@@ -30,6 +30,10 @@ The paper treats a disturbance as a physical intervention with PMU-projected con
 
 The target is approximately 20 IEEE Access pages including references and any biographies. The intended body allocation is 0.5 page for front matter, 1.2 for the introduction, 1.3 for related work, 1.8 for formulation, 2.3 for diagnosability, 1.6 for inference, 1.2 for edge knowledge, 1.7 for protocol, 4.0 for results, 0.8 for discussion, and 0.3 for the conclusion. This is a planning target, not permission to add filler.
 
+## Initial-draft baseline
+
+This revision is an evidence-bounded first manuscript draft, not a completed empirical paper. It contains the problem statement, two explicitly scoped local propositions, method contract, and reproducible experiment design, but no proposed-method numerical result, performance chart, or completed results table. The current compiled length is therefore intentionally below the 20-page target; frozen Campaign A--D evidence, source-backed related-work table entries, figures, tables, final author metadata, and biographies are the appropriate ways for the paper to grow.
+
 ## Terminology commitments
 
 - Call the proposed inference **Bayesian** only when a stated likelihood, prior, and posterior update are used.

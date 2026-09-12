@@ -8,6 +8,14 @@
 \usepackage{array}
 \usepackage{xcolor}
 \usepackage[hidelinks]{hyperref}
+\usepackage{etoolbox}
+
+% ieeeaccess.cls adds an unnumbered REFERENCES entry to the PDF outline after
+% creating the heading. Supply its hyperlink destination without altering the
+% official class or its visual bibliography formatting.
+\makeatletter
+\patchcmd{\thebibliography}{\section*{\refname}}{\section*{\refname}\phantomsection}{}{}
+\makeatother
 
 \newtheorem{proposition}{Proposition}
 \newtheorem{definition}{Definition}
