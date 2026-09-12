@@ -17,6 +17,7 @@ main.pdf
 
 # Local environments and operating-system files
 build/
+tmp/
 .DS_Store
 __pycache__/
 .venv/

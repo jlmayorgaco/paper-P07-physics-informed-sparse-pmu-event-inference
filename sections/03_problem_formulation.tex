@@ -26,6 +26,14 @@ where $\bm{h}_p$ selects or transforms state variables into the local voltage an
 
 The reporting set may vary as $\Pset_k \ne \Pset_{k+1}$. A PMU joining enlarges the observed projection, whereas a departing PMU removes one. The formulation does not require a fixed ordering or a fixed number of PMU channels. It instead records the identity, observed channels, and integrity state of every member of $\Pset_k$.
 
+\subsection{Reference Event Contract}
+
+The initial benchmark uses the IEEE 39-bus network and eight reference PMUs at buses 2, 5, 6, 10, 19, 22, 29, and 39. Each reporting device supplies three-phase voltage and current phasors, frequency, ROCOF, and an availability indicator. These channels are sufficient to define the measurement operator in \eqref{eq:pmu-measurement}; they are not evidence that all physical sources are directly observable.
+
+The reference data contract contains nine row labels covering normal operation, four physical families, and four integrity/ambiguous conditions. A flat classifier may treat them as mutually exclusive classes, but that representation loses the fact that missing data can coincide with a physical event. Table~\ref{tab:legacy-event-mapping} gives the P07 interpretation. Physical location metrics apply only to scenarios with a declared physical target. Missing or corrupted data receives its own PMU-integrity target; it is not counted as a bus or line localization success. The unknown/mixed label is not credited as open-set physical-source localization unless the hidden intervention composition is independently recorded.
+
+\input{tables/legacy_event_mapping}
+
 \subsection{Inference Objective and Decisions}
 
 Let $\Hset=\{H_0,H_1,\ldots,H_J\}$ contain the physical hypotheses generated from candidate families, locations, onset times, and admissible magnitudes. The central target is the causal posterior

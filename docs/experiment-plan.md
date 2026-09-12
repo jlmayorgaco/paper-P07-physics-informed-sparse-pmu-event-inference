@@ -42,9 +42,9 @@ An ablation is reportable only when its training, development, threshold, and te
 
 | Identifier | Baseline | Current manuscript status | Required record before reporting |
 | --- | --- | --- | --- |
-| B0 | Physics-guided hierarchical ExtraTrees (SGSMA legacy) | Historical infrastructure reported; implementation not present in this repository. | Feature schema, label contract, source split, availability handling, version, and frozen result manifest. |
-| B1 | Compact sequential ExtraTrees | Historical infrastructure reported; implementation not present in this repository. | Reduced feature specification, causal windowing, source split, version, and frozen result manifest. |
-| B2 | Post-hackathon hybrid candidate ranker | Historical infrastructure reported; implementation not present in this repository. | Candidate generator, learned compatibility model, electrical residual definition, tuning split, version, and result manifest. |
+| B0 | Legacy physics-guided hierarchical ExtraTrees | External archive audited; not imported or reproduced under P07. | Feature schema, label contract, source split, availability handling, source hashes, version, and frozen P07 result manifest. |
+| B1 | Compact sequential ExtraTrees | External archive audited; not imported or reproduced under P07. | Reduced feature specification, causal windowing, source split, source hashes, version, and frozen P07 result manifest. |
+| B2 | Legacy hybrid candidate ranker | External archive audited; not imported or reproduced under P07. | Candidate generator, learned compatibility model, electrical residual definition, tuning split, source hashes, and result manifest. |
 | B3 | Physical residual or Zbus-style ranker | Planned. | Network model, residual definition, candidate space, and operating-point assumptions. |
 | B4 | EKF, UKF, MHE, or documented equivalent | Planned. | State definition, noise model, initialization, tuning, and failure handling. |
 | B5 | Topology-aware, open-set, or graph-learning baseline | Planned and conditional on reproducibility. | Verified citation, implementation revision, source split, tuning procedure, license, and common-contract eligibility. |
@@ -73,7 +73,7 @@ An ablation is reportable only when its training, development, threshold, and te
 | Table | Content | Publication gate |
 | --- | --- | --- |
 | I | Related-work capability/gap matrix | Every method/capability cell supported by a verified source and qualified for its assumptions. |
-| II | From legacy SGSMA labels to compositional physical and measurement-integrity states | Version the originating legacy label contract and obtain coauthor review; do not treat proposed mappings as dataset facts before then. |
+| II | From the legacy nine-label contract to compositional physical and measurement-integrity states | Source label semantics are audited; obtain coauthor review and import a versioned source contract before reusing any numerical legacy result. |
 | III | Campaigns and train/development/test contracts | Add after manifests have stable identifiers. |
 | IV | Main held-out-source results | Campaign A is frozen and source exclusion independently checked. |
 | V | PMU membership and knowledge-transfer ablations | Campaigns B and C are frozen. |

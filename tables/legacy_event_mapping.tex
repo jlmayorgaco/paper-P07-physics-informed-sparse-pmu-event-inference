@@ -1,0 +1,23 @@
+\begin{table*}[t]
+\centering
+\caption{Compositional interpretation of the legacy nine-label event contract in the P07 evaluation design. A single legacy label may encode both a physical intervention and a PMU-integrity condition; P07 records these targets separately.}
+\label{tab:legacy-event-mapping}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabularx}{\textwidth}{@{}c l X X@{}}
+\toprule
+Legacy ID & Reference condition & P07 physical-intervention target & P07 PMU-integrity target \\
+\midrule
+0 & Normal operation & $H_0$ (no modeled intervention) & Nominal \\
+1 & Fault & Fault family, bus or line candidate & Nominal unless an integrity condition is separately observed \\
+2 & Line outage & Line-opening family and branch candidate & Nominal unless an integrity condition is separately observed \\
+3 & Generation change/outage & Generation-injection or generator-trip family and asset candidate & Nominal unless an integrity condition is separately observed \\
+4 & Load change/drop & Load-injection family and asset candidate & Nominal unless an integrity condition is separately observed \\
+5 & Missing data & No physical-event target implied & Missing or unavailable PMU channel(s) \\
+6 & Missing data concurrent with a physical event & Physical family and asset, if independently specified by the scenario record & Missing PMU channel(s) \\
+7 & Bad data & No physical-event target implied unless separately specified & Corrupted or unreliable channel(s) \\
+8 & Unknown or mixed disturbance & Unresolved family, or an explicitly recorded multi-intervention scenario & Any separately recorded integrity state; no default mapping \\
+\bottomrule
+\end{tabularx}
+\end{table*}
