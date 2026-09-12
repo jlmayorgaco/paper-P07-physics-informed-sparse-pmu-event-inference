@@ -17,7 +17,7 @@ This repository develops a defensible research manuscript on physical-event infe
 | `references.bib` | Verified, cited bibliography entries only |
 | `figures/` | Source figures and the figure roadmap |
 | `tables/` | Evidence-backed modular manuscript tables |
-| `docs/` | Scope, claims, experiment, and editorial records |
+| `docs/` | Scope, claims, experiment, and editorial records, including the binding paper contract |
 | `scripts/` | Reproducible experiment and artifact-generation scripts |
 | `generated/` | Small, intentional generated artifacts; never LaTeX build products |
 
@@ -54,4 +54,4 @@ Avoid editing the same LaTeX lines locally and in Overleaf at the same time. Res
 
 ## Evidence policy
 
-Do not add numerical results, reference simulations, or performance claims without a traceable experiment contract. `docs/claims-and-evidence.md` records what can be said now and what must wait for a frozen campaign.
+Do not add numerical results, reference simulations, or performance claims without a traceable experiment contract. [`docs/PAPER_GUIDELINES.md`](docs/PAPER_GUIDELINES.md) defines the hybrid physics/ML scope, required comparisons, literature standard, and submission gates; [`docs/claims-and-evidence.md`](docs/claims-and-evidence.md) records what can be said now and what must wait for a frozen campaign.

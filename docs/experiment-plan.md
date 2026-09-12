@@ -18,21 +18,37 @@ Do not pool results from incompatible simulators, source-holdout rules, PMU memb
 
 | Campaign | Primary question | Train/development/test contract | Required comparisons | Required outputs |
 | --- | --- | --- | --- | --- |
-| A — Source Generalization | Can the system identify a source never represented as a source label during training or tuning? | Test buses, lines, generators, and loads are excluded from every source-labeled train and development split. Freeze the asset manifest before tuning. | B0–B4 when implemented; P; known-source performance reported separately. | Exact and Top-3 localization, electrical distance where meaningful, joint correctness, candidate-set coverage/size, entropy, source-resolution delay, family/asset failure analysis. |
+| A — Source Generalization | Can the system identify a source never represented as a source label during training or tuning? | Test buses, lines, generators, and loads are excluded from every source-labeled train and development split. Freeze the asset manifest before tuning. | B0–B5 when implemented; P; known-source performance reported separately. | Exact and Top-3 localization, electrical distance where meaningful, joint correctness, candidate-set coverage/size, entropy, source-resolution delay, family/asset failure analysis. |
 | B — Dynamic Observability | Does current PMU membership and the proposed information measure explain ambiguity? | Evaluate 8, 7, 6, and 4 PMUs plus at least one controlled addition. Hold event and operating-condition contracts fixed where possible. | Random loss versus information-critical loss; addition case; P and compatible baselines. | Pairwise/minimum information, candidate sets, entropy, coverage, localization, delay; before/after membership transition. |
 | C — Knowledge Transfer | Does a validated physical knowledge object transfer across conditions and PMU perspectives? | Hold out a phenomenon/knowledge item, evaluate it as unknown, simulate trusted confirmation, then test new operating points, noise, and perspectives. Include discovering-PMU-disconnected condition. | No update; conventional update or FL/KD-style comparator if reproducible; physics-grounded transfer. | Forward transfer, retained old-event performance, forgetting, candidate-set behavior, performance without discovering PMU, provenance record. |
-| D — Operational Robustness | Does the causal pipeline retain useful behavior under shift and long normal exposure? | Separate ANDES nominal, ANDES shift, PowerDynamics.jl transfer, noise, missing PMUs, and continuous stream exposure. RAW0001 is separate retrospective evidence only. | B0–B4 when implemented; P; nominal versus shift and simulator-specific comparisons. | Precision, recall, F1, macro-F1 where defined, false alarms/hour, joint precision/F1, delay, resource measurements, failure taxonomy. |
+| D — Operational Robustness | Does the causal pipeline retain useful behavior under shift and long normal exposure? | Separate ANDES nominal, ANDES shift, PowerDynamics.jl transfer, noise, missing PMUs, and continuous stream exposure. RAW0001 is separate retrospective evidence only. | B0–B5 when implemented; P; nominal versus shift and simulator-specific comparisons. | Precision, recall, F1, macro-F1 where defined, false alarms/hour, joint precision/F1, delay, resource measurements, failure taxonomy. |
+
+## Paradigm and ablation contract
+
+Every campaign that reports a P07 comparison must distinguish data-driven diagnosis, physics-only intervention inference, and hybrid physics-informed inference. The hybrid learner receives candidate-specific residual information from the DAE prediction; it must not be trained to emit a held-out source identity.
+
+| ID | Ingredient set | Question answered |
+| --- | --- | --- |
+| A0 | ML-only diagnosis | What does learned recognition achieve without the physical hypothesis bank? |
+| A1 | Physics-only likelihood | What does DAE-based intervention inference achieve without learned mismatch correction? |
+| A2 | Physics plus SGSMA-derived engineered residual features | Do the legacy feature families improve the residual evidence path? |
+| A3 | Physics plus learned source-agnostic discrepancy | Does learned mismatch correction improve the physical likelihood? |
+| A4 | A3 plus explicit Bayesian uncertainty | Does the uncertainty model improve decision quality under shift? |
+| A5 | A4 plus diagnosability-aware candidate set or abstention | Does ambiguity-aware decision logic avoid unsupported exact-source claims? |
+
+An ablation is reportable only when its training, development, threshold, and test partitions match the compared method. If an ingredient is unavailable, label it unavailable rather than treating a different method as a substitute.
 
 ## Baseline availability register
 
 | Identifier | Baseline | Current manuscript status | Required record before reporting |
 | --- | --- | --- | --- |
-| B0 | 448-feature hierarchical ExtraTrees method | Historical infrastructure reported; implementation not present in this repository. | Feature schema, training split, availability handling, version, and frozen result manifest. |
-| B1 | Hybrid learned candidate ranker | Historical infrastructure reported; implementation not present in this repository. | Candidate generator, learned compatibility model, tuning split, version, and result manifest. |
-| B2 | Physical residual or Zbus-style ranker | Planned. | Network model, residual definition, candidate space, and operating-point assumptions. |
-| B3 | EKF, UKF, MHE, or documented equivalent | Planned. | State definition, noise model, initialization, tuning, and failure handling. |
-| B4 | Topology-aware or open-set data-driven baseline | Planned and conditional on reproducibility. | Citation, implementation revision, source split, tuning procedure, and license. |
-| P | Proposed intervention-inference framework | Method specification only. | Complete candidate generator, likelihood calibration procedure, fusion assumptions, abstention rule, and all campaign manifests. |
+| B0 | Physics-guided hierarchical ExtraTrees (SGSMA legacy) | Historical infrastructure reported; implementation not present in this repository. | Feature schema, label contract, source split, availability handling, version, and frozen result manifest. |
+| B1 | Compact sequential ExtraTrees | Historical infrastructure reported; implementation not present in this repository. | Reduced feature specification, causal windowing, source split, version, and frozen result manifest. |
+| B2 | Post-hackathon hybrid candidate ranker | Historical infrastructure reported; implementation not present in this repository. | Candidate generator, learned compatibility model, electrical residual definition, tuning split, version, and result manifest. |
+| B3 | Physical residual or Zbus-style ranker | Planned. | Network model, residual definition, candidate space, and operating-point assumptions. |
+| B4 | EKF, UKF, MHE, or documented equivalent | Planned. | State definition, noise model, initialization, tuning, and failure handling. |
+| B5 | Topology-aware, open-set, or graph-learning baseline | Planned and conditional on reproducibility. | Verified citation, implementation revision, source split, tuning procedure, license, and common-contract eligibility. |
+| P | DAE plus learned-discrepancy Bayesian framework | Method specification only. | Candidate generator, source-agnostic discrepancy model, likelihood/uncertainty specification, fusion assumptions, abstention rule, and all campaign manifests. |
 
 ## Metric definitions
 
@@ -57,7 +73,7 @@ Do not pool results from incompatible simulators, source-holdout rules, PMU memb
 | Table | Content | Publication gate |
 | --- | --- | --- |
 | I | Related-work capability/gap matrix | Every method/capability cell supported by a verified source and qualified for its assumptions. |
-| II | Physical and measurement intervention definitions | Static definitions may be added after coauthor review. |
+| II | From legacy SGSMA labels to compositional physical and measurement-integrity states | Version the originating legacy label contract and obtain coauthor review; do not treat proposed mappings as dataset facts before then. |
 | III | Campaigns and train/development/test contracts | Add after manifests have stable identifiers. |
 | IV | Main held-out-source results | Campaign A is frozen and source exclusion independently checked. |
 | V | PMU membership and knowledge-transfer ablations | Campaigns B and C are frozen. |

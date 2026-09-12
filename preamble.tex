@@ -17,6 +17,17 @@
 \patchcmd{\thebibliography}{\section*{\refname}}{\section*{\refname}\phantomsection}{}{}
 \makeatother
 
+% Replace the class template's published-volume placeholder with an honest
+% circulation marker. The official class file itself remains unmodified.
+\newcommand{\PSevenDraftFooter}{MANUSCRIPT DRAFT, SEPTEMBER 2026}
+\makeatletter
+\patchcmd{\ps@titlepage}{\footervolfont VOLUME\ \thevol, \theyear}{\footervolfont\PSevenDraftFooter}{}{}
+\patchcmd{\ps@titlepage}{\footervolfont VOLUME\ \thevol, \theyear}{\footervolfont\PSevenDraftFooter}{}{}
+\patchcmd{\ps@headings}{\footervolfont VOLUME\ \thevol, \theyear}{\footervolfont\PSevenDraftFooter}{}{}
+\patchcmd{\ps@headings}{\footervolfont VOLUME\ \thevol, \theyear}{\footervolfont\PSevenDraftFooter}{}{}
+\AtBeginDocument{\ps@headings}
+\makeatother
+
 \newtheorem{proposition}{Proposition}
 \newtheorem{definition}{Definition}
 

@@ -3,21 +3,29 @@
 
 No proposed-method numerical result is reported in this initial draft. This section fixes the questions, denominators, and comparisons that future frozen experiments must answer. It must not be populated with expected values, simulated example scores, or historical-system results unless their archived source, split contract, and provenance are imported and cited separately.
 
-\subsection{Held-Out-Source Inference}
+\subsection{Unseen-Source Inference and Paradigm Comparison}
 
-Campaign~A will report whether P can localize physical sources excluded from source-labeled training and tuning. The primary display will separate exact localization, Top-3 localization, electrical-distance error where defined, joint event-and-source correctness, candidate-set coverage and size, and time to identification. Results will be stratified by event family and source type so that a favorable aggregate cannot hide a failure on held-out assets.
+Campaign~A will report whether P can localize physical sources excluded from source-labeled training and tuning. The primary comparison will distinguish ML-only recognition, physics-only intervention inference, and actually implemented hybrid variants. It will separate exact localization, Top-3 localization, electrical-distance error where defined, joint event-and-source correctness, candidate-set coverage and size, and time to identification. Results will be stratified by event family and source type so that a favorable aggregate cannot hide a failure on held-out assets.
+
+\subsection{Diagnosability and Empirical Ambiguity}
+
+Campaign~B will test whether the dynamic information measure predicts source ambiguity rather than merely changing with PMU count. The analysis will relate minimum and pairwise diagnosability to exact-source correctness, posterior entropy, candidate-set coverage and size, and time to a resolved source decision. It must report counterexamples, including cases where the local approximation, model fidelity, or independence assumptions are not adequate.
 
 \subsection{PMU Join, Loss, and Ambiguity}
 
 Campaign~B will test whether the dynamic information measure tracks the practical consequences of PMU membership changes. The analysis will compare random and information-critical removals at each coverage level, then show a controlled addition. It will report the paired evolution of available PMUs, pairwise/minimum diagnosability, posterior entropy, candidate-set size, coverage, and localization performance.
 
-\subsection{Controlled Knowledge Transfer}
+\subsection{Model and Measurement Shift}
 
-Campaign~C will test the model-mediated transfer defined in Section~\ref{sec:edge-knowledge}. The comparison will report the no-update condition, any reproducible conventional update, and physics-grounded transfer under operating-point, noise, and PMU-perspective shifts. The original discovering-PMU-disconnected condition is necessary to distinguish cross-node transfer from reliance on the original local waveform.
+Campaign~D will compare ANDES nominal data, ANDES operating or parameter shift, restricted PowerDynamics.jl transfer, noise, and missing-PMU conditions without pooling them. It will test whether a learned discrepancy improves the physical likelihood under the declared no-retuning rule, while separating calibration evaluation from any uncalibrated score. RAW0001, if included, remains a retrospective reference simulation only.
 
-\subsection{Operational Robustness and Continuous Scanning}
+\subsection{Controlled Knowledge Transfer (Conditional)}
 
-Campaign~D will report nominal, shifted, and cross-simulator results separately. For continuous scans, tables and plots will give long-normal exposure, total alarms, false alarms per hour, event recall, joint alarm precision, joint F1, and delay definitions. Resource measurements will be reported only when the implementation and hardware are fixed.
+Campaign~C will be reported only if it convincingly tests the model-mediated transfer defined in Section~\ref{sec:edge-knowledge}. The comparison will report the no-update condition, any reproducible conventional update, and physics-grounded transfer under operating-point, noise, and PMU-perspective shifts. The original discovering-PMU-disconnected condition is necessary to distinguish cross-node transfer from reliance on the original local waveform. If this gate is not met, the material moves to future work rather than supporting a main contribution.
+
+\subsection{Continuous Scanning and Resource Cost}
+
+For continuous scans, tables and plots will give long-normal exposure, total alarms, false alarms per hour, event recall, joint alarm precision, joint F1, and delay definitions. Resource measurements for inference time, CPU load, memory, bytes per message, messages per event, and total communication volume will be reported only when the implementation and hardware are fixed.
 
 \subsection{Reporting Integrity}
 

@@ -13,6 +13,18 @@ The proposed computational path separates rapid screening from costly physical r
 \end{equation}
 At time $k$, a causal innovation or change statistic first identifies windows that merit analysis. Candidate generation then enumerates feasible family, location, onset, and magnitude ranges subject to the current topology and operating context. A fast physical residual or sensitivity calculation ranks candidates. Only the leading $K$ candidates undergo nonlinear DAE simulation, state-estimation, or moving-horizon refinement. This division is computationally motivated; it does not redefine an old ranker as a new method.
 
+\subsection{Physics-Informed Discrepancy Likelihood}
+
+For each retained physical hypothesis $H_j$, the DAE and its fitted nuisance quantities produce a candidate-specific PMU prediction $\hat{\bm{y}}^{\mathrm{phys}}_{j,k}$. The proposed hybrid layer does not predict a source label. Instead, it conditions a learned discrepancy on residual evidence, the operating context $\chi_k$, and the PMUs that are presently available. With $\bm{\Xi}_{j,1:k}$ denoting causal summaries such as residual peaks and energy, multiscale innovations, PMU disagreement, phase coherence, and integrity descriptors, the proposed observation model is
+\begin{equation}
+ \begin{aligned}
+  \bm{y}_k &= \hat{\bm{y}}^{\mathrm{phys}}_{j,k} + \bm{\delta}_{\phi}(\bm{\Xi}_{j,1:k},\chi_k,\Pset_k) + \bm{\epsilon}_{j,k}, \\
+  \bm{\epsilon}_{j,k} &\sim \mathcal{N}\!\left(\bm{0},R_k+\bm{\Sigma}_{\phi}\right).
+ \end{aligned}
+ \label{eq:hybrid-discrepancy}
+\end{equation}
+The physical model therefore explains the candidate trajectory, whereas $\bm{\delta}_{\phi}$ and $\bm{\Sigma}_{\phi}$ are intended to represent structured model mismatch and heteroscedastic uncertainty. Their source-agnostic role is a design constraint, not an established generalization result: training, feature fitting, and threshold selection must obey the source-holdout contract in Section~\ref{sec:experimental-protocol}. Campaigns A and D must test whether this term improves inference relative to physics-only and ML-only alternatives.
+
 For each retained $H_j$, refinement estimates nuisance quantities such as pre-event state, onset adjustment, severity, and a bounded model-discrepancy term. Let $\mathcal{Y}_{1:k}$ and $\mathcal{I}_{1:k}$ denote all data and integrity information available through $k$. The update is
 \begin{equation}
  \begin{aligned}
@@ -20,7 +32,7 @@ For each retained $H_j$, refinement estimates nuisance quantities such as pre-ev
  &\quad\times p(H_j\given\mathcal{I}_{1:k},\Pset_{1:k}).
  \end{aligned} \label{eq:bayes-update}
 \end{equation}
-The likelihood must be a stated probabilistic measurement model, such as the calibrated Gaussian approximation in \eqref{eq:gaussian-observation} or a validated heavy-tailed alternative. A learned score may help screen hypotheses, but it is not called a posterior unless it is calibrated as part of \eqref{eq:bayes-update}.
+The likelihood must be a stated probabilistic measurement model, such as the local Gaussian approximation in \eqref{eq:gaussian-observation}, the hybrid form in \eqref{eq:hybrid-discrepancy}, or a validated heavy-tailed alternative. A learned score may help screen hypotheses, but it is not called a posterior unless it is calibrated as part of \eqref{eq:bayes-update}.
 
 Every quantity in \eqref{eq:inference-path}--\eqref{eq:bayes-update} is restricted to samples through $k$. Offline smoothing, retrospective onset estimation, and future labels may be useful for benchmarking but must be labeled noncausal and must not be used to support a streaming-delay claim.
 
@@ -46,6 +58,6 @@ The final decision uses the posterior and the ambiguity test from Section~\ref{s
 
 \subsection{Implementation Boundary}
 
-The architecture is intentionally compatible with existing feature-based detectors, physical residual rankers, and dynamic estimators as components or baselines. Its proposed contribution lies in the evidence contract that connects them: source-label exclusion in Campaign~A, causal data availability, current PMU membership, explicit likelihood assumptions, and a diagnosability-aware abstention decision. Runtime, communication volume, and calibration remain experimental questions; the paper does not describe the framework as real-time, calibrated, or distributed in deployment until those measurements and assumptions are demonstrated.
+The architecture is intentionally compatible with legacy physics-guided ExtraTrees detectors, compact sequential feature baselines, learned candidate rankers, physical residual rankers, and dynamic estimators. The legacy features may be reused only as candidate-specific residual summaries, not as an unqualified source-label shortcut. The proposed contribution lies in the evidence contract that connects these alternatives: source-label exclusion in Campaign~A, causal data availability, current PMU membership, explicit likelihood assumptions, a source-agnostic learned discrepancy, and a diagnosability-aware abstention decision. Runtime, communication volume, calibration, and the value of the learned discrepancy remain experimental questions; the paper does not describe the framework as real-time, calibrated, or distributed in deployment until those measurements and assumptions are demonstrated.
 
 % Planned Fig. 2: Measurement, Inference, and Knowledge planes are specified in docs/figure-plan.md.
