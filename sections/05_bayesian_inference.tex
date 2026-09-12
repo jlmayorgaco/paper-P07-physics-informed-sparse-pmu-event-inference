@@ -1,4 +1,51 @@
 \section{Causal Bayesian Inference and Distributed Fusion}
 \label{sec:bayesian-inference}
 
-% Drafted in the theory commit.
+\subsection{Causal Coarse-to-Fine Inference}
+
+The proposed computational path separates rapid screening from costly physical refinement:
+\begin{equation}
+ \begin{aligned}
+  \text{PMU stream} &\rightarrow \text{causal change evidence} \\
+  &\rightarrow \text{physical screening} \rightarrow \text{Top-}K\ \text{refinement} \\
+  &\rightarrow \text{candidate set}.
+ \end{aligned} \label{eq:inference-path}
+\end{equation}
+At time $k$, a causal innovation or change statistic first identifies windows that merit analysis. Candidate generation then enumerates feasible family, location, onset, and magnitude ranges subject to the current topology and operating context. A fast physical residual or sensitivity calculation ranks candidates. Only the leading $K$ candidates undergo nonlinear DAE simulation, state-estimation, or moving-horizon refinement. This division is computationally motivated; it does not redefine an old ranker as a new method.
+
+For each retained $H_j$, refinement estimates nuisance quantities such as pre-event state, onset adjustment, severity, and a bounded model-discrepancy term. Let $\mathcal{Y}_{1:k}$ and $\mathcal{I}_{1:k}$ denote all data and integrity information available through $k$. The update is
+\begin{equation}
+ \begin{aligned}
+ p(H_j\given\mathcal{Y}_{1:k},\mathcal{I}_{1:k},\Pset_{1:k}) &\propto p(\mathcal{Y}_{1:k}\given H_j,\mathcal{I}_{1:k},\Pset_{1:k})\\
+ &\quad\times p(H_j\given\mathcal{I}_{1:k},\Pset_{1:k}).
+ \end{aligned} \label{eq:bayes-update}
+\end{equation}
+The likelihood must be a stated probabilistic measurement model, such as the calibrated Gaussian approximation in \eqref{eq:gaussian-observation} or a validated heavy-tailed alternative. A learned score may help screen hypotheses, but it is not called a posterior unless it is calibrated as part of \eqref{eq:bayes-update}.
+
+Every quantity in \eqref{eq:inference-path}--\eqref{eq:bayes-update} is restricted to samples through $k$. Offline smoothing, retrospective onset estimation, and future labels may be useful for benchmarking but must be labeled noncausal and must not be used to support a streaming-delay claim.
+
+\subsection{Local Evidence and Fusion Assumptions}
+
+For a PMU $p\in\Pset_k$, let $\mathcal{D}_{p,k}$ collect the available PMU history and integrity information used to condition its local observation model. Define the conditional local log-likelihood ratio
+\begin{equation}
+ \ell_{p,j,k}=\log\frac{p(\bm{y}_{p,k}\given H_j,\mathcal{D}_{p,k})}{p(\bm{y}_{p,k}\given H_0,\mathcal{D}_{p,k})}. \label{eq:local-evidence}
+\end{equation}
+If local residuals are conditionally independent after conditioning on the common state estimate, integrity states, and model-discrepancy variables, their evidence adds:
+\begin{equation}
+ L_{j,k}=\sum_{p\in\Pset_k}\ell_{p,j,k}. \label{eq:fused-evidence}
+\end{equation}
+The posterior recursion combines $L_{j,k}$ with the prior odds and any temporal transition model. This factorization is not a novelty claim; it is a transparent implementation assumption that supports a PMU joining or leaving without changing the dimensionality of a monolithic learned input.
+
+Conditional independence can fail because remote PMU innovations share a network state, timing error, or a common-mode communication fault. The implementation should therefore either condition on shared latent variables, retain covariance terms in a centralized refinement, or use a conservative fusion correction. Reporting a sum of local scores without declaring this assumption would not establish distributed Bayesian inference.
+
+\subsection{Integrity-Aware Decision Logic}
+
+The inference system evaluates physical and measurement-side explanations separately. A physical hypothesis may be accompanied by one or more integrity states, but it is not replaced by them. Before a source decision, the system compares physical-event likelihoods with hypotheses such as PMU loss, corrupted channels, and concurrent physical-plus-measurement anomalies. It then reports the physical candidate set together with integrity flags and their uncertainty.
+
+The final decision uses the posterior and the ambiguity test from Section~\ref{sec:diagnosability}. It produces an exact source only when one candidate meets the operating threshold and competing candidates are adequately separated. Otherwise, it returns the retained candidate set or an explicit unresolved-source result. This logic makes abstention a first-class output rather than a retrospective explanation for an incorrect forced label.
+
+\subsection{Implementation Boundary}
+
+The architecture is intentionally compatible with existing feature-based detectors, physical residual rankers, and dynamic estimators as components or baselines. Its proposed contribution lies in the evidence contract that connects them: source-label exclusion in Campaign~A, causal data availability, current PMU membership, explicit likelihood assumptions, and a diagnosability-aware abstention decision. Runtime, communication volume, and calibration remain experimental questions; the paper does not describe the framework as real-time, calibrated, or distributed in deployment until those measurements and assumptions are demonstrated.
+
+% Planned Fig. 2: Measurement, Inference, and Knowledge planes are specified in docs/figure-plan.md.
