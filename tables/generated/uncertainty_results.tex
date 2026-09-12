@@ -1,0 +1,16 @@
+\begin{table*}[t]
+\caption{Frozen TEST uncertainty and colored-discrepancy ablations. U2 is fitted on a disjoint 30-trajectory calibration set; Gauss--Markov (GM) ranks are selected on that calibration set.}
+\label{tab:uncertainty-results}
+\centering
+\footnotesize
+\begin{tabular}{lccccc}
+\toprule
+Variant & Hidden NLL & 95\% cov. Re (\%) & 95\% cov. Im (\%) & Innovation ACF(1) & TVE (\%) \\
+\midrule
+U0 original & -13.477 & 100.0 & 100.0 & 0.602 & 0.009634 \\
+U2 Re/Im temperature & -16.184 & 93.9 & 94.2 & 0.602 & 0.009634 \\
+D2-M measurement GM r4 & 14.991 & 66.6 & 48.1 & 0.540 & 0.009788 \\
+D2-P process GM r1 & -13.475 & 100.0 & 100.0 & 0.602 & 0.009638 \\
+\bottomrule
+\end{tabular}
+\end{table*}

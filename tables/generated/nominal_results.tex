@@ -1,0 +1,15 @@
+\begin{table*}[t]
+\caption{Nominal reconstruction on 100 frozen nonlinear TEST trajectories. Metrics use the 31 unobserved buses only; TVE is reported in percent and intervals bootstrap independent trajectories.}
+\label{tab:nominal-results}
+\centering
+\footnotesize
+\begin{tabular}{lccccc}
+\toprule
+Method & Complex RMSE & $|V|$ RMSE & Angle RMSE ($^\circ$) & Mean TVE (\%) & 95\% TVE interval (\%) \\
+\midrule
+B0 equilibrium & 3.486e-03 & 2.496e-05 & 0.19497 & 0.340200 & [0.293231, 0.387428] \\
+B1 snapshot WLS & 1.529e-04 & 5.091e-05 & 0.00821 & 0.009904 & [0.008342, 0.011514] \\
+B2 causal Kalman & 1.338e-04 & 4.235e-05 & 0.00722 & 0.009634 & [0.008006, 0.011302] \\
+\bottomrule
+\end{tabular}
+\end{table*}
