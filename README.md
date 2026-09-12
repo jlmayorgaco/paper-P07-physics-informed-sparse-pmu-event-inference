@@ -1,10 +1,10 @@
-# P07 --- Physics-Informed Sparse PMU Estimation
+# P07 --- Functional Voltage Reconstruction From Sparse PMUs
 
-**Working paper title:** *Physics-Informed Bayesian Event Inference and Localization from Sparse PMU Measurements*
+**Working paper title:** *Functional Observability and Physics-Based Reconstruction of Unobserved Power-System Voltages From Sparse PMUs Under Model Mismatch*
 
 **Target venue:** IEEE Access
 
-This repository develops a defensible research manuscript on physical-event inference from sparse, dynamically changing phasor measurement unit (PMU) observations. The draft separates proposed methodology, historical motivation, and unvalidated experimental claims so that reproducible simulations can be added without rewriting the scientific contract.
+This repository develops an evidence-backed IEEE Access manuscript on reconstructing 31 unobserved IEEE 39-bus voltages from eight voltage/current PMUs. The paper connects functional observability, local physics-based estimation, nominal uncertainty diagnostics, physically rebuilt mismatch plants, model-adequacy detection, and a deliberately retained negative causal-adaptation result. Event detection and source localization remain later research stages rather than claims of this manuscript.
 
 ## Repository layout
 
@@ -19,7 +19,20 @@ This repository develops a defensible research manuscript on physical-event infe
 | `tables/` | Evidence-backed modular manuscript tables |
 | `docs/` | Scope, claims, experiment, and editorial records, including the binding paper contract |
 | `scripts/` | Reproducible experiment and artifact-generation scripts |
-| `generated/` | Small, intentional generated artifacts; never LaTeX build products |
+| `generated/frozen/` | Hashed snapshot of the result artifacts used by the paper |
+| `generated/results_macros.tex` | Generated numerical prose values; do not edit manually |
+| `figures/generated/`, `tables/generated/` | Regenerated empirical assets |
+
+## Reproduce paper artifacts
+
+The source-results import is an explicit operation because it snapshots another local research repository. Its default location can be overridden with `-SourceRepository`.
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/import_frozen_results.ps1
+python scripts/generate_paper_artifacts.py
+```
+
+`SOURCE_MANIFEST.csv` records a SHA-256 hash and source-relative path for every imported artifact. `SOURCE_SNAPSHOT.txt` records the source branch and commit. The generator asserts the principal denominators before writing LaTeX macros, tables, and vector figures.
 
 ## Build
 
@@ -38,7 +51,7 @@ When `latexmk` and Perl are available, the equivalent command is:
 latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
 ```
 
-The resulting local build is `main.pdf`; it is intentionally ignored and is not a repository artifact.
+The resulting local build is `main.pdf`; it is intentionally ignored. Run the artifact generator before compiling whenever the frozen snapshot changes.
 
 ## GitHub and Overleaf workflow
 
@@ -54,4 +67,4 @@ Avoid editing the same LaTeX lines locally and in Overleaf at the same time. Res
 
 ## Evidence policy
 
-Do not add numerical results, reference simulations, or performance claims without a traceable experiment contract. [`docs/PAPER_GUIDELINES.md`](docs/PAPER_GUIDELINES.md) defines the hybrid physics/ML scope, required comparisons, literature standard, and submission gates; [`docs/claims-and-evidence.md`](docs/claims-and-evidence.md) records what can be said now and what must wait for a frozen campaign. [`docs/legacy-sgsma-evidence-audit.md`](docs/legacy-sgsma-evidence-audit.md) records the externally audited legacy PMU materials and their reuse boundary; [`docs/literature-capability-matrix.md`](docs/literature-capability-matrix.md) records the direct-method comparison contract.
+Do not add numerical results or performance claims without a traceable experiment contract. [`CLAIMS.md`](CLAIMS.md) is the concise submission boundary; [`docs/claims-and-evidence.md`](docs/claims-and-evidence.md) maps each main claim to its artifact. [`TODO_PENDING.md`](TODO_PENDING.md) separates the next research gates from completed manuscript work. The earlier event-inference and competition-derived system remains useful prior development, but its numerical claims must not be merged into this reconstruction paper without a compatible, frozen protocol.
