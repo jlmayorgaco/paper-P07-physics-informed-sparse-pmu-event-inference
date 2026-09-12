@@ -1,0 +1,36 @@
+\documentclass{ieeeaccess}
+
+\input{preamble}
+
+\begin{document}
+\input{metadata}
+
+% This provisional abstract must be rewritten after the experimental results are frozen.
+\begin{abstract}
+Sparse phasor measurement unit (PMU) networks can observe the consequences of a power-system disturbance without directly observing its physical source. This paper develops a research framework for physics-informed Bayesian event inference and localization under sparse, time-varying PMU observation. Rather than treating an event as a fixed source label, the framework represents it as a physical intervention in a differential-algebraic network model and separates that intervention from measurement-integrity states. It combines causal innovation evidence, physical-hypothesis screening, nonlinear refinement, and posterior candidate sets that permit an exact source decision or an explicit unresolved result. A dynamic diagnosability measure relates the presently available PMUs to pairwise hypothesis separation and source ambiguity. The manuscript also specifies a controlled concept for transferring operator-confirmed physical-event knowledge across PMU nodes through the network model rather than copying local waveforms. The planned evaluation covers held-out-source generalization, PMU join and loss, cross-simulator and operating-condition shifts, continuous causal scanning, and a controlled knowledge-transfer study. Quantitative claims are intentionally deferred until these experiments are completed and frozen.
+\end{abstract}
+
+\begin{keywords}
+Bayesian inference, diagnosability, event localization, phasor measurement units, power-system dynamics, sparse observability.
+\end{keywords}
+
+\titlepgskip=-21pt
+\maketitle
+
+\input{sections/01_introduction}
+\input{sections/02_related_work}
+\input{sections/03_problem_formulation}
+\input{sections/04_diagnosability}
+\input{sections/05_bayesian_inference}
+\input{sections/06_edge_knowledge}
+\input{sections/07_experimental_protocol}
+\input{sections/08_results}
+\input{sections/09_discussion}
+\input{sections/10_conclusion}
+
+% Acknowledgments and author biographies are intentionally omitted until author-provided.
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\EOD
+\end{document}

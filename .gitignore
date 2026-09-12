@@ -1,0 +1,23 @@
+# LaTeX build products
+*.aux
+*.log
+*.out
+*.toc
+*.blg
+*.bbl
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+main.pdf
+
+# Local environments and operating-system files
+build/
+.DS_Store
+__pycache__/
+.venv/
+.env
