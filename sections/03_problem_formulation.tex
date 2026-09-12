@@ -1,51 +1,68 @@
-\section{Dynamic PMU Network and Problem Formulation}
+\section{System and Sparse-PMU Reconstruction Problem}
 \label{sec:problem-formulation}
 
-\subsection{Dynamic Network and Physical Interventions}
+\subsection{Hybrid DAE Plant}
 
-Let $\bm{x}(t) \in \R^{n_x}$ denote dynamic states, $\bm{z}(t) \in \R^{n_z}$ algebraic states, and $\bm{u}(t)$ exogenous inputs. We model the power system over an observation horizon by
+Let $\bm{x}(t)\in\mathbb{R}^{n_x}$ denote differential states, $\bm{z}(t)\in\mathbb{R}^{n_z}$ algebraic states, $\bm{u}(t)$ exogenous inputs, $\bm{q}(t)$ the physical network configuration, and $\bm{\theta}$ physical parameters. The general plant is
 \begin{align}
-  \dot{\bm{x}}(t) &= \bm{f}\bigl(\bm{x}(t),\bm{z}(t),\bm{u}(t),\bm{a}(t);\bm{\theta}\bigr), \label{eq:dae-dynamic}\\
-  \bm{0} &= \bm{g}\bigl(\bm{x}(t),\bm{z}(t),\bm{u}(t),\bm{a}(t);\bm{\theta}\bigr), \label{eq:dae-algebraic}
+ \dot{\bm{x}}(t) &= \bm{f}\!\left(\bm{x},\bm{z},\bm{u},\bm{q};\bm{\theta}\right)+\bm{w}_x(t), \label{eq:dae-dynamic}\\
+ \bm{0} &= \bm{g}\!\left(\bm{x},\bm{z},\bm{u},\bm{q};\bm{\theta}\right), \label{eq:dae-algebraic}\\
+ \bm{y}_{\mathcal P}(t) &= \bm{h}_{\mathcal P}\!\left(\bm{x},\bm{z},\bm{q};\bm{\theta}\right)+\bm{v}(t), \label{eq:dae-measurement}
 \end{align}
-where $\bm{\theta}$ collects network and component parameters. The event variable $\bm{a}(t)$ encodes a physical intervention rather than a learned source label. A candidate can be written as
+where $\bm{w}_x$ and $\bm{v}$ denote process and measurement uncertainty in the local probabilistic model. Equations \eqref{eq:dae-dynamic}--\eqref{eq:dae-measurement} define the long-term Hybrid-DAE framework; the experiments in this paper validate its local linear-Gaussian special case, not the complete nonlinear posterior.
+
+The network algebraic core is
 \begin{equation}
-  a = (c,\ell,\tau,\gamma,\ldots), \label{eq:intervention}
+ \bm{I}=\bm{Y}_{\mathrm{bus}}(\bm q,\bm\theta)\bm V,
+ \qquad S_i=P_i+\mathrm{j}Q_i=V_i I_i^{*}. \label{eq:network-core}
 \end{equation}
-where $c$ is the family, $\ell$ is the affected bus, line, generator, or load, $\tau$ is onset time, and $\gamma$ is a severity or magnitude parameter. The initial candidate families are faults, line outages, generation changes, and load changes. The hypothesis space also includes a no-physical-event reference $H_0$.
-
-A bus, a line, and a PMU are distinct objects. A bus or line may be the physical locus of an intervention; a PMU is a measurement device whose location and channels determine a projection of the network state. This distinction is necessary when a line event is inferred from remote voltage and current phasors.
-
-\subsection{PMU Observations and Integrity States}
-
-At sampling index $k$, let $\Pset_k$ be the PMUs currently available to the inference system. For PMU $p\in\Pset_k$, the observation model is
+Writing $\bm{Y}_{\mathrm{bus}}=\bm G+\mathrm{j}\bm B$ and $V_i=|V_i|e^{\mathrm{j}\vartheta_i}$ gives
+\begin{align}
+ P_i &= |V_i|\sum_j |V_j|\left[G_{ij}\cos(\vartheta_i-\vartheta_j)+B_{ij}\sin(\vartheta_i-\vartheta_j)\right], \label{eq:ac-p}\\
+ Q_i &= |V_i|\sum_j |V_j|\left[G_{ij}\sin(\vartheta_i-\vartheta_j)-B_{ij}\cos(\vartheta_i-\vartheta_j)\right]. \label{eq:ac-q}
+\end{align}
+For a PMU measuring one terminal of branch $(i,j)$, the current operator retains the branch primitive orientation,
 \begin{equation}
- \bm{y}_{p,k} = \mathcal{M}_{p,m_{p,k}}\!\left(\bm{h}_p(\bm{x}_k,\bm{z}_k)\right) + \bm{v}_{p,k}, \label{eq:pmu-measurement}
+ I_{ij}=Y_{ff,ij}V_i+Y_{ft,ij}V_j,
+ \qquad I_{ji}=Y_{tf,ij}V_i+Y_{tt,ij}V_j. \label{eq:terminal-current}
 \end{equation}
-where $\bm{h}_p$ selects or transforms state variables into the local voltage and current phasors, frequency, and rate of change of frequency; $\bm{v}_{p,k}$ is measurement noise; and $m_{p,k}$ is a measurement-integrity state. The operator $\mathcal{M}_{p,m_{p,k}}$ may describe a nominal channel, a missing sample, bad or corrupted data, a communication loss, or recovery. Availability and quality indicators are therefore observations about the measurement process, not alternate values of $a$.
+Replacing \eqref{eq:terminal-current} with a generic bus-injection current would change the measurement contract.
 
-The reporting set may vary as $\Pset_k \ne \Pset_{k+1}$. A PMU joining enlarges the observed projection, whereas a departing PMU removes one. The formulation does not require a fixed ordering or a fixed number of PMU channels. It instead records the identity, observed channels, and integrity state of every member of $\Pset_k$.
+\subsection{Observed and Target Outputs}
 
-\subsection{Reference Event Contract}
-
-The initial benchmark uses the IEEE 39-bus network and eight reference PMUs at buses 2, 5, 6, 10, 19, 22, 29, and 39. Each reporting device supplies three-phase voltage and current phasors, frequency, ROCOF, and an availability indicator. These channels are sufficient to define the measurement operator in \eqref{eq:pmu-measurement}; they are not evidence that all physical sources are directly observable.
-
-The reference data contract contains nine row labels covering normal operation, four physical families, and four integrity/ambiguous conditions. A flat classifier may treat them as mutually exclusive classes, but that representation loses the fact that missing data can coincide with a physical event. Table~\ref{tab:legacy-event-mapping} gives the P07 interpretation. Physical location metrics apply only to scenarios with a declared physical target. Missing or corrupted data receives its own PMU-integrity target; it is not counted as a bus or line localization success. The unknown/mixed label is not credited as open-set physical-source localization unless the hidden intervention composition is independently recorded.
-
-\input{tables/legacy_event_mapping}
-
-\subsection{Inference Objective and Decisions}
-
-Let $\Hset=\{H_0,H_1,\ldots,H_J\}$ contain the physical hypotheses generated from candidate families, locations, onset times, and admissible magnitudes. The central target is the causal posterior
+The study uses the observed-bus set
 \begin{equation}
- p\!\left(H_j \given \mathcal{Y}_{1:k},\mathcal{I}_{1:k},\Pset_{1:k}\right), \qquad H_j\in\Hset, \label{eq:target-posterior}
+ \mathcal P=\{2,5,6,10,19,22,29,39\},\qquad |\mathcal P|=8, \label{eq:pmu-set}
 \end{equation}
-where $\mathcal{Y}_{1:k}$ contains observations through $k$ and $\mathcal{I}_{1:k}$ contains integrity information through $k$. A system that reports a causal decision at $k$ may not use samples from $k+1$ or later to form \eqref{eq:target-posterior}.
-
-The decision layer maps this posterior and a diagnosability assessment into one of three outputs: an exact source, a candidate set, or an abstention. For a declared physical family $c$, a simple candidate set has the form
+and the unobserved set $\mathcal U=\{1,\ldots,39\}\setminus\mathcal P$, with $|\mathcal U|=31$. The synthetic PMU vector stacks rectangular voltage and controlled terminal-current components,
 \begin{equation}
- \mathcal{C}_{c,k} = \left\{H_j\in\Hset_c : p(H_j\given\mathcal{Y}_{1:k},\mathcal{I}_{1:k},\Pset_{1:k}) \geq \eta_{c,k}\right\}, \label{eq:candidate-set}
+ \bm y_{\mathcal P,k}=\operatorname{col}_{p\in\mathcal P}
+ \left[\Re V_{p,k},\Im V_{p,k},\Re I_{p\ell,k},\Im I_{p\ell,k}\right]. \label{eq:pmu-vector}
 \end{equation}
-with an operating threshold $\eta_{c,k}$ specified and validated in the experimental protocol. An exact claim such as \emph{FAULT @ BUS17} requires singleton, adequately supported evidence. A set such as \emph{FAULT @ \{BUS17, BUS18\}} preserves source ambiguity. If neither a unique source nor a useful set is justified, the correct output is \emph{PHYSICAL EVENT --- EXACT SOURCE UNRESOLVED}.
+Frequency and ROCOF remain valid future measurement operators but are not silently treated as independent instantaneous states in the validated experiments.
 
-% Planned Fig. 3: data requirements are recorded in docs/figure-plan.md; no placeholder graphic is inserted.
+The primary target is the hidden complex-voltage field
+\begin{equation}
+ \bm z_{\mathcal U,k}=\operatorname{col}_{i\in\mathcal U}\left[\Re V_{i,k},\Im V_{i,k}\right]\in\mathbb R^{62}. \label{eq:hidden-target}
+\end{equation}
+The target is therefore narrower than the 114 differential coordinates of the reduced dynamic model. Success on \eqref{eq:hidden-target} does not imply that all machine, exciter, governor, and load states are observable or accurately reconstructed.
+
+\subsection{Reconstruction and Adequacy Questions}
+
+Given $\bm y_{\mathcal P,0:k}$, the causal reconstruction problem is to obtain $\widehat{\bm z}_{\mathcal U,k}$ and a defensible uncertainty model using no sample after time $k$. The paper asks four questions:
+\begin{enumerate}
+ \item Does a structural functional-observability diagnostic predict which hidden outputs are difficult to reconstruct?
+ \item How much do snapshot electrical constraints, causal dynamics, and fixed-lag smoothing each contribute under nominal operation?
+ \item Can nominal uncertainty and colored innovations be modeled without damaging hidden-state inference?
+ \item When the nonlinear plant changes, is excess error caused by lost information or by stale centering and linearization, and can that inadequacy be detected from observed PMUs?
+\end{enumerate}
+
+For trajectory $r$ with $T_r$ frames, the primary total vector error is
+\begin{equation}
+ \operatorname{TVE}^{(r)}=\frac{1}{T_r|\mathcal U|}
+ \sum_{k=1}^{T_r}\sum_{i\in\mathcal U}
+ \frac{|\widehat V_{i,k}-V_{i,k}|}{\max(|V_{i,k}|,\epsilon)}, \label{eq:tve}
+\end{equation}
+with TVE reported as a percentage and $\epsilon$ used only as a numerical guard. Magnitude RMSE and wrapped angle RMSE are reported separately. Confidence intervals treat a complete nonlinear trajectory or rebuilt physical plant as the independent unit; PMU frames are not counted as independent replicates.
+
+Physical-event support variables, measurement-integrity states, and external-data transfer belong to the broader Hybrid-DAE program, but they are outside the empirical claims of this paper. This boundary keeps the present results tied to reconstructed voltages, nominal calibration, and physical model mismatch.

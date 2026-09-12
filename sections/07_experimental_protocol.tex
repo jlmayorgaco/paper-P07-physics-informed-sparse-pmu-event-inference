@@ -1,44 +1,27 @@
-\section{Experimental Design and Reproducibility}
-\label{sec:experimental-protocol}
+\section{Nominal Reconstruction and Structural Evidence}
+\label{sec:nominal-results}
 
-\subsection{Evaluation Principle and Shared Contract}
+\subsection{What the Sparse PMUs Recover}
 
-The experiments must test the claims made by the framework rather than reward a favorable split. The common testbed is the IEEE 39-bus system with PMUs at buses $\{2,5,6,10,19,22,29,39\}$. Each released campaign must record the network and dynamic-model version, PMU measurement operator, sampling and windowing policy, event generator, random seeds, operating-point split, noise and integrity model, candidate space, thresholds, hardware, and complete train/development/test manifests. Event instances generated from the same physical source or scenario family must not leak across a source-generalization split.
+Table~\ref{tab:nominal-results} reports the frozen nominal TEST results. Remaining at the equilibrium (B0) gives \BZeroTVE{} mean hidden-bus TVE. Applying the same PMU evidence through the snapshot electrical update (B1) reduces this to \BOneTVE{}, showing that the dominant nominal gain comes from the measurement-constrained physical map rather than temporal recurrence. The causal Kalman recursion (B2) reaches \BTwoTVE{}, a further \BTwoRelativeImprovement{} reduction relative to B1. Its 95\% trajectory-bootstrap interval overlaps that of B1, so the evidence supports a modest temporal improvement rather than a categorical advantage.
 
-ANDES provides one simulation implementation for nominal and shifted campaigns \cite{cui2021hybrid}; a restricted PowerDynamics.jl implementation provides an independent simulator path for transfer testing \cite{plietzsch2022powerdynamics}. Cross-simulator agreement is not assumed. The versioned model differences, unsupported controls, and any mapping required to align intervention semantics must be reported before comparing results.
+\input{tables/generated/nominal_results}
 
-\subsection{Campaign A: Source Generalization}
+Figure~\ref{fig:nominal-reconstruction}(a) makes the scale separation visible. The equilibrium baseline is more than one order of magnitude worse than either measurement-updated estimator. This is not a comparison against learned or nonlinear DAE estimators; it is a controlled decomposition of equilibrium centering, instantaneous PMU conditioning, and causal temporal propagation within one local model.
 
-Campaign~A is the primary test of physical source inference. The physical assets used for test localization are excluded from every source-labeled training and tuning partition. The exclusion applies to source identifiers, event-specific localizers, candidate-ranking features trained on source labels, and development-set threshold selection. A frozen manifest must identify held-out buses, lines, generators, and loads; the event families, operating conditions, and severity ranges may be shared only as permitted by the declared generalization setting.
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/generated/nominal_reconstruction.pdf}
+\caption{Nominal reconstruction and its structural explanation. (a) Mean hidden-bus TVE on the same \NominalTestCount{} nonlinear TEST trajectories; error bars are 95\% bootstrap intervals over trajectories. (b) Per-bus causal Kalman TVE versus the horizon-180 functional residual exported before TEST scoring. Labels identify the five buses with largest empirical TVE.}
+\label{fig:nominal-reconstruction}
+\end{figure*}
 
-The campaign compares exact source accuracy, Top-3 accuracy, electrical-distance error when a distance is meaningful, joint event-and-source correctness, candidate-set coverage and size, posterior entropy, and time to exact or resolved source identification. It must report failures by family and asset type. A high score on events from known assets is reported separately and is not substituted for this campaign.
+\subsection{Does Functional Structure Predict Error?}
 
-\subsection{Campaign B: Dynamic Observability}
+At horizon 180, the finite-horizon matrix has numerical rank 39 of 114 and the aggregate target residual is nonzero. Accordingly, the experiment does not declare exact full-state or exact functional observability. The preregistered bus residual nevertheless correlates with B2 TVE at $\rho=\FunctionalSpearman$ (Spearman), as shown in Fig.~\ref{fig:nominal-reconstruction}(b). The same qualitative relation appears for B1. This supports the narrower claim that the local structural diagnostic ranks empirical difficulty better than chance under the nominal benchmark.
 
-Campaign~B evaluates the reporting-set sequence $8\rightarrow7\rightarrow6\rightarrow4$ PMUs and at least one controlled sensor-addition case. For each cardinality, compare random PMU loss with removal of PMUs selected as information-critical by the pairwise quantity in \eqref{eq:pairwise-information}. Report the change in minimum and pairwise diagnosability, candidate-set behavior, localization metrics, and time to identification before and after each membership transition.
+The relationship is informative but incomplete. Bus 36 has the largest structural residual, whereas the largest B2 errors occur at buses 33, 34, 20, 37, and 38. Thus the structural projector captures one source of difficulty but not the nonlinear excitation distribution, estimator covariance, or all numerical conditioning effects. This counterexample is precisely why the residual is reported as a diagnostic rather than converted into a binary observability certificate.
 
-The expected theoretical direction from Proposition~\ref{prop:monotonicity} is conditional on its assumptions. The campaign therefore tests, rather than assumes, whether the modeled diagnosability score predicts empirical ambiguity and error in the nonlinear, noisy system. A sensor addition that does not materially reduce ambiguity is informative evidence if its predicted contribution was small or its assumptions fail.
+\subsection{Does Retrospective Smoothing Help?}
 
-\subsection{Campaign C: Physics-Grounded Knowledge Transfer}
-
-Campaign~C is a controlled proof of concept for Section~\ref{sec:edge-knowledge}. First, hold out an event phenomenon or knowledge item and evaluate it as unknown or weakly modeled. Second, simulate trusted confirmation and construct $\mathcal{K}_e$ from the confirmed physical hypothesis, context, uncertainty, and provenance. Third, evaluate new realizations at another operating point, under different noise, and from a different PMU perspective. One condition should disconnect the original discovering PMU.
-
-The required comparisons are no update, a conventional learned update or a suitable federated-learning/knowledge-distillation-style comparator if it can be implemented reproducibly, and the physics-grounded transfer. Report forward transfer, retained old-event performance, forgetting, candidate-set behavior, and performance after the discovering PMU is removed. If a conventional comparator cannot meet the shared contract, report the omission and do not imply a comparison.
-
-\subsection{Campaign D: Operational Robustness}
-
-Campaign~D combines ANDES nominal data, ANDES operating or parameter shift, restricted PowerDynamics.jl transfer, measurement noise, missing PMUs, and long normal exposure. It evaluates a continuous causal scan rather than only presegmented event windows. Detection precision, recall, F1, macro-F1 where classes are defined, false alarms per hour, event recall, joint alarm precision, joint F1, detection delay, and source-resolution delay must be reported with unambiguous denominators.
-
-RAW0001 may appear only as a known organizer-provided reference simulation and retrospective evaluation. It is not independent external validation and must not be pooled with cross-simulator or source-generalization statistics.
-
-\subsection{Baselines, Legacy Evidence, Resources, and Release Artifacts}
-
-The planned baseline suite is: B0, a legacy physics-guided hierarchical ExtraTrees method; B1, a compact sequential ExtraTrees variant; B2, a legacy hybrid learned candidate ranker; B3, a simple physical residual or Zbus-style ranker; B4, a dynamic estimator such as EKF, UKF, moving-horizon estimation, or a carefully documented equivalent; and B5, a reproducible topology-aware, open-set, or graph-learning baseline. The proposed DAE plus learned-discrepancy Bayesian framework is denoted P. Each campaign must state which baselines and ablations are actually implemented; the present manuscript does not claim implementation status for any of them.
-
-The legacy source archive provides useful B0/B1 feature families: local robust statistics, multiscale temporal and innovation summaries, voltage/current/frequency/ROCOF and power-proxy descriptors, cross-PMU or electrical descriptors, and integrity indicators. P07 reuses such information only through an explicit, versioned schema. For hybrid ablations, engineered features are computed from the candidate-specific physical residual rather than used as an unqualified source-label shortcut. Historical baseline results are not reported here because their archive, feature variants, source split, and simulator contract have not yet been imported as a frozen P07 artifact.
-
-The main ablation contrasts ML-only recognition, physics-only intervention inference, physics plus engineered residual features, physics plus a source-agnostic learned discrepancy, the corresponding uncertainty model, and diagnosability-aware abstention. Every variant must use the same source-holdout, development, test, threshold, and temporal-exposure contract. The learned discrepancy is eligible only when it is fitted without target-source-label leakage and evaluated on the frozen held-out assets.
-
-Where measurement is available, report inference time, CPU load, memory, bytes per message, messages per event, and communication volume. Artifact releases should include configurations, simulator adapters, PMU operator calibration, event manifests, source-holdout manifests, environment files, seeds, metric definitions, raw aggregate counts, and scripts that regenerate paper tables and figures. Do not commit large raw datasets or credentials.
-
-% Planned Fig. 8: domain-shift, false-alarm/delay, and resource data requirements are recorded in docs/figure-plan.md.
+Across lags from one frame to 2~s, the exact fixed-lag smoother never improves mean TVE over lag zero; every positive lag is slightly worse in the frozen results. Figure~\ref{fig:temporal-uncertainty}(a) shows the full curve. In this regime, current voltage and terminal-current phasors already dominate the hidden-voltage update, and additional future samples do not compensate for the local-model approximation. The negative result rules out latency as a useful trade for accuracy under the tested nominal perturbations.

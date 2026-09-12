@@ -1,17 +1,20 @@
+% ieeeaccess.cls reuses \year as a metadata setter. Preserve the TeX primitive
+% so PGF/TikZ can initialize its deterministic machinery while loading.
+\let\PSevenTeXYear\year
 \documentclass{ieeeaccess}
 
 \input{preamble}
+\input{generated/results_macros}
 
 \begin{document}
 \input{metadata}
 
-% This provisional abstract must be rewritten after the experimental results are frozen.
 \begin{abstract}
-Sparse phasor measurement unit (PMU) networks can observe the consequences of a power-system disturbance without directly observing its physical source. This paper develops a research framework for physics-informed Bayesian event inference and localization under sparse, time-varying PMU observation. Rather than treating an event as a fixed source label, the framework represents it as a physical intervention in a differential-algebraic network model and separates that intervention from measurement-integrity states. It combines causal innovation evidence, physical-hypothesis screening, nonlinear refinement, a source-agnostic learned discrepancy likelihood, and posterior candidate sets that permit an exact source decision or an explicit unresolved result. A dynamic diagnosability measure relates the presently available PMUs to pairwise hypothesis separation and source ambiguity. The manuscript also specifies a conditional concept for transferring operator-confirmed physical-event knowledge across PMU nodes through the network model rather than copying local waveforms. The planned evaluation covers held-out-source generalization, physics-only versus hybrid inference, PMU join and loss, cross-simulator and operating-condition shifts, continuous causal scanning, and controlled knowledge transfer. Quantitative claims are intentionally deferred until these experiments are completed and frozen.
+Sparse phasor measurement unit (PMU) deployments leave much of the network voltage field unmeasured, and accurate reconstruction can fail when the estimator's physical model becomes stale. This paper formulates recovery of unobserved complex bus voltages as a functional-observability problem and evaluates physics-based local Gaussian estimators on an audited PowerDynamics IEEE 39-bus benchmark. \ObservedPMUCount{} PMUs observe voltage and terminal-current phasors while the target comprises the remaining \HiddenBusCount{} bus voltages. On \NominalTestCount{} frozen nonlinear test trajectories, a causal Kalman estimator reduces mean hidden-bus total vector error (TVE) from \BZeroTVE{} for the nominal-equilibrium baseline to \BTwoTVE{}; a snapshot weighted least-squares estimator reaches \BOneTVE{}. A preregistered functional-observability residual correlates with per-bus Kalman TVE (Spearman $\rho=\FunctionalSpearman$), whereas fixed-lag smoothing provides no improvement over zero lag in the tested regime. A separate campaign rebuilds \MismatchMainCount{} nonlinear plants over seven physical mismatch families and adds \MismatchRefinementCount{} refinement cases. At the largest tested scale, network and operating-point mismatch increase median TVE by factors of \NetworkMismatchRatio{} and \OperatingMismatchRatio{}, respectively. Oracle recentering and relinearization recover most of this excess error, but a causal offset-only recentering proxy closes a median \OnlineClosurePercent{} of the oracle gap. The evidence therefore identifies stale physical centering and linearization, rather than PMU count alone, as the dominant limitation under the tested shifts and motivates stronger leakage-safe physical adaptation before residual learning or event inference.
 \end{abstract}
 
 \begin{keywords}
-Bayesian inference, diagnosability, event localization, phasor measurement units, power-system dynamics, sparse observability.
+dynamic state estimation, functional observability, model mismatch, phasor measurement units, state reconstruction, uncertainty calibration.
 \end{keywords}
 
 \titlepgskip=-21pt
@@ -29,6 +32,7 @@ Bayesian inference, diagnosability, event localization, phasor measurement units
 \input{sections/10_conclusion}
 
 % Acknowledgments and author biographies are intentionally omitted until author-provided.
+\IEEEtriggeratref{15}
 \bibliographystyle{IEEEtran}
 \bibliography{references}
 

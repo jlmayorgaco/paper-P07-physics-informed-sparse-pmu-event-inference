@@ -1,63 +1,63 @@
-\section{Causal Bayesian Inference and Distributed Fusion}
-\label{sec:bayesian-inference}
+\section{Local Physics-Based Estimation and Diagnostics}
+\label{sec:estimation}
 
-\subsection{Causal Coarse-to-Fine Inference}
+\subsection{Nominal Estimator Hierarchy}
 
-The proposed computational path separates rapid screening from costly physical refinement:
+All estimators use the same equilibrium $\bm y_0$, hidden-voltage center $\bm z_{\mathcal U,0}$, sampled dynamics $\bm A_d$, PMU map $\bm C$, and hidden-output map $\bm L_{\mathcal U}$. This shared model isolates the value of measurement updating and temporal propagation.
+
+The equilibrium baseline B0 returns
 \begin{equation}
- \begin{aligned}
-  \text{PMU stream} &\rightarrow \text{causal change evidence} \\
-  &\rightarrow \text{physical screening} \rightarrow \text{Top-}K\ \text{refinement} \\
-  &\rightarrow \text{candidate set}.
- \end{aligned} \label{eq:inference-path}
+ \widehat{\bm z}^{\mathrm{B0}}_{\mathcal U,k}=\bm z_{\mathcal U,0}. \label{eq:b0}
 \end{equation}
-At time $k$, a causal innovation or change statistic first identifies windows that merit analysis. Candidate generation then enumerates feasible family, location, onset, and magnitude ranges subject to the current topology and operating context. A fast physical residual or sensitivity calculation ranks candidates. Only the leading $K$ candidates undergo nonlinear DAE simulation, state-estimation, or moving-horizon refinement. This division is computationally motivated; it does not redefine an old ranker as a new method.
+It measures how much of the score can be obtained by remaining at the nominal power-flow solution.
 
-\subsection{Physics-Informed Discrepancy Likelihood}
+The snapshot estimator B1 computes the minimum-variance linear update independently at every frame,
+\begin{align}
+ \bm K_{\mathrm{WLS}}&=\bm P_0\bm C^{\mathsf T}
+ \left(\bm C\bm P_0\bm C^{\mathsf T}+\bm R\right)^{-1}, \label{eq:wls-gain}\\
+ \widehat{\delta\bm x}^{\mathrm{B1}}_k&=\bm K_{\mathrm{WLS}}(\bm y_k-\bm y_0), \qquad
+ \widehat{\bm z}^{\mathrm{B1}}_{\mathcal U,k}=\bm z_{\mathcal U,0}+\bm L_{\mathcal U}\widehat{\delta\bm x}^{\mathrm{B1}}_k. \label{eq:wls-update}
+\end{align}
+B1 uses network-constrained cross-covariance but no state carried from frame $k-1$.
 
-For each retained physical hypothesis $H_j$, the DAE and its fitted nuisance quantities produce a candidate-specific PMU prediction $\hat{\bm{y}}^{\mathrm{phys}}_{j,k}$. The proposed hybrid layer does not predict a source label. Instead, it conditions a learned discrepancy on residual evidence, the operating context $\chi_k$, and the PMUs that are presently available. With $\bm{\Xi}_{j,1:k}$ denoting causal summaries such as residual peaks and energy, multiscale innovations, PMU disagreement, phase coherence, and integrity descriptors, the proposed observation model is
+The causal Kalman estimator B2 applies the classical linear-Gaussian recursion \cite{kalman1960}:
+\begin{align}
+ \widehat{\bm x}_{k|k-1}&=\bm A_d\widehat{\bm x}_{k-1|k-1}, \label{eq:kf-predict-state}\\
+ \bm P_{k|k-1}&=\bm A_d\bm P_{k-1|k-1}\bm A_d^{\mathsf T}+\bm Q, \label{eq:kf-predict-cov}\\
+ \bm\nu_k&=(\bm y_k-\bm y_0)-\bm C\widehat{\bm x}_{k|k-1}, \label{eq:innovation}\\
+ \bm S_k&=\bm C\bm P_{k|k-1}\bm C^{\mathsf T}+\bm R, \label{eq:innovation-cov}\\
+ \bm K_k&=\bm P_{k|k-1}\bm C^{\mathsf T}\bm S_k^{-1}, \label{eq:kf-gain}\\
+ \widehat{\bm x}_{k|k}&=\widehat{\bm x}_{k|k-1}+\bm K_k\bm\nu_k. \label{eq:kf-update}
+\end{align}
+The covariance update uses the Joseph form. The hidden estimate is $\bm z_{\mathcal U,0}+\bm L_{\mathcal U}\widehat{\bm x}_{k|k}$. B2 is causal because only $\bm y_{0:k}$ enters the result at $k$.
+
+B3 is an exact fixed-lag Gaussian smoother, following the linear Gaussian backward-recursion principle in \cite{rauch1965smoothing}, evaluated at lags $\ell\in\{0,1,3,5,10,15,30,60\}$ frames. It uses measurements through $k+\ell$ to refine the estimate at $k$ and is therefore retrospective by $\ell/30$ seconds. Dense and cached implementations agree numerically on representative lags. B3 tests whether temporal information beyond the causal update improves the hidden-voltage target; it is not used to support a real-time claim.
+
+\subsection{Marginal Calibration and Colored Discrepancy}
+
+For the hidden two-component voltage error at bus $i$, B2 provides
 \begin{equation}
- \begin{aligned}
-  \bm{y}_k &= \hat{\bm{y}}^{\mathrm{phys}}_{j,k} + \bm{\delta}_{\phi}(\bm{\Xi}_{j,1:k},\chi_k,\Pset_k) + \bm{\epsilon}_{j,k}, \\
-  \bm{\epsilon}_{j,k} &\sim \mathcal{N}\!\left(\bm{0},R_k+\bm{\Sigma}_{\phi}\right).
- \end{aligned}
- \label{eq:hybrid-discrepancy}
+ \bm\Sigma_{i,k}=\bm L_i\bm P_{k|k}\bm L_i^{\mathsf T}. \label{eq:hidden-covariance}
 \end{equation}
-The physical model therefore explains the candidate trajectory, whereas $\bm{\delta}_{\phi}$ and $\bm{\Sigma}_{\phi}$ are intended to represent structured model mismatch and heteroscedastic uncertainty. Their source-agnostic role is a design constraint, not an established generalization result: training, feature fitting, and threshold selection must obey the source-holdout contract in Section~\ref{sec:experimental-protocol}. Campaigns A and D must test whether this term improves inference relative to physics-only and ML-only alternatives.
-
-For each retained $H_j$, refinement estimates nuisance quantities such as pre-event state, onset adjustment, severity, and a bounded model-discrepancy term. Let $\mathcal{Y}_{1:k}$ and $\mathcal{I}_{1:k}$ denote all data and integrity information available through $k$. The update is
+The original covariance is U0. A two-block temperature model U2 is fitted on an independent calibration split:
 \begin{equation}
- \begin{aligned}
- p(H_j\given\mathcal{Y}_{1:k},\mathcal{I}_{1:k},\Pset_{1:k}) &\propto p(\mathcal{Y}_{1:k}\given H_j,\mathcal{I}_{1:k},\Pset_{1:k})\\
- &\quad\times p(H_j\given\mathcal{I}_{1:k},\Pset_{1:k}).
- \end{aligned} \label{eq:bayes-update}
+ \bm\Sigma^{\mathrm{U2}}_{i,k}=\bm T\bm\Sigma_{i,k}\bm T^{\mathsf T},\qquad
+ \bm T=\operatorname{diag}(\sqrt{\tau_{\Re}},\sqrt{\tau_{\Im}}). \label{eq:temperature}
 \end{equation}
-The likelihood must be a stated probabilistic measurement model, such as the local Gaussian approximation in \eqref{eq:gaussian-observation}, the hybrid form in \eqref{eq:hybrid-discrepancy}, or a validated heavy-tailed alternative. A learned score may help screen hypotheses, but it is not called a posterior unless it is calibrated as part of \eqref{eq:bayes-update}.
+The temperatures minimize Gaussian negative log likelihood (NLL) on calibration data and are frozen before TEST. Coverage, NLL, normalized innovation squared (NIS), and temporal innovation correlation are reported separately; nominal marginal coverage alone is not called complete calibration.
 
-Every quantity in \eqref{eq:inference-path}--\eqref{eq:bayes-update} is restricted to samples through $k$. Offline smoothing, retrospective onset estimation, and future labels may be useful for benchmarking but must be labeled noncausal and must not be used to support a streaming-delay claim.
-
-\subsection{Local Evidence and Fusion Assumptions}
-
-For a PMU $p\in\Pset_k$, let $\mathcal{D}_{p,k}$ collect the available PMU history and integrity information used to condition its local observation model. Define the conditional local log-likelihood ratio
+The residual study considers a latent Gauss--Markov process
 \begin{equation}
- \ell_{p,j,k}=\log\frac{p(\bm{y}_{p,k}\given H_j,\mathcal{D}_{p,k})}{p(\bm{y}_{p,k}\given H_0,\mathcal{D}_{p,k})}. \label{eq:local-evidence}
+ \bm c_{k+1}=\bm F_c\bm c_k+\bm\eta_k. \label{eq:discrepancy-state}
 \end{equation}
-If local residuals are conditionally independent after conditioning on the common state estimate, integrity states, and model-discrepancy variables, their evidence adds:
+In D2-M, $\bm c_k$ enters the PMU measurement residual through a calibration-fitted low-rank basis. In D2-P, it enters a sparse physical process dictionary. Basis, rank, $\bm F_c$, and latent covariance are selected using calibration records only. The experiment asks whether the observed low-rank structure improves reconstruction, hidden uncertainty, or innovation whiteness. It does not assume that a lower innovation autocorrelation is sufficient.
+
+\subsection{Model-Adequacy Statistic and Recentring Ablations}
+
+Let $\bm\mu_{\nu}$ and $\bm\Sigma_{\nu}$ be the mean and shrunk covariance of B2 innovations on the nominal calibration set. The per-frame adequacy statistic is the five-frame trailing mean of
 \begin{equation}
- L_{j,k}=\sum_{p\in\Pset_k}\ell_{p,j,k}. \label{eq:fused-evidence}
+ a_k=(\bm\nu_k-\bm\mu_{\nu})^{\mathsf T}\bm\Sigma_{\nu}^{-1}(\bm\nu_k-\bm\mu_{\nu}). \label{eq:adequacy-score}
 \end{equation}
-The posterior recursion combines $L_{j,k}$ with the prior odds and any temporal transition model. This factorization is not a novelty claim; it is a transparent implementation assumption that supports a PMU joining or leaving without changing the dimensionality of a monolithic learned input.
+Mismatch labels and hidden truth do not enter \eqref{eq:adequacy-score}; hidden truth is used only after inference to label frames whose hidden TVE exceeds the frozen evaluation threshold. AUROC and AUPRC therefore measure whether observed innovations anticipate unacceptable hidden error, not whether the detector identifies a mismatch family.
 
-Conditional independence can fail because remote PMU innovations share a network state, timing error, or a common-mode communication fault. The implementation should therefore either condition on shared latent variables, retain covariance terms in a centralized refinement, or use a conservative fusion correction. Reporting a sum of local scores without declaring this assumption would not establish distributed Bayesian inference.
-
-\subsection{Integrity-Aware Decision Logic}
-
-The inference system evaluates physical and measurement-side explanations separately. A physical hypothesis may be accompanied by one or more integrity states, but it is not replaced by them. Before a source decision, the system compares physical-event likelihoods with hypotheses such as PMU loss, corrupted channels, and concurrent physical-plus-measurement anomalies. It then reports the physical candidate set together with integrity flags and their uncertainty.
-
-The final decision uses the posterior and the ambiguity test from Section~\ref{sec:diagnosability}. It produces an exact source only when one candidate meets the operating threshold and competing candidates are adequately separated. Otherwise, it returns the retained candidate set or an explicit unresolved-source result. This logic makes abstention a first-class output rather than a retrospective explanation for an incorrect forced label.
-
-\subsection{Implementation Boundary}
-
-The architecture is intentionally compatible with legacy physics-guided ExtraTrees detectors, compact sequential feature baselines, learned candidate rankers, physical residual rankers, and dynamic estimators. The legacy features may be reused only as candidate-specific residual summaries, not as an unqualified source-label shortcut. The proposed contribution lies in the evidence contract that connects these alternatives: source-label exclusion in Campaign~A, causal data availability, current PMU membership, explicit likelihood assumptions, a source-agnostic learned discrepancy, and a diagnosability-aware abstention decision. Runtime, communication volume, calibration, and the value of the learned discrepancy remain experimental questions; the paper does not describe the framework as real-time, calibrated, or distributed in deployment until those measurements and assumptions are demonstrated.
-
-% Planned Fig. 2: Measurement, Inference, and Knowledge planes are specified in docs/figure-plan.md.
+Two evaluation-only or adaptive variants diagnose the failure mechanism. R1 replaces the nominal equilibrium with the true plant equilibrium and is explicitly oracle. R2-A estimates an eight-dimensional grouped observed-bus voltage offset using a 60-frame trailing window, nominal matrices, ridge regularization, and only PMU measurements. It is a preregistered linearized static-MAP proxy, not a nonlinear AC power-flow or KKT solve. Its center/state cross-covariance is neglected. Comparing frozen B2, R1, and R2-A tests whether a simple causal offset correction captures the oracle recentering benefit.

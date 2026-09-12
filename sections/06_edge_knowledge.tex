@@ -1,26 +1,51 @@
-\section{Physics-Grounded Edge Knowledge}
-\label{sec:edge-knowledge}
+\section{Validated Benchmark and Experimental Protocol}
+\label{sec:experimental-protocol}
 
-\subsection{From Local Observation to Validated Experience}
+\subsection{Benchmark Provenance and Numerical Gates}
 
-A PMU observes a location-dependent projection of a system-wide disturbance. Consequently, an event waveform discovered at one PMU should not be copied literally to another node. The receiving PMU has a different transfer path, operating context, measurement operator, and integrity history. A useful shared object must therefore preserve the physical explanation and allow each node to derive its own expected local manifestation through the network model.
+The primary plant uses Julia 1.11.9, PowerDynamics.jl 5.0.0, and NetworkDynamics.jl 1.3.0 \cite{plietzsch2022powerdynamics}. It contains 39 buses, 46 branches, 19 loads, 10 sixth-order Sauer--Pai machines, nine AVR Type-I controllers, and nine TGOV1 governors. The descriptor realization has 192 coordinates: 114 differential and 78 algebraic. These parameters are package-defined tutorial data. We therefore classify the plant as a numerically validated pedagogical benchmark rather than an authoritative representation of an external grid.
 
-After trusted operator or oracle confirmation, we define a validated event knowledge object as
+The validation ladder prevents estimator performance from hiding an upstream modeling error. A same-plant static translation was audited after correcting tap orientation, shunts, line charging, and full-$Y_{\mathrm{bus}}$ injection accounting. Final maximum discrepancies were $1.14\times10^{-13}$~pu for a $Y_{\mathrm{bus}}$ element, $1.73\times10^{-7}$~pu for voltage magnitude, $1.40\times10^{-5}$ degrees for angle, and $1.71\times10^{-3}$~MVA for terminal flow. The controlled PMU operator then achieved maximum complex-voltage and analytic/backend terminal-current discrepancies of $2.71\times10^{-7}$ and $1.43\times10^{-14}$~pu, respectively.
+
+Dynamic validation checks the equilibrium, local modes, nonlinear trajectories, and linearization. The DAE equilibrium residual is $4.66\times10^{-13}$. After removing the reference mode, the least-damped physical pair is $-0.09818\pm\mathrm{j}0.42948$~s$^{-1}$. Nonlinear Rodas5P simulations remain finite for the audited perturbations. Amplitude sweeps satisfy
 \begin{equation}
- \mathcal{K}_e=\left\{a_e,\,\chi_e,\,\Delta_e,\,\Sigma_e,\,q_e,\,\pi_e\right\}, \label{eq:knowledge-object}
+ \|\bm y_{\mathrm{NL}}(\epsilon)-\bm y_{\mathrm{LIN}}(\epsilon)\|_2\propto\epsilon^p, \label{eq:linearization-order}
 \end{equation}
-where $a_e$ is the validated physical hypothesis, $\chi_e$ is operating context, $\Delta_e$ is a physical or model-discrepancy signature, $\Sigma_e$ represents uncertainty, $q_e$ is validation confidence, and $\pi_e$ is provenance. Provenance includes the simulation or observation source, model version, confirming authority, timestamp, and the conditions under which the item is valid. The object does not convert an unverified alert into knowledge; it is created only after the confirmation criterion is met.
+with fitted slopes 1.9820, 1.9987, and 2.0003 for representative state, governor-reference, and load perturbations, consistent with first-order linearization error.
 
-The transfer operation evaluates the physical intervention and context in the receiving model, then maps the predicted local state through that PMU's measurement operator. The recipient can use the resulting local expectation as a prior, a screening template, or a model-discrepancy correction with uncertainty. The transfer is thus event-level and model-mediated: \emph{share the physical experience, not the waveform}.
+\begin{table*}[t]
+\caption{Frozen experimental contracts. A complete nonlinear trajectory or rebuilt plant is the independent unit.}
+\label{tab:experimental-contracts}
+\centering
+\footnotesize
+\begin{tabularx}{\textwidth}{lXllll}
+\toprule
+Study & Purpose and data & Split & Units & Frames & Model use \\
+\midrule
+Structural audit & Local VI-only target residual for 31 hidden buses & preregistered & 31 buses & horizons 0--180 & frozen equilibrium \\
+Nominal reconstruction & Governor, load, and combined nonlinear perturbations & 20 DEV / 100 TEST & trajectories & 91 at 30 Hz & frozen B0--B3 \\
+Nominal calibration & New nonlinear nominal trajectories & 30 CAL & trajectories & 91 at 30 Hz & fit U1/U2 and discrepancy only \\
+Physical mismatch & Seven families, seven scales, 20 seeds & frozen TEST & 980 rebuilt plants & 91 at 30 Hz & frozen B1/B2/U2 \\
+Breakpoint refinement & New seeds in transition bands & frozen TEST & 175 rebuilt plants & 91 at 30 Hz & frozen B2 \\
+Causal recentering & M1/M2/M6/M7 with disjoint new seeds & 160 DEV / 320 TEST & rebuilt plants & 91 at 30 Hz & select on DEV; score TEST once \\
+\bottomrule
+\end{tabularx}
+\end{table*}
 
-\subsection{Membership Changes and Local Evidence}
+\subsection{Nominal Reconstruction and Calibration}
 
-Each active PMU may retain local residual summaries, integrity assessments, and a compact reference to $\mathcal{K}_e$. When a node joins, it receives the knowledge object and instantiates a local prediction under its current measurement configuration. When a node leaves, the global inference retains evidence already fused but removes that node from subsequent local-evidence updates. This behavior follows the membership model in Section~\ref{sec:problem-formulation}; it does not require replaying the original discovering node's waveform.
+The nominal dataset contains 20 development and 100 test trajectories, each sampled at 30~Hz for 3~s. Perturbations are normal-operation changes to governor references, loads, or their combination. The equilibrium, linear model, $\bm P_0=10^{-2}\bm I$, $\bm Q=10^{-6}\bm I$, and $\bm R=10^{-6}\bm I$ are frozen before TEST. B0, B1, B2, and all B3 lags are evaluated on the same trajectories. A separate 30-trajectory calibration split fits U1/U2 temperatures and low-rank discrepancy variants; TEST is not used for selection.
 
-The proposed knowledge object is deliberately narrower than unrestricted federated model exchange. It does not assume that arbitrary learned weights, raw PMU streams, or private labels can be shared safely or that such exchange would be useful for a new PMU perspective. Campaign~C tests whether the proposed representation transfers information under controlled conditions. Until then, it is a falsifiable design rather than an established continual-learning result.
+Hidden truth is used only for post-hoc metrics. The eight observed buses are excluded from every primary reconstruction score. The phasor prediction is formed as $\bm V_0+\Delta\bm V$, and angle error is wrapped using $\operatorname{atan2}(\sin\Delta\vartheta,\cos\Delta\vartheta)$. These rules correct an earlier exploratory implementation that incorrectly interpreted $\angle\Delta V$ as the absolute angle; no superseded result from that implementation is retained.
 
-\subsection{Operational Feedback Boundary}
+\subsection{Physical Mismatch Campaign}
 
-The inference question, \emph{what happened?}, is separate from the operational question, \emph{how severe was it?} The former concerns physical source and uncertainty; the latter may depend on protection context, asset condition, operator priorities, and consequence. Operator severity feedback can be stored as future metadata in $\mathcal{K}_e$, but it is not treated as a labeled severity-learning contribution in this manuscript without a dedicated protocol and evidence.
+For each mismatch case, a fresh PowerDynamics plant is rebuilt from copied source tables, followed by power flow, dynamic initialization, and nonlinear simulation. The original package CSVs remain hash-identical. The seven families are network $R/X/B$ (M1), machine parameters (M2), governor parameters (M3), AVR parameters (M4), ZIP/load model (M5), operating-point redispatch (M6), and coupled mismatch (M7). Stress scale is $m\in\{0,0.25,0.5,0.75,1.0,1.25,1.5\}$. These are engineering stress-test ranges, not probability priors.
 
-% Planned Fig. 7: knowledge acquisition and cross-node transfer data requirements are recorded in docs/figure-plan.md.
+All 980 main-grid cases and all 175 refinement cases passed power-flow, initialization, and time-domain acceptance. B1, B2, U0, U2, and the adequacy score are frozen from nominal data. Bootstrap intervals use seeds as independent units. Breakpoints in this paper are not inferred from the narrative report: the generated plots use the frozen per-case table directly because a prior refined breakpoint mixed aggregation definitions.
+
+\subsection{Oracle and Causal Adaptation Contracts}
+
+The oracle subset compares the frozen estimator with true-equilibrium recentering and true local relinearization on the same mutated trajectories. Oracle quantities are evaluation-only. The causal recentering study uses new DEV seeds 101--110 and TEST seeds 201--220, disjoint from all earlier datasets. Its window, cadence, regularization, and activation threshold are selected on DEV and frozen before TEST. No event labels, hidden state, or mismatch family enter the R2-A estimate. Rejected or nonconvergent cases would remain in the denominator; none occurred in the reported physical mismatch grids.
+
+All numerical tables and empirical figures are regenerated from the hashed snapshot under \texttt{generated/frozen}. The build script asserts 100 nominal test trajectories, 980 main-grid B2 cases, and the expected adaptation closure range before producing manuscript assets.

@@ -1,34 +1,45 @@
-\section{Results}
+\section{Uncertainty, Physical Mismatch, and Adaptation}
 \label{sec:results}
 
-No proposed-method numerical result is reported in this initial draft. This section fixes the questions, denominators, and comparisons that future frozen experiments must answer. It must not be populated with expected values, simulated example scores, or historical-system results unless their archived source, split contract, and provenance are imported and cited separately.
+\subsection{Marginal Calibration Does Not Whiten Innovations}
 
-\subsection{Unseen-Source Inference and Paradigm Comparison}
+The nominal B2 covariance is highly conservative: U0 covers essentially all real and imaginary errors at the nominal 95\% level. Fitting two temperatures on 30 independent CAL trajectories improves TEST hidden NLL from $-13.477$ to \UtwoNLL{} and gives \UtwoCoverageRe{} and \UtwoCoverageIm{} marginal 95\% coverage for real and imaginary components, respectively. This is useful marginal calibration, but it leaves the innovation lag-one autocorrelation unchanged at \OriginalInnovationACF{} and the Ljung--Box test rejects whiteness. Figure~\ref{fig:temporal-uncertainty}(b)--(c) and Table~\ref{tab:uncertainty-results} therefore separate interval coverage from temporal model adequacy.
 
-Campaign~A will report whether P can localize physical sources excluded from source-labeled training and tuning. The primary comparison will distinguish ML-only recognition, physics-only intervention inference, and actually implemented hybrid variants. It will separate exact localization, Top-3 localization, electrical-distance error where defined, joint event-and-source correctness, candidate-set coverage and size, and time to identification. Results will be stratified by event family and source type so that a favorable aggregate cannot hide a failure on held-out assets.
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/generated/temporal_uncertainty.pdf}
+\caption{Temporal and uncertainty diagnostics on the frozen nominal TEST set. (a) Exact fixed-lag smoothing; lag zero is the causal Kalman result. (b) Marginal real-component coverage for U0 and real/imaginary U2 blocks against nominal coverage. (c) innovation autocorrelation for the original estimator and calibration-selected low-rank discrepancy placements.}
+\label{fig:temporal-uncertainty}
+\end{figure*}
 
-\subsection{Diagnosability and Empirical Ambiguity}
+\input{tables/generated/uncertainty_results}
 
-Campaign~B will test whether the dynamic information measure predicts source ambiguity rather than merely changing with PMU count. The analysis will relate minimum and pairwise diagnosability to exact-source correctness, posterior entropy, candidate-set coverage and size, and time to a resolved source decision. It must report counterexamples, including cases where the local approximation, model fidelity, or independence assumptions are not adequate.
+The calibration residual is strongly low rank: its first two principal components explain 95.7\% of variance and four explain 99.2\%. That empirical fact does not guarantee a useful generative correction. The rank-four measurement Gauss--Markov model reduces lag-one autocorrelation from \OriginalInnovationACF{} to \MeasurementGMInnovationACF{}, but worsens TVE, produces hidden NLL 14.991, and undercovers both components. The rank-one process placement leaves both TVE and autocorrelation effectively unchanged. These ablations reject the claim that low-rank colored PMU residuals, inserted without stronger physical structure, improve hidden-state uncertainty.
 
-\subsection{PMU Join, Loss, and Ambiguity}
+\subsection{Which Physical Mismatches Matter?}
 
-Campaign~B will test whether the dynamic information measure tracks the practical consequences of PMU membership changes. The analysis will compare random and information-critical removals at each coverage level, then show a controlled addition. It will report the paired evolution of available PMUs, pairwise/minimum diagnosability, posterior entropy, candidate-set size, coverage, and localization performance.
+The 980-case rebuilt-plant campaign reveals sharp family dependence (Fig.~\ref{fig:physical-mismatch} and Table~\ref{tab:mismatch-results}). At $m=1.5$, network mismatch reaches \NetworkMismatchRatio{}$\times$ the pooled nominal median and operating-point mismatch reaches \OperatingMismatchRatio{}$\times$. The coupled family is smaller at 1.602$\times$, while machine, governor, AVR, and load-model families remain near the nominal median for the tested perturbations. A blanket claim of robustness would therefore be misleading: the estimator is insensitive to several tested component shifts but fails materially when the algebraic network map or equilibrium center changes.
 
-\subsection{Model and Measurement Shift}
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/generated/physical_mismatch.pdf}
+\caption{Frozen B2 under seven families of physically rebuilt nonlinear plants. (a) Median hidden-bus TVE relative to the pooled $m=0$ median, computed directly from per-case artifacts. The shaded envelope covers M2--M5. (b) absolute median TVE at the largest tested scale. Each family--scale cell contains 20 independently rebuilt plants.}
+\label{fig:physical-mismatch}
+\end{figure*}
 
-Campaign~D will compare ANDES nominal data, ANDES operating or parameter shift, restricted PowerDynamics.jl transfer, noise, and missing-PMU conditions without pooling them. It will test whether a learned discrepancy improves the physical likelihood under the declared no-retuning rule, while separating calibration evaluation from any uncalibrated score. RAW0001, if included, remains a retrospective reference simulation only.
+\input{tables/generated/mismatch_results}
 
-\subsection{Controlled Knowledge Transfer (Conditional)}
+Nominal covariance repair does not transfer automatically. Averaged across all mismatch cases, U0 has \MismatchUzeroCoverage{} 95\% coverage and nominally fitted U2 has only \MismatchUtwoCoverage{}. The reduction reflects physical shift, not a calibration/test leak: U2 remains frozen from nominal CAL data. This result limits the interpretation of Section~\ref{sec:estimation}: nominal dispersion scaling is not robustness to a changed plant.
 
-Campaign~C will be reported only if it convincingly tests the model-mediated transfer defined in Section~\ref{sec:edge-knowledge}. The comparison will report the no-update condition, any reproducible conventional update, and physics-grounded transfer under operating-point, noise, and PMU-perspective shifts. The original discovering-PMU-disconnected condition is necessary to distinguish cross-node transfer from reliance on the original local waveform. If this gate is not met, the material moves to future work rather than supporting a main contribution.
+\subsection{Adequacy Is Detectable, but the Tested Adaptation Fails}
 
-\subsection{Continuous Scanning and Resource Cost}
+The observed-PMU innovation statistic detects many cases in which hidden TVE is unacceptable. Macro AUROC/AUPRC are \AdequacyHalfAUROC{}/\AdequacyHalfAUPRC{} at $m=0.5$ and \AdequacyMaxAUROC{}/\AdequacyMaxAUPRC{} at $m=1.5$ (Fig.~\ref{fig:adequacy-adaptation}(b)). Undefined family-level AUROCs, caused when every frame has the same frozen adequacy label, are omitted from the macro mean; AUPRC remains reported. Consequently, the statistic supports model-adequacy triage, not mismatch-family classification or guaranteed alarm calibration.
 
-For continuous scans, tables and plots will give long-normal exposure, total alarms, false alarms per hour, event recall, joint alarm precision, joint F1, and delay definitions. Resource measurements for inference time, CPU load, memory, bytes per message, messages per event, and total communication volume will be reported only when the implementation and hardware are fixed.
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/generated/adequacy_adaptation.pdf}
+\caption{Failure-mechanism and adaptation evidence. (a) Median TEST TVE at $m=1.5$ for the frozen estimator, evaluation-only oracle center, and causal observed-PMU offset proxy. (b) macro model-adequacy discrimination using a five-frame trailing Mahalanobis innovation statistic fitted only on nominal CAL data.}
+\label{fig:adequacy-adaptation}
+\end{figure*}
 
-\subsection{Reporting Integrity}
-
-Each result table or figure will identify the campaign manifest, random seeds or repetitions, source-exclusion rule, PMU membership condition, simulator, and denominator. RAW0001, if included, will be labeled a known retrospective reference simulation. It will not be merged with the campaign aggregates or described as independent field validation.
-
-% Planned Fig. 5 and Fig. 6: main held-out-source and PMU join/leave data requirements are recorded in docs/figure-plan.md.
+Oracle recentering changes the conclusion from ``insufficient PMUs'' to ``stale local physics.'' At $m=1.5$, it reduces network, operating-point, and coupled median TVE from \NetworkFrozenTVE{}, \OperatingFrozenTVE{}, and \CoupledFrozenTVE{} to \NetworkOracleTVE{}, \OperatingOracleTVE{}, and \CoupledOracleTVE{}, respectively. Oracle relinearization closes the remaining gap in the small diagnostic subset. The causal offset-only proxy, however, gives \NetworkOnlineTVE{}, \OperatingOnlineTVE{}, and \CoupledOnlineTVE{} and closes a median \OnlineClosurePercent{} of the oracle gap over nonnominal identifiable cases. Its nominal-safety gate passes, but its recovery gate fails. Observed-PMU offset fitting is therefore not an adequate substitute for leakage-safe AC recentering and local model rebuilding.

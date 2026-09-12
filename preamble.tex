@@ -8,6 +8,15 @@
 \usepackage{array}
 \usepackage{tabularx}
 \usepackage{xcolor}
+% The legacy IEEE Access class encodes its blue as a Pantone spot color that
+% some current PDF renderers drop. Preserve the journal hue in device RGB so
+% titles, section heads, and captions remain visible in archival renderers.
+\definecolor{accessblue}{RGB}{0,114,178}
+\let\PSevenIEEEAccessYear\year
+\let\year\PSevenTeXYear
+\usepackage{tikz}
+\let\year\PSevenIEEEAccessYear
+\usetikzlibrary{arrows.meta,positioning,fit,calc}
 \usepackage[hidelinks]{hyperref}
 \usepackage{etoolbox}
 
