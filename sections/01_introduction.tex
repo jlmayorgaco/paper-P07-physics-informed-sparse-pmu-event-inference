@@ -1,4 +1,22 @@
 \section{Introduction}
 \label{sec:introduction}
 
-% Drafted in the research-gap commit.
+\PARstart{S}{ynchronized} phasor measurements make geographically separated voltage, current, and frequency observations comparable on a common time base. They support monitoring, protection, and dynamic analysis, yet they do not remove the physical consequences of sparse coverage: a disturbance can originate far from any reporting PMU, and multiple interventions can induce similar projections at the PMUs that remain available \cite{phadke2008synchronized}. For event diagnosis, the central question is therefore not only whether a measurement window appears abnormal, but whether the available measurements identify a physical source well enough to support an operational decision.
+
+Many PMU event-identification methods formulate the task as recognition from an event dictionary, a learned representation, or a source-labeled training set \cite{li2018subspace,yuan2021learning}. These approaches can be useful when future deployments resemble their training conditions. Their reported task accuracy, however, does not by itself establish that an event source can be inferred when that physical asset was absent from source-labeled training. The distinction matters for the IEEE 39-bus setting studied here, where eight PMUs at buses $\{2,5,6,10,19,22,29,39\}$ observe a system whose faults, line outages, generation changes, and load changes may occur elsewhere.
+
+Sparse observation is also dynamic. A PMU can lose communication, report corrupted data, recover, or join an inference session. Placement work confirms that the utility of a limited PMU set depends on the monitoring task and the information retained under loss \cite{yildiz2025sparse}. A diagnosis architecture that assumes one fixed, concatenated sensor vector must either discard information when membership changes or retrain around each anticipated pattern. Neither response answers whether the current evidence is sufficient to distinguish competing physical hypotheses.
+
+This paper develops a different scientific contract. We represent an event as an unknown physical intervention in a dynamic network model and assess candidate interventions by their ability to explain causal PMU evidence. The output is not required to be a forced bus label: it may be an exact source, a defensible candidate set, or an explicit statement that the exact source remains unresolved. Measurement-integrity states remain distinct from physical interventions, so a PMU failure is not silently recast as a network event.
+
+The paper makes four bounded contributions.
+\begin{enumerate}
+  \item It formulates sparse PMU diagnosis around physical intervention hypotheses, time-varying PMU membership, and a separate measurement-integrity state (Section~\ref{sec:problem-formulation}).
+  \item It introduces a PMU-projected dynamic diagnosability quantity that connects pairwise physical signatures, current sensor membership, posterior ambiguity, and candidate-set decisions (Section~\ref{sec:diagnosability}).
+  \item It specifies a causal coarse-to-fine Bayesian inference architecture with local evidence and explicit fusion assumptions, rather than treating an arbitrary classifier score as a posterior (Section~\ref{sec:bayesian-inference}).
+  \item It defines a controlled, physics-grounded knowledge-transfer concept in which a validated event experience is transferred through the network model, not by copying a local waveform to another PMU (Section~\ref{sec:edge-knowledge}).
+\end{enumerate}
+
+These are framework and experimental commitments, not completed performance claims. Section~\ref{sec:experimental-protocol} defines the source-generalization, dynamic-observability, knowledge-transfer, and operational-robustness campaigns needed to test them. Until those campaigns are frozen, Section~\ref{sec:results} reports the questions and reporting structure rather than invented numerical outcomes.
+
+The remainder of the paper first positions the gap in the PMU literature, then defines the dynamic observation problem and diagnosability analysis. It next describes causal Bayesian inference, the knowledge representation, and the experimental protocol before stating the evidence boundary, deployment path, and conclusion.

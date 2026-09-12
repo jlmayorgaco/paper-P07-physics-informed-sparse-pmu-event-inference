@@ -1,4 +1,22 @@
 \section{Related Work and Research Gap}
 \label{sec:related-work}
 
-% Drafted in the research-gap commit.
+\subsection{PMU Event Identification and Localization}
+
+Synchrophasor methods have addressed disturbance detection, type identification, and localization through signal processing, model-based estimation, and learned representations. For example, low-dimensional subspace characterization compares streaming synchrophasor data with an offline event dictionary \cite{li2018subspace}, while a two-stage learned system maps reconstructed temporal features to event types \cite{yuan2021learning}. Such designs establish useful event-recognition baselines. Their operative unit of generalization is nevertheless tied to the event dictionary, data distribution, or source-label coverage that created it. The present problem instead asks whether a physical hypothesis can be evaluated when the corresponding asset has not supplied source-labeled training examples.
+
+\subsection{Model-Based Dynamic Estimation}
+
+Dynamic state estimation places measurements in a state-space or differential-algebraic model and has a broad role in monitoring and control. The IEEE task-force review by Zhao \emph{et al.}\ distinguishes dynamic, tracking, forecasting-aided, and static estimation while identifying model uncertainty, computation, and communication as central implementation concerns \cite{zhao2019dse}. This literature provides the modeling foundation for physical residuals and nonlinear refinement. It does not automatically yield a source-decision rule under sparse, changing measurements: state estimation, intervention inference, and measurement-integrity diagnosis pose related but different inverse problems.
+
+\subsection{Sparse Observability and Placement}
+
+PMU-placement research formalizes where instruments should be installed to achieve observability or improve a designated task. Recent work has explicitly optimized sparse placement for event detection and identification, illustrating that placement changes the attainable accuracy of both model-based and data-driven methods \cite{yildiz2025sparse}. Placement, however, is normally planned before a deployment. This manuscript addresses the complementary online question: given the PMUs currently reporting, which physical hypotheses remain distinguishable and when should the system abstain from a unique source claim?
+
+\subsection{Streaming, Imperfect Data, and Communication}
+
+Streaming PMU applications must accommodate temporal dependence, missing or poor-quality samples, and communication constraints. Event-identification studies have used PMU status and data cleaning to manage imperfect measurements \cite{yuan2021learning}; communication reviews show that measurement and transfer standards, architecture, and reliability are part of the broader synchrophasor system \cite{appasani2018communication}. These treatments motivate explicit availability and quality variables. We retain them as measurement-side states instead of merging them with faults, outages, or dispatch changes in a single event label.
+
+\subsection{Research Gap}
+
+The literature contains strong components for event recognition, dynamic estimation, placement, and data-quality handling. What remains to be tested in one coherent setting is a dynamic intervention framework that evaluates source hypotheses beyond source-label training, quantifies their separation after PMU membership changes, fuses evidence without assuming a fixed sensor vector, and abstains when the resulting posterior ambiguity is material. The paper does not claim that the underlying divergence, information, or placement tools are new. Its contribution is the proposed integration and the experimental contracts required to evaluate it.
