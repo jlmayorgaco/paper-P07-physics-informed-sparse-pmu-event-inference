@@ -1,4 +1,8 @@
 \section{Discussion and Deployment Path}
 \label{sec:discussion}
 
-% Drafted in the experimental-framework commit.
+The framework establishes a clear decision language in principle: physical interventions and measurement failures are distinct; source identity may be ambiguous under the currently available PMUs; and abstention can be more informative than a forced label. The two propositions describe this language under a local Gaussian approximation, while the inference design states the assumptions required to fuse local evidence causally.
+
+What the current manuscript does \emph{not} establish is empirical source generalization, posterior calibration, alarm-rate control, distributed deployment, edge-hardware performance, or real-time operation. Those statements depend on the frozen experiments and resource measurements in Section~\ref{sec:experimental-protocol}. Model mismatch, source-space incompleteness, correlated measurement errors, topology uncertainty, and simultaneous physical-plus-measurement anomalies remain central risks rather than implementation details.
+
+The longer-term OpenPMU deployment path can include local PMU inference, asynchronous evidence fusion, packet loss and communication delay, hardware constraints, and continual operator-validated knowledge. These are deployment objectives, not contributions of the present manuscript until supported by an implementation and corresponding evidence. The current contribution is to make their scientific and reporting boundaries explicit.

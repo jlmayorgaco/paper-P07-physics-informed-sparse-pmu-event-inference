@@ -1,4 +1,40 @@
 \section{Experimental Design and Reproducibility}
 \label{sec:experimental-protocol}
 
-% Drafted in the experimental-framework commit.
+\subsection{Evaluation Principle and Shared Contract}
+
+The experiments must test the claims made by the framework rather than reward a favorable split. The common testbed is the IEEE 39-bus system with PMUs at buses $\{2,5,6,10,19,22,29,39\}$. Each released campaign must record the network and dynamic-model version, PMU measurement operator, sampling and windowing policy, event generator, random seeds, operating-point split, noise and integrity model, candidate space, thresholds, hardware, and complete train/development/test manifests. Event instances generated from the same physical source or scenario family must not leak across a source-generalization split.
+
+ANDES provides one simulation implementation for nominal and shifted campaigns \cite{cui2021hybrid}; a restricted PowerDynamics.jl implementation provides an independent simulator path for transfer testing \cite{plietzsch2022powerdynamics}. Cross-simulator agreement is not assumed. The versioned model differences, unsupported controls, and any mapping required to align intervention semantics must be reported before comparing results.
+
+\subsection{Campaign A: Source Generalization}
+
+Campaign~A is the primary test of physical source inference. The physical assets used for test localization are excluded from every source-labeled training and tuning partition. The exclusion applies to source identifiers, event-specific localizers, candidate-ranking features trained on source labels, and development-set threshold selection. A frozen manifest must identify held-out buses, lines, generators, and loads; the event families, operating conditions, and severity ranges may be shared only as permitted by the declared generalization setting.
+
+The campaign compares exact source accuracy, Top-3 accuracy, electrical-distance error when a distance is meaningful, joint event-and-source correctness, candidate-set coverage and size, posterior entropy, and time to exact or resolved source identification. It must report failures by family and asset type. A high score on events from known assets is reported separately and is not substituted for this campaign.
+
+\subsection{Campaign B: Dynamic Observability}
+
+Campaign~B evaluates the reporting-set sequence $8\rightarrow7\rightarrow6\rightarrow4$ PMUs and at least one controlled sensor-addition case. For each cardinality, compare random PMU loss with removal of PMUs selected as information-critical by the pairwise quantity in \eqref{eq:pairwise-information}. Report the change in minimum and pairwise diagnosability, candidate-set behavior, localization metrics, and time to identification before and after each membership transition.
+
+The expected theoretical direction from Proposition~\ref{prop:monotonicity} is conditional on its assumptions. The campaign therefore tests, rather than assumes, whether the modeled diagnosability score predicts empirical ambiguity and error in the nonlinear, noisy system. A sensor addition that does not materially reduce ambiguity is informative evidence if its predicted contribution was small or its assumptions fail.
+
+\subsection{Campaign C: Physics-Grounded Knowledge Transfer}
+
+Campaign~C is a controlled proof of concept for Section~\ref{sec:edge-knowledge}. First, hold out an event phenomenon or knowledge item and evaluate it as unknown or weakly modeled. Second, simulate trusted confirmation and construct $\mathcal{K}_e$ from the confirmed physical hypothesis, context, uncertainty, and provenance. Third, evaluate new realizations at another operating point, under different noise, and from a different PMU perspective. One condition should disconnect the original discovering PMU.
+
+The required comparisons are no update, a conventional learned update or a suitable federated-learning/knowledge-distillation-style comparator if it can be implemented reproducibly, and the physics-grounded transfer. Report forward transfer, retained old-event performance, forgetting, candidate-set behavior, and performance after the discovering PMU is removed. If a conventional comparator cannot meet the shared contract, report the omission and do not imply a comparison.
+
+\subsection{Campaign D: Operational Robustness}
+
+Campaign~D combines ANDES nominal data, ANDES operating or parameter shift, restricted PowerDynamics.jl transfer, measurement noise, missing PMUs, and long normal exposure. It evaluates a continuous causal scan rather than only presegmented event windows. Detection precision, recall, F1, macro-F1 where classes are defined, false alarms per hour, event recall, joint alarm precision, joint F1, detection delay, and source-resolution delay must be reported with unambiguous denominators.
+
+RAW0001 may appear only as a known organizer-provided reference simulation and retrospective evaluation. It is not independent external validation and must not be pooled with cross-simulator or source-generalization statistics.
+
+\subsection{Baselines, Resources, and Release Artifacts}
+
+The planned baseline suite is: B0, the existing 448-feature hierarchical ExtraTrees method; B1, the existing hybrid learned candidate ranker; B2, a simple physical residual or Zbus-style ranker; B3, a dynamic estimator such as EKF, UKF, moving-horizon estimation, or a carefully documented equivalent; and B4, a contemporary topology-aware or open-set data-driven baseline when reproducible. The proposed framework is denoted P. Each campaign must state which baselines are actually implemented; the present manuscript does not claim implementation status for any of them.
+
+Where measurement is available, report inference time, CPU load, memory, bytes per message, messages per event, and communication volume. Artifact releases should include configurations, simulator adapters, PMU operator calibration, event manifests, source-holdout manifests, environment files, seeds, metric definitions, raw aggregate counts, and scripts that regenerate paper tables and figures. Do not commit large raw datasets or credentials.
+
+% Planned Fig. 8: domain-shift, false-alarm/delay, and resource data requirements are recorded in docs/figure-plan.md.

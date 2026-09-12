@@ -1,4 +1,26 @@
 \section{Physics-Grounded Edge Knowledge}
 \label{sec:edge-knowledge}
 
-% Drafted in the experimental-framework commit.
+\subsection{From Local Observation to Validated Experience}
+
+A PMU observes a location-dependent projection of a system-wide disturbance. Consequently, an event waveform discovered at one PMU should not be copied literally to another node. The receiving PMU has a different transfer path, operating context, measurement operator, and integrity history. A useful shared object must therefore preserve the physical explanation and allow each node to derive its own expected local manifestation through the network model.
+
+After trusted operator or oracle confirmation, we define a validated event knowledge object as
+\begin{equation}
+ \mathcal{K}_e=\left\{a_e,\,\chi_e,\,\Delta_e,\,\Sigma_e,\,q_e,\,\pi_e\right\}, \label{eq:knowledge-object}
+\end{equation}
+where $a_e$ is the validated physical hypothesis, $\chi_e$ is operating context, $\Delta_e$ is a physical or model-discrepancy signature, $\Sigma_e$ represents uncertainty, $q_e$ is validation confidence, and $\pi_e$ is provenance. Provenance includes the simulation or observation source, model version, confirming authority, timestamp, and the conditions under which the item is valid. The object does not convert an unverified alert into knowledge; it is created only after the confirmation criterion is met.
+
+The transfer operation evaluates the physical intervention and context in the receiving model, then maps the predicted local state through that PMU's measurement operator. The recipient can use the resulting local expectation as a prior, a screening template, or a model-discrepancy correction with uncertainty. The transfer is thus event-level and model-mediated: \emph{share the physical experience, not the waveform}.
+
+\subsection{Membership Changes and Local Evidence}
+
+Each active PMU may retain local residual summaries, integrity assessments, and a compact reference to $\mathcal{K}_e$. When a node joins, it receives the knowledge object and instantiates a local prediction under its current measurement configuration. When a node leaves, the global inference retains evidence already fused but removes that node from subsequent local-evidence updates. This behavior follows the membership model in Section~\ref{sec:problem-formulation}; it does not require replaying the original discovering node's waveform.
+
+The proposed knowledge object is deliberately narrower than unrestricted federated model exchange. It does not assume that arbitrary learned weights, raw PMU streams, or private labels can be shared safely or that such exchange would be useful for a new PMU perspective. Campaign~C tests whether the proposed representation transfers information under controlled conditions. Until then, it is a falsifiable design rather than an established continual-learning result.
+
+\subsection{Operational Feedback Boundary}
+
+The inference question, \emph{what happened?}, is separate from the operational question, \emph{how severe was it?} The former concerns physical source and uncertainty; the latter may depend on protection context, asset condition, operator priorities, and consequence. Operator severity feedback can be stored as future metadata in $\mathcal{K}_e$, but it is not treated as a labeled severity-learning contribution in this manuscript without a dedicated protocol and evidence.
+
+% Planned Fig. 7: knowledge acquisition and cross-node transfer data requirements are recorded in docs/figure-plan.md.

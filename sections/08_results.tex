@@ -1,4 +1,26 @@
 \section{Results}
 \label{sec:results}
 
-% Quantitative results are intentionally deferred until frozen experiments exist.
+No proposed-method numerical result is reported in this initial draft. This section fixes the questions, denominators, and comparisons that future frozen experiments must answer. It must not be populated with expected values, simulated example scores, or historical-system results unless their archived source, split contract, and provenance are imported and cited separately.
+
+\subsection{Held-Out-Source Inference}
+
+Campaign~A will report whether P can localize physical sources excluded from source-labeled training and tuning. The primary display will separate exact localization, Top-3 localization, electrical-distance error where defined, joint event-and-source correctness, candidate-set coverage and size, and time to identification. Results will be stratified by event family and source type so that a favorable aggregate cannot hide a failure on held-out assets.
+
+\subsection{PMU Join, Loss, and Ambiguity}
+
+Campaign~B will test whether the dynamic information measure tracks the practical consequences of PMU membership changes. The analysis will compare random and information-critical removals at each coverage level, then show a controlled addition. It will report the paired evolution of available PMUs, pairwise/minimum diagnosability, posterior entropy, candidate-set size, coverage, and localization performance.
+
+\subsection{Controlled Knowledge Transfer}
+
+Campaign~C will test the model-mediated transfer defined in Section~\ref{sec:edge-knowledge}. The comparison will report the no-update condition, any reproducible conventional update, and physics-grounded transfer under operating-point, noise, and PMU-perspective shifts. The original discovering-PMU-disconnected condition is necessary to distinguish cross-node transfer from reliance on the original local waveform.
+
+\subsection{Operational Robustness and Continuous Scanning}
+
+Campaign~D will report nominal, shifted, and cross-simulator results separately. For continuous scans, tables and plots will give long-normal exposure, total alarms, false alarms per hour, event recall, joint alarm precision, joint F1, and delay definitions. Resource measurements will be reported only when the implementation and hardware are fixed.
+
+\subsection{Reporting Integrity}
+
+Each result table or figure will identify the campaign manifest, random seeds or repetitions, source-exclusion rule, PMU membership condition, simulator, and denominator. RAW0001, if included, will be labeled a known retrospective reference simulation. It will not be merged with the campaign aggregates or described as independent field validation.
+
+% Planned Fig. 5 and Fig. 6: main held-out-source and PMU join/leave data requirements are recorded in docs/figure-plan.md.
