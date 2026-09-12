@@ -57,7 +57,13 @@ def setup_style() -> None:
 
 def save_figure(fig: plt.Figure, stem: str) -> None:
     FIGURES.mkdir(parents=True, exist_ok=True)
-    fig.savefig(FIGURES / f"{stem}.pdf", bbox_inches="tight", pad_inches=0.025)
+    pdf_metadata = {"CreationDate": None, "ModDate": None}
+    fig.savefig(
+        FIGURES / f"{stem}.pdf",
+        bbox_inches="tight",
+        pad_inches=0.025,
+        metadata=pdf_metadata,
+    )
     fig.savefig(FIGURES / f"{stem}.png", bbox_inches="tight", pad_inches=0.025)
     plt.close(fig)
 
