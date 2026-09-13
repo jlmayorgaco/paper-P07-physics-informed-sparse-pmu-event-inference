@@ -1,12 +1,16 @@
 # Figure and table map
 
+## Shared visual grammar
+
+Figures 1, 5, and 6 are the visual reference for the manuscript. New and revised graphics use the same color-blind-safe blue/orange/green/purple palette, left-aligned panel headings, comparable type size at final two-column width, restrained grids, direct annotations of only the decisive values, and vector output. Multi-panel figures are ordered as a scientific argument---mechanism or stressor, observed evidence, and claim boundary---rather than as a collection of available metrics. Continuous color maps are reserved for fields or matrices and are paired with printed values when exact reading matters.
+
 Every empirical panel is generated from a frozen artifact. Conceptual drawings are TikZ/vector graphics; they contain no empirical values.
 
 | Asset | Scientific function | Evidence/source | Status |
 | --- | --- | --- | --- |
 | Fig. 1 | Separate evaluated state/event components from the unvalidated joint candidate path. | Joint formulation in Sections III--V. | TikZ lane diagram, integrated. |
 | Fig. 2 | Map state/input, event/source, and observability/sensor-value developments on separate lanes. | Verified literature through 2026. | TikZ three-lane timeline, integrated. |
-| Fig. 3 | Expose numerical horizon sensitivity in the prescribed eight-PMU observability audit. | `pd_observability_horizons.csv`. | Generated vector PDF/PNG, integrated. |
+| Fig. 3 | Tell the observability-claim story: the pseudo-rank contradiction, improved conditioning without a certificate, and the boundary between structural and empirical evidence. | `pd_observability_horizons.csv`, `e04a_b0_b1_b2_summary.csv`, `e04a1_e03_vs_e04.csv`. | Full-width generated vector PDF/PNG, integrated. |
 | Fig. 4 | Show affine candidate separation and the nonlinear remainder that can erase it. | Propositions 2--3 and Corollary 2. | TikZ, integrated. |
 | Fig. 5 | Define six representative event signatures without smoothing or hand-drawn values. | Frozen legacy RAW0001 trace artifact. | Imported vector PDF/PNG, integrated. |
 | Fig. 6 | Compare B0--B2, relate the preregistered residual to bus-level difficulty, and show paired B2--B1 differences. | E04A frozen summaries and per-case results. | Generated vector PDF/PNG, integrated. |

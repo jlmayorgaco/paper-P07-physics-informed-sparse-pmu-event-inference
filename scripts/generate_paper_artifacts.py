@@ -420,38 +420,139 @@ def figure_system_architecture() -> None:
 def figure_observability_horizon() -> None:
     audit = read_csv("pd_observability_horizons.csv")
     horizon = audit["horizon"].to_numpy()
+    seconds = horizon / 30
+    nominal = read_csv("e04a_b0_b1_b2_summary.csv").set_index("method")
+    e03 = read_csv("e04a1_e03_vs_e04.csv")
 
-    fig, axes = plt.subplots(1, 2, figsize=(3.50, 1.82), gridspec_kw={"width_ratios": [0.78, 1.22]})
+    # This figure is deliberately structured as an argument rather than a
+    # dashboard: an impossible numerical rank trend, the quantity that does
+    # improve with history, and the resulting boundary on the paper's claims.
+    fig, axes = plt.subplots(
+        1,
+        3,
+        figsize=(7.16, 2.48),
+        gridspec_kw={"width_ratios": [0.98, 1.05, 1.18]},
+    )
     ax = axes[0]
-    ax.plot(horizon, audit["rank"], marker="o", color=BLUE)
+    ax.plot(seconds, audit["rank"], marker="o", color=BLUE, zorder=3)
     ax.axhline(114, color=GRAY, linestyle="--", linewidth=0.8, label="state dimension")
-    ax.set_xlabel("Horizon $N$")
+    peak_idx = int(np.argmax(audit["rank"].to_numpy()))
+    ax.scatter(seconds[peak_idx], audit.iloc[peak_idx]["rank"], s=28, color=ORANGE, zorder=4)
+    ax.annotate(
+        f"peak {int(audit.iloc[peak_idx]['rank'])}",
+        (seconds[peak_idx], audit.iloc[peak_idx]["rank"]),
+        xytext=(5, 8),
+        textcoords="offset points",
+        fontsize=5.8,
+        color=ORANGE,
+        arrowprops={"arrowstyle": "-", "lw": 0.65, "color": ORANGE},
+    )
+    ax.annotate(
+        f"falls to {int(audit.iloc[-1]['rank'])}\nwhile rows are added",
+        (seconds[-1], audit.iloc[-1]["rank"]),
+        xytext=(-5, -26),
+        textcoords="offset points",
+        ha="right",
+        fontsize=5.8,
+        color=ORANGE,
+        arrowprops={"arrowstyle": "->", "lw": 0.7, "color": ORANGE},
+    )
+    ax.text(5.85, 116.5, "$n_x=114$", ha="right", va="bottom", fontsize=5.8, color=GRAY)
+    ax.set_xlabel("Accumulated history (s)")
     ax.set_ylabel("Gramian pseudo-rank")
-    ax.set_title("(a) Threshold sensitivity", loc="left")
+    ax.set_title("(a) Exact-rank contradiction", loc="left")
+    ax.set_xlim(-0.15, 6.15)
     ax.set_ylim(0, 122)
     ax.grid(alpha=0.2, linewidth=0.5)
 
     ax = axes[1]
+    residual_ratio = audit["functional_output_residual"].to_numpy() / audit.iloc[0]["functional_output_residual"]
+    noise_ratio = audit["noise_information_bound_sigma1e3"].to_numpy() / audit.iloc[0]["noise_information_bound_sigma1e3"]
     ax.semilogy(
-        horizon,
-        audit["functional_output_residual"],
+        seconds,
+        residual_ratio,
         marker="o",
         color=ORANGE,
-        label="functional residual",
+        label="$r_F(N)/r_F(0)$",
     )
     ax.semilogy(
-        horizon,
-        audit["noise_information_bound_sigma1e3"],
+        seconds,
+        noise_ratio,
         marker="s",
         color=GREEN,
-        label="noise bound",
+        label="noise bound / initial",
     )
-    ax.set_xlabel("Horizon $N$")
-    ax.set_ylabel("Frozen diagnostic value")
-    ax.set_title("(b) Target residual and noise", loc="left")
+    ax.axhline(1, color=GRAY, linestyle=":", linewidth=0.7)
+    ax.annotate(
+        "does not approach zero",
+        (seconds[-1], residual_ratio[-1]),
+        xytext=(-4, -17),
+        textcoords="offset points",
+        ha="right",
+        fontsize=5.8,
+        color=ORANGE,
+    )
+    improvement = audit.iloc[0]["noise_information_bound_sigma1e3"] / audit.iloc[-1]["noise_information_bound_sigma1e3"]
+    ax.annotate(
+        f"{improvement:.1e}$\\times$ lower",
+        (seconds[-1], noise_ratio[-1]),
+        xytext=(-4, 8),
+        textcoords="offset points",
+        ha="right",
+        fontsize=5.8,
+        color=GREEN,
+    )
+    ax.set_xlabel("Accumulated history (s)")
+    ax.set_ylabel("Diagnostic / value at $N=0$")
+    ax.set_title("(b) Conditioning, not certification", loc="left")
+    ax.set_xlim(-0.15, 6.15)
     ax.grid(which="both", alpha=0.2, linewidth=0.5)
-    ax.legend(frameon=False, fontsize=5.4, loc="best")
-    fig.tight_layout(w_pad=0.7)
+    ax.legend(frameon=False, fontsize=5.5, loc="center left")
+
+    ax = axes[2]
+    ax.set_xlim(0, 1)
+    ax.set_ylim(0, 1)
+    ax.axis("off")
+    ax.set_title("(c) Claim boundary", loc="left")
+    b2_hvre = float(nominal.loc["B2_KALMAN", "TVE_percent"])
+    rho = float(e03["spearman_B2_TVE_vs_functional_residual"].dropna().iloc[0])
+    claim_rows = [
+        (
+            0.78,
+            ORANGE,
+            "x",
+            "Full dynamic state",
+            f"not established: rank {int(audit.iloc[-1]['rank'])}/{114} and nonmonotonic",
+        ),
+        (
+            0.48,
+            ORANGE,
+            "x",
+            "Exact voltage-function certificate",
+            r"not obtained: $r_F(N)>0$ at every tested horizon",
+        ),
+        (
+            0.18,
+            GREEN,
+            "o",
+            "Nominal hidden-voltage recovery",
+            f"empirically supported: {b2_hvre:.6f}% mean HVRE; $\\rho={rho:.4f}$",
+        ),
+    ]
+    for y, color, marker, claim, evidence in claim_rows:
+        ax.plot([0.02, 0.98], [y - 0.105, y - 0.105], color="#E5E7EB", linewidth=0.6)
+        ax.scatter(0.06, y, marker=marker, s=30, color=color, linewidths=1.2, zorder=3)
+        ax.text(0.13, y + 0.035, claim, fontsize=6.2, weight="bold", va="center", color="#243244")
+        ax.text(0.13, y - 0.055, evidence, fontsize=5.55, va="center", color="#4B5563")
+    ax.text(
+        0.02,
+        0.98,
+        "Do not infer observability from estimator accuracy",
+        fontsize=5.8,
+        color=BLUE,
+        va="top",
+    )
+    fig.tight_layout(w_pad=0.9)
     save_figure(fig, "observability_horizon")
 
 
@@ -529,13 +630,13 @@ def figure_temporal_uncertainty() -> None:
     d4 = read_csv("e04a4_test_metrics.csv").set_index("model")
     d5 = read_csv("e04a5_test_metrics.csv").set_index("model")
 
-    fig, axes = plt.subplots(1, 3, figsize=(7.16, 2.35))
+    fig, axes = plt.subplots(1, 3, figsize=(7.16, 2.45))
     ax = axes[0]
     ax.plot(lag["lag_seconds"], lag["TVE_percent"], marker="o", color=BLUE)
     ax.axhline(lag.iloc[0]["TVE_percent"], color=GRAY, linestyle="--", linewidth=0.9, label="lag 0")
     ax.set_xlabel("Fixed lag (s)")
     ax.set_ylabel("Hidden-voltage HVRE (%)")
-    ax.set_title("(a) Smoothing adds no HVRE benefit")
+    ax.set_title("(a) Smoothing adds no HVRE benefit", loc="left")
     ax.ticklabel_format(axis="y", style="plain", useOffset=False)
     ax.grid(alpha=0.2, linewidth=0.5)
 
@@ -562,15 +663,17 @@ def figure_temporal_uncertainty() -> None:
             calibration.loc["U2_RE_IM_BLOCK_TEMPERATURE", "coverage95_im"],
         ]
     )
-    ax.plot(nominal_levels, nominal_levels, color=GRAY, linestyle="--", label="ideal")
-    ax.plot(nominal_levels, u0, marker="s", color=LIGHT_GRAY, markeredgecolor="#243244", label="U0")
-    ax.plot(nominal_levels, u2_re, marker="o", color=BLUE, label="U2 Re")
-    ax.plot(nominal_levels, u2_im, marker="^", color=ORANGE, label="U2 Im")
-    ax.set_xlabel("Nominal coverage")
-    ax.set_ylabel("Empirical coverage")
-    ax.set_xlim(0.46, 0.98)
-    ax.set_ylim(0.46, 1.02)
-    ax.set_title("(b) Independent nominal calibration")
+    nominal_percent = 100 * nominal_levels
+    ax.plot(nominal_percent, nominal_percent, color=GRAY, linestyle="--", label="ideal")
+    ax.plot(nominal_percent, 100 * u0, marker="s", color=LIGHT_GRAY, markeredgecolor="#243244", label="U0")
+    ax.plot(nominal_percent, 100 * u2_re, marker="o", color=BLUE, label="U2 Re")
+    ax.plot(nominal_percent, 100 * u2_im, marker="^", color=ORANGE, label="U2 Im")
+    ax.set_xlabel("Nominal coverage (%)")
+    ax.set_ylabel("Empirical coverage (%)")
+    ax.set_xticks(nominal_percent, ["50", "90", "95"])
+    ax.set_xlim(47, 98)
+    ax.set_ylim(47, 102)
+    ax.set_title("(b) Calibration corrects overcoverage", loc="left")
     ax.legend(frameon=False, ncol=2, loc="lower right")
     ax.grid(alpha=0.2, linewidth=0.5)
 
@@ -583,7 +686,7 @@ def figure_temporal_uncertainty() -> None:
     ax.set_xlabel("Innovation lag (frames)")
     ax.set_ylabel("Autocorrelation")
     ax.set_xticks(lags)
-    ax.set_title("(c) Residuals remain colored")
+    ax.set_title("(c) Residual dependence remains", loc="left")
     ax.legend(frameon=False)
     ax.grid(alpha=0.2, linewidth=0.5)
     fig.tight_layout(w_pad=1.15)

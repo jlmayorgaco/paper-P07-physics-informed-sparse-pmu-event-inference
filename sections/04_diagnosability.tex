@@ -64,14 +64,14 @@ For the anchor-time target used by the structural audit, define
 \end{align}
 A zero residual is an exact numerical condition only when the matrix scaling and rank decision are defensible. A nonzero value certifies that the computed observable subspace does not contain every requested anchor-time direction.
 
-The implementation formed $\mathcal O_N^{\mathsf T}\mathcal O_N$ and retained eigenvalues above $10^{-9}$ of its maximum. Figure~\ref{fig:observability-horizon} exposes the sensitivity of that choice. The pseudo-rank reaches 54 at $N=30$ but falls to 39 at $N=180$, although the exact rank of a vertically augmented observability matrix cannot decrease. This behavior results from Gramian squaring, unstable-mode scaling, and a relative threshold; it prevents the pseudo-rank from being treated as an algebraic certificate. The target residual is also nonzero at every tested horizon. By contrast, the reported noise-amplification diagnostic decreases as more temporal information is accumulated.
+The implementation formed $\mathcal O_N^{\mathsf T}\mathcal O_N$ and retained eigenvalues above $10^{-9}$ of its maximum. Figure~\ref{fig:observability-horizon} turns the audit into a claim test. The pseudo-rank reaches 54 at $N=30$ but falls to 39 at $N=180$, although the exact rank of a vertically augmented observability matrix cannot decrease. Gramian squaring, unstable-mode scaling, and a relative threshold therefore make this pseudo-rank unsuitable as an algebraic certificate. Longer history still lowers the trace-style noise bound by more than five orders of magnitude, but $r_F(N)$ remains nonzero. The evidence supports improved numerical conditioning, not full-state or exact target observability. Empirical voltage recovery is evaluated separately and is not used to repair the failed certificate.
 
-\begin{figure}[t]
+\begin{figure*}[t]
 \centering
-\includegraphics[width=\columnwidth]{figures/generated/observability_horizon.pdf}
-\caption{Local observability audit for PMU buses $\{2,5,6,10,19,22,29,39\}$. (a) Gramian pseudo-rank under the stated relative threshold; its nonmonotonicity is numerical and rules out an exact-rank claim. (b) Nonzero anchor-time functional residual and the trace-style noise-amplification bound. These quantities diagnose the local model; they do not prove nonlinear recoverability.}
+\includegraphics[width=\textwidth]{figures/generated/observability_horizon.pdf}
+\caption{What the prescribed eight-PMU audit permits one to claim. (a) The relative-threshold Gramian pseudo-rank decreases after $N=30$ even though samples are added, contradicting the monotonicity required of exact rank. (b) Values normalized to their $N=0$ levels separate two effects: accumulated history sharply lowers the trace-style noise bound, whereas the functional residual does not approach zero. (c) Consequently, the audit does not establish the full dynamic state or an exact hidden-voltage function. The small nominal TEST error is empirical evidence under the frozen experiment, not an observability proof.}
 \label{fig:observability-horizon}
-\end{figure}
+\end{figure*}
 
 Horizons $N\in\{0,3,10,30,60,120,180\}$ correspond to 0--6~s. The nonlinear nominal trajectories contain 91 frames, or 3~s, so $N=180$ is not a matched causal horizon for those records. Its bus ranking was nevertheless exported before nonlinear scoring and is retained only as a preregistered, cross-horizon structural diagnostic. The empirical test correlates $r_{F,i}(180)$ with bus-level HVRE; it does not convert the six-second local audit into a three-second observability proof.
 
