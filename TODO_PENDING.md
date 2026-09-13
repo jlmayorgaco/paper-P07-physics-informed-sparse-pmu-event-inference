@@ -1,12 +1,13 @@
 # Pending research gates
 
-## Submission veto: the proposed joint method is not yet executed
+## Submission veto: the full multi-family joint method is not yet executed
 
-- Implement the hypothesis-conditioned objective labeled `eq:joint-map-objective` under one audited plant, PMU operator, and event ontology.
-- Estimate directional simulator-response curvature and evaluate the nonlinear separation certificate in Proposition 3.
+- Extend the executed load-source likelihood to faults, line outages, generation changes, integrity events, and simultaneous compositions under one audited plant and PMU operator.
+- Complete the analytic descriptor-DAE tangent or retain the numerical physical tangent terminology permanently.
+- Estimate state/integrity nuisance curvature and evaluate the full nonlinear separation certificate in Proposition 3.
 - Compare four frozen paradigms on identical event parents: learned-only, physics-only, physics plus learned residual discrepancy, and diagnosability-aware inference with abstention.
 - Hold out physical source assets from every source-labeled training, tuning, threshold, and calibration operation.
-- Test whether the nuisance-profiled separation margin predicts calibrated uncertainty, candidate-set size, and source-resolution delay.
+- Test whether the nuisance-profiled pairwise margin predicts calibrated uncertainty, candidate-set size, and source-resolution delay; the current projected-Fisher confusion test is inconclusive.
 - Add PMU loss/join, operating-point shift, parameter shift, line topology change, and at least one cross-simulator transfer campaign.
 - Expose a long normal stream and report false alarms/hour, event recall, joint alarm precision, and duplicate-alarm scoring.
 - Calibrate or rename the source evidence: classifier votes and uncorrected MAP scores are not probabilities.

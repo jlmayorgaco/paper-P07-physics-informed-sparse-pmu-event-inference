@@ -52,20 +52,34 @@ The nuisance information matrix has median rank \EZeroHRank{} among \EZeroHDimen
 
 Point accuracy does not certify posterior uncertainty. The nullspace-aware Laplace covariance covers every marginal interval, yet its joint NEES-like statistic grows with mismatch and remains far above the nominal reference [Fig.~\ref{fig:adequacy-adaptation}(c)]. The independent constrained solver also converges on only part of its small diagnostic subset. M6 point reconstruction is supported; joint uncertainty, network mismatch, coupled mismatch, and sequential adaptation are not.
 
+\subsection{Physics-Based Load Detection and Source Resolution}
+
+The centered numerical tangent passes two checks before source inference is scored. Across all 16 load candidates, its largest discrepancy from either one-sided derivative is \LoadTangentMaxRelError{}, and the minimum cosine between the positive and negative perturbation directions is \LoadTangentMinCosine{}. At a separate 10\% stress, the median and maximum relative trajectory errors of the tangent prediction are \LoadTangentMedianStressError{} and \LoadTangentMaxStressError{}. These tests support the numerical physical dictionary over the stated range; they do not complete the pending analytic descriptor-DAE derivative.
+
+Normal-data covariance changes the decision rule materially. In V1, identity whitening produces a 100\% false-positive rate and 10.9\% source Top-1, whereas channel covariance plus temporal AR(1) whitening gives \LoadVOneFPR{} false positives and \LoadVOneTopOne{} Top-1 on \LoadVOneEventCases{} event records. The larger V2 normal bank confirms the statistical mechanism: W2 has NIS per frame \LoadWTwoNIS{}, lag-one autocorrelation \LoadWTwoACFOne{}, and Ljung--Box $p=\LoadWTwoLjungP{}$. Channel covariance alone leaves lag-one autocorrelation at 0.341.
+
+The nonlinear remainder follows the expected local order. A log--log fit over candidate buses and development amplitudes gives $p=\LoadTruncationSlope{}$ with bootstrap 95\% interval $[\LoadTruncationCILow{},\LoadTruncationCIHigh{}]$ [Fig.~\ref{fig:load-event-inference}(a)]. The second-order mean model L2 is then selected on DEV with \LoadLTwoDevCoverage{} amplitude coverage. On the independent finite-amplitude TEST block, its 95\% coverage ranges from \LoadFiniteCoverageMin{} to \LoadFiniteCoverageMax{} over signed changes from 1.25 to 9\% [Fig.~\ref{fig:load-event-inference}(f)].
+
+Weak events expose the difference between detection and localization. At $|a|=0.01\%$, sign-pooled AUROC is 0.733 while exact source Top-1 is 13.0\%; at $|a|=0.05\%$, the same quantities are 0.995 and 73.4\%. Source Top-1 reaches 100\% at $|a|=0.4\%$ (Table~\ref{tab:load-weak-results}). The event false-positive rate is 0.25\% on \LoadWeakNoEventCases{} no-event records. Thus a window can contain detectable event evidence while remaining insufficient for a reliable source decision.
+
+The theory predicts part, but not all, of that boundary. Source-wise event-visible information is negatively associated with the empirical amplitude required for 90\% detection, with Spearman $\rho=\LoadEVIRho{}$ [Fig.~\ref{fig:load-event-inference}(e)]. The projected pairwise information has only $\rho=\LoadProjectedFisherRho{}$ with empirical pair confusion and is retained as inconclusive. Event visibility is supported as a detectability predictor; the proposed pairwise source-confusion surrogate is not.
+
+\input{tables/generated/load_weak_results}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/generated/load_event_inference.pdf}
+\caption{Frozen physics-based load-event evidence. (a) First-order residual scaling over 16 candidate buses. (b) Normal-data covariance diagnostics for W0--W2. (c) Weak-event detection and (d) exact source resolution, pooled only across signs at the same magnitude. (e) Event-visible-information threshold against the empirical 90\%-detection amplitude; labels identify representative source buses. (f) L2 amplitude coverage on the separate finite-amplitude TEST block. The weak block contains \LoadWeakEventCases{} event and \LoadWeakNoEventCases{} no-event records; the finite block contains \LoadFiniteEventCases{} events.}
+\label{fig:load-event-inference}
+\end{figure*}
+
 \subsection{Known-Source Detection and Localization}
 
 On the known-source TEST split, the availability-gated hierarchy reaches detection F1 \LegacyEventDetectionFOne{} but only \LegacyPhysicalTopOne{} physical Top-1 (Table~\ref{tab:legacy-event-results}). Expanding the representation adds \LegacyPhysicalGainPP{} percentage points to source ranking over the compact hierarchy. Multiscale dynamics, adaptive residuals, and PMU contrasts therefore help when the source is represented during training; the availability rule contributes mainly to integrity handling.
 
 \input{tables/generated/legacy_event_results}
 
-Figure~\ref{fig:legacy-event-evidence}(a) separates detection, family classification, physical localization, and integrity localization. The gap between detection F1 and physical Top-1 confirms that a recognizable disturbance need not have a uniquely recoverable source. False alarms decrease to \LegacyFalseAlarmsPerMinute{} episodes per normal-labeled minute, but the normal exposure is only about 7.15~min per split. That rate is evidence of alarm burden in a short synthetic stream, not an operational false-alarm guarantee.
-
-\begin{figure*}[t]
-\centering
-\includegraphics[width=\textwidth]{figures/generated/legacy_event_evidence.pdf}
-\caption{Event evidence and its transfer boundary. (a) Known-source TEST metrics for the compact hierarchy, expanded hierarchy, and availability-gated model. (b) Exact physical-source success under three distinct counting protocols: known-source completed scenarios, source-held-out decisions, and RAW0001 physical episodes. The bars in (b) are deliberately not pooled; they expose the change in task difficulty and data semantics.}
-\label{fig:legacy-event-evidence}
-\end{figure*}
+The gap between detection F1 and physical Top-1 confirms that a recognizable disturbance need not have a uniquely recoverable source. False alarms decrease to \LegacyFalseAlarmsPerMinute{} episodes per normal-labeled minute, but the normal exposure is only about 7.15~min per split. That rate is evidence of alarm burden in a short synthetic stream, not an operational false-alarm guarantee.
 
 \subsection{Source Holdout Breaks Learned Localization}
 
@@ -73,4 +87,4 @@ With the physical source excluded from source-labeled fitting and the true event
 
 Transfer to RAW0001 is also weak: the basic candidate model localizes only \RawCandidatePhysicalEpisodes{} of five physical episodes on average. The simulator bank omits some channels used by the longer-window implementation, so no single feature family can be blamed for the deficit. Internal simulation accuracy does not establish cross-record reliability.
 
-Supervised, physics-guided features work for detection and known-source diagnosis but not for source-generalizable inference. This failure justifies testing the candidate-conditioned residual in \eqref{eq:joint-map-objective} against the physical separation measure in \eqref{eq:pairwise-information}. It supplies the reason for that experiment, not evidence of its outcome.
+Supervised, physics-guided features work for detection and known-source diagnosis but not for source-generalizable inference. The physical load experiment supplies a contrasting result: candidate sources are evaluated through simulated responses rather than learned asset labels. Its 16-source success is restricted to one event family, fixed topology, and matched simulator; it does not repair the broader held-source or cross-record failure.

@@ -12,7 +12,7 @@ import shutil
 from pathlib import Path
 
 import matplotlib.pyplot as plt
-from matplotlib import colors as mcolors, patches
+from matplotlib import colors as mcolors, patches, ticker
 import numpy as np
 import pandas as pd
 from scipy import stats
@@ -162,6 +162,17 @@ def write_macros(checks: dict[str, object]) -> None:
     held_sources = read_csv("legacy_unseen_sources_recomputed.csv")
     raw_transfer = read_csv("legacy_raw0001_transfer_results.csv")
     raw_candidate = raw_transfer[raw_transfer["method"].eq("C_universal_z_candidate")]
+    tangent_consistency = read_csv("load_tangent_fd_consistency.csv")
+    tangent_stress = read_csv("load_tangent_finite_stress.csv")
+    load_v1 = read_csv("load_bayes_v1_summary.csv").iloc[0]
+    load_v1_models = read_csv("load_bayes_v1_model_comparison.csv").set_index("model")
+    load_v2 = read_csv("load_bayes_v2_summary.csv").iloc[0]
+    load_dictionary = read_csv("load_bayes_v2_dictionary_manifest.csv").iloc[0]
+    load_whitening = read_csv("load_bayes_v2_whitening.csv").set_index("model")
+    load_dev = read_csv("load_bayes_v2_dev_likelihood.csv").set_index("model")
+    load_weak_detection = read_csv("load_bayes_v2_weak_detection.csv")
+    load_weak_localization = read_csv("load_bayes_v2_weak_localization.csv")
+    load_finite_calibration = read_csv("load_bayes_v2_finite_calibration.csv")
     structural_x = e03["functional_residual"].to_numpy()
     structural_y = e03["B2_TVE"].to_numpy()
     observed_rho = float(stats.spearmanr(structural_x, structural_y).statistic)
@@ -257,6 +268,31 @@ def write_macros(checks: dict[str, object]) -> None:
         "HeldSourceRate": fmt_percent(100 * held_sources["correct"].mean(), 1),
         "RawCandidateEventEpisodes": f"{raw_candidate['event_episode_correct'].mean():.1f}",
         "RawCandidatePhysicalEpisodes": f"{raw_candidate['physical_episode_correct'].mean():.1f}",
+        "LoadSourceCount": str(int(load_dictionary["n_sources"])),
+        "LoadTangentMaxRelError": fmt_percent(100 * tangent_consistency[["central_vs_plus_relerr", "central_vs_minus_relerr"]].to_numpy().max(), 3),
+        "LoadTangentMinCosine": f"{tangent_consistency['plus_minus_cosine'].min():.6f}",
+        "LoadTangentMedianStressError": fmt_percent(100 * tangent_stress["relative_trajectory_error"].median(), 2),
+        "LoadTangentMaxStressError": fmt_percent(100 * tangent_stress["relative_trajectory_error"].max(), 2),
+        "LoadVOneEventCases": str(int(load_v1["event_cases"])),
+        "LoadVOneNoEventCases": str(int(load_v1["no_event_test_cases"])),
+        "LoadVOneFPR": fmt_percent(100 * load_v1_models.loc["W2_SEPARABLE_AR1", "event_FPR_at_.5"], 3),
+        "LoadVOneTopOne": fmt_percent(100 * load_v1_models.loc["W2_SEPARABLE_AR1", "source_top1"], 1),
+        "LoadWeakEventCases": str(int(load_v2["weak_test_events"])),
+        "LoadWeakNoEventCases": str(int(load_v2["weak_test_no_event"])),
+        "LoadFiniteEventCases": str(int(load_v2["finite_test_events"])),
+        "LoadTruncationSlope": f"{load_v2['truncation_slope']:.2f}",
+        "LoadTruncationCILow": f"{load_v2['truncation_ci95_low']:.2f}",
+        "LoadTruncationCIHigh": f"{load_v2['truncation_ci95_high']:.2f}",
+        "LoadWTwoNIS": f"{load_whitening.loc['W2_SEPARABLE_AR1', 'NIS_per_frame']:.3f}",
+        "LoadWTwoACFOne": f"{load_whitening.loc['W2_SEPARABLE_AR1', 'ACF_lag_1']:.4f}",
+        "LoadWTwoLjungP": f"{load_whitening.loc['W2_SEPARABLE_AR1', 'Ljung_Box_pvalue']:.3f}",
+        "LoadLTwoDevCoverage": fmt_percent(100 * load_dev.loc["L2", "DEV_coverage95"], 1),
+        "LoadEVIRho": f"{load_v2['evi_a90_spearman']:.3f}",
+        "LoadProjectedFisherRho": f"{load_v2['J_confusion_spearman']:.3f}",
+        "LoadWeakMinAUROC": f"{load_weak_detection['AUROC'].min():.3f}",
+        "LoadWeakMinTopOne": fmt_percent(100 * load_weak_localization["top1"].min(), 1),
+        "LoadFiniteCoverageMin": fmt_percent(100 * load_finite_calibration["coverage95"].min(), 1),
+        "LoadFiniteCoverageMax": fmt_percent(100 * load_finite_calibration["coverage95"].max(), 1),
     }
     lines = [f"\\newcommand{{\\{name}}}{{{value}}}" for name, value in macros.items()]
     (GENERATED / "results_macros.tex").write_text("\n".join(lines) + "\n", encoding="ascii")
@@ -276,6 +312,22 @@ def write_macros(checks: dict[str, object]) -> None:
             "legacy_event_trajectories": 690,
             "legacy_held_source_decisions": int(len(held_sources)),
             "legacy_held_source_correct": int(held_sources["correct"].sum()),
+            "load_tangent_sources": int(len(tangent_consistency)),
+            "load_tangent_max_rel_error": float(tangent_consistency[["central_vs_plus_relerr", "central_vs_minus_relerr"]].to_numpy().max()),
+            "load_v2_cal_normal": int(load_v2["cal_normal"]),
+            "load_v2_dev_normal": int(load_v2["dev_normal"]),
+            "load_v2_dev_event_cases": int(load_v2["dev_event_cases"]),
+            "load_v2_weak_event_cases": int(load_v2["weak_test_events"]),
+            "load_v2_weak_no_event_cases": int(load_v2["weak_test_no_event"]),
+            "load_v2_finite_event_cases": int(load_v2["finite_test_events"]),
+            "load_v2_dictionary_hash": str(load_v2["dictionary_hash"]),
+            "load_v2_selected_whitening": str(load_v2["selected_whitening"]),
+            "load_v2_selected_likelihood": str(load_v2["selected_likelihood"]),
+            "load_v2_truncation_slope": float(load_v2["truncation_slope"]),
+            "load_v2_evi_a90_spearman": float(load_v2["evi_a90_spearman"]),
+            "load_v2_projected_fisher_confusion_spearman": float(load_v2["J_confusion_spearman"]),
+            "load_v2_finite_coverage95_min": float(load_finite_calibration["coverage95"].min()),
+            "load_v2_finite_coverage95_max": float(load_finite_calibration["coverage95"].max()),
         }
     )
 
@@ -664,8 +716,8 @@ def figure_adequacy_adaptation() -> None:
     save_figure(fig, "adequacy_adaptation")
 
 
-def figure_legacy_event_evidence() -> None:
-    """Summarize the frozen event baseline and its transfer boundary."""
+def figure_event_inference_evidence() -> None:
+    """Show the load-event evidence and retain the audited event-signature asset."""
     source_pdf = DATA / "legacy_event_traces.pdf"
     source_png = DATA / "legacy_event_traces.png"
     if not source_pdf.exists() or not source_png.exists():
@@ -674,56 +726,101 @@ def figure_legacy_event_evidence() -> None:
     shutil.copyfile(source_pdf, FIGURES / "event_signatures.pdf")
     shutil.copyfile(source_png, FIGURES / "event_signatures.png")
 
-    summary = read_legacy_summary()
-    configurations = [
-        "hierarchical_136",
-        "hierarchical_448",
-        "hierarchical_448_availability",
-    ]
-    config_labels = ["136-feature\nhierarchy", "448-feature\nhierarchy", "448 + availability\ngate"]
-    metrics = [
-        ("detection_f1", "Detection F1", BLUE),
-        ("event_macro_f1_all_labels", "Event macro-F1", ORANGE),
-        ("physical_top1", "Physical Top-1", GREEN),
-        ("integrity_top1", "Integrity Top-1", PURPLE),
-    ]
+    truncation = read_csv("load_bayes_v2_truncation_dev.csv")
+    truncation_order = read_csv("load_bayes_v2_truncation_order.csv").iloc[0]
+    whitening = read_csv("load_bayes_v2_whitening.csv")
+    detection = read_csv("load_bayes_v2_weak_detection.csv")
+    localization = read_csv("load_bayes_v2_weak_localization.csv")
+    detectability = read_csv("load_bayes_v2_detectability.csv")
+    predictive = read_csv("load_bayes_v2_predictive_tests.csv").set_index("metric")["value"]
+    finite = read_csv("load_bayes_v2_finite_calibration.csv")
 
-    fig, axes = plt.subplots(1, 2, figsize=(7.16, 2.55), gridspec_kw={"width_ratios": [1.32, 0.88]})
-    ax = axes[0]
-    x = np.arange(len(configurations))
-    width = 0.19
-    for offset, (metric, label, color) in enumerate(metrics):
-        values = [summary.loc[configuration, (metric, "mean")] for configuration in configurations]
-        ax.bar(x + (offset - 1.5) * width, values, width=width, label=label, color=color, alpha=0.88)
-    ax.set_xticks(x, config_labels)
-    ax.set_ylim(0.42, 1.02)
-    ax.set_ylabel("Frozen TEST score")
-    ax.set_title("(a) Known-source event diagnosis", loc="left")
-    ax.legend(frameon=False, ncol=2, loc="lower right", fontsize=5.8)
-    ax.grid(axis="y", alpha=0.2, linewidth=0.5)
+    fig, axes = plt.subplots(2, 3, figsize=(7.16, 4.75))
 
-    ax = axes[1]
-    selected = summary.loc["hierarchical_448_availability"]
-    held = read_csv("legacy_unseen_sources_recomputed.csv")
-    raw = read_csv("legacy_raw0001_transfer_results.csv")
-    raw_candidate = raw[raw["method"].eq("C_universal_z_candidate")]
-    values = [
-        selected[("physical_scenario_top1", "mean")],
-        held["correct"].mean(),
-        raw_candidate["physical_episode_top1"].mean(),
-    ]
-    labels = ["Known-source\n121 scenarios", "Held-source\n303 decisions", "RAW0001\n5 episodes"]
-    bars = ax.bar(np.arange(3), values, color=[BLUE, ORANGE, GRAY], width=0.62)
-    for bar, value in zip(bars, values):
-        ax.text(bar.get_x() + bar.get_width() / 2, value + 0.018, f"{100 * value:.1f}%", ha="center", va="bottom", fontsize=6.5)
-    ax.set_xticks(np.arange(3), labels)
-    ax.set_ylim(0, 0.82)
-    ax.set_ylabel("Exact physical-source success")
-    ax.set_title("(b) Transfer is the binding failure", loc="left")
-    ax.grid(axis="y", alpha=0.2, linewidth=0.5)
-    ax.text(0.02, 0.98, "Different counting contracts; no pooled comparison", transform=ax.transAxes, va="top", fontsize=5.5)
-    fig.tight_layout(w_pad=1.0)
-    save_figure(fig, "legacy_event_evidence")
+    ax = axes[0, 0]
+    truncation = truncation.assign(abs_amplitude=truncation["amplitude"].abs())
+    curve = truncation.groupby("abs_amplitude")["error1_norm"].median().sort_index()
+    ax.loglog(100 * curve.index, curve.values, marker="o", color=BLUE)
+    ax.set_xticks([0.75, 1.5, 3.5, 6.0], ["0.75", "1.5", "3.5", "6"])
+    ax.xaxis.set_minor_formatter(ticker.NullFormatter())
+    ax.set_xlabel(r"Load-change magnitude $|a|$ (\%)")
+    ax.set_ylabel(r"Median $\|r-aD\|_2$")
+    ax.set_title("(a) Local truncation order", loc="left")
+    ax.text(0.05, 0.92, rf"slope $p={truncation_order['slope_p']:.2f}$", transform=ax.transAxes, va="top")
+    ax.grid(which="both", alpha=0.2, linewidth=0.5)
+
+    ax = axes[0, 1]
+    labels = ["W0\nidentity", "W1\nchannel", "W2\nchannel + AR(1)"]
+    x = np.arange(3)
+    ax.plot(x, whitening["NIS_per_frame"], marker="o", color=BLUE, label="NIS/frame")
+    ax.plot(x, whitening["ACF_lag_1"].abs(), marker="s", color=ORANGE, label=r"$|$ACF(1)$|$")
+    ax.set_yscale("log")
+    ax.set_xticks(x, labels)
+    ax.set_ylim(1e-8, 2)
+    ax.set_title("(b) Normal-data whitening", loc="left")
+    ax.legend(frameon=False, fontsize=5.8, loc="lower right")
+    ax.grid(which="both", alpha=0.2, linewidth=0.5)
+
+    def pool_signs(frame: pd.DataFrame) -> pd.DataFrame:
+        pooled = frame.assign(abs_amplitude=frame["amplitude"].abs()).groupby("abs_amplitude").mean(numeric_only=True)
+        return pooled.sort_index()
+
+    det = pool_signs(detection)
+    loc = pool_signs(localization)
+    magnitude_percent = 100 * det.index.to_numpy()
+
+    ax = axes[0, 2]
+    ax.semilogx(magnitude_percent, det["AUROC"], marker="o", color=BLUE, label="AUROC")
+    ax.semilogx(magnitude_percent, det["FNR"], marker="s", color=ORANGE, label="FNR at 0.5")
+    ax.set_ylim(-0.03, 1.03)
+    ax.set_xlabel(r"Load-change magnitude $|a|$ (\%)")
+    ax.set_title("(c) Weak-event detection", loc="left")
+    ax.legend(frameon=False, fontsize=5.8)
+    ax.grid(which="both", alpha=0.2, linewidth=0.5)
+
+    ax = axes[1, 0]
+    ax.semilogx(magnitude_percent, loc["top1"], marker="o", color=GREEN, label="Top-1")
+    ax.semilogx(magnitude_percent, loc["top3"], marker="s", color=PURPLE, label="Top-3")
+    ax.axhline(1 / 16, color=GRAY, linestyle=":", linewidth=0.8, label="Top-1 chance")
+    ax.set_ylim(0, 1.03)
+    ax.set_xlabel(r"Load-change magnitude $|a|$ (\%)")
+    ax.set_ylabel("Exact source success")
+    ax.set_title("(d) Source-resolution boundary", loc="left")
+    ax.legend(frameon=False, fontsize=5.7, loc="lower right")
+    ax.grid(which="both", alpha=0.2, linewidth=0.5)
+
+    ax = axes[1, 1]
+    x_pred = 100 * detectability["a_min"]
+    y_emp = 100 * detectability["a90"]
+    ax.scatter(x_pred, y_emp, s=24, color=BLUE, edgecolor="#243244", linewidth=0.45)
+    lim_low = 0.8 * min(x_pred.min(), y_emp.min())
+    lim_high = 1.25 * max(x_pred.max(), y_emp.max())
+    ax.plot([lim_low, lim_high], [lim_low, lim_high], color=GRAY, linestyle="--", linewidth=0.8)
+    for row in detectability.itertuples():
+        if row.source_bus in {8, 12, 20}:
+            ax.annotate(str(row.source_bus), (100 * row.a_min, 100 * row.a90), xytext=(3, 2), textcoords="offset points", fontsize=5.5)
+    ax.set_xscale("log")
+    ax.set_yscale("log")
+    ax.set_xlim(lim_low, lim_high)
+    ax.set_ylim(lim_low, lim_high)
+    ax.set_xlabel("EVI-predicted threshold (%)")
+    ax.set_ylabel("Empirical 90% threshold (%)")
+    ax.set_title("(e) Detectability prediction", loc="left")
+    ax.text(0.05, 0.92, rf"Spearman $\rho={predictive['EVI_vs_a90_spearman']:.2f}$", transform=ax.transAxes, va="top")
+    ax.grid(which="both", alpha=0.2, linewidth=0.5)
+
+    ax = axes[1, 2]
+    ax.plot(100 * finite["amplitude"], 100 * finite["coverage95"], marker="o", color=PURPLE)
+    ax.axhline(95, color=GRAY, linestyle="--", linewidth=0.8, label="nominal 95%")
+    ax.set_ylim(88, 100)
+    ax.set_xlabel("Signed load change $a$ (%)")
+    ax.set_ylabel("Amplitude coverage (%)")
+    ax.set_title("(f) Finite-amplitude calibration", loc="left")
+    ax.legend(frameon=False, fontsize=5.8, loc="lower right")
+    ax.grid(alpha=0.2, linewidth=0.5)
+
+    fig.tight_layout(h_pad=1.0, w_pad=0.8)
+    save_figure(fig, "load_event_inference")
 
 
 def write_tables() -> None:
@@ -887,6 +984,33 @@ Configuration & Detection F1 & Event macro-F1 & Physical Top-1 & Physical Top-3 
 """
     (TABLES / "legacy_event_results.tex").write_text(event_tex, encoding="ascii")
 
+    weak_detection = read_csv("load_bayes_v2_weak_detection.csv")
+    weak_localization = read_csv("load_bayes_v2_weak_localization.csv")
+    weak = weak_detection.merge(weak_localization, on="amplitude", validate="one_to_one")
+    weak["abs_amplitude"] = weak["amplitude"].abs()
+    weak = weak.groupby("abs_amplitude").mean(numeric_only=True).sort_index()
+    weak_rows = [
+        f"{100*a:.3f} & {row['AUROC']:.3f} & {100*row['FPR']:.2f} & "
+        f"{100*row['FNR']:.1f} & {100*row['top1']:.1f} & {100*row['top3']:.1f} \\\\"
+        for a, row in weak.iterrows()
+    ]
+    weak_tex = r"""\begin{table}[t]
+\caption{Sign-pooled weak load-event TEST results for the frozen W2/L2 model. Each row contains 1,600 event cases (16 source buses, two signs, 50 noise replicas); the false-positive rate uses 800 no-event records.}
+\label{tab:load-weak-results}
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3.2pt}
+\begin{tabular}{cccccc}
+\toprule
+$|a|$ (\%) & AUROC & FPR (\%) & FNR (\%) & Top-1 (\%) & Top-3 (\%) \\
+\midrule
+""" + "\n".join(weak_rows) + r"""
+\bottomrule
+\end{tabular}
+\end{table}
+"""
+    (TABLES / "load_weak_results.tex").write_text(weak_tex, encoding="ascii")
+
 
 def main() -> None:
     setup_style()
@@ -898,7 +1022,7 @@ def main() -> None:
     figure_temporal_uncertainty()
     figure_mismatch()
     figure_adequacy_adaptation()
-    figure_legacy_event_evidence()
+    figure_event_inference_evidence()
     write_tables()
 
     assert checks["nominal_test_trajectories"] == 100
@@ -912,6 +1036,21 @@ def main() -> None:
     assert checks["legacy_event_trajectories"] == 690
     assert checks["legacy_held_source_decisions"] == 303
     assert checks["legacy_held_source_correct"] == 3
+    assert checks["load_tangent_sources"] == 16
+    assert checks["load_tangent_max_rel_error"] < 0.0025
+    assert checks["load_v2_cal_normal"] == 1000
+    assert checks["load_v2_dev_normal"] == 500
+    assert checks["load_v2_dev_event_cases"] == 640
+    assert checks["load_v2_weak_event_cases"] == 9600
+    assert checks["load_v2_weak_no_event_cases"] == 800
+    assert checks["load_v2_finite_event_cases"] == 8000
+    assert checks["load_v2_selected_whitening"] == "W2_SEPARABLE_AR1"
+    assert checks["load_v2_selected_likelihood"] == "L2"
+    assert 1.9 < checks["load_v2_truncation_slope"] < 2.1
+    assert checks["load_v2_evi_a90_spearman"] < -0.7
+    assert abs(checks["load_v2_projected_fisher_confusion_spearman"]) < 0.5
+    assert 0.9 < checks["load_v2_finite_coverage95_min"] <= 0.95
+    assert 0.95 <= checks["load_v2_finite_coverage95_max"] < 0.98
     (GENERATED / "evidence_checks.json").write_text(
         json.dumps(checks, indent=2, sort_keys=True) + "\n", encoding="ascii"
     )

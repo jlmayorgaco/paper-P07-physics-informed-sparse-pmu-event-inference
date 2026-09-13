@@ -15,6 +15,9 @@ $manifestRoot = Join-Path $benchmarkRoot "output\manifests"
 $topologyRoot = Join-Path $SourceRepository "data\topology\ieee39"
 $legacyEvidenceRoot = Join-Path $SourceRepository "paper_journal\evidence"
 $legacyFigureRoot = Join-Path $SourceRepository "paper_journal\figures\journal"
+$loadTangentV2Root = Join-Path $benchmarkRoot "output\load_tangent_v2\results"
+$loadBayesV1Root = Join-Path $benchmarkRoot "output\load_bayes_fd_v1\results"
+$loadBayesV2Root = Join-Path $benchmarkRoot "output\load_bayes_fd_v2\results"
 $destination = Join-Path $paperRoot "generated\frozen"
 
 function Get-RelativePathCompat([string]$BasePath, [string]$TargetPath) {
@@ -85,7 +88,31 @@ $sources = @(
     @{ Kind = "legacy-evidence"; Name = "figure_trace_manifest.json"; Target = "legacy_figure_trace_manifest.json" },
     @{ Kind = "legacy-evidence"; Name = "source_manifest.json"; Target = "legacy_source_manifest.json" },
     @{ Kind = "legacy-figure"; Name = "event_traces.pdf"; Target = "legacy_event_traces.pdf" },
-    @{ Kind = "legacy-figure"; Name = "event_traces.png"; Target = "legacy_event_traces.png" }
+    @{ Kind = "legacy-figure"; Name = "event_traces.png"; Target = "legacy_event_traces.png" },
+    @{ Kind = "load-tangent-v2"; Name = "load_fd_central_operator.npz"; Target = "load_tangent_fd_operator.npz" },
+    @{ Kind = "load-tangent-v2"; Name = "load_fd_central_consistency.csv"; Target = "load_tangent_fd_consistency.csv" },
+    @{ Kind = "load-tangent-v2"; Name = "load_finite_amplitude_stress.csv"; Target = "load_tangent_finite_stress.csv" },
+    @{ Kind = "load-bayes-v1"; Name = "load_bayes_summary.csv"; Target = "load_bayes_v1_summary.csv" },
+    @{ Kind = "load-bayes-v1"; Name = "load_bayes_model_comparison.csv"; Target = "load_bayes_v1_model_comparison.csv" },
+    @{ Kind = "load-bayes-v1"; Name = "load_calibration.csv"; Target = "load_bayes_v1_calibration.csv" },
+    @{ Kind = "load-bayes-v2"; Name = "load_bayes_fd_v2_summary.csv"; Target = "load_bayes_v2_summary.csv" },
+    @{ Kind = "load-bayes-v2"; Name = "load_bayes_dictionary_manifest.csv"; Target = "load_bayes_v2_dictionary_manifest.csv" },
+    @{ Kind = "load-bayes-v2"; Name = "load_bayes_cal_manifest.csv"; Target = "load_bayes_v2_cal_manifest.csv" },
+    @{ Kind = "load-bayes-v2"; Name = "load_bayes_dev_manifest.csv"; Target = "load_bayes_v2_dev_manifest.csv" },
+    @{ Kind = "load-bayes-v2"; Name = "load_bayes_test_manifest.csv"; Target = "load_bayes_v2_test_manifest.csv" },
+    @{ Kind = "load-bayes-v2"; Name = "load_whitening_model.csv"; Target = "load_bayes_v2_whitening.csv" },
+    @{ Kind = "load-bayes-v2"; Name = "load_truncation_order.csv"; Target = "load_bayes_v2_truncation_order.csv" },
+    @{ Kind = "load-bayes-v2"; Name = "load_truncation_dev.csv"; Target = "load_bayes_v2_truncation_dev.csv" },
+    @{ Kind = "load-bayes-v2"; Name = "load_dev_likelihood_ablation.csv"; Target = "load_bayes_v2_dev_likelihood.csv" },
+    @{ Kind = "load-bayes-v2"; Name = "load_weak_detection.csv"; Target = "load_bayes_v2_weak_detection.csv" },
+    @{ Kind = "load-bayes-v2"; Name = "load_weak_localization.csv"; Target = "load_bayes_v2_weak_localization.csv" },
+    @{ Kind = "load-bayes-v2"; Name = "load_detectability_thresholds.csv"; Target = "load_bayes_v2_detectability.csv" },
+    @{ Kind = "load-bayes-v2"; Name = "load_predictive_tests.csv"; Target = "load_bayes_v2_predictive_tests.csv" },
+    @{ Kind = "load-bayes-v2"; Name = "load_finite_calibration.csv"; Target = "load_bayes_v2_finite_calibration.csv" },
+    @{ Kind = "load-bayes-v2"; Name = "load_selected_likelihood.csv"; Target = "load_bayes_v2_selected_likelihood.csv" },
+    @{ Kind = "load-bayes-v2"; Name = "load_q_stability.csv"; Target = "load_bayes_v2_q_stability.csv" },
+    @{ Kind = "load-bayes-v2"; Name = "load_pair_geometry_whitened.csv"; Target = "load_bayes_v2_pair_geometry.csv" },
+    @{ Kind = "load-bayes-v2"; Name = "load_pair_confusion.csv"; Target = "load_bayes_v2_pair_confusion.csv" }
 )
 
 New-Item -ItemType Directory -Force -Path $destination | Out-Null
@@ -97,6 +124,9 @@ $records = foreach ($source in $sources) {
         "data" { $topologyRoot }
         "legacy-evidence" { $legacyEvidenceRoot }
         "legacy-figure" { $legacyFigureRoot }
+        "load-tangent-v2" { $loadTangentV2Root }
+        "load-bayes-v1" { $loadBayesV1Root }
+        "load-bayes-v2" { $loadBayesV2Root }
         default { throw "Unknown source kind: $($source.Kind)" }
     }
     $sourcePath = Join-Path $base $source.Name

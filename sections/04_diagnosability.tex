@@ -151,7 +151,7 @@ Hence $d_{ij}^{\mathrm{lin}}>(\kappa_i+\kappa_j)r^2/2$ is sufficient for the two
 For any admissible pair $(\bm\eta_i,\bm\eta_j)$, the reverse triangle inequality bounds the exact distance by its affine part minus $\|\bm\rho_i\|_2+\|\bm\rho_j\|_2$. Minimizing the affine part and applying \eqref{eq:nonlinear-remainder} gives \eqref{eq:nonlinear-separation-bound}; nonnegativity produces the positive-part operator.
 \endIEEEproof
 
-This condition is sufficient, not necessary. Estimating $\kappa_h$ requires directional second derivatives of the simulator response over a declared operating region. Those derivatives are not available, so the nonlinear certificate is not evaluated numerically here.
+This condition is sufficient, not necessary. A complete certificate requires directional curvature bounds for every candidate and nuisance direction. Section~\ref{sec:load-event-inference} tests the narrower load-intervention remainder and its second-order scaling. Curvature bounds for the full state, integrity, and multi-family candidate set remain unavailable.
 
 For fixed closest nuisance values and unit-severity signature, the equal-prior Gaussian error is
 \begin{equation}
@@ -159,6 +159,24 @@ For fixed closest nuisance values and unit-severity signature, the equal-prior G
  |\gamma|_{\min}=\frac{\sqrt2\,\Phi^{-1}(1-\beta)}{\sqrt{D_{ij}(1)}} \label{eq:min-detectable-severity}
 \end{equation}
 to target $P_e^{\star}\le\beta$ when the signature scales linearly with severity $\gamma$. This local severity limit is not applied across topology switches or nonlinear fault saturation. For simultaneous events with projected unit-signature matrix $\widetilde{\bm S}_A$, their amplitudes are locally identifiable only if $\operatorname{rank}(\widetilde{\bm S}_A)=|A|$ after the same nuisance projection.
+
+The executed load-intervention case gives a directly testable specialization. Let $\bm D_g$ be the whitened unit-amplitude response for candidate source $g$ and let $\bm\Sigma$ be the normal-data covariance before whitening. Its event-visible information is
+\begin{equation}
+ \mathcal I_g=\bm D_g^{\mathsf T}\bm\Sigma^{-1}\bm D_g, \qquad
+ |a|_{\min}=\frac{z_{1-\alpha}+z_{1-\beta}}{\sqrt{\mathcal I_g}},
+ \label{eq:event-visible-information}
+\end{equation}
+where the second expression is the local amplitude required by a one-sided Gaussian score with false-alarm probability $\alpha$ and power $1-\beta$. The formula predicts detectability, not source identity.
+
+For source $j$ as the closest single-signature alternative, the information left after its amplitude is fitted is
+\begin{equation}
+ \mathcal J_{g\rightarrow j}=\mathcal I_g-
+ \frac{(\bm D_g^{\mathsf T}\bm\Sigma^{-1}\bm D_j)^2}
+ {\bm D_j^{\mathsf T}\bm\Sigma^{-1}\bm D_j}
+ =\mathcal I_g(1-\mu_{gj}^{2}),
+ \label{eq:projected-fisher}
+\end{equation}
+with $\mu_{gj}$ the covariance-weighted signature coherence. Equation~\eqref{eq:projected-fisher} is a pairwise local quantity. It need not predict multicandidate confusion once amplitude priors, unequal alternatives, and finite nonlinear response are present; the experiment retains that comparison as a falsifiable test.
 
 \begin{figure}[t]
 \centering
@@ -172,4 +190,4 @@ For a calibrated source posterior, define the smallest candidate set satisfying
  \mathcal C_k(\alpha)=\argmin_{\mathcal C\subseteq\mathcal H}
  \left\{|\mathcal C|:\sum_{h\in\mathcal C}p(h\mid\bm y_{0:k})\ge1-\alpha\right\}. \label{eq:candidate-set}
 \end{equation}
-A diagnosability-aware system abstains from exact Top-1 when $|\mathcal C_k|>1$ or when its closest competing margin falls below a development-set threshold. A source-disjoint experiment must test whether the margin predicts candidate-set size, calibrated uncertainty, and source-resolution delay under PMU loss and addition. The available event bank does not supply that test.
+A diagnosability-aware system abstains from exact Top-1 when $|\mathcal C_k|>1$ or when its closest competing margin falls below a development-set threshold. The load-intervention study tests whether $\mathcal I_g$ predicts detection amplitude and whether $\mathcal J_{g\rightarrow j}$ predicts pair confusion. Candidate-set calibration, source-resolution delay, and PMU loss or addition still require a source-disjoint multi-family experiment.

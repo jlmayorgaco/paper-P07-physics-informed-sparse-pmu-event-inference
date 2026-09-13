@@ -13,12 +13,12 @@ Every empirical panel is generated from a frozen artifact. Conceptual drawings a
 | Fig. 7 | Test lag, marginal calibration, and low-rank discrepancy placement. | E04A3--E04A5 artifacts. | Generated vector PDF/PNG, integrated. |
 | Fig. 8 | Show the mismatch atlas and observed-only adequacy discrimination. | E06 per-case, calibration, and adequacy artifacts. | Generated vector PDF/PNG, integrated. |
 | Fig. 9 | Compare frozen and regularized physical-recentering M6 errors, oracle-gap closure, and covariance failure. | E06-H summary, closure, uncertainty, and identifiability artifacts. | Generated vector PDF/PNG, integrated. |
-| Fig. 10 | Separate known-source event performance from held-source collapse and RAW transfer. | Frozen legacy event summaries. | Generated vector PDF/PNG, integrated. |
-| Main tables | Fix literature capabilities, event semantics/operators, experimental contracts, state-estimation results, uncertainty, mismatch, recentering results, and legacy event evidence. | Manuscript definitions and frozen artifacts. | Integrated. |
+| Fig. 10 | Connect load-response curvature, normal whitening, weak-event detection, source resolution, EVI prediction, and finite-amplitude calibration. | LOAD-TANGENT-V2 and LOAD-BAYES-FD-V2 frozen artifacts. | Six-panel generated vector PDF/PNG, integrated. |
+| Main tables | Fix literature capabilities, event semantics/operators, experimental contracts, state-estimation results, uncertainty, mismatch, recentering, weak-load inference, and legacy event evidence. | Manuscript definitions and frozen artifacts. | Integrated. |
 
 The generated eight-PMU topology/estimator panel remains a reserve asset (`figures/generated/system_architecture.pdf`); it is not numbered in the current manuscript because Fig. 1 states the inference flow more directly.
 
-Still prospective: calibrated uncertainty versus profiled separation; PMU loss/join and placement sweeps; topology-outage maps; and the common-contract end-to-end joint estimator. These assets enter the paper only after their manifests, selection rules, and test results are frozen.
+Still prospective: calibrated candidate sets versus profiled pairwise separation; PMU loss/join and placement sweeps; topology-outage maps; and the common-contract multi-family joint estimator. These assets enter the paper only after their manifests, selection rules, and test results are frozen.
 
 Production rules:
 

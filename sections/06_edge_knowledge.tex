@@ -30,6 +30,9 @@ Physical mismatch & Seven families, seven scales; B1/B2/U2 frozen & 980 rebuilt 
 Breakpoint refinement & New seeds in transition bands; B2 frozen & 175 rebuilt plants \\
 Causal recentering & M1/M2/M6/M7; 160 DEV / 320 TEST; tune on DEV & Rebuilt plant trajectory \\
 Regularized physical recentering & M6 PQ/PV/Slack basis; 30 DEV / 60 TEST; one snapshot & Rebuilt equilibrium \\
+Load tangent audit & 16 candidate load buses; centered $\pm0.5\%$ nonlinear simulations & Candidate-bus intervention \\
+Bayesian load inference V1 & Eight amplitudes; 2,560 event / 320 no-event TEST records & Source--amplitude--noise record \\
+Bayesian load inference V2 & 1,000 normal CAL; 500 normal + 640 event DEV; 9,600 weak + 800 no-event and 8,000 finite-amplitude TEST records & Source--amplitude--noise record \\
 Known-source event diagnosis & Eight abnormal labels plus normal; 414 TRAIN / 138 DEV / 138 TEST & Complete ANDES trajectory \\
 Source-transfer audit & Asset-disjoint folds; true family supplied; exact source & 303 decisions from 101 event parents $\times$ 3 seeds \\
 \bottomrule
@@ -55,6 +58,14 @@ The oracle subset compares the frozen estimator with true-equilibrium recenterin
 The corrected regularized physical-recentering campaign is a separate M6-only contract. It uses 30 fresh DEV cases from seeds 601--610 and 60 TEST cases from seeds 611--630, with 20 TEST equilibria at each of $m\in\{0.5,1.0,1.5\}$. DEV selects the nuisance scale, regularization, and continuation initialization from a small fixed grid. TEST uses only the observed voltage and terminal-current phasors; hidden voltages are revealed afterward for scoring. A solution is accepted only when the nonlinear optimizer succeeds, all outputs are finite, and the maximum AC residual is at most $5\times10^{-5}$. Rejections remain in the denominator; the frozen rejection table is empty. A six-case subset is also solved with an independent constrained optimizer, and its partial convergence status is reported rather than upgraded to full solver equivalence.
 
 All numerical tables and empirical figures are regenerated from the hashed snapshot under \texttt{generated/frozen}. The build script checks the sample counts, acceptance flags, rank-deficient nuisance information, and preregistered adaptation-closure range before producing the tables and figures.
+
+\subsection{Load-Source Inference Contract}
+
+The load-source campaign uses the PowerDynamics plant and the same eight PMU buses, but it has its own frozen normal banks, event dictionary, and test manifests. The dictionary covers 16 candidate load buses listed in its manifest. Centered $\pm0.5\%$ nonlinear simulations define \,\eqref{eq:load-tangent}; the corresponding dictionary hash is fixed before the Bayesian tests. Candidate source and amplitude are inferred from the PMU window. The true source and true amplitude appear only in the evaluator.
+
+V1 tests finite changes of $\pm1$, $\pm2.5$, $\pm5$, and $\pm7.5\%$ on 2,560 event and 320 no-event records. V2 expands normal calibration to 1,000 records, uses 500 normal and 640 event records for likelihood selection, then opens two TEST blocks. The weak block contains 9,600 events at magnitudes from 0.01 to 0.4\% and 800 no-event records. The finite block contains 8,000 events from $\pm1.25$ to $\pm9\%$. Noise seeds are disjoint across CAL, DEV, and TEST. A test record is one source--amplitude--noise realization; repeated samples within its 30-frame window are never counted as independent cases.
+
+W2 and L2 are selected on CAL/DEV, respectively, and frozen for both V2 TEST blocks. The weak-event operating threshold is 0.5 posterior event probability. No TEST row enters covariance estimation, likelihood selection, prior selection, or threshold tuning. The campaign covers one physical family and a fixed topology; it does not validate simultaneous events, missing PMUs, or cross-simulator transfer.
 
 \subsection{Event-Diagnosis Campaign and Signal Evidence}
 

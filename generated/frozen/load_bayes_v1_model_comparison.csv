@@ -1,0 +1,4 @@
+model,event_AUROC,event_FPR_at_.5,event_FNR_at_.5,source_top1,event_cases,no_event_cases
+W0_IDENTITY,1.0,1.0,0.0,0.109375,2560,320
+W1_CHANNEL_COV,1.0,0.121875,0.0,1.0,2560,320
+W2_SEPARABLE_AR1,1.0,0.00625,0.0,1.0,2560,320

@@ -9,20 +9,20 @@ The distinction is operational, not semantic. A generation change can be visible
 
 A physical candidate is represented by $h=(c,\ell,\tau,\gamma)$, containing the event family, source, onset, and magnitude. Measurement availability and corruption remain separate variables. Each candidate generates a counterfactual DAE response, while candidate comparison fits admissible initial-state and integrity nuisance directions. The distance that remains after this fit measures source separation. A zero distance identifies a pair for which a uniformly correct source decision is impossible under the declared local model.
 
-Two independent studies supply complementary evidence. The PowerDynamics study reconstructs 31 hidden complex bus voltages from eight voltage/current PMUs and tests operating-point mismatch. The ANDES study evaluates a physics-guided hierarchical ExtraTrees baseline on eight abnormal labels plus normal operation. They use the same PMU buses and related IEEE 39-bus networks, but their simulator semantics, state coordinates, and data splits differ. Their metrics are kept separate.
+Three frozen contracts supply complementary evidence. The PowerDynamics state study reconstructs 31 hidden complex bus voltages from eight voltage/current PMUs and tests operating-point mismatch. A second PowerDynamics contract uses candidate-specific nonlinear load interventions to infer event presence, amplitude, and one of 16 source buses without a fitted source-label head. The ANDES study evaluates a physics-guided hierarchical ExtraTrees baseline on eight abnormal labels plus normal operation. The two simulators have different semantics, state coordinates, and data splits; their metrics are never pooled.
 
 The contributions are:
 \begin{enumerate}
   \item a hybrid DAE inference model that maps eight event labels to composable physical-intervention and measurement-integrity variables;
-  \item a finite-horizon analysis that separates target-state estimability from event-source diagnosability, including a minimum-variance covariance, a sparse-integrity margin, and a nonlinear remainder certificate; and
-  \item a paired evaluation showing accurate hidden-voltage reconstruction and operating-point recentering, together with a decisive failure of learned localization under complete physical-source holdout.
+  \item a finite-horizon analysis that separates target-state estimability from event-source diagnosability, including a minimum-variance covariance, a sparse-integrity margin, a nonlinear remainder bound, and source-specific detectability information; and
+  \item frozen tests of hidden-voltage reconstruction, operating-point recentering, and Bayesian load-source inference, accompanied by a complete-source-holdout audit of the earlier supervised hierarchy.
 \end{enumerate}
 
-The empirical boundary is sharp. The state estimator reaches \BTwoTVE{} mean hidden-voltage HVRE, while physical recentering closes \EZeroHClosureHalf{}--\EZeroHClosureMax{} of the operating-point error gap. The known-source event model detects and classifies disturbances, but complete source holdout leaves only \HeldSourceCorrect{} correct decisions among \HeldSourceDecisions{}. Thus state recovery and event recognition do not imply source recovery. Candidate-conditioned physical inference is the next experiment, not an accomplished result.
+The empirical boundary is sharp. The state estimator reaches \BTwoTVE{} mean hidden-voltage HVRE, while physical recentering closes \EZeroHClosureHalf{}--\EZeroHClosureMax{} of the operating-point error gap. In the load-intervention study, the physical likelihood resolves all sources at 0.4\% magnitude but only 13.0\% at 0.01\%. The supervised event model detects and classifies known-source disturbances, yet complete source holdout leaves \HeldSourceCorrect{} correct decisions among \HeldSourceDecisions{}. Physical candidate inference is therefore supported for one matched event family, not for the full eight-family joint problem.
 
 \begin{figure*}[t]
 \centering
 \resizebox{\textwidth}{!}{\input{figures/joint_inference_architecture}}
-\caption{Inference path and validation boundary. PMU samples and quality flags enter candidate-specific DAE simulation and nuisance fitting. The fitted candidates produce a state estimate and an event, source, and integrity decision with optional abstention. Solid boxes denote evaluated components; dashed boxes denote the end-to-end candidate comparison that still requires a common experiment.}
+\caption{Inference path and validation boundary. PMU samples and quality flags enter candidate-specific DAE simulation and nuisance fitting. The fitted candidates produce a state estimate and an event, source, and integrity decision with optional abstention. Solid boxes denote evaluated state components and the restricted load-source likelihood; dashed boxes denote the full multi-family candidate comparison that still requires a common experiment.}
 \label{fig:joint-architecture}
 \end{figure*}

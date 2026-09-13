@@ -6,6 +6,7 @@
     minimum height=0.78cm,inner sep=4pt,fill=white},
   state/.style={box,draw=accessblue!75!black,fill=accessblue!8},
   event/.style={box,draw=orange!75!black,fill=orange!9},
+  loadcase/.style={box,draw=green!55!black,fill=green!7},
   pending/.style={box,draw=purple!70!black,densely dashed,fill=purple!5},
   arr/.style={->,thick,draw=black!65},
   branch/.style={->,thick,draw=black!55,rounded corners=3pt}
@@ -25,6 +26,11 @@
 \node[pending,minimum width=2.30cm,minimum height=1.05cm] (compare) at (9.45,1.50)
   {Candidate comparison\\$D_{ij},\;p(h\mid\bm y_{0:k})$\\calibrated evidence};
 
+\node[loadcase,minimum width=2.45cm,minimum height=0.78cm] (loadfit) at (6.25,-0.25)
+  {Evaluated load case\\centered tangent and W2/L2};
+\node[loadcase,minimum width=2.30cm,minimum height=0.78cm] (loadpost) at (9.45,-0.25)
+  {Normalized evidence\\$H_0$, 16 sources, amplitude};
+
 \node[state,minimum width=2.30cm] (stateout) at (12.80,2.55)
   {Hidden-voltage estimate\\$\widehat{\bm z}_{\mathcal U,k},\bm\Sigma_{z,k}$};
 \node[event,minimum width=2.30cm] (eventout) at (12.80,0.45)
@@ -38,14 +44,17 @@
 \draw[arr] (quality.east) -| (fit.north);
 \draw[arr] (bank.east) -| (fit.south);
 \draw[arr] (fit) -- (compare);
+\draw[branch] (bank.east) -| (loadfit.north);
+\draw[arr] (loadfit) -- (loadpost);
+\draw[branch] (loadpost.east) -| (eventout.south);
 \draw[branch] (compare.east) -| (stateout.west);
 \draw[branch] (compare.east) -| (eventout.west);
 \draw[arr] (eventout) -- (abstain);
 
-\node[font=\sffamily\tiny,text=accessblue!75!black,anchor=west] at (-0.95,-0.45)
+\node[font=\sffamily\tiny,text=accessblue!75!black,anchor=west] at (-0.95,-1.05)
   {solid blue: evaluated state-model components};
-\node[font=\sffamily\tiny,text=orange!75!black,anchor=west] at (4.15,-0.45)
-  {solid orange: separately evaluated event/integrity components};
-\node[font=\sffamily\tiny,text=purple!75!black,anchor=west] at (10.15,-0.45)
+\node[font=\sffamily\tiny,text=green!55!black,anchor=west] at (4.15,-1.05)
+  {solid green: evaluated load-source special case};
+\node[font=\sffamily\tiny,text=purple!75!black,anchor=west] at (10.15,-1.05)
   {dashed: joint path not yet evaluated};
 \end{tikzpicture}

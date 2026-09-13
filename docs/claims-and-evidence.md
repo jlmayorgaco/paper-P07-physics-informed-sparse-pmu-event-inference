@@ -24,14 +24,21 @@ This register governs manuscript wording. Every imported artifact is hashed in `
 | Electrical descriptors improve physical-source ranking in the legacy hierarchy. | `legacy_descriptor_paired_intervals.csv` | **Historical empirical-secondary.** Top-1 increases by 9.6 percentage points, 95% paired interval 6.9--12.5. | Component result within the same supervised hierarchy. |
 | The legacy hierarchy generalizes to unseen physical sources. | `legacy_unseen_sources_recomputed.csv` | **Rejected.** Only 3/303 exact source decisions are correct across 101 held-source parents and three seeds, even with the event family supplied. | Strong evidence of source memorization under this contract. |
 | The RAW0001 candidate model is a reliable event alarm. | `legacy_raw0001_transfer_results.csv` | **Rejected.** It recovers 2.7/12 event episodes and 0.3/5 physical episodes on average. | One independent record; preserves a negative transfer result. |
+| The centered finite-difference load dictionary is a numerically consistent physical tangent. | `load_tangent_fd_consistency.csv`; `load_tangent_finite_stress.csv`; frozen NPZ dictionary | **Empirical-primary for the numerical tangent.** Maximum central-to-one-sided relative error is 0.235%; the 10% stress has median/max trajectory error 1.56%/4.55%. | Sixteen load buses, fixed PowerDynamics model, 30-frame response; not an analytic descriptor-DAE sensitivity. |
+| W2 produces an adequate normal residual model for load-source inference. | `load_bayes_v2_whitening.csv`; CAL manifest | **Empirical-primary.** NIS/frame 0.998, ACF(1) -0.0026, Ljung--Box p = 0.598 on the frozen normal bank. | Separable AR(1) plus channel covariance under matched simulator noise; no topology or PMU-loss shift. |
+| The local load-response remainder is second order and L2 calibrates finite amplitudes. | `load_bayes_v2_truncation_order.csv`; `load_bayes_v2_dev_likelihood.csv`; `load_bayes_v2_finite_calibration.csv` | **Empirical-primary.** Fitted order 2.00 [1.79, 2.24]; DEV selects L2; finite TEST 95% coverage is 92.9--96.0%. | One physical family, fixed onset window and topology; L2 uses numerical curvature and fixed W2 covariance. |
+| Event-visible information predicts weak-load detectability. | `load_bayes_v2_detectability.csv`; `load_bayes_v2_predictive_tests.csv` | **Empirical-primary mechanism test.** Spearman rho between EVI and empirical a90 is -0.794. | Sixteen source buses and a finite amplitude grid; predicts detection amplitude, not exact source. |
+| Projected pairwise information predicts multicandidate source confusion. | `load_bayes_v2_pair_geometry.csv`; `load_bayes_v2_pair_confusion.csv`; `load_bayes_v2_predictive_tests.csv` | **Inconclusive.** Spearman rho = 0.361. | Retain the negative result; do not claim a validated localization surrogate. |
+| Physics-based load-source inference resolves unseen amplitudes without a source-label head. | `load_bayes_v1_model_comparison.csv`; `load_bayes_v2_weak_detection.csv`; `load_bayes_v2_weak_localization.csv`; TEST manifests | **Empirical-primary for the matched load contract.** Top-1 ranges from 13.0% at 0.01% magnitude to 100% at 0.4%; V2 has 9,600 weak events and 800 no-event records. | Candidate buses are encoded by simulator interventions; the evidence does not cover unseen topology, event family, or simulator. |
 | The proposed joint Bayesian estimator improves source localization or end-to-end state estimation. | None yet. | **Hypothesis, not established.** Present as formulation and required experiment. | Requires a frozen common-contract comparison of ML-only, physics-only, hybrid residual, and full joint methods. |
 
 ## Forbidden upgrades
 
-- Do not describe the manuscript as an end-to-end validated joint estimator.
+- Do not describe the manuscript as an end-to-end validated multi-family joint estimator.
 - Do not call the legacy event model zero-shot, source-generalizing, Bayesian, or robust.
 - Do not call retrospective inference real-time or continuous unless latency and normal exposure are measured.
 - Do not call U2 or the recentering curvature covariance fully calibrated.
-- Do not infer topology, PMU loss/join, cross-simulator, field, or HIL performance from nominal/M6 evidence.
+- Do not infer topology, PMU loss/join, cross-simulator, field, or HIL performance from the state or load-source evidence.
+- Do not call the numerical load tangent analytic, or promote the inconclusive projected-Fisher result into a source-confusion law.
 - Do not turn oracle recentering into a deployable-method claim.
 - Do not claim exact functional identifiability when the projected residual is nonzero.
