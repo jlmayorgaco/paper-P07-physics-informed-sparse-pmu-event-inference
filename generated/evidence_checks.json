@@ -3,5 +3,13 @@
   "e06_main_unique_physical_cases": 980,
   "e06_nominal_reference_tve_percent": 0.014744044384083058,
   "e06e_median_oracle_closure": 0.0038099671005001005,
+  "e06h_median_closure": 0.9808898436506872,
+  "e06h_nuisance_dimension": 43,
+  "e06h_nuisance_rank": 25,
+  "e06h_test_cases": 60,
+  "e06h_test_valid_rate": 1.0,
+  "legacy_event_trajectories": 690,
+  "legacy_held_source_correct": 3,
+  "legacy_held_source_decisions": 303,
   "nominal_test_trajectories": 100
 }

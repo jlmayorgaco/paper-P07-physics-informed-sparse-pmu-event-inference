@@ -1,0 +1,15 @@
+\begin{table*}[t]
+\caption{Audited sequential event-diagnosis baseline on the known-source TEST split, mean over three fitted seeds. The independent split unit is the complete trajectory; timestamp-level scores retain the denominators of the frozen evaluator.}
+\label{tab:legacy-event-results}
+\centering
+\footnotesize
+\begin{tabular}{lcccccc}
+\toprule
+Configuration & Detection F1 & Event macro-F1 & Physical Top-1 & Physical Top-3 & Integrity Top-1 & False alarms/min \\
+\midrule
+136-feature hierarchy & 0.965 & 0.791 & 0.496 & 0.646 & 0.870 & 4.01 \\
+448-feature hierarchy & 0.975 & 0.815 & 0.590 & 0.717 & 0.865 & 1.45 \\
+448 features + availability & 0.989 & 0.905 & 0.592 & 0.719 & 0.974 & 1.45 \\
+\bottomrule
+\end{tabular}
+\end{table*}

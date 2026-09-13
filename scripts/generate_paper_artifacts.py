@@ -8,11 +8,14 @@ research repository during a manuscript build.
 from __future__ import annotations
 
 import json
+import shutil
 from pathlib import Path
 
 import matplotlib.pyplot as plt
+from matplotlib import colors as mcolors, patches
 import numpy as np
 import pandas as pd
+from scipy import stats
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -29,9 +32,33 @@ SKY = "#56B4E9"
 GRAY = "#6B7280"
 LIGHT_GRAY = "#B7BDC5"
 
+PMU_BUSES = {2, 5, 6, 10, 19, 22, 29, 39}
+BUS_POSITIONS = {
+    1: (0, 2.1), 2: (1.1, 2.15), 3: (2.1, 1.85), 4: (3, 1.55),
+    5: (4, 1.55), 6: (5, 1.35), 7: (6, 1.45), 8: (6.8, 1.95),
+    9: (7.3, 2.65), 10: (5.35, 0.25), 11: (4.55, 0.55),
+    12: (3.7, 0.2), 13: (3.25, 0.8), 14: (3, 0.25),
+    15: (2.3, -0.25), 16: (1.55, -0.55), 17: (0.85, -0.05),
+    18: (1.25, 0.8), 19: (0.75, -1.05), 20: (0.2, -1.65),
+    21: (2.15, -1.15), 22: (2.85, -1.55), 23: (3.65, -1.35),
+    24: (2.65, -0.85), 25: (-0.15, 1.15), 26: (-0.95, 0.35),
+    27: (0.15, 0), 28: (-1.55, 1), 29: (-2.35, 0.35),
+    30: (1.35, 2.85), 31: (5.75, 2.05), 32: (6.1, 0),
+    33: (0.2, -2.35), 34: (0.95, -2.15), 35: (3.05, -2.35),
+    36: (4.35, -2), 37: (-0.85, 1.65), 38: (-2.95, 1.05),
+    39: (0, 3.05),
+}
+
 
 def read_csv(name: str) -> pd.DataFrame:
     return pd.read_csv(DATA / name)
+
+
+def read_legacy_summary() -> pd.DataFrame:
+    """Read the two-row header exported by the legacy event evaluation."""
+    summary = pd.read_csv(DATA / "legacy_replayed_summary.csv", header=[0, 1], index_col=0)
+    summary.index.name = "configuration"
+    return summary
 
 
 def setup_style() -> None:
@@ -107,6 +134,48 @@ def write_macros(checks: dict[str, object]) -> None:
     adaptation_medians = adaptation.groupby(["family", "variant"])["TVE_percent"].median().unstack()
     macro_adequacy = adequacy[adequacy["m"].isin([0.5, 1.0, 1.5])].groupby("m")[["AUROC", "AUPRC"]].mean()
     mismatch_coverage = mismatch[mismatch["method"].isin(["B2", "B2-U2"])].groupby("method")["coverage95"].mean()
+    paired = read_csv("e04a_paired_comparisons.csv")
+    paired_b2_b1 = paired[
+        paired["comparison"].eq("B2_KALMAN - B1_SNAPSHOT_WLS")
+        & paired["metric"].eq("TVE_fraction")
+    ].iloc[0]
+    nominal_cases = read_csv("e04a_per_case.csv")
+    nominal_pivot = nominal_cases.pivot(index="traj", columns="method", values="TVE_percent")
+    b2_win_rate = float(
+        (nominal_pivot["B2_KALMAN"] < nominal_pivot["B1_SNAPSHOT_WLS"]).mean()
+    )
+    e06h_summary = read_csv("e06h_summary.csv").iloc[0]
+    e06h_cases = read_csv("e06h_test_per_case.csv")
+    e06h_medians = e06h_cases.groupby(["m", "method"])["hidden_V_TVE_percent"].median().unstack()
+    e06h_closure = read_csv("e06h_closure.csv").set_index("m")
+    e06h_ident = read_csv("e06h_identifiability.csv")
+    e06h_uncertainty = read_csv("e06h_uncertainty.csv")
+    e06h_nees = e06h_uncertainty.groupby("m")["NEES_like"].median()
+    legacy = read_legacy_summary()
+    legacy_selected = legacy.loc["hierarchical_448_availability"]
+    legacy_gain = read_csv("legacy_paired_intervals_recomputed.csv")
+    legacy_gain = legacy_gain[
+        legacy_gain["method"].eq("hierarchical_448_availability")
+        & legacy_gain["reference"].eq("hierarchical_136")
+        & legacy_gain["metric"].eq("physical_row_top1")
+    ].iloc[0]
+    held_sources = read_csv("legacy_unseen_sources_recomputed.csv")
+    raw_transfer = read_csv("legacy_raw0001_transfer_results.csv")
+    raw_candidate = raw_transfer[raw_transfer["method"].eq("C_universal_z_candidate")]
+    structural_x = e03["functional_residual"].to_numpy()
+    structural_y = e03["B2_TVE"].to_numpy()
+    observed_rho = float(stats.spearmanr(structural_x, structural_y).statistic)
+    rng = np.random.default_rng(20260912)
+    bootstrap_rho = []
+    for indices in rng.integers(0, len(structural_x), size=(10000, len(structural_x))):
+        value = float(stats.spearmanr(structural_x[indices], structural_y[indices]).statistic)
+        if np.isfinite(value):
+            bootstrap_rho.append(value)
+    permuted_rho = np.array(
+        [stats.spearmanr(structural_x, rng.permutation(structural_y)).statistic for _ in range(10000)]
+    )
+    permutation_p = float((1 + np.sum(np.abs(permuted_rho) >= abs(observed_rho))) / (1 + len(permuted_rho)))
+    kendall_tau = float(stats.kendalltau(structural_x, structural_y).statistic)
 
     macros = {
         "ObservedPMUCount": "8",
@@ -116,7 +185,15 @@ def write_macros(checks: dict[str, object]) -> None:
         "BOneTVE": fmt_percent(nominal.loc["B1_SNAPSHOT_WLS", "TVE_percent"], 6),
         "BTwoTVE": fmt_percent(nominal.loc["B2_KALMAN", "TVE_percent"], 6),
         "BTwoRelativeImprovement": f"{100 * (1 - nominal.loc['B2_KALMAN', 'TVE_percent'] / nominal.loc['B1_SNAPSHOT_WLS', 'TVE_percent']):.1f}\\%",
+        "BTwoMinusBOnePP": f"{100 * paired_b2_b1['mean_difference']:.6f}",
+        "BTwoMinusBOneCILowPP": f"{100 * paired_b2_b1['paired_bootstrap_ci95_low']:.6f}",
+        "BTwoMinusBOneCIHighPP": f"{100 * paired_b2_b1['paired_bootstrap_ci95_high']:.6f}",
+        "BTwoWinRate": fmt_percent(100 * b2_win_rate, 1),
         "FunctionalSpearman": f"{e03['spearman_B2_TVE_vs_functional_residual'].dropna().iloc[0]:.4f}",
+        "FunctionalSpearmanCILow": f"{np.quantile(bootstrap_rho, 0.025):.3f}",
+        "FunctionalSpearmanCIHigh": f"{np.quantile(bootstrap_rho, 0.975):.3f}",
+        "FunctionalPermutationP": f"{permutation_p:.4f}",
+        "FunctionalKendall": f"{kendall_tau:.3f}",
         "MismatchMainCount": str(int((b2.shape[0]))),
         "MismatchRefinementCount": "175",
         "NetworkMismatchRatio": f"{at_max['M1_NETWORK'] / nominal_ref:.2f}",
@@ -142,6 +219,44 @@ def write_macros(checks: dict[str, object]) -> None:
         "CoupledFrozenTVE": fmt_percent(adaptation_medians.loc["M7_COUPLED", "R0"], 6),
         "CoupledOracleTVE": fmt_percent(adaptation_medians.loc["M7_COUPLED", "R1"], 6),
         "CoupledOnlineTVE": fmt_percent(adaptation_medians.loc["M7_COUPLED", "R2A"], 6),
+        "EZeroHDevCount": str(int(e06h_summary["dev_cases"])),
+        "EZeroHTestCount": str(int(e06h_summary["test_cases"])),
+        "EZeroHValidRate": fmt_percent(100 * e06h_summary["test_valid_rate"], 1),
+        "EZeroHClosureOverall": fmt_percent(100 * e06h_summary["closure_median"], 1),
+        "EZeroHRuntimeMedian": f"{e06h_summary['runtime_median_ms']:.1f}",
+        "EZeroHRuntimePNinetyFive": f"{e06h_summary['runtime_p95_ms']:.1f}",
+        "EZeroHRank": str(int(e06h_summary["ident_rank_median"])),
+        "EZeroHDimension": str(int(e06h_ident["parameter_dimension"].median())),
+        "EZeroHNullity": str(int(e06h_summary["ident_nullspace_median"])),
+        "EZeroHFunctionalResidual": f"{e06h_ident['functional_hidden_voltage_residual'].median():.4f}",
+        "EZeroHFrozenHalf": fmt_percent(e06h_medians.loc[0.5, "S0-NOM"], 5),
+        "EZeroHFrozenOne": fmt_percent(e06h_medians.loc[1.0, "S0-NOM"], 5),
+        "EZeroHFrozenMax": fmt_percent(e06h_medians.loc[1.5, "S0-NOM"], 5),
+        "EZeroHCorrectedHalf": fmt_percent(e06h_medians.loc[0.5, "S0-MAP-CORRECTED"], 5),
+        "EZeroHCorrectedOne": fmt_percent(e06h_medians.loc[1.0, "S0-MAP-CORRECTED"], 5),
+        "EZeroHCorrectedMax": fmt_percent(e06h_medians.loc[1.5, "S0-MAP-CORRECTED"], 5),
+        "EZeroHClosureHalf": fmt_percent(100 * e06h_closure.loc[0.5, "closure_median"], 1),
+        "EZeroHClosureOne": fmt_percent(100 * e06h_closure.loc[1.0, "closure_median"], 1),
+        "EZeroHClosureMax": fmt_percent(100 * e06h_closure.loc[1.5, "closure_median"], 1),
+        "EZeroHNEESHalf": f"{e06h_nees.loc[0.5]:.1f}",
+        "EZeroHNEESOne": f"{e06h_nees.loc[1.0]:.1f}",
+        "EZeroHNEESMax": f"{e06h_nees.loc[1.5]:.1f}",
+        "LegacyEventTrajectories": "690",
+        "LegacyEventDetectionFOne": f"{legacy_selected[('detection_f1', 'mean')]:.3f}",
+        "LegacyEventMacroFOne": f"{legacy_selected[('event_macro_f1_all_labels', 'mean')]:.3f}",
+        "LegacyPhysicalTopOne": f"{legacy_selected[('physical_top1', 'mean')]:.3f}",
+        "LegacyPhysicalTopThree": f"{legacy_selected[('physical_top3', 'mean')]:.3f}",
+        "LegacyIntegrityTopOne": f"{legacy_selected[('integrity_top1', 'mean')]:.3f}",
+        "LegacyFalseAlarmsPerMinute": f"{legacy_selected[('false_alarm_episodes_per_min', 'mean')]:.2f}",
+        "LegacyPhysicalGainPP": f"{100 * legacy_gain['estimate']:.1f}",
+        "LegacyPhysicalGainCILowPP": f"{100 * legacy_gain['lower']:.1f}",
+        "LegacyPhysicalGainCIHighPP": f"{100 * legacy_gain['upper']:.1f}",
+        "HeldSourceCorrect": str(int(held_sources["correct"].sum())),
+        "HeldSourceDecisions": str(int(len(held_sources))),
+        "HeldSourceCases": str(int(held_sources["scenario_id"].nunique())),
+        "HeldSourceRate": fmt_percent(100 * held_sources["correct"].mean(), 1),
+        "RawCandidateEventEpisodes": f"{raw_candidate['event_episode_correct'].mean():.1f}",
+        "RawCandidatePhysicalEpisodes": f"{raw_candidate['physical_episode_correct'].mean():.1f}",
     }
     lines = [f"\\newcommand{{\\{name}}}{{{value}}}" for name, value in macros.items()]
     (GENERATED / "results_macros.tex").write_text("\n".join(lines) + "\n", encoding="ascii")
@@ -153,59 +268,168 @@ def write_macros(checks: dict[str, object]) -> None:
             "e06_main_unique_physical_cases": int(b2["case_id"].nunique()),
             "e06_nominal_reference_tve_percent": float(nominal_ref),
             "e06e_median_oracle_closure": float(closure["closure"].median()),
+            "e06h_test_cases": int(e06h_summary["test_cases"]),
+            "e06h_test_valid_rate": float(e06h_summary["test_valid_rate"]),
+            "e06h_median_closure": float(e06h_summary["closure_median"]),
+            "e06h_nuisance_rank": int(e06h_summary["ident_rank_median"]),
+            "e06h_nuisance_dimension": int(e06h_ident["parameter_dimension"].median()),
+            "legacy_event_trajectories": 690,
+            "legacy_held_source_decisions": int(len(held_sources)),
+            "legacy_held_source_correct": int(held_sources["correct"].sum()),
         }
     )
 
 
-def figure_nominal() -> None:
-    nominal = read_csv("e04a_b0_b1_b2_summary.csv")
-    e03 = read_csv("e04a1_e03_vs_e04.csv")
-    names = ["Equilibrium", "Snapshot WLS", "Causal Kalman"]
-    values = nominal["TVE_percent"].to_numpy()
-    low = values - nominal["TVE_percent_ci95_low"].to_numpy()
-    high = nominal["TVE_percent_ci95_high"].to_numpy() - values
+def _draw_network(
+    ax: plt.Axes,
+    branches: pd.DataFrame,
+    residuals: dict[int, float] | None = None,
+    show_legend: bool = False,
+) -> object | None:
+    for edge in branches.itertuples():
+        p = BUS_POSITIONS[int(edge.from_bus)]
+        q = BUS_POSITIONS[int(edge.to_bus)]
+        ax.plot([p[0], q[0]], [p[1], q[1]], color="#A5ABB3", linewidth=0.45, zorder=0)
+    scalar_map = None
+    if residuals:
+        norm = mcolors.Normalize(vmin=min(residuals.values()), vmax=max(residuals.values()))
+        scalar_map = plt.cm.ScalarMappable(norm=norm, cmap="cividis")
+    for bus, (x, y) in BUS_POSITIONS.items():
+        marker = "s" if bus >= 30 else "o"
+        if bus in PMU_BUSES:
+            face, edge, text_color = BLUE, "#003B5C", "white"
+        elif residuals:
+            face = scalar_map.to_rgba(residuals[bus])
+            luminance = 0.2126 * face[0] + 0.7152 * face[1] + 0.0722 * face[2]
+            edge, text_color = "#4B5563", "white" if luminance < 0.46 else "#111827"
+        else:
+            face, edge, text_color = "white", "#5E6670", "#25313C"
+        ax.scatter(x, y, marker=marker, s=48, facecolor=face, edgecolor=edge, linewidth=0.65, zorder=2)
+        ax.text(x, y, str(bus), ha="center", va="center", fontsize=4.8, color=text_color, zorder=3)
+    if show_legend:
+        ax.scatter([], [], s=28, facecolor=BLUE, edgecolor="#003B5C", label="PMU bus")
+        ax.scatter([], [], s=28, facecolor="white", edgecolor="#5E6670", label="hidden bus")
+        ax.scatter([], [], marker="s", s=28, facecolor="white", edgecolor="#5E6670", label="generator bus")
+        ax.legend(frameon=False, fontsize=5.5, loc="lower right", handletextpad=0.3, labelspacing=0.25)
+    ax.set_aspect("equal")
+    ax.axis("off")
+    ax.margins(0.03)
+    return scalar_map
 
-    fig, axes = plt.subplots(1, 2, figsize=(7.16, 2.65), gridspec_kw={"width_ratios": [0.88, 1.12]})
-    ax = axes[0]
-    bars = ax.bar(
-        names,
-        values,
-        yerr=np.vstack([low, high]),
-        capsize=2.5,
-        color=[LIGHT_GRAY, SKY, BLUE],
-        edgecolor="#243244",
-        linewidth=0.55,
+
+def figure_system_architecture() -> None:
+    branches = read_csv("branches_physical.csv")
+    e03 = read_csv("e04a1_e03_vs_e04.csv")
+    residuals = {int(row.hidden_bus): float(row.functional_residual) for row in e03.itertuples()}
+
+    fig, axes = plt.subplots(
+        1, 3, figsize=(7.16, 2.48), gridspec_kw={"width_ratios": [1.15, 0.92, 1.15]}
     )
+    _draw_network(axes[0], branches, show_legend=True)
+    axes[0].set_title("(a) IEEE 39-bus sensing geometry", loc="left")
+
+    ax = axes[1]
+    ax.set_xlim(0, 1)
+    ax.set_ylim(0, 1)
+    ax.axis("off")
+
+    def box(x: float, y: float, w: float, h: float, label: str, color: str) -> None:
+        ax.add_patch(
+            patches.FancyBboxPatch(
+                (x, y), w, h, boxstyle="round,pad=0.02", facecolor=color,
+                edgecolor="#34495E", linewidth=0.7
+            )
+        )
+        ax.text(x + w / 2, y + h / 2, label, ha="center", va="center", fontsize=6.2)
+
+    def arrow(start: tuple[float, float], end: tuple[float, float], color: str = "#34495E") -> None:
+        ax.annotate("", xy=end, xytext=start, arrowprops={"arrowstyle": "->", "lw": 0.8, "color": color})
+
+    box(0.08, 0.78, 0.84, 0.13, "8 PMUs: voltage +\nterminal-current phasors", "#E6F2FA")
+    box(0.08, 0.54, 0.84, 0.13, "Audited local physics\n" + r"$A_d, C, L_{\mathcal{U}}$", "#E7F6F1")
+    box(0.08, 0.30, 0.84, 0.13, "Functional reconstruction\n" + r"$\hat V_{\mathcal{U}}$ at 31 buses", "#E6F2FA")
+    box(0.08, 0.06, 0.38, 0.12, "$r_F$: structural\nweakness", "#F1F3F5")
+    box(0.54, 0.06, 0.38, 0.12, "$a_k$: model\nadequacy", "#FFF0E6")
+    arrow((0.50, 0.78), (0.50, 0.67))
+    arrow((0.50, 0.54), (0.50, 0.43))
+    arrow((0.33, 0.30), (0.27, 0.18))
+    arrow((0.67, 0.30), (0.73, 0.18), ORANGE)
+    ax.set_title("(b) Target-specific reconstruction", loc="left")
+
+    scalar_map = _draw_network(axes[2], branches, residuals=residuals)
+    axes[2].set_title("(c) Preregistered functional residual", loc="left")
+    colorbar = fig.colorbar(scalar_map, ax=axes[2], fraction=0.045, pad=0.01)
+    colorbar.set_label("$r_{F,i}(180)$", fontsize=6.2)
+    colorbar.ax.tick_params(labelsize=5.5, length=2)
+    fig.tight_layout(w_pad=0.8)
+    save_figure(fig, "system_architecture")
+
+
+def figure_nominal() -> None:
+    e03 = read_csv("e04a1_e03_vs_e04.csv")
+    per_case = read_csv("e04a_per_case.csv")
+    paired = read_csv("e04a_paired_comparisons.csv")
+    methods = ["B0_NOMINAL", "B1_SNAPSHOT_WLS", "B2_KALMAN"]
+    labels = ["B0\nEquilibrium", "B1\nSnapshot", "B2\nKalman"]
+    colors = [LIGHT_GRAY, SKY, BLUE]
+
+    fig, axes = plt.subplots(1, 3, figsize=(7.16, 2.45), gridspec_kw={"width_ratios": [0.88, 1.05, 0.92]})
+    ax = axes[0]
+    groups = [per_case.loc[per_case["method"].eq(method), "TVE_percent"].to_numpy() for method in methods]
+    bp = ax.boxplot(groups, positions=np.arange(3), widths=0.52, patch_artist=True, showfliers=False)
+    for patch, color in zip(bp["boxes"], colors):
+        patch.set_facecolor(color)
+        patch.set_edgecolor("#243244")
+        patch.set_linewidth(0.6)
+    for element in ("whiskers", "caps", "medians"):
+        for artist in bp[element]:
+            artist.set_color("#243244")
+            artist.set_linewidth(0.65)
+    rng = np.random.default_rng(20260912)
+    for x0, values, color in zip(range(3), groups, colors):
+        jitter = rng.normal(0, 0.045, size=len(values))
+        ax.scatter(x0 + jitter, values, s=4.5, color=color, edgecolor="none", alpha=0.38, zorder=1)
+    ax.set_xticks(range(3), labels)
     ax.set_yscale("log")
-    ax.set_ylabel("Mean hidden-bus TVE (%)")
-    ax.set_title("(a) Nominal reconstruction, 100 TEST trajectories")
+    ax.set_ylabel("Trajectory hidden-bus TVE (%)")
+    ax.set_title("(a) Frozen nominal TEST distributions", loc="left")
     ax.grid(axis="y", which="both", alpha=0.2, linewidth=0.5)
-    ax.tick_params(axis="x", rotation=16)
-    for bar, value in zip(bars, values):
-        ax.text(bar.get_x() + bar.get_width() / 2, value * 1.16, f"{value:.4g}%", ha="center", va="bottom", fontsize=6.4)
 
     ax = axes[1]
     x = e03["functional_residual"].to_numpy()
     y = 100 * e03["B2_TVE"].to_numpy()
-    ax.scatter(x, y, s=22, facecolors="white", edgecolors=BLUE, linewidths=1.0, zorder=3)
+    ax.scatter(x, y, s=20, facecolors="white", edgecolors=BLUE, linewidths=0.9, zorder=3)
     weak = e03.nlargest(5, "B2_TVE")
     for _, row in weak.iterrows():
-        ax.annotate(
-            str(int(row["hidden_bus"])),
-            (row["functional_residual"], 100 * row["B2_TVE"]),
-            xytext=(3, 3),
-            textcoords="offset points",
-            fontsize=6.3,
-            color="#243244",
-        )
+        ax.annotate(str(int(row["hidden_bus"])), (row["functional_residual"], 100 * row["B2_TVE"]), xytext=(2, 2), textcoords="offset points", fontsize=5.8)
     rho = e03["spearman_B2_TVE_vs_functional_residual"].dropna().iloc[0]
     ax.text(0.03, 0.94, rf"Spearman $\rho={rho:.4f}$", transform=ax.transAxes, va="top")
-    ax.set_xlabel("Preregistered functional residual")
+    ax.set_xlabel("Functional residual $r_{F,i}$")
     ax.set_ylabel("Per-bus Kalman TVE (%)")
     ax.set_yscale("log")
-    ax.set_title("(b) Structural weakness predicts empirical difficulty")
+    ax.set_title("(b) Structure predicts difficulty", loc="left")
     ax.grid(alpha=0.2, linewidth=0.5)
-    fig.tight_layout(w_pad=1.5)
+
+    ax = axes[2]
+    pivot = per_case.pivot(index="traj", columns="method", values="TVE_percent")
+    delta = np.sort((pivot["B2_KALMAN"] - pivot["B1_SNAPSHOT_WLS"]).to_numpy())
+    comparison = paired[
+        paired["comparison"].eq("B2_KALMAN - B1_SNAPSHOT_WLS")
+        & paired["metric"].eq("TVE_fraction")
+    ].iloc[0]
+    ax.plot(np.arange(1, len(delta) + 1), delta, color=BLUE, linewidth=1.0)
+    ax.axhline(0, color="#243244", linewidth=0.7, linestyle="--")
+    ax.fill_between(np.arange(1, len(delta) + 1), delta, 0, where=delta <= 0, color=GREEN, alpha=0.18)
+    mean_pp = 100 * comparison["mean_difference"]
+    lo_pp = 100 * comparison["paired_bootstrap_ci95_low"]
+    hi_pp = 100 * comparison["paired_bootstrap_ci95_high"]
+    wins = 100 * np.mean(delta < 0)
+    ax.text(0.03, 0.97, f"mean {mean_pp:.6f} pp\n95% CI [{lo_pp:.6f}, {hi_pp:.6f}]\nB2 wins {wins:.1f}%", transform=ax.transAxes, va="top", fontsize=5.7)
+    ax.set_xlabel("Trajectory rank")
+    ax.set_ylabel("B2 - B1 TVE (percentage points)")
+    ax.set_title("(c) Paired temporal contribution", loc="left")
+    ax.grid(alpha=0.2, linewidth=0.5)
+    fig.tight_layout(w_pad=0.9)
     save_figure(fig, "nominal_reconstruction")
 
 
@@ -279,109 +503,178 @@ def figure_temporal_uncertainty() -> None:
 def figure_mismatch() -> None:
     per_case = pd.read_parquet(DATA / "e06_standard_per_case.parquet")
     b2 = per_case[per_case["method"].eq("B2")].copy()
+    b2_u2 = per_case[per_case["method"].eq("B2-U2")].copy()
+    adequacy = read_csv("e06_standard_adequacy.csv")
     ref = b2.loc[b2["m"].eq(0), "TVE_percent"].median()
     grouped = b2.groupby(["family", "m"])["TVE_percent"].median().unstack()
-    scales = grouped.columns.to_numpy(dtype=float)
+    coverage = b2_u2.groupby(["family", "m"])["coverage95"].mean().unstack()
+    families = ["M1_NETWORK", "M2_MACHINE", "M3_GOVERNOR", "M4_AVR", "M5_LOAD_MODEL", "M6_OPERATING_POINT", "M7_COUPLED"]
+    labels = ["M1 network", "M2 machine", "M3 governor", "M4 AVR", "M5 load", "M6 op. point", "M7 coupled"]
+    scales = np.array([0.25, 0.5, 0.75, 1.0, 1.25, 1.5])
+    ratio = grouped.loc[families, scales].to_numpy() / ref
+    coverage_matrix = coverage.loc[families, scales].to_numpy()
 
-    fig, axes = plt.subplots(1, 2, figsize=(7.16, 2.65), gridspec_kw={"width_ratios": [1.15, 0.85]})
+    fig, axes = plt.subplots(1, 3, figsize=(7.16, 2.92), gridspec_kw={"width_ratios": [1.12, 1.05, 0.88]})
     ax = axes[0]
-    series = [
-        ("M1 network", "M1_NETWORK", BLUE, "o"),
-        ("M6 operating point", "M6_OPERATING_POINT", ORANGE, "s"),
-        ("M7 coupled", "M7_COUPLED", PURPLE, "^"),
-    ]
-    for label, key, color, marker in series:
-        ax.plot(scales, grouped.loc[key].to_numpy() / ref, marker=marker, color=color, label=label)
-    minor = grouped.loc[["M2_MACHINE", "M3_GOVERNOR", "M4_AVR", "M5_LOAD_MODEL"]].to_numpy() / ref
-    ax.fill_between(scales, minor.min(axis=0), minor.max(axis=0), color=LIGHT_GRAY, alpha=0.65, label="M2--M5 range")
-    ax.axhline(2, color="#243244", linestyle="--", linewidth=0.8)
-    ax.axhline(5, color="#243244", linestyle=":", linewidth=0.8)
+    log_ratio = np.log10(ratio)
+    norm = mcolors.TwoSlopeNorm(vmin=min(-0.05, float(np.nanmin(log_ratio))), vcenter=0, vmax=float(np.nanmax(log_ratio)))
+    im = ax.imshow(log_ratio, aspect="auto", cmap="PuOr", norm=norm)
+    for i in range(len(families)):
+        for j in range(len(scales)):
+            color = "white" if abs(log_ratio[i, j]) > 0.58 else "#1F2937"
+            ax.text(j, i, f"{ratio[i, j]:.2f}x", ha="center", va="center", fontsize=4.4, color=color)
+    ax.set_xticks(range(len(scales)), [f"{m:g}" for m in scales])
+    ax.set_yticks(range(len(families)), labels)
     ax.set_xlabel("Mismatch scale $m$")
-    ax.set_ylabel("Median TVE / nominal median")
-    ax.set_title("(a) Frozen Kalman estimator under rebuilt plants")
-    ax.legend(frameon=False, loc="upper left")
-    ax.grid(alpha=0.2, linewidth=0.5)
+    ax.set_title("(a) Median TVE / nominal", loc="left")
+    cbar = fig.colorbar(im, ax=ax, fraction=0.045, pad=0.02)
+    cbar.set_label(r"$\log_{10}$ TVE ratio", fontsize=5.8)
+    cbar.ax.tick_params(labelsize=5.2, length=2)
 
     ax = axes[1]
-    keys = ["M1_NETWORK", "M6_OPERATING_POINT", "M7_COUPLED"]
-    labels = ["Network", "Operating\npoint", "Coupled"]
-    values = grouped.loc[keys, 1.5].to_numpy()
-    colors = [BLUE, ORANGE, PURPLE]
-    bars = ax.bar(labels, values, color=colors, edgecolor="#243244", linewidth=0.5)
-    ax.axhline(ref, color="#243244", linestyle="--", linewidth=0.9, label=f"nominal {ref:.4f}%")
-    for bar, value in zip(bars, values):
-        ax.text(bar.get_x() + bar.get_width() / 2, value * 1.03, f"{value:.3f}%", ha="center", va="bottom", fontsize=6.4)
-    ax.set_ylabel("Median hidden-bus TVE (%)")
-    ax.set_title("(b) Largest tested scale, $m=1.5$")
-    ax.legend(frameon=False, loc="upper right")
-    ax.grid(axis="y", alpha=0.2, linewidth=0.5)
-    fig.tight_layout(w_pad=1.4)
+    im = ax.imshow(coverage_matrix, aspect="auto", cmap="cividis", vmin=0, vmax=1)
+    for i in range(len(families)):
+        for j in range(len(scales)):
+            color = "white" if coverage_matrix[i, j] < 0.45 else "#111827"
+            ax.text(j, i, f"{100 * coverage_matrix[i, j]:.0f}", ha="center", va="center", fontsize=4.4, color=color)
+    ax.set_xticks(range(len(scales)), [f"{m:g}" for m in scales])
+    ax.set_yticks(range(len(families)), [])
+    ax.set_xlabel("Mismatch scale $m$")
+    ax.set_title("(b) Nominal U2 coverage (%)", loc="left")
+    cbar = fig.colorbar(im, ax=ax, fraction=0.045, pad=0.02)
+    cbar.set_label("95% marginal coverage", fontsize=5.8)
+    cbar.ax.tick_params(labelsize=5.2, length=2)
+
+    ax = axes[2]
+    eval_scales = [0.5, 1.0, 1.5]
+    auroc = [adequacy.loc[adequacy["m"].eq(scale), "AUROC"].mean(skipna=True) for scale in eval_scales]
+    auprc = [adequacy.loc[adequacy["m"].eq(scale), "AUPRC"].mean(skipna=True) for scale in eval_scales]
+    ax.plot(eval_scales, auroc, marker="o", color=BLUE, label="macro AUROC")
+    ax.plot(eval_scales, auprc, marker="s", color=PURPLE, label="macro AUPRC")
+    ax.set_ylim(0.70, 0.98)
+    ax.set_xticks(eval_scales)
+    ax.set_xlabel("Mismatch scale $m$")
+    ax.set_ylabel("Adequacy discrimination")
+    ax.set_title("(c) Observed-innovation gate", loc="left")
+    ax.legend(frameon=False, loc="lower left", fontsize=5.7)
+    ax.grid(alpha=0.2, linewidth=0.5)
+    fig.tight_layout(w_pad=0.65)
     save_figure(fig, "physical_mismatch")
 
 
 def figure_adequacy_adaptation() -> None:
-    e06e = read_csv("e06e_summary.csv")
-    adequacy = read_csv("e06_standard_adequacy.csv")
-    families = ["M1_NETWORK", "M6_OPERATING_POINT", "M7_COUPLED"]
-    selected = e06e[
-        e06e["split"].eq("TEST") & e06e["m"].eq(1.5) & e06e["family"].isin(families)
-    ].copy()
-    selected["variant"] = np.where(
-        selected["method"].eq("R0_FROZEN_B2"),
-        "Frozen B2",
-        np.where(
-            selected["method"].eq("R1_ORACLE_RECENTERED"),
-            "Oracle center",
-            np.where(selected["policy"].eq("ADAPTIVE_RECENTER"), "Online offset", "exclude"),
-        ),
-    )
-    selected = selected[selected["variant"].ne("exclude")]
-    med = selected.groupby(["family", "variant"])["TVE_percent"].median().unstack()
+    cases = read_csv("e06h_test_per_case.csv")
+    closure = read_csv("e06h_closure.csv").set_index("m")
+    uncertainty = read_csv("e06h_uncertainty.csv")
+    scales = np.array([0.5, 1.0, 1.5])
+    med = cases.groupby(["m", "method"])["hidden_V_TVE_percent"].median().unstack()
+    nees = uncertainty.groupby("m")["NEES_like"].median()
+    coverage = uncertainty.groupby("m")["coverage95"].mean()
 
-    fig, axes = plt.subplots(1, 2, figsize=(7.16, 2.55), gridspec_kw={"width_ratios": [1.08, 0.92]})
+    fig, axes = plt.subplots(1, 3, figsize=(7.16, 2.48), gridspec_kw={"width_ratios": [1.0, 0.92, 0.92]})
     ax = axes[0]
-    variants = ["Frozen B2", "Oracle center", "Online offset"]
-    colors = [GRAY, GREEN, ORANGE]
-    hatches = ["", "///", "xx"]
-    x = np.arange(len(families))
-    width = 0.24
-    for i, (variant, color, hatch) in enumerate(zip(variants, colors, hatches)):
-        ax.bar(
-            x + (i - 1) * width,
-            med.loc[families, variant],
-            width,
-            label=variant,
-            color=color,
-            hatch=hatch,
-            edgecolor="#243244",
-            linewidth=0.45,
-        )
+    ax.plot(scales, med.loc[scales, "S0-NOM"], marker="o", color=GRAY, label="frozen nominal center")
+    ax.plot(scales, med.loc[scales, "S0-MAP-CORRECTED"], marker="s", color=GREEN, label="physical static MAP")
     ax.set_yscale("log")
-    ax.set_xticks(x, ["Network", "Operating\npoint", "Coupled"])
+    ax.set_xticks(scales)
+    ax.set_xlabel("Operating-point mismatch scale $m$")
     ax.set_ylabel("Median TEST TVE (%)")
-    ax.set_title("(a) Causal offset proxy does not close oracle gap")
-    ax.legend(frameon=False, ncol=3, loc="upper center", bbox_to_anchor=(0.5, 1.02))
-    ax.grid(axis="y", which="both", alpha=0.2, linewidth=0.5)
+    ax.set_title("(a) Physical recentering", loc="left")
+    ax.legend(frameon=False, fontsize=5.7)
+    ax.grid(which="both", alpha=0.2, linewidth=0.5)
 
     ax = axes[1]
-    scales = [0.5, 1.0, 1.5]
-    auroc = []
-    auprc = []
-    for scale in scales:
-        rows = adequacy[adequacy["m"].eq(scale)]
-        auroc.append(rows["AUROC"].mean(skipna=True))
-        auprc.append(rows["AUPRC"].mean(skipna=True))
-    ax.plot(scales, auroc, marker="o", color=BLUE, label="macro AUROC")
-    ax.plot(scales, auprc, marker="s", color=PURPLE, label="macro AUPRC")
-    ax.set_ylim(0.72, 0.98)
+    center = closure.loc[scales, "closure_median"].to_numpy()
+    low = center - closure.loc[scales, "closure_ci95_low"].to_numpy()
+    high = closure.loc[scales, "closure_ci95_high"].to_numpy() - center
+    ax.errorbar(scales, 100 * center, yerr=100 * np.vstack([low, high]), marker="o", color=BLUE, capsize=2.5)
+    ax.axhline(100, color="#243244", linestyle="--", linewidth=0.7, label="oracle center")
+    ax.set_ylim(90, 101)
     ax.set_xticks(scales)
-    ax.set_xlabel("Mismatch scale $m$")
-    ax.set_ylabel("Macro score across families")
-    ax.set_title("(b) Nominal-CAL model-adequacy statistic")
-    ax.legend(frameon=False, loc="lower left")
+    ax.set_xlabel("Operating-point mismatch scale $m$")
+    ax.set_ylabel("Oracle-gap closure (%)")
+    ax.set_title("(b) Paired bootstrap closure", loc="left")
+    ax.legend(frameon=False, fontsize=5.7, loc="lower right")
     ax.grid(alpha=0.2, linewidth=0.5)
-    fig.tight_layout(w_pad=1.2)
+
+    ax = axes[2]
+    points = ax.scatter(
+        med.loc[scales, "S0-MAP-CORRECTED"], nees.loc[scales],
+        c=scales, cmap="cividis", s=35, edgecolor="#243244", linewidth=0.5
+    )
+    for scale in scales:
+        ax.annotate(f"m={scale:g}\ncoverage={100 * coverage.loc[scale]:.0f}%", (med.loc[scale, "S0-MAP-CORRECTED"], nees.loc[scale]), xytext=(3, 2), textcoords="offset points", fontsize=5.3)
+    ax.axhline(1, color="#243244", linestyle="--", linewidth=0.7, label="NEES reference")
+    ax.set_yscale("log")
+    ax.set_xlabel("Corrected median TVE (%)")
+    ax.set_ylabel("Median NEES-like statistic")
+    ax.set_title("(c) Accurate mean, partial uncertainty", loc="left")
+    ax.legend(frameon=False, fontsize=5.5, loc="lower right")
+    ax.grid(which="both", alpha=0.2, linewidth=0.5)
+    fig.tight_layout(w_pad=0.8)
     save_figure(fig, "adequacy_adaptation")
+
+
+def figure_legacy_event_evidence() -> None:
+    """Summarize the frozen event baseline and its transfer boundary."""
+    source_pdf = DATA / "legacy_event_traces.pdf"
+    source_png = DATA / "legacy_event_traces.png"
+    if not source_pdf.exists() or not source_png.exists():
+        raise FileNotFoundError("Legacy event-trace artifacts were not imported")
+    FIGURES.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(source_pdf, FIGURES / "event_signatures.pdf")
+    shutil.copyfile(source_png, FIGURES / "event_signatures.png")
+
+    summary = read_legacy_summary()
+    configurations = [
+        "hierarchical_136",
+        "hierarchical_448",
+        "hierarchical_448_availability",
+    ]
+    config_labels = ["136-feature\nhierarchy", "448-feature\nhierarchy", "448 + availability\ngate"]
+    metrics = [
+        ("detection_f1", "Detection F1", BLUE),
+        ("event_macro_f1_all_labels", "Event macro-F1", ORANGE),
+        ("physical_top1", "Physical Top-1", GREEN),
+        ("integrity_top1", "Integrity Top-1", PURPLE),
+    ]
+
+    fig, axes = plt.subplots(1, 2, figsize=(7.16, 2.55), gridspec_kw={"width_ratios": [1.32, 0.88]})
+    ax = axes[0]
+    x = np.arange(len(configurations))
+    width = 0.19
+    for offset, (metric, label, color) in enumerate(metrics):
+        values = [summary.loc[configuration, (metric, "mean")] for configuration in configurations]
+        ax.bar(x + (offset - 1.5) * width, values, width=width, label=label, color=color, alpha=0.88)
+    ax.set_xticks(x, config_labels)
+    ax.set_ylim(0.42, 1.02)
+    ax.set_ylabel("Frozen TEST score")
+    ax.set_title("(a) Known-source event diagnosis", loc="left")
+    ax.legend(frameon=False, ncol=2, loc="lower right", fontsize=5.8)
+    ax.grid(axis="y", alpha=0.2, linewidth=0.5)
+
+    ax = axes[1]
+    selected = summary.loc["hierarchical_448_availability"]
+    held = read_csv("legacy_unseen_sources_recomputed.csv")
+    raw = read_csv("legacy_raw0001_transfer_results.csv")
+    raw_candidate = raw[raw["method"].eq("C_universal_z_candidate")]
+    values = [
+        selected[("physical_scenario_top1", "mean")],
+        held["correct"].mean(),
+        raw_candidate["physical_episode_top1"].mean(),
+    ]
+    labels = ["Known-source\n121 scenarios", "Held-source\n303 decisions", "RAW0001\n5 episodes"]
+    bars = ax.bar(np.arange(3), values, color=[BLUE, ORANGE, GRAY], width=0.62)
+    for bar, value in zip(bars, values):
+        ax.text(bar.get_x() + bar.get_width() / 2, value + 0.018, f"{100 * value:.1f}%", ha="center", va="bottom", fontsize=6.5)
+    ax.set_xticks(np.arange(3), labels)
+    ax.set_ylim(0, 0.82)
+    ax.set_ylabel("Exact physical-source success")
+    ax.set_title("(b) Transfer is the binding failure", loc="left")
+    ax.grid(axis="y", alpha=0.2, linewidth=0.5)
+    ax.text(0.02, 0.98, "Different counting contracts; no pooled comparison", transform=ax.transAxes, va="top", fontsize=5.5)
+    fig.tight_layout(w_pad=1.0)
+    save_figure(fig, "legacy_event_evidence")
 
 
 def write_tables() -> None:
@@ -478,21 +771,97 @@ Mismatch family & TVE (\\%) & Ratio \\\\
 """
     (TABLES / "mismatch_results.tex").write_text(mismatch_tex, encoding="ascii")
 
+    e06h_cases = read_csv("e06h_test_per_case.csv")
+    e06h_closure = read_csv("e06h_closure.csv").set_index("m")
+    e06h_ident = read_csv("e06h_identifiability.csv")
+    e06h_uncertainty = read_csv("e06h_uncertainty.csv")
+    e06h_runtime = read_csv("e06h_runtime.csv")
+    e06h_medians = e06h_cases.groupby(["m", "method"])["hidden_V_TVE_percent"].median().unstack()
+    ident_by_scale = e06h_ident.groupby("m")[["information_rank", "nullspace_dimension"]].median()
+    nees_by_scale = e06h_uncertainty.groupby("m")["NEES_like"].median()
+    runtime_by_scale = e06h_runtime.groupby("m")["runtime_ms"].median()
+    adaptation_rows = []
+    for scale in (0.5, 1.0, 1.5):
+        c = e06h_closure.loc[scale]
+        adaptation_rows.append(
+            f"{scale:.1f} & {int(c['n'])} & {e06h_medians.loc[scale, 'S0-NOM']:.5f} & "
+            f"{e06h_medians.loc[scale, 'S0-MAP-CORRECTED']:.5f} & "
+            f"{100*c['closure_median']:.1f} [{100*c['closure_ci95_low']:.1f}, {100*c['closure_ci95_high']:.1f}] & "
+            f"{int(ident_by_scale.loc[scale, 'information_rank'])}/43 & "
+            f"{int(ident_by_scale.loc[scale, 'nullspace_dimension'])} & {nees_by_scale.loc[scale]:.1f} & "
+            f"{runtime_by_scale.loc[scale]:.1f} \\\\"
+        )
+    adaptation_tex = r"""\begin{table*}[t]
+\caption{Corrected physical static recentering on 60 held-out M6 operating-point cases. Gap-closure intervals bootstrap the 20 independent TEST cases at each scale. Rank and nullity refer to the 43-dimensional nuisance basis; runtime is per solve.}
+\label{tab:e06h-results}
+\centering
+\footnotesize
+\begin{tabular}{ccccccccc}
+\toprule
+$m$ & $n$ & Frozen TVE (\%) & Corrected TVE (\%) & Gap closure [95\% CI] (\%) & Rank & Nullity & Median NEES & Runtime (ms) \\
+\midrule
+""" + "\n".join(adaptation_rows) + r"""
+\bottomrule
+\end{tabular}
+\end{table*}
+"""
+    (TABLES / "e06h_results.tex").write_text(adaptation_tex, encoding="ascii")
+
+    summary = read_legacy_summary()
+    event_rows = []
+    for key, label in [
+        ("hierarchical_136", "136-feature hierarchy"),
+        ("hierarchical_448", "448-feature hierarchy"),
+        ("hierarchical_448_availability", "448 features + availability"),
+    ]:
+        row = summary.loc[key]
+        event_rows.append(
+            f"{label} & {row[('detection_f1', 'mean')]:.3f} & "
+            f"{row[('event_macro_f1_all_labels', 'mean')]:.3f} & "
+            f"{row[('physical_top1', 'mean')]:.3f} & {row[('physical_top3', 'mean')]:.3f} & "
+            f"{row[('integrity_top1', 'mean')]:.3f} & "
+            f"{row[('false_alarm_episodes_per_min', 'mean')]:.2f} \\\\"
+        )
+    event_tex = r"""\begin{table*}[t]
+\caption{Audited sequential event-diagnosis baseline on the known-source TEST split, mean over three fitted seeds. The independent split unit is the complete trajectory; timestamp-level scores retain the denominators of the frozen evaluator.}
+\label{tab:legacy-event-results}
+\centering
+\footnotesize
+\begin{tabular}{lcccccc}
+\toprule
+Configuration & Detection F1 & Event macro-F1 & Physical Top-1 & Physical Top-3 & Integrity Top-1 & False alarms/min \\
+\midrule
+""" + "\n".join(event_rows) + r"""
+\bottomrule
+\end{tabular}
+\end{table*}
+"""
+    (TABLES / "legacy_event_results.tex").write_text(event_tex, encoding="ascii")
+
 
 def main() -> None:
     setup_style()
     checks: dict[str, object] = {}
     write_macros(checks)
+    figure_system_architecture()
     figure_nominal()
     figure_temporal_uncertainty()
     figure_mismatch()
     figure_adequacy_adaptation()
+    figure_legacy_event_evidence()
     write_tables()
 
     assert checks["nominal_test_trajectories"] == 100
     assert checks["e06_main_b2_cases"] == 980
     assert checks["e06_main_unique_physical_cases"] == 980
     assert 0 <= checks["e06e_median_oracle_closure"] < 0.01
+    assert checks["e06h_test_cases"] == 60
+    assert checks["e06h_test_valid_rate"] == 1.0
+    assert 0.95 < checks["e06h_median_closure"] < 1.0
+    assert checks["e06h_nuisance_rank"] < checks["e06h_nuisance_dimension"]
+    assert checks["legacy_event_trajectories"] == 690
+    assert checks["legacy_held_source_decisions"] == 303
+    assert checks["legacy_held_source_correct"] == 3
     (GENERATED / "evidence_checks.json").write_text(
         json.dumps(checks, indent=2, sort_keys=True) + "\n", encoding="ascii"
     )

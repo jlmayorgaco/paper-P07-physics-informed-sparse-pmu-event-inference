@@ -1,0 +1,15 @@
+\begin{table*}[t]
+\caption{Corrected physical static recentering on 60 held-out M6 operating-point cases. Gap-closure intervals bootstrap the 20 independent TEST cases at each scale. Rank and nullity refer to the 43-dimensional nuisance basis; runtime is per solve.}
+\label{tab:e06h-results}
+\centering
+\footnotesize
+\begin{tabular}{ccccccccc}
+\toprule
+$m$ & $n$ & Frozen TVE (\%) & Corrected TVE (\%) & Gap closure [95\% CI] (\%) & Rank & Nullity & Median NEES & Runtime (ms) \\
+\midrule
+0.5 & 20 & 0.19885 & 0.00525 & 97.4 [94.9, 98.8] & 25/43 & 18 & 111.6 & 57.6 \\
+1.0 & 20 & 0.38834 & 0.00749 & 98.1 [96.7, 98.8] & 25/43 & 18 & 183.3 & 61.1 \\
+1.5 & 20 & 0.57795 & 0.00974 & 98.3 [97.4, 98.8] & 25/43 & 18 & 294.2 & 69.2 \\
+\bottomrule
+\end{tabular}
+\end{table*}
