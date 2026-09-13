@@ -2,7 +2,8 @@
 
 ## Submission veto: the proposed joint method is not yet executed
 
-- Implement the hypothesis-conditioned objective in Eq. (24) under one audited plant, PMU operator, and event ontology.
+- Implement the hypothesis-conditioned objective labeled `eq:joint-map-objective` under one audited plant, PMU operator, and event ontology.
+- Estimate directional simulator-response curvature and evaluate the nonlinear separation certificate in Proposition 3.
 - Compare four frozen paradigms on identical event parents: learned-only, physics-only, physics plus learned residual discrepancy, and diagnosability-aware inference with abstention.
 - Hold out physical source assets from every source-labeled training, tuning, threshold, and calibration operation.
 - Test whether the nuisance-profiled separation margin predicts calibrated uncertainty, candidate-set size, and source-resolution delay.

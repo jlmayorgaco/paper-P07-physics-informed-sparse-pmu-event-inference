@@ -11,8 +11,10 @@
 ## Supported theory and design claims
 
 - The paper defines physical interventions and measurement-integrity states as separate, composable latent variables.
+- When the requested functional is estimable in the finite-horizon local model, its generalized least-squares map is the best linear unbiased estimator and its target covariance is explicit.
 - Under the stated local linear-Gaussian assumptions, intersecting candidate--nuisance manifolds admit indistinguishable parameter pairs; no classifier can distinguish them uniformly over the declared nuisance set.
 - Adding a conditionally independent, correctly modeled PMU block cannot decrease the nuisance-profiled separation margin. The margins are not generally additive, and the result is not a guarantee for an arbitrary learned classifier.
+- A bounded second-order DAE remainder gives a sufficient local condition for an affine source-separation margin to survive nonlinear curvature. The required simulator curvature constants have not yet been evaluated.
 
 ## Not established
 

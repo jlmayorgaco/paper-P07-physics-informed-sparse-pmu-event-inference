@@ -1,6 +1,6 @@
-# P07 --- State Recoverability and Event-Source Diagnosability From Sparse PMUs
+# P07 State Reconstruction and Event-Source Diagnosability From Sparse PMUs
 
-**Working paper title:** *From State Recoverability to Event-Source Diagnosability: Physics-Based Inference From Sparse PMUs*
+**Working paper title:** *Physics-Based State Reconstruction and Event-Source Diagnosability With Sparse PMU Measurements*
 
 **Target venue:** IEEE Access
 

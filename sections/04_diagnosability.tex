@@ -32,9 +32,31 @@ Two initial states produce the same output history exactly when their difference
 
 This standard functional-observability result \cite{fernando2010functional,zhang2025functional} fixes the target and time index before any estimator is assessed. It also shows why a low full-state rank alone does not preclude recovery of the hidden-voltage function.
 
+The noisy case gives a sharper statement than a rank test. Stack the output perturbations as $\delta\bm Y_N=\mathcal O_N\delta\bm x_0+\bm v_N$, assume $\bm v_N\sim\mathcal N(\bm0,\bm R_N)$ with $\bm R_N\succ0$, and define $\bm G_N=\mathcal O_N^{\mathsf T}\bm R_N^{-1}\mathcal O_N$.
+
+\begin{corollary}[Minimum-variance functional estimate]
+\label{cor:functional-blue}
+If \eqref{eq:functional-condition} holds, the best linear unbiased estimate of the time-$r$ target and its error covariance are
+\begin{align}
+ \widehat{\delta\bm z}_{\mathcal U,r}
+ &=\bm L_r\bm G_N^{\dagger}\mathcal O_N^{\mathsf T}
+   \bm R_N^{-1}\delta\bm Y_N, \label{eq:functional-blue}\\
+ \bm\Sigma_{z,r}^{\star}
+ &=\bm L_r\bm G_N^{\dagger}\bm L_r^{\mathsf T}. \label{eq:functional-blue-cov}
+\end{align}
+Every other linear unbiased estimator has covariance
+$\bm\Sigma_{z,r}^{\star}+\bm Q\bm R_N\bm Q^{\mathsf T}$ for some $\bm Q$ satisfying $\bm Q\mathcal O_N=\bm0$.
+\end{corollary}
+
+\IEEEproof
+Condition \eqref{eq:functional-condition} implies $\bm L_r=\bm L_r\bm G_N^{\dagger}\bm G_N$, which proves unbiasedness of \eqref{eq:functional-blue}. Direct substitution gives \eqref{eq:functional-blue-cov}. Any other unbiased linear map is the displayed map plus $\bm Q$ with $\bm Q\mathcal O_N=\bm0$. The covariance cross terms vanish because $\mathcal O_N^{\mathsf T}\bm Q^{\mathsf T}=\bm0$, leaving the positive-semidefinite term $\bm Q\bm R_N\bm Q^{\mathsf T}$.
+\endIEEEproof
+
+For whitened measurements, $\operatorname{tr}(\bm\Sigma_{z,r}^{\star})$ quantifies noise amplification in the requested voltage field. It depends on singular values and target alignment, not rank alone. The numerical curve below is an implementation of this quantity with a tolerance-dependent pseudoinverse; it is a conditioning diagnostic rather than an exact certificate.
+
 \subsection{Numerical Audit for the Prescribed Eight-PMU Case}
 
-For the anchor-time target used by the frozen structural audit, define
+For the anchor-time target used by the structural audit, define
 \begin{align}
  \bm\Pi_N&=\mathcal O_N^{\dagger}\mathcal O_N, \label{eq:observable-projector}\\
  r_F(N)&=\left\|\bm L_{\mathcal U}(\bm I-\bm\Pi_N)\right\|_F, \label{eq:functional-residual}\\
@@ -42,18 +64,18 @@ For the anchor-time target used by the frozen structural audit, define
 \end{align}
 A zero residual is an exact numerical condition only when the matrix scaling and rank decision are defensible. A nonzero value certifies that the computed observable subspace does not contain every requested anchor-time direction.
 
-The frozen implementation formed $\mathcal O_N^{\mathsf T}\mathcal O_N$ and retained eigenvalues above $10^{-9}$ of its maximum. Figure~\ref{fig:observability-horizon} exposes, rather than hides, the sensitivity of that choice. The pseudo-rank reaches 54 at $N=30$ but falls to 39 at $N=180$, although the exact rank of a vertically augmented observability matrix cannot decrease. This behavior results from Gramian squaring, unstable-mode scaling, and a relative threshold; it prevents the pseudo-rank from being treated as an algebraic certificate. The target residual is also nonzero at every tested horizon. By contrast, the reported noise-amplification diagnostic decreases as more temporal information is accumulated.
+The implementation formed $\mathcal O_N^{\mathsf T}\mathcal O_N$ and retained eigenvalues above $10^{-9}$ of its maximum. Figure~\ref{fig:observability-horizon} exposes the sensitivity of that choice. The pseudo-rank reaches 54 at $N=30$ but falls to 39 at $N=180$, although the exact rank of a vertically augmented observability matrix cannot decrease. This behavior results from Gramian squaring, unstable-mode scaling, and a relative threshold; it prevents the pseudo-rank from being treated as an algebraic certificate. The target residual is also nonzero at every tested horizon. By contrast, the reported noise-amplification diagnostic decreases as more temporal information is accumulated.
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{figures/generated/observability_horizon.pdf}
-\caption{Frozen local observability audit for PMU buses $\{2,5,6,10,19,22,29,39\}$. (a) Gramian pseudo-rank under the stated relative threshold; its nonmonotonicity is numerical and rules out an exact-rank claim. (b) Nonzero anchor-time functional residual and the trace-style noise-amplification bound. These quantities diagnose the local model; they do not prove nonlinear recoverability.}
+\caption{Local observability audit for PMU buses $\{2,5,6,10,19,22,29,39\}$. (a) Gramian pseudo-rank under the stated relative threshold; its nonmonotonicity is numerical and rules out an exact-rank claim. (b) Nonzero anchor-time functional residual and the trace-style noise-amplification bound. These quantities diagnose the local model; they do not prove nonlinear recoverability.}
 \label{fig:observability-horizon}
 \end{figure}
 
 Horizons $N\in\{0,3,10,30,60,120,180\}$ correspond to 0--6~s. The nonlinear nominal trajectories contain 91 frames, or 3~s, so $N=180$ is not a matched causal horizon for those records. Its bus ranking was nevertheless exported before nonlinear scoring and is retained only as a preregistered, cross-horizon structural diagnostic. The empirical test correlates $r_{F,i}(180)$ with bus-level HVRE; it does not convert the six-second local audit into a three-second observability proof.
 
-\subsection{Event-Source Diagnosability as Affine-Manifold Separation}
+\subsection{Event-Source Diagnosability From Candidate Manifolds}
 
 State recoverability and source diagnosability have different nuisance spaces. Under candidate $h$, stack the available channels over $H$ samples as
 \begin{equation}
@@ -79,7 +101,7 @@ The $\bm R_H^{-1}$-orthogonal nuisance projector and the pairwise separation mar
  D_{ij,S}^{(\mathcal P)}(H)&=\frac12
  \left\|\bm P_{ij,S}^{\perp}\Delta\bm s_{ij}\right\|_{\bm R_H^{-1}}^2. \label{eq:pairwise-information}
 \end{align}
-Equation~\eqref{eq:pairwise-information} is half the minimum squared weighted distance between the two affine manifolds. It becomes the Gaussian mean-separation term only after nuisance values are fixed at the closest points. If all candidates are conditioned on one common pre-event state, the corresponding contract replaces the two independent state blocks in \eqref{eq:pair-nuisance} by $\mathcal O_{i,H}-\mathcal O_{j,H}$. The paper does not mix these two contracts.
+Equation~\eqref{eq:pairwise-information} is half the minimum squared weighted distance between the two affine manifolds. It becomes the Gaussian mean-separation term only after nuisance values are fixed at the closest points. If all candidates are conditioned on one common pre-event state, the corresponding model replaces the two independent state blocks in \eqref{eq:pair-nuisance} by $\mathcal O_{i,H}-\mathcal O_{j,H}$. The analysis below uses independent candidate-specific state blocks; it does not use the common-state alternative.
 
 \begin{proposition}[Local composite-hypothesis indistinguishability]
 \label{prop:source-indistinguishability}
@@ -94,17 +116,42 @@ When the corruption support is unknown but at most $q$ channels are affected, th
 \begin{equation}
  D_{ij}^{(q)}(H)=\min_{S:\,|S|\le q}D_{ij,S}^{(\mathcal P)}(H). \label{eq:sparse-integrity-margin}
 \end{equation}
-This union-of-subspaces formulation connects source localization to sparse strong observability and unknown-input reconstruction \cite{hou1998input,showkatbakhsh2020secure,sun2026secure}. It also states what an integrity-robust diagnosability claim must survive.
+This union-of-subspaces formulation connects source localization to sparse strong observability and unknown-input reconstruction \cite{hou1998input,showkatbakhsh2020secure,sun2026secure}. It also states the condition required for diagnosability under sparse corruption.
 
 \begin{corollary}[Monotonicity under an added PMU]
 \label{cor:pmu-additivity}
-For the same pair, covariance model, nuisance contract, and integrity budget, adding a conditionally independent PMU block cannot reduce the profiled margin:
+For the same pair, covariance model, nuisance specification, and integrity budget, adding a conditionally independent PMU block cannot reduce the profiled margin:
 \begin{equation}
  D_{ij,S}^{(\mathcal P\cup\{p\})}(H)\ge D_{ij,S}^{(\mathcal P)}(H). \label{eq:information-additivity}
 \end{equation}
 \end{corollary}
 
 For every nuisance vector, the augmented squared residual is the old nonnegative residual plus the new PMU residual. Taking the minimum preserves the inequality. Equality with a sum of separately profiled margins does not hold in general because the same nuisance variables must explain both sensor blocks; additivity requires fixed simple hypotheses or additional separability conditions.
+
+The affine margin is useful only if it survives local DAE curvature. Let $\bm m_h(\bm\eta_h)$ denote the exact, whitened, noise-free candidate response and suppose that, for $\|\bm\eta_h\|_2\le r$,
+\begin{equation}
+ \bm m_h(\bm\eta_h)=\bm s_h+\bm N_h\bm\eta_h+\bm\rho_h(\bm\eta_h),
+ \qquad
+ \|\bm\rho_h(\bm\eta_h)\|_2\le\frac{\kappa_h}{2}\|\bm\eta_h\|_2^2 .
+ \label{eq:nonlinear-remainder}
+\end{equation}
+
+\begin{proposition}[Local nonlinear separation]
+\label{prop:nonlinear-separation}
+Let $d_{ij}^{\mathrm{lin}}=\sqrt{2D_{ij,S}^{(\mathcal P)}(H)}$ and let $d_{ij}^{\mathrm{nl}}(r)$ be the minimum distance between the exact candidate responses over the two radius-$r$ nuisance balls. Under \eqref{eq:nonlinear-remainder},
+\begin{equation}
+ d_{ij}^{\mathrm{nl}}(r)\ge
+ \left[d_{ij}^{\mathrm{lin}}-\frac{\kappa_i+\kappa_j}{2}r^2\right]_+ .
+ \label{eq:nonlinear-separation-bound}
+\end{equation}
+Hence $d_{ij}^{\mathrm{lin}}>(\kappa_i+\kappa_j)r^2/2$ is sufficient for the two local nonlinear response sets to remain disjoint.
+\end{proposition}
+
+\IEEEproof
+For any admissible pair $(\bm\eta_i,\bm\eta_j)$, the reverse triangle inequality bounds the exact distance by its affine part minus $\|\bm\rho_i\|_2+\|\bm\rho_j\|_2$. Minimizing the affine part and applying \eqref{eq:nonlinear-remainder} gives \eqref{eq:nonlinear-separation-bound}; nonnegativity produces the positive-part operator.
+\endIEEEproof
+
+This condition is sufficient, not necessary. Estimating $\kappa_h$ requires directional second derivatives of the simulator response over a declared operating region. Those derivatives are not available, so the nonlinear certificate is not evaluated numerically here.
 
 For fixed closest nuisance values and unit-severity signature, the equal-prior Gaussian error is
 \begin{equation}
@@ -116,7 +163,7 @@ to target $P_e^{\star}\le\beta$ when the signature scales linearly with severity
 \begin{figure}[t]
 \centering
 \resizebox{\columnwidth}{!}{\input{figures/diagnosability_geometry}}
-\caption{Local source-diagnosability geometry. Each candidate forms an affine set after state and integrity nuisance are profiled. The shortest weighted separation, not the raw signature difference, determines the local margin. Intersecting sets admit indistinguishable candidate--nuisance pairs.}
+\caption{Local source-diagnosability geometry. State and integrity nuisance generate one affine response set per candidate. The shortest weighted separation determines the linear margin. The shaded tubes represent bounded nonlinear remainders; overlap can erase a positive linear margin.}
 \label{fig:diagnosability-geometry}
 \end{figure}
 
@@ -125,4 +172,4 @@ For a calibrated source posterior, define the smallest candidate set satisfying
  \mathcal C_k(\alpha)=\argmin_{\mathcal C\subseteq\mathcal H}
  \left\{|\mathcal C|:\sum_{h\in\mathcal C}p(h\mid\bm y_{0:k})\ge1-\alpha\right\}. \label{eq:candidate-set}
 \end{equation}
-A diagnosability-aware system abstains from exact Top-1 when $|\mathcal C_k|>1$ or when its closest competing margin falls below a development-set threshold. The pending common-contract experiment must test whether the margin predicts candidate-set size, calibrated uncertainty, and source-resolution delay under PMU loss and join. The current event bank has not supplied that evidence.
+A diagnosability-aware system abstains from exact Top-1 when $|\mathcal C_k|>1$ or when its closest competing margin falls below a development-set threshold. A source-disjoint experiment must test whether the margin predicts candidate-set size, calibrated uncertainty, and source-resolution delay under PMU loss and addition. The available event bank does not supply that test.

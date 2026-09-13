@@ -607,7 +607,6 @@ def figure_adequacy_adaptation() -> None:
     scales = np.array([0.5, 1.0, 1.5])
     med = cases.groupby(["m", "method"])["hidden_V_TVE_percent"].median().unstack()
     nees = uncertainty.groupby("m")["NEES_like"].median()
-    coverage = uncertainty.groupby("m")["coverage95"].mean()
 
     fig, axes = plt.subplots(1, 3, figsize=(7.16, 2.48), gridspec_kw={"width_ratios": [1.0, 0.92, 0.92]})
     ax = axes[0]
@@ -640,8 +639,20 @@ def figure_adequacy_adaptation() -> None:
         med.loc[scales, "S0-MAP-CORRECTED"], nees.loc[scales],
         c=scales, cmap="cividis", s=35, edgecolor="#243244", linewidth=0.5
     )
+    annotation_style = {
+        0.5: {"xytext": (3, 3), "ha": "left", "va": "bottom"},
+        1.0: {"xytext": (-3, 4), "ha": "right", "va": "bottom"},
+        1.5: {"xytext": (-3, -4), "ha": "right", "va": "top"},
+    }
     for scale in scales:
-        ax.annotate(f"m={scale:g}\ncoverage={100 * coverage.loc[scale]:.0f}%", (med.loc[scale, "S0-MAP-CORRECTED"], nees.loc[scale]), xytext=(3, 2), textcoords="offset points", fontsize=5.3)
+        style = annotation_style[float(scale)]
+        ax.annotate(
+            f"$m={scale:g}$",
+            (med.loc[scale, "S0-MAP-CORRECTED"], nees.loc[scale]),
+            textcoords="offset points",
+            fontsize=5.3,
+            **style,
+        )
     ax.axhline(1, color="#243244", linestyle="--", linewidth=0.7, label="NEES reference")
     ax.set_yscale("log")
     ax.set_xlabel("Corrected median HVRE (%)")

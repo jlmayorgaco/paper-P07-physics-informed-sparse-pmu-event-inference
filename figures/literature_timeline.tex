@@ -1,28 +1,54 @@
 \begin{tikzpicture}[
   x=1cm,y=1cm,
   font=\sffamily\tiny,
-  >=Latex,
-  milestone/.style={circle,draw=accessblue!80!black,fill=accessblue!18,minimum size=4.2pt,inner sep=0pt},
-  card/.style={draw=black!30,rounded corners=2pt,fill=white,align=center,text width=2.15cm,minimum height=0.75cm,inner sep=3pt}
+  statecell/.style={draw=accessblue!55,fill=accessblue!7,rounded corners=1.5pt,
+    align=center,text width=2.00cm,minimum height=0.76cm,inner sep=2pt},
+  eventcell/.style={draw=orange!65!black,fill=orange!8,rounded corners=1.5pt,
+    align=center,text width=2.00cm,minimum height=0.76cm,inner sep=2pt},
+  theorycell/.style={draw=green!55!black,fill=green!7,rounded corners=1.5pt,
+    align=center,text width=2.00cm,minimum height=0.76cm,inner sep=2pt},
+  emptycell/.style={draw=black!15,fill=black!1,rounded corners=1.5pt,
+    text width=2.00cm,minimum height=0.76cm},
+  year/.style={font=\sffamily\scriptsize\bfseries,text=black!70}
 ]
-\draw[->,very thick,black!55] (0,0) -- (14.2,0);
-\foreach \x/\yr in {0.5/1998,2.8/2010,5.1/2019--20,7.6/2022--23,10.3/2024--25,13.2/2026}{
-  \node[milestone] at (\x,0) {};
-  \node[font=\sffamily\scriptsize\bfseries,text=black!70] at (\x,-0.34) {\yr};
+
+\foreach \x/\yr in {3.05/1998,5.30/2010,7.55/2019--20,9.80/2022--23,12.05/2024--25,14.30/2026}{
+  \node[year] at (\x,4.25) {\yr};
+  \draw[black!18] (\x-1.08,0.05) -- (\x-1.08,4.02);
 }
-\node[card] at (0.7,1.05) {Input observability\\and reconstruction};
-\draw[thin] (0.5,0.12) -- (0.65,0.66);
-\node[card] at (2.9,-1.20) {Functional\\observability};
-\draw[thin] (2.8,-0.12) -- (2.88,-0.80);
-\node[card] at (5.1,1.05) {PMU source localization\\and placement limits};
-\draw[thin] (5.1,0.12) -- (5.1,0.66);
-\node[card] at (7.6,-1.20) {DAE/unknown-input observers;\\open-set event recognition};
-\draw[thin] (7.6,-0.12) -- (7.6,-0.80);
-\node[card] at (10.3,1.05) {Sparse graph state estimation;\\partial-observation localization};
-\draw[thin] (10.3,0.12) -- (10.3,0.66);
-\node[card] at (13.1,-1.20) {Joint state/attack/input;\\generative open-set detection};
-\draw[thin] (13.2,-0.12) -- (13.1,-0.80);
-\node[font=\sffamily\scriptsize\bfseries,text=purple!75!black,align=center] at (11.75,1.92)
-  {remaining intersection: target state + physical source + integrity\\under one source-disjoint sparse-PMU contract};
-\draw[->,thick,purple!70!black] (10.65,1.58) -- (9.25,0.28);
+\draw[->,thick,black!55] (1.82,4.00) -- (15.45,4.00);
+
+\node[align=right,font=\sffamily\scriptsize\bfseries,text=accessblue!80!black] at (0.92,3.35)
+  {state and\\unknown inputs};
+\node[align=right,font=\sffamily\scriptsize\bfseries,text=orange!80!black] at (0.92,2.20)
+  {event and\\physical source};
+\node[align=right,font=\sffamily\scriptsize\bfseries,text=green!45!black] at (0.92,1.05)
+  {observability and\\sensor value};
+
+\node[emptycell]  at (3.05,3.35) {};
+\node[emptycell]  at (5.30,3.35) {};
+\node[statecell]  at (7.55,3.35) {Zhao: DSE taxonomy};
+\node[statecell]  at (9.80,3.35) {Nugroho: DAE observer\\Qu: joint state/input};
+\node[statecell]  at (12.05,3.35) {Katanic: recursive DAE\\Moshtagh: sparse state};
+\node[statecell]  at (14.30,3.35) {Sun: state, attack,\\and unknown input};
+
+\node[emptycell]  at (3.05,2.20) {};
+\node[emptycell]  at (5.30,2.20) {};
+\node[eventcell]  at (7.55,2.20) {Li: sparse fault\\Pandey: event and source};
+\node[eventcell]  at (9.80,2.20) {Kummerow: open set\\Azizi: source ranking};
+\node[eventcell]  at (12.05,2.20) {Yildiz: few PMUs\\Li: graph localization};
+\node[eventcell]  at (14.30,2.20) {Hu: generative\\open-set detection};
+
+\node[theorycell] at (3.05,1.05) {Hou: input\\observability};
+\node[theorycell] at (5.30,1.05) {Fernando: functional\\observability};
+\node[theorycell] at (7.55,1.05) {Jamei: source limits\\and PMU placement};
+\node[theorycell] at (9.80,1.05) {Conte: indistinguishable\\fault-line groups};
+\node[theorycell] at (12.05,1.05) {Zhang: functional obs.\\Yildiz: placement};
+\node[theorycell] at (14.30,1.05) {Sun: sparse strong\\observability};
+
+\draw[very thick,purple!70!black] (9.05,0.22) -- (15.35,0.22);
+\draw[very thick,purple!70!black] (9.05,0.12) -- (9.05,0.32);
+\draw[very thick,purple!70!black] (15.35,0.12) -- (15.35,0.32);
+\node[font=\sffamily\scriptsize\bfseries,text=purple!75!black,align=center] at (12.20,-0.15)
+  {unresolved joint contract: hidden target, physical source, and integrity under source-disjoint sparse sensing};
 \end{tikzpicture}

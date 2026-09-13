@@ -15,7 +15,7 @@
 | I. Introduction | Exact joint problem, defensible gap, contributions, and evidence boundary. |
 | II. Related Work | State estimation, sparse-PMU localization, partial-observation reconstruction, and capability matrix. |
 | III. Problem Formulation | Hybrid DAE, AC/terminal-current model, sparse PMUs, eight event labels, separate physical/integrity sources. |
-| IV. Observability and Diagnosability | Functional target recovery, affine candidate manifolds, profiled separation, and indistinguishability limit. |
+| IV. Observability and Diagnosability | Functional target recovery and covariance, affine candidate manifolds, profiled separation, and a nonlinear remainder limit. |
 | V. Estimation | Exact Bayesian target, proposed generative candidate model, and validated B0--B3, calibration, adequacy, and recentering components. |
 | VI. Protocol | Audited PowerDynamics state campaign and separate ANDES event campaign. |
 | VII. State Results | Nominal reconstruction and theory-to-error evidence. |
@@ -25,4 +25,4 @@
 
 ## Title gate
 
-The working title states the demonstrated distinction between state recoverability and source diagnosability. A joint-method title is allowed only after the common-contract campaign is complete.
+The working title is *Physics-Based State Reconstruction and Event-Source Diagnosability With Sparse PMU Measurements*. Adviser requirement: the title must not contain a colon. A joint-method title is allowed only after the common-contract campaign is complete.

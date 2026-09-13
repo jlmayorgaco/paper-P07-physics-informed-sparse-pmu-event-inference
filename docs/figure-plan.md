@@ -4,10 +4,10 @@ Every empirical panel is generated from a frozen artifact. Conceptual drawings a
 
 | Asset | Scientific function | Evidence/source | Status |
 | --- | --- | --- | --- |
-| Fig. 1 | Expose the joint inference contract and visibly mark the unvalidated joint block. | Joint formulation in Sections III--V. | TikZ, integrated. |
-| Fig. 2 | Map the methodological timeline and the unresolved capability intersection. | Verified literature through 2026. | TikZ, integrated. |
+| Fig. 1 | Separate evaluated state/event components from the unvalidated joint candidate path. | Joint formulation in Sections III--V. | TikZ lane diagram, integrated. |
+| Fig. 2 | Map state/input, event/source, and observability/sensor-value developments on separate lanes. | Verified literature through 2026. | TikZ three-lane timeline, integrated. |
 | Fig. 3 | Expose numerical horizon sensitivity in the prescribed eight-PMU observability audit. | `pd_observability_horizons.csv`. | Generated vector PDF/PNG, integrated. |
-| Fig. 4 | Make affine candidate--nuisance separation geometrically interpretable. | Proposition 2 and Corollary 1. | TikZ, integrated. |
+| Fig. 4 | Show affine candidate separation and the nonlinear remainder that can erase it. | Propositions 2--3 and Corollary 2. | TikZ, integrated. |
 | Fig. 5 | Define six representative event signatures without smoothing or hand-drawn values. | Frozen legacy RAW0001 trace artifact. | Imported vector PDF/PNG, integrated. |
 | Fig. 6 | Compare B0--B2, relate the preregistered residual to bus-level difficulty, and show paired B2--B1 differences. | E04A frozen summaries and per-case results. | Generated vector PDF/PNG, integrated. |
 | Fig. 7 | Test lag, marginal calibration, and low-rank discrepancy placement. | E04A3--E04A5 artifacts. | Generated vector PDF/PNG, integrated. |

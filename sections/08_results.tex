@@ -3,27 +3,27 @@
 
 \subsection{Marginal Calibration Does Not Whiten Innovations}
 
-The nominal B2 covariance is highly conservative: U0 covers essentially all real and imaginary errors at the nominal 95\% level. Fitting two temperatures on 30 independent CAL trajectories improves TEST hidden NLL from $-13.477$ to \UtwoNLL{} and gives \UtwoCoverageRe{} and \UtwoCoverageIm{} marginal 95\% coverage for real and imaginary components, respectively. This is useful marginal calibration, but it leaves the innovation lag-one autocorrelation unchanged at \OriginalInnovationACF{} and the Ljung--Box test rejects whiteness. Figure~\ref{fig:temporal-uncertainty}(b)--(c) and Table~\ref{tab:uncertainty-results} therefore separate interval coverage from temporal model adequacy.
+The nominal B2 covariance is conservative and covers essentially all real and imaginary errors at the nominal 95\% level. Two temperatures fitted on 30 independent CAL trajectories bring the TEST marginal coverage closer to its target and improve hidden NLL (Table~\ref{tab:uncertainty-results}). They do not change the lag-one innovation autocorrelation, and the Ljung--Box test still rejects whiteness. Marginal calibration and temporal model adequacy are therefore separate properties [Fig.~\ref{fig:temporal-uncertainty}(b)--(c)].
 
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/generated/temporal_uncertainty.pdf}
-\caption{Temporal and uncertainty diagnostics on the frozen nominal TEST set. (a) Exact fixed-lag smoothing; lag zero is the causal Kalman result. (b) Marginal real-component coverage for U0 and real/imaginary U2 blocks against nominal coverage. (c) innovation autocorrelation for the original estimator and calibration-selected low-rank discrepancy placements.}
+\caption{Temporal and uncertainty diagnostics on the nominal TEST set. (a) Exact fixed-lag smoothing; lag zero is the causal Kalman result. (b) Marginal real-component coverage for U0 and real/imaginary U2 blocks against nominal coverage. (c) Innovation autocorrelation for the original estimator and calibration-selected low-rank discrepancy placements.}
 \label{fig:temporal-uncertainty}
 \end{figure*}
 
 \input{tables/generated/uncertainty_results}
 
-The calibration residual is strongly low rank: its first two principal components explain 95.7\% of variance and four explain 99.2\%. That empirical fact does not guarantee a useful generative correction. The rank-four measurement Gauss--Markov model reduces lag-one autocorrelation from \OriginalInnovationACF{} to \MeasurementGMInnovationACF{}, but worsens HVRE, produces hidden NLL 14.991, and undercovers both components. The rank-one process placement leaves both HVRE and autocorrelation effectively unchanged. These ablations reject the claim that low-rank colored PMU residuals, inserted without stronger physical structure, improve hidden-state uncertainty.
+Four principal components explain 99.2\% of the calibration-residual variance, but low rank alone does not make the residual a useful process model. A rank-four measurement Gauss--Markov correction lowers the lag-one autocorrelation, then worsens HVRE and undercovers both voltage components. Placing one mode in the process model changes neither HVRE nor autocorrelation appreciably. Colored residual structure must therefore be tied to a physical discrepancy mechanism before it improves hidden-state uncertainty.
 
-\subsection{Which Physical Mismatches Matter?}
+\subsection{Mismatch Response Depends on Model Family}
 
-The 980-case rebuilt-plant campaign reveals sharp family dependence (Fig.~\ref{fig:physical-mismatch} and Table~\ref{tab:mismatch-results}). At $m=1.5$, network mismatch reaches \NetworkMismatchRatio{}$\times$ the pooled nominal median and operating-point mismatch reaches \OperatingMismatchRatio{}$\times$. The coupled family is smaller at 1.602$\times$, while machine, governor, AVR, and load-model families remain near the nominal median for the tested perturbations. A blanket claim of robustness would therefore be misleading: the estimator is insensitive to several tested component shifts but fails materially when the algebraic network map or equilibrium center changes.
+The rebuilt-plant campaign reveals a clear family dependence (Fig.~\ref{fig:physical-mismatch} and Table~\ref{tab:mismatch-results}). At the largest tested scale, network mismatch raises the median error by \NetworkMismatchRatio{}$\times$ and an operating-point shift raises it by \OperatingMismatchRatio{}$\times$. Machine, governor, AVR, and load-model perturbations remain near the nominal median. The estimator tolerates those tested component shifts but fails when the algebraic network map or equilibrium center changes.
 
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/generated/physical_mismatch.pdf}
-\caption{Physical-mismatch atlas for the frozen estimator. (a) Median B2 hidden-voltage HVRE relative to the pooled $m=0$ median for every family--scale cell; annotations show the untransformed ratio and color encodes its base-10 logarithm. (b) Mean nominal-U2 marginal 95\% coverage under the same rebuilt plants. (c) Macro adequacy discrimination from observed innovations; undefined family-level AUROCs are omitted from the macro mean. Each family--scale cell contains 20 independently rebuilt plants.}
+\caption{Physical-mismatch atlas for the fixed nominal estimator. (a) Median B2 hidden-voltage HVRE relative to the pooled $m=0$ median for every family--scale cell; annotations show the untransformed ratio and color encodes its base-10 logarithm. (b) Mean nominal-U2 marginal 95\% coverage under the same rebuilt plants. (c) Macro adequacy discrimination from observed innovations; undefined family-level AUROCs are omitted from the macro mean. Each family--scale cell contains 20 independently rebuilt plants.}
 \label{fig:physical-mismatch}
 \end{figure*}
 
@@ -31,30 +31,30 @@ The 980-case rebuilt-plant campaign reveals sharp family dependence (Fig.~\ref{f
 
 Nominal covariance repair does not transfer automatically. Averaged across all mismatch cases, U0 has \MismatchUzeroCoverage{} 95\% coverage and nominally fitted U2 has only \MismatchUtwoCoverage{}. The reduction reflects physical shift, not a calibration/test leak: U2 remains frozen from nominal CAL data. This result limits the interpretation of Section~\ref{sec:estimation}: nominal dispersion scaling is not robustness to a changed plant.
 
-\subsection{Adequacy Signals Mismatch and Physical Static MAP Recovers M6}
+\subsection{Adequacy Detection and Physical Recentering}
 
-The observed-PMU innovation statistic detects many cases in which hidden HVRE is unacceptable. Macro AUROC/AUPRC are \AdequacyHalfAUROC{}/\AdequacyHalfAUPRC{} at $m=0.5$ and \AdequacyMaxAUROC{}/\AdequacyMaxAUPRC{} at $m=1.5$ [Fig.~\ref{fig:physical-mismatch}(c)]. Undefined family-level AUROCs, caused when every frame has the same frozen adequacy label, are omitted from the macro mean; AUPRC remains reported. Consequently, the statistic supports model-adequacy triage, not mismatch-family classification or guaranteed alarm calibration.
+The observed-PMU innovation statistic detects many cases in which hidden HVRE is unacceptable. At the largest tested scale, its macro AUROC/AUPRC is \AdequacyMaxAUROC{}/\AdequacyMaxAUPRC{} [Fig.~\ref{fig:physical-mismatch}(c)]. Family-level AUROC is omitted when every frame has the same frozen adequacy label; AUPRC remains defined. The statistic can flag a stale model, but it neither identifies the mismatch family nor supplies a calibrated alarm probability.
 
 The earlier R2-A offset-only ablation remains scientifically useful because it isolates what does not solve the problem. Across nonnominal identifiable M1, M6, and M7 cases it closes only \OnlineClosurePercent{} of the oracle gap, despite passing its nominal-safety gate. That failure does not imply that adaptation from observed PMUs is impossible; it shows that grouped voltage offsets without AC balance and a rebuilt physical center are inadequate.
 
-The corrected regularized-recentering experiment directly tests that distinction for M6. All \EZeroHTestCount{} TEST solves satisfy the frozen convergence gate. From $m=0.5$ to 1.5, the nominal-center median HVRE rises from \EZeroHFrozenHalf{} to \EZeroHFrozenMax{}, whereas the physical solve gives \EZeroHCorrectedHalf{} to \EZeroHCorrectedMax{} [Fig.~\ref{fig:adequacy-adaptation}(a)]. Paired oracle-gap closure is \EZeroHClosureHalf{}, \EZeroHClosureOne{}, and \EZeroHClosureMax{} across the three scales, with bootstrap intervals reported in Table~\ref{tab:e06h-results}. Median solve time is \EZeroHRuntimeMedian{}~ms and the 95th percentile is \EZeroHRuntimePNinetyFive{}~ms. These timings characterize the implemented static solve only; they do not establish end-to-end real-time operation.
+The regularized-recentering experiment tests that distinction for M6. Every TEST case satisfies the prespecified convergence gate. Across the three mismatch scales, the physical solve removes \EZeroHClosureHalf{}--\EZeroHClosureMax{} of the error gap to an oracle center [Fig.~\ref{fig:adequacy-adaptation}(a)--(b)]. The median solve takes \EZeroHRuntimeMedian{}~ms. Table~\ref{tab:e06h-results} retains the point errors, paired intervals, and tail runtime; these static timings do not establish end-to-end real-time operation.
 
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/generated/adequacy_adaptation.pdf}
-\caption{Corrected regularized physical recentering for held-out M6 operating-point mismatch. (a) Median hidden-voltage HVRE for the frozen nominal center and the physical solve. (b) Paired oracle-gap closure with 95\% bootstrap intervals over 20 independent TEST cases per scale; the oracle-center reference is 100\%. (c) Corrected point error versus the median joint NEES-like diagnostic. Marginal 95\% coverage is 100\% at each scale, but the joint statistic remains far above its nominal reference.}
+\caption{Corrected regularized physical recentering for held-out M6 operating-point mismatch. (a) Median hidden-voltage HVRE for the nominal center and the physical solve. (b) Paired oracle-gap closure with 95\% bootstrap intervals over 20 independent TEST cases per scale; the oracle-center reference is 100\%. (c) Corrected point error versus the median joint NEES-like diagnostic. Marginal 95\% coverage is 100\% at each scale, but the joint statistic remains far above its nominal reference.}
 \label{fig:adequacy-adaptation}
 \end{figure*}
 
 \input{tables/generated/e06h_results}
 
-The nuisance information matrix has median rank \EZeroHRank{} for \EZeroHDimension{} coordinates, leaving an \EZeroHNullity{}-dimensional nullspace. Nevertheless, the requested hidden-voltage field is recovered with two orders of magnitude less error than the frozen center. This is empirical evidence for target recovery despite nuisance non-uniqueness, not a proof of exact functional identifiability: the local hidden-voltage residual is nonzero at \EZeroHFunctionalResidual{}. The distinction links the adaptation result to Section~\ref{sec:functional-observability} without claiming that the injection vector itself is recovered.
+The nuisance information matrix has median rank \EZeroHRank{} among \EZeroHDimension{} coordinates. Even with that nullspace, the requested voltage field is recovered with two orders of magnitude less error than the frozen center. This supports target recovery despite nuisance non-uniqueness. It does not prove exact functional identifiability because the local hidden-voltage residual remains nonzero, nor does it show that the injection vector is recovered.
 
-Point accuracy also does not certify posterior uncertainty. The nullspace-aware Laplace covariance attains 100\% marginal 95\% coverage, yet its median NEES-like statistic increases from \EZeroHNEESHalf{} to \EZeroHNEESMax{} [Fig.~\ref{fig:adequacy-adaptation}(c)]. The independent constrained solver also converges on only part of its six-case subset. The E06-H conclusion is therefore strong for corrected M6 point reconstruction, partial for local target structure and uncertainty, and not established for M1 network mismatch, M7 coupled mismatch, or sequential online adaptation.
+Point accuracy does not certify posterior uncertainty. The nullspace-aware Laplace covariance covers every marginal interval, yet its joint NEES-like statistic grows with mismatch and remains far above the nominal reference [Fig.~\ref{fig:adequacy-adaptation}(c)]. The independent constrained solver also converges on only part of its small diagnostic subset. M6 point reconstruction is supported; joint uncertainty, network mismatch, coupled mismatch, and sequential adaptation are not.
 
-\subsection{How Far Does the Known-Source Event Baseline Go?}
+\subsection{Known-Source Detection and Localization}
 
-Table~\ref{tab:legacy-event-results} reports the audited sequential event baseline. On the known-source TEST split, the 448-feature hierarchy with the availability gate attains detection F1 \LegacyEventDetectionFOne{}, event macro-F1 \LegacyEventMacroFOne{}, physical Top-1 \LegacyPhysicalTopOne{}, physical Top-3 \LegacyPhysicalTopThree{}, and integrity Top-1 \LegacyIntegrityTopOne{}. The expanded representation improves physical Top-1 over the 136-feature hierarchy by \LegacyPhysicalGainPP{} percentage points (95\% paired interval, \LegacyPhysicalGainCILowPP{}--\LegacyPhysicalGainCIHighPP{}). This isolates the value of multiscale dynamics, adaptive residuals, and PMU contrasts under known-source training; the availability rule mainly improves integrity handling.
+On the known-source TEST split, the availability-gated hierarchy reaches detection F1 \LegacyEventDetectionFOne{} but only \LegacyPhysicalTopOne{} physical Top-1 (Table~\ref{tab:legacy-event-results}). Expanding the representation adds \LegacyPhysicalGainPP{} percentage points to source ranking over the compact hierarchy. Multiscale dynamics, adaptive residuals, and PMU contrasts therefore help when the source is represented during training; the availability rule contributes mainly to integrity handling.
 
 \input{tables/generated/legacy_event_results}
 
@@ -63,14 +63,14 @@ Figure~\ref{fig:legacy-event-evidence}(a) separates detection, family classifica
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/generated/legacy_event_evidence.pdf}
-\caption{Event evidence and its transfer boundary. (a) Frozen known-source TEST metrics for the compact hierarchy, expanded hierarchy, and availability-gated model. (b) Exact physical-source success under three distinct counting contracts: known-source completed scenarios, source-held-out decisions, and RAW0001 physical episodes. The bars in (b) are deliberately not pooled; they expose the change in task difficulty and data semantics.}
+\caption{Event evidence and its transfer boundary. (a) Known-source TEST metrics for the compact hierarchy, expanded hierarchy, and availability-gated model. (b) Exact physical-source success under three distinct counting protocols: known-source completed scenarios, source-held-out decisions, and RAW0001 physical episodes. The bars in (b) are deliberately not pooled; they expose the change in task difficulty and data semantics.}
 \label{fig:legacy-event-evidence}
 \end{figure*}
 
-\subsection{Does Localization Transfer to Unseen Physical Sources?}
+\subsection{Source Holdout Breaks Learned Localization}
 
-No. With the physical source excluded from source-labeled fitting and the true event family supplied, only \HeldSourceCorrect{} of \HeldSourceDecisions{} decisions across \HeldSourceCases{} held-source cases and three model seeds are exact, a rate of \HeldSourceRate{}. This is not a detector failure or a confusion among event families: it is direct evidence that the learned location heads and candidate descriptors retain source-specific associations. The negative result invalidates any zero-shot-source claim for the legacy system.
+With the physical source excluded from source-labeled fitting and the true event family supplied, only \HeldSourceCorrect{} of \HeldSourceDecisions{} decisions are exact. Detection and event-family confusion have been removed from this test. The remaining error shows that the learned location heads and candidate descriptors retain source-specific associations, invalidating a zero-shot-source claim for the legacy system.
 
-Transfer to RAW0001 is also weak. The basic candidate model classifies an average of \RawCandidateEventEpisodes{} of 12 event episodes and localizes \RawCandidatePhysicalEpisodes{} of five physical episodes across three seeds. The simulator bank omits some channels used by the longer-window implementation, so the transfer deficit cannot be assigned to one feature family alone. It nevertheless shows that improving the internal simulation score does not establish cross-record reliability.
+Transfer to RAW0001 is also weak: the basic candidate model localizes only \RawCandidatePhysicalEpisodes{} of five physical episodes on average. The simulator bank omits some channels used by the longer-window implementation, so no single feature family can be blamed for the deficit. Internal simulation accuracy does not establish cross-record reliability.
 
-The event evidence therefore answers a precise baseline question: supervised, physics-guided feature engineering is effective for detection and known-source diagnosis, but it does not solve source-generalizable physical inference. The result motivates the candidate-conditioned residual objective in \eqref{eq:joint-map-objective} and the profiled separation test in \eqref{eq:pairwise-information}; it is not itself evidence that those proposed components work.
+Supervised, physics-guided features work for detection and known-source diagnosis but not for source-generalizable inference. This failure justifies testing the candidate-conditioned residual in \eqref{eq:joint-map-objective} against the physical separation measure in \eqref{eq:pairwise-information}. It supplies the reason for that experiment, not evidence of its outcome.

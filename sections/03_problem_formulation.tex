@@ -41,7 +41,7 @@ where $\vartheta_{ij}=\vartheta_i-\vartheta_j$. A line outage changes the branch
  I_{ij}=Y_{ff,ij}V_i+Y_{ft,ij}V_j,
  \qquad I_{ji}=Y_{tf,ij}V_i+Y_{tt,ij}V_j. \label{eq:terminal-current}
 \end{equation}
-The orientation, transformer tap, line charging, and shunt convention in \eqref{eq:terminal-current} are part of the inference contract; replacing terminal current with bus-injection current changes the likelihood.
+The orientation, transformer tap, line charging, and shunt convention in \eqref{eq:terminal-current} are part of the measurement model; replacing terminal current with bus-injection current changes the likelihood.
 
 At the acquisition boundary, native measurements can include $V_{abc}$, $I_{abc}$, frequency, ROCOF, quality flags, and availability. Positive-sequence phasors define the balanced network likelihood used here. Negative- and zero-sequence components, when available, remain unbalance or integrity evidence rather than being mixed into the positive-sequence state. Ideal continuous-frequency channels satisfy
 \begin{equation}
@@ -95,7 +95,7 @@ ID & Operational meaning & Physical intervention $c$ & Physical source $\ell$ & 
 \end{tabularx}
 \end{table*}
 
-Table~\ref{tab:physical-operators} states how the four physical families enter the candidate DAE. It is an operator contract, not a claim that the proposed posterior has already solved every family.
+Table~\ref{tab:physical-operators} states how the four physical families enter the candidate DAE. It defines the operators without implying that the joint posterior has already solved every family.
 
 \begin{table*}[t]
 \caption{Physical intervention operators in the candidate bank. Algebraic jumps are resolved by the post-event network constraints; differential-state resets are absent unless explicitly stated.}
@@ -133,4 +133,4 @@ State accuracy uses the mean hidden-voltage relative complex error (HVRE)
 \end{equation}
 This trajectory-and-bus aggregate is reported as a percentage. It is TVE-style but is not the standard per-frame synchrophasor TVE conformity statistic. Event detection, event-family macro-F1, exact physical Top-1/Top-3, and integrity-source Top-1 use their own declared populations. The joint correctness indicator is one only when every applicable component of \eqref{eq:joint-output} is correct; a correct event family cannot conceal a wrong source. Confidence intervals use an independently generated trajectory, event parent, or rebuilt plant as the statistical unit, never individual 30-Hz samples.
 
-The causal contract permits only $\bm y_{0:k}$ at time $k$. A fixed-lag smoother, complete-window statistic, or centered temporal feature is retrospective and is labeled accordingly. Source generalization requires that physical source $\ell$ be absent from all source-labeled training and tuning, not merely that the test trajectory use a new random seed.
+Causal inference permits only $\bm y_{0:k}$ at time $k$. A fixed-lag smoother, complete-window statistic, or centered temporal feature is retrospective and is labeled accordingly. Source generalization requires that physical source $\ell$ be absent from all source-labeled training and tuning, not merely that the test trajectory use a new random seed.

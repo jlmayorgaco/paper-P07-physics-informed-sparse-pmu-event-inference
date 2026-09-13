@@ -42,7 +42,7 @@ The learned component is deliberately restricted. The earlier engineered feature
 
 \subsection{Nominal Estimator Hierarchy}
 
-The estimators form an evidence ladder rather than a collection of unrelated algorithms. B0 retains only the equilibrium, B1 adds instantaneous PMU conditioning, B2 adds causal state propagation, and B3 tests retrospective temporal information. When the equilibrium itself becomes stale, the separate E06-H level estimates a physically admissible operating point through regularized nonlinear recentering before any sequential extension is claimed. A full nonlinear Hybrid-DAE fixed-lag posterior is therefore an enclosing research formulation, not a result of this paper.
+The estimator sequence changes one information source at a time. B0 retains only the equilibrium. B1 adds instantaneous PMU conditioning, B2 adds causal state propagation, and B3 tests retrospective temporal information. When the equilibrium becomes stale, E06-H estimates a physically admissible operating point through regularized nonlinear recentering. The full nonlinear Hybrid-DAE fixed-lag posterior is not evaluated in the experiments.
 
 All nominal estimators use the same equilibrium $\bm y_0$, hidden-voltage center $\bm z_{\mathcal U,0}$, sampled dynamics $\bm A_d$, PMU map $\bm C$, and hidden-output map $\bm L_{\mathcal U}$. This shared model isolates the value of measurement updating and temporal propagation.
 
