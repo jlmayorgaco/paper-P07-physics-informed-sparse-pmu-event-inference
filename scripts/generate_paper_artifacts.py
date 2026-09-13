@@ -365,12 +365,50 @@ def figure_system_architecture() -> None:
     save_figure(fig, "system_architecture")
 
 
+def figure_observability_horizon() -> None:
+    audit = read_csv("pd_observability_horizons.csv")
+    horizon = audit["horizon"].to_numpy()
+
+    fig, axes = plt.subplots(1, 2, figsize=(3.50, 1.82), gridspec_kw={"width_ratios": [0.78, 1.22]})
+    ax = axes[0]
+    ax.plot(horizon, audit["rank"], marker="o", color=BLUE)
+    ax.axhline(114, color=GRAY, linestyle="--", linewidth=0.8, label="state dimension")
+    ax.set_xlabel("Horizon $N$")
+    ax.set_ylabel("Gramian pseudo-rank")
+    ax.set_title("(a) Threshold sensitivity", loc="left")
+    ax.set_ylim(0, 122)
+    ax.grid(alpha=0.2, linewidth=0.5)
+
+    ax = axes[1]
+    ax.semilogy(
+        horizon,
+        audit["functional_output_residual"],
+        marker="o",
+        color=ORANGE,
+        label="functional residual",
+    )
+    ax.semilogy(
+        horizon,
+        audit["noise_information_bound_sigma1e3"],
+        marker="s",
+        color=GREEN,
+        label="noise bound",
+    )
+    ax.set_xlabel("Horizon $N$")
+    ax.set_ylabel("Frozen diagnostic value")
+    ax.set_title("(b) Target residual and noise", loc="left")
+    ax.grid(which="both", alpha=0.2, linewidth=0.5)
+    ax.legend(frameon=False, fontsize=5.4, loc="best")
+    fig.tight_layout(w_pad=0.7)
+    save_figure(fig, "observability_horizon")
+
+
 def figure_nominal() -> None:
     e03 = read_csv("e04a1_e03_vs_e04.csv")
     per_case = read_csv("e04a_per_case.csv")
     paired = read_csv("e04a_paired_comparisons.csv")
     methods = ["B0_NOMINAL", "B1_SNAPSHOT_WLS", "B2_KALMAN"]
-    labels = ["B0\nEquilibrium", "B1\nSnapshot", "B2\nKalman"]
+    labels = ["B0\nEquilibrium", "B1\nLMMSE", "B2\nKalman"]
     colors = [LIGHT_GRAY, SKY, BLUE]
 
     fig, axes = plt.subplots(1, 3, figsize=(7.16, 2.45), gridspec_kw={"width_ratios": [0.88, 1.05, 0.92]})
@@ -391,7 +429,7 @@ def figure_nominal() -> None:
         ax.scatter(x0 + jitter, values, s=4.5, color=color, edgecolor="none", alpha=0.38, zorder=1)
     ax.set_xticks(range(3), labels)
     ax.set_yscale("log")
-    ax.set_ylabel("Trajectory hidden-bus TVE (%)")
+    ax.set_ylabel("Trajectory hidden-voltage HVRE (%)")
     ax.set_title("(a) Frozen nominal TEST distributions", loc="left")
     ax.grid(axis="y", which="both", alpha=0.2, linewidth=0.5)
 
@@ -405,7 +443,7 @@ def figure_nominal() -> None:
     rho = e03["spearman_B2_TVE_vs_functional_residual"].dropna().iloc[0]
     ax.text(0.03, 0.94, rf"Spearman $\rho={rho:.4f}$", transform=ax.transAxes, va="top")
     ax.set_xlabel("Functional residual $r_{F,i}$")
-    ax.set_ylabel("Per-bus Kalman TVE (%)")
+    ax.set_ylabel("Per-bus Kalman HVRE (%)")
     ax.set_yscale("log")
     ax.set_title("(b) Structure predicts difficulty", loc="left")
     ax.grid(alpha=0.2, linewidth=0.5)
@@ -426,7 +464,7 @@ def figure_nominal() -> None:
     wins = 100 * np.mean(delta < 0)
     ax.text(0.03, 0.97, f"mean {mean_pp:.6f} pp\n95% CI [{lo_pp:.6f}, {hi_pp:.6f}]\nB2 wins {wins:.1f}%", transform=ax.transAxes, va="top", fontsize=5.7)
     ax.set_xlabel("Trajectory rank")
-    ax.set_ylabel("B2 - B1 TVE (percentage points)")
+    ax.set_ylabel("B2 - B1 HVRE (percentage points)")
     ax.set_title("(c) Paired temporal contribution", loc="left")
     ax.grid(alpha=0.2, linewidth=0.5)
     fig.tight_layout(w_pad=0.9)
@@ -444,8 +482,8 @@ def figure_temporal_uncertainty() -> None:
     ax.plot(lag["lag_seconds"], lag["TVE_percent"], marker="o", color=BLUE)
     ax.axhline(lag.iloc[0]["TVE_percent"], color=GRAY, linestyle="--", linewidth=0.9, label="lag 0")
     ax.set_xlabel("Fixed lag (s)")
-    ax.set_ylabel("Hidden-bus TVE (%)")
-    ax.set_title("(a) Smoothing adds no TVE benefit")
+    ax.set_ylabel("Hidden-voltage HVRE (%)")
+    ax.set_title("(a) Smoothing adds no HVRE benefit")
     ax.ticklabel_format(axis="y", style="plain", useOffset=False)
     ax.grid(alpha=0.2, linewidth=0.5)
 
@@ -526,9 +564,9 @@ def figure_mismatch() -> None:
     ax.set_xticks(range(len(scales)), [f"{m:g}" for m in scales])
     ax.set_yticks(range(len(families)), labels)
     ax.set_xlabel("Mismatch scale $m$")
-    ax.set_title("(a) Median TVE / nominal", loc="left")
+    ax.set_title("(a) Median HVRE / nominal", loc="left")
     cbar = fig.colorbar(im, ax=ax, fraction=0.045, pad=0.02)
-    cbar.set_label(r"$\log_{10}$ TVE ratio", fontsize=5.8)
+    cbar.set_label(r"$\log_{10}$ HVRE ratio", fontsize=5.8)
     cbar.ax.tick_params(labelsize=5.2, length=2)
 
     ax = axes[1]
@@ -574,11 +612,11 @@ def figure_adequacy_adaptation() -> None:
     fig, axes = plt.subplots(1, 3, figsize=(7.16, 2.48), gridspec_kw={"width_ratios": [1.0, 0.92, 0.92]})
     ax = axes[0]
     ax.plot(scales, med.loc[scales, "S0-NOM"], marker="o", color=GRAY, label="frozen nominal center")
-    ax.plot(scales, med.loc[scales, "S0-MAP-CORRECTED"], marker="s", color=GREEN, label="physical static MAP")
+    ax.plot(scales, med.loc[scales, "S0-MAP-CORRECTED"], marker="s", color=GREEN, label="physical recentering")
     ax.set_yscale("log")
     ax.set_xticks(scales)
     ax.set_xlabel("Operating-point mismatch scale $m$")
-    ax.set_ylabel("Median TEST TVE (%)")
+    ax.set_ylabel("Median TEST HVRE (%)")
     ax.set_title("(a) Physical recentering", loc="left")
     ax.legend(frameon=False, fontsize=5.7)
     ax.grid(which="both", alpha=0.2, linewidth=0.5)
@@ -606,7 +644,7 @@ def figure_adequacy_adaptation() -> None:
         ax.annotate(f"m={scale:g}\ncoverage={100 * coverage.loc[scale]:.0f}%", (med.loc[scale, "S0-MAP-CORRECTED"], nees.loc[scale]), xytext=(3, 2), textcoords="offset points", fontsize=5.3)
     ax.axhline(1, color="#243244", linestyle="--", linewidth=0.7, label="NEES reference")
     ax.set_yscale("log")
-    ax.set_xlabel("Corrected median TVE (%)")
+    ax.set_xlabel("Corrected median HVRE (%)")
     ax.set_ylabel("Median NEES-like statistic")
     ax.set_title("(c) Accurate mean, partial uncertainty", loc="left")
     ax.legend(frameon=False, fontsize=5.5, loc="lower right")
@@ -682,7 +720,7 @@ def write_tables() -> None:
     nominal = read_csv("e04a_b0_b1_b2_summary.csv").set_index("method")
     labels = {
         "B0_NOMINAL": "B0 equilibrium",
-        "B1_SNAPSHOT_WLS": "B1 snapshot WLS",
+        "B1_SNAPSHOT_WLS": "B1 snapshot LMMSE",
         "B2_KALMAN": "B2 causal Kalman",
     }
     rows = []
@@ -694,13 +732,13 @@ def write_tables() -> None:
             f"[{row['TVE_percent_ci95_low']:.6f}, {row['TVE_percent_ci95_high']:.6f}] \\\\"
         )
     nominal_tex = """\\begin{table*}[t]
-\\caption{Nominal reconstruction on 100 frozen nonlinear TEST trajectories. Metrics use the 31 unobserved buses only; TVE is reported in percent and intervals bootstrap independent trajectories.}
+\\caption{Nominal reconstruction on 100 frozen nonlinear TEST trajectories. HVRE is the trajectory-and-bus mean relative complex-voltage error over the 31 unobserved buses; intervals bootstrap independent trajectories.}
 \\label{tab:nominal-results}
 \\centering
 \\footnotesize
 \\begin{tabular}{lccccc}
 \\toprule
-Method & Complex RMSE & $|V|$ RMSE & Angle RMSE ($^\\circ$) & Mean TVE (\\%) & 95\\% TVE interval (\\%) \\\\
+Method & Complex RMSE & $|V|$ RMSE & Angle RMSE ($^\\circ$) & Mean HVRE (\\%) & 95\\% HVRE interval (\\%) \\\\
 \\midrule
 """ + "\n".join(rows) + """
 \\bottomrule
@@ -729,7 +767,7 @@ Method & Complex RMSE & $|V|$ RMSE & Angle RMSE ($^\\circ$) & Mean TVE (\\%) & 9
 \\footnotesize
 \\begin{tabular}{lccccc}
 \\toprule
-Variant & Hidden NLL & 95\\% cov. Re (\\%) & 95\\% cov. Im (\\%) & Innovation ACF(1) & TVE (\\%) \\\\
+Variant & Hidden NLL & 95\\% cov. Re (\\%) & 95\\% cov. Im (\\%) & Innovation ACF(1) & HVRE (\\%) \\\\
 \\midrule
 """ + "\n".join(lines) + """
 \\bottomrule
@@ -756,13 +794,13 @@ Variant & Hidden NLL & 95\\% cov. Re (\\%) & 95\\% cov. Im (\\%) & Innovation AC
         for key, label in mismatch_labels.items()
     ]
     mismatch_tex = """\\begin{table}[t]
-\\caption{Median B2 hidden-bus TVE at the largest mismatch scale, $m=1.5$. Ratios use the 140-case main-grid nominal median of 0.014744\\%.}
+\\caption{Median B2 hidden-voltage HVRE at the largest mismatch scale, $m=1.5$. Ratios use the 140-case main-grid nominal median of 0.014744\\%.}
 \\label{tab:mismatch-results}
 \\centering
 \\footnotesize
 \\begin{tabular}{lcc}
 \\toprule
-Mismatch family & TVE (\\%) & Ratio \\\\
+Mismatch family & HVRE (\\%) & Ratio \\\\
 \\midrule
 """ + "\n".join(mismatch_rows) + """
 \\bottomrule
@@ -798,7 +836,7 @@ Mismatch family & TVE (\\%) & Ratio \\\\
 \footnotesize
 \begin{tabular}{ccccccccc}
 \toprule
-$m$ & $n$ & Frozen TVE (\%) & Corrected TVE (\%) & Gap closure [95\% CI] (\%) & Rank & Nullity & Median NEES & Runtime (ms) \\
+$m$ & $n$ & Frozen HVRE (\%) & Corrected HVRE (\%) & Gap closure [95\% CI] (\%) & Rank & Nullity & Median NEES & Runtime (ms) \\
 \midrule
 """ + "\n".join(adaptation_rows) + r"""
 \bottomrule
@@ -844,6 +882,7 @@ def main() -> None:
     checks: dict[str, object] = {}
     write_macros(checks)
     figure_system_architecture()
+    figure_observability_horizon()
     figure_nominal()
     figure_temporal_uncertainty()
     figure_mismatch()

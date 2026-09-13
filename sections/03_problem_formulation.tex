@@ -3,18 +3,28 @@
 
 \subsection{Hybrid DAE and Electrical Measurement Model}
 
-Let $\bm x(t)\in\mathbb R^{n_x}$ denote differential states, $\bm z(t)\in\mathbb R^{n_z}$ algebraic states, $\bm u(t)$ scheduled inputs, $\bm q(t)$ network configuration, and $\bm\theta$ physical parameters. A physical intervention $\bm a_h(t)$ is indexed by hypothesis
+Let $\bm x(t)\in\mathbb R^{n_x}$ denote differential states, $\bm z(t)\in\mathbb R^{n_z}$ algebraic states, $\bm u(t)$ scheduled inputs, $\bm q(t)$ network configuration, and $\bm\theta_k=\bm\theta_0+\bm G_\alpha\bm\alpha_k$ physical parameters with a slowly varying operating coordinate $\bm\alpha_k$. A physical intervention $\bm a_h(t)$ is indexed by hypothesis
 \begin{equation}
  h=(c,\ell,\tau,\gamma,\bm d), \qquad h\in\mathcal H,
  \label{eq:physical-hypothesis}
 \end{equation}
 where $c$ is event family, $\ell$ is a bus or branch source, $\tau$ is onset, $\gamma$ is severity, and $\bm d$ describes the allowed temporal profile. The plant is
 \begin{align}
- \dot{\bm x}(t)&=\bm f\!\left(\bm x,\bm z,\bm u,\bm q,\bm a_h;\bm\theta\right)+\bm w_x(t), \label{eq:dae-dynamic}\\
- \bm 0&=\bm g\!\left(\bm x,\bm z,\bm u,\bm q,\bm a_h;\bm\theta\right), \label{eq:dae-algebraic}\\
- \bm y_k&=\bm M_k\!\left[\bm h_{\mathcal P_k}(\bm x_k,\bm z_k,\bm q_k;\bm\theta)+\bm b_k\right]+\bm v_k. \label{eq:dae-measurement}
+ \dot{\bm x}(t)&=\bm f\!\left(\bm x,\bm z,\bm u,\bm q,\bm a_h;\bm\theta_k\right)+\bm w_x(t), \label{eq:dae-dynamic}\\
+ \bm 0&=\bm g\!\left(\bm x,\bm z,\bm u,\bm q,\bm a_h;\bm\theta_k\right), \label{eq:dae-algebraic}\\
+ \bm y_k&=\bm M_k\!\left[\bm h_{\mathcal P_k}(\bm x_k,\bm z_k,\bm q_k;\bm\theta_k)+\bm b_k\right]+\bm v_k. \label{eq:dae-measurement}
 \end{align}
 Here $\bm M_k$ selects the channels that are available at time $k$, $\bm b_k$ is a measurement-corruption process, and $\bm v_k$ is measurement noise. A dropout changes $\bm M_k$; bad data change $\bm b_k$; neither is a physical input to \eqref{eq:dae-dynamic}--\eqref{eq:dae-algebraic}. This separation permits a physical event and a measurement failure to coexist.
+
+The latent variables have deliberately different time scales and meanings. The pair $(\bm x,\bm z)$ is the fast dynamic--algebraic state; $\bm\alpha$ is slow operating-point or parameter drift; $\bm a_h$ is an abrupt, sparse physical intervention; $\bm q$ is a discrete network mode; and $(\bm M,\bm b)$ describes data availability and corruption. A colored model-discrepancy state $\bm c_k$ may enter either the process or measurement residual, as tested in Section~\ref{sec:estimation}, but is not interchangeable with an event.
+
+Within a smooth mode, assume the DAE is locally index one, so $\bm g_{\bm z}$ is nonsingular after the reference-angle constraint is imposed. Differentiating the algebraic constraint gives
+\begin{equation}
+ \dot{\bm z}=-\bm g_{\bm z}^{-1}
+ \left(\bm g_{\bm x}\bm f+\bm g_{\bm u}\dot{\bm u}
+ +\bm g_{\bm\theta}\dot{\bm\theta}\right). \label{eq:dae-index-one}
+\end{equation}
+Equation~\eqref{eq:dae-index-one} is not applied across a fault insertion or topology switch, where algebraic variables can jump and the model must be segmented. Differential states remain continuous unless a simulator-specific reset map is declared.
 
 The algebraic network core is
 \begin{equation}
@@ -32,6 +42,13 @@ where $\vartheta_{ij}=\vartheta_i-\vartheta_j$. A line outage changes the branch
  \qquad I_{ji}=Y_{tf,ij}V_i+Y_{tt,ij}V_j. \label{eq:terminal-current}
 \end{equation}
 The orientation, transformer tap, line charging, and shunt convention in \eqref{eq:terminal-current} are part of the inference contract; replacing terminal current with bus-injection current changes the likelihood.
+
+At the acquisition boundary, native measurements can include $V_{abc}$, $I_{abc}$, frequency, ROCOF, quality flags, and availability. Positive-sequence phasors define the balanced network likelihood used here. Negative- and zero-sequence components, when available, remain unbalance or integrity evidence rather than being mixed into the positive-sequence state. Ideal continuous-frequency channels satisfy
+\begin{equation}
+ f_i=f_0+\frac{1}{2\pi}\frac{d\angle V_i}{dt},\qquad
+ \operatorname{ROCOF}_i=\frac{1}{2\pi}\frac{d^2\angle V_i}{dt^2}, \label{eq:frequency-rocof}
+\end{equation}
+but an implemented likelihood must use the causal estimator and filtering semantics of the corresponding PMU backend.
 
 \subsection{Sparse PMUs and Requested State Function}
 
@@ -78,6 +95,25 @@ ID & Operational meaning & Physical intervention $c$ & Physical source $\ell$ & 
 \end{tabularx}
 \end{table*}
 
+Table~\ref{tab:physical-operators} states how the four physical families enter the candidate DAE. It is an operator contract, not a claim that the proposed posterior has already solved every family.
+
+\begin{table*}[t]
+\caption{Physical intervention operators in the candidate bank. Algebraic jumps are resolved by the post-event network constraints; differential-state resets are absent unless explicitly stated.}
+\label{tab:physical-operators}
+\centering
+\scriptsize
+\begin{tabularx}{\textwidth}{@{}lXlll@{}}
+\toprule
+Family & DAE action at source $\ell$ & Candidate support & Severity coordinates & State continuity \\
+\midrule
+Bus fault & Add a shunt primitive, $\bm Y_{\rm bus}^{+}=\bm Y_{\rm bus}^{-}+y_f\bm e_\ell\bm e_\ell^{\mathsf T}$, for the declared clearing interval & admissible buses & complex fault admittance or resistance/reactance & $\bm x$ continuous; $\bm z$ may jump \\
+Line outage & Set branch status $q_{ij}:1\mapsto0$ and remove its tap, series, charging, and shunt primitives from $\bm Y_{\rm bus}$ & in-service branches & discrete status and switching time & $\bm x$ continuous; $\bm z$ may jump \\
+Generation change & Modify scheduled active/reactive injection or a declared governor reference at generator bus $\ell$ & generator buses & $\Delta P_G$, $\Delta Q_G$, duration & continuous input-driven response \\
+Load change & Modify the active/reactive withdrawal model at load bus $\ell$ & load buses & $\Delta P_L$, $\Delta Q_L$, ZIP convention & continuous input-driven response \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
 The internal decision at time $k$ is
 \begin{equation}
  \left(\widehat{\bm z}_{\mathcal U,k},\bm\Sigma_{z,k},
@@ -89,12 +125,12 @@ where $m_k$ denotes the integrity state and $\mathcal C_k\subseteq\mathcal H$ is
 
 \subsection{Correctness and Evaluation Units}
 
-State accuracy uses hidden-bus total vector error
+State accuracy uses the mean hidden-voltage relative complex error (HVRE)
 \begin{equation}
- \operatorname{TVE}^{(r)}=\frac{1}{T_r|\mathcal U|}
+ \operatorname{HVRE}^{(r)}=\frac{1}{T_r|\mathcal U|}
  \sum_{k=1}^{T_r}\sum_{i\in\mathcal U}
- \frac{|\widehat V_{i,k}-V_{i,k}|}{\max(|V_{i,k}|,\epsilon)}, \label{eq:tve}
+ \frac{|\widehat V_{i,k}-V_{i,k}|}{\max(|V_{i,k}|,\epsilon)}. \label{eq:tve}
 \end{equation}
-reported as a percentage. Event detection, event-family macro-F1, exact physical Top-1/Top-3, and integrity-source Top-1 use their own declared populations. The joint correctness indicator is one only when every applicable component of \eqref{eq:joint-output} is correct; a correct event family cannot conceal a wrong source. Confidence intervals use an independently generated trajectory, event parent, or rebuilt plant as the statistical unit, never individual 30-Hz samples.
+This trajectory-and-bus aggregate is reported as a percentage. It is TVE-style but is not the standard per-frame synchrophasor TVE conformity statistic. Event detection, event-family macro-F1, exact physical Top-1/Top-3, and integrity-source Top-1 use their own declared populations. The joint correctness indicator is one only when every applicable component of \eqref{eq:joint-output} is correct; a correct event family cannot conceal a wrong source. Confidence intervals use an independently generated trajectory, event parent, or rebuilt plant as the statistical unit, never individual 30-Hz samples.
 
 The causal contract permits only $\bm y_{0:k}$ at time $k$. A fixed-lag smoother, complete-window statistic, or centered temporal feature is retrospective and is labeled accordingly. Source generalization requires that physical source $\ell$ be absent from all source-labeled training and tuning, not merely that the test trajectory use a new random seed.

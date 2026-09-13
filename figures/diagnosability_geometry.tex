@@ -1,13 +1,26 @@
 \begin{tikzpicture}[x=1cm,y=1cm,font=\sffamily\scriptsize,>=Latex]
-\fill[accessblue!8] (0,0) ellipse (2.35 and 0.72);
-\draw[accessblue!70!black,thick] (0,0) ellipse (2.35 and 0.72);
-\node[text=accessblue!70!black] at (0,-0.98) {responses explainable by initial-state uncertainty $\operatorname{col}(\mathcal O_H)$};
-\draw[->,thick,accessblue!75!black] (-0.35,-0.08) -- (0.72,0.36) node[above right] {$\bm s_i$};
-\draw[->,thick,orange!80!black] (-0.35,-0.08) -- (3.15,1.17) node[above] {$\bm s_j$};
-\draw[densely dashed,thick,orange!80!black] (0.72,0.36) -- (3.15,1.17);
-\draw[->,very thick,green!55!black] (0.72,0.36) -- (2.83,1.10)
-  node[midway,below,sloped] {$\bm P_{\mathcal O}^{\perp}(\bm s_j-\bm s_i)$};
-\node[align=left,text=black!75] at (5.2,0.68) {observable separation\\$D_{ij}^{(\mathcal P)}=\tfrac12\|\bm P_{\mathcal O}^{\perp}(\bm s_i-\bm s_j)\|_{\bm R_\perp^\dagger}^{2}$};
-\draw[->,thick] (3.25,0.93) -- (4.05,0.78);
-\node[align=center,text=orange!70!black] at (5.2,-0.55) {If the projected difference is zero,\\the two sources are locally indistinguishable.};
+\fill[accessblue!8,rounded corners=2pt] (-0.2,-0.15) -- (3.45,0.83) -- (3.75,1.20) -- (0.10,0.22) -- cycle;
+\draw[accessblue!75!black,very thick] (-0.05,0.02) -- (3.60,1.00);
+\node[text=accessblue!75!black,anchor=south west] at (0.10,0.28)
+  {$\mathcal M_i(S)=\bm s_i+\operatorname{col}[\mathcal O_i,\mathcal E_S]$};
+
+\fill[orange!10,rounded corners=2pt] (0.00,1.78) -- (3.65,2.76) -- (3.95,3.13) -- (0.30,2.15) -- cycle;
+\draw[orange!85!black,very thick] (0.15,1.95) -- (3.80,2.93);
+\node[text=orange!80!black,anchor=south west] at (0.30,2.23)
+  {$\mathcal M_j(S)=\bm s_j+\operatorname{col}[\mathcal O_j,\mathcal E_S]$};
+
+\coordinate (pi) at (2.15,0.61);
+\coordinate (pj) at (1.78,2.39);
+\fill[accessblue!80!black] (pi) circle (1.4pt);
+\fill[orange!85!black] (pj) circle (1.4pt);
+\draw[<->,very thick,green!55!black] (pi) -- (pj)
+  node[midway,right,align=left] {$\sqrt{2D_{ij,S}}$\\minimum weighted separation};
+
+\node[draw=black!35,rounded corners=2pt,fill=white,align=left,inner sep=4pt]
+  at (5.65,2.45) {Candidate-specific nuisance\\is fitted on each manifold.};
+\draw[->,thin] (4.55,2.28) -- (3.42,2.65);
+
+\node[draw=black!35,rounded corners=2pt,fill=white,align=left,inner sep=4pt]
+  at (5.65,0.75) {Intersection $\Rightarrow D_{ij,S}=0$:\\no uniform source decision.};
+\draw[->,thin] (4.45,0.86) -- (3.30,1.12);
 \end{tikzpicture}

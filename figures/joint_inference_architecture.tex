@@ -15,7 +15,7 @@
 \node[physics,minimum width=2.25cm] (dae) at (2.85,0.25) {Hybrid DAE and AC map\\$\bm f,\bm g,\bm h_{\mathcal P_k}$};
 \node[physics,minimum width=2.35cm] (bank) at (5.95,0.25) {Physical hypothesis bank\\$h=(c,\ell,\tau,\gamma)$};
 \node[data,minimum width=2.35cm] (residual) at (5.95,2.25) {Masked robust residuals\\$\bm r_{h,k}=\bm y_k-\widehat{\bm y}_{h,k}$};
-\node[block,minimum width=2.35cm] (joint) at (8.95,1.25) {Joint MAP / posterior\\state, event, source, integrity};
+\node[block,draw=purple!65!black,densely dashed,minimum width=2.35cm] (joint) at (8.95,1.25) {Proposed joint posterior\\not end-to-end validated};
 \node[output,minimum width=2.25cm] (state) at (11.95,2.25) {State estimate\\$\widehat{\bm z}_{\mathcal U,k},\;\bm\Sigma_{z,k}$};
 \node[output,minimum width=2.25cm] (decision) at (11.95,0.25) {Decision with abstention\\$\widehat c_k,\widehat\ell_k,\mathcal C_k$};
 
@@ -36,5 +36,6 @@
 \begin{scope}[on background layer]
 \node[draw=accessblue!45,rounded corners=3pt,fit=(dae)(bank),inner sep=5pt,label={[font=\sffamily\tiny,text=accessblue]below:physics defines counterfactual responses}] {};
 \node[draw=orange!55!black,rounded corners=3pt,fit=(quality)(residual),inner sep=5pt,label={[font=\sffamily\tiny,text=orange!55!black]above:data quality controls the likelihood}] {};
+\node[draw=purple!55!black,densely dashed,rounded corners=3pt,fit=(joint),inner sep=4pt,label={[font=\sffamily\tiny,text=purple!65!black]below:completion gate}] {};
 \end{scope}
 \end{tikzpicture}

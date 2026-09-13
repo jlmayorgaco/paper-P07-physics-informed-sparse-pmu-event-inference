@@ -14,7 +14,7 @@ The nominal B2 covariance is highly conservative: U0 covers essentially all real
 
 \input{tables/generated/uncertainty_results}
 
-The calibration residual is strongly low rank: its first two principal components explain 95.7\% of variance and four explain 99.2\%. That empirical fact does not guarantee a useful generative correction. The rank-four measurement Gauss--Markov model reduces lag-one autocorrelation from \OriginalInnovationACF{} to \MeasurementGMInnovationACF{}, but worsens TVE, produces hidden NLL 14.991, and undercovers both components. The rank-one process placement leaves both TVE and autocorrelation effectively unchanged. These ablations reject the claim that low-rank colored PMU residuals, inserted without stronger physical structure, improve hidden-state uncertainty.
+The calibration residual is strongly low rank: its first two principal components explain 95.7\% of variance and four explain 99.2\%. That empirical fact does not guarantee a useful generative correction. The rank-four measurement Gauss--Markov model reduces lag-one autocorrelation from \OriginalInnovationACF{} to \MeasurementGMInnovationACF{}, but worsens HVRE, produces hidden NLL 14.991, and undercovers both components. The rank-one process placement leaves both HVRE and autocorrelation effectively unchanged. These ablations reject the claim that low-rank colored PMU residuals, inserted without stronger physical structure, improve hidden-state uncertainty.
 
 \subsection{Which Physical Mismatches Matter?}
 
@@ -23,7 +23,7 @@ The 980-case rebuilt-plant campaign reveals sharp family dependence (Fig.~\ref{f
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/generated/physical_mismatch.pdf}
-\caption{Physical-mismatch atlas for the frozen estimator. (a) Median B2 hidden-bus TVE relative to the pooled $m=0$ median for every family--scale cell; annotations show the untransformed ratio and color encodes its base-10 logarithm. (b) Mean nominal-U2 marginal 95\% coverage under the same rebuilt plants. (c) Macro adequacy discrimination from observed innovations; undefined family-level AUROCs are omitted from the macro mean. Each family--scale cell contains 20 independently rebuilt plants.}
+\caption{Physical-mismatch atlas for the frozen estimator. (a) Median B2 hidden-voltage HVRE relative to the pooled $m=0$ median for every family--scale cell; annotations show the untransformed ratio and color encodes its base-10 logarithm. (b) Mean nominal-U2 marginal 95\% coverage under the same rebuilt plants. (c) Macro adequacy discrimination from observed innovations; undefined family-level AUROCs are omitted from the macro mean. Each family--scale cell contains 20 independently rebuilt plants.}
 \label{fig:physical-mismatch}
 \end{figure*}
 
@@ -33,16 +33,16 @@ Nominal covariance repair does not transfer automatically. Averaged across all m
 
 \subsection{Adequacy Signals Mismatch and Physical Static MAP Recovers M6}
 
-The observed-PMU innovation statistic detects many cases in which hidden TVE is unacceptable. Macro AUROC/AUPRC are \AdequacyHalfAUROC{}/\AdequacyHalfAUPRC{} at $m=0.5$ and \AdequacyMaxAUROC{}/\AdequacyMaxAUPRC{} at $m=1.5$ [Fig.~\ref{fig:physical-mismatch}(c)]. Undefined family-level AUROCs, caused when every frame has the same frozen adequacy label, are omitted from the macro mean; AUPRC remains reported. Consequently, the statistic supports model-adequacy triage, not mismatch-family classification or guaranteed alarm calibration.
+The observed-PMU innovation statistic detects many cases in which hidden HVRE is unacceptable. Macro AUROC/AUPRC are \AdequacyHalfAUROC{}/\AdequacyHalfAUPRC{} at $m=0.5$ and \AdequacyMaxAUROC{}/\AdequacyMaxAUPRC{} at $m=1.5$ [Fig.~\ref{fig:physical-mismatch}(c)]. Undefined family-level AUROCs, caused when every frame has the same frozen adequacy label, are omitted from the macro mean; AUPRC remains reported. Consequently, the statistic supports model-adequacy triage, not mismatch-family classification or guaranteed alarm calibration.
 
 The earlier R2-A offset-only ablation remains scientifically useful because it isolates what does not solve the problem. Across nonnominal identifiable M1, M6, and M7 cases it closes only \OnlineClosurePercent{} of the oracle gap, despite passing its nominal-safety gate. That failure does not imply that adaptation from observed PMUs is impossible; it shows that grouped voltage offsets without AC balance and a rebuilt physical center are inadequate.
 
-The corrected static-MAP experiment directly tests that distinction for M6. All \EZeroHTestCount{} TEST solves satisfy the frozen convergence gate. From $m=0.5$ to 1.5, the nominal-center median TVE rises from \EZeroHFrozenHalf{} to \EZeroHFrozenMax{}, whereas the physical MAP gives \EZeroHCorrectedHalf{} to \EZeroHCorrectedMax{} [Fig.~\ref{fig:adequacy-adaptation}(a)]. Paired oracle-gap closure is \EZeroHClosureHalf{}, \EZeroHClosureOne{}, and \EZeroHClosureMax{} across the three scales, with bootstrap intervals reported in Table~\ref{tab:e06h-results}. Median solve time is \EZeroHRuntimeMedian{}~ms and the 95th percentile is \EZeroHRuntimePNinetyFive{}~ms. These timings characterize the implemented static solve only; they do not establish end-to-end real-time operation.
+The corrected regularized-recentering experiment directly tests that distinction for M6. All \EZeroHTestCount{} TEST solves satisfy the frozen convergence gate. From $m=0.5$ to 1.5, the nominal-center median HVRE rises from \EZeroHFrozenHalf{} to \EZeroHFrozenMax{}, whereas the physical solve gives \EZeroHCorrectedHalf{} to \EZeroHCorrectedMax{} [Fig.~\ref{fig:adequacy-adaptation}(a)]. Paired oracle-gap closure is \EZeroHClosureHalf{}, \EZeroHClosureOne{}, and \EZeroHClosureMax{} across the three scales, with bootstrap intervals reported in Table~\ref{tab:e06h-results}. Median solve time is \EZeroHRuntimeMedian{}~ms and the 95th percentile is \EZeroHRuntimePNinetyFive{}~ms. These timings characterize the implemented static solve only; they do not establish end-to-end real-time operation.
 
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/generated/adequacy_adaptation.pdf}
-\caption{Corrected physical static recentering for held-out M6 operating-point mismatch. (a) Median hidden-bus TVE for the frozen nominal center and the physical static MAP. (b) Paired oracle-gap closure with 95\% bootstrap intervals over 20 independent TEST cases per scale; the oracle-center reference is 100\%. (c) Corrected point error versus the median joint NEES-like diagnostic. Marginal 95\% coverage is 100\% at each scale, but the joint statistic remains far above its nominal reference.}
+\caption{Corrected regularized physical recentering for held-out M6 operating-point mismatch. (a) Median hidden-voltage HVRE for the frozen nominal center and the physical solve. (b) Paired oracle-gap closure with 95\% bootstrap intervals over 20 independent TEST cases per scale; the oracle-center reference is 100\%. (c) Corrected point error versus the median joint NEES-like diagnostic. Marginal 95\% coverage is 100\% at each scale, but the joint statistic remains far above its nominal reference.}
 \label{fig:adequacy-adaptation}
 \end{figure*}
 
@@ -73,4 +73,4 @@ No. With the physical source excluded from source-labeled fitting and the true e
 
 Transfer to RAW0001 is also weak. The basic candidate model classifies an average of \RawCandidateEventEpisodes{} of 12 event episodes and localizes \RawCandidatePhysicalEpisodes{} of five physical episodes across three seeds. The simulator bank omits some channels used by the longer-window implementation, so the transfer deficit cannot be assigned to one feature family alone. It nevertheless shows that improving the internal simulation score does not establish cross-record reliability.
 
-The event evidence therefore answers a precise baseline question: supervised, physics-guided feature engineering is effective for detection and known-source diagnosis, but it does not solve source-generalizable physical inference. The result motivates the candidate-conditioned residual objective in \eqref{eq:joint-map-objective} and the projected information test in \eqref{eq:pairwise-information}; it is not itself evidence that those proposed components work.
+The event evidence therefore answers a precise baseline question: supervised, physics-guided feature engineering is effective for detection and known-source diagnosis, but it does not solve source-generalizable physical inference. The result motivates the candidate-conditioned residual objective in \eqref{eq:joint-map-objective} and the profiled separation test in \eqref{eq:pairwise-information}; it is not itself evidence that those proposed components work.

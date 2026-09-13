@@ -1,0 +1,28 @@
+\begin{tikzpicture}[
+  x=1cm,y=1cm,
+  font=\sffamily\tiny,
+  >=Latex,
+  milestone/.style={circle,draw=accessblue!80!black,fill=accessblue!18,minimum size=4.2pt,inner sep=0pt},
+  card/.style={draw=black!30,rounded corners=2pt,fill=white,align=center,text width=2.15cm,minimum height=0.75cm,inner sep=3pt}
+]
+\draw[->,very thick,black!55] (0,0) -- (14.2,0);
+\foreach \x/\yr in {0.5/1998,2.8/2010,5.1/2019--20,7.6/2022--23,10.3/2024--25,13.2/2026}{
+  \node[milestone] at (\x,0) {};
+  \node[font=\sffamily\scriptsize\bfseries,text=black!70] at (\x,-0.34) {\yr};
+}
+\node[card] at (0.7,1.05) {Input observability\\and reconstruction};
+\draw[thin] (0.5,0.12) -- (0.65,0.66);
+\node[card] at (2.9,-1.20) {Functional\\observability};
+\draw[thin] (2.8,-0.12) -- (2.88,-0.80);
+\node[card] at (5.1,1.05) {PMU source localization\\and placement limits};
+\draw[thin] (5.1,0.12) -- (5.1,0.66);
+\node[card] at (7.6,-1.20) {DAE/unknown-input observers;\\open-set event recognition};
+\draw[thin] (7.6,-0.12) -- (7.6,-0.80);
+\node[card] at (10.3,1.05) {Sparse graph state estimation;\\partial-observation localization};
+\draw[thin] (10.3,0.12) -- (10.3,0.66);
+\node[card] at (13.1,-1.20) {Joint state/attack/input;\\generative open-set detection};
+\draw[thin] (13.2,-0.12) -- (13.1,-0.80);
+\node[font=\sffamily\scriptsize\bfseries,text=purple!75!black,align=center] at (11.75,1.92)
+  {remaining intersection: target state + physical source + integrity\\under one source-disjoint sparse-PMU contract};
+\draw[->,thick,purple!70!black] (10.65,1.58) -- (9.25,0.28);
+\end{tikzpicture}

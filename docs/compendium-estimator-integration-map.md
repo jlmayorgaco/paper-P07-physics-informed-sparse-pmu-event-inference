@@ -11,7 +11,7 @@
 | Sparse-PMU observation and hidden-voltage target | Problem formulation and Fig. 1 | Implemented and audited. |
 | AC network, terminal-current operator, and Hybrid-DAE plant | Physical model and measurement contract | Implemented; full nonlinear trajectory posterior is not claimed. |
 | Functional observability and target-specific nullspace condition | Proposition and structural diagnostic | Theoretical foundation plus frozen bus-level association. |
-| B0 equilibrium, B1 snapshot WLS, B2 causal Kalman, B3 fixed-lag smoothing | Nominal estimator ladder | Frozen E04 evidence; B3 is a negative result. |
+| B0 equilibrium, B1 prior-conditioned LMMSE, B2 causal Kalman, B3 fixed-lag smoothing | Nominal estimator ladder | Frozen E04 evidence; B3 is a negative result. |
 | Marginal calibration and low-rank Gauss--Markov discrepancy | Uncertainty/discrepancy ablations | Frozen E04 evidence; joint calibration remains incomplete. |
 | Rebuilt M1--M7 physical mismatch and adequacy statistic | Failure mechanism and observed-only diagnostic | Frozen E06 evidence. |
 | Oracle recentering/relinearization | Mechanistic reference | Evaluation-only; not deployable inference. |

@@ -29,7 +29,7 @@ Nominal calibration & 30 independent CAL trajectories; U1/U2 and discrepancy onl
 Physical mismatch & Seven families, seven scales; B1/B2/U2 frozen & 980 rebuilt plants \\
 Breakpoint refinement & New seeds in transition bands; B2 frozen & 175 rebuilt plants \\
 Causal recentering & M1/M2/M6/M7; 160 DEV / 320 TEST; tune on DEV & Rebuilt plant trajectory \\
-Physical static MAP & M6 PQ/PV/Slack basis; 30 DEV / 60 TEST; one snapshot & Rebuilt equilibrium \\
+Regularized physical recentering & M6 PQ/PV/Slack basis; 30 DEV / 60 TEST; one snapshot & Rebuilt equilibrium \\
 Known-source event diagnosis & Eight abnormal labels plus normal; 414 TRAIN / 138 DEV / 138 TEST & Complete ANDES trajectory \\
 Source-transfer audit & Asset-disjoint folds; true family supplied; exact source & 303 decisions from 101 event parents $\times$ 3 seeds \\
 \bottomrule
@@ -52,7 +52,7 @@ All 980 main-grid cases and all 175 refinement cases passed power-flow, initiali
 
 The oracle subset compares the frozen estimator with true-equilibrium recentering and true local relinearization on the same mutated trajectories. Oracle quantities are evaluation-only. The offset-only recentering study uses new DEV seeds 101--110 and TEST seeds 201--220, disjoint from all earlier datasets. Its window, cadence, regularization, and activation threshold are selected on DEV and frozen before TEST. No event labels, hidden state, or mismatch family enter the R2-A estimate.
 
-The corrected physical static-MAP campaign is a separate M6-only contract. It uses 30 fresh DEV cases from seeds 601--610 and 60 TEST cases from seeds 611--630, with 20 TEST equilibria at each of $m\in\{0.5,1.0,1.5\}$. DEV selects the nuisance scale, regularization, and continuation initialization from a small fixed grid. TEST uses only the observed voltage and terminal-current phasors; hidden voltages are revealed afterward for scoring. A solution is accepted only when the nonlinear optimizer succeeds, all outputs are finite, and the maximum AC residual is at most $5\times10^{-5}$. Rejections remain in the denominator; the frozen rejection table is empty. A six-case subset is also solved with an independent constrained optimizer, and its partial convergence status is reported rather than upgraded to full solver equivalence.
+The corrected regularized physical-recentering campaign is a separate M6-only contract. It uses 30 fresh DEV cases from seeds 601--610 and 60 TEST cases from seeds 611--630, with 20 TEST equilibria at each of $m\in\{0.5,1.0,1.5\}$. DEV selects the nuisance scale, regularization, and continuation initialization from a small fixed grid. TEST uses only the observed voltage and terminal-current phasors; hidden voltages are revealed afterward for scoring. A solution is accepted only when the nonlinear optimizer succeeds, all outputs are finite, and the maximum AC residual is at most $5\times10^{-5}$. Rejections remain in the denominator; the frozen rejection table is empty. A six-case subset is also solved with an independent constrained optimizer, and its partial convergence status is reported rather than upgraded to full solver equivalence.
 
 All numerical tables and empirical figures are regenerated from the hashed snapshot under \texttt{generated/frozen}. The build script asserts 100 nominal test trajectories, 980 main-grid B2 cases, 60 corrected-MAP TEST cases with complete acceptance, rank-deficient nuisance information, and the preregistered adaptation-closure range before producing manuscript assets.
 
