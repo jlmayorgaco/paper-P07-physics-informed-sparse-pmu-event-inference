@@ -1,9 +1,39 @@
-\section{Local Physics-Based Estimation and Diagnostics}
+\section{Physics-Based State Estimation and Joint Inference}
 \label{sec:estimation}
+
+\subsection{Joint Hypothesis-Conditioned Objective}
+
+For candidate $h=(c,\ell,\tau,\gamma,\bm d)$, let $\bm X_{0:k}$ and $\bm Z_{0:k}$ denote the differential and algebraic trajectory and let $\bm B_{0:k}$ denote sparse measurement corruption. A physics-first fixed-horizon estimator can be written as
+\begin{equation}
+\begin{aligned}
+ \mathcal J_h={}&\|\bm x_0-\overline{\bm x}_0\|_{\bm P_0^{-1}}^2
+ +\sum_{t=0}^{k}\rho\!\left(\|\bm r_{h,t}\|_{\bm R_t^{-1}}^2\right)\\
+ &+\sum_{t=0}^{k-1}\|\bm x_{t+1}-\bm F_h(\bm x_t,\bm z_t)\|_{\bm Q^{-1}}^2
+ +\gamma_g\sum_{t=0}^{k}\|\bm g_h(\bm x_t,\bm z_t)\|_2^2\\
+ &+\lambda_b\sum_{t=0}^{k}\|\bm b_t\|_1-2\log p(h),
+\end{aligned}
+\label{eq:joint-map-objective}
+\end{equation}
+where
+\begin{equation}
+ \bm r_{h,t}=\bm M_t[\bm y_t-\bm h_{\mathcal P_t}(\bm x_t,\bm z_t)-\bm b_t]. \label{eq:hypothesis-residual}
+\end{equation}
+The robust loss $\rho$ limits the influence of unmodeled outliers, while the sparse term assigns persistent channel corruption to $\bm b_t$ instead of forcing the physical state to explain it. The event hypothesis changes the DAE through the mechanisms in Section~\ref{sec:problem-formulation}; thus event family and source are evaluated as physical counterfactuals rather than asset labels.
+
+With a probabilistic model for every term, a Laplace or sequential approximation gives
+\begin{equation}
+ p(h\mid\bm y_{0:k})\propto p(h)\,|\bm H_h|^{-1/2}
+ \exp[-\mathcal J_h(\widehat{\bm X}_h,\widehat{\bm Z}_h,\widehat{\bm B}_h)/2], \label{eq:hypothesis-posterior}
+\end{equation}
+where $\bm H_h$ is an appropriate local Hessian on identifiable directions. If the determinant correction is omitted or the score is not calibrated, the output is an evidence score, not a posterior probability.
+
+The learned component is deliberately restricted. The earlier engineered feature system can propose a small candidate set or learn a correction $\psi_{\phi}(\bm r_{h,0:k})$ to the physical log evidence. It must be trained on candidate residuals rather than source identity alone and tested on held-out physical sources. This design distinguishes physics-guided signal features from a learned model discrepancy; only the latter modifies the inference objective. The required ablation is learned-only, physics-only, physics plus learned discrepancy, and the full diagnosability-aware decision rule.
 
 \subsection{Nominal Estimator Hierarchy}
 
-All estimators use the same equilibrium $\bm y_0$, hidden-voltage center $\bm z_{\mathcal U,0}$, sampled dynamics $\bm A_d$, PMU map $\bm C$, and hidden-output map $\bm L_{\mathcal U}$. This shared model isolates the value of measurement updating and temporal propagation.
+The estimators form an evidence ladder rather than a collection of unrelated algorithms. B0 retains only the equilibrium, B1 adds instantaneous PMU conditioning, B2 adds causal state propagation, and B3 tests retrospective temporal information. When the equilibrium itself becomes stale, the separate E06-H level estimates a physically admissible operating point through nonlinear static MAP before any sequential extension is claimed. A full nonlinear Hybrid-DAE fixed-lag posterior is therefore an enclosing research formulation, not a result of this paper.
+
+All nominal estimators use the same equilibrium $\bm y_0$, hidden-voltage center $\bm z_{\mathcal U,0}$, sampled dynamics $\bm A_d$, PMU map $\bm C$, and hidden-output map $\bm L_{\mathcal U}$. This shared model isolates the value of measurement updating and temporal propagation.
 
 The equilibrium baseline B0 returns
 \begin{equation}
@@ -60,4 +90,28 @@ Let $\bm\mu_{\nu}$ and $\bm\Sigma_{\nu}$ be the mean and shrunk covariance of B2
 \end{equation}
 Mismatch labels and hidden truth do not enter \eqref{eq:adequacy-score}; hidden truth is used only after inference to label frames whose hidden TVE exceeds the frozen evaluation threshold. AUROC and AUPRC therefore measure whether observed innovations anticipate unacceptable hidden error, not whether the detector identifies a mismatch family.
 
-Two evaluation-only or adaptive variants diagnose the failure mechanism. R1 replaces the nominal equilibrium with the true plant equilibrium and is explicitly oracle. R2-A estimates an eight-dimensional grouped observed-bus voltage offset using a 60-frame trailing window, nominal matrices, ridge regularization, and only PMU measurements. It is a preregistered linearized static-MAP proxy, not a nonlinear AC power-flow or KKT solve. Its center/state cross-covariance is neglected. Comparing frozen B2, R1, and R2-A tests whether a simple causal offset correction captures the oracle recentering benefit.
+Three variants diagnose the failure mechanism without merging their evidence contracts. R1 replaces the nominal equilibrium with the true plant equilibrium and is explicitly oracle. R2-A estimates an eight-dimensional grouped observed-bus voltage offset using a 60-frame trailing window, nominal matrices, ridge regularization, and only PMU measurements. It is a causal negative ablation: its center/state cross-covariance is neglected and it does not enforce the nonlinear AC equations.
+
+The corrected physical static-MAP estimator addresses M6 operating-point mismatch at one equilibrium snapshot. Let
+\begin{equation}
+ \bm d=\operatorname{col}(\Delta\bm P_{\mathrm{PQ}},\Delta\bm Q_{\mathrm{PQ}},\Delta\bm P_{\mathrm{PV}})\in\mathbb R^{43} \label{eq:e06h-nuisance}
+\end{equation}
+collect active and reactive changes at 17 admissible PQ loads and active-power changes at nine PV buses. Voltage is parameterized as $\bm V(\bm\theta,\bm\rho)=\exp(\bm\rho+\mathrm{j}\bm\theta)$. Defining the scaled PMU residual as $\bm e_y(\bm V)=\bm D_y^{-1}[\bm h_{\mathcal P}(\bm V)-\bm y_{\mathcal P}]$, the estimator solves
+\begin{equation}
+\begin{aligned}
+ (\widehat{\bm V},\widehat{\bm d})
+ &=\argmin_{\bm V,\bm d}\;\mathcal J(\bm V,\bm d),\\
+ \mathcal J(\bm V,\bm d)
+ &=\|\bm e_y(\bm V)\|_2^2
+ +\gamma^2\|\bm g_{\mathrm{AC}}(\bm V,\bm d)\|_2^2
+ +\frac{\lambda}{q_d^2}\|\bm d\|_2^2.
+\end{aligned}
+\label{eq:e06h-map}
+\end{equation}
+where $\bm h_{\mathcal P}$ is the audited voltage/terminal-current operator, $\bm g_{\mathrm{AC}}$ includes PQ balance, explicit PV-magnitude constraints, solved PV reactive power, and bus 31 as Slack, and $\bm D_y$ scales voltage and current components separately. The weights are $\gamma=10^3$, $q_d=1$, and $\lambda=0.01$, selected on a disjoint DEV split; continuation initialization is then frozen for TEST. Neither the true nuisance vector nor the hidden voltages enter the TEST solve.
+
+Because $\bm d$ may be non-unique, evaluation distinguishes nuisance information from target information. If $\bm J_{y d}$ and $\bm J_{z d}$ are the observed-PMU and hidden-voltage Jacobians with respect to $\bm d$ after eliminating voltage through the AC constraints, the local target residual is
+\begin{equation}
+ r_{d\rightarrow z}=\frac{\|\bm J_{z d}\bm N(\bm J_{y d})\|_F}{\max(\|\bm J_{z d}\|_F,\epsilon)}, \label{eq:e06h-functional-residual}
+\end{equation}
+where $\bm N(\bm J_{y d})$ spans the PMU-uninformed nuisance nullspace. Exact target identifiability would require a zero residual. The experiment instead tests the weaker empirical question: whether \,\eqref{eq:e06h-map} reconstructs the hidden voltage accurately despite rank-deficient nuisance information, and whether its Laplace covariance is credible.

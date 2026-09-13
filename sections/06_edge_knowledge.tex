@@ -14,20 +14,24 @@ Dynamic validation checks the equilibrium, local modes, nonlinear trajectories, 
 with fitted slopes 1.9820, 1.9987, and 2.0003 for representative state, governor-reference, and load perturbations, consistent with first-order linearization error.
 
 \begin{table*}[t]
-\caption{Frozen experimental contracts. A complete nonlinear trajectory or rebuilt plant is the independent unit.}
+\caption{Frozen experimental contracts. State and event campaigns retain separate simulators, splits, targets, and denominators.}
 \label{tab:experimental-contracts}
 \centering
-\footnotesize
-\begin{tabularx}{\textwidth}{lXllll}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\textwidth}{@{}lXX@{}}
 \toprule
-Study & Purpose and data & Split & Units & Frames & Model use \\
+Study & Frozen contract & Independent evaluation unit \\
 \midrule
-Structural audit & Local VI-only target residual for 31 hidden buses & preregistered & 31 buses & horizons 0--180 & frozen equilibrium \\
-Nominal reconstruction & Governor, load, and combined nonlinear perturbations & 20 DEV / 100 TEST & trajectories & 91 at 30 Hz & frozen B0--B3 \\
-Nominal calibration & New nonlinear nominal trajectories & 30 CAL & trajectories & 91 at 30 Hz & fit U1/U2 and discrepancy only \\
-Physical mismatch & Seven families, seven scales, 20 seeds & frozen TEST & 980 rebuilt plants & 91 at 30 Hz & frozen B1/B2/U2 \\
-Breakpoint refinement & New seeds in transition bands & frozen TEST & 175 rebuilt plants & 91 at 30 Hz & frozen B2 \\
-Causal recentering & M1/M2/M6/M7 with disjoint new seeds & 160 DEV / 320 TEST & rebuilt plants & 91 at 30 Hz & select on DEV; score TEST once \\
+Structural audit & Preregistered voltage/current target residual, horizons 0--180 & 31 hidden buses \\
+Nominal reconstruction & 20 DEV / 100 TEST; 91 frames at 30~Hz; B0--B3 frozen & Complete nonlinear trajectory \\
+Nominal calibration & 30 independent CAL trajectories; U1/U2 and discrepancy only & Complete nonlinear trajectory \\
+Physical mismatch & Seven families, seven scales; B1/B2/U2 frozen & 980 rebuilt plants \\
+Breakpoint refinement & New seeds in transition bands; B2 frozen & 175 rebuilt plants \\
+Causal recentering & M1/M2/M6/M7; 160 DEV / 320 TEST; tune on DEV & Rebuilt plant trajectory \\
+Physical static MAP & M6 PQ/PV/Slack basis; 30 DEV / 60 TEST; one snapshot & Rebuilt equilibrium \\
+Known-source event diagnosis & Eight abnormal labels plus normal; 414 TRAIN / 138 DEV / 138 TEST & Complete ANDES trajectory \\
+Source-transfer audit & Asset-disjoint folds; true family supplied; exact source & 303 decisions from 101 event parents $\times$ 3 seeds \\
 \bottomrule
 \end{tabularx}
 \end{table*}
@@ -44,8 +48,27 @@ For each mismatch case, a fresh PowerDynamics plant is rebuilt from copied sourc
 
 All 980 main-grid cases and all 175 refinement cases passed power-flow, initialization, and time-domain acceptance. B1, B2, U0, U2, and the adequacy score are frozen from nominal data. Bootstrap intervals use seeds as independent units. Breakpoints in this paper are not inferred from the narrative report: the generated plots use the frozen per-case table directly because a prior refined breakpoint mixed aggregation definitions.
 
-\subsection{Oracle and Causal Adaptation Contracts}
+\subsection{Oracle, Offset, and Physical-Map Adaptation Contracts}
 
-The oracle subset compares the frozen estimator with true-equilibrium recentering and true local relinearization on the same mutated trajectories. Oracle quantities are evaluation-only. The causal recentering study uses new DEV seeds 101--110 and TEST seeds 201--220, disjoint from all earlier datasets. Its window, cadence, regularization, and activation threshold are selected on DEV and frozen before TEST. No event labels, hidden state, or mismatch family enter the R2-A estimate. Rejected or nonconvergent cases would remain in the denominator; none occurred in the reported physical mismatch grids.
+The oracle subset compares the frozen estimator with true-equilibrium recentering and true local relinearization on the same mutated trajectories. Oracle quantities are evaluation-only. The offset-only recentering study uses new DEV seeds 101--110 and TEST seeds 201--220, disjoint from all earlier datasets. Its window, cadence, regularization, and activation threshold are selected on DEV and frozen before TEST. No event labels, hidden state, or mismatch family enter the R2-A estimate.
 
-All numerical tables and empirical figures are regenerated from the hashed snapshot under \texttt{generated/frozen}. The build script asserts 100 nominal test trajectories, 980 main-grid B2 cases, and the expected adaptation closure range before producing manuscript assets.
+The corrected physical static-MAP campaign is a separate M6-only contract. It uses 30 fresh DEV cases from seeds 601--610 and 60 TEST cases from seeds 611--630, with 20 TEST equilibria at each of $m\in\{0.5,1.0,1.5\}$. DEV selects the nuisance scale, regularization, and continuation initialization from a small fixed grid. TEST uses only the observed voltage and terminal-current phasors; hidden voltages are revealed afterward for scoring. A solution is accepted only when the nonlinear optimizer succeeds, all outputs are finite, and the maximum AC residual is at most $5\times10^{-5}$. Rejections remain in the denominator; the frozen rejection table is empty. A six-case subset is also solved with an independent constrained optimizer, and its partial convergence status is reported rather than upgraded to full solver equivalence.
+
+All numerical tables and empirical figures are regenerated from the hashed snapshot under \texttt{generated/frozen}. The build script asserts 100 nominal test trajectories, 980 main-grid B2 cases, 60 corrected-MAP TEST cases with complete acceptance, rank-deficient nuisance information, and the preregistered adaptation-closure range before producing manuscript assets.
+
+\subsection{Event-Diagnosis Campaign and Signal Evidence}
+
+The separate event campaign uses ANDES \cite{cui2021hybrid} and the same eight PMU buses. It contains 138 source configurations: one normal condition, 39 fault buses, 34 outage lines, ten generation connections, 18 load buses, eight missing-data PMUs, ten generation-and-missing pairs, eight bad-data PMUs, and ten prescribed mixed-event configurations. Five replicas per configuration give \LegacyEventTrajectories{} complete trajectories. Each physical trajectory lasts approximately 5~s, with the event scheduled at 2~s; missing or corrupted intervals last 0.7~s. Physical interventions are applied inside the simulator, whereas missing and corrupted values are applied to sampled measurements.
+
+Three replicas per source configuration enter training, one development, and one test, producing 414/138/138 complete-trajectory splits. Consequently, the primary event benchmark evaluates new replicas at sources already represented in training. The separate asset-disjoint audit removes the physical source from all source-labeled fitting and tuning. Results from these contracts are reported side by side but never interpreted as the same generalization task.
+
+The historical baseline is a hierarchy of extremely randomized trees. Its 136-feature version uses trailing voltage magnitude, angle, frequency, missingness, and a normalized disturbance score. The 448-feature version adds multiscale statistics, adaptive residuals, and simultaneous contrasts among PMUs. A deterministic availability gate handles directly observed dropout. These are physics-guided features and typed decision heads; they are not a DAE-constrained learning architecture, and the ensemble's leaf-vote scores are not treated as calibrated probabilities.
+
+Figure~\ref{fig:event-signatures} uses the first labeled episode of six representative families in the 89.65-min RAW0001 reference simulation. The curves are measured simulator outputs, not sketches or smoothed reconstructions. They show why no single channel suffices: a fault creates a short voltage sag, an outage redistributes current, injection changes have slower frequency/current responses, and measurement failures require availability or phase-consistency information.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/generated/event_signatures.pdf}
+\caption{Representative measured event signatures from RAW0001. (a) Bus fault, (b) line outage, (c) generation change, (d) load change, (e) missing data, and (f) single-phase corruption. Dotted lines mark the first labeled sample; gray shading marks missing or corrupted intervals. Magnitudes are normalized by the preceding 3-s median, frequency is relative to its corresponding median, and time scales differ by panel. The plotted values and source-file hashes are frozen in the evidence snapshot.}
+\label{fig:event-signatures}
+\end{figure*}

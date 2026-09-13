@@ -1,19 +1,24 @@
 # Pending research gates
 
-## Required before a strong submission claim
+## Submission veto: the title's joint claim is not yet executed
 
-- Implement and freeze leakage-safe nonlinear AC recentering plus local Jacobian rebuilding on the existing disjoint E06-E DEV/TEST contract.
-- Add a direct nonlinear DAE-estimation baseline if the manuscript retains “Hybrid-DAE” language beyond the general formulation.
-- Expand the verified literature capability matrix around sparse-PMU reconstruction, functional observers, nonlinear DAE estimation, adaptive state estimation, and model-invalidity detection.
-- Add independent network/simulator evidence or narrow the final external-validity statement exactly as in the current draft.
+- Implement the hypothesis-conditioned objective in Eq. (24) under one audited plant, PMU operator, and event ontology.
+- Compare four frozen paradigms on identical event parents: learned-only, physics-only, physics plus learned residual discrepancy, and diagnosability-aware inference with abstention.
+- Hold out physical source assets from every source-labeled training, tuning, threshold, and calibration operation.
+- Test whether projected pairwise information predicts posterior entropy, candidate-set size, and source-resolution delay.
+- Add PMU loss/join, operating-point shift, parameter shift, line topology change, and at least one cross-simulator transfer campaign.
+- Expose a long normal stream and report false alarms/hour, event recall, joint alarm precision, and duplicate-alarm scoring.
+- Calibrate or rename the source evidence: classifier votes and uncorrected MAP scores are not probabilities.
 
-## Separate extension, not silently part of current results
+## State-estimation gates
 
-- Event-family detection and physical-source localization with complete source holdout.
-- Explicit measurement-integrity states (missing, corrupted, timing/quality) composed with physical events.
-- PMU loss/join experiments tied prospectively to the functional diagnostic.
-- Long continuous normal exposure, false alarms/hour, and detection/source-resolution delays.
-- Physics-residual reuse of the earlier engineered-feature system, compared against physics-only and ML-only baselines.
-- Field/HIL evidence, cross-simulator transfer, runtime/hardware, and communication measurements.
+- Extend the successful static M6 MAP to a causal sequential recentering and Jacobian-rebuild protocol with disjoint DEV/TEST manifests.
+- Resolve the under-dispersed joint uncertainty using a profile, sandwich, bootstrap, or nonlinear posterior approximation.
+- Expand the independent-solver check or permanently narrow solver-independence wording.
 
-Never replace these experiments with stronger prose. Numerical claims enter the manuscript only through frozen artifacts and regenerated outputs.
+## Evidence-integrity rules
+
+- Keep PowerDynamics state metrics and ANDES event metrics separate; never average across campaigns.
+- Keep physical events distinct from missing, corrupt, or timing-quality measurements.
+- Report failed solves and rejected trajectories in the planned denominator.
+- Generate every numerical table and empirical plot from frozen artifacts. Do not replace a missing experiment with stronger prose.

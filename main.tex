@@ -10,11 +10,11 @@
 \input{metadata}
 
 \begin{abstract}
-Sparse phasor measurement unit (PMU) deployments leave much of the network voltage field unmeasured, and accurate reconstruction can fail when the estimator's physical model becomes stale. This paper formulates recovery of unobserved complex bus voltages as a functional-observability problem and evaluates physics-based local Gaussian estimators on an audited PowerDynamics IEEE 39-bus benchmark. \ObservedPMUCount{} PMUs observe voltage and terminal-current phasors while the target comprises the remaining \HiddenBusCount{} bus voltages. On \NominalTestCount{} frozen nonlinear test trajectories, a causal Kalman estimator reduces mean hidden-bus total vector error (TVE) from \BZeroTVE{} for the nominal-equilibrium baseline to \BTwoTVE{}; a snapshot weighted least-squares estimator reaches \BOneTVE{}. A preregistered functional-observability residual correlates with per-bus Kalman TVE (Spearman $\rho=\FunctionalSpearman$), whereas fixed-lag smoothing provides no improvement over zero lag in the tested regime. A separate campaign rebuilds \MismatchMainCount{} nonlinear plants over seven physical mismatch families and adds \MismatchRefinementCount{} refinement cases. At the largest tested scale, network and operating-point mismatch increase median TVE by factors of \NetworkMismatchRatio{} and \OperatingMismatchRatio{}, respectively. Oracle recentering and relinearization recover most of this excess error, but a causal offset-only recentering proxy closes a median \OnlineClosurePercent{} of the oracle gap. The evidence therefore identifies stale physical centering and linearization, rather than PMU count alone, as the dominant limitation under the tested shifts and motivates stronger leakage-safe physical adaptation before residual learning or event inference.
+Sparse phasor measurement unit (PMU) coverage couples three questions that are often evaluated separately: what is happening in the unobserved network, which event occurred, and where it originated. We formulate these questions as joint state, physical-intervention, and measurement-integrity inference in a hybrid differential-algebraic model. The formulation separates physical source hypotheses from missing or corrupted measurements and introduces two target-specific limits: functional observability of hidden voltages and projected pairwise information for event-source diagnosability. Evidence comes from two frozen IEEE 39-bus campaigns using the same eight PMU buses but different simulators and contracts. On 100 PowerDynamics nonlinear test trajectories, a causal Kalman estimator reduces mean hidden-bus total vector error from \BZeroTVE{} to \BTwoTVE{}; a preregistered functional residual correlates with bus-level error ($\rho=\FunctionalSpearman$). A measurement-only static physical MAP closes \EZeroHClosureHalf{}--\EZeroHClosureMax{} of the nominal-center error gap on 60 operating-point-shifted test plants despite nuisance-information rank \EZeroHRank{}/\EZeroHDimension{}. On a separate 690-trajectory ANDES event bank, a physics-guided hierarchical baseline attains detection F1 \LegacyEventDetectionFOne{}, event macro-F1 \LegacyEventMacroFOne{}, and physical-source Top-1 \LegacyPhysicalTopOne{} for sources represented during training. Under complete source holdout, however, only \HeldSourceCorrect{} of \HeldSourceDecisions{} decisions are correct. These results establish the state-reconstruction component and expose source memorization as the binding failure; they do not yet validate the proposed end-to-end joint estimator.
 \end{abstract}
 
 \begin{keywords}
-dynamic state estimation, functional observability, model mismatch, phasor measurement units, state reconstruction, uncertainty calibration.
+dynamic state estimation, event detection, functional observability, limited observability, phasor measurement units, physics-informed inference, source localization.
 \end{keywords}
 
 \titlepgskip=-21pt
@@ -32,7 +32,6 @@ dynamic state estimation, functional observability, model mismatch, phasor measu
 \input{sections/10_conclusion}
 
 % Acknowledgments and author biographies are intentionally omitted until author-provided.
-\IEEEtriggeratref{15}
 \bibliographystyle{IEEEtran}
 \bibliography{references}
 

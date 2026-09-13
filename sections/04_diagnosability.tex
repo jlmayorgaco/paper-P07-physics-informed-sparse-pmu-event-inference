@@ -51,3 +51,62 @@ A smaller value means that fewer target directions project onto the numerically 
 The projector is obtained from the eigendecomposition of $\mathcal O_N^{\mathsf T}\mathcal O_N$ using a fixed relative eigenvalue tolerance of $10^{-9}$. Horizons $N\in\{0,3,10,30,60,120,180\}$ are evaluated. The $N=180$ bus-level residuals and their ranking were exported before nonlinear reconstruction was scored. This preregistration permits a genuine theory-to-evidence test: the paper correlates $r_{F,i}(180)$ with per-bus TVE rather than defining the diagnostic after seeing the error pattern.
 
 The same Gramian produces a trace-style noise amplification diagnostic under independent rectangular-voltage noise with standard deviation $10^{-3}$~pu. Because this bound depends on the local linearization and numerical rank tolerance, it is reported as structural context rather than as estimator performance.
+
+\subsection{Event-Source Diagnosability Under Nuisance State}
+
+Functional observability concerns a state function; source localization concerns separation among interventions. Linearize candidate $h$ over a horizon of $H$ samples:
+\begin{align}
+ \delta\bm x_{k+1}&=\bm A_k\delta\bm x_k+\bm B_{h,k}\bm d_{h,k}+\bm w_k, \label{eq:event-linear-state}\\
+ \delta\bm y_k&=\bm C_k\delta\bm x_k+\bm E_k\bm b_k+\bm v_k. \label{eq:event-linear-output}
+\end{align}
+After stacking the available channels selected by $\bm M_k$,
+\begin{equation}
+ \bm Y_H=\mathcal O_H\delta\bm x_0+\bm s_{h,H}+\mathcal E_H\bm B_H+\bm\varepsilon_H, \label{eq:stacked-hypothesis}
+\end{equation}
+where $\bm s_{h,H}$ is the candidate physical response, $\mathcal O_H$ is the time-varying observability matrix, and $\mathcal E_H\bm B_H$ represents admissible integrity corruption. Let $\bm R_H$ be the stacked noise covariance. To avoid mistaking an uncertain initial condition for an event, define the $\bm R_H^{-1}$-orthogonal nuisance projector
+\begin{equation}
+ \bm P_{\mathcal O}^{\perp}=\bm I-\mathcal O_H
+ (\mathcal O_H^{\mathsf T}\bm R_H^{-1}\mathcal O_H)^{\dagger}
+ \mathcal O_H^{\mathsf T}\bm R_H^{-1}. \label{eq:nuisance-projector}
+\end{equation}
+The usable signature is $\widetilde{\bm s}_{h,H}=\bm P_{\mathcal O}^{\perp}\bm s_{h,H}$. For candidates $i$ and $j$ with equal projected covariance, their local pairwise information is
+\begin{equation}
+ D_{ij}^{(\mathcal P)}(H)=\frac{1}{2}
+ (\widetilde{\bm s}_{i,H}-\widetilde{\bm s}_{j,H})^{\mathsf T}
+ \bm R_{\perp}^{\dagger}
+ (\widetilde{\bm s}_{i,H}-\widetilde{\bm s}_{j,H}), \label{eq:pairwise-information}
+\end{equation}
+with $\bm R_{\perp}=\bm P_{\mathcal O}^{\perp}\bm R_H(\bm P_{\mathcal O}^{\perp})^{\mathsf T}$. This is the Gaussian mean-separation term after removing initial-state nuisance. It is not a new divergence.
+
+\begin{proposition}[Local indistinguishability]
+\label{prop:source-indistinguishability}
+Assume the linearized model \eqref{eq:stacked-hypothesis}, equal prior probability, equal projected covariance, and no integrity pattern that differentiates candidates $i$ and $j$. If $D_{ij}^{(\mathcal P)}(H)=0$, then the projected measurement distributions under $i$ and $j$ are identical. No decision rule based on the stated PMU history can attain an average error below $1/2$ for this pair.
+\end{proposition}
+
+\IEEEproof
+Equation \eqref{eq:pairwise-information} is zero exactly when the two projected Gaussian means coincide on the support of $\bm R_{\perp}$. Equal covariance then makes the distributions identical. With equal priors, every measurable decision rule assigns the same observation law under both hypotheses, so its two conditional error probabilities sum to one.
+\endIEEEproof
+
+\begin{corollary}[Information cannot decrease when an independent PMU joins]
+\label{cor:pmu-additivity}
+If an added PMU block is conditionally independent of the existing measurements given each hypothesis and has a correctly specified covariance, then
+\begin{equation}
+ D_{ij}^{(\mathcal P\cup\{p\})}(H)=D_{ij}^{(\mathcal P)}(H)+D_{ij}^{(p)}(H)\ge D_{ij}^{(\mathcal P)}(H). \label{eq:information-additivity}
+\end{equation}
+\end{corollary}
+
+The corollary follows from additivity of Gaussian log-likelihood ratios. It gives a theoretical upper direction, not a guarantee that an arbitrary learned classifier improves when a PMU is added. Model error, dependence, or poor normalization can violate the assumptions.
+
+\begin{figure}[t]
+\centering
+\resizebox{\columnwidth}{!}{\input{figures/diagnosability_geometry}}
+\caption{Local source-diagnosability geometry. Components within the initial-state response subspace are nuisance; only the projected difference separates two physical-source candidates. Coincident projected signatures imply the lower bound in Proposition~\ref{prop:source-indistinguishability}.}
+\label{fig:diagnosability-geometry}
+\end{figure}
+
+For a source posterior $p(h\mid\bm y_{0:k})$, define the smallest candidate set satisfying
+\begin{equation}
+ \mathcal C_k(\alpha)=\argmin_{\mathcal C\subseteq\mathcal H}
+ \left\{|\mathcal C|:\sum_{h\in\mathcal C}p(h\mid\bm y_{0:k})\ge1-\alpha\right\}. \label{eq:candidate-set}
+\end{equation}
+A diagnosability-aware system abstains from exact Top-1 when $|\mathcal C_k|>1$ or when the minimum information to a competing hypothesis falls below a development-set threshold. The pending joint experiment must test whether \eqref{eq:pairwise-information} predicts candidate-set size, posterior entropy, and source-resolution delay under PMU loss/join. The current event bank has not yet supplied that evidence.

@@ -1,0 +1,40 @@
+\begin{tikzpicture}[
+  x=1cm,y=1cm,
+  font=\sffamily\scriptsize,
+  >=Latex,
+  block/.style={draw=black!55,rounded corners=2pt,thick,align=center,minimum height=0.72cm,inner sep=4pt,fill=white},
+  data/.style={block,fill=accessblue!9},
+  physics/.style={block,fill=green!8},
+  integrity/.style={block,fill=orange!11},
+  output/.style={block,fill=purple!8},
+  arr/.style={->,thick,draw=black!65},
+  aux/.style={->,densely dashed,draw=black!55}
+]
+\node[data,minimum width=2.15cm] (pmu) at (0,1.25) {Sparse PMU stream\\$\{V,I,f,q\}_{\mathcal P_k}$};
+\node[integrity,minimum width=2.05cm] (quality) at (2.85,2.25) {Availability and quality\\$\bm M_k,\;\bm b_k$};
+\node[physics,minimum width=2.25cm] (dae) at (2.85,0.25) {Hybrid DAE and AC map\\$\bm f,\bm g,\bm h_{\mathcal P_k}$};
+\node[physics,minimum width=2.35cm] (bank) at (5.95,0.25) {Physical hypothesis bank\\$h=(c,\ell,\tau,\gamma)$};
+\node[data,minimum width=2.35cm] (residual) at (5.95,2.25) {Masked robust residuals\\$\bm r_{h,k}=\bm y_k-\widehat{\bm y}_{h,k}$};
+\node[block,minimum width=2.35cm] (joint) at (8.95,1.25) {Joint MAP / posterior\\state, event, source, integrity};
+\node[output,minimum width=2.25cm] (state) at (11.95,2.25) {State estimate\\$\widehat{\bm z}_{\mathcal U,k},\;\bm\Sigma_{z,k}$};
+\node[output,minimum width=2.25cm] (decision) at (11.95,0.25) {Decision with abstention\\$\widehat c_k,\widehat\ell_k,\mathcal C_k$};
+
+\draw[arr] (pmu) -- (quality);
+\draw[arr] (pmu) -- (dae);
+\draw[arr] (dae) -- (bank);
+\draw[arr] (quality) -- (residual);
+\draw[arr] (bank) -- (residual);
+\draw[arr] (residual) -- (joint);
+\draw[arr] (dae) -- (joint);
+\draw[arr] (joint) -- (state);
+\draw[arr] (joint) -- (decision);
+
+\node[align=center,font=\sffamily\tiny,text=black!70] at (4.42,1.25)
+  {physical intervention\\$\neq$ sensor failure};
+\draw[aux] (quality.south) -- (dae.north);
+
+\begin{scope}[on background layer]
+\node[draw=accessblue!45,rounded corners=3pt,fit=(dae)(bank),inner sep=5pt,label={[font=\sffamily\tiny,text=accessblue]below:physics defines counterfactual responses}] {};
+\node[draw=orange!55!black,rounded corners=3pt,fit=(quality)(residual),inner sep=5pt,label={[font=\sffamily\tiny,text=orange!55!black]above:data quality controls the likelihood}] {};
+\end{scope}
+\end{tikzpicture}

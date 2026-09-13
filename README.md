@@ -1,10 +1,10 @@
-# P07 --- Functional Voltage Reconstruction From Sparse PMUs
+# P07 --- Joint State, Event, and Source Inference From Sparse PMUs
 
-**Working paper title:** *Functional Observability and Physics-Based Reconstruction of Unobserved Power-System Voltages From Sparse PMUs Under Model Mismatch*
+**Working paper title:** *Physics-Informed Joint State Estimation, Event Detection, and Source Localization From Sparse PMUs Under Limited Observability*
 
 **Target venue:** IEEE Access
 
-This repository develops an evidence-backed IEEE Access manuscript on reconstructing 31 unobserved IEEE 39-bus voltages from eight voltage/current PMUs. The paper connects functional observability, local physics-based estimation, nominal uncertainty diagnostics, physically rebuilt mismatch plants, model-adequacy detection, and a deliberately retained negative causal-adaptation result. Event detection and source localization remain later research stages rather than claims of this manuscript.
+This repository develops an evidence-backed IEEE Access manuscript on joint hidden-state, event, source, and measurement-integrity inference from eight PMUs. It consolidates two frozen evidence lines: (i) PowerDynamics reconstruction of 31 hidden IEEE 39-bus voltages, including model mismatch and static physical-MAP recentering; and (ii) an ANDES event-diagnosis baseline spanning eight abnormal labels plus normal operation. The draft derives functional-observability and source-diagnosability limits, imports the measured event-signature figure, and preserves the decisive negative result: known-source localization is moderate, whereas complete source holdout yields only 3 correct decisions out of 303. The proposed end-to-end joint posterior remains unexecuted and is not presented as a completed result.
 
 ## Repository layout
 
@@ -32,7 +32,7 @@ powershell -ExecutionPolicy Bypass -File scripts/import_frozen_results.ps1
 python scripts/generate_paper_artifacts.py
 ```
 
-`SOURCE_MANIFEST.csv` records a SHA-256 hash and source-relative path for every imported artifact. `SOURCE_SNAPSHOT.txt` records the source branch and commit. The generator asserts the principal denominators before writing LaTeX macros, tables, and vector figures.
+`SOURCE_MANIFEST.csv` records a SHA-256 hash and source-relative path for every imported state or event artifact. `SOURCE_SNAPSHOT.txt` records the source branch and commit. The generator asserts the principal denominators before writing LaTeX macros, tables, and vector figures.
 
 ## Build
 
@@ -67,4 +67,6 @@ Avoid editing the same LaTeX lines locally and in Overleaf at the same time. Res
 
 ## Evidence policy
 
-Do not add numerical results or performance claims without a traceable experiment contract. [`CLAIMS.md`](CLAIMS.md) is the concise submission boundary; [`docs/claims-and-evidence.md`](docs/claims-and-evidence.md) maps each main claim to its artifact. [`TODO_PENDING.md`](TODO_PENDING.md) separates the next research gates from completed manuscript work. The earlier event-inference and competition-derived system remains useful prior development, but its numerical claims must not be merged into this reconstruction paper without a compatible, frozen protocol.
+Do not add numerical results or performance claims without a traceable experiment contract. [`CLAIMS.md`](CLAIMS.md) is the concise submission boundary; [`docs/claims-and-evidence.md`](docs/claims-and-evidence.md) maps each main claim to its artifact. [`TODO_PENDING.md`](TODO_PENDING.md) separates the next research gates from completed manuscript work. The earlier event-inference system remains useful prior development, but its numerical claims must not be merged into this reconstruction paper without a compatible, frozen protocol.
+
+The full-project scientific compendium is routed through [`docs/compendium-estimator-integration-map.md`](docs/compendium-estimator-integration-map.md). That map separates validated estimator results, the audited historical diagnosis baseline, and the still-proposed common-contract joint experiment.

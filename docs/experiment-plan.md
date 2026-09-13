@@ -5,22 +5,32 @@
 | Study | Independent unit | Split and denominator | Selection rule |
 | --- | --- | --- | --- |
 | Nominal reconstruction | nonlinear trajectory | 20 DEV / 100 TEST; 91 frames at 30 Hz | B0--B3 frozen before TEST. |
-| Functional diagnostic | hidden bus | 31 buses; horizon-180 ranking preregistered | Correlation evaluated only after ranking export. |
+| Functional diagnostic | hidden bus | 31 buses; horizon-180 ranking preregistered | Correlation evaluated after ranking export. |
 | Nominal calibration/discrepancy | nonlinear trajectory | 30 CAL / original 100 TEST | Temperature and rank selected on CAL, frozen for TEST. |
 | Physical mismatch | rebuilt nonlinear plant | 7 families x 7 scales x 20 seeds = 980; 175 refinement cases | Nominal estimator/calibration frozen. |
-| Causal recentering | rebuilt nonlinear plant | 160 DEV seeds 101--110 / 320 TEST seeds 201--220 | Window, cadence, qd, lambda, and gate selected on DEV. |
+| Causal grouped-offset recentering | rebuilt nonlinear plant | 160 DEV / 320 TEST rebuilt cases | Window, cadence, qd, lambda, and gate selected on DEV; retained as a negative ablation. |
+| Corrected physical static MAP | rebuilt nonlinear M6 snapshot | 30 DEV / 60 TEST; 20 cases per shift scale | qd=1, lambda=0.01, and continuation initialization frozen after DEV. |
+| Legacy event hierarchy | physical trajectory/event parent | 690 trajectories from 138 source configurations x 5 replicas | Grouped train/dev/test by event parent; detector/classifier thresholds selected before evaluation. |
+| Complete physical-source holdout | held physical source parent | 101 held-source cases x 3 seeds = 303 decisions | Physical source absent from source-labeled training and tuning; event family supplied. |
+| Independent RAW0001 transfer | annotated event episode | 12 event episodes, including 5 physical episodes | Candidate model selected before inspecting the record-level outcome. |
 
-Simulation failures remain in planned denominators. All reported main-grid and refinement plants passed the documented power-flow, initialization, and trajectory checks.
+Simulation failures remain in planned denominators. The state-estimation campaigns and imported legacy event campaign remain separate evidence contracts; the manuscript does not average their metrics or imply a single end-to-end run.
 
-## Next falsifiable gate
+## Completed falsifiable findings
 
-Implement a causal nonlinear AC recentering step using observed PMU voltage/current measurements only, then rebuild the local Jacobians and covariance. Freeze solver tolerances, window, regularization, activation policy, and failure handling on DEV. Evaluate once on the existing disjoint E06-E TEST manifest against:
+- The corrected E06-H estimator solves a nonlinear AC-constrained static MAP problem from observed PMU voltage/current measurements only. It yields strong M6 target-state recovery despite a rank-deficient nuisance vector, but its Laplace covariance is jointly under-dispersed.
+- The legacy physics-guided hierarchy performs strongly for detection and event family classification under known-source training, but nearly collapses under complete physical-source holdout and transfers weakly to RAW0001.
+- Together these results motivate candidate-conditioned physical intervention inference; they do not validate the proposed joint estimator.
 
-1. frozen B2;
-2. oracle recentering (mechanistic upper reference);
-3. failed R2-A offset proxy; and
-4. nonlinear recentering with and without Jacobian rebuilding.
+## Submission-critical next gate
 
-Primary metrics are hidden-bus TVE, oracle-gap closure, nominal degradation, solver acceptance, latency, and rejected-case accounting. A learned discrepancy model is justified only after this physical adaptive baseline is available.
+Run one preregistered common-contract campaign with:
 
-Event/source inference, PMU join/loss, continuous false alarms/hour, cross-simulator transfer, and field/HIL validation require separate manifests and are not completion conditions for the current paper revision.
+1. physical hypotheses `(event family, source, onset, magnitude)` and separate integrity masks/corruptions;
+2. ML-only, physics-only, physics plus engineered residual features, and full uncertainty/abstention baselines;
+3. grouped event-parent splits and complete held-source splits;
+4. PMU loss/join, operating/parameter shift, topology outage, and cross-simulator blocks;
+5. long normal exposure with false alarms per hour, event recall, detection delay, exact Top-1/Top-3 source accuracy, candidate-set coverage/size, and calibration metrics;
+6. frozen manifests, thresholds, seeds, failed-solve accounting, paired intervals, runtime, and hardware metadata.
+
+Until this gate is complete, title and abstract must retain the explicit component-evidence boundary.

@@ -1,68 +1,100 @@
-\section{System and Sparse-PMU Reconstruction Problem}
+\section{Joint State, Event, and Source Problem}
 \label{sec:problem-formulation}
 
-\subsection{Hybrid DAE Plant}
+\subsection{Hybrid DAE and Electrical Measurement Model}
 
-Let $\bm{x}(t)\in\mathbb{R}^{n_x}$ denote differential states, $\bm{z}(t)\in\mathbb{R}^{n_z}$ algebraic states, $\bm{u}(t)$ exogenous inputs, $\bm{q}(t)$ the physical network configuration, and $\bm{\theta}$ physical parameters. The general plant is
-\begin{align}
- \dot{\bm{x}}(t) &= \bm{f}\!\left(\bm{x},\bm{z},\bm{u},\bm{q};\bm{\theta}\right)+\bm{w}_x(t), \label{eq:dae-dynamic}\\
- \bm{0} &= \bm{g}\!\left(\bm{x},\bm{z},\bm{u},\bm{q};\bm{\theta}\right), \label{eq:dae-algebraic}\\
- \bm{y}_{\mathcal P}(t) &= \bm{h}_{\mathcal P}\!\left(\bm{x},\bm{z},\bm{q};\bm{\theta}\right)+\bm{v}(t), \label{eq:dae-measurement}
-\end{align}
-where $\bm{w}_x$ and $\bm{v}$ denote process and measurement uncertainty in the local probabilistic model. Equations \eqref{eq:dae-dynamic}--\eqref{eq:dae-measurement} define the long-term Hybrid-DAE framework; the experiments in this paper validate its local linear-Gaussian special case, not the complete nonlinear posterior.
-
-The network algebraic core is
+Let $\bm x(t)\in\mathbb R^{n_x}$ denote differential states, $\bm z(t)\in\mathbb R^{n_z}$ algebraic states, $\bm u(t)$ scheduled inputs, $\bm q(t)$ network configuration, and $\bm\theta$ physical parameters. A physical intervention $\bm a_h(t)$ is indexed by hypothesis
 \begin{equation}
- \bm{I}=\bm{Y}_{\mathrm{bus}}(\bm q,\bm\theta)\bm V,
- \qquad S_i=P_i+\mathrm{j}Q_i=V_i I_i^{*}. \label{eq:network-core}
+ h=(c,\ell,\tau,\gamma,\bm d), \qquad h\in\mathcal H,
+ \label{eq:physical-hypothesis}
 \end{equation}
-Writing $\bm{Y}_{\mathrm{bus}}=\bm G+\mathrm{j}\bm B$ and $V_i=|V_i|e^{\mathrm{j}\vartheta_i}$ gives
+where $c$ is event family, $\ell$ is a bus or branch source, $\tau$ is onset, $\gamma$ is severity, and $\bm d$ describes the allowed temporal profile. The plant is
 \begin{align}
- P_i &= |V_i|\sum_j |V_j|\left[G_{ij}\cos(\vartheta_i-\vartheta_j)+B_{ij}\sin(\vartheta_i-\vartheta_j)\right], \label{eq:ac-p}\\
- Q_i &= |V_i|\sum_j |V_j|\left[G_{ij}\sin(\vartheta_i-\vartheta_j)-B_{ij}\cos(\vartheta_i-\vartheta_j)\right]. \label{eq:ac-q}
+ \dot{\bm x}(t)&=\bm f\!\left(\bm x,\bm z,\bm u,\bm q,\bm a_h;\bm\theta\right)+\bm w_x(t), \label{eq:dae-dynamic}\\
+ \bm 0&=\bm g\!\left(\bm x,\bm z,\bm u,\bm q,\bm a_h;\bm\theta\right), \label{eq:dae-algebraic}\\
+ \bm y_k&=\bm M_k\!\left[\bm h_{\mathcal P_k}(\bm x_k,\bm z_k,\bm q_k;\bm\theta)+\bm b_k\right]+\bm v_k. \label{eq:dae-measurement}
 \end{align}
-For a PMU measuring one terminal of branch $(i,j)$, the current operator retains the branch primitive orientation,
+Here $\bm M_k$ selects the channels that are available at time $k$, $\bm b_k$ is a measurement-corruption process, and $\bm v_k$ is measurement noise. A dropout changes $\bm M_k$; bad data change $\bm b_k$; neither is a physical input to \eqref{eq:dae-dynamic}--\eqref{eq:dae-algebraic}. This separation permits a physical event and a measurement failure to coexist.
+
+The algebraic network core is
+\begin{equation}
+ \bm I=\bm Y_{\mathrm{bus}}(\bm q,\bm\theta)\bm V,
+ \qquad S_i=P_i+\mathrm jQ_i=V_i I_i^{*}. \label{eq:network-core}
+\end{equation}
+Writing $\bm Y_{\mathrm{bus}}=\bm G+\mathrm j\bm B$ and $V_i=|V_i|e^{\mathrm j\vartheta_i}$ gives
+\begin{align}
+ P_i&=|V_i|\sum_j|V_j|\!\left[G_{ij}\cos\vartheta_{ij}+B_{ij}\sin\vartheta_{ij}\right], \label{eq:ac-p}\\
+ Q_i&=|V_i|\sum_j|V_j|\!\left[G_{ij}\sin\vartheta_{ij}-B_{ij}\cos\vartheta_{ij}\right], \label{eq:ac-q}
+\end{align}
+where $\vartheta_{ij}=\vartheta_i-\vartheta_j$. A line outage changes the branch primitives and therefore $\bm Y_{\mathrm{bus}}$; a bus fault adds a shunt-admittance intervention; generation and load changes modify the appropriate active/reactive injection equations. For a PMU at one terminal of branch $(i,j)$,
 \begin{equation}
  I_{ij}=Y_{ff,ij}V_i+Y_{ft,ij}V_j,
  \qquad I_{ji}=Y_{tf,ij}V_i+Y_{tt,ij}V_j. \label{eq:terminal-current}
 \end{equation}
-Replacing \eqref{eq:terminal-current} with a generic bus-injection current would change the measurement contract.
+The orientation, transformer tap, line charging, and shunt convention in \eqref{eq:terminal-current} are part of the inference contract; replacing terminal current with bus-injection current changes the likelihood.
 
-\subsection{Observed and Target Outputs}
+\subsection{Sparse PMUs and Requested State Function}
 
-The study uses the observed-bus set
+Both evidence campaigns use PMU buses
 \begin{equation}
- \mathcal P=\{2,5,6,10,19,22,29,39\},\qquad |\mathcal P|=8, \label{eq:pmu-set}
+ \mathcal P=\{2,5,6,10,19,22,29,39\},\qquad |\mathcal P|=8. \label{eq:pmu-set}
 \end{equation}
-and the unobserved set $\mathcal U=\{1,\ldots,39\}\setminus\mathcal P$, with $|\mathcal U|=31$. The synthetic PMU vector stacks rectangular voltage and controlled terminal-current components,
+The unobserved set is $\mathcal U=\{1,\ldots,39\}\setminus\mathcal P$, with $|\mathcal U|=31$. The state-estimation campaign stacks rectangular voltage and controlled terminal-current components,
 \begin{equation}
  \bm y_{\mathcal P,k}=\operatorname{col}_{p\in\mathcal P}
- \left[\Re V_{p,k},\Im V_{p,k},\Re I_{p\ell,k},\Im I_{p\ell,k}\right]. \label{eq:pmu-vector}
+ [\Re V_{p,k},\Im V_{p,k},\Re I_{p\ell,k},\Im I_{p\ell,k}], \label{eq:pmu-vector}
 \end{equation}
-Frequency and ROCOF remain valid future measurement operators but are not silently treated as independent instantaneous states in the validated experiments.
-
-The primary target is the hidden complex-voltage field
+and requests the hidden complex-voltage function
 \begin{equation}
- \bm z_{\mathcal U,k}=\operatorname{col}_{i\in\mathcal U}\left[\Re V_{i,k},\Im V_{i,k}\right]\in\mathbb R^{62}. \label{eq:hidden-target}
+ \bm z_{\mathcal U,k}=\operatorname{col}_{i\in\mathcal U}[\Re V_{i,k},\Im V_{i,k}]\in\mathbb R^{62}. \label{eq:hidden-target}
 \end{equation}
-The target is therefore narrower than the 114 differential coordinates of the reduced dynamic model. Success on \eqref{eq:hidden-target} does not imply that all machine, exciter, governor, and load states are observable or accurately reconstructed.
+The event campaign also uses voltage angle, frequency, availability, and, in its longer-window implementation, current and ROCOF. Measurement semantics are kept campaign-specific rather than declaring channels equivalent across simulators.
 
-\subsection{Reconstruction and Adequacy Questions}
+\subsection{Eight Event Labels as Composable States}
 
-Given $\bm y_{\mathcal P,0:k}$, the causal reconstruction problem is to obtain $\widehat{\bm z}_{\mathcal U,k}$ and a defensible uncertainty model using no sample after time $k$. The paper asks four questions:
-\begin{enumerate}
- \item Does a structural functional-observability diagnostic predict which hidden outputs are difficult to reconstruct?
- \item How much do snapshot electrical constraints, causal dynamics, and fixed-lag smoothing each contribute under nominal operation?
- \item Can nominal uncertainty and colored innovations be modeled without damaging hidden-state inference?
- \item When the nonlinear plant changes, is excess error caused by lost information or by stale centering and linearization, and can that inadequacy be detected from observed PMUs?
-\end{enumerate}
+Table~\ref{tab:event-ontology} defines the eight abnormal labels in the historical event bank. The scientific variables are not the label numbers. Classes 1--4 are single physical interventions; classes 5 and 7 are measurement-integrity states; classes 6 and 8 are compositions. Class 8 is a prescribed mixed event in the available simulations, not evidence of open-set recognition.
 
-For trajectory $r$ with $T_r$ frames, the primary total vector error is
+\begin{table*}[t]
+\caption{Event ontology and historical ANDES inventory. Each source configuration has five replicas. ``Physical source'' and ``integrity source'' are separate outputs.}
+\label{tab:event-ontology}
+\centering
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}cXlllr@{}}
+\toprule
+ID & Operational meaning & Physical intervention $c$ & Physical source $\ell$ & Integrity state/source & Records \\
+\midrule
+0 & Normal operation & none & none & nominal & 5 \\
+1 & Bus fault & fault admittance & bus & nominal & 195 \\
+2 & Line outage & topology removal & branch & nominal & 170 \\
+3 & Generation change & active/reactive injection & generator bus & nominal & 50 \\
+4 & Load change & active/reactive withdrawal & load bus & nominal & 90 \\
+5 & Missing data & none & none & dropout / PMU & 40 \\
+6 & Generation change with missing data & generation change & generator bus & dropout / PMU & 50 \\
+7 & Bad data & none & none & corruption / PMU channel & 40 \\
+8 & Prescribed mixed disturbance & generation plus load changes & declared generator bus & measurement disturbance / PMU & 50 \\
+\midrule
+ & Total & & & & 690 \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+The internal decision at time $k$ is
+\begin{equation}
+ \left(\widehat{\bm z}_{\mathcal U,k},\bm\Sigma_{z,k},
+ \widehat c_k,\widehat\ell^{\mathrm{phys}}_k,
+ \widehat m_k,\widehat\ell^{\mathrm{meas}}_k,\mathcal C_k\right),
+ \label{eq:joint-output}
+\end{equation}
+where $m_k$ denotes the integrity state and $\mathcal C_k\subseteq\mathcal H$ is a credible candidate set. A location is empty when it does not apply. The candidate set is required because limited observability can make a forced Top-1 decision scientifically unjustified.
+
+\subsection{Correctness and Evaluation Units}
+
+State accuracy uses hidden-bus total vector error
 \begin{equation}
  \operatorname{TVE}^{(r)}=\frac{1}{T_r|\mathcal U|}
  \sum_{k=1}^{T_r}\sum_{i\in\mathcal U}
  \frac{|\widehat V_{i,k}-V_{i,k}|}{\max(|V_{i,k}|,\epsilon)}, \label{eq:tve}
 \end{equation}
-with TVE reported as a percentage and $\epsilon$ used only as a numerical guard. Magnitude RMSE and wrapped angle RMSE are reported separately. Confidence intervals treat a complete nonlinear trajectory or rebuilt physical plant as the independent unit; PMU frames are not counted as independent replicates.
+reported as a percentage. Event detection, event-family macro-F1, exact physical Top-1/Top-3, and integrity-source Top-1 use their own declared populations. The joint correctness indicator is one only when every applicable component of \eqref{eq:joint-output} is correct; a correct event family cannot conceal a wrong source. Confidence intervals use an independently generated trajectory, event parent, or rebuilt plant as the statistical unit, never individual 30-Hz samples.
 
-Physical-event support variables, measurement-integrity states, and external-data transfer belong to the broader Hybrid-DAE program, but they are outside the empirical claims of this paper. This boundary keeps the present results tied to reconstructed voltages, nominal calibration, and physical model mismatch.
+The causal contract permits only $\bm y_{0:k}$ at time $k$. A fixed-lag smoother, complete-window statistic, or centered temporal feature is retrospective and is labeled accordingly. Source generalization requires that physical source $\ell$ be absent from all source-labeled training and tuning, not merely that the test trajectory use a new random seed.

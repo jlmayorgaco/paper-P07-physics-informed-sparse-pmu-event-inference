@@ -2,25 +2,27 @@
 
 ## Five-sentence research map
 
-1. **Problem:** Sparse PMU deployments leave most bus voltages unmeasured, and a nominal estimator can become unreliable when its physical model is stale.
-2. **Gap:** Dynamic estimation, functional observability, uncertainty calibration, and model-mismatch studies are rarely joined in one audited nonlinear benchmark with disjoint splits and physically rebuilt plants.
-3. **Insight:** Hidden-voltage recovery should be treated as a target-specific functional-output problem, and failure under shift should be decomposed into information loss versus stale centering and linearization.
-4. **Test:** Compare equilibrium, snapshot, causal, and smoothed local estimators; preregister the structural diagnostic; rebuild seven mismatch families; then contrast frozen, oracle, and causal recentering.
-5. **Consequence:** The evidence identifies when sparse-PMU reconstruction is credible, when nominal uncertainty is misleading, and which physical adaptation must precede learned residuals or event inference.
+1. **Problem:** Sparse PMUs leave the voltage field incomplete and may not distinguish physical source assets, especially when measurement failures coexist with grid events.
+2. **Gap:** Existing state estimators, partial-observation reconstruction methods, and sparse-PMU localizers solve overlapping subsets, but the exact source-disjoint joint state/physical-event/integrity contract remains insufficiently tested.
+3. **Insight:** Treat each physical event as a counterfactual DAE intervention, keep measurement integrity separate, and project candidate signatures away from uncertain initial-state directions before ranking sources.
+4. **Test:** Compare learned-only, physics-only, physics-plus-discrepancy, and diagnosability-aware inference on common source-disjoint parents under PMU loss/join and physical shift.
+5. **Consequence:** A successful system could reconstruct the hidden network while declaring when the available PMUs support a source decision; the current evidence establishes the state component and the known-source baseline but not this end-to-end result.
 
 ## Section logic
 
 | Section | Scientific role |
 | --- | --- |
-| I. Introduction | Exact problem, evidence-backed gap, four contributions, headline boundary. |
-| II. Related Work | Dynamic estimation, functional observability, uncertainty/adaptation, benchmark validity. |
-| III. Problem Formulation | Hybrid DAE, PMU operator, observed/hidden sets, target and metrics. |
-| IV. Functional Observability | Finite-horizon condition, projector residual, preregistered theory-to-evidence link. |
-| V. Estimation and Diagnostics | B0-B3, U2, discrepancy placements, adequacy statistic, R1/R2-A. |
-| VI. Benchmark and Protocol | Validation ladder, splits, denominators, rebuilt plants, anti-leakage rules. |
-| VII. Nominal Results | B0/B1/B2/B3 and structural-error relation. |
-| VIII. Mismatch and Adaptation | Calibration, discrepancy negatives, mismatch families, adequacy, oracle/causal adaptation. |
-| IX. Discussion | Mechanism, competing explanations, deployment boundary, next falsifiable step. |
-| X. Conclusion | Only established evidence and its narrow implication. |
+| I. Introduction | Exact joint problem, defensible gap, contributions, and evidence boundary. |
+| II. Related Work | State estimation, sparse-PMU localization, partial-observation reconstruction, and capability matrix. |
+| III. Problem Formulation | Hybrid DAE, AC/terminal-current model, sparse PMUs, eight event labels, separate physical/integrity sources. |
+| IV. Observability and Diagnosability | Functional target recovery, nuisance projection, pairwise information, and indistinguishability limit. |
+| V. Estimation | Proposed joint objective; validated B0--B3, calibration, adequacy, and static-MAP components. |
+| VI. Protocol | Audited PowerDynamics state campaign and separate ANDES event campaign. |
+| VII. State Results | Nominal reconstruction and theory-to-error evidence. |
+| VIII. Mismatch and Event Results | Calibration/mismatch/adaptation plus known-source event baseline and source-transfer failure. |
+| IX. Discussion | Mechanisms, competing explanations, limitations, and next frozen common-contract campaign. |
+| X. Conclusion | Established component evidence and explicit end-to-end completion gate. |
 
-The Results sections should remain among the largest sections. Additional event-inference material belongs in a separate manuscript or a later revision only after its own frozen evidence is available.
+## Title gate
+
+The working title states the program's central problem. If the end-to-end joint campaign is not complete at submission, narrow the title to reflect a formulation plus component-evidence paper.

@@ -1,0 +1,13 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\sffamily\scriptsize,>=Latex]
+\fill[accessblue!8] (0,0) ellipse (2.35 and 0.72);
+\draw[accessblue!70!black,thick] (0,0) ellipse (2.35 and 0.72);
+\node[text=accessblue!70!black] at (0,-0.98) {responses explainable by initial-state uncertainty $\operatorname{col}(\mathcal O_H)$};
+\draw[->,thick,accessblue!75!black] (-0.35,-0.08) -- (0.72,0.36) node[above right] {$\bm s_i$};
+\draw[->,thick,orange!80!black] (-0.35,-0.08) -- (3.15,1.17) node[above] {$\bm s_j$};
+\draw[densely dashed,thick,orange!80!black] (0.72,0.36) -- (3.15,1.17);
+\draw[->,very thick,green!55!black] (0.72,0.36) -- (2.83,1.10)
+  node[midway,below,sloped] {$\bm P_{\mathcal O}^{\perp}(\bm s_j-\bm s_i)$};
+\node[align=left,text=black!75] at (5.2,0.68) {observable separation\\$D_{ij}^{(\mathcal P)}=\tfrac12\|\bm P_{\mathcal O}^{\perp}(\bm s_i-\bm s_j)\|_{\bm R_\perp^\dagger}^{2}$};
+\draw[->,thick] (3.25,0.93) -- (4.05,0.78);
+\node[align=center,text=orange!70!black] at (5.2,-0.55) {If the projected difference is zero,\\the two sources are locally indistinguishable.};
+\end{tikzpicture}
