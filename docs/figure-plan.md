@@ -8,11 +8,11 @@ Every empirical panel is generated from a frozen artifact. Conceptual drawings a
 
 | Asset | Scientific function | Evidence/source | Status |
 | --- | --- | --- | --- |
-| Fig. 1 | Separate evaluated state/event components from the unvalidated joint candidate path. | Joint formulation in Sections III--V. | TikZ lane diagram, integrated. |
-| Fig. 2 | Map state/input, event/source, and observability/sensor-value developments on separate lanes. | Verified literature through 2026. | TikZ three-lane timeline, integrated. |
+| Fig. 1 | Separate the evaluated state and load-source lanes from the unvalidated joint candidate path. | Joint formulation in Sections III--V. | TikZ three-lane evidence diagram, integrated. |
+| Fig. 2 | Show how state/input, event/source, and observability/sensor-value developments converge on the unresolved combined contract. | Verified literature through 2026. | TikZ convergence timeline, integrated. |
 | Fig. 3 | Tell the observability-claim story: the pseudo-rank contradiction, improved conditioning without a certificate, and the boundary between structural and empirical evidence. | `pd_observability_horizons.csv`, `e04a_b0_b1_b2_summary.csv`, `e04a1_e03_vs_e04.csv`. | Full-width generated vector PDF/PNG, integrated. |
-| Fig. 4 | Show affine candidate separation and the nonlinear remainder that can erase it. | Propositions 2--3 and Corollary 2. | TikZ, integrated. |
-| Fig. 5 | Define six representative event signatures without smoothing or hand-drawn values. | Frozen legacy RAW0001 trace artifact. | Imported vector PDF/PNG, integrated. |
+| Fig. 4 | Distinguish first-order source separation from shared-tangent, second-order relative curvature. | Propositions 2--3 and Corollary 2. | TikZ, integrated. |
+| Fig. 5 | Define six representative event signatures and distinguish missing PMU packets from continued reference time. | Frozen RAW0001 trace values and trace manifest. | Programmatically regenerated vector PDF/PNG, integrated. |
 | Fig. 6 | Compare B0--B2, relate the preregistered residual to bus-level difficulty, and show paired B2--B1 differences. | E04A frozen summaries and per-case results. | Generated vector PDF/PNG, integrated. |
 | Fig. 7 | Test lag, marginal calibration, and low-rank discrepancy placement. | E04A3--E04A5 artifacts. | Generated vector PDF/PNG, integrated. |
 | Fig. 8 | Show the mismatch atlas and observed-only adequacy discrimination. | E06 per-case, calibration, and adequacy artifacts. | Generated vector PDF/PNG, integrated. |

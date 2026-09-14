@@ -4,7 +4,7 @@
 
 **Target venue:** IEEE Access
 
-This repository develops an evidence-backed IEEE Access manuscript on hidden-state recoverability and event-source diagnosability from eight PMUs. It consolidates three frozen contracts: (i) PowerDynamics reconstruction of 31 hidden IEEE 39-bus voltages, including model mismatch and regularized physical recentering; (ii) physics-based Bayesian inference over 16 load-source candidates with weak-event and finite-amplitude tests; and (iii) an ANDES event-diagnosis baseline spanning eight abnormal labels plus normal operation. The draft derives functional-observability and source-diagnosability limits, imports the measured event-signature figure, and preserves negative results. The full multi-family joint posterior remains unexecuted and is not presented as a completed result.
+This repository develops an evidence-backed IEEE Access manuscript on hidden-state recoverability and event-source diagnosability from eight PMUs. It consolidates three frozen contracts: (i) PowerDynamics reconstruction of 31 hidden IEEE 39-bus voltages, including model mismatch and regularized physical recentering; (ii) physics-based Bayesian inference over 16 load-source candidates with weak-event and finite-amplitude tests; and (iii) an ANDES event-diagnosis baseline spanning eight abnormal labels plus normal operation. The draft derives functional-observability and source-diagnosability limits, regenerates the measured event-signature figure from frozen trace values, and preserves negative results. The full multi-family joint posterior remains unexecuted and is not presented as a completed result.
 
 ## Repository layout
 

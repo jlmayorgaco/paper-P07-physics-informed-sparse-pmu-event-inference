@@ -8,7 +8,6 @@ research repository during a manuscript build.
 from __future__ import annotations
 
 import json
-import shutil
 from pathlib import Path
 
 import matplotlib.pyplot as plt
@@ -819,15 +818,126 @@ def figure_adequacy_adaptation() -> None:
     save_figure(fig, "adequacy_adaptation")
 
 
+def _generate_event_signature_figure() -> None:
+    """Replot the frozen RAW0001 traces and add a clearly labeled time reference."""
+    traces = read_csv("legacy_raw_event_figure_values.csv")
+    manifest = json.loads((DATA / "legacy_figure_trace_manifest.json").read_text(encoding="utf-8"))
+    event_end = {
+        int(record["event"]): float(record["last_labeled_time_bus2_s"] - record["onset_time_bus2_s"])
+        for record in manifest
+    }
+    missing_frames = int(next(record["missing_frames"] for record in manifest if int(record["event"]) == 5))
+    palette = ["#17608b", "#c26821", "#47866b"]
+    specs = [
+        ("(a)", 1, "(a) Fault at bus 39", (-0.25, 1.5),
+         [(39, "BUS39_VA_MAG", "PMU 39"), (5, "BUS5_VA_MAG", "PMU 5"), (19, "BUS19_VA_MAG", "PMU 19")],
+         r"$|V_A| / V_{A,\mathrm{pre}}$"),
+        ("(b)", 2, "(b) Outage of line 23-24", (-1, 6),
+         [(22, "BUS22_IA_MAG", "PMU 22"), (39, "BUS39_IA_MAG", "PMU 39"), (2, "BUS2_IA_MAG", "PMU 2")],
+         r"$|I_A| / I_{A,\mathrm{pre}}$"),
+        ("(c)", 3, "(c) Generation change at bus 2", (-3, 35),
+         [(2, "BUS2_Freq", "PMU 2"), (39, "BUS39_Freq", "PMU 39")],
+         r"$f-f_{\mathrm{pre}}$ (mHz)"),
+        ("(d)", 4, "(d) Load change at bus 7", (-3, 40),
+         [(6, "BUS6_IA_MAG", "PMU 6"), (10, "BUS10_IA_MAG", "PMU 10"), (5, "BUS5_IA_MAG", "PMU 5")],
+         r"$|I_A| / I_{A,\mathrm{pre}}$"),
+        ("(e)", 5, "(e) Missing data at PMU 29", (-4, 32),
+         [(29, "DATA_PRESENT", "PMU 29"), (22, "DATA_PRESENT", "PMU 22")],
+         "Data available"),
+        ("(f)", 7, "(f) Corrupted voltage at PMU 2", (-0.5, 2),
+         [(2, "BUS2_VC_MAG", "Phase C"), (2, "BUS2_VA_MAG", "Phase A"), (2, "BUS2_VB_MAG", "Phase B")],
+         r"$|V_\phi| / V_{\phi,\mathrm{pre}}$"),
+    ]
+
+    style = {
+        "font.family": "serif",
+        "font.serif": ["Times New Roman", "DejaVu Serif"],
+        "font.size": 7.2,
+        "axes.labelsize": 8.2,
+        "axes.titlesize": 8.2,
+        "legend.fontsize": 6.8,
+        "xtick.labelsize": 7.0,
+        "ytick.labelsize": 7.0,
+        "axes.spines.top": False,
+        "axes.spines.right": False,
+    }
+    with plt.rc_context(style):
+        fig, axes = plt.subplots(2, 3, figsize=(7.16, 4.04))
+        fig.subplots_adjust(left=0.073, right=0.99, bottom=0.11, top=0.875, wspace=0.36, hspace=0.91)
+        for ax, (panel, event, title, limits, channels, ylabel) in zip(axes.flat, specs):
+            panel_data = traces.loc[traces["event"].eq(event)]
+            ax.axvline(0, color=".35", linestyle=":", linewidth=0.85, zorder=0)
+            if event in (5, 7):
+                ax.axvspan(0, event_end[event], color="#e7e7e7", alpha=0.75, zorder=0)
+
+            for k, (bus, channel, label) in enumerate(channels):
+                curve = panel_data.loc[
+                    panel_data["bus"].eq(bus) & panel_data["channel"].eq(channel)
+                ].sort_values("sample_index")
+                x = curve["time_from_label_s"].to_numpy()
+                y = curve["plotted_value"].to_numpy()
+                if channel == "DATA_PRESENT":
+                    ax.step(x, y, where="post", color=palette[k], linewidth=1.15,
+                            linestyle="-" if k == 0 else "--", label=label, zorder=3)
+                else:
+                    ax.plot(x, y, color=palette[k], linewidth=1.0 if event in (1, 2, 7) else 0.65,
+                            alpha=1.0 if k == 0 else 0.88, label=label, zorder=2)
+
+            ax.set_title(title, loc="left", fontsize=8.2, pad=26)
+            ax.legend(loc="lower left", bbox_to_anchor=(-0.015, 1.005), ncol=len(channels),
+                      frameon=False, fontsize=6.9, handlelength=1.2, columnspacing=0.8,
+                      handletextpad=0.35, borderaxespad=0)
+            ax.set_xlim(limits)
+            ax.set_ylabel(ylabel, fontsize=8.4, labelpad=2)
+            ax.set_xlabel(r"Time from label onset, $t-t_0$ (s)", fontsize=7.2, labelpad=2)
+            ax.tick_params(labelsize=7, pad=2)
+            ax.grid(axis="y", color=".88", linewidth=0.4, zorder=0)
+
+            if event == 1:
+                primary = panel_data.loc[
+                    panel_data["bus"].eq(39) & panel_data["channel"].eq("BUS39_VA_MAG")
+                ].sort_values("sample_index")
+                minimum = primary.loc[primary["plotted_value"].idxmin()]
+                ax.set_ylim(0.15, 1.2)
+                ax.set_yticks([0.25, 0.5, 0.75, 1])
+                ax.set_xticks([0, 0.5, 1, 1.5])
+                ax.plot(minimum["time_from_label_s"], minimum["plotted_value"], "o", color=palette[0], markersize=2.5)
+                ax.annotate(f'{minimum["plotted_value"]:.3f} of baseline',
+                            xy=(minimum["time_from_label_s"], minimum["plotted_value"]),
+                            xytext=(0.48, 0.43), fontsize=7,
+                            arrowprops={"arrowstyle": "->", "lw": 0.7, "color": ".35"})
+            elif event == 2:
+                ax.set_ylim(0.65, 1.84); ax.set_yticks([0.7, 1, 1.4, 1.8]); ax.set_xticks([0, 2, 4, 6])
+            elif event == 3:
+                ax.set_ylim(-255, 55); ax.set_yticks([-200, -100, 0]); ax.set_xticks([0, 10, 20, 30])
+            elif event == 4:
+                ax.set_ylim(0.94, 1.175); ax.set_yticks([0.95, 1, 1.1, 1.15]); ax.set_xticks([0, 10, 20, 30, 40])
+            elif event == 5:
+                ax.set_ylim(-0.38, 1.15)
+                ax.set_yticks([0, 1], ["No", "Yes"])
+                ax.set_xticks([0, 10, 20, 30])
+                ax.text(13.5, 0.35, f"{missing_frames} PMU 29 frames absent", ha="center", fontsize=6.8)
+
+                reference = panel_data.loc[
+                    panel_data["bus"].eq(22) & panel_data["channel"].eq("DATA_PRESENT")
+                ].sort_values("sample_index")
+                clock_x = reference["time_from_label_s"].to_numpy()
+                clock_low, clock_high = -0.30, -0.17
+                clock_y = np.where(np.mod(clock_x - limits[0], 2.0) < 1.0, clock_high, clock_low)
+                ax.step(clock_x, clock_y, where="post", color="#9AA1A9", linewidth=0.62,
+                        alpha=0.72, zorder=2)
+                ax.text(13.5, -0.355, "reference clock continues", ha="center", va="bottom",
+                        fontsize=6.2, color="#6B7280")
+            elif event == 7:
+                ax.set_ylim(0.98, 1.13); ax.set_yticks([1, 1.05, 1.1]); ax.set_xticks([0, 0.5, 1, 1.5, 2])
+                ax.text(1.31, 1.104, "Phase C only", ha="center", fontsize=7)
+
+        save_figure(fig, "event_signatures")
+
+
 def figure_event_inference_evidence() -> None:
-    """Show the load-event evidence and retain the audited event-signature asset."""
-    source_pdf = DATA / "legacy_event_traces.pdf"
-    source_png = DATA / "legacy_event_traces.png"
-    if not source_pdf.exists() or not source_png.exists():
-        raise FileNotFoundError("Legacy event-trace artifacts were not imported")
-    FIGURES.mkdir(parents=True, exist_ok=True)
-    shutil.copyfile(source_pdf, FIGURES / "event_signatures.pdf")
-    shutil.copyfile(source_png, FIGURES / "event_signatures.png")
+    """Show the frozen event signatures and load-event evidence."""
+    _generate_event_signature_figure()
 
     truncation = read_csv("load_bayes_v2_truncation_dev.csv")
     truncation_order = read_csv("load_bayes_v2_truncation_order.csv").iloc[0]
