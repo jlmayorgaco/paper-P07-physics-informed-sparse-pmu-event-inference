@@ -846,14 +846,14 @@ def figure_event_inference_evidence() -> None:
     ax.loglog(100 * curve.index, curve.values, marker="o", color=BLUE)
     ax.set_xticks([0.75, 1.5, 3.5, 6.0], ["0.75", "1.5", "3.5", "6"])
     ax.xaxis.set_minor_formatter(ticker.NullFormatter())
-    ax.set_xlabel(r"Load-change magnitude $|a|$ (\%)")
+    ax.set_xlabel(r"Load-change magnitude $|a|$ (%)")
     ax.set_ylabel(r"Median $\|r-aD\|_2$")
     ax.set_title("(a) Local truncation order", loc="left")
     ax.text(0.05, 0.92, rf"slope $p={truncation_order['slope_p']:.2f}$", transform=ax.transAxes, va="top")
     ax.grid(which="both", alpha=0.2, linewidth=0.5)
 
     ax = axes[0, 1]
-    labels = ["W0\nidentity", "W1\nchannel", "W2\nchannel + AR(1)"]
+    labels = ["W0\nunscaled diagnostic", "W1\nchannel", "W2\nchannel + AR(1)"]
     x = np.arange(3)
     ax.plot(x, whitening["NIS_per_frame"], marker="o", color=BLUE, label="NIS/frame")
     ax.plot(x, whitening["ACF_lag_1"].abs(), marker="s", color=ORANGE, label=r"$|$ACF(1)$|$")
@@ -876,7 +876,7 @@ def figure_event_inference_evidence() -> None:
     ax.semilogx(magnitude_percent, det["AUROC"], marker="o", color=BLUE, label="AUROC")
     ax.semilogx(magnitude_percent, det["FNR"], marker="s", color=ORANGE, label="FNR at 0.5")
     ax.set_ylim(-0.03, 1.03)
-    ax.set_xlabel(r"Load-change magnitude $|a|$ (\%)")
+    ax.set_xlabel(r"Load-change magnitude $|a|$ (%)")
     ax.set_title("(c) Weak-event detection", loc="left")
     ax.legend(frameon=False, fontsize=5.8)
     ax.grid(which="both", alpha=0.2, linewidth=0.5)
@@ -886,7 +886,7 @@ def figure_event_inference_evidence() -> None:
     ax.semilogx(magnitude_percent, loc["top3"], marker="s", color=PURPLE, label="Top-3")
     ax.axhline(1 / 16, color=GRAY, linestyle=":", linewidth=0.8, label="Top-1 chance")
     ax.set_ylim(0, 1.03)
-    ax.set_xlabel(r"Load-change magnitude $|a|$ (\%)")
+    ax.set_xlabel(r"Load-change magnitude $|a|$ (%)")
     ax.set_ylabel("Exact source success")
     ax.set_title("(d) Source-resolution boundary", loc="left")
     ax.legend(frameon=False, fontsize=5.7, loc="lower right")
@@ -906,10 +906,10 @@ def figure_event_inference_evidence() -> None:
     ax.set_yscale("log")
     ax.set_xlim(lim_low, lim_high)
     ax.set_ylim(lim_low, lim_high)
-    ax.set_xlabel("EVI-predicted threshold (%)")
+    ax.set_xlabel("Fisher-predicted threshold (%)")
     ax.set_ylabel("Empirical 90% threshold (%)")
     ax.set_title("(e) Detectability prediction", loc="left")
-    ax.text(0.05, 0.92, rf"Spearman $\rho={predictive['EVI_vs_a90_spearman']:.2f}$", transform=ax.transAxes, va="top")
+    ax.text(0.05, 0.92, rf"Spearman $\rho={predictive['EVI_vs_a90_spearman']:.2f}$, $n=16$", transform=ax.transAxes, va="top")
     ax.grid(which="both", alpha=0.2, linewidth=0.5)
 
     ax = axes[1, 2]

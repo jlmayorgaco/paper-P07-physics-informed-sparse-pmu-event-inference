@@ -12,7 +12,7 @@
   year/.style={font=\sffamily\scriptsize\bfseries,text=black!70}
 ]
 
-\foreach \x/\yr in {3.05/1998,5.30/2010,7.55/2019--20,9.80/2022--23,12.05/2024--25,14.30/2026}{
+\foreach \x/\yr in {3.05/1994--2008,5.30/2010--17,7.55/2019--20,9.80/2022--23,12.05/2024--25,14.30/2026}{
   \node[year] at (\x,4.25) {\yr};
   \draw[black!18] (\x-1.08,0.05) -- (\x-1.08,4.02);
 }
@@ -25,22 +25,22 @@
 \node[align=right,font=\sffamily\scriptsize\bfseries,text=green!45!black] at (0.92,1.05)
   {observability and\\sensor value};
 
-\node[emptycell]  at (3.05,3.35) {};
-\node[emptycell]  at (5.30,3.35) {};
+\node[statecell]  at (3.05,3.35) {Gillijns: joint\\input/state estimate};
+\node[statecell]  at (5.30,3.35) {Zhao: uncertain-state\\outage inference};
 \node[statecell]  at (7.55,3.35) {Zhao: DSE taxonomy};
 \node[statecell]  at (9.80,3.35) {Nugroho: DAE observer\\Qu: joint state/input};
 \node[statecell]  at (12.05,3.35) {Katanic: recursive DAE\\Moshtagh: sparse state};
 \node[statecell]  at (14.30,3.35) {Sun: state, attack,\\and unknown input};
 
-\node[emptycell]  at (3.05,2.20) {};
-\node[emptycell]  at (5.30,2.20) {};
+\node[eventcell]  at (3.05,2.20) {Scharf: matched subspace\\Tate: line outage};
+\node[eventcell]  at (5.30,2.20) {Chen/Rovatsos: quickest\\transient outage};
 \node[eventcell]  at (7.55,2.20) {Li: sparse fault\\Pandey: event and source};
 \node[eventcell]  at (9.80,2.20) {Kummerow: open set\\Azizi: source ranking};
 \node[eventcell]  at (12.05,2.20) {Yildiz: few PMUs\\Li: graph localization};
 \node[eventcell]  at (14.30,2.20) {Hu: generative\\open-set detection};
 
-\node[theorycell] at (3.05,1.05) {Hou: input\\observability};
-\node[theorycell] at (5.30,1.05) {Fernando: functional\\observability};
+\node[theorycell] at (3.05,1.05) {Hou: input observability\\Nyberg: detectability};
+\node[theorycell] at (5.30,1.05) {Fernando: functional obs.\\Eriksson: diagnosability};
 \node[theorycell] at (7.55,1.05) {Jamei: source limits\\and PMU placement};
 \node[theorycell] at (9.80,1.05) {Conte: indistinguishable\\fault-line groups};
 \node[theorycell] at (12.05,1.05) {Zhang: functional obs.\\Yildiz: placement};
