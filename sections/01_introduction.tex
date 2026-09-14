@@ -7,14 +7,14 @@ Dynamic estimators combine network models with synchrophasors \cite{zhao2019dse,
 
 The distinction is operational, not semantic. A generation change can be visible throughout the network while its source remains ambiguous. A dropped PMU identifies an integrity location directly but removes information needed to localize a simultaneous physical event. Likewise, a state estimate can have small point error while the intervention that produced it is not uniquely identifiable. A single multiclass label conceals these differences and produces accuracy values whose denominators do not match the claimed task.
 
-A physical candidate is represented by $h=(c,\ell,\tau,\gamma)$, containing the event family, source, onset, and magnitude. Measurement availability and corruption remain separate variables. Each candidate generates a counterfactual DAE response, while candidate comparison fits admissible initial-state and integrity nuisance directions. The distance that remains after this fit measures source separation. A zero distance identifies a pair for which a uniformly correct source decision is impossible under the declared local model.
+A physical candidate is represented by $h=(c,\ell,\tau,\gamma)$, containing the event family, source, onset, and magnitude. Measurement availability and corruption remain separate variables. Each candidate generates a counterfactual DAE response, while candidate comparison fits admissible initial-state and integrity nuisance directions. Specializing established distinguishability and matched-subspace ideas \cite{eriksson2013diagnosability,scharf1994matched}, the remaining weighted distance measures local source separation. A zero distance identifies a pair for which a uniformly correct source decision is impossible under the declared local model.
 
 Three frozen contracts supply complementary evidence. The PowerDynamics state study reconstructs 31 hidden complex bus voltages from eight voltage/current PMUs and tests operating-point mismatch. A second PowerDynamics contract uses candidate-specific nonlinear load interventions to infer event presence, amplitude, and one of 16 source buses without a fitted source-label head. The ANDES study evaluates a physics-guided hierarchical ExtraTrees baseline on eight abnormal labels plus normal operation. The two simulators have different semantics, state coordinates, and data splits; their metrics are never pooled.
 
 The contributions are:
 \begin{enumerate}
   \item a hybrid DAE inference model that maps eight event labels to composable physical-intervention and measurement-integrity variables;
-  \item a finite-horizon analysis that separates target-state estimability from event-source diagnosability, including a minimum-variance covariance, a sparse-integrity margin, a nonlinear remainder bound, and source-specific detectability information; and
+  \item a finite-horizon synthesis that separates target-state estimability from established event-source distinguishability, with a minimum-variance covariance, an integrity-aware margin, a nonlinear remainder bound, and source-specific amplitude information; and
   \item frozen tests of hidden-voltage reconstruction, operating-point recentering, and Bayesian load-source inference, accompanied by a complete-source-holdout audit of the earlier supervised hierarchy.
 \end{enumerate}
 
