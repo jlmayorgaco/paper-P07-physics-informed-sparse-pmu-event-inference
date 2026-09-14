@@ -863,7 +863,7 @@ def _generate_event_signature_figure() -> None:
     }
     with plt.rc_context(style):
         fig, axes = plt.subplots(2, 3, figsize=(7.16, 4.04))
-        fig.subplots_adjust(left=0.073, right=0.99, bottom=0.11, top=0.875, wspace=0.36, hspace=0.91)
+        fig.subplots_adjust(left=0.073, right=0.99, bottom=0.11, top=0.875, wspace=0.50, hspace=0.91)
         for ax, (panel, event, title, limits, channels, ylabel) in zip(axes.flat, specs):
             panel_data = traces.loc[traces["event"].eq(event)]
             ax.axvline(0, color=".35", linestyle=":", linewidth=0.85, zorder=0)
@@ -913,7 +913,7 @@ def _generate_event_signature_figure() -> None:
             elif event == 4:
                 ax.set_ylim(0.94, 1.175); ax.set_yticks([0.95, 1, 1.1, 1.15]); ax.set_xticks([0, 10, 20, 30, 40])
             elif event == 5:
-                ax.set_ylim(-0.38, 1.15)
+                ax.set_ylim(-0.12, 1.15)
                 ax.set_yticks([0, 1], ["No", "Yes"])
                 ax.set_xticks([0, 10, 20, 30])
                 ax.text(13.5, 0.35, f"{missing_frames} PMU 29 frames absent", ha="center", fontsize=6.8)
@@ -922,12 +922,20 @@ def _generate_event_signature_figure() -> None:
                     panel_data["bus"].eq(22) & panel_data["channel"].eq("DATA_PRESENT")
                 ].sort_values("sample_index")
                 clock_x = reference["time_from_label_s"].to_numpy()
-                clock_low, clock_high = -0.30, -0.17
-                clock_y = np.where(np.mod(clock_x - limits[0], 2.0) < 1.0, clock_high, clock_low)
-                ax.step(clock_x, clock_y, where="post", color="#9AA1A9", linewidth=0.62,
-                        alpha=0.72, zorder=2)
-                ax.text(13.5, -0.355, "reference clock continues", ha="center", va="bottom",
-                        fontsize=6.2, color="#6B7280")
+                clock_y = np.where(np.mod(clock_x - limits[0], 2.0) < 1.0, 1.0, 0.0)
+                ax.step(clock_x, clock_y, where="post", color="#9AA1A9", linewidth=0.95,
+                        alpha=0.34, zorder=1)
+
+                clock_axis = ax.twinx()
+                clock_axis.set_ylim(ax.get_ylim())
+                clock_axis.set_yticks([0, 1], ["Low", "High"])
+                clock_axis.set_ylabel("Clock signal", fontsize=6.4, color="#6B7280", labelpad=0)
+                clock_axis.tick_params(axis="y", labelsize=6.0, colors="#6B7280", pad=0.5, length=2.5)
+                clock_axis.spines["right"].set_visible(True)
+                clock_axis.spines["right"].set_color("#9AA1A9")
+                clock_axis.spines["right"].set_linewidth(0.65)
+                clock_axis.spines["top"].set_visible(False)
+                clock_axis.patch.set_visible(False)
             elif event == 7:
                 ax.set_ylim(0.98, 1.13); ax.set_yticks([1, 1.05, 1.1]); ax.set_xticks([0, 0.5, 1, 1.5, 2])
                 ax.text(1.31, 1.104, "Phase C only", ha="center", fontsize=7)
