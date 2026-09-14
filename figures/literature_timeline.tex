@@ -2,53 +2,61 @@
   x=1cm,y=1cm,
   font=\sffamily\tiny,
   statecell/.style={draw=accessblue!55,fill=accessblue!7,rounded corners=1.5pt,
-    align=center,text width=2.00cm,minimum height=0.76cm,inner sep=2pt},
+    align=center,text width=1.72cm,minimum height=0.76cm,inner sep=2pt},
   eventcell/.style={draw=orange!65!black,fill=orange!8,rounded corners=1.5pt,
-    align=center,text width=2.00cm,minimum height=0.76cm,inner sep=2pt},
+    align=center,text width=1.72cm,minimum height=0.76cm,inner sep=2pt},
   theorycell/.style={draw=green!55!black,fill=green!7,rounded corners=1.5pt,
-    align=center,text width=2.00cm,minimum height=0.76cm,inner sep=2pt},
-  emptycell/.style={draw=black!15,fill=black!1,rounded corners=1.5pt,
-    text width=2.00cm,minimum height=0.76cm},
-  year/.style={font=\sffamily\scriptsize\bfseries,text=black!70}
+    align=center,text width=1.72cm,minimum height=0.76cm,inner sep=2pt},
+  gap/.style={draw=purple!72!black,densely dashed,very thick,rounded corners=2pt,
+    fill=purple!5,align=center},
+  year/.style={font=\sffamily\scriptsize\bfseries,text=black!70},
+  stream/.style={font=\sffamily\scriptsize\bfseries,align=right,anchor=east}
 ]
 
-\foreach \x/\yr in {3.05/1994--2008,5.30/2010--17,7.55/2019--20,9.80/2022--23,12.05/2024--25,14.30/2026}{
-  \node[year] at (\x,4.25) {\yr};
-  \draw[black!18] (\x-1.08,0.05) -- (\x-1.08,4.02);
+\foreach \x/\yr in {2.20/1994--2008,4.15/2010--17,6.10/2019--20,8.05/2022--23,10.00/2024--25,11.95/2026}{
+  \node[year] at (\x,4.22) {\yr};
+  \draw[black!12] (\x-0.94,0.45) -- (\x-0.94,4.00);
 }
-\draw[->,thick,black!55] (1.82,4.00) -- (15.45,4.00);
+\draw[->,thick,black!50] (1.18,3.98) -- (13.03,3.98);
 
-\node[align=right,font=\sffamily\scriptsize\bfseries,text=accessblue!80!black] at (0.92,3.35)
-  {state and\\unknown inputs};
-\node[align=right,font=\sffamily\scriptsize\bfseries,text=orange!80!black] at (0.92,2.20)
-  {event and\\physical source};
-\node[align=right,font=\sffamily\scriptsize\bfseries,text=green!45!black] at (0.92,1.05)
-  {observability and\\sensor value};
+\node[stream,text=accessblue!82!black] at (1.06,3.30) {state and\\unknown inputs};
+\node[stream,text=orange!82!black] at (1.06,2.15) {event and\\physical source};
+\node[stream,text=green!45!black] at (1.06,1.00) {observability and\\sensor value};
 
-\node[statecell]  at (3.05,3.35) {Gillijns: joint\\input/state estimate};
-\node[statecell]  at (5.30,3.35) {Zhao: uncertain-state\\outage inference};
-\node[statecell]  at (7.55,3.35) {Zhao: DSE taxonomy};
-\node[statecell]  at (9.80,3.35) {Nugroho: DAE observer\\Qu: joint state/input};
-\node[statecell]  at (12.05,3.35) {Katanic: recursive DAE\\Moshtagh: sparse state};
-\node[statecell]  at (14.30,3.35) {Sun: state, attack,\\and unknown input};
+% Thin stream lines emphasize accumulation rather than isolated papers.
+\draw[->,accessblue!32,thick] (1.28,3.30) -- (13.06,3.30);
+\draw[->,orange!38,thick] (1.28,2.15) -- (13.06,2.15);
+\draw[->,green!35!black,thick] (1.28,1.00) -- (13.06,1.00);
 
-\node[eventcell]  at (3.05,2.20) {Scharf: matched subspace\\Tate: line outage};
-\node[eventcell]  at (5.30,2.20) {Chen/Rovatsos: quickest\\transient outage};
-\node[eventcell]  at (7.55,2.20) {Li: sparse fault\\Pandey: event and source};
-\node[eventcell]  at (9.80,2.20) {Kummerow: open set\\Azizi: source ranking};
-\node[eventcell]  at (12.05,2.20) {Yildiz: few PMUs\\Li: graph localization};
-\node[eventcell]  at (14.30,2.20) {Hu: generative\\open-set detection};
+\node[statecell]  (s1) at (2.20,3.30) {Gillijns: joint\\input/state estimate};
+\node[statecell]  (s2) at (4.15,3.30) {Zhao: state uncertainty\\in outage inference};
+\node[statecell]  (s3) at (6.10,3.30) {Zhao: DSE taxonomy};
+\node[statecell]  (s4) at (8.05,3.30) {Nugroho: DAE observer\\Qu: joint state/input};
+\node[statecell]  (s5) at (10.00,3.30) {Katanic: recursive DAE\\Moshtagh: sparse state};
+\node[statecell]  (s6) at (11.95,3.30) {Sun: state, attack,\\and unknown input};
 
-\node[theorycell] at (3.05,1.05) {Hou: input observability\\Nyberg: detectability};
-\node[theorycell] at (5.30,1.05) {Fernando: functional obs.\\Eriksson: diagnosability};
-\node[theorycell] at (7.55,1.05) {Jamei: source limits\\and PMU placement};
-\node[theorycell] at (9.80,1.05) {Conte: indistinguishable\\fault-line groups};
-\node[theorycell] at (12.05,1.05) {Zhang: functional obs.\\Yildiz: placement};
-\node[theorycell] at (14.30,1.05) {Sun: sparse strong\\observability};
+\node[eventcell]  (e1) at (2.20,2.15) {Scharf: matched subspace\\Tate: line outage};
+\node[eventcell]  (e2) at (4.15,2.15) {Chen/Rovatsos: quickest\\transient outage};
+\node[eventcell]  (e3) at (6.10,2.15) {Li: sparse fault\\Pandey: event and source};
+\node[eventcell]  (e4) at (8.05,2.15) {Kummerow: open set\\Azizi: source ranking};
+\node[eventcell]  (e5) at (10.00,2.15) {Yildiz: few PMUs\\Li: graph localization};
+\node[eventcell]  (e6) at (11.95,2.15) {Hu: generative\\open-set detection};
 
-\draw[very thick,purple!70!black] (9.05,0.22) -- (15.35,0.22);
-\draw[very thick,purple!70!black] (9.05,0.12) -- (9.05,0.32);
-\draw[very thick,purple!70!black] (15.35,0.12) -- (15.35,0.32);
-\node[font=\sffamily\scriptsize\bfseries,text=purple!75!black,align=center] at (12.20,-0.15)
-  {unresolved joint contract: hidden target, physical source, and integrity under source-disjoint sparse sensing};
+\node[theorycell] (t1) at (2.20,1.00) {Hou: input observability\\Nyberg: detectability};
+\node[theorycell] (t2) at (4.15,1.00) {Fernando: functional obs.\\Eriksson: diagnosability};
+\node[theorycell] (t3) at (6.10,1.00) {Jamei: source limits\\and PMU placement};
+\node[theorycell] (t4) at (8.05,1.00) {Conte: indistinguishable\\fault-line groups};
+\node[theorycell] (t5) at (10.00,1.00) {Zhang: functional obs.\\Yildiz: placement};
+\node[theorycell] (t6) at (11.95,1.00) {Sun: sparse strong\\observability};
+
+\node[gap,text width=2.35cm,minimum height=2.66cm,font=\sffamily\scriptsize] (target) at (15.05,2.15)
+  {\textbf{Combined contract}\\[2pt]
+   hidden target\\physical event and source\\integrity state\\held-source sparse sensing\\[2pt]
+   \textcolor{purple!78!black}{not yet tested jointly}};
+\draw[->,purple!68!black,thick] (s6.east) -- (target.west |- s6.east);
+\draw[->,purple!68!black,thick] (e6.east) -- (target.west |- e6.east);
+\draw[->,purple!68!black,thick] (t6.east) -- (target.west |- t6.east);
+
+\node[font=\sffamily\tiny,text=black!55,align=center] at (7.10,0.24)
+  {Each stream solves part of the inverse problem; none establishes the combined evaluation contract.};
 \end{tikzpicture}

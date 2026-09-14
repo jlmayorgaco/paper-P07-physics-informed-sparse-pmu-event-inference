@@ -23,6 +23,6 @@ The empirical boundary is sharp. The state estimator reaches \BTwoTVE{} mean hid
 \begin{figure*}[t]
 \centering
 \resizebox{\textwidth}{!}{\input{figures/joint_inference_architecture}}
-\caption{Inference path and validation boundary. PMU samples and quality flags enter candidate-specific DAE simulation and nuisance fitting. The fitted candidates produce a state estimate and an event, source, and integrity decision with optional abstention. Solid boxes denote evaluated state components and the restricted load-source likelihood; dashed boxes denote the full multi-family candidate comparison that still requires a common experiment.}
+\caption{Inference path and validation boundary. The three lanes separate the evaluated causal state estimator, the proposed joint candidate-conditioned route, and the evaluated load-source special case. Solid blue and green boxes denote executed evidence; purple dashed boxes denote the multi-family nuisance fit, candidate comparison, and abstention path that still require a common experiment.}
 \label{fig:joint-architecture}
 \end{figure*}
