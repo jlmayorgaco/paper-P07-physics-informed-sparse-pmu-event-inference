@@ -1,33 +1,42 @@
 \begin{tikzpicture}[x=1cm,y=1cm,font=\sffamily\scriptsize,>=Latex]
-% Linear candidate sets and their nonlinear remainder tubes.
-\fill[accessblue!10] (-0.10,-0.02) -- (3.82,0.98) -- (3.82,1.34) -- (-0.10,0.34) -- cycle;
-\draw[accessblue!75!black,very thick] (0.00,0.16) -- (3.72,1.12);
-\draw[accessblue!75!black,densely dashed,thick]
-  (0.00,0.10) .. controls (1.15,0.55) and (2.45,0.50) .. (3.72,1.24);
-\node[text=accessblue!80!black,anchor=south west] at (0.10,0.42)
-  {$\mathcal M_i^{\mathrm{lin}}$};
+% Panel (a): the event leaves the nuisance tangent at first order.
+\node[font=\bfseries] at (2.15,3.45) {(a) First-order separation};
+\fill[accessblue!7,rounded corners=2pt] (0.15,0.25) rectangle (4.15,3.20);
+\coordinate (oa) at (0.72,0.72);
+\draw[black!35,thin] (0.48,0.72) -- (3.82,1.65);
+\draw[accessblue!80!black,very thick]
+  (0.48,0.65) .. controls (1.65,0.94) and (2.65,1.30) .. (3.82,1.58);
+\draw[orange!88!black,very thick]
+  (oa) .. controls (1.55,1.38) and (2.65,2.25) .. (3.55,2.92);
+\fill[black!70] (oa) circle (1.35pt);
+\draw[<->,green!45!black,very thick]
+  (2.72,1.30) -- (2.72,2.30)
+  node[midway,right=2pt,align=left] {$O(|a|)$\\$\|P_\perp d_g\|$};
+\node[text=accessblue!80!black,anchor=north west,align=left] at (0.52,1.73)
+  {nuisance manifold\\$\mathcal M_0$};
+\node[text=orange!88!black,anchor=south east] at (3.70,2.82)
+  {event path $c_g(a)$};
+\node[anchor=north west,text=black!65] at (0.42,0.56)
+  {different tangents};
 
-\fill[orange!12] (-0.10,2.16) -- (3.82,3.16) -- (3.82,3.52) -- (-0.10,2.52) -- cycle;
-\draw[orange!85!black,very thick] (0.00,2.34) -- (3.72,3.30);
-\draw[orange!85!black,densely dashed,thick]
-  (0.00,2.45) .. controls (1.30,2.54) and (2.35,3.28) .. (3.72,3.18);
-\node[text=orange!85!black,anchor=south west] at (0.10,2.60)
-  {$\mathcal M_j^{\mathrm{lin}}$};
-
-\coordinate (pi) at (2.02,0.68);
-\coordinate (pj) at (1.52,2.73);
-\fill[accessblue!80!black] (pi) circle (1.5pt);
-\fill[orange!85!black] (pj) circle (1.5pt);
-\draw[<->,very thick,green!50!black] (pi) -- (pj)
-  node[midway,right=2pt,align=left] {$d_{ij}^{\mathrm{lin}}$\\profiled distance};
-
-\draw[<->,thick,purple!75!black] (3.42,1.24) -- (3.42,3.08)
-  node[midway,right=2pt] {$d_{ij}^{\mathrm{nl}}$};
-
-\node[draw=black!30,rounded corners=2pt,fill=white,align=left,inner sep=4pt]
-  at (5.55,2.55)
-  {$d_{ij}^{\mathrm{nl}}\geq$\\$[d_{ij}^{\mathrm{lin}}-\epsilon_i(r)-\epsilon_j(r)]_+$};
-\node[draw=black!30,rounded corners=2pt,fill=white,align=left,inner sep=4pt]
-  at (5.55,0.80)
-  {solid: affine model\\dashed: nonlinear response\\shading: remainder bound};
+% Panel (b): a shared tangent, but distinct relative curvature.
+\node[font=\bfseries] at (6.45,3.45) {(b) Second-order contact};
+\fill[orange!6,rounded corners=2pt] (4.35,0.25) rectangle (8.55,3.20);
+\coordinate (ob) at (4.88,0.72);
+\draw[black!40,thin] (4.60,0.72) -- (8.25,0.72)
+  node[anchor=north east,text=black!60] {common tangent};
+\draw[accessblue!80!black,very thick]
+  (ob) .. controls (6.15,0.74) and (7.15,1.10) .. (8.22,1.66);
+\draw[orange!88!black,very thick]
+  (ob) .. controls (6.05,0.76) and (7.15,1.80) .. (8.22,2.92);
+\fill[black!70] (ob) circle (1.35pt);
+\draw[<->,green!45!black,very thick]
+  (7.28,1.22) -- (7.28,2.05)
+  node[midway,right=2pt,align=left] {$O(a^2)$\\$\|\kappa_g\|$};
+\node[text=accessblue!80!black,anchor=north east] at (8.18,1.63)
+  {$\mathcal M_0$};
+\node[text=orange!88!black,anchor=south east] at (8.18,2.87)
+  {$c_g(a)$};
+\node[anchor=north west,text=black!65,align=left] at (4.54,0.56)
+  {$P_\perp d_g=0$ but\\$\kappa_g\ne0$};
 \end{tikzpicture}

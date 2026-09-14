@@ -1,7 +1,7 @@
 \section{Conclusion}
 \label{sec:conclusion}
 
-Sparse-PMU monitoring contains two inverse problems with different information limits. Functional observability determines whether the requested hidden-voltage function is recoverable and gives the covariance of its minimum-variance linear estimate. Candidate-manifold separation determines whether two event sources remain distinguishable after state and integrity nuisance are fitted. A bounded DAE remainder connects that linear margin to a local nonlinear certificate.
+Sparse-PMU monitoring contains two inverse problems with different information limits. Functional observability determines whether the requested hidden-voltage function is recoverable and gives the covariance of its minimum-variance linear estimate. Candidate-manifold separation determines whether two event sources remain distinguishable after state and integrity nuisance are fitted. When nuisance absorbs the event tangent, relative curvature can preserve second-order local evidence; when a positive affine margin exists, a bounded DAE remainder determines whether it survives nonlinearity.
 
 The experiments show the distinction. The causal PowerDynamics estimator attains \BTwoTVE{} mean hidden-voltage HVRE, and physical recentering removes \EZeroHClosureHalf{}--\EZeroHClosureMax{} of the operating-point error gap. In the executed 16-source load case, amplitude Fisher information is associated with a discretized 90\%-detection threshold, while source Top-1 falls from 100\% at 0.4\% magnitude to 13.0\% at 0.01\%. The separate ANDES model detects known-source events, yet complete physical-source holdout yields only \HeldSourceCorrect{} correct decisions among \HeldSourceDecisions{}.
 

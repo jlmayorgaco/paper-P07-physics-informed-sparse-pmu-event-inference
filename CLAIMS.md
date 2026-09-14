@@ -19,7 +19,7 @@
 - When the requested functional is estimable in the finite-horizon local model, its generalized least-squares map is the best linear unbiased estimator and its target covariance is explicit.
 - Under the stated local linear-Gaussian assumptions, intersecting candidate--nuisance manifolds admit indistinguishable parameter pairs; no classifier can distinguish them uniformly over the declared nuisance set.
 - Adding a conditionally independent, correctly modeled PMU block cannot decrease the nuisance-profiled separation margin. The margins are not generally additive, and the result is not a guarantee for an arbitrary learned classifier.
-- A bounded second-order DAE remainder gives a sufficient local condition for an affine source-separation margin to survive nonlinear curvature. The load-intervention remainder is measured, but the full multi-family state/integrity curvature certificate is not evaluated.
+- If nuisance absorbs an event tangent, curvature relative to the nuisance manifold can still produce second-order local separation. A separate bounded-remainder condition determines whether a positive affine margin survives nonlinearity. The relative-contact identity has a toy algebraic check, but neither certificate is evaluated for the full IEEE 39-bus multi-family candidate set.
 
 ## Not established
 

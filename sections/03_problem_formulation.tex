@@ -36,12 +36,16 @@ Writing $\bm Y_{\mathrm{bus}}=\bm G+\mathrm j\bm B$ and $V_i=|V_i|e^{\mathrm j\v
  P_i&=|V_i|\sum_j|V_j|\!\left[G_{ij}\cos\vartheta_{ij}+B_{ij}\sin\vartheta_{ij}\right], \label{eq:ac-p}\\
  Q_i&=|V_i|\sum_j|V_j|\!\left[G_{ij}\sin\vartheta_{ij}-B_{ij}\cos\vartheta_{ij}\right], \label{eq:ac-q}
 \end{align}
-where $\vartheta_{ij}=\vartheta_i-\vartheta_j$. A line outage changes the branch primitives and therefore $\bm Y_{\mathrm{bus}}$; a bus fault adds a shunt-admittance intervention; generation and load changes modify the appropriate active/reactive injection equations. For a PMU at one terminal of branch $(i,j)$,
+where $\vartheta_{ij}=\vartheta_i-\vartheta_j$. A line outage changes the branch primitives and therefore $\bm Y_{\mathrm{bus}}$; a bus fault adds a shunt-admittance intervention; generation and load changes modify the appropriate active/reactive injection equations. For branch $e=(i,j)$, let $t_e$ be the complex off-nominal tap, $y_e$ the series admittance, and $y_e^{f,sh},y_e^{t,sh}$ the terminal shunts. Its terminal currents obey
 \begin{equation}
- I_{ij}=Y_{ff,ij}V_i+Y_{ft,ij}V_j,
- \qquad I_{ji}=Y_{tf,ij}V_i+Y_{tt,ij}V_j. \label{eq:terminal-current}
+ \begin{bmatrix}I_{e,f}\\ I_{e,t}\end{bmatrix}=
+ \begin{bmatrix}
+ (y_e+y_e^{f,sh})/|t_e|^2&-y_e/t_e^*\\
+ -y_e/t_e&y_e+y_e^{t,sh}
+ \end{bmatrix}
+ \begin{bmatrix}V_i\\V_j\end{bmatrix}. \label{eq:terminal-current}
 \end{equation}
-The orientation, transformer tap, line charging, and shunt convention in \eqref{eq:terminal-current} are part of the measurement model; replacing terminal current with bus-injection current changes the likelihood.
+The PMU operator selects the actual instrumented terminal and orientation. Replacing terminal current with complete bus-injection current, or changing the tap and charging convention, changes the likelihood.
 
 At the acquisition boundary, native measurements can include $V_{abc}$, $I_{abc}$, frequency, ROCOF, quality flags, and availability. Positive-sequence phasors define the balanced network likelihood used here. Negative- and zero-sequence components, when available, remain unbalance or integrity evidence rather than being mixed into the positive-sequence state. Ideal continuous-frequency channels satisfy
 \begin{equation}

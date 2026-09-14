@@ -30,7 +30,7 @@ The complete target sequence is uniquely determined if and only if $\ker\mathcal
 Two initial states produce the same output history exactly when their difference belongs to $\ker\mathcal O_N$. Their requested outputs at time $r$ agree for every such pair exactly when the difference also belongs to $\ker\bm L_r$. Stacking the maps gives the sequence statement. Equivalently, the rows of the requested map lie in the row space of $\mathcal O_N$.
 \endIEEEproof
 
-This standard functional-observability result \cite{fernando2010functional,zhang2025functional} fixes the target and time index before any estimator is assessed. It also shows why a low full-state rank alone does not preclude recovery of the hidden-voltage function.
+This standard functional-observability result \cite{fernando2010functional,zhang2025functional} fixes the target and time index before any estimator is assessed. It also shows why a low full-state rank alone does not preclude recovery of the hidden-voltage function. In a nonlinear DAE, however, a favorable kernel inclusion at one equilibrium is only first-order evidence: local functional factorization requires a constant-rank neighborhood condition on the feasible observation fibers \cite{montanari2022functional}.
 
 The Gauss--Markov specialization adds a variance statement to the rank condition. Stack the output perturbations as $\delta\bm Y_N=\mathcal O_N\delta\bm x_0+\bm v_N$, assume $\bm v_N\sim\mathcal N(\bm0,\bm R_N)$ with $\bm R_N\succ0$, and define $\bm G_N=\mathcal O_N^{\mathsf T}\bm R_N^{-1}\mathcal O_N$.
 
@@ -128,37 +128,34 @@ For the same pair, covariance model, nuisance specification, and integrity budge
 
 For every nuisance vector, the augmented squared residual is the old nonnegative residual plus the new PMU residual. Taking the minimum preserves the inequality. Equality with a sum of separately profiled margins does not hold in general because the same nuisance variables must explain both sensor blocks; additivity requires fixed simple hypotheses or additional separability conditions.
 
-The affine margin is useful only if it survives local DAE curvature. Let $\bm m_h(\bm\eta_h)$ denote the exact, whitened, noise-free candidate response and suppose that, for $\|\bm\eta_h\|_2\le r$,
-\begin{equation}
- \bm m_h(\bm\eta_h)=\bm s_h+\bm N_h\bm\eta_h+\bm\rho_h(\bm\eta_h),
- \qquad
- \|\bm\rho_h(\bm\eta_h)\|_2\le\frac{\kappa_h}{2}\|\bm\eta_h\|_2^2 .
- \label{eq:nonlinear-remainder}
-\end{equation}
+The affine margin tests only first-order separation. To state what a zero margin does and does not imply, work in whitened coordinates and let the local no-event explanations and one event path be
+\begin{align}
+ \bm F_0(\bm b)&=\bm N\bm b+\tfrac12\bm H_0[\bm b,\bm b]+O(\|\bm b\|^3),\nonumber\\
+ \bm c_g(a)&=a\bm d_g+a^2\bm q_g+O(a^3).
+ \label{eq:relative-contact-model}
+\end{align}
+Define $\Delta_g(a)=\min_{\bm b\ \mathrm{local}}\|\bm c_g(a)-\bm F_0(\bm b)\|_2$. Here $\bm b$ parameterizes a regular observable nuisance chart, so redundant coordinates have been removed and $\bm N$ has full column rank. The construction applies pairwise after one candidate manifold is used as the local reference.
 
-\begin{proposition}[Local nonlinear separation]
-\label{prop:nonlinear-separation}
-Let $d_{ij}^{\mathrm{lin}}=\sqrt{2D_{ij,S}^{(\mathcal P)}(H)}$ and let $d_{ij}^{\mathrm{nl}}(r)$ be the minimum distance between the exact candidate responses over the two radius-$r$ nuisance balls. Under \eqref{eq:nonlinear-remainder},
+\begin{proposition}[Relative order of distinguishability]
+\label{prop:relative-contact}
+Let $\bm P_\perp=\bm I-\bm N(\bm N^{\mathsf T}\bm N)^{-1}\bm N^{\mathsf T}$. If $\bm P_\perp\bm d_g\ne\bm0$, then
 \begin{equation}
- d_{ij}^{\mathrm{nl}}(r)\ge
- \left[d_{ij}^{\mathrm{lin}}-\frac{\kappa_i+\kappa_j}{2}r^2\right]_+ .
- \label{eq:nonlinear-separation-bound}
+ \Delta_g^2(a)=a^2\|\bm P_\perp\bm d_g\|_2^2+O(a^3). \label{eq:first-order-contact}
 \end{equation}
-Hence $d_{ij}^{\mathrm{lin}}>(\kappa_i+\kappa_j)r^2/2$ is sufficient for the two local nonlinear response sets to remain disjoint.
+If $\bm d_g=\bm N\bm v$, define the relative curvature
+\begin{equation}
+ \bm\kappa_g=\bm P_\perp\!\left(\bm q_g-\tfrac12\bm H_0[\bm v,\bm v]\right). \label{eq:relative-curvature}
+\end{equation}
+Then $\Delta_g^2(a)=a^4\|\bm\kappa_g\|_2^2+O(a^5)$. Thus zero first-order information does not imply local nonlinear indistinguishability when $\bm\kappa_g\ne\bm0$.
 \end{proposition}
 
 \IEEEproof
-For any admissible pair $(\bm\eta_i,\bm\eta_j)$, the reverse triangle inequality bounds the exact distance by its affine part minus $\|\bm\rho_i\|_2+\|\bm\rho_j\|_2$. Minimizing the affine part and applying \eqref{eq:nonlinear-remainder} gives \eqref{eq:nonlinear-separation-bound}; nonnegativity produces the positive-part operator.
+The stationarity equation has derivative $\bm N^{\mathsf T}\bm N\succ\bm0$ in $\bm b$, so the implicit-function theorem gives a smooth minimizer. With $\bm v_*=(\bm N^{\mathsf T}\bm N)^{-1}\bm N^{\mathsf T}\bm d_g$, expanding $\bm b_*(a)=a\bm v_*+a^2\bm w+O(a^3)$ leaves $a\bm P_\perp\bm d_g$ at first order. If $\bm d_g=\bm N\bm v_*$, profiling removes the tangential quadratic term and leaves $a^2\bm\kappa_g+O(a^3)$; squaring proves the claim.
 \endIEEEproof
 
-This condition is sufficient, not necessary. A complete certificate requires directional curvature bounds for every candidate and nuisance direction. Section~\ref{sec:load-event-inference} tests the narrower load-intervention remainder and its second-order scaling. Curvature bounds for the full state, integrity, and multi-family candidate set remain unavailable.
+For $n$ independent Gaussian windows, the closest-null divergence is $n\Delta_g^2(a)/2$; Pinsker's inequality bounds level-$\alpha$ power by $\alpha+\min\{1,\sqrt n\Delta_g(a)/2\}$. Hence contact order $r$ gives limiting amplitude scale $n^{-1/(2r)}$: $n^{-1/2}$ at first order and $n^{-1/4}$ at second order \cite{rotnitzky2000singular}. This result is local and mode preserving. Correlated frames enter through their joint covariance, not as independent replications.
 
-For fixed closest nuisance values and unit-severity signature, the equal-prior Gaussian error is
-\begin{equation}
- P_{e,ij}^{\star}=\Phi\!\left(-\sqrt{D_{ij}/2}\right),\qquad
- |\gamma|_{\min}=\frac{\sqrt2\,\Phi^{-1}(1-\beta)}{\sqrt{D_{ij}(1)}} \label{eq:min-detectable-severity}
-\end{equation}
-to target $P_e^{\star}\le\beta$ when the signature scales linearly with severity $\gamma$. This local severity limit is not applied across topology switches or nonlinear fault saturation. For simultaneous events with projected unit-signature matrix $\widetilde{\bm S}_A$, their amplitudes are locally identifiable only if $\operatorname{rank}(\widetilde{\bm S}_A)=|A|$ after the same nuisance projection.
+A positive affine margin has a complementary guarantee. If each exact candidate response has a radius-$r$ remainder bounded by $\kappa_h\|\bm\eta_h\|_2^2/2$, the reverse triangle inequality gives $d_{ij}^{\mathrm{nl}}(r)\ge[d_{ij}^{\mathrm{lin}}-(\kappa_i+\kappa_j)r^2/2]_+$. Neither this bound nor Proposition~\ref{prop:relative-contact} is certified for the multi-family bank; the load study measures only source-wise Taylor remainder.
 
 The executed load-intervention case gives a narrower matched-signal specialization. Let $\bm D_g$ be the whitened unit-amplitude response for candidate source $g$ and let $\bm\Sigma$ be the normal-data covariance before whitening. The amplitude Fisher information is
 \begin{equation}
@@ -181,7 +178,7 @@ with $\mu_{gj}$ the covariance-weighted signature coherence. Equation~\eqref{eq:
 \begin{figure}[t]
 \centering
 \resizebox{\columnwidth}{!}{\input{figures/diagnosability_geometry}}
-\caption{Local source-diagnosability geometry. State and integrity nuisance generate one affine response set per candidate. The shortest weighted separation determines the linear margin. The shaded tubes represent bounded nonlinear remainders; overlap can erase a positive linear margin.}
+\caption{Local diagnosability after whitening. (a) A projected event tangent gives first-order separation. (b) Nuisance absorbs the tangent, but relative curvature yields squared separation proportional to $a^4$. Event curvature alone is insufficient because the nuisance manifold can bend with it.}
 \label{fig:diagnosability-geometry}
 \end{figure}
 

@@ -74,7 +74,7 @@ Finite changes bend the response. Symmetric development simulations estimate a s
 \end{equation}
 Four likelihood variants isolate mean curvature and amplitude-dependent covariance. DEV selects L2, which uses the second-order mean and fixed W2 covariance. Because that mean is quadratic in $a$, L2 evaluates \eqref{eq:load-source-evidence} by normalized 401-point quadrature over $[-0.12,0.12]$, with a mode-centered refinement for narrow posteriors; the analytic $H_0$ density uses the same evidence normalization. TEST then remains frozen. The descriptor-DAE tangent is incomplete, so \eqref{eq:load-tangent} is numerical, not analytic.
 
-This executed model conditions on the nominal initial state, assumes no corrupted channels, and uses a common fixed topology and known 30-frame onset window. It therefore tests the amplitude-information and signature-coherence specialization in \eqref{eq:event-visible-information}--\eqref{eq:projected-fisher}; it does not implement the nuisance-projected candidate manifolds in \eqref{eq:stacked-hypothesis} or numerically certify Proposition~\ref{prop:nonlinear-separation}.
+This executed model conditions on the nominal initial state, assumes no corrupted channels, and uses a common fixed topology and known 30-frame onset window. It therefore tests the amplitude-information and signature-coherence specialization in \eqref{eq:event-visible-information}--\eqref{eq:projected-fisher}; it does not implement the nuisance-projected candidate manifolds in \eqref{eq:stacked-hypothesis} or test Proposition~\ref{prop:relative-contact} on the IEEE 39-bus system.
 
 \subsection{Nominal Estimator Hierarchy}
 
