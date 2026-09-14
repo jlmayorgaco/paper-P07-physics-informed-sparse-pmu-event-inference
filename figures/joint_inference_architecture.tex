@@ -15,64 +15,65 @@
 
 % Column headings make the contract readable before the individual boxes.
 \foreach \x/\txt in {0.95/OBSERVATIONS,3.72/PHYSICAL MODEL,6.72/INFERENCE,9.82/EVIDENCE,13.10/OUTPUT}{
-  \node[font=\sffamily\tiny\bfseries,text=black!58] at (\x,3.48) {\txt};
+  \node[font=\sffamily\tiny\bfseries,text=black!58] at (\x,4.35) {\txt};
 }
 
-\node[state,text width=2.05cm,minimum height=1.15cm] (pmu) at (0.95,1.48)
+\node[state,text width=2.05cm,minimum height=1.15cm] (pmu) at (0.95,1.50)
   {PMU frame at $k$\\$\bm y_k=\{V,I,f\}$\\$\bm M_k,\bm b_k$, quality flags};
 
-\node[state,text width=2.10cm] (dae) at (3.72,2.45)
+\node[state,text width=2.10cm] (dae) at (3.72,3.20)
   {Network and DAE model\\$\bm f,\bm g,\bm h_{\mathcal P}$};
-\node[event,text width=2.10cm] (bank) at (3.72,0.45)
+\node[event,text width=2.10cm] (bank) at (3.72,-0.20)
   {Physical hypothesis bank\\$h=(c,\ell,\tau,\gamma)$};
 
-\node[state,text width=2.25cm] (statefit) at (6.72,2.45)
+\node[state,text width=2.25cm] (statefit) at (6.72,3.20)
   {Causal state estimator\\frozen B0--B3 tests};
-\node[pending,text width=2.38cm,minimum height=0.90cm] (jointfit) at (6.72,1.20)
+\node[pending,text width=2.38cm,minimum height=0.90cm] (jointfit) at (6.72,1.50)
   {Candidate-conditioned fit\\state and integrity nuisance};
-\node[loadcase,text width=2.25cm] (loadfit) at (6.72,-0.05)
+\node[loadcase,text width=2.25cm] (loadfit) at (6.72,-0.20)
   {Load tangent\\and fitted noise};
 
-\node[pending,text width=2.30cm,minimum height=0.90cm] (compare) at (9.82,1.20)
+\node[pending,text width=2.30cm,minimum height=0.90cm] (compare) at (9.82,1.50)
   {Profiled candidate evidence\\$D_{ij},\ p(h\mid\bm y_{0:k})$};
-\node[loadcase,text width=2.22cm] (loadpost) at (9.82,-0.05)
+\node[loadcase,text width=2.22cm] (loadpost) at (9.82,-0.20)
   {Closed evaluated bank\\$H_0$ and 16 load buses};
 
-\node[state,text width=2.32cm] (stateout) at (13.10,2.45)
+\node[state,text width=2.32cm] (stateout) at (13.10,3.20)
   {Hidden-voltage estimate\\$\widehat{\bm z}_{\mathcal U,k},\bm\Sigma_{z,k}$};
-\node[event,text width=2.32cm] (eventout) at (13.10,1.05)
+\node[event,text width=2.32cm] (eventout) at (13.10,1.50)
   {Event, source, integrity\\$\widehat c_k,\widehat\ell_k,\widehat q_k$};
-\node[pending,text width=1.55cm] (abstain) at (15.55,1.05)
+\node[pending,text width=1.55cm] (abstain) at (15.55,1.50)
   {candidate set\\or abstain};
 
 % Three distinct lanes: evaluated state, pending joint inference, and evaluated load-only inference.
-\node[lane,text=accessblue!80!black] at (-0.35,2.45) {evaluated\\state lane};
-\node[lane,text=purple!78!black] at (-0.35,1.20) {joint lane\\not evaluated};
-\node[lane,text=green!48!black] at (-0.35,-0.05) {evaluated\\load lane};
+\node[lane,text=accessblue!80!black] at (-0.35,3.20) {evaluated\\state lane};
+\node[lane,text=purple!78!black] at (-0.35,1.50) {joint lane\\not evaluated};
+\node[lane,text=green!48!black] at (-0.35,-0.20) {evaluated\\load lane};
 
 \begin{scope}[on background layer]
-  \draw[arr,draw=accessblue!72!black] ($(pmu.east)+(0,0.40)$) -- (dae.west);
+  % The observation fan-out uses separate upper, middle, and lower corridors.
+  \draw[arr,draw=accessblue!72!black] (pmu.north) -- (0.95,2.48) -| (dae.west);
   \draw[arr,draw=accessblue!72!black] (dae) -- (statefit);
   \draw[arr,draw=accessblue!72!black] (statefit) -- (stateout);
 
   \draw[pendingarr] (pmu.east) -- (jointfit.west);
-  \draw[pendingarr] (dae.south) -- (jointfit.north);
-  \draw[pendingarr] (bank.north) -- (jointfit.south);
+  \draw[pendingarr] (dae.south) -- (3.72,2.45) -| (jointfit.north);
+  \draw[pendingarr] (bank.north) -- (3.72,0.48) -| (jointfit.south);
   \draw[pendingarr] (jointfit) -- (compare);
   \draw[pendingarr] (compare.east) -- (eventout.west);
-  \draw[pendingarr] (compare.north east) -| (stateout.south);
+  \draw[pendingarr] (compare.north east) -- (11.35,2.18) |- (stateout.south);
 
-  \draw[arr,draw=green!48!black] (pmu.south) -- (0.95,-0.62) -- (5.24,-0.62) |- (loadfit.west);
+  \draw[arr,draw=green!48!black] (pmu.south) -- (0.95,-0.92) -- (5.22,-0.92) |- (loadfit.west);
   \draw[arr,draw=green!48!black] (bank) -- (loadfit);
   \draw[arr,draw=green!48!black] (loadfit) -- (loadpost);
-  \draw[arr,draw=green!48!black] (loadpost.east) -| (eventout.south);
+  \draw[arr,draw=green!48!black] (loadpost.east) -- (11.55,-0.20) |- (eventout.south);
   \draw[pendingarr] (eventout) -- (abstain);
 \end{scope}
 
-\node[font=\sffamily\tiny,text=black!58,anchor=west] at (1.55,-0.92)
+\node[font=\sffamily\tiny,text=black!58,anchor=west] at (1.55,-1.35)
   {solid blue/green: executed evidence};
-\node[font=\sffamily\tiny,text=purple!78!black,anchor=west] at (6.45,-0.92)
+\node[font=\sffamily\tiny,text=purple!78!black,anchor=west] at (6.45,-1.35)
   {purple dashed: proposed multi-family joint path};
-\node[font=\sffamily\tiny,text=orange!80!black,anchor=west] at (12.55,-0.92)
+\node[font=\sffamily\tiny,text=orange!80!black,anchor=west] at (12.55,-1.35)
   {orange: physical/integrity decision};
 \end{tikzpicture}
