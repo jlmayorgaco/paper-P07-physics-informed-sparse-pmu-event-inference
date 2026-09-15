@@ -2,12 +2,14 @@
 
 ## Submission veto: the full multi-family joint method is not yet executed
 
+- Complete the independent-operating-point T120 physical bank and reconcile the absolute scale/name of the exported separation metric before freezing a prospective horizon contract.
+- After that audit, freeze a new 30/60/90/120-frame test reporting $p(K=2)$, exact support, Top-3, credible-set coverage/size, entropy, and resolution delay without retuning the likelihood.
 - Extend the executed load-source likelihood to faults, line outages, generation changes, integrity events, and simultaneous compositions under one audited plant and PMU operator.
 - Complete the analytic descriptor-DAE tangent or retain the numerical physical tangent terminology permanently.
 - Estimate state/integrity nuisance tangent and curvature on disjoint development data; test whether the first- versus second-order contact predicted by Proposition 3 explains IEEE 39-bus detection and source-resolution thresholds.
 - Compare four frozen paradigms on identical event parents: learned-only, physics-only, physics plus learned residual discrepancy, and diagnosability-aware inference with abstention.
 - Hold out physical source assets from every source-labeled training, tuning, threshold, and calibration operation.
-- Test whether the nuisance-profiled pairwise margin predicts calibrated uncertainty, candidate-set size, and source-resolution delay; the current projected-Fisher confusion test is inconclusive.
+- Test whether the nuisance-profiled pairwise margin predicts calibrated uncertainty, candidate-set size, and source-resolution delay prospectively. The retrospective global-distance result is encouraging but is not a frozen prospective bridge.
 - Add PMU loss/join, operating-point shift, parameter shift, line topology change, and at least one cross-simulator transfer campaign.
 - Expose a long normal stream and report false alarms/hour, event recall, joint alarm precision, and duplicate-alarm scoring.
 - Calibrate or rename the source evidence: classifier votes and uncorrected MAP scores are not probabilities.

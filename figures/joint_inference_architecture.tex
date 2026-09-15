@@ -24,19 +24,19 @@
 \node[state,text width=2.10cm] (dae) at (3.72,3.20)
   {Network and DAE model\\$\bm f,\bm g,\bm h_{\mathcal P}$};
 \node[event,text width=2.10cm] (bank) at (3.72,-0.20)
-  {Physical hypothesis bank\\$h=(c,\ell,\tau,\gamma)$};
+  {Physical hypothesis bank\\$h=(c,\mathcal S,\tau,\bm a)$};
 
 \node[state,text width=2.25cm] (statefit) at (6.72,3.20)
   {Causal state estimator\\frozen B0--B3 tests};
 \node[pending,text width=2.38cm,minimum height=0.90cm] (jointfit) at (6.72,1.50)
   {Candidate-conditioned fit\\state and integrity nuisance};
 \node[loadcase,text width=2.25cm] (loadfit) at (6.72,-0.20)
-  {Load tangent\\and fitted noise};
+  {Quadratic load manifold\\$D,Q,Q_{ij}$ and W2 noise};
 
 \node[pending,text width=2.30cm,minimum height=0.90cm] (compare) at (9.82,1.50)
   {Profiled candidate evidence\\$D_{ij},\ p(h\mid\bm y_{0:k})$};
 \node[loadcase,text width=2.22cm] (loadpost) at (9.82,-0.20)
-  {Closed evaluated bank\\$H_0$ and 16 load buses};
+  {Closed evaluated bank\\$H_0+16+120$ supports};
 
 \node[state,text width=2.32cm] (stateout) at (13.10,3.20)
   {Hidden-voltage estimate\\$\widehat{\bm z}_{\mathcal U,k},\bm\Sigma_{z,k}$};

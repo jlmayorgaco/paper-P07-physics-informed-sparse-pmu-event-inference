@@ -128,34 +128,36 @@ For the same pair, covariance model, nuisance specification, and integrity budge
 
 For every nuisance vector, the augmented squared residual is the old nonnegative residual plus the new PMU residual. Taking the minimum preserves the inequality. Equality with a sum of separately profiled margins does not hold in general because the same nuisance variables must explain both sensor blocks; additivity requires fixed simple hypotheses or additional separability conditions.
 
-The affine margin tests only first-order separation. To state what a zero margin does and does not imply, work in whitened coordinates and let the local no-event explanations and one event path be
-\begin{align}
- \bm F_0(\bm b)&=\bm N\bm b+\tfrac12\bm H_0[\bm b,\bm b]+O(\|\bm b\|^3),\nonumber\\
- \bm c_g(a)&=a\bm d_g+a^2\bm q_g+O(a^3).
- \label{eq:relative-contact-model}
-\end{align}
-Define $\Delta_g(a)=\min_{\bm b\ \mathrm{local}}\|\bm c_g(a)-\bm F_0(\bm b)\|_2$. Here $\bm b$ parameterizes a regular observable nuisance chart, so redundant coordinates have been removed and $\bm N$ has full column rank. The construction applies pairwise after one candidate manifold is used as the local reference.
+Observation time has an analogous but distinct role. Align a persistent event at its onset and reduce the regular local DAE to
+\begin{equation}
+ \bm\xi_{k+1}=\bm A_r\bm\xi_k+\bm B_r\bm a,
+ \quad \bm y_k=\bm C_r\bm\xi_k+\bm D_r\bm a,
+ \quad \bm\xi_0=\bm L_r\bm a. \label{eq:persistent-event-model}
+\end{equation}
+Stacking $T$ samples gives $\bm Y_T=\mathcal H_T\bm a$ after the common no-event trajectory is removed. Let $\mathcal A_{2K}$ denote vectors with at most $2K$ nonzero entries.
 
-\begin{proposition}[Relative order of distinguishability]
-\label{prop:relative-contact}
-Let $\bm P_\perp=\bm I-\bm N(\bm N^{\mathsf T}\bm N)^{-1}\bm N^{\mathsf T}$. If $\bm P_\perp\bm d_g\ne\bm0$, then
+\begin{proposition}[Finite-horizon sparse event injectivity]
+\label{prop:sparse-event-injectivity}
+All event vectors with at most $K$ active sources are uniquely determined by the noise-free $T$-sample output if and only if
 \begin{equation}
- \Delta_g^2(a)=a^2\|\bm P_\perp\bm d_g\|_2^2+O(a^3). \label{eq:first-order-contact}
+ \ker\mathcal H_T\cap\mathcal A_{2K}=\{\bm0\}. \label{eq:sparse-injectivity-condition}
 \end{equation}
-If $\bm d_g=\bm N\bm v$, define the relative curvature
-\begin{equation}
- \bm\kappa_g=\bm P_\perp\!\left(\bm q_g-\tfrac12\bm H_0[\bm v,\bm v]\right). \label{eq:relative-curvature}
-\end{equation}
-Then $\Delta_g^2(a)=a^4\|\bm\kappa_g\|_2^2+O(a^5)$. Thus zero first-order information does not imply local nonlinear indistinguishability when $\bm\kappa_g\ne\bm0$.
+For a fixed support $S$, stable amplitude estimation further requires the weighted Gramian $\mathcal H_{T,S}^{\mathsf T}\bm R_T^{-1}\mathcal H_{T,S}$ to be well conditioned, not merely nonsingular.
 \end{proposition}
 
 \IEEEproof
-The stationarity equation has derivative $\bm N^{\mathsf T}\bm N\succ\bm0$ in $\bm b$, so the implicit-function theorem gives a smooth minimizer. With $\bm v_*=(\bm N^{\mathsf T}\bm N)^{-1}\bm N^{\mathsf T}\bm d_g$, expanding $\bm b_*(a)=a\bm v_*+a^2\bm w+O(a^3)$ leaves $a\bm P_\perp\bm d_g$ at first order. If $\bm d_g=\bm N\bm v_*$, profiling removes the tangential quadratic term and leaves $a^2\bm\kappa_g+O(a^3)$; squaring proves the claim.
+Two $K$-sparse events produce the same history exactly when their difference, which is at most $2K$ sparse, lies in $\ker\mathcal H_T$. This proves the equivalence. On a fixed support, generalized least squares has covariance equal to the inverse support Gramian; its smallest eigenvalue therefore controls noise amplification.
 \endIEEEproof
 
-For $n$ independent Gaussian windows, the closest-null divergence is $n\Delta_g^2(a)/2$; Pinsker's inequality bounds level-$\alpha$ power by $\alpha+\min\{1,\sqrt n\Delta_g(a)/2\}$. Hence contact order $r$ gives limiting amplitude scale $n^{-1/(2r)}$: $n^{-1/2}$ at first order and $n^{-1/4}$ at second order \cite{rotnitzky2000singular}. This result is local and mode preserving. Correlated frames enter through their joint covariance, not as independent replications.
+For competing supports $S$ and $R$, define the profiled temporal separation
+\begin{equation}
+ \Delta_{S\rightarrow R}^2(T)=\min_{\bm b}
+ \|\mathcal H_{T,S}\bm a-\mathcal H_{T,R}\bm b\|_{\bm R_T^{-1}}^2.
+ \label{eq:temporal-profiled-separation}
+\end{equation}
+Under prefix-consistent causal whitening and a fixed nuisance domain, appending samples cannot reduce \eqref{eq:temporal-profiled-separation}: each candidate fit acquires a nonnegative residual term before minimization. If the optimally profiled steady signatures differ, the separation grows as $\Theta(T)$; if they coincide and the remaining transient is square summable, it can saturate. Thus a finite-horizon failure may be delay limited, whereas equality of equilibrium signatures is only a necessary warning for persistent ambiguity. Both statements are conditional on the same local model and sensing operator.
 
-A positive affine margin has a complementary guarantee. If each exact candidate response has a radius-$r$ remainder bounded by $\kappa_h\|\bm\eta_h\|_2^2/2$, the reverse triangle inequality gives $d_{ij}^{\mathrm{nl}}(r)\ge[d_{ij}^{\mathrm{lin}}-(\kappa_i+\kappa_j)r^2/2]_+$. Neither this bound nor Proposition~\ref{prop:relative-contact} is certified for the multi-family bank; the load study measures only source-wise Taylor remainder.
+The affine margin is first order. If nuisance absorbs an event tangent, relative curvature can still produce a squared distance of order $a^4$ rather than $a^2$ under a regular nuisance chart \cite{rotnitzky2000singular}. That possibility is not invoked as the mechanism here: the retrospective load audit classifies every tested direction as first-order resolvable and rejects the simple curvature-dominated delay explanation. A bounded nonlinear remainder is still required before any positive affine margin is promoted to an exact nonlinear certificate.
 
 The executed load-intervention case gives a narrower matched-signal specialization. Let $\bm D_g$ be the whitened unit-amplitude response for candidate source $g$ and let $\bm\Sigma$ be the normal-data covariance before whitening. The amplitude Fisher information is
 \begin{equation}
@@ -175,16 +177,9 @@ For source $j$ as the closest single-signature alternative, the information left
 \end{equation}
 with $\mu_{gj}$ the covariance-weighted signature coherence. Equation~\eqref{eq:projected-fisher} is the profiled pairwise Fisher information for one signature against another. It need not predict multicandidate confusion once amplitude priors, unequal alternatives, and finite nonlinear response are present.
 
-\begin{figure}[t]
-\centering
-\resizebox{\columnwidth}{!}{\input{figures/diagnosability_geometry}}
-\caption{Local diagnosability after whitening. (a) A projected event tangent gives first-order separation. (b) Nuisance absorbs the tangent, but relative curvature yields squared separation proportional to $a^4$. Event curvature alone is insufficient because the nuisance manifold can bend with it.}
-\label{fig:diagnosability-geometry}
-\end{figure}
-
 For a calibrated source posterior, define the smallest candidate set satisfying
 \begin{equation}
  \mathcal C_k(\alpha)=\argmin_{\mathcal C\subseteq\mathcal H}
  \left\{|\mathcal C|:\sum_{h\in\mathcal C}p(h\mid\bm y_{0:k})\ge1-\alpha\right\}. \label{eq:candidate-set}
 \end{equation}
-A diagnosability-aware system abstains from exact Top-1 when $|\mathcal C_k|>1$ or when its closest competing margin falls below a development-set threshold. The load-intervention study tests only the amplitude-information relation in \eqref{eq:event-visible-information} and reports an exploratory, mismatched aggregate comparison for \eqref{eq:projected-fisher}. It does not fit the initial-state nuisance $\mathcal O_h\bm\xi_h$, corruption nuisance $\mathcal E_S\bm\beta_h$, or the curvature constant $\kappa_h$. Candidate-set calibration, source-resolution delay, and PMU loss or addition still require a source-disjoint multi-family experiment.
+A diagnosability-aware system abstains from exact Top-1 when $|\mathcal C_k|>1$ or when its closest competing margin falls below a development-set threshold. The load-intervention study evaluates exact support and a retrospective profiled-distance mechanism but does not fit initial-state nuisance $\mathcal O_h\bm\xi_h$ or corruption nuisance $\mathcal E_S\bm\beta_h$. Candidate-set calibration, prospective resolution delay, and PMU loss or addition still require a source-disjoint experiment.

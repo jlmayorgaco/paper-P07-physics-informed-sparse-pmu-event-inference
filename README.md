@@ -1,10 +1,10 @@
-# P07 State Reconstruction and Event-Source Diagnosability From Sparse PMUs
+# P07 State Reconstruction and Event-Source Inference From Sparse PMUs
 
-**Working paper title:** *Physics-Based State Reconstruction and Event-Source Diagnosability With Sparse PMU Measurements*
+**Working paper title:** *Physics-Informed State Reconstruction and Event-Source Inference From Sparse PMUs Under Limited Observability*
 
 **Target venue:** IEEE Access
 
-This repository develops an evidence-backed IEEE Access manuscript on hidden-state recoverability and event-source diagnosability from eight PMUs. It consolidates three frozen contracts: (i) PowerDynamics reconstruction of 31 hidden IEEE 39-bus voltages, including model mismatch and regularized physical recentering; (ii) physics-based Bayesian inference over 16 load-source candidates with weak-event and finite-amplitude tests; and (iii) an ANDES event-diagnosis baseline spanning eight abnormal labels plus normal operation. The draft derives functional-observability and source-diagnosability limits, regenerates the measured event-signature figure from frozen trace values, and preserves negative results. The full multi-family joint posterior remains unexecuted and is not presented as a completed result.
+This repository develops an evidence-backed IEEE Access manuscript on hidden-state recoverability and event-source inference from eight PMUs. It consolidates three distinct contracts: (i) PowerDynamics reconstruction of 31 hidden IEEE 39-bus voltages, including model mismatch and regularized physical recentering; (ii) a prospective Bayesian bank with 137 load-intervention hypotheses---no event, 16 single sources, and all 120 two-source supports---plus retrospective weak-regime and 120-frame diagnostics; and (iii) an ANDES event-diagnosis baseline spanning eight abnormal labels plus normal operation. The draft derives functional-observability and sparse event-injectivity conditions, regenerates every numerical figure from frozen artifacts, and preserves negative results. The full multi-family joint posterior remains unexecuted and is not presented as a completed result.
 
 ## Repository layout
 
@@ -51,7 +51,7 @@ When `latexmk` and Perl are available, the equivalent command is:
 latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
 ```
 
-The resulting local build is `main.pdf`; it is intentionally ignored. Run the artifact generator before compiling whenever the frozen snapshot changes.
+The resulting local build is `main.pdf`. The review copy under `output/pdf/` is tracked for direct delivery. Run the artifact generator before compiling whenever the frozen snapshot changes.
 
 ## GitHub and Overleaf workflow
 

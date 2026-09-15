@@ -33,6 +33,9 @@ Regularized physical recentering & M6 PQ/PV/Slack basis; 30 DEV / 60 TEST; one s
 Load tangent audit & 16 candidate load buses; centered $\pm0.5\%$ nonlinear simulations & Candidate-bus intervention \\
 Bayesian load inference V1 & Eight amplitudes; 2,560 event / 320 no-event TEST records & Source--amplitude--noise record \\
 Bayesian load inference V2 & 1,000 normal CAL; 500 normal + 640 event DEV; 9,600 weak + 800 no-event and 8,000 finite-amplitude TEST records & Source--amplitude--noise record \\
+Prospective 137-hypothesis load inference & Fresh $H_0+16$ singles $+120$ pairs; 3,488 physical trajectories; 10,564 noise realizations & Physical trajectory for simulation uncertainty; complete record for decisions \\
+Weak-regime mechanism audit & Frozen GH31 prefixes at 5--30 frames; 2,400 trajectories and 2,400 noise realizations & Retrospective source-pair trajectory \\
+Long-horizon likelihood diagnostic & Exact prefixes through 120 frames; 32 nominal pair trajectories; all 137 hypotheses & Diagnostic trajectory; not a population recovery test \\
 Known-source event diagnosis & Eight abnormal labels plus normal; 414 TRAIN / 138 DEV / 138 TEST & Complete ANDES trajectory \\
 Source-transfer audit & Asset-disjoint folds; true family supplied; exact source & 303 decisions from 101 event parents $\times$ 3 seeds \\
 \bottomrule
@@ -65,7 +68,13 @@ The load-source campaign uses the PowerDynamics plant and the same eight PMU bus
 
 V1 tests finite changes of $\pm1$, $\pm2.5$, $\pm5$, and $\pm7.5\%$ on 2,560 event and 320 no-event records. V2 expands normal calibration to 1,000 records, uses 500 normal and 640 event records for likelihood selection, then opens two TEST blocks. The weak block contains 9,600 events at magnitudes from 0.01 to 0.4\% and 800 no-event records. The finite block contains 8,000 events from $\pm1.25$ to $\pm9\%$. Noise seeds are disjoint across CAL, DEV, and TEST. A test record is one source--amplitude--noise realization; repeated samples within its 30-frame window are never counted as independent cases.
 
-W2 and L2 are selected on CAL/DEV, respectively, and frozen for both V2 TEST blocks. The weak-event operating threshold is 0.5 posterior event probability. No TEST row enters covariance estimation, likelihood selection, prior selection, or threshold tuning. The campaign covers one physical family and a fixed topology; it does not validate simultaneous events, missing PMUs, or cross-simulator transfer.
+W2 and L2 are selected on CAL/DEV, respectively, and frozen for both V2 TEST blocks. The weak-event operating threshold is 0.5 posterior event probability. No TEST row enters covariance estimation, likelihood selection, prior selection, or threshold tuning.
+
+The subsequent GLOBAL-137 confirmation freezes W2, $D$, $Q$, $Q_{ij}$, priors, onset, and quadrature before generating new data. Its support space contains $H_0$, all 16 singles, and all 120 pairs. Four weak--weak magnitude combinations, one weak--strong, one moderate, and one finite combination are evaluated under all sign patterns; four additional magnitudes cover single events. All \GlobalPhysicalTrajectories{} native nonlinear trajectories solve successfully. Three disjoint noise realizations per event path plus 100 $H_0$ records produce \GlobalNoiseRecords{} decisions. The GLOBAL-137 identifiers have zero overlap with 1,816 historical manifest identifiers. Replayed noise is not promoted to an independent physical-system replicate.
+
+The exact weak-regime study is explicitly retrospective. It replays the frozen GH31 likelihood over 2,400 physical paths at horizons 5--30 and asks which geometry predicts cardinality and exact-support recovery; it does not refit the estimator. The T120 contract regenerates a true-time-local numerical dictionary through 120 post-event frames and validates 32 pair trajectories at the nominal operating point. Its information, equilibrium, and runtime outputs are diagnostics. Independent operating-point validation and an all-term analytic variational continuation remain pending, so T120 is not a frozen recovery claim.
+
+The load campaigns cover one physical family, fixed topology, and known onset. They do not validate missing PMUs, corrupted channels, cross-simulator transfer, or the state-conditioned multi-family posterior.
 
 \subsection{Event-Diagnosis Campaign and Signal Evidence}
 

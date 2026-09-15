@@ -45,7 +45,7 @@ Kummerow \emph{et al.} \cite{kummerow2023sigmoid} & None & Known/unknown event t
 Hu and Cheng \cite{hu2026openset} & None & Open-set event detection/classification & Generative window evidence and fusion & Streaming PMUs & Unknown-event category & No physical-source posterior \\
 Rimkus \emph{et al.} \cite{rimkus2025gnn} & Missing PMU trajectories & Downstream fault localization & Graph reconstruction before diagnosis & Yes & No source labels for imputer & Corruption via imputation \\
 Zhai \emph{et al.} \cite{zhai2025partial} & Full dynamical state & Line-attack location & Learned temporal dynamics & Yes & Across benchmark contracts & Attack target only \\
-This paper & Hidden voltage field; state uncertainty & Eight event labels; physical and integrity sources & DAE hypotheses; one-family physical likelihood & Eight prescribed PMU buses & Yes; learned baseline fails & Yes \\
+This paper & Hidden voltage field; state uncertainty & Eight-label ontology; all load supports with $K\le2$ & DAE hypotheses; quadratic physical likelihood & Eight prescribed PMU buses & Physical bank avoids source-label head; learned baseline fails holdout & Yes \\
 \bottomrule
 \end{tabularx}
 \end{table*}
@@ -54,4 +54,4 @@ This paper & Hidden voltage field; state uncertainty & Eight event labels; physi
 
 Table~\ref{tab:literature-capability} separates the capabilities needed for the combined problem. A source-agnostic physical hypothesis must be evaluated while the unobserved trajectory is estimated and measurement failures remain possible. The sensing geometry must expose indistinguishable sources before a classifier is trusted. Evaluation must then exclude the physical source asset from all source-labeled fitting. Under this protocol, learning is useful only when it corrects model discrepancy or reduces candidate-search cost without memorizing asset labels.
 
-The available evidence covers only part of this intersection. PowerDynamics supports hidden-voltage estimation and physical recentering. ANDES supports known-source event recognition and documents failure under source holdout. Joint candidate-conditioned inference and the predicted relation between separation and uncertainty still require a common experimental contract.
+The available evidence covers only part of this intersection. PowerDynamics supports hidden-voltage estimation, physical recentering, and prospective zero-, one-, and two-source load inference. A retrospective audit links weak-case recovery to profiled manifold distance, while a 120-frame diagnostic studies information accumulation without upgrading it to a recovery experiment. ANDES supports known-source event recognition and documents failure under source holdout. Multi-family candidate-conditioned inference with state and integrity nuisance still requires one common experimental contract.

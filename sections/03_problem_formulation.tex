@@ -5,10 +5,15 @@
 
 Let $\bm x(t)\in\mathbb R^{n_x}$ denote differential states, $\bm z(t)\in\mathbb R^{n_z}$ algebraic states, $\bm u(t)$ scheduled inputs, $\bm q(t)$ network configuration, and $\bm\theta_k=\bm\theta_0+\bm G_\alpha\bm\alpha_k$ physical parameters with a slowly varying operating coordinate $\bm\alpha_k$. A physical intervention $\bm a_h(t)$ is indexed by hypothesis
 \begin{equation}
- h=(c,\ell,\tau,\gamma,\bm d), \qquad h\in\mathcal H,
+ h=(c,\mathcal S,\tau,\bm a,\bm d), \qquad h\in\mathcal H,
  \label{eq:physical-hypothesis}
 \end{equation}
-where $c$ is event family, $\ell$ is a bus or branch source, $\tau$ is onset, $\gamma$ is severity, and $\bm d$ describes the allowed temporal profile. The plant is
+where $c$ is event family, $\mathcal S$ is a bus or branch support, $\tau$ is onset, $\bm a$ contains signed severities on that support, and $\bm d$ describes the allowed temporal profile. A single-source event has $\mathcal S=\{\ell\}$ and scalar severity $\gamma=a_\ell$. The evaluated load contract fixes $c$ and $\tau$ and uses
+\begin{equation}
+ \mathcal S\subseteq\mathcal L,\qquad K=|\mathcal S|=\|\bm a\|_0\le2,
+ \qquad |\mathcal L|=16, \label{eq:sparse-load-support}
+\end{equation}
+which gives one no-event, 16 single-source, and $\binom{16}{2}=120$ two-source hypotheses. The plant is
 \begin{align}
  \dot{\bm x}(t)&=\bm f\!\left(\bm x,\bm z,\bm u,\bm q,\bm a_h;\bm\theta_k\right)+\bm w_x(t), \label{eq:dae-dynamic}\\
  \bm 0&=\bm g\!\left(\bm x,\bm z,\bm u,\bm q,\bm a_h;\bm\theta_k\right), \label{eq:dae-algebraic}\\
@@ -130,11 +135,11 @@ Load change & Modify the active/reactive withdrawal model at load bus $\ell$ & l
 The internal decision at time $k$ is
 \begin{equation}
  \left(\widehat{\bm z}_{\mathcal U,k},\bm\Sigma_{z,k},
- \widehat c_k,\widehat\ell^{\mathrm{phys}}_k,
+ \widehat c_k,\widehat K_k,\widehat{\mathcal S}^{\mathrm{phys}}_k,
  \widehat m_k,\widehat\ell^{\mathrm{meas}}_k,\mathcal C_k\right),
  \label{eq:joint-output}
 \end{equation}
-where $m_k$ denotes the integrity state and $\mathcal C_k\subseteq\mathcal H$ is a credible candidate set. A location is empty when it does not apply. The candidate set is required because limited observability can make a forced Top-1 decision scientifically unjustified.
+where $m_k$ denotes the integrity state and $\mathcal C_k\subseteq\mathcal H$ is a credible candidate set. A support is empty when no physical event applies. The candidate set is required because limited observability can make a forced Top-1 decision scientifically unjustified.
 
 \subsection{Correctness and Evaluation Units}
 
