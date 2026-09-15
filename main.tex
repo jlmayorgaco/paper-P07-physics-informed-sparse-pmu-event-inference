@@ -4,7 +4,10 @@
 \documentclass{ieeeaccess}
 
 \input{preamble}
+\usepackage{pdfpages}
 \input{generated/results_macros}
+
+\newcommand{\PSevenSupplementPDF}{output/pdf/P07_Physics_Informed_State_Reconstruction_Event_Source_Inference_Supplement.pdf}
 
 \begin{document}
 \input{metadata}
@@ -42,4 +45,15 @@ dynamic state estimation, event detection, functional observability, limited obs
 \bibliography{references}
 
 \EOD
+\clearpage
+\IfFileExists{\PSevenSupplementPDF}{%
+  \includepdf[
+    pages=-,
+    fitpaper=true,
+    pagecommand={\thispagestyle{empty}},
+    addtotoc={1,section,1,{Supplementary Material},supplementary-material}
+  ]{\PSevenSupplementPDF}%
+}{%
+  \PackageError{P07}{Supplementary PDF not found}{Run scripts/build_manuscript_bundle.ps1 before compiling main.tex.}%
+}
 \end{document}

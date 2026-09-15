@@ -37,26 +37,27 @@ python scripts/generate_paper_artifacts.py
 
 ## Build
 
-The root manuscript uses the official `ieeeaccess.cls` supplied with the repository. The current MiKTeX installation has no Perl engine, so use the fallback sequence:
+The root manuscript uses the official `ieeeaccess.cls` supplied with the repository. The normal build compiles the standalone supplement first and then compiles `main.tex`, which appends every supplementary page after the principal article. Run:
 
 ```powershell
-pdflatex -interaction=nonstopmode -halt-on-error main.tex
-bibtex main
-pdflatex -interaction=nonstopmode -halt-on-error main.tex
-pdflatex -interaction=nonstopmode -halt-on-error main.tex
+powershell -ExecutionPolicy Bypass -File scripts/build_manuscript_bundle.ps1
+```
+
+The current MiKTeX installation has no Perl engine. The equivalent manual sequence is:
+
+```powershell
 pdflatex -interaction=nonstopmode -halt-on-error supplement.tex
 bibtex supplement
 pdflatex -interaction=nonstopmode -halt-on-error supplement.tex
 pdflatex -interaction=nonstopmode -halt-on-error supplement.tex
+Copy-Item supplement.pdf output/pdf/P07_Physics_Informed_State_Reconstruction_Event_Source_Inference_Supplement.pdf -Force
+pdflatex -interaction=nonstopmode -halt-on-error main.tex
+bibtex main
+pdflatex -interaction=nonstopmode -halt-on-error main.tex
+pdflatex -interaction=nonstopmode -halt-on-error main.tex
 ```
 
-When `latexmk` and Perl are available, the equivalent command is:
-
-```powershell
-latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
-```
-
-The resulting local builds are `main.pdf` and `supplement.pdf`. The main paper retains the scientific argument and decisive evidence. The supplement contains the paper-by-paper literature matrix, electrical conventions, complete proofs, nuisance-profiled Fisher information, sparse and temporal identifiability results, the executed 137-hypothesis Bayesian algorithm, the candidate-conditioned joint-estimator design, frozen contracts, and secondary diagnostics. Review copies under `output/pdf/` are tracked for direct delivery. Run the artifact generator before compiling whenever the frozen snapshot changes.
+The resulting `main.pdf` contains the principal article followed by the complete supplement, while `supplement.pdf` remains available as a standalone companion. Both review copies under `output/pdf/` are tracked for direct delivery. The principal article retains the scientific argument and decisive evidence; the supplement contains the paper-by-paper literature matrix, electrical conventions, complete proofs, nuisance-profiled Fisher information, sparse and temporal identifiability results, the executed 137-hypothesis Bayesian algorithm, the candidate-conditioned joint-estimator design, frozen contracts, and secondary diagnostics. Run the artifact generator before compiling whenever the frozen snapshot changes.
 
 ## GitHub and Overleaf workflow
 

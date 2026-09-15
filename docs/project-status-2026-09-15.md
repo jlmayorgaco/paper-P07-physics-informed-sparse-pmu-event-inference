@@ -11,7 +11,8 @@
 - State reconstruction, physical mismatch, regularized recentering, the historical eight-label benchmark, and source-holdout failure remain in the paper under separate denominators.
 - Figure 8 converts the new reports into one evidence narrative rather than presenting disconnected tables.
 - The 14-page main paper now follows four questions in scientific order: hidden-voltage recovery, failure under physical mismatch, simultaneous-source resolution, and supervised source holdout.
-- Detailed derivations, all frozen contracts, and secondary diagnostics now appear in an 8-page companion supplement. Exact tables remain available without interrupting the main argument.
+- Detailed derivations, Fisher-information results, stepwise Bayesian algorithms, all frozen contracts, and secondary diagnostics now appear in a 14-page companion supplement. Exact tables remain available without interrupting the main argument.
+- The reproducible bundle build retains the 14-page supplement independently and appends it after the 14-page principal article, producing one 28-page review PDF without altering the main-paper page budget.
 
 ## Current evidence boundary
 
