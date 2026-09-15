@@ -21,6 +21,7 @@ $loadBayesV2Root = Join-Path $benchmarkRoot "output\load_bayes_fd_v2\results"
 $global137Root = Join-Path $benchmarkRoot "output\global_137_confirmatory_v1"
 $weakResolutionRoot = Join-Path $benchmarkRoot "output\exact_weak_regime_resolution_v2"
 $likelihood120Root = Join-Path $benchmarkRoot "output\likelihood_120_contract_v2"
+$rawsim39V12Root = Join-Path $SourceRepository "output\RAWSIM39_V12_IDENTIFIABILITY"
 $destination = Join-Path $paperRoot "generated\frozen"
 
 function Get-RelativePathCompat([string]$BasePath, [string]$TargetPath) {
@@ -137,7 +138,12 @@ $sources = @(
     @{ Kind = "likelihood120-result"; Name = "t30_backward_compatibility.csv"; Target = "likelihood120_t30_compatibility.csv" },
     @{ Kind = "likelihood120-result"; Name = "model_error_relative_to_margin.csv"; Target = "likelihood120_model_error_margin.csv" },
     @{ Kind = "likelihood120-result"; Name = "physical_manifold_validation_by_horizon.csv"; Target = "likelihood120_physical_validation.csv" },
-    @{ Kind = "likelihood120-report"; Name = "likelihood_120_contract_v2.md"; Target = "report_likelihood_120_contract_v2.md" }
+    @{ Kind = "likelihood120-report"; Name = "likelihood_120_contract_v2.md"; Target = "report_likelihood_120_contract_v2.md" },
+    @{ Kind = "rawsim39-v12-identifiability"; Name = "CANDIDATE_IDENTIFIABILITY.csv"; Target = "rawsim39_v12_candidate_identifiability.csv" },
+    @{ Kind = "rawsim39-v12-identifiability"; Name = "SUBSET_SELECTION.csv"; Target = "rawsim39_v12_subset_selection.csv" },
+    @{ Kind = "rawsim39-v12-identifiability"; Name = "PARAMETER_DECISION_LEDGER.csv"; Target = "rawsim39_v12_parameter_decision_ledger.csv" },
+    @{ Kind = "rawsim39-v12-identifiability"; Name = "IDENTIFIABILITY_DECISION.json"; Target = "rawsim39_v12_identifiability_decision.json" },
+    @{ Kind = "rawsim39-v12-report"; Name = "FINAL_REPORT.md"; Target = "report_rawsim39_v12_identifiability.md" }
 )
 
 New-Item -ItemType Directory -Force -Path $destination | Out-Null
@@ -158,6 +164,8 @@ $records = foreach ($source in $sources) {
         "weak-resolution-report" { Join-Path $weakResolutionRoot "reports" }
         "likelihood120-result" { Join-Path $likelihood120Root "results" }
         "likelihood120-report" { Join-Path $likelihood120Root "reports" }
+        "rawsim39-v12-identifiability" { Join-Path $rawsim39V12Root "02_identifiability" }
+        "rawsim39-v12-report" { Join-Path $rawsim39V12Root "06_report" }
         default { throw "Unknown source kind: $($source.Kind)" }
     }
     $sourcePath = Join-Path $base $source.Name

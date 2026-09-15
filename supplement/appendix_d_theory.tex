@@ -378,11 +378,12 @@ Then
  \overline{\bm F}_S\bm\alpha_S\|_2^2,
  \label{eq:supp-support-margin-projector}\\
  &=\bm\alpha_S^{\mathsf T}\bm K_{S\mid C}\bm\alpha_S,
- \qquad
- \bm K_{S\mid C}=\overline{\bm F}_S^{\mathsf T}
+ \label{eq:supp-support-margin-matrix}\\
+ \bm K_{S\mid C}
+ &=\overline{\bm F}_S^{\mathsf T}
  \left(\bm I-\bm P_{\overline{\bm F}_C}\right)
  \overline{\bm F}_S\succeq\bm0.
- \label{eq:supp-support-margin-matrix}
+ \label{eq:supp-support-conditional-matrix}
 \end{align}
 Here $\bm P_{\overline{\bm F}_C}=\overline{\bm F}_C
 \overline{\bm F}_C^{\dagger}$, so rank deficiency in either nuisance or event
@@ -706,7 +707,19 @@ $\|\widetilde{\mathcal H}_T(\bm a-\bm b)\|_2$ by $2\epsilon$, while the definiti
 
 \subsection{Information Cannot Decrease When Valid Measurements Are Added}
 
-Partition the difference between two candidate means into old and added measurement blocks, $\bm\delta=\operatorname{col}(\bm\delta_1,\bm\delta_2)$, with joint covariance $\bm\Sigma\succ\bm0$. Block Gaussian elimination gives
+For a true trajectory at severity $a$ and a competing physical family with
+parameter $\bm\eta\in\Theta_C$, define the exact profiled prefix distance
+\begin{equation}
+ d_T^2(a)=\inf_{\bm\eta\in\Theta_C}
+ \bm r_T(a,\bm\eta)^{\mathsf T}\bm\Sigma_T^{-1}
+ \bm r_T(a,\bm\eta),
+ \label{eq:supp-profiled-prefix-distance}
+\end{equation}
+where every $\bm\Sigma_T$ is a principal prefix of one positive-definite
+process covariance and the physical competitor domain does not change with
+$T$. Partition the difference between candidate means into old and added
+blocks, $\bm\delta=\operatorname{col}(\bm\delta_1,\bm\delta_2)$, with joint
+covariance $\bm\Sigma\succ\bm0$. Block Gaussian elimination gives
 \begin{align}
  \bm\delta^{\mathsf T}\bm\Sigma^{-1}\bm\delta
  ={}&\bm\delta_1^{\mathsf T}\bm\Sigma_{11}^{-1}\bm\delta_1
@@ -719,7 +732,44 @@ Partition the difference between two candidate means into old and added measurem
  \bm\Sigma_{2\mid1}={}&\bm\Sigma_{22}-
  \bm\Sigma_{21}\bm\Sigma_{11}^{-1}\bm\Sigma_{12}.
 \end{align}
-The conditional covariance is positive definite, so the second term is nonnegative. The inequality holds for each common nuisance vector; minimizing over the same nuisance class preserves it. Hence adding a valid PMU or later frame cannot reduce ideal profiled information. A concrete estimator may still degrade if its model, covariance, or optimization changes.
+
+\begin{theorem}[Prefix monotonicity and temporal rescue]
+Under the prefix and fixed-domain contract above,
+\begin{equation}
+ d_{T+1}^2(a)\ge d_T^2(a).
+ \label{eq:supp-prefix-monotonicity}
+\end{equation}
+If both minima are attained, equality holds if and only if an element of
+$\operatorname{Argmin}d_T^2$ also has zero conditional innovation residual in
+the added block. Suppose further that, locally,
+\begin{equation}
+ d_T^2(a)=c_Ta^{2k_T}+o(a^{2k_T}),\qquad c_T>0.
+ \label{eq:supp-prefix-contact-order}
+\end{equation}
+Then $k_{T+1}\le k_T$; if the order remains $k$, then
+$c_{T+1}\ge c_T$.
+\label{thm:supp-prefix-monotonicity}
+\end{theorem}
+
+\paragraph{Proof.}
+The conditional covariance in \eqref{eq:supp-block-information} is positive
+definite, so its second quadratic form is nonnegative for every fixed
+$\bm\eta$. Taking the infimum over the same $\Theta_C$ proves
+\eqref{eq:supp-prefix-monotonicity}. If the minima are attained, equality of
+the infima forces an extended-horizon minimizer to minimize the prefix term and
+to make the innovation term zero; the converse is immediate. If
+$k_{T+1}>k_T$, the ratio $d_{T+1}^2(a)/d_T^2(a)$ tends to zero as $a\to0$,
+contradicting \eqref{eq:supp-prefix-monotonicity}. When both orders equal $k$,
+division by $a^{2k}$ and passage to the limit yield
+$c_{T+1}\ge c_T$. $\hfill\square$
+
+The theorem permits a longer prefix to reveal a first-order direction that was
+absorbed at an earlier horizon, or to reveal a higher-order obstruction that
+was previously invisible. It does not say that a concrete estimator improves:
+changing its normalization, nuisance set, covariance model, or optimization
+breaks the prefix contract. In particular, the archived RAWSIM39 calibration
+renormalized each event--signal--horizon block to unit weight and is not a
+prefix likelihood for this theorem.
 
 If whitened model errors under two supports satisfy
 $\|\bm W\bm e_S\|\le\epsilon_S$ and
@@ -758,10 +808,10 @@ Define the profiled simple-model separation
 \end{equation}
 It equals the minimum KL divergence over fixed-amplitude simple Gaussian competitors. It is not the KL divergence or Bayes factor of the amplitude-mixture support model.
 
-\begin{theorem}[Horizon monotonicity and persistent rate]
-If the amplitude domain and nuisance dimension do not change with $T$ and all covariances are prefixes of the same process, then
-$\mathcal J_{S\rightarrow R}(T+1)\ge\mathcal J_{S\rightarrow R}(T)$.
-If, in addition, $\bm\delta_t(\bm b)$ converges uniformly on a compact competitor domain to $\bm\delta_{\infty}(\bm b)$, then
+\begin{theorem}[Persistent AR(1) information rate]
+If the amplitude domain is compact and fixed and
+$\bm\delta_t(\bm b)$ converges uniformly to
+$\bm\delta_{\infty}(\bm b)$, then
 \begin{equation}
  \lim_{T\rightarrow\infty}
  \frac{2\mathcal J_{S\rightarrow R}(T)}{T}
@@ -774,13 +824,16 @@ If, in addition, $\bm\delta_t(\bm b)$ converges uniformly on a compact competito
 \end{theorem}
 
 \paragraph{Proof.}
-Equation~\eqref{eq:supp-ar1-innovation-information} gives
-$q_{T+1}(\bm b)=q_T(\bm b)+s_{T+1}(\bm b)$ with $s_{T+1}\ge0$ for every fixed $\bm b$. Taking the infimum proves monotonicity. Under uniform convergence,
+Under uniform convergence,
 $\bm\delta_t-\rho\bm\delta_{t-1}$ converges uniformly to
 $(1-\rho)\bm\delta_{\infty}$. Divide \eqref{eq:supp-ar1-innovation-information} by $T$; the first-frame term vanishes and the Ces\`aro mean converges uniformly to
 $(1-\rho)^2(1-\rho^2)^{-1}
 \|\bm\delta_{\infty}\|_{\bm\Omega^{-1}}^2$.
 Compactness and uniform convergence permit interchange of infimum and limit, giving \eqref{eq:supp-asymptotic-information-rate}. $\hfill\square$
+
+Monotonicity of $\mathcal J_{S\rightarrow R}(T)$ follows independently from
+Theorem~\ref{thm:supp-prefix-monotonicity}; the AR(1) calculation supplies the
+explicit limiting rate.
 
 If the profiled equilibrium distance is positive, separation grows as $\Theta(T)$. If an admissible competitor matches equilibrium and its innovation differences are square summable, evaluating \eqref{eq:supp-profiled-temporal-information} at that competitor gives a finite upper bound; monotonicity then implies convergence to a finite ceiling. Exact trajectory overlap gives zero separation for every horizon.
 
@@ -856,19 +909,154 @@ same manifold branch. If $\gamma_2=0$, the conclusion is only
 $\Delta^2(a)=o(a^4)$ under the corresponding little-$o$ expansion; an $a^6$ law
 or exact overlap requires a separate third-order analysis.
 
+\subsection{Operational Error and Support-Recovery Limits}
+
+For two simple hypotheses with a shared covariance,
+$P_i=\mathcal N(\bm\mu_i,\bm\Sigma)$, define
+\begin{equation}
+ d^2=(\bm\mu_1-\bm\mu_0)^{\mathsf T}\bm\Sigma^{-1}
+ (\bm\mu_1-\bm\mu_0).
+ \label{eq:supp-simple-mahalanobis}
+\end{equation}
+The equal-prior log likelihood ratio is Gaussian with mean
+$\mp d^2/2$ and variance $d^2$ under $P_0$ and $P_1$, respectively. Hence
+\begin{equation}
+ \begin{aligned}
+ P_e^\star&=\Phi(-d/2),&
+ D_{\mathrm{KL}}(P_1\|P_0)&=d^2/2,\\
+ C_{\mathrm{Ch}}&=d^2/8.&&
+ \end{aligned}
+ \label{eq:supp-gaussian-operational-map}
+\end{equation}
+The last identity gives
+$P_e^\star\le\tfrac12\exp(-d^2/8)$. If a common affine nuisance is
+$\bm A\bm\eta$, orthogonal projection after whitening removes it exactly and
+replaces $d$ by the quotient margin. Thus
+$P_e^\star=\Phi(-\gamma/2)$ is exact for that quotient Gaussian experiment.
+It is not an exact formula for two nonlinear amplitude mixtures with different
+priors or dimensions.
+
+Suppose the first nonzero contact order at horizon $T$ is $k$ and
+\begin{equation}
+ d_T^2(a)=T\mathcal I_k|a|^{2k}[1+o(1)],\qquad \mathcal I_k>0.
+ \label{eq:supp-order-k-information-rate}
+\end{equation}
+For target simple-Gaussian error $\alpha<1/2$, inversion of
+\eqref{eq:supp-gaussian-operational-map} yields
+\begin{equation}
+ |a|_{\min}(\alpha,T)\sim
+ \left[\frac{2\Phi^{-1}(1-\alpha)}
+ {\sqrt{T\mathcal I_k}}\right]^{1/k}.
+ \label{eq:supp-order-k-resolution}
+\end{equation}
+Equivalently, if $a_T=cT^{-\beta}$, the optimal binary error tends to one half
+for $\beta>1/(2k)$, to a nontrivial constant at equality, and to zero for
+$\beta<1/(2k)$. This gives the $T^{-1/2}$ and $T^{-1/4}$ boundaries for
+first- and second-order separation.
+
+Now let $\Theta=\bigcup_{S\in\mathfrak S}\Theta_S$ and define the minimax
+exact-support risk
+\begin{equation}
+ R^\star=\inf_{\widehat S}\sup_{\theta\in\Theta}
+ \Pr_\theta\{\widehat S\ne S(\theta)\}.
+ \label{eq:supp-minimax-support-risk}
+\end{equation}
+
+\begin{theorem}[Binary and minimum-severity limits]
+For every pair $\theta_i\in\Theta_{S_i}$ with $S_0\ne S_1$,
+\begin{equation}
+ \begin{aligned}
+ R^\star&\ge\frac12[1-\operatorname{TV}(P_{\theta_0},P_{\theta_1})]\\
+ &\ge\frac12\left[1-
+ \sqrt{\tfrac12D_{\mathrm{KL}}(P_{\theta_0}\|P_{\theta_1})}
+ \right]_+.
+ \end{aligned}
+ \label{eq:supp-binary-minimax-bound}
+\end{equation}
+If $S^+=S\cup\{j\}$ and
+$P_{S^+,a_j}\to P_S$ in total variation as $a_j\downarrow0$, then uniform
+exact-support recovery over all $a_j>0$ has minimax risk at least one half.
+\label{thm:supp-beta-min}
+\end{theorem}
+
+\paragraph{Proof.}
+Restriction of any support rule to a two-point subset cannot reduce its
+worst-case risk; the optimal equal-prior binary risk is
+$[1-\operatorname{TV}(P,Q)]/2$. Pinsker's inequality gives the second bound.
+For the nested pair, the binary risk tends to one half as the active amplitude
+tends to zero, so the supremum over positive amplitudes is at least that limit.
+$\hfill\square$
+
+The theorem requires either a declared $|a_j|\ge a_{\min}>0$ contract or a
+decision that may abstain near absence. It also distinguishes a source-ranking
+error from an impossible exact-cardinality decision.
+
+For $M$ equiprobable supports, Fano's inequality gives
+\begin{equation}
+ P_e\ge1-\frac{I(V;\bm Y)+\log 2}{\log M}.
+ \label{eq:supp-fano-basic}
+\end{equation}
+With $\overline P=M^{-1}\sum_jP_j$, convexity of KL in its second argument
+implies
+\begin{equation}
+ \begin{aligned}
+ I(V;\bm Y)
+ &=\frac1M\sum_iD_{\mathrm{KL}}(P_i\|\overline P)\\
+ &\le\frac1{M^2}\sum_{i,j}D_{\mathrm{KL}}(P_i\|P_j)
+ =\overline D_{\mathrm{KL}}.
+ \end{aligned}
+ \label{eq:supp-average-pairwise-kl}
+\end{equation}
+Therefore a necessary condition for $P_e\le\alpha$ is
+\begin{equation}
+ \overline D_{\mathrm{KL}}
+ \ge(1-\alpha)\log M-\log 2.
+ \label{eq:supp-fano-necessary-information}
+\end{equation}
+If $M={N\choose K}$ and
+$\overline D_{\mathrm{KL}}(T)\le
+T\overline{\mathcal I}_ka^{2k}/2$, then necessarily
+\begin{equation}
+ T\ge
+ \frac{2[(1-\alpha)\log {N\choose K}-\log 2]}
+ {\overline{\mathcal I}_ka^{2k}}.
+ \label{eq:supp-fano-horizon-bound}
+\end{equation}
+This is an impossibility certificate, not a sufficient sample-size guarantee
+\cite{cover2006elements,tsybakov2009nonparametric}. For sparse $K\ll N$, it
+has the familiar scaling
+$T\gtrsim K\log(N/K)/(\overline{\mathcal I}_ka^{2k})$, now expressed through
+the physical Hybrid-DAE information rate.
+
+\subsection{Applied Gate Taxonomy From an Archived ANDES Checkpoint}
+
+The frozen RAWSIM39 V1.2 calibration ledger provides an applied boundary check
+on the theory. It contains complete first-order screening and rank-selection
+decisions for 18 plant/event directions, but not the Jacobian and higher-order
+arrays needed to evaluate $\gamma_2$ or $\gamma_3$. Table~\ref{tab:supp-rawsim39-v12-taxonomy}
+therefore classifies only what the recorded gates establish. In particular,
+failure of the curvature gate is not relabeled as second-order
+identifiability, and a small orthogonal fraction is not relabeled as exact
+redundancy.
+
+\input{tables/generated/rawsim39_v12_taxonomy}
+
+\input{tables/generated/information_limit_validation}
+
 \subsection{Theory-to-Evidence Boundary}
 
 Equation~\eqref{eq:supp-first-order-contact} supplies a direct falsification test:
 for independently generated nonlinear trajectories with decreasing $|a|$, the
 profiled squared distance divided by $a^2$ should converge to $\gamma_1^2$. That
 convergence study has not been run for the present ANDES bank; the retrospective
-distance association in the article is not a substitute for it.
+distance association and the gate-only RAWSIM39 taxonomy are not substitutes
+for it.
 
 If $n$ independent Gaussian replications have local distance
 $\Delta(a)=|a|^r\|\bm k_r\|+O(|a|^{r+1})$, their KL divergence to the closest null is $n\Delta^2(a)/2$. Pinsker's inequality bounds the power of any level-$\alpha$ test by
 \begin{equation}
  \operatorname{Power}_a
- \le \alpha+min\{1,\sqrt n\Delta(a)/2\}.
+ \le \alpha+\min\{1,\sqrt n\Delta(a)/2\}.
  \label{eq:supp-contact-power-bound}
 \end{equation}
 Thus $n|a_n|^{2r}\rightarrow0$ prevents power from separating from size. The reference scales are $n^{-1/2}$ for first-order contact and $n^{-1/4}$ for second-order contact; singular-information asymptotics are established more broadly \cite{rotnitzky2000singular}. Correlated frames in one PMU window are not independent replications and must be handled through their joint covariance.
@@ -909,8 +1097,10 @@ Consistency jump & DAE contract only; callback/right-limit logging and derivativ
 Functional equivalence and BLUE & Exact in the local linear model; nonlinear TEST accuracy remains empirical. \\
 Fisher, support, and cone geometry & Signed and one-sided toy identities pass; IEEE 39-bus convergence and physical cone margins remain untested. \\
 Sparse injectivity and $\gamma_{2K}$ & T120 diagnostics concern the frozen load bank, not general descriptor left-invertibility. \\
-Temporal rate & The long-horizon study remains diagnostic and lacks independent operating-point validation. \\
+Temporal order and rate & Prefix and controlled correlated-noise identities pass; the frozen long-horizon load study remains diagnostic and lacks independent operating-point validation. \\
 Relative curvature & The controlled parabola passes; curvature-dominated weak-event behavior was not observed in the frozen atlas. \\
+Error and minimax limits & Gaussian quotient, minimum-severity, and Fano formulas pass controlled checks; no IEEE 39 pairwise oracle-error atlas has been frozen. \\
+RAWSIM39 gate taxonomy & The 18-direction ledger supports five conservative gate categories; derivative arrays needed to assign higher-order classes are unavailable. \\
 Robust separation & Requires a simulator-shift or independent-data contract. \\
 \bottomrule
 \end{tabularx}

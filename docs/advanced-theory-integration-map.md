@@ -14,6 +14,8 @@ Nine deterministic checks are retained in `scripts/verify_theory_identities.py` 
 
 Twelve additional checks in `scripts/verify_cone_bayes_identities.py` guard the conditional exclusive-support quotient, one-sided cone geometry, boundary-aware Bayes factors, the nuisance-profile limit, cone--Laplace scaling, and the singular quartic counterexample. They correct the signed-subspace theory where an event amplitude lies on a physical boundary; they do not add an IEEE 39-bus multi-family result.
 
+Twelve checks in `scripts/verify_information_limits.py` cover exact redundancy, higher-order and mixed evidence exponents, nested-support Occam rates, prefix-consistent horizon monotonicity, temporal rescue, the Gaussian quotient error map, beta-min and Fano limits, and the frozen RAWSIM39 V1.2 gate taxonomy. The IEEE 39-bus ledger supports only the reported screening taxonomy; it has no derivative arrays with which to establish a nonlinear contact order.
+
 ## Retained only as future work
 
 - IBR, PLL, grid-forming, multievent, unknown-onset, point-process, anytime-valid alarm, and distributed factor-graph formulations.

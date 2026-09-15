@@ -135,3 +135,43 @@ Stable amplitude estimation also requires a well-conditioned support Gramian.
 \end{proposition}
 
 The proposition distinguishes uniqueness from finite-information difficulty. With prefix-consistent causal whitening, adding samples cannot reduce the profiled separation between two fixed supports. Separation grows when their steady signatures differ and can saturate when only a finite transient distinguishes them. The experiments therefore ask two questions in order: does the posterior identify how many sources are active, and does the remaining separation identify which sources? Full proofs and the temporal cases appear in Supplementary Appendix~D.
+
+The separation also has an operational meaning under the corresponding simple
+equal-covariance Gaussian quotient experiment. If $d$ is the nuisance-profiled
+Mahalanobis distance, then
+\begin{equation}
+ P_e^\star=\Phi(-d/2),\qquad
+ D_{\mathrm{KL}}=d^2/2.
+ \label{eq:gaussian-operational-separation}
+\end{equation}
+Thus a local order-$k$ pair satisfying
+$d_T^2(a)=T\mathcal I_k|a|^{2k}+o(T|a|^{2k})$, with
+$\mathcal I_k>0$, has the resolution scale
+\begin{equation}
+ |a|_{\min}(\alpha,T)\sim
+ \left[\frac{2\Phi^{-1}(1-\alpha)}{\sqrt{T\mathcal I_k}}
+ \right]^{1/k}.
+ \label{eq:order-k-resolution-scale}
+\end{equation}
+First-order and curvature-only separation therefore improve as $T^{-1/2}$ and
+$T^{-1/4}$, respectively. Equation~\eqref{eq:gaussian-operational-separation}
+is exact for the stated quotient experiment, not for an amplitude-marginalized
+nonlinear support mixture.
+
+Two limits prevent accuracy from being interpreted without a severity and
+candidate-set contract. If an added active amplitude may approach zero, its law
+approaches the nested lower-cardinality law, so uniform exact-support recovery
+is impossible without a minimum-severity condition or abstention. For $M$
+equiprobable supports, Fano's inequality further gives
+\begin{equation}
+ \begin{aligned}
+ P_e&\geq\left[1-\frac{\overline D_{\mathrm{KL}}+\log 2}{\log M}
+ \right]_+,\\
+ \overline D_{\mathrm{KL}}&=\frac{1}{M^2}
+ \sum_{i,j}D_{\mathrm{KL}}(P_i\Vert P_j).
+ \end{aligned}
+ \label{eq:fano-support-bound}
+\end{equation}
+which separates algorithmic failure from insufficient physical information
+\cite{cover2006elements,tsybakov2009nonparametric}. Supplementary Appendix~D
+states the assumptions, proofs, and the resulting necessary horizon bound.

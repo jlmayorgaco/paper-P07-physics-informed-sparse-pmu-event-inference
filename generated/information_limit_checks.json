@@ -1,0 +1,257 @@
+{
+  "scope": "Analytic and controlled numerical checks of evidence scaling, temporal information, and fundamental limits, plus a gate-only audit of the frozen RAWSIM39 V1.2 checkpoint.",
+  "checks": [
+    {
+      "name": "exact_redundancy_evidence_rate",
+      "log_log_slope": 0.9998324950661585,
+      "smallest_scale_exact_to_asymptotic": 0.9999942215737544,
+      "error": 0.00016750493384154463,
+      "tolerance": 0.02,
+      "passed": true
+    },
+    {
+      "name": "higher_order_k2_evidence_rate",
+      "log_log_slope": 0.4959298822537903,
+      "smallest_scale_exact_to_asymptotic": 0.9987671902570104,
+      "error": 0.004070117746209689,
+      "tolerance": 0.02,
+      "passed": true
+    },
+    {
+      "name": "mixed_regular_plus_k2_evidence_rate",
+      "log_log_slope": 1.495822856325166,
+      "smallest_scale_exact_to_asymptotic": 0.9989116167664478,
+      "error": 0.004177143674833905,
+      "tolerance": 0.025,
+      "passed": true
+    },
+    {
+      "name": "nested_support_occam_exponents",
+      "slopes": {
+        "regular": 0.9994343176615978,
+        "order_2": 0.49508174985910747,
+        "redundant": 0.00028266926649119054
+      },
+      "redundant_limit": 0.7071136863576244,
+      "error": 0.004918250140892533,
+      "tolerance": 0.02,
+      "passed": true
+    },
+    {
+      "name": "profiled_horizon_monotonicity",
+      "trials": 500,
+      "maximum_violation": 0.0,
+      "error": 0.0,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "first_order_temporal_rescue",
+      "horizons": [
+        1,
+        2,
+        20,
+        80,
+        320,
+        1280
+      ],
+      "gamma_squared": [
+        1.1102230246251565e-16,
+        0.4527244641197046,
+        63.669530211390665,
+        303.66804733970565,
+        1263.6680473397055,
+        5103.668047339706
+      ],
+      "formula_error": 9.094947017729282e-13,
+      "normalized_final": 3.9872406619841456,
+      "error": 0.012759338015854382,
+      "tolerance": 0.02,
+      "passed": true
+    },
+    {
+      "name": "second_order_temporal_rescue",
+      "horizons": [
+        2,
+        4,
+        8,
+        16
+      ],
+      "distance_over_a4": [
+        1.9998000299945262,
+        3.9996000599890524,
+        7.999200119978105,
+        15.99840023995621
+      ],
+      "error": 9.998500273689093e-05,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "equal_covariance_gaussian_bayes_error",
+      "distances": [
+        0.5,
+        1.0,
+        2.0,
+        3.0,
+        4.0
+      ],
+      "error_probabilities": [
+        0.4012936743170763,
+        0.30853753872598694,
+        0.15865525393145713,
+        0.06680720126885809,
+        0.022750131948179153
+      ],
+      "error": 5.551115123125783e-17,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "gaussian_quotient_operational_map",
+      "gamma": 1.7993647475018104,
+      "bayes_error": 0.1841446530863305,
+      "kl_divergence": 1.618856747276127,
+      "error": 2.220446049250313e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "beta_min_and_detection_boundary",
+      "near_zero_error": 0.49840423513376836,
+      "phase_records": {
+        "k1_beta0.6": [
+          0.3761991209967116,
+          0.4211104140965758,
+          0.4500265290443459
+        ],
+        "k1_beta0.5": [
+          0.30853753872598694,
+          0.30853753872598694,
+          0.30853753872598694
+        ],
+        "k1_beta0.4": [
+          0.21405015949935718,
+          0.10456827931891632,
+          0.023265969299945066
+        ],
+        "k2_beta0.35": [
+          0.4211104140965758,
+          0.46841901150761,
+          0.4874163092997592
+        ],
+        "k2_beta0.25": [
+          0.30853753872598694,
+          0.30853753872598694,
+          0.30853753872598694
+        ],
+        "k2_beta0.15": [
+          0.10456827931891632,
+          0.0008030773569284166,
+          1.1657341758564144e-15
+        ]
+      },
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "fano_multisupport_lower_bound",
+      "rows": [
+        {
+          "delta": 0.4,
+          "fano_lower_bound": 0.5993408980918483,
+          "map_monte_carlo_error": 0.78948
+        },
+        {
+          "delta": 0.8,
+          "fano_lower_bound": 0.3973635923673934,
+          "map_monte_carlo_error": 0.6776566666666667
+        }
+      ],
+      "maximum_violation": 0.0,
+      "ieee39_combinatorial_illustration": [
+        {
+          "active_count": 1,
+          "support_count": 39,
+          "average_kl_required": 2.604058300956736,
+          "equivalent_average_distance_squared": 5.208116601913472
+        },
+        {
+          "active_count": 2,
+          "support_count": 741,
+          "average_kl_required": 5.254053382206533,
+          "equivalent_average_distance_squared": 10.508106764413066
+        },
+        {
+          "active_count": 3,
+          "support_count": 9139,
+          "average_kl_required": 7.515128443785036,
+          "equivalent_average_distance_squared": 15.030256887570072
+        },
+        {
+          "active_count": 4,
+          "support_count": 82251,
+          "average_kl_required": 9.492630563387634,
+          "equivalent_average_distance_squared": 18.985261126775267
+        }
+      ],
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "rawsim39_v12_gate_taxonomy",
+      "gate_values": {
+        "candidate_count": 18,
+        "eligible_candidate_count": 10,
+        "eligible_full_condition_number": 722.9105686056365,
+        "selected_parameter_count": 8,
+        "selected_condition_number": 7.826727232395702,
+        "released_parameter_count": 7
+      },
+      "category_counts": {
+        "REGULAR_LOCAL_IDENTIFIABLE": 7,
+        "WEAK_FIRST_ORDER_INFORMATION": 6,
+        "NONLINEAR_CURVATURE_UNRESOLVED": 2,
+        "NEAR_REDUNDANT_FIRST_ORDER": 2,
+        "LOCAL_MODEL_DOMAIN_FAILURE": 1
+      },
+      "category_members": {
+        "REGULAR_LOCAL_IDENTIFIABLE": [
+          "plant_inertia_scale",
+          "plant_governor_droop_scale",
+          "generation_delta_p_pu",
+          "generation_delta_q_pu",
+          "generation_amplitude",
+          "generation_peak_s",
+          "load_delta_p_fraction"
+        ],
+        "WEAK_FIRST_ORDER_INFORMATION": [
+          "plant_damping",
+          "plant_governor_lag_scale",
+          "plant_turbine_time_scale",
+          "plant_avr_gain_scale",
+          "plant_avr_time_scale",
+          "plant_subtransient_x_scale"
+        ],
+        "NONLINEAR_CURVATURE_UNRESOLVED": [
+          "fault_duration_s",
+          "line_duration_s"
+        ],
+        "NEAR_REDUNDANT_FIRST_ORDER": [
+          "generation_tau_s",
+          "generation_residual"
+        ],
+        "LOCAL_MODEL_DOMAIN_FAILURE": [
+          "fault_reactance_pu"
+        ]
+      },
+      "error": 0,
+      "tolerance": 1e-10,
+      "passed": true
+    }
+  ],
+  "passed": 12,
+  "total": 12
+}

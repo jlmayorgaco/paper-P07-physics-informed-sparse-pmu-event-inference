@@ -425,6 +425,83 @@ evidence scale. For example,
 \end{equation}
 not the $n^{-1/2}$ rate of regular quadratic Laplace theory.
 
+\begin{proposition}[Exact reduction along redundant fibers]
+Suppose a parameter chart $\bm\theta\leftrightarrow(\bm\xi,\bm\zeta)$ is
+one-to-one on the prior support and the observable map satisfies
+$\bm\mu(\bm\theta)=\overline{\bm\mu}(\bm\xi)$ there. If
+$\widetilde\pi(\bm\xi,\bm\zeta)$ is the transformed proper prior, then the
+evidence equals the reduced integral with induced prior
+\begin{equation}
+ \overline\pi(\bm\xi)=
+ \int\widetilde\pi(\bm\xi,\bm\zeta)\,d\bm\zeta.
+ \label{eq:supp-induced-fiber-prior}
+\end{equation}
+Thus an exactly redundant coordinate contributes no vanishing small-noise
+power; its effect is the pushforward prior measure, not a pseudodeterminant.
+\label{prop:supp-redundant-fiber}
+\end{proposition}
+
+\paragraph{Proof.}
+The likelihood is independent of $\bm\zeta$. Fubini's theorem integrates the
+proper transformed prior along each fiber and gives
+$Z=\int p(\bm y\mid\bm\xi)\overline\pi(\bm\xi)d\bm\xi$ exactly.
+$\hfill\square$
+
+For a merely local chart, the same reduction is asymptotic only after a
+localization condition excludes evidence from distant branches.
+
+\begin{theorem}[Mixed regular and higher-order evidence]
+In whitened coordinates, suppose the first observable expansion after
+redundancy removal is
+\begin{equation}
+ \bm\mu(\bm\xi,a)=\bm\mu_0+\bm A\bm\xi
+ +\frac{\bm c_k}{k!}a^k
+ +o(\|\bm\xi\|+|a|^k),
+ \label{eq:supp-mixed-singular-map}
+\end{equation}
+where $\bm A$ has rank $r$, the proper prior density is continuous and positive
+at the origin, and
+\begin{equation}
+ \bm c_{k,\perp}=(\bm I-\bm P_{\bm A})\bm c_k\ne\bm0.
+ \label{eq:supp-normal-higher-order-coefficient}
+\end{equation}
+Assume a dominating envelope and negligible evidence away from this branch.
+For the Gaussian-normalizer-free evidence kernel with noise scale $\epsilon$,
+\begin{align}
+ M_\epsilon\sim{}&C\epsilon^{r+1/k},
+ \label{eq:supp-mixed-singular-evidence-rate}\\
+ C={}&\pi(\bm0,0)(2\pi)^{r/2}
+ |\bm A^{\mathsf T}\bm A|^{-1/2}\\
+ &\times
+ \frac{\Gamma(1/(2k))}{k}
+ \left[\frac{2(k!)^2}{\|\bm c_{k,\perp}\|_2^2}
+ \right]^{1/(2k)}.
+ \label{eq:supp-mixed-singular-evidence-constant}
+\end{align}
+\label{thm:supp-mixed-singular-evidence}
+\end{theorem}
+
+\paragraph{Proof.}
+Use $\bm\xi=\epsilon\bm u$ and
+$a=\epsilon^{1/k}t$. The Jacobian is
+$\epsilon^{r+1/k}$ and the limiting kernel is
+$\exp[-\|\bm A\bm u+\bm c_kt^k/k!\|^2/2]$.
+The component of $\bm c_k$ in $\operatorname{range}\bm A$ disappears after a
+translation of $\bm u$. Gaussian integration over the remaining regular
+coordinates yields $(2\pi)^{r/2}|\bm A^{\mathsf T}\bm A|^{-1/2}$; integration
+of the normal component over $t\in\mathbb R$ gives the gamma-function factor.
+Dominated convergence supplies the prior density at the origin and the stated
+limit. $\hfill\square$
+
+For one additional amplitude, the theorem separates three cardinality cases.
+A regular direction supplies an $O(\epsilon)$ Occam factor, a direction first
+visible at order $k$ supplies $O(\epsilon^{1/k})$, and an exactly redundant
+extension supplies an $O(1)$ factor determined by its induced prior. For
+$\epsilon\asymp n^{-1/2}$ these become $n^{-1/2}$,
+$n^{-1/(2k)}$, and $n^0$. These are local evidence rates; the RAWSIM39 gate
+ledger does not contain the higher-order derivatives required to assign them
+to its rejected parameters.
+
 \input{tables/generated/boundary_bayes_validation}
 
 For a sliding window, eliminating old Gaussian variables creates an arrival prior. Write its canonical log kernel as

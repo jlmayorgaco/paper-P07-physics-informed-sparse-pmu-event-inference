@@ -13,6 +13,10 @@
 - Separate rank deficiency caused by redundant coordinates from genuine higher-order non-identifiability before applying cone--Laplace evidence; do not substitute a Hessian pseudoinverse for this audit.
 - Recover or rerun the reported nonlinear controlled-DAE experiment with its exact equations, solver settings, seeds, CSV, and figures; its current `sandbox:/mnt/data` links are not repository evidence.
 - Complete the independent-operating-point T120 physical bank and reconcile the absolute scale/name of the exported separation metric before freezing a prospective horizon contract.
+- Export cumulative, prefix-consistent likelihood blocks for all 18 archived RAWSIM39 candidate directions; report the profiled increment, equality cases, and contact-order changes without blockwise renormalization.
+- Export first-, second-, and, where needed, higher-directional derivative arrays for the archived gate. Use nonlinear TDS convergence to distinguish weak regular information, genuine order-$k$ contact, exact redundancy, and local-domain failure.
+- Build a pairwise IEEE 39-bus distance atlas and compare the simple-hypothesis Gaussian oracle error with empirical candidate-pair decisions before translating geometry into an operational error probability.
+- Extend the information limits to an explicit bounded model-discrepancy class and test whether the robust lower margin remains positive under independent operating points.
 - After that audit, freeze a new 30/60/90/120-frame test reporting $p(K=2)$, exact support, Top-3, credible-set coverage/size, entropy, and resolution delay without retuning the likelihood.
 - Extend the executed load-source likelihood to faults, line outages, generation changes, integrity events, and simultaneous compositions under one audited plant and PMU operator.
 - Complete the analytic descriptor-DAE tangent or retain the numerical physical tangent terminology permanently.
