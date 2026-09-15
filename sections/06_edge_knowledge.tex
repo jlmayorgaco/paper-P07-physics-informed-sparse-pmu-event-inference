@@ -1,94 +1,50 @@
-\section{Validated Benchmark and Experimental Protocol}
+\section{Experimental Questions and Frozen Evidence}
 \label{sec:experimental-protocol}
 
-\subsection{Benchmark Provenance and Numerical Gates}
-
-The primary plant uses Julia 1.11.9, PowerDynamics.jl 5.0.0, and NetworkDynamics.jl 1.3.0 \cite{plietzsch2022powerdynamics}. It contains 39 buses, 46 branches, 19 loads, 10 sixth-order Sauer--Pai machines, nine AVR Type-I controllers, and nine TGOV1 governors. The descriptor realization has 192 coordinates: 114 differential and 78 algebraic. These parameters are package-defined tutorial data. We therefore classify the plant as a numerically validated pedagogical benchmark rather than an authoritative representation of an external grid.
-
-The validation ladder checks the model before estimator error is scored. A same-plant static translation was audited after correcting tap orientation, shunts, line charging, and full-$Y_{\mathrm{bus}}$ injection accounting. The largest remaining static discrepancy is $1.71\times10^{-3}$~MVA in terminal flow. The controlled PMU operator agrees with the simulator to $2.71\times10^{-7}$~pu in complex voltage and $1.43\times10^{-14}$~pu in analytic/backend terminal current.
-
-Dynamic validation checks the equilibrium, local modes, nonlinear trajectories, and linearization. The DAE equilibrium residual is $4.66\times10^{-13}$. After removing the reference mode, the least-damped physical pair is $-0.09818\pm\mathrm{j}0.42948$~s$^{-1}$. Nonlinear Rodas5P simulations remain finite for the audited perturbations. Amplitude sweeps satisfy
-\begin{equation}
- \|\bm y_{\mathrm{NL}}(\epsilon)-\bm y_{\mathrm{LIN}}(\epsilon)\|_2\propto\epsilon^p, \label{eq:linearization-order}
-\end{equation}
-with fitted slopes between 1.982 and 2.000 for representative state, governor-reference, and load perturbations, consistent with first-order linearization error.
+The experiments follow the logic of the paper rather than the order in which the software was developed. Each research question has its own independent unit, frozen selection boundary, and claim limit (Table~\ref{tab:experimental-contracts}). The complete manifests, seeds, acceptance gates, simulator versions, and secondary campaigns appear in Supplementary Appendix~F.
 
 \begin{table*}[t]
-\caption{Frozen experimental contracts. State and event campaigns retain separate simulators, splits, targets, and denominators.}
+\caption{Four research questions and their evidence contracts. Results from different rows are not pooled.}
 \label{tab:experimental-contracts}
 \centering
-\scriptsize
-\setlength{\tabcolsep}{3pt}
-\begin{tabularx}{\textwidth}{@{}lXX@{}}
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}p{0.8cm}XXX@{}}
 \toprule
-Study & Frozen contract & Independent evaluation unit \\
+RQ & Scientific question & Primary evidence and independent unit & Claim boundary \\
 \midrule
-Structural audit & Preregistered voltage/current target residual, horizons 0--180 & 31 hidden buses \\
-Nominal reconstruction & 20 DEV / 100 TEST; 91 frames at 30~Hz; B0--B3 frozen & Complete nonlinear trajectory \\
-Nominal calibration & 30 independent CAL trajectories; U1/U2 and discrepancy only & Complete nonlinear trajectory \\
-Physical mismatch & Seven families, seven scales; B1/B2/U2 frozen & 980 rebuilt plants \\
-Breakpoint refinement & New seeds in transition bands; B2 frozen & 175 rebuilt plants \\
-Causal recentering & M1/M2/M6/M7; 160 DEV / 320 TEST; tune on DEV & Rebuilt plant trajectory \\
-Regularized physical recentering & M6 PQ/PV/Slack basis; 30 DEV / 60 TEST; one snapshot & Rebuilt equilibrium \\
-Load tangent audit & 16 candidate load buses; centered $\pm0.5\%$ nonlinear simulations & Candidate-bus intervention \\
-Bayesian load inference V1 & Eight amplitudes; 2,560 event / 320 no-event TEST records & Source--amplitude--noise record \\
-Bayesian load inference V2 & 1,000 normal CAL; 500 normal + 640 event DEV; 9,600 weak + 800 no-event and 8,000 finite-amplitude TEST records & Source--amplitude--noise record \\
-Prospective 137-hypothesis load inference & Fresh $H_0+16$ singles $+120$ pairs; 3,488 physical trajectories; 10,564 noise realizations & Physical trajectory for simulation uncertainty; complete record for decisions \\
-Weak-regime mechanism audit & Frozen GH31 prefixes at 5--30 frames; 2,400 trajectories and 2,400 noise realizations & Retrospective source-pair trajectory \\
-Long-horizon likelihood diagnostic & Exact prefixes through 120 frames; 32 nominal pair trajectories; all 137 hypotheses & Diagnostic trajectory; not a population recovery test \\
-Known-source event diagnosis & Eight abnormal labels plus normal; 414 TRAIN / 138 DEV / 138 TEST & Complete ANDES trajectory \\
-Source-transfer audit & Asset-disjoint folds; true family supplied; exact source & 303 decisions from 101 event parents $\times$ 3 seeds \\
+RQ1 & What hidden voltage information do eight PMUs recover? & 100 frozen nonlinear PowerDynamics TEST trajectories; complete trajectory is the unit & Matched model and fixed PMU set \\
+RQ2 & What fails under physical mismatch, and can a constrained recentering repair it? & 980 independently rebuilt plants for diagnosis; 60 held-out equilibria for physical recentering & Point recovery under tested shifts, not sequential adaptation \\
+RQ3 & When can simultaneous load sources be resolved? & 3,488 fresh nonlinear paths and 10,564 complete-record decisions over all 137 hypotheses & One event family, known onset, fixed topology and sensing \\
+RQ4 & Does supervised localization survive physical-source holdout? & 303 decisions from 101 held-out event parents in ANDES & Historical baseline; true event family supplied \\
 \bottomrule
 \end{tabularx}
 \end{table*}
 
-\subsection{Nominal Reconstruction and Calibration}
+\subsection{RQ1 and RQ2 State-Reconstruction Contracts}
 
-The nominal dataset contains 20 development and 100 test trajectories, each sampled at 30~Hz for 3~s. Perturbations are normal-operation changes to governor references, loads, or their combination. The equilibrium, linear model, $\bm P_0=10^{-2}\bm I$, $\bm Q=10^{-6}\bm I$, and $\bm R=10^{-6}\bm I$ are frozen before TEST. B0, B1, B2, and all B3 lags are evaluated on the same trajectories. A separate 30-trajectory calibration split fits U1/U2 temperatures and low-rank discrepancy variants; TEST is not used for selection.
+The primary plant is the package-defined IEEE 39-bus PowerDynamics benchmark \cite{plietzsch2022powerdynamics}. Before scoring estimator error, we verified the power-flow translation, terminal-current orientation, equilibrium, local modes, nonlinear trajectories, and first-order response. These checks establish numerical consistency with the implemented benchmark; they do not make the tutorial model an authoritative external grid.
 
-Hidden truth is used only for post-hoc metrics. The eight observed buses are excluded from every primary reconstruction score. The phasor prediction is formed as $\bm V_0+\Delta\bm V$, and angle error is wrapped using $\operatorname{atan2}(\sin\Delta\vartheta,\cos\Delta\vartheta)$. These rules correct an earlier exploratory implementation that incorrectly interpreted $\angle\Delta V$ as the absolute angle; no superseded result from that implementation is retained.
+RQ1 compares B0--B3 on the same 3-s trajectories. Model parameters and covariance choices are fixed before TEST, and the 31 requested buses exclude all eight observed buses. Separate calibration trajectories fit uncertainty corrections. RQ2 then rebuilds the plant under seven physical mismatch families while keeping the nominal estimator frozen. A distinct held-out operating-point campaign tests the constrained recentering in \eqref{eq:e06h-map}. Hidden voltages are revealed only after each solve, and rejected solves remain in the planned denominator.
 
-\subsection{Physical Mismatch Campaign}
+\subsection{RQ3 Simultaneous Load-Source Contract}
 
-For each mismatch case, a fresh PowerDynamics plant is rebuilt from copied source tables, followed by power flow, dynamic initialization, and nonlinear simulation. The original package CSVs remain hash-identical. The seven families are network $R/X/B$ (M1), machine parameters (M2), governor parameters (M3), AVR parameters (M4), ZIP/load model (M5), operating-point redispatch (M6), and coupled mismatch (M7). Stress scale is $m\in\{0,0.25,0.5,0.75,1.0,1.25,1.5\}$. These are engineering stress-test ranges, not probability priors.
+Development data select the normal covariance and likelihood before the prospective support test. The final bank freezes $\bm D_i$, $\bm Q_i$, $\bm Q_{ij}$, the priors, onset, and quadrature, then generates new nonlinear trajectories for $H_0$, every single source, and every source pair. Event identifiers do not overlap the historical development manifests. Repeated noise realizations produce separate decisions but are not counted as new physical-system trajectories.
 
-All 980 main-grid cases and all 175 refinement cases passed power-flow, initialization, and time-domain acceptance. B1, B2, U0, U2, and the adequacy score are frozen from nominal data. Bootstrap intervals use seeds as independent units. The plots read the frozen per-case table directly; a previously used refined breakpoint mixed aggregation definitions and is excluded.
+The primary outcome is exact support, evaluated only after cardinality. A retrospective weak-regime audit asks which geometric distance explains errors without refitting the likelihood. A separate 120-frame study checks physical-manifold fidelity, information accumulation, and runtime. Because that study uses only one operating point and 32 validation paths, it is a diagnostic rather than a prospective recovery result.
 
-\subsection{Oracle, Offset, and Physical-Map Adaptation Contracts}
+\subsection{RQ4 Historical Baseline and Event Semantics}
 
-The oracle subset compares the frozen estimator with true-equilibrium recentering and true local relinearization on the same mutated trajectories. Oracle quantities are evaluation-only. The offset-only recentering study uses new DEV seeds 101--110 and TEST seeds 201--220, disjoint from all earlier datasets. Its window, cadence, regularization, and activation threshold are selected on DEV and frozen before TEST. No event labels, hidden state, or mismatch family enter the R2-A estimate.
+The ANDES campaign \cite{cui2021hybrid} preserves the earlier physics-guided hierarchy as a baseline. Its compact representation uses local voltage, angle, frequency, and availability information; its expanded representation adds multiscale dynamics, adaptive residuals, and simultaneous PMU contrasts. A deterministic availability gate handles observed dropout. The ensemble is not DAE constrained, and its leaf votes are not treated as calibrated probabilities.
 
-The corrected regularized physical-recentering campaign is a separate M6-only contract. It uses 30 fresh DEV cases from seeds 601--610 and 60 TEST cases from seeds 611--630, with 20 TEST equilibria at each of $m\in\{0.5,1.0,1.5\}$. DEV selects the nuisance scale, regularization, and continuation initialization from a small fixed grid. TEST uses only the observed voltage and terminal-current phasors; hidden voltages are revealed afterward for scoring. A solution is accepted only when the nonlinear optimizer succeeds, all outputs are finite, and the maximum AC residual is at most $5\times10^{-5}$. Rejections remain in the denominator; the frozen rejection table is empty. A six-case subset is also solved with an independent constrained optimizer, and its partial convergence status is reported rather than upgraded to full solver equivalence.
+The ordinary split places new replicas of known sources in TEST. RQ4 imposes the harder contract: it removes each physical source from every source-labeled fitting and tuning step and supplies the true event family at evaluation. This isolates physical-source generalization from detection and family-classification errors.
 
-All numerical tables and empirical figures are regenerated from the hashed snapshot under \texttt{generated/frozen}. The build script checks the sample counts, acceptance flags, rank-deficient nuisance information, and preregistered adaptation-closure range before producing the tables and figures.
-
-\subsection{Load-Source Inference Contract}
-
-The load-source campaign uses the PowerDynamics plant and the same eight PMU buses, but it has its own frozen normal banks, event dictionary, and test manifests. The dictionary covers 16 candidate load buses listed in its manifest. Centered $\pm0.5\%$ nonlinear simulations define \,\eqref{eq:load-tangent}; the corresponding dictionary hash is fixed before the Bayesian tests. Candidate source and amplitude are inferred from the PMU window. The true source and true amplitude appear only in the evaluator.
-
-V1 tests finite changes of $\pm1$, $\pm2.5$, $\pm5$, and $\pm7.5\%$ on 2,560 event and 320 no-event records. V2 expands normal calibration to 1,000 records, uses 500 normal and 640 event records for likelihood selection, then opens two TEST blocks. The weak block contains 9,600 events at magnitudes from 0.01 to 0.4\% and 800 no-event records. The finite block contains 8,000 events from $\pm1.25$ to $\pm9\%$. Noise seeds are disjoint across CAL, DEV, and TEST. A test record is one source--amplitude--noise realization; repeated samples within its 30-frame window are never counted as independent cases.
-
-W2 and L2 are selected on CAL/DEV, respectively, and frozen for both V2 TEST blocks. The weak-event operating threshold is 0.5 posterior event probability. No TEST row enters covariance estimation, likelihood selection, prior selection, or threshold tuning.
-
-The subsequent GLOBAL-137 confirmation freezes W2, $D$, $Q$, $Q_{ij}$, priors, onset, and quadrature before generating new data. Its support space contains $H_0$, all 16 singles, and all 120 pairs. Four weak--weak magnitude combinations, one weak--strong, one moderate, and one finite combination are evaluated under all sign patterns; four additional magnitudes cover single events. All \GlobalPhysicalTrajectories{} native nonlinear trajectories solve successfully. Three disjoint noise realizations per event path plus 100 $H_0$ records produce \GlobalNoiseRecords{} decisions. The GLOBAL-137 identifiers have zero overlap with 1,816 historical manifest identifiers. Replayed noise is not promoted to an independent physical-system replicate.
-
-The exact weak-regime study is explicitly retrospective. It replays the frozen GH31 likelihood over 2,400 physical paths at horizons 5--30 and asks which geometry predicts cardinality and exact-support recovery; it does not refit the estimator. The T120 contract regenerates a true-time-local numerical dictionary through 120 post-event frames and validates 32 pair trajectories at the nominal operating point. Its information, equilibrium, and runtime outputs are diagnostics. Independent operating-point validation and an all-term analytic variational continuation remain pending, so T120 is not a frozen recovery claim.
-
-The load campaigns cover one physical family, fixed topology, and known onset. They do not validate missing PMUs, corrupted channels, cross-simulator transfer, or the state-conditioned multi-family posterior.
-
-\subsection{Event-Diagnosis Campaign and Signal Evidence}
-
-The separate ANDES campaign \cite{cui2021hybrid} uses the same eight PMU buses and 138 source configurations: one normal, 39 faults, 34 outages, ten generation, 18 load, eight missing-data, ten generation-and-missing, eight bad-data, and ten mixed configurations. Five replicas give \LegacyEventTrajectories{} trajectories. Deterministic source/replica formulas vary severity over $\{0.06,0.09,0.12,0.15\}$, operating scale over $\{0.97,0.985,1.00,1.015,1.03\}$, and the simulator/noise seed; source and 2-s onset stay fixed. Per-PMU AR(1) Gaussian noise is calibrated from normal, available RAW0001 rows. Trajectories last about 5~s; missing/corrupted intervals last 0.7~s. Physical interventions act in the simulator, while integrity changes act on sampled measurements.
-
-Three replicas per source configuration enter training, one development, and one test, producing 414/138/138 complete-trajectory splits. Consequently, the primary event benchmark evaluates new replicas at sources already represented in training. The separate asset-disjoint audit removes the physical source from all source-labeled fitting and tuning. Results from these contracts are reported side by side but never interpreted as the same generalization task.
-
-The historical baseline is a hierarchy of extremely randomized trees. Its 136-feature version uses trailing voltage magnitude, angle, frequency, missingness, and a normalized disturbance score. The 448-feature version adds multiscale statistics, adaptive residuals, and simultaneous contrasts among PMUs. A deterministic availability gate handles directly observed dropout. These are physics-guided features and typed decision heads; they are not a DAE-constrained learning architecture, and the ensemble's leaf-vote scores are not treated as calibrated probabilities.
-
-Figure~\ref{fig:event-signatures} uses the first labeled episode of six representative families in the 89.65-min RAW0001 reference simulation. The curves are measured simulator outputs, not sketches or smoothed reconstructions. They show why no single channel suffices: a fault creates a short voltage sag, an outage redistributes current, injection changes have slower frequency/current responses, and measurement failures require availability or phase-consistency information.
+Figure~\ref{fig:event-signatures} grounds the event ontology before any score is reported. A fault produces a short voltage sag, a line outage redistributes current, and injection changes evolve more slowly. Missing or corrupted measurements require different evidence. The clock trace in panel (e) makes the distinction explicit: time advances while packets from PMU~29 are absent.
 
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/generated/event_signatures.pdf}
-\caption{Representative measured event signatures from RAW0001, sampled at approximately 30 frames/s. (a) Bus fault, (b) line outage, (c) generation change, (d) load change, (e) missing data, and (f) single-phase corruption. The 812-frame missing interval in (e) is approximately 27.1~s; the full-height light-gray square wave and right-hand axis show a schematic reference clock derived from the recorded time coordinate, not a received PMU channel. Thus time advances while PMU~29 packets are absent. Dotted lines mark the first labeled sample; gray shading marks missing or corrupted intervals. Magnitudes are normalized by the preceding 3-s median, frequency is relative to its corresponding median, and time scales differ by panel. The plotted measurements and source-file hashes are frozen in the evidence snapshot.}
+\caption{Representative measured signatures from the RAW0001 reference simulation. Physical events alter voltage, current, or frequency through the network; integrity events alter availability or channel consistency. In panel (e), the gray reference clock advances while PMU~29 packets are absent. Curves are unsmoothed, and each panel uses the time scale needed to show its physical response.}
 \label{fig:event-signatures}
 \end{figure*}
+
+All intervals and tests use the experiment's independent unit: a complete trajectory, event parent, or rebuilt plant. Generated tables and figures read only the hashed frozen snapshot. Sample-level PMU frames are never promoted to independent replicates.

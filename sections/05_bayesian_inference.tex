@@ -1,161 +1,71 @@
-\section{Physics-Based State Estimation and Event-Source Inference}
+\section{Two Evaluated Inference Paths}
 \label{sec:estimation}
 
-\subsection{Exact Target and a Generative Candidate Model}
+Figure~\ref{fig:joint-architecture} separates the implemented paths from the intended joint model. The blue path reconstructs a requested voltage function under one physical mode. The green path compares load-event supports through simulated physical responses. They share the DAE and PMU operator, but they do not share a fitted posterior in the present experiments.
 
-Let $\bm\zeta_k=\bm L(\bm x_k,\bm z_k)$ be the electrical quantity requested by the application. Under squared loss, the exact Bayesian target is
-\begin{equation}
- \widehat{\bm\zeta}^{\rm MMSE}_k=\mathbb E[\bm\zeta_k\mid\bm y_{0:k}],
- \qquad \widehat h_k^{\rm MAP}=\argmax_{h\in\mathcal H}p(h\mid\bm y_{0:k}). \label{eq:exact-bayes-target}
-\end{equation}
-This statement is an optimality definition, not an implemented-algorithm claim.
+\subsection{Causal State Reconstruction}
 
-For candidate $h=(c,\ell,\tau,\gamma,\bm d)$, assume $\bm x_0\sim\mathcal N(\overline{\bm x}_0,\bm P_0)$, Gaussian process and measurement noise, the hard constraint $\bm g_h(\bm x_t,\bm z_t)=\bm0$, and a Laplace prior on active corruption coefficients. With
-\begin{equation}
- \bm r_{h,t}=\bm M_t[\bm y_t-\bm h_{\mathcal P_t}(\bm x_t,\bm z_t)-\bm b_t], \label{eq:hypothesis-residual}
-\end{equation}
-the negative twice-log joint density conditional on $h$, up to constants and the declared corruption-support prior, is
-\begin{equation}
-\begin{aligned}
- \mathcal J_h^{\circ}={}&\|\bm x_0-\overline{\bm x}_0\|_{\bm P_0^{-1}}^2
- +\sum_{t=0}^{k}\|\bm r_{h,t}\|_{\bm R_t^{-1}}^2\\
- &+\sum_{t=0}^{k-1}\|\bm x_{t+1}-\bm F_h(\bm x_t,\bm z_t)\|_{\bm Q^{-1}}^2
- +2\lambda_b\sum_{t=0}^{k}\|\bm b_t\|_1,
-\end{aligned}
-\label{eq:joint-map-objective}
-\end{equation}
-subject to the DAE constraints. Crucially, $\mathcal J_h^{\circ}$ does not contain the hypothesis prior. The physical family and source enter through $\bm F_h$, $\bm g_h$, and the network/measurement operators rather than as an asset-label head.
+The state experiment changes one information source at a time. B0 returns the equilibrium voltage. B1 conditions that equilibrium on the current PMU frame. B2 propagates the state causally and then applies the PMU correction. B3 is a retrospective fixed-lag smoother used only to test whether later measurements add useful information. This sequence isolates where each improvement comes from.
 
-The evidence is the constrained integral
-\begin{equation}
- p(\bm y_{0:k}\mid h)=\int_{\bm g_h=\bm0}
- \exp[-\mathcal J_h^{\circ}/2]\,d\bm X\,d\bm Z\,d\bm B. \label{eq:hypothesis-evidence}
-\end{equation}
-A Laplace approximation on locally identifiable directions gives
-\begin{equation}
- p(h\mid\bm y_{0:k})\propto p(h)\,\det{}^{+}(\bm H_h)^{-1/2}
- \exp[-\mathcal J_h^{\circ}(\widehat{\bm X}_h,\widehat{\bm Z}_h,\widehat{\bm B}_h)/2], \label{eq:hypothesis-posterior}
-\end{equation}
-so the prior appears exactly once. The pseudo-determinant requires the active constraint and corruption support to be fixed locally. If a Huber loss, a soft DAE penalty, or an omitted determinant is used without a corresponding normalized density, the result is a penalized evidence score, not a posterior probability.
+For the local model in \eqref{eq:local-model}, B2 uses the standard Kalman recursion \cite{kalman1960}:
+\begin{align}
+ \widehat{\bm x}_{k|k-1}&=\bm A_d\widehat{\bm x}_{k-1|k-1},
+ \nonumber\\[-1mm]
+ \bm P_{k|k-1}&=\bm A_d\bm P_{k-1|k-1}\bm A_d^{\mathsf T}+\bm Q,
+ \nonumber\\
+ \bm K_k&=\bm P_{k|k-1}\bm C^{\mathsf T}
+ (\bm C\bm P_{k|k-1}\bm C^{\mathsf T}+\bm R)^{-1},
+ \nonumber\\
+ \widehat{\bm x}_{k|k}&=\widehat{\bm x}_{k|k-1}
+ +\bm K_k\bm\nu_k. \label{eq:kf-compact}
+\end{align}
+The hidden-voltage estimate is $\bm z_{\mathcal U,0}+\bm L_{\mathcal U}\widehat{\bm x}_{k|k}$. Only measurements through $k$ enter B2. B3 follows the Gaussian backward recursion \cite{rauch1965smoothing} and is explicitly retrospective.
 
-The learned component is deliberately restricted. The earlier engineered feature system can propose a candidate set or learn a correction $\psi_{\phi}(\bm r_{h,0:k})$ to physical log evidence. It must consume candidate residuals, not source identity alone, and must be tested on held-out physical sources. The required ablation is learned-only, physics-only, physics plus learned discrepancy, and the complete diagnosability-aware rule.
+Two checks separate point accuracy from uncertainty. First, a temperature map fitted on independent calibration trajectories rescales the two rectangular voltage components without changing the state estimate. Second, an observed-innovation statistic tests whether the nominal model has become inadequate. Neither operation repairs the physical model. Their complete equations and negative discrepancy ablations appear in Supplementary Appendix~E.
 
-\subsection{Evaluated Bayesian Load-Source Model}
+When the operating point is stale, the physical-recentering estimator rebuilds a feasible equilibrium instead of shifting measured voltages by an unconstrained offset. It solves
+\begin{equation}
+ \begin{aligned}
+ (\widehat{\bm V},\widehat{\bm d})
+ =\arg\min_{\bm V,\bm d}\; &\|\bm e_y(\bm V)\|_2^2
+ +\gamma^2\|\bm g_{\mathrm{AC}}(\bm V,\bm d)\|_2^2\\[-1mm]
+ &+\lambda q_d^{-2}\|\bm d\|_2^2,
+ \end{aligned}
+ \label{eq:e06h-map}
+\end{equation}
+where $\bm e_y$ uses only measured voltage and terminal-current phasors, $\bm g_{\mathrm{AC}}$ enforces AC balance and bus conventions, and $\bm d$ collects admissible load and generation changes. Development data fix the weights and continuation rule before TEST. Hidden voltages and the true nuisance vector never enter the solve.
+
+\subsection{Physical Likelihood for Load-Event Supports}
 \label{sec:load-event-inference}
 
-One restricted instance of the candidate model is executed rather than proposed. For each of 16 load buses, a centered finite difference of the nonlinear time-domain simulator forms a 30-frame, 32-channel response dictionary,
+The event path begins with a physical question: what would the measured PMUs have recorded if a candidate load bus had changed? For each of the 16 buses, centered nonlinear simulations form the unit response
 \begin{equation}
  \bm D_g=\frac{\bm y_g(+\epsilon)-\bm y_g(-\epsilon)}{2\epsilon},
- \qquad \epsilon=0.005. \label{eq:load-tangent}
+ \qquad \epsilon=0.005.
+ \label{eq:load-tangent}
 \end{equation}
-The dictionary is physical: it is regenerated by changing the load at candidate bus $g$ and simulating the network. No source classifier or source label is fitted. Symmetric simulations also estimate self-curvature $\bm Q_g$ and pairwise interaction $\bm Q_{ij}$. For support $S$ and amplitudes $\bm a_S$, the frozen mean is
+Symmetric simulations also estimate source self-curvature $\bm Q_i$ and pairwise interaction $\bm Q_{ij}$. The mean response for support $S$ is
 \begin{equation}
  \bm\mu_S(\bm a)=\sum_{i\in S}(a_i\bm D_i+a_i^2\bm Q_i)
- +\sum_{\substack{i,j\in S\\i<j}}a_i a_j\bm Q_{ij}. \label{eq:load-multi-source-mean}
+ +\sum_{\substack{i,j\in S\\i<j}}a_ia_j\bm Q_{ij}.
+ \label{eq:load-multi-source-mean}
 \end{equation}
-The cross term is not a cosmetic refinement: it represents the mixed derivative of the nonlinear event manifold and is isolated experimentally.
+The mixed term matters physically: two simultaneous interventions need not equal the sum of two isolated responses.
 
-After subtracting the normal mean, $\bm r=\bm\mu_S(\bm a)+\bm\varepsilon$ with $\bm\varepsilon\sim\mathcal N(\bm0,\bm\Sigma)$. The W2 covariance combines the frozen channel covariance with temporal AR(1) coefficient 0.3512. It was estimated from equilibrium records with synthetic measurement noise, not ambient load trajectories. Instrument and timing error, noise sweeps, and PMU loss are absent.
-
-The cardinality prior is $p(K=0,1,2)=(0.20,0.50,0.30)$; supports are uniform conditional on $K$, and active amplitudes are independent $\mathcal N(0,0.05^2)$. The normalized support evidence is
-\begin{equation}
- Z_S=\int\mathcal N(\bm r;\bm\mu_S(\bm a),\bm\Sigma)
- \prod_{i\in S}\mathcal N(a_i;0,0.05^2)\,d\bm a_S, \label{eq:load-support-evidence}
-\end{equation}
-with $Z_{\varnothing}=\mathcal N(\bm r;\bm0,\bm\Sigma)$ and
-\begin{equation}
- p(S\mid\bm r)\propto Z_S\frac{p(|S|)}{\binom{16}{|S|}}.
+After subtracting the normal mean, the residual follows
+$\bm r=\bm\mu_S(\bm a)+\bm\varepsilon$ under the frozen Gaussian covariance. Each support receives normalized evidence by integrating over its active amplitudes,
+\begin{align}
+ Z_S&=\int \mathcal N(\bm r;\bm\mu_S(\bm a),\bm\Sigma)
+ \prod_{i\in S}p(a_i)\,d\bm a_S,\nonumber\\
+ p(S\mid\bm r)&\propto Z_S\,\frac{p(|S|)}{\binom{16}{|S|}}.
  \label{eq:load-support-posterior}
-\end{equation}
-Operational inference uses 31-node Gauss--Hermite quadrature per active amplitude. An independent two-dimensional Gauss--Kronrod reference checks representative supports. The posterior yields $p(K\mid\bm r)$, exact-support ranks, per-bus inclusion probabilities, and conditional amplitude intervals. A model-averaged amplitude also requires an explicit zero atom when the bus is inactive; its interval calibration remains partial and is not used as a primary claim.
-
-The prospective bank evaluates all \GlobalHypothesisCount{} supports at the known 30-frame onset. A separate 120-frame dictionary preserves exact prefixes at $T\in\{30,60,90,120\}$ and is used only for physical-manifold, information, and runtime diagnostics. This executed model conditions on the nominal initial state, assumes no corrupted channels, and uses fixed topology. It tests the sparse-support specialization of Proposition~\ref{prop:sparse-event-injectivity}; it does not implement the state/integrity nuisance fit in \eqref{eq:stacked-hypothesis} or validate the multi-family posterior in \eqref{eq:hypothesis-posterior}.
-
-\subsection{Nominal Estimator Hierarchy}
-
-The estimator sequence changes one information source at a time. B0 retains only the equilibrium. B1 adds instantaneous PMU conditioning, B2 adds causal state propagation, and B3 tests retrospective temporal information. When the equilibrium becomes stale, E06-H estimates a physically admissible operating point through regularized nonlinear recentering. The full nonlinear Hybrid-DAE fixed-lag posterior is not evaluated in the experiments.
-
-All nominal estimators use the same equilibrium $\bm y_0$, hidden-voltage center $\bm z_{\mathcal U,0}$, sampled dynamics $\bm A_d$, PMU map $\bm C$, and hidden-output map $\bm L_{\mathcal U}$. This shared model isolates the value of measurement updating and temporal propagation.
-
-The equilibrium baseline B0 returns
-\begin{equation}
- \widehat{\bm z}^{\mathrm{B0}}_{\mathcal U,k}=\bm z_{\mathcal U,0}. \label{eq:b0}
-\end{equation}
-It measures how much of the score can be obtained by remaining at the nominal power-flow solution.
-
-The snapshot estimator B1 computes a prior-conditioned linear minimum-mean-square-error (LMMSE) update independently at every frame,
-\begin{align}
- \bm K_{\mathrm{LMMSE}}&=\bm P_0\bm C^{\mathsf T}
- \left(\bm C\bm P_0\bm C^{\mathsf T}+\bm R\right)^{-1}, \label{eq:wls-gain}\\
- \widehat{\delta\bm x}^{\mathrm{B1}}_k&=\bm K_{\mathrm{LMMSE}}(\bm y_k-\bm y_0), \qquad
- \widehat{\bm z}^{\mathrm{B1}}_{\mathcal U,k}=\bm z_{\mathcal U,0}+\bm L_{\mathcal U}\widehat{\delta\bm x}^{\mathrm{B1}}_k. \label{eq:wls-update}
 \end{align}
-B1 uses network-constrained cross-covariance but no state carried from frame $k-1$.
+Gauss--Hermite quadrature evaluates every support; independent Gauss--Kronrod calculations check representative two-dimensional integrals. Priors, covariance estimation, quadrature order, and calibration checks are documented in Supplementary Appendix~E.
 
-Conditional on one linear-Gaussian candidate with no corruption, B2 is not an ad hoc module: the Kalman recursion computes the exact conditional mean and covariance in \eqref{eq:exact-bayes-target}. Candidate uncertainty, nonlinear switching, unknown integrity support, and non-Gaussian discrepancy are what make the enclosing hybrid problem approximate.
+The posterior is read in a fixed order. First, $p(K\mid\bm r)$ asks whether no source, one source, or two sources are active. Conditional support ranks then ask which buses are involved. Amplitude intervals answer how large the changes are. This order is essential under limited observability because cardinality can be well supported while several source pairs remain plausible.
 
-The causal Kalman estimator B2 applies the classical linear-Gaussian recursion \cite{kalman1960}:
-\begin{align}
- \widehat{\bm x}_{k|k-1}&=\bm A_d\widehat{\bm x}_{k-1|k-1}, \label{eq:kf-predict-state}\\
- \bm P_{k|k-1}&=\bm A_d\bm P_{k-1|k-1}\bm A_d^{\mathsf T}+\bm Q, \label{eq:kf-predict-cov}\\
- \bm\nu_k&=(\bm y_k-\bm y_0)-\bm C\widehat{\bm x}_{k|k-1}, \label{eq:innovation}\\
- \bm S_k&=\bm C\bm P_{k|k-1}\bm C^{\mathsf T}+\bm R, \label{eq:innovation-cov}\\
- \bm K_k&=\bm P_{k|k-1}\bm C^{\mathsf T}\bm S_k^{-1}, \label{eq:kf-gain}\\
- \widehat{\bm x}_{k|k}&=\widehat{\bm x}_{k|k-1}+\bm K_k\bm\nu_k. \label{eq:kf-update}
-\end{align}
-The covariance update uses the Joseph form. The hidden estimate is $\bm z_{\mathcal U,0}+\bm L_{\mathcal U}\widehat{\bm x}_{k|k}$. B2 is causal because only $\bm y_{0:k}$ enters the result at $k$.
+The prospective experiment evaluates all \GlobalHypothesisCount{} supports at a known onset and fixed PMU set. It conditions on the nominal initial state and assumes no corrupted channels. Thus it evaluates the sparse load specialization of Proposition~\ref{prop:sparse-event-injectivity}, not the full state-and-integrity nuisance model in \eqref{eq:stacked-hypothesis}.
 
-B3 is an exact fixed-lag Gaussian smoother, following the linear Gaussian backward-recursion principle in \cite{rauch1965smoothing}, evaluated at lags $\ell\in\{0,1,3,5,10,15,30,60\}$ frames. It uses measurements through $k+\ell$ to refine the estimate at $k$ and is therefore retrospective by $\ell/30$ seconds. Dense and cached implementations agree numerically on representative lags. B3 tests whether temporal information beyond the causal update improves the hidden-voltage target; it is not used to support a real-time claim.
+\subsection{Boundary of the Joint Formulation}
 
-\subsection{Marginal Calibration and Colored Discrepancy}
-
-For the hidden two-component voltage error at bus $i$, B2 provides
-\begin{equation}
- \bm\Sigma_{i,k}=\bm L_i\bm P_{k|k}\bm L_i^{\mathsf T}. \label{eq:hidden-covariance}
-\end{equation}
-The original covariance is U0. A two-block temperature model U2 is fitted on an independent calibration split:
-\begin{equation}
- \bm\Sigma^{\mathrm{U2}}_{i,k}=\bm T\bm\Sigma_{i,k}\bm T^{\mathsf T},\qquad
- \bm T=\operatorname{diag}(\sqrt{\tau_{\Re}},\sqrt{\tau_{\Im}}). \label{eq:temperature}
-\end{equation}
-The temperatures minimize Gaussian negative log likelihood (NLL) on calibration data and are frozen before TEST. Coverage, NLL, normalized innovation squared (NIS), and temporal innovation correlation are reported separately; nominal marginal coverage alone is not called complete calibration.
-
-The residual study considers a latent Gauss--Markov process
-\begin{equation}
- \bm c_{k+1}=\bm F_c\bm c_k+\bm\eta_k. \label{eq:discrepancy-state}
-\end{equation}
-In D2-M, $\bm c_k$ enters the PMU measurement residual through a calibration-fitted low-rank basis. In D2-P, it enters a sparse physical process dictionary. Basis, rank, $\bm F_c$, and latent covariance are selected using calibration records only. The experiment asks whether the observed low-rank structure improves reconstruction, hidden uncertainty, or innovation whiteness. It does not assume that a lower innovation autocorrelation is sufficient.
-
-\subsection{Model-Adequacy Statistic and Recentring Ablations}
-
-Let $\bm\mu_{\nu}$ and $\bm\Sigma_{\nu}$ be the mean and shrunk covariance of B2 innovations on the nominal calibration set. The per-frame adequacy statistic is the five-frame trailing mean of
-\begin{equation}
- a_k=(\bm\nu_k-\bm\mu_{\nu})^{\mathsf T}\bm\Sigma_{\nu}^{-1}(\bm\nu_k-\bm\mu_{\nu}). \label{eq:adequacy-score}
-\end{equation}
-Mismatch labels and hidden truth do not enter \eqref{eq:adequacy-score}; hidden truth is used only after inference to label frames whose hidden HVRE exceeds the frozen evaluation threshold. AUROC and AUPRC therefore measure whether observed innovations anticipate unacceptable hidden error, not whether the detector identifies a mismatch family.
-
-Three variants diagnose the failure mechanism without merging their evidence contracts. R1 replaces the nominal equilibrium with the true plant equilibrium and is explicitly oracle. R2-A estimates an eight-dimensional grouped observed-bus voltage offset using a 60-frame trailing window, nominal matrices, ridge regularization, and only PMU measurements. It is a causal negative ablation: its center/state cross-covariance is neglected and it does not enforce the nonlinear AC equations.
-
-The corrected regularized physical estimator addresses M6 operating-point mismatch at one equilibrium snapshot. Let
-\begin{equation}
- \bm d=\operatorname{col}(\Delta\bm P_{\mathrm{PQ}},\Delta\bm Q_{\mathrm{PQ}},\Delta\bm P_{\mathrm{PV}})\in\mathbb R^{43} \label{eq:e06h-nuisance}
-\end{equation}
-collect active and reactive changes at 17 admissible PQ loads and active-power changes at nine PV buses. Voltage is parameterized as $\bm V(\bm\theta,\bm\rho)=\exp(\bm\rho+\mathrm{j}\bm\theta)$. Defining the scaled PMU residual as $\bm e_y(\bm V)=\bm D_y^{-1}[\bm h_{\mathcal P}(\bm V)-\bm y_{\mathcal P}]$, the estimator solves
-\begin{equation}
-\begin{aligned}
- (\widehat{\bm V},\widehat{\bm d})
- &=\argmin_{\bm V,\bm d}\;\mathcal J(\bm V,\bm d),\\
- \mathcal J(\bm V,\bm d)
- &=\|\bm e_y(\bm V)\|_2^2
- +\gamma^2\|\bm g_{\mathrm{AC}}(\bm V,\bm d)\|_2^2
- +\frac{\lambda}{q_d^2}\|\bm d\|_2^2.
-\end{aligned}
-\label{eq:e06h-map}
-\end{equation}
-where $\bm h_{\mathcal P}$ is the audited voltage/terminal-current operator, $\bm g_{\mathrm{AC}}$ includes PQ balance, explicit PV-magnitude constraints, solved PV reactive power, and bus 31 as Slack, and $\bm D_y$ scales voltage and current components separately. The weights are $\gamma=10^3$, $q_d=1$, and $\lambda=0.01$, selected on a disjoint DEV split; continuation initialization is then frozen for TEST. Neither the true nuisance vector nor the hidden voltages enter the TEST solve.
-
-Because $\bm d$ may be non-unique, evaluation distinguishes nuisance information from target information. If $\bm J_{y d}$ and $\bm J_{z d}$ are the observed-PMU and hidden-voltage Jacobians with respect to $\bm d$ after eliminating voltage through the AC constraints, the local target residual is
-\begin{equation}
- r_{d\rightarrow z}=\frac{\|\bm J_{z d}\bm N(\bm J_{y d})\|_F}{\max(\|\bm J_{z d}\|_F,\epsilon)}, \label{eq:e06h-functional-residual}
-\end{equation}
-where $\bm N(\bm J_{y d})$ spans the PMU-uninformed nuisance nullspace. Exact target identifiability would require a zero residual. The experiment instead tests the weaker empirical question: whether \,\eqref{eq:e06h-map} reconstructs the hidden voltage accurately despite rank-deficient nuisance information, and whether its Laplace covariance is credible.
+The complete candidate-conditioned model would fit state and integrity nuisance for each physical hypothesis and normalize the resulting evidence. A learned component could then correct candidate residuals or reduce the search, but it must not consume source identity as a shortcut. The required common-contract ablation is learned-only, physics-only, physics plus learned discrepancy, and diagnosability-aware inference with abstention. None of those integrations is presented as an executed result here; Supplementary Appendix~E records the full generative objective so the proposed extension is unambiguous.

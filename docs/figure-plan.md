@@ -16,7 +16,7 @@ Every empirical panel is generated from a frozen artifact. Conceptual drawings a
 | Fig. 6 | Show the mismatch atlas and observed-only adequacy discrimination. | E06 per-case, calibration, and adequacy artifacts. | Generated vector PDF/PNG, integrated. |
 | Fig. 7 | Compare frozen and regularized physical-recentering M6 errors, oracle-gap closure, and covariance failure. | E06-H summary, closure, uncertainty, and identifiability artifacts. | Generated vector PDF/PNG, integrated. |
 | Fig. 8 | Tell the simultaneous-source story from outcome to boundary: prospective cardinality/support recovery, weak-case mechanism, quadratic-interaction necessity, information growth, and ill-conditioned pairs. | GLOBAL-137, exact weak-regime, and T120 frozen artifacts. | Six-panel generated vector PDF/PNG, integrated. |
-| Main tables | Fix literature capabilities, event semantics/operators, experimental contracts, state-estimation results, physical recentering, and prospective 137-hypothesis outcomes. | Manuscript definitions and frozen artifacts. | Integrated. |
+| Main tables | Fix literature families, event semantics, four question-specific contracts, decisive state-estimation results, physical recentering, and prospective 137-hypothesis outcomes. | Manuscript definitions and frozen artifacts. | Integrated; exhaustive matrices and secondary values moved to the supplement. |
 
 The earlier literature timeline (`figures/literature_timeline.tex`) and the generated topology/estimator panel (`figures/generated/system_architecture.pdf`) remain reserve assets. The timeline was removed because the capability table communicates the literature gap more precisely; the new Fig. 2 uses the page budget for the physical network and sensing contract.
 

@@ -14,14 +14,18 @@
 | --- | --- |
 | I. Introduction | Exact joint problem, defensible gap, contributions, and evidence boundary. |
 | II. Related Work | State estimation, sparse-PMU localization, partial-observation reconstruction, and capability matrix. |
-| III. Problem Formulation | Hybrid DAE, AC/terminal-current model, sparse PMUs, eight event labels, separate physical/integrity sources. |
-| IV. Observability and Diagnosability | Functional target recovery and covariance, affine candidate manifolds, profiled separation, and a nonlinear remainder limit. |
-| V. Estimation | Exact Bayesian target, evaluated numerical-tangent load likelihood, and validated B0--B3, calibration, adequacy, and recentering components. |
-| VI. Protocol | Audited PowerDynamics state and load-source campaigns plus the separate ANDES event campaign. |
-| VII. State Results | Nominal reconstruction and theory-to-error evidence. |
-| VIII. Mismatch and Event Results | Calibration/mismatch/adaptation, prospective 137-hypothesis recovery, weak-case geometry, long-horizon diagnostics, then the known-source baseline and source-transfer failure. |
+| III. State, Event, and Source Problem | One physical model, two inverse questions, sparse-PMU geometry, and separate physical/integrity variables. |
+| IV. What Sparse Measurements Can Determine | Functional target recovery, candidate-manifold separation, and sparse event injectivity before any estimator is selected. |
+| V. Two Evaluated Inference Paths | B0--B3 state reconstruction and the physical load-support likelihood, with the unexecuted joint boundary explicit. |
+| VI. Experimental Questions and Frozen Evidence | Four research questions, one independent unit per question, and no pooling across incompatible contracts. |
+| VII. State Evidence From Recovery to Model Failure | RQ1 nominal recovery followed by RQ2 physical mismatch and constrained recentering. |
+| VIII. Event Evidence From Detection to Source Ambiguity | RQ3 cardinality then exact support, weak-case geometry, observation time, and RQ4 source holdout. |
 | IX. Discussion | Mechanisms, competing explanations, limitations, and next frozen common-contract campaign. |
 | X. Conclusion | Established component evidence and explicit end-to-end completion gate. |
+
+## Main-paper and supplement boundary
+
+The main paper carries only the definitions, propositions, numbers, and figures needed to answer the four research questions. Supplementary Appendices A--G contain the paper-by-paper literature matrix, terminal-current and event-operator conventions, metric denominators, proofs, complete estimator and likelihood equations, full frozen-contract inventory, and secondary diagnostics. This boundary keeps the article readable without weakening reproducibility.
 
 ## Title gate
 

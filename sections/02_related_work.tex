@@ -24,34 +24,25 @@ The unresolved issue is the evaluation contract. New replicas from trained asset
 Functional observability asks whether a requested function of state can be inferred without full-state observability \cite{fernando2010functional,zhang2025functional}; nonlinear extensions require the observation fibers to determine the requested functional locally, not merely a favorable Jacobian at one point \cite{montanari2022functional}. Unknown-input observability instead asks whether exogenous inputs can be reconstructed from output histories \cite{hou1998input}; fault detectability asks whether a fault can be separated while disturbances are decoupled \cite{nyberg2002detectability}. Sparse strong observability extends the question to corrupted sensor sets \cite{showkatbakhsh2020secure,sun2026secure}, and attack identification characterizes when adversarial input supports are distinguishable from system behavior \cite{pasqualetti2013attack}. Eriksson \emph{et al.} quantify pairwise diagnosability for stochastic linear descriptor models \cite{eriksson2013diagnosability}. Likelihood inference with singular first-order information also has established nonregular asymptotics \cite{rotnitzky2000singular}; therefore, a vanishing projected tangent is not by itself a universal impossibility result. PMU placement based on empirical observability Gramians treats sensor value as task dependent \cite{qi2015placement,sun2016observability}. For event sources, Jamei \emph{et al.} derive placement-dependent fault-localization limits \cite{jamei2020limits}; Conte \emph{et al.} partition a radial grid into indistinguishable line clusters \cite{conte2023fault}; and Yildiz and Abur optimize sparse placement for event detection and identification \cite{yildiz2025sparse}. These results distinguish hidden-state reconstruction, input reconstruction, and pairwise source separation. They also rule out a general optimal-placement claim from one prescribed eight-PMU set.
 
 \begin{table*}[t]
-\caption{Capability comparison for the closest methodological families. ``Held source'' means that the physical asset is absent from source-labeled training or tuning. Entries describe published tasks and assumptions, not a cross-paper performance ranking.}
+\caption{Research gap by methodological family. The full paper-by-paper capability matrix is reported in Supplementary Appendix~A.}
 \label{tab:literature-capability}
 \centering
-\scriptsize
-\begin{tabularx}{\textwidth}{@{}lXXXXXX@{}}
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}lXXX@{}}
 \toprule
-Work & State target & Event/source target & Physics mechanism & Sparse/partial sensing & Held source & Integrity separate \\
+Family & Established capability & Remaining issue for this problem & Role here \\
 \midrule
-Katanic \emph{et al.} \cite{katanic2024recursive} & Differential and algebraic DAE states & Unknown injectors, not event taxonomy & Incomplete nonlinear DAE and least squares & Yes & N/A & No \\
-Nugroho \emph{et al.} \cite{nugroho2022dae} & Differential and algebraic DAE states & Unknown input and input-sensor failure & Outlier-resistant DAE observer & PMU voltage/current & N/A & Failure tolerance, not compositional source \\
-Qu \emph{et al.} \cite{qu2023joint} & Machine state & Unknown field voltage and torque & Event-triggered nonlinear state/input estimator & Event-triggered PMUs & N/A & Covariance bounds \\
-Ngo \emph{et al.} \cite{ngo2024pignn} & Power-system states & None & Branch-current physics plus graph learning & Yes & N/A & No \\
-Yue \emph{et al.} \cite{yue2024graph} & Distribution-system state & Line outage & Grid-model-informed graph learning and outlier-resistant SE & Yes & Not stated & No \\
-Moshtagh \emph{et al.} \cite{moshtagh2025topology} & Transmission-system state & Topology variation, not source output & Topology-aware graph learning & PMU-unobservable systems & Not a source task & PMU failure and bad-data tests \\
-Pandey \emph{et al.} \cite{pandey2020realtime} & None & Detection, class, and source & Topology/equipment information & PMU network & Not stated & No \\
-Yildiz and Abur \cite{yildiz2024few} & None & Fault detection and location & OLS/CNN with strategic PMU placement & Yes & Not stated & No \\
-Li \emph{et al.} \cite{li2024knowledge} & None & Multi-family disturbance source & Topology/type-constrained STGCN loss & Yes & Not stated & No \\
-Kummerow \emph{et al.} \cite{kummerow2023sigmoid} & None & Known/unknown event type and location & Siamese distance with learned rejection & Limited/full PMU sets & Open-set rejection & Rejection boundary \\
-Hu and Cheng \cite{hu2026openset} & None & Open-set event detection/classification & Generative window evidence and fusion & Streaming PMUs & Unknown-event category & No physical-source posterior \\
-Rimkus \emph{et al.} \cite{rimkus2025gnn} & Missing PMU trajectories & Downstream fault localization & Graph reconstruction before diagnosis & Yes & No source labels for imputer & Corruption via imputation \\
-Zhai \emph{et al.} \cite{zhai2025partial} & Full dynamical state & Line-attack location & Learned temporal dynamics & Yes & Across benchmark contracts & Attack target only \\
-This paper & Hidden voltage field; state uncertainty & Eight-label ontology; all load supports with $K\le2$ & DAE hypotheses; quadratic physical likelihood & Eight prescribed PMU buses & Physical bank avoids source-label head; learned baseline fails holdout & Yes \\
+Dynamic state and unknown-input estimation \cite{gillijns2007input,nugroho2022dae,katanic2024recursive} & Reconstructs states or unknown inputs from model and PMU histories & Does not usually define a closed physical event-source bank with compositional integrity & Defines the state-reconstruction path and its nuisance variables \\
+Learned event localization \cite{pandey2020realtime,li2024knowledge,yildiz2024few} & Detects and localizes represented event families under sparse sensing & Source-label training can confound asset memorization with source generalization & Supplies the supervised baseline and held-source stress test \\
+Model-based event inference \cite{tate2008outage,zhao2014outages,chen2016quickest} & Ranks physical outage hypotheses and can marginalize operating uncertainty & Published contracts are event-specific and do not establish the present simultaneous-load problem & Motivates physical candidate likelihoods and nuisance profiling \\
+Observability and placement \cite{montanari2022functional,jamei2020limits,yildiz2025sparse} & Characterizes state recovery or event separation for a declared sensing task & Rank alone does not quantify finite-horizon support ambiguity & Supplies the target-recovery and diagnosability tests \\
+This work & Reconstructs a requested hidden-voltage field and ranks all load supports with $K\le2$ & The multi-family state/event/integrity posterior remains untested & Connects separate evaluated paths through one information-based formulation \\
 \bottomrule
 \end{tabularx}
 \end{table*}
 
 \subsection{Remaining Technical Gap}
 
-Table~\ref{tab:literature-capability} separates the capabilities needed for the combined problem. A source-agnostic physical hypothesis must be evaluated while the unobserved trajectory is estimated and measurement failures remain possible. The sensing geometry must expose indistinguishable sources before a classifier is trusted. Evaluation must then exclude the physical source asset from all source-labeled fitting. Under this protocol, learning is useful only when it corrects model discrepancy or reduces candidate-search cost without memorizing asset labels.
+Table~\ref{tab:literature-capability} shows why one accuracy value cannot close the gap. The state path must specify the requested function, and the event path must expose indistinguishable sources before any classifier is trusted. A source-generalization test must also remove the physical asset from every source-labeled fitting step. Under that contract, learning is useful only if it corrects model discrepancy or reduces candidate-search cost without memorizing asset identity.
 
-The available evidence covers only part of this intersection. PowerDynamics supports hidden-voltage estimation, physical recentering, and prospective zero-, one-, and two-source load inference. A retrospective audit links weak-case recovery to profiled manifold distance, while a 120-frame diagnostic studies information accumulation without upgrading it to a recovery experiment. ANDES supports known-source event recognition and documents failure under source holdout. Multi-family candidate-conditioned inference with state and integrity nuisance still requires one common experimental contract.
+The experiments cover only part of this intersection. PowerDynamics supports hidden-voltage estimation, physical recentering, and prospective load-source inference. ANDES documents what a supervised representation loses under source holdout. A common multi-family experiment with state and integrity nuisance remains future work.

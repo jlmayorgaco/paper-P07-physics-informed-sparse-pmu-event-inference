@@ -10,6 +10,8 @@
 - The quadratic response manifold explicitly includes self-curvature and pairwise interaction. The T120 physical check shows that the pairwise term is essential under the tested simultaneous load changes.
 - State reconstruction, physical mismatch, regularized recentering, the historical eight-label benchmark, and source-holdout failure remain in the paper under separate denominators.
 - Figure 8 converts the new reports into one evidence narrative rather than presenting disconnected tables.
+- The 14-page main paper now follows four questions in scientific order: hidden-voltage recovery, failure under physical mismatch, simultaneous-source resolution, and supervised source holdout.
+- Detailed derivations, all frozen contracts, and secondary diagnostics now appear in an 8-page companion supplement. Exact tables remain available without interrupting the main argument.
 
 ## Current evidence boundary
 

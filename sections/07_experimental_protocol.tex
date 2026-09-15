@@ -1,27 +1,45 @@
-\section{Nominal Reconstruction and Structural Evidence}
+\section{State Evidence From Recovery to Model Failure}
 \label{sec:nominal-results}
 
-\subsection{What the Sparse PMUs Recover}
+\subsection{RQ1 Measurement Conditioning Recovers the Target}
 
-Table~\ref{tab:nominal-results} gives the nominal TEST results. Conditioning the equilibrium estimate on the current PMU sample (B1) reduces hidden-voltage HVRE by more than one order of magnitude. The causal Kalman recursion (B2) improves on B1 in \BTwoWinRate{} of the same trajectories, but its paired mean advantage is only \BTwoMinusBOnePP{} percentage points. Most of the nominal gain therefore comes from the measurement-conditioned physical map; temporal propagation supplies a smaller correction.
+The estimator sequence reveals where the nominal accuracy comes from. Conditioning the equilibrium on the current PMU frame (B1) reduces hidden-voltage error by more than one order of magnitude. Adding causal propagation (B2) improves most trajectories, but by a much smaller amount. Thus the network-constrained measurement map supplies the main gain; temporal propagation refines it.
 
 \input{tables/generated/nominal_results}
 
-Figure~\ref{fig:nominal-reconstruction}(a) makes the trajectory distributions and scale separation visible, while panel (c) shows the paired differences rather than comparing overlapping marginal intervals. The equilibrium baseline is more than one order of magnitude worse than either measurement-updated estimator. This is not a comparison against learned or nonlinear DAE estimators; it is a controlled decomposition of equilibrium centering, instantaneous PMU conditioning, and causal temporal propagation within one local model.
+Figure~\ref{fig:nominal-reconstruction}(a) shows the scale change directly, and panel (c) uses paired trajectory differences rather than overlapping marginal intervals. The comparison is deliberately internal: B0, B1, and B2 share the same local physical model. It does not claim superiority over every learned or nonlinear estimator.
 
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/generated/nominal_reconstruction.pdf}
-\caption{Nominal reconstruction and structural evidence. (a) Trajectory-level hidden-voltage HVRE distributions on the same \NominalTestCount{} nonlinear TEST trajectories. (b) Per-bus causal Kalman HVRE versus the horizon-180 functional residual exported before TEST scoring; labels identify the five buses with largest empirical error. (c) Sorted paired B2-minus-B1 HVRE differences; negative values favor the causal estimator, and the annotation reports the paired bootstrap interval and win rate.}
+\caption{Where nominal state-reconstruction accuracy comes from. (a) PMU conditioning produces the dominant reduction in trajectory-level hidden-voltage error. (b) The preregistered structural residual predicts some, but not all, difficult buses. (c) Paired B2-minus-B1 differences isolate the smaller contribution of causal propagation.}
 \label{fig:nominal-reconstruction}
 \end{figure*}
 
-\subsection{Functional Structure as a Predictor of Error}
+The structural residual in Fig.~\ref{fig:nominal-reconstruction}(b) correlates with bus-level B2 error, but the relationship is incomplete. The buses share trajectories and network coupling, and the residual comes from the threshold-sensitive projector discussed in Section~\ref{sec:functional-observability}. It is therefore a difficulty indicator, not an observability certificate.
 
-At horizon 180, the finite-horizon Gramian has pseudo-rank 39 of 114 and the aggregate target residual is nonzero; neither full-state nor exact functional observability is declared. The preregistered bus residual nevertheless correlates with B2 HVRE at Spearman $\rho=\FunctionalSpearman$ [Fig.~\ref{fig:nominal-reconstruction}(b)], with a two-sided permutation $p$-value of \FunctionalPermutationP{}. Because the 31 buses share trajectories and network coupling, bus-resampling intervals are treated as exploratory rather than as independent-unit confidence intervals. The same qualitative relation appears for B1.
+Two negative checks sharpen this result. The fixed-lag smoother does not improve the nonlinear TEST trajectories, even though a correctly specified linear-Gaussian smoother cannot increase expected squared error. Innovation autocorrelation identifies the missing premise: the local model treats deterministic governor and load excitation as white process noise. Marginal temperature scaling repairs coverage under nominal operation but does not whiten those innovations. More data cannot compensate for the wrong temporal model.
 
-The relationship is informative but incomplete. Bus 36 has the largest structural residual, whereas the five largest B2 errors occur elsewhere. The projector captures one source of difficulty but not the nonlinear excitation distribution, estimator covariance, or every conditioning effect. Electrical distance to the nearest PMU has not been computed on the same audited network, so the analysis cannot yet show that $r_{F,i}$ adds information beyond that confounder. The residual remains a diagnostic, not a binary observability certificate.
+\subsection{RQ2 Physical Shift Exposes the Model Boundary}
 
-\subsection{Retrospective Smoothing Test}
+The mismatch campaign asks whether nominal accuracy survives a changed plant. It does not fail uniformly. Network-parameter changes and operating-point shifts dominate the state error, while the tested machine, governor, AVR, and load-model perturbations remain close to the nominal level over the short excitation [Fig.~\ref{fig:physical-mismatch}(a)]. Those near-null responses show that the experiment did not expose the corresponding parameters; they are not evidence of general robustness.
 
-Across lags from one frame to 2~s, the implemented fixed-lag smoother never improves mean HVRE over lag zero; every positive lag is slightly worse in the nonlinear TEST trajectories. A correctly specified linear-Gaussian smoother cannot increase expected squared error, so this result diagnoses a violated modeling premise rather than a general failure of smoothing. The local model absorbs deterministic governor/load excitation into white process noise, while lag-one innovation autocorrelation remains \OriginalInnovationACF{} and the Ljung--Box test rejects whiteness. An unknown-input estimator \cite{gillijns2007input} and a re-estimated process model are required before a latency--accuracy conclusion is drawn.
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/generated/physical_mismatch.pdf}
+\caption{How the frozen state estimator fails under physical mismatch. (a) Network and operating-point changes dominate the hidden-voltage error. (b) A covariance correction fitted under nominal operation loses coverage after physical shift. (c) Observed innovations often flag unacceptable hidden error but do not identify its physical cause. Each family-scale cell contains 20 rebuilt plants.}
+\label{fig:physical-mismatch}
+\end{figure*}
+
+This pattern suggests a mechanism. A stale equilibrium moves the center of both the measured and hidden voltage fields. The offset-only ablation estimates that movement from measured buses but ignores AC balance, and it closes almost none of the oracle gap. The constrained recentering in \eqref{eq:e06h-map} instead rebuilds a physically admissible center. Across all three held-out operating shifts, it removes nearly all of the point-error gap [Fig.~\ref{fig:adequacy-adaptation}(a)--(b)].
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/generated/adequacy_adaptation.pdf}
+\caption{Physical recentering separates point recovery from uncertainty. (a) Enforcing the AC map sharply reduces hidden-voltage error under operating-point shift. (b) The paired oracle-gap closure is consistent across held-out cases. (c) The joint NEES-like diagnostic remains too large even when marginal intervals cover, so the point estimate is supported but its joint covariance is not.}
+\label{fig:adequacy-adaptation}
+\end{figure*}
+
+\input{tables/generated/e06h_results}
+
+The recovery does not identify every operating-point coordinate. The nuisance information is rank deficient, yet the requested voltage field changes little along much of that nullspace. This is the empirical counterpart of Proposition~\ref{prop:functional-reconstruction}: a target can be recoverable even when the full latent vector is not. The remaining limitation is uncertainty. Marginal intervals cover, but the joint NEES-like statistic is severely under-dispersed, and the independent constrained solver converges on only part of its small diagnostic subset. The evidence supports point reconstruction for the tested operating shifts, not joint parameter recovery or sequential adaptation.

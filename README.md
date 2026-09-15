@@ -10,7 +10,8 @@ This repository develops an evidence-backed IEEE Access manuscript on hidden-sta
 
 | Path | Purpose |
 | --- | --- |
-| `main.tex` | IEEE Access root manuscript |
+| `main.tex` | IEEE Access root manuscript, organized around four research questions |
+| `supplement.tex` | Detailed derivations, frozen contracts, and secondary results |
 | `metadata.tex` | Title, author list, affiliations, and running headers |
 | `preamble.tex` | Shared packages and mathematical notation |
 | `sections/` | One LaTeX source file per manuscript section |
@@ -43,6 +44,10 @@ pdflatex -interaction=nonstopmode -halt-on-error main.tex
 bibtex main
 pdflatex -interaction=nonstopmode -halt-on-error main.tex
 pdflatex -interaction=nonstopmode -halt-on-error main.tex
+pdflatex -interaction=nonstopmode -halt-on-error supplement.tex
+bibtex supplement
+pdflatex -interaction=nonstopmode -halt-on-error supplement.tex
+pdflatex -interaction=nonstopmode -halt-on-error supplement.tex
 ```
 
 When `latexmk` and Perl are available, the equivalent command is:
@@ -51,7 +56,7 @@ When `latexmk` and Perl are available, the equivalent command is:
 latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
 ```
 
-The resulting local build is `main.pdf`. The review copy under `output/pdf/` is tracked for direct delivery. Run the artifact generator before compiling whenever the frozen snapshot changes.
+The resulting local builds are `main.pdf` and `supplement.pdf`. The main paper retains the scientific argument and decisive evidence; the supplement contains the paper-by-paper literature matrix, electrical conventions, proofs, complete estimator equations, frozen contracts, and secondary diagnostics. Review copies under `output/pdf/` are tracked for direct delivery. Run the artifact generator before compiling whenever the frozen snapshot changes.
 
 ## GitHub and Overleaf workflow
 
