@@ -1,0 +1,516 @@
+\section{Proofs and Additional Diagnosability Results}
+\label{app:theory}
+
+This appendix develops the mathematical chain used by the paper. It begins with the sampled hybrid event map, separates state-functional recovery from event-source separation, derives the relevant Fisher information after physical nuisance is removed, and then states the finite-horizon and temporal limits. The results are local unless a statement explicitly says otherwise.
+
+\subsection{Regularity and Statistical Contract}
+
+Let $\bm u=\operatorname{col}(\bm x,\bm z)$ collect differential and algebraic coordinates and consider the descriptor model
+\begin{equation}
+ \bm E\dot{\bm u}=\bm F(\bm u,\bm p),
+ \qquad \bm y=\bm h(\bm u,\bm p).
+ \label{eq:supp-descriptor}
+\end{equation}
+The analysis uses four assumptions.
+
+\begin{enumerate}
+\item The reference angle has been fixed and the algebraic Jacobian is nonsingular on the local mode under study, so a regular index-one chart exists between discrete events.
+\item The scheduled event time is fixed. In a neighborhood of zero amplitude, the complete callback--solver--sampling map is twice continuously differentiable.
+\item Every covariance used as a metric is positive definite on the retained measurement subspace. Candidate-dependent covariances retain their log determinants in likelihood comparisons.
+\item The support set is finite and all Bayesian priors are proper. Exact signed-amplitude equivalences use a neighborhood of zero within each support subspace; constrained physical amplitudes instead use their actual difference set.
+\end{enumerate}
+
+These assumptions distinguish the local theory from general descriptor left invertibility, state-triggered saltation, and global nonlinear identifiability.
+
+\subsection{Simulator-Consistent Event Sensitivities}
+
+The production callback changes physical parameters while preserving the stored coordinates at the callback. The DAE solver then restores consistency before the first retained frame. The relevant differentiable object is therefore the sampled map
+\begin{equation}
+ \bm\Psi_{T_s}^{\mathrm{sim}}:
+ (\bm u^{-},\bm p(\bm a))\mapsto
+ \bm u(\tau+T_s;\bm a),
+ \qquad T_s=1/30\;\mathrm{s}.
+ \label{eq:supp-sampled-event-map}
+\end{equation}
+For event coordinates $a_i$, define
+\begin{equation}
+ \bm L_i=\left.\frac{\partial\bm\Psi_{T_s}^{\mathrm{sim}}}{\partial a_i}\right|_{\bm a=\bm0},
+ \qquad
+ \bm L_{ij}^{(2)}=\left.\frac{\partial^2\bm\Psi_{T_s}^{\mathrm{sim}}}
+ {\partial a_i\partial a_j}\right|_{\bm a=\bm0}.
+ \label{eq:supp-event-map-derivatives}
+\end{equation}
+For $t\ge \tau+T_s$, the first and second sensitivities obey
+\begin{align}
+ \bm E\dot{\bm s}_i
+ &=\bm F_{\bm u}\bm s_i+\bm F_{\bm p}\bm p_i,
+ \label{eq:supp-first-variation}\\
+ \bm E\dot{\bm s}_{ij}
+ &=\bm F_{\bm u}\bm s_{ij}+\bm r_{ij},
+ \label{eq:supp-second-variation}
+\end{align}
+where
+\begin{align}
+ \bm r_{ij}={}&\bm F_{\bm u\bm u}[\bm s_i,\bm s_j]
+ +\bm F_{\bm u\bm p}[\bm s_i,\bm p_j]
+ +\bm F_{\bm p\bm u}[\bm p_i,\bm s_j]\nonumber\\
+ &+\bm F_{\bm p\bm p}[\bm p_i,\bm p_j]
+ +\bm F_{\bm p}\bm p_{ij}.
+ \label{eq:supp-second-forcing}
+\end{align}
+The initial conditions are $\bm s_i(\tau+T_s)=\bm L_i$ and $\bm s_{ij}(\tau+T_s)=\bm L_{ij}^{(2)}$. For the affine event parameterization, $\bm p_{ij}=\bm0$.
+
+\begin{theorem}[Propagation of event-map mismatch]
+Suppose two second-order models have the same nominal trajectory, first-order sensitivities, parameter derivatives, and forcing in \eqref{eq:supp-second-variation}, but different second-order event-map initial conditions. Their difference $\bm e_{ij}=\bm s_{ij}^{A}-\bm s_{ij}^{B}$ satisfies
+\begin{equation}
+ \bm E\dot{\bm e}_{ij}=\bm F_{\bm u}\bm e_{ij},
+ \qquad
+ \bm e_{ij}(t)=\bm\Phi_E(t,t_1)\bm e_{ij}(t_1)
+ \label{eq:supp-homogeneous-mismatch}
+\end{equation}
+on the consistent solution subspace, where $t_1=\tau+T_s$.
+\end{theorem}
+
+\paragraph{Proof.}
+Subtract \eqref{eq:supp-second-variation} for the two models. Every forcing term cancels by assumption, leaving the homogeneous descriptor variational equation. Applying its transition operator gives \eqref{eq:supp-homogeneous-mismatch}. $\hfill\square$
+
+When the retained PMU operator is locally affine, $\bm y=\bm H_y\bm u+\bm d$, the sampled response coefficients are
+\begin{equation}
+ \bm D_i=\bm H_y\bm s_i,
+ \quad
+ \bm Q_i=\tfrac12\bm H_y\bm s_{ii},
+ \quad
+ \bm Q_{ij}=\bm H_y\bm s_{ij}.
+ \label{eq:supp-pmu-manifold-coefficients}
+\end{equation}
+Thus all quadratic curvature comes from the physical solution and event map, not from PMU post-processing. This is why the dictionary must differentiate the same event semantics used to generate the trajectories.
+
+\subsection{Exact Functional Reconstruction}
+
+Consider the finite-horizon linear experiment
+\begin{equation}
+ \bm Y=\mathcal O\bm x+\bm\varepsilon,
+ \qquad \bm\psi=\bm L\bm x,
+ \qquad \bm\varepsilon\sim\mathcal N(\bm0,\bm R),
+ \quad \bm R\succ\bm0.
+ \label{eq:supp-functional-experiment}
+\end{equation}
+
+\begin{theorem}[Functional reconstruction equivalence]
+The following statements are equivalent: (i) $\mathcal O\bm x_1=\mathcal O\bm x_2$ implies $\bm L\bm x_1=\bm L\bm x_2$; (ii) $\ker\mathcal O\subseteq\ker\bm L$; and (iii) there is a linear map $\bm K$ such that $\bm L=\bm K\mathcal O$.
+\label{thm:supp-functional-equivalence}
+\end{theorem}
+
+\paragraph{Proof.}
+If (i) holds and $\bm v\in\ker\mathcal O$, the observations of $\bm v$ and $\bm0$ coincide, hence $\bm L\bm v=\bm0$ and (ii) follows. If (ii) holds, define $\bm K(\mathcal O\bm x)=\bm L\bm x$ on $\operatorname{range}\mathcal O$. The definition is independent of the representative because two representatives differ by a vector in $\ker\mathcal O\subseteq\ker\bm L$. Extend $\bm K$ linearly to the observation space to obtain (iii). Finally, (iii) immediately implies (i). $\hfill\square$
+
+Let
+\begin{equation}
+ \bm G=\mathcal O^{\mathsf T}\bm R^{-1}\mathcal O.
+ \label{eq:supp-information-gramian}
+\end{equation}
+
+\begin{theorem}[Best linear unbiased estimate of an estimable function]
+If the equivalent conditions of Theorem~\ref{thm:supp-functional-equivalence} hold, then
+\begin{align}
+ \widehat{\bm\psi}_{\star}
+ &=\bm L\bm G^{\dagger}\mathcal O^{\mathsf T}\bm R^{-1}\bm Y,
+ \label{eq:supp-functional-blue}\\
+ \operatorname{Cov}(\widehat{\bm\psi}_{\star})
+ &=\bm L\bm G^{\dagger}\bm L^{\mathsf T}.
+ \label{eq:supp-functional-covariance}
+\end{align}
+It has minimum covariance, in the positive-semidefinite order, among all linear unbiased estimators of $\bm L\bm x$ \cite{kay1993estimation}.
+\label{thm:supp-functional-blue}
+\end{theorem}
+
+\paragraph{Proof.}
+Because
+$\bm v^{\mathsf T}\bm G\bm v=\|\mathcal O\bm v\|_{\bm R^{-1}}^2$,
+$\ker\bm G=\ker\mathcal O$. Estimability gives
+$\bm L=\bm L\bm G^{\dagger}\bm G$, so taking expectation in \eqref{eq:supp-functional-blue} yields $\bm L\bm x$. Direct covariance propagation gives \eqref{eq:supp-functional-covariance}. Let $\bm A\bm Y$ be any other linear unbiased estimator and set
+$\bm T=\bm A-\bm L\bm G^{\dagger}\mathcal O^{\mathsf T}\bm R^{-1}$.
+Then $\bm T\mathcal O=\bm0$ and the cross covariance vanishes because
+$\bm L\bm G^{\dagger}\mathcal O^{\mathsf T}\bm T^{\mathsf T}=\bm0$.
+Consequently,
+\begin{equation}
+ \operatorname{Cov}(\bm A\bm Y)
+ =\operatorname{Cov}(\widehat{\bm\psi}_{\star})
+ +\bm T\bm R\bm T^{\mathsf T}
+ \succeq\operatorname{Cov}(\widehat{\bm\psi}_{\star}).
+\end{equation}
+If the kernel inclusion fails, two states induce the same data law but different targets, so no estimator can be unbiased for every state. $\hfill\square$
+
+The pseudoinverse has this interpretation only for estimable targets. In the nonlinear DAE, a pointwise kernel test is not sufficient: local factorization requires the condition to hold on a regular constant-rank neighborhood with connected local fibers \cite{montanari2022functional}.
+
+\subsection{Fisher Information With Physical Nuisance}
+
+For a differentiable Gaussian model
+\begin{equation}
+ \bm r\mid\bm\theta\sim
+ \mathcal N(\bm\mu(\bm\theta),\bm\Sigma(\bm\theta)),
+ \label{eq:supp-general-gaussian}
+\end{equation}
+the Fisher information contains both mean and covariance contributions. For scalar $a$,
+\begin{equation}
+ I(a)=\bm\mu_a^{\mathsf T}\bm\Sigma^{-1}\bm\mu_a
+ +\tfrac12\operatorname{tr}
+ (\bm\Sigma^{-1}\bm\Sigma_a\bm\Sigma^{-1}\bm\Sigma_a).
+ \label{eq:supp-fisher-mean-covariance}
+\end{equation}
+The second term must be retained when event amplitude changes the covariance. The evaluated load bank freezes $\bm\Sigma$, so only the first term is used.
+
+To expose nuisance geometry, consider
+\begin{equation}
+ \bm r=a\bm d+\bm N\bm\nu+\bm\varepsilon,
+ \qquad \bm\varepsilon\sim\mathcal N(\bm0,\bm\Sigma),
+ \label{eq:supp-local-nuisance-model}
+\end{equation}
+where $\bm\nu$ may contain initial-state, operating-point, parameter, or integrity directions. Let $\bm W^{\mathsf T}\bm W=\bm\Sigma^{-1}$, $\overline{\bm d}=\bm W\bm d$, $\overline{\bm N}=\bm W\bm N$, and
+\begin{equation}
+ \bm P_{\perp}=\bm I-overline{\bm N}\overline{\bm N}^{\dagger}.
+ \label{eq:supp-nuisance-projector}
+\end{equation}
+
+\begin{theorem}[Efficient Fisher information after nuisance profiling]
+For deterministic unknown $\bm\nu$, the efficient information for $a$ is
+\begin{align}
+ I_{a\mid\nu}^{\mathrm{det}}
+ &=\overline{\bm d}^{\mathsf T}\bm P_{\perp}\overline{\bm d}
+ \label{eq:supp-efficient-fisher-projector}\\
+ &=\bm d^{\mathsf T}\bm\Sigma^{-1}\bm d
+ -\bm d^{\mathsf T}\bm\Sigma^{-1}\bm N
+ (\bm N^{\mathsf T}\bm\Sigma^{-1}\bm N)^{\dagger}
+ \bm N^{\mathsf T}\bm\Sigma^{-1}\bm d.
+ \label{eq:supp-efficient-fisher-schur}
+\end{align}
+It is zero exactly when the event tangent lies in the observable nuisance span.
+\label{thm:supp-efficient-fisher}
+\end{theorem}
+
+\paragraph{Proof.}
+After whitening, the score for $a$ is
+$\overline{\bm d}^{\mathsf T}\overline{\bm\varepsilon}$.
+Nuisance scores span
+$\{\bm v^{\mathsf T}\overline{\bm\varepsilon}:\bm v\in\operatorname{range}\overline{\bm N}\}$.
+Their Fisher inner product is Euclidean because
+$\mathbb E[\overline{\bm\varepsilon}\overline{\bm\varepsilon}^{\mathsf T}]=\bm I$.
+Removing the nuisance-score projection leaves
+$(\bm P_{\perp}\overline{\bm d})^{\mathsf T}\overline{\bm\varepsilon}$,
+whose variance is \eqref{eq:supp-efficient-fisher-projector}. Expanding the projector by an SVD gives \eqref{eq:supp-efficient-fisher-schur}. $\hfill\square$
+
+If instead $\bm\nu\sim\mathcal N(\bm m_{\nu},\bm\Gamma)$ with a proper prior, marginalization yields
+\begin{align}
+ \bm r\mid a&\sim\mathcal N(a\bm d+\bm N\bm m_{\nu},
+ \bm\Sigma+\bm N\bm\Gamma\bm N^{\mathsf T}),\label{eq:supp-nuisance-marginal}\\
+ I_{a\mid\nu}^{\mathrm{Bayes}}
+ &=\bm d^{\mathsf T}(\bm\Sigma+\bm N\bm\Gamma\bm N^{\mathsf T})^{-1}\bm d.
+ \label{eq:supp-bayesian-fisher}
+\end{align}
+Woodbury's identity shows that \eqref{eq:supp-bayesian-fisher} tends to the no-nuisance information as $\bm\Gamma\rightarrow\bm0$ and to \eqref{eq:supp-efficient-fisher-projector} as a full-rank nuisance prior becomes diffuse. Thus zero deterministic efficient information is not a universal impossibility statement: a restrictive proper prior can still supply separation.
+
+\begin{corollary}[Pre-event information cannot reduce local event information]
+If pre-event data add nuisance precision $\bm\Lambda_{\mathrm{pre}}\succeq\bm0$, then
+\begin{equation}
+ I_{a\mid\nu,\mathrm{pre}}
+ =I_{aa}-\bm I_{a\nu}
+ (\bm I_{\nu\nu}+\bm\Lambda_{\mathrm{pre}})^{-1}\bm I_{\nu a}
+ \label{eq:supp-preevent-fisher}
+\end{equation}
+is nondecreasing in $\bm\Lambda_{\mathrm{pre}}$.
+\end{corollary}
+
+\paragraph{Justification.}
+If $\bm\Lambda_2\succeq\bm\Lambda_1\succeq\bm0$, matrix inversion reverses the order. Premultiplication and postmultiplication by the cross-information blocks preserve the positive-semidefinite order, and subtraction reverses it once more. $\hfill\square$
+
+For a known source, known positive sign, and fixed covariance, the standardized matched statistic
+\begin{equation}
+ T=\frac{\bm d^{\mathsf T}\bm\Sigma^{-1}\bm r}
+ {\sqrt{\bm d^{\mathsf T}\bm\Sigma^{-1}\bm d}}
+ \label{eq:supp-matched-statistic}
+\end{equation}
+is standard normal under $H_0$ and has mean $a\sqrt I$ under amplitude $a$. A level-$\alpha$ one-sided test has power
+$1-\Phi(z_{1-\alpha}-a\sqrt I)$. Hence the amplitude required for power $1-\beta$ is
+\begin{equation}
+ a_{\alpha,\beta}
+ =\frac{z_{1-\alpha}+z_{1-\beta}}{\sqrt I}.
+ \label{eq:supp-detection-amplitude}
+\end{equation}
+This is a conditional known-source benchmark, not the threshold of the 137-support search. Its empirical use in the paper is limited to the exploratory source-wise detectability association.
+
+\subsection{Pairwise Source Geometry and Onset Information}
+
+Let two first-order source signatures be $\bm d_g$ and $\bm d_j$ under fixed precision $\bm G\succeq\bm0$. Allow the competing source to refit its amplitude. The local profiled distance satisfies
+\begin{align}
+ b_{\star}(a)
+ &=a\frac{\bm d_j^{\mathsf T}\bm G\bm d_g}
+ {\bm d_j^{\mathsf T}\bm G\bm d_j}+O(a^2),\label{eq:supp-profiled-amplitude}\\
+ \Delta_{g\rightarrow j}^2(a)
+ &=a^2J_{g\rightarrow j}+O(a^3),\label{eq:supp-profiled-fisher-expansion}\\
+ J_{g\rightarrow j}
+ &=\bm d_g^{\mathsf T}\bm G\bm d_g
+ -\frac{(\bm d_g^{\mathsf T}\bm G\bm d_j)^2}
+ {\bm d_j^{\mathsf T}\bm G\bm d_j}\ge0.
+ \label{eq:supp-profiled-pairwise-fisher}
+\end{align}
+Equation~\eqref{eq:supp-profiled-pairwise-fisher} is a pairwise local separation quantity, not the Fisher information for amplitudes conditional on the true support. For a multi-source support $S$, the latter is
+\begin{equation}
+ \bm I_S(\bm a)=\bm J_S(\bm a)^{\mathsf T}\bm G\bm J_S(\bm a),
+ \quad
+ \bm J_S=\frac{\partial\bm\mu_S}{\partial\bm a_S}.
+ \label{eq:supp-multisource-fisher}
+\end{equation}
+Positive definiteness of $\bm I_S$ permits local amplitude estimation conditional on $S$; it does not exclude another support with the same mean.
+
+Unknown onset has a separate degeneracy. For $\bm\mu(a,\tau)=a\bm d(\tau)$ and fixed covariance,
+\begin{equation}
+ \bm I(a,\tau)=
+ \begin{bmatrix}
+ \bm d^{\mathsf T}\bm\Sigma^{-1}\bm d &
+ a\bm d^{\mathsf T}\bm\Sigma^{-1}\dot{\bm d}\\
+ a\dot{\bm d}^{\mathsf T}\bm\Sigma^{-1}\bm d &
+ a^2\dot{\bm d}^{\mathsf T}\bm\Sigma^{-1}\dot{\bm d}
+ \end{bmatrix}.
+ \label{eq:supp-onset-fisher-matrix}
+\end{equation}
+Profiling amplitude by a Schur complement gives
+\begin{equation}
+ I_{\tau\mid a}=a^2\left[
+ \dot{\bm d}^{\mathsf T}\bm\Sigma^{-1}\dot{\bm d}
+ -\frac{(\bm d^{\mathsf T}\bm\Sigma^{-1}\dot{\bm d})^2}
+ {\bm d^{\mathsf T}\bm\Sigma^{-1}\bm d}
+ \right].
+ \label{eq:supp-onset-efficient-information}
+\end{equation}
+At $a=0$, onset is unidentifiable. If $\dot{\bm d}$ is proportional to $\bm d$, delay and gain are locally confounded even for nonzero amplitude. The evaluated bank avoids this unresolved problem by fixing onset.
+
+\subsection{Candidate Indistinguishability and Sparse Injectivity}
+
+For candidate $h$ and fixed integrity support $S$, define the affine mean set
+\begin{equation}
+ \mathcal M_h(S)=\bm s_{h,H}
+ +\operatorname{range}[\mathcal O_{h,H},\mathcal E_{S,H}].
+ \label{eq:supp-affine-candidate-manifold}
+\end{equation}
+The profiled margin in the main paper is half the squared distance between two such sets under $\bm R_H^{-1}$.
+
+\begin{theorem}[Local candidate indistinguishability]
+If $D_{ij,S}(H)=0$, the candidate manifolds intersect. At any intersection, the two candidates induce the same Gaussian law; no decision rule can distinguish them uniformly over the declared nuisance set.
+\label{thm:supp-candidate-indistinguishability}
+\end{theorem}
+
+\paragraph{Proof.}
+Zero distance between closed affine sets means that there exist nuisance vectors for which their means coincide. The covariance is common by the stated contract, so the two conditional probability measures are identical. For any decision region, the probabilities of choosing $i$ and $j$ under this common law sum to one; at least one conditional error is therefore at least one half. $\hfill\square$
+
+For two fixed simple candidates with squared Mahalanobis distance $\Delta^2=2D_{ij,S}$ and equal priors, projection onto their mean difference reduces the optimal test to one dimension, giving
+\begin{equation}
+ P_e^{\star}=\Phi(-\Delta/2)=\Phi(-\sqrt{D_{ij,S}/2}).
+ \label{eq:supp-simple-gaussian-error}
+\end{equation}
+This formula does not apply directly to amplitude-marginalized support mixtures.
+
+For the local persistent-event model $\bm Y_T=\mathcal H_T\bm a+\bm\varepsilon_T$, define the physically admissible difference set
+\begin{equation}
+ \mathcal D_K=\{\bm a-\bm b:
+ \bm a,\bm b\text{ admissible and }K\text{-sparse}\}.
+ \label{eq:supp-admissible-difference-set}
+\end{equation}
+
+\begin{theorem}[Finite-horizon sparse event uniqueness]
+Every admissible $K$-sparse event is uniquely determined in the noise-free local model if and only if
+\begin{equation}
+ \ker\mathcal H_T\cap\mathcal D_K=\{\bm0\}.
+ \label{eq:supp-constrained-sparse-injectivity}
+\end{equation}
+For a signed neighborhood in each support subspace, $\mathcal D_K=\mathcal A_{2K}$ locally, recovering the condition in the main paper.
+\label{thm:supp-sparse-uniqueness}
+\end{theorem}
+
+\paragraph{Proof.}
+If two admissible events produce the same output, their nonzero difference belongs to both sets in \eqref{eq:supp-constrained-sparse-injectivity}. Conversely, any nonzero vector in the intersection is, by definition of $\mathcal D_K$, the difference of two admissible $K$-sparse events that produce the same output. $\hfill\square$
+
+Unknown initial-state nuisance can be removed locally by whitening and projection:
+\begin{equation}
+ \widetilde{\mathcal H}_T
+ =\left(\bm I-\bm P_{\operatorname{range}(\bm W_T\mathcal O_T)}\right)
+ \bm W_T\mathcal H_T,
+ \qquad \bm W_T^{\mathsf T}\bm W_T=\bm R_T^{-1}.
+ \label{eq:supp-projected-event-dictionary}
+\end{equation}
+Theorem~\ref{thm:supp-sparse-uniqueness} then applies with $\widetilde{\mathcal H}_T$. Define the restricted margin
+\begin{equation}
+ \gamma_{2K}(T)=
+ \min_{1\le |U|\le2K}\sigma_{\min}
+ (\widetilde{\mathcal H}_{T,U}).
+ \label{eq:supp-restricted-margin}
+\end{equation}
+If two $K$-sparse explanations both fit data within whitened residual $\epsilon$, then
+\begin{equation}
+ \|\bm a-\bm b\|_2\le\frac{2\epsilon}{\gamma_{2K}(T)}.
+ \label{eq:supp-stability-bound}
+\end{equation}
+Indeed, the triangle inequality bounds
+$\|\widetilde{\mathcal H}_T(\bm a-\bm b)\|_2$ by $2\epsilon$, while the definition of $\gamma_{2K}$ gives the reverse lower bound. For the evaluated $K\le2$ bank, the relevant union size is four.
+
+\subsection{Information Cannot Decrease When Valid Measurements Are Added}
+
+Partition the difference between two candidate means into old and added measurement blocks, $\bm\delta=\operatorname{col}(\bm\delta_1,\bm\delta_2)$, with joint covariance $\bm\Sigma\succ\bm0$. Block Gaussian elimination gives
+\begin{align}
+ \bm\delta^{\mathsf T}\bm\Sigma^{-1}\bm\delta
+ ={}&\bm\delta_1^{\mathsf T}\bm\Sigma_{11}^{-1}\bm\delta_1
+ +\widetilde{\bm\delta}_2^{\mathsf T}
+ \bm\Sigma_{2\mid1}^{-1}\widetilde{\bm\delta}_2,
+ \label{eq:supp-block-information}\\
+ \widetilde{\bm\delta}_2={}&\bm\delta_2-
+ \bm\Sigma_{21}\bm\Sigma_{11}^{-1}\bm\delta_1,
+ \\
+ \bm\Sigma_{2\mid1}={}&\bm\Sigma_{22}-
+ \bm\Sigma_{21}\bm\Sigma_{11}^{-1}\bm\Sigma_{12}.
+\end{align}
+The conditional covariance is positive definite, so the second term is nonnegative. The inequality holds for each common nuisance vector; minimizing over the same nuisance class preserves it. Hence adding a valid PMU or later frame cannot reduce ideal profiled information. A concrete estimator may still degrade if its model, covariance, or optimization changes.
+
+If whitened model errors under two supports satisfy
+$\|\bm W\bm e_S\|\le\epsilon_S$ and
+$\|\bm W\bm e_R\|\le\epsilon_R$, the reverse triangle inequality gives the robust separation bound
+\begin{equation}
+ d_{\mathrm{true}}
+ \ge[d_{\mathrm{nom}}-\epsilon_S-\epsilon_R]_+,
+ \qquad
+ \mathcal J_{\mathrm{true}}
+ \ge\tfrac12[d_{\mathrm{nom}}-\epsilon_S-\epsilon_R]_+^2.
+ \label{eq:supp-robust-separation}
+\end{equation}
+This is the required bridge for future simulator-shift claims; it is not evaluated by the current nominal load bank.
+
+\subsection{Temporal Information Under the Frozen AR(1) Contract}
+
+For true support $S$, competing support $R$, true amplitude $\bm a$, and competitor amplitude $\bm b$, let
+$\bm\delta_t(\bm b)=\bm\mu_{S,t}(\bm a)-\bm\mu_{R,t}(\bm b)$.
+The frozen temporal covariance is
+\begin{equation}
+ \bm\Sigma_T=\bm R_T(\rho)\otimes\bm\Omega,
+ \qquad [\bm R_T]_{ij}=\rho^{|i-j|},\quad |\rho|<1.
+ \label{eq:supp-ar1-covariance}
+\end{equation}
+For fixed $\bm b$, its squared Mahalanobis separation has the innovation form
+\begin{align}
+ q_T(\bm b)={}&\|\bm\delta_1(\bm b)\|_{\bm\Omega^{-1}}^2\nonumber\\
+ &+\frac{1}{1-\rho^2}\sum_{t=2}^{T}
+ \|\bm\delta_t(\bm b)-\rho\bm\delta_{t-1}(\bm b)\|_{\bm\Omega^{-1}}^2.
+ \label{eq:supp-ar1-innovation-information}
+\end{align}
+Define the profiled simple-model separation
+\begin{equation}
+ \mathcal J_{S\rightarrow R}(T)=\tfrac12\inf_{\bm b\in\mathcal A_R}q_T(\bm b).
+ \label{eq:supp-profiled-temporal-information}
+\end{equation}
+It equals the minimum KL divergence over fixed-amplitude simple Gaussian competitors. It is not the KL divergence or Bayes factor of the amplitude-mixture support model.
+
+\begin{theorem}[Horizon monotonicity and persistent rate]
+If the amplitude domain and nuisance dimension do not change with $T$ and all covariances are prefixes of the same process, then
+$\mathcal J_{S\rightarrow R}(T+1)\ge\mathcal J_{S\rightarrow R}(T)$.
+If, in addition, $\bm\delta_t(\bm b)$ converges uniformly on a compact competitor domain to $\bm\delta_{\infty}(\bm b)$, then
+\begin{equation}
+ \lim_{T\rightarrow\infty}
+ \frac{2\mathcal J_{S\rightarrow R}(T)}{T}
+ =\frac{1-\rho}{1+\rho}
+ \inf_{\bm b\in\mathcal A_R}
+ \|\bm\delta_{\infty}(\bm b)\|_{\bm\Omega^{-1}}^2.
+ \label{eq:supp-asymptotic-information-rate}
+\end{equation}
+\label{thm:supp-temporal-rate}
+\end{theorem}
+
+\paragraph{Proof.}
+Equation~\eqref{eq:supp-ar1-innovation-information} gives
+$q_{T+1}(\bm b)=q_T(\bm b)+s_{T+1}(\bm b)$ with $s_{T+1}\ge0$ for every fixed $\bm b$. Taking the infimum proves monotonicity. Under uniform convergence,
+$\bm\delta_t-\rho\bm\delta_{t-1}$ converges uniformly to
+$(1-\rho)\bm\delta_{\infty}$. Divide \eqref{eq:supp-ar1-innovation-information} by $T$; the first-frame term vanishes and the Ces\`aro mean converges uniformly to
+$(1-\rho)^2(1-\rho^2)^{-1}
+\|\bm\delta_{\infty}\|_{\bm\Omega^{-1}}^2$.
+Compactness and uniform convergence permit interchange of infimum and limit, giving \eqref{eq:supp-asymptotic-information-rate}. $\hfill\square$
+
+If the profiled equilibrium distance is positive, separation grows as $\Theta(T)$. If an admissible competitor matches equilibrium and its innovation differences are square summable, evaluating \eqref{eq:supp-profiled-temporal-information} at that competitor gives a finite upper bound; monotonicity then implies convergence to a finite ceiling. Exact trajectory overlap gives zero separation for every horizon.
+
+For a true pair $\{i,j\}$, a competing pair $\{i,k\}$ can refit the shared source. With whitened equilibrium columns $\overline{\bm h}_i,\overline{\bm h}_j,\overline{\bm h}_k$,
+\begin{equation}
+ a_j^2\|(\bm I-\bm P_{i,k})\overline{\bm h}_j\|_2^2
+ \le
+ a_j^2\|(\bm I-\bm P_i)\overline{\bm h}_j\|_2^2.
+ \label{eq:supp-shared-source-bottleneck}
+\end{equation}
+The inequality follows from
+$\operatorname{span}(\overline{\bm h}_i)\subseteq
+\operatorname{span}(\overline{\bm h}_i,\overline{\bm h}_k)$.
+It formalizes why identifying which weak second source occurred cannot be easier than rejecting the shared single-source explanation.
+
+\subsection{Higher-Order Contact and Local Detection Scale}
+
+First-order Fisher information can vanish while nonlinear separation remains. In whitened coordinates, let the no-event nuisance manifold and event curve be
+\begin{align}
+ \bm F_0(\bm b)&=\bm N\bm b+\tfrac12\bm H_0[\bm b,\bm b]
+ +O(\|\bm b\|^3),\label{eq:supp-nuisance-manifold}\\
+ \bm c(a)&=a\bm d+a^2\bm q+O(a^3).
+ \label{eq:supp-event-contact-curve}
+\end{align}
+
+\begin{theorem}[Relative first- and second-order separation]
+Assume $\bm N$ has full column rank in a regular observable nuisance chart. If $\bm P_{\perp}\bm d\ne\bm0$, the local squared distance to the nuisance manifold is
+\begin{equation}
+ \Delta^2(a)=a^2\|\bm P_{\perp}\bm d\|_2^2+O(a^3).
+ \label{eq:supp-first-order-contact}
+\end{equation}
+If $\bm d=\bm N\bm v$, define
+\begin{equation}
+ \bm\kappa=\bm P_{\perp}
+ \left(\bm q-\tfrac12\bm H_0[\bm v,\bm v]\right).
+ \label{eq:supp-relative-curvature}
+\end{equation}
+Then
+\begin{equation}
+ \Delta^2(a)=a^4\|\bm\kappa\|_2^2+O(a^5).
+ \label{eq:supp-second-order-contact}
+\end{equation}
+\label{thm:supp-relative-contact}
+\end{theorem}
+
+\paragraph{Proof.}
+The local minimizer satisfies
+$D\bm F_0(\bm b)^{\mathsf T}[\bm F_0(\bm b)-\bm c(a)]=\bm0$.
+At the origin, its derivative with respect to $\bm b$ is
+$\bm N^{\mathsf T}\bm N\succ\bm0$, so the implicit-function theorem gives a smooth minimizing branch. Write
+$\bm b_{\star}(a)=a\bm v+a^2\bm w+O(a^3)$.
+At first order, $\bm N^{\mathsf T}(\bm N\bm v-\bm d)=\bm0$, yielding residual $a\bm P_{\perp}\bm d+O(a^2)$ and \eqref{eq:supp-first-order-contact}. If $\bm d=\bm N\bm v$, the first-order residual vanishes. At second order, minimization projects
+$\bm q-\tfrac12\bm H_0[\bm v,\bm v]$ onto $\operatorname{range}\bm N$; the remaining normal component is \eqref{eq:supp-relative-curvature}. Squaring the residual gives \eqref{eq:supp-second-order-contact}. $\hfill\square$
+
+If $n$ independent Gaussian replications have local distance
+$\Delta(a)=|a|^r\|\bm k_r\|+O(|a|^{r+1})$, their KL divergence to the closest null is $n\Delta^2(a)/2$. Pinsker's inequality bounds the power of any level-$\alpha$ test by
+\begin{equation}
+ \operatorname{Power}_a
+ \le \alpha+min\{1,\sqrt n\Delta(a)/2\}.
+ \label{eq:supp-contact-power-bound}
+\end{equation}
+Thus $n|a_n|^{2r}\rightarrow0$ prevents power from separating from size. The reference scales are $n^{-1/2}$ for first-order contact and $n^{-1/4}$ for second-order contact; singular-information asymptotics are established more broadly \cite{rotnitzky2000singular}. Correlated frames in one PMU window are not independent replications and must be handled through their joint covariance.
+
+All audited load directions in the present bank have nonzero first-order separation. The second-order result is therefore a boundary theorem, not the empirical explanation for weak-pair failure.
+
+\subsection{Theory-to-Evidence Boundary}
+
+\begin{table*}[t]
+\caption{Status of the mathematical results relative to the frozen evidence.}
+\label{tab:supp-theory-status}
+\centering
+\scriptsize
+\begin{tabularx}{\textwidth}{@{}lXX@{}}
+\toprule
+Result & What it establishes & Present evidence boundary \\
+\midrule
+Functional equivalence and BLUE & Exact target recovery and minimum covariance in the finite-horizon local linear model & Nonlinear TEST accuracy is empirical; the threshold-sensitive structural audit is not a certificate \\
+Efficient Fisher projection & First-order amplitude information after declared nuisance is removed & Source-wise detectability association is exploratory; pairwise Fisher did not match the pooled multicandidate outcome \\
+Sparse injectivity and $\gamma_{2K}$ & Noise-free uniqueness and a local stability constant for a fixed dictionary & T120 diagnostics use the frozen load bank; no general descriptor left-invertibility claim \\
+Temporal rate theorem & Persistent equilibrium separation gives linear information growth; transient-only separation can saturate & Current long-horizon study is diagnostic and lacks independent operating-point validation \\
+Relative-curvature theorem & Zero first-order information need not imply nonlinear indistinguishability & Curvature-dominated weak-event behavior was not observed in the frozen atlas \\
+Robust separation bound & Nominal geometry survives only when its margin exceeds model error & Requires a future simulator-shift or independent-data contract \\
+\bottomrule
+\end{tabularx}
+\end{table*}

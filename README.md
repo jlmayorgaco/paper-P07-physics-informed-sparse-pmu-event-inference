@@ -11,7 +11,7 @@ This repository develops an evidence-backed IEEE Access manuscript on hidden-sta
 | Path | Purpose |
 | --- | --- |
 | `main.tex` | IEEE Access root manuscript, organized around four research questions |
-| `supplement.tex` | Detailed derivations, frozen contracts, and secondary results |
+| `supplement.tex`, `supplement/` | Detailed proofs, Fisher-information analysis, stepwise Bayesian estimators, frozen contracts, and secondary results |
 | `metadata.tex` | Title, author list, affiliations, and running headers |
 | `preamble.tex` | Shared packages and mathematical notation |
 | `sections/` | One LaTeX source file per manuscript section |
@@ -56,7 +56,7 @@ When `latexmk` and Perl are available, the equivalent command is:
 latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
 ```
 
-The resulting local builds are `main.pdf` and `supplement.pdf`. The main paper retains the scientific argument and decisive evidence; the supplement contains the paper-by-paper literature matrix, electrical conventions, proofs, complete estimator equations, frozen contracts, and secondary diagnostics. Review copies under `output/pdf/` are tracked for direct delivery. Run the artifact generator before compiling whenever the frozen snapshot changes.
+The resulting local builds are `main.pdf` and `supplement.pdf`. The main paper retains the scientific argument and decisive evidence. The supplement contains the paper-by-paper literature matrix, electrical conventions, complete proofs, nuisance-profiled Fisher information, sparse and temporal identifiability results, the executed 137-hypothesis Bayesian algorithm, the candidate-conditioned joint-estimator design, frozen contracts, and secondary diagnostics. Review copies under `output/pdf/` are tracked for direct delivery. Run the artifact generator before compiling whenever the frozen snapshot changes.
 
 ## GitHub and Overleaf workflow
 
@@ -77,5 +77,7 @@ Do not add numerical results or performance claims without a traceable experimen
 The full-project scientific compendium is routed through [`docs/compendium-estimator-integration-map.md`](docs/compendium-estimator-integration-map.md). That map separates validated estimator results, the audited historical diagnosis baseline, and the still-proposed common-contract joint experiment.
 
 The September 13 master dossier is routed through [`docs/master-dossier-integration-map.md`](docs/master-dossier-integration-map.md), which records what fits in the 20-page paper, what remains compact, and what is deferred until an experiment is complete.
+
+The expanded mathematical supplement is indexed in [`docs/supplement-theory-map-2026-09-15.md`](docs/supplement-theory-map-2026-09-15.md). That map links each proof and estimator block to its interpretation and evidence boundary.
 
 The phase-1 adversarial review is resolved issue by issue in [`docs/adversarial-audit-response.md`](docs/adversarial-audit-response.md); unresolved experimental items remain submission vetoes rather than prose claims.

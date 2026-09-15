@@ -25,7 +25,7 @@
 
 ## Main-paper and supplement boundary
 
-The main paper carries only the definitions, propositions, numbers, and figures needed to answer the four research questions. Supplementary Appendices A--G contain the paper-by-paper literature matrix, terminal-current and event-operator conventions, metric denominators, proofs, complete estimator and likelihood equations, full frozen-contract inventory, and secondary diagnostics. This boundary keeps the article readable without weakening reproducibility.
+The main paper carries only the definitions, propositions, numbers, and figures needed to answer the four research questions. Supplementary Appendices A--G contain the paper-by-paper literature matrix, terminal-current and event-operator conventions, metric denominators, proofs of functional reconstruction and sparse injectivity, nuisance-profiled Fisher and temporal-information analysis, the executed Bayesian load-bank algorithm, the still-unexecuted candidate-conditioned joint design, the full frozen-contract inventory, and secondary diagnostics. This boundary keeps the article readable without weakening reproducibility or confusing derived capability with tested performance.
 
 ## Title gate
 

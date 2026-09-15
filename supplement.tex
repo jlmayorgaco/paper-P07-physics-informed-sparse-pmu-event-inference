@@ -4,6 +4,7 @@
 
 \input{preamble}
 \usepackage{placeins}
+\newtheorem{theorem}{Theorem}
 \input{generated/results_macros}
 
 \begin{document}
@@ -22,10 +23,10 @@
 }
 
 \begin{abstract}
-This supplement records the detailed literature matrix, electrical conventions, theoretical derivations, estimator equations, frozen experimental contracts, and secondary results supporting the main article. It does not add claims or change any test denominator. Every numerical table and empirical figure is generated from the same hashed evidence snapshot used by the main manuscript.
+This supplement records the detailed literature matrix, electrical conventions, mathematical proofs, Fisher-information analysis, Bayesian estimator construction, frozen experimental contracts, and secondary results supporting the main article. It distinguishes the evaluated state and 137-hypothesis load-support estimators from the still-unexecuted common-contract joint formulation. It does not add empirical claims or change any test denominator. Every numerical table and empirical figure is generated from the same hashed evidence snapshot used by the main manuscript.
 \end{abstract}
 \begin{keywords}
-phasor measurement units, reproducibility, state estimation, event-source inference, supplementary material.
+Bayesian inference, Fisher information, functional observability, phasor measurement units, reproducibility, state estimation, event-source inference.
 \end{keywords}
 \titlepgskip=-21pt
 \maketitle
@@ -131,98 +132,10 @@ It is a trajectory-and-bus mean reported as a percentage; it is not the standard
 
 A causal estimate at $k$ uses $\bm y_{0:k}$. A fixed-lag smoother, complete-window score, or centered temporal feature is retrospective. For source generalization, the physical asset is absent from source-labeled training, feature fitting, threshold selection, and calibration. Intervals and significance tests use the complete trajectory, event parent, or rebuilt plant as the independent unit; samples within a 30-Hz stream are correlated observations, not replicates.
 
-\section{Proofs and Additional Diagnosability Results}
+\input{supplement/appendix_d_theory}
 
-\subsection{Functional Reconstruction and Covariance}
-
-Two initial states produce the same output history exactly when their difference belongs to $\ker\mathcal O_N$. Their requested outputs agree for every such pair exactly when that difference also belongs to $\ker\bm L_r$. This proves the functional condition in the main paper. Stacking $\bm L_0,\ldots,\bm L_N$ gives the complete-sequence statement.
-
-Let $\bm G_N=\mathcal O_N^{\mathsf T}\bm R_N^{-1}\mathcal O_N$. When the functional condition holds, the minimum-variance linear unbiased target estimate and covariance are
-\begin{align}
- \widehat{\delta\bm z}_r&=\bm L_r\bm G_N^{\dagger}
- \mathcal O_N^{\mathsf T}\bm R_N^{-1}\delta\bm Y_N,\\
- \bm\Sigma_{z,r}^{\star}&=\bm L_r\bm G_N^{\dagger}\bm L_r^{\mathsf T}.
- \label{eq:supp-functional-blue}
-\end{align}
-The kernel inclusion implies $\bm L_r=\bm L_r\bm G_N^{\dagger}\bm G_N$, which proves unbiasedness. Any other unbiased linear map adds $\bm Q$ satisfying $\bm Q\mathcal O_N=\bm0$ and therefore adds the positive-semidefinite covariance term $\bm Q\bm R_N\bm Q^{\mathsf T}$. For a nonlinear DAE, this local result requires a constant-rank neighborhood condition before it becomes a functional-observability certificate \cite{montanari2022functional}.
-
-\subsection{Composite Candidates, Integrity Nuisance, and PMU Addition}
-
-For candidate $h$, define the affine mean set
-\begin{equation}
- \mathcal M_h(S)=\bm s_{h,H}+\operatorname{col}[\mathcal O_{h,H},\mathcal E_{S,H}].
-\end{equation}
-The profiled margin is zero exactly when the response difference belongs to the combined nuisance column space. At that point, the two candidates have identical means and covariance; their two conditional error probabilities sum to one. This proves the local indistinguishability proposition.
-
-When the corruption support is unknown but at most $q$ channels are affected, the conservative margin is
-\begin{equation}
- D_{ij}^{(q)}(H)=\min_{S:\,|S|\le q}D_{ij,S}(H).
-\end{equation}
-This union-of-subspaces form connects event localization to sparse attack identification and unknown-input reconstruction \cite{pasqualetti2013attack,showkatbakhsh2020secure}. For a fixed nuisance contract, adding a conditionally independent PMU block adds a nonnegative residual term for every nuisance vector. Minimizing after augmentation preserves the inequality
-\begin{equation}
- D_{ij,S}^{(\mathcal P\cup\{p\})}(H)\ge D_{ij,S}^{(\mathcal P)}(H).
-\end{equation}
-Equality with a sum of separately profiled margins need not hold because both blocks share nuisance variables.
-
-\subsection{Sparse Injectivity and Observation Time}
-
-If two $K$-sparse event vectors produce the same history, their difference is at most $2K$ sparse and lies in $\ker\mathcal H_T$. Conversely, any nonzero vector in $\ker\mathcal H_T\cap\mathcal A_{2K}$ can be written as the difference of two $K$-sparse vectors that produce the same output. This proves the sparse-injectivity proposition.
-
-For competing supports $S$ and $R$, define
-\begin{equation}
- \Delta_{S\rightarrow R}^2(T)=\min_{\bm b}
- \|\mathcal H_{T,S}\bm a-\mathcal H_{T,R}\bm b\|_{\bm R_T^{-1}}^2.
-\end{equation}
-Under prefix-consistent causal whitening and a fixed nuisance domain, appending samples adds a nonnegative residual term before minimization. The separation cannot decrease. It grows linearly when the optimally profiled steady signatures differ and can saturate when only a square-summable transient distinguishes them. Thus observation time improves finite information but cannot repair an exact shared response.
-
-\section{Estimator and Likelihood Details}
-
-\subsection{Candidate-Conditioned Joint Objective}
-
-For candidate $h$, define the residual
-$\bm r_{h,t}=\bm M_t[\bm y_t-\bm h_{\mathcal P_t}(\bm x_t,\bm z_t)-\bm b_t]$.
-The negative twice-log joint density, excluding the hypothesis prior, is
-\begin{equation}
-\begin{aligned}
- \mathcal J_h^{\circ}={}&\|\bm x_0-\overline{\bm x}_0\|_{\bm P_0^{-1}}^2
- +\sum_{t=0}^{k}\|\bm r_{h,t}\|_{\bm R_t^{-1}}^2\\
- &+\sum_{t=0}^{k-1}\|\bm x_{t+1}-\bm F_h(\bm x_t,\bm z_t)\|_{\bm Q^{-1}}^2
- +2\lambda_b\sum_{t=0}^{k}\|\bm b_t\|_1,
-\end{aligned}
-\end{equation}
-subject to the candidate DAE constraints. The normalized evidence integrates $\exp(-\mathcal J_h^{\circ}/2)$ over the latent trajectory and corruption coefficients. A Laplace approximation multiplies the optimized density by the pseudo-determinant on locally identifiable directions and by $p(h)$ exactly once. If the determinant or normalized density is omitted, the result is an evidence score rather than a posterior probability.
-
-\subsection{State Hierarchy, Calibration, and Recentering}
-
-B0 returns the equilibrium. B1 applies the prior-conditioned snapshot gain
-\begin{align}
- \bm K_{\mathrm{LMMSE}}&=\bm P_0\bm C^{\mathsf T}
- (\bm C\bm P_0\bm C^{\mathsf T}+\bm R)^{-1},\\
- \widehat{\delta\bm x}^{\mathrm{B1}}_k&=\bm K_{\mathrm{LMMSE}}(\bm y_k-\bm y_0).
-\end{align}
-B2 carries the state and covariance between frames using the Kalman recursion in the main paper. B3 applies the exact linear-Gaussian backward recursion at fixed lags from one frame to 2~s and is retrospective \cite{rauch1965smoothing}.
-
-The nominal uncertainty correction uses
-\begin{equation}
- \bm\Sigma_{i,k}^{\mathrm{U2}}=\bm T\bm\Sigma_{i,k}\bm T^{\mathsf T},
- \qquad \bm T=\operatorname{diag}(\sqrt{\tau_{\Re}},\sqrt{\tau_{\Im}}),
-\end{equation}
-with temperatures fitted on independent calibration trajectories. The adequacy statistic is a five-frame trailing mean of
-\begin{equation}
- a_k=(\bm\nu_k-\bm\mu_{\nu})^{\mathsf T}\bm\Sigma_{\nu}^{-1}(\bm\nu_k-\bm\mu_{\nu}).
-\end{equation}
-Hidden truth labels whether the state error is unacceptable only after inference; it never enters the statistic.
-
-For physical recentering, $\bm d$ collects active/reactive changes at admissible PQ loads and active-power changes at PV buses. Development data select $\gamma=10^3$, $q_d=1$, and $\lambda=0.01$. If $\bm J_{yd}$ and $\bm J_{zd}$ are the observed and hidden voltage Jacobians after eliminating voltage through the AC constraints, the target residual
-\begin{equation}
- r_{d\rightarrow z}=\frac{\|\bm J_{zd}\bm N(\bm J_{yd})\|_F}
- {\max(\|\bm J_{zd}\|_F,\epsilon)}
-\end{equation}
-tests whether PMU-uninformed nuisance directions alter the requested voltage. A zero value would be required for exact local target identifiability.
-
-\subsection{Load Likelihood Configuration}
-
-The W2 covariance combines the frozen channel covariance with an AR(1) temporal model estimated from equilibrium records with synthetic measurement noise. The cardinality prior is $p(K=0,1,2)=(0.20,0.50,0.30)$, supports are uniform conditional on $K$, and active amplitudes are independent $\mathcal N(0,0.05^2)$. Operational integration uses 31-node Gauss--Hermite quadrature per active amplitude. Two-dimensional Gauss--Kronrod calculations provide an independent numerical check. The configuration excludes ambient load trajectories, instrument/timing-error sweeps, PMU loss, topology changes, and unknown onset.
+\FloatBarrier
+\input{supplement/appendix_e_estimator}
 
 \section{Complete Frozen Experimental Contracts}
 
@@ -264,7 +177,11 @@ The ANDES ordinary split uses three replicas for training, one for development, 
 \FloatBarrier
 \section{Secondary Results}
 
-The main paper retains the figures needed for the scientific argument. This appendix records secondary diagnostics and exact values that would otherwise interrupt that argument.
+The main paper retains the figures needed for the scientific argument. This appendix records secondary diagnostics and exact values that would otherwise interrupt that argument. The two compact tables first preserve the exact mismatch and weak-signal values; the full-width panels then show the corresponding temporal, likelihood, and supervised-baseline diagnostics.
+
+\input{tables/generated/mismatch_results}
+
+\input{tables/generated/load_weak_results}
 
 \input{tables/generated/uncertainty_results}
 
@@ -274,10 +191,6 @@ The main paper retains the figures needed for the scientific argument. This appe
 \caption{Secondary temporal and uncertainty diagnostics for B2/B3 and calibration variants. These panels diagnose model adequacy; they do not upgrade nominal marginal coverage to a complete uncertainty claim.}
 \label{fig:supp-temporal-uncertainty}
 \end{figure*}
-
-\input{tables/generated/mismatch_results}
-
-\input{tables/generated/load_weak_results}
 
 \begin{figure*}[t]
 \centering
