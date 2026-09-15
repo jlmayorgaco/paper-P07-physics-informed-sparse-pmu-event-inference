@@ -16,6 +16,19 @@ where $c$ is the event family, $\mathcal S$ its bus or branch support, $\tau$ th
 \end{align}
 The event enters the physical equations through $h$. In contrast, $\bm M_k$ records channel availability and $\bm b_k$ records measurement corruption. A physical event and a failed PMU can therefore coexist without becoming a new event class.
 
+For a scheduled impulse-free intervention, the physical switch preserves the
+differential state and re-equilibrates the algebraic state in the post-event mode:
+\begin{equation}
+ \bm x(\tau^+)=\bm x(\tau^-),\qquad
+ \bm g_{h^+}\!\left(\bm x(\tau^-),\bm z(\tau^+),\bm u;\bm\theta^+\right)=\bm0.
+ \label{eq:event-right-limit}
+\end{equation}
+This right limit is not necessarily the array stored inside a simulator callback.
+The frozen trajectories begin at the first retained 30-Hz frame, so they validate
+the sampled response rather than the callback microstate. Supplementary
+Appendix~D proves the local consistency expansion and separates the direct
+algebraic PMU signature from its subsequent dynamic propagation.
+
 The network map uses $\bm I=\bm Y_{\mathrm{bus}}\bm V$ and $S_i=V_iI_i^*$. A fault changes a shunt, a line outage changes $\bm Y_{\mathrm{bus}}$, and generation or load events change the corresponding injections. PMU currents use the instrumented branch terminal and orientation. Supplementary Appendix~B gives the AC power equations, transformer and terminal-current conventions, index-one reduction, and frequency/ROCOF definitions. Those details determine the likelihood, but they do not change the two inference questions posed here.
 
 The first question asks for a function of state. With PMUs at

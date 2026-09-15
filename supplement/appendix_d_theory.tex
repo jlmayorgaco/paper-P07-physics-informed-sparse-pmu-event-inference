@@ -24,7 +24,103 @@ These assumptions distinguish the local theory from general descriptor left inve
 
 \subsection{Simulator-Consistent Event Sensitivities}
 
-The production callback changes physical parameters while preserving the stored coordinates at the callback. The DAE solver then restores consistency before the first retained frame. The relevant differentiable object is therefore the sampled map
+For a fixed-time, impulse-free event, the differential state is continuous, but the
+algebraic state must satisfy the post-event constraint. This physical right limit
+must be distinguished from the values stored inside a simulator callback and from
+the first sampled frame. The following result makes that distinction explicit.
+
+\begin{theorem}[Local consistency-jump expansion]
+Let $\bm x_0=\bm x(\tau^-)$ and suppose
+$\bm g_+(\bm x_0,\bm z_0,0)=\bm0$. If $\bm g_+$ is three times continuously
+differentiable and $\bm g_{\bm z}$ is nonsingular at
+$(\bm x_0,\bm z_0,0)$, there is a unique local consistent branch
+\begin{equation}
+ \bm z_+(a)=\bm z_0+a\bm z_1+\tfrac12a^2\bm z_2+O(a^3),
+ \label{eq:supp-consistency-branch}
+\end{equation}
+where all derivatives below are evaluated at the nominal right-limit mode and
+\begin{align}
+ \bm z_1&=-\bm g_{\bm z}^{-1}\bm g_a,
+ \label{eq:supp-consistency-first}\\
+ \bm z_2&=-\bm g_{\bm z}^{-1}
+ \left(\bm g_{\bm z\bm z}[\bm z_1,\bm z_1]
+ +2\bm g_{\bm z a}\bm z_1+\bm g_{aa}\right).
+ \label{eq:supp-consistency-second}
+\end{align}
+The corresponding differential state satisfies
+$\bm x(\tau^+)=\bm x(\tau^-)$, and its first event-amplitude sensitivity starts
+with
+\begin{equation}
+ \dot{\bm x}_a(\tau^+)
+ =\bm f_a-\bm f_{\bm z}\bm g_{\bm z}^{-1}\bm g_a
+ \equiv \bm B_{r,a}.
+ \label{eq:supp-reduced-event-forcing}
+\end{equation}
+Its second-order initial forcing is
+\begin{align}
+ \dot{\bm x}_{aa}(\tau^+)\equiv\bm B_{r,aa}
+ ={}&\bm f_{\bm z\bm z}[\bm z_1,\bm z_1]
+ +2\bm f_{\bm z a}\bm z_1+\bm f_{aa}\nonumber\\
+ &-\bm f_{\bm z}\bm g_{\bm z}^{-1}
+ \left(\bm g_{\bm z\bm z}[\bm z_1,\bm z_1]
+ +2\bm g_{\bm z a}\bm z_1+\bm g_{aa}\right).
+ \label{eq:supp-reduced-second-forcing}
+\end{align}
+\label{thm:supp-consistency-jump}
+\end{theorem}
+
+\paragraph{Proof.}
+The implicit-function theorem applied to
+$\bm g_+(\bm x_0,\bm z_+(a),a)=\bm0$ gives a unique smooth local branch.
+Differentiating once gives
+$\bm g_{\bm z}\bm z_1+\bm g_a=\bm0$, which yields
+\eqref{eq:supp-consistency-first}. Differentiating a second time gives
+$\bm g_{\bm z}\bm z_2+\bm g_{\bm z\bm z}[\bm z_1,\bm z_1]
++2\bm g_{\bm z a}\bm z_1+\bm g_{aa}=\bm0$, which yields
+\eqref{eq:supp-consistency-second}. An impulse-free fixed-time switch does not
+reset the energy-storage coordinates, so the differential state is continuous.
+Differentiating $\dot{\bm x}=\bm f_+(\bm x,\bm z_+(a),a)$ at the right limit,
+with $\bm x_a(\tau^+)=\bm0$, gives
+\eqref{eq:supp-reduced-event-forcing}. A second differentiation, using
+$\bm x_{aa}(\tau^+)=\bm0$ and \eqref{eq:supp-consistency-second}, gives
+\eqref{eq:supp-reduced-second-forcing}. $\hfill\square$
+
+The theorem also defines an implementation-independent consistency diagnostic. If
+a callback changes the parameter but temporarily retains $\bm z_0$, its algebraic
+residual is
+\begin{equation}
+ \bm r_{\mathrm{cb}}(a)
+ =\bm g_+(\bm x_0,\bm z_0,a)
+ =a\bm g_a+\tfrac12a^2\bm g_{aa}+O(a^3).
+ \label{eq:supp-callback-residual}
+\end{equation}
+Substituting the zeroth-, first-, and second-order approximations to
+\eqref{eq:supp-consistency-branch} produces constraint residuals of orders
+$O(a)$, $O(a^2)$, and $O(a^3)$, respectively. Central finite differences of an
+independently solved algebraic branch can therefore test both derivatives and the
+expected convergence orders without relying on undocumented callback storage.
+
+For a differentiable PMU map $\bm y=\bm h(\bm x,\bm z,a)$, the direct
+right-limit signature is
+\begin{equation}
+ \bm y_a(\tau^+)
+ =\bm h_a-\bm h_{\bm z}\bm g_{\bm z}^{-1}\bm g_a,
+ \qquad
+ \Delta\bm y_{\mathcal P}
+ =a\bm M_{\mathcal P}\bm y_a(\tau^+)+O(a^2).
+ \label{eq:supp-direct-pmu-signature}
+\end{equation}
+This direct algebraic visibility is not the entire event signature. Even when
+\eqref{eq:supp-direct-pmu-signature} is nearly zero at the retained PMUs,
+\eqref{eq:supp-reduced-event-forcing} can generate a distinguishable dynamic
+response over later frames. Instantaneous invisibility therefore does not imply
+finite-horizon nonidentifiability.
+
+The frozen artifacts begin at the first retained 30-Hz frame and do not record the
+callback microstate or an independently solved algebraic right limit. Accordingly,
+the paper treats the right-limit equations above as the physical contract, not as
+an observed fact about the current ANDES callback implementation. The relevant
+differentiable object for the existing response dictionary is the sampled map
 \begin{equation}
  \bm\Psi_{T_s}^{\mathrm{sim}}:
  (\bm u^{-},\bm p(\bm a))\mapsto
@@ -168,7 +264,7 @@ To expose nuisance geometry, consider
 \end{equation}
 where $\bm\nu$ may contain initial-state, operating-point, parameter, or integrity directions. Let $\bm W^{\mathsf T}\bm W=\bm\Sigma^{-1}$, $\overline{\bm d}=\bm W\bm d$, $\overline{\bm N}=\bm W\bm N$, and
 \begin{equation}
- \bm P_{\perp}=\bm I-overline{\bm N}\overline{\bm N}^{\dagger}.
+ \bm P_{\perp}=\bm I-\overline{\bm N}\overline{\bm N}^{\dagger}.
  \label{eq:supp-nuisance-projector}
 \end{equation}
 
@@ -455,12 +551,24 @@ First-order Fisher information can vanish while nonlinear separation remains. In
 \end{align}
 
 \begin{theorem}[Relative first- and second-order separation]
-Assume $\bm N$ has full column rank in a regular observable nuisance chart. If $\bm P_{\perp}\bm d\ne\bm0$, the local squared distance to the nuisance manifold is
+Assume the nuisance manifold has constant rank and use a regular chart after
+removing redundant coordinates. Define the profiled first-order coefficient
 \begin{equation}
- \Delta^2(a)=a^2\|\bm P_{\perp}\bm d\|_2^2+O(a^3).
+ \gamma_1^2=\|\bm P_{\perp}\bm d\|_2^2,
+ \qquad
+ \bm P_{\perp}=\bm I-(\bm W\bm J_c)(\bm W\bm J_c)^{\dagger},
+ \label{eq:supp-gamma-one}
+\end{equation}
+where $\bm J_c$ is the nuisance tangent before whitening and $\bm d$ is the
+already whitened event tangent in \eqref{eq:supp-event-contact-curve}. If
+$\gamma_1>0$, the local squared distance to the
+nuisance manifold is
+\begin{equation}
+ \Delta^2(a)=a^2\gamma_1^2+O(a^3).
  \label{eq:supp-first-order-contact}
 \end{equation}
-If $\bm d=\bm N\bm v$, define
+If $\gamma_1=0$, so the whitened event tangent lies in the nuisance tangent
+space, define
 \begin{equation}
  \bm\kappa=\bm P_{\perp}
  \left(\bm q-\tfrac12\bm H_0[\bm v,\bm v]\right).
@@ -477,11 +585,17 @@ Then
 \paragraph{Proof.}
 The local minimizer satisfies
 $D\bm F_0(\bm b)^{\mathsf T}[\bm F_0(\bm b)-\bm c(a)]=\bm0$.
-At the origin, its derivative with respect to $\bm b$ is
+At the origin, its derivative with respect to the regular chart coordinate is
 $\bm N^{\mathsf T}\bm N\succ\bm0$, so the implicit-function theorem gives a smooth minimizing branch. Write
 $\bm b_{\star}(a)=a\bm v+a^2\bm w+O(a^3)$.
 At first order, $\bm N^{\mathsf T}(\bm N\bm v-\bm d)=\bm0$, yielding residual $a\bm P_{\perp}\bm d+O(a^2)$ and \eqref{eq:supp-first-order-contact}. If $\bm d=\bm N\bm v$, the first-order residual vanishes. At second order, minimization projects
-$\bm q-\tfrac12\bm H_0[\bm v,\bm v]$ onto $\operatorname{range}\bm N$; the remaining normal component is \eqref{eq:supp-relative-curvature}. Squaring the residual gives \eqref{eq:supp-second-order-contact}. $\hfill\square$
+$\bm q-\tfrac12\bm H_0[\bm v,\bm v]$ onto $\operatorname{range}\bm N$; the remaining normal component is \eqref{eq:supp-relative-curvature}. Squaring the residual gives \eqref{eq:supp-second-order-contact}. The projector is unchanged by any full-rank reparameterization of the same nuisance tangent space, so $\gamma_1$ is a property of the local manifolds and covariance metric rather than of a particular nuisance coordinate basis. $\hfill\square$
+
+Equation~\eqref{eq:supp-first-order-contact} supplies a direct falsification test:
+for independently generated nonlinear trajectories with decreasing $|a|$, the
+profiled squared distance divided by $a^2$ should converge to $\gamma_1^2$. That
+convergence study has not been run for the present ANDES bank; the retrospective
+distance association in the article is not a substitute for it.
 
 If $n$ independent Gaussian replications have local distance
 $\Delta(a)=|a|^r\|\bm k_r\|+O(|a|^{r+1})$, their KL divergence to the closest null is $n\Delta^2(a)/2$. Pinsker's inequality bounds the power of any level-$\alpha$ test by
@@ -497,6 +611,25 @@ All audited load directions in the present bank have nonzero first-order separat
 \subsection{Theory-to-Evidence Boundary}
 
 \begin{table*}[t]
+\caption{Computational closure of the simulator event semantics.}
+\label{tab:supp-semantic-closure}
+\centering
+\scriptsize
+\begin{tabularx}{\textwidth}{@{}lXXl@{}}
+\toprule
+Check & Quantity & Acceptance pattern & Status \\
+\midrule
+Right-limit consistency & $\|\bm g_+(\bm x(\tau+\epsilon),\bm z(\tau+\epsilon),a)\|$ & Solver-scale residual after re-equilibration; callback residual may be $O(a)$ & Open \\
+Algebraic derivatives & Analytic $\bm z_1,\bm z_2$ versus central finite differences & Agreement under a decreasing symmetric amplitude grid & Open \\
+Taylor order & Constraint and state-approximation errors & Successive slopes $1,2,3$, or amplitude-halving ratios $2,4,8$ & Open \\
+Event families & Load, generation, and continuous branch-admittance perturbations & Same declared semantics and tolerances for all three & Open \\
+Dynamic first order & $\bm B_{r,a}$ and the retained PMU response & $\Delta\bm y/a$ converges over the declared early-time window & Open \\
+Dynamic second order & Analytic second variation versus nonlinear trajectories & Discrepancy below a preregistered tolerance & Open; discrepancy unresolved \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+\begin{table*}[t]
 \caption{Status of the mathematical results relative to the frozen evidence.}
 \label{tab:supp-theory-status}
 \centering
@@ -505,8 +638,9 @@ All audited load directions in the present bank have nonzero first-order separat
 \toprule
 Result & What it establishes & Present evidence boundary \\
 \midrule
+Consistency-jump theorem & Differential-state continuity, algebraic re-equilibration, and direct versus dynamic PMU signatures & Mathematical DAE contract only; callback/right-limit logging and derivative convergence remain open \\
 Functional equivalence and BLUE & Exact target recovery and minimum covariance in the finite-horizon local linear model & Nonlinear TEST accuracy is empirical; the threshold-sensitive structural audit is not a certificate \\
-Efficient Fisher projection & First-order amplitude information after declared nuisance is removed & Source-wise detectability association is exploratory; pairwise Fisher did not match the pooled multicandidate outcome \\
+Efficient Fisher projection and $\gamma_1$ & First-order amplitude information and local separation after declared nuisance is removed & Source-wise detectability association is exploratory; $\Delta^2(a)/a^2\rightarrow\gamma_1^2$ has not been tested \\
 Sparse injectivity and $\gamma_{2K}$ & Noise-free uniqueness and a local stability constant for a fixed dictionary & T120 diagnostics use the frozen load bank; no general descriptor left-invertibility claim \\
 Temporal rate theorem & Persistent equilibrium separation gives linear information growth; transient-only separation can saturate & Current long-horizon study is diagnostic and lacks independent operating-point validation \\
 Relative-curvature theorem & Zero first-order information need not imply nonlinear indistinguishability & Curvature-dominated weak-event behavior was not observed in the frozen atlas \\

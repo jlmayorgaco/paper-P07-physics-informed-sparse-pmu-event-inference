@@ -67,6 +67,23 @@ If $D_{ij,S}(H)=0$, the two candidate manifolds intersect. At an intersection th
 
 A positive distance establishes local separation, not an easy decision. Small distance or near-collinear signatures amplify noise and delay support resolution. Supplementary Appendix~D proves the proposition, treats unknown sparse corruption, and shows that adding a conditionally independent PMU cannot reduce the profiled margin when the nuisance contract is fixed.
 
+The infinitesimal version makes the first-order boundary explicit. Let
+$\bm g_\star$ be the event-response tangent, $\bm J_c$ the tangent of the closest
+competing nuisance manifold, and $\bm W^{\mathsf T}\bm W=\bm R_H^{-1}$. With
+\begin{equation}
+ \gamma_1^2=\|\left(\bm I-\bm P_c\right)\bm W\bm g_\star\|_2^2,
+ \qquad
+ \bm P_c=(\bm W\bm J_c)(\bm W\bm J_c)^{\dagger},
+ \label{eq:profiled-first-order-coefficient}
+\end{equation}
+the corresponding local version of \eqref{eq:pairwise-information} satisfies
+$D_{\star c}(a)=a^2\gamma_1^2/2+o(a^2)$. Thus $\gamma_1>0$ gives
+first-order separation after nuisance fitting; $\gamma_1=0$ only makes the
+first-order test inconclusive. Relative curvature can then produce an $a^4$
+squared-distance law. The full statement and proof are in Supplementary
+Appendix~D. The present experiments do not yet test the convergence of
+$2D_{\star c}(a)/a^2$ to $\gamma_1^2$.
+
 For persistent load events, subtract the common no-event trajectory and write the $T$-sample response as
 \begin{equation}
  \bm Y_T=\mathcal H_T\bm a+\bm\varepsilon_T.

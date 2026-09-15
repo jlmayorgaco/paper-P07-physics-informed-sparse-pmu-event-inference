@@ -2,6 +2,11 @@
 
 ## Submission veto: the full multi-family joint method is not yet executed
 
+- Instrument the hybrid DAE event boundary: store the pre-event state, callback arrays, independently consistent post-event algebraic state, constraint residual, and first retained PMU frame.
+- Validate the analytic algebraic terms $z_1,z_2$ with central finite differences and verify zeroth-, first-, and second-order residual scaling before calling the event tangent analytic.
+- Repeat the semantic gate for load change, generation change, and a continuous line-admittance perturbation; use the binary outage only as a separate discrete-mode experiment.
+- Resolve the current second-order analytic-to-TDS discrepancy before using full dynamic curvature as evidence.
+- Freeze and run the local separation falsification test $2D(a)/a^2\rightarrow\gamma_1^2$ over declared candidate pairs, nuisance spaces, operating points, amplitudes, and numerical tolerances.
 - Complete the independent-operating-point T120 physical bank and reconcile the absolute scale/name of the exported separation metric before freezing a prospective horizon contract.
 - After that audit, freeze a new 30/60/90/120-frame test reporting $p(K=2)$, exact support, Top-3, credible-set coverage/size, entropy, and resolution delay without retuning the likelihood.
 - Extend the executed load-source likelihood to faults, line outages, generation changes, integrity events, and simultaneous compositions under one audited plant and PMU operator.

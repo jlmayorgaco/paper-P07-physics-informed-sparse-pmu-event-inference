@@ -11,8 +11,9 @@
 - State reconstruction, physical mismatch, regularized recentering, the historical eight-label benchmark, and source-holdout failure remain in the paper under separate denominators.
 - Figure 8 converts the new reports into one evidence narrative rather than presenting disconnected tables.
 - The 14-page main paper now follows four questions in scientific order: hidden-voltage recovery, failure under physical mismatch, simultaneous-source resolution, and supervised source holdout.
-- Detailed derivations, Fisher-information results, stepwise Bayesian algorithms, all frozen contracts, and secondary diagnostics now appear in a 14-page companion supplement. Exact tables remain available without interrupting the main argument.
-- The reproducible bundle build retains the 14-page supplement independently and appends it after the 14-page principal article, producing one 28-page review PDF without altering the main-paper page budget.
+- Detailed derivations, Fisher-information results, stepwise Bayesian algorithms, all frozen contracts, and secondary diagnostics now appear in a 15-page companion supplement. Exact tables remain available without interrupting the main argument.
+- The hybrid-event semantics now distinguish the physical algebraic right limit, callback storage, and the first retained PMU frame. The local consistency-jump and profiled-$\gamma_1$ results are integrated as theory, while their simulator-convergence tests remain explicit open gates.
+- The reproducible bundle build retains the 15-page supplement independently and appends it after the 14-page principal article, producing one 29-page review PDF without altering the main-paper page budget.
 
 ## Current evidence boundary
 
@@ -25,3 +26,5 @@ The prospective result is strong for moderate and finite simultaneous load inter
 3. Execute one common-contract multi-family estimator with state and integrity nuisance, source holdout, PMU loss/join, physical shift, and long normal exposure.
 4. Compare learned-only, physics-only, learned-discrepancy, and diagnosability-aware variants on identical parents.
 5. Resolve joint uncertainty under physical recentering and expand the independent-solver state check.
+6. Close the hybrid-event semantic gate: instrument callback/right-limit behavior, validate $z_1,z_2$ and residual orders for continuous event families, and resolve the full second-order analytic-to-TDS discrepancy.
+7. Test the local profiled-distance law prospectively by verifying $2D(a)/a^2\rightarrow\gamma_1^2$ under frozen pairs, nuisance spaces, and operating points.
