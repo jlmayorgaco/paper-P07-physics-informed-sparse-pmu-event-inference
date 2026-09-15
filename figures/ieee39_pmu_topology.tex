@@ -1,0 +1,118 @@
+% Vector reconstruction of the IEEE 39-bus network used in the manuscript.
+% Branches and PMU locations were checked against the frozen topology manifest;
+% coordinates are schematic and never enter an electrical-distance calculation.
+\begin{tikzpicture}[
+  x=1cm,y=1cm,
+  font=\sffamily\scriptsize,
+  bus/.style={circle,draw=black!38,fill=white,line width=0.45pt,
+    minimum size=0.42cm,inner sep=0.25pt,font=\sffamily\tiny},
+  source/.style={bus,draw=orange!88!black,fill=orange!14,line width=0.85pt},
+  pmu/.style={bus,draw=accessblue!88!black,fill=accessblue!12,
+    line width=1.15pt,minimum size=0.48cm,font=\sffamily\tiny\bfseries},
+  gen/.style={rounded corners=1.2pt,draw=green!52!black,fill=green!9,
+    line width=0.65pt,minimum width=0.43cm,minimum height=0.40cm,
+    inner sep=0.25pt,font=\sffamily\tiny},
+  pmugen/.style={circle,double=accessblue!88!black,double distance=0.55pt,
+    draw=white,fill=green!10,line width=0.55pt,minimum size=0.49cm,
+    inner sep=0.25pt,font=\sffamily\tiny\bfseries},
+  branch/.style={draw=black!42,line width=0.55pt,line cap=round},
+  note/.style={rounded corners=2pt,align=left,text width=4.15cm,
+    minimum height=0.78cm,inner sep=3pt,font=\sffamily\tiny},
+  rule/.style={draw=black!18,line width=0.45pt}
+]
+
+% Network geometry adapted from the project slide deck and redrawn as vector art.
+\coordinate (b1c) at (0.0,2.1);
+\coordinate (b2c) at (1.1,2.15);
+\coordinate (b3c) at (2.1,1.85);
+\coordinate (b4c) at (3.0,1.55);
+\coordinate (b5c) at (4.0,1.55);
+\coordinate (b6c) at (5.0,1.35);
+\coordinate (b7c) at (6.0,1.45);
+\coordinate (b8c) at (6.8,1.95);
+\coordinate (b9c) at (7.3,2.65);
+\coordinate (b39c) at (0.0,3.05);
+\coordinate (b10c) at (5.35,0.25);
+\coordinate (b11c) at (4.55,0.55);
+\coordinate (b12c) at (3.70,0.20);
+\coordinate (b13c) at (3.25,0.80);
+\coordinate (b14c) at (3.00,0.25);
+\coordinate (b15c) at (2.30,-0.25);
+\coordinate (b16c) at (1.55,-0.55);
+\coordinate (b17c) at (0.85,-0.05);
+\coordinate (b18c) at (1.25,0.80);
+\coordinate (b19c) at (0.75,-1.05);
+\coordinate (b20c) at (0.2,-1.65);
+\coordinate (b21c) at (2.15,-1.15);
+\coordinate (b22c) at (2.85,-1.55);
+\coordinate (b23c) at (3.65,-1.35);
+\coordinate (b24c) at (2.65,-0.85);
+\coordinate (b25c) at (-0.15,1.15);
+\coordinate (b26c) at (-0.95,0.35);
+\coordinate (b27c) at (0.15,0.00);
+\coordinate (b28c) at (-1.55,1.00);
+\coordinate (b29c) at (-2.35,0.35);
+\coordinate (b30c) at (1.35,2.85);
+\coordinate (b31c) at (5.75,2.05);
+\coordinate (b32c) at (6.10,0.00);
+\coordinate (b33c) at (0.20,-2.35);
+\coordinate (b34c) at (0.95,-2.15);
+\coordinate (b35c) at (3.05,-2.35);
+\coordinate (b36c) at (4.35,-2.00);
+\coordinate (b37c) at (-0.85,1.65);
+\coordinate (b38c) at (-2.95,1.05);
+
+% The 46 physical branches are drawn before the buses so labels remain legible.
+\foreach \a/\b in {
+  1/2,1/39,2/3,2/25,2/30,3/4,3/18,4/5,4/14,5/6,5/8,
+  6/7,6/11,6/31,7/8,8/9,9/39,10/11,10/13,10/32,11/12,
+  12/13,13/14,14/15,15/16,16/17,16/19,16/21,16/24,17/18,
+  17/27,19/20,19/33,20/34,21/22,22/23,22/35,23/24,23/36,
+  25/26,25/37,26/27,26/28,26/29,28/29,29/38}{
+    \draw[branch] (b\a c) -- (b\b c);
+}
+
+% Uninstrumented, noncandidate transmission buses.
+\foreach \n in {1,9,11,13,14,17}{\node[bus] (b\n) at (b\n c) {\n};}
+
+% Candidate load-source buses in the evaluated physical dictionary.
+\foreach \n in {3,4,7,8,12,15,16,18,20,21,23,24,25,26,27,28}{
+  \node[source] (b\n) at (b\n c) {\n};
+}
+
+% Prescribed PMU buses. Bus 39 is both a PMU and a generator bus.
+\foreach \n in {2,5,6,10,19,22,29}{\node[pmu] (b\n) at (b\n c) {\n};}
+\node[pmugen] (b39) at (b39c) {39};
+
+% Remaining generator buses.
+\foreach \n in {30,31,32,33,34,35,36,37,38}{\node[gen] (b\n) at (b\n c) {\n};}
+
+% Small legend under the topology.
+\node[pmu] (lpmu) at (-2.75,-2.85) {2};
+\node[anchor=west,font=\sffamily\tiny] at (-2.47,-2.85) {measured PMU bus};
+\node[source] (lsrc) at (0.20,-2.85) {3};
+\node[anchor=west,font=\sffamily\tiny] at (0.48,-2.85) {candidate load source};
+\node[gen] (lgen) at (3.65,-2.85) {30};
+\node[anchor=west,font=\sffamily\tiny] at (3.93,-2.85) {generator bus};
+
+% Right-hand reading guide turns the topology into part of the scientific argument.
+\draw[rule] (7.85,-3.10) -- (7.85,3.25);
+\node[anchor=west,font=\sffamily\small\bfseries,text=black!78] at (8.25,3.00)
+  {Sparse sensing and inference burden};
+
+\node[note,anchor=north west,draw=accessblue!62,fill=accessblue!6]
+  at (8.25,2.58) {\textbf{8 of 39 buses measured}\\[-1pt]
+  $\mathcal P=\{2,5,6,10,19,22,29,39\}$.};
+
+\node[note,anchor=north west,draw=orange!62!black,fill=orange!6]
+  at (8.25,1.30) {\textbf{16 load-source candidates}\\[-1pt]
+  Orange nodes define the closed physical bank evaluated in the load study.};
+
+\node[note,anchor=north west,draw=green!48!black,fill=green!5]
+  at (8.25,0.02) {\textbf{31 hidden voltage targets}\\[-1pt]
+  The network has 46 branches (12 transformers) and 10 generator buses.};
+
+\node[note,anchor=north west,draw=black!35,fill=black!2]
+  at (8.25,-1.25) {\textbf{Schematic geometry}\\[-1pt]
+  Responses and electrical distances use the audited $\bm Y_{\rm bus}$; drawing length has no electrical meaning.};
+\end{tikzpicture}

@@ -7,13 +7,6 @@ Power-system dynamic state estimation combines machine, control, load, and netwo
 
 Learning methods reconstruct states from sparse measurements by encoding graph structure or power-flow relations. Examples combine graph learning with physics-based estimates \cite{ngo2024pignn}, outlier-resistant estimation and outage identification \cite{yue2024graph}, or topology-aware reconstruction under PMU failures and bad data \cite{moshtagh2025topology}. Robust reconstruction does not, by itself, identify the physical source.
 
-\begin{figure*}[t]
-\centering
-\resizebox{\textwidth}{!}{\input{figures/literature_timeline}}
-\caption{Three research streams converge on the unresolved contract. State/input estimators reconstruct latent variables \cite{gillijns2007input,nugroho2022dae,qu2023joint}; event methods assign a family or physical source \cite{tate2008outage,zhao2014outages,chen2016quickest,pandey2020realtime}; observability and diagnosability determine whether the requested quantity is identifiable from the sensors \cite{hou1998input,eriksson2013diagnosability,pasqualetti2013attack,jamei2020limits}. The dashed target requires all three capabilities under source-disjoint sparse sensing and a separate integrity state.}
-\label{fig:literature-timeline}
-\end{figure*}
-
 \subsection{Sparse-PMU Event and Source Inference}
 
 PMU event identification uses subspaces, engineered features, transfer learning, and graph models \cite{li2018subspace,yuan2021learning,li2022transfer,yuan2023gnn}. Label-light field-stream detection and scarce-label transfer target event presence or family \cite{cheng2022bigan,abdelhai2021transfer}; physical-source recovery is distinct. Prior localization spans joint classification/localization \cite{pandey2020realtime}, sparse-PMU fault, generation-loss, and outage methods \cite{li2019cnn,azizi2021log,azizi2023line,yildiz2024few}, group-sparse physical dictionaries \cite{wang2024group}, and topology-constrained graph losses \cite{li2024knowledge}.

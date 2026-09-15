@@ -71,6 +71,15 @@ and requests the hidden complex-voltage function
 \end{equation}
 The event campaign also uses voltage angle, frequency, availability, and, in its longer-window implementation, current and ROCOF. Measurement semantics are kept campaign-specific rather than declaring channels equivalent across simulators.
 
+Figure~\ref{fig:ieee39-topology} fixes the network and sensing geometry used by both campaigns. The topology contains 46 physical branches; the colored load buses identify the 16-source candidate set rather than a claim that every event family has been evaluated at those locations. The drawing is explanatory only: all physical responses and electrical-distance features use the audited branch data and admittance model.
+
+\begin{figure*}[t]
+\centering
+\resizebox{\textwidth}{!}{\input{figures/ieee39_pmu_topology}}
+\caption{IEEE 39-bus sensing and candidate geometry. Blue circles mark the eight prescribed PMU buses; orange circles mark the 16 load buses in the evaluated physical candidate dictionary; green boxes mark generator buses. Bus 39 carries both a generator and a PMU. The vector drawing preserves the 46-branch connectivity used to form $\bm Y_{\rm bus}$ but is not a geographic map or a proxy for electrical distance.}
+\label{fig:ieee39-topology}
+\end{figure*}
+
 \subsection{Eight Event Labels as Composable States}
 
 Table~\ref{tab:event-ontology} defines the eight abnormal labels in the historical event bank. The scientific variables are not the label numbers. Classes 1--4 are single physical interventions; classes 5 and 7 are measurement-integrity states; classes 6 and 8 are compositions. Class 8 is a prescribed mixed event in the available simulations, not evidence of open-set recognition.
