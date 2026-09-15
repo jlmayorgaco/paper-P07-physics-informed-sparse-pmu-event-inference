@@ -46,6 +46,10 @@ powershell -ExecutionPolicy Bypass -File scripts/build_manuscript_bundle.ps1
 The current MiKTeX installation has no Perl engine. The equivalent manual sequence is:
 
 ```powershell
+python scripts/verify_theory_identities.py
+python scripts/verify_cone_bayes_identities.py
+python scripts/verify_information_limits.py
+python scripts/verify_discrepancy_design.py
 pdflatex -interaction=nonstopmode -halt-on-error supplement.tex
 bibtex supplement
 pdflatex -interaction=nonstopmode -halt-on-error supplement.tex
@@ -80,5 +84,7 @@ The full-project scientific compendium is routed through [`docs/compendium-estim
 The September 13 master dossier is routed through [`docs/master-dossier-integration-map.md`](docs/master-dossier-integration-map.md), which records what fits in the 20-page paper, what remains compact, and what is deferred until an experiment is complete.
 
 The expanded mathematical supplement is indexed in [`docs/supplement-theory-map-2026-09-15.md`](docs/supplement-theory-map-2026-09-15.md). That map links each proof and estimator block to its interpretation and evidence boundary.
+
+The robust-discrepancy revision is audited in [`docs/robust-discrepancy-routing-2026-09-15.md`](docs/robust-discrepancy-routing-2026-09-15.md). It records the full-likelihood correction to the utility-only design and the incomplete status of the targeted nonlinear-margin campaign.
 
 The phase-1 adversarial review is resolved issue by issue in [`docs/adversarial-audit-response.md`](docs/adversarial-audit-response.md); unresolved experimental items remain submission vetoes rather than prose claims.

@@ -28,6 +28,7 @@
 - A K-sparse persistent-event vector is uniquely determined over a finite horizon exactly when the event operator kernel contains no nonzero 2K-sparse vector. Nonsingularity establishes uniqueness; the smallest support-Gramian eigenvalue governs conditioning.
 - With a fixed nuisance domain and prefix-consistent whitening, profiled separation cannot decrease as samples are appended. A nonzero profiled steady signature implies linear information growth; an equal steady signature can leave a transient-only, saturating separation.
 - A zero projected event tangent is not, by itself, a universal nonlinear impossibility statement because relative curvature may retain higher-order separation. This possibility is stated as a boundary, not claimed as the mechanism: all tested load directions are first-order resolvable and the curvature-dominated delay explanation is not supported.
+- For a whitened low-rank discrepancy covariance, principal angles give the exact worst retained fraction of protected event information. The complete expected Gaussian score gives a finite fixed-basis variance; the result is a design theorem, not evidence that a learned correction improves the IEEE 39-bus estimator.
 
 ## Not established
 

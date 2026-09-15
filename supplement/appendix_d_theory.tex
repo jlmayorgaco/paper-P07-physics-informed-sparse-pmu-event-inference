@@ -1028,6 +1028,88 @@ has the familiar scaling
 $T\gtrsim K\log(N/K)/(\overline{\mathcal I}_ka^{2k})$, now expressed through
 the physical Hybrid-DAE information rate.
 
+\subsection{Diagnosability-Preserving Discrepancy Covariance}
+
+A residual correction can improve fit while making physical events harder to
+distinguish.  The following calculation makes that tradeoff explicit.  Work
+after whitening and removal of common nuisance.  Let $\bm Q_U\in\mathbb R^{m\times r}$
+be an orthonormal basis for the discriminant directions that must be protected,
+and let $\bm Q_D\in\mathbb R^{m\times q}$ be an orthonormal discrepancy basis.
+The former should be frozen from critical candidate pairs; the latter must be
+estimated from mismatch-only records so that unlabeled events are not absorbed
+as model error.
+
+\begin{theorem}[Discrepancy retention and finite intensity]
+\label{thm:supp-discrepancy-retention}
+Let $\bm P_D=\bm Q_D\bm Q_D^{\mathsf T}$ and model the whitened residual with
+covariance
+\begin{equation}
+ \bm C_s=\bm I+s\bm P_D,\qquad s=\tau^2\ge0.
+ \label{eq:supp-discrepancy-covariance}
+\end{equation}
+Then $\bm C_s^{-1}=\bm I-\alpha\bm P_D$, where
+$\alpha=s/(1+s)$, and the worst information fraction retained over the
+protected subspace is
+\begin{equation}
+ \rho(s,\bm Q_D)
+ =1-\alpha\,\sigma_{\max}^2(\bm Q_U^{\mathsf T}\bm Q_D).
+ \label{eq:supp-discrepancy-retention}
+\end{equation}
+Set $c^2=\sigma_{\max}^2(\bm Q_U^{\mathsf T}\bm Q_D)$ and
+$\delta=1-\rho_{\min}$.  The constraint $\rho\ge\rho_{\min}$ imposes no finite
+upper bound on $s$ when $c^2\le\delta$; otherwise it requires
+\begin{equation}
+ s\le s_{\max}=\frac{\delta}{c^2-\delta}.
+ \label{eq:supp-discrepancy-variance-cap}
+\end{equation}
+If the true residual covariance is $\bm I+\bm C_m$ and
+$E_D=\operatorname{tr}(\bm Q_D^{\mathsf T}\bm C_m\bm Q_D)$, the expected
+Gaussian negative twice-log-likelihood relative to $s=0$, up to constants, is
+\begin{equation}
+ \Delta\mathcal L(s)=q\log(1+s)-\frac{s}{1+s}(q+E_D).
+ \label{eq:supp-discrepancy-full-score}
+\end{equation}
+For fixed $\bm Q_D$, its constrained minimizer is finite:
+\begin{equation}
+ s^\star=\min\{E_D/q,s_{\max}\},
+ \label{eq:supp-discrepancy-finite-intensity}
+\end{equation}
+with $s_{\max}=+\infty$ in the first geometric case.
+\end{theorem}
+
+\paragraph{Proof.}
+The inverse follows from $\bm P_D^2=\bm P_D$.  For
+$\bm x=\bm Q_U\bm a$, the information ratio is the Rayleigh quotient of
+$\bm I-\alpha\bm Q_U^{\mathsf T}\bm P_D\bm Q_U$; its smallest eigenvalue is
+\eqref{eq:supp-discrepancy-retention} because the singular values of
+$\bm Q_U^{\mathsf T}\bm Q_D$ are the principal-angle cosines.  Solving
+$\alpha c^2\le\delta$ gives \eqref{eq:supp-discrepancy-variance-cap}.  Finally,
+$\log|\bm C_s|=q\log(1+s)$ and taking the expectation of
+$\bm y^{\mathsf T}\bm C_s^{-1}\bm y$ under
+$\operatorname{Cov}(\bm y)=\bm I+\bm C_m$ gives
+\eqref{eq:supp-discrepancy-full-score}.  Its derivative is
+$(qs-E_D)/(1+s)^2$, which gives \eqref{eq:supp-discrepancy-finite-intensity}.
+$\hfill\square$
+
+Under strict no-loss protection, $\rho_{\min}=1$ and $s>0$ require
+$\operatorname{range}(\bm Q_D)\subseteq\operatorname{range}(\bm Q_U)^\perp$.
+For fixed rank, the basis that captures the most mismatch energy is therefore
+the top-$q$ eigenspace of
+$\bm P_{U^\perp}\bm C_m\bm P_{U^\perp}$, provided that the orthogonal
+complement has dimension at least $q$.  This is a safe projected-PCA baseline,
+not a learned-estimator result.
+
+Maximizing only $\alpha E_D$ omits both the covariance determinant and the
+whitened measurement-noise contribution.  It therefore drives $s$ toward an
+infinite-variance limit whenever geometry permits.  That utility is a valid
+description of reduced quadratic mismatch penalty, but it is not a normalized
+Bayesian tuning objective.  The general joint orientation problem for $q>1$
+is an offline nonconvex design; spectral, semidefinite, or moment relaxations
+belong in a separate optimization study unless they are executed on the frozen
+event and mismatch dictionaries.
+
+\input{tables/generated/discrepancy_design_validation}
+
 \subsection{Applied Gate Taxonomy From an Archived ANDES Checkpoint}
 
 The frozen RAWSIM39 V1.2 calibration ledger provides an applied boundary check
@@ -1101,7 +1183,7 @@ Temporal order and rate & Prefix and controlled correlated-noise identities pass
 Relative curvature & The controlled parabola passes; curvature-dominated weak-event behavior was not observed in the frozen atlas. \\
 Error and minimax limits & Gaussian quotient, minimum-severity, and Fano formulas pass controlled checks; no IEEE 39 pairwise oracle-error atlas has been frozen. \\
 RAWSIM39 gate taxonomy & The 18-direction ledger supports five conservative gate categories; derivative arrays needed to assign higher-order classes are unavailable. \\
-Robust separation & Requires a simulator-shift or independent-data contract. \\
+Discrepancy retention & Exact for the whitened low-rank covariance model and checked algebraically; the protected dictionary, mismatch covariance, learned correction, and shifted IEEE 39-bus test remain unexecuted. \\
 \bottomrule
 \end{tabularx}
 \end{table}

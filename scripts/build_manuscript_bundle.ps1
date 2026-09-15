@@ -25,6 +25,7 @@ try {
     Invoke-CheckedCommand -Command 'python' -Arguments @('scripts/verify_theory_identities.py')
     Invoke-CheckedCommand -Command 'python' -Arguments @('scripts/verify_cone_bayes_identities.py')
     Invoke-CheckedCommand -Command 'python' -Arguments @('scripts/verify_information_limits.py')
+    Invoke-CheckedCommand -Command 'python' -Arguments @('scripts/verify_discrepancy_design.py')
 
     Write-Host 'Building the standalone supplementary material...'
     Invoke-CheckedCommand -Command 'pdflatex' -Arguments ($latexArguments + 'supplement.tex')

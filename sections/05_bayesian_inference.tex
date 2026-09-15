@@ -84,4 +84,10 @@ The prospective experiment evaluates all \GlobalHypothesisCount{} supports at a 
 
 \subsection{Boundary of the Joint Formulation}
 
-The complete candidate-conditioned model would fit state and integrity nuisance for each physical hypothesis and normalize the resulting evidence. A learned component could then correct candidate residuals or reduce the search, but it must not consume source identity as a shortcut. The required common-contract ablation is learned-only, physics-only, physics plus learned discrepancy, and diagnosability-aware inference with abstention. None of those integrations is presented as an executed result here; Supplementary Appendix~E records the full generative objective so the proposed extension is unambiguous.
+The complete candidate-conditioned model would fit state and integrity nuisance for each physical hypothesis and normalize the resulting evidence. A learned component could then correct candidate residuals or reduce the search, but it must not consume source identity as a shortcut. It must also preserve the directions that distinguish critical physical candidates. After whitening and nuisance removal, a rank-$q$ discrepancy basis $\bm Q_D$ with variance $\tau^2$ retains the worst-case fraction
+\begin{equation}
+ \rho=1-\frac{\tau^2}{1+\tau^2}
+ \sigma_{\max}^2(\bm Q_U^{\mathsf T}\bm Q_D)
+ \label{eq:discrepancy-retention-main}
+\end{equation}
+of the information in a protected discriminant subspace $\bm Q_U$. Supplementary Appendix~D derives the corresponding finite-variance rule using the full Gaussian likelihood; maximizing residual accommodation alone would omit its log-determinant penalty. The required common-contract ablation remains learned-only, physics-only, physics plus learned discrepancy, and diagnosability-aware inference with abstention. None of those integrations is presented as an executed result here; Supplementary Appendix~E records the full generative objective so the proposed extension is unambiguous.

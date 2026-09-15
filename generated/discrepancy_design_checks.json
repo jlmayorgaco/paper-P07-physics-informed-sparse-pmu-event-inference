@@ -1,0 +1,65 @@
+{
+  "contract": {
+    "seed": 20260915,
+    "ambient_dimension": 12,
+    "protected_rank": 3,
+    "discrepancy_rank": 2,
+    "principal_angle_degrees": 30.0,
+    "rho_min": 0.8
+  },
+  "derived": {
+    "cosine_squared": 0.7500000000000009,
+    "variance_cap": 0.3636363636363629,
+    "captured_mismatch_energy": 2.3014547496403672,
+    "unconstrained_likelihood_variance": 1.1507273748201836,
+    "selected_likelihood_variance": 0.3636363636363629,
+    "safe_projected_energy": 6.698629640913756,
+    "best_random_safe_energy": 4.546734051104155
+  },
+  "checks": [
+    {
+      "name": "low_rank_covariance_inverse",
+      "error": 3.3356780531024984e-16,
+      "tolerance": 1e-12,
+      "passed": true,
+      "detail": "Woodbury/projector inverse for I + tau^2 P_D"
+    },
+    {
+      "name": "principal_angle_retention",
+      "error": 3.3306690738754696e-16,
+      "tolerance": 1e-12,
+      "passed": true,
+      "detail": "minimum protected information ratio"
+    },
+    {
+      "name": "retention_variance_cap",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true,
+      "detail": "closed-form variance cap reaches rho_min"
+    },
+    {
+      "name": "finite_full_likelihood_intensity",
+      "error": 5.4984838904204025e-09,
+      "tolerance": 1e-07,
+      "passed": true,
+      "detail": "analytic full-Gaussian optimum versus bounded scalar solve"
+    },
+    {
+      "name": "safe_projected_pca",
+      "error": 8.881784197001252e-16,
+      "tolerance": 1e-10,
+      "passed": true,
+      "detail": "Ky Fan optimum inside the protected orthogonal complement"
+    },
+    {
+      "name": "protected_distance_floor",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 1e-12,
+      "passed": true,
+      "detail": "least-retained protected direction attains the bound"
+    }
+  ],
+  "all_passed": true,
+  "evidence_boundary": "Controlled algebraic checks only; no learned model or IEEE 39-bus discrepancy campaign is validated."
+}
