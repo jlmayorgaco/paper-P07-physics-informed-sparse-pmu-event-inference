@@ -13,6 +13,7 @@
 - The 14-page main paper now follows four questions in scientific order: hidden-voltage recovery, failure under physical mismatch, simultaneous-source resolution, and supervised source holdout.
 - Detailed derivations, Fisher-information results, stepwise Bayesian algorithms, all frozen contracts, and secondary diagnostics now appear in a 15-page companion supplement. Exact tables remain available without interrupting the main argument.
 - The hybrid-event semantics now distinguish the physical algebraic right limit, callback storage, and the first retained PMU frame. The local consistency-jump and profiled-$\gamma_1$ results are integrated as theory, while their simulator-convergence tests remain explicit open gates.
+- First-order multi-event support geometry now separates visibility from aliasing, handles rank-deficient nuisance through projected fits, and proves why nested support cardinality cannot be selected by geometric distance alone. Nine deterministic checks validate the stated local identities without being presented as simulator evidence.
 - The reproducible bundle build retains the 15-page supplement independently and appends it after the 14-page principal article, producing one 29-page review PDF without altering the main-paper page budget.
 
 ## Current evidence boundary

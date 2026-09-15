@@ -10,7 +10,7 @@ The archive `PMU_Teoria_Avanzada_Fuentes_y_Verificacion_2026-09-13.zip` was revi
 - The local testing limit connects first-order contact to an $n^{-1/2}$ amplitude scale and second-order contact to $n^{-1/4}$ under independent Gaussian replications. The text explicitly excludes correlated samples within one PMU window from this interpretation.
 - The diagnosability figure was redesigned to contrast first-order separation with shared-tangent, second-order contact.
 
-Two focused checks were retained in `scripts/verify_theory_identities.py` and `generated/theory_checks.json`. They guard the branch primitive and the $a^4$ squared-distance law without being presented as power-system evidence.
+Nine deterministic checks are retained in `scripts/verify_theory_identities.py` and `generated/theory_checks.json`. They guard the branch primitive; regular first-order and shared-tangent second-order laws; rank-deficient profiling; shared-source cancellation; competitor and nuisance monotonicity; nested-support degeneracy; and the principal-angle identity. A generated supplementary table summarizes them without presenting toy systems as power-system evidence.
 
 ## Retained only as future work
 

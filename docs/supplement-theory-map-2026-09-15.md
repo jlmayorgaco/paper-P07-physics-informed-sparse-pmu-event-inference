@@ -16,6 +16,7 @@ The supplementary material now carries the full mathematical chain behind the co
 | Added measurements | Conditional Gaussian information decomposition and a discrepancy-robust lower bound | A valid new PMU or frame cannot reduce ideal information; model error can erase the nominal margin | Changing-PMU and cross-simulator campaigns remain pending |
 | Temporal information | Exact AR(1) innovation separation, monotonicity, persistent-event linear rate, transient ceiling, and shared-source bottleneck | More frames help only when they add nonredundant candidate separation | T120 is diagnostic and still lacks an independent operating-point block |
 | First- and higher-order contact | Profiled coefficient $\gamma_1$, relative curvature after nuisance projection, and local detection-rate consequence | Positive $\gamma_1$ gives first-order separation; zero first-order Fisher information need not imply nonlinear impossibility | The $\Delta^2(a)/a^2$ convergence test is pending; all audited load directions are first-order and curvature-dominated scaling is a boundary result only |
+| Multi-event support geometry | Support-to-support projection, shared-source quotient, enrichment monotonicity, nested-support degeneracy, and principal angles | Exact support depends on the true-exclusive response outside the competitor span; cardinality requires integrated evidence | Deterministic identities pass, but the analytic IEEE 39-bus tangent/nuisance dictionary has not been validated |
 
 ## Appendix E estimator inventory
 

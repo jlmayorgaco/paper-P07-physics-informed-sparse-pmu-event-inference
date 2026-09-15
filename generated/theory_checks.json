@@ -1,5 +1,5 @@
 {
-  "scope": "Deterministic algebraic toy checks; not IEEE 39-bus evidence.",
+  "scope": "Deterministic toy checks of local theory; not IEEE 39-bus evidence.",
   "checks": [
     {
       "name": "branch_primitive_real_power",
@@ -8,14 +8,80 @@
       "passed": true
     },
     {
+      "name": "regular_first_order_dae",
+      "gamma_squared": 0.4527244641197043,
+      "expected_gamma_squared": 0.452724464118,
+      "squared_distance_log_slope": 2.0000000000000013,
+      "normal_equation_error": 5.551115123125783e-17,
+      "error": 3.764548859585951e-12,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
       "name": "relative_second_order_contact",
-      "squared_distance_log_slope": 3.999995265043359,
+      "squared_distance_log_slope": 3.9999995638415653,
       "expected_slope": 4.0,
-      "error": 4.734956640994881e-06,
+      "limiting_coefficient": 2.8899999966591596,
+      "expected_coefficient": 2.8899999999999997,
+      "error": 4.361584347023495e-07,
       "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "rank_deficient_profile",
+      "rank": 2,
+      "parameter_count": 3,
+      "gamma_squared": 0.5000000000000001,
+      "max_projected_fit_variation": 1.5700924586837752e-16,
+      "max_residual_variation": 0.0,
+      "error": 1.5700924586837752e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "shared_source_cancellation",
+      "expected_margin_squared": 0.019599999999999996,
+      "margin_range": 0.0,
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "competitor_enrichment_monotonicity",
+      "single_margin_squared": 0.5095999999999999,
+      "enriched_margin_squared": 0.019599999999999996,
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "nested_support_zero_margin",
+      "margin_squared": 6.139127113374434e-35,
+      "error": 6.139127113374434e-35,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "principal_angle_margin",
+      "angle_radians": 0.37,
+      "observed_margin": 0.361615431964962,
+      "expected_margin": 0.361615431964962,
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "nuisance_absorption_monotonicity",
+      "margin_sequence": [
+        2.0,
+        1.0,
+        0.0
+      ],
+      "error": 0.0,
+      "tolerance": 1e-12,
       "passed": true
     }
   ],
-  "passed": 2,
-  "total": 2
+  "passed": 9,
+  "total": 9
 }

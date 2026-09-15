@@ -334,7 +334,7 @@ $1-\Phi(z_{1-\alpha}-a\sqrt I)$. Hence the amplitude required for power $1-\beta
 \end{equation}
 This is a conditional known-source benchmark, not the threshold of the 137-support search. Its empirical use in the paper is limited to the exploratory source-wise detectability association.
 
-\subsection{Pairwise Source Geometry and Onset Information}
+\subsection{First-Order Multi-Event Support Geometry and Onset Information}
 
 Let two first-order source signatures be $\bm d_g$ and $\bm d_j$ under fixed precision $\bm G\succeq\bm0$. Allow the competing source to refit its amplitude. The local profiled distance satisfies
 \begin{align}
@@ -349,7 +349,108 @@ Let two first-order source signatures be $\bm d_g$ and $\bm d_j$ under fixed pre
  {\bm d_j^{\mathsf T}\bm G\bm d_j}\ge0.
  \label{eq:supp-profiled-pairwise-fisher}
 \end{align}
-Equation~\eqref{eq:supp-profiled-pairwise-fisher} is a pairwise local separation quantity, not the Fisher information for amplitudes conditional on the true support. For a multi-source support $S$, the latter is
+Equation~\eqref{eq:supp-profiled-pairwise-fisher} is a pairwise local separation quantity, not the Fisher information for amplitudes conditional on the true support.
+
+The pairwise formula extends to arbitrary supports. Let $\bm N_c$ be the
+unwhitened nuisance Jacobian, let $\bm G_e=[\bm g_1,\ldots,\bm g_M]$ collect the
+event tangents, and define
+\begin{equation}
+ \bm A=\bm W\bm N_c,
+ \quad \bm F=\bm W\bm G_e,
+ \quad \bm R_N=\bm I-\bm A\bm A^{\dagger},
+ \quad \overline{\bm F}=\bm R_N\bm F.
+ \label{eq:supp-residualized-event-dictionary}
+\end{equation}
+
+\begin{theorem}[First-order support-to-support separation]
+For true support $S$ with fixed severity direction $\bm\alpha_S$ and competing
+support $C$ with freely fitted local amplitudes, define
+\begin{equation}
+ \gamma_{S\rightarrow C}^2(\bm\alpha_S)
+ =\min_{\bm u,\bm\beta_C}
+ \|\bm F_S\bm\alpha_S-\bm A\bm u-\bm F_C\bm\beta_C\|_2^2.
+ \label{eq:supp-support-margin-definition}
+\end{equation}
+Then
+\begin{align}
+ \gamma_{S\rightarrow C}^2(\bm\alpha_S)
+ &=\|\left(\bm I-\bm P_{\overline{\bm F}_C}\right)
+ \overline{\bm F}_S\bm\alpha_S\|_2^2,
+ \label{eq:supp-support-margin-projector}\\
+ &=\bm\alpha_S^{\mathsf T}\bm K_{S\mid C}\bm\alpha_S,
+ \qquad
+ \bm K_{S\mid C}=\overline{\bm F}_S^{\mathsf T}
+ \left(\bm I-\bm P_{\overline{\bm F}_C}\right)
+ \overline{\bm F}_S\succeq\bm0.
+ \label{eq:supp-support-margin-matrix}
+\end{align}
+Here $\bm P_{\overline{\bm F}_C}=\overline{\bm F}_C
+\overline{\bm F}_C^{\dagger}$, so rank deficiency in either nuisance or event
+coordinates does not change the projected trajectory.
+\label{thm:supp-support-separation}
+\end{theorem}
+
+\paragraph{Proof.}
+For fixed $\bm\beta_C$, minimizing
+\eqref{eq:supp-support-margin-definition} over $\bm u$ removes the component in
+$\operatorname{range}\bm A$ and leaves
+$\|\overline{\bm F}_S\bm\alpha_S-
+\overline{\bm F}_C\bm\beta_C\|_2^2$. A second least-squares projection gives
+\eqref{eq:supp-support-margin-projector}. Symmetry and idempotence of the
+orthogonal projector give \eqref{eq:supp-support-margin-matrix} and its
+positive-semidefinite order. $\hfill\square$
+
+The theorem exposes two distinct weak-event mechanisms. For nonzero residualized
+single-source signatures $\overline{\bm f}_i$ and
+$\overline{\bm f}_j$,
+\begin{equation}
+ \gamma_{i\rightarrow j}^2(a_i)
+ =a_i^2\|\overline{\bm f}_i\|_2^2(1-\rho_{ij}^2),
+ \qquad
+ \rho_{ij}=\frac{\overline{\bm f}_i^{\mathsf T}
+ \overline{\bm f}_j}{\|\overline{\bm f}_i\|_2
+ \|\overline{\bm f}_j\|_2}.
+ \label{eq:supp-single-source-angle}
+\end{equation}
+Small $\|\overline{\bm f}_i\|$ is event--nuisance invisibility; large
+$|\rho_{ij}|$ is event--event aliasing after nuisance removal.
+
+For general supports, write $H=S\cap C$, $B=S\setminus C$, and
+$D=C\setminus S$. The shared amplitudes can be refitted, so
+\begin{equation}
+ \gamma_{S\rightarrow C}^2
+ =\|\left(\bm I-\bm P_{[\bm A,\bm F_H,\bm F_D]}\right)
+ \bm F_B\bm\alpha_B\|_2^2.
+ \label{eq:supp-shared-support-quotient}
+\end{equation}
+Thus the shared true component cancels exactly at first order. In particular,
+for $S=\{i,j\}$ and $C=\{i,k\}$ the margin is independent of the amplitude at
+$i$. Enlarging a competitor can only reduce the margin because its explanatory
+subspace grows.
+
+If $S\subset C$ and active amplitudes may equal zero, the competitor contains the
+true response and $\gamma_{S\rightarrow C}=0$. If zero is excluded but belongs
+to the amplitude-domain closure, the infimum remains zero. Pure best-fit geometry
+therefore cannot select cardinality among nested support models. The marginal
+likelihood in Supplementary Appendix~E supplies the required amplitude-volume
+and support-prior terms.
+
+After nuisance and shared-source quotienting, principal angles between
+$\operatorname{range}\overline{\bm F}_S$ and
+$\operatorname{range}\overline{\bm F}_C$ summarize the worst aligned severity
+directions. A zero angle caused only by the literal shared-source intersection is
+not evidence that the exclusive source components are indistinguishable. This is
+why the frozen weak-event audit residualizes the shared direction before reporting
+quotient geometry.
+
+Equations~\eqref{eq:supp-support-margin-definition}--
+\eqref{eq:supp-shared-support-quotient} assume a local signed-amplitude
+neighborhood. With sign, magnitude, or duration constraints, the linear-subspace
+projection is a lower bound unless the constrained optimum is shown to be
+interior; the constrained cone or difference set must otherwise be used.
+
+For a multi-source support $S$, the Fisher information conditional on that known
+support is
 \begin{equation}
  \bm I_S(\bm a)=\bm J_S(\bm a)^{\mathsf T}\bm G\bm J_S(\bm a),
  \quad
@@ -568,7 +669,8 @@ nuisance manifold is
  \label{eq:supp-first-order-contact}
 \end{equation}
 If $\gamma_1=0$, so the whitened event tangent lies in the nuisance tangent
-space, define
+space, choose the regular-chart vector $\bm v$ satisfying $\bm N\bm v=\bm d$
+and define
 \begin{equation}
  \bm\kappa=\bm P_{\perp}
  \left(\bm q-\tfrac12\bm H_0[\bm v,\bm v]\right).
@@ -576,7 +678,8 @@ space, define
 \end{equation}
 Then
 \begin{equation}
- \Delta^2(a)=a^4\|\bm\kappa\|_2^2+O(a^5).
+ \Delta^2(a)=a^4\gamma_2^2+O(a^5),
+ \qquad \gamma_2^2=\|\bm\kappa\|_2^2.
  \label{eq:supp-second-order-contact}
 \end{equation}
 \label{thm:supp-relative-contact}
@@ -590,6 +693,15 @@ $\bm N^{\mathsf T}\bm N\succ\bm0$, so the implicit-function theorem gives a smoo
 $\bm b_{\star}(a)=a\bm v+a^2\bm w+O(a^3)$.
 At first order, $\bm N^{\mathsf T}(\bm N\bm v-\bm d)=\bm0$, yielding residual $a\bm P_{\perp}\bm d+O(a^2)$ and \eqref{eq:supp-first-order-contact}. If $\bm d=\bm N\bm v$, the first-order residual vanishes. At second order, minimization projects
 $\bm q-\tfrac12\bm H_0[\bm v,\bm v]$ onto $\operatorname{range}\bm N$; the remaining normal component is \eqref{eq:supp-relative-curvature}. Squaring the residual gives \eqref{eq:supp-second-order-contact}. The projector is unchanged by any full-rank reparameterization of the same nuisance tangent space, so $\gamma_1$ is a property of the local manifolds and covariance metric rather than of a particular nuisance coordinate basis. $\hfill\square$
+
+The same constant-rank qualification makes $\gamma_2$ intrinsic. Redundant
+original parameters may give several representatives of the same observable
+tangent, but their normal acceleration equals the second fundamental form of the
+same manifold branch. If $\gamma_2=0$, the conclusion is only
+$\Delta^2(a)=o(a^4)$ under the corresponding little-$o$ expansion; an $a^6$ law
+or exact overlap requires a separate third-order analysis.
+
+\subsection{Theory-to-Evidence Boundary}
 
 Equation~\eqref{eq:supp-first-order-contact} supplies a direct falsification test:
 for independently generated nonlinear trajectories with decreasing $|a|$, the
@@ -608,43 +720,43 @@ Thus $n|a_n|^{2r}\rightarrow0$ prevents power from separating from size. The ref
 
 All audited load directions in the present bank have nonzero first-order separation. The second-order result is therefore a boundary theorem, not the empirical explanation for weak-pair failure.
 
-\subsection{Theory-to-Evidence Boundary}
+\input{tables/generated/theory_validation}
 
-\begin{table*}[t]
-\caption{Computational closure of the simulator event semantics.}
+\begin{table}[t]
+\caption{Open checks for the simulator event semantics.}
 \label{tab:supp-semantic-closure}
 \centering
 \scriptsize
-\begin{tabularx}{\textwidth}{@{}lXXl@{}}
+\begin{tabularx}{\columnwidth}{@{}p{0.28\columnwidth}X@{}}
 \toprule
-Check & Quantity & Acceptance pattern & Status \\
+Check & Evidence required for closure \\
 \midrule
-Right-limit consistency & $\|\bm g_+(\bm x(\tau+\epsilon),\bm z(\tau+\epsilon),a)\|$ & Solver-scale residual after re-equilibration; callback residual may be $O(a)$ & Open \\
-Algebraic derivatives & Analytic $\bm z_1,\bm z_2$ versus central finite differences & Agreement under a decreasing symmetric amplitude grid & Open \\
-Taylor order & Constraint and state-approximation errors & Successive slopes $1,2,3$, or amplitude-halving ratios $2,4,8$ & Open \\
-Event families & Load, generation, and continuous branch-admittance perturbations & Same declared semantics and tolerances for all three & Open \\
-Dynamic first order & $\bm B_{r,a}$ and the retained PMU response & $\Delta\bm y/a$ converges over the declared early-time window & Open \\
-Dynamic second order & Analytic second variation versus nonlinear trajectories & Discrepancy below a preregistered tolerance & Open; discrepancy unresolved \\
+Right limit & Solver-scale $\|\bm g_+(\bm x(\tau+\epsilon),\bm z(\tau+\epsilon),a)\|$ after re-equilibration; the callback residual may remain $O(a)$. \\
+Algebraic derivatives & Agreement of analytic $\bm z_1,\bm z_2$ with central differences on a decreasing symmetric amplitude grid. \\
+Taylor order & Constraint and state-approximation slopes $1,2,3$, or amplitude-halving ratios $2,4,8$. \\
+Event families & One declared semantics and tolerance set for load, generation, and continuous branch-admittance perturbations. \\
+Dynamic first order & Convergence of $\Delta\bm y/a$ to $\bm B_{r,a}$ over the declared early-time window. \\
+Dynamic second order & Analytic second variation within a preregistered tolerance of nonlinear trajectories; the current discrepancy is unresolved. \\
 \bottomrule
 \end{tabularx}
-\end{table*}
+\end{table}
 
-\begin{table*}[t]
+\begin{table}[t]
 \caption{Status of the mathematical results relative to the frozen evidence.}
 \label{tab:supp-theory-status}
 \centering
 \scriptsize
-\begin{tabularx}{\textwidth}{@{}lXX@{}}
+\begin{tabularx}{\columnwidth}{@{}p{0.31\columnwidth}X@{}}
 \toprule
-Result & What it establishes & Present evidence boundary \\
+Result & Present evidence boundary \\
 \midrule
-Consistency-jump theorem & Differential-state continuity, algebraic re-equilibration, and direct versus dynamic PMU signatures & Mathematical DAE contract only; callback/right-limit logging and derivative convergence remain open \\
-Functional equivalence and BLUE & Exact target recovery and minimum covariance in the finite-horizon local linear model & Nonlinear TEST accuracy is empirical; the threshold-sensitive structural audit is not a certificate \\
-Efficient Fisher projection and $\gamma_1$ & First-order amplitude information and local separation after declared nuisance is removed & Source-wise detectability association is exploratory; $\Delta^2(a)/a^2\rightarrow\gamma_1^2$ has not been tested \\
-Sparse injectivity and $\gamma_{2K}$ & Noise-free uniqueness and a local stability constant for a fixed dictionary & T120 diagnostics use the frozen load bank; no general descriptor left-invertibility claim \\
-Temporal rate theorem & Persistent equilibrium separation gives linear information growth; transient-only separation can saturate & Current long-horizon study is diagnostic and lacks independent operating-point validation \\
-Relative-curvature theorem & Zero first-order information need not imply nonlinear indistinguishability & Curvature-dominated weak-event behavior was not observed in the frozen atlas \\
-Robust separation bound & Nominal geometry survives only when its margin exceeds model error & Requires a future simulator-shift or independent-data contract \\
+Consistency jump & DAE contract only; callback/right-limit logging and derivative convergence remain open. \\
+Functional equivalence and BLUE & Exact in the local linear model; nonlinear TEST accuracy remains empirical. \\
+Fisher projection and support geometry & Toy identities pass; IEEE 39-bus convergence to $\gamma_1$ remains untested. \\
+Sparse injectivity and $\gamma_{2K}$ & T120 diagnostics concern the frozen load bank, not general descriptor left-invertibility. \\
+Temporal rate & The long-horizon study remains diagnostic and lacks independent operating-point validation. \\
+Relative curvature & The controlled parabola passes; curvature-dominated weak-event behavior was not observed in the frozen atlas. \\
+Robust separation & Requires a simulator-shift or independent-data contract. \\
 \bottomrule
 \end{tabularx}
-\end{table*}
+\end{table}

@@ -84,6 +84,27 @@ squared-distance law. The full statement and proof are in Supplementary
 Appendix~D. The present experiments do not yet test the convergence of
 $2D_{\star c}(a)/a^2$ to $\gamma_1^2$.
 
+For multiple events, let $\bm G$ collect the first-order event signatures,
+$\bm N$ the nuisance tangent, let $\bm P_{\bm A}$ denote the orthogonal
+projector onto $\operatorname{range}(\bm A)$, and define
+$\overline{\bm G}=(\bm I-\bm P_{\bm W\bm N})\bm W\bm G$ the event dictionary
+after nuisance removal. For true support $S$, severity direction
+$\bm\alpha_S$, and competing support $C$, the support-to-support margin is
+\begin{equation}
+ \gamma_{S\rightarrow C}^2(\bm\alpha_S)
+ =\|\left(\bm I-\bm P_{\overline{\bm G}_C}\right)
+ \overline{\bm G}_S\bm\alpha_S\|_2^2.
+ \label{eq:support-to-support-margin}
+\end{equation}
+The competitor is allowed to refit its amplitudes; comparing columns at equal
+amplitude would overstate separation. Shared sources cancel from the discriminant
+at first order, leaving only the true-exclusive component after projection onto
+nuisance, shared, and competitor-exclusive directions. If $S\subset C$ and an
+extra amplitude may approach zero, the geometric infimum is zero. Geometry can
+rank non-nested explanations, but cardinality among nested supports requires a
+model-selection penalty or integrated evidence. Supplementary Appendix~D proves
+these statements and gives the associated principal-angle interpretation.
+
 For persistent load events, subtract the common no-event trajectory and write the $T$-sample response as
 \begin{equation}
  \bm Y_T=\mathcal H_T\bm a+\bm\varepsilon_T.

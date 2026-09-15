@@ -7,6 +7,8 @@
 - Repeat the semantic gate for load change, generation change, and a continuous line-admittance perturbation; use the binary outage only as a separate discrete-mode experiment.
 - Resolve the current second-order analytic-to-TDS discrepancy before using full dynamic curvature as evidence.
 - Freeze and run the local separation falsification test $2D(a)/a^2\rightarrow\gamma_1^2$ over declared candidate pairs, nuisance spaces, operating points, amplitudes, and numerical tolerances.
+- Export the actual IEEE 39-bus nuisance-residual event dictionary and evaluate the support-to-support margin under the same sign and amplitude constraints used by the Bayesian likelihood.
+- Recover or rerun the reported nonlinear controlled-DAE experiment with its exact equations, solver settings, seeds, CSV, and figures; its current `sandbox:/mnt/data` links are not repository evidence.
 - Complete the independent-operating-point T120 physical bank and reconcile the absolute scale/name of the exported separation metric before freezing a prospective horizon contract.
 - After that audit, freeze a new 30/60/90/120-frame test reporting $p(K=2)$, exact support, Top-3, credible-set coverage/size, entropy, and resolution delay without retuning the likelihood.
 - Extend the executed load-source likelihood to faults, line outages, generation changes, integrity events, and simultaneous compositions under one audited plant and PMU operator.
@@ -31,3 +33,4 @@
 - Keep physical events distinct from missing, corrupt, or timing-quality measurements.
 - Report failed solves and rejected trajectories in the planned denominator.
 - Generate every numerical table and empirical plot from frozen artifacts. Do not replace a missing experiment with stronger prose.
+- Keep deterministic toy identity checks separate from simulator validation and from primary IEEE 39-bus evidence.
