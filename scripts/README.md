@@ -2,7 +2,7 @@
 
 Place reproducible experiment and manuscript-artifact scripts here. Record input data, configuration, environment, and output contracts with each script.
 
-`verify_theory_identities.py` regenerates `generated/theory_checks.json` and its compact supplementary table. Its deterministic checks cover the branch primitive, regular and higher-order profiled separation, rank-deficient nuisance, and signed support geometry.
+`verify_theory_identities.py` regenerates `generated/theory_checks.json` and its compact supplementary table. Its eleven deterministic checks cover the branch primitive, regular and higher-order profiled separation, rank-deficient nuisance, signed support geometry, diagnostic-quotient factorization, and nuisance-span parameterization invariance.
 
 `verify_cone_bayes_identities.py` regenerates `generated/cone_bayes_checks.json` and two supplementary tables. It checks the exclusive-support quotient, one-sided cone projections, boundary-aware Bayes factors, the nuisance-profile limit, cone--Laplace scaling, and a singular-Hessian counterexample. Both verification scripts use explicit toy systems and are algebraic/numerical guards, not IEEE 39-bus validation.
 

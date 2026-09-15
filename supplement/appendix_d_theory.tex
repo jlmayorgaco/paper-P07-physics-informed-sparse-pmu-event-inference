@@ -362,6 +362,55 @@ event tangents, and define
  \label{eq:supp-residualized-event-dictionary}
 \end{equation}
 
+\begin{theorem}[Profile-likelihood diagnostic quotient]
+Consider the whitened local experiment
+\begin{equation}
+ \bm y=\bm A\bm\nu+\bm F\bm\alpha+\bm\epsilon,
+ \qquad \bm\epsilon\sim\mathcal N(\bm0,\bm I),
+ \label{eq:supp-diagnostic-quotient-model}
+\end{equation}
+with deterministic unrestricted nuisance $\bm\nu$. Let
+$\bm U_{\mathcal D}$ have orthonormal columns spanning
+$\mathcal D=\operatorname{range}(\overline{\bm F})$, and define
+\begin{equation}
+ \bm z=\bm U_{\mathcal D}^{\mathsf T}\bm R_N\bm y,
+ \qquad d_{\mathcal D}=\dim\mathcal D
+ =\operatorname{rank}(\overline{\bm F}).
+ \label{eq:supp-diagnostic-quotient-statistic}
+\end{equation}
+Then every profile-likelihood ratio over $\bm\alpha$ depends on $\bm y$ only
+through $\bm z$:
+\begin{equation}
+ \min_{\bm\nu}\|\bm y-\bm A\bm\nu-\bm F\bm\alpha\|_2^2
+ =\|\bm z-\bm U_{\mathcal D}^{\mathsf T}
+       \overline{\bm F}\bm\alpha\|_2^2+C(\bm y),
+ \label{eq:supp-diagnostic-quotient-factorization}
+\end{equation}
+where $C(\bm y)$ is independent of $\bm\alpha$. The projector, quotient
+statistic up to an orthogonal change of coordinates, and
+$d_{\mathcal D}$ depend only on the nuisance span, not its parameterization.
+\label{thm:supp-diagnostic-quotient}
+\end{theorem}
+
+\paragraph{Proof.}
+Profiling nuisance gives
+$\|\bm R_N(\bm y-\bm F\bm\alpha)\|_2^2$. Decompose this residual orthogonally
+into $\mathcal D$ and
+$\operatorname{range}(\bm R_N)\cap\mathcal D^{\perp}$. The first component is
+the squared norm in \eqref{eq:supp-diagnostic-quotient-factorization}; because
+$\overline{\bm F}\bm\alpha\in\mathcal D$, the second is
+$C(\bm y)=\|(\bm I-\bm U_{\mathcal D}\bm U_{\mathcal D}^{\mathsf T})
+\bm R_N\bm y\|_2^2$ and contains no $\bm\alpha$. Reparameterizing nuisance
+without changing $\operatorname{range}(\bm A)$ leaves
+$\bm A\bm A^{\dagger}$ and therefore every stated object unchanged. $\hfill\square$
+
+Thus $d_{\mathcal D}$ is the intrinsic dimension of the \emph{linear profiled}
+event experiment. It is not a nonlinear global observability count and need
+not equal the number of PMUs. If candidates use different nuisance spans, or if
+nuisance has an informative proper prior, the corresponding candidate-specific
+profile or marginal likelihood must be retained; the common projector above is
+then insufficient.
+
 \begin{theorem}[Signed first-order support-to-support separation]
 For true support $S$ with fixed severity direction $\bm\alpha_S$ and competing
 support $C$ with freely fitted local amplitudes, define

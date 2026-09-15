@@ -238,6 +238,94 @@ def support_geometry_checks() -> list[dict[str, float | bool | str]]:
     ]
 
 
+def diagnostic_quotient_checks() -> list[dict[str, float | bool | str | int]]:
+    """Check profile-likelihood factorization and nuisance-span invariance."""
+    nuisance_1 = np.array([1.0, 0.0, 1.0, -1.0, 0.5, 0.0])
+    nuisance_2 = np.array([0.0, 1.0, 1.0, 0.5, -1.0, 0.5])
+    nuisance = np.column_stack(
+        [nuisance_1, nuisance_2, nuisance_1 + nuisance_2]
+    )
+    reparameterized = np.column_stack(
+        [
+            2.0 * nuisance_1 - nuisance_2,
+            nuisance_1 + 3.0 * nuisance_2,
+            -nuisance_1 + 0.5 * nuisance_2,
+            4.0 * nuisance_2,
+        ]
+    )
+    event_dictionary = np.array(
+        [
+            [0.2, 1.0, 0.0, 0.3],
+            [0.4, 0.0, 1.0, -0.2],
+            [1.0, -0.4, 0.2, 0.0],
+            [0.0, 0.7, -0.3, 1.0],
+            [-0.6, 0.0, 0.8, 0.2],
+            [0.5, -0.2, 0.1, -0.7],
+        ]
+    )
+    observation = np.array([0.7, -0.2, 0.4, 1.1, -0.5, 0.3])
+    amplitudes = (
+        np.array([0.3, -0.1, 0.0, 0.2]),
+        np.array([-0.2, 0.4, 0.1, 0.0]),
+    )
+
+    projector = nuisance @ np.linalg.pinv(nuisance)
+    residualizer = np.eye(observation.size) - projector
+    residualized_dictionary = residualizer @ event_dictionary
+    left_vectors, singular_values, _ = np.linalg.svd(
+        residualized_dictionary, full_matrices=False
+    )
+    diagnostic_rank = int(
+        np.sum(singular_values > singular_values[0] * 1e-12)
+    )
+    diagnostic_basis = left_vectors[:, :diagnostic_rank]
+    diagnostic_observation = diagnostic_basis.T @ residualizer @ observation
+    complement = (
+        np.eye(observation.size) - diagnostic_basis @ diagnostic_basis.T
+    ) @ residualizer @ observation
+    constant = float(complement @ complement)
+
+    factorization_errors = []
+    for amplitude in amplitudes:
+        profiled_cost = float(
+            np.linalg.norm(residualizer @ (observation - event_dictionary @ amplitude))
+            ** 2
+        )
+        quotient_cost = float(
+            np.linalg.norm(
+                diagnostic_observation
+                - diagnostic_basis.T @ residualized_dictionary @ amplitude
+            )
+            ** 2
+            + constant
+        )
+        factorization_errors.append(abs(profiled_cost - quotient_cost))
+    likelihood_error = max(factorization_errors)
+
+    reparameterized_projector = reparameterized @ np.linalg.pinv(reparameterized)
+    parameterization_error = float(
+        np.linalg.norm(projector - reparameterized_projector, ord=2)
+    )
+    return [
+        {
+            "name": "diagnostic_quotient_profile_likelihood",
+            "diagnostic_rank": diagnostic_rank,
+            "ambient_dimension": int(observation.size),
+            "max_cost_factorization_error": likelihood_error,
+            "error": likelihood_error,
+            "tolerance": 1e-12,
+            "passed": likelihood_error <= 1e-12,
+        },
+        {
+            "name": "nuisance_span_parameterization_invariance",
+            "projector_spectral_error": parameterization_error,
+            "error": parameterization_error,
+            "tolerance": 1e-12,
+            "passed": parameterization_error <= 1e-12,
+        },
+    ]
+
+
 def write_latex_table(path: Path, checks: list[dict[str, object]]) -> None:
     by_name = {str(check["name"]): check for check in checks}
     regular = by_name["regular_first_order_dae"]
@@ -248,6 +336,8 @@ def write_latex_table(path: Path, checks: list[dict[str, object]]) -> None:
     nested = by_name["nested_support_zero_margin"]
     angle = by_name["principal_angle_margin"]
     nuisance = by_name["nuisance_absorption_monotonicity"]
+    quotient = by_name["diagnostic_quotient_profile_likelihood"]
+    parameterization = by_name["nuisance_span_parameterization_invariance"]
     rows = [
         (
             "Regular first-order DAE",
@@ -289,6 +379,16 @@ def write_latex_table(path: Path, checks: list[dict[str, object]]) -> None:
             r"profiled margin cannot increase",
             "sequence " + ", ".join(f"{value:.1f}" for value in nuisance["margin_sequence"]),
         ),
+        (
+            "Diagnostic quotient",
+            r"profiled costs factor through $d_{\mathcal D}$ coordinates",
+            rf"rank {quotient['diagnostic_rank']}/{quotient['ambient_dimension']}; max error {quotient['max_cost_factorization_error']:.1e}",
+        ),
+        (
+            "Nuisance reparameterization",
+            r"unchanged nuisance span gives the same projector",
+            rf"spectral error {parameterization['projector_spectral_error']:.1e}",
+        ),
     ]
     lines = [
         r"\begin{table}[t]",
@@ -321,6 +421,7 @@ def main(output_path: Path, table_path: Path) -> None:
         contact_order_check(),
         rank_deficient_profile_check(),
         *support_geometry_checks(),
+        *diagnostic_quotient_checks(),
     ]
     payload = {
         "scope": "Deterministic toy checks of local theory; not IEEE 39-bus evidence.",

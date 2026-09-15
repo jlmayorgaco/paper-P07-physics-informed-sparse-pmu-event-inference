@@ -84,7 +84,15 @@ The prospective experiment evaluates all \GlobalHypothesisCount{} supports at a 
 
 \subsection{Boundary of the Joint Formulation}
 
-The complete candidate-conditioned model would fit state and integrity nuisance for each physical hypothesis and normalize the resulting evidence. A learned component could then correct candidate residuals or reduce the search, but it must not consume source identity as a shortcut. It must also preserve the directions that distinguish critical physical candidates. After whitening and nuisance removal, a rank-$q$ discrepancy basis $\bm Q_D$ with variance $\tau^2$ retains the worst-case fraction
+The statistical object in the complete formulation is the
+candidate-conditioned joint posterior and normalized evidence, with state and
+integrity nuisance modeled under each physical hypothesis. Iterated smoothing,
+Gauss--Newton steps, moving-horizon optimization, or generalized EM would be
+numerical realizations of that object, not different scientific estimators.
+Changing the solver cannot change the declared priors, candidate set, causal
+data boundary, or evidence normalization.
+
+A learned component could then correct candidate residuals or reduce the search, but it must not consume source identity as a shortcut. It must also preserve the directions that distinguish critical physical candidates. After whitening and nuisance removal, a rank-$q$ discrepancy basis $\bm Q_D$ with variance $\tau^2$ retains the worst-case fraction
 \begin{equation}
  \rho=1-\frac{\tau^2}{1+\tau^2}
  \sigma_{\max}^2(\bm Q_U^{\mathsf T}\bm Q_D)

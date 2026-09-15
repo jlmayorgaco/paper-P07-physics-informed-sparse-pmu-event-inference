@@ -8,6 +8,7 @@
 - Resolve the current second-order analytic-to-TDS discrepancy before using full dynamic curvature as evidence.
 - Freeze and run the local separation falsification test $2D(a)/a^2\rightarrow\gamma_1^2$ over declared candidate pairs, nuisance spaces, operating points, amplitudes, and numerical tolerances.
 - Export the actual IEEE 39-bus nuisance-residual event dictionary and evaluate the support-to-support margin under the same sign and amplitude constraints used by the Bayesian likelihood.
+- On those same frozen parents, compare diagnostic-quotient rank and restricted margin with posterior entropy, credible-set size, exact-support error, and resolution delay; quotient dimension alone is not a performance certificate.
 - For every physical family, freeze whether severity is signed, one-sided, bounded, or discrete; compare relaxed span and physical cone margins and record which constraints are active at each nearest competitor.
 - Evaluate the half-normal boundary factor and posterior sensitivity to proper slab scale on held-out fault, trip, and outage trajectories before using it as a multi-family result.
 - Separate rank deficiency caused by redundant coordinates from genuine higher-order non-identifiability before applying cone--Laplace evidence; do not substitute a Hessian pseudoinverse for this audit.
@@ -22,6 +23,8 @@
 - Complete the analytic descriptor-DAE tangent or retain the numerical physical tangent terminology permanently.
 - Estimate state/integrity nuisance tangent and curvature on disjoint development data; test whether the first- versus second-order contact predicted by Proposition 3 explains IEEE 39-bus detection and source-resolution thresholds.
 - Compare four frozen paradigms on identical event parents: learned-only, physics-only, physics plus learned residual discrepancy, and diagnosability-aware inference with abstention.
+- Compare the tractable candidate-conditioned posterior with a converged small-problem SMC or nested-sampling reference before making an approximation-quality claim.
+- Test slow parameter adaptation first and weak/integral sparse model correction only after residual lack of fit remains; require an ablation showing that protected event-discriminant directions are not absorbed before adding SINDy-like adaptation to the method.
 - Hold out physical source assets from every source-labeled training, tuning, threshold, and calibration operation.
 - Test whether the nuisance-profiled pairwise margin predicts calibrated uncertainty, candidate-set size, and source-resolution delay prospectively. The retrospective global-distance result is encouraging but is not a frozen prospective bridge.
 - Add PMU loss/join, operating-point shift, parameter shift, line topology change, and at least one cross-simulator transfer campaign.

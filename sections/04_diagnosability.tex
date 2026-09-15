@@ -88,7 +88,14 @@ For multiple events, let $\bm G$ collect the first-order event signatures,
 $\bm N$ the nuisance tangent, let $\bm P_{\bm A}$ denote the orthogonal
 projector onto $\operatorname{range}(\bm A)$, and define
 $\overline{\bm G}=(\bm I-\bm P_{\bm W\bm N})\bm W\bm G$ the event dictionary
-after nuisance removal. For true support $S$, severity direction
+after nuisance removal. All first-order event information that survives
+worst-case nuisance fitting lies in
+$\mathcal D=\operatorname{range}(\overline{\bm G})$. Hence
+$d_{\mathcal D}=\operatorname{rank}(\overline{\bm G})$ is the intrinsic linear
+diagnostic dimension, not the number of retained PMU channels or reconstructed
+states. Supplementary Appendix~D proves that coordinates on $\mathcal D$
+preserve every profiled Gaussian likelihood ratio when candidates share the
+same nuisance range. For true support $S$, severity direction
 $\bm\alpha_S$, and competing support $C$, the support-to-support margin is
 \begin{equation}
  \gamma_{S\rightarrow C}^2(\bm\alpha_S)

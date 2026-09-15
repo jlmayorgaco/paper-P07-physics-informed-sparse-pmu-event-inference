@@ -1,7 +1,14 @@
 \section{Estimator and Likelihood Details}
 \label{app:estimator}
 
-This appendix distinguishes two algorithms. Sections~\ref{sec:supp-state-recursion}--\ref{sec:supp-evaluated-event-bank} specify the state estimator and load-support posterior that produced the reported results. Section~\ref{sec:supp-joint-design} gives the mathematical design of the common state--event--integrity estimator; that final integration has not yet been evaluated.
+This appendix separates two evaluated computations from the unexecuted common
+estimator. Sections~\ref{sec:supp-state-recursion}--\ref{sec:supp-evaluated-event-bank}
+specify the state recursion and load-support posterior that produced the reported
+results. The complete statistical object is the candidate-conditioned joint
+posterior and its normalized evidence; filtering, smoothing, or optimization is
+the numerical route used to approximate it. Section~\ref{sec:supp-joint-design}
+specifies that common state--event--integrity object, but its final integration
+has not yet been evaluated.
 
 \subsection{Bayesian Recursion and the State Hierarchy}
 \label{sec:supp-state-recursion}

@@ -34,11 +34,12 @@ recomputed by the repository's deterministic validation script.
 
 ## Independent checks added
 
-The repository now regenerates nine deterministic checks: the branch primitive,
+The repository now regenerates eleven deterministic checks: the branch primitive,
 the regular two-frame DAE coefficient and slope, the shared-tangent second-order
 coefficient and slope, rank-deficient projection invariance, shared-source
 cancellation, competitor-enrichment monotonicity, nested-support zero margin, the
-principal-angle identity, and nuisance-enlargement monotonicity. All values flow
+principal-angle identity, nuisance-enlargement monotonicity, diagnostic-quotient
+profile factorization, and nuisance-span reparameterization invariance. All values flow
 from `scripts/verify_theory_identities.py` to `generated/theory_checks.json` and
 `tables/generated/theory_validation.tex`.
 
