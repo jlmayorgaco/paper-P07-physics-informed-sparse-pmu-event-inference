@@ -8,6 +8,11 @@
   "e06h_nuisance_rank": 25,
   "e06h_test_cases": 60,
   "e06h_test_valid_rate": 1.0,
+  "global137_finite_top1": 1.0,
+  "global137_hypotheses": 137,
+  "global137_noise_records": 10564,
+  "global137_physical_trajectories": 3488,
+  "global137_weak_top1": 0.24375,
   "legacy_event_trajectories": 690,
   "legacy_held_source_correct": 3,
   "legacy_held_source_decisions": 303,
@@ -27,5 +32,8 @@
   "load_v2_truncation_slope": 2.0000012866451717,
   "load_v2_weak_event_cases": 9600,
   "load_v2_weak_no_event_cases": 800,
-  "nominal_test_trajectories": 100
+  "nominal_test_trajectories": 100,
+  "t120_complete_eta_max": 0.088498279992027,
+  "t120_gamma4_infinity": 2844.4378067528064,
+  "t120_information_ratio_120_vs_30": 8.366674228508064
 }

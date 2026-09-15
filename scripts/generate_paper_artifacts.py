@@ -172,6 +172,20 @@ def write_macros(checks: dict[str, object]) -> None:
     load_weak_detection = read_csv("load_bayes_v2_weak_detection.csv")
     load_weak_localization = read_csv("load_bayes_v2_weak_localization.csv")
     load_finite_calibration = read_csv("load_bayes_v2_finite_calibration.csv")
+    global_cardinality = read_csv("global137_cardinality_summary.csv").set_index("regime")
+    global_support = read_csv("global137_support_summary.csv").set_index("regime")
+    global_event = read_csv("global137_event_detection.csv").iloc[0]
+    global_inclusion = read_csv("global137_source_inclusion_summary.csv").iloc[0]
+    global_run = read_csv("global137_run_manifest.csv").iloc[0]
+    weak_predictors = read_csv("weak_resolution_predictor_metrics.csv")
+    t120_information = read_csv("likelihood120_information_growth.csv").set_index("T")
+    t120_gamma = read_csv("likelihood120_gamma_infinity.csv").set_index("k")
+    t120_validation = read_csv("likelihood120_physical_validation.csv")
+    t120_runtime = read_csv("likelihood120_runtime_scaling.csv").set_index("T")
+    t120_pairs = read_csv("likelihood120_equilibrium_pairs.csv")
+    t120_complete = t120_validation[
+        (t120_validation["T"].eq(120)) & t120_validation["model"].eq("D_Q_Qij")
+    ]
     structural_x = e03["functional_residual"].to_numpy()
     structural_y = e03["B2_TVE"].to_numpy()
     observed_rho = float(stats.spearmanr(structural_x, structural_y).statistic)
@@ -292,6 +306,35 @@ def write_macros(checks: dict[str, object]) -> None:
         "LoadWeakMinTopOne": fmt_percent(100 * load_weak_localization["top1"].min(), 1),
         "LoadFiniteCoverageMin": fmt_percent(100 * load_finite_calibration["coverage95"].min(), 1),
         "LoadFiniteCoverageMax": fmt_percent(100 * load_finite_calibration["coverage95"].max(), 1),
+        "GlobalHypothesisCount": str(int(global_run["hypotheses_per_case"])),
+        "GlobalPhysicalTrajectories": str(int(global_run["unique_physical_trajectories"])),
+        "GlobalNoiseRecords": str(int(global_run["noise_rows"])),
+        "GlobalEventRecords": str(int(global_event["n"])),
+        "GlobalEventAUROC": f"{global_event['AUROC']:.3f}",
+        "GlobalEventAUPRC": f"{global_event['AUPRC']:.4f}",
+        "GlobalEventFNR": fmt_percent(100 * global_event["FNR"], 1),
+        "GlobalEventFPRUpper": fmt_percent(100 * global_event["FPR_hi"], 1),
+        "GlobalWeakCardinality": fmt_percent(100 * global_cardinality.loc["WEAK_WEAK", "accuracy"], 1),
+        "GlobalWeakTopOne": fmt_percent(100 * global_support.loc["WEAK_WEAK", "top1"], 1),
+        "GlobalWeakTopThree": fmt_percent(100 * global_support.loc["WEAK_WEAK", "top3"], 1),
+        "GlobalWeakStrongTopOne": fmt_percent(100 * global_support.loc["WEAK_STRONG", "top1"], 1),
+        "GlobalModerateTopOne": fmt_percent(100 * global_support.loc["MODERATE", "top1"], 1),
+        "GlobalFiniteTopOne": fmt_percent(100 * global_support.loc["FINITE", "top1"], 1),
+        "GlobalInclusionAUROC": f"{global_inclusion['AUROC']:.3f}",
+        "GlobalInclusionECE": f"{global_inclusion['ECE']:.3f}",
+        "WeakGlobalExactRho": f"{weak_predictors[(weak_predictors['predictor'].eq('GLOBAL')) & (weak_predictors['outcome'].eq('exact'))]['spearman'].iloc[0]:.3f}",
+        "WeakSupportOnlyExactRho": f"{weak_predictors[(weak_predictors['predictor'].eq('support_only_R')) & (weak_predictors['outcome'].eq('exact'))]['spearman'].iloc[0]:.3f}",
+        "TOneTwentyGammaFour": f"{t120_gamma.loc[4, 'gamma_infinity']:.2f}",
+        "TOneTwentyInfoRatio": f"{t120_information.loc[120, 'Delta_global_sq'] / t120_information.loc[30, 'Delta_global_sq']:.2f}",
+        "TOneTwentyCompleteMedianError": f"{t120_complete['whitened_norm'].median():.4f}",
+        "TOneTwentyCompleteMedianEta": f"{t120_complete['eta_model'].median():.2e}",
+        "TOneTwentyCompleteMaxEta": f"{t120_complete['eta_model'].max():.3f}",
+        "TOneTwentyDMedianError": f"{t120_validation[(t120_validation['T'].eq(120)) & t120_validation['model'].eq('D')]['whitened_norm'].median():.4f}",
+        "TOneTwentyDQMedianError": f"{t120_validation[(t120_validation['T'].eq(120)) & t120_validation['model'].eq('D_Q')]['whitened_norm'].median():.4f}",
+        "TOneTwentyHardPairSigma": f"{t120_pairs['sigma_min'].min():.1f}",
+        "TOneTwentyHardPairCoherence": f"{t120_pairs.loc[t120_pairs['sigma_min'].idxmin(), 'coherence']:.6f}",
+        "TOneTwentySevenTwelveCoherence": f"{t120_pairs[(t120_pairs['source_i'].eq(7)) & (t120_pairs['source_j'].eq(12))]['coherence'].iloc[0]:.6f}",
+        "TOneTwentyRuntime": f"{t120_runtime.loc[120, 'runtime_s']:.3f}",
     }
     lines = [f"\\newcommand{{\\{name}}}{{{value}}}" for name, value in macros.items()]
     (GENERATED / "results_macros.tex").write_text("\n".join(lines) + "\n", encoding="ascii")
@@ -327,6 +370,14 @@ def write_macros(checks: dict[str, object]) -> None:
             "load_v2_projected_fisher_confusion_spearman": float(load_v2["J_confusion_spearman"]),
             "load_v2_finite_coverage95_min": float(load_finite_calibration["coverage95"].min()),
             "load_v2_finite_coverage95_max": float(load_finite_calibration["coverage95"].max()),
+            "global137_hypotheses": int(global_run["hypotheses_per_case"]),
+            "global137_physical_trajectories": int(global_run["unique_physical_trajectories"]),
+            "global137_noise_records": int(global_run["noise_rows"]),
+            "global137_weak_top1": float(global_support.loc["WEAK_WEAK", "top1"]),
+            "global137_finite_top1": float(global_support.loc["FINITE", "top1"]),
+            "t120_gamma4_infinity": float(t120_gamma.loc[4, "gamma_infinity"]),
+            "t120_information_ratio_120_vs_30": float(t120_information.loc[120, "Delta_global_sq"] / t120_information.loc[30, "Delta_global_sq"]),
+            "t120_complete_eta_max": float(t120_complete["eta_model"].max()),
         }
     )
 
@@ -1044,6 +1095,125 @@ def figure_event_inference_evidence() -> None:
     save_figure(fig, "load_event_inference")
 
 
+def figure_multi_event_evidence() -> None:
+    """Tell the prospective multi-event result and its finite-horizon boundary."""
+    card = read_csv("global137_cardinality_summary.csv").set_index("regime")
+    support = read_csv("global137_support_summary.csv").set_index("regime")
+    transition = read_csv("global137_weak_transition.csv")
+    predictors = read_csv("weak_resolution_predictor_metrics.csv")
+    validation = read_csv("likelihood120_physical_validation.csv")
+    information = read_csv("likelihood120_information_growth.csv").set_index("T")
+    runtime = read_csv("likelihood120_runtime_scaling.csv").set_index("T")
+    pairs = read_csv("likelihood120_equilibrium_pairs.csv").sort_values("sigma_min").head(5)
+
+    regimes = ["WEAK_WEAK", "WEAK_STRONG", "MODERATE", "FINITE"]
+    labels = ["weak--weak", "weak--strong", "moderate", "finite"]
+    x = np.arange(len(regimes))
+    fig, axes = plt.subplots(2, 3, figsize=(7.16, 4.72))
+
+    ax = axes[0, 0]
+    width = 0.24
+    ax.bar(x - width, [card.loc[r, "accuracy"] for r in regimes], width,
+           color=BLUE, label="cardinality", zorder=3)
+    ax.bar(x, [support.loc[r, "top1"] for r in regimes], width,
+           color=ORANGE, label="exact Top-1", zorder=3)
+    ax.bar(x + width, [support.loc[r, "top3"] for r in regimes], width,
+           color=GREEN, label="exact Top-3", zorder=3)
+    ax.set_ylim(0, 1.07)
+    ax.set_xticks(x, labels, rotation=18, ha="right")
+    ax.set_ylabel("Fraction correct")
+    ax.set_title("(a) Prospective support recovery", loc="left")
+    ax.legend(frameon=False, fontsize=5.6, ncol=1, loc="lower right")
+    ax.grid(axis="y", alpha=0.22, linewidth=0.5, zorder=0)
+
+    ax = axes[0, 1]
+    severity = 100 * transition["severity_abs"].to_numpy()
+    ax.plot(severity, transition["p_M2"], marker="o", color=BLUE,
+            label=r"mean $p(K=2)$")
+    ax.plot(severity, transition["exact_support_top1"], marker="s", color=ORANGE,
+            label="exact Top-1")
+    ax.axhline(0.5, color=GRAY, linestyle=":", linewidth=0.8)
+    ax.set_xscale("log")
+    ax.set_ylim(0, 1.02)
+    ax.set_xlabel("Larger weak magnitude (%)")
+    ax.set_ylabel("Posterior / success")
+    ax.set_title("(b) Cardinality resolves before support", loc="left")
+    ax.legend(frameon=False, fontsize=5.8, loc="upper left")
+    ax.grid(which="both", alpha=0.22, linewidth=0.5)
+
+    ax = axes[0, 2]
+    wanted = predictors[
+        predictors["predictor"].isin(["GLOBAL", "support_only_R"])
+        & predictors["outcome"].isin(["p_M2", "exact"])
+    ].copy()
+    outcomes = ["p_M2", "exact"]
+    xx = np.arange(2)
+    for shift, key, label, color in [
+        (-0.16, "GLOBAL", "profiled global distance", PURPLE),
+        (0.16, "support_only_R", "support-only score", LIGHT_GRAY),
+    ]:
+        values = [float(wanted[(wanted.predictor == key) & (wanted.outcome == out)].spearman.iloc[0]) for out in outcomes]
+        ax.bar(xx + shift, values, 0.30, color=color, label=label, zorder=3)
+    ax.set_xticks(xx, [r"$p(K=2)$", "exact support"])
+    ax.set_ylim(0, 0.92)
+    ax.set_ylabel("Case-wise Spearman $\\rho$")
+    ax.set_title("(c) Geometry explains weak cases", loc="left")
+    ax.legend(frameon=False, fontsize=5.4, loc="upper right")
+    ax.grid(axis="y", alpha=0.22, linewidth=0.5, zorder=0)
+
+    ax = axes[1, 0]
+    model_labels = {"D": r"$D$", "D_Q": r"$D+Q$", "D_Q_Qij": r"$D+Q+Q_{ij}$"}
+    model_colors = {"D": BLUE, "D_Q": ORANGE, "D_Q_Qij": GREEN}
+    for model in ["D", "D_Q", "D_Q_Qij"]:
+        curve = validation[validation.model.eq(model)].groupby("T")["whitened_norm"].median().sort_index()
+        ax.semilogy(curve.index, curve.values, marker="o", color=model_colors[model],
+                    label=model_labels[model])
+    ax.set_xticks([30, 45, 60, 90, 120])
+    ax.set_xlabel("Post-event horizon $T$ (frames)")
+    ax.set_ylabel("Median whitened error")
+    ax.set_title("(d) Cross interaction is essential", loc="left")
+    ax.legend(frameon=False, fontsize=5.8, loc="upper left")
+    ax.grid(which="both", alpha=0.22, linewidth=0.5)
+
+    ax = axes[1, 1]
+    horizons = np.array([30, 60, 90, 120])
+    normalized = information.loc[horizons, "Delta_global_sq"] / information.loc[30, "Delta_global_sq"]
+    ax.plot(horizons, normalized, marker="o", color=BLUE, label=r"normalized $\Delta^2(T)$")
+    ax.set_xticks(horizons)
+    ax.set_xlabel("Post-event horizon $T$ (frames)")
+    ax.set_ylabel(r"$\Delta^2(T)/\Delta^2(30)$", color=BLUE)
+    ax.tick_params(axis="y", colors=BLUE)
+    ax2 = ax.twinx()
+    ax2.plot(horizons, runtime.loc[horizons, "runtime_s"], marker="s", color=ORANGE,
+             linestyle="--", label="GH31 runtime")
+    ax2.set_ylabel("Runtime (s)", color=ORANGE)
+    ax2.tick_params(axis="y", colors=ORANGE)
+    ax.set_title("(e) More time adds information", loc="left")
+    lines = ax.get_lines() + ax2.get_lines()
+    ax.legend(lines, [line.get_label() for line in lines], frameon=False,
+              fontsize=5.6, loc="upper left")
+    ax.grid(alpha=0.22, linewidth=0.5)
+
+    ax = axes[1, 2]
+    pair_labels = [f"{int(r.source_i)}--{int(r.source_j)}" for r in pairs.itertuples()]
+    xp = np.arange(len(pairs))
+    ax.bar(xp, pairs["sigma_min"], color=SKY, edgecolor=BLUE, linewidth=0.55, zorder=3)
+    ax.set_xticks(xp, pair_labels, rotation=25, ha="right")
+    ax.set_ylabel(r"Equilibrium $\sigma_{\min}$")
+    ax.set_title("(f) Identifiable, but ill-conditioned", loc="left")
+    ax3 = ax.twinx()
+    gap = 1 - pairs["coherence"].abs().to_numpy()
+    ax3.plot(xp, gap, marker="D", color=ORANGE, linestyle="none", label=r"$1-|\mu|$")
+    ax3.set_yscale("log")
+    ax3.set_ylabel(r"$1-|\mu|$", color=ORANGE)
+    ax3.tick_params(axis="y", colors=ORANGE)
+    ax3.legend(frameon=False, fontsize=5.8, loc="upper right")
+    ax.grid(axis="y", alpha=0.22, linewidth=0.5, zorder=0)
+
+    fig.tight_layout(h_pad=1.05, w_pad=0.85)
+    save_figure(fig, "multi_event_evidence")
+
+
 def write_tables() -> None:
     TABLES.mkdir(parents=True, exist_ok=True)
     nominal = read_csv("e04a_b0_b1_b2_summary.csv").set_index("method")
@@ -1232,6 +1402,45 @@ $|a|$ (\%) & AUROC & FPR (\%) & FNR (\%) & Top-1 (\%) & Top-3 (\%) \\
 """
     (TABLES / "load_weak_results.tex").write_text(weak_tex, encoding="ascii")
 
+    global_card = read_csv("global137_cardinality_summary.csv").set_index("regime")
+    global_support = read_csv("global137_support_summary.csv").set_index("regime")
+    global_rows = []
+    for regime, label in [
+        ("H0", "No event"),
+        ("SINGLE", "Single source"),
+        ("WEAK_WEAK", "Weak--weak pair"),
+        ("WEAK_STRONG", "Weak--strong pair"),
+        ("MODERATE", "Moderate pair"),
+        ("FINITE", "Finite pair"),
+    ]:
+        c = global_card.loc[regime]
+        if regime in global_support.index:
+            s = global_support.loc[regime]
+            top1 = f"{100*s['top1']:.1f}"
+            top3 = f"{100*s['top3']:.1f}"
+        else:
+            top1 = top3 = "---"
+        trajectory_count = "---" if regime == "H0" else str(int(c["physical_trajectories"]))
+        global_rows.append(
+            f"{label} & {trajectory_count} & {int(c['n'])} & "
+            f"{100*c['accuracy']:.1f} & {top1} & {top3} & {c['mean_p_M2']:.3f} \\\\"
+        )
+    global_tex = r"""\begin{table*}[t]
+\caption{Fresh prospective 137-hypothesis confirmation. The bank contains $H_0$, 16 single-source hypotheses, and all 120 two-source supports. Repeated noise realizations are decisions, not independent physical trajectories. Top-$k$ is exact support recovery and is undefined for $H_0$ and single-source rows in this exported support table.}
+\label{tab:global137-results}
+\centering
+\footnotesize
+\begin{tabular}{lrrrrrr}
+\toprule
+Regime & Physical trajectories & Decisions & Cardinality (\%) & Top-1 (\%) & Top-3 (\%) & Mean $p(K=2)$ \\
+\midrule
+""" + "\n".join(global_rows) + r"""
+\bottomrule
+\end{tabular}
+\end{table*}
+"""
+    (TABLES / "global137_results.tex").write_text(global_tex, encoding="ascii")
+
 
 def main() -> None:
     setup_style()
@@ -1244,6 +1453,7 @@ def main() -> None:
     figure_mismatch()
     figure_adequacy_adaptation()
     figure_event_inference_evidence()
+    figure_multi_event_evidence()
     write_tables()
 
     assert checks["nominal_test_trajectories"] == 100
@@ -1272,6 +1482,14 @@ def main() -> None:
     assert abs(checks["load_v2_projected_fisher_confusion_spearman"]) < 0.5
     assert 0.9 < checks["load_v2_finite_coverage95_min"] <= 0.95
     assert 0.95 <= checks["load_v2_finite_coverage95_max"] < 0.98
+    assert checks["global137_hypotheses"] == 137
+    assert checks["global137_physical_trajectories"] == 3488
+    assert checks["global137_noise_records"] == 10564
+    assert checks["global137_weak_top1"] < 0.3
+    assert checks["global137_finite_top1"] == 1.0
+    assert checks["t120_gamma4_infinity"] > 0
+    assert checks["t120_information_ratio_120_vs_30"] > 1.0
+    assert checks["t120_complete_eta_max"] < 0.1
     (GENERATED / "evidence_checks.json").write_text(
         json.dumps(checks, indent=2, sort_keys=True) + "\n", encoding="ascii"
     )

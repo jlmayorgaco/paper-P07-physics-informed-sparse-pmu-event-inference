@@ -18,6 +18,9 @@ $legacyFigureRoot = Join-Path $SourceRepository "paper_journal\figures\journal"
 $loadTangentV2Root = Join-Path $benchmarkRoot "output\load_tangent_v2\results"
 $loadBayesV1Root = Join-Path $benchmarkRoot "output\load_bayes_fd_v1\results"
 $loadBayesV2Root = Join-Path $benchmarkRoot "output\load_bayes_fd_v2\results"
+$global137Root = Join-Path $benchmarkRoot "output\global_137_confirmatory_v1"
+$weakResolutionRoot = Join-Path $benchmarkRoot "output\exact_weak_regime_resolution_v2"
+$likelihood120Root = Join-Path $benchmarkRoot "output\likelihood_120_contract_v2"
 $destination = Join-Path $paperRoot "generated\frozen"
 
 function Get-RelativePathCompat([string]$BasePath, [string]$TargetPath) {
@@ -74,7 +77,7 @@ $sources = @(
     @{ Kind = "report"; Name = "e04a5_discrepancy_placement.md" },
     @{ Kind = "report"; Name = "e06_standard_validation.md" },
     @{ Kind = "report"; Name = "e06e_breakpoint_audit.md" },
-    @{ Kind = "report"; Name = "e06e_online_recentering.md" }
+    @{ Kind = "report"; Name = "e06e_online_recentering.md" },
     @{ Kind = "report"; Name = "e06h_corrected_m6_static_recentering.md" },
     @{ Kind = "legacy-evidence"; Name = "replayed_summary.csv"; Target = "legacy_replayed_summary.csv" },
     @{ Kind = "legacy-evidence"; Name = "feature_group_ablation_summary.csv"; Target = "legacy_feature_group_ablation_summary.csv" },
@@ -112,7 +115,29 @@ $sources = @(
     @{ Kind = "load-bayes-v2"; Name = "load_selected_likelihood.csv"; Target = "load_bayes_v2_selected_likelihood.csv" },
     @{ Kind = "load-bayes-v2"; Name = "load_q_stability.csv"; Target = "load_bayes_v2_q_stability.csv" },
     @{ Kind = "load-bayes-v2"; Name = "load_pair_geometry_whitened.csv"; Target = "load_bayes_v2_pair_geometry.csv" },
-    @{ Kind = "load-bayes-v2"; Name = "load_pair_confusion.csv"; Target = "load_bayes_v2_pair_confusion.csv" }
+    @{ Kind = "load-bayes-v2"; Name = "load_pair_confusion.csv"; Target = "load_bayes_v2_pair_confusion.csv" },
+    @{ Kind = "global137-result"; Name = "cardinality_summary.csv"; Target = "global137_cardinality_summary.csv" },
+    @{ Kind = "global137-result"; Name = "support_summary.csv"; Target = "global137_support_summary.csv" },
+    @{ Kind = "global137-result"; Name = "event_detection.csv"; Target = "global137_event_detection.csv" },
+    @{ Kind = "global137-result"; Name = "source_inclusion_summary.csv"; Target = "global137_source_inclusion_summary.csv" },
+    @{ Kind = "global137-result"; Name = "weak_weak_transition.csv"; Target = "global137_weak_transition.csv" },
+    @{ Kind = "global137-result"; Name = "gk_reference_check.csv"; Target = "global137_gk_reference_check.csv" },
+    @{ Kind = "global137-result"; Name = "run_manifest.csv"; Target = "global137_run_manifest.csv" },
+    @{ Kind = "global137-result"; Name = "retrospective_vs_confirmatory.csv"; Target = "global137_retrospective_comparison.csv" },
+    @{ Kind = "global137-result"; Name = "pair_difficulty_atlas.csv"; Target = "global137_pair_difficulty_atlas.csv" },
+    @{ Kind = "global137-report"; Name = "global_137_confirmatory_v1.md"; Target = "report_global_137_confirmatory_v1.md" },
+    @{ Kind = "weak-resolution-result"; Name = "case_level_predictor_metrics.csv"; Target = "weak_resolution_predictor_metrics.csv" },
+    @{ Kind = "weak-resolution-result"; Name = "gamma_horizon_scaling.csv"; Target = "weak_resolution_gamma_scaling.csv" },
+    @{ Kind = "weak-resolution-result"; Name = "run_manifest.csv"; Target = "weak_resolution_run_manifest.csv" },
+    @{ Kind = "weak-resolution-report"; Name = "exact_weak_regime_resolution_v2.md"; Target = "report_exact_weak_regime_resolution_v2.md" },
+    @{ Kind = "likelihood120-result"; Name = "information_growth.csv"; Target = "likelihood120_information_growth.csv" },
+    @{ Kind = "likelihood120-result"; Name = "gamma_infinity.csv"; Target = "likelihood120_gamma_infinity.csv" },
+    @{ Kind = "likelihood120-result"; Name = "equilibrium_pair_resolvability.csv"; Target = "likelihood120_equilibrium_pairs.csv" },
+    @{ Kind = "likelihood120-result"; Name = "runtime_scaling.csv"; Target = "likelihood120_runtime_scaling.csv" },
+    @{ Kind = "likelihood120-result"; Name = "t30_backward_compatibility.csv"; Target = "likelihood120_t30_compatibility.csv" },
+    @{ Kind = "likelihood120-result"; Name = "model_error_relative_to_margin.csv"; Target = "likelihood120_model_error_margin.csv" },
+    @{ Kind = "likelihood120-result"; Name = "physical_manifold_validation_by_horizon.csv"; Target = "likelihood120_physical_validation.csv" },
+    @{ Kind = "likelihood120-report"; Name = "likelihood_120_contract_v2.md"; Target = "report_likelihood_120_contract_v2.md" }
 )
 
 New-Item -ItemType Directory -Force -Path $destination | Out-Null
@@ -127,6 +152,12 @@ $records = foreach ($source in $sources) {
         "load-tangent-v2" { $loadTangentV2Root }
         "load-bayes-v1" { $loadBayesV1Root }
         "load-bayes-v2" { $loadBayesV2Root }
+        "global137-result" { Join-Path $global137Root "results" }
+        "global137-report" { Join-Path $global137Root "reports" }
+        "weak-resolution-result" { Join-Path $weakResolutionRoot "results" }
+        "weak-resolution-report" { Join-Path $weakResolutionRoot "reports" }
+        "likelihood120-result" { Join-Path $likelihood120Root "results" }
+        "likelihood120-report" { Join-Path $likelihood120Root "reports" }
         default { throw "Unknown source kind: $($source.Kind)" }
     }
     $sourcePath = Join-Path $base $source.Name
