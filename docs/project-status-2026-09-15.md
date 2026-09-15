@@ -11,10 +11,11 @@
 - State reconstruction, physical mismatch, regularized recentering, the historical eight-label benchmark, and source-holdout failure remain in the paper under separate denominators.
 - Figure 8 converts the new reports into one evidence narrative rather than presenting disconnected tables.
 - The 14-page main paper now follows four questions in scientific order: hidden-voltage recovery, failure under physical mismatch, simultaneous-source resolution, and supervised source holdout.
-- Detailed derivations, Fisher-information results, stepwise Bayesian algorithms, all frozen contracts, and secondary diagnostics now appear in a 15-page companion supplement. Exact tables remain available without interrupting the main argument.
+- Detailed derivations, Fisher-information results, stepwise Bayesian algorithms, all frozen contracts, and secondary diagnostics now appear in a 17-page companion supplement. Exact tables remain available without interrupting the main argument.
 - The hybrid-event semantics now distinguish the physical algebraic right limit, callback storage, and the first retained PMU frame. The local consistency-jump and profiled-$\gamma_1$ results are integrated as theory, while their simulator-convergence tests remain explicit open gates.
 - First-order multi-event support geometry now separates visibility from aliasing, handles rank-deficient nuisance through projected fits, and proves why nested support cardinality cannot be selected by geometric distance alone. Nine deterministic checks validate the stated local identities without being presented as simulator evidence.
-- The reproducible bundle build retains the 15-page supplement independently and appends it after the 14-page principal article, producing one 29-page review PDF without altering the main-paper page budget.
+- One-sided physical events now use tangent-cone rather than span geometry. The supplement adds conditional exclusive-support results, an exact half-normal Bayes factor, a boundary-aware cone--Laplace theorem, a singular-Hessian counterexample, and 12 independent toy checks; none is presented as a new IEEE 39-bus campaign.
+- The reproducible bundle build retains the 17-page supplement independently and appends it after the 14-page principal article, producing one 31-page review PDF without altering the main-paper page budget.
 
 ## Current evidence boundary
 

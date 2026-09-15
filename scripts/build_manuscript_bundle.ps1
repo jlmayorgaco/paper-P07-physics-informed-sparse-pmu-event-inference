@@ -21,6 +21,10 @@ function Invoke-CheckedCommand {
 
 Push-Location $paperRoot
 try {
+    Write-Host 'Regenerating deterministic theory checks...'
+    Invoke-CheckedCommand -Command 'python' -Arguments @('scripts/verify_theory_identities.py')
+    Invoke-CheckedCommand -Command 'python' -Arguments @('scripts/verify_cone_bayes_identities.py')
+
     Write-Host 'Building the standalone supplementary material...'
     Invoke-CheckedCommand -Command 'pdflatex' -Arguments ($latexArguments + 'supplement.tex')
     Invoke-CheckedCommand -Command 'bibtex' -Arguments @('supplement')

@@ -12,6 +12,8 @@ The archive `PMU_Teoria_Avanzada_Fuentes_y_Verificacion_2026-09-13.zip` was revi
 
 Nine deterministic checks are retained in `scripts/verify_theory_identities.py` and `generated/theory_checks.json`. They guard the branch primitive; regular first-order and shared-tangent second-order laws; rank-deficient profiling; shared-source cancellation; competitor and nuisance monotonicity; nested-support degeneracy; and the principal-angle identity. A generated supplementary table summarizes them without presenting toy systems as power-system evidence.
 
+Twelve additional checks in `scripts/verify_cone_bayes_identities.py` guard the conditional exclusive-support quotient, one-sided cone geometry, boundary-aware Bayes factors, the nuisance-profile limit, cone--Laplace scaling, and the singular quartic counterexample. They correct the signed-subspace theory where an event amplitude lies on a physical boundary; they do not add an IEEE 39-bus multi-family result.
+
 ## Retained only as future work
 
 - IBR, PLL, grid-forming, multievent, unknown-onset, point-process, anytime-valid alarm, and distributed factor-graph formulations.

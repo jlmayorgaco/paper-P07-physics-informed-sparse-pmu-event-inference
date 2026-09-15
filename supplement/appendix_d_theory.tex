@@ -362,7 +362,7 @@ event tangents, and define
  \label{eq:supp-residualized-event-dictionary}
 \end{equation}
 
-\begin{theorem}[First-order support-to-support separation]
+\begin{theorem}[Signed first-order support-to-support separation]
 For true support $S$ with fixed severity direction $\bm\alpha_S$ and competing
 support $C$ with freely fitted local amplitudes, define
 \begin{equation}
@@ -423,10 +423,73 @@ $D=C\setminus S$. The shared amplitudes can be refitted, so
  \bm F_B\bm\alpha_B\|_2^2.
  \label{eq:supp-shared-support-quotient}
 \end{equation}
-Thus the shared true component cancels exactly at first order. In particular,
-for $S=\{i,j\}$ and $C=\{i,k\}$ the margin is independent of the amplitude at
-$i$. Enlarging a competitor can only reduce the margin because its explanatory
+Thus the shared true component cancels exactly at first order for signed
+amplitudes or an interior parameter point. In particular, for $S=\{i,j\}$ and
+$C=\{i,k\}$ the relaxed margin is independent of the amplitude at $i$.
+Enlarging a competitor can only reduce the margin because its explanatory
 subspace grows.
+
+The exclusive-support quotient removes the zero directions introduced by a
+literal support intersection. Define
+\begin{equation}
+ \begin{aligned}
+ \bm Z_H&=[\bm A,\bm F_H],
+ &\bm R_H&=\bm I-\bm Z_H\bm Z_H^\dagger,\\
+ \widetilde{\bm F}_B&=\bm R_H\bm F_B,
+ &\widetilde{\bm F}_D&=\bm R_H\bm F_D.
+ \end{aligned}
+ \label{eq:supp-exclusive-support-residualization}
+\end{equation}
+Then
+\begin{align}
+ \gamma_{S\rightarrow C}^2(\bm\alpha_B)
+ &=\min_{\bm\beta_D}
+ \|\widetilde{\bm F}_B\bm\alpha_B-
+   \widetilde{\bm F}_D\bm\beta_D\|_2^2 \nonumber\\
+ &=\bm\alpha_B^{\mathsf T}\bm K_{B\mid D;H}\bm\alpha_B,
+ \label{eq:supp-conditional-support-matrix}\\
+ \bm K_{B\mid D;H}
+ &=\widetilde{\bm F}_B^{\mathsf T}
+ (\bm I-\bm P_{\widetilde{\bm F}_D})
+ \widetilde{\bm F}_B\succeq\bm0.
+ \nonumber
+\end{align}
+The first equality follows by minimizing first over the common span
+$\operatorname{range}\bm Z_H$ and then over $\bm\beta_D$. Moreover,
+$\bm K_{B\mid D;H}\succ\bm0$ if and only if
+\begin{equation}
+ \ker\widetilde{\bm F}_B=\{\bm0\},
+ \qquad
+ \operatorname{range}\widetilde{\bm F}_B
+ \cap\operatorname{range}\widetilde{\bm F}_D=\{\bm0\}.
+ \label{eq:supp-conditional-pd-condition}
+\end{equation}
+Indeed, a zero quadratic form means that
+$\widetilde{\bm F}_B\bm\alpha_B$ lies in the competing range; the two
+conditions force $\bm\alpha_B=\bm0$, and the converse is immediate. Under the
+coefficient normalization $\|\bm\alpha_B\|_2=1$, Rayleigh--Ritz gives the
+worst relaxed direction and margin as
+\begin{equation}
+ \min_{\|\bm\alpha_B\|_2=1}\gamma_{S\rightarrow C}^2
+ =\lambda_{\min}(\bm K_{B\mid D;H}).
+ \label{eq:supp-conditional-worst-direction}
+\end{equation}
+This value depends on the physical scaling of the amplitude coordinates.
+
+For a scale-free comparison, let $\bm Q_B,\bm Q_D$ be orthonormal bases of the
+two conditional ranges. If $\theta_{\min}$ is their smallest principal angle,
+\begin{equation}
+ \lambda_{\min}\!\left[
+ \bm Q_B^{\mathsf T}(\bm I-\bm Q_D\bm Q_D^{\mathsf T})\bm Q_B
+ \right]=\sin^2\theta_{\min}.
+ \label{eq:supp-conditional-angle}
+\end{equation}
+The angle must be computed after removing nuisance and shared directions;
+otherwise every shared event creates a trivial zero angle. If the residual
+ambient dimension is $q_H=m-\operatorname{rank}\bm Z_H$, then
+$r_B+r_D>q_H$ forces a nonzero intersection between the two conditional
+\emph{spans}. This is a span-relaxed dimensional obstruction, not yet a
+one-sided physical ambiguity.
 
 If $S\subset C$ and active amplitudes may equal zero, the competitor contains the
 true response and $\gamma_{S\rightarrow C}=0$. If zero is excluded but belongs
@@ -435,19 +498,111 @@ therefore cannot select cardinality among nested support models. The marginal
 likelihood in Supplementary Appendix~E supplies the required amplitude-volume
 and support-prior terms.
 
-After nuisance and shared-source quotienting, principal angles between
-$\operatorname{range}\overline{\bm F}_S$ and
-$\operatorname{range}\overline{\bm F}_C$ summarize the worst aligned severity
-directions. A zero angle caused only by the literal shared-source intersection is
-not evidence that the exclusive source components are indistinguishable. This is
-why the frozen weak-event audit residualizes the shared direction before reporting
-quotient geometry.
+\subsection{Physical Tangent-Cone Separation}
 
-Equations~\eqref{eq:supp-support-margin-definition}--
-\eqref{eq:supp-shared-support-quotient} assume a local signed-amplitude
-neighborhood. With sign, magnitude, or duration constraints, the linear-subspace
-projection is a lower bound unless the constrained optimum is shown to be
-interior; the constrained cone or difference set must otherwise be used.
+Let $\mathcal A_C$ be the physical amplitude domain of a competing event model
+at the nominal point, and let $T_C=T_{\mathcal A_C}(\bm0)$ denote its
+Bouligand tangent cone. Signed load changes give $T_C=\mathbb R^{|C|}$;
+one-sided trip, shedding, outage-continuation, and fault-severity coordinates
+give nonnegative rays. Missing PMU data are a discrete measurement-mode change
+and are not forced into this continuous construction.
+
+\begin{theorem}[Constrained first-order separation]
+Suppose a competing trajectory family has a local $C^2$ effective chart
+$\bm\phi$ with $\bm\phi(\bm0)=\bm y_0$, full-column-rank derivative
+$\bm J$, and local parameter cone $\bm K=\mathbb R^p\times T_C$, where $T_C$
+is closed and polyhedral. Assume no distant branch approaches $\bm y_0$.
+For $\bm y_\star(\epsilon)=\bm y_0+\epsilon\bm b+o(\epsilon)$,
+\begin{equation}
+ d_C^2(\epsilon)
+ =\epsilon^2\operatorname{dist}^2(\bm b,\bm J\bm K)
+ +o(\epsilon^2).
+ \label{eq:supp-cone-distance-law}
+\end{equation}
+\label{thm:supp-cone-separation}
+\end{theorem}
+
+\paragraph{Proof.}
+For every $\bm v\in\bm K$, conicity gives
+$\bm\phi(\epsilon\bm v)=\bm y_0+\epsilon\bm J\bm v+o(\epsilon)$, which yields
+the upper bound after taking the infimum. Conversely, an
+$o(\epsilon)$-optimal local coordinate $\bm u_\epsilon$ satisfies
+$\|\bm\phi(\bm u_\epsilon)-\bm y_0\|=O(\epsilon)$. Full column rank and
+differentiability imply $\|\bm u_\epsilon\|=O(\epsilon)$. Every convergent
+subsequence of $\bm u_\epsilon/\epsilon$ has a limit in the closed cone
+$\bm K$, and division of the residual by $\epsilon$ gives the matching lower
+bound. The isolated-branch assumption prevents a nonlocal chart from attaining
+a smaller leading distance. $\hfill\square$
+
+With $\bm A$ the whitened unconstrained nuisance tangent and $\bm F_C$ the
+event tangent, nuisance profiling is still exact:
+\begin{equation}
+ \gamma_{\mathrm{phys}}^2
+ =\min_{\bm\beta_C\in T_C}
+ \|\bm R_N(\bm b-\bm F_C\bm\beta_C)\|_2^2
+ =\operatorname{dist}^2(\bm R_N\bm b,\bm R_N\bm F_C T_C).
+ \label{eq:supp-cone-profiled-margin}
+\end{equation}
+The observable projection is unique even when the coefficient vector is not.
+Let $\mathcal C=\bm R_N\bm F_C T_C$ and
+$\mathcal L=\operatorname{span}\mathcal C$. Since
+$\mathcal C\subseteq\mathcal L$,
+\begin{equation}
+ \gamma_{\mathrm{phys}}\ge\gamma_{\mathrm{span}},
+ \quad
+ \gamma_{\mathrm{phys}}=\gamma_{\mathrm{span}}
+ \iff
+ \bm\Pi_{\mathcal L}(\bm R_N\bm b)\in\mathcal C.
+ \label{eq:supp-cone-span-relation}
+\end{equation}
+Thus a positive span margin certifies physical separation, whereas a zero span
+margin does not prove one-sided ambiguity.
+
+For $T_C=\mathbb R_+^{|C|}$, the optimum is a nonnegative least-squares
+projection. With residual
+$\bm r=\bm R_N(\bm b-\bm F_C\bm\beta_C)$, the KKT conditions are
+\begin{equation}
+ \bm\beta_C\ge\bm0,\quad
+ (\bm R_N\bm F_C)^{\mathsf T}\bm r\le\bm0,\quad
+ \beta_j(\bm R_N\bm f_j)^{\mathsf T}\bm r=0.
+ \label{eq:supp-cone-kkt}
+\end{equation}
+For one true signature $\bm x$ and one admissible competing ray $\bm d$,
+\begin{equation}
+ \gamma_{\mathrm{ray}}^2
+ =\|\bm x\|_2^2-
+ \frac{[\bm d^{\mathsf T}\bm x]_+^2}{\|\bm d\|_2^2},
+ \qquad [v]_+=\max(0,v).
+ \label{eq:supp-single-ray-margin}
+\end{equation}
+An antiparallel signature can therefore have zero span margin and a strictly
+positive physical margin.
+
+For a shared one-sided support $H$, the exact difference coordinate satisfies
+$\bm\delta_H\in T_H-\bm\alpha_H$, which need not be a subspace. Hence the
+physical margin can depend on the shared true amplitude; the unconditional
+cancellation statement applies only when the relaxed solution is feasible.
+Competitor enrichment still cannot increase the margin whenever the old
+feasible set is contained in the new one. Likewise, a nested superset still
+has zero margin when it can match the shared amplitudes and set every added
+amplitude to zero.
+
+For nontrivial closed cones $\mathcal C_S,\mathcal C_C$, the directed
+scale-free separation
+\begin{equation}
+ \delta(\mathcal C_S\!\rightarrow\!\mathcal C_C)
+ =\min_{\substack{\bm x\in\mathcal C_S\\\|\bm x\|_2=1}}
+ \operatorname{dist}(\bm x,\mathcal C_C)
+ \label{eq:supp-directed-cone-separation}
+\end{equation}
+vanishes exactly when the cones share a nonzero vector. It reduces to
+$\sin\theta_{\min}$ for subspaces, but need not be symmetric. Consequently,
+the classical signed-sparse condition
+$\operatorname{spark}(\overline{\bm F})>2K$ remains sufficient under
+one-sided constraints, while its failure need not imply a physically feasible
+ambiguity.
+
+\input{tables/generated/cone_geometry_validation}
 
 For a multi-source support $S$, the Fisher information conditional on that known
 support is
@@ -752,7 +907,7 @@ Result & Present evidence boundary \\
 \midrule
 Consistency jump & DAE contract only; callback/right-limit logging and derivative convergence remain open. \\
 Functional equivalence and BLUE & Exact in the local linear model; nonlinear TEST accuracy remains empirical. \\
-Fisher projection and support geometry & Toy identities pass; IEEE 39-bus convergence to $\gamma_1$ remains untested. \\
+Fisher, support, and cone geometry & Signed and one-sided toy identities pass; IEEE 39-bus convergence and physical cone margins remain untested. \\
 Sparse injectivity and $\gamma_{2K}$ & T120 diagnostics concern the frozen load bank, not general descriptor left-invertibility. \\
 Temporal rate & The long-horizon study remains diagnostic and lacks independent operating-point validation. \\
 Relative curvature & The controlled parabola passes; curvature-dominated weak-event behavior was not observed in the frozen atlas. \\

@@ -265,7 +265,7 @@ def write_latex_table(path: Path, checks: list[dict[str, object]]) -> None:
             rf"rank {rank_deficient['rank']}/{rank_deficient['parameter_count']}; max variation {rank_deficient['max_projected_fit_variation']:.1e}",
         ),
         (
-            "Shared-source cancellation",
+            "Signed shared-source cancellation",
             r"margin independent of shared amplitude",
             rf"squared-margin range {shared['margin_range']:.1e}",
         ),

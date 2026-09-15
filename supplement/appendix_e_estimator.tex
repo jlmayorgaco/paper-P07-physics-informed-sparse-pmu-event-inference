@@ -178,6 +178,43 @@ $-\tfrac12[(I+\sigma_a^{-2})a^2-2sa]$.
 Completing the square gives mean $m$ and variance $v$. Integrating the resulting Gaussian contributes
 $\sqrt{v/\sigma_a^2}\exp(vs^2/2)$ relative to $H_0$; taking its logarithm gives \eqref{eq:supp-linear-bayes-factor}. The logarithmic term is the amplitude-volume or Occam penalty. $\hfill\square$
 
+\begin{corollary}[One-sided amplitude evidence]
+Under Proposition~\ref{prop:supp-conjugate-bayes}, replace the signed Gaussian
+slab by the proper half-normal prior
+$p(a)=2\mathcal N(a;0,\sigma_a^2)\mathbb I(a\ge0)$. If
+$BF_{\pm}$ denotes the signed Bayes factor in
+\eqref{eq:supp-linear-bayes-factor}, then
+\begin{equation}
+ BF_{+}=2\Phi(z)BF_{\pm},
+ \qquad
+ z=\frac{\sigma_a s}{\sqrt{1+\sigma_a^2I}}.
+ \label{eq:supp-one-sided-bayes-factor}
+\end{equation}
+Conditional on the active model, the severity posterior is
+$\mathcal N(m,v)$ truncated to $[0,\infty)$.
+\end{corollary}
+
+\paragraph{Proof.}
+The fixed-amplitude likelihood ratio is
+$\exp(as-Ia^2/2)$. Multiplication by the half-normal density and completion of
+the square give twice the signed Gaussian integral restricted to $a\ge0$.
+The unrestricted posterior has standardized probability
+$\Phi(m/\sqrt v)=\Phi(z)$ on that half-line, which yields
+\eqref{eq:supp-one-sided-bayes-factor}. $\hfill\square$
+
+The factor $2\Phi(z)$ preserves direction: a large score with the prohibited
+sign is evidence against the one-sided event even though the signed factor
+depends on $s^2$. Proper slab scales are essential because Bayes factors across
+different support dimensions are undefined up to an arbitrary constant under
+an improper amplitude prior. Under the one-sided null $a=0$, the likelihood
+ratio statistic satisfies
+\begin{equation}
+ 2\Delta\ell=[Z]_+^2,\qquad Z\sim\mathcal N(0,1),
+ \label{eq:supp-boundary-lrt}
+\end{equation}
+and therefore has the boundary mixture
+$\tfrac12\delta_0+\tfrac12\chi_1^2$, rather than the regular $\chi_1^2$ law.
+
 The quadratic multi-source mean is nonconjugate. Its evidence is
 \begin{equation}
  Z_S=p(\bm r\mid S)=
@@ -313,14 +350,82 @@ subject to the candidate DAE constraints. Here $\bm\chi_t$ denotes a consistent 
  \end{aligned}
  \label{eq:supp-joint-objective}
 \end{equation}
-The Laplace evidence must be evaluated in a common feasible measure. If $\widehat{\bm\xi}_S$ is a mode in local free coordinates of dimension $d_S$ and $\bm H_S$ is the corresponding positive-definite Hessian, then
+Candidate evidence must be evaluated in a common feasible measure. The boundary
+correction is exposed by an explicit concentration parameter rather than by
+informally assuming a concentrated posterior.
+
+\begin{theorem}[Local cone--Laplace evidence]
+Let $L_{S,\epsilon}$ be the log likelihood plus the log of a proper prior in
+identifiable local coordinates of dimension $d_S$. Suppose the rescaled
+feasible domains converge locally to a closed polyhedral cone $\bm K_S$ and
 \begin{equation}
- \log Z_S^{\mathrm{Lap}}
- \approx-\tfrac12\mathcal J_S^{\circ}(\widehat{\bm\xi}_S)
- +\tfrac{d_S}{2}\log(2\pi)-\tfrac12\log\det\bm H_S.
- \label{eq:supp-laplace-evidence}
+ L_{S,\epsilon}(\bm\xi_0+\epsilon\bm u)
+ -L_{S,\epsilon}(\bm\xi_0)
+ =\bm h_S^{\mathsf T}\bm u
+ -\tfrac12\bm u^{\mathsf T}\bm H_S\bm u
+ +r_\epsilon(\bm u),
+ \label{eq:supp-cone-laplace-expansion}
 \end{equation}
-Chart Jacobians, prior normalizers, and candidate-dependent covariance determinants belong in $\mathcal J_S^{\circ}$ or the measure term. Comparing only optimized residuals drops the volume penalty and does not produce a posterior.
+where $\bm H_S\succ\bm0$ and $r_\epsilon\to0$ uniformly on compact sets.
+Assume an integrable dominating envelope and negligible evidence from distant
+modes. Then
+\begin{align}
+ Z_{S,\epsilon}
+ ={}&e^{L_{S,\epsilon}(\bm\xi_0)}\epsilon^{d_S}
+ (2\pi)^{d_S/2}|\bm H_S|^{-1/2}
+ \nonumber\\
+ &\times\exp\!\left(
+ \tfrac12\bm h_S^{\mathsf T}\bm H_S^{-1}\bm h_S
+ \right)
+ \Pr(\bm U_S\in\bm K_S)[1+o(1)],
+ \label{eq:supp-laplace-evidence}\\
+ \bm U_S\sim{}&
+ \mathcal N(\bm H_S^{-1}\bm h_S,\bm H_S^{-1}).
+ \nonumber
+\end{align}
+\label{thm:supp-cone-laplace}
+\end{theorem}
+
+\paragraph{Proof.}
+Set $\bm\xi=\bm\xi_0+\epsilon\bm u$, which contributes the Jacobian
+$\epsilon^{d_S}$. The compact-uniform expansion gives pointwise convergence of
+the rescaled integrand to
+$\exp(\bm h_S^{\mathsf T}\bm u-\bm u^{\mathsf T}\bm H_S\bm u/2)$.
+The assumed envelope permits dominated convergence, while the distant-mode
+condition localizes the original integral. Completing the square in the
+limiting quadratic integral gives the Gaussian normalizer and the cone
+probability in \eqref{eq:supp-laplace-evidence}. $\hfill\square$
+
+For an interior model $\bm K_S=\mathbb R^{d_S}$ and the probability factor is
+one. For one or more boundary amplitudes it is a Gaussian orthant probability,
+not generally $2^{-q}$. Half-normal prior normalizers supply their own factors
+in addition to this cone probability. Chart Jacobians, prior normalizers, and
+candidate-dependent covariance determinants belong in $L_{S,\epsilon}$ or the
+measure term. Comparing only optimized residuals drops both volume and boundary
+terms and does not produce a posterior.
+
+For a small-noise Gaussian Hybrid-DAE trajectory map
+$\bm\mu_S(\bm\xi_0+\epsilon\bm u)
+=\bm\mu_0+\epsilon\bm J_S\bm u+O(\epsilon^2)$,
+\begin{equation}
+ \bm h_S=\bm J_S^{\mathsf T}\bm\Sigma^{-1}\bm z,\qquad
+ \bm H_S=\bm J_S^{\mathsf T}\bm\Sigma^{-1}\bm J_S,
+ \label{eq:supp-dae-cone-laplace-hessian}
+\end{equation}
+so positive curvature is equivalent to first-order identifiability in the
+reduced coordinates. This is a theoretical local specialization, not a
+validation of the unevaluated joint estimator. If $\bm H_S$ is singular, merely
+replacing its inverse by a pseudoinverse is invalid: redundant coordinates must
+first be quotiented out, while genuine higher-order identification changes the
+evidence scale. For example,
+\begin{equation}
+ \int_0^\infty e^{-na^4/4}\,da
+ =\frac{\Gamma(1/4)}{4^{3/4}}n^{-1/4},
+ \label{eq:supp-singular-quartic-evidence}
+\end{equation}
+not the $n^{-1/2}$ rate of regular quadratic Laplace theory.
+
+\input{tables/generated/boundary_bayes_validation}
 
 For a sliding window, eliminating old Gaussian variables creates an arrival prior. Write its canonical log kernel as
 $-\tfrac12\bm z^{\mathsf T}\bm\Lambda\bm z+\bm h^{\mathsf T}\bm z+c$.

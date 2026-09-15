@@ -70,6 +70,14 @@ within-cardinality prior state the sparsity contract. Cardinality is therefore a
 Bayesian model-selection question; it cannot be recovered from best-fit distance
 alone.
 
+The evaluated load bank uses a proper signed Gaussian amplitude prior because
+load changes may increase or decrease. A one-sided fault, trip, or outage instead
+requires a proper truncated slab and boundary-aware evidence. In the local
+single-amplitude Gaussian model, Supplementary Appendix~E shows that a
+half-normal slab multiplies the signed Bayes factor by an exact directional
+factor $2\Phi(z)$. This extension is part of the common estimator design; it is
+not an evaluated multi-family result.
+
 The posterior is read in a fixed order. First, $p(K\mid\bm r)$ asks whether no source, one source, or two sources are active. Conditional support ranks then ask which buses are involved. Amplitude intervals answer how large the changes are. This order is essential under limited observability because cardinality can be well supported while several source pairs remain plausible.
 
 The prospective experiment evaluates all \GlobalHypothesisCount{} supports at a known onset and fixed PMU set. It conditions on the nominal initial state and assumes no corrupted channels. Thus it evaluates the sparse load specialization of Proposition~\ref{prop:sparse-event-injectivity}, not the full state-and-integrity nuisance model in \eqref{eq:stacked-hypothesis}.

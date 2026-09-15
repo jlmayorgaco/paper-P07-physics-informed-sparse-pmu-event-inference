@@ -8,6 +8,9 @@
 - Resolve the current second-order analytic-to-TDS discrepancy before using full dynamic curvature as evidence.
 - Freeze and run the local separation falsification test $2D(a)/a^2\rightarrow\gamma_1^2$ over declared candidate pairs, nuisance spaces, operating points, amplitudes, and numerical tolerances.
 - Export the actual IEEE 39-bus nuisance-residual event dictionary and evaluate the support-to-support margin under the same sign and amplitude constraints used by the Bayesian likelihood.
+- For every physical family, freeze whether severity is signed, one-sided, bounded, or discrete; compare relaxed span and physical cone margins and record which constraints are active at each nearest competitor.
+- Evaluate the half-normal boundary factor and posterior sensitivity to proper slab scale on held-out fault, trip, and outage trajectories before using it as a multi-family result.
+- Separate rank deficiency caused by redundant coordinates from genuine higher-order non-identifiability before applying cone--Laplace evidence; do not substitute a Hessian pseudoinverse for this audit.
 - Recover or rerun the reported nonlinear controlled-DAE experiment with its exact equations, solver settings, seeds, CSV, and figures; its current `sandbox:/mnt/data` links are not repository evidence.
 - Complete the independent-operating-point T120 physical bank and reconcile the absolute scale/name of the exported separation metric before freezing a prospective horizon contract.
 - After that audit, freeze a new 30/60/90/120-frame test reporting $p(K=2)$, exact support, Top-3, credible-set coverage/size, entropy, and resolution delay without retuning the likelihood.

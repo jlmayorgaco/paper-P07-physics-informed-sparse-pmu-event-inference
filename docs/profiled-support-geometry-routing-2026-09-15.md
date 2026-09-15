@@ -51,9 +51,9 @@ from `scripts/verify_theory_identities.py` to `generated/theory_checks.json` and
    under the audited callback--solve--sample semantics.
 3. Freeze candidate pairs spanning large, small, and near-zero `gamma1`, then test
    distance, optimal nuisance motion, and normal-residual convergence jointly.
-4. Apply the support theorem under the physical sign and amplitude constraints;
-   unconstrained subspace projection is only a lower bound when the optimum hits a
-   constraint boundary.
+4. Evaluate the now-derived tangent-cone support margin on the IEEE 39-bus event
+   families and record when the relaxed subspace optimum violates physical sign
+   or amplitude constraints.
 5. Test whether the two predicted mechanisms—nuisance invisibility and event
    aliasing—explain held-out nonlinear outcomes prospectively.
 6. Preserve cardinality as integrated Bayesian model selection. Do not replace the

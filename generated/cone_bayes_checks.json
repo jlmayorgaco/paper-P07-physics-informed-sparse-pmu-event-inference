@@ -1,0 +1,144 @@
+{
+  "scope": "Deterministic toy checks of constrained geometry and boundary-aware evidence; not IEEE 39-bus evidence.",
+  "checks": [
+    {
+      "name": "conditional_quotient_reduction",
+      "full_margin_squared": 0.40018695652173913,
+      "quotient_margin_squared": 0.40018695652173913,
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "conditional_matrix_worst_direction",
+      "minimum_eigenvalue": 0.11264797922565911,
+      "grid_minimum": 0.1126479980503967,
+      "minimum_eigenvector": [
+        -0.9776931386152578,
+        -0.21003839340617358
+      ],
+      "error": 1.882473758818559e-08,
+      "tolerance": 1e-07,
+      "passed": true
+    },
+    {
+      "name": "conditional_principal_angle",
+      "naive_angle_degrees": 0.0,
+      "conditional_angle_degrees": 18.68866076722518,
+      "error": 4.163336342344337e-17,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "one_sided_ray_vs_span",
+      "span_margin_squared": 0.0,
+      "cone_margin_squared": 1.0,
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "one_sided_shared_source_dependence",
+      "shared_amplitudes": [
+        0.0,
+        1.0,
+        2.0,
+        3.0
+      ],
+      "margin_sequence": [
+        5.000000000000001,
+        2.0000000000000004,
+        1.0,
+        1.0
+      ],
+      "error": 8.881784197001252e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "cone_competitor_enrichment",
+      "trials": 2000,
+      "maximum_violation": 6.661338147750939e-16,
+      "error": 6.661338147750939e-16,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "nested_cone_zero_margin",
+      "margin_squared": 1.4458437714320263e-31,
+      "error": 1.4458437714320263e-31,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "signed_and_half_normal_bayes_factors",
+      "cases": [
+        {
+          "score": -3.9115214431215892,
+          "signed_bayes_factor": 7.219056395334707,
+          "one_sided_bayes_factor": 0.21906036378911214
+        },
+        {
+          "score": 0.0,
+          "signed_bayes_factor": 0.6920456654478331,
+          "one_sided_bayes_factor": 0.6920456654478331
+        },
+        {
+          "score": 3.9115214431215892,
+          "signed_bayes_factor": 7.219056395334707,
+          "one_sided_bayes_factor": 14.219052426880301
+        }
+      ],
+      "signed_quadrature_error": 1.3677947663381929e-12,
+      "one_sided_quadrature_error": 2.7355895326763857e-12,
+      "error": 2.7355895326763857e-12,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "broad_nuisance_to_profile_limit",
+      "profile_information": 1.1616917455153164,
+      "broad_prior_information": 1.1616917465543306,
+      "broad_scale": 10000.0,
+      "relative_error": 8.943975129505814e-10,
+      "error": 8.943975129505814e-10,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "one_sided_boundary_lrt",
+      "samples": 200000,
+      "zero_mass": 0.49722,
+      "positive_component_mean": 0.9986967067706569,
+      "error": 0.0027800000000000047,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "nonlinear_cone_laplace_rate",
+      "relative_errors": [
+        0.08201861869229299,
+        0.04482168965213662,
+        0.023547861774049106,
+        0.01208754203429352,
+        0.0061263782669470634,
+        0.003084405914718813
+      ],
+      "log_log_slope": 0.9497080490525247,
+      "error": 0.050291950947475295,
+      "tolerance": 0.08,
+      "passed": true
+    },
+    {
+      "name": "singular_quartic_evidence_rate",
+      "log_log_slope": -0.25000000000000006,
+      "expected_slope": -0.25,
+      "quadrature_error": 9.592326932761353e-14,
+      "error": 9.592326932761353e-14,
+      "tolerance": 1e-10,
+      "passed": true
+    }
+  ],
+  "passed": 12,
+  "total": 12
+}

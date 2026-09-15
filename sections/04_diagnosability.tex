@@ -96,14 +96,26 @@ $\bm\alpha_S$, and competing support $C$, the support-to-support margin is
  \overline{\bm G}_S\bm\alpha_S\|_2^2.
  \label{eq:support-to-support-margin}
 \end{equation}
-The competitor is allowed to refit its amplitudes; comparing columns at equal
-amplitude would overstate separation. Shared sources cancel from the discriminant
-at first order, leaving only the true-exclusive component after projection onto
-nuisance, shared, and competitor-exclusive directions. If $S\subset C$ and an
-extra amplitude may approach zero, the geometric infimum is zero. Geometry can
-rank non-nested explanations, but cardinality among nested supports requires a
-model-selection penalty or integrated evidence. Supplementary Appendix~D proves
-these statements and gives the associated principal-angle interpretation.
+Equation~\eqref{eq:support-to-support-margin} is exact for signed amplitudes or
+an interior parameter point. At a physical boundary, let
+$T_{\mathcal A_C}(\bm0)$ be the tangent cone of the competitor's admissible
+amplitude domain. The first-order physical margin is instead
+\begin{equation}
+ \gamma_{\mathrm{phys}}^2
+ =\min_{\bm u,\,\bm\beta_C\in T_{\mathcal A_C}(\bm0)}
+ \|\bm W\bm G_S\bm\alpha_S-\bm W\bm N\bm u
+       -\bm W\bm G_C\bm\beta_C\|_2^2.
+ \label{eq:physical-cone-margin}
+\end{equation}
+Because the cone is contained in its span,
+$\gamma_{\mathrm{phys}}\ge\gamma_{S\rightarrow C}$; zero relaxed margin does
+not prove ambiguity for a one-sided event. Shared sources cancel exactly only
+when the matched amplitude is feasible and the relevant constraint is inactive.
+Competitor enrichment still cannot increase the margin, and a nested superset
+still has zero margin when its added amplitude admits zero. Geometry can
+therefore rank non-nested explanations, but cardinality among nested supports
+requires a model-selection penalty or integrated evidence. Supplementary
+Appendix~D proves the subspace and cone statements.
 
 For persistent load events, subtract the common no-event trajectory and write the $T$-sample response as
 \begin{equation}
