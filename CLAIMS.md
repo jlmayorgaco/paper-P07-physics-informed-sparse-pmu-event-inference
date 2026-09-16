@@ -22,6 +22,7 @@
 ## Supported theory and design claims
 
 - The paper defines physical interventions and measurement-integrity states as separate, composable latent variables.
+- Candidate-conditioned bus currents, branch-terminal currents, complex powers, and model-implied frequency quantities are deterministic functionals of the estimated DAE state and network mode; they are not independent learned outputs. Only the hidden complex-voltage target has current empirical reconstruction evidence.
 - When the requested functional is estimable in the finite-horizon local model, its generalized least-squares map is the best linear unbiased estimator and its target covariance is explicit.
 - Under the stated local linear-Gaussian assumptions, intersecting candidate--nuisance manifolds admit indistinguishable parameter pairs; no classifier can distinguish them uniformly over the declared nuisance set.
 - Adding a conditionally independent, correctly modeled PMU block cannot decrease the nuisance-profiled separation margin. The margins are not generally additive, and the result is not a guarantee for an arbitrary learned classifier.
@@ -33,6 +34,6 @@
 
 ## Not established
 
-The paper does **not** yet establish an executed multi-family joint state/event/source estimator, multi-family source generalization, calibrated candidate sets, causal nonlinear adaptation, topology transfer, optimal PMU placement, field or HIL validity, cross-simulator superiority, continuous false-alarm control, or real-time deployment. The T120 contract also lacks independent operating-point validation and a reconciled absolute separation scale. State, load-source, and ANDES metrics come from distinct frozen contracts and must never be pooled.
+The paper does **not** yet establish an executed multi-family joint state/event/source estimator, a validated 39-bus virtual-PMU field for current/frequency/ROCOF/power, independent three-phase waveform reconstruction, multi-family source generalization, calibrated candidate sets, causal nonlinear adaptation, topology transfer, optimal PMU placement, field or HIL validity, cross-simulator superiority, continuous false-alarm control, or real-time deployment. The T120 contract also lacks independent operating-point validation and a reconciled absolute separation scale. State, load-source, and ANDES metrics come from distinct frozen contracts and must never be pooled.
 
 See `docs/claims-and-evidence.md` for the artifact-level register.

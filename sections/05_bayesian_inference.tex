@@ -91,6 +91,10 @@ Gauss--Newton steps, moving-horizon optimization, or generalized EM would be
 numerical realizations of that object, not different scientific estimators.
 Changing the solver cannot change the declared priors, candidate set, causal
 data boundary, or evidence normalization.
+For each candidate, virtual electrical outputs are deterministic functionals of
+the same state trajectory and network mode. Model averaging must therefore
+propagate both within-candidate state uncertainty and between-candidate event
+ambiguity; it does not require a separate regressor for every output channel.
 
 A learned component could then correct candidate residuals or reduce the search, but it must not consume source identity as a shortcut. It must also preserve the directions that distinguish critical physical candidates. After whitening and nuisance removal, a rank-$q$ discrepancy basis $\bm Q_D$ with variance $\tau^2$ retains the worst-case fraction
 \begin{equation}

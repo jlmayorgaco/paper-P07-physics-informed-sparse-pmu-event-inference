@@ -569,7 +569,9 @@ The one-step expected information gain is
 \end{equation}
 Equations~\eqref{eq:supp-bayes-stopping}--\eqref{eq:supp-next-frame-information} motivate adaptive horizon selection. They are not an executed stopping rule for the current fixed-onset, fixed-window bank.
 
-Finally, the hidden-voltage posterior must average across support uncertainty rather than report only the winning support. With $w_S=p(S\mid\bm Y)$, conditional target mean $\bm m_S$, and covariance $\bm P_S$,
+Finally, a hidden-voltage or derived-output posterior must average across support
+uncertainty. With $w_S=p(S\mid\bm Y)$, conditional output mean $\bm m_S$, and
+covariance $\bm P_S$,
 \begin{align}
  \overline{\bm m}&=\sum_Sw_S\bm m_S,\label{eq:supp-mixture-mean}\\
  \operatorname{Cov}(\bm\psi\mid\bm Y)
@@ -578,7 +580,9 @@ Finally, the hidden-voltage posterior must average across support uncertainty ra
  (\bm m_S-\overline{\bm m})^{\mathsf T}.
  \label{eq:supp-total-mixture-covariance}
 \end{align}
-The second term is between-support ambiguity. Dropping it would make the virtual-PMU field appear overconfident precisely when source hypotheses disagree.
+The second term is between-support ambiguity. Nonlinear output moments may be
+computed from posterior samples or a local delta method; phasors are averaged in
+rectangular coordinates before magnitude and angle are formed.
 
 \subsection{Estimator Claim Boundary}
 

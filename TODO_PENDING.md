@@ -36,6 +36,9 @@
 - Extend the successful regularized M6 recentering to a causal sequential recentering and Jacobian-rebuild protocol with disjoint DEV/TEST manifests.
 - Resolve the under-dispersed joint uncertainty using a profile, sandwich, bootstrap, or nonlinear posterior approximation.
 - Expand the independent-solver check or permanently narrow solver-independence wording.
+- Freeze candidate-conditioned validation targets for branch-terminal current, bus injection, active/reactive power, model-implied frequency, and ROCOF at uninstrumented buses. Report phasor error in rectangular/TVE-style form, absolute and base-normalized current error near zero current, and uncertainty coverage at the trajectory level.
+- Compare model-implied frequency and ROCOF against the exact causal filtering used by the PMU backend; do not validate them against ideal derivatives alone or evaluate derivatives across a topology jump.
+- Treat positive-sequence ABC output only as balanced waveform synthesis. Any claim about unbalanced phase recovery requires a sequence-complete or phase-domain plant and corresponding measurements.
 
 ## Evidence-integrity rules
 

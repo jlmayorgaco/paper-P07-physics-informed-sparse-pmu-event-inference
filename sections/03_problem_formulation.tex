@@ -29,7 +29,21 @@ the sampled response rather than the callback microstate. Supplementary
 Appendix~D proves the local consistency expansion and separates the direct
 algebraic PMU signature from its subsequent dynamic propagation.
 
-The network map uses $\bm I=\bm Y_{\mathrm{bus}}\bm V$ and $S_i=V_iI_i^*$. A fault changes a shunt, a line outage changes $\bm Y_{\mathrm{bus}}$, and generation or load events change the corresponding injections. PMU currents use the instrumented branch terminal and orientation. Supplementary Appendix~B gives the AC power equations, transformer and terminal-current conventions, index-one reduction, and frequency/ROCOF definitions. Those details determine the likelihood, but they do not change the two inference questions posed here.
+The primary estimated electrical target is the rectangular complex-voltage field,
+not a collection of independently learned PMU channels. Conditional on a
+physical candidate and its network mode, bus injections, oriented terminal
+currents, and complex powers are deterministic functionals of the estimated DAE
+state. The network map uses $\bm I=\bm Y_{\mathrm{bus}}\bm V$ and
+$S_i=V_iI_i^*$; terminal currents retain the complete branch primitive rather
+than replacing it by a bus-injection current. Thus a fault changes a shunt, a
+line outage changes $\bm Y_{\mathrm{bus}}$, and generation or load events change
+the corresponding injections.
+
+Supplementary Appendix~B defines this candidate-conditioned virtual electrical
+output map, including the qualifications for model-implied frequency, ROCOF,
+and balanced waveform synthesis. These derived quantities are not additional
+independently estimated states, and only hidden complex voltage is empirically
+validated in the present state-reconstruction campaigns.
 
 The first question asks for a function of state. With PMUs at
 \begin{equation}
