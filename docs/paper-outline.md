@@ -16,7 +16,7 @@
 | II. Related Work | State estimation, sparse-PMU localization, partial-observation reconstruction, and capability matrix. |
 | III. State, Event, and Source Problem | One physical model, two inverse questions, sparse-PMU geometry, and separate physical/integrity variables. |
 | IV. What Sparse Measurements Can Determine | Functional target recovery, candidate-manifold separation, and sparse event injectivity before any estimator is selected. |
-| V. Two Evaluated Inference Paths | B0--B3 state reconstruction and the physical load-support likelihood, with the unexecuted joint boundary explicit. |
+| V. Evaluated Components and Two Estimator Contracts | B0--B3 as a separate state component; implemented batch event estimator $\mathcal E_{\mathrm B}$; proposed joint Hybrid-DAE estimator $\mathcal E_{\mathrm J}$; and the mandatory reduction test between them. |
 | VI. Experimental Questions and Frozen Evidence | Four research questions, one independent unit per question, and no pooling across incompatible contracts. |
 | VII. State Evidence From Recovery to Model Failure | RQ1 nominal recovery followed by RQ2 physical mismatch and constrained recentering. |
 | VIII. Event Evidence From Detection to Source Ambiguity | RQ3 cardinality then exact support, weak-case geometry, observation time, and RQ4 source holdout. |

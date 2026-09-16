@@ -1,11 +1,19 @@
-\section{Two Evaluated Inference Paths}
+\section{Evaluated Components and Two Estimator Contracts}
 \label{sec:estimation}
 
-Figure~\ref{fig:joint-architecture} separates the implemented paths from the intended joint model. The blue path reconstructs a requested voltage function under one physical mode. The green path compares load-event supports through simulated physical responses. They share the DAE and PMU operator, but they do not share a fitted posterior in the present experiments.
+Figure~\ref{fig:joint-architecture} separates three objects that must not share
+one name. The blue B0--B3 state reconstructor is an independently evaluated
+component. The green path is the implemented reference event estimator,
+$\mathcal E_{\mathrm B}$, a batch physical-manifold Bayesian bank. The dashed
+path is the second estimator proposal, $\mathcal E_{\mathrm J}$, a joint
+Hybrid-DAE state--event Bayesian model that remains unexecuted. They share the
+plant and PMU operator, but no fitted posterior is shared in the present results.
 
 \subsection{Causal State Reconstruction}
 
-The state experiment changes one information source at a time. B0 returns the equilibrium voltage. B1 conditions that equilibrium on the current PMU frame. B2 propagates the state causally and then applies the PMU correction. B3 is a retrospective fixed-lag smoother used only to test whether later measurements add useful information. This sequence isolates where each improvement comes from.
+The state experiment changes one information source at a time. It validates a
+state-reconstruction component, not the joint estimator $\mathcal E_{\mathrm J}$.
+B0 returns the equilibrium voltage. B1 conditions that equilibrium on the current PMU frame. B2 propagates the state causally and then applies the PMU correction. B3 is a retrospective fixed-lag smoother used only to test whether later measurements add useful information. This sequence isolates where each improvement comes from.
 
 For the local model in \eqref{eq:local-model}, B2 uses the standard Kalman recursion \cite{kalman1960}:
 \begin{align}
@@ -35,10 +43,14 @@ When the operating point is stale, the physical-recentering estimator rebuilds a
 \end{equation}
 where $\bm e_y$ uses only measured voltage and terminal-current phasors, $\bm g_{\mathrm{AC}}$ enforces AC balance and bus conventions, and $\bm d$ collects admissible load and generation changes. Development data fix the weights and continuation rule before TEST. Hidden voltages and the true nuisance vector never enter the solve.
 
-\subsection{Physical Likelihood for Load-Event Supports}
+\subsection{Implemented Batch Physical-Manifold Bayes $\mathcal E_{\mathrm B}$}
 \label{sec:load-event-inference}
 
-The event path begins with a physical question: what would the measured PMUs have recorded if a candidate load bus had changed? For each of the 16 buses, centered nonlinear simulations form the unit response
+The reference estimator targets
+$p_{\mathrm B}(S,\bm a_S\mid\bm r,\bm\eta_0,\tau_0,c_{\rm load})$:
+operating point, onset, and family are fixed, while support and amplitudes are
+inferred. The physical question is what the measured PMUs would have recorded
+if a candidate load bus had changed. For each of the 16 buses, centered nonlinear simulations form the unit response
 \begin{equation}
  \bm D_g=\frac{\bm y_g(+\epsilon)-\bm y_g(-\epsilon)}{2\epsilon},
  \qquad \epsilon=0.005.
@@ -61,6 +73,10 @@ $\bm r=\bm\mu_S(\bm a)+\bm\varepsilon$ under the frozen Gaussian covariance. Eac
  \label{eq:load-support-posterior}
 \end{align}
 Gauss--Hermite quadrature evaluates every support; independent Gauss--Kronrod calculations check representative two-dimensional integrals. Priors, covariance estimation, quadrature order, and calibration checks are documented in Supplementary Appendix~E.
+Thus $\mathcal E_{\mathrm B}$ marginalizes one- and two-dimensional amplitudes
+rather than substituting a MAP amplitude and local Laplace approximation. The
+quadrature is accurate for the frozen second-order physical surrogate; it is not
+an exact posterior for the full nonlinear DAE.
 
 The amplitude integral is structurally necessary, not decorative. A superset can
 reproduce any smaller support by driving its additional amplitudes to zero, so its
@@ -75,23 +91,40 @@ load changes may increase or decrease. A one-sided fault, trip, or outage instea
 requires a proper truncated slab and boundary-aware evidence. In the local
 single-amplitude Gaussian model, Supplementary Appendix~E shows that a
 half-normal slab multiplies the signed Bayes factor by an exact directional
-factor $2\Phi(z)$. This extension is part of the common estimator design; it is
+factor $2\Phi(z)$. This extension is part of the proposed $\mathcal E_{\mathrm J}$ design; it is
 not an evaluated multi-family result.
 
 The posterior is read in a fixed order. First, $p(K\mid\bm r)$ asks whether no source, one source, or two sources are active. Conditional support ranks then ask which buses are involved. Amplitude intervals answer how large the changes are. This order is essential under limited observability because cardinality can be well supported while several source pairs remain plausible.
 
 The prospective experiment evaluates all \GlobalHypothesisCount{} supports at a known onset and fixed PMU set. It conditions on the nominal initial state and assumes no corrupted channels. Thus it evaluates the sparse load specialization of Proposition~\ref{prop:sparse-event-injectivity}, not the full state-and-integrity nuisance model in \eqref{eq:stacked-hypothesis}.
 
-\subsection{Boundary of the Joint Formulation}
+\subsection{Proposed Joint Hybrid-DAE Bayes $\mathcal E_{\mathrm J}$}
 
-The statistical object in the complete formulation is the
-candidate-conditioned joint posterior and normalized evidence, with state and
-integrity nuisance modeled under each physical hypothesis. Iterated smoothing,
+The second proposal targets a candidate-conditioned joint posterior over state,
+operating nuisance, event family, onset, support, amplitude, and integrity, with
+normalized evidence across physical hypotheses. A sequential implementation of
+$\mathcal E_{\mathrm B}$ is not a third estimator: under the same prefix and
+initial AR(1) density, it must reproduce the batch posterior numerically.
+
+More generally, define the restriction $\mathcal R_0$ to fix
+$\bm\eta=\bm\eta_0$, $\tau=\tau_0$, and $c=c_{\rm load}$ and to reuse the same
+137-support surrogate, covariance, and priors. The mandatory reduction test is
+\begin{equation}
+ p_{\mathrm J}(S,\bm a_S\mid\bm Y,\mathcal R_0)
+ =p_{\mathrm B}(S,\bm a_S\mid\bm r,\bm\eta_0,\tau_0,c_{\rm load}).
+ \label{eq:joint-to-batch-reduction}
+\end{equation}
+Failure of \eqref{eq:joint-to-batch-reduction} is either an implementation error
+or an undeclared change of statistical model.
+
+Iterated smoothing,
 Gauss--Newton steps, moving-horizon optimization, or generalized EM would be
 numerical realizations of that object, not different scientific estimators.
 Changing the solver cannot change the declared priors, candidate set, causal
 data boundary, or evidence normalization.
-For each candidate, virtual electrical outputs are deterministic functionals of
+Where the active amplitude remains one- or two-dimensional, the design should
+retain quadrature marginalization and use optimization or Laplace only for the
+remaining state and nuisance coordinates. For each candidate, virtual electrical outputs are deterministic functionals of
 the same state trajectory and network mode. Model averaging must therefore
 propagate both within-candidate state uncertainty and between-candidate event
 ambiguity; it does not require a separate regressor for every output channel.

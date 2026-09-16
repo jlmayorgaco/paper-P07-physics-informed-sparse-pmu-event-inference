@@ -20,6 +20,8 @@
 - The estimator output contract now distinguishes primary rectangular voltage states from candidate-conditioned current, power, frequency, ROCOF, and balanced-waveform functionals. Mixture uncertainty includes both within-candidate state uncertainty and between-candidate event ambiguity; only hidden voltage remains empirically validated.
 - An archived RAWSIM39 V1.2 checkpoint is now frozen with source hashes. Its 18-to-10-to-8-to-7 gate and five-way conservative taxonomy appear only as an identifiability audit because the archive lacks higher-derivative arrays and a source-decision outcome.
 - The reproducible bundle build retains the 20-page supplement independently and appends it after the 15-page principal article, producing one 35-page review PDF without altering the main-paper page budget.
+- The estimator taxonomy is now explicit. $\mathcal E_{\mathrm B}$ is the implemented batch 137-support event estimator; $\mathcal E_{\mathrm J}$ is the proposed, unexecuted joint Hybrid-DAE estimator. B0--B3 is a separately evaluated state-reconstruction component, and a sequential implementation of $\mathcal E_{\mathrm B}$ is not counted as a third estimator.
+- The design now includes two mandatory regression checks: exact batch--prefix agreement for $\mathcal E_{\mathrm B}$ and reduction of $\mathcal E_{\mathrm J}$ to $\mathcal E_{\mathrm B}$ under the complete restriction $\mathcal R_0$.
 
 ## Current evidence boundary
 

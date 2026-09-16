@@ -8,7 +8,7 @@ Every empirical panel is generated from a frozen artifact. Conceptual drawings a
 
 | Asset | Scientific function | Evidence/source | Status |
 | --- | --- | --- | --- |
-| Fig. 1 | Separate the evaluated state and load-source lanes from the unvalidated joint candidate path. | Joint formulation in Sections III--V. | TikZ three-lane evidence diagram, integrated. |
+| Fig. 1 | Separate the B0--B3 state component, implemented batch event estimator $\mathcal E_{\mathrm B}$, and unvalidated joint estimator $\mathcal E_{\mathrm J}$. | Estimator contracts in Sections III--V. | TikZ three-lane evidence diagram, integrated. |
 | Fig. 2 | Fix the IEEE 39-bus sensing geometry, the 16-bus load-source bank, and the difference between drawing proximity and electrical distance. | Audited 46-branch topology, prescribed PMU map, and frozen load-source dictionary. | Full-width TikZ/vector topology, integrated. |
 | Fig. 3 | Tell the observability-claim story: the pseudo-rank contradiction, improved conditioning without a certificate, and the boundary between structural and empirical evidence. | `pd_observability_horizons.csv`, `e04a_b0_b1_b2_summary.csv`, `e04a1_e03_vs_e04.csv`. | Full-width generated vector PDF/PNG, integrated. |
 | Fig. 4 | Define six representative event signatures and distinguish missing PMU packets from continued reference time. | Frozen RAW0001 trace values and trace manifest. | Programmatically regenerated vector PDF/PNG, integrated. |
@@ -20,7 +20,7 @@ Every empirical panel is generated from a frozen artifact. Conceptual drawings a
 
 The earlier literature timeline (`figures/literature_timeline.tex`) and the generated topology/estimator panel (`figures/generated/system_architecture.pdf`) remain reserve assets. The timeline was removed because the capability table communicates the literature gap more precisely; the new Fig. 2 uses the page budget for the physical network and sensing contract.
 
-Still prospective: independent-operating-point T120 recovery, calibrated candidate sets versus profiled pairwise separation, PMU loss/join and placement sweeps, topology-outage maps, and the common-contract multi-family joint estimator. These assets enter the paper only after their manifests, selection rules, and test results are frozen.
+Still prospective: independent-operating-point T120 recovery, calibrated candidate sets versus profiled pairwise separation, PMU loss/join and placement sweeps, topology-outage maps, and $\mathcal E_{\mathrm J}$. These assets enter the paper only after their manifests, selection rules, and test results are frozen.
 
 Production rules:
 

@@ -2,6 +2,10 @@
 
 ## Submission veto: the full multi-family joint method is not yet executed
 
+- Freeze $\mathcal E_{\mathrm B}$ as the reference batch event estimator. Do not replace its GH31 amplitude marginalization by EM, a point estimate, or a local Laplace approximation and still call the result the same reference method.
+- Implement an exact prefix version of $\mathcal E_{\mathrm B}$ and verify the batch quadratic form, evidence, and posterior at every prefix, including the same initial AR(1) density.
+- Before evaluating $\mathcal E_{\mathrm J}$, enforce the $\mathcal R_0$ reduction test against $\mathcal E_{\mathrm B}$ with the identical candidate bank, surrogate, covariance, priors, onset, and family.
+- In $\mathcal E_{\mathrm J}$, retain GH31 or equivalent Rao--Blackwellized integration for one- and two-dimensional event amplitudes; reserve optimization/Laplace approximations for the remaining state and nuisance coordinates and audit their normalizers.
 - Instrument the hybrid DAE event boundary: store the pre-event state, callback arrays, independently consistent post-event algebraic state, constraint residual, and first retained PMU frame.
 - Validate the analytic algebraic terms $z_1,z_2$ with central finite differences and verify zeroth-, first-, and second-order residual scaling before calling the event tangent analytic.
 - Repeat the semantic gate for load change, generation change, and a continuous line-admittance perturbation; use the binary outage only as a separate discrete-mode experiment.

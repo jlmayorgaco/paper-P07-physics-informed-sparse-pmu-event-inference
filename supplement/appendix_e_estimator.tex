@@ -1,14 +1,13 @@
 \section{Estimator and Likelihood Details}
 \label{app:estimator}
 
-This appendix separates two evaluated computations from the unexecuted common
-estimator. Sections~\ref{sec:supp-state-recursion}--\ref{sec:supp-evaluated-event-bank}
-specify the state recursion and load-support posterior that produced the reported
-results. The complete statistical object is the candidate-conditioned joint
-posterior and its normalized evidence; filtering, smoothing, or optimization is
-the numerical route used to approximate it. Section~\ref{sec:supp-joint-design}
-specifies that common state--event--integrity object, but its final integration
-has not yet been evaluated.
+This appendix distinguishes a state-reconstruction component from two event
+estimator contracts. Sections~\ref{sec:supp-state-recursion}--\ref{sec:supp-evaluated-event-bank}
+specify the state recursion and the implemented batch physical-manifold Bayes
+estimator $\mathcal E_{\mathrm B}$. Section~\ref{sec:supp-joint-design} specifies
+the proposed joint Hybrid-DAE estimator $\mathcal E_{\mathrm J}$. Filtering,
+smoothing, quadrature, and optimization are numerical operations within those
+contracts, not additional estimator proposals.
 
 \subsection{Bayesian Recursion and the State Hierarchy}
 \label{sec:supp-state-recursion}
@@ -132,7 +131,7 @@ $\bm q^{\mathsf T}\bm Z^{\mathsf T}\bm H\bm Z\bm q=0$, so $\bm q=\bm0$ and $\bm 
 
 This covariance is local and unimodal. The reported joint NEES-like failure shows that it is not calibrated for the full shifted-plant experiment.
 
-\subsection{Evaluated Physical Load-Support Model}
+\subsection{Implemented Batch Physical-Manifold Bayes $\mathcal E_{\mathrm B}$}
 \label{sec:supp-evaluated-event-bank}
 
 Let $\bm r$ be the centered $T$-frame PMU window. For support $S$ with amplitudes $\bm a_S$, the evaluated mean is
@@ -333,19 +332,28 @@ The direct quadrature cost per record is
 \end{equation}
 likelihood-node evaluations for $K\le2$. With $G=16$ and $Q=31$, this is 115,817 nodes before vectorization or reuse. The count explains why the support bank, integration order, and horizon must be frozen together when runtime is compared.
 
-\subsection{Candidate-Conditioned Joint State--Event Design}
+An incremental implementation of $\mathcal E_{\mathrm B}$ is computational,
+not a new estimator. If the exact innovations factorization includes the same
+initial AR(1) density, then at every frozen prefix it must reproduce the batch
+quadratic form, evidence, and posterior to numerical tolerance. This is a
+regression test, not evidence for the joint model below.
+
+\subsection{Proposed Joint Hybrid-DAE Bayes $\mathcal E_{\mathrm J}$}
 \label{sec:supp-joint-design}
 
-The common-contract extension would infer state trajectory $\bm X$, algebraic variables $\bm Z$, event support $S$, amplitudes $\bm a_S$, operating nuisance $\bm\eta$, and integrity corruption $\bm b$. Its posterior factorization is
+The proposed extension would infer state trajectory $\bm X$, algebraic variables $\bm Z$, event family $c$, onset $\tau$, support $S$, amplitudes $\bm a_S$, operating nuisance $\bm\eta$, and integrity corruption $\bm b$. Its posterior factorization is
 \begin{align}
- &p(\bm X,\bm Z,\bm\eta,\bm b,S,\bm a_S\mid\bm Y)
- \propto p(S)p(\bm a_S\mid S)p(\bm\chi_0)\nonumber\\
+ &p(\bm X,\bm Z,\bm\eta,\bm b,c,\tau,S,\bm a_S\mid\bm Y)
+ \nonumber\\[-2pt]
+ &\quad\propto p(\bm\eta)p(c)p(\tau\mid c)p(S\mid c)\nonumber\\
+ &\quad\times p(\bm a_S\mid S,c)p(\bm\chi_0\mid\bm\eta)\nonumber\\
  &\quad\times\prod_{t=0}^{T-1}
- p(\bm\chi_{t+1}\mid\bm\chi_t,S,\bm a_S)
- \prod_{t=0}^{T}p(\bm y_t\mid\bm\chi_t,\bm b_t,S,\bm a_S),
+ p(\bm\chi_{t+1}\mid\bm\chi_t,\bm\eta,c,\tau,S,\bm a_S)\nonumber\\
+ &\quad\times\prod_{t=0}^{T}
+ p(\bm y_t\mid\bm\chi_t,\bm b_t,c,\tau,S,\bm a_S)p(\bm b_t),
  \label{eq:supp-full-joint-posterior}
 \end{align}
-subject to the candidate DAE constraints. Here $\bm\chi_t$ denotes a consistent state/nuisance chart. A constrained negative twice-log density, excluding $p(S)$, is
+subject to the candidate DAE constraints. Here $\bm\chi_t$ denotes a consistent state/nuisance chart. A constrained negative twice-log density, excluding the discrete candidate priors, is
 \begin{equation}
  \begin{aligned}
  \mathcal J_S^{\circ}={}&
@@ -360,6 +368,18 @@ subject to the candidate DAE constraints. Here $\bm\chi_t$ denotes a consistent 
 Candidate evidence must be evaluated in a common feasible measure. The boundary
 correction is exposed by an explicit concentration parameter rather than by
 informally assuming a concentrated posterior.
+
+Let $\mathcal R_0$ fix operating point, onset, and load family and replace the
+candidate prediction with the same quadratic manifold, W2 covariance, support
+prior, and amplitude prior used by $\mathcal E_{\mathrm B}$. Then the defining
+regression condition is
+\begin{equation}
+ p_{\mathrm J}(S,\bm a_S\mid\bm Y,\mathcal R_0)
+ =p_{\mathrm B}(S,\bm a_S\mid\bm r,\bm\eta_0,\tau_0,c_{\rm load}).
+ \label{eq:supp-joint-batch-reduction}
+\end{equation}
+The equality is not claimed for an unrestricted nonlinear DAE likelihood; it
+holds only when the complete statistical contract is shared.
 
 \begin{theorem}[Local cone--Laplace evidence]
 Let $L_{S,\epsilon}$ be the log likelihood plus the log of a proper prior in
@@ -542,9 +562,9 @@ Step & Operation & Required calculation & Present status \\
 2 & Integrity mask & Mark missing channels exactly and introduce sparse corruption variables for available but suspect channels & Ontology defined; common inference pending \\
 3 & Candidate generation & Enumerate physical family, support, onset, and severity domain without using source identity as a learned label & Load family evaluated; other families pending \\
 4 & Candidate prediction & Apply the candidate DAE/event map and the current PMU membership to generate a physical trajectory & Load bank evaluated \\
-5 & Candidate-conditioned solve & Minimize \eqref{eq:supp-joint-objective} on the feasible DAE manifold using the KKT system and continuation from the pre-event state & Not executed jointly \\
+5 & Candidate-conditioned solve & Fit state and nuisance on the feasible DAE manifold, conditional on the physical candidate and amplitude quadrature node & Not executed jointly \\
 6 & Learned discrepancy & If used, predict only candidate-residual discrepancy and covariance; do not replace the physical hypothesis or consume target source labels & Not implemented \\
-7 & Evidence normalization & Retain log determinants, prior densities, feasible-coordinate measures, and the Schur normalizer before comparing candidates & GH31 load evidence evaluated; joint Laplace evidence pending \\
+7 & Evidence normalization & Retain GH31 amplitude marginalization when $|S|\le2$; integrate or approximate the remaining coordinates with all determinants, priors, and Schur normalizers & GH31 load evidence evaluated; joint evidence pending \\
 8 & Posterior outputs & Return state-functional mixture, cardinality, support, integrity state, severity, and candidate-set uncertainty & Separate state/load outputs only \\
 9 & Sequential decision & Continue observing when expected information gain justifies delay; use distinct thresholds for detection, cardinality, and exact source & Not evaluated \\
 10 & Reconfigure and verify & After accepting a physical change, rebuild the operating center and check subsequent innovations before declaring a persistent model update & Static recentering only \\
@@ -586,4 +606,11 @@ rectangular coordinates before magnitude and angle are formed.
 
 \subsection{Estimator Claim Boundary}
 
-The executed state recursion is Bayesian under its local linear Gaussian model, and the load-source bank computes normalized Bayesian evidence under the frozen W2/L2 model. The physical recentering is a regularized constrained estimator with separately assessed uncertainty. The full candidate-conditioned state--event--integrity posterior, learned discrepancy, unknown-onset inference, changing-PMU operation, and sequential stopping rule remain specified but unexecuted. No result in the main paper is attributed to those pending components.
+The state recursion is an independently evaluated component. $\mathcal E_{\mathrm B}$
+computes normalized Bayesian evidence under the frozen quadratic W2/L2 model and
+is the implemented reference event estimator. $\mathcal E_{\mathrm J}$, its
+reduction test, learned discrepancy, unknown-onset/family inference,
+changing-PMU operation, virtual outputs, and sequential stopping remain
+specified but unexecuted. The physical recentering is a regularized constrained
+estimator with separately assessed uncertainty; it is not relabeled as either
+event estimator.

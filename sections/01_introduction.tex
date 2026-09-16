@@ -18,11 +18,11 @@ The contributions are:
   \item a prospective \GlobalHypothesisCount{}-hypothesis load-source test that connects exact-support recovery to response-manifold geometry, together with independent state-reconstruction and source-holdout evidence.
 \end{enumerate}
 
-The evidence yields one consistent picture. Sparse PMUs can recover the requested voltage field under a matched model, but operating-point error must be corrected physically. For simultaneous load events, source severity controls whether the posterior resolves only cardinality or the exact support. Longer observation adds information, yet nearly collinear signatures remain difficult. The evaluated method therefore supports matched load interventions with at most two sources. It does not yet solve the full multi-family problem shown in Fig.~\ref{fig:joint-architecture}.
+The evidence yields one consistent picture. Sparse PMUs can recover the requested voltage field under a matched model, but operating-point error must be corrected physically. For simultaneous load events, source severity controls whether the posterior resolves only cardinality or the exact support. Longer observation adds information, yet nearly collinear signatures remain difficult. The implemented batch event estimator therefore supports matched load interventions with at most two sources. It does not yet solve the full multi-family problem shown in Fig.~\ref{fig:joint-architecture}.
 
 \begin{figure*}[t]
 \centering
 \resizebox{\textwidth}{!}{\input{figures/joint_inference_architecture}}
-\caption{Scientific argument and validation boundary. The evaluated state path asks what the sparse PMUs recover. The evaluated load-event path asks which candidate supports the measurements distinguish. The dashed middle path is the intended multi-family integration; it remains outside the present evidence.}
+\caption{Scientific argument and validation boundary. The blue B0--B3 path is an independently evaluated state-reconstruction component. The green path is the implemented batch reference estimator $\mathcal E_{\mathrm B}$. The dashed path is the proposed joint estimator $\mathcal E_{\mathrm J}$; it remains outside the present evidence.}
 \label{fig:joint-architecture}
 \end{figure*}

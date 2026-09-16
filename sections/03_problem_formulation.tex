@@ -39,11 +39,12 @@ than replacing it by a bus-injection current. Thus a fault changes a shunt, a
 line outage changes $\bm Y_{\mathrm{bus}}$, and generation or load events change
 the corresponding injections.
 
-Supplementary Appendix~B defines this candidate-conditioned virtual electrical
-output map, including the qualifications for model-implied frequency, ROCOF,
-and balanced waveform synthesis. These derived quantities are not additional
-independently estimated states, and only hidden complex voltage is empirically
-validated in the present state-reconstruction campaigns.
+Supplementary Appendix~B defines the corresponding electrical output maps and
+their frequency, ROCOF, and balanced-waveform qualifications. They belong to
+the proposed joint estimator $\mathcal E_{\mathrm J}$; the implemented batch
+event estimator $\mathcal E_{\mathrm B}$ does not infer a state trajectory or
+virtual outputs. Only hidden complex voltage is empirically validated by the
+separate state-reconstruction component.
 
 The first question asks for a function of state. With PMUs at
 \begin{equation}

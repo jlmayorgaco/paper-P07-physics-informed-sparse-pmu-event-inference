@@ -25,7 +25,13 @@ The supplementary material now carries the full mathematical chain behind the co
 
 ## Appendix E estimator inventory
 
-The executed path is written in the order used to obtain results:
+The appendix uses two canonical event-estimator names. $\mathcal E_{\mathrm B}$
+is the implemented batch physical-manifold Bayesian estimator;
+$\mathcal E_{\mathrm J}$ is the proposed joint Hybrid-DAE estimator. The B0--B3
+state hierarchy is a separately evaluated component, and numerical solvers or
+sequential implementations do not create additional scientific estimators.
+
+The executed $\mathcal E_{\mathrm B}$ path is written in the order used to obtain results:
 
 1. Bayesian prediction/correction and the B0--B3 hierarchy.
 2. Constrained physical recentering and its feasible tangent-space covariance.
@@ -35,7 +41,7 @@ The executed path is written in the order used to obtain results:
 6. Cardinality, support, inclusion, amplitude, entropy, effective multiplicity, and credible-set outputs.
 7. A 12-step table marking which operations produced the frozen results.
 
-The joint path is a design specification, not a result. Its statistical object is the candidate-conditioned posterior and normalized evidence; smoothing, Gauss--Newton, moving-horizon, or generalized-EM iterations are numerical solvers for that object rather than separate estimators. The design adds constrained state solving, integrity variables, learned discrepancy, cone--Laplace evidence with determinant and physical-boundary terms, Schur arrival-prior updates, sequential stopping, and candidate-conditioned virtual electrical outputs with within- and between-support uncertainty. Its 10-step table records the present implementation status of every component. The singular quartic counterexample explains why genuine rank loss cannot be repaired by inserting a pseudoinverse into regular Laplace theory.
+The $\mathcal E_{\mathrm J}$ path is a design specification, not a result. Its statistical object is the candidate-conditioned posterior and normalized evidence; smoothing, Gauss--Newton, moving-horizon, or generalized-EM iterations are numerical solvers for that object rather than separate estimators. The design adds constrained state solving, integrity variables, learned discrepancy, cone--Laplace evidence with determinant and physical-boundary terms, Schur arrival-prior updates, sequential stopping, and candidate-conditioned virtual electrical outputs with within- and between-support uncertainty. Its 10-step table records the present implementation status of every component. The singular quartic counterexample explains why genuine rank loss cannot be repaired by inserting a pseudoinverse into regular Laplace theory. Under the complete restriction $\mathcal R_0$, $\mathcal E_{\mathrm J}$ must reproduce $\mathcal E_{\mathrm B}$; independently, an exact sequential implementation of $\mathcal E_{\mathrm B}$ must reproduce its batch posterior at every prefix.
 
 The evidence appendix now also proves the local $\epsilon^{r+1/k}$ law for mixed regular and order-$k$ coordinates and treats exact redundancy by integrating the induced prior on an identifiable quotient. Nested regular, second-order, and redundant alternatives therefore have distinct Occam rates rather than one pseudodeterminant formula.
 
@@ -44,5 +50,5 @@ The evidence appendix now also proves the local $\epsilon^{r+1/k}$ law for mixed
 - The local linear-Gaussian recursion is exactly Bayesian under its stated model.
 - The frozen W2/L2 load bank computes normalized Bayesian evidence for zero-, one-, and two-source supports.
 - Physical recentering is a regularized constrained estimator with separately assessed uncertainty; it is not relabeled as a complete nonlinear posterior.
-- The common state--event--integrity posterior, changing-PMU operation, unknown-onset inference, learned discrepancy, and sequential stopping remain unexecuted.
+- The proposed $\mathcal E_{\mathrm J}$ state--event--integrity posterior, changing-PMU operation, unknown-onset inference, learned discrepancy, and sequential stopping remain unexecuted.
 - No theorem is used to replace a missing experiment, and no diagnostic association is promoted to an operational guarantee.
