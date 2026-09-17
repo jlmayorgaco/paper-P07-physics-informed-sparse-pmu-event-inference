@@ -30,13 +30,16 @@
 - Compare the tractable candidate-conditioned posterior with a converged small-problem SMC or nested-sampling reference before making an approximation-quality claim.
 - Test slow parameter adaptation first and weak/integral sparse model correction only after residual lack of fit remains; require an ablation showing that protected event-discriminant directions are not absorbed before adding SINDy-like adaptation to the method.
 - Hold out physical source assets from every source-labeled training, tuning, threshold, and calibration operation.
-- Test whether the nuisance-profiled pairwise margin predicts calibrated uncertainty, candidate-set size, and source-resolution delay prospectively. The retrospective global-distance result is encouraging but is not a frozen prospective bridge.
+- Test whether the nuisance-profiled pairwise margin predicts calibrated uncertainty, candidate-set size, and source-resolution delay prospectively. The retrospective global-distance result is encouraging but is not a frozen prospective bridge. Freeze and hash the theory-only predicted curve (pairwise distance, Gaussian error bound, and implied resolution horizon) before running the corresponding Monte Carlo campaign, so the comparison is a genuine prospective test and not a retrospective correlation.
+- Compare the frozen fixed-covariance W2 likelihood against a hierarchical noise-scale-marginalized alternative (a shared scale factor with a conjugate prior, integrated out analytically) on identical candidates and data; report whether the fixed-covariance likelihood produces excess false positives or miscalibration under noise-scale mismatch between CAL and TEST before adopting either as the reference likelihood.
+- Test whether adding frequency and ROCOF channels to the event likelihood (beyond voltage/current) changes localization accuracy or resolution delay, as a distinct question from validating those channels as candidate-conditioned outputs; report the channel-set ablation and do not assume unused virtual outputs are informative for localization.
 - Add PMU loss/join, operating-point shift, parameter shift, line topology change, and at least one cross-simulator transfer campaign.
 - Expose a long normal stream and report false alarms/hour, event recall, joint alarm precision, and duplicate-alarm scoring.
 - Calibrate or rename the source evidence: classifier votes and uncorrected MAP scores are not probabilities.
 
 ## State-estimation gates
 
+- Before reporting any candidate-conditioned or posterior-averaged state estimator (state model averaging over event hypotheses) as a headline result, evaluate it on trajectories whose severity, onset, and operating point are disjoint from those used to fit the response surrogate/dictionary. Near-zero error against trajectories that share dictionary-forming points is not evidence of generalization.
 - Extend the successful regularized M6 recentering to a causal sequential recentering and Jacobian-rebuild protocol with disjoint DEV/TEST manifests.
 - Resolve the under-dispersed joint uncertainty using a profile, sandwich, bootstrap, or nonlinear posterior approximation.
 - Expand the independent-solver check or permanently narrow solver-independence wording.

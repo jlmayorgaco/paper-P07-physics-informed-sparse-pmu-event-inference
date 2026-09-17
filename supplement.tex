@@ -97,10 +97,28 @@ The implemented PMU operator selects the actual terminal and orientation. Replac
 
 Positive-sequence phasors define the balanced model. Negative- and zero-sequence components remain integrity or unbalance evidence. Ideal continuous-frequency channels satisfy
 \begin{equation}
- f_i=f_0+\frac{1}{2\pi}\frac{d\angle V_i}{dt},\qquad
- \operatorname{ROCOF}_i=\frac{1}{2\pi}\frac{d^2\angle V_i}{dt^2},
+ f_i^{\mathrm{phys}}=f_0+\frac{1}{2\pi}\frac{d\angle V_i}{dt},\qquad
+ \operatorname{ROCOF}_i^{\mathrm{phys}}=\frac{1}{2\pi}\frac{d^2\angle V_i}{dt^2},
 \end{equation}
 but an operational likelihood must reproduce the causal filtering of the PMU backend.
+
+The preceding equations define the ideal physical quantities $f_i^{\mathrm{phys}}$ and $\operatorname{ROCOF}_i^{\mathrm{phys}}$ implied by the network trajectory. Reported quantities $f_i^{\mathrm{meas}}$ and $\operatorname{ROCOF}_i^{\mathrm{meas}}$, however, are outputs of a dynamic frequency-estimation process and can exhibit disturbance- and estimator-dependent transient error and latency. A prior benchmark by the authors compared 16 dynamic frequency estimators spanning six practical groups over 34 disturbance scenarios and quantified these trade-offs under ramps, phase jumps, harmonics, ringdown, and composite IBR disturbances \cite{Mayorga2026FrequencyBenchmark}. We therefore distinguish
+\begin{equation}
+ \begin{bmatrix}f_i^{\mathrm{meas}}\\\operatorname{ROCOF}_i^{\mathrm{meas}}\end{bmatrix}
+ =
+ \begin{bmatrix}f_i^{\mathrm{phys}}\\\operatorname{ROCOF}_i^{\mathrm{phys}}\end{bmatrix}
+ +\bm\varepsilon_{fr,i},\qquad
+ \operatorname{Cov}(\bm\varepsilon_{fr,i})=\bm\Omega_{fr}.
+\end{equation}
+Because phasor, frequency, and ROCOF outputs may be estimated from overlapping underlying waveform or phasor information, their errors need not be conditionally independent. An augmented likelihood therefore permits cross-covariance
+\begin{equation}
+ \bm\Omega_{\mathrm{aug}}=
+ \begin{bmatrix}
+ \bm\Omega_{VI}&\bm\Omega_{VI,fr}\\
+ \bm\Omega_{fr,VI}&\bm\Omega_{fr}
+ \end{bmatrix};
+\end{equation}
+neither the magnitude of $\bm\Omega_{VI,fr}$ nor a block-diagonal approximation is assumed without calibration. Frequency and ROCOF are retained as candidate channels for an augmented sparse-PMU likelihood. Their incremental source-discrimination value, covariance structure, and effect on localization delay are not assumed here and require the dedicated $VI$, $VI+f$, $VI+\operatorname{ROCOF}$, and $VI+f+\operatorname{ROCOF}$ ablation.
 
 \begin{table*}[t]
 \caption{Physical intervention operators represented by the common DAE formulation.}
