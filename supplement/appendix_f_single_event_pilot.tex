@@ -1,0 +1,94 @@
+\section{Exploratory Hierarchical Single-Event Pilot}
+\label{app:single-event-pilot}
+
+This appendix records the September~24, 2026 estimator handoff as a \emph{provisional} numerical branch of the joint design $\mathcal E_{\mathrm J}$. Its source documents are the 30-page mathematical derivation book and 24-page technical integration dossier identified in the repository integration ledger. Their statements are technical source material, not independent instructions or substitutes for campaign outputs. The dossiers label many checks ``artifact-verified'' in packages supplied elsewhere; those packages were not supplied with this manuscript checkout. The latest strict-final comparison is explicitly tagged terminal-reported in both documents. All values below are therefore transcribed as \emph{dossier-reported} diagnostics and excluded from the article's frozen primary tables.
+
+\begin{table*}[t]
+\caption{Single-event pilot ledger transcribed from the two author-supplied September 24 dossiers. All rows require the corresponding campaign archives for an independent paper audit.}
+\label{tab:pilot-numerical-ledger}
+\centering\scriptsize
+\begin{tabularx}{\textwidth}{@{}p{2.6cm}Xp{2.15cm}@{}}
+\toprule
+Check or campaign & Dossier-reported result and precise interpretation & Source tier \\
+\midrule
+Linear Gaussian oracle E0 & RTS and batch MAP means agree near $10^{-16}$; covariance/log-likelihood checks near $10^{-14}$ after an omitted evidence constant was repaired. This guards the numerical algebra only. & Dossier AV \\
+Three-node and five-bus toys & E1: five development and 30 evaluation seeds, hidden algebraic two-sigma coverage 0.927 versus nominal 0.954. E2: first-order classification 0.2875 over 10 hypotheses $\times$ eight repetitions; not a nonlinear full-catalog result. & Dossier AV \\
+Transition/derivative audit & Rodas4P/Rodas5P: 23 shared successful candidates with maximum endpoint difference $4.9\times10^{-7}$; Rodas4P evaluated three of three selected Rodas5P failures. Finite-difference coverage was 25/25; one random direction retained a moderate derivative discrepancy. & Dossier AV \\
+Joint update and severity & Full-block and Schur steps agree in 30/30 synthetic block systems to numerical precision. Four fault-resistance initializations of 0.01, 0.03, 0.05, and 0.08 ended in 0.02006--0.02133 around truth 0.021; only the first two passed the stated strict stationarity gate. & Dossier AV \\
+Small hidden-event bank & A hidden LOAD@16 and LINE(23,24) ranked first against selected decoys after joint severity and line-index corrections. These were not full-catalog tests. & Dossier AV \\
+$H_0$ and onset pilots & Fifty-one disjoint normal calibration windows yielded no alarms at two reported thresholds on that same set; this is neither independent alarm testing nor false alarms per hour. Blind onset alternatives differed by 26--27 frames in two cases. & Dossier AV \\
+Stage-A development & Four cases; 451/456 attempted physical scores were valid (98.9\%); family-stratified shortlist retained 4/4 truths. & Dossier AV \\
+Blind mini-holdout & FAULT@20, LOAD@28, GEN@38, and LINE(4,14): within-family truth ranks 3/38, 1/19, 1/9, and 1/46. The shortlist and subsequent racing retained 4/4 truths; GEN survived at the six-candidate cutoff. Four quiet windows were a proposal-level control only. & Dossier AV \\
+Strict final comparison & The later terminal summary reports 0/4 exact winners after 24 final fits. Fault and line include unconverged truth/competitors; load and generator have better-scoring converged neighbors. This is a failure audit, not an identifiable physical error rate. & TR; final archive absent \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+\subsection{State, Measurements, and Event Operators}
+
+The pilot's declared model has 114 differential states, 78 algebraic rectangular-voltage coordinates, and 32 measured rectangular channels: voltage at eight PMUs and terminal current at eight monitored branches. Sampling is at $1/30$~s. Its default matrices are $\bm P_0=10^{-2}\bm I_{114}$, $\bm Q=10^{-6}\bm I_{114}$, and $\bm R=10^{-6}\bm I_{32}$. These numbers identify the pilot likelihood, not the separately frozen covariance W2 of $\mathcal E_{\mathrm B}$. Three-phase phasors, frequency, ROCOF, and data-present fields in the historical competition files do not silently become inputs to this 32-channel physical likelihood.
+
+For a fixed candidate $H$ and severity $\bm\vartheta_H$, the semi-explicit system is $\dot{\bm x}=\bm f_H(\bm x,\bm z;\bm\vartheta_H)$, $\bm0=\bm g_H(\bm x,\bm z;\bm\vartheta_H)$, and $\bm y=\bm h_H(\bm x,\bm z)+\bm v$. At a regular point with invertible $\bm G_z=\partial\bm g_H/\partial\bm z$, the implicit-function theorem gives
+\begin{equation}
+\bm Z_x=-\bm G_z^{-1}\bm G_x,\quad
+\bm Z_{\vartheta}=-\bm G_z^{-1}\bm G_{\vartheta},\quad
+\bm A_c=\bm F_x-\bm F_z\bm G_z^{-1}\bm G_x.
+\label{eq:pilot-dae-reduction}
+\end{equation}
+The corresponding reduced event pathway is $\bm B_{\vartheta}=\bm F_{\vartheta}+\bm F_z\bm Z_{\vartheta}$ and the direct measured pathway is $\bm D_{\vartheta}=\bm H_{\vartheta}+\bm H_z\bm Z_{\vartheta}$. A generator-reference change can satisfy $\bm D_{\vartheta}=\bm0$ while $\bm B_{\vartheta}\ne\bm0$: it is invisible to a raw algebraic screen but visible after dynamic propagation. The event operator and its duration must be replayed consistently in truth generation and candidate fitting. The pilot dossier reports a five-frame fault pulse, persistent load steps unless recovery is declared, and finite generator and line events with recovery. Some earlier inference runs used persistent approximations for the latter two; those rankings have a known model-contract discrepancy.
+
+The current single-event catalog has 39 fault buses, 19 load buses, nine controlled generators, 46 in-service branches, and a separate $H_0$ comparison. Thus it has 113 physical candidates and one null candidate; the screening rank denominators may be smaller when a candidate is numerically unscorable. Fault severity uses a log-resistance coordinate, load severity two active/reactive changes, generator severity a reference-power change, and an outage has a discrete branch and switching profile. Missing or bad PMU channels belong to the integrity variable of $\mathcal E_{\mathrm J}$ and were not jointly inferred in this pilot.
+
+\subsection{Joint Gauss--Newton Step and Its Interpretation}
+
+For one candidate, write the conditional MAP residual as $\bm r_H(\bm X,\bm\vartheta)$ after whitening and appending proper prior residuals. Let $\Delta\bm u=\operatorname{col}(\Delta\bm X,\Delta\bm\vartheta)$ and $\bm g=\operatorname{col}(\bm g_X,\bm g_{\vartheta})$. At an iterate, its local quadratic is
+\begin{equation}
+\begin{aligned}
+q(\Delta\bm u)&=\bm g^{\mathsf T}\Delta\bm u+
+\tfrac12\Delta\bm u^{\mathsf T}\bm H\Delta\bm u,\\
+\bm H&=\begin{bmatrix}
+\bm H_{XX}&\bm H_{X\vartheta}\\
+\bm H_{\vartheta X}&\bm H_{\vartheta\vartheta}
+\end{bmatrix}.
+\end{aligned}
+\label{eq:pilot-block-quadratic}
+\end{equation}
+Eliminating $\Delta\bm X$ gives $q_{\rm red}(\Delta\bm\vartheta)=\mathrm{const}+\bm b_H^{\mathsf T}\Delta\bm\vartheta+\tfrac12\Delta\bm\vartheta^{\mathsf T}\bm S_H\Delta\bm\vartheta$, where $\bm S_H=\bm H_{\vartheta\vartheta}-\bm H_{\vartheta X}\bm H_{XX}^{-1}\bm H_{X\vartheta}$ and $\bm b_H=\bm g_{\vartheta}-\bm H_{\vartheta X}\bm H_{XX}^{-1}\bm g_X$. Hence its unconstrained local decrease is $-\tfrac12\bm b_H^{\mathsf T}\bm S_H^{-1}\bm b_H$ when $\bm S_H\succ0$. This algebra needs no conditional convergence of $\bm X$: it is the full-block Gauss--Newton step expressed with a smaller parameter solve. By contrast, if $\psi(\bm\vartheta)=\min_{\bm X}J_H(\bm X,\bm\vartheta)$, the identity $\nabla^2\psi=\bm H_{\vartheta\vartheta}-\bm H_{\vartheta X}\bm H_{XX}^{-1}\bm H_{X\vartheta}$ is a local \emph{profile-Hessian} statement only at a regular conditional optimum, and for the true Hessian rather than an arbitrary Gauss--Newton approximation. An unsettled state trajectory can change the sign of the reduced gradient without invalidating Schur elimination.
+
+The numerical realization factors the temporally sparse state block and obtains its action on $\bm g_X$ and the few columns of $\bm H_{X\vartheta}$ by solves; it does not form $\bm H_{XX}^{-1}$. One Armijo step length updates both state and severity and evaluates the actual nonlinear DAE objective. The pilot selected Rodas4P for transition evaluation after the reported cross-integrator audit. That choice is a numerical guard, not a new inference theorem. Levenberg--Marquardt remains an independent finalizer candidate for the unresolved fault/line fits \cite{bell1994ieks,sarkka2020linesearch}.
+
+\subsection{Detection, Physical Screening, and Racing}
+
+Let $\bm\nu_k=\bm y_k-\widehat{\bm y}^{H_0}_{k\mid k-1}$ be the observed innovation. An alarm tests the adequacy of $H_0$ on measured channels; it is not itself the physical onset. The pilot refines onset over a bounded interval and fits the common initial state $\widehat{\bm X}_{\rm pre}$ on data before that onset. Every candidate starts from this same reference. This prevents a strong event from contaminating its own null-model baseline.
+
+For a smooth candidate nested at $H_0$, the efficient local score is $T_H=\bm b_H^{\mathsf T}\bm S_H^{-1}\bm b_H$ under positive definite $\bm S_H$. If a severity is physically one-sided, maximizing the local quadratic over its tangent cone replaces the unconstrained inverse step and changes the null law; the ordinary signed score is then only a proposal proxy. For a fault or topology switch, let $\bm s_H$ be its short-horizon physical response from $\widehat{\bm X}_{\rm pre}$ and $\bm r$ the corresponding null residual. With $\bm W^{\mathsf T}\bm W=\bm R_H^{-1}$ and nuisance projector $\bm P_N$, define $\widetilde{\bm s}_H=(\bm I-\bm P_N)\bm W\bm s_H$ and $\widetilde{\bm r}=(\bm I-\bm P_N)\bm W\bm r$. A signed matched score is $(\widetilde{\bm r}^{\mathsf T}\widetilde{\bm s}_H)^2/\|\widetilde{\bm s}_H\|^2$, with the allowed severity domain imposed before interpreting it as a physical fit. The two screening scores need not share a calibrated scale across families.
+
+The frozen pilot consequently ranks within each family, retains a family quota, and allocates increasing nonlinear budgets $B1,B2,B3,B5,B10$ before strict finalization. A candidate with a failed score is recorded as unscorable rather than inserted into a tie by catalog order. The dossier reports that ranking was nonmonotone with iteration budget and that the generator truth survived the blind racing cutoff at rank six of six. Thus survival is a search diagnostic; it says nothing by itself about a final converged winner or computational savings. In the reported racing run all 21 candidates were still evaluated to ten iterations, so a wall-clock advantage has not been demonstrated.
+
+The operational order of this \emph{pilot} is fixed: (1) process only the declared 32-channel PMU sequence and evaluate the $H_0$ innovation; (2) record alarm time, refine physical onset candidates, and fit a common pre-event state; (3) score every admissible physical family/location with its own event operator and explicit numerical status; (4) retain the frozen within-family quotas; (5) apply the same staged nonlinear budgets to all survivors while checkpointing objective and stationarity; (6) finalize every remaining candidate to the same strict gate; and (7) compare only validly converged modes with consistent priors, normalizers, and boundary treatment. Outputs before step~(6) are candidate sets and diagnostics, not final source decisions. This route is retrospective whenever onset refinement or smoothing uses samples after the decision time; it has no measured end-to-end latency guarantee.
+
+Several discarded results in the dossier were caused by implementation changes rather than by power-system information limits. A generator screen based only on the algebraic Jacobian missed its differential pathway; a previous joint update computed but did not apply the severity step; and an outage candidate was once switched at frame zero instead of the inferred onset. A full-window $H_0$ fit absorbed an event into the null reference, while independent caps on state and severity steps invalidated a quadratic proposal score. Unscored fault candidates inherited catalog order through a tied sentinel value. One detection-delay calculation used the window start rather than its end, and some failed integrator returns were encoded as nonfinite values despite finite unfinished states. The corrected pilot treats each as a separate numerical or semantic gate. Its four-case truth survival must not be merged with superseded rankings from those earlier variants.
+
+\subsection{Evidence and the Final Comparison Gate}
+
+For converged, regular, identifiable interior modes only, the local Laplace approximation is
+\begin{equation}
+\log p(\bm Y\mid H)\simeq
+-J_H(\widehat{\bm u}_H)
++\tfrac{d_H}{2}\log(2\pi)
+-\tfrac12\log|\nabla^2J_H(\widehat{\bm u}_H)|,
+\label{eq:pilot-laplace}
+\end{equation}
+where $\bm u_H$ uses a common feasible measure and $J_H$ includes all model-dependent prior and likelihood normalizers. The normalizer, prior scale, curvature determinant, and any boundary or quotient correction must be retained when comparing families of different dimension. Section~\ref{sec:supp-joint-design} derives the boundary-aware alternative. A candidate that stops at $B10$ or violates the strict stationarity/solver gate cannot be made comparable merely by evaluating \eqref{eq:pilot-laplace}. The pilot has not demonstrated exact normalization against the load-bank restriction $\mathcal R_0$.
+
+\subsection{Dossier-Reported Numerical Ledger}
+
+Table~\ref{tab:pilot-numerical-ledger} preserves the numerical chronology without treating small pilot denominators as population rates. ``Dossier AV'' means the PDF claims an external campaign package supports the entry; it does not mean this repository has reopened that package. ``TR'' is the dossier's own terminal-report tier.
+
+
+
+The case-specific terminal report places converged LOAD@27 and LOAD@26 ahead of true LOAD@28. It quotes approximate objectives $-29986.9$, $-29985.9$, and $-29980.7$, respectively, with evidence values around 4609.98, 4610.22, and 4607.17. Those values are deliberately absent from the main manuscript: their sign convention and normalizing terms must be checked against the final archive before quantitative model comparison. No exact generator margin was supplied. The fault and line comparisons are not physically interpretable until both truth and nearest competitors pass a common strict convergence gate.
+
+\subsection{Required Closure Before a Multi-Family Claim}
+
+The next frozen audit must first replay each event operator, measurement conversion, onset, duration, and initial state under the same truth and inference model. It must then use an independent finalizer for the fault/line candidates, retaining every failed solve in the denominator. For converged load/generator mislocalizations, successive oracles should fix the true pre-event state, timing, severity, and trajectory, then remove noise and add a counterfactual nearby PMU. Only a persistent small whitened truth-to-competitor margin after those controls supports an information-limited explanation. The final-survivor archive must supply per-candidate status, objective, prior and likelihood constants, Hessian measure, and evidence normalization. A larger source-disjoint holdout, operational normal exposure, and the $\mathcal R_0$ reduction test are still needed. The current pilot cannot be used to upgrade the separate $\mathcal E_{\mathrm B}$ load-support result into a validated multi-family joint estimator.
