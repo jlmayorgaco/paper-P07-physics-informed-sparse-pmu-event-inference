@@ -1,5 +1,15 @@
 # Claims and evidence register
 
+## Continuous evidence addendum, 2026-10-29
+
+| Claim | Evidence | Class and boundary |
+|---|---|---|
+| Restricted causal load/line inference runs without true onset/source inputs. | Imported H03/H04 CSV, source seals, Section V causal component | Empirical-secondary; fixed catalog, F01, stationary prefix. Not E_J completion. |
+| Network mixing trades alarm burden against timely attribution. | Generated `continuous_h04.csv` and `continuous_tradeoff.pdf` | Empirical-secondary; preserve nominal and admission-ablation regressions. No uniform superiority. |
+| Published Chen2016 persistent QCD has an executable reproduction. | Imported core/tests and MATCHED outputs | Implementation validation on three-bus law; declared F01 adapter, mismatch failures retained. No original 118-bus replication or F01 ARL guarantee. |
+| The new common test is prespecified. | Imported C01 PLAN/FREEZE | Protocol only; results unavailable, not confirmation. |
+
+
 This register governs manuscript wording. Every imported artifact is hashed in `generated/frozen/SOURCE_MANIFEST.csv`; the source branch and commit are recorded in `generated/frozen/SOURCE_SNAPSHOT.txt`.
 
 | Claim | Evidence artifact | Evidence class and allowed wording | Boundary |

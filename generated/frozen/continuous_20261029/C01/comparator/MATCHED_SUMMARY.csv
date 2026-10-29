@@ -1,0 +1,5 @@
+source,trials,alarms,prechange_alarms,correct_after_change,median_delay_observations,censored,exposure
+LINE1-2,100,100,1,99,4.0,0,10429
+LINE1-3,100,100,0,100,7.0,0,10746
+LINE2-3,100,100,0,100,3.0,0,10342
+normal,100,0,0,0,,100,100000

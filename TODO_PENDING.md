@@ -1,6 +1,11 @@
+# Active paper closure — 2026-10-29
+
+The active finite closure is [PAPER_PLAN.md](PAPER_PLAN.md): execute the frozen C01 comparison, aggregate all outcomes, then finish the manuscript audit. R11 and nominal remain fixed; no more per-bus candidate repair. The complete joint-estimator/theory items below remain a separate research backlog and are not silently marked implemented by the causal component. Submission is blocked by missing confirmatory results and final evidence/citation/reproducibility review.
+
+
 # Pending research gates
 
-## Submission veto: the full multi-family joint method is not yet executed
+## Separate E_J research backlog: required only for a full joint-method claim
 
 - Freeze $\mathcal E_{\mathrm B}$ as the reference batch event estimator. Do not replace its GH31 amplitude marginalization by EM, a point estimate, or a local Laplace approximation and still call the result the same reference method.
 - Implement an exact prefix version of $\mathcal E_{\mathrm B}$ and verify the batch quadratic form, evidence, and posterior at every prefix, including the same initial AR(1) density.

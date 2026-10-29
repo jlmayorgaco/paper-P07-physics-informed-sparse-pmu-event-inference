@@ -20,6 +20,8 @@ The contributions are:
 
 The evidence yields one consistent picture. Sparse PMUs can recover the requested voltage field under a matched model, but operating-point error must be corrected physically. For simultaneous load events, source severity controls whether the posterior resolves only cardinality or the exact support. Longer observation adds information, yet nearly collinear signatures remain difficult. The implemented batch event estimator therefore supports matched load interventions with at most two sources. It does not yet solve the full multi-family problem shown in Fig.~\ref{fig:joint-architecture}.
 
+A separate causal component extends the executed evidence to unknown-onset load and line interventions in continuous streams. It retains conditional recovery states and marginalizes a finite bank of fixed network hypotheses. Its source/family array and increments separate event-evidence evolution from model reweighting. Section~\ref{sec:continuous-evidence} reports the resulting precision--timeliness trade-off, including failures; it does not identify this component with the complete joint posterior. We implement a published line-outage likelihood comparator and preregister its eligible confirmatory comparison rather than infer general superiority from incompatible task definitions.
+
 \begin{figure*}[t]
 \centering
 \resizebox{\textwidth}{!}{\input{figures/joint_inference_architecture}}

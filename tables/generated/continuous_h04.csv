@@ -1,0 +1,6 @@
+method,label,timely,total,extras,false_restorations,out_timely,out_total,out_extras,out_f1,out_bus31_timely
+R11,R11 mixture,53,54,4,4,17,18,4,0.8180451127819549,2
+R11_NOMINAL,R11 nominal,54,54,7,4,18,18,6,0.8277076606985618,3
+R12,Admission ablation,52,54,0,0,16,18,0,0.8542148760330579,2
+ET_REFERENCE,ExtraTrees reference,27,54,3,3,9,18,1,0.6187891440501044,0
+ET_CANDIDATE,ExtraTrees short,27,54,3,3,9,18,1,0.6256751142501039,0

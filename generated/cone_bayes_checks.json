@@ -3,8 +3,8 @@
   "checks": [
     {
       "name": "conditional_quotient_reduction",
-      "full_margin_squared": 0.40018695652173913,
-      "quotient_margin_squared": 0.40018695652173913,
+      "full_margin_squared": 0.4001869565217392,
+      "quotient_margin_squared": 0.4001869565217392,
       "error": 0.0,
       "tolerance": 1e-12,
       "passed": true
@@ -25,7 +25,7 @@
       "name": "conditional_principal_angle",
       "naive_angle_degrees": 0.0,
       "conditional_angle_degrees": 18.68866076722518,
-      "error": 4.163336342344337e-17,
+      "error": 6.938893903907228e-17,
       "tolerance": 1e-12,
       "passed": true
     },
@@ -58,15 +58,15 @@
     {
       "name": "cone_competitor_enrichment",
       "trials": 2000,
-      "maximum_violation": 6.661338147750939e-16,
-      "error": 6.661338147750939e-16,
+      "maximum_violation": 3.552713678800501e-15,
+      "error": 3.552713678800501e-15,
       "tolerance": 1e-10,
       "passed": true
     },
     {
       "name": "nested_cone_zero_margin",
-      "margin_squared": 1.4458437714320263e-31,
-      "error": 1.4458437714320263e-31,
+      "margin_squared": 2.414508261743103e-31,
+      "error": 2.414508261743103e-31,
       "tolerance": 1e-12,
       "passed": true
     },
@@ -98,10 +98,10 @@
     {
       "name": "broad_nuisance_to_profile_limit",
       "profile_information": 1.1616917455153164,
-      "broad_prior_information": 1.1616917465543306,
+      "broad_prior_information": 1.161691747977492,
       "broad_scale": 10000.0,
-      "relative_error": 8.943975129505814e-10,
-      "error": 8.943975129505814e-10,
+      "relative_error": 2.1194741066560333e-09,
+      "error": 2.1194741066560333e-09,
       "tolerance": 1e-06,
       "passed": true
     },
@@ -124,8 +124,8 @@
         0.0061263782669470634,
         0.003084405914718813
       ],
-      "log_log_slope": 0.9497080490525247,
-      "error": 0.050291950947475295,
+      "log_log_slope": 0.9497080490525249,
+      "error": 0.05029195094747507,
       "tolerance": 0.08,
       "passed": true
     },

@@ -1,0 +1,167 @@
+{
+  "status": "SECONDARY_DEVELOPMENT_EVIDENCE_NOT_C01_RESULTS",
+  "date": "2026-10-29",
+  "source_repo": "SGSMA26-Physics-Informed-AD",
+  "files": [
+    {
+      "path": "H03/SUMMARY.csv",
+      "sha256": "0ee01ff13651b88ca0959818209ea7b89003b6108074516b7c2ae6e8f27d2ad6",
+      "source": "experiments/E5_VALIDATION_PAPER/M03_R11_FROZEN_DISCREPANCY/protocol/new_holdout/results/SUMMARY.csv"
+    },
+    {
+      "path": "H03/EVENTS.csv",
+      "sha256": "aed94e6d5734092e4a23ca88048a47d5699f5aa60fcf6ea6d4d686c190c9cc80",
+      "source": "experiments/E5_VALIDATION_PAPER/M03_R11_FROZEN_DISCREPANCY/protocol/new_holdout/results/EVENTS.csv"
+    },
+    {
+      "path": "H03/EXTRAS.csv",
+      "sha256": "6ab93396a1f9c1b5ee03e52ffb79fd2713f8b807d5fb3311cc2663f33abf39a3",
+      "source": "experiments/E5_VALIDATION_PAPER/M03_R11_FROZEN_DISCREPANCY/protocol/new_holdout/results/EXTRAS.csv"
+    },
+    {
+      "path": "H03/LIFECYCLES.csv",
+      "sha256": "bb37be6c81f27a97fadcf6263eb54dd88eb9676556dbd7e2048a0f028c761d9b",
+      "source": "experiments/E5_VALIDATION_PAPER/M03_R11_FROZEN_DISCREPANCY/protocol/new_holdout/results/LIFECYCLES.csv"
+    },
+    {
+      "path": "H03/EVALUATION_AUDIT.json",
+      "sha256": "12b738cf5596e8ac5fa20fdaf789623d3f2cfb3415372a5f002533a7bb53b6f9",
+      "source": "experiments/E5_VALIDATION_PAPER/M03_R11_FROZEN_DISCREPANCY/protocol/new_holdout/results/EVALUATION_AUDIT.json"
+    },
+    {
+      "path": "H03/PREDICTIONS_SEAL.json",
+      "sha256": "812aec13f9a1706a84ba519250c7df1ea37c79d14d95f679ed5f6ff356cc1e84",
+      "source": "experiments/E5_VALIDATION_PAPER/M03_R11_FROZEN_DISCREPANCY/protocol/new_holdout/results/PREDICTIONS_SEAL.json"
+    },
+    {
+      "path": "H03/SCIENTIFIC_CONTRACT.md",
+      "sha256": "2d74ad8797c3a16f4a2d88f47484a5dd16dc6985ea9126f35f05a543959d6565",
+      "source": "experiments/E5_VALIDATION_PAPER/M03_R11_FROZEN_DISCREPANCY/SCIENTIFIC_CONTRACT.md"
+    },
+    {
+      "path": "H03/METHOD.md",
+      "sha256": "23e9c8042c54a7ae2670e927165ba6c667f039a05668ed2e921ab5ed69fb1c08",
+      "source": "experiments/E5_VALIDATION_PAPER/M03_R11_FROZEN_DISCREPANCY/METHOD.md"
+    },
+    {
+      "path": "H03/RESULTS.md",
+      "sha256": "7c74307c9097671ccf3eceed2845d4dd16843e791f397a6d4659d1e9b76d336b",
+      "source": "experiments/E5_VALIDATION_PAPER/M03_R11_FROZEN_DISCREPANCY/RESULTS.md"
+    },
+    {
+      "path": "H03/CANDIDATE_FREEZE.json",
+      "sha256": "ad5be01a64c67e8df95079d8f0f80f85538e7fc0208dcb90fd61a4e3c4d3bf16",
+      "source": "experiments/E5_VALIDATION_PAPER/M03_R11_FROZEN_DISCREPANCY/CANDIDATE_FREEZE.json"
+    },
+    {
+      "path": "H04/SUMMARY.csv",
+      "sha256": "ddaebaf77bb69f662f5c84c04d9c49b3d76585a78f782a711a0671766178bcba",
+      "source": "experiments/E5_VALIDATION_PAPER/M03_R12_CAUSAL_BIRTH/protocol/new_holdout/results/SUMMARY.csv"
+    },
+    {
+      "path": "H04/EVENTS.csv",
+      "sha256": "60043b31c6833772fb10c25b6e53addd1fe53273e626b0ff8dd81b66d1ad1ef8",
+      "source": "experiments/E5_VALIDATION_PAPER/M03_R12_CAUSAL_BIRTH/protocol/new_holdout/results/EVENTS.csv"
+    },
+    {
+      "path": "H04/EXTRAS.csv",
+      "sha256": "f01a664107f6bf48fd5aeeda5b7b571c44bc906112acc1db1a3bf0c2c804595e",
+      "source": "experiments/E5_VALIDATION_PAPER/M03_R12_CAUSAL_BIRTH/protocol/new_holdout/results/EXTRAS.csv"
+    },
+    {
+      "path": "H04/LIFECYCLES.csv",
+      "sha256": "91e318671cc8c6cf919ef8ec21f1d9947efcf3f46169d94c7525aae395df0003",
+      "source": "experiments/E5_VALIDATION_PAPER/M03_R12_CAUSAL_BIRTH/protocol/new_holdout/results/LIFECYCLES.csv"
+    },
+    {
+      "path": "H04/EVALUATION_AUDIT.json",
+      "sha256": "12b738cf5596e8ac5fa20fdaf789623d3f2cfb3415372a5f002533a7bb53b6f9",
+      "source": "experiments/E5_VALIDATION_PAPER/M03_R12_CAUSAL_BIRTH/protocol/new_holdout/results/EVALUATION_AUDIT.json"
+    },
+    {
+      "path": "H04/PREDICTIONS_SEAL.json",
+      "sha256": "0a63a2cd7bf4a0eee3f59d2a8a1d624a01adc3490458b8fba5357a5b1a888f4f",
+      "source": "experiments/E5_VALIDATION_PAPER/M03_R12_CAUSAL_BIRTH/protocol/new_holdout/results/PREDICTIONS_SEAL.json"
+    },
+    {
+      "path": "H04/SCIENTIFIC_CONTRACT.md",
+      "sha256": "f8e5ed0cb1882d22042af6d42b4213024f4d251f45922adf03ec68850eb17380",
+      "source": "experiments/E5_VALIDATION_PAPER/M03_R12_CAUSAL_BIRTH/SCIENTIFIC_CONTRACT.md"
+    },
+    {
+      "path": "H04/METHOD.md",
+      "sha256": "495c9bf69fa95b29214fe12ea85bf55aaf67c51a42b70fdc7fd663bbe8b7313a",
+      "source": "experiments/E5_VALIDATION_PAPER/M03_R12_CAUSAL_BIRTH/METHOD.md"
+    },
+    {
+      "path": "H04/RESULTS.md",
+      "sha256": "49f29e49661890eea463bf363df619851411d896e6e123671567e942158cabfe",
+      "source": "experiments/E5_VALIDATION_PAPER/M03_R12_CAUSAL_BIRTH/RESULTS.md"
+    },
+    {
+      "path": "H04/CANDIDATE_FREEZE.json",
+      "sha256": "60c643759d2256cbc29999e30c55ad334f16af016ea9ba4878483fed07df8a8a",
+      "source": "experiments/E5_VALIDATION_PAPER/M03_R12_CAUSAL_BIRTH/CANDIDATE_FREEZE.json"
+    },
+    {
+      "path": "C01/references/R11_FREEZE.json",
+      "sha256": "6092b66ef8479a96b962a0f2b2c111c9aa9bfe2874cf6989dcf352573a67ad03",
+      "source": "experiments/PAPER_CONFIRMATORY_C01/references/R11_FREEZE.json"
+    },
+    {
+      "path": "C01/protocol/PLAN.json",
+      "sha256": "03ee431d3dfa28de500340b63c7fad9a8db05628707e6a2afeefc7c9388bc170",
+      "source": "experiments/PAPER_CONFIRMATORY_C01/protocol/PLAN.json"
+    },
+    {
+      "path": "C01/protocol/FREEZE.json",
+      "sha256": "6bdb3f740e87ae13fbe0efa6122f7d144fdb77c9f05fc409ffcbf4793eacc269",
+      "source": "experiments/PAPER_CONFIRMATORY_C01/protocol/FREEZE.json"
+    },
+    {
+      "path": "C01/comparator/chen2016.py",
+      "sha256": "2511680d7ba404b0fd63842bd7a370820265070428e645489a7dcf06ee1585d8",
+      "source": "experiments/PAPER_CONFIRMATORY_C01/comparator/chen2016.py"
+    },
+    {
+      "path": "C01/comparator/run_f01.py",
+      "sha256": "e03a39c46b0c4c543c4dba50d0df0022ffe9a078d38dcb13d18002466c4d53ab",
+      "source": "experiments/PAPER_CONFIRMATORY_C01/comparator/run_f01.py"
+    },
+    {
+      "path": "C01/comparator/test_chen2016.py",
+      "sha256": "5dc6b14598178ceaee32ea2feaf2a2b2f216704dd7b344220beba532715aea75",
+      "source": "experiments/PAPER_CONFIRMATORY_C01/comparator/test_chen2016.py"
+    },
+    {
+      "path": "C01/comparator/TESTS.json",
+      "sha256": "ff338b89832a0d155d98cada920d6577981c018ea13d57f3ce20dbd7384b8e4a",
+      "source": "experiments/PAPER_CONFIRMATORY_C01/comparator/TESTS.json"
+    },
+    {
+      "path": "C01/comparator/MATCHED_CONTRACT.json",
+      "sha256": "7d633cea7ccd7e2f949931efa059849e5b495863739657d0b7438bb421293639",
+      "source": "experiments/PAPER_CONFIRMATORY_C01/comparator/MATCHED_CONTRACT.json"
+    },
+    {
+      "path": "C01/comparator/MATCHED_SUMMARY.csv",
+      "sha256": "28f53100b8db6778a05c729f65ba509d3b2bdb70cb2cb6a5b9939518cac64dcd",
+      "source": "experiments/PAPER_CONFIRMATORY_C01/comparator/MATCHED_SUMMARY.csv"
+    },
+    {
+      "path": "C01/comparator/MATCHED_TRIALS.csv",
+      "sha256": "9950de2040b5cb413bf43f183595f8bca358023971b67943aea42b3eb185aa58",
+      "source": "experiments/PAPER_CONFIRMATORY_C01/comparator/MATCHED_TRIALS.csv"
+    },
+    {
+      "path": "C01/comparator/F01_STRESS.csv",
+      "sha256": "d0b3df992d8ea60fc8c7e8798ea129237711626eda7b5d591659ed5fad473b25",
+      "source": "experiments/PAPER_CONFIRMATORY_C01/comparator/F01_STRESS.csv"
+    },
+    {
+      "path": "C01/comparator/README.md",
+      "sha256": "0f914ba24e8b259734d9d6e8881e20fd12a03537082d061eb0d6497f0b8a799e",
+      "source": "experiments/PAPER_CONFIRMATORY_C01/comparator/README.md"
+    }
+  ]
+}

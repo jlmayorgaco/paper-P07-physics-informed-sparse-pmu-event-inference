@@ -1,5 +1,13 @@
 # Current manuscript claim boundary
 
+## Continuous component addendum, 2026-10-29
+
+- R11 and R11_NOMINAL are frozen research references. Generated H04 table: `tables/generated/continuous_h04.csv`; exact provenance: `generated/frozen/continuous_20261029/MANIFEST.json`.
+- R11's restricted unknown-onset load/line result is secondary development evidence. It does not replace E_B or validate the full E_J restriction regression.
+- M and ΔM implement finite-model marginalization and an exact update decomposition. Their algebra alone is not claimed as a novel tensor estimator or calibrated posterior.
+- The Chen2016 persistent-outage core and its declared F01 adapter are implemented and tested. Its matched-law checks are implementation validation; F01 normal false alarms are retained. A compatible confirmatory superiority claim is pending.
+- C01 is prespecified and prepared, not executed. Changing PMUs, unseen-source causal transfer, field operation and all-family hackathon superiority remain blocked.
+
 ## Supported component claims
 
 - On the audited PowerDynamics IEEE 39-bus benchmark, eight voltage/current PMUs support accurate nominal reconstruction of 31 hidden bus voltages. A preregistered functional residual is associated with bus-level difficulty.

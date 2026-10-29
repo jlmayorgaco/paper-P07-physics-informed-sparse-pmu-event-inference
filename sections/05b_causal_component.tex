@@ -1,0 +1,45 @@
+\subsection{A Separate Causal Load--Line Component}
+\label{sec:continuous-component}
+
+The batch estimator $\mathcal E_{\mathrm B}$ above uses a known onset and integrates load amplitudes with its original quadrature. We retain that implementation. A separate executable component, denoted R11, tests unknown-onset load and line interventions in a continuous stream. It is not a numerical realization of the complete joint estimator $\mathcal E_{\mathrm J}$: its source catalog, startup conditions, and uncertainty approximation are narrower.
+
+R11 uses the frozen Julia/PowerDynamics IEEE-39 candidate and eight PMUs. Its 47 input coordinates comprise eight voltage magnitudes, eight voltage angles, eight terminal-current magnitudes, seven terminal-current angles, eight absolute frequencies, and eight ROCOFs. The current angle at BUS39 is excluded because its terminal interpretation is only partially validated. The BUS5 terminal retains the provisional historical 5--6 hypothesis. Currents are oriented terminal measurements, not nodal injections; bus frequency is not rotor speed. No waveform harmonics or THD are inferred from these phasor reports.
+
+The physical bank propagates conditional state histories with local DAE transition and observation operators. Load interventions enter affine operators with an uncertain continuous amplitude; line interventions change the operator. Retrospective screening compares source/onset candidates over a 10-s history. A proposed suffix is replayed from its stored no-event state estimate; its screening score is not multiplied into the posterior as another observation. Conditional Gaussian state updates and truncated amplitude integration therefore have a different contract from the batch quadrature in $\mathcal E_{\mathrm B}$. Physical restoration changes the intervention operator while retaining the dynamic state. Restored histories continue to predict electrical recovery, which may outlast the intervention. The startup prefix ends before 10~s and the inherited monitoring warmup ends at 12~s; neither is supplied with event times.
+
+Five fixed network hypotheses represent nominal, global $\pm2\%$, and selected-branch $\pm3\%$ paired R/X perturbations. They are constant over a trajectory. For each hypothesis $\theta_\ell$, a 300-report startup prefix estimates an observation intercept,
+\begin{equation}
+ \widehat b_\ell=\overline y_{0:299}-y^{\mathrm{ref}}_\ell,
+ \qquad \widehat b_{\ell,k}=\widehat b_\ell\quad(k\geq300).
+ \label{eq:continuous-intercept}
+\end{equation}
+Angular differences are wrapped consistently. Frequency and ROCOF already use empirical startup centers and receive no additional intercept. This is an observational correction, not an identified network impedance or an AC-feasible state recentering. Its uncertainty is treated by substitution rather than fully marginalized. A stationary intervention-free prefix is required.
+
+Let $\mathcal F_{k-1}$ contain the reports available before report $k$. The outer weights update once using each conditional model's one-step predictive density:
+\begin{equation}
+ w_{\ell,k}=\frac{w_{\ell,k-1}\,
+ p_\ell(y_k\mid\mathcal F_{k-1},\widehat b_\ell)}
+ {\sum_j w_{j,k-1}\,
+ p_j(y_k\mid\mathcal F_{k-1},\widehat b_j)}.
+ \label{eq:continuous-weights}
+\end{equation}
+Startup reports are not scored again as independent evidence. The density includes the retained normal, active, restored, and newly born histories before current-report screening and state updates. Adaptive proposals, pruning, and shared covariance approximations make this an approximate prequential mixture; neither optimality nor calibrated event probabilities are claimed.
+
+The source/family array has a computational role: it marginalizes the conditional history masses $M_{\ell,c,k}$ over static parameter hypotheses. Here $c$ indexes a bus-load or line cell, rather than a dense array of physically admissible events at all bus pairs. The implementation checks the exact decomposition
+\begin{align}
+ M_{c,k}&=\sum_\ell w_{\ell,k} M_{\ell,c,k},\nonumber\\
+ \Delta M_{c,k}&=\sum_\ell w_{\ell,k}
+ (M_{\ell,c,k}-M_{\ell,c,k-1})\nonumber\\
+ &\quad+\sum_\ell(w_{\ell,k}-w_{\ell,k-1})M_{\ell,c,k-1}.
+ \label{eq:continuous-delta}
+\end{align}
+The terms distinguish conditional event-evidence evolution from reweighting network hypotheses. They do not constitute a new tensor-factorization theorem. The nominal ablation retains one physical hypothesis and its own episode publication path. Alarm, diagnosis, restoration, and electrical recovery remain distinct outputs; publication does not reset the conditional observers.
+
+\subsection{Published Physical Comparator and Its Eligibility}
+\label{sec:chen-comparator}
+
+We implement the persistent single-line quickest-change detector of Chen \emph{et al.}~\cite{chen2016quickest}. Its reference-reduced incremental network matrix $H_i$ defines $M_i=H_i^{-1}$. With Gaussian injection increments of covariance $\Sigma$ and PMU selection matrix $C$, the observed covariance is $C M_i\Sigma M_i^\top C^\top$. Selection occurs after inversion. A parallel positive-part log-likelihood recursion stops when its maximum exceeds $\log(L\beta)$, where $L$ is the number of admissible outages and $\beta$ is expressed in observation intervals. The line at the maximum is the stopping diagnosis.
+
+The F01 adapter uses flat-voltage DC branch slopes $1/(X a)$ with transformer tap $a$, known nominal topology, and a scalar injection covariance estimated only from the startup prefix. Nonoverlapping PMU angle pairs give 15 increments/s from the common 30-report/s input; circular angle differences prevent wrapping jumps. Prefix mean increments compensate the observation-frame drift. These are declared adapter assumptions, not a reproduction of the article's original test system or an average-run-length guarantee on colored instrumental noise.
+
+The primary eligible comparison is one persistent line outage or a normal record. The comparator has no load-family or restoration output. We do not manufacture reclosing decisions, restart it at true event times, or count unsupported load labels as a failure of its published scope. Its monitoring starts after its 10-s prefix; normal exposure is reported for each method's actual monitoring interval. Mixed continuous streams provide only an explicitly out-of-contract stress test.

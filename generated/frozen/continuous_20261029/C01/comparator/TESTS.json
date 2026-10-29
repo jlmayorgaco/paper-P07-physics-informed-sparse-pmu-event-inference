@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "three_bus_eq9": true,
+  "sparse_marginal": true,
+  "logpdf_scipy_parity": true,
+  "suffix_max_parity": true,
+  "matched_postchange_identified": "LINE2-3",
+  "causal_prefix": true,
+  "angle_wrap": true,
+  "islanding_exclusion": true
+}

@@ -22,6 +22,7 @@ function Invoke-CheckedCommand {
 Push-Location $paperRoot
 try {
     Write-Host 'Regenerating deterministic theory checks...'
+    Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/generate_continuous_evidence.py')
     Invoke-CheckedCommand -Command 'python' -Arguments @('scripts/verify_theory_identities.py')
     Invoke-CheckedCommand -Command 'python' -Arguments @('scripts/verify_cone_bayes_identities.py')
     Invoke-CheckedCommand -Command 'python' -Arguments @('scripts/verify_information_limits.py')

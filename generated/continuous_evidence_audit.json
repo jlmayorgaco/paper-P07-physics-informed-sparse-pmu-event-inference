@@ -1,0 +1,72 @@
+{
+  "status": "GENERATED_FROM_VERIFIED_FROZEN_OUTPUTS",
+  "rows": [
+    {
+      "method": "R11",
+      "label": "R11 mixture",
+      "timely": 53,
+      "total": 54,
+      "extras": 4,
+      "false_restorations": 4,
+      "out_timely": 17,
+      "out_total": 18,
+      "out_extras": 4,
+      "out_f1": 0.8180451127819549,
+      "out_bus31_timely": 2
+    },
+    {
+      "method": "R11_NOMINAL",
+      "label": "R11 nominal",
+      "timely": 54,
+      "total": 54,
+      "extras": 7,
+      "false_restorations": 4,
+      "out_timely": 18,
+      "out_total": 18,
+      "out_extras": 6,
+      "out_f1": 0.8277076606985618,
+      "out_bus31_timely": 3
+    },
+    {
+      "method": "R12",
+      "label": "Admission ablation",
+      "timely": 52,
+      "total": 54,
+      "extras": 0,
+      "false_restorations": 0,
+      "out_timely": 16,
+      "out_total": 18,
+      "out_extras": 0,
+      "out_f1": 0.8542148760330579,
+      "out_bus31_timely": 2
+    },
+    {
+      "method": "ET_REFERENCE",
+      "label": "ExtraTrees reference",
+      "timely": 27,
+      "total": 54,
+      "extras": 3,
+      "false_restorations": 3,
+      "out_timely": 9,
+      "out_total": 18,
+      "out_extras": 1,
+      "out_f1": 0.6187891440501044,
+      "out_bus31_timely": 0
+    },
+    {
+      "method": "ET_CANDIDATE",
+      "label": "ExtraTrees short",
+      "timely": 27,
+      "total": 54,
+      "extras": 3,
+      "false_restorations": 3,
+      "out_timely": 9,
+      "out_total": 18,
+      "out_extras": 1,
+      "out_f1": 0.6256751142501039,
+      "out_bus31_timely": 0
+    }
+  ],
+  "primary_paper_estimator_unchanged": true,
+  "confirmatory_C01_executed": false
+}

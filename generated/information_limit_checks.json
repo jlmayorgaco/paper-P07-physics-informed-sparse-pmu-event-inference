@@ -3,9 +3,9 @@
   "checks": [
     {
       "name": "exact_redundancy_evidence_rate",
-      "log_log_slope": 0.9998324950661585,
+      "log_log_slope": 0.999832495066158,
       "smallest_scale_exact_to_asymptotic": 0.9999942215737544,
-      "error": 0.00016750493384154463,
+      "error": 0.00016750493384198872,
       "tolerance": 0.02,
       "passed": true
     },
@@ -19,18 +19,18 @@
     },
     {
       "name": "mixed_regular_plus_k2_evidence_rate",
-      "log_log_slope": 1.495822856325166,
+      "log_log_slope": 1.4958228563251665,
       "smallest_scale_exact_to_asymptotic": 0.9989116167664478,
-      "error": 0.004177143674833905,
+      "error": 0.004177143674833461,
       "tolerance": 0.025,
       "passed": true
     },
     {
       "name": "nested_support_occam_exponents",
       "slopes": {
-        "regular": 0.9994343176615978,
+        "regular": 0.9994343176615974,
         "order_2": 0.49508174985910747,
-        "redundant": 0.00028266926649119054
+        "redundant": 0.00028266926649123233
       },
       "redundant_limit": 0.7071136863576244,
       "error": 0.004918250140892533,
@@ -109,9 +109,9 @@
     },
     {
       "name": "gaussian_quotient_operational_map",
-      "gamma": 1.7993647475018104,
-      "bayes_error": 0.1841446530863305,
-      "kl_divergence": 1.618856747276127,
+      "gamma": 1.7993647475018102,
+      "bayes_error": 0.18414465308633055,
+      "kl_divergence": 1.6188567472761266,
       "error": 2.220446049250313e-16,
       "tolerance": 1e-12,
       "passed": true

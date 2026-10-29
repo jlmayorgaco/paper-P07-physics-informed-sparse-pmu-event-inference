@@ -3,27 +3,27 @@
   "checks": [
     {
       "name": "branch_primitive_real_power",
-      "error": 1.0039763283600428e-14,
+      "error": 5.476234518327506e-15,
       "tolerance": 1e-12,
       "passed": true
     },
     {
       "name": "regular_first_order_dae",
-      "gamma_squared": 0.4527244641197043,
+      "gamma_squared": 0.4527244641197044,
       "expected_gamma_squared": 0.452724464118,
       "squared_distance_log_slope": 2.0000000000000013,
-      "normal_equation_error": 5.551115123125783e-17,
-      "error": 3.764548859585951e-12,
+      "normal_equation_error": 0.0,
+      "error": 3.7647940910926664e-12,
       "tolerance": 1e-10,
       "passed": true
     },
     {
       "name": "relative_second_order_contact",
-      "squared_distance_log_slope": 3.9999995638415653,
+      "squared_distance_log_slope": 3.999999563841562,
       "expected_slope": 4.0,
       "limiting_coefficient": 2.8899999966591596,
       "expected_coefficient": 2.8899999999999997,
-      "error": 4.361584347023495e-07,
+      "error": 4.3615843781097396e-07,
       "tolerance": 0.001,
       "passed": true
     },
@@ -32,9 +32,9 @@
       "rank": 2,
       "parameter_count": 3,
       "gamma_squared": 0.5000000000000001,
-      "max_projected_fit_variation": 1.5700924586837752e-16,
+      "max_projected_fit_variation": 1.2412670766236366e-16,
       "max_residual_variation": 0.0,
-      "error": 1.5700924586837752e-16,
+      "error": 1.2412670766236366e-16,
       "tolerance": 1e-12,
       "passed": true
     },
@@ -85,15 +85,15 @@
       "name": "diagnostic_quotient_profile_likelihood",
       "diagnostic_rank": 4,
       "ambient_dimension": 6,
-      "max_cost_factorization_error": 4.440892098500626e-16,
-      "error": 4.440892098500626e-16,
+      "max_cost_factorization_error": 1.1102230246251565e-15,
+      "error": 1.1102230246251565e-15,
       "tolerance": 1e-12,
       "passed": true
     },
     {
       "name": "nuisance_span_parameterization_invariance",
-      "projector_spectral_error": 7.125173221241392e-16,
-      "error": 7.125173221241392e-16,
+      "projector_spectral_error": 9.468564464671496e-16,
+      "error": 9.468564464671496e-16,
       "tolerance": 1e-12,
       "passed": true
     }
