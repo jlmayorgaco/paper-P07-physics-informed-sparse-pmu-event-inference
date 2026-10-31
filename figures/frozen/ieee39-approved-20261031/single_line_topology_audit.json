@@ -1,0 +1,118 @@
+{
+  "buses": 39,
+  "branches": 46,
+  "branch_segments": 66,
+  "orthogonal_routes": 46,
+  "wire_crossings": 0,
+  "wire_overlaps": 0,
+  "unintended_bus_contacts": 0,
+  "device_wire_crossings": 0,
+  "transformers": 12,
+  "generators": [
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39
+  ],
+  "pmu_voltage_buses": [
+    2,
+    5,
+    6,
+    10,
+    19,
+    22,
+    29,
+    39
+  ],
+  "nominal_load_connections": [
+    3,
+    4,
+    7,
+    8,
+    12,
+    15,
+    16,
+    18,
+    20,
+    21,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    31,
+    39
+  ],
+  "load_candidates": [
+    3,
+    4,
+    7,
+    15,
+    16,
+    20,
+    24,
+    26,
+    31
+  ],
+  "line_candidates": [
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      14
+    ],
+    [
+      9,
+      39
+    ],
+    [
+      14,
+      15
+    ],
+    [
+      16,
+      17
+    ],
+    [
+      17,
+      18
+    ],
+    [
+      23,
+      24
+    ],
+    [
+      26,
+      27
+    ],
+    [
+      26,
+      29
+    ]
+  ],
+  "electrical_parameters_changed": false,
+  "measurement_mapping_changed": false,
+  "source_hashes_verified": true,
+  "renderer": "pdfLaTeX / PGF-TikZ",
+  "rendered_bus_labels": 39,
+  "rendered_pmu_badges": 8,
+  "label_wire_device_overlaps": 0,
+  "label_label_overlaps": 0,
+  "minimum_tested_label_clearance_pt": 0.75,
+  "pdf_size_pt": [
+    443.53900146484375,
+    477.28399658203125
+  ],
+  "embedded_raster_images": 0,
+  "tikz_sha256": "f06e5de2a4dde9923606e869775ec53a143b47bd7ed74c8a7d21243f365eb118"
+}

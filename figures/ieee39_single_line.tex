@@ -4,16 +4,16 @@
 \begingroup
 \definecolor{SLDblue}{RGB}{0,104,164}
 \definecolor{SLDorange}{RGB}{184,76,0}
-\begin{tikzpicture}[x=1cm,y=1cm,font=\sffamily\fontsize{9}{10}\selectfont,
-wire/.style={draw=black!88,line width=.65pt,line cap=butt,line join=miter},
-candidate/.style={wire,draw=SLDorange,line width=.85pt},
-busbar/.style={draw=black,line width=1.65pt,line cap=butt},
-measured/.style={busbar,draw=SLDblue,line width=2.1pt},
+\begin{tikzpicture}[x=.55cm,y=.50cm,font=\sffamily\fontsize{7}{8}\selectfont,
+wire/.style={draw=black!88,line width=.50pt,line cap=butt,line join=miter},
+candidate/.style={wire,draw=SLDorange,line width=.65pt},
+busbar/.style={draw=black,line width=1.2pt,line cap=butt},
+measured/.style={busbar,draw=SLDblue,line width=1.45pt},
 number/.style={anchor=west,inner sep=0pt},
 badge/.style={draw=SLDblue,text=SLDblue,fill=SLDblue!5,line width=.55pt,
-minimum width=.29cm,minimum height=.29cm,inner sep=0pt,font=\sffamily\bfseries\fontsize{6.5}{7}\selectfont},
-load/.style={wire,-{Triangle[length=3.2pt,width=3pt]},draw=black!65},
-legend/.style={anchor=west,inner sep=0pt,font=\sffamily\fontsize{8}{9}\selectfont}]
+minimum width=.20cm,minimum height=.20cm,inner sep=0pt,font=\sffamily\bfseries\fontsize{5}{6}\selectfont},
+load/.style={wire,-{Triangle[length=2.5pt,width=2.4pt]},draw=black!65},
+legend/.style={anchor=west,inner sep=0pt,font=\sffamily\fontsize{6.5}{7}\selectfont}]
 % Transmission branches and transformer connections.
 % Branch 1--2
 \draw[wire] (1.9,9.6) -- (1.9,11.8);
@@ -25,9 +25,9 @@ legend/.style={anchor=west,inner sep=0pt,font=\sffamily\fontsize{8}{9}\selectfon
 \draw[wire] (2.7,11.8) -- (2.7,12.45) -- (3.25,12.45) -- (3.25,13);
 % Branch 2--30
 \draw[wire] (1.9,11.8) -- (1.9,13);
-\fill[white] (1.73,12.165) rectangle (2.07,12.635);
-\draw[wire] (1.9,12.31) circle[radius=.145cm];
-\draw[wire] (1.9,12.49) circle[radius=.145cm];
+\fill[white] (1.73,12.13) rectangle (2.07,12.67);
+\draw[wire] (1.9,12.3) circle[radius=.085cm];
+\draw[wire] (1.9,12.5) circle[radius=.085cm];
 % Branch 3--4
 \draw[candidate] (3.35,9.6) -- (3.35,7.4);
 % Branch 3--18
@@ -46,9 +46,9 @@ legend/.style={anchor=west,inner sep=0pt,font=\sffamily\fontsize{8}{9}\selectfon
 \draw[wire] (5,5.2) -- (5,4.65) -- (5.7,4.65) -- (5.7,4.1);
 % Branch 6--31
 \draw[wire] (4.35,5.2) -- (4.35,2.9);
-\fill[white] (4.18,3.265) rectangle (4.52,3.735);
-\draw[wire] (4.35,3.41) circle[radius=.145cm];
-\draw[wire] (4.35,3.59) circle[radius=.145cm];
+\fill[white] (4.18,3.23) rectangle (4.52,3.77);
+\draw[wire] (4.35,3.4) circle[radius=.085cm];
+\draw[wire] (4.35,3.6) circle[radius=.085cm];
 % Branch 7--8
 \draw[wire] (2.65,4.1) -- (2.65,2.9);
 % Branch 8--9
@@ -61,19 +61,19 @@ legend/.style={anchor=west,inner sep=0pt,font=\sffamily\fontsize{8}{9}\selectfon
 \draw[wire] (7.75,2.9) -- (7.75,4.1);
 % Branch 10--32
 \draw[wire] (7.15,2.9) -- (7.15,1.8);
-\fill[white] (6.98,2.115) rectangle (7.32,2.585);
-\draw[wire] (7.15,2.26) circle[radius=.145cm];
-\draw[wire] (7.15,2.44) circle[radius=.145cm];
+\fill[white] (6.98,2.08) rectangle (7.32,2.62);
+\draw[wire] (7.15,2.25) circle[radius=.085cm];
+\draw[wire] (7.15,2.45) circle[radius=.085cm];
 % Branch 12--11
 \draw[wire] (5.95,5.2) -- (5.95,4.1);
-\fill[white] (5.78,4.415) rectangle (6.12,4.885);
-\draw[wire] (5.95,4.56) circle[radius=.145cm];
-\draw[wire] (5.95,4.74) circle[radius=.145cm];
+\fill[white] (5.78,4.38) rectangle (6.12,4.92);
+\draw[wire] (5.95,4.55) circle[radius=.085cm];
+\draw[wire] (5.95,4.75) circle[radius=.085cm];
 % Branch 12--13
 \draw[wire] (7.25,5.2) -- (7.25,4.1);
-\fill[white] (7.08,4.415) rectangle (7.42,4.885);
-\draw[wire] (7.25,4.56) circle[radius=.145cm];
-\draw[wire] (7.25,4.74) circle[radius=.145cm];
+\fill[white] (7.08,4.38) rectangle (7.42,4.92);
+\draw[wire] (7.25,4.55) circle[radius=.085cm];
+\draw[wire] (7.25,4.75) circle[radius=.085cm];
 % Branch 13--14
 \draw[wire] (7.75,4.1) -- (7.75,7.4);
 % Branch 14--15
@@ -94,42 +94,42 @@ legend/.style={anchor=west,inner sep=0pt,font=\sffamily\fontsize{8}{9}\selectfon
 \draw[wire] (7.75,10.7) -- (7.75,11.8);
 % Branch 19--20
 \draw[wire] (9.45,5.2) -- (9.45,4.1);
-\fill[white] (9.28,4.415) rectangle (9.62,4.885);
-\draw[wire] (9.45,4.56) circle[radius=.145cm];
-\draw[wire] (9.45,4.74) circle[radius=.145cm];
+\fill[white] (9.28,4.38) rectangle (9.62,4.92);
+\draw[wire] (9.45,4.55) circle[radius=.085cm];
+\draw[wire] (9.45,4.75) circle[radius=.085cm];
 % Branch 19--33
 \draw[wire] (11.4,5.2) -- (11.4,2.9);
-\fill[white] (11.23,3.815) rectangle (11.57,4.285);
-\draw[wire] (11.4,3.96) circle[radius=.145cm];
-\draw[wire] (11.4,4.14) circle[radius=.145cm];
+\fill[white] (11.23,3.78) rectangle (11.57,4.32);
+\draw[wire] (11.4,3.95) circle[radius=.085cm];
+\draw[wire] (11.4,4.15) circle[radius=.085cm];
 % Branch 20--34
 \draw[wire] (9.45,4.1) -- (9.45,2.9);
-\fill[white] (9.28,3.265) rectangle (9.62,3.735);
-\draw[wire] (9.45,3.41) circle[radius=.145cm];
-\draw[wire] (9.45,3.59) circle[radius=.145cm];
+\fill[white] (9.28,3.23) rectangle (9.62,3.77);
+\draw[wire] (9.45,3.4) circle[radius=.085cm];
+\draw[wire] (9.45,3.6) circle[radius=.085cm];
 % Branch 21--22
 \draw[wire] (10.7,8.5) -- (10.7,9.05) -- (12.5,9.05) -- (12.5,8.5);
 % Branch 22--23
 \draw[wire] (13.1,8.5) -- (13.1,5.2);
 % Branch 22--35
 \draw[wire] (13.1,8.5) -- (13.1,9.6);
-\fill[white] (12.93,8.815) rectangle (13.27,9.285);
-\draw[wire] (13.1,8.96) circle[radius=.145cm];
-\draw[wire] (13.1,9.14) circle[radius=.145cm];
+\fill[white] (12.93,8.78) rectangle (13.27,9.32);
+\draw[wire] (13.1,8.95) circle[radius=.085cm];
+\draw[wire] (13.1,9.15) circle[radius=.085cm];
 % Branch 23--24
 \draw[candidate] (13.8,5.2) -- (13.8,11.25) -- (11.4,11.25) -- (11.4,11.8);
 % Branch 23--36
 \draw[wire] (13.1,5.2) -- (13.1,4.1);
-\fill[white] (12.93,4.415) rectangle (13.27,4.885);
-\draw[wire] (13.1,4.56) circle[radius=.145cm];
-\draw[wire] (13.1,4.74) circle[radius=.145cm];
+\fill[white] (12.93,4.38) rectangle (13.27,4.92);
+\draw[wire] (13.1,4.55) circle[radius=.085cm];
+\draw[wire] (13.1,4.75) circle[radius=.085cm];
 % Branch 25--26
 \draw[wire] (4.95,13) -- (4.95,12.45) -- (7.1,12.45) -- (7.1,13);
 % Branch 25--37
 \draw[wire] (3.55,13) -- (3.55,14.1);
-\fill[white] (3.38,13.315) rectangle (3.72,13.785);
-\draw[wire] (3.55,13.46) circle[radius=.145cm];
-\draw[wire] (3.55,13.64) circle[radius=.145cm];
+\fill[white] (3.38,13.28) rectangle (3.72,13.82);
+\draw[wire] (3.55,13.45) circle[radius=.085cm];
+\draw[wire] (3.55,13.65) circle[radius=.085cm];
 % Branch 26--27
 \draw[candidate] (7.75,13) -- (7.75,11.8);
 % Branch 26--28
@@ -140,180 +140,178 @@ legend/.style={anchor=west,inner sep=0pt,font=\sffamily\fontsize{8}{9}\selectfon
 \draw[wire] (10.55,13) -- (10.55,13.55) -- (14.25,13.55) -- (14.25,13);
 % Branch 29--38
 \draw[wire] (15,13) -- (15,11.8);
-\fill[white] (14.83,12.165) rectangle (15.17,12.635);
-\draw[wire] (15,12.31) circle[radius=.145cm];
-\draw[wire] (15,12.49) circle[radius=.145cm];
+\fill[white] (14.83,12.13) rectangle (15.17,12.67);
+\draw[wire] (15,12.3) circle[radius=.085cm];
+\draw[wire] (15,12.5) circle[radius=.085cm];
 % Generators use the conventional G and sine-in-circle symbol.
-\draw[wire] (1.9,13) -- (1.9,13.7);
-\draw[wire,fill=white] (1.9,14) circle[radius=.30cm];
-\node[inner sep=0pt,font=\sffamily\fontsize{8}{8}\selectfont] at (1.9,14.075) {G};
-\draw[wire,shift={(1.9,13.89)}] plot[domain=-.18:.18,samples=25] (\x,{.045*sin(1000*\x)});
-\draw[wire] (4.35,2.9) -- (4.35,2.25);
-\draw[wire,fill=white] (4.35,1.95) circle[radius=.30cm];
-\node[inner sep=0pt,font=\sffamily\fontsize{8}{8}\selectfont] at (4.35,2.025) {G};
-\draw[wire,shift={(4.35,1.84)}] plot[domain=-.18:.18,samples=25] (\x,{.045*sin(1000*\x)});
-\draw[wire] (7.15,1.8) -- (7.15,1.1);
-\draw[wire,fill=white] (7.15,0.8) circle[radius=.30cm];
-\node[inner sep=0pt,font=\sffamily\fontsize{8}{8}\selectfont] at (7.15,0.875) {G};
-\draw[wire,shift={(7.15,0.69)}] plot[domain=-.18:.18,samples=25] (\x,{.045*sin(1000*\x)});
-\draw[wire] (11.4,2.9) -- (11.4,2.25);
-\draw[wire,fill=white] (11.4,1.95) circle[radius=.30cm];
-\node[inner sep=0pt,font=\sffamily\fontsize{8}{8}\selectfont] at (11.4,2.025) {G};
-\draw[wire,shift={(11.4,1.84)}] plot[domain=-.18:.18,samples=25] (\x,{.045*sin(1000*\x)});
-\draw[wire] (9.45,2.9) -- (9.45,2.25);
-\draw[wire,fill=white] (9.45,1.95) circle[radius=.30cm];
-\node[inner sep=0pt,font=\sffamily\fontsize{8}{8}\selectfont] at (9.45,2.025) {G};
-\draw[wire,shift={(9.45,1.84)}] plot[domain=-.18:.18,samples=25] (\x,{.045*sin(1000*\x)});
-\draw[wire] (13.1,9.6) -- (13.1,10.25);
-\draw[wire,fill=white] (13.1,10.55) circle[radius=.30cm];
-\node[inner sep=0pt,font=\sffamily\fontsize{8}{8}\selectfont] at (13.1,10.625) {G};
-\draw[wire,shift={(13.1,10.44)}] plot[domain=-.18:.18,samples=25] (\x,{.045*sin(1000*\x)});
-\draw[wire] (13.1,4.1) -- (13.1,3.45);
-\draw[wire,fill=white] (13.1,3.15) circle[radius=.30cm];
-\node[inner sep=0pt,font=\sffamily\fontsize{8}{8}\selectfont] at (13.1,3.225) {G};
-\draw[wire,shift={(13.1,3.04)}] plot[domain=-.18:.18,samples=25] (\x,{.045*sin(1000*\x)});
-\draw[wire] (3.55,14.1) -- (3.55,14.75);
-\draw[wire,fill=white] (3.55,15.05) circle[radius=.30cm];
-\node[inner sep=0pt,font=\sffamily\fontsize{8}{8}\selectfont] at (3.55,15.125) {G};
-\draw[wire,shift={(3.55,14.94)}] plot[domain=-.18:.18,samples=25] (\x,{.045*sin(1000*\x)});
-\draw[wire] (15,11.8) -- (15,11.15);
-\draw[wire,fill=white] (15,10.85) circle[radius=.30cm];
-\node[inner sep=0pt,font=\sffamily\fontsize{8}{8}\selectfont] at (15,10.925) {G};
-\draw[wire,shift={(15,10.74)}] plot[domain=-.18:.18,samples=25] (\x,{.045*sin(1000*\x)});
-\draw[wire] (0.5,7.4) -- (0.5,8.05);
-\draw[wire,fill=white] (0.5,8.35) circle[radius=.30cm];
-\node[inner sep=0pt,font=\sffamily\fontsize{8}{8}\selectfont] at (0.5,8.425) {G};
-\draw[wire,shift={(0.5,8.24)}] plot[domain=-.18:.18,samples=25] (\x,{.045*sin(1000*\x)});
+\draw[wire] (1.9,13) -- (1.9,13.66);
+\draw[wire,fill=white] (1.9,14) circle[radius=.17cm];
+\node[inner sep=0pt,font=\sffamily\fontsize{5.5}{6}\selectfont] at (1.9,14.11) {G};
+\draw[wire,shift={(1.9,13.83)}] plot[domain=-.18:.18,samples=25] (\x,{.045*sin(1000*\x)});
+\draw[wire] (4.35,2.9) -- (4.35,2.29);
+\draw[wire,fill=white] (4.35,1.95) circle[radius=.17cm];
+\node[inner sep=0pt,font=\sffamily\fontsize{5.5}{6}\selectfont] at (4.35,2.06) {G};
+\draw[wire,shift={(4.35,1.78)}] plot[domain=-.18:.18,samples=25] (\x,{.045*sin(1000*\x)});
+\draw[wire] (7.15,1.8) -- (7.15,1.14);
+\draw[wire,fill=white] (7.15,0.8) circle[radius=.17cm];
+\node[inner sep=0pt,font=\sffamily\fontsize{5.5}{6}\selectfont] at (7.15,0.91) {G};
+\draw[wire,shift={(7.15,0.63)}] plot[domain=-.18:.18,samples=25] (\x,{.045*sin(1000*\x)});
+\draw[wire] (11.4,2.9) -- (11.4,2.29);
+\draw[wire,fill=white] (11.4,1.95) circle[radius=.17cm];
+\node[inner sep=0pt,font=\sffamily\fontsize{5.5}{6}\selectfont] at (11.4,2.06) {G};
+\draw[wire,shift={(11.4,1.78)}] plot[domain=-.18:.18,samples=25] (\x,{.045*sin(1000*\x)});
+\draw[wire] (9.45,2.9) -- (9.45,2.29);
+\draw[wire,fill=white] (9.45,1.95) circle[radius=.17cm];
+\node[inner sep=0pt,font=\sffamily\fontsize{5.5}{6}\selectfont] at (9.45,2.06) {G};
+\draw[wire,shift={(9.45,1.78)}] plot[domain=-.18:.18,samples=25] (\x,{.045*sin(1000*\x)});
+\draw[wire] (13.1,9.6) -- (13.1,10.21);
+\draw[wire,fill=white] (13.1,10.55) circle[radius=.17cm];
+\node[inner sep=0pt,font=\sffamily\fontsize{5.5}{6}\selectfont] at (13.1,10.66) {G};
+\draw[wire,shift={(13.1,10.38)}] plot[domain=-.18:.18,samples=25] (\x,{.045*sin(1000*\x)});
+\draw[wire] (13.1,4.1) -- (13.1,3.49);
+\draw[wire,fill=white] (13.1,3.15) circle[radius=.17cm];
+\node[inner sep=0pt,font=\sffamily\fontsize{5.5}{6}\selectfont] at (13.1,3.26) {G};
+\draw[wire,shift={(13.1,2.98)}] plot[domain=-.18:.18,samples=25] (\x,{.045*sin(1000*\x)});
+\draw[wire] (3.55,14.1) -- (3.55,14.71);
+\draw[wire,fill=white] (3.55,15.05) circle[radius=.17cm];
+\node[inner sep=0pt,font=\sffamily\fontsize{5.5}{6}\selectfont] at (3.55,15.16) {G};
+\draw[wire,shift={(3.55,14.88)}] plot[domain=-.18:.18,samples=25] (\x,{.045*sin(1000*\x)});
+\draw[wire] (15,11.8) -- (15,11.19);
+\draw[wire,fill=white] (15,10.85) circle[radius=.17cm];
+\node[inner sep=0pt,font=\sffamily\fontsize{5.5}{6}\selectfont] at (15,10.96) {G};
+\draw[wire,shift={(15,10.68)}] plot[domain=-.18:.18,samples=25] (\x,{.045*sin(1000*\x)});
+\draw[wire] (0.5,7.4) -- (0.5,8.01);
+\draw[wire,fill=white] (0.5,8.35) circle[radius=.17cm];
+\node[inner sep=0pt,font=\sffamily\fontsize{5.5}{6}\selectfont] at (0.5,8.46) {G};
+\draw[wire,shift={(0.5,8.18)}] plot[domain=-.18:.18,samples=25] (\x,{.045*sin(1000*\x)});
 % Connected loads, with candidate interventions in orange.
-\draw[load,draw=SLDorange,line width=.85pt] (4.3,9.6) -- (4.3,9.02);
-\draw[load,draw=SLDorange,line width=.85pt] (4.3,7.4) -- (4.3,6.82);
-\draw[load,draw=SLDorange,line width=.85pt] (3.05,4.1) -- (3.05,3.52);
+\draw[load,draw=SLDorange,line width=.65pt] (4.3,9.6) -- (4.3,9.02);
+\draw[load,draw=SLDorange,line width=.65pt] (4.3,7.4) -- (4.3,6.82);
+\draw[load,draw=SLDorange,line width=.65pt] (3.05,4.1) -- (3.05,3.52);
 \draw[load] (2.95,2.9) -- (2.95,2.32);
 \draw[load] (6.5,5.2) -- (6.5,5.78);
-\draw[load,draw=SLDorange,line width=.85pt] (8.4,8.5) -- (8.4,7.92);
-\draw[load,draw=SLDorange,line width=.85pt] (8.65,9.6) -- (8.65,9.02);
+\draw[load,draw=SLDorange,line width=.65pt] (8.4,8.5) -- (8.4,7.92);
+\draw[load,draw=SLDorange,line width=.65pt] (8.65,9.6) -- (8.65,9.02);
 \draw[load] (4.8,10.7) -- (4.8,10.12);
-\draw[load,draw=SLDorange,line width=.85pt] (8.9,4.1) -- (8.9,3.52);
+\draw[load,draw=SLDorange,line width=.65pt] (8.9,4.1) -- (8.9,3.52);
 \draw[load] (10.7,8.5) -- (10.7,7.92);
 \draw[load] (13.8,5.2) -- (13.8,4.62);
-\draw[load,draw=SLDorange,line width=.85pt] (10.35,11.8) -- (10.35,11.22);
+\draw[load,draw=SLDorange,line width=.65pt] (10.35,11.8) -- (10.35,11.22);
 \draw[load] (4.25,13) -- (4.25,12.42);
-\draw[load,draw=SLDorange,line width=.85pt] (7.1,13) -- (7.1,13.58);
+\draw[load,draw=SLDorange,line width=.65pt] (7.1,13) -- (7.1,13.58);
 \draw[load] (8.45,11.8) -- (8.45,11.22);
 \draw[load] (10.2,13) -- (10.2,12.42);
 \draw[load] (14.95,13) -- (14.95,13.58);
-\draw[load,draw=SLDorange,line width=.85pt] (4.85,2.9) -- (4.85,2.32);
+\draw[load,draw=SLDorange,line width=.65pt] (4.85,2.9) -- (4.85,2.32);
 \draw[load] (0.45,7.4) -- (0.45,6.82);
 % Busbars and labels. Labels have no opaque masks.
 \draw[busbar] (0.9,9.6) -- (2.2,9.6);
-\node[number] at (0.9,9.86) {1};
+\node[number] at (0.9,10.02) {1};
 \draw[measured] (0.9,11.8) -- (3.6,11.8);
-\node[number] at (1.02,12.06) {2};
+\node[number] at (1.02,12.22) {2};
 \draw[busbar] (3,9.6) -- (4.5,9.6);
-\node[number] at (3,9.86) {3};
+\node[number] at (3,10.02) {3};
 \draw[busbar] (3,7.4) -- (4.5,7.4);
-\node[number] at (3,7.66) {4};
+\node[number] at (3,7.82) {4};
 \draw[measured] (1.8,6.3) -- (4.5,6.3);
-\node[number] at (1.8,6.56) {5};
+\node[number] at (1.8,6.72) {5};
 \draw[measured] (3,5.2) -- (5.3,5.2);
-\node[number] at (3.03,5.46) {6};
+\node[number] at (3.03,5.62) {6};
 \draw[busbar] (2.3,4.1) -- (3.7,4.1);
-\node[number] at (2.3,4.36) {7};
+\node[number] at (2.3,4.52) {7};
 \draw[busbar] (1.6,2.9) -- (3.1,2.9);
-\node[number] at (1.6,3.16) {8};
+\node[number] at (1.6,3.32) {8};
 \draw[busbar] (0.9,1.8) -- (2.2,1.8);
-\node[number] at (0.9,2.06) {9};
+\node[number] at (0.7,2.22) {9};
 \draw[measured] (5.8,2.9) -- (8.1,2.9);
-\node[number] at (6.35,3.16) {10};
+\node[number] at (6.15,3.32) {10};
 \draw[busbar] (4.8,4.1) -- (6.2,4.1);
-\node[number] at (4.86,4.36) {11};
+\node[number] at (4.86,3.68) {11};
 \draw[busbar] (5.5,5.2) -- (7.4,5.2);
-\node[number] at (5.5,5.46) {12};
+\node[number] at (5.5,5.62) {12};
 \draw[busbar] (6.6,4.1) -- (8.1,4.1);
-\node[number] at (6.6,4.36) {13};
+\node[number] at (6.4,4.52) {13};
 \draw[busbar] (6.6,7.4) -- (8.1,7.4);
-\node[number] at (6.6,7.14) {14};
+\node[number] at (6.6,6.98) {14};
 \draw[busbar] (7.4,8.5) -- (8.8,8.5);
-\node[number] at (8.05,8.76) {15};
+\node[number] at (8.05,8.92) {15};
 \draw[busbar] (7.4,9.6) -- (10.9,9.6);
-\node[number] at (8.6,9.86) {16};
+\node[number] at (8.6,10.02) {16};
 \draw[busbar] (6.6,10.7) -- (8.1,10.7);
-\node[number] at (6.6,10.44) {17};
+\node[number] at (6.6,10.28) {17};
 \draw[busbar] (3.7,10.7) -- (5.1,10.7);
-\node[number] at (3.7,10.96) {18};
+\node[number] at (3.7,11.12) {18};
 \draw[measured] (9.1,5.2) -- (11.8,5.2);
-\node[number] at (10.5,5.46) {19};
+\node[number] at (10.5,5.62) {19};
 \draw[busbar] (8.6,4.1) -- (9.9,4.1);
-\node[number] at (8.6,4.36) {20};
+\node[number] at (8.6,4.52) {20};
 \draw[busbar] (9.9,8.5) -- (11.2,8.5);
-\node[number] at (9.93,8.24) {21};
+\node[number] at (9.93,8.08) {21};
 \draw[measured] (12,8.5) -- (13.4,8.5);
-\node[number] at (12,8.76) {22};
+\node[number] at (11.85,8.08) {22};
 \draw[busbar] (12.7,5.2) -- (14.1,5.2);
-\node[number] at (13.3,5.46) {23};
+\node[number] at (13.25,5.62) {23};
 \draw[busbar] (10.2,11.8) -- (11.6,11.8);
-\node[number] at (10.95,12.06) {24};
+\node[number] at (10.95,12.22) {24};
 \draw[busbar] (3,13) -- (5.3,13);
-\node[number] at (3,13.26) {25};
+\node[number] at (2.8,13.42) {25};
 \draw[busbar] (6.7,13) -- (8.8,13);
-\node[number] at (6.57,13.26) {26};
+\node[number] at (6.5,13.42) {26};
 \draw[busbar] (7.4,11.8) -- (8.8,11.8);
-\node[number] at (8.1,12.06) {27};
+\node[number] at (8.1,12.22) {27};
 \draw[busbar] (9.5,13) -- (10.9,13);
-\node[number] at (9.5,12.74) {28};
+\node[number] at (9.5,12.58) {28};
 \draw[measured] (13.6,13) -- (15.3,13);
-\node[number] at (13.6,12.74) {29};
+\node[number] at (13.6,12.58) {29};
 \draw[busbar] (1.2,13) -- (2.6,13);
-\node[number] at (1.2,13.26) {30};
+\node[number] at (0.95,13.42) {30};
 \draw[busbar] (3.7,2.9) -- (5.1,2.9);
-\node[number] at (3.7,3.16) {31};
+\node[number] at (3.5,3.32) {31};
 \draw[busbar] (6.6,1.8) -- (8.1,1.8);
-\node[number] at (6.6,1.54) {32};
+\node[number] at (6.2,1.38) {32};
 \draw[busbar] (10.8,2.9) -- (12.1,2.9);
-\node[number] at (11.65,3.16) {33};
+\node[number] at (11.65,3.32) {33};
 \draw[busbar] (9.1,2.9) -- (10.5,2.9);
-\node[number] at (9.75,3.16) {34};
+\node[number] at (9.75,3.32) {34};
 \draw[busbar] (12,9.6) -- (13.4,9.6);
-\node[number] at (12,9.86) {35};
+\node[number] at (12,10.02) {35};
 \draw[busbar] (12.7,4.1) -- (14.1,4.1);
-\node[number] at (13.45,4.36) {36};
+\node[number] at (14.15,4.52) {36};
 \draw[busbar] (3,14.1) -- (4.4,14.1);
-\node[number] at (3.9,14.36) {37};
+\node[number] at (3.9,14.52) {37};
 \draw[busbar] (14.1,11.8) -- (15.5,11.8);
-\node[number] at (14.1,12.06) {38};
+\node[number] at (14.1,11.38) {38};
 \draw[measured] (0.2,7.4) -- (1.55,7.4);
-\node[number] at (0.68,7.66) {39};
+\node[number] at (1.35,7.82) {39};
 % PMU voltage bus 2
-\node[badge] at (3.5,12.08) {P};
+\node[badge] at (3.5,12.16) {P};
 % PMU voltage bus 5
-\node[badge] at (4.18,6.58) {P};
+\node[badge] at (3.95,6.66) {P};
 % PMU voltage bus 6
-\node[badge] at (5.05,5.48) {P};
+\node[badge] at (5.05,5.56) {P};
 % PMU voltage bus 10
-\node[badge] at (6.95,3.18) {P};
+\node[badge] at (7.08,3.26) {P};
 % PMU voltage bus 19
-\node[badge] at (11.35,5.48) {P};
+\node[badge] at (11.5,5.56) {P};
 % PMU voltage bus 22
-\node[badge] at (12.55,8.18) {P};
+\node[badge] at (12.75,8.12) {P};
 % PMU voltage bus 29
-\node[badge] at (14.35,12.72) {P};
+\node[badge] at (14.42,12.64) {P};
 % PMU voltage bus 39
-\node[badge] at (1.65,7.12) {P};
+\node[badge] at (0.1,7.02) {P};
 % Legend, kept outside all electrical routes.
 \draw[black!20,line width=.35pt] (.2,.12) -- (15.5,.12);
-\draw[busbar] (.25,-.32) -- (.85,-.32);
-\node[legend] at (1.02,-.32) {Busbar};
-\draw[measured] (3,-.32) -- (3.6,-.32);
-\node[badge] at (3.86,-.32) {P};
-\node[legend] at (4.15,-.32) {PMU voltage bus};
-\draw[wire] (7.5,-.32) circle[radius=.145cm];
-\draw[wire] (7.68,-.32) circle[radius=.145cm];
-\node[legend] at (8.02,-.32) {Transformer};
-\draw[load] (11.2,-.07) -- (11.2,-.57);
-\node[legend] at (11.55,-.32) {Connected load};
-\draw[candidate] (3,-.93) -- (3.75,-.93);
-\node[legend] at (4.15,-.93) {Candidate line opening};
-\draw[load,draw=SLDorange,line width=.85pt] (9.45,-.68) -- (9.45,-1.18);
-\node[legend] at (9.8,-.93) {Candidate load change};
+\begin{scope}[x=1cm,y=1cm]
+\draw[measured] (.2,-.20) -- (.55,-.20);
+\node[badge] at (.72,-.20) {P};
+\node[legend] at (.93,-.20) {PMU voltage bus};
+\draw[wire] (4.8,-.20) circle[radius=.085cm];
+\draw[wire] (4.9,-.20) circle[radius=.085cm];
+\node[legend] at (5.18,-.20) {Transformer};
+\draw[candidate] (.2,-.59) -- (.72,-.59);
+\node[legend] at (.93,-.59) {Candidate line opening};
+\draw[load,draw=SLDorange,line width=.65pt] (4.85,-.44) -- (4.85,-.74);
+\node[legend] at (5.18,-.59) {Candidate load change};
+\end{scope}
 \end{tikzpicture}
 \endgroup

@@ -9,12 +9,8 @@ or an imperfect physical prediction. The task is to distinguish these
 explanations using only the reports available at the decision time.
 
 \begin{figure*}[t]\centering
-\resizebox{\textwidth}{!}{\input{figures/narrative_architecture}}
-\caption{Implemented causal attribution. Network equations predict the PMU
-response of competing load/line histories from retained past states.
-Evidence updates their active and originating-cause masses. Event truth
-enters only evaluation. The separate signature experiment tests a response
-approximation; it is not an extra stage silently added to this algorithm.}
+\includegraphics[width=\textwidth]{figures/generated/narrative_architecture.pdf}
+\caption{Implemented physical-history attribution, organized into model preparation (A), startup context (B), per-report inference (C), and publication (D). The bank predicts before state correction and saves model evidence before proposal selection. Candidate replay replaces a likelihood suffix, so each report contributes once. The feedback loop retains physical and instrumental memory through restoration. Reserved event truth is used only after predictions are sealed.}
 \label{fig:joint-architecture}\end{figure*}
 
 Physical restoration is not electrical recovery. A detector that returns

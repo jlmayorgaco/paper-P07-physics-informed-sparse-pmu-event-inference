@@ -1,13 +1,159 @@
-\begin{tikzpicture}[font=\sffamily\footnotesize\mdseries,>=Latex,
- box/.style={draw=black!40,rounded corners=3pt,align=left,text width=4.45cm,minimum height=1.48cm,inner sep=6pt},
- arr/.style={->,thick,draw=black!65}]
-\node[box,fill=accessblue!8] (y) at (0,0) {\textbf{1. Receive a PMU report}\\Eight PMUs: $V$, terminal $I$, $f$, ROCOF.\\Observed history through time $t$.};
-\node[box,fill=green!7] (physics) at (5.35,0) {\textbf{2. Predict a physical response}\\DAE dynamics and network constraints.\\Oriented terminal-current map.};
-\node[box,fill=orange!9] (hyp) at (10.7,0) {\textbf{3. Compare physical histories}\\New load/line or existing recovery.\\Replay from the estimated past state.};
-\node[box,fill=orange!9] (like) at (10.7,-2.7) {\textbf{4. Compare prediction and data}\\Filter state and colored noise.\\Integrate severity; score a report once.};
-\node[box,fill=green!7] (mass) at (5.35,-2.7) {\textbf{5. Retain active and cause masses}\\Mix fixed network models into $M_c(t)$.\\$\Delta M$: evidence change + reweighting.};
-\node[box,fill=accessblue!8] (out) at (0,-2.7) {\textbf{6. Emit a causal decision}\\Alarm/diagnosis emission times.\\Source candidates and restoration.};
-\draw[arr] (y)--(physics);\draw[arr] (physics)--(hyp);\draw[arr] (hyp)--(like);\draw[arr] (like)--(mass);\draw[arr] (mass)--(out);
-\node[draw=black!35,fill=black!3,rounded corners=2pt,align=center,text width=15.1cm,minimum height=.68cm] (eval) at (5.35,-4.8) {\textbf{Evaluation only:} seal predictions, then compare with reserved event truth. Physical OFF and electrical recovery are different times.};
-\draw[arr,dashed] (out.south)--++(0,-.45)-|(eval.west);
+% Implemented R11 computation, cross-checked against sections/article_method.tex.
+% Do not add proposed joint-inference, neural, or integrity stages to this path.
+\begingroup
+\definecolor{FlowBlue}{RGB}{0,101,158}
+\definecolor{FlowTeal}{RGB}{0,113,104}
+\definecolor{FlowAmber}{RGB}{163,86,17}
+\definecolor{FlowPurple}{RGB}{107,75,137}
+\definecolor{FlowGreen}{RGB}{54,113,62}
+\begin{tikzpicture}[
+  x=1cm,y=1cm,>=Latex,
+  font=\sffamily\fontsize{8}{10}\selectfont,
+  block/.style={draw=black!45,line width=.6pt,rounded corners=1.5pt,
+    text width=3.65cm,minimum height=1.34cm,inner sep=4pt,align=left},
+  obs/.style={block,draw=FlowBlue!80,fill=FlowBlue!5},
+  phys/.style={block,draw=FlowTeal!80,fill=FlowTeal!5},
+  hist/.style={block,draw=FlowAmber!80,fill=FlowAmber!6},
+  evid/.style={block,draw=FlowPurple!80,fill=FlowPurple!5},
+  decision/.style={block,draw=FlowGreen!80,fill=FlowGreen!5},
+  flow/.style={-{Latex[length=4pt,width=3pt]},draw=black!65,line width=.65pt},
+  memory/.style={flow,dashed,draw=FlowTeal},
+  phase/.style={anchor=west,inner sep=0pt,font=\sffamily\bfseries\fontsize{9}{11}\selectfont},
+  small/.style={font=\sffamily\fontsize{7}{8}\selectfont,inner sep=1pt}
+]
+% Phase boundaries precede all nodes and wires.
+\draw[draw=FlowTeal!24,fill=FlowTeal!1,rounded corners=3pt] (0,9.45) rectangle (17.3,11.85);
+\draw[draw=FlowBlue!24,fill=FlowBlue!1,rounded corners=3pt] (0,7.05) rectangle (17.3,9.30);
+\draw[draw=black!24,fill=black!1,rounded corners=3pt] (0,2.70) rectangle (17.3,6.95);
+\draw[draw=FlowGreen!24,fill=FlowGreen!1,rounded corners=3pt] (0,-.02) rectangle (17.3,2.52);
+\node[phase,text=FlowTeal] at (.25,11.48) {A\quad PREPARE THE PHYSICAL MODEL BANK};
+\node[phase,text=FlowBlue] at (.25,8.98) {B\quad ESTIMATE AND FREEZE THE STARTUP CONTEXT};
+\node[phase,text=black!80] at (.25,6.75) {C\quad UPDATE CAUSALLY AT EACH PMU REPORT};
+\node[phase,text=FlowGreen] at (.25,2.20) {D\quad DECIDE AND PUBLISH};
+
+% A: construction before monitoring.
+\node[phys] (network) at (2.1,10.35) {
+  \textbf{Network and PMU map}\\
+  DAE; $Y_{\rm bus}$, $Y_{\rm term}$\\
+  Eight PMUs; oriented $I$};
+\node[phys] (models) at (6.45,10.35) {
+  \textbf{Five R/X hypotheses}\\
+  Nominal; global $\pm2\%$ R/X\\
+  Branch subset: $\pm3\%$ R/X};
+\node[phys] (reduce) at (10.8,10.35) {
+  \textbf{Switched predictors}\\
+  $A_{\ell,q},B_{\ell,q},C_{\ell,q},D_{\ell,q}$\\
+  Load inputs; line modes};
+\node[phys] (augment) at (15.15,10.35) {
+  \textbf{Augmented state}\\
+  Physical and filter memory\\
+  Latent AR discrepancy};
+\draw[flow,draw=FlowTeal] (network) -- (models);
+\draw[flow,draw=FlowTeal] (models) -- (reduce);
+\draw[flow,draw=FlowTeal] (reduce) -- (augment);
+
+% B: prefix fitting is not scored again as model-selection evidence.
+\node[obs] (prefix) at (2.1,7.95) {
+  \textbf{Startup measurements}\\
+  300 reports; eight PMUs\\
+  Context, phase and noise};
+\node[obs] (context) at (6.45,7.95) {
+  \textbf{Model-specific context}\\
+  Estimate operating factors\\
+  Keep R/X hypotheses fixed};
+\node[obs] (freeze) at (10.8,7.95) {
+  \textbf{Frozen correction}\\
+  Fix V/I intercept $\widehat b_\ell$\\
+  Center, scale and whiten};
+\node[phys] (initialize) at (15.15,7.95) {
+  \textbf{Initialize histories}\\
+  Physical, filter and AR state\\
+  10-s memory; 12-s warmup};
+\draw[flow,draw=FlowBlue] (prefix) -- (context);
+\draw[flow,draw=FlowBlue] (context) -- (freeze);
+\draw[flow,draw=FlowBlue] (freeze) -- (initialize);
+\draw[flow,draw=FlowTeal] (augment.south) -- (initialize.north);
+
+% C: eight operations in a serpentine path, with a retained-state feedback loop.
+\node[obs] (report) at (2.1,5.65) {
+  \textbf{1\quad PMU report $k$}\\
+  $V,I,f,\mathrm{ROCOF}$; 30/s\\
+  47 retained coordinates};
+\node[obs] (transform) at (6.45,5.65) {
+  \textbf{2\quad Transform reports}\\
+  Frozen intercept and scale\\
+  Whiten instrument noise};
+\node[phys] (predict) at (10.8,5.65) {
+  \textbf{3\quad Predict histories}\\
+  State / covariance forecast\\
+  Save model density};
+\node[hist] (birth) at (15.15,5.65) {
+  \textbf{4\quad Propose onsets}\\
+  Birth screen: lags 0--18\\
+  Retrieve pre-onset states};
+\node[hist] (replay) at (15.15,3.65) {
+  \textbf{5\quad Replay histories}\\
+  New input versus recovery\\
+  Replace likelihood suffix};
+\node[evid] (score) at (10.8,3.65) {
+  \textbf{6\quad Score histories}\\
+  Load: integrate severity\\
+  Line: switched predictor};
+\node[evid] (update) at (6.45,3.65) {
+  \textbf{7\quad Correct and weight}\\
+  Update state and severity\\
+  Saved density $\rightarrow w_{\ell,k}$};
+\node[phys] (carry) at (2.1,3.65) {
+  \textbf{8\quad Retain through OFF}\\
+  No physical-state reset\\
+  Keep history and cause};
+\draw[flow,draw=FlowBlue] (initialize.south) -- (15.15,6.48) -- (2.1,6.48) -- (report.north);
+\draw[flow] (report) -- (transform);
+\draw[flow] (transform) -- (predict);
+\draw[flow] (predict) -- (birth);
+\draw[flow,draw=FlowAmber] (birth) -- (replay);
+\draw[flow,draw=FlowAmber] (replay) -- (score);
+\draw[flow,draw=FlowPurple] (score) -- (update);
+\draw[flow,draw=FlowTeal] (update) -- (carry);
+\node[small,text=FlowPurple,anchor=south] at (8.63,3.70) {$L_{h,k}$};
+\node[small,text=FlowAmber] at (8.65,4.65)
+  {History $h$: family, asset, onset, severity and restoration};
+\draw[memory] (carry.west) -- (-.18,3.65) -- (-.18,5.65) -- (report.west);
+\node[small,rotate=90,text=FlowTeal] at (-.43,4.65) {retained state; next report};
+
+% D: active-event mass and originating-cause mass are different outputs.
+\node[decision,text width=4.65cm] (mass) at (2.85,.85) {
+  \textbf{Aggregate physical attribution}\\
+  Active mass $M_{c,k}$; cause mass $\Gamma_{c,k}$\\
+  $\Delta M$: evolution + model reweighting};
+\node[decision,text width=4.4cm] (rules) at (8.65,.85) {
+  \textbf{Apply fixed publication rules}\\
+  Alarm: $0.99$ for 6 reports\\
+  OFF: $0.99$ for 15 reports};
+\node[decision,text width=4.5cm] (output) at (14.6,.85) {
+  \textbf{Time-stamped decisions}\\
+  Alarm, family/source, restoration\\
+  Onset estimate; last report used};
+\draw[flow,draw=FlowTeal] (carry.south) -- (2.1,2.60) -- (4.6,2.60) -- ([xshift=1.75cm]mass.north);
+\draw[flow,draw=FlowGreen] (mass) -- (rules);
+\draw[flow,draw=FlowGreen] (rules) -- (output);
+
+% Truth is downstream of sealed predictions, never an inference input.
+\node[draw=black!25,fill=black!3,rounded corners=2pt,text width=16.9cm,
+  minimum height=.65cm,align=left,inner sep=4pt,font=\sffamily\fontsize{7}{9}\selectfont]
+  (evaluation) at (8.65,-.85) {
+  \textbf{Evaluation only, after sealing predictions:}
+  reserved event truth $\rightarrow$ timely source decisions, extra alarms and episode closure.};
+\draw[flow,dashed] (output.south) -- (14.6,-.32) -- ([xshift=5.95cm]evaluation.north);
+
+\foreach \x/\col/\label in {
+ .25/FlowBlue/Measurements and context,
+ 4.10/FlowTeal/Physical state and memory,
+ 8.25/FlowAmber/Competing histories,
+ 11.55/FlowPurple/Conditional evidence,
+ 14.9/FlowGreen/Decisions}{
+ \fill[\col] (\x,-1.62) rectangle ++(.12,.12);
+ \node[small,anchor=west,text=black!75] at (\x+.20,-1.56) {\label};
+}
 \end{tikzpicture}
+\endgroup

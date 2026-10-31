@@ -32,10 +32,11 @@ and ROCOF in Hz/s. Internal centered coordinates do not replace the
 absolute frequency contract. These are reporting-rate phasor measurements;
 waveform harmonics or THD are not measured by these channels.
 
-\begin{figure*}[t]\centering
-\includegraphics[width=.86\textwidth]{figures/generated/narrative_topology.pdf}
-\caption{Electrical single-line diagram of the frozen IEEE-39 model: 39 busbars, 46 branches, 12 transformers (overlapping circles), and 10 generators (sine symbols). Arrows denote connected loads; orange arrows and lines mark the nine load-change buses and nine candidate line interventions. Blue busbars and P badges identify the eight voltage-measurement buses; current channels retain the separate oriented terminal assignments described in the measurement contract. All branches follow orthogonal routes without wire crossings. The drawing is schematic, not a geographic or electrical-distance map.}
-\label{fig:narrative-topology}\end{figure*}
+% PROTECTED FIGURE: retain this single-column IEEE-39 diagram. See AGENTS.md.
+\begin{figure}[t]\centering
+\includegraphics[width=\columnwidth]{figures/generated/narrative_topology.pdf}
+\caption{IEEE 39-bus single-line diagram: 46 branches, 12 transformers and 10 generators. Blue bars and P marks locate the eight voltage PMUs. Orange branches and load arrows identify the nine line and nine load candidates; gray arrows denote other loads. Current terminals follow the separate measurement contract. All routes are orthogonal.}
+\label{fig:narrative-topology}\end{figure}
 
 The physical model is
 \begin{align}

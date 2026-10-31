@@ -2,6 +2,8 @@
 from pathlib import Path
 import csv, hashlib, json, shutil, subprocess
 ROOT=Path(__file__).resolve().parents[1]
+# Compact physical coordinates; font sizes are NOT scaled down with the network.
+XS, YS = .55, .50
 # Busbars: left, right, height. Branches use distinct, deliberate taps.
 BARS={
 1:(.9,2.2,9.6),2:(.9,3.6,11.8),3:(3,4.5,9.6),4:(3,4.5,7.4),
@@ -77,8 +79,15 @@ LABELS={2:(1.02,12.06),6:(3.03,5.46),10:(6.35,3.16),11:(4.86,4.36),
 27:(8.1,12.06),28:(9.5,12.74),29:(13.6,12.74),30:(1.2,13.26),
 31:(3.7,3.16),32:(6.6,1.54),33:(11.65,3.16),34:(9.75,3.16),
 35:(12,9.86),36:(13.45,4.36),37:(3.9,14.36),38:(14.1,12.06),39:(.68,7.66)}
-PMU_BADGES={2:(3.5,12.08),5:(4.18,6.58),6:(5.05,5.48),10:(6.95,3.18),
-19:(11.35,5.48),22:(12.55,8.18),29:(14.35,12.72),39:(1.65,7.12)}
+LABELS.update({9:(.7,2.12),10:(6.15,3.16),13:(6.4,4.36),22:(11.83,8.82),
+               23:(13.25,5.5),25:(2.8,13.32),26:(6.5,13.32),
+               31:(3.5,3.22),32:(6.5,1.48),39:(.56,7.72)})
+LABELS={n:(LABELS.get(n,(l,y+.32))[0],y+(.42 if LABELS.get(n,(l,y+.32))[1]>y else -.42))
+        for n,(l,r,y) in BARS.items()}
+LABELS.update({11:(4.86,3.68),22:(11.85,8.08),30:(.95,13.42),
+               32:(6.2,1.38),36:(14.15,4.52),38:(14.1,11.38),39:(1.35,7.82)})
+PMU_BADGES={2:(3.5,12.16),5:(3.95,6.66),6:(5.05,5.56),10:(7.08,3.26),
+19:(11.5,5.56),22:(12.75,8.12),29:(14.42,12.64),39:(.1,7.02)}
 
 def digest(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 def point(p): return f'({p[0]:g},{p[1]:g})'
@@ -127,7 +136,7 @@ def audit_geometry(branches,buses,pmus):
                     'wire crossing/overlap',edge,other,hit)
     devices=[]
     for n,(x,y) in GENERATORS.items():
-        by=BARS[n][2];end=y+(.3 if by>y else -.3)
+        by=BARS[n][2];end=y+(.34 if by>y else -.34)
         devices.append((n,(x,by),(x,end),'generator'))
     for n,(x,dr) in LOADS.items():
         by=BARS[n][2];devices.append((n,(x,by),(x,by+dr*.58),'load'))
@@ -152,16 +161,16 @@ r'% P badges identify voltage buses, not the separate oriented current terminals
 r'\begingroup',
 r'\definecolor{SLDblue}{RGB}{0,104,164}',
 r'\definecolor{SLDorange}{RGB}{184,76,0}',
-r'\begin{tikzpicture}[x=1cm,y=1cm,font=\sffamily\fontsize{9}{10}\selectfont,',
-r'wire/.style={draw=black!88,line width=.65pt,line cap=butt,line join=miter},',
-r'candidate/.style={wire,draw=SLDorange,line width=.85pt},',
-r'busbar/.style={draw=black,line width=1.65pt,line cap=butt},',
-r'measured/.style={busbar,draw=SLDblue,line width=2.1pt},',
+r'\begin{tikzpicture}[x=.55cm,y=.50cm,font=\sffamily\fontsize{7}{8}\selectfont,',
+r'wire/.style={draw=black!88,line width=.50pt,line cap=butt,line join=miter},',
+r'candidate/.style={wire,draw=SLDorange,line width=.65pt},',
+r'busbar/.style={draw=black,line width=1.2pt,line cap=butt},',
+r'measured/.style={busbar,draw=SLDblue,line width=1.45pt},',
 r'number/.style={anchor=west,inner sep=0pt},',
 r'badge/.style={draw=SLDblue,text=SLDblue,fill=SLDblue!5,line width=.55pt,',
-r'minimum width=.29cm,minimum height=.29cm,inner sep=0pt,font=\sffamily\bfseries\fontsize{6.5}{7}\selectfont},',
-r'load/.style={wire,-{Triangle[length=3.2pt,width=3pt]},draw=black!65},',
-r'legend/.style={anchor=west,inner sep=0pt,font=\sffamily\fontsize{8}{9}\selectfont}]',
+r'minimum width=.20cm,minimum height=.20cm,inner sep=0pt,font=\sffamily\bfseries\fontsize{5}{6}\selectfont},',
+r'load/.style={wire,-{Triangle[length=2.5pt,width=2.4pt]},draw=black!65},',
+r'legend/.style={anchor=west,inner sep=0pt,font=\sffamily\fontsize{6.5}{7}\selectfont}]',
 r'% Transmission branches and transformer connections.']
     for row in branches:
         edge=(int(row['src_bus']),int(row['dst_bus']));pts=ROUTES[edge]
@@ -170,76 +179,74 @@ r'% Transmission branches and transformer connections.']
         if int(row['transformer']):
             assert len(pts)==2 and pts[0][0]==pts[1][0]
             x=pts[0][0];y=3.5 if edge==(6,31) else (pts[0][1]+pts[1][1])/2
-            lines += [f'\\fill[white] {point((x-.17,y-.235))} rectangle {point((x+.17,y+.235))};',
-                f'\\draw[wire] {point((x,y-.09))} circle[radius=.145cm];',
-                f'\\draw[wire] {point((x,y+.09))} circle[radius=.145cm];']
+            lines += [f'\\fill[white] {point((x-.17,y-.27))} rectangle {point((x+.17,y+.27))};',
+                f'\\draw[wire] {point((x,y-.10))} circle[radius=.085cm];',
+                f'\\draw[wire] {point((x,y+.10))} circle[radius=.085cm];']
     lines += ['% Generators use the conventional G and sine-in-circle symbol.']
     for n,(x,y) in GENERATORS.items():
-        by=BARS[n][2];end=y+(.30 if by>y else -.30)
+        by=BARS[n][2];end=y+(.34 if by>y else -.34)
         lines += [f'\\draw[wire] {point((x,by))} -- {point((x,end))};',
-            f'\\draw[wire,fill=white] {point((x,y))} circle[radius=.30cm];',
-            f'\\node[inner sep=0pt,font=\\sffamily\\fontsize{{8}}{{8}}\\selectfont] at {point((x,y+.075))} {{G}};',
-            f'\\draw[wire,shift={{{point((x,y-.11))}}}] plot[domain=-.18:.18,samples=25] (\\x,{{.045*sin(1000*\\x)}});']
+            f'\\draw[wire,fill=white] {point((x,y))} circle[radius=.17cm];',
+            f'\\node[inner sep=0pt,font=\\sffamily\\fontsize{{5.5}}{{6}}\\selectfont] at {point((x,y+.11))} {{G}};',
+            f'\\draw[wire,shift={{{point((x,y-.17))}}}] plot[domain=-.18:.18,samples=25] (\\x,{{.045*sin(1000*\\x)}});']
     lines += ['% Connected loads, with candidate interventions in orange.']
     for n,(x,dr) in LOADS.items():
-        y=BARS[n][2];style='load,draw=SLDorange,line width=.85pt' if n in loads else 'load'
+        y=BARS[n][2];style='load,draw=SLDorange,line width=.65pt' if n in loads else 'load'
         lines += [f'\\draw[{style}] {point((x,y))} -- {point((x,y+dr*.58))};']
     lines += ['% Busbars and labels. Labels have no opaque masks.']
     for n,(l,r,y) in sorted(BARS.items()):
-        style='measured' if n in PMU_BADGES else 'busbar';lp=LABELS.get(n,(l,y+.26))
+        style='measured' if n in PMU_BADGES else 'busbar';lp=LABELS.get(n,(l,y+.32))
         lines += [f'\\draw[{style}] {point((l,y))} -- {point((r,y))};',
             f'\\node[number] at {point(lp)} {{{n}}};']
     for n,p in PMU_BADGES.items():lines += [f'% PMU voltage bus {n}',f'\\node[badge] at {point(p)} {{P}};']
     lines += [
 r'% Legend, kept outside all electrical routes.',
 r'\draw[black!20,line width=.35pt] (.2,.12) -- (15.5,.12);',
-r'\draw[busbar] (.25,-.32) -- (.85,-.32);',
-r'\node[legend] at (1.02,-.32) {Busbar};',
-r'\draw[measured] (3,-.32) -- (3.6,-.32);',
-r'\node[badge] at (3.86,-.32) {P};',
-r'\node[legend] at (4.15,-.32) {PMU voltage bus};',
-r'\draw[wire] (7.5,-.32) circle[radius=.145cm];',
-r'\draw[wire] (7.68,-.32) circle[radius=.145cm];',
-r'\node[legend] at (8.02,-.32) {Transformer};',
-r'\draw[load] (11.2,-.07) -- (11.2,-.57);',
-r'\node[legend] at (11.55,-.32) {Connected load};',
-r'\draw[candidate] (3,-.93) -- (3.75,-.93);',
-r'\node[legend] at (4.15,-.93) {Candidate line opening};',
-r'\draw[load,draw=SLDorange,line width=.85pt] (9.45,-.68) -- (9.45,-1.18);',
-r'\node[legend] at (9.8,-.93) {Candidate load change};',
+r'\begin{scope}[x=1cm,y=1cm]',
+r'\draw[measured] (.2,-.20) -- (.55,-.20);',
+r'\node[badge] at (.72,-.20) {P};',
+r'\node[legend] at (.93,-.20) {PMU voltage bus};',
+r'\draw[wire] (4.8,-.20) circle[radius=.085cm];',
+r'\draw[wire] (4.9,-.20) circle[radius=.085cm];',
+r'\node[legend] at (5.18,-.20) {Transformer};',
+r'\draw[candidate] (.2,-.59) -- (.72,-.59);',
+r'\node[legend] at (.93,-.59) {Candidate line opening};',
+r'\draw[load,draw=SLDorange,line width=.65pt] (4.85,-.44) -- (4.85,-.74);',
+r'\node[legend] at (5.18,-.59) {Candidate load change};',
+r'\end{scope}',
 r'\end{tikzpicture}',r'\endgroup','']
     (root/'figures/ieee39_single_line.tex').write_text('\n'.join(lines),encoding='utf-8')
 
 def audit_pdf(page, branches):
     """Check actual rendered glyph bounds against wires and device envelopes."""
     import pymupdf
-    scale=72/2.54
+    sx=XS*72/2.54;sy=YS*72/2.54
     bus=next(d for d in page.get_drawings()
-             if abs(d['rect'].width-3.5*scale)<.1 and d['rect'].height<.01)
-    ox=bus['rect'].x0-7.4*scale;oy=bus['rect'].y0+9.6*scale
-    def rect(a,b,pad=.4):
-        r=pymupdf.Rect(ox+min(a[0],b[0])*scale,oy-max(a[1],b[1])*scale,
-                       ox+max(a[0],b[0])*scale,oy-min(a[1],b[1])*scale)
+             if abs(d['rect'].width-3.5*sx)<.1 and d['rect'].height<.01)
+    ox=bus['rect'].x0-7.4*sx;oy=bus['rect'].y0+9.6*sy
+    def rect(a,b,pad=.3):
+        r=pymupdf.Rect(ox+min(a[0],b[0])*sx,oy-max(a[1],b[1])*sy,
+                       ox+max(a[0],b[0])*sx,oy-min(a[1],b[1])*sy)
         return r+(-pad,-pad,pad,pad)
     objects=[]
     for edge,pts in ROUTES.items():
         objects += [(str(edge),rect(a,b)) for a,b in zip(pts,pts[1:])]
-    for n,(l,r,y) in BARS.items():objects.append((f'bus {n}',rect((l,y),(r,y),1.1)))
+    for n,(l,r,y) in BARS.items():objects.append((f'bus {n}',rect((l,y),(r,y),.75)))
     for n,(x,y) in GENERATORS.items():
         by=BARS[n][2]
-        objects += [(f'generator lead {n}',rect((x,by),(x,y+(.3 if by>y else -.3)))),
-                    (f'generator {n}',rect((x-.3,y-.3),(x+.3,y+.3)))]
+        objects += [(f'generator lead {n}',rect((x,by),(x,y+(.34 if by>y else -.34)))),
+                    (f'generator {n}',rect((x-.17/XS,y-.17/YS),(x+.17/XS,y+.17/YS)))]
     for n,(x,dr) in LOADS.items():
         y=BARS[n][2];objects.append((f'load {n}',rect((x,y),(x,y+dr*.58))))
     for row in branches:
         if not int(row['transformer']):continue
         edge=(int(row['src_bus']),int(row['dst_bus']));pts=ROUTES[edge]
         x=pts[0][0];y=3.5 if edge==(6,31) else (pts[0][1]+pts[1][1])/2
-        objects.append((f'transformer {edge}',rect((x-.145,y-.235),(x+.145,y+.235))))
+        objects.append((f'transformer {edge}',rect((x-.085/XS,y-.27),(x+.085/XS,y+.27))))
     numbers=[w for w in page.get_text('words') if w[4].isdigit()]
     assert sorted(int(w[4]) for w in numbers)==list(range(1,40))
-    labels=[(w[4],pymupdf.Rect(w[:4])+(-.75,-.75,.75,.75)) for w in numbers]
-    labels += [(f'PMU {n}',rect((x-.145,y-.145),(x+.145,y+.145),.75))
+    labels=[(w[4],pymupdf.Rect(w[:4])+(-.3,-.3,.3,.3)) for w in numbers]
+    labels += [(f'PMU {n}',rect((x-.1/XS,y-.1/YS),(x+.1/XS,y+.1/YS),.3))
                for n,(x,y) in PMU_BADGES.items()]
     for name,box in labels:
         for other,ob in objects:
@@ -248,7 +255,8 @@ def audit_pdf(page, branches):
         for other,ob in labels[i+1:]:
             assert not box.intersects(ob),(name,'rendered label overlaps',other)
     return dict(rendered_bus_labels=39,rendered_pmu_badges=8,label_wire_device_overlaps=0,
-                label_label_overlaps=0,minimum_tested_label_clearance_pt=.75)
+                label_label_overlaps=0,minimum_tested_label_clearance_pt=.3,
+                nominal_bus_font_pt=7,layout='compact single-column')
 
 def render(root=ROOT):
     root=Path(root);source=root/'figures/source/ieee39_single_line'

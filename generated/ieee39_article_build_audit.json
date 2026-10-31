@@ -1,18 +1,30 @@
 {
   "date": "2026-10-31",
-  "method": "Export explicitly staged inputs using git show :path; compile the figure and article with scripts/build_ieee39_review.ps1; compare every page at 72 dpi. PDF creation metadata excluded.",
+  "revision": "compact single-column topology and phased method architecture",
+  "method": "Compile from a clean export of indexed inputs and compare every freshly built PDF page at 72 dpi. PDF creation metadata excluded.",
   "checks": {
     "figures/generated/narrative_topology.pdf": {
       "pages": 1,
+      "fresh_build_pdf": "build/layout_20261031/clean-index/build/ieee39_review/main.pdf",
+      "clean_index_render_identical_all_pages": true
+    },
+    "figures/generated/narrative_architecture.pdf": {
+      "pages": 1,
+      "fresh_build_pdf": "build/layout_20261031/clean-index/build/method_architecture/main.pdf",
       "clean_index_render_identical_all_pages": true
     },
     "output/pdf/P07_Event_Attribution_Article.pdf": {
       "pages": 15,
+      "fresh_build_pdf": "build/layout_20261031/clean-index/main.pdf",
       "clean_index_render_identical_all_pages": true
     }
   },
   "frozen_source_bytes_preserved": true,
+  "protected_figures_verified_in_pdf": true,
+  "event_figure_number": 2,
+  "event_article_page": 4,
   "topology_figure_number": 3,
   "topology_article_page": 5,
+  "architecture_article_page": 2,
   "scientific_results_revalidated": false
 }

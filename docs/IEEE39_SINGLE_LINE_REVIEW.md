@@ -1,5 +1,10 @@
 # IEEE-39 single-line figure review — 2026-10-31
 
+Updated by the subsequent user request: the active figure is now compact and
+single-column. The approved wide original and the compact successor are both
+frozen independently. See [the layout review](FIGURE_LAYOUT_REVIEW_20261031.md)
+and [the mandatory retention contract](PROTECTED_FIGURES.md).
+
 The current article uses an original, native TikZ electrical single-line diagram,
 following the conventional arrangement in the three visual references supplied
 for this task. All connections are orthogonal. There are no wire crossings,
@@ -57,7 +62,9 @@ and orthogonal routes, and rejects crossings, overlaps and accidental bus
 contacts. It verifies generator/load inventory and the eight PMU locations from
 independent input records. After compilation it verifies all 39 numeric labels
 and eight badge positions against wire and device envelopes, using the actual
-PDF glyph bounds with a 0.75 pt label margin. The figure contains no raster images.
+PDF glyph bounds with a 0.30 pt label margin in the compact version (0.75 pt in
+the preserved wide original). The compact drawing uses 7 pt nominal bus labels.
+The figure contains no raster images.
 
 Visual review covered the standalone figure and its placement in the 15-page
 IEEE Access article, including the full page and a complete article contact sheet.

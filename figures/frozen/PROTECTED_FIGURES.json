@@ -1,0 +1,26 @@
+{
+  "authorization": "User instruction 2026-10-31: keep event figure (Figure 2) and IEEE-39 diagram in the paper; preserve approved TikZ separately. Compact layout authorized; no change to event image or electrical topology.",
+  "files": {
+    "figures/frozen/ieee39-approved-20261031/build_ieee39_tikz.py": "ee28d59ff550c2f0a8c8583b2289a7904d6bf35d6756fc8190100772dd25802d",
+    "figures/frozen/ieee39-approved-20261031/ieee39_single_line.tex": "f06e5de2a4dde9923606e869775ec53a143b47bd7ed74c8a7d21243f365eb118",
+    "figures/frozen/ieee39-approved-20261031/main.tex": "51a4ded2e0169bd40b0eb305276bef2512cc969d286451379bf06345d07fe301",
+    "figures/frozen/ieee39-approved-20261031/narrative_topology.pdf": "07155fe115164ad7ba9c2eb0bd10617da88bf790fdeac2a99ffbd012e44aa782",
+    "figures/frozen/ieee39-approved-20261031/narrative_topology.png": "f4596bc73729e5a031e1c490b864af50554c5f17abee5d19298b3701536d0ba4",
+    "figures/frozen/ieee39-approved-20261031/single_line_topology_audit.json": "0318aabdfebd857cf1f243d215e28d60841f6a26e5b9772fcaaca29246cacb2a",
+    "figures/frozen/event-signatures-approved/event_signatures.pdf": "a85d23376f5f94c6956502553f424b5800ad66d262a0f042b579b1af6052c80d",
+    "figures/frozen/event-signatures-approved/event_signatures.png": "8e8d78d043f68a154a64e588a28b638c7d6d3b3e1c7e03f1d3a866c33e3928da",
+    "figures/generated/event_signatures.pdf": "a85d23376f5f94c6956502553f424b5800ad66d262a0f042b579b1af6052c80d",
+    "figures/generated/event_signatures.png": "8e8d78d043f68a154a64e588a28b638c7d6d3b3e1c7e03f1d3a866c33e3928da",
+    "figures/frozen/ieee39-compact-20261031/build_ieee39_tikz.py": "86396709c01b887bf590509bb0f377de0a7294d9b83a856672f85086c9bdfbb1",
+    "figures/frozen/ieee39-compact-20261031/ieee39_single_line.tex": "47b4bfb24a9879153e731aee348fb1f5d423070d788ccd2b2a71c460de51016e",
+    "figures/frozen/ieee39-compact-20261031/main.tex": "51a4ded2e0169bd40b0eb305276bef2512cc969d286451379bf06345d07fe301",
+    "figures/frozen/ieee39-compact-20261031/narrative_topology.pdf": "52f477c6b9d478a06fb43b8200005c1d8778d1977f3ca7a26682d66e62177038",
+    "figures/frozen/ieee39-compact-20261031/narrative_topology.png": "86a67384d35a00d0fa6ce8c9a74a5cb4cad2aca1476fc1f9019b6641af991a95",
+    "figures/frozen/ieee39-compact-20261031/single_line_topology_audit.json": "d7f7361a46bba4eda8ecdec3c1b51c6d3b1e20fa5d770e1b07212cc981e97c6f"
+  },
+  "required_labels": [
+    "fig:reference-event-types",
+    "fig:narrative-topology"
+  ],
+  "forbid_removal_from_article": true
+}

@@ -4,7 +4,7 @@ El [corpus de continuidad](docs/corpus/README.md) reconcilia conversación, idea
 
 Actualización con [la revisión compartida](docs/SHARED_REVIEW_INTEGRATION_20261030.md): se separan el método causal congelado y el candidato DICE. El banco batch archivado requiere calificar su normalización y sus métricas Top-1/Top-3; sus valores no se modifican ni se transfieren a R11. La imagen de tipos de evento queda protegida mediante hashes durante el build.
 
-Título de trabajo: *Recovery-Aware Physical Event Attribution From Sparse PMUs*. Autores, modelos y resultados conservados. La revisión de literatura solicitada el 29-oct-2026 concreta la diferencia frente a Warner; no es una nueva versión de inferencia.
+Título de trabajo: *Physics-Based Event Attribution From Sparse PMUs With Recovery Memory*. Autores, modelos y resultados conservados. La revisión de literatura solicitada el 29-oct-2026 concreta la diferencia frente a Warner; no es una nueva versión de inferencia.
 
 La pregunta es: con ocho PMU, ¿qué intervención explica mejor la historia observada, y cuándo puede distinguirse de las alternativas?
 

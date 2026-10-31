@@ -1,4 +1,10 @@
-# P07 — Recovery-Aware Physical Event Attribution From Sparse PMUs
+# P07 — Physics-Based Event Attribution From Sparse PMUs With Recovery Memory
+
+**Figuras protegidas:** la Figura 2 de eventos y el unifilar IEEE-39 deben permanecer
+en el artículo. Sus copias de recuperación y controles están documentados en
+[PROTECTED_FIGURES.md](docs/PROTECTED_FIGURES.md). La revisión actual usa un unifilar
+de una columna y una arquitectura del método organizada en cuatro fases.
+Trabajar directamente en `main`, según [AGENTS.md](AGENTS.md).
 
 [Resultados E_i en IEEE-39 y reescritura](docs/ei-x02-results.md): nominal, recentrado y firmas condicionadas, con trazabilidad completa. El artículo separa el ensayo de firmas del método causal congelado. La imagen original de eventos y el diagrama aprobado se conservan.
 
@@ -8,7 +14,7 @@
 
 Revisión actual: [auditoría del artículo principal, 30-oct-2026](docs/MAIN_ARTICLE_AUDIT_20261030.md). El [PDF principal](output/pdf/P07_Event_Attribution_Article.pdf) contiene solo el artículo. C01 todavía está en ejecución; el borrador no anticipa sus resultados ni se declara listo para envío.
 
-**Título de trabajo:** *Recovery-Aware Physical Event Attribution From Sparse PMUs*
+**Título de trabajo:** *Physics-Based Event Attribution From Sparse PMUs With Recovery Memory*
 
 **Objetivo:** explicar qué intervención física produce una historia PMU y cuándo puede distinguirse de sus alternativas. El artículo sigue la predicción DAE, la evidencia causal, M/ΔM y la decisión; separa resultados de desarrollo y confirmación.
 
