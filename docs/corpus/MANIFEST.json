@@ -1,0 +1,149 @@
+{
+  "created_utc": "2026-10-31T04:54:06.645699+00:00",
+  "result_rows": 89,
+  "adjudicated_ideas": 32,
+  "sources": {
+    "figures\\generated\\event_signatures.pdf": {
+      "sha256": "a85d23376f5f94c6956502553f424b5800ad66d262a0f042b579b1af6052c80d",
+      "bytes": 104835
+    },
+    "figures\\generated\\event_signatures.png": {
+      "sha256": "8e8d78d043f68a154a64e588a28b638c7d6d3b3e1c7e03f1d3a866c33e3928da",
+      "bytes": 324897
+    },
+    "figures\\narrative_architecture.tex": {
+      "sha256": "b43a90a653cbeefb12f8dc843f143d47288583f922fa268a1a2a3b9a13d142c9",
+      "bytes": 1671
+    },
+    "generated\\frozen\\e04a_b0_b1_b2_summary.csv": {
+      "sha256": "a64685c9af3a892401d7e9a9da251fe6e70418f20d19c209e07fa1c6d36b428b",
+      "bytes": 2163
+    },
+    "generated\\frozen\\e06h_summary.csv": {
+      "sha256": "a29854c38d2c1c0f6131df24fa1e09ef23c7eb4b8dc1a7b76800ecbd23408de3",
+      "bytes": 559
+    },
+    "generated\\frozen\\legacy_replayed_summary.csv": {
+      "sha256": "82b7d80278d5ae142235e60ea8df6ab4c4f76c168a4b380c4feee97423fc5c1c",
+      "bytes": 1847
+    },
+    "generated\\frozen\\legacy_unseen_sources_recomputed.csv": {
+      "sha256": "28030fcf3cd6de7a702d3793c26007bbd556a87cc23e3c9a983c458bd3a33e89",
+      "bytes": 13549
+    },
+    "generated\\frozen\\global137_support_summary.csv": {
+      "sha256": "b55db9e7d5a18a57b38405fce50eb16a7c1d6ed65d727eaf88e8c802f2a17e74",
+      "bytes": 368
+    },
+    "generated\\frozen\\global137_run_manifest.csv": {
+      "sha256": "d047ba82c2ceccccbc43fbb2d06c6e872f3f7fef0edb40e42f7d14ebab37cd11",
+      "bytes": 1070
+    },
+    "generated\\frozen\\likelihood120_physical_validation.csv": {
+      "sha256": "cc5846162eec61341c68049cb1caf1708e6a836b7704b76d1244131f1b48d5a1",
+      "bytes": 78238
+    },
+    "generated\\frozen\\continuous_20261029\\H04\\EVENTS.csv": {
+      "sha256": "60043b31c6833772fb10c25b6e53addd1fe53273e626b0ff8dd81b66d1ad1ef8",
+      "bytes": 149527
+    },
+    "generated\\frozen\\continuous_20261029\\H04\\SUMMARY.csv": {
+      "sha256": "ddaebaf77bb69f662f5c84c04d9c49b3d76585a78f782a711a0671766178bcba",
+      "bytes": 5734
+    },
+    "generated\\frozen\\shared_review_x01_20261030\\run\\RESULTS.json": {
+      "sha256": "5917280a6b283db667a0c53ae0ce3d78f725d32949d64986c7efd487dc06aabf",
+      "bytes": 5111
+    },
+    "generated\\frozen\\ei_x02_20261030\\results\\SUMMARY.csv": {
+      "sha256": "f8d314bcb823cf9c06ad8f378d7efd712af3a118b61d0188174ec472c8287897",
+      "bytes": 422
+    },
+    "generated\\ei_x02_amplitude_analysis.json": {
+      "sha256": "c1ebf9b0c7d14e6f247f70d018bd03de3857af9e44c4e5e62b0ea5dcfc5a6c06",
+      "bytes": 1169
+    },
+    "generated\\frozen\\ei_x02_20261030\\results\\PER_RECORD.csv": {
+      "sha256": "31178572e371df64012e7f2f67f0db0053ce207e4fc4814a2bc8c68e788158d1",
+      "bytes": 80183
+    },
+    "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_CONFIRMATORY_C01\\protocol\\EXECUTION_FREEZE.json": {
+      "sha256": "aabb50a07022855ce21dcb242df36a892ee40ebae254e7e2e940a3501fae4e56",
+      "bytes": 2184
+    },
+    "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_CONFIRMATORY_C01\\execution\\common.py": {
+      "sha256": "5893843a502c96ada05821de9925bba5057ec4477e2eeb10bba04fa0bf38ee90",
+      "bytes": 1936
+    },
+    "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_CONFIRMATORY_C01\\execution\\evaluate.py": {
+      "sha256": "93a805b0fee8f4235681063c0781e42d609fc4ad9f33d6a159e4400d443a371b",
+      "bytes": 10092
+    },
+    "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_CONFIRMATORY_C01\\execution\\metrics.py": {
+      "sha256": "3d143748709c894377c39e040bf7e3bdecbe08265d537d868de677fe8be4e182",
+      "bytes": 4558
+    },
+    "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_CONFIRMATORY_C01\\execution\\paper.py": {
+      "sha256": "752f34fd61f96da790345e46c3b9e98ba7418c5efe8a17ddcd0191661e2034fe",
+      "bytes": 11354
+    },
+    "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_CONFIRMATORY_C01\\execution\\pipeline.py": {
+      "sha256": "e9cefc24e3368f588f87aa221be14ab49a11ae68d4613e74a565602e6f1f145a",
+      "bytes": 7774
+    },
+    "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_CONFIRMATORY_C01\\execution\\test_execution.py": {
+      "sha256": "a24699e7a39339c23b639decef799d66c05d8de302e9c425df0c79234f3c7c04",
+      "bytes": 2036
+    },
+    "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_CONFIRMATORY_C01\\execution\\worker.py": {
+      "sha256": "2e88aca82c53d7ee4a832240078fd4aa54715a9c88f6e61d4e5ca1cebedf693d",
+      "bytes": 2698
+    },
+    "scripts\\build_research_corpus.py": {
+      "sha256": "74693a8087adaf9956448353161158378d3ca0df5e4e126c9627d9070f4c013f",
+      "bytes": 14290
+    },
+    "docs\\corpus\\README.md": {
+      "sha256": "0e7b88b809ebb060d9b9cd250590d1cb2a48766404dbd359a47ce1552087bf2d",
+      "bytes": 3247
+    },
+    "docs\\corpus\\CONVERSATION_SYNTHESIS.md": {
+      "sha256": "6982609d9deb0d210ce27c919613dcca1505c5dab857eba82c217ff67dc5d303",
+      "bytes": 9187
+    },
+    "docs\\corpus\\REVIEW_6ae55d7c.md": {
+      "sha256": "970b7269c4732b0c1036859c1114fc85dc302c1dd8b6feb7e94b72866a38546b",
+      "bytes": 6204
+    },
+    "docs\\corpus\\EQUATIONS_AND_STATUS.md": {
+      "sha256": "ae2c3f6b945b82c83df9452499d6abfe9fa72db2da4af2a6ddcdc8c9423baed9",
+      "bytes": 6057
+    },
+    "docs\\corpus\\EXPERIMENT_DECISIONS.md": {
+      "sha256": "113b57b724011a42e4c80e62e4b40c1b12495b53eeef01bbc1c594e85cdf299a",
+      "bytes": 5177
+    },
+    "docs\\corpus\\IDEAS.csv": {
+      "sha256": "691c42c2ef5e3cc3afeab2207fe3e2bda12efa44dd6956c40a426dd7c5a4bb2f",
+      "bytes": 6908
+    },
+    "docs\\corpus\\review_source.json": {
+      "sha256": "b155c70890b1dbeb96433839cb5eb627096af7e656920a8e5c23b8379142a884",
+      "bytes": 2199
+    },
+    "docs\\corpus\\RESULTS.csv": {
+      "sha256": "7fc5b04049e6f6652c8c9f17a590424a6864bb4ef49aff747f444a1c70c93bd4",
+      "bytes": 30431
+    },
+    "docs\\corpus\\RESULTS.md": {
+      "sha256": "33e8bf38f659e679a6334346c63d6dc61ce7727abe24cdca1cdd12d72723628d",
+      "bytes": 7809
+    }
+  },
+  "protected_visuals_verified": true,
+  "frozen_C01_executor_files_verified": 7,
+  "C01_partial_outcomes_read": false,
+  "C01_modified": false,
+  "external_DICE_artifact_reproduced": false,
+  "RAW0002_opened": false
+}

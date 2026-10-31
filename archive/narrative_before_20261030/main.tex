@@ -1,0 +1,64 @@
+% ieeeaccess.cls reuses \year as a metadata setter. Preserve the TeX primitive
+% so PGF/TikZ can initialize its deterministic machinery while loading.
+\let\PSevenTeXYear\year
+\documentclass{ieeeaccess}
+
+\input{preamble}
+\usepackage{pdfpages}
+\input{generated/results_macros}
+\input{generated/continuous_macros}
+
+\newcommand{\PSevenSupplementPDF}{output/pdf/P07_Physics_Informed_State_Reconstruction_Event_Source_Inference_Supplement.pdf}
+
+\begin{document}
+\input{metadata}
+\hypersetup{
+  pdftitle={Physics-Informed State Reconstruction and Event-Source Inference From Sparse PMUs Under Limited Observability},
+  pdfauthor={Jorge Luis Mayorga Taborda; Yessica Africano Rodriguez; Masoud Barati; Payman Dehghanian; David Felipe Celeita Rodriguez},
+  pdfsubject={Sparse-PMU state reconstruction, finite-horizon diagnosability, and multi-event source inference},
+  pdfkeywords={dynamic state estimation, functional observability, phasor measurement units, physics-informed inference, source localization}
+}
+
+\begin{abstract}
+Sparse phasor measurements leave distinct questions: whether hidden voltages can be reconstructed and whether event sources can be distinguished. We separate them with a hybrid differential-algebraic model. Functional observability governs the requested state target; finite-horizon separation between candidate response manifolds governs event cardinality and source support. On the IEEE 39-bus system with eight voltage/current PMUs, a causal model-based estimator reconstructs hidden voltages with \BTwoTVE{} mean relative error under matched operation. A separate Bayesian bank evaluates \GlobalHypothesisCount{} load-intervention hypotheses. Across \GlobalPhysicalTrajectories{} fresh nonlinear trajectories, exact-support Top-1 ranges from \GlobalWeakTopOne{} for weak pairs to \GlobalFiniteTopOne{} for finite pairs. Weak-event evidence often resolves cardinality before source identity; profiled response distance explains that ambiguity better than support-only geometry. A separate unknown-onset load/line component obtains \ContMixTimely{}/\ContMixTotal{} timely family/source decisions with \ContMixExtras{} unmatched alarms in paired continuous-stream development tests. Its nominal ablation retains one more timely event but produces more extras, exposing a model-uncertainty trade-off. These components support bounded state-recovery and source-inference claims. A published physical comparator is implemented, while its common confirmatory comparison remains pending. The complete joint state/event/integrity posterior, changing sensing, unseen-source causal generalization, and field transfer remain unvalidated.
+\end{abstract}
+
+\begin{keywords}
+dynamic state estimation, event detection, functional observability, limited observability, phasor measurement units, physics-informed inference, source localization.
+\end{keywords}
+
+\titlepgskip=-21pt
+\maketitle
+
+\input{sections/01_introduction}
+\input{sections/02_related_work}
+\input{sections/03_problem_formulation}
+\input{sections/04_diagnosability}
+\input{sections/05_bayesian_inference}
+\input{sections/05a_hierarchical_single_event}
+\input{sections/05b_causal_component}
+\input{sections/06_edge_knowledge}
+\input{sections/07_experimental_protocol}
+\input{sections/08_results}
+\input{sections/08a_single_event_pilot}
+\input{sections/08b_continuous_evidence}
+\input{sections/09_discussion}
+\input{sections/10_conclusion}
+
+% Acknowledgments and author biographies are intentionally omitted until author-provided.
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\EOD
+\clearpage
+\IfFileExists{\PSevenSupplementPDF}{%
+  \includepdf[
+    pages=-,
+    fitpaper=true,
+    pagecommand={\thispagestyle{empty}},
+    addtotoc={1,section,1,{Supplementary Material},supplementary-material}
+  ]{\PSevenSupplementPDF}%
+}{%
+  \PackageError{P07}{Supplementary PDF not found}{Run scripts/build_manuscript_bundle.ps1 before compiling main.tex.}%
+}
+\end{document}

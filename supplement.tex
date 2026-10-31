@@ -6,11 +6,13 @@
 \usepackage{placeins}
 \newtheorem{theorem}{Theorem}
 \input{generated/results_macros}
+\input{generated/continuous_macros}
+\IfFileExists{generated/c01_macros.tex}{\input{generated/c01_macros}}{}
 
 \begin{document}
 \history{}
 \doi{}
-\title{Supplementary Material for Physics-Informed State Reconstruction and Event-Source Inference From Sparse PMUs Under Limited Observability}
+\title{Supplementary Material for Recovery-Aware Physical Event Attribution From Sparse PMUs}
 \author{\uppercase{Jorge Luis Mayorga Taborda}\authorrefmark{1}, \uppercase{Yessica Africano Rodriguez}\authorrefmark{1}, \uppercase{Masoud Barati}\authorrefmark{2}, \uppercase{Payman Dehghanian}\authorrefmark{3}, AND \uppercase{David Felipe Celeita Rodr\'iguez}\authorrefmark{4}}
 \address[1]{Universidad de los Andes, Bogot\'a, Colombia}
 \address[2]{Department of Electrical and Computer Engineering, University of Pittsburgh, Pittsburgh, PA, USA}
@@ -18,7 +20,7 @@
 \address[4]{Faculty of Engineering, Universidad de La Sabana, Ch\'ia, Colombia}
 \markboth{Mayorga Taborda \headeretal, Supplementary Material}{Mayorga Taborda \headeretal, Supplementary Material}
 \hypersetup{
-  pdftitle={Supplementary Material for Physics-Informed State Reconstruction and Event-Source Inference From Sparse PMUs Under Limited Observability},
+  pdftitle={Supplementary Material for Recovery-Aware Physical Event Attribution From Sparse PMUs},
   pdfauthor={Jorge Luis Mayorga Taborda; Yessica Africano Rodriguez; Masoud Barati; Payman Dehghanian; David Felipe Celeita Rodriguez}
 }
 
@@ -47,6 +49,9 @@ Table~\ref{tab:supp-literature} expands the family-level synthesis in the main p
 Work & State target & Event/source target & Physics mechanism & Sparse sensing & Held source & Integrity treatment \\
 \midrule
 Katanic \emph{et al.} \cite{katanic2024recursive} & Differential and algebraic DAE states & Unknown injectors & Incomplete nonlinear DAE and least squares & Yes & N/A & No \\
+Warner \emph{et al.} \cite{warner2023highfidelity} & Simulated transient paths & Short-circuit line candidates & DAE V/I trajectories and moving onset scan & Two PMUs in IEEE-39 case & Not a source-exclusion test & Load forecast/adverse-load tests \\
+Chen / Rovatsos \cite{chen2016quickest,rovatsos2017outage} & Network angle increments & Outage identity & QCD; Rovatsos includes transient phases & PMU subset & Not a learned source task & Stochastic injection law \\
+Warner / Fellouris \cite{warner2024matrix} & General sequential observations & Post-change alternative & Adaptive Matrix CuSum & Not a PMU placement study & Finite specified alternatives & Error/delay theory under stated laws \\
 Nugroho \emph{et al.} \cite{nugroho2022dae} & Differential and algebraic DAE states & Unknown input and input-sensor failure & Outlier-resistant DAE observer & PMU voltage/current & N/A & Failure tolerance \\
 Qu \emph{et al.} \cite{qu2023joint} & Machine state & Unknown field voltage and torque & Event-triggered nonlinear state/input estimator & Event-triggered PMUs & N/A & Covariance bounds \\
 Ngo \emph{et al.} \cite{ngo2024pignn} & Power-system states & None & Branch-current physics plus graph learning & Yes & N/A & No \\
@@ -59,7 +64,8 @@ Kummerow \emph{et al.} \cite{kummerow2023sigmoid} & None & Known/unknown event t
 Hu and Cheng \cite{hu2026openset} & None & Open-set event detection/classification & Generative window evidence and fusion & Streaming PMUs & Unknown-event category & No source posterior \\
 Rimkus \emph{et al.} \cite{rimkus2025gnn} & Missing PMU trajectories & Downstream fault localization & Graph reconstruction before diagnosis & Yes & Imputer only & Corruption via imputation \\
 Zhai \emph{et al.} \cite{zhai2025partial} & Full dynamical state & Line-attack location & Learned temporal dynamics & Yes & Across benchmarks & Attack target only \\
-Main article & Hidden voltage field & All load supports with $K\le2$; historical eight-label ontology & DAE hypotheses and quadratic physical likelihood & Eight PMU buses & Physical bank has no source-label head & Physical/integrity variables separate \\
+R11 in main article & Retained conditional states & Successive nine-load/nine-line catalog & DAE histories, recovery and fixed R/X mixture & Eight PMU buses & Not tested; no source-label head & Colored instrument; plug-in startup \\
+Separate batch component & Known-context voltage/current & Load supports with $K\le2$ & Original GH31/W2 likelihood & Eight PMU buses & Different contract from R11 & Matched frozen noise \\
 \bottomrule
 \end{tabularx}
 \end{table*}
@@ -213,7 +219,9 @@ The main paper retains the figures needed for the scientific argument. This appe
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/generated/load_event_inference.pdf}
-\caption{Single-source development evidence for the frozen load likelihood. The figure is retained as component validation; GLOBAL-137 in the main paper is the prospective support-recovery result.}
+\caption{Single-source development evidence for the frozen load likelihood.
+This archived component study is distinct from the causal and signature
+experiments in the main article.}
 \label{fig:supp-load-inference}
 \end{figure*}
 
@@ -228,6 +236,11 @@ The main paper retains the figures needed for the scientific argument. This appe
 
 \FloatBarrier
 \input{supplement/appendix_f_single_event_pilot}
+
+\FloatBarrier
+\input{supplement/appendix_narrative_support}
+\input{supplement/appendix_archived_source_resolution}
+\IfFileExists{supplement/c01_narrative_details.tex}{\input{supplement/c01_narrative_details}}{}
 
 \raggedbottom
 \bibliographystyle{IEEEtran}

@@ -1,0 +1,12 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+Sparse PMUs impose different information limits on state reconstruction and event-source inference. The requested hidden-voltage function can be estimated accurately even when the full local state is not observable. Event support requires a stronger condition: candidate responses must remain separated after amplitude and nuisance directions are profiled.
+
+The experiments follow that logic. Eight PMUs reconstruct the 31 unmeasured bus voltages with \BTwoTVE{} mean relative error under the matched model, and physical recentering repairs most of the tested operating-point shift. In the prospective load bank, finite two-source supports are recovered exactly, whereas weak-pair Top-1 remains \GlobalWeakTopOne{}. The gap is explained by finite-horizon response overlap and near-collinearity, not by event absence alone.
+
+The present evidence supports matched-model state reconstruction and simultaneous load-source inference as separate components. A separate causal load/line component obtains \ContMixTimely{}/\ContMixTotal{} timely decisions with \ContMixExtras{} unmatched alarms in development streams, while its nominal ablation retains one more timely event at a higher alarm burden. That trade-off and the negative admission ablation are part of the result. R11 and its nominal ablation are frozen for a preregistered comparison with ExtraTrees and an implemented published line-outage detector. No confirmatory outcome is claimed before execution. The complete multi-family state/event/integrity posterior, source holdout, changing sensing, and field transfer remain open.
+
+\section*{Supplementary Material}
+
+The companion supplement contains the paper-by-paper literature matrix, electrical and PMU conventions, proofs, complete estimator equations, frozen experimental contracts, and secondary result tables. These details preserve reproducibility without interrupting the main scientific argument.

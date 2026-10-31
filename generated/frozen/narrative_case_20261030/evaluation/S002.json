@@ -1,0 +1,74 @@
+{
+  "case": {
+    "id": "H002_MATCH",
+    "parent_schedule": "H002",
+    "condition": "MATCH",
+    "duration_s": 80,
+    "operating_point": "F01",
+    "events": [
+      {
+        "id": "H002_E01",
+        "source": "BUS24",
+        "family": "load",
+        "onset_s": 16.26614,
+        "off_s": 18.558193,
+        "amplitude": -0.07619724386543623
+      },
+      {
+        "id": "H002_E02",
+        "source": "LINE9-39",
+        "family": "line",
+        "onset_s": 23.407497,
+        "off_s": 25.759414,
+        "amplitude": null
+      },
+      {
+        "id": "H002_E03",
+        "source": "LINE4-14",
+        "family": "line",
+        "onset_s": 28.770765,
+        "off_s": 31.990725,
+        "amplitude": null
+      },
+      {
+        "id": "H002_E04",
+        "source": "BUS31",
+        "family": "load",
+        "onset_s": 37.977393,
+        "off_s": 40.156546,
+        "amplitude": -0.07181552517990838
+      },
+      {
+        "id": "H002_E05",
+        "source": "LINE26-27",
+        "family": "line",
+        "onset_s": 43.722617,
+        "off_s": 47.053672,
+        "amplitude": null
+      },
+      {
+        "id": "H002_E06",
+        "source": "BUS16",
+        "family": "load",
+        "onset_s": 51.562291,
+        "off_s": 54.546855,
+        "amplitude": 0.13277632827779343
+      }
+    ],
+    "kind": "event",
+    "true_particle_id": "nominal",
+    "true_branch_factors": {}
+  },
+  "record": {
+    "id": "S002",
+    "physical_id": "H002_MATCH",
+    "operating_point": "F01__H002_MATCH",
+    "noise_std_factor": 1.0,
+    "seed": 260102913102,
+    "seed_index": 0,
+    "reports": 2401,
+    "duration_s": 80,
+    "kind": "event",
+    "sha256": "860c844d9c56e52344ee78f9ee15294dbe8800cd550cad0ed11b29642ab0774c"
+  }
+}

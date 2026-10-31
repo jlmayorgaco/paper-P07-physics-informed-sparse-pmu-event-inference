@@ -1,18 +1,26 @@
-# P07 State Reconstruction and Event-Source Inference From Sparse PMUs
+# P07 — Recovery-Aware Physical Event Attribution From Sparse PMUs
 
-**Working paper title:** *Physics-Informed State Reconstruction and Event-Source Inference From Sparse PMUs Under Limited Observability*
+[Resultados E_i en IEEE-39 y reescritura](docs/ei-x02-results.md): nominal, recentrado y firmas condicionadas, con trazabilidad completa. El artículo separa el ensayo de firmas del método causal congelado. La imagen original de eventos y el diagrama aprobado se conservan.
 
-**Target venue:** IEEE Access
+[Corpus científico y continuidad](docs/corpus/README.md): objetivos de la conversación, ecuaciones implementadas, ideas adjudicadas, resultados con fuentes y revisión del nuevo chat compartido. Distingue lo que puede incorporarse al artículo actual de lo que necesita otra validación; no modifica C01.
 
-**Revisión 29-oct-2026:** se integra R11/nominal como componente causal separado, se preserva E_B/GH31 y se prepara C01. Ver [plan de cierre](PAPER_PLAN.md) y [alcance/evidencia](docs/paper-closure-2026-10-29.md). El comparador físico Chen2016 está implementado; C01 no se ha ejecutado. No es todavía una versión lista para envío.
+[Integración del chat de revisión y giro DICE-PMU](docs/SHARED_REVIEW_INTEGRATION_20261030.md): algoritmo por reporte, precedentes, contratos de métricas, normalización del banco auxiliar y candidato separado. La imagen de tipos de eventos permanece intacta.
 
-This repository develops an evidence-backed IEEE Access manuscript on hidden-state recoverability and event-source inference from eight PMUs. It consolidates three distinct contracts: (i) PowerDynamics reconstruction of 31 hidden IEEE 39-bus voltages, including model mismatch and regularized physical recentering; (ii) a prospective Bayesian bank with 137 load-intervention hypotheses---no event, 16 single sources, and all 120 two-source supports---plus retrospective weak-regime and 120-frame diagnostics; and (iii) an ANDES event-diagnosis baseline spanning eight abnormal labels plus normal operation. The draft derives functional-observability and sparse event-injectivity conditions, regenerates every numerical figure from frozen artifacts, and preserves negative results. The full multi-family joint posterior remains unexecuted and is not presented as a completed result.
+Revisión actual: [auditoría del artículo principal, 30-oct-2026](docs/MAIN_ARTICLE_AUDIT_20261030.md). El [PDF principal](output/pdf/P07_Event_Attribution_Article.pdf) contiene solo el artículo. C01 todavía está en ejecución; el borrador no anticipa sus resultados ni se declara listo para envío.
+
+**Título de trabajo:** *Recovery-Aware Physical Event Attribution From Sparse PMUs*
+
+**Objetivo:** explicar qué intervención física produce una historia PMU y cuándo puede distinguirse de sus alternativas. El artículo sigue la predicción DAE, la evidencia causal, M/ΔM y la decisión; separa resultados de desarrollo y confirmación.
+
+Ver [guía narrativa en español](NARRATIVA_P07.md), [plan del argumento](PAPER_PLAN.md) y [auditoría de la revisión](docs/narrative-revision-2026-10-30.md). El texto anterior y su PDF se conservan en `archive/narrative_before_20261030/`. C01 sigue ejecutándose sin reajustes; sus resultados se integrarán al completar la evaluación.
+
+El [contraste con Warner y los métodos cercanos](docs/novelty-and-closest-methods.md) define el aporte defendible y sus límites. La [revisión de la línea physics-informed de Barati](docs/barati-physics-informed-options.md) distingue lo incorporado de extensiones futuras. Ninguna cambia el método congelado.
 
 ## Repository layout
 
 | Path | Purpose |
 | --- | --- |
-| `main.tex` | IEEE Access root manuscript, organized around four research questions |
+| `main.tex` | IEEE Access article: recovery-aware attribution, physical prediction, source resolution and frozen operational evaluation |
 | `supplement.tex`, `supplement/` | Detailed proofs, Fisher-information analysis, stepwise Bayesian estimators, frozen contracts, and secondary results |
 | `metadata.tex` | Title, author list, affiliations, and running headers |
 | `preamble.tex` | Shared packages and mathematical notation |
@@ -39,7 +47,7 @@ python scripts/generate_paper_artifacts.py
 
 ## Build
 
-The root manuscript uses the official `ieeeaccess.cls` supplied with the repository. The normal build compiles the standalone supplement first and then compiles `main.tex`, which appends every supplementary page after the principal article. Run:
+The root manuscript uses the official `ieeeaccess.cls` supplied with the repository. The build compiles the supplement and the main article as separate PDFs. `main.tex` does not append supplementary pages. Run:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File scripts/build_manuscript_bundle.ps1

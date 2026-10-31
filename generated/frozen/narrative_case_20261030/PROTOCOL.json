@@ -1,0 +1,273 @@
+{
+  "id": "M02_STREAM_V9_CAUSAL_RECOVERY_CANDIDATE",
+  "parent": "M02_STREAM_V8_RECOVERY_HYPOTHESIS_CANDIDATE",
+  "created_utc": "2026-10-26T13:11:44.155267+00:00",
+  "state_prior": {
+    "default": 0.005,
+    "omega": 0.0001,
+    "delta": 0.005
+  },
+  "dt_s": 0.03333333333333333,
+  "retrospective_s": 10.0,
+  "birth_hazard_per_s": 0.016666666666666666,
+  "off_hazard_per_s": 0.03333333333333333,
+  "amplitude_knots": [
+    -0.2,
+    -0.1,
+    0.0,
+    0.1,
+    0.2
+  ],
+  "amplitude_prior_sd": 0.15,
+  "alarm_probability": 0.99,
+  "confirmation_frames": 6,
+  "warmup_frames": 360,
+  "max_histories": 96,
+  "min_per_cell": 1,
+  "off_confirmation_frames": 15,
+  "restoration_probability": 0.99,
+  "diagnosis_delay_frames": 15,
+  "physical_process_variance_per_frame": 1e-07,
+  "auxiliary_process_variance_per_frame": 1e-14,
+  "supported": "One active physical intervention at a time, repeat episodes with dynamic recovery retained; linked P/Q load changes and full line opening/reclosing; 18-source public catalog",
+  "extension": "A03: pooled AR observation discrepancy as A01, plus uniform six-report alarm confirmation (V5:3). Development decision trades nominal100ms extra delay for rejection of brief posterior excursions. Applies to every source and at all times; no post-OFF blackout.",
+  "approximations": [
+    "Full DAE relinearized at PMU-estimated point; subsequent event prediction remains affine",
+    "Shared steady covariance per regime; finite beam; moment projection omits between-hypothesis covariance",
+    "Frequency and ROCOF use the linearized21-frame estimator; nonlinear robust generator unchanged",
+    "Plug-in operation/noise estimates; uncalibrated switching posterior and approximate Gaussian clipped noise",
+    "Proposed onset search0..18 frames; history retained10s, not an exhaustive300-onset search",
+    "Screening chi-square tails are computational proposal budgets, not certified alarm probabilities"
+  ],
+  "comparison": "Frozen V6, V7B matrix and V8 on SIM0009; retrospective SIM0008 regression separately",
+  "holdout_design": {
+    "dataset": "SIM0008_RECLOSURE_HOLDOUT",
+    "authoritative_protocol": "../../../SIM0008_RECLOSURE_HOLDOUT/PROTOCOL.json",
+    "not_read_by_inference": true
+  },
+  "metrics": {
+    "event_matching": "First unmatched alarm after true onset and before next onset, maximum delay 30 s; alarms outside that interval false/duplicate; report separately alarms before true OFF; family/source at emitted alarm+0.5s; no truth-dependent selection",
+    "windows": "30 s windows from delivered runtime; truth active if onset < end and OFF >= start. M02: sum active M over reports with active probability >= .99, select family mass and Top-3; E0 if no qualifying report or alarm. Multi-family windows excluded only from single-label F1 and separately reported; all windows enter binary detection and set coverage.",
+    "report_level": "Family during active ON/OFF interval; transition and recovery errors counted; same timeline for both",
+    "outputs": [
+      "recall",
+      "false alarms per normal hour",
+      "duplicate alarms",
+      "median delay",
+      "family accuracy",
+      "joint Top1/Top3",
+      "onset/duration/intensity error",
+      "normal exposure",
+      "source failures"
+    ]
+  },
+  "no_raw_access": true,
+  "plant_recalibrated": false,
+  "official_release": false,
+  "model_discrepancy": {
+    "source": "120 archived deterministic PUBLIC full-DAE response trajectories from M02 V1; no observed pilot/holdout/RAW residuals",
+    "covariance": "Uncentered second moments of full-DAE minus affine one-report physical-state prediction AND algebraic/instrument observation error, whitened with F01 colored-noise operator; separate load, line and recovery regimes",
+    "selection": "Retain preceding active-family regime after inferred OFF until nominal innovation recovery criterion. Line episode can raise load regime during recovery. Same V1 matrices.",
+    "covariance_limit": "Shared steady nominal-state covariance per regime; no claim of calibrated full switching posterior",
+    "temporal": "eta[k+1]=rho eta[k]+w; observation includes eta[k]. rho=.9878403461460089 from public model calculations; Q_eta=(1-rho^2)R_model, original physical Q unchanged. State mean retained through closure."
+  },
+  "development_data": "SIM0008 and SIM0009 now known; no new holdout drawn",
+  "birth_proposal": {
+    "signals": 31,
+    "order": 4,
+    "noise_seed": 9230041,
+    "noise_reports": 32768,
+    "threshold_chi_square_tail": 1e-08,
+    "threshold": 97.02845158996229,
+    "covariance_source": "Frozen F01 synthetic instrumental noise only; no RAW or physical trajectory residuals",
+    "no_refractory_interval": true,
+    "limitation": "May miss weak, smooth or instantaneously invisible events; not exact Bayesian inference",
+    "policy": "A06 known-noise smooth-model adequacy plus causal onset support. Keep19 V4 alternatives, require4 pre reports for weak proposals. Require4 post reports only if any family rejects degree-seven smooth adequacy using four Bonferroni chi-square tests at total0.01/report; otherwise1 post report can seed later DAE evidence. Strong d4 unchanged. No OFF timer, bus rule or plant recalibration.",
+    "retrospective_births": "Replay suffix likelihood ratio from causal H0 snapshot; no repeated posterior evidence",
+    "step_glr_tail_per_report": 1e-08,
+    "step_glr_comparisons": 19,
+    "physical_step_comparisons": 342,
+    "physical_step_tail_per_report": 0.001,
+    "lag_frames": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "weak_proposal_duration_scope": "4 pre;1 post if smooth adequacy accepted,4 post if rejected; strong d4 unchanged.",
+    "state_projection_barrier": "No retrospective birth crosses a completed-episode state projection",
+    "proposal_budget": "Uniform screening budget 0.001 per report over all19 onsets and18 sources: approximately1.8 noise-only proposals/min under ideal known Gaussian covariance. A proposal is not an alarm; final recurrent probability0.99 unchanged; A03 confirmation is6 reports. Development choice applies to every source; no BUS31-specific threshold.",
+    "eligible_weak_lags": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "retain_censored_alternatives": true,
+    "thresholds_changed_from_v4": false,
+    "minimum_side_rationale": "Four pre reports is an explicit minimum-history heuristic fixed during development, not an optimality theorem or full identification of the degree-seven background. A recent hypothesis accumulates later data; prehistory missing at the old window edge cannot be recovered.",
+    "minimum_pre_reports": 4,
+    "minimum_post_reports": 1,
+    "smooth_support": {
+      "degree": 7,
+      "reports": 20,
+      "families": 4,
+      "screening_tail_per_report": 0.01,
+      "bonferroni": true,
+      "df": [
+        96,
+        96,
+        96,
+        84
+      ],
+      "not_calibrated_event_probability": true
+    },
+    "eligible_when_smooth_rejected": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ]
+  },
+  "acceptance_gate": {
+    "authoritative_protocol": "../../../SIM0008_RECLOSURE_HOLDOUT/PROTOCOL.json",
+    "no_joint_top1_regressions_vs_v5": true,
+    "no_BUS31_regressions_vs_v5": true,
+    "zero_event_extra_alarms": true,
+    "zero_normal_false_alarms": true,
+    "no_unconfirmed_episodes": true,
+    "all_matched_restored_before_next": true
+  },
+  "adaptation": {
+    "startup_reports": 300,
+    "minimum_valid_reports": 240,
+    "noise_scale_bounds": [
+      0.1,
+      10.0
+    ],
+    "operating_factor_bounds": [
+      0.9,
+      1.1
+    ],
+    "policy": "Once-only300-report PMU inverse-AC and noise estimation. Direct full-DAE derivatives at inferred operating point, no true operating inputs. Freeze thereafter.",
+    "operating_family": "Three global net-PQ P/Q and PV net-P dispatch factors, fixed PV/slack voltage; conditional identifiable subspace, not unrestricted 39-bus reconstruction",
+    "baseline": "AC inverse projected PMU mean using correlated mean covariance for V/I; empirical frequency/ROCOF mean; structural model and DAE Jacobians fixed",
+    "noise": "Robust fourth-difference MAD against archived AR/VAR covariance, separate six family scale factors; recompute Riccati gains/covariances and boundary covariance",
+    "limitation": "Stationary startup; three operating directions only. Plug-in operation/noise uncertainty; shared covariance and affine event model, no calibrated posterior."
+  },
+  "signature_grid": {
+    "axis": [
+      0.9,
+      1.0,
+      1.1
+    ],
+    "dimensions": [
+      "PQ_P",
+      "PQ_Q",
+      "PV_P"
+    ],
+    "method": "Trilinear interpolation of full-DAE Schur derivatives and line-mode algebraic responses; exact inverse-AC normal voltage reference",
+    "structural_plant_frozen": true,
+    "used_by_final_method": false
+  },
+  "continuous_births": false,
+  "conditional_signatures": {
+    "method": "Direct full-DAE Schur derivatives at PMU-estimated operating point",
+    "structural_plant_changed": false,
+    "derivative_check_step": 1e-07,
+    "derivative_relative_tolerance": 0.001,
+    "interpolation": false
+  },
+  "episode_policy": "Same-source revisions do not supersede. A different source with posterior onset after the previous primary diagnosis and new active mass>=0.99 for6 reports may supersede; this is explicitly unconfirmed restoration. Confirmed OFF projects the continuous augmented mean; no equilibrium reset.",
+  "decision_change": {
+    "confirmation_frames_before": 3,
+    "confirmation_frames_after": 6,
+    "nominal_extra_delay_s": 0.1,
+    "all_sources_uniform": true,
+    "no_after_off_timer": true,
+    "selected_on": "SIM0007 development; must pass all48 records and then fresh SIM0008",
+    "optimality_claim": false
+  },
+  "continuous_bank": {
+    "reports": 300,
+    "half_frame_onsets": true,
+    "load_amplitude_prior": "same truncated Gaussian as V6",
+    "promotion_prior_odds": 1.0,
+    "energy_retention": 0.9999,
+    "contrast_retention": 0.99,
+    "contrast_prefix_reports": [
+      1,
+      15,
+      30,
+      60,
+      150,
+      300
+    ],
+    "contrast_load_amplitude": 0.1,
+    "maximum_promotions_per_report": 1,
+    "legacy_proposals_retained": true,
+    "mask_support": false,
+    "scope": "All 18 public sources x two subframe phases x 300 onset ages. Continuous evidence screening, then exact existing V6 suffix replay; NOT an exhaustive joint switching posterior.",
+    "line_approximation": "Additive frozen-equilibrium response for screening only. Full switched affine operator and H0 state used by V6 confirmation.",
+    "compression": "One orthogonal channel-mode Tucker factor per covariance regime, chosen from physics only; identical bank and thresholds in dense/compressed arms.",
+    "promotion_selection": "Best overall physical bank candidate; promote only if not already represented and its preliminary birth weight including current V6 H0 mass exceeds unit odds. Do not promote a runner-up merely because best was already born."
+  },
+  "recovery_hypothesis": {
+    "attempt": "A07",
+    "model": "Initial DAE/instrument state profiled over causal30-report window, plus constant offsets; exact V6 posterior unchanged",
+    "new_proposal": "Requires profiled GLR and continuous bank evidence at its onset; legacy proposals retained",
+    "fixed_deadtime": false,
+    "plant_changed": false,
+    "amplitude_prior_changed": false,
+    "posterior_thresholds_changed": false,
+    "source_support": "Load amplitude profiled inside original physical bounds; full line opening fixed; confirmation retains original Bayesian amplitude prior.",
+    "proposal_threshold": "F(1,d-1) quantile, nominal .001/report divided by936 hypotheses; not a calibrated end-to-end alarm probability.",
+    "uncertainty": "Profile unexplained residual variance in the local physical recovery-vs-intervention regression, with unit instrumental variance floor. No plant or threshold fitting.",
+    "hypothesis_consistency": "Return to source-agnostic detection proposals; source confirmation remains Bayesian. Exact-source agreement in A06 lost weak BUS31; do not treat a proposal argmax as a known source.",
+    "proposal_channels": "All47 existing channels: V/I magnitudes and angles, frequency and ROCOF; physical and instrumental memory retained."
+  },
+  "selected_development_attempt": "A07",
+  "selected_utc": "2026-10-26T04:54:28.086007+00:00",
+  "v9": {
+    "attempt": "A01",
+    "recovery": "Conditional prior from causal H0 with exact stationary innovations whitening; unexplained variance profiled",
+    "episode": "New onset later than existing alarm; source-independent; all superseded alarms retained",
+    "new_holdout": "SIM0010_EPISODE_HOLDOUT"
+  }
+}

@@ -1,0 +1,28 @@
+\section{Evidence Design and Fair Comparisons}
+\label{sec:narrative-protocol}
+
+The experiments answer three successive questions: does the physical model recover useful electrical information; are source responses distinguishable after nuisance fitting; and does a causal decision retain precision when interventions and recovery follow one another? They are separate tests, not parts of one pooled accuracy score.
+
+\begin{table*}[t]\centering\small
+\caption{One argument, distinct evidence contracts. An event realization repeats a physical parent under a condition or noise draw; it is not another independent physical event.}\label{tab:narrative-evidence}
+\begin{tabularx}{\textwidth}{@{}lXXX@{}}\toprule
+Question & Executed experiment & Decisive outcome & What it does not establish\\\midrule
+Useful state information? & Separate B0--B3 voltage reconstruction and AC recentering & Hidden-voltage error and model-shift sensitivity & Source identity or calibrated joint covariance\\
+Which sources are distinguishable? & Prospective 137-support batch load bank; known onset & Cardinality and exact-support recovery by severity & Unknown-onset multi-family monitoring\\
+Can it monitor successive events? & H03/H04 continuous load/line development & Timely family/source, extras and restoration behavior & Confirmatory superiority or unseen-source transfer\\
+Does the frozen result persist? & C01 configuration sealed before its new predictions & Independent-parent, paired R/X/noise comparison & No result is claimed until execution completes\\\bottomrule
+\end{tabularx}\end{table*}
+
+The causal simulator uses the frozen IEEE-39 Julia/PowerDynamics candidate, with continuous states and a separate PMU reporting grid. A 120-s record contains 3601 reports per PMU; a 600-s normal record contains 18001. Event-aligned reports use the consistent post-switch algebraic value, and solver diagnostics are stored separately. The measurement references, load law and stochastic instrument parameters are not retuned to individual events. RAW0001 is retrospective calibration evidence; RAW0002 remains unopened.
+
+H03 and H04 each contain three event parents with six successive load/line interventions and one normal parent, all 80 s long. Schedules are paired across nominal, in-bank R/X and mixed out-of-bank R/X conditions. Each campaign therefore has 18 unique interventions and 54 event realizations. Both campaigns are now development evidence. No interval or generalization claim treats those 54 realizations as independent events.
+
+R11 and its nominal version are frozen co-references. Both ExtraTrees artifacts and their causal preprocessing/publication adapters are frozen as well; neither is retrained on H04 or C01. They receive the same 30-fps observations. This is a comparison of those operational implementations on the stated contract, not a rerun of the hackathon leaderboard.
+
+The published physical comparator is Chen \emph{et al.}'s persistent single-line quickest-change detector \cite{chen2016quickest}. Its reduced-network covariance is marginalized to the observed PMU subset after inversion. Parallel CUSUM statistics stop at the first threshold crossing and select a line. Our declared F01 adapter uses nonoverlapping angle increments at 15 Hz, a startup-only scale/drift estimate and the fixed nominal line catalog. Its white-injection/DC assumptions do not describe all F01 instrumental effects. We preserve both matched-law implementation checks and F01 mismatch failures; no ARL guarantee is transferred to colored noise.
+
+The eligible common test for Chen is one persistent line opening or a normal record. It is not assigned a load classifier or a restoration operator. C01 therefore has two evaluation lanes: continuous load/line episodes for R11/nominal/ML, and first-stop persistent-line decisions for all comparators. Early stops, wrong sources, omissions and horizon censoring remain visible.
+
+For continuous events, an alarm is associated temporally before predicted family/source is inspected. The first unmatched alarm after ON is eligible up to the next ON, with the inherited 30-s cap. A timely joint decision requires the correct family and asset emitted before true OFF. Unmatched alarms are extras; false restorations and open episodes are reported separately. These definitions prevent an eventual correct answer from hiding a late diagnosis.
+
+C01 specifies 18 continuous parents, 27 persistent-line parents and 12 normal parents, with three fixed R/X conditions and instrumental-noise scales of one and two. The 171 intended physical trajectories produce 342 intended observed records. All solver and inference failures remain in the ledger. Comparisons use 10,000 paired parent-cluster resamples; conditions and noise realizations do not create extra independent parents. Predictions are sealed before the evaluator opens reserved truth. Until that evaluation exists, the following section reports only completed development evidence.

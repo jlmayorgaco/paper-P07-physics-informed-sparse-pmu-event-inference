@@ -1,0 +1,58 @@
+% ieeeaccess.cls reuses \year as a metadata setter. Preserve the TeX primitive
+% so PGF/TikZ can initialize its deterministic machinery while loading.
+\let\PSevenTeXYear\year
+\documentclass{ieeeaccess}
+
+\input{preamble}
+\usepackage{pdfpages}
+\usepackage{placeins}
+\input{generated/results_macros}
+\input{generated/continuous_macros}
+\input{generated/narrative_macros}
+\IfFileExists{generated/c01_macros.tex}{\input{generated/c01_macros}}{}
+
+\begin{document}
+\input{metadata}
+\hypersetup{
+  pdftitle={Recovery-Aware Physical Event Attribution From Sparse PMUs},
+  pdfauthor={Jorge Luis Mayorga Taborda; Yessica Africano Rodriguez; Masoud Barati; Payman Dehghanian; David Felipe Celeita Rodriguez},
+  pdfsubject={Causal physical event attribution, recovery, and source resolution from sparse PMUs},
+  pdfkeywords={dynamic state estimation, functional observability, phasor measurement units, physics-informed inference, source localization}
+}
+
+\begin{abstract}
+An electrical network can continue responding after an intervention is restored, while a new event begins before that response decays. With sparse PMUs, this creates ambiguity between a new source and the recovery of an earlier one. We formulate attribution through competing physical histories. The inference engine uses switched state-space predictors derived from the network differential-algebraic equations, together with voltage, terminal current, frequency and ROCOF from eight PMUs. It screens unknown onsets over a ten-second retrospective window, integrates load severity, and preserves separate active-event and originating-cause masses after restoration. A finite bank represents constant network-parameter uncertainty. \IfFileExists{generated/c01_macros.tex}{In the independent continuous evaluation, the five-model bank obtains \COneMixTimely{}/\COneMixTotal{} timely family/source decisions with \COneMixExtras{} unmatched alarms; nominal obtains \COneNomTimely{}/\COneNomTotal{} with \COneNomExtras{} extras.}{In completed development streams, the bank obtains \ContMixTimely{}/\ContMixTotal{} timely family/source decisions with \ContMixExtras{} unmatched alarms. Nominal gains one timely decision but produces more extras. The independent, prespecified evaluation remains in progress.} A separate known-onset load experiment illustrates why visible weak interventions can remain difficult to localize. The contribution is a specified recovery-aware attribution mechanism and an evaluation that separates detection, timely source decisions and restoration. The validated scope is a known load/line catalog; calibrated event probabilities, all-family diagnosis and real-time execution are not established.
+\end{abstract}
+
+\begin{keywords}
+event detection, model uncertainty, phasor measurement units, physics-informed inference, sequential diagnosis, source localization.
+\end{keywords}
+
+\titlepgskip=-21pt
+\maketitle
+
+\input{sections/narrative_intro}
+\input{sections/narrative_related}
+\input{sections/narrative_problem}
+\input{sections/article_method}
+\FloatBarrier
+\input{sections/narrative_protocol}
+\FloatBarrier
+\input{sections/narrative_results}
+\IfFileExists{sections/08c_c01_confirmatory.tex}{\input{sections/08c_c01_confirmatory}\FloatBarrier}{}
+\input{sections/article_resolution}
+\FloatBarrier
+\input{sections/article_discussion}
+\input{sections/article_conclusion}
+
+\section*{Acknowledgment}
+OpenAI Codex assisted with drafting and restructuring the main text,
+LaTeX preparation, and plotting and execution-infrastructure code.
+The authors retain responsibility for the scientific content, verification,
+and final submission.
+\FloatBarrier
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\EOD
+\end{document}

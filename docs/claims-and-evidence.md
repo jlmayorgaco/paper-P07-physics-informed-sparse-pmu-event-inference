@@ -1,5 +1,37 @@
 # Claims and evidence register
 
+## Completed controlled signature test X02
+
+The separate IEEE-39 experiment compares a nominal signature, the same signature
+with a PMU-prefix offset, and an operating-context-conditioned signature. Across
+80 physical load-event cases and three common noise realizations, both corrected
+arms select presence and source correctly in 240/240 observed records. Conditioning
+reduces median relative incremental-response error from 1.2513% to 0.0561% and
+median relative severity error from 1.2032% to 0.3288%. It adds no source hits
+against the recentered arm in this ceiling test. The family, onset and OFF are
+known; four sources and one scalar operating-context direction are tested.
+Shared-noise paired intervals are conditional on those realizations. Severity
+is evaluated under the generating source; neither saturated source masses nor
+this restricted test establish calibration or causal detection performance.
+See `ei-x02-results.md`, `generated/frozen/ei_x02_20261030/MANIFEST.json` and
+`sections/article_ei_x02.tex`. This component is not integrated into frozen R11;
+it does not replace C01 or establish an improvement over the hackathon entry.
+
+## Consolidated conversation corpus
+
+`corpus/README.md` links the conversation synthesis, equation-to-implementation map, adjudicated ideas and generated numerical ledger. `corpus/RESULTS.csv` preserves each value's source/hash, denominator and scope. The new shared review describes an older manuscript; its external synthetic DICE figures are not adopted as IEEE-39 results. The event-context successor remains distinct from R11. C01 partial outcomes are not read by the corpus generator or used to revise claims.
+
+## Current recovery-aware claim after closest-method review
+
+The governing R11 contribution is the specified competition between successive intervention histories and retained recovery under finite fixed network uncertainty. Physical templates, unknown-onset scans, standard Bayesian updates, M/Delta M accounting, observability and diagnosability have explicit precedents. This review does not certify first use. See `novelty-and-closest-methods.md` and `closest-methods-capabilities.csv`.
+
+- **Implemented capability:** past-state-conditioned load/line histories; separate active and originating-cause masses; finite R/X mixing; no source-label head.
+- **Development evidence:** H04 family/timely/extras and nominal/mixture trade-off. The admission ablation is not a pure recovery-memory ablation.
+- **Not established:** numerical advantage over Warner/Adaptive Matrix CuSum; calibrated event probabilities; causal benefit of each memory operation; source-excluded transfer or official hackathon-score improvement.
+- **Confirmation pending:** C01 remains unchanged and its partial outputs are not used to choose claims or methods. Empirical utility, methodological difference and author approval are distinct gates.
+
+The earlier entries below retain their component-specific contracts; they do not override these restrictions for R11.
+
 ## Continuous evidence addendum, 2026-10-29
 
 | Claim | Evidence | Class and boundary |

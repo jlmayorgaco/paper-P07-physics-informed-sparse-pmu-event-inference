@@ -1,52 +1,44 @@
-# P07 — cierre del manuscrito, 29-oct-2026
+# P07 — argumento y mapa de lectura revisados
 
-Estado: borrador revisado con evidencia ejecutada; C01 preparada, no ejecutada.
-No cambia el título, los autores, la planta F01 ni los estimadores archivados.
+El [corpus de continuidad](docs/corpus/README.md) reconcilia conversación, ideas y fuentes. El [ensayo IEEE-39 X02](docs/ei-x02-results.md) ya prueba E_i en un contrato restringido: mejora respuesta e intensidad, sin más aciertos de origen que recentrar. No se añade silenciosamente a R11/C01. El atlas predictivo, la incertidumbre conjunta y el refinamiento selectivo siguen pendientes.
 
-## Contrato científico en cinco frases
+Actualización con [la revisión compartida](docs/SHARED_REVIEW_INTEGRATION_20261030.md): se separan el método causal congelado y el candidato DICE. El banco batch archivado requiere calificar su normalización y sus métricas Top-1/Top-3; sus valores no se modifican ni se transfieren a R11. La imagen de tipos de evento queda protegida mediante hashes durante el build.
 
-1. Problema: ocho PMU deben distinguir recuperación de estado y atribución de una intervención, con información incompleta y error de modelo.
-2. Gap que se contrasta: una reconstrucción precisa no garantiza separación entre fuentes; un buen score en fuentes conocidas tampoco prueba transferencia ni vigilancia causal.
-3. Idea: medir separación después de permitir amplitud y nuisance físicos, y conservar hipótesis de intervención/estado en lugar de aprender exclusivamente etiquetas de bus.
-4. Prueba falsable: geometría frente a errores de soporte en el banco batch; método causal y referencias congeladas frente a líneas persistentes, restauraciones, R/X y ruido, con todos los fallos incluidos.
-5. Consecuencia: decidir qué puede inferirse, qué permanece ambiguo y cuánto cuesta esperar; el resultado negativo también limita las afirmaciones del artículo.
+Título de trabajo: *Recovery-Aware Physical Event Attribution From Sparse PMUs*. Autores, modelos y resultados conservados. La revisión de literatura solicitada el 29-oct-2026 concreta la diferencia frente a Warner; no es una nueva versión de inferencia.
 
-## Lo que se preserva
+La pregunta es: con ocho PMU, ¿qué intervención explica mejor la historia observada, y cuándo puede distinguirse de las alternativas?
 
-- B0–B3: reconstrucción de voltajes y recentrado físico, con sus denominadores.
-- E_B: banco batch 137 hipótesis, GH31 y W2. Sin sustitución por R11.
-- E_J: formulación conjunta propuesta, aún no validada en su totalidad.
-- ANDES/ExtraTrees históricos: referencia separada; no se mezcla el leaderboard con H04.
+El texto sigue problema → modelo de medición → historias físicas → evidencia y M/ΔM → comparación causal → prueba separada de firmas → interpretación. La reconstrucción de estado y el banco batch quedan en suplemento/corpus, con sus contratos y la normalización calificada. E_B/GH31 no se reemplaza por R11, ni E_J se presenta como terminado.
 
-## Lo que se añade ahora
+## Tres contribuciones acotadas
 
-- R11 y nominal: componente causal carga/línea, estados continuos, inicio desconocido, 47 coordenadas y catálogo 9+9 conocido.
-- Ecuaciones ejecutadas del intercepto fijo, peso prequential y descomposición exacta de ΔM. Son mecanismos, no tres teoremas nuevos.
-- Tabla y figura H04 generadas desde CSV importados con SHA256. R12 queda como ablación negativa.
-- Comparador publicado Chen2016: núcleo reproducido, adaptación F01 declarada; carril propio de apertura persistente, sin atribuirle clasificación de carga/OFF.
-- C01: métodos y protocolo sellados; nuevas solicitudes de simulación preparadas. Ninguna métrica confirmatoria inventada.
+1. Atribución con recuperación: comparar una nueva intervención de carga/línea con el estado que dejó una anterior; separar masa activa de causa retenida bajo hipótesis R/X constantes.
+2. Prueba operacional reproducible: familia/fuente a tiempo, extras y restauración; nominal/mezcla, ablación negativa y C01 congelada. Ni esa ablación ni C01 aíslan cada operación de memoria.
+3. Prueba física controlada de firmas: mismo prefijo/horizonte, nominal frente a recentrado y E_i, midiendo ajuste, origen e intensidad por separado. Es conocida la familia y el ON/OFF; no es otra puntuación del detector causal.
 
-## Orden fijo hasta cerrar
+## Diferencia frente a precedentes
 
-1. Ejecutar C01 sin modificar R11, nominal, ExtraTrees, umbrales ni evaluador. Conservar los rechazos y censuras.
-2. Generar comparaciones pareadas por padre, intervalos, exposición normal y figuras; escribir Results a partir de esos artefactos, incluso si no hay superioridad.
-3. Revisar contribuciones frente a la literatura y a los fallos, compactar el borrador y verificar referencias, derivaciones, reproducibilidad y consistencia de claims.
+Warner ya usa trayectorias físicas, PMU dispersas y barrido retrospectivo. Rovatsos ya incorpora transitorios al QCD. Adaptive Matrix CuSum ya tiene teoría de diagnóstico secuencial. La diferencia de P07 se busca en la atribución de episodios sucesivos con restauración y recuperación conservadas; no se reclama prioridad mundial ni superioridad numérica sobre métodos que no ejecutamos.
 
-No se crea R13 para arreglar otro bus. Una modificación posterior sería otra investigación, no reparación de este examen.
+La comparación detallada y sus límites están en [novelty-and-closest-methods.md](docs/novelty-and-closest-methods.md). La revisión de Barati y la decisión de no ampliar métodos antes de cerrar C01 están en [barati-physics-informed-options.md](docs/barati-physics-informed-options.md).
 
-## Afirmaciones bloqueadas
+## Lectura de las figuras
 
-No se afirma: estimador global óptimo, probabilidades calibradas, novedad por llamar tensor a M, mejora del score oficial de la hackathon, generalización causal a fuentes excluidas, validación de 39 orígenes, faltas/generación/integridad, cambio de PMU, transferencia de campo o reproducción exacta de RAW0001. No se abre RAW0002.
+| Figura | Pregunta que responde |
+|---|---|
+| Arquitectura | ¿Dónde entran física, datos, hipótesis y decisiones? |
+| Tipos de evento (original conservado) | ¿Qué fenómenos muestra RAW0001 y cuáles sí evaluamos causalmente? |
+| Red IEEE-39 | ¿Qué medimos y qué fuentes admite el banco? |
+| Señales | ¿Cómo se manifiestan dos intervenciones en las ocho PMU? |
+| Ablación de firmas | ¿Qué cambia al recentrar y qué añade E_i? |
+| Señales X02 | ¿Qué predice cada modelo en un caso fijado? |
+| Secuencia y M/ΔM | ¿Cómo evoluciona la decisión y dónde llega tarde? |
+| Compromiso de decisión | ¿Qué se gana y qué se pierde al reducir extras? |
 
-La novedad defendible debe apoyarse en la distinción información de estado/separación de fuentes y su prueba empírica, no en una lista de Kalman+Bayes+tensor. Las recursiones de filtrado, la mezcla finita y CUSUM tienen precedentes. La contribución causal queda condicionada a C01 y a la comparación con esos precedentes.
+El artículo es autónomo; el suplemento se compila por separado. La revisión actual está en [PAPER_REVISION_X02.md](docs/PAPER_REVISION_X02.md). El predictor causal es local y conserva memoria física/instrumental; no resuelve una DAE no lineal por celda y reporte. X02 construye sus derivadas con trayectorias no lineales completas, en otro contrato. El artículo anterior y su PDF están en `archive/before_EI_X02_revision/`.
 
-## Fuentes del borrador y comandos
+## C01 sigue intacta
 
-- Métodos: `sections/05b_causal_component.tex`.
-- Resultados nuevos: `sections/08b_continuous_evidence.tex`.
-- Evidencia: `generated/frozen/continuous_20261029/MANIFEST.json`.
-- Auditoría de escritura y alcance: `docs/paper-closure-2026-10-29.md`.
-- Regenerar: `python -B scripts/generate_continuous_evidence.py`.
-- Compilar artículo y suplemento: `powershell -File scripts/build_manuscript_bundle.ps1`.
+No se miran resultados parciales para reescribir o ajustar el método. El ejecutor sigue congelado en SGSMA. Al completar la importación, `scripts/refresh_narrative_c01.py` y `scripts/c01_main_tables.py` integran en el artículo principal la comparación continua, Chen en aperturas persistentes, normales, exposición, fallos, demoras y censuras. Los detalles adicionales siguen en el suplemento. La campaña no debe sobrescribir esta revisión con la estructura anterior.
 
-El PDF es un borrador de investigación, no una versión autorizada para enviar.
+Falta terminar C01, interpretar resultados completos y revisar afirmaciones/reproducibilidad/coautores para envío. No se exige ahora otra familia ni otra corrección por bus. No se abre RAW0002 ni se hace push.

@@ -1,0 +1,54 @@
+{
+  "review_requested_local_date": "2026-10-29",
+  "scope": "Directed closest-method comparison, not systematic review",
+  "methods_changed": false,
+  "C01_partial_outcomes_used": false,
+  "primary_sources": [
+    {
+      "key": "warner2024matrix",
+      "url": "https://arxiv.org/pdf/2211.12980",
+      "final_url": "https://arxiv.org/pdf/2211.12980",
+      "sha256": "84eda87f1dd87402bf7f80512166060a05e05bd5bb2c44b2f38208663a284936",
+      "pages": 47,
+      "status": "readable"
+    },
+    {
+      "key": "ensaf2023kernel",
+      "url": "https://arxiv.org/pdf/2309.10200",
+      "final_url": "https://arxiv.org/pdf/2309.10200",
+      "sha256": "531e6e70ea3cd06f36058daa6b7202caf5b7a613ffefce9e61d8a0083eb30ef3",
+      "pages": 5,
+      "status": "readable"
+    },
+    {
+      "key": "barati2024acpf",
+      "url": "https://arxiv.org/pdf/2406.10390",
+      "final_url": "https://arxiv.org/pdf/2406.10390",
+      "sha256": "d70d70bc2a3052d1b3b48bdca86217fa14fd3956b0886d09181386a6e38064e8",
+      "pages": 10,
+      "status": "readable"
+    },
+    {
+      "key": "chen2016",
+      "url": "https://aledan.ece.illinois.edu/files/2017/04/TPWRS_2016_b.pdf",
+      "final_url": "https://aledan.ece.illinois.edu/files/2017/04/TPWRS_2016_b.pdf",
+      "sha256": "221d4799df60ada1fc59a269d8151d8f0aa8a67c918d04e9afc88a3cca4b4aee",
+      "pages": 10,
+      "status": "readable"
+    },
+    {
+      "key": "rovatsos2017",
+      "url": "https://aledan.ece.illinois.edu/files/2017/04/TSP_2017.pdf",
+      "final_url": "https://aledan.ece.illinois.edu/files/2017/04/TSP_2017.pdf",
+      "sha256": "97c881ab3963c24ca102813413a3930693ea6c2b89ff5ffeaf5a1fa9ccca790a",
+      "pages": 11,
+      "status": "readable"
+    }
+  ],
+  "warner_access": "Crossref author/title/posted content; primary indexed PDF pages3,4,5,6,9. Direct download not obtained. No claim full local copy.",
+  "excluded_failed_urls_recorded_in": "build/literature_closure/SOURCES.json",
+  "source_matrix_sha256": "e8cdef23fe2072f9821173d24347944cc22f0a254b3bc104e6e43f2ffe0d20ea",
+  "not_a_systematic_priority_certificate": true,
+  "matrix_rows_including_R11": 12,
+  "IMM_access": "Primary IEEE metadata/abstract; used only for general hypothesis-management precedent"
+}

@@ -1,0 +1,86 @@
+{
+  "status": "DEVELOPMENT_ILLUSTRATION_NOT_CONFIRMATORY",
+  "selection": "Fixed parent H002; MATCH/OUT pair. First load and first line for waveform windows; BUS31 for declared timing failure. No selection using C01.",
+  "files": [
+    {
+      "path": "observed/S002.npz",
+      "sha256": "860c844d9c56e52344ee78f9ee15294dbe8800cd550cad0ed11b29642ab0774c",
+      "source": "experiments/E5_VALIDATION_PAPER/M03_R12_CAUSAL_BIRTH/protocol/new_holdout/data/observed/S002.npz",
+      "source_sha256": "860c844d9c56e52344ee78f9ee15294dbe8800cd550cad0ed11b29642ab0774c"
+    },
+    {
+      "path": "prediction/S002.json",
+      "sha256": "c2f8fe96f2e703535746d12e4abbd22ef3559537aa33188e5600725819719c10",
+      "source": "experiments/E5_VALIDATION_PAPER/M03_R12_CAUSAL_BIRTH/protocol/new_holdout/data/predictions/S002/R11/prediction.json",
+      "source_sha256": "c2f8fe96f2e703535746d12e4abbd22ef3559537aa33188e5600725819719c10"
+    },
+    {
+      "path": "prediction/S002_compact.npz",
+      "sha256": "dcea1dbee16e4690f3b9ba4cf36ef5be5cb17d511eeb06c899a693979cad42f3",
+      "source": "experiments/E5_VALIDATION_PAPER/M03_R12_CAUSAL_BIRTH/protocol/new_holdout/data/predictions/S002/R11/prediction.npz",
+      "source_sha256": "e3d1168219ddd92e05a14cad9f5b4ade0d26c60b77d1478f766070bfb3b8d63c",
+      "retained_arrays": [
+        "time_s",
+        "M",
+        "M_cause",
+        "theta_weights",
+        "delta_M_conditional",
+        "delta_M_parameter"
+      ]
+    },
+    {
+      "path": "evaluation/S002.json",
+      "sha256": "3634605f41d8887d5d134cce67ec452e157928f03f80df9840cc13dc1e6ebce4",
+      "source": "H04 sealed truth, used only for retrospective illustration"
+    },
+    {
+      "path": "observed/S012.npz",
+      "sha256": "60ade3960519c157bf2a854dee36d5114c8fe7dd84dcb3aa77cc8169e282e4b0",
+      "source": "experiments/E5_VALIDATION_PAPER/M03_R12_CAUSAL_BIRTH/protocol/new_holdout/data/observed/S012.npz",
+      "source_sha256": "60ade3960519c157bf2a854dee36d5114c8fe7dd84dcb3aa77cc8169e282e4b0"
+    },
+    {
+      "path": "prediction/S012.json",
+      "sha256": "26a555bd0df4950a91915412cf946c8d62a50b792d7dc974909e7a483a69dd9a",
+      "source": "experiments/E5_VALIDATION_PAPER/M03_R12_CAUSAL_BIRTH/protocol/new_holdout/data/predictions/S012/R11/prediction.json",
+      "source_sha256": "26a555bd0df4950a91915412cf946c8d62a50b792d7dc974909e7a483a69dd9a"
+    },
+    {
+      "path": "prediction/S012_compact.npz",
+      "sha256": "45dfdee6f4392b235f4aeb530cf89a76641bcfc746b45d4e41987d6033a40d4c",
+      "source": "experiments/E5_VALIDATION_PAPER/M03_R12_CAUSAL_BIRTH/protocol/new_holdout/data/predictions/S012/R11/prediction.npz",
+      "source_sha256": "9b2e85a8b6ad8863aba9028c51802731e51fb3ba349407f2cd6a4fb6fa3bb199",
+      "retained_arrays": [
+        "time_s",
+        "M",
+        "M_cause",
+        "theta_weights",
+        "delta_M_conditional",
+        "delta_M_parameter"
+      ]
+    },
+    {
+      "path": "evaluation/S012.json",
+      "sha256": "c774017e5fcc670436c2e50c0608da78ca6e3ee50a6daabebacf90bda5bb1c23",
+      "source": "H04 sealed truth, used only for retrospective illustration"
+    },
+    {
+      "path": "assets.json",
+      "sha256": "e237d417f12f1fa3e59c62166d980d017c70b5eab3f1b7733b618e3326a9c7f9",
+      "source": "experiments/E5_VALIDATION_PAPER/M03_R12_CAUSAL_BIRTH/protocol/new_holdout/runtime/model/assets.json",
+      "source_sha256": "e237d417f12f1fa3e59c62166d980d017c70b5eab3f1b7733b618e3326a9c7f9"
+    },
+    {
+      "path": "branch.csv",
+      "sha256": "b1858adb3e409750b5db24bc5073dda1e0683a59ef6e5966840cd73a18293972",
+      "source": "experiments/E5_VALIDATION_PAPER/M03_R12_CAUSAL_BIRTH/protocol/new_holdout/runtime/model/physics/reference/data/branch.csv",
+      "source_sha256": "b1858adb3e409750b5db24bc5073dda1e0683a59ef6e5966840cd73a18293972"
+    },
+    {
+      "path": "PROTOCOL.json",
+      "sha256": "5bd95c1a1f8cf4999527a03b2abd177bd99e353b24fc241de7fae28b3a14d1b7",
+      "source": "experiments/E5_VALIDATION_PAPER/M03_R12_CAUSAL_BIRTH/protocol/new_holdout/runtime/PROTOCOL.json",
+      "source_sha256": "5bd95c1a1f8cf4999527a03b2abd177bd99e353b24fc241de7fae28b3a14d1b7"
+    }
+  ]
+}

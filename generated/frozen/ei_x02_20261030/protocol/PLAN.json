@@ -1,0 +1,104 @@
+{
+  "id": "IEEE39_EI_X02_RESEARCH_CANDIDATE",
+  "parent": "SIM0001_JuliaPD_F01",
+  "parent_manifest_sha256": "e4c20cdb58c66ba28ad3c763fea171bef140df268132d229a31ee92891a0a2e7",
+  "hypothesis": "Mixed event-context derivatives improve a shifted signature beyond correcting its baseline; measure whether this also changes source decisions.",
+  "buses": [
+    3,
+    7,
+    16,
+    24
+  ],
+  "pmus": [
+    2,
+    5,
+    6,
+    10,
+    19,
+    22,
+    29,
+    39
+  ],
+  "fps": 30,
+  "duration_s": 10.0,
+  "onset_s": 3.0,
+  "off_s": 6.0,
+  "context_definition": "Scalar eta multiplies P/Q at PQ buses and PV active dispatch; feasible equilibrium initialization may change allowed setpoints but no structural constants.",
+  "context_dictionary": [
+    -0.01,
+    -0.005,
+    0.0,
+    0.005,
+    0.01
+  ],
+  "test_context": [
+    -0.03,
+    -0.02,
+    0.0,
+    0.02,
+    0.03
+  ],
+  "event_fd_step": 0.005,
+  "context_fd_step": 0.01,
+  "half_context_fd_step": 0.005,
+  "half_event_fd_step": 0.0025,
+  "test_amplitudes": [
+    -0.01,
+    -0.001,
+    0.001,
+    0.01
+  ],
+  "noise_seeds": [
+    390502,
+    390503,
+    390504
+  ],
+  "amplitude_prior_sd": 0.05,
+  "amplitude_bounds": [
+    -0.15,
+    0.15
+  ],
+  "prefix_end_s": 2.5,
+  "score_start_s": 3.0,
+  "score_end_s": 10.0,
+  "fields": 47,
+  "exclude_current_angle_bus39": true,
+  "comparators": [
+    "nominal",
+    "recentered",
+    "conditioned"
+  ],
+  "context_estimation": "PMU-only scalar GLS from the intervention-free prefix; no true operating point supplied.",
+  "recentering": "Same observed prefix offset for recentered and conditioned. No post-onset fitting of baseline.",
+  "candidate_response": "a*D0+a^2*Q0 plus a*eta_hat*E_i only in conditioned; same Q0 and proper amplitude prior/bounds in all arms.",
+  "inferencer_information": "Known load family and fixed ON/OFF timing; four public candidate buses; no true source/severity/context.",
+  "uncertainty": "Frozen colored-instrument innovations transform; plug-in prefix fit and truncated noise imply approximate likelihood, no posterior-calibration claim.",
+  "metrics": [
+    "incremental_response_error",
+    "absolute_prediction_error",
+    "joint_source_top1",
+    "source_top3",
+    "amplitude_error",
+    "conditional_log_loss",
+    "context_error",
+    "normal_selection"
+  ],
+  "independent_unit": "Physical trajectory; noise realizations and methods paired. Bootstrap groups by physical test case.",
+  "bootstrap_seed": 390505,
+  "bootstrap_repetitions": 2000,
+  "full_DAE_trajectories": 142,
+  "dictionary_trajectories": 57,
+  "test_physical_trajectories": 85,
+  "test_physical_events": 80,
+  "no_retuning_after_test": true,
+  "case_rejections_retained": true,
+  "C01_changed": false,
+  "RAW0002_opened": false,
+  "boundaries": [
+    "No unknown-onset detection claim",
+    "No all-39-source generalization",
+    "No simultaneous interventions",
+    "No field or real-time claim",
+    "No recalibration of plant or instrument"
+  ]
+}

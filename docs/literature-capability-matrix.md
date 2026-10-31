@@ -1,5 +1,13 @@
 # Literature capability matrix
 
+## Governing update: recovery-aware paper closure
+
+The current manuscript is the restricted R11/nominal recovery-aware load/line study, with separate B0--B3 and E_B evidence. The earlier broad hybrid/source-exclusion program below is historical and is not a set of achieved R11 contributions or new requirements for C01. See [the new capability ledger](closest-methods-capabilities.csv) and [the direct-method audit](novelty-and-closest-methods.md).
+
+The directed closure search adds Warner's high-fidelity trajectory scan and Adaptive Matrix CuSum, stochastic physical/kernel state priors and DAE joint parameter estimation. It corrects the Rovatsos author initials from N./Y. to G./X. using the author PDF and publisher record. Unknown-onset scanning, transient signatures, model mixing, physical uncertainty and diagnosability are not claimed as first discoveries. Only Chen and the frozen ExtraTrees adapters are executed published/learned comparators in C01; no score against Warner is manufactured.
+
+This is not a systematic saturation or priority certificate. Direct PDF downloads for Warner were unavailable; the audited source was the primary indexed PDF pages identified in the new ledger plus the Crossref preprint record. The 2026 parameter-estimation preprint is distinguished from its later 2027 journal issue. Unexamined full-text details are not used to assert missing capabilities.
+
 ## Scope and audit rule
 
 This matrix positions the paper against methods for state estimation, event identification, source localization, partial observation, and measurement integrity. Scores from different plants or targets are not treated as a leaderboard. A method is a common-contract baseline only if its observation operator, candidate space, split unit, and source-exclusion rule can be reproduced. Bibliographic metadata below are represented by verified entries in `references.bib`.

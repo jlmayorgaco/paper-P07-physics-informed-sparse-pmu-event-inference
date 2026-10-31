@@ -1,0 +1,22 @@
+\section{What Existing Methods Explain and What This Test Adds}
+\label{sec:narrative-related}
+
+Dynamic state estimation supplies the state and uncertainty machinery used to predict a PMU history. Unknown-input and DAE estimators address incomplete models and exogenous inputs \cite{gillijns2007input,nugroho2022dae,katanic2024recursive}. Their task is not automatically an event-family/source decision. A recovered bus-voltage field can remain compatible with competing physical interventions.
+
+Model-based source inference is the closest methodological precedent. Phasor angles support outage hypotheses \cite{tate2008outage}; uncertain pre-event conditions can be marginalized with outage identity \cite{zhao2014outages}; and sequential likelihoods detect line changes under stochastic operation \cite{chen2016quickest,rovatsos2017outage}. We therefore compare with an executable published physical detector rather than presenting physical hypothesis testing itself as new. Its persistent-line assumptions determine where the comparison is eligible.
+
+Learned PMU diagnosis provides a different comparator. Sparse classifiers and knowledge-driven representations identify represented events or assets \cite{pandey2020realtime,li2024knowledge,yildiz2024few}. The historical SGSMA baseline supplies two frozen ExtraTrees adaptations here. We distinguish interpolation at represented sources, transfer of that frozen adapter, and true held-source generalization. The present causal catalog is known; its results do not establish the last of those claims.
+
+Observability and diagnosability explain why neither a physical nor learned method is guaranteed to localize every visible event. Functional observability concerns the requested state function \cite{fernando2010functional,montanari2022functional}; descriptor-model diagnosability and nuisance-profiled tests concern competing explanations \cite{eriksson2013diagnosability,scharf1994matched}. Placement-dependent source ambiguity is also established in PMU fault/event work \cite{jamei2020limits,conte2023fault,yildiz2025sparse}. These precedents motivate an empirical question, not a claim of first discovery: does preserving the physical event/recovery history remain useful when a fixed sparse sensor set and imperfect network models must support causal decisions?
+
+\begin{table*}[t]\centering\small
+\caption{The comparison is about inference contracts, not a list of ingredients. The full paper-by-paper literature matrix remains in Supplementary Appendix~A.}\label{tab:literature-capability}
+\begin{tabularx}{\textwidth}{@{}lXXX@{}}\toprule
+Route & What drives the decision & Relevant precedent & Role in this paper\\\midrule
+State/unknown-input estimation & Dynamic equations and observed history & DAE and recursive estimation & State component; does not alone certify source identity\\
+Learned diagnosis & Features mapped to trained labels & Sparse-PMU classifiers & Frozen causal ExtraTrees references\\
+Physical outage QCD & Likelihood under line hypotheses & Chen \emph{et al.} & Published first-stop comparator on persistent lines\\
+Physical history bank here & Intervention/recovery trajectories with a finite model mixture & Filtering, model selection and diagnosability & Restricted load/line attribution with explicit timing and failure tests\\\bottomrule
+\end{tabularx}\end{table*}
+
+We use ``physics-informed'' to mean that the physical equations define the candidate trajectories and likelihood inputs. It does not mean that a neural network has been constrained by a physics loss. Learning is present in the supervised references; a learned source-agnostic discrepancy layer and the unrestricted joint state/event/integrity estimator remain separate proposals, not completed contributions.

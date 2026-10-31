@@ -1,0 +1,30 @@
+{
+  "article_pages": 12,
+  "supplement_pages": 28,
+  "C01_and_reference_seals_unchanged": true,
+  "pipeline_verify_exit_code": 0,
+  "narrative_and_continuous_evidence_hashes_valid": true,
+  "C01_editorial_synthetic_fixture_passed": true,
+  "fixture_idempotent": true,
+  "actual_C01_outcomes_used": false,
+  "methods_changed": false,
+  "unresolved_citations": false,
+  "unresolved_references": false,
+  "bibliography_duplicate_keys": false,
+  "full_build_passed": true,
+  "local_review_not_independent_peer_review": true,
+  "article_sha256": "af33b9df2d826ed5ba2fb03400190f0c1f32e40ba869c4c42f57b0d53b8a00e4",
+  "visual_review_pages": [
+    1,
+    3,
+    4,
+    6,
+    7,
+    9,
+    10,
+    11,
+    12
+  ],
+  "figure_count": 6,
+  "table_count": 4
+}

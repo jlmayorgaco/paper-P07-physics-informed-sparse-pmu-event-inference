@@ -1,0 +1,36 @@
+\subsection{Exploratory Numerical Route to Multi-Family Inference}
+\label{sec:single-event-route}
+
+The joint target $\mathcal E_{\mathrm J}$ in the preceding subsection is a statistical specification, not an executed end-to-end result. A separate single-event pilot implements parts of its physical search and continuous state--severity fit. It uses 32 rectangular voltage/current channels from the same eight PMU buses at 30~Hz; frequency and ROCOF from the historical competition files are not inputs to this likelihood. Its candidate catalog contains $H_0$, bus faults, load changes, generator-reference changes, and branch outages. The generator and line scenarios in this pilot have recovery semantics that must be matched by each candidate's temporal operator. Supplementary Appendix~H records the exact contract and the unverified evidence boundary.
+
+For a fixed family, source, and onset, let $\bm X$ collect the differential trajectory after algebraic projection and let $\bm\vartheta_H$ contain the continuous severity coordinates. Set $\bm r^{\rm dyn}_{H,k}=\bm x_{k+1}-\bm F_{H,k}(\bm x_k;\bm\vartheta_H)$ and $\bm r^{\rm pmu}_{H,k}=\bm y_k-\bm h_{H,k}(\bm x_k;\bm\vartheta_H)$. The pilot minimizes the conditional Gaussian MAP objective
+\begin{equation}
+\begin{aligned}
+J_H(\bm X,\bm\vartheta_H)={}&
+\tfrac12\|\bm x_0-\overline{\bm x}_0\|_{\bm P_0^{-1}}^2
++\tfrac12\sum_k\|\bm r^{\rm dyn}_{H,k}\|_{\bm Q^{-1}}^2\\
+&+\tfrac12\sum_k\|\bm r^{\rm pmu}_{H,k}\|_{\bm R^{-1}}^2
+-\log p(\bm\vartheta_H\mid H).
+\end{aligned}
+\label{eq:pilot-map}
+\end{equation}
+The DAE transition $\bm F_{H,k}$ changes with the physical operator: a fault adds a temporary shunt, an outage removes a branch primitive, a load event changes withdrawal, and a generator event perturbs a governor reference. Algebraic sensitivity alone is blind to that last pathway; its PMU effect appears after differential propagation. The objective is conditional on the candidate and the declared Gaussian approximation. A minimum of $J_H$ is not a normalized model probability.
+
+The numerical update uses structured Gauss--Newton smoothing, whose relationship to the iterated extended Kalman smoother is established \cite{bell1994ieks,sarkka2020linesearch}. Partition its local normal equations into trajectory and event-parameter blocks. If $\bm H_{XX}$ is nonsingular, eliminating the trajectory step gives
+\begin{equation}
+\begin{aligned}
+\bm S_H&=\bm H_{\vartheta\vartheta}
+-\bm H_{\vartheta X}\bm H_{XX}^{-1}\bm H_{X\vartheta},\\
+\bm b_H&=\bm g_{\vartheta}
+-\bm H_{\vartheta X}\bm H_{XX}^{-1}\bm g_X,\\
+\Delta\bm\vartheta_H&=-\bm S_H^{-1}\bm b_H,\quad
+\Delta\bm X=-\bm H_{XX}^{-1}
+(\bm g_X+\bm H_{X\vartheta}\Delta\bm\vartheta_H).
+\end{aligned}
+\label{eq:pilot-schur}
+\end{equation}
+One Armijo factor is applied to both increments and tested against the nonlinear objective. Equation~\eqref{eq:pilot-schur} is algebraically the full joint step; calling $\bm b_H$ a gradient of the \emph{profiled} objective additionally requires the trajectory to be conditionally stationary. The appendix derives both statements and explains the numerical guards.
+
+The pilot separates proposal recall from final selection. An $H_0$ innovation detector identifies an alarm window; the onset is refined separately, and a common pre-event state is fitted without event-contaminated samples. Smoothly nested load and generator candidates use the nuisance-profiled screening strength $T_H=\bm b_H^{\mathsf T}\bm S_H^{-1}\bm b_H$ when $\bm S_H\succ0$. Fault and outage candidates instead use short-horizon physical signatures and nuisance-projected matched scores, because a topology switch or finite fault pulse is not an ordinary infinitesimal perturbation of $H_0$. Scores are ranked \emph{within} families; a frozen quota retains representatives of every family because their cheap scores are not cross-family calibrated. A sequence of increasing nonlinear budgets then refines the shortlist. These steps are search heuristics, and neither a high Stage-A rank nor survival at ten iterations is a converged localization decision.
+
+For valid final fits, a Laplace approximation would add prior, covariance, curvature, and measure normalizers to the optimized log density. Boundary severities require a cone correction, and failed or singular fits cannot be assigned a comparable regular Laplace score. The present pilot has not closed that final comparison. It also has not passed the $\mathcal R_0$ reduction test in \eqref{eq:joint-to-batch-reduction}; therefore its four-family experiments are kept separate from the prospective 137-support load result.

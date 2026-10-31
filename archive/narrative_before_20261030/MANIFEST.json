@@ -1,0 +1,86 @@
+{
+  "utc": "2026-10-30T03:52:51.651231+00:00",
+  "purpose": "Preserve complete pre-revision manuscript; no research baselines changed",
+  "files": [
+    {
+      "path": "main.tex",
+      "sha256": "49b9f2882c28c052ce007a97f69143763a86a63eaf413eeb102464f77439ebc9"
+    },
+    {
+      "path": "supplement.tex",
+      "sha256": "58f2cf5bb65b5e53fdc35053e3d4da8e78be5be185800d083283ef78cd61301a"
+    },
+    {
+      "path": "PAPER_PLAN.md",
+      "sha256": "4a4438bb46a5fae244bcb5f27d743ba5e8dadc5162d2779b09ae27a4a6f3672d"
+    },
+    {
+      "path": "README.md",
+      "sha256": "81b164b7e0370d726e16cbe352fdf1e529a4fe9ba3d01f4b39a72ae20f08a666"
+    },
+    {
+      "path": "scripts/build_manuscript_bundle.ps1",
+      "sha256": "067a8bf01552e3328099608e59b5821918a963cf63d96a041d947ee6fb1683f1"
+    },
+    {
+      "path": "docs/figure-plan.md",
+      "sha256": "70b5c8684b9c67d8322f5cf5139c8d01d5c09947581afefe703c0917c9ae12ed"
+    },
+    {
+      "path": "sections/01_introduction.tex",
+      "sha256": "9277d84a822a2fabc39713583f1c411605ca8a935fcd7e45e2b8ae96b51e6b25"
+    },
+    {
+      "path": "sections/02_related_work.tex",
+      "sha256": "7f9ee0266aa4feb980e87256972909bd1ad0bf03576c69eb34411b865da932f3"
+    },
+    {
+      "path": "sections/03_problem_formulation.tex",
+      "sha256": "1ebaf11794c9df46f7dab770fe5d9d66612b6028aea56e95f51f914c13407980"
+    },
+    {
+      "path": "sections/04_diagnosability.tex",
+      "sha256": "4177fb13126ceb2224f95ef2c023cf51fce4a366fc889e69d906b19d33dd7088"
+    },
+    {
+      "path": "sections/05a_hierarchical_single_event.tex",
+      "sha256": "32d1b5e5c697a7128c3d71e950f34fbab4f586013c7ae78793c104836d0fbe07"
+    },
+    {
+      "path": "sections/05b_causal_component.tex",
+      "sha256": "f71d8b4be81bd6a9e4d6512ed9b3d1e8d71d1228c2ab65bc18ce3da2c1d674bd"
+    },
+    {
+      "path": "sections/05_bayesian_inference.tex",
+      "sha256": "a19bcc05dc57a8a51bfa11bd9f4749db0ef974be9471e30eb9ba2ed3fa52f259"
+    },
+    {
+      "path": "sections/06_edge_knowledge.tex",
+      "sha256": "6175c70dbca8f54639cff10718d6c0cce91f27307fcf7e3bb0552aa5768096bd"
+    },
+    {
+      "path": "sections/07_experimental_protocol.tex",
+      "sha256": "be77413e2848cd0a53426c6a71b139194513cc880ae04c4437eb221ea90c87f4"
+    },
+    {
+      "path": "sections/08a_single_event_pilot.tex",
+      "sha256": "75fc1f0b113a68321e788cc1fe167db05373b47717115f542090293006b1dfac"
+    },
+    {
+      "path": "sections/08b_continuous_evidence.tex",
+      "sha256": "25b97821ade44fe77834dcb4453cd473d9b2bec2d9bd004ada6fa9072f38e3a8"
+    },
+    {
+      "path": "sections/08_results.tex",
+      "sha256": "726539c210612dba1cef0ee5a648e2e9ca95785f56d9e031d29b65877797a961"
+    },
+    {
+      "path": "sections/09_discussion.tex",
+      "sha256": "46c717243b8eacf919efda75dfcf82c0a137b3449cc2177c4e8d7d587a0146b3"
+    },
+    {
+      "path": "sections/10_conclusion.tex",
+      "sha256": "0942fc393530926419af706ed70fcafa28e5d6a4f73769907d2cf780cfd6a1b4"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "scope": "Local Gaussian algebra; independent numerical quadrature; no new simulator evidence",
+  "checks": [
+    {
+      "bounds": [
+        -0.2,
+        0.3
+      ],
+      "absolute_error": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "bounds": [
+        -0.3,
+        0.0
+      ],
+      "absolute_error": 0.0,
+      "passed": true
+    }
+  ]
+}

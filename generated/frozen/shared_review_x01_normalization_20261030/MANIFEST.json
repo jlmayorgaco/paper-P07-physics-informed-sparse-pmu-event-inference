@@ -1,0 +1,21 @@
+{
+  "status": "INDEPENDENT_LINEAR_GAUSSIAN_NORMALIZATION_CONTROL",
+  "physical_replay": false,
+  "files": [
+    {
+      "path": "check_linear_normalization.py",
+      "sha256": "654f598c6a9a70c25d15670e9617b63f5ef0764b0dbdfd9f26d378848a0312e9",
+      "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_METHOD_DICE_X01\\check_linear_normalization.py"
+    },
+    {
+      "path": "run/NORMALIZATION_ANALYTIC_CHECK.json",
+      "sha256": "97a0ed485ee258110f91a9e90e48601002fa7f797576593a01cb01cf3dba6b1f",
+      "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_METHOD_DICE_X01\\run\\NORMALIZATION_ANALYTIC_CHECK.json"
+    },
+    {
+      "path": "RESULTS.md",
+      "sha256": "8685518e9eea0c03a7f1339aff38094d59527f1466ec87b3adf2b3cead957c01",
+      "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_METHOD_DICE_X01\\RESULTS.md"
+    }
+  ]
+}

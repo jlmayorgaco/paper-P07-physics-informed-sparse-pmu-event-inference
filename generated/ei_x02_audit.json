@@ -1,0 +1,98 @@
+{
+  "import_hashes_verified": true,
+  "case_denominators_verified": true,
+  "physical_cases": 142,
+  "test_cases": 85,
+  "observed_records": 255,
+  "known_onset_and_off": true,
+  "derivative_checks": [
+    {
+      "bus": "3",
+      "check": "context_step_halving",
+      "relative_difference": "0.002826580384879283"
+    },
+    {
+      "bus": "7",
+      "check": "context_step_halving",
+      "relative_difference": "0.0029102219934705586"
+    },
+    {
+      "bus": "16",
+      "check": "context_step_halving",
+      "relative_difference": "0.003913488907567422"
+    },
+    {
+      "bus": "24",
+      "check": "context_step_halving",
+      "relative_difference": "0.004267573340378951"
+    },
+    {
+      "bus": "3",
+      "check": "event_step_halving",
+      "relative_difference": "2.8042905799956963e-05"
+    },
+    {
+      "bus": "16",
+      "check": "event_step_halving",
+      "relative_difference": "9.766347344338705e-05"
+    }
+  ],
+  "effects": {
+    "relative_incremental_error": {
+      "metric": "relative_incremental_error",
+      "contrast": "conditioned_minus_recentered",
+      "estimate": "-0.011540795213032692",
+      "lower95": "-0.01305200346930662",
+      "upper95": "-0.009998978148403295",
+      "physical_cases": "80"
+    },
+    "joint_correct": {
+      "metric": "joint_correct",
+      "contrast": "conditioned_minus_recentered",
+      "estimate": "0.0",
+      "lower95": "0.0",
+      "upper95": "0.0",
+      "physical_cases": "80"
+    },
+    "log_loss": {
+      "metric": "log_loss",
+      "contrast": "conditioned_minus_recentered",
+      "estimate": "0.0",
+      "lower95": "0.0",
+      "upper95": "0.0",
+      "physical_cases": "80"
+    }
+  },
+  "amplitude": [
+    {
+      "method": "nominal",
+      "median_relative_amplitude_error_pct": 3.452206425819948,
+      "mean_relative_amplitude_error_pct": 19.999635923566775,
+      "records": 240
+    },
+    {
+      "method": "recentered",
+      "median_relative_amplitude_error_pct": 1.2031696516837955,
+      "mean_relative_amplitude_error_pct": 1.2465971720395908,
+      "records": 240
+    },
+    {
+      "method": "conditioned",
+      "median_relative_amplitude_error_pct": 0.3288283529167928,
+      "mean_relative_amplitude_error_pct": 0.5083297176540144,
+      "records": 240
+    }
+  ],
+  "amplitude_effect": {
+    "metric": "relative_amplitude_error_pct",
+    "estimate": -0.7382674543855767,
+    "lower95": -0.8977595263721682,
+    "upper95": -0.5815576198283842,
+    "physical_cases": 80,
+    "interpretation": "Amplitude-error metric was prespecified; this aggregation uses all source-conditioned amplitude estimates. Intervals condition on three common noise realizations."
+  },
+  "physical_response_improvement": true,
+  "source_claim": "does not establish a directional improvement in joint source decisions",
+  "C01_changed": false,
+  "RAW0002_opened": false
+}

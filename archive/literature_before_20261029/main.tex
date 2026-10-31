@@ -1,0 +1,67 @@
+% ieeeaccess.cls reuses \year as a metadata setter. Preserve the TeX primitive
+% so PGF/TikZ can initialize its deterministic machinery while loading.
+\let\PSevenTeXYear\year
+\documentclass{ieeeaccess}
+
+\input{preamble}
+\usepackage{pdfpages}
+\usepackage{placeins}
+\input{generated/results_macros}
+\input{generated/continuous_macros}
+\input{generated/narrative_macros}
+\IfFileExists{generated/c01_macros.tex}{\input{generated/c01_macros}}{}
+
+\newcommand{\PSevenSupplementPDF}{output/pdf/P07_Physics_Informed_State_Reconstruction_Event_Source_Inference_Supplement.pdf}
+
+\begin{document}
+\input{metadata}
+\hypersetup{
+  pdftitle={Physics-Informed Event Attribution From Sparse PMUs Under Model Uncertainty},
+  pdfauthor={Jorge Luis Mayorga Taborda; Yessica Africano Rodriguez; Masoud Barati; Payman Dehghanian; David Felipe Celeita Rodriguez},
+  pdfsubject={Sparse-PMU state reconstruction, finite-horizon diagnosability, and multi-event source inference},
+  pdfkeywords={dynamic state estimation, functional observability, phasor measurement units, physics-informed inference, source localization}
+}
+
+\begin{abstract}
+Sparse PMUs can reveal a disturbance without identifying its physical source. We study attribution as a comparison of intervention-conditioned network trajectories, rather than a direct mapping from measurements to bus labels. A frozen differential-algebraic model predicts voltage, terminal current, frequency and ROCOF at eight PMUs. A causal history bank tests load and line hypotheses over a ten-second retrospective window, integrates load severity, retains recovery states after restoration, and combines fixed network-model hypotheses. Its source masses $M$ and increments distinguish conditional evidence from model reweighting. Separate experiments expose the information limit: accurate hidden-voltage recovery does not imply source separation, and weak-pair exact-support Top-1 in the matched batch study is \GlobalWeakTopOne{}, versus \GlobalFiniteTopOne{} for finite pairs. In continuous-stream development tests, the physical bank obtains \ContMixTimely{}/\ContMixTotal{} timely family/source decisions with \ContMixExtras{} unmatched alarms. The nominal reference gains one timely decision but produces more extras; a stricter admission ablation suppresses extras while losing a real intervention. The per-family and temporal analyses explain those outcomes. Confirmatory performance remains pending completion of the frozen campaign. The demonstrated scope is a known load/line catalog, not all event families, unseen-source causal transfer or field operation.
+\end{abstract}
+
+\begin{keywords}
+dynamic state estimation, event detection, functional observability, limited observability, phasor measurement units, physics-informed inference, source localization.
+\end{keywords}
+
+\titlepgskip=-21pt
+\maketitle
+
+\input{sections/narrative_intro}
+\input{sections/narrative_related}
+\input{sections/narrative_problem}
+\input{sections/narrative_method}
+\FloatBarrier
+\input{sections/narrative_information}
+\FloatBarrier
+\input{sections/narrative_protocol}
+\FloatBarrier
+\input{sections/narrative_results}
+\IfFileExists{sections/08c_c01_confirmatory.tex}{\input{sections/08c_c01_confirmatory}\FloatBarrier}{}
+\input{sections/narrative_discussion}
+\input{sections/narrative_conclusion}
+
+% Acknowledgments and author biographies are intentionally omitted until author-provided.
+\FloatBarrier
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\EOD
+\clearpage
+\IfFileExists{\PSevenSupplementPDF}{%
+  \includepdf[
+    pages=-,
+    fitpaper=true,
+    pagecommand={\thispagestyle{empty}},
+    addtotoc={1,section,1,{Supplementary Material},supplementary-material}
+  ]{\PSevenSupplementPDF}%
+}{%
+  \PackageError{P07}{Supplementary PDF not found}{Run scripts/build_manuscript_bundle.ps1 before compiling main.tex.}%
+}
+\end{document}

@@ -1,4 +1,6 @@
-# Figure and table map
+# Historical figure and table map (superseded for the main article)
+
+The active seven-figure map is in [MAIN_ARTICLE_AUDIT_20261030.md](MAIN_ARTICLE_AUDIT_20261030.md). The map below records the previous multi-study manuscript. Its references to an integrated three-lane estimator and state-estimation figures are historical; they do not describe the current main article.
 
 ## Shared visual grammar
 

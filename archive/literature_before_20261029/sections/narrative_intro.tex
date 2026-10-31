@@ -1,0 +1,26 @@
+\section{Introduction}
+\label{sec:introduction}
+
+\PARstart{A}{n} unmeasured load changes. Several PMUs respond, a detector raises an alarm, and the network keeps oscillating after the load is restored. A second intervention then begins during that recovery. The operational question is no longer whether one signal exceeds a threshold: which physical intervention explains the reports observed so far, where did it originate, and when is that explanation distinguishable from the alternatives?
+
+\begin{figure*}[t]\centering
+\resizebox{\textwidth}{!}{\input{figures/narrative_architecture}}
+\caption{The complete scientific argument. Physics maps an intervention at an unmeasured source into predicted PMU trajectories; causal evidence chooses among those explanations. Event truth enters only evaluation. The figure describes the implemented restricted load/line component, not an already validated all-family joint estimator.}
+\label{fig:joint-architecture}\end{figure*}
+
+Sparse PMUs make the question difficult because a source need not have a sensor at its own bus. Its voltage, current and frequency effects propagate through the network \cite{phadke2008synchronized,zhao2019dse}. Uncertain operating context and network parameters can also change those effects. Moreover, physical OFF is not electrical recovery. A method that resets at restoration can treat the remaining response as another event or lose a real event that begins before the oscillation decays.
+
+Strong existing methods solve parts of this problem. Dynamic state estimators combine power-system equations and PMU histories \cite{katanic2024recursive}; supervised classifiers learn sparse-PMU event/source labels \cite{pandey2020realtime,yildiz2024few}; and physical outage detectors compare network hypotheses sequentially \cite{chen2016quickest,rovatsos2017outage}. A low state error does not, however, prove source identity. Nor does a high classifier score on represented assets prove source transfer. A useful comparison must distinguish these tasks and keep uncertain explanations visible.
+
+Our approach uses the physical intervention as the object of inference. A load or line candidate changes the network's DAE operator. Starting from an estimated past state, that operator predicts what all eight PMUs should report. Conditional likelihoods compare those responses with the observed history while retaining amplitude, noise and network-model uncertainty. The source/family masses $M$ summarize the competing explanations; their increments separate conditional evidence evolution from reweighting physical models. Retained recovery states compete against new events rather than being discarded at OFF.
+
+The paper makes three scoped contributions:
+\begin{enumerate}
+\item \textbf{A physical attribution mechanism:} an executable causal load/line history bank with native terminal-current predictions, unknown-onset retrospective screening, fixed-model uncertainty and continuous recovery states. We specify the inputs, evidence update and public decisions, not just the architecture.
+\item \textbf{An information-based interpretation:} functional state recovery and nuisance-profiled source separation answer different questions. The matched load-support study connects this distinction to the observed weak-source resolution limit.
+\item \textbf{A traceable evaluation argument:} separate state, batch-ambiguity and continuous-stream tests retain their own denominators, negative ablations and comparator eligibility. R11 and nominal are frozen co-references; confirmation is not used to tune another version.
+\end{enumerate}
+
+The contribution is not a new Bayes rule, a universally optimal filter, or the name ``tensor'' for an array. It is the physical construction and tested interpretation of competing intervention/recovery explanations under the declared sparse-PMU contract. In completed development evidence, the five-model bank obtains \ContMixTimely{}/\ContMixTotal{} timely family/source decisions with \ContMixExtras{} extras; nominal retains one more timely event at a higher alarm burden. The per-family breakdown, time-aligned example and failed ablation explain those counts. Final performance claims require the separate frozen confirmation.
+
+

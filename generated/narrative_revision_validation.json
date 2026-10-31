@@ -1,0 +1,50 @@
+{
+  "article_pages": 11,
+  "supplement_pages": 28,
+  "main_figures": 6,
+  "main_tables": 4,
+  "unresolved_references": false,
+  "unresolved_citations": false,
+  "main_visual_review_pages": [
+    1,
+    2,
+    4,
+    5,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "narrative_hashes_verified": true,
+  "delta_identity_max_error": 6.617254318011089e-16,
+  "deterministic_checks": {
+    "theory_checks": true,
+    "cone_bayes_checks": true,
+    "information_limit_checks": true,
+    "discrepancy_design_checks": true
+  },
+  "C01_partial_outcomes_used": false,
+  "article_separate_from_supplement": true,
+  "methods_changed": false,
+  "old_manuscript_archived": true,
+  "publication_status": "NARRATIVE_REVISED_CONFIRMATION_PENDING",
+  "local_gaussian_quadrature_checks": [
+    {
+      "bounds": [
+        -0.2,
+        0.3
+      ],
+      "absolute_error": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "bounds": [
+        -0.3,
+        0.0
+      ],
+      "absolute_error": 0.0,
+      "passed": true
+    }
+  ]
+}

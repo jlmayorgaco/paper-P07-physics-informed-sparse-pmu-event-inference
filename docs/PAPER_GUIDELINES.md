@@ -1,3 +1,5 @@
+> Revisión de alcance del 30-oct-2026: el argumento actual está en [PAPER_PLAN.md](../PAPER_PLAN.md). Las metas originales de aprendizaje de discrepancia, fuentes excluidas y PMU cambiantes que siguen abajo se conservan como programa de investigación; no se presentan como resultados logrados por R11.
+
 # P07 paper guidelines, v1.0
 
 **Status:** binding manuscript contract for the next research and writing stages.

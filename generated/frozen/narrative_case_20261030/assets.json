@@ -1,0 +1,134 @@
+[
+  {
+    "id": "BUS3",
+    "family": "load",
+    "bus": 3,
+    "i": 3,
+    "j": 3
+  },
+  {
+    "id": "BUS4",
+    "family": "load",
+    "bus": 4,
+    "i": 4,
+    "j": 4,
+    "new_origin": true
+  },
+  {
+    "id": "BUS7",
+    "family": "load",
+    "bus": 7,
+    "i": 7,
+    "j": 7
+  },
+  {
+    "id": "BUS15",
+    "family": "load",
+    "bus": 15,
+    "i": 15,
+    "j": 15,
+    "new_origin": true
+  },
+  {
+    "id": "BUS16",
+    "family": "load",
+    "bus": 16,
+    "i": 16,
+    "j": 16
+  },
+  {
+    "id": "BUS20",
+    "family": "load",
+    "bus": 20,
+    "i": 20,
+    "j": 20
+  },
+  {
+    "id": "BUS24",
+    "family": "load",
+    "bus": 24,
+    "i": 24,
+    "j": 24,
+    "new_origin": true
+  },
+  {
+    "id": "BUS26",
+    "family": "load",
+    "bus": 26,
+    "i": 26,
+    "j": 26
+  },
+  {
+    "id": "BUS31",
+    "family": "load",
+    "bus": 31,
+    "i": 31,
+    "j": 31
+  },
+  {
+    "id": "LINE3-4",
+    "family": "line",
+    "edge": 6,
+    "i": 3,
+    "j": 4,
+    "new_origin": true
+  },
+  {
+    "id": "LINE4-14",
+    "family": "line",
+    "edge": 9,
+    "i": 4,
+    "j": 14
+  },
+  {
+    "id": "LINE9-39",
+    "family": "line",
+    "edge": 17,
+    "i": 9,
+    "j": 39
+  },
+  {
+    "id": "LINE14-15",
+    "family": "line",
+    "edge": 24,
+    "i": 14,
+    "j": 15,
+    "new_origin": true
+  },
+  {
+    "id": "LINE16-17",
+    "family": "line",
+    "edge": 26,
+    "i": 16,
+    "j": 17
+  },
+  {
+    "id": "LINE17-18",
+    "family": "line",
+    "edge": 30,
+    "i": 17,
+    "j": 18,
+    "new_origin": true
+  },
+  {
+    "id": "LINE23-24",
+    "family": "line",
+    "edge": 38,
+    "i": 23,
+    "j": 24
+  },
+  {
+    "id": "LINE26-27",
+    "family": "line",
+    "edge": 42,
+    "i": 26,
+    "j": 27
+  },
+  {
+    "id": "LINE26-29",
+    "family": "line",
+    "edge": 44,
+    "i": 26,
+    "j": 29
+  }
+]
