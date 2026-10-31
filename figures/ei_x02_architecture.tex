@@ -1,0 +1,20 @@
+\begin{figure*}[t]\centering
+\begin{tikzpicture}[font=\sffamily\scriptsize,>=Latex,
+ b/.style={draw=black!45,rounded corners=2pt,align=left,text width=4.3cm,minimum height=1.0cm,inner sep=5pt},
+ a/.style={->,draw=black!65,thick}]
+\node[b,fill=accessblue!7] (prefix) at (5.2,0) {\textbf{Same pre-event PMUs}\\Estimate $\widehat\eta$ and offset $\widehat b$.\\Use only reports before 2.5 s.};
+\node[b,fill=green!7] (dict) at (0,0) {\textbf{Separate physical dictionary}\\Complete DAE trajectories produce\\$D_i^0$, $Q_i^0$ and mixed derivative $E_i$.};
+\node[b,fill=orange!9] (data) at (10.4,0) {\textbf{Same held-out observations}\\Four candidate loads; known ON/OFF.\\Truth is unavailable to inference.};
+\node[b,fill=accessblue!5] (nom) at (0,-1.8) {\textbf{Nominal}\\$y_0+aD_i^0+a^2Q_i^0$};
+\node[b,fill=green!5] (recent) at (5.2,-1.8) {\textbf{Recentered}\\Nominal prediction $+\widehat b$};
+\node[b,fill=orange!6] (cond) at (10.4,-1.8) {\textbf{Conditioned}\\Recentered prediction $+a\widehat\eta E_i$};
+\node[draw=black!40,rounded corners=2pt,text width=14.6cm,align=center,inner sep=5pt] (out) at (5.2,-3.4) {\textbf{Same inference and evaluation:} colored-instrument transform, amplitude integral and priors.\\Compare response error, source/presence decisions and severity; retain every test case.};
+\draw[a] (dict)--(nom);\draw[a] (prefix)--(recent);
+\draw[a] (nom)--(recent);\draw[a] (recent)--(cond);
+\draw[a] (data.east)--++(.25,0)|-(out.east);
+\draw[a] (nom.south)--(out.north west);\draw[a] (recent)--(out);\draw[a] (cond.south)--(out.north east);
+\end{tikzpicture}
+\caption{Executed signature ablation, separate from the stream algorithm
+in Fig.~\ref{fig:joint-architecture}. The three variants share the data
+and decision calculation; only reference and event-response terms differ.}
+\label{fig:ei-architecture}\end{figure*}

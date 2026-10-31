@@ -1,0 +1,9 @@
+\begin{table*}[t]\centering\small
+\caption{Controlled signature test, separate from causal detection. Response error is the median whitened incremental error at the generating source/severity over 80 physical cases. Joint correctness includes presence and source on 240 noisy event records; source-only ranking conditions on a load. Severity error is median absolute relative error at the generating source. Normal selections use 15 fixed windows, not normal-hours exposure.}
+\label{tab:ei-results}
+\begin{tabular}{lrrrrr}\toprule
+Model & \shortstack{Response\\error (\%)} & \shortstack{Joint\\correct} & \shortstack{Source-only\\correct} & \shortstack{Normal event\\selections} & \shortstack{Severity\\error (\%)}\\\midrule
+Nominal & 1.25 & 114/240 & 114/240 & 12/15 & 3.45\\
+Recentered & 1.25 & 240/240 & 240/240 & 0/15 & 1.2\\
+Conditioned & 0.0561 & 240/240 & 240/240 & 0/15 & 0.329\\
+\bottomrule\end{tabular}\end{table*}

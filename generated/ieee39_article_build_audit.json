@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-31",
+  "method": "Export explicitly staged inputs using git show :path; compile the figure and article with scripts/build_ieee39_review.ps1; compare every page at 72 dpi. PDF creation metadata excluded.",
+  "checks": {
+    "figures/generated/narrative_topology.pdf": {
+      "pages": 1,
+      "clean_index_render_identical_all_pages": true
+    },
+    "output/pdf/P07_Event_Attribution_Article.pdf": {
+      "pages": 15,
+      "clean_index_render_identical_all_pages": true
+    }
+  },
+  "frozen_source_bytes_preserved": true,
+  "topology_figure_number": 3,
+  "topology_article_page": 5,
+  "scientific_results_revalidated": false
+}

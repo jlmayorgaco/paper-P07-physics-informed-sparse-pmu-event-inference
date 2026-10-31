@@ -1,0 +1,23 @@
+{
+  "files": {
+    "branch.csv": {
+      "sha256": "b1858adb3e409750b5db24bc5073dda1e0683a59ef6e5966840cd73a18293972",
+      "source": "generated/frozen/narrative_case_20261030/branch.csv"
+    },
+    "assets.json": {
+      "sha256": "e237d417f12f1fa3e59c62166d980d017c70b5eab3f1b7733b618e3326a9c7f9",
+      "source": "generated/frozen/narrative_case_20261030/assets.json"
+    },
+    "bus.csv": {
+      "sha256": "d732a896e95c013fa3906941a540f2d9161ca99a2c60e571a890174680cb6943",
+      "source": "SIM0001_JuliaPD_F01/runtime/reference/data/bus.csv"
+    },
+    "terminal_mapping.csv": {
+      "sha256": "74c1ba517d22f0c7d8c478c55fff32207d826a816c291187cb86d6c3b91bd9be",
+      "source": "SIM0001_JuliaPD_F01/runtime/reference/terminal_mapping.csv"
+    }
+  },
+  "baseline_changed": false,
+  "use": "Topology, device presence, candidate membership and voltage PMU locations only. No operating parameters are altered. F01 BUS5 terminal 5-6 remains provisional.",
+  "layout_reference": "Original orthogonal layout following the conventional arrangement in the three user-supplied visual references; no image is embedded or traced as raster."
+}

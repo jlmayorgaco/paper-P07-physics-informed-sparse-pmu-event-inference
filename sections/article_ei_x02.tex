@@ -1,0 +1,114 @@
+\section{Operating-Point Signature Experiment}
+\label{sec:ei-x02}
+
+\subsection{Reference Correction and Response Correction}
+The stream bank already builds local predictors at estimated operating
+points. A separate experiment tests why changing a reference alone may be
+insufficient. It compares three response approximations with identical
+observations, channels, timing, amplitude prior and inference horizon.
+It is a controlled test of a mixed derivative, not another version of R11.
+
+Let $\eta$ denote a scalar operating change and $a$ the signed load factor.
+Central differences of complete nonlinear DAE trajectories give
+\begin{align}
+ D_i(\eta)&\simeq\frac{y_i(\eta,h)-y_i(\eta,-h)}{2h},\nonumber\\
+ E_i&\simeq\frac{D_i(d)-D_i(-d)}{2d}.
+ \label{eq:ei-mixed-response}
+\end{align}
+The event follows the same ON/OFF schedule in every derivative trajectory.
+The fixed $Q_i^0$ is the coefficient of $a^2$, obtained from the centered
+second difference divided by $2h^2$. After removing the frozen common
+angle drift, the three predicted histories are
+\begin{align}
+ \mu_i^{\rm N}(a)&=y_0+aD_i^0+a^2Q_i^0,\nonumber\\
+ \mu_i^{\rm R}(a)&=\mu_i^{\rm N}(a)+\widehat b,\nonumber\\
+ \mu_i^{\rm E}(a)&=\mu_i^{\rm R}(a)+a\widehat\eta E_i.
+ \label{eq:ei-three-predictions}
+\end{align}
+Both corrected variants use exactly the same prefix offset $\widehat b$.
+This comparator corrects the measured PMU reference; it is not the separate
+nonlinear AC hidden-state reconstruction algorithm in the historical study.
+Only the last changes the event signature. The first two consequently
+have identical incremental response models even when their absolute fits
+differ. Context $\widehat\eta$ is estimated by generalized least squares
+from the pre-event PMUs and the nominal context direction. No test context,
+source or severity enters inference.
+
+\input{figures/ei_x02_architecture}
+
+\subsection{Test Cases and Decision Contract}
+The frozen F01 plant supplies all trajectories. The scalar $\eta$ scales
+PQ operating injections and active PV dispatch; feasible initialization
+can change permitted operating setpoints, but not machine constants,
+line impedances, ZIP fractions or the PMU model. Central event/context
+steps are 0.005 and 0.01, with step-halving checks. Dictionary construction
+uses \EIDictionaryCases{} trajectories. The test contains \EITestPhysical{}
+physical cases: \EIEventPhysical{} load interventions and \EINormalPhysical{}
+controls at operating changes $-3\%,-2\%,0,+2\%,+3\%$. Each load changes
+P/Q together by $\pm0.1\%$ or $\pm1\%$ at BUS3, BUS7, BUS16 or BUS24.
+None belongs to the prescribed voltage-measurement PMU set; the separate
+oriented current-terminal assignments remain fixed.
+
+Each case is one ten-second integration, with ON at 3 s, OFF at 6 s and
+no state reset. The context fit ends at 2.5 s. Three frozen instrumental
+noise seeds produce \EIObserved{} paired records. The nonlinear PMU
+frequency/ROCOF operator runs before its archived instrumental noise is
+added. Both corrected methods retain the same measured prefix, so an
+advantage cannot arise from supplying one method a better initial reference.
+
+This experiment supplies the load family and ON/OFF times. It estimates
+source and continuous severity using the same bounded Gaussian prior and
+amplitude-integrated likelihood in all three variants. The no-event
+hypothesis is retained. The fixed colored-instrument transform is common;
+plug-in prefix estimates and clipped noise still limit probability
+calibration. Thus these decisions are not unknown-onset detector scores
+and normal-window decisions are not continuous false-alarm rates.
+
+\subsection{Response Error and Source Decisions}
+\input{tables/generated/ei_x02_results}
+\input{generated/ei_x02_interpretation}
+
+The gain is not uniform across all comparisons: at the nominal operating
+point, estimating an unnecessary reference/context can worsen severity
+relative to keeping the correct fixed reference. Figure~\ref{fig:ei-comparison}
+retains that case rather than reporting only shifted operation.
+
+The derivative stability checks change $E_i$ by
+\EIContextFDLow{}--\EIContextFDHigh{}\% when the
+context step is halved. Halving the event step in the two checked directions
+changes it by at most \EIEventFDHigh{}\%. These are local numerical checks, not a
+global smoothness or identifiability certificate.
+Percentages of event severity refer to the P/Q input factors; actual load
+power also responds to voltage under the frozen impedance law.
+
+\begin{figure*}[t]\centering
+\includegraphics[width=.96\textwidth]{figures/generated/ei_x02_comparison.pdf}
+\caption{Separate effects of recentering and conditioning. (a) Incremental
+response error in the fixed physical test cases, evaluated at the generating
+source and severity to isolate approximation error. (b) Correct source
+and presence decisions on noisy observations, after marginalizing severity.
+(c) Relative severity error evaluated at the generating source.
+The panels measure different outcomes. Noise realizations repeat
+physical cases and are not counted as additional independent trajectories.
+Nominal and recentered incremental predictions coincide.}
+\label{fig:ei-comparison}\end{figure*}
+
+\begin{figure*}[t]\centering
+\includegraphics[width=.96\textwidth]{figures/generated/ei_x02_signals.pdf}
+\caption{Fixed illustrative test: BUS7, $\eta=+3\%$, load factor $+1\%$,
+seed 390502. Gray traces are the delivered PMU observations. Colored curves
+use each method's selected source and estimated severity; a no-event
+selection keeps its baseline. The dotted black curve is physical truth,
+used only for illustration. The plotted channels and case were fixed
+without selecting the largest improvement. Shading marks physical ON/OFF
+for evaluation.}
+\label{fig:ei-signals}\end{figure*}
+
+Paired intervals resample physical test cases, keeping their noise seeds
+and methods together. The same three noise seeds are reused across cases;
+these intervals describe case variation conditional on those common noise
+realizations, not uncertainty over a noise population or transfer to arbitrary
+sources or plants. The step-halving checks and all
+case outcomes remain in the frozen artifact package. Better fidelity, if
+observed, is not sufficient to establish calibrated source probabilities,
+all-family diagnosis or a benefit in the unchanged causal campaign.

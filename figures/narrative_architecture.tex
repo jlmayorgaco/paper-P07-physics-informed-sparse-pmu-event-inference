@@ -1,0 +1,13 @@
+\begin{tikzpicture}[font=\sffamily\footnotesize\mdseries,>=Latex,
+ box/.style={draw=black!40,rounded corners=3pt,align=left,text width=4.45cm,minimum height=1.48cm,inner sep=6pt},
+ arr/.style={->,thick,draw=black!65}]
+\node[box,fill=accessblue!8] (y) at (0,0) {\textbf{1. Receive a PMU report}\\Eight PMUs: $V$, terminal $I$, $f$, ROCOF.\\Observed history through time $t$.};
+\node[box,fill=green!7] (physics) at (5.35,0) {\textbf{2. Predict a physical response}\\DAE dynamics and network constraints.\\Oriented terminal-current map.};
+\node[box,fill=orange!9] (hyp) at (10.7,0) {\textbf{3. Compare physical histories}\\New load/line or existing recovery.\\Replay from the estimated past state.};
+\node[box,fill=orange!9] (like) at (10.7,-2.7) {\textbf{4. Compare prediction and data}\\Filter state and colored noise.\\Integrate severity; score a report once.};
+\node[box,fill=green!7] (mass) at (5.35,-2.7) {\textbf{5. Retain active and cause masses}\\Mix fixed network models into $M_c(t)$.\\$\Delta M$: evidence change + reweighting.};
+\node[box,fill=accessblue!8] (out) at (0,-2.7) {\textbf{6. Emit a causal decision}\\Alarm/diagnosis emission times.\\Source candidates and restoration.};
+\draw[arr] (y)--(physics);\draw[arr] (physics)--(hyp);\draw[arr] (hyp)--(like);\draw[arr] (like)--(mass);\draw[arr] (mass)--(out);
+\node[draw=black!35,fill=black!3,rounded corners=2pt,align=center,text width=15.1cm,minimum height=.68cm] (eval) at (5.35,-4.8) {\textbf{Evaluation only:} seal predictions, then compare with reserved event truth. Physical OFF and electrical recovery are different times.};
+\draw[arr,dashed] (out.south)--++(0,-.45)-|(eval.west);
+\end{tikzpicture}

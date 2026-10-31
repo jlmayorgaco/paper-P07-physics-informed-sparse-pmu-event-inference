@@ -1,0 +1,31 @@
+\section{Experimental Design}
+\label{sec:narrative-protocol}
+
+The primary experiment asks whether the causal bank can attribute successive load/line interventions without confusing recovery with a new event. Development, independent evaluation and an auxiliary source-resolution experiment answer different questions and retain separate denominators.
+
+\begin{table*}[t]\centering\small
+\caption{Experimental populations and their purposes. Conditions and noise realizations repeat a physical parent rather than creating independent trajectories.}\label{tab:narrative-evidence}
+\begin{tabularx}{\textwidth}{@{}lXXX@{}}\toprule
+Population & Configuration & Main outcome & Interpretation\\\midrule
+Continuous development & Three event parents, six interventions each; one normal parent; three network conditions & Timely family/source, extras and restoration & Open development evidence, not independent confirmation\\
+Independent continuous evaluation & 18 event parents, six interventions each; 12 normal parents; three network conditions and two noise scales & Paired attribution, false alarms, delays and failures & Prespecified comparison of unchanged methods\\
+Persistent-line evaluation & Nine lines, three parent repetitions; same network/noise strata & First stopping decision, source and censoring & Eligible comparison with published line-outage QCD\\
+\IfFileExists{generated/ei_x02_macros.tex}{Signature component test & \EIDictionaryCases{} dictionary and \EITestPhysical{} test trajectories; four loads; three common noise seeds & Nominal, reference correction and mixed-signature correction & Known ON/OFF and family; separate from causal accuracy\\}{}
+\bottomrule
+\end{tabularx}\end{table*}
+
+The simulator is the IEEE-39 Julia/PowerDynamics research candidate F01. Each physical parent is integrated continuously, preserving differential states through ON/OFF. Its PMU reporting grid is separate from solver steps: a 120-s record contains 3601 reports per PMU and a 600-s normal record contains 18001, including endpoints. At a switch-aligned report the export uses the post-switch algebraic value. Measurement references, load law and stochastic instrument parameters are fixed across events. RAW0001 supplied retrospective calibration context, not independent test data.
+
+H03 and H04 each contain three event parents with six successive load/line interventions and one normal parent, all 80 s long. Schedules are paired across nominal, in-bank R/X and mixed out-of-bank R/X conditions. Each campaign therefore has 18 unique interventions and 54 event realizations. Both campaigns are now development evidence. No interval or generalization claim treats those 54 realizations as independent events.
+
+R11 and its nominal version are frozen co-references. Both ExtraTrees artifacts and their causal preprocessing/publication adapters are frozen as well; neither is retrained on H04 or C01. They receive the same 30-fps observations. This is a comparison of those operational implementations on the stated contract, not a rerun of the hackathon leaderboard.
+
+The published physical comparator is Chen \emph{et al.}'s persistent single-line quickest-change detector \cite{chen2016quickest}. Its reduced-network covariance is marginalized to the observed PMU subset after inversion. Parallel CUSUM statistics stop at the first threshold crossing and select a line. Our declared F01 adapter uses nonoverlapping angle increments at 15 Hz, a startup-only scale/drift estimate and the fixed nominal line catalog. Its white-injection/DC assumptions do not describe all F01 instrumental effects. We preserve both matched-law implementation checks and F01 mismatch failures; no ARL guarantee is transferred to colored noise.
+
+The eligible common test for Chen is one persistent line opening or a normal record. Its output has no load family or restoration operator. The independent campaign, C01, therefore separates continuous load/line episodes from persistent-line first-stop decisions. Early stops, wrong sources, omissions and horizon censoring remain visible.
+
+For continuous events, an alarm is associated temporally before predicted family/source is inspected. The first unmatched alarm after ON is eligible up to the next ON, with the inherited 30-s cap. A timely joint decision requires the correct family and asset emitted before true OFF. Unmatched alarms are extras; false restorations and open episodes are reported separately. These definitions prevent an eventual correct answer from hiding a late diagnosis.
+
+C01 specifies 18 continuous parents, 27 persistent-line parents and 12 normal parents, with three R/X conditions and instrumental-noise scales of one and two. The 171 intended physical trajectories yield 342 observed records. Conditions represent nominal parameters, perturbations represented in the bank and mixed perturbations outside it. Solver and inference failures remain in the intended denominators. Comparisons use 10,000 paired parent-cluster resamples; repeated conditions/noise do not count as independent parents. Predictions are fixed before the evaluator opens reserved truth.
+
+Logical decision delay is measured on report timestamps. Wall-clock cost is recorded separately with hardware, process concurrency and one-thread BLAS settings; parallel execution of independent records does not make a within-record inference method real-time. \IfFileExists{generated/c01_macros.tex}{The completed independent results follow the development examples.}{The independent evaluation is in progress. The following section reports completed development results only.}
