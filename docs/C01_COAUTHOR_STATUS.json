@@ -1,0 +1,39 @@
+{
+  "local_time": "2026-10-31T17:12:42.694038-05:00",
+  "progress": {
+    "completed": 213,
+    "intended_observed": 342,
+    "last_record": "S213"
+  },
+  "stage": {
+    "stage": "r11_S214",
+    "status": "RUNNING",
+    "started_unix_s": 1793484369.3446515,
+    "log": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_CONFIRMATORY_C01\\run\\logs\\r11_S214.log",
+    "method_changes": false
+  },
+  "timing_by_duration": {
+    "120": {
+      "n": 12,
+      "median_s": 487.21117973327637,
+      "min_s": 432.8887677192688,
+      "max_s": 573.4297208786011,
+      "remaining": 105
+    },
+    "600": {
+      "n": 12,
+      "median_s": 1568.4050866365433,
+      "min_s": 1271.6641764640808,
+      "max_s": 2475.5923998355865,
+      "remaining": 24
+    }
+  },
+  "remaining_hours": {
+    "median_s": 24.666359986464183,
+    "min_s": 21.103683568239212,
+    "max_s": 33.22898285786311
+  },
+  "interpretation": "Timing projection, not a statistical confidence interval; excludes evaluation/build. Current record counted in full.",
+  "methods_changed": false,
+  "scientific_partial_results_read": false
+}

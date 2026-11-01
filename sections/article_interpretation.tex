@@ -3,6 +3,8 @@
 
 \input{sections/article_information}
 
+\input{sections/article_recovery_x04}
+
 \subsection{Operational Meaning and Scope}
 The physical distinction underlying the stream method is simple:
 restoration changes an input or topology, but does not erase the machine
@@ -52,17 +54,10 @@ line openings; its F01 adapter has DC/white-injection assumptions that do
 not capture all instrumental effects. Its mismatches and censored decisions
 remain part of the comparison.
 
-A further extension would integrate a vector of pre-event context uncertainties rather
-than substituting a point estimate. A local Gaussian approximation gives
-\begin{equation}
- V_h(a)=\Sigma_W+J_{\eta,h}(a)P_{\eta,\tau}J_{\eta,h}(a)^\top.
- \label{eq:context-conditioned-extension}
-\end{equation}
-Its determinant belongs in the likelihood. The covariance must be
-calibrated without absorbing the response directions that distinguish
-sources. Neither the stream scores nor the signature test validate this
-joint extension, an unrestricted multi-source estimator or an optimal
-filter. Those questions require their own fixed comparisons.
+Joint context uncertainty, unrestricted simultaneous sources and calibrated
+posterior probabilities remain unvalidated. Such extensions must preserve
+source-discriminating response directions and account for dependence
+between estimation error and measurement noise.
 
 Finally, processing reports causally is not proof of real-time throughput.
 Observation time, computation and queue delay must be measured separately.

@@ -46,13 +46,17 @@ physical predictors, evidence updates and decision rules.
 before restoration, extra alarms and episode closure. Nominal and uncertain
 network models are evaluated alongside two fixed ExtraTrees adapters;
 Chen's published detector is compared on eligible persistent line openings.
-\item \IfFileExists{generated/ei_x02_macros.tex}{A controlled IEEE-39 test
+\item \IfFileExists{generated/ei_x02_macros.tex}{A known-family, known-ON/OFF IEEE-39 component test
 that separates correction of the pre-event reference from a change in the
 event signature. The test estimates context from PMUs and measures response
 fidelity, source decisions and continuous severity.}{A distinction between fitting
 electrical observations and distinguishing their physical sources, with
 explicit limits on what state and source results establish.}
 \end{enumerate}
+
+A further physical control asks whether recovery increases source separation.
+It distinguishes retaining a consistent prediction from obtaining additional
+information about the source; it is not a comparison of causal detectors.
 
 Completed development streams expose a trade-off: the five-model reference
 obtains \ContMixTimely{}/\ContMixTotal{} timely family/source decisions with

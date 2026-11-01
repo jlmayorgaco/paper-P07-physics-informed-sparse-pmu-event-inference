@@ -1,0 +1,22 @@
+{
+  "scope": "Oracle physical falsification, not a causal inference or R11 comparison",
+  "physical_trajectories": 38,
+  "comparisons": 12,
+  "distinct_recovery_histories": 4,
+  "median_ratio_known": 1.0005939979575982,
+  "median_ratio_uncertain": 0.8531847931117489,
+  "ratio_uncertain_above_one": 0,
+  "mean_frozen": 0.9834722222222222,
+  "mean_conditioned": 0.9834722222222222,
+  "mean_gain_pp": 9.251858538542972e-16,
+  "negative_gain_cases": 2,
+  "protected_files_unchanged": 90,
+  "max_prefix_difference": 0.0,
+  "warnings": [
+    "Oracle recovery state/baseline and known onset/pair",
+    "Finite-amplitude secants, not infinitesimal analytical tangents",
+    "Gaussian innovation surrogate; no new PMU-noise calibration",
+    "Not R11/M3H or a causal detection benchmark",
+    "No independent confirmation; no significance claim"
+  ]
+}

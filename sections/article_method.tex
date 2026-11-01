@@ -35,9 +35,22 @@ On a regular index-one DAE chart with a fixed angle reference,
  B_q^{\rm red}=f_u-f_zg_z^{-1}g_u.
  \label{eq:narrative-reduction}
 \end{align}
-Observation derivatives provide the corresponding reduced output. The
-implementation discretizes these operators for the admitted switch modes.
-Inertia, controls and load law remain those of the fixed plant.
+For the instantaneous electrical observation map $H_q(x,z,u)$, the
+corresponding output operators are
+\begin{equation}
+ C_q^{\rm red}=H_x-H_zg_z^{-1}g_x,\qquad
+ D_q^{\rm red}=H_u-H_zg_z^{-1}g_u.
+ \label{eq:electrical-output-reduction}
+\end{equation}
+They propagate a perturbation at an unmeasured source to the selected
+voltage and oriented-current channels. Network connectivity enters through
+the branch stamps in $g_q$ and $H_q$; eliminating unmeasured algebraic
+variables generally produces dense reduced operators. The graph therefore
+constrains the prediction without a learned graph embedding. A changed
+terminal operator also contributes directly through $H_q$, not only
+through the changed voltage. The implementation discretizes the admitted
+switch modes and adds causal phase-history operators for frequency and
+ROCOF. Inertia, controls and load law remain those of the fixed plant.
 
 After augmenting instrumental memory, a conditional predictor has the
 local form
@@ -109,6 +122,26 @@ These standard identities are exact for the stated local conditional
 model. Adaptive proposals, pruning and covariance approximations make the
 complete bank approximate.
 
+The conditional state mean is represented as $m_h+d_h a$. To make the
+filtering approximation explicit, let $T_o,J_o,g_o,u_o,j_o,v_o$ denote the
+archived one-report transition and observation operators for switch $o$.
+The code forms $e=r_k-J_o m_h-j_o$ and $s=J_o d_h+v_o$. With the shared
+covariance $P_\rho$ for the current discrepancy regime $\rho$,
+\begin{align}
+ S_o&=R+J_oP_\rho J_o^\top,&
+ K_o&=T_oP_\rho J_o^\top S_o^{-1},\nonumber\\
+ m_h^+&=T_o m_h+g_o+K_o e,&
+ d_h^+&=T_o d_h+u_o-K_o s.
+ \label{eq:implemented-conditional-correction}
+\end{align}
+The amplitude distribution is updated by the same integral above. The
+regime covariances are obtained from nominal-operator Riccati equations;
+R11 does not propagate an independent exact covariance for every switched
+history. At episode closure, it retains the mixture mean of the augmented
+state and records the omitted between-history spread. Thus state continuity
+and conditional Bayesian amplitude integration are implemented, while a
+fully Bayesian posterior over states, context and all histories is not.
+
 The rolling screen proposes histories; it is not another independent
 observation. Replaying a suffix replaces its original no-new-event suffix
 likelihood. The sequential update therefore counts each report once,
@@ -161,6 +194,9 @@ originating-cause masses for an admissible family/source cell $c$:
 A retained history can stop being active while its cause still explains
 recovery. Later interventions compete with those histories. The
 implementation stores 18 admissible cells, not every family at every bus.
+After confirmed episode closure, explicit histories are compressed into
+the retained state mean. Cause masses describe the current bank, not a
+permanent ledger of all past interventions.
 
 Writing the conditional active mass as $M_{\ell,c,k}$ yields
 \begin{align}
@@ -184,9 +220,26 @@ the last report used. A diagnosis can be correct eventually but too late
 to precede physical OFF.
 
 The nominal comparator uses the same nominal conditional model with its
-own fixed publication path. Comparing nominal and mixture tests the outer
-network bank. The admission-rule ablation tests a different publication
+own fixed publication path. Comparing nominal and mixture evaluates two
+complete configured procedures; it does not isolate the outer network bank
+from publication decisions. The admission-rule ablation tests a different publication
 decision; it is not a pure recovery-memory ablation.
+
+The per-report birth and restoration hazards are
+$1-\exp[-(1/60)/30]$ and $1-\exp[-(1/30)/30]$.
+Birth mass is split equally between load and line families, then uniformly
+among sources within each family. Load severity has a zero-mean Gaussian
+prior with standard deviation 0.15, truncated to $[-0.2,0.2]$ and integrated
+over four intervals with boundaries $-0.2,-0.1,0,0.1,0.2$.
+After three reports, eligible active histories can produce OFF children
+at either half-report position while inheriting state and severity.
+After likelihood normalization, the beam retains the 96 highest-weight
+recent histories, 64 older histories and at least one per occupied source;
+their union is renormalized and discarded mass is recorded.
+The reproducibility archive maps these operations to the frozen
+\texttt{transitions}, \texttt{process}, and
+\texttt{predictive\_log\_density} routines and preserves the complete
+publication configuration.
 
 \subsection{Per-Report Algorithm and Computational Boundary}
 
@@ -199,12 +252,13 @@ startup prefix. Initialize conditional states and retain the eligible past
 states needed by retrospective proposals.
 \item At report $k$, apply the frozen centering, scaling and instrumental
 transformation. Propagate each retained physical/recovery history and its
-conditional uncertainty to predict this report.
+conditional uncertainty to predict this report. Compute and save the outer
+model predictive density before current-report screening and state correction.
 \item Apply the frozen short-lag birth screen using retained past states.
 A proposed history starts before its selected onset; replay
 replaces the corresponding likelihood suffix rather than adding it twice.
-\item Score the report using its predictive density, before correcting
-the state with that report. Integrate the allowed load severity and apply
+\item Score candidate histories and replayed suffixes before correcting
+their states with the reports being scored. Integrate the allowed load severity and apply
 the archived switched operator for a line hypothesis.
 \item Correct the conditional states and severity distributions; update
 network weights and the retained history bank using the fixed rules.

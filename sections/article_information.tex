@@ -1,6 +1,23 @@
 \subsection{Response Fit, Severity and Source Identity}
 \label{sec:narrative-information}
 
+A retained physical history predicts the response still present after
+restoration and defines the state from which a new intervention begins.
+For the exact observation map $\Psi$ and the same pre-intervention history
+$h$, the incremental response is
+\begin{equation}
+ s_{e\mid h}(t)=\Psi_t(h\oplus e)-\Psi_t(h).
+ \label{eq:history-increment}
+\end{equation}
+The two paths share their initial physical and instrumental states.
+In an additive linear time-invariant system, superposition makes this
+increment independent of the prior state. Nonlinear dynamics can change
+its shape, but do not guarantee greater source separation. Preserving
+recovery is a model-consistency requirement, not a claim that an earlier
+disturbance universally helps localization. The stream implementation
+approximates these paths with its declared switched predictors; it does
+not solve the full nonlinear DAE for each hypothesis.
+
 A better physical prediction need not produce a better location. Competing
 sources may remain similar after their severities and initial conditions
 are fitted. For a response $s_h$ at specified severity and context, the

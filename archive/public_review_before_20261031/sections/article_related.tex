@@ -1,0 +1,72 @@
+\section{Related Work}
+\label{sec:narrative-related}
+
+\subsection{State Estimation and Physical Source Inference}
+Unknown-input and DAE estimators recover electrical states despite
+incomplete models or exogenous inputs
+\cite{gillijns2007input,nugroho2022dae,katanic2024recursive}. Functional
+observability asks whether a requested state quantity can be recovered
+\cite{fernando2010functional,montanari2022functional}. Source inference asks
+which intervention can explain the trajectory. Descriptor-model
+diagnosability and nuisance-profiled tests formalize this distinction
+\cite{eriksson2013diagnosability,scharf1994matched}.
+
+Physical hypotheses support outage inference from phasor angles
+\cite{tate2008outage}, Bayesian inference with uncertain states
+\cite{zhao2014outages}, and sequential detection under stochastic operation
+\cite{chen2016quickest,rovatsos2017outage}. Anguluri \emph{et al.} recover
+sparse forcing locations, inputs and an unknown initial state using group
+LASSO for linear dynamics \cite{anguluri2023group}. These are precedents
+for source recovery; group LASSO is not an executed comparator in our
+frozen campaign. Sensor placement also affects source distinguishability
+\cite{jamei2020limits,conte2023fault,yildiz2025sparse}.
+
+\subsection{Trajectory-Based and Sequential Diagnosis}
+Warner \emph{et al.} compare simulated voltage/current fault trajectories
+over a moving onset window and return candidate lines
+\cite{warner2023highfidelity}. Their evaluated target is short-circuit
+identification before clearing; load changes are an adverse-event test.
+Our target follows load changes and line openings through restoration and
+successive interventions. Physical trajectory libraries, remote PMUs and
+retrospective onset scanning are shared ingredients. Their procedure was
+not run on our data, so no numerical superiority is inferred.
+
+The Adaptive Matrix CuSum derives sequential identification error/delay
+results under specified observation laws \cite{warner2024matrix}.
+Multiple-model filtering already propagates conditional state/mode
+hypotheses \cite{blom1988imm}. Our pruned history bank uses these ideas,
+but its approximate covariances, proposal screen and fitted startup context
+do not inherit their general guarantees. The difference tested here is how
+retained recovery competes with a later intervention and affects timely
+attribution and alarm burden.
+
+\subsection{Learned Diagnosis and Physical Uncertainty}
+Learned and knowledge-driven representations identify PMU disturbances and
+assets \cite{pandey2020realtime,li2024knowledge,yildiz2024few}. We compare
+two fixed ExtraTrees adapters from the SGSMA project. Their performance
+tests transfer of those implementations, not the limits of all supervised
+learning. A known physical catalog and source-excluded supervised training
+also impose different information constraints.
+
+Physical stochastic models support latent-state estimation
+\cite{ensaf2023kernel,tartakovsky2023gp}, while joint DAE parameter inference
+addresses uncertain generators and networks \cite{albustami2026dae}.
+Our stream method uses a finite bank of constant network hypotheses.
+The separate signature test examines a local event--context derivative;
+it does not identify every plant parameter or replace the stream method
+with an unrestricted joint estimator.
+
+\begin{table*}[t]\centering\small
+\caption{Closest inference contracts. Only Chen and the fixed ExtraTrees
+adapters are executed comparators in the confirmatory stream campaign.
+An untested capability is not an algorithmic impossibility.}
+\label{tab:literature-capability}
+\begin{tabularx}{\textwidth}{@{}lXXX@{}}\toprule
+Route & Mechanism & Evaluated target & Role in this study\\\midrule
+Chen / Rovatsos & Network likelihoods and sequential tests & Line outages; Rovatsos includes transients & Chen on persistent-line first decisions\\
+Warner high-fidelity & Simulated V/I paths and onset search & Short-circuit line candidates & Closest trajectory precedent; no common-data run\\
+Adaptive Matrix CuSum & Sequential diagnosis with error/delay analysis & One unknown distributional change & Statistical precedent; no inherited guarantee\\
+DAE / stochastic-state estimation & Physical state and uncertainty models & States, unknown inputs or parameters & Components and adjacent tasks\\
+Learned PMU diagnosis & Features or constrained representations & Event families and locations & Two frozen ExtraTrees references\\
+Physical history bank here & Estimated-past-state paths and recovery & Successive catalog load/line events & Timely attribution, extras and restoration\\\bottomrule
+\end{tabularx}\end{table*}

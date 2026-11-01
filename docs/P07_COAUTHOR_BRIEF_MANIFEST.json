@@ -1,0 +1,56 @@
+{
+  "status": {
+    "local_time": "2026-10-31T17:12:42.694038-05:00",
+    "progress": {
+      "completed": 213,
+      "intended_observed": 342,
+      "last_record": "S213"
+    },
+    "stage": {
+      "stage": "r11_S214",
+      "status": "RUNNING",
+      "started_unix_s": 1793484369.3446515,
+      "log": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_CONFIRMATORY_C01\\run\\logs\\r11_S214.log",
+      "method_changes": false
+    },
+    "timing_by_duration": {
+      "120": {
+        "n": 12,
+        "median_s": 487.21117973327637,
+        "min_s": 432.8887677192688,
+        "max_s": 573.4297208786011,
+        "remaining": 105
+      },
+      "600": {
+        "n": 12,
+        "median_s": 1568.4050866365433,
+        "min_s": 1271.6641764640808,
+        "max_s": 2475.5923998355865,
+        "remaining": 24
+      }
+    },
+    "remaining_hours": {
+      "median_s": 24.666359986464183,
+      "min_s": 21.103683568239212,
+      "max_s": 33.22898285786311
+    },
+    "interpretation": "Timing projection, not a statistical confidence interval; excludes evaluation/build. Current record counted in full.",
+    "methods_changed": false,
+    "scientific_partial_results_read": false
+  },
+  "numerical_sources": [
+    {
+      "path": "generated\\continuous_macros.tex",
+      "sha256": "b23f0db4d88677cec9c57a8f3ca681c6c3e09ed32d60d4e685c2caee1779f602"
+    },
+    {
+      "path": "generated\\ei_x02_macros.tex",
+      "sha256": "941b622f8190074890b55f9b7f81bf121cb4a6a6991979f123b2638738fc7618"
+    },
+    {
+      "path": "generated\\frozen\\recovery_x04_20261031\\results\\SUMMARY.json",
+      "sha256": "e823b2c1549de1772a2f4601c1b7f67a56f9b0af9c25b8c423a50fa2b7baae52"
+    }
+  ],
+  "output_sha256": "8f865ad640230bf8980a06d0ed29122f6a12ceca85a46bcb0277739a5f9b8839"
+}

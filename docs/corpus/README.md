@@ -23,6 +23,10 @@ físicos útiles. Ese objetivo completo no es la capacidad demostrada hoy.
 
 ## Leer en este orden
 
+Actualización 31-oct: [nuevo chat, ZIP reproducido y decisiones de
+integración](REVIEW_6ae64dc7.md). El piloto externo clásico, la comprobación
+física F01 X04 y C01 tienen contratos separados.
+
 1. [Síntesis de objetivos, decisiones y aportes](CONVERSATION_SYNTHESIS.md).
 2. [Resultados rastreables](RESULTS.md): generados desde los CSV/JSON, con
    contrato e interpretación; [CSV](RESULTS.csv) para reutilizarlos.

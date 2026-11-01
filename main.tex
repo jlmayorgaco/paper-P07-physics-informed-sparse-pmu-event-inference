@@ -39,7 +39,8 @@ development streams give \ContMixTimely{}/\ContMixTotal{} timely family/source
 decisions with \ContMixExtras{} extra alarms; nominal gains one timely
 decision at a higher alarm burden. Independent confirmation is in progress.}
 \IfFileExists{generated/ei_x02_macros.tex}{In a separate known-onset load
-test, conditioned signatures reduce median relative severity error from
+test with supplied load family, conditioned signatures reduce median
+relative severity error, evaluated at the generating source, from
 \EIRecentSeverity{}\% to \EICondSeverity{}\%, while matching reference-only
 source accuracy.}{}
 The contribution is a specified recovery-aware attribution mechanism and
@@ -64,7 +65,7 @@ event detection, model uncertainty, phasor measurement units, physics-informed i
 \input{sections/narrative_protocol}
 \FloatBarrier
 \input{sections/narrative_results}
-\FloatBarrier
+% Allow following text to fill the column while the full-width history figure floats.
 \IfFileExists{sections/08c_c01_confirmatory.tex}{\input{sections/08c_c01_confirmatory}\FloatBarrier}{}
 \IfFileExists{generated/ei_x02_macros.tex}{\input{sections/article_ei_x02}}{}
 \input{sections/article_interpretation}
@@ -74,10 +75,9 @@ event detection, model uncertainty, phasor measurement units, physics-informed i
 OpenAI Codex assisted with drafting and restructuring the main text,
 LaTeX preparation, and plotting and execution-infrastructure code.
 The authors retain responsibility for the scientific content, verification,
-and final submission.
+and final submission.\EOD
 \FloatBarrier
 \bibliographystyle{IEEEtran}
 \bibliography{references}
 
-\EOD
 \end{document}

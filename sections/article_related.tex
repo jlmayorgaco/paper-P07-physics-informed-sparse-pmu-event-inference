@@ -34,11 +34,16 @@ not run on our data, so no numerical superiority is inferred.
 The Adaptive Matrix CuSum derives sequential identification error/delay
 results under specified observation laws \cite{warner2024matrix}.
 Multiple-model filtering already propagates conditional state/mode
-hypotheses \cite{blom1988imm}. Our pruned history bank uses these ideas,
+hypotheses \cite{blom1988imm}. The multiple-model multiple-hypothesis
+filter maintains mode-sequence histories and adapts their number through
+pruning and merging \cite{boers2005m3h}. Retaining histories or adapting
+bank size is therefore not an original principle of our method.
+Our pruned history bank uses these ideas,
 but its approximate covariances, proposal screen and fitted startup context
-do not inherit their general guarantees. The difference tested here is how
-retained recovery competes with a later intervention and affects timely
-attribution and alarm burden.
+do not inherit their general guarantees. The complete procedure evaluated
+here makes retained recovery compete with later interventions and reports
+timely attribution and alarm burden. These comparisons do not isolate
+recovery memory from the other admission and publication rules.
 
 \subsection{Learned Diagnosis and Physical Uncertainty}
 Learned and knowledge-driven representations identify PMU disturbances and
@@ -52,7 +57,10 @@ Physical stochastic models support latent-state estimation
 \cite{ensaf2023kernel,tartakovsky2023gp}, while joint DAE parameter inference
 addresses uncertain generators and networks \cite{albustami2026dae}.
 Our stream method uses a finite bank of constant network hypotheses.
-The separate signature test examines a local event--context derivative;
+Trajectory sensitivities and Gaussian evidence have also been combined
+for Bayesian parameter inference in power-system DAEs
+\cite{nagi2022trajectory}. Their use alone does not distinguish an event
+attribution algorithm. The separate signature test examines a local event--context derivative;
 it does not identify every plant parameter or replace the stream method
 with an unrestricted joint estimator.
 

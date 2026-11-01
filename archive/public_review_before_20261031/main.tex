@@ -1,0 +1,83 @@
+% ieeeaccess.cls reuses \year as a metadata setter. Preserve the TeX primitive
+% so PGF/TikZ can initialize its deterministic machinery while loading.
+\let\PSevenTeXYear\year
+\documentclass{ieeeaccess}
+
+\input{preamble}
+\usepackage{pdfpages}
+\usepackage{placeins}
+\input{generated/results_macros}
+\input{generated/continuous_macros}
+\input{generated/narrative_macros}
+\IfFileExists{generated/c01_macros.tex}{\input{generated/c01_macros}}{}
+\IfFileExists{generated/ei_x02_macros.tex}{\input{generated/ei_x02_macros}}{}
+
+\begin{document}
+\input{metadata}
+\hypersetup{
+  pdftitle={Physics-Based Event Attribution From Sparse PMUs With Recovery Memory},
+  pdfauthor={Jorge Luis Mayorga Taborda; Yessica Africano Rodriguez; Masoud Barati; Payman Dehghanian; David Felipe Celeita Rodriguez},
+  pdfsubject={Causal physical event attribution, recovery, and source resolution from sparse PMUs},
+  pdfkeywords={dynamic state estimation, functional observability, phasor measurement units, physics-informed inference, source localization}
+}
+
+\begin{abstract}
+An electrical network can continue oscillating after a load is restored or
+a line is reclosed. A later intervention can then resemble the recovery of
+an earlier one. We address this ambiguity by comparing physical histories
+from eight sparse PMUs. DAE-derived switched predictors use voltage,
+oriented terminal current, frequency and ROCOF, start from estimated past
+states, and preserve recovery through restoration. A ten-second state
+history supports screened onset proposals; conditional evidence integrates load severity and
+updates fixed network hypotheses. Active-event and originating-cause masses
+keep ongoing interventions separate from their remaining response.
+\IfFileExists{generated/c01_macros.tex}{The independent continuous evaluation
+gives \COneMixTimely{}/\COneMixTotal{} timely family/source decisions with
+\COneMixExtras{} extra alarms for the five-model bank, versus
+\COneNomTimely{}/\COneNomTotal{} and \COneNomExtras{} for nominal.}{Completed
+development streams give \ContMixTimely{}/\ContMixTotal{} timely family/source
+decisions with \ContMixExtras{} extra alarms; nominal gains one timely
+decision at a higher alarm burden. Independent confirmation is in progress.}
+\IfFileExists{generated/ei_x02_macros.tex}{In a separate known-onset load
+test, conditioned signatures reduce median relative severity error from
+\EIRecentSeverity{}\% to \EICondSeverity{}\%, while matching reference-only
+source accuracy.}{}
+The contribution is a specified recovery-aware attribution mechanism and
+an evaluation separating detection, timely location and restoration.
+The scope is a known load/line catalog; probability calibration, all-family
+diagnosis and real-time deployment remain unestablished.
+\end{abstract}
+
+\begin{keywords}
+event detection, model uncertainty, phasor measurement units, physics-informed inference, sequential diagnosis, source localization.
+\end{keywords}
+
+\titlepgskip=-21pt
+\maketitle
+\raggedbottom
+
+\input{sections/article_intro}
+\input{sections/article_related}
+\input{sections/narrative_problem}
+\input{sections/article_method}
+\FloatBarrier
+\input{sections/narrative_protocol}
+\FloatBarrier
+\input{sections/narrative_results}
+\FloatBarrier
+\IfFileExists{sections/08c_c01_confirmatory.tex}{\input{sections/08c_c01_confirmatory}\FloatBarrier}{}
+\IfFileExists{generated/ei_x02_macros.tex}{\input{sections/article_ei_x02}}{}
+\input{sections/article_interpretation}
+\input{sections/article_final_conclusion}
+
+\section*{Acknowledgment}
+OpenAI Codex assisted with drafting and restructuring the main text,
+LaTeX preparation, and plotting and execution-infrastructure code.
+The authors retain responsibility for the scientific content, verification,
+and final submission.
+\FloatBarrier
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\EOD
+\end{document}

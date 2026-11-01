@@ -1,0 +1,61 @@
+{
+  "scope": "Oracle physical falsification, not a causal inference or R11 comparison",
+  "files": [
+    {
+      "path": "results/PER_CASE.csv",
+      "sha256": "42ba00fa80a987192daaa19a49bf5d6a4ae3f90c7e7401e4b820a6bc6dbb177f"
+    },
+    {
+      "path": "results/SUMMARY.json",
+      "sha256": "e823b2c1549de1772a2f4601c1b7f67a56f9b0af9c25b8c423a50fa2b7baae52"
+    },
+    {
+      "path": "results/CONTINUITY.csv",
+      "sha256": "8792e1d9a68e415c0b4665ed137688a5baeb18a605a2b9b6c26a7541a35c517a"
+    },
+    {
+      "path": "results/PREFIX_EQUALITY.csv",
+      "sha256": "a719e0a935b8baf7976051456ff666b55d3312a8c92b340d2b9c76f1bc292d86"
+    },
+    {
+      "path": "results/FIXED_BUS5_TRACE.csv",
+      "sha256": "089747ad72bd70fe669361f63e6c8d57c47c6c22ae9ede3dc84d47aa2570bc7d"
+    },
+    {
+      "path": "protocol/PLAN.json",
+      "sha256": "2d3e339f2ce644fca49b2db5048953a79b2439f545544e5b8e9c1fafa9ed005f"
+    },
+    {
+      "path": "protocol/DESIGN.json",
+      "sha256": "ac91611c61ddde3d8932a3350380bca8d41cc61596206216520735103bc5dd6a"
+    },
+    {
+      "path": "protocol/FREEZE.json",
+      "sha256": "45000b4664e62587d8fe0107da0ded6c2ed17349e803bb72f5861642bbb8c2fd"
+    },
+    {
+      "path": "protocol/EVALUATION_FREEZE.json",
+      "sha256": "c61feb37cf1c6e7562a78d7265be657b521b47b0b4e098c1c8c79d1631473e0e"
+    },
+    {
+      "path": "protocol/PROTECTED_BEFORE.json",
+      "sha256": "3d58c72376137b4f51316a3d834428adb8c26b8b5cdb238018e2d915e1407a3a"
+    },
+    {
+      "path": "prepare.py",
+      "sha256": "efe415ecb417e8a15f2305d65598499eb8be413cbbdf8971c088b5803d0c1e97"
+    },
+    {
+      "path": "evaluate.py",
+      "sha256": "c61e8636ead0e393a0dcfd1519a79383e09ae452a7e9702360a0299a2568c0c9"
+    },
+    {
+      "path": "measurement_bridge.py",
+      "sha256": "e3d04ea90d4f294d41c7415fe768f6fdcdc0a58ee39634e31dfb71b01506c8b7"
+    },
+    {
+      "path": "build_artifacts.py",
+      "sha256": "4102a173c2d3e7853ea053ce792077c12c76e5e45a6e234f61df6ed364c260e5"
+    }
+  ]
+}

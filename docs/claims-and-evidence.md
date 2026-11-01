@@ -1,5 +1,24 @@
 # Claims and evidence register
 
+## Recovery control X04 (31 Oct)
+
+Full F01, 38 continuous trajectories, 47 instrumental coordinates, four
+recovery histories and 12 correlated pair comparisons. Oracle history,
+known onset/family/pair; finite-amplitude secants. Median separation ratio
+is 1.000594 with known history and 0.853185 after rank-one prior-severity
+uncertainty. No uncertain ratio exceeds one. Both binary controls average
+98.3472%; two cells lose and one gains. This is not a causal R11 improvement,
+a calibrated posterior, or an independent confirmatory population.
+See `recovery-x04-results.md` and the frozen X04 manifest. Different
+amplitude domains for geometric profiling and likelihood integration are
+explicit. The result rejects using universal recovery information gain
+as the paper's thesis; it does not claim recovery memory is unnecessary.
+
+The external classical-machine X03 reproduction is a separate source:
+108 rows reproduced, 14 checks passed. It does not validate full-F01
+tangents. All public-chat ideas were adjudicated in
+`corpus/REVIEW_6ae64dc7.md`; proposed adjoints/refinement are not achievements.
+
 ## Completed controlled signature test X02
 
 The separate IEEE-39 experiment compares a nominal signature, the same signature

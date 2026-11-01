@@ -1,0 +1,47 @@
+{
+  "id": "F01_RECOVERY_X04",
+  "created_unix_s": 1793478581.9944723,
+  "scope": "Oracle physical falsification, not a causal inference or R11 comparison",
+  "hypothesis": "Recovery can change a source response without increasing profiled source separation.",
+  "source_pairs": [
+    [
+      18,
+      27
+    ],
+    [
+      16,
+      21
+    ],
+    [
+      3,
+      21
+    ]
+  ],
+  "prior_buses": [
+    7,
+    24
+  ],
+  "delays_s": [
+    0.5,
+    2.0
+  ],
+  "horizon_s": 1.5,
+  "prior_on_s": 2.0,
+  "prior_off_s": 3.0,
+  "prior_fraction": 0.08,
+  "secondary_fraction": 0.0006,
+  "previous_fraction_sd": 0.01,
+  "amplitude_prior_sd": 0.0015,
+  "noise_seed": 391004,
+  "draws_per_source": 300,
+  "assumed_noise": "Unit Gaussian innovations after frozen 47-coordinate instrument whitener; not a new F01 noise calibration",
+  "nuisance": "Scalar prior severity derivative; excludes full state posterior; oracle recovery-only baseline",
+  "decisions": "Known onset and family, two candidates; no H0, no cardinality test, no field inference",
+  "comparisons": [
+    "equilibrium signatures on recovery data",
+    "recovery-conditioned signatures on identical data"
+  ],
+  "physical_trajectories": 38,
+  "no_parameter_selection_after_results": true,
+  "interpretation": "All outcomes retained. No new C01 result or operational superiority claim."
+}

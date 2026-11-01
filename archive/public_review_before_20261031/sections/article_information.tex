@@ -1,0 +1,38 @@
+\subsection{Response Fit, Severity and Source Identity}
+\label{sec:narrative-information}
+
+A better physical prediction need not produce a better location. Competing
+sources may remain similar after their severities and initial conditions
+are fitted. For a response $s_h$ at specified severity and context, the
+distance to an admitted competitor is
+\begin{equation}
+ d_h^2=\min_{j\ne h}\ \min_{\beta_j\in\mathcal A_j}
+       \|s_h-s_j(\beta_j)\|_{\Sigma^{-1}}^2.
+ \label{eq:narrative-separation}
+\end{equation}
+The set $\mathcal A_j$ fixes allowed signs, severities and nuisance
+coordinates. Small distance makes source discrimination noise-sensitive;
+it is not a universal error formula or a calibrated decision certificate
+\cite{eriksson2013diagnosability,scharf1994matched}.
+
+Three outcomes remain separate: prediction error at a specified physical
+source, ranking of competing sources, and uncertainty calibration. A
+response improvement establishes the first. It establishes the second only
+if source decisions improve under the same observations, horizon and
+decision rule. Neither establishes the third automatically. A nonlinear
+response comparison is needed before treating a surrogate's residual
+confusion as an unavoidable physical limit.
+
+The supplementary archive retains the earlier state-reconstruction and
+simultaneous-load studies, with their separate observation contracts and
+prior-normalization qualification. Their known-onset scores are not
+combined with the causal results here. In particular, recovering hidden
+voltages does not certify the source that moved them.
+
+To first order, a component of the context derivative parallel to a nominal
+source signature can be absorbed by fitting a different severity. Correct
+source ranking can therefore coexist with biased intensity. Components
+orthogonal to that signature cannot be removed by this rescaling. This
+explains why source accuracy can reach a test ceiling while response and
+severity errors still distinguish the models; it is a standard projection
+argument, not a new identifiability theorem.

@@ -7,7 +7,7 @@
 
 In H04, both ExtraTrees adapters and both physical references identify all tested lines in time (Table~\ref{tab:narrative-results}). The difference is in loads: the five-model bank obtains \NarMixLoadTimely{}/\NarMixLoadTotal{} timely decisions, nominal \NarNomLoadTimely{}/\NarNomLoadTotal{}, and these ExtraTrees adapters \NarETLoadTimely{}/\NarETLoadTotal{}. This tests transfer of the frozen adapters; it neither rules out supervised load detection nor reproduces the historical multi-class hackathon score.
 
-The five-model bank detects and eventually attributes \NarMixJoint{}/\NarMixEvents{} realizations, but only \ContMixTimely{} diagnoses precede physical OFF. Nominal has \ContNomTimely{} timely diagnoses, with \ContNomExtras{} extras versus \ContMixExtras{}. Detection, eventual attribution and timely attribution therefore give different answers. Representing model uncertainty trades an additional late diagnosis for fewer extra alarms here.
+The five-model bank detects and eventually attributes \NarMixJoint{}/\NarMixEvents{} realizations, but only \ContMixTimely{} diagnoses precede physical OFF. Nominal has \ContNomTimely{} timely diagnoses, with \ContNomExtras{} extras versus \ContMixExtras{}. Detection, eventual attribution and timely attribution therefore give different answers. The configured five-model procedure yields one fewer timely diagnosis and three fewer extra alarms than nominal; this comparison does not isolate model uncertainty.
 
 \subsection{Recovery and a New Event Must Remain Competing Explanations}
 
@@ -15,7 +15,7 @@ Figure~\ref{fig:narrative-rolling} shows what the counts omit. The physical stat
 
 
 
-The out-of-bank BUS31 case shows a remaining timing failure: the source is recovered eventually but too late. The network mixture changes how much mass is assigned to that source, and \eqref{eq:continuous-delta} separates that revision from within-model evidence. This is what the array adds to the explanation. The figure does not establish that a tensor representation alone improves accuracy.
+The out-of-bank BUS31 case shows a remaining timing failure: the source is recovered eventually but too late. The network mixture changes how much mass is assigned to that source, and \eqref{eq:continuous-delta} separates that revision from within-model evidence. This decomposition distinguishes changing within-model evidence from changing network weights; it is an interpretation of the delayed decision.
 
 \begin{figure}[!htbp]\centering
 \includegraphics[width=\columnwidth]{figures/generated/narrative_tradeoff.pdf}
