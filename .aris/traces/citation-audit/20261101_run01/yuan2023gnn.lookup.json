@@ -1,0 +1,538 @@
+{
+  "key": "yuan2023gnn",
+  "retrieved_at": "2026-11-01T03:53:23.779562+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1109%2FTPWRS.2022.3158248",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1109/TPWRS.2022.3158248",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:51.134856+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          24
+        ]
+      ],
+      "date-time": "2026-10-24T19:16:23Z",
+      "timestamp": 1792869383407,
+      "version": "4.5.0"
+    },
+    "reference-count": 44,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "1",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2023,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2023-01-01T00:00:00Z",
+          "timestamp": 1672531200000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2023,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2023-01-01T00:00:00Z",
+          "timestamp": 1672531200000
+        },
+        "content-version": "am",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2023,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2023-01-01T00:00:00Z",
+          "timestamp": 1672531200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2023,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2023-01-01T00:00:00Z",
+          "timestamp": 1672531200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "funder": [
+      {
+        "name": "U.S. Department of Energy Office of Electricity",
+        "award": [
+          "DE-OE0000910"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "DE-OE0000910"
+            ]
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Trans. Power Syst."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2023,
+          1
+        ]
+      ]
+    },
+    "DOI": "10.1109/tpwrs.2022.3158248",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2022,
+          3,
+          10
+        ]
+      ],
+      "date-time": "2022-03-10T15:28:27Z",
+      "timestamp": 1646926107000
+    },
+    "page": "617-629",
+    "source": "Crossref",
+    "is-referenced-by-count": 24,
+    "title": [
+      "Learning Latent Interactions for Event Classification via Graph Neural Networks and PMU Data"
+    ],
+    "prefix": "10.1109",
+    "volume": "38",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-6623-4905",
+        "authenticated-orcid": false,
+        "given": "Yuxuan",
+        "family": "Yuan",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Department of Electrical and Computer Engineering, Iowa State University, Ames, IA, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-0656-0562",
+        "authenticated-orcid": false,
+        "given": "Zhaoyu",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Electrical and Computer Engineering, Iowa State University, Ames, IA, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-5345-2225",
+        "authenticated-orcid": false,
+        "given": "Yanchao",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Electrical and Computer Engineering, Iowa State University, Ames, IA, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2010.2044815"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRD.2016.2590961"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2018.2859323"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SmartGridComm.2015.7436311"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2015.2478421"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TII.2017.2772081"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2014.2316476"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRD.2008.921121"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2014.2383693"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRD.2016.2520958"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2019.2941565"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2018.2796442"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PESGM.2018.8585774"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TII.2017.2731366"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TIE.2018.2840508"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.eswa.2019.07.007"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2020.2971909"
+      },
+      {
+        "key": "ref18",
+        "first-page": "2688",
+        "article-title": "Neural relational inference for interacting systems",
+        "volume-title": "Proc. Int. Conf. Mach. Learn.",
+        "author": "Kipf",
+        "year": "2018"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2011.2106521"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2021.3081608"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3627816"
+      },
+      {
+        "key": "ref22",
+        "article-title": "Spectral networks and locally connected networks on graphs",
+        "author": "Bruna",
+        "year": "2013"
+      },
+      {
+        "key": "ref23",
+        "first-page": "1263",
+        "article-title": "Neural message passing for quantum chemistry",
+        "volume-title": "Proc. Int. Conf. Mach. Learn.",
+        "author": "Gilmer",
+        "year": "2017"
+      },
+      {
+        "key": "ref24",
+        "first-page": "1972",
+        "article-title": "Learning discrete structures for graph neural networks",
+        "volume-title": "Proc. Int. Conf. Mach. Learn.",
+        "author": "Franceschi",
+        "year": "2019"
+      },
+      {
+        "key": "ref25",
+        "first-page": "1263",
+        "article-title": "Neural message passing for quantum chemistry",
+        "volume-title": "Proc. Int. Conf. Mach. Learn.",
+        "author": "Justin",
+        "year": "2017"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2020.2970406"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICTAI.2019.00119"
+      },
+      {
+        "key": "ref28",
+        "article-title": "Fast and accurate deep network learning by exponential linear units (ELUs)",
+        "author": "Clevert",
+        "year": "2016"
+      },
+      {
+        "key": "ref29",
+        "first-page": "448",
+        "article-title": "Batch normalization: Accelerating deep network training by reducing internal covariate shift",
+        "volume-title": "Proc. Int. Conf. Mach. Learn.",
+        "author": "Ioffe",
+        "year": "2015"
+      },
+      {
+        "key": "ref30",
+        "first-page": "1",
+        "article-title": "Categorical reparameterization with gumbel-softmax",
+        "volume-title": "Proc. 5th Int. Conf. Learn. Representations",
+        "author": "Jang",
+        "year": "2017"
+      },
+      {
+        "key": "ref31",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TMM.2019.2947352"
+      },
+      {
+        "key": "ref32",
+        "volume-title": "Deep learning",
+        "author": "Goodfellow",
+        "year": "2016"
+      },
+      {
+        "key": "ref33",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.47839/ijc.18.1.1270"
+      },
+      {
+        "key": "ref34",
+        "article-title": "Fractional max-pooling",
+        "author": "Graham",
+        "year": "2014"
+      },
+      {
+        "key": "ref35",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAFFC.2021.3126263"
+      },
+      {
+        "key": "ref36",
+        "first-page": "281",
+        "article-title": "Random search for hyper-parameter optimization",
+        "volume": "13",
+        "author": "Bergstra",
+        "year": "2012",
+        "journal-title": "J. Mach. Learn. Res."
+      },
+      {
+        "key": "ref37",
+        "article-title": "Adam: A method for stochastic optimization",
+        "author": "Kingma",
+        "year": "2014"
+      },
+      {
+        "issue": "1",
+        "key": "ref38",
+        "first-page": "1929",
+        "article-title": "Dropout: A simple way to prevent neural networks from overfitting",
+        "volume": "15",
+        "author": "Nitish",
+        "year": "2014",
+        "journal-title": "J. Mach. Learn. Res."
+      },
+      {
+        "key": "ref39",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.24963/ijcai.2021/631"
+      },
+      {
+        "key": "ref40",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/JIOT.2022.3177686"
+      },
+      {
+        "key": "ref41",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.patrec.2005.10.010"
+      },
+      {
+        "key": "ref42",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.ijepes.2018.11.013"
+      },
+      {
+        "key": "ref43",
+        "first-page": "3146",
+        "article-title": "Lightgbm: A highly efficient gradient boosting decision tree",
+        "volume-title": "Proc. Adv. Neural Inf. Process. Syst.",
+        "author": "Ke",
+        "year": "2017"
+      },
+      {
+        "key": "ref44",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/ncomms13928"
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Power Systems"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://ieeexplore.ieee.org/ielam/59/9998169/9732528-aam.pdf",
+        "content-type": "application/pdf",
+        "content-version": "am",
+        "intended-application": "syndication"
+      },
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/59/9998169/09732528.pdf?arnumber=9732528",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2024,
+          1,
+          17
+        ]
+      ],
+      "date-time": "2024-01-17T19:12:25Z",
+      "timestamp": 1705518745000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/9732528/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2023,
+          1
+        ]
+      ]
+    },
+    "references-count": 44,
+    "journal-issue": {
+      "issue": "1"
+    },
+    "URL": "https://doi.org/10.1109/tpwrs.2022.3158248",
+    "relation": {},
+    "ISSN": [
+      "0885-8950",
+      "1558-0679"
+    ],
+    "issn-type": [
+      {
+        "value": "0885-8950",
+        "type": "print"
+      },
+      {
+        "value": "1558-0679",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2023,
+          1
+        ]
+      ]
+    }
+  }
+}

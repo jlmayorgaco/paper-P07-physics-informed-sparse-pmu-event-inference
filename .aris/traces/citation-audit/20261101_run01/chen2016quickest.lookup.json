@@ -1,0 +1,356 @@
+{
+  "key": "chen2016quickest",
+  "retrieved_at": "2026-11-01T03:53:21.313918+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1109%2FTPWRS.2015.2394246",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1109/TPWRS.2015.2394246",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:53:57.621465+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          30
+        ]
+      ],
+      "date-time": "2026-09-30T11:53:33Z",
+      "timestamp": 1790769213872,
+      "version": "4.1.0"
+    },
+    "reference-count": 26,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "1",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2016,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2016-01-01T00:00:00Z",
+          "timestamp": 1451606400000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Trans. Power Syst."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2016,
+          1
+        ]
+      ]
+    },
+    "DOI": "10.1109/tpwrs.2015.2394246",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2015,
+          2,
+          12
+        ]
+      ],
+      "date-time": "2015-02-12T14:50:46Z",
+      "timestamp": 1423752646000
+    },
+    "page": "749-758",
+    "source": "Crossref",
+    "is-referenced-by-count": 117,
+    "title": [
+      "Quickest Line Outage Detection and Identification"
+    ],
+    "prefix": "10.1109",
+    "volume": "31",
+    "author": [
+      {
+        "given": "Yu Christine",
+        "family": "Chen",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Taposh",
+        "family": "Banerjee",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Alejandro D.",
+        "family": "Dominguez-Garcia",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Venugopal V.",
+        "family": "Veeravalli",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/59.131079"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPAS.1981.316835"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2008.2004826"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2012.2192142"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2012.2220865"
+      },
+      {
+        "key": "ref15",
+        "first-page": "3450",
+        "article-title": "Power system line outage detection and identification?a quickest change detection approach",
+        "author": "banerjee",
+        "year": "2014",
+        "journal-title": "Proc IEEE Int Conf Acoust Speech Signal Process"
+      },
+      {
+        "key": "ref16",
+        "author": "wood",
+        "year": "1996",
+        "journal-title": "Power Generation Operation and Control"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1017/CBO9780511810817"
+      },
+      {
+        "key": "ref18",
+        "author": "poor",
+        "year": "2009",
+        "journal-title": "Quickest Detection"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1201/b17279",
+        "author": "tartakovsky",
+        "year": "2014",
+        "journal-title": "Sequential Analysis Hypothesis Testing and Change-Point Detection"
+      },
+      {
+        "key": "ref4",
+        "year": "2006",
+        "journal-title": "?Steps to Establish a Real-Time Transmission Monitoring System for Transmission Owners and Operators Within the Eastern and Western Interconnections ?"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-642-04282-9"
+      },
+      {
+        "key": "ref6",
+        "author": "basseville",
+        "year": "1993",
+        "journal-title": "Detection of Abrupt Changes Theory and Application"
+      },
+      {
+        "key": "ref5",
+        "author": "veeravalli",
+        "year": "2013",
+        "journal-title": "Quickest Change Detection"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/59.192991"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPAS.1980.319807"
+      },
+      {
+        "key": "ref2",
+        "year": "2012",
+        "journal-title": "?Arizona?Southern California outages on September 8 2011 Causes and recommendations ?"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/59.32475"
+      },
+      {
+        "key": "ref1",
+        "year": "2004",
+        "journal-title": "?Final Report on the August 14th Blackout in the United States and Canada Causes and Recommendations ?"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1214/aos/1176346587"
+      },
+      {
+        "key": "ref22",
+        "article-title": "Quickest changepoint detection in distributed multisensor systems under unknown parameters",
+        "author": "tartakovsky",
+        "year": "2008",
+        "journal-title": "Proc IEEE Int Conf Inf Fusion"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "crossref",
+        "first-page": "2917",
+        "DOI": "10.1109/18.737522",
+        "article-title": "Information bounds and quick detection of parameter changes in stochastic systems",
+        "volume": "44",
+        "author": "lai",
+        "year": "1998",
+        "journal-title": "IEEE Trans Inf Theory"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2010.2051168"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/07474940801989202"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PES.2009.5275357"
+      },
+      {
+        "key": "ref25",
+        "year": "2013",
+        "journal-title": "?Synchrophasor Technologies and Their Deployment in the Recovery Act Smart Grid Programs ?"
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Power Systems"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/59/7361773/7041234.pdf?arnumber=7041234",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2022,
+          1,
+          12
+        ]
+      ],
+      "date-time": "2022-01-12T10:57:16Z",
+      "timestamp": 1641985036000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "http://ieeexplore.ieee.org/document/7041234/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2016,
+          1
+        ]
+      ]
+    },
+    "references-count": 26,
+    "journal-issue": {
+      "issue": "1"
+    },
+    "URL": "https://doi.org/10.1109/tpwrs.2015.2394246",
+    "relation": {},
+    "ISSN": [
+      "0885-8950",
+      "1558-0679"
+    ],
+    "issn-type": [
+      {
+        "value": "0885-8950",
+        "type": "print"
+      },
+      {
+        "value": "1558-0679",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2016,
+          1
+        ]
+      ]
+    }
+  }
+}

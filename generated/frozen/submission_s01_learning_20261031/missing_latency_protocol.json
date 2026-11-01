@@ -1,0 +1,23 @@
+{
+  "id": "S01_MISSING_AVAILABILITY_LATENCY_V1",
+  "status": "RETROSPECTIVE_DEFINITION_AFTER_PREDICTION_SEALS_BEFORE_LATENCY_COMPUTATION",
+  "scope": "Four observed missing-data intervals only; no physical actions, attack intent or broad detector superiority",
+  "truth": "Contiguous runs with at least one PMU annotated Event5 or Event6. Verify their entire PMU mask against original DATA_PRESENT and sealed current-report validity mask. Stop rather than silently reconcile any disagreement.",
+  "clock": "Timestamp of the latest received PMU report at each aligned row; original eight clocks must agree within 1e-7 seconds. Onset is first missing report; end is first subsequent nonmissing report, not the final missing report.",
+  "clock_roundoff": "Map each recorded notice time to the unique nearest received-report clock within 1e-7 seconds solely to reconcile CSV serialization. Preserve actual emitted time and the mapping adjustment; refuse larger discrepancies.",
+  "source": "Require a constant missing-PMU source set within each interval for this comparison; retain that set explicitly. E6 legacy_location is a physical source and cannot count as missing-PMU attribution.",
+  "eligible_notice": "First missing notice emitted at or after interval onset and strictly before the earlier of interval end and next missing onset. Emission must not precede the last consumed report. No retrospective broadcast or onset backdating.",
+  "legacy_notice": "Frozen native ZIP window output with legacy_event5 or6 at its recorded emitted_s. E5 legacy_location provides an affected-PMU claim only if it has PMU syntax. E6 has no native missing-PMU source; record source unavailable rather than borrowing composed sources.",
+  "V2_notice": "Current-report missing diagnosis in sealed availability_messages; its emitted_s is the availability publication time and its source is the explicit missing-PMU set.",
+  "first_notice_policy": "Retain the first eligible notice even if its source is wrong or unavailable. Do not search later notices for a favorable replacement. Count missed intervals and wrong/unknown first sources separately.",
+  "preexisting_notice": "Record the latest missing notice before onset separately; it cannot be credited as a new detection after onset. Interval diagnoses do not assert persistent future missing status.",
+  "metrics": "Detection coverage and first-notice exact-source coverage over all four intervals; individual detection delays, conditional mean/median/max with denominator; deadline-restricted delay counting a missed interval at deadline. Wrong-source delay is retained without crediting exact attribution.",
+  "comparison": "Both methods share the same four measured missing intervals and frozen data. Faster correct notice supports an advantage of immediate availability publication, not a novel attack detector or global method victory.",
+  "input_seals": {
+    "legacy_predictions_sha256": "87f0dddb794403a1482057bfb62f36c14b12097a3d1c559471a8de9b0e675165",
+    "cyber_prediction_sha256": "e73181b9a15667d3eb354698f615b4268efe202c1b38fdd2f7bd4afd25c6f678",
+    "availability_sha256": "5857f49af401d0546ef90a727e0658da5a13d07b29d8cc9cee317f11fbed63e6"
+  },
+  "preserve": ["Existing EVALUATION.json files", "RAW_AUDIT_VALIDATION.json", "Existing metric functions", "Original predictions and seals"],
+  "forbidden": ["C01 data or outputs", "RAW0002", "Model reruns or tuning", "Using predictions to define missing intervals"]
+}

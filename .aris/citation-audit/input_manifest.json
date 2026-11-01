@@ -1,0 +1,1498 @@
+{
+  "captured_at": "2026-11-01T03:53:21.301945+00:00",
+  "entries": [
+    {
+      "key": "albustami2026dae",
+      "type": "misc",
+      "fields": {
+        "author": "Alalem Albustami, A. and Taha, A. F. and Mahadevan, S.",
+        "title": "{DAE}-Aware Bayesian Inference for Joint Generator-Network Parameter Estimation",
+        "year": "2026",
+        "howpublished": "arXiv preprint arXiv:2604.15686",
+        "url": "https://arxiv.org/abs/2604.15686",
+        "note": "Preprint"
+      },
+      "bib": "@misc{albustami2026dae,\n  author = {Alalem Albustami, A. and Taha, A. F. and Mahadevan, S.},\n  title = {{DAE}-Aware Bayesian Inference for Joint Generator-Network Parameter Estimation},\n  year = {2026},\n  howpublished = {arXiv preprint arXiv:2604.15686},\n  url = {https://arxiv.org/abs/2604.15686},\n  note = {Preprint}\n}",
+      "uses": [
+        {
+          "key": "albustami2026dae",
+          "file": "sections/article_related.tex",
+          "line": 58,
+          "context": "Physical stochastic models support latent-state estimation\n\\cite{ensaf2023kernel,tartakovsky2023gp}, while joint DAE parameter inference\naddresses uncertain generators and networks \\cite{albustami2026dae}.\nOur stream method uses a finite bank of constant network hypotheses.\nTrajectory sensitivities and Gaussian evidence have also been combined\nfor Bayesian parameter inference in power-system DAEs\n\\cite{nagi2022trajectory}. Their use alone does not distinguish an event\nattribution algorithm. The separate signature test examines a local event--context derivative;\nit does not identify every plant parameter or replace the stream method\nwith an unrestricted joint estimator."
+        }
+      ]
+    },
+    {
+      "key": "anguluri2023group",
+      "type": "article",
+      "fields": {
+        "author": "R. Anguluri and O. Kosut and L. Sankar",
+        "title": "Localization and Estimation of Unknown Forced Inputs: A Group {LASSO} Approach",
+        "journal": "IEEE Transactions on Control of Network Systems",
+        "volume": "10",
+        "number": "4",
+        "pages": "1997--2009",
+        "year": "2023",
+        "doi": "10.1109/TCNS.2023.3258627"
+      },
+      "bib": "@article{anguluri2023group,\n  author  = {R. Anguluri and O. Kosut and L. Sankar},\n  title   = {Localization and Estimation of Unknown Forced Inputs: A Group {LASSO} Approach},\n  journal = {IEEE Transactions on Control of Network Systems},\n  volume  = {10},\n  number  = {4},\n  pages   = {1997--2009},\n  year    = {2023},\n  doi     = {10.1109/TCNS.2023.3258627}\n}",
+      "uses": [
+        {
+          "key": "anguluri2023group",
+          "file": "sections/article_related.tex",
+          "line": 19,
+          "context": "Physical hypotheses support outage inference from phasor angles\n\\cite{tate2008outage}, Bayesian inference with uncertain states\n\\cite{zhao2014outages}, and sequential detection under stochastic operation\n\\cite{chen2016quickest,rovatsos2017outage}. Anguluri \\emph{et al.} recover\nsparse forcing locations, inputs and an unknown initial state using group\nLASSO for linear dynamics \\cite{anguluri2023group}. These are precedents\nfor source recovery; group LASSO is not an executed comparator in our\nfrozen campaign. Sensor placement also affects source distinguishability\n\\cite{jamei2020limits,conte2023fault,yildiz2025sparse}.\\AIDraftingCredit{}"
+        }
+      ]
+    },
+    {
+      "key": "blom1988imm",
+      "type": "article",
+      "fields": {
+        "author": "H. A. P. Blom and Y. Bar-Shalom",
+        "title": "The Interacting Multiple Model Algorithm for Systems With Markovian Switching Coefficients",
+        "journal": "IEEE Transactions on Automatic Control",
+        "volume": "33",
+        "number": "8",
+        "pages": "780--783",
+        "year": "1988",
+        "doi": "10.1109/9.1299"
+      },
+      "bib": "@article{blom1988imm,\n  author = {H. A. P. Blom and Y. Bar-Shalom},\n  title = {The Interacting Multiple Model Algorithm for Systems With Markovian Switching Coefficients},\n  journal = {IEEE Transactions on Automatic Control},\n  volume = {33},\n  number = {8},\n  pages = {780--783},\n  year = {1988},\n  doi = {10.1109/9.1299}\n}",
+      "uses": [
+        {
+          "key": "blom1988imm",
+          "file": "sections/article_related.tex",
+          "line": 37,
+          "context": "The Adaptive Matrix CuSum derives sequential identification error/delay\nresults under specified observation laws \\cite{warner2024matrix}.\nMultiple-model filtering already propagates conditional state/mode\nhypotheses \\cite{blom1988imm}. The multiple-model multiple-hypothesis\nfilter maintains mode-sequence histories and adapts their number through\npruning and merging \\cite{boers2005m3h}. Retaining histories or adapting\nbank size is therefore not an original principle of our method.\nOur pruned history bank uses these ideas,\nbut its approximate covariances, proposal screen and fitted startup context\ndo not inherit their general guarantees. The complete procedure evaluated\nhere makes retained recovery compete with later interventions and reports\ntimely attribution and alarm burden. These comparisons do not isolate\nrecovery memory from the other admission and publication rules."
+        }
+      ]
+    },
+    {
+      "key": "boers2005m3h",
+      "type": "article",
+      "fields": {
+        "author": "Yvo Boers and Hans Driessen",
+        "title": "A multiple model multiple hypothesis filter for {Markovian} switching systems",
+        "journal": "Automatica",
+        "year": "2005",
+        "volume": "41",
+        "number": "4",
+        "pages": "709--716",
+        "doi": "10.1016/j.automatica.2004.11.018"
+      },
+      "bib": "@article{boers2005m3h,\n  author={Yvo Boers and Hans Driessen},\n  title={A multiple model multiple hypothesis filter for {Markovian} switching systems},\n  journal={Automatica}, year={2005}, volume={41}, number={4}, pages={709--716},\n  doi={10.1016/j.automatica.2004.11.018}\n}",
+      "uses": [
+        {
+          "key": "boers2005m3h",
+          "file": "sections/article_related.tex",
+          "line": 39,
+          "context": "The Adaptive Matrix CuSum derives sequential identification error/delay\nresults under specified observation laws \\cite{warner2024matrix}.\nMultiple-model filtering already propagates conditional state/mode\nhypotheses \\cite{blom1988imm}. The multiple-model multiple-hypothesis\nfilter maintains mode-sequence histories and adapts their number through\npruning and merging \\cite{boers2005m3h}. Retaining histories or adapting\nbank size is therefore not an original principle of our method.\nOur pruned history bank uses these ideas,\nbut its approximate covariances, proposal screen and fitted startup context\ndo not inherit their general guarantees. The complete procedure evaluated\nhere makes retained recovery compete with later interventions and reports\ntimely attribution and alarm burden. These comparisons do not isolate\nrecovery memory from the other admission and publication rules."
+        }
+      ]
+    },
+    {
+      "key": "chen2016quickest",
+      "type": "article",
+      "fields": {
+        "author": "Y. C. Chen and T. Banerjee and A. D. Dom{\\'i}nguez-Garc{\\'i}a and V. V. Veeravalli",
+        "title": "Quickest Line Outage Detection and Identification",
+        "journal": "IEEE Transactions on Power Systems",
+        "volume": "31",
+        "number": "1",
+        "pages": "749--758",
+        "year": "2016",
+        "doi": "10.1109/TPWRS.2015.2394246"
+      },
+      "bib": "@article{chen2016quickest,\n  author  = {Y. C. Chen and T. Banerjee and A. D. Dom{\\'i}nguez-Garc{\\'i}a and V. V. Veeravalli},\n  title   = {Quickest Line Outage Detection and Identification},\n  journal = {IEEE Transactions on Power Systems},\n  volume  = {31},\n  number  = {1},\n  pages   = {749--758},\n  year    = {2016},\n  doi     = {10.1109/TPWRS.2015.2394246}\n}",
+      "uses": [
+        {
+          "key": "chen2016quickest",
+          "file": "sections/article_intro.tex",
+          "line": 26,
+          "context": "Existing work provides strong foundations. DAE state estimators infer\nunmeasured electrical states \\cite{katanic2024recursive}; physical outage\ndetectors compare network hypotheses sequentially\n\\cite{chen2016quickest,rovatsos2017outage}; and simulated fault trajectories\nsupport diagnosis from sparse PMUs \\cite{warner2023highfidelity}.\nPhysical models, transient histories and unknown-onset searches are thus\nestablished ingredients. A small state-reconstruction error, however, does\nnot by itself identify the intervention that produced the observations."
+        },
+        {
+          "key": "chen2016quickest",
+          "file": "sections/article_related.tex",
+          "line": 17,
+          "context": "Physical hypotheses support outage inference from phasor angles\n\\cite{tate2008outage}, Bayesian inference with uncertain states\n\\cite{zhao2014outages}, and sequential detection under stochastic operation\n\\cite{chen2016quickest,rovatsos2017outage}. Anguluri \\emph{et al.} recover\nsparse forcing locations, inputs and an unknown initial state using group\nLASSO for linear dynamics \\cite{anguluri2023group}. These are precedents\nfor source recovery; group LASSO is not an executed comparator in our\nfrozen campaign. Sensor placement also affects source distinguishability\n\\cite{jamei2020limits,conte2023fault,yildiz2025sparse}.\\AIDraftingCredit{}"
+        },
+        {
+          "key": "chen2016quickest",
+          "file": "sections/narrative_protocol.tex",
+          "line": 33,
+          "context": "The published physical comparator is Chen \\emph{et al.}'s persistent single-line quickest-change detector \\cite{chen2016quickest}. Its reduced-network covariance is marginalized to the observed PMU subset after inversion. Parallel CUSUM statistics stop at the first threshold crossing and select a line. Our declared F01 adapter uses nonoverlapping angle increments at 15 Hz, a startup-only scale/drift estimate and the fixed nominal line catalog. Its white-injection/DC assumptions do not describe all F01 instrumental effects. We preserve both matched-law implementation checks and F01 mismatch failures; no ARL guarantee is transferred to colored noise."
+        }
+      ]
+    },
+    {
+      "key": "conte2023fault",
+      "type": "article",
+      "fields": {
+        "author": "F. Conte and F. D'Agostino and B. Gabriele and G.-P. Schiapparelli and F. Silvestro",
+        "title": "Fault Detection and Localization in Active Distribution Networks Using Optimally Placed Phasor Measurements Units",
+        "journal": "IEEE Transactions on Power Systems",
+        "volume": "38",
+        "number": "1",
+        "pages": "714--727",
+        "year": "2023",
+        "doi": "10.1109/TPWRS.2022.3165685"
+      },
+      "bib": "@article{conte2023fault,\n  author  = {F. Conte and F. D'Agostino and B. Gabriele and G.-P. Schiapparelli and F. Silvestro},\n  title   = {Fault Detection and Localization in Active Distribution Networks Using Optimally Placed Phasor Measurements Units},\n  journal = {IEEE Transactions on Power Systems},\n  volume  = {38},\n  number  = {1},\n  pages   = {714--727},\n  year    = {2023},\n  doi     = {10.1109/TPWRS.2022.3165685}\n}",
+      "uses": [
+        {
+          "key": "conte2023fault",
+          "file": "sections/article_related.tex",
+          "line": 22,
+          "context": "Physical hypotheses support outage inference from phasor angles\n\\cite{tate2008outage}, Bayesian inference with uncertain states\n\\cite{zhao2014outages}, and sequential detection under stochastic operation\n\\cite{chen2016quickest,rovatsos2017outage}. Anguluri \\emph{et al.} recover\nsparse forcing locations, inputs and an unknown initial state using group\nLASSO for linear dynamics \\cite{anguluri2023group}. These are precedents\nfor source recovery; group LASSO is not an executed comparator in our\nfrozen campaign. Sensor placement also affects source distinguishability\n\\cite{jamei2020limits,conte2023fault,yildiz2025sparse}.\\AIDraftingCredit{}"
+        }
+      ]
+    },
+    {
+      "key": "ensaf2023kernel",
+      "type": "misc",
+      "fields": {
+        "author": "M. Ensaf and M. Barati",
+        "title": "Harnessing Kernel Regression for Stochastic State Estimation in Solar-Integrated Power Grids",
+        "year": "2023",
+        "howpublished": "arXiv preprint arXiv:2309.10200",
+        "url": "https://arxiv.org/abs/2309.10200",
+        "note": "Version 1"
+      },
+      "bib": "@misc{ensaf2023kernel,\n  author = {M. Ensaf and M. Barati},\n  title = {Harnessing Kernel Regression for Stochastic State Estimation in Solar-Integrated Power Grids},\n  year = {2023},\n  howpublished = {arXiv preprint arXiv:2309.10200},\n  url = {https://arxiv.org/abs/2309.10200},\n  note = {Version 1}\n}",
+      "uses": [
+        {
+          "key": "ensaf2023kernel",
+          "file": "sections/article_related.tex",
+          "line": 57,
+          "context": "Physical stochastic models support latent-state estimation\n\\cite{ensaf2023kernel,tartakovsky2023gp}, while joint DAE parameter inference\naddresses uncertain generators and networks \\cite{albustami2026dae}.\nOur stream method uses a finite bank of constant network hypotheses.\nTrajectory sensitivities and Gaussian evidence have also been combined\nfor Bayesian parameter inference in power-system DAEs\n\\cite{nagi2022trajectory}. Their use alone does not distinguish an event\nattribution algorithm. The separate signature test examines a local event--context derivative;\nit does not identify every plant parameter or replace the stream method\nwith an unrestricted joint estimator."
+        }
+      ]
+    },
+    {
+      "key": "eriksson2013diagnosability",
+      "type": "article",
+      "fields": {
+        "author": "D. Eriksson and E. Frisk and M. Krysander",
+        "title": "A Method for Quantitative Fault Diagnosability Analysis of Stochastic Linear Descriptor Models",
+        "journal": "Automatica",
+        "volume": "49",
+        "number": "6",
+        "pages": "1591--1600",
+        "year": "2013",
+        "doi": "10.1016/j.automatica.2013.02.045"
+      },
+      "bib": "@article{eriksson2013diagnosability,\n  author  = {D. Eriksson and E. Frisk and M. Krysander},\n  title   = {A Method for Quantitative Fault Diagnosability Analysis of Stochastic Linear Descriptor Models},\n  journal = {Automatica},\n  volume  = {49},\n  number  = {6},\n  pages   = {1591--1600},\n  year    = {2013},\n  doi     = {10.1016/j.automatica.2013.02.045}\n}",
+      "uses": [
+        {
+          "key": "eriksson2013diagnosability",
+          "file": "sections/article_related.tex",
+          "line": 12,
+          "context": "\\subsection{State Estimation and Physical Source Inference}\nUnknown-input and DAE estimators recover electrical states despite\nincomplete models or exogenous inputs\n\\cite{gillijns2007input,nugroho2022dae,katanic2024recursive}. Functional\nobservability asks whether a requested state quantity can be recovered\n\\cite{fernando2010functional,montanari2022functional}. Source inference asks\nwhich intervention can explain the trajectory. Descriptor-model\ndiagnosability and nuisance-profiled tests formalize this distinction\n\\cite{eriksson2013diagnosability,scharf1994matched}."
+        },
+        {
+          "key": "eriksson2013diagnosability",
+          "file": "sections/article_information.tex",
+          "line": 33,
+          "context": "A better physical prediction need not produce a better location. Competing\nsources may remain similar after their severities and initial conditions\nare fitted. For a response $s_h$ at specified severity and context, the\ndistance to an admitted competitor is\n\\begin{equation}\n d_h^2=\\min_{j\\ne h}\\ \\min_{\\beta_j\\in\\mathcal A_j}\n       \\|s_h-s_j(\\beta_j)\\|_{\\Sigma^{-1}}^2.\n \\label{eq:narrative-separation}\n\\end{equation}\nThe set $\\mathcal A_j$ fixes allowed signs, severities and nuisance\ncoordinates. Small distance makes source discrimination noise-sensitive;\nit is not a universal error formula or a calibrated decision certificate\n\\cite{eriksson2013diagnosability,scharf1994matched}."
+        }
+      ]
+    },
+    {
+      "key": "fernando2010functional",
+      "type": "article",
+      "fields": {
+        "author": "T. L. Fernando and H. M. Trinh and L. Jennings",
+        "title": "Functional Observability and the Design of Minimum Order Linear Functional Observers",
+        "journal": "IEEE Transactions on Automatic Control",
+        "volume": "55",
+        "number": "5",
+        "pages": "1268--1273",
+        "year": "2010",
+        "doi": "10.1109/TAC.2010.2042761"
+      },
+      "bib": "@article{fernando2010functional,\n  author  = {T. L. Fernando and H. M. Trinh and L. Jennings},\n  title   = {Functional Observability and the Design of Minimum Order Linear Functional Observers},\n  journal = {IEEE Transactions on Automatic Control},\n  volume  = {55},\n  number  = {5},\n  pages   = {1268--1273},\n  year    = {2010},\n  doi     = {10.1109/TAC.2010.2042761}\n}",
+      "uses": [
+        {
+          "key": "fernando2010functional",
+          "file": "sections/article_related.tex",
+          "line": 9,
+          "context": "\\subsection{State Estimation and Physical Source Inference}\nUnknown-input and DAE estimators recover electrical states despite\nincomplete models or exogenous inputs\n\\cite{gillijns2007input,nugroho2022dae,katanic2024recursive}. Functional\nobservability asks whether a requested state quantity can be recovered\n\\cite{fernando2010functional,montanari2022functional}. Source inference asks\nwhich intervention can explain the trajectory. Descriptor-model\ndiagnosability and nuisance-profiled tests formalize this distinction\n\\cite{eriksson2013diagnosability,scharf1994matched}."
+        }
+      ]
+    },
+    {
+      "key": "gillijns2007input",
+      "type": "article",
+      "fields": {
+        "author": "S. Gillijns and B. De Moor",
+        "title": "Unbiased Minimum-Variance Input and State Estimation for Linear Discrete-Time Systems",
+        "journal": "Automatica",
+        "volume": "43",
+        "number": "1",
+        "pages": "111--116",
+        "year": "2007",
+        "doi": "10.1016/j.automatica.2006.08.002"
+      },
+      "bib": "@article{gillijns2007input,\n  author  = {S. Gillijns and B. De Moor},\n  title   = {Unbiased Minimum-Variance Input and State Estimation for Linear Discrete-Time Systems},\n  journal = {Automatica},\n  volume  = {43},\n  number  = {1},\n  pages   = {111--116},\n  year    = {2007},\n  doi     = {10.1016/j.automatica.2006.08.002}\n}",
+      "uses": [
+        {
+          "key": "gillijns2007input",
+          "file": "sections/article_related.tex",
+          "line": 7,
+          "context": "\\subsection{State Estimation and Physical Source Inference}\nUnknown-input and DAE estimators recover electrical states despite\nincomplete models or exogenous inputs\n\\cite{gillijns2007input,nugroho2022dae,katanic2024recursive}. Functional\nobservability asks whether a requested state quantity can be recovered\n\\cite{fernando2010functional,montanari2022functional}. Source inference asks\nwhich intervention can explain the trajectory. Descriptor-model\ndiagnosability and nuisance-profiled tests formalize this distinction\n\\cite{eriksson2013diagnosability,scharf1994matched}."
+        }
+      ]
+    },
+    {
+      "key": "jamei2020limits",
+      "type": "article",
+      "fields": {
+        "author": "M. Jamei and R. Ramakrishna and T. Tesfay and R. Gentz and C. Roberts and A. Scaglione and S. Peisert",
+        "title": "Phasor Measurement Units Optimal Placement and Performance Limits for Fault Localization",
+        "journal": "IEEE Journal on Selected Areas in Communications",
+        "volume": "38",
+        "number": "1",
+        "pages": "180--192",
+        "year": "2020",
+        "doi": "10.1109/JSAC.2019.2951971"
+      },
+      "bib": "@article{jamei2020limits,\n  author  = {M. Jamei and R. Ramakrishna and T. Tesfay and R. Gentz and C. Roberts and A. Scaglione and S. Peisert},\n  title   = {Phasor Measurement Units Optimal Placement and Performance Limits for Fault Localization},\n  journal = {IEEE Journal on Selected Areas in Communications},\n  volume  = {38},\n  number  = {1},\n  pages   = {180--192},\n  year    = {2020},\n  doi     = {10.1109/JSAC.2019.2951971}\n}",
+      "uses": [
+        {
+          "key": "jamei2020limits",
+          "file": "sections/article_related.tex",
+          "line": 22,
+          "context": "Physical hypotheses support outage inference from phasor angles\n\\cite{tate2008outage}, Bayesian inference with uncertain states\n\\cite{zhao2014outages}, and sequential detection under stochastic operation\n\\cite{chen2016quickest,rovatsos2017outage}. Anguluri \\emph{et al.} recover\nsparse forcing locations, inputs and an unknown initial state using group\nLASSO for linear dynamics \\cite{anguluri2023group}. These are precedents\nfor source recovery; group LASSO is not an executed comparator in our\nfrozen campaign. Sensor placement also affects source distinguishability\n\\cite{jamei2020limits,conte2023fault,yildiz2025sparse}.\\AIDraftingCredit{}"
+        }
+      ]
+    },
+    {
+      "key": "katanic2024recursive",
+      "type": "article",
+      "fields": {
+        "author": "M. Katanic and J. Lygeros and G. Hug",
+        "title": "Recursive Dynamic State Estimation for Power Systems With an Incomplete Nonlinear {DAE} Model",
+        "journal": "IET Generation, Transmission \\& Distribution",
+        "volume": "18",
+        "number": "22",
+        "pages": "3657--3668",
+        "year": "2024",
+        "doi": "10.1049/gtd2.13308"
+      },
+      "bib": "@article{katanic2024recursive,\n  author  = {M. Katanic and J. Lygeros and G. Hug},\n  title   = {Recursive Dynamic State Estimation for Power Systems With an Incomplete Nonlinear {DAE} Model},\n  journal = {IET Generation, Transmission \\& Distribution},\n  volume  = {18},\n  number  = {22},\n  pages   = {3657--3668},\n  year    = {2024},\n  doi     = {10.1049/gtd2.13308}\n}",
+      "uses": [
+        {
+          "key": "katanic2024recursive",
+          "file": "sections/article_intro.tex",
+          "line": 24,
+          "context": "Existing work provides strong foundations. DAE state estimators infer\nunmeasured electrical states \\cite{katanic2024recursive}; physical outage\ndetectors compare network hypotheses sequentially\n\\cite{chen2016quickest,rovatsos2017outage}; and simulated fault trajectories\nsupport diagnosis from sparse PMUs \\cite{warner2023highfidelity}.\nPhysical models, transient histories and unknown-onset searches are thus\nestablished ingredients. A small state-reconstruction error, however, does\nnot by itself identify the intervention that produced the observations."
+        },
+        {
+          "key": "katanic2024recursive",
+          "file": "sections/article_related.tex",
+          "line": 7,
+          "context": "\\subsection{State Estimation and Physical Source Inference}\nUnknown-input and DAE estimators recover electrical states despite\nincomplete models or exogenous inputs\n\\cite{gillijns2007input,nugroho2022dae,katanic2024recursive}. Functional\nobservability asks whether a requested state quantity can be recovered\n\\cite{fernando2010functional,montanari2022functional}. Source inference asks\nwhich intervention can explain the trajectory. Descriptor-model\ndiagnosability and nuisance-profiled tests formalize this distinction\n\\cite{eriksson2013diagnosability,scharf1994matched}."
+        }
+      ]
+    },
+    {
+      "key": "li2024knowledge",
+      "type": "article",
+      "fields": {
+        "author": "Z. Li and J. Tian and H. Liu",
+        "title": "A Joint Data and Knowledge-Driven Method for Power System Disturbance Localisation",
+        "journal": "IET Generation, Transmission \\& Distribution",
+        "volume": "18",
+        "number": "24",
+        "pages": "4078--4089",
+        "year": "2024",
+        "doi": "10.1049/gtd2.13331"
+      },
+      "bib": "@article{li2024knowledge,\n  author  = {Z. Li and J. Tian and H. Liu},\n  title   = {A Joint Data and Knowledge-Driven Method for Power System Disturbance Localisation},\n  journal = {IET Generation, Transmission \\& Distribution},\n  volume  = {18},\n  number  = {24},\n  pages   = {4078--4089},\n  year    = {2024},\n  doi     = {10.1049/gtd2.13331}\n}",
+      "uses": [
+        {
+          "key": "li2024knowledge",
+          "file": "sections/article_related.tex",
+          "line": 50,
+          "context": "\\subsection{Learned Diagnosis and Physical Uncertainty}\nLearned and knowledge-driven representations identify PMU disturbances and\nassets \\cite{pandey2020realtime,li2024knowledge,yildiz2024few}. We compare\ntwo fixed ExtraTrees adapters from the SGSMA project. Their performance\ntests transfer of those implementations, not the limits of all supervised\nlearning. A known physical catalog and source-excluded supervised training\nalso impose different information constraints."
+        }
+      ]
+    },
+    {
+      "key": "montanari2022functional",
+      "type": "article",
+      "fields": {
+        "author": "A. N. Montanari and L. Freitas and D. Proverbio and J. Gon{\\c{c}}alves",
+        "title": "Functional Observability and Subspace Reconstruction in Nonlinear Systems",
+        "journal": "Physical Review Research",
+        "volume": "4",
+        "number": "4",
+        "pages": "043195",
+        "year": "2022",
+        "doi": "10.1103/PhysRevResearch.4.043195"
+      },
+      "bib": "@article{montanari2022functional,\n  author  = {A. N. Montanari and L. Freitas and D. Proverbio and J. Gon{\\c{c}}alves},\n  title   = {Functional Observability and Subspace Reconstruction in Nonlinear Systems},\n  journal = {Physical Review Research},\n  volume  = {4},\n  number  = {4},\n  pages   = {043195},\n  year    = {2022},\n  doi     = {10.1103/PhysRevResearch.4.043195}\n}",
+      "uses": [
+        {
+          "key": "montanari2022functional",
+          "file": "sections/article_related.tex",
+          "line": 9,
+          "context": "\\subsection{State Estimation and Physical Source Inference}\nUnknown-input and DAE estimators recover electrical states despite\nincomplete models or exogenous inputs\n\\cite{gillijns2007input,nugroho2022dae,katanic2024recursive}. Functional\nobservability asks whether a requested state quantity can be recovered\n\\cite{fernando2010functional,montanari2022functional}. Source inference asks\nwhich intervention can explain the trajectory. Descriptor-model\ndiagnosability and nuisance-profiled tests formalize this distinction\n\\cite{eriksson2013diagnosability,scharf1994matched}."
+        }
+      ]
+    },
+    {
+      "key": "nagi2022trajectory",
+      "type": "article",
+      "fields": {
+        "author": "Rubinder Nagi and Xun Huan and Yu Christine Chen",
+        "title": "Bayesian Inference of Parameters in Power System Dynamic Models Using Trajectory Sensitivities",
+        "journal": "IEEE Transactions on Power Systems",
+        "year": "2022",
+        "volume": "37",
+        "number": "2",
+        "pages": "1253--1263",
+        "doi": "10.1109/TPWRS.2021.3104536"
+      },
+      "bib": "@article{nagi2022trajectory,\n  author={Rubinder Nagi and Xun Huan and Yu Christine Chen},\n  title={Bayesian Inference of Parameters in Power System Dynamic Models Using Trajectory Sensitivities},\n  journal={IEEE Transactions on Power Systems}, year={2022}, volume={37}, number={2}, pages={1253--1263},\n  doi={10.1109/TPWRS.2021.3104536}\n}",
+      "uses": [
+        {
+          "key": "nagi2022trajectory",
+          "file": "sections/article_related.tex",
+          "line": 62,
+          "context": "Physical stochastic models support latent-state estimation\n\\cite{ensaf2023kernel,tartakovsky2023gp}, while joint DAE parameter inference\naddresses uncertain generators and networks \\cite{albustami2026dae}.\nOur stream method uses a finite bank of constant network hypotheses.\nTrajectory sensitivities and Gaussian evidence have also been combined\nfor Bayesian parameter inference in power-system DAEs\n\\cite{nagi2022trajectory}. Their use alone does not distinguish an event\nattribution algorithm. The separate signature test examines a local event--context derivative;\nit does not identify every plant parameter or replace the stream method\nwith an unrestricted joint estimator."
+        }
+      ]
+    },
+    {
+      "key": "nugroho2022dae",
+      "type": "article",
+      "fields": {
+        "author": "S. A. Nugroho and A. F. Taha and N. Gatsis and J. Zhao",
+        "title": "Observers for Differential Algebraic Equation Models of Power Networks: Jointly Estimating Dynamic and Algebraic States",
+        "journal": "IEEE Transactions on Control of Network Systems",
+        "volume": "9",
+        "number": "3",
+        "pages": "1531--1543",
+        "year": "2022",
+        "doi": "10.1109/TCNS.2022.3158754"
+      },
+      "bib": "@article{nugroho2022dae,\n  author  = {S. A. Nugroho and A. F. Taha and N. Gatsis and J. Zhao},\n  title   = {Observers for Differential Algebraic Equation Models of Power Networks: Jointly Estimating Dynamic and Algebraic States},\n  journal = {IEEE Transactions on Control of Network Systems},\n  volume  = {9},\n  number  = {3},\n  pages   = {1531--1543},\n  year    = {2022},\n  doi     = {10.1109/TCNS.2022.3158754}\n}",
+      "uses": [
+        {
+          "key": "nugroho2022dae",
+          "file": "sections/article_related.tex",
+          "line": 7,
+          "context": "\\subsection{State Estimation and Physical Source Inference}\nUnknown-input and DAE estimators recover electrical states despite\nincomplete models or exogenous inputs\n\\cite{gillijns2007input,nugroho2022dae,katanic2024recursive}. Functional\nobservability asks whether a requested state quantity can be recovered\n\\cite{fernando2010functional,montanari2022functional}. Source inference asks\nwhich intervention can explain the trajectory. Descriptor-model\ndiagnosability and nuisance-profiled tests formalize this distinction\n\\cite{eriksson2013diagnosability,scharf1994matched}."
+        }
+      ]
+    },
+    {
+      "key": "openaiCodex2026",
+      "type": "misc",
+      "fields": {
+        "author": "{OpenAI}",
+        "title": "{Codex}",
+        "howpublished": "[Online]. Available: \\url{https://openai.com/codex/}",
+        "note": "Accessed: Oct. 31, 2026. AI system used for disclosed writing and code assistance"
+      },
+      "bib": "@misc{openaiCodex2026,\n  author = {{OpenAI}},\n  title = {{Codex}},\n  howpublished = {[Online]. Available: \\url{https://openai.com/codex/}},\n  note = {Accessed: Oct. 31, 2026. AI system used for disclosed writing and code assistance}\n}",
+      "uses": [
+        {
+          "key": "openaiCodex2026",
+          "file": "main.tex",
+          "line": 81,
+          "context": "\\section*{Acknowledgment}\nOpenAI Codex~\\cite{openaiCodex2026} assisted with drafting and restructuring\nthe abstract, all numbered main sections, author biographies and supplementary derivations, protocols and examples,\nLaTeX preparation, and plotting and execution-infrastructure code.\nThe authors retain responsibility for the scientific content, verification,\nand final submission.\n\\FloatBarrier\n\\bibliographystyle{IEEEtran}\n\\bibliography{references}\n\\input{author_biographies}\n\\EOD"
+        },
+        {
+          "key": "openaiCodex2026",
+          "file": "preamble.tex",
+          "line": 54,
+          "context": "\\newcommand{\\AIDraftingCredit}{\\footnote{Drafting/revision assistance:\nOpenAI Codex~\\cite{openaiCodex2026}.}}"
+        },
+        {
+          "key": "openaiCodex2026",
+          "file": "author_biographies.tex",
+          "line": 8,
+          "context": "\\begin{IEEEbiographynophoto}{Jorge Luis Mayorga Taborda}\nstudied electronic engineering at Universidad de los Andes, Bogot\\'a, Colombia. His academic work has addressed distributed control using population dynamics, including applications to urban traffic systems.\\footnote{Biographical drafting assistance: OpenAI Codex~\\cite{openaiCodex2026}.}\n\\end{IEEEbiographynophoto}"
+        },
+        {
+          "key": "openaiCodex2026",
+          "file": "supplement.tex",
+          "line": 66,
+          "context": "\\begin{abstract}\nThis supplement gives the executable statistical contract of the causal\nphysical-history method: local DAE reduction, candidate transitions,\ntruncated-severity evidence, state updates, restoration, worked examples,\nand scenario-level reproduction. It also defines the measurement-integrity\ninterface and separates causal alarm, diagnosis and restoration metrics\nfrom the historical hackathon window evaluation. Earlier reconstruction,\nbatch-source and proposed joint-estimator studies are preserved in the\nseparately compiled Historical Technical Notes. Their results do not enter\nthe causal method's denominators.\n\\end{abstract}\n\\begin{keywords}\nphasor measurement units, physical event attribution, measurement integrity,\ncausal inference, reproducibility.\n\\end{keywords}\n\\titlepgskip=-21pt\n\\maketitle\n\\raggedbottom\n\\appendices\n\\input{supplement/appendix_causal_walkthrough}\n\\input{supplement/appendix_submission_contract}\n\\input{supplement/appendix_single_state}\n\\IfFileExists{generated/submission_s01_learning_macros.tex}{\\input{supplement/appendix_grouped_learning}}{}\n\\input{sections/article_recovery_x04}\n\\IfFileExists{generated/ei_x02_macros.tex}{\\input{sections/article_ei_x02}}{}\n\\IfFileExists{supplement/c01_narrative_details.tex}{\\input{supplement/c01_narrative_details}}{}\n\\section*{Acknowledgment}\nOpenAI Codex~\\cite{openaiCodex2026} assisted with drafting and revision of\nthe abstract and all numbered appendices, including the derivations,\nworked examples and protocols, and with LaTeX and code preparation.\nThe section footnotes identify this writing assistance separately from\nscientific references. The authors retain responsibility for verification\nand the final manuscript.\n\\bibliographystyle{IEEEtran}\n\\bibliography{references}\n\\EOD\n\\end{document}"
+        }
+      ]
+    },
+    {
+      "key": "pandey2020realtime",
+      "type": "article",
+      "fields": {
+        "author": "S. Pandey and A. K. Srivastava and B. G. Amidan",
+        "title": "A Real Time Event Detection, Classification and Localization Using Synchrophasor Data",
+        "journal": "IEEE Transactions on Power Systems",
+        "volume": "35",
+        "number": "6",
+        "pages": "4421--4431",
+        "year": "2020",
+        "doi": "10.1109/TPWRS.2020.2986019"
+      },
+      "bib": "@article{pandey2020realtime,\n  author  = {S. Pandey and A. K. Srivastava and B. G. Amidan},\n  title   = {A Real Time Event Detection, Classification and Localization Using Synchrophasor Data},\n  journal = {IEEE Transactions on Power Systems},\n  volume  = {35},\n  number  = {6},\n  pages   = {4421--4431},\n  year    = {2020},\n  doi     = {10.1109/TPWRS.2020.2986019}\n}",
+      "uses": [
+        {
+          "key": "pandey2020realtime",
+          "file": "sections/article_related.tex",
+          "line": 50,
+          "context": "\\subsection{Learned Diagnosis and Physical Uncertainty}\nLearned and knowledge-driven representations identify PMU disturbances and\nassets \\cite{pandey2020realtime,li2024knowledge,yildiz2024few}. We compare\ntwo fixed ExtraTrees adapters from the SGSMA project. Their performance\ntests transfer of those implementations, not the limits of all supervised\nlearning. A known physical catalog and source-excluded supervised training\nalso impose different information constraints."
+        }
+      ]
+    },
+    {
+      "key": "rovatsos2017outage",
+      "type": "article",
+      "fields": {
+        "author": "G. Rovatsos and X. Jiang and A. D. Dom{\\'i}nguez-Garc{\\'i}a and V. V. Veeravalli",
+        "title": "Statistical Power System Line Outage Detection Under Transient Dynamics",
+        "journal": "IEEE Transactions on Signal Processing",
+        "volume": "65",
+        "number": "11",
+        "pages": "2787--2797",
+        "year": "2017",
+        "doi": "10.1109/TSP.2017.2673802"
+      },
+      "bib": "@article{rovatsos2017outage,\n  author  = {G. Rovatsos and X. Jiang and A. D. Dom{\\'i}nguez-Garc{\\'i}a and V. V. Veeravalli},\n  title   = {Statistical Power System Line Outage Detection Under Transient Dynamics},\n  journal = {IEEE Transactions on Signal Processing},\n  volume  = {65},\n  number  = {11},\n  pages   = {2787--2797},\n  year    = {2017},\n  doi     = {10.1109/TSP.2017.2673802}\n}",
+      "uses": [
+        {
+          "key": "rovatsos2017outage",
+          "file": "sections/article_intro.tex",
+          "line": 26,
+          "context": "Existing work provides strong foundations. DAE state estimators infer\nunmeasured electrical states \\cite{katanic2024recursive}; physical outage\ndetectors compare network hypotheses sequentially\n\\cite{chen2016quickest,rovatsos2017outage}; and simulated fault trajectories\nsupport diagnosis from sparse PMUs \\cite{warner2023highfidelity}.\nPhysical models, transient histories and unknown-onset searches are thus\nestablished ingredients. A small state-reconstruction error, however, does\nnot by itself identify the intervention that produced the observations."
+        },
+        {
+          "key": "rovatsos2017outage",
+          "file": "sections/article_related.tex",
+          "line": 17,
+          "context": "Physical hypotheses support outage inference from phasor angles\n\\cite{tate2008outage}, Bayesian inference with uncertain states\n\\cite{zhao2014outages}, and sequential detection under stochastic operation\n\\cite{chen2016quickest,rovatsos2017outage}. Anguluri \\emph{et al.} recover\nsparse forcing locations, inputs and an unknown initial state using group\nLASSO for linear dynamics \\cite{anguluri2023group}. These are precedents\nfor source recovery; group LASSO is not an executed comparator in our\nfrozen campaign. Sensor placement also affects source distinguishability\n\\cite{jamei2020limits,conte2023fault,yildiz2025sparse}.\\AIDraftingCredit{}"
+        }
+      ]
+    },
+    {
+      "key": "sarkka2013bayesian",
+      "type": "book",
+      "fields": {
+        "author": "S. S{\\\"a}rkk{\\\"a}",
+        "title": "Bayesian Filtering and Smoothing",
+        "publisher": "Cambridge University Press",
+        "address": "Cambridge, U.K.",
+        "year": "2013",
+        "doi": "10.1017/CBO9781139344203",
+        "isbn": "978-1-107-03065-7"
+      },
+      "bib": "@book{sarkka2013bayesian,\n  author    = {S. S{\\\"a}rkk{\\\"a}},\n  title     = {Bayesian Filtering and Smoothing},\n  publisher = {Cambridge University Press},\n  address   = {Cambridge, U.K.},\n  year      = {2013},\n  doi       = {10.1017/CBO9781139344203},\n  isbn      = {978-1-107-03065-7}\n}",
+      "uses": [
+        {
+          "key": "sarkka2013bayesian",
+          "file": "supplement/appendix_causal_walkthrough.tex",
+          "line": 20,
+          "context": "The article retains the physical model, the defining evidence integral,\nthe recovery mechanism, the decision outputs and decisive results. This\nsupplement supplies the intermediate calculations. The Historical Technical\nNotes develop functional observability, nuisance-profiled information and\nsource ambiguity, and distinguish the implemented batch estimator $\\mathcal E_{\\mathrm B}$ from\nthe proposed joint estimator $\\mathcal E_{\\mathrm J}$. Neither should be\nsilently substituted for the causal history bank, archived as R11.\nThe conditional Gaussian updates use standard filtering identities\n\\cite{sarkka2013bayesian}; the derivation below specifies their role and\nthe approximations made by the implemented bank."
+        }
+      ]
+    },
+    {
+      "key": "scharf1994matched",
+      "type": "article",
+      "fields": {
+        "author": "L. L. Scharf and B. Friedlander",
+        "title": "Matched Subspace Detectors",
+        "journal": "IEEE Transactions on Signal Processing",
+        "volume": "42",
+        "number": "8",
+        "pages": "2146--2157",
+        "year": "1994",
+        "doi": "10.1109/78.301849"
+      },
+      "bib": "@article{scharf1994matched,\n  author  = {L. L. Scharf and B. Friedlander},\n  title   = {Matched Subspace Detectors},\n  journal = {IEEE Transactions on Signal Processing},\n  volume  = {42},\n  number  = {8},\n  pages   = {2146--2157},\n  year    = {1994},\n  doi     = {10.1109/78.301849}\n}",
+      "uses": [
+        {
+          "key": "scharf1994matched",
+          "file": "sections/article_related.tex",
+          "line": 12,
+          "context": "\\subsection{State Estimation and Physical Source Inference}\nUnknown-input and DAE estimators recover electrical states despite\nincomplete models or exogenous inputs\n\\cite{gillijns2007input,nugroho2022dae,katanic2024recursive}. Functional\nobservability asks whether a requested state quantity can be recovered\n\\cite{fernando2010functional,montanari2022functional}. Source inference asks\nwhich intervention can explain the trajectory. Descriptor-model\ndiagnosability and nuisance-profiled tests formalize this distinction\n\\cite{eriksson2013diagnosability,scharf1994matched}."
+        },
+        {
+          "key": "scharf1994matched",
+          "file": "sections/article_information.tex",
+          "line": 33,
+          "context": "A better physical prediction need not produce a better location. Competing\nsources may remain similar after their severities and initial conditions\nare fitted. For a response $s_h$ at specified severity and context, the\ndistance to an admitted competitor is\n\\begin{equation}\n d_h^2=\\min_{j\\ne h}\\ \\min_{\\beta_j\\in\\mathcal A_j}\n       \\|s_h-s_j(\\beta_j)\\|_{\\Sigma^{-1}}^2.\n \\label{eq:narrative-separation}\n\\end{equation}\nThe set $\\mathcal A_j$ fixes allowed signs, severities and nuisance\ncoordinates. Small distance makes source discrimination noise-sensitive;\nit is not a universal error formula or a calibrated decision certificate\n\\cite{eriksson2013diagnosability,scharf1994matched}."
+        }
+      ]
+    },
+    {
+      "key": "tartakovsky2023gp",
+      "type": "article",
+      "fields": {
+        "author": "A. M. Tartakovsky and T. Ma and D. A. Barajas-Solano and R. Tipireddy",
+        "title": "Physics-Informed Gaussian Process Regression for States Estimation and Forecasting in Power Grids",
+        "journal": "International Journal of Forecasting",
+        "volume": "39",
+        "number": "2",
+        "pages": "967--980",
+        "year": "2023",
+        "doi": "10.1016/j.ijforecast.2022.03.007"
+      },
+      "bib": "@article{tartakovsky2023gp,\n  author = {A. M. Tartakovsky and T. Ma and D. A. Barajas-Solano and R. Tipireddy},\n  title = {Physics-Informed Gaussian Process Regression for States Estimation and Forecasting in Power Grids},\n  journal = {International Journal of Forecasting},\n  volume = {39},\n  number = {2},\n  pages = {967--980},\n  year = {2023},\n  doi = {10.1016/j.ijforecast.2022.03.007}\n}",
+      "uses": [
+        {
+          "key": "tartakovsky2023gp",
+          "file": "sections/article_related.tex",
+          "line": 57,
+          "context": "Physical stochastic models support latent-state estimation\n\\cite{ensaf2023kernel,tartakovsky2023gp}, while joint DAE parameter inference\naddresses uncertain generators and networks \\cite{albustami2026dae}.\nOur stream method uses a finite bank of constant network hypotheses.\nTrajectory sensitivities and Gaussian evidence have also been combined\nfor Bayesian parameter inference in power-system DAEs\n\\cite{nagi2022trajectory}. Their use alone does not distinguish an event\nattribution algorithm. The separate signature test examines a local event--context derivative;\nit does not identify every plant parameter or replace the stream method\nwith an unrestricted joint estimator."
+        }
+      ]
+    },
+    {
+      "key": "tate2008outage",
+      "type": "article",
+      "fields": {
+        "author": "J. E. Tate and T. J. Overbye",
+        "title": "Line Outage Detection Using Phasor Angle Measurements",
+        "journal": "IEEE Transactions on Power Systems",
+        "volume": "23",
+        "number": "4",
+        "pages": "1644--1652",
+        "year": "2008",
+        "doi": "10.1109/TPWRS.2008.2004826"
+      },
+      "bib": "@article{tate2008outage,\n  author  = {J. E. Tate and T. J. Overbye},\n  title   = {Line Outage Detection Using Phasor Angle Measurements},\n  journal = {IEEE Transactions on Power Systems},\n  volume  = {23},\n  number  = {4},\n  pages   = {1644--1652},\n  year    = {2008},\n  doi     = {10.1109/TPWRS.2008.2004826}\n}",
+      "uses": [
+        {
+          "key": "tate2008outage",
+          "file": "sections/article_related.tex",
+          "line": 15,
+          "context": "Physical hypotheses support outage inference from phasor angles\n\\cite{tate2008outage}, Bayesian inference with uncertain states\n\\cite{zhao2014outages}, and sequential detection under stochastic operation\n\\cite{chen2016quickest,rovatsos2017outage}. Anguluri \\emph{et al.} recover\nsparse forcing locations, inputs and an unknown initial state using group\nLASSO for linear dynamics \\cite{anguluri2023group}. These are precedents\nfor source recovery; group LASSO is not an executed comparator in our\nfrozen campaign. Sensor placement also affects source distinguishability\n\\cite{jamei2020limits,conte2023fault,yildiz2025sparse}.\\AIDraftingCredit{}"
+        }
+      ]
+    },
+    {
+      "key": "warner2023highfidelity",
+      "type": "misc",
+      "fields": {
+        "author": "A. Warner and D. Hamilton and G. Fellouris and D. Aliprantis",
+        "title": "Quick Line Fault Detection and Identification Using High-Fidelity Models of Transient Dynamics",
+        "year": "2023",
+        "howpublished": "TechRxiv preprint, version 1",
+        "doi": "10.36227/techrxiv.23264519.v1",
+        "note": "Posted June 16, 2023; cited as a preprint"
+      },
+      "bib": "@misc{warner2023highfidelity,\n  author = {A. Warner and D. Hamilton and G. Fellouris and D. Aliprantis},\n  title = {Quick Line Fault Detection and Identification Using High-Fidelity Models of Transient Dynamics},\n  year = {2023},\n  howpublished = {TechRxiv preprint, version 1},\n  doi = {10.36227/techrxiv.23264519.v1},\n  note = {Posted June 16, 2023; cited as a preprint}\n}",
+      "uses": [
+        {
+          "key": "warner2023highfidelity",
+          "file": "sections/article_intro.tex",
+          "line": 27,
+          "context": "Existing work provides strong foundations. DAE state estimators infer\nunmeasured electrical states \\cite{katanic2024recursive}; physical outage\ndetectors compare network hypotheses sequentially\n\\cite{chen2016quickest,rovatsos2017outage}; and simulated fault trajectories\nsupport diagnosis from sparse PMUs \\cite{warner2023highfidelity}.\nPhysical models, transient histories and unknown-onset searches are thus\nestablished ingredients. A small state-reconstruction error, however, does\nnot by itself identify the intervention that produced the observations."
+        },
+        {
+          "key": "warner2023highfidelity",
+          "file": "sections/article_related.tex",
+          "line": 27,
+          "context": "\\subsection{Trajectory-Based and Sequential Diagnosis}\nWarner \\emph{et al.} compare simulated voltage/current fault trajectories\nover a moving onset window and return candidate lines\n\\cite{warner2023highfidelity}. Their evaluated target is short-circuit\nidentification before clearing; load changes are an adverse-event test.\nOur target follows load changes and line openings through restoration and\nsuccessive interventions. Physical trajectory libraries, remote PMUs and\nretrospective onset scanning are shared ingredients. Their procedure was\nnot run on our data, so no numerical superiority is inferred."
+        }
+      ]
+    },
+    {
+      "key": "warner2024matrix",
+      "type": "article",
+      "fields": {
+        "author": "A. Warner and G. Fellouris",
+        "title": "Sequential Change Diagnosis Revisited and the Adaptive Matrix {CuSum}",
+        "journal": "Bernoulli",
+        "volume": "30",
+        "number": "3",
+        "pages": "2228--2252",
+        "year": "2024",
+        "doi": "10.3150/23-BEJ1671"
+      },
+      "bib": "@article{warner2024matrix,\n  author = {A. Warner and G. Fellouris},\n  title = {Sequential Change Diagnosis Revisited and the Adaptive Matrix {CuSum}},\n  journal = {Bernoulli},\n  volume = {30},\n  number = {3},\n  pages = {2228--2252},\n  year = {2024},\n  doi = {10.3150/23-BEJ1671}\n}",
+      "uses": [
+        {
+          "key": "warner2024matrix",
+          "file": "sections/article_related.tex",
+          "line": 35,
+          "context": "The Adaptive Matrix CuSum derives sequential identification error/delay\nresults under specified observation laws \\cite{warner2024matrix}.\nMultiple-model filtering already propagates conditional state/mode\nhypotheses \\cite{blom1988imm}. The multiple-model multiple-hypothesis\nfilter maintains mode-sequence histories and adapts their number through\npruning and merging \\cite{boers2005m3h}. Retaining histories or adapting\nbank size is therefore not an original principle of our method.\nOur pruned history bank uses these ideas,\nbut its approximate covariances, proposal screen and fitted startup context\ndo not inherit their general guarantees. The complete procedure evaluated\nhere makes retained recovery compete with later interventions and reports\ntimely attribution and alarm burden. These comparisons do not isolate\nrecovery memory from the other admission and publication rules."
+        }
+      ]
+    },
+    {
+      "key": "yildiz2024few",
+      "type": "article",
+      "fields": {
+        "author": "T. Yildiz and A. Abur",
+        "title": "Convolutional Neural Network-Assisted Fault Detection and Location Using Few {PMUs}",
+        "journal": "Electric Power Systems Research",
+        "volume": "235",
+        "pages": "110705",
+        "year": "2024",
+        "doi": "10.1016/j.epsr.2024.110705"
+      },
+      "bib": "@article{yildiz2024few,\n  author  = {T. Yildiz and A. Abur},\n  title   = {Convolutional Neural Network-Assisted Fault Detection and Location Using Few {PMUs}},\n  journal = {Electric Power Systems Research},\n  volume  = {235},\n  pages   = {110705},\n  year    = {2024},\n  doi     = {10.1016/j.epsr.2024.110705}\n}",
+      "uses": [
+        {
+          "key": "yildiz2024few",
+          "file": "sections/article_related.tex",
+          "line": 50,
+          "context": "\\subsection{Learned Diagnosis and Physical Uncertainty}\nLearned and knowledge-driven representations identify PMU disturbances and\nassets \\cite{pandey2020realtime,li2024knowledge,yildiz2024few}. We compare\ntwo fixed ExtraTrees adapters from the SGSMA project. Their performance\ntests transfer of those implementations, not the limits of all supervised\nlearning. A known physical catalog and source-excluded supervised training\nalso impose different information constraints."
+        }
+      ]
+    },
+    {
+      "key": "yildiz2025sparse",
+      "type": "article",
+      "fields": {
+        "author": "T. Yildiz and A. Abur",
+        "title": "Sparse {PMU} Placement Algorithm for Enhanced Detection and Identification of Power Grid Events",
+        "journal": "IEEE Transactions on Power Systems",
+        "volume": "40",
+        "number": "2",
+        "pages": "1843--1853",
+        "year": "2025",
+        "doi": "10.1109/TPWRS.2024.3446237"
+      },
+      "bib": "@article{yildiz2025sparse,\n  author  = {T. Yildiz and A. Abur},\n  title   = {Sparse {PMU} Placement Algorithm for Enhanced Detection and Identification of Power Grid Events},\n  journal = {IEEE Transactions on Power Systems},\n  volume  = {40},\n  number  = {2},\n  pages   = {1843--1853},\n  year    = {2025},\n  doi     = {10.1109/TPWRS.2024.3446237}\n}",
+      "uses": [
+        {
+          "key": "yildiz2025sparse",
+          "file": "sections/article_related.tex",
+          "line": 22,
+          "context": "Physical hypotheses support outage inference from phasor angles\n\\cite{tate2008outage}, Bayesian inference with uncertain states\n\\cite{zhao2014outages}, and sequential detection under stochastic operation\n\\cite{chen2016quickest,rovatsos2017outage}. Anguluri \\emph{et al.} recover\nsparse forcing locations, inputs and an unknown initial state using group\nLASSO for linear dynamics \\cite{anguluri2023group}. These are precedents\nfor source recovery; group LASSO is not an executed comparator in our\nfrozen campaign. Sensor placement also affects source distinguishability\n\\cite{jamei2020limits,conte2023fault,yildiz2025sparse}.\\AIDraftingCredit{}"
+        }
+      ]
+    },
+    {
+      "key": "zhao2014outages",
+      "type": "article",
+      "fields": {
+        "author": "Y. Zhao and J. Chen and A. Goldsmith and H. V. Poor",
+        "title": "Identification of Outages in Power Systems With Uncertain States and Optimal Sensor Locations",
+        "journal": "IEEE Journal of Selected Topics in Signal Processing",
+        "volume": "8",
+        "number": "6",
+        "pages": "1140--1153",
+        "year": "2014",
+        "doi": "10.1109/JSTSP.2014.2342191"
+      },
+      "bib": "@article{zhao2014outages,\n  author  = {Y. Zhao and J. Chen and A. Goldsmith and H. V. Poor},\n  title   = {Identification of Outages in Power Systems With Uncertain States and Optimal Sensor Locations},\n  journal = {IEEE Journal of Selected Topics in Signal Processing},\n  volume  = {8},\n  number  = {6},\n  pages   = {1140--1153},\n  year    = {2014},\n  doi     = {10.1109/JSTSP.2014.2342191}\n}",
+      "uses": [
+        {
+          "key": "zhao2014outages",
+          "file": "sections/article_related.tex",
+          "line": 16,
+          "context": "Physical hypotheses support outage inference from phasor angles\n\\cite{tate2008outage}, Bayesian inference with uncertain states\n\\cite{zhao2014outages}, and sequential detection under stochastic operation\n\\cite{chen2016quickest,rovatsos2017outage}. Anguluri \\emph{et al.} recover\nsparse forcing locations, inputs and an unknown initial state using group\nLASSO for linear dynamics \\cite{anguluri2023group}. These are precedents\nfor source recovery; group LASSO is not an executed comparator in our\nfrozen campaign. Sensor placement also affects source distinguishability\n\\cite{jamei2020limits,conte2023fault,yildiz2025sparse}.\\AIDraftingCredit{}"
+        }
+      ]
+    },
+    {
+      "key": "Mayorga2026FrequencyBenchmark",
+      "type": "inproceedings",
+      "fields": {
+        "author": "Mayorga Taborda, Jorge Luis and\n               Africano Rodriguez, Yessica and\n               Jimenez, Fernando",
+        "title": "Benchmarking Dynamic Frequency Estimators for Low-Inertia {IBR} Grids:\n               A Latency--Robustness Trade-Off Analysis",
+        "booktitle": "2026 5th International Conference on Smart Grid Synchronized Measurements and Analytics (SGSMA)",
+        "year": "2026",
+        "doi": "10.1109/SGSMA65955.2026.11618772",
+        "publisher": "IEEE"
+      },
+      "bib": "@inproceedings{Mayorga2026FrequencyBenchmark,\n  author    = {Mayorga Taborda, Jorge Luis and\n               Africano Rodriguez, Yessica and\n               Jimenez, Fernando},\n  title     = {Benchmarking Dynamic Frequency Estimators for Low-Inertia {IBR} Grids:\n               A Latency--Robustness Trade-Off Analysis},\n  booktitle = {2026 5th International Conference on Smart Grid Synchronized Measurements and Analytics (SGSMA)},\n  year      = {2026},\n  doi       = {10.1109/SGSMA65955.2026.11618772},\n  publisher = {IEEE}\n}",
+      "uses": []
+    },
+    {
+      "key": "abdelhai2021transfer",
+      "type": "article",
+      "fields": {
+        "author": "A. Abdel Hai and T. Dokic and M. Pavlovski and T. Mohamed and D. Saranovic and M. Alqudah and M. Kezunovic and Z. Obradovic",
+        "title": "Transfer Learning for Event Detection From {PMU} Measurements With Scarce Labels",
+        "journal": "IEEE Access",
+        "volume": "9",
+        "pages": "127420--127432",
+        "year": "2021",
+        "doi": "10.1109/ACCESS.2021.3111727"
+      },
+      "bib": "@article{abdelhai2021transfer,\n  author  = {A. Abdel Hai and T. Dokic and M. Pavlovski and T. Mohamed and D. Saranovic and M. Alqudah and M. Kezunovic and Z. Obradovic},\n  title   = {Transfer Learning for Event Detection From {PMU} Measurements With Scarce Labels},\n  journal = {IEEE Access},\n  volume  = {9},\n  pages   = {127420--127432},\n  year    = {2021},\n  doi     = {10.1109/ACCESS.2021.3111727}\n}",
+      "uses": []
+    },
+    {
+      "key": "azizi2021log",
+      "type": "article",
+      "fields": {
+        "author": "S. Azizi and M. R. Rezaei Jegarluei and A. Salehi Dobakhshari and G. Liu and V. Terzija",
+        "title": "Wide-Area Identification of the Size and Location of Loss of Generation Events by Sparse {PMUs}",
+        "journal": "IEEE Transactions on Power Delivery",
+        "volume": "36",
+        "number": "4",
+        "pages": "2397--2407",
+        "year": "2021",
+        "doi": "10.1109/TPWRD.2020.3047228"
+      },
+      "bib": "@article{azizi2021log,\n  author  = {S. Azizi and M. R. Rezaei Jegarluei and A. Salehi Dobakhshari and G. Liu and V. Terzija},\n  title   = {Wide-Area Identification of the Size and Location of Loss of Generation Events by Sparse {PMUs}},\n  journal = {IEEE Transactions on Power Delivery},\n  volume  = {36},\n  number  = {4},\n  pages   = {2397--2407},\n  year    = {2021},\n  doi     = {10.1109/TPWRD.2020.3047228}\n}",
+      "uses": []
+    },
+    {
+      "key": "azizi2023line",
+      "type": "article",
+      "fields": {
+        "author": "S. Azizi and M. R. Rezaei Jegarluei and A. M. Kettner and A. Salehi Dobakhshari",
+        "title": "Wide-Area Line Outage Monitoring by Sparse Phasor Measurements",
+        "journal": "IEEE Transactions on Power Systems",
+        "volume": "38",
+        "number": "4",
+        "pages": "3621--3631",
+        "year": "2023",
+        "doi": "10.1109/TPWRS.2022.3201067"
+      },
+      "bib": "@article{azizi2023line,\n  author  = {S. Azizi and M. R. Rezaei Jegarluei and A. M. Kettner and A. Salehi Dobakhshari},\n  title   = {Wide-Area Line Outage Monitoring by Sparse Phasor Measurements},\n  journal = {IEEE Transactions on Power Systems},\n  volume  = {38},\n  number  = {4},\n  pages   = {3621--3631},\n  year    = {2023},\n  doi     = {10.1109/TPWRS.2022.3201067}\n}",
+      "uses": []
+    },
+    {
+      "key": "bell1994ieks",
+      "type": "article",
+      "fields": {
+        "author": "B. M. Bell",
+        "title": "The Iterated Kalman Smoother as a {Gauss--Newton} Method",
+        "journal": "SIAM Journal on Optimization",
+        "volume": "4",
+        "number": "3",
+        "pages": "626--636",
+        "year": "1994",
+        "doi": "10.1137/0804035"
+      },
+      "bib": "@article{bell1994ieks,\n  author  = {B. M. Bell},\n  title   = {The Iterated Kalman Smoother as a {Gauss--Newton} Method},\n  journal = {SIAM Journal on Optimization},\n  volume  = {4},\n  number  = {3},\n  pages   = {626--636},\n  year    = {1994},\n  doi     = {10.1137/0804035}\n}",
+      "uses": []
+    },
+    {
+      "key": "biswas2025quality",
+      "type": "article",
+      "fields": {
+        "author": "S. Biswas and T. Yin and S. A. R. Naqvi and J. Follum and A. C. Varghese and T. Ahmad and P. V. Etingov",
+        "title": "An Open-Access Repository of Synchrophasor Data Quality Examples: Curation and Example Applications",
+        "journal": "IEEE Access",
+        "volume": "13",
+        "pages": "66445--66457",
+        "year": "2025",
+        "doi": "10.1109/ACCESS.2025.3560602"
+      },
+      "bib": "@article{biswas2025quality,\n  author  = {S. Biswas and T. Yin and S. A. R. Naqvi and J. Follum and A. C. Varghese and T. Ahmad and P. V. Etingov},\n  title   = {An Open-Access Repository of Synchrophasor Data Quality Examples: Curation and Example Applications},\n  journal = {IEEE Access},\n  volume  = {13},\n  pages   = {66445--66457},\n  year    = {2025},\n  doi     = {10.1109/ACCESS.2025.3560602}\n}",
+      "uses": []
+    },
+    {
+      "key": "chatterjee2020robust",
+      "type": "article",
+      "fields": {
+        "author": "K. Chatterjee and K. Mahapatra and N. R. Chaudhuri",
+        "title": "Robust Recovery of {PMU} Signals With Outlier Characterization and Stochastic Subspace Selection",
+        "journal": "IEEE Transactions on Smart Grid",
+        "volume": "11",
+        "number": "4",
+        "pages": "3346--3358",
+        "year": "2020",
+        "doi": "10.1109/TSG.2019.2961561"
+      },
+      "bib": "@article{chatterjee2020robust,\n  author  = {K. Chatterjee and K. Mahapatra and N. R. Chaudhuri},\n  title   = {Robust Recovery of {PMU} Signals With Outlier Characterization and Stochastic Subspace Selection},\n  journal = {IEEE Transactions on Smart Grid},\n  volume  = {11},\n  number  = {4},\n  pages   = {3346--3358},\n  year    = {2020},\n  doi     = {10.1109/TSG.2019.2961561}\n}",
+      "uses": []
+    },
+    {
+      "key": "cheng2022bigan",
+      "type": "article",
+      "fields": {
+        "author": "Y. Cheng and N. Yu and B. Foggo and K. Yamashita",
+        "title": "Online Power System Event Detection via Bidirectional Generative Adversarial Networks",
+        "journal": "IEEE Transactions on Power Systems",
+        "volume": "37",
+        "number": "6",
+        "pages": "4807--4818",
+        "year": "2022",
+        "doi": "10.1109/TPWRS.2022.3153591"
+      },
+      "bib": "@article{cheng2022bigan,\n  author  = {Y. Cheng and N. Yu and B. Foggo and K. Yamashita},\n  title   = {Online Power System Event Detection via Bidirectional Generative Adversarial Networks},\n  journal = {IEEE Transactions on Power Systems},\n  volume  = {37},\n  number  = {6},\n  pages   = {4807--4818},\n  year    = {2022},\n  doi     = {10.1109/TPWRS.2022.3153591}\n}",
+      "uses": []
+    },
+    {
+      "key": "cover2006elements",
+      "type": "book",
+      "fields": {
+        "author": "T. M. Cover and J. A. Thomas",
+        "title": "Elements of Information Theory",
+        "edition": "2",
+        "publisher": "Wiley-Interscience",
+        "address": "Hoboken, NJ, USA",
+        "year": "2006",
+        "doi": "10.1002/047174882X",
+        "isbn": "978-0-471-24195-9"
+      },
+      "bib": "@book{cover2006elements,\n  author    = {T. M. Cover and J. A. Thomas},\n  title     = {Elements of Information Theory},\n  edition   = {2},\n  publisher = {Wiley-Interscience},\n  address   = {Hoboken, NJ, USA},\n  year      = {2006},\n  doi       = {10.1002/047174882X},\n  isbn      = {978-0-471-24195-9}\n}",
+      "uses": []
+    },
+    {
+      "key": "cui2021hybrid",
+      "type": "article",
+      "fields": {
+        "author": "H. Cui and F. Li and K. Tomsovic",
+        "title": "Hybrid Symbolic-Numeric Framework for Power System Modeling and Analysis",
+        "journal": "IEEE Transactions on Power Systems",
+        "volume": "36",
+        "number": "2",
+        "pages": "1373--1384",
+        "year": "2021",
+        "doi": "10.1109/TPWRS.2020.3017019"
+      },
+      "bib": "@article{cui2021hybrid,\n  author  = {H. Cui and F. Li and K. Tomsovic},\n  title   = {Hybrid Symbolic-Numeric Framework for Power System Modeling and Analysis},\n  journal = {IEEE Transactions on Power Systems},\n  volume  = {36},\n  number  = {2},\n  pages   = {1373--1384},\n  year    = {2021},\n  doi     = {10.1109/TPWRS.2020.3017019}\n}",
+      "uses": []
+    },
+    {
+      "key": "foggo2024pmubage",
+      "type": "article",
+      "fields": {
+        "author": "B. Foggo and K. Yamashita and N. Yu",
+        "title": "{pmuBAGE}: The Benchmarking Assortment of Generated {PMU} Data for Power System Events",
+        "journal": "IEEE Transactions on Power Systems",
+        "volume": "39",
+        "number": "2",
+        "pages": "3485--3496",
+        "year": "2024",
+        "doi": "10.1109/TPWRS.2023.3280430"
+      },
+      "bib": "@article{foggo2024pmubage,\n  author  = {B. Foggo and K. Yamashita and N. Yu},\n  title   = {{pmuBAGE}: The Benchmarking Assortment of Generated {PMU} Data for Power System Events},\n  journal = {IEEE Transactions on Power Systems},\n  volume  = {39},\n  number  = {2},\n  pages   = {3485--3496},\n  year    = {2024},\n  doi     = {10.1109/TPWRS.2023.3280430}\n}",
+      "uses": []
+    },
+    {
+      "key": "hou1998input",
+      "type": "article",
+      "fields": {
+        "author": "M. Hou and R. J. Patton",
+        "title": "Input Observability and Input Reconstruction",
+        "journal": "Automatica",
+        "volume": "34",
+        "number": "6",
+        "pages": "789--794",
+        "year": "1998",
+        "doi": "10.1016/S0005-1098(98)00021-1"
+      },
+      "bib": "@article{hou1998input,\n  author  = {M. Hou and R. J. Patton},\n  title   = {Input Observability and Input Reconstruction},\n  journal = {Automatica},\n  volume  = {34},\n  number  = {6},\n  pages   = {789--794},\n  year    = {1998},\n  doi     = {10.1016/S0005-1098(98)00021-1}\n}",
+      "uses": []
+    },
+    {
+      "key": "hu2026openset",
+      "type": "article",
+      "fields": {
+        "author": "Y. Hu and Z. Cheng",
+        "title": "Generative {AI} for Open-Set Event Detection and Classification in Power Systems Using Synchrophasor Data",
+        "journal": "IEEE Transactions on Industrial Informatics",
+        "year": "2026",
+        "note": "Early access",
+        "doi": "10.1109/TII.2026.3690931"
+      },
+      "bib": "@article{hu2026openset,\n  author  = {Y. Hu and Z. Cheng},\n  title   = {Generative {AI} for Open-Set Event Detection and Classification in Power Systems Using Synchrophasor Data},\n  journal = {IEEE Transactions on Industrial Informatics},\n  year    = {2026},\n  note    = {Early access},\n  doi     = {10.1109/TII.2026.3690931}\n}",
+      "uses": []
+    },
+    {
+      "key": "kalman1960",
+      "type": "article",
+      "fields": {
+        "author": "R. E. Kalman",
+        "title": "A New Approach to Linear Filtering and Prediction Problems",
+        "journal": "Journal of Basic Engineering",
+        "volume": "82",
+        "number": "1",
+        "pages": "35--45",
+        "year": "1960",
+        "doi": "10.1115/1.3662552"
+      },
+      "bib": "@article{kalman1960,\n  author  = {R. E. Kalman},\n  title   = {A New Approach to Linear Filtering and Prediction Problems},\n  journal = {Journal of Basic Engineering},\n  volume  = {82},\n  number  = {1},\n  pages   = {35--45},\n  year    = {1960},\n  doi     = {10.1115/1.3662552}\n}",
+      "uses": []
+    },
+    {
+      "key": "kay1993estimation",
+      "type": "book",
+      "fields": {
+        "author": "S. M. Kay",
+        "title": "Fundamentals of Statistical Signal Processing, Volume I: Estimation Theory",
+        "publisher": "Prentice Hall",
+        "address": "Englewood Cliffs, NJ, USA",
+        "year": "1993",
+        "isbn": "978-0-13-345711-7"
+      },
+      "bib": "@book{kay1993estimation,\n  author    = {S. M. Kay},\n  title     = {Fundamentals of Statistical Signal Processing, Volume I: Estimation Theory},\n  publisher = {Prentice Hall},\n  address   = {Englewood Cliffs, NJ, USA},\n  year      = {1993},\n  isbn      = {978-0-13-345711-7}\n}",
+      "uses": []
+    },
+    {
+      "key": "kummerow2022siamese",
+      "type": "article",
+      "fields": {
+        "author": "A. Kummerow and C. Monsalve and P. Bretschneider",
+        "title": "Siamese Recurrent Neural Networks for the Robust Classification of Grid Disturbances in Transmission Power Systems Considering Unknown Events",
+        "journal": "IET Smart Grid",
+        "volume": "5",
+        "number": "1",
+        "pages": "51--61",
+        "year": "2022",
+        "doi": "10.1049/stg2.12051"
+      },
+      "bib": "@article{kummerow2022siamese,\n  author  = {A. Kummerow and C. Monsalve and P. Bretschneider},\n  title   = {Siamese Recurrent Neural Networks for the Robust Classification of Grid Disturbances in Transmission Power Systems Considering Unknown Events},\n  journal = {IET Smart Grid},\n  volume  = {5},\n  number  = {1},\n  pages   = {51--61},\n  year    = {2022},\n  doi     = {10.1049/stg2.12051}\n}",
+      "uses": []
+    },
+    {
+      "key": "kummerow2023nuisance",
+      "type": "article",
+      "fields": {
+        "author": "A. Kummerow and P. Bretschneider",
+        "title": "Influence of Nuisance Variables on the {PMU}-Based Disturbance Classification in Power Transmission Systems",
+        "journal": "at--Automatisierungstechnik",
+        "volume": "71",
+        "number": "10",
+        "pages": "867--877",
+        "year": "2023",
+        "doi": "10.1515/auto-2023-0023"
+      },
+      "bib": "@article{kummerow2023nuisance,\n  author  = {A. Kummerow and P. Bretschneider},\n  title   = {Influence of Nuisance Variables on the {PMU}-Based Disturbance Classification in Power Transmission Systems},\n  journal = {at--Automatisierungstechnik},\n  volume  = {71},\n  number  = {10},\n  pages   = {867--877},\n  year    = {2023},\n  doi     = {10.1515/auto-2023-0023}\n}",
+      "uses": []
+    },
+    {
+      "key": "kummerow2023sigmoid",
+      "type": "article",
+      "fields": {
+        "author": "A. Kummerow and M. Dirbas and C. Monsalve and P. Bretschneider",
+        "title": "Siamese Sigmoid Networks for the Open Classification of Grid Disturbances in Power Transmission Systems",
+        "journal": "IET Smart Grid",
+        "volume": "6",
+        "number": "2",
+        "pages": "136--146",
+        "year": "2023",
+        "doi": "10.1049/stg2.12083"
+      },
+      "bib": "@article{kummerow2023sigmoid,\n  author  = {A. Kummerow and M. Dirbas and C. Monsalve and P. Bretschneider},\n  title   = {Siamese Sigmoid Networks for the Open Classification of Grid Disturbances in Power Transmission Systems},\n  journal = {IET Smart Grid},\n  volume  = {6},\n  number  = {2},\n  pages   = {136--146},\n  year    = {2023},\n  doi     = {10.1049/stg2.12083}\n}",
+      "uses": []
+    },
+    {
+      "key": "li2018subspace",
+      "type": "article",
+      "fields": {
+        "author": "W. Li and M. Wang and J. H. Chow",
+        "title": "Real-Time Event Identification Through Low-Dimensional Subspace Characterization of High-Dimensional Synchrophasor Data",
+        "journal": "IEEE Transactions on Power Systems",
+        "volume": "33",
+        "number": "5",
+        "pages": "4937--4947",
+        "year": "2018",
+        "doi": "10.1109/TPWRS.2018.2796442"
+      },
+      "bib": "@article{li2018subspace,\n  author  = {W. Li and M. Wang and J. H. Chow},\n  title   = {Real-Time Event Identification Through Low-Dimensional Subspace Characterization of High-Dimensional Synchrophasor Data},\n  journal = {IEEE Transactions on Power Systems},\n  volume  = {33},\n  number  = {5},\n  pages   = {4937--4947},\n  year    = {2018},\n  doi     = {10.1109/TPWRS.2018.2796442}\n}",
+      "uses": []
+    },
+    {
+      "key": "li2019cnn",
+      "type": "article",
+      "fields": {
+        "author": "W. Li and D. Deka and M. Chertkov and M. Wang",
+        "title": "Real-Time Faulted Line Localization and {PMU} Placement in Power Systems Through Convolutional Neural Networks",
+        "journal": "IEEE Transactions on Power Systems",
+        "volume": "34",
+        "number": "6",
+        "pages": "4640--4651",
+        "year": "2019",
+        "doi": "10.1109/TPWRS.2019.2917794"
+      },
+      "bib": "@article{li2019cnn,\n  author  = {W. Li and D. Deka and M. Chertkov and M. Wang},\n  title   = {Real-Time Faulted Line Localization and {PMU} Placement in Power Systems Through Convolutional Neural Networks},\n  journal = {IEEE Transactions on Power Systems},\n  volume  = {34},\n  number  = {6},\n  pages   = {4640--4651},\n  year    = {2019},\n  doi     = {10.1109/TPWRS.2019.2917794}\n}",
+      "uses": []
+    },
+    {
+      "key": "li2022transfer",
+      "type": "article",
+      "fields": {
+        "author": "H. Li and Z. Ma and Y. Weng",
+        "title": "A Transfer Learning Framework for Power System Event Identification",
+        "journal": "IEEE Transactions on Power Systems",
+        "volume": "37",
+        "number": "6",
+        "pages": "4424--4435",
+        "year": "2022",
+        "doi": "10.1109/TPWRS.2022.3153445"
+      },
+      "bib": "@article{li2022transfer,\n  author  = {H. Li and Z. Ma and Y. Weng},\n  title   = {A Transfer Learning Framework for Power System Event Identification},\n  journal = {IEEE Transactions on Power Systems},\n  volume  = {37},\n  number  = {6},\n  pages   = {4424--4435},\n  year    = {2022},\n  doi     = {10.1109/TPWRS.2022.3153445}\n}",
+      "uses": []
+    },
+    {
+      "key": "li2023eventtriggered",
+      "type": "article",
+      "fields": {
+        "author": "Z. Li and S. Li and B. Liu and S. S. Yu and P. Shi",
+        "title": "A Stochastic Event-Triggered Robust Cubature Kalman Filtering Approach to Power System Dynamic State Estimation With Non-Gaussian Measurement Noises",
+        "journal": "IEEE Transactions on Control Systems Technology",
+        "volume": "31",
+        "number": "2",
+        "pages": "889--896",
+        "year": "2023",
+        "doi": "10.1109/TCST.2022.3184467"
+      },
+      "bib": "@article{li2023eventtriggered,\n  author  = {Z. Li and S. Li and B. Liu and S. S. Yu and P. Shi},\n  title   = {A Stochastic Event-Triggered Robust Cubature Kalman Filtering Approach to Power System Dynamic State Estimation With Non-Gaussian Measurement Noises},\n  journal = {IEEE Transactions on Control Systems Technology},\n  volume  = {31},\n  number  = {2},\n  pages   = {889--896},\n  year    = {2023},\n  doi     = {10.1109/TCST.2022.3184467}\n}",
+      "uses": []
+    },
+    {
+      "key": "moshtagh2025topology",
+      "type": "article",
+      "fields": {
+        "author": "S. Moshtagh and B. Azimian and M. Golgol and A. Pal",
+        "title": "Topology-Aware Graph Neural Network-Based State Estimation for {PMU}-Unobservable Power Systems",
+        "journal": "IEEE Transactions on Power Systems",
+        "year": "2025",
+        "doi": "10.1109/TPWRS.2025.3572848"
+      },
+      "bib": "@article{moshtagh2025topology,\n  author  = {S. Moshtagh and B. Azimian and M. Golgol and A. Pal},\n  title   = {Topology-Aware Graph Neural Network-Based State Estimation for {PMU}-Unobservable Power Systems},\n  journal = {IEEE Transactions on Power Systems},\n  year    = {2025},\n  doi     = {10.1109/TPWRS.2025.3572848}\n}",
+      "uses": []
+    },
+    {
+      "key": "ngo2024pignn",
+      "type": "article",
+      "fields": {
+        "author": "Q.-H. Ngo and B. L. H. Nguyen and T. V. Vu and J. Zhang and T. Ngo",
+        "title": "Physics-Informed Graphical Neural Network for Power System State Estimation",
+        "journal": "Applied Energy",
+        "volume": "358",
+        "pages": "122602",
+        "year": "2024",
+        "doi": "10.1016/j.apenergy.2023.122602"
+      },
+      "bib": "@article{ngo2024pignn,\n  author  = {Q.-H. Ngo and B. L. H. Nguyen and T. V. Vu and J. Zhang and T. Ngo},\n  title   = {Physics-Informed Graphical Neural Network for Power System State Estimation},\n  journal = {Applied Energy},\n  volume  = {358},\n  pages   = {122602},\n  year    = {2024},\n  doi     = {10.1016/j.apenergy.2023.122602}\n}",
+      "uses": []
+    },
+    {
+      "key": "nguyen2021unknown",
+      "type": "article",
+      "fields": {
+        "author": "B. L. H. Nguyen and T. V. Vu and J. M. Guerrero and M. Steurer and K. Schoder and T. Ngo",
+        "title": "Distributed Dynamic State-Input Estimation for Power Networks of Microgrids and Active Distribution Systems With Unknown Inputs",
+        "journal": "Electric Power Systems Research",
+        "volume": "201",
+        "pages": "107510",
+        "year": "2021",
+        "doi": "10.1016/j.epsr.2021.107510"
+      },
+      "bib": "@article{nguyen2021unknown,\n  author  = {B. L. H. Nguyen and T. V. Vu and J. M. Guerrero and M. Steurer and K. Schoder and T. Ngo},\n  title   = {Distributed Dynamic State-Input Estimation for Power Networks of Microgrids and Active Distribution Systems With Unknown Inputs},\n  journal = {Electric Power Systems Research},\n  volume  = {201},\n  pages   = {107510},\n  year    = {2021},\n  doi     = {10.1016/j.epsr.2021.107510}\n}",
+      "uses": []
+    },
+    {
+      "key": "nyberg2002detectability",
+      "type": "article",
+      "fields": {
+        "author": "M. Nyberg",
+        "title": "Criterions for Detectability and Strong Detectability of Faults in Linear Systems",
+        "journal": "International Journal of Control",
+        "volume": "75",
+        "number": "7",
+        "pages": "490--501",
+        "year": "2002",
+        "doi": "10.1080/00207170110121303"
+      },
+      "bib": "@article{nyberg2002detectability,\n  author  = {M. Nyberg},\n  title   = {Criterions for Detectability and Strong Detectability of Faults in Linear Systems},\n  journal = {International Journal of Control},\n  volume  = {75},\n  number  = {7},\n  pages   = {490--501},\n  year    = {2002},\n  doi     = {10.1080/00207170110121303}\n}",
+      "uses": []
+    },
+    {
+      "key": "pasqualetti2013attack",
+      "type": "article",
+      "fields": {
+        "author": "F. Pasqualetti and F. D{\\\"o}rfler and F. Bullo",
+        "title": "Attack Detection and Identification in Cyber--Physical Systems",
+        "journal": "IEEE Transactions on Automatic Control",
+        "volume": "58",
+        "number": "11",
+        "pages": "2715--2729",
+        "year": "2013",
+        "doi": "10.1109/TAC.2013.2266831"
+      },
+      "bib": "@article{pasqualetti2013attack,\n  author  = {F. Pasqualetti and F. D{\\\"o}rfler and F. Bullo},\n  title   = {Attack Detection and Identification in Cyber--Physical Systems},\n  journal = {IEEE Transactions on Automatic Control},\n  volume  = {58},\n  number  = {11},\n  pages   = {2715--2729},\n  year    = {2013},\n  doi     = {10.1109/TAC.2013.2266831}\n}",
+      "uses": []
+    },
+    {
+      "key": "phadke2008synchronized",
+      "type": "book",
+      "fields": {
+        "author": "A. G. Phadke and J. S. Thorp",
+        "title": "Synchronized Phasor Measurements and Their Applications",
+        "publisher": "Springer",
+        "address": "New York, NY, USA",
+        "year": "2008",
+        "doi": "10.1007/978-0-387-76537-2"
+      },
+      "bib": "@book{phadke2008synchronized,\n  author    = {A. G. Phadke and J. S. Thorp},\n  title     = {Synchronized Phasor Measurements and Their Applications},\n  publisher = {Springer},\n  address   = {New York, NY, USA},\n  year      = {2008},\n  doi       = {10.1007/978-0-387-76537-2}\n}",
+      "uses": []
+    },
+    {
+      "key": "plietzsch2022powerdynamics",
+      "type": "article",
+      "fields": {
+        "author": "A. Plietzsch and R. Kogler and S. Auer and J. Merino and A. Gil-de-Muro and J. Li{\\ss}e and C. Vogel and F. Hellmann",
+        "title": "{PowerDynamics.jl}---An Experimentally Validated Open-Source Package for the Dynamical Analysis of Power Grids",
+        "journal": "SoftwareX",
+        "volume": "17",
+        "pages": "100861",
+        "year": "2022",
+        "doi": "10.1016/j.softx.2021.100861"
+      },
+      "bib": "@article{plietzsch2022powerdynamics,\n  author  = {A. Plietzsch and R. Kogler and S. Auer and J. Merino and A. Gil-de-Muro and J. Li{\\ss}e and C. Vogel and F. Hellmann},\n  title   = {{PowerDynamics.jl}---An Experimentally Validated Open-Source Package for the Dynamical Analysis of Power Grids},\n  journal = {SoftwareX},\n  volume  = {17},\n  pages   = {100861},\n  year    = {2022},\n  doi     = {10.1016/j.softx.2021.100861}\n}",
+      "uses": []
+    },
+    {
+      "key": "pomarico2026shred",
+      "type": "article",
+      "fields": {
+        "author": "A. Pomarico and A. Berizzi and J. N. Kutz",
+        "title": "A Shallow Recurrent Decoder for Dynamic State Estimation with a Limited Number of {PMU}s in Power Systems",
+        "journal": "arXiv preprint arXiv:2607.00116",
+        "year": "2026"
+      },
+      "bib": "@article{pomarico2026shred,\n  author  = {A. Pomarico and A. Berizzi and J. N. Kutz},\n  title   = {A Shallow Recurrent Decoder for Dynamic State Estimation with a Limited Number of {PMU}s in Power Systems},\n  journal = {arXiv preprint arXiv:2607.00116},\n  year    = {2026}\n}",
+      "uses": []
+    },
+    {
+      "key": "qi2015placement",
+      "type": "article",
+      "fields": {
+        "author": "J. Qi and K. Sun and W. Kang",
+        "title": "Optimal {PMU} Placement for Power System Dynamic State Estimation by Using Empirical Observability Gramian",
+        "journal": "IEEE Transactions on Power Systems",
+        "volume": "30",
+        "number": "4",
+        "pages": "2041--2054",
+        "year": "2015",
+        "doi": "10.1109/TPWRS.2014.2356797"
+      },
+      "bib": "@article{qi2015placement,\n  author  = {J. Qi and K. Sun and W. Kang},\n  title   = {Optimal {PMU} Placement for Power System Dynamic State Estimation by Using Empirical Observability Gramian},\n  journal = {IEEE Transactions on Power Systems},\n  volume  = {30},\n  number  = {4},\n  pages   = {2041--2054},\n  year    = {2015},\n  doi     = {10.1109/TPWRS.2014.2356797}\n}",
+      "uses": []
+    },
+    {
+      "key": "qu2023joint",
+      "type": "article",
+      "fields": {
+        "author": "B. Qu and Z. Wang and B. Shen and H. Dong and H. Liu",
+        "title": "Event-Based Joint State and Unknown Input Estimation for Energy Networks: Handling Multi-Machine Power Grids",
+        "journal": "IEEE Transactions on Network Science and Engineering",
+        "volume": "10",
+        "number": "1",
+        "pages": "253--264",
+        "year": "2023",
+        "doi": "10.1109/TNSE.2022.3206720"
+      },
+      "bib": "@article{qu2023joint,\n  author  = {B. Qu and Z. Wang and B. Shen and H. Dong and H. Liu},\n  title   = {Event-Based Joint State and Unknown Input Estimation for Energy Networks: Handling Multi-Machine Power Grids},\n  journal = {IEEE Transactions on Network Science and Engineering},\n  volume  = {10},\n  number  = {1},\n  pages   = {253--264},\n  year    = {2023},\n  doi     = {10.1109/TNSE.2022.3206720}\n}",
+      "uses": []
+    },
+    {
+      "key": "rauch1965smoothing",
+      "type": "article",
+      "fields": {
+        "author": "H. E. Rauch and F. Tung and C. T. Striebel",
+        "title": "Maximum Likelihood Estimates of Linear Dynamic Systems",
+        "journal": "AIAA Journal",
+        "volume": "3",
+        "number": "8",
+        "pages": "1445--1450",
+        "year": "1965",
+        "doi": "10.2514/3.3166"
+      },
+      "bib": "@article{rauch1965smoothing,\n  author  = {H. E. Rauch and F. Tung and C. T. Striebel},\n  title   = {Maximum Likelihood Estimates of Linear Dynamic Systems},\n  journal = {AIAA Journal},\n  volume  = {3},\n  number  = {8},\n  pages   = {1445--1450},\n  year    = {1965},\n  doi     = {10.2514/3.3166}\n}",
+      "uses": []
+    },
+    {
+      "key": "rimkus2025gnn",
+      "type": "article",
+      "fields": {
+        "author": "M. Rimkus and P. Kokoszka and D. Duan and X. Wang and H. Wang",
+        "title": "Graph Neural Networks for the Localization of Faults in a Partially Observed Regional Transmission System",
+        "journal": "Scandinavian Journal of Statistics",
+        "volume": "52",
+        "number": "2",
+        "pages": "572--594",
+        "year": "2025",
+        "doi": "10.1111/sjos.12763"
+      },
+      "bib": "@article{rimkus2025gnn,\n  author  = {M. Rimkus and P. Kokoszka and D. Duan and X. Wang and H. Wang},\n  title   = {Graph Neural Networks for the Localization of Faults in a Partially Observed Regional Transmission System},\n  journal = {Scandinavian Journal of Statistics},\n  volume  = {52},\n  number  = {2},\n  pages   = {572--594},\n  year    = {2025},\n  doi     = {10.1111/sjos.12763}\n}",
+      "uses": []
+    },
+    {
+      "key": "rotnitzky2000singular",
+      "type": "article",
+      "fields": {
+        "author": "A. Rotnitzky and D. R. Cox and M. Bottai and J. M. Robins",
+        "title": "Likelihood-Based Inference With Singular Information Matrix",
+        "journal": "Bernoulli",
+        "volume": "6",
+        "number": "2",
+        "pages": "243--284",
+        "year": "2000",
+        "doi": "10.2307/3318576"
+      },
+      "bib": "@article{rotnitzky2000singular,\n  author  = {A. Rotnitzky and D. R. Cox and M. Bottai and J. M. Robins},\n  title   = {Likelihood-Based Inference With Singular Information Matrix},\n  journal = {Bernoulli},\n  volume  = {6},\n  number  = {2},\n  pages   = {243--284},\n  year    = {2000},\n  doi     = {10.2307/3318576}\n}",
+      "uses": []
+    },
+    {
+      "key": "sarkka2020linesearch",
+      "type": "inproceedings",
+      "fields": {
+        "author": "S. S{\\\"a}rkk{\\\"a} and L. Svensson",
+        "title": "Levenberg--Marquardt and Line-Search Extended Kalman Smoothers",
+        "booktitle": "Proc. IEEE Int. Conf. Acoustics, Speech and Signal Processing (ICASSP)",
+        "pages": "5875--5879",
+        "year": "2020",
+        "doi": "10.1109/ICASSP40776.2020.9054686"
+      },
+      "bib": "@inproceedings{sarkka2020linesearch,\n  author    = {S. S{\\\"a}rkk{\\\"a} and L. Svensson},\n  title     = {Levenberg--Marquardt and Line-Search Extended Kalman Smoothers},\n  booktitle = {Proc. IEEE Int. Conf. Acoustics, Speech and Signal Processing (ICASSP)},\n  pages     = {5875--5879},\n  year      = {2020},\n  doi       = {10.1109/ICASSP40776.2020.9054686}\n}",
+      "uses": []
+    },
+    {
+      "key": "showkatbakhsh2020secure",
+      "type": "article",
+      "fields": {
+        "author": "M. Showkatbakhsh and Y. Shoukry and S. N. Diggavi and P. Tabuada",
+        "title": "Securing State Reconstruction Under Sensor and Actuator Attacks: Theory and Design",
+        "journal": "Automatica",
+        "volume": "116",
+        "pages": "108920",
+        "year": "2020",
+        "doi": "10.1016/j.automatica.2020.108920"
+      },
+      "bib": "@article{showkatbakhsh2020secure,\n  author  = {M. Showkatbakhsh and Y. Shoukry and S. N. Diggavi and P. Tabuada},\n  title   = {Securing State Reconstruction Under Sensor and Actuator Attacks: Theory and Design},\n  journal = {Automatica},\n  volume  = {116},\n  pages   = {108920},\n  year    = {2020},\n  doi     = {10.1016/j.automatica.2020.108920}\n}",
+      "uses": []
+    },
+    {
+      "key": "stuart2010inverse",
+      "type": "article",
+      "fields": {
+        "author": "A. M. Stuart",
+        "title": "Inverse Problems: A Bayesian Perspective",
+        "journal": "Acta Numerica",
+        "volume": "19",
+        "pages": "451--559",
+        "year": "2010",
+        "doi": "10.1017/S0962492910000061"
+      },
+      "bib": "@article{stuart2010inverse,\n  author  = {A. M. Stuart},\n  title   = {Inverse Problems: A Bayesian Perspective},\n  journal = {Acta Numerica},\n  volume  = {19},\n  pages   = {451--559},\n  year    = {2010},\n  doi     = {10.1017/S0962492910000061}\n}",
+      "uses": []
+    },
+    {
+      "key": "sun2016observability",
+      "type": "article",
+      "fields": {
+        "author": "K. Sun and J. Qi and W. Kang",
+        "title": "Power System Observability and Dynamic State Estimation for Stability Monitoring Using Synchrophasor Measurements",
+        "journal": "Control Engineering Practice",
+        "volume": "53",
+        "pages": "160--172",
+        "year": "2016",
+        "doi": "10.1016/j.conengprac.2016.01.013"
+      },
+      "bib": "@article{sun2016observability,\n  author  = {K. Sun and J. Qi and W. Kang},\n  title   = {Power System Observability and Dynamic State Estimation for Stability Monitoring Using Synchrophasor Measurements},\n  journal = {Control Engineering Practice},\n  volume  = {53},\n  pages   = {160--172},\n  year    = {2016},\n  doi     = {10.1016/j.conengprac.2016.01.013}\n}",
+      "uses": []
+    },
+    {
+      "key": "sun2026secure",
+      "type": "article",
+      "fields": {
+        "author": "Q. Sun and G.-H. Yang",
+        "title": "Joint Estimation of States, Sparse Sensor Attacks, and Unknown Inputs in Discrete-Time Cyber--Physical Systems",
+        "journal": "IEEE Transactions on Cybernetics",
+        "volume": "56",
+        "number": "8",
+        "pages": "4625--4633",
+        "year": "2026",
+        "doi": "10.1109/TCYB.2026.3681691"
+      },
+      "bib": "@article{sun2026secure,\n  author  = {Q. Sun and G.-H. Yang},\n  title   = {Joint Estimation of States, Sparse Sensor Attacks, and Unknown Inputs in Discrete-Time Cyber--Physical Systems},\n  journal = {IEEE Transactions on Cybernetics},\n  volume  = {56},\n  number  = {8},\n  pages   = {4625--4633},\n  year    = {2026},\n  doi     = {10.1109/TCYB.2026.3681691}\n}",
+      "uses": []
+    },
+    {
+      "key": "tsybakov2009nonparametric",
+      "type": "book",
+      "fields": {
+        "author": "A. B. Tsybakov",
+        "title": "Introduction to Nonparametric Estimation",
+        "publisher": "Springer",
+        "address": "New York, NY, USA",
+        "year": "2009",
+        "doi": "10.1007/b13794",
+        "isbn": "978-0-387-79052-7"
+      },
+      "bib": "@book{tsybakov2009nonparametric,\n  author    = {A. B. Tsybakov},\n  title     = {Introduction to Nonparametric Estimation},\n  publisher = {Springer},\n  address   = {New York, NY, USA},\n  year      = {2009},\n  doi       = {10.1007/b13794},\n  isbn      = {978-0-387-79052-7}\n}",
+      "uses": []
+    },
+    {
+      "key": "wang2024group",
+      "type": "article",
+      "fields": {
+        "author": "Z. Wang and M. Jiao and D. Wang and M. Liu and M. Jiang and H. Wang and S. Li",
+        "title": "A Disturbance Localization Method for Power System Based on Group Sparse Representation and Entropy Weight Method",
+        "journal": "Energy Engineering",
+        "volume": "121",
+        "number": "8",
+        "pages": "2275--2291",
+        "year": "2024",
+        "doi": "10.32604/ee.2024.028223"
+      },
+      "bib": "@article{wang2024group,\n  author  = {Z. Wang and M. Jiao and D. Wang and M. Liu and M. Jiang and H. Wang and S. Li},\n  title   = {A Disturbance Localization Method for Power System Based on Group Sparse Representation and Entropy Weight Method},\n  journal = {Energy Engineering},\n  volume  = {121},\n  number  = {8},\n  pages   = {2275--2291},\n  year    = {2024},\n  doi     = {10.32604/ee.2024.028223}\n}",
+      "uses": []
+    },
+    {
+      "key": "yuan2021learning",
+      "type": "article",
+      "fields": {
+        "author": "Y. Yuan and Y. Guo and K. Dehghanpour and Z. Wang and Y. Wang",
+        "title": "Learning-Based Real-Time Event Identification Using Rich Real {PMU} Data",
+        "journal": "IEEE Transactions on Power Systems",
+        "volume": "36",
+        "number": "6",
+        "pages": "5044--5055",
+        "year": "2021",
+        "doi": "10.1109/TPWRS.2021.3081608"
+      },
+      "bib": "@article{yuan2021learning,\n  author  = {Y. Yuan and Y. Guo and K. Dehghanpour and Z. Wang and Y. Wang},\n  title   = {Learning-Based Real-Time Event Identification Using Rich Real {PMU} Data},\n  journal = {IEEE Transactions on Power Systems},\n  volume  = {36},\n  number  = {6},\n  pages   = {5044--5055},\n  year    = {2021},\n  doi     = {10.1109/TPWRS.2021.3081608}\n}",
+      "uses": []
+    },
+    {
+      "key": "yuan2023gnn",
+      "type": "article",
+      "fields": {
+        "author": "Y. Yuan and Y. Wang and Z. Wang",
+        "title": "Learning Latent Interactions for Event Classification via Graph Neural Networks and {PMU} Data",
+        "journal": "IEEE Transactions on Power Systems",
+        "volume": "38",
+        "number": "1",
+        "pages": "617--629",
+        "year": "2023",
+        "doi": "10.1109/TPWRS.2022.3158248"
+      },
+      "bib": "@article{yuan2023gnn,\n  author  = {Y. Yuan and Y. Wang and Z. Wang},\n  title   = {Learning Latent Interactions for Event Classification via Graph Neural Networks and {PMU} Data},\n  journal = {IEEE Transactions on Power Systems},\n  volume  = {38},\n  number  = {1},\n  pages   = {617--629},\n  year    = {2023},\n  doi     = {10.1109/TPWRS.2022.3158248}\n}",
+      "uses": []
+    },
+    {
+      "key": "yue2024graph",
+      "type": "article",
+      "fields": {
+        "author": "H. Yue and W. Zhang and U. C. Yilmaz and T. Yildiz and H. Huang and H. Liu and Y. Lin and A. Abur",
+        "title": "Graph-Learning-Assisted State Estimation Using Sparse Heterogeneous Measurements",
+        "journal": "Electric Power Systems Research",
+        "volume": "235",
+        "pages": "110644",
+        "year": "2024",
+        "doi": "10.1016/j.epsr.2024.110644"
+      },
+      "bib": "@article{yue2024graph,\n  author  = {H. Yue and W. Zhang and U. C. Yilmaz and T. Yildiz and H. Huang and H. Liu and Y. Lin and A. Abur},\n  title   = {Graph-Learning-Assisted State Estimation Using Sparse Heterogeneous Measurements},\n  journal = {Electric Power Systems Research},\n  volume  = {235},\n  pages   = {110644},\n  year    = {2024},\n  doi     = {10.1016/j.epsr.2024.110644}\n}",
+      "uses": []
+    },
+    {
+      "key": "zhai2025partial",
+      "type": "article",
+      "fields": {
+        "author": "Z.-M. Zhai and M. Moradi and Y.-C. Lai",
+        "title": "Detecting Attacks and Estimating States of Power Grids From Partial Observations With Machine Learning",
+        "journal": "PRX Energy",
+        "volume": "4",
+        "number": "1",
+        "pages": "013003",
+        "year": "2025",
+        "doi": "10.1103/PRXEnergy.4.013003"
+      },
+      "bib": "@article{zhai2025partial,\n  author  = {Z.-M. Zhai and M. Moradi and Y.-C. Lai},\n  title   = {Detecting Attacks and Estimating States of Power Grids From Partial Observations With Machine Learning},\n  journal = {PRX Energy},\n  volume  = {4},\n  number  = {1},\n  pages   = {013003},\n  year    = {2025},\n  doi     = {10.1103/PRXEnergy.4.013003}\n}",
+      "uses": []
+    },
+    {
+      "key": "zhang2025functional",
+      "type": "article",
+      "fields": {
+        "author": "T. Zhang and T. L. Fernando and M. Darouach",
+        "title": "Functional Observability, Functional Detectability, and Structural Functional Observability of Linear Systems",
+        "journal": "IEEE Transactions on Automatic Control",
+        "volume": "70",
+        "number": "3",
+        "pages": "1592--1607",
+        "year": "2025",
+        "doi": "10.1109/TAC.2024.3462558"
+      },
+      "bib": "@article{zhang2025functional,\n  author  = {T. Zhang and T. L. Fernando and M. Darouach},\n  title   = {Functional Observability, Functional Detectability, and Structural Functional Observability of Linear Systems},\n  journal = {IEEE Transactions on Automatic Control},\n  volume  = {70},\n  number  = {3},\n  pages   = {1592--1607},\n  year    = {2025},\n  doi     = {10.1109/TAC.2024.3462558}\n}",
+      "uses": []
+    },
+    {
+      "key": "zhao2018gmukf",
+      "type": "article",
+      "fields": {
+        "author": "J. Zhao and L. Mili",
+        "title": "A Robust Generalized-Maximum Likelihood Unscented Kalman Filter for Power System Dynamic State Estimation",
+        "journal": "IEEE Journal of Selected Topics in Signal Processing",
+        "volume": "12",
+        "number": "4",
+        "pages": "578--592",
+        "year": "2018",
+        "doi": "10.1109/JSTSP.2018.2827261"
+      },
+      "bib": "@article{zhao2018gmukf,\n  author  = {J. Zhao and L. Mili},\n  title   = {A Robust Generalized-Maximum Likelihood Unscented Kalman Filter for Power System Dynamic State Estimation},\n  journal = {IEEE Journal of Selected Topics in Signal Processing},\n  volume  = {12},\n  number  = {4},\n  pages   = {578--592},\n  year    = {2018},\n  doi     = {10.1109/JSTSP.2018.2827261}\n}",
+      "uses": []
+    },
+    {
+      "key": "zhao2019dse",
+      "type": "article",
+      "fields": {
+        "author": "J. Zhao and J. Qi and Z. Huang and A. P. S. Meliopoulos and A. G{\\'o}mez-Exp{\\'o}sito and M. Netto and others",
+        "title": "Power System Dynamic State Estimation: Motivations, Definitions, Methodologies and Future Work",
+        "journal": "IEEE Transactions on Power Systems",
+        "volume": "34",
+        "number": "4",
+        "pages": "3188--3198",
+        "year": "2019",
+        "doi": "10.1109/TPWRS.2019.2894769"
+      },
+      "bib": "@article{zhao2019dse,\n  author  = {J. Zhao and J. Qi and Z. Huang and A. P. S. Meliopoulos and A. G{\\'o}mez-Exp{\\'o}sito and M. Netto and others},\n  title   = {Power System Dynamic State Estimation: Motivations, Definitions, Methodologies and Future Work},\n  journal = {IEEE Transactions on Power Systems},\n  volume  = {34},\n  number  = {4},\n  pages   = {3188--3198},\n  year    = {2019},\n  doi     = {10.1109/TPWRS.2019.2894769}\n}",
+      "uses": []
+    }
+  ],
+  "input_hashes": {
+    "main.tex": "sha256:12e8be9d4d4afc92ae948d6446b40b1ac5cb5cdb03ff82c4ee6c83941b2ad076",
+    "preamble.tex": "sha256:d059158359cac3ef596a00a83d4a8ed6c53792029f86b05e066f1fcb2f2a1c4a",
+    "generated/results_macros.tex": "sha256:afb4c23f1f3346e2a2a5781ac9337e7b47dc076c6ab92e17a1c9778489cbe476",
+    "generated/continuous_macros.tex": "sha256:b23f0db4d88677cec9c57a8f3ca681c6c3e09ed32d60d4e685c2caee1779f602",
+    "generated/narrative_macros.tex": "sha256:3b7bf0d1c23f1507c0da47d8e32dbe5697e45e4b97c8bf87590c2904d3978031",
+    "generated/ei_x02_macros.tex": "sha256:941b622f8190074890b55f9b7f81bf121cb4a6a6991979f123b2638738fc7618",
+    "generated/submission_s01_macros.tex": "sha256:8a2ce39d58484b9d19650d025bb7eacdb4fcc2f395503be648934ad70c55c25a",
+    "generated/submission_s01_learning_macros.tex": "sha256:3c38f738a1392e1e9330e08849124cf507c388952149e5f7713e26fd54c63c28",
+    "generated/submission_s01_raw_macros.tex": "sha256:ee1ad590181e9626852121de90cc563a6b9ebc9ed83da9f02ae5cb909582114d",
+    "generated/submission_s01_ml_h04_macros.tex": "sha256:563d0e1822e3699c3d188eb7959aabf74a66d85615ed2d99321c061d659e56e6",
+    "generated/submission_s01_system_macros.tex": "sha256:fce1d1c432f89e70904272b61bd33b756adaa6cde949ac540bc48bda077a238d",
+    "metadata.tex": "sha256:49096e330b0f94e8025efba9f4e917d454f0193a04d8c0fdde08f40c30ee042c",
+    "sections/article_intro.tex": "sha256:6a218a1bbcf08f97c6da2683b669e36e23a6439bb63124e5aefaa115010faadb",
+    "sections/article_related.tex": "sha256:b0bb591f977190a0df4545d4718908de921bf0c52413b5fa30a949d606831a40",
+    "sections/narrative_problem.tex": "sha256:5acae1903777f573c2e191c1f95ce62e83cd6ec14b548904bc4a69eda37dba89",
+    "sections/article_method.tex": "sha256:ab76807da9fceb1d5eddde92e944d21806e0a13492bf5f6c1b4de4143d1f697d",
+    "sections/narrative_protocol.tex": "sha256:1cd8c2aa36c8453fe5f4364cdabb2bdafde357b0899a38548e363b8b6855e18e",
+    "sections/narrative_results.tex": "sha256:29dabc1657d34eacb74e3fafe0a713937d3eddaf4129d71028c6b63fbc7c88b9",
+    "tables/generated/narrative_results.tex": "sha256:54035ff1cad2778c84ff67bb4c39fcaf168309407d58b43b15754768256402f7",
+    "sections/article_submission_checks.tex": "sha256:f14c2a4a874dda16c4b183c7f686980ab2212c865e8d42b87b8a92ce5978590e",
+    "tables/generated/single_state_control.tex": "sha256:f90ef61af284ca9384f1651e7b1e829a3d001843fe493c1eecf1850ed9af043d",
+    "tables/generated/grouped_learning.tex": "sha256:82d9b7e3bdd7c81c0270bfce5afb9a7cfc88c04291d50ee8922f9c14bb0f7d67",
+    "tables/generated/raw_source_hybrid.tex": "sha256:4fcbce805e1b1647e5666c11cec4fad8e2e530234d798165d51101a849d63e9d",
+    "sections/article_signature_summary.tex": "sha256:86df8d605e481746ae36d238392b87b2ddbdf0a6b43cc97f4957a87562786ff5",
+    "sections/article_interpretation.tex": "sha256:44d92a7eff5e5a42b416261d54be482c7bfc05fe3ff29482bfefd09dbcb10af8",
+    "sections/article_information.tex": "sha256:aff97f499e4468623c26f1f0bcd0ed8cdd59c701b2e6e4f0b66ee7c266558829",
+    "sections/article_final_conclusion.tex": "sha256:3f147c8299dcde6c357fc0ea6c732d16f6fe8f32a7d0110b827ff189581e8037",
+    "author_biographies.tex": "sha256:e4026c21593ed328d955da755fed4fcf3589cad3812ed32e3af2ec133196cfaf",
+    "supplement.tex": "sha256:6b9e20934d80f4458de4124f9e41b627cf2e80213fe68d2ecc8b1bbfac0daed1",
+    "supplement/appendix_causal_walkthrough.tex": "sha256:429b93a2610a02fd706f69a8467cfd359ae707b7b34488a2779907d826990b34",
+    "supplement/appendix_submission_contract.tex": "sha256:2a51018a5fa0eefe2c703ed999da77b1ff1399b39c0547c8fd3dfcfb3fe23dd6",
+    "supplement/appendix_single_state.tex": "sha256:18f0569fc69c70bea57204ff1fe36c46d6a78613b11e5acc31e1e6a029d15afc",
+    "supplement/appendix_grouped_learning.tex": "sha256:19b7f1fd2dc3cb007955ea2070e5d4d8105885afde6d67fa7cf0bb208db52916",
+    "sections/article_recovery_x04.tex": "sha256:9ce1b312457782975b74fda98d7e51d007800b511be8becbb988c7db183e30f0",
+    "sections/article_ei_x02.tex": "sha256:de95d8589b02e725852f1db2b343e7b5378130c816c041b2e264c57cc3d2b3c0",
+    "figures/ei_x02_architecture.tex": "sha256:f5faccd942e3566327ff66a49530470b02fa926e61e847d546f8c2f48e6d2e25",
+    "tables/generated/ei_x02_results_compact.tex": "sha256:40a5218f809b48121412d6c531c528f50534d3f82e90465d6b0291aa9ba60864",
+    "generated/ei_x02_interpretation.tex": "sha256:5fb2b2b56c02c1193ab62647f2026fbffd1025f032b6ada3340e3a3d1d78d390",
+    "references.bib": "sha256:552382f48119afde24af6aecfba6030d22af72a0be9756b468677ba293fe2aad",
+    ".aris/citation-audit/contexts.txt": "sha256:0ae75677239fd9bce3ebde18aeee41ea9e389bc409383b41719915b930626cea"
+  },
+  "missing_citations": [],
+  "context_count": 38
+}

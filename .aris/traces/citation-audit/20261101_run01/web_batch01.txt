@@ -1,0 +1,494 @@
+Localization and Estimation of Unknown Forced Inputs: A Group LASSO Approach (https://arxiv.org/abs/2201.07907)
+citeturn20academia12 [wordlim: 200] Published: 4.8 years ago; Title: Localization and Estimation of Unknown Forced Inputs: A Group LASSO Approach ... Using this model, with probabilistic guarantees, we recover the locations and simultaneously estimate the initial state and forcing inputs using a variant of the group LASSO (linear absolute shrinkage and selection operator) method. ... Our theoretical analysis is one of the first to provide a complete treatment for the group LASSO estimator for linear dynamical systems under input-to-output delay assumptions.
+Title: Localization and Estimation of Unknown Forced Inputs: A Group LASSO Approach
+Authors: Rajasekhar Anguluri, Lalitha Sankar, Oliver Kosut
+Date: Wed Jan 19 23:13:56 2022
+
+We model and study the problem of localizing a set of sparse forcing inputs for linear dynamical systems from noisy measurements when the initial state is unknown. This problem is of particular relevance to detecting forced oscillations in electric power networks. We express measurements as an additive model comprising the initial state and inputs grouped over time, both expanded in terms of the basis functions (i.e., impulse response coefficients). Using this model, with probabilistic guarantees, we recover the locations and simultaneously estimate the initial state and forcing inputs using a variant of the group LASSO (linear absolute shrinkage and selection operator) method. Specifically, we provide a tight upper bound on: (i) the probability that the group LASSO estimator wrongly identifies the source locations, and (ii) the $\ell_2$-norm of the estimation error. Our bounds explicitly depend upon the length of the measurement horizon, the noise statistics, the number of inputs and sensors, and the singular values of impulse response matrices. Our theoretical analysis is one of the first to provide a complete treatment for the group LASSO estimator for linear dynamical systems under input-to-output delay assumptions. Finally, we validate our results on synthetic models and the IEEE 68-bus, 16-machine system.--------------------------------------------------------------------------------
+Quick Line Fault Detection and Identiﬁcation Using High-Fidelity (https://d197for5662m48.cloudfront.net/documents/publicationstatus/169966/preprint_pdf/fb88c972e89f2492099d5d5e00da2aac.pdf)
+citeturn20search13 [wordlim: 200] Published: 6 months ago; Quick Line Fault Detection and Identiﬁcation Using ... detection and identiﬁcation of transmission line faults. ... transient dynamics using high-ﬁdelity models. ... monitoring technology, such as the proliferation of phasor
+JOURNAL OF LATEX CLASS FILES, VOL. 14, NO. 8, AUGUST 2015
+1
+Quick Line Fault Detection and Identiﬁcation Using
+High-Fidelity Models of Transient Dynamics
+Austin Warner, Student Member, IEEE, Dakota Hamilton, Student Member, IEEE,
+Georgios Fellouris, Member, IEEE, and Dionysios Aliprantis, Senior Member, IEEE
+Abstract—A robust, versatile algorithm is proposed for quick
+detection and identiﬁcation of transmission line faults. Our
+approach is based on time-domain simulations of power system
+transient dynamics using high-ﬁdelity models. The proposed al-
+gorithm operates on real-time data from available PMU sensors,
+which can be sparsely placed and located far from the line fault.
+The algorithm successfully identiﬁes faults during the transient
+regime, while avoiding false alarms. It is also shown to be
+robust against uncertainties in operational parameters, as well
+as adverse events such as sudden load changes. A case study is
+included to illustrate algorithm design, tuning, and performance.
+Index Terms—Change detection algorithms, fault detection,
+phasor measurement units, power system dynamics, power sys-
+tem faults, power system simulation.
+I. INTRODUCTION
+S
+ITUATIONAL awareness is essential for the reliable and
+secure operation of power systems. This term includes
+an array of technologies that provide precise information
+regarding the current system state and its anticipated evolution
+over time, including actions taken to restore or maintain
+normal operation [1]. Due to the highly interconnected nature
+of modern power networks, transmission system operators
+(TSOs) must also be aware of the state of neighboring systems
+that may affect the reliability of their control area. Poor situa-
+tional awareness and lack of information sharing across TSO
+boundaries have been signiﬁcant contributing factors in several
+recent blackouts across the United States and Europe [2]–[4].
+Recent advancements in power system measurement and
+monitoring technology, such as the proliferation of phasor
+measurement units (PMUs), provide new opportunities for
+improving situational awareness in power systems. PMUs pro-
+vide Global Positioning System (GPS) time-stamped voltage
+and current phasor data (magnitude and phase angle) at various
+locations around the network.
+The use of PMU data to quickly detect and identify line
+faults in transmission networks is of growing interest in the
+power systems literature [5]–[12]. In [5], the changes in phase
+angles are monitored and compared against their expected be-
+havior following a transmission line fault, which is computed
+This work was supported by NSF-AMPS 1736454. (Corresponding author:
+Austin Warner.)
+A. Warner and G. Fellouris are with the Department of Statistics, Uni-
+versity of Illinois Urbana–Champaign, Urbana, IL 61801 USA (e-mail:
+awarner5@illinois.edu; fellouri@illinois.edu).
+D. Hamilton and D. Aliprantis are with the Elmore Family School of
+Electrical and Computer Engineering, Purdue University, West Lafayette, IN
+47907 USA (e-mail: hamilt89@purdue.edu; dionysis@purdue.edu).
+based on the linearized, dc power ﬂow equations. Method-
+ology from the quick change detection (QCD) literature was
+introduced in [6], incorporating the persistent nature of the
+fault to detect and identify outages, and a QCD framework
+has since been used in several works [7]–[9]. In QCD, a
+sequence of measurements is obtained online, and an abrupt
+change occurs in the statistical behavior of the measurements.
+The goal is to detect this change as quickly as possible
+while maintaining a desired false alarm rate [13]. Applied to
+situational awareness in power systems, QCD methodology is
+used to detect transmission line faults by monitoring PMU
+data streams for changes characterized by a line fault.
+The algorithms developed in [5], [6] are based on steady-
+state or quasi-steady-state power ﬂow models that are valid
+on the order of minutes to hours. That is, it is assumed that
+the fast dynamics of the system have settled out before a
+line outage can be detected. However, power system transient
+dynamics (developing over sub-second timescales) are often
+critical in ensuring system stability. Therefore, it is important
+to quickly detect and identify faults within these timescales,
+allowing system operators to anticipate the evolution of system
+dynamics and take appropriate actions. In [10], a method is
+proposed for line outage detection at fast timescales using
+the bus impedance matrix, but the transient dynamics of the
+system are not explicitly modeled.
+Some recent works have attempted to consider the transient
+response of the system in line outage detection algorithms,
+leveraging the high-frequency (30–120 Hz), time-synchronized
+sampling of PMU sensors. In [7], the modeling in [6] is ex-
+tended to include time-dependent participation factor matrices
+that model the impact of governor dynamics on changes in
+generator power output, and a QCD procedure is proposed
+to incorporate the transient dynamics of the fault. A small-
+signal, time-variant model of the system dynamics is obtained
+by taking the derivative of the nonlinear, ac power ﬂow
+equations with respect to time in [8]. In [11], the generator
+swing equations are introduced to incorporate the rotor me-
+chanical dynamics in the proposed sparse recovery algorithm.
+Other works have addressed the scalability of the QCD-based
+approach [9], as well as the detection and identiﬁcation of
+multiple simultaneous line outages [11], [12].
+While [7], [8], [11] account for the transient response of
+the system through sensitivities of the power ﬂow equations to
+changes in power injections or the generator swing equations,
+such models represent the slower dynamics (timescales on the
+order of a few seconds) of automatic generation controls, speed
+governors, and generator mechanical dynamics. In contrast, we--------------------------------------------------------------------------------
+Bernoulli 30(3), 2024, 2228–2252 (https://www.imstat.org/publications/bej/bej_30_3/bej_30_3.pdf)
+citeturn20search14 [wordlim: 200] Published: 2.5 years ago; # Sequential change diagnosis revisited and the Adaptive Matrix CuSum
+Bernoulli 30(3), 2024, 2228–2252  
+https://doi.org/10.3150/23-BEJ1671
+
+# Sequential change diagnosis revisited and the Adaptive Matrix CuSum
+
+AUSTIN WARNERᵃ and GEORGIOS FELLOURISᵇ
+
+Department of Statistics, University of Illinois Urbana-Champaign, Urbana, U.S.A., ᵃawarner5@illinois.edu, ᵇfellouri@illinois.edu
+
+The problem of sequential change diagnosis is considered, where observations are obtained on-line, an abrupt change occurs in their distribution, and the goal is to quickly detect the change and accurately identify the post-change distribution, while controlling the false alarm rate. A finite set of alternatives is postulated for the post-change regime, but no prior information is assumed for the unknown change point. A drawback of many algorithms that have been proposed for this problem is the implicit use of pre-change data for determining the post-change distribution. This can lead to very large conditional probabilities of misidentification, given that there was no false alarm, unless the change occurs soon after monitoring begins. A novel, recursive algorithm is proposed and shown to resolve this issue without the use of additional tuning parameters and without sacrificing control of the worst-case delay in Lorden’s sense. A theoretical analysis is conducted for a general family of sequential change diagnosis procedures, which supports the proposed algorithm and revises certain state-of-the-art results. Additionally, a novel, comprehensive method is proposed for the design and evaluation of sequential change diagnosis algorithms. This method is illustrated with simulation studies, where existing procedures are compared to the proposed.
+
+Keywords: CuSum; Lorden’s criterion; sequential change detection; sequential change diagnosis
+
+## References
+
+Bakhache, B. and Nikiforov, I. (1999). Reliable detection of faults in navigation systems. In *Proceedings of the 38th IEEE Conference on Decision and Control (Cat. No. 99CH36304)* 5 4976–4981. IEEE.  
+Bissell, A. (1969). Cusum techniques for quality control. *J. R. Stat. Soc. Ser. C. Appl. --------------------------------------------------------------------------------
+IEEE Transactions on Control of Network Systems (https://rajanguluri.github.io/assets/pdf/papers/RA-OK-LS-TCNS2022.pdf)
+citeturn20search15 [wordlim: 200] Crawled: 7 months ago; # Localization and Estimation of Unknown Forced Inputs: A Group LASSO Approach ... Vertical arXiv identifier along the left margin: “[math.OC] 19 Jan 2022” and “arXiv:2201.07907v1”. ... **Abstract—** We model and study the problem of localizing a set of sparse forcing inputs for linear dynamical systems from noisy measurements when the initial state is unknown. ... Using this model, with probabilistic guarantees, we recover the locations and simultaneously estimate the initial state and forcing inputs using a variant of the group LASSO (linear absolute shrinking and selection operator) method. ... Our theoretical analysis is one of the first to provide a complete treatment for the group LASSO estimator for linear dynamical systems under input-to-output delay assumptions. ... **Index Terms—** Forced oscillations, unknown input, group LASSO, invariant zeros, source localization, sparse estimation. ... As installing sensors at each potential source is expensive, recent research suggests using phasor measurement unit (PMU) measurements based source localization algorithms.
+IEEE Transactions on Control of Network Systems
+
+# Localization and Estimation of Unknown Forced Inputs: A Group LASSO Approach
+
+Rajasekhar Anguluri, *Member, IEEE*, Lalitha Sankar, *Senior Member, IEEE*, and Oliver Kosut, *Member, IEEE*
+
+<visual_element id="e1">
+Vertical arXiv identifier along the left margin: “[math.OC] 19 Jan 2022” and “arXiv:2201.07907v1”.
+</visual_element>
+
+**Abstract—** We model and study the problem of localizing a set of sparse forcing inputs for linear dynamical systems from noisy measurements when the initial state is unknown. This problem is of particular relevance to detecting forced oscillations in electric power networks. We express measurements as an additive model comprising the initial state and inputs grouped over time, both expanded in terms of the basis functions (i.e., impulse response coefficients). Using this model, with probabilistic guarantees, we recover the locations and simultaneously estimate the initial state and forcing inputs using a variant of the group LASSO (linear absolute shrinking and selection operator) method. --------------------------------------------------------------------------------
+Sequential Change Diagnosis Revisited and the Adaptive Matrix CuSum (https://arxiv.org/abs/2211.12980)
+citeturn20academia16 [wordlim: 200] Published: 3.9 years ago; Title: Sequential Change Diagnosis Revisited and the Adaptive Matrix CuSum
+Title: Sequential Change Diagnosis Revisited and the Adaptive Matrix CuSum
+Authors: Austin Warner, Georgios Fellouris
+Date: Wed Nov 23 14:39:58 2022
+
+The problem of sequential change diagnosis is considered, where observations are obtained on-line, an abrupt change occurs in their distribution, and the goal is to quickly detect the change and accurately identify the post-change distribution, while controlling the false alarm rate. A finite set of alternatives is postulated for the post-change regime, but no prior information is assumed for the unknown change-point. A drawback of many algorithms that have been proposed for this problem is the implicit use of pre-change data for determining the post-change distribution. This can lead to very large conditional probabilities of misidentification, given that there was no false alarm, unless the change occurs soon after monitoring begins. A novel, recursive algorithm is proposed and shown to resolve this issue without the use of additional tuning parameters and without sacrificing control of the worst-case delay in Lorden's sense. A theoretical analysis is conducted for a general family of sequential change diagnosis procedures, which supports the proposed algorithm and revises certain state-of-the-art results. Additionally, a novel, comprehensive method is proposed for the design and evaluation of sequential change diagnosis algorithms. This method is illustrated with simulation studies, where existing procedures are compared to the proposed.--------------------------------------------------------------------------------
+Illinois Department of Statistics (https://stat.illinois.edu/system/files/2022-04/2022%20Bohrer%20Workshop%20Program.pdf)
+citeturn20search17 [wordlim: 200] Published: 4.5 years ago; Diagnosis Revisited
+•The problem of sequential change diagnosis is considered,
+Bohrer Memorial Student Workshop
+Full Abstracts
+Austin 
+Warner 
+Sequential Change 
+Diagnosis Revisited
+•The problem of sequential change diagnosis is considered, 
+where a sequence of independent random elements is 
+accessed sequentially. At some unknown time there is an 
+abrupt change in its distribution, and there are two main 
+operational goals: to quickly detect the change and to 
+accurately identify the post-change distribution among a 
+finite set of alternatives. Two algorithms - one which we 
+propose and one which we draw from sequential detection 
+literature - are shown to control the worst-case conditional 
+probability of false isolation under some conditions, and at 
+the same time minimize Lorden’s criterion for the detection 
+delay, for every possible post-change distribution, to a first-
+order asymptotic approximation as both the worst-case 
+probability of false isolation and the false alarm rate go to 
+zero, but with the false alarm rate going to zero at a faster 
+rate. Specifically, it is shown that these properties are 
+satisfied under some conditions by a standard change 
+detection algorithm that raises an alarm as soon as the 
+CuSum statistic that corresponds to one of the post-change 
+alternatives exceeds a certain threshold, when the post-
+change distributions are more distant (in a Kullback-Leibler
+divergence sense) from one another than from the pre-
+change distribution. More importantly, a novel, recursive 
+algorithm is proposed and is shown to satisfy the above 
+properties under any pre-change and post-change 
+distributions, subject to similar conditions. The insights of 
+these theoretical results are illustrated by simulation studies 
+under various setups, where these algorithms are compared 
+to each other and to existing procedures in the sequential 
+change diagnosis literature in a framework which we 
+propose for comparison in general.--------------------------------------------------------------------------------
+Sequential Change Diagnosis Revisited and the Adaptive Matrix CuSum | alphaXiv (https://www.alphaxiv.org/abs/2211.12980)
+citeturn20search0 [wordlim: 200] Published: 3.9 years ago; Crawled: 4 weeks ago; # Sequential Change Diagnosis Revisited and the Adaptive Matrix CuSum
+Submitted 23 Nov 2022
+
+# Sequential Change Diagnosis Revisited and the Adaptive Matrix CuSum
+
+AW
+
+Austin Warner
+
+GF
+
+Georgios Fellouris
+
+## Abstract
+
+The problem of sequential change diagnosis is considered, where observations are obtained on-line, an abrupt change occurs in their distribution, and the goal is to quickly detect the change and accurately identify the post-change distribution, while controlling the false alarm rate. A finite set of alternatives is postulated for the post-change regime, but no prior information is assumed for the unknown change-point. A drawback of many algorithms that have been proposed for this problem is the implicit use of pre-change data for determining the post-change distribution. This can lead to very large conditional probabilities of misidentification, given that there was no false alarm, unless the change occurs soon after monitoring begins. A novel, recursive algorithm is proposed and shown to resolve this issue without the use of additional tuning parameters and without sacrificing control of the worst-case delay in Lorden's sense. A theoretical analysis is conducted for a general family of sequential change diagnosis procedures, which supports the proposed algorithm and revises certain state-of-the-art results. Additionally, a novel, comprehensive method is proposed for the design and evaluation of sequential change diagnosis algorithms. This method is illustrated with simulation studies, where existing procedures are compared to the proposed.
+
+View PaperPDF
+
+1
+
+Cite
+
+## Discussion
+
+Comment
+
+1 views
+
+v1
+
+## Citation
+
+Copy
+
+@misc{warner2022sequentialchangediagnosisrevisited, title={Sequential Change Diagnosis Revisited and the Adaptive Matrix CuSum}, author={Austin Warner and Georgios Fellouris}, year={2022}, eprint={2211.12980}, archivePrefix={arXiv}, primaryClass={math.ST}, url={https://arxiv.org/abs/2211.12980}, }--------------------------------------------------------------------------------
+Localization and Estimation of Unknown Forced Inputs: A... (https://arxivlens.com/paperview/details/localization-and-estimation-of-unknown-forced-inputs-a-group-lasso-approach-5609-1764612)
+citeturn20search1 [wordlim: 200] Published: 4.8 years ago; Crawled: yesterday; # Localization and Estimation of Unknown Forced Inputs: A Group LASSO Approach ... Using this model, with probabilistic guarantees, we recover the locations and simultaneously estimate the initial state and forcing inputs using a variant of the group LASSO (linear absolute shrinkage and selection operator) method. ... Our theoretical analysis is one of the first to provide a complete treatment for the group LASSO estimator for linear dynamical systems under input-to-output delay assumptions.
+
+# Localization and Estimation of Unknown Forced Inputs: A Group LASSO Approach
+
+Lalitha Sankar, Oliver Kosut, Rajasekhar Anguluri
+
+2201.07907 Published Jan 21, 2022 1 citations
+
+## Abstract
+
+We model and study the problem of localizing a set of sparse forcing inputs for linear dynamical systems from noisy measurements when the initial state is unknown. This problem is of particular relevance to detecting forced oscillations in electric power networks. We express measurements as an additive model comprising the initial state and inputs grouped over time, both expanded in terms of the basis functions (i.e., impulse response coefficients). Using this model, with probabilistic guarantees, we recover the locations and simultaneously estimate the initial state and forcing inputs using a variant of the group LASSO (linear absolute shrinkage and selection operator) method. Specifically, we provide a tight upper bound on: (i) the probability that the group LASSO estimator wrongly identifies the source locations, and (ii) the $\ell_2$-norm of the estimation error. Our bounds explicitly depend upon the length of the measurement horizon, the noise statistics, the number of inputs and sensors, and the singular values of impulse response matrices. Our theoretical analysis is one of the first to provide a complete treatment for the group LASSO estimator for linear dynamical systems under input-to-output delay assumptions. Finally, we validate our results on synthetic models and the IEEE 68-bus, 16-machine system.
+--------------------------------------------------------------------------------
+Sequential change diagnosis revisited and the Adaptive Matrix CuSum · ivySCI (https://www.ivysci.com/en/articles/5439356__Sequential_change_diagnosis_revisited_and_the_Adaptive_Matrix_CuSum)
+citeturn20search2 [wordlim: 200] Crawled: 4 months ago; ## Sequential change diagnosis revisited and the Adaptive Matrix CuSum
+
+## Sequential change diagnosis revisited and the Adaptive Matrix CuSum
+
+[Button: Add to library]
+
+Author:Austin Warner, Georgios Fellouris
+
+DOI: 10.3150/23-bej1671 Image: Papermap
+
+PaperMap
+
+Journals:Bernoulli
+
+Abstract
+
+
+## Journal Info
+
+Journals:[Button: Bernoulli]
+
+ISSN 1350-7265
+
+Quartile
+
+Category  | Quartile
+STATISTICS & PROBABILITY  | 2
+--------------------------------------------------------------------------------
+Department of Statistics Event Calendar (https://calendars.illinois.edu/detail/1439/33428954)
+citeturn20search3 [wordlim: 200] Published: 4.5 years ago; Crawled: 3 weeks ago;     * Sequential Change Diagnosis Revisited
+  * Yubo Zhuang
+    * Sketch-and-lift: scalable subsampled semidefinite program for K-means clustering
+
+12:00 - 1:00 Lunch
+
+1:00 - 1:45 Paper Session 1
+
+  * Alton Barbehenn
+    * Asyptotically Optimal Simultaneous Gaussian Mean Estimation with Nonparametric Regression
+  * Sayan Chakrabarty
+    * Subsampling Based Community Detection in Large Networks
+  * Sarah Formentini
+    * Confidence Band Estimation for Survival Random Forests
+
+1:45 - 2:00 Break
+
+2:00 - 2:30 Paper Session 2
+
+  * Yan Shen
+    * Comparing baseball players across eras via the novel Full House Model
+  * Austin Warner
+    * Sequential Change Diagnosis Revisited
+
+2:30 - 2:40 Break
+
+2:40 - 2:45 Introduction to Norton Prize
+2:45 - 3:45 Norton Session
+
+  * Yangfan Zhang
+    * Adaptive Testing for High-Dimensional Data
+  * Joshua Loyal
+    * An Eigenmodel for Dynamic Multilayer Networks
+
+3:45 - 4:00 Break
+
+4:00 - 5:00 Wijsman Lecture (remote)
+
+  * Dawn Woodard
+    * Statistical Efficiency of Travel Time Prediction
+
+5:00 - 6:00 Award Presentations and Poster Session
+
+6:00 - 8:00 Dinner
+
+Zoom Information:
+
+https://illinois.zoom.us/j/85711463563?pwd=U1VtNFpZay9LZjBONVVWcjNwTkc1QT09
+
+Meeting ID: 857 1146 3563
+Password: 347542--------------------------------------------------------------------------------
+(PDF) Sequential Change Diagnosis Revisited and the Adaptive Matrix CuSum (https://www.researchgate.net/publication/365701673_Sequential_Change_Diagnosis_Revisited_and_the_Adaptive_Matrix_CuSum)
+citeturn20search4 [wordlim: 200] Published: 3.9 years ago; Crawled: 2 months ago; often used in applications as an ad-hoc solution to the sequential change diagnosis problem (see, e.g., ... In this paper we revisit the problem of sequential change diagnosis and we propose a novel procedure
+upon stopping.
+
+The problem of simultaneously detecting a change in the distribution of sequentially collected data and
+
+identifying the correct post-change distribution among a ﬁnite set of alternatives is known as sequential
+
+change diagnosis. The literature on this problem can be broadly classiﬁed into two categories. In the
+
+ﬁrst one (see, e.g., Dayanik et al. (2008, 2013); Ma et al. (2021); Tartakovsky (2021)), a Bayesian
+
+formulation is adopted that assumes a prior distribution on the change-point, and sometimes on the type
+
+of change. In the second (see, e.g., Nikiforov (1995); Tartakovsky (2008); Lai (2000); Nikiforov (2000);
+
+Pergamenchtchikov et al. (2022); Oskiper and Poor (2002)), no such prior information is assumed. Both
+
+setups are considered in some works, such as Lai (2000); Pergamenchtchikov et al. (2022).
+
+A Bayesian formulation of the sequential change detection problem was ﬁrst proposed in Shiryaev
+
+(1963) (see also Shiryaev (2007)), where the Bayes rule was derived under the assumptions of a Geometric
+
+the sequential change detection problem, Page’s Cumulative Sum (CuSum), was proposed early on in
+
+Page (1954) and, since then, has been grounded on strong theoretical support. In particular, assuming
+
+completely speciﬁed pre-change and post-change distributions, it was shown in Moustakides et al. (1986)
+
+to minimize Lorden’s criterion (Lorden et al. (1971)), i.e., the worst-case conditional expected detection
+
+delay with respect to both the change-point and the history of the observations up to the change-point,
+
+subject to a user-speciﬁed bound on the false alarm rate. Modiﬁcations of the CuSum algorithm have been
+
+introduced to allow for parametric uncertainty and/or temporal dependence in the pre-change and post-
+
+change models, e.g., Mei (2006); Siegmund and Venkatraman (1995); Lai (1998); Lai and Xing (2010);
+
+Lai and Shan (1999).
+
+The ﬁrst sequential change diagnosis scheme that does not utilize prior information regarding the
+
+change-point (and in general) was proposed in Nikiforov (1995), and was a generalization of the CuSum
+
+algorithm, termed the “Generalized CuSum.” However, unlike the CuSum, this algorithm does not admit a
+
+recursive computational structure, even in the iid setting, and the number of operations it requires per time
+
+instance grows with the number of collected observations. Since the change can take a very long time to
+
+occur, this procedure needs to be modiﬁed to be applicable in practice. One such modiﬁcation, suggested
+
+
+In Section VI we conduct a theoretical analysis that supports the above claims, but, ﬁrst, in Section V,
+
+we provide an intuitive explanation of why the Matrix CuSum, as well as the Generalized CuSum, can
+
+November 24, 2022 DRAFT
+
+12
+
+systematically fail to correctly isolate the post-change distribution in certain setups.
+
+Remark: An alternative sequential change diagnosis scheme can be obtained by setting M i(n) = R i(n)
+
+in (23). However, the calculation of W i(n)in this case would require a number of operations of the order
+
+of n−R i(n). Speciﬁcally, the computational cost and memory requirement of the procedure would be
+
+dictated by a random variable with a long tail, which may not be desirable in practice. On the other hand,
+
+applying the window R i(n)to the Matrix CuSum statistics leads to a recursive structure (30), which is
+
+another motivation for our proposal of this scheme.
+
+V. T H E E FFEC T O F P RE-C HANGE D ATA
+
+In this section we explain intuitively how the Matrix CuSum and Generalized CuSum can systematically
+
+fail, in certain setups, to correctly isolate the post-change regime. To this end, we focus on the case that
+
+the true post-change density is g K and there is another density, say g 1, such that g 1 and g K are closer
+
+together than g K and f, in the sense that
+
+Div(g K|| g 1)<Div(g K|| f)(31)
+
+or, equivalently,
+
+E K[ℓ 1(n)] >0∀n∈N.(32)
+
+--------------------------------------------------------------------------------
+(PDF) Quick Line Fault Detection and Identification Using High-Fidelity Models of Transient Dynamics (https://www.researchgate.net/publication/371657943_Quick_Line_Fault_Detection_and_Identification_Using_High-Fidelity_Models_of_Transient_Dynamics)
+citeturn20search5 [wordlim: 200] Crawled: 5 months ago; 14: Declare a transmission line fault ... on average, when no fault has occurred, and increase with
+Algorithm 1.
+
+Algorithm 1 Implementation of the Proposed QCD Algorithm
+
+Input: L,P, M, r, U, h
+
+1: Obtain load forecast for the operational period
+
+2: Obtain synthetic PMU measurements based on the load
+
+forecast, for each line and each line position
+
+3: while t < M do
+
+4: Burn-in
+
+(Compute V t(`, p)according to (4) for `∈ L, p ∈ P)
+
+5: end while
+
+6: for t=M, . . . , U do
+
+7: Receive new measurement X t
+
+8: for `∈ L, p ∈ P do
+
+9: Compute V t(`, p)via recursion (4)
+
+10: W t(`, p)←max V t(`, p)
+
+11: Y t(`)←max p∈P W t(`, p)
+
+12: end for
+
+13: if max`∈L Y t(`)≥h then
+
+14: Declare a transmission line fault
+
+15: Report D(r)
+
+16: else
+
+17: t←t+ 1
+
+18: end if
+
+19: end for
+
+III. P ERFORMANCE C RITERIA
+
+In this section, we introduce performance criteria that
+
+inform the tuning of the proposed algorithm. Speciﬁcally,
+
+choosing the threshold h is a critical aspect of deploying
+
+the QCD algorithm. The proposed algorithm signals an alarm
+
+whenever a statistic Y t(`)crosses the threshold h. As discussed
+--------------------------------------------------------------------------------
+Synchrophasor Technology Realtime Operation Of Power Networks Nand Kishor | PDF (https://www.slideshare.net/slideshow/synchrophasor-technology-realtime-operation-of-power-networks-nand-kishor/279501020)
+citeturn20search6 [wordlim: 200] Published: 3.8 years ago; Crawled: last month; Localization and estimation of unknown forced inputs: a group LASSO approach. arXiv:220107907; 2022. ... Data-based model validation for locating the source of forced oscillations due to power plant governors.
+--------------------------------------------------------------------------------
+(PDF) A Complex-LASSO Approach for Localizing Forced Oscillations in Power Systems (https://www.researchgate.net/publication/357987383_A_Complex-LASSO_Approach_for_Localizing_Forced_Oscillations_in_Power_Systems)
+citeturn20search7 [wordlim: 200] Published: 4.8 years ago; Crawled: 3 months ago; for arbitrary forced inputs [9]. ... are localized using ratios between signal content at the har- ... localize sources (mostly single) but do not jointly estimate the ... arXiv:2201.07910v1 [stat.AP] 19 Jan 2022 ... excited by external unknown inputs in state-space form: ... model the input u(t)∈R m as the forced oscillation vector:
+--------------------------------------------------------------------------------
+WM Medical Practice Guidelines & Research Articles - International Waldenstrom’s Macroglobulinemia Foundation (https://iwmf.com/wm-medical-practice-guidelines-research-articles/)
+citeturn20search8 [wordlim: 200] Crawled: today; ##### Cold agglutinin disease revisited: a multinational, observational study of 232 patients.
+--------------------------------------------------------------------------------
+Search | arXiv e-print repository (https://rt.http3.lol/index.php?q=aHR0cHM6Ly9hcnhpdi5vcmcvc2VhcmNoL2NzP3NlYXJjaHR5cGU9YXV0aG9yJnF1ZXJ5PVNjaCVDMyVCNm4sK1QrQg)
+citeturn20search9 [wordlim: 200] Crawled: today;   4. arXiv:2605.21167  [pdf, ps, other] ... Our results suggest that the path to effective ECG foundation models lies in the strategic alignment of architecture and paradigm rather than brute-force scaling. ... This allows learning physically consistent mode… ▽ More In this paper, we propose Lagrangian Gaussian Processes (LGPs) for probabilistic and data-efficient learning of dynamics via discrete forced Euler-Lagrange equations. ... In particular, it is challenging to simultaneously estimate unknown states and learn a model online from sequentially arriving mea… ▽ More Operating complex real-world systems, such as soft robots, can benefit from precise predictive control schemes that require accurate state and model knowledge. ... This, in contrast to estimation via a random walk over stiffness values, enables prediction of bending stiffness and improves overall model quality. ... In this paper, we study dynamics learning using Hamiltonian GPs and focus on learning solely from input-output data, without relying on velocity or momentum measurements.
+--------------------------------------------------------------------------------
+Optimal Sequential Diagnosis Algorithm (https://www.emergentmind.com/topics/optimal-sequential-diagnosis-algorithm)
+citeturn20search10 [wordlim: 200] Crawled: 4 months ago;   * The paper’s main contribution is the formulation of an optimal sequential diagnosis algorithm that minimizes cost while maximizing diagnostic accuracy using decision-theoretic models and Bayesian updates. ...   * Empirical evaluations show the approach outperforms human heuristics, offering significant cost savings and improved accuracy in medical, industrial, and technical fault diagnosis. ... This task is exemplified in domains ranging from clinical medicine, circuit fault isolation, and industrial troubleshooting, to sequential change-detection in stochastic processes.
+--------------------------------------------------------------------------------
+Publications - Changepoint.info (https://www.changepoint.info/publications.html)
+citeturn20search11 [wordlim: 200] Crawled: today; | MOSUM monitoring for variance change in nonparametric regression models [BibTeX]  | 2017  | Communications in Statistics - Simulation and Computation   | article  | DOI URL ... | Sequential Monitoring Variance Changes in Location Model [BibTeX]  | 2015  | Communications in Statistics - Theory and Methods
+

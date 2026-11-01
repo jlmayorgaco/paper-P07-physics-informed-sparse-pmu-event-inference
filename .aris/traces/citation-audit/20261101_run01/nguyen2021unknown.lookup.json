@@ -1,0 +1,784 @@
+{
+  "key": "nguyen2021unknown",
+  "retrieved_at": "2026-11-01T03:53:23.160347+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1016%2Fj.epsr.2021.107510",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1016/j.epsr.2021.107510",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:34.081269+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          8,
+          31
+        ]
+      ],
+      "date-time": "2026-08-31T21:17:17Z",
+      "timestamp": 1788211037535,
+      "version": "build-2803163510"
+    },
+    "reference-count": 34,
+    "publisher": "Elsevier BV",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              12,
+              1
+            ]
+          ],
+          "date-time": "2021-12-01T00:00:00Z",
+          "timestamp": 1638316800000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              12,
+              1
+            ]
+          ],
+          "date-time": "2021-12-01T00:00:00Z",
+          "timestamp": 1638316800000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/legal/tdmrep-license"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2023,
+              8,
+              17
+            ]
+          ],
+          "date-time": "2023-08-17T00:00:00Z",
+          "timestamp": 1692230400000
+        },
+        "content-version": "am",
+        "delay-in-days": 624,
+        "URL": "http://www.elsevier.com/open-access/userlicense/1.0/"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              12,
+              1
+            ]
+          ],
+          "date-time": "2021-12-01T00:00:00Z",
+          "timestamp": 1638316800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-017"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              12,
+              1
+            ]
+          ],
+          "date-time": "2021-12-01T00:00:00Z",
+          "timestamp": 1638316800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              12,
+              1
+            ]
+          ],
+          "date-time": "2021-12-01T00:00:00Z",
+          "timestamp": 1638316800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-012"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              12,
+              1
+            ]
+          ],
+          "date-time": "2021-12-01T00:00:00Z",
+          "timestamp": 1638316800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              12,
+              1
+            ]
+          ],
+          "date-time": "2021-12-01T00:00:00Z",
+          "timestamp": 1638316800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-004"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/100000006",
+        "name": "Office of Naval Research",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "N00014-16-1-2956"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "N00014-16-1-2956"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/100000006",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "elsevier.com",
+        "sciencedirect.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "Electric Power Systems Research"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2021,
+          12
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.epsr.2021.107510",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2021,
+          8,
+          17
+        ]
+      ],
+      "date-time": "2021-08-17T07:49:11Z",
+      "timestamp": 1629186551000
+    },
+    "page": "107510",
+    "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 21,
+    "special_numbering": "C",
+    "title": [
+      "Distributed dynamic state-input estimation for power networks of Microgrids and active distribution systems with unknown inputs"
+    ],
+    "prefix": "10.1016",
+    "volume": "201",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-1832-7621",
+        "authenticated-orcid": false,
+        "given": "Bang L.H.",
+        "family": "Nguyen",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-0130-7042",
+        "authenticated-orcid": false,
+        "given": "Tuyen V.",
+        "family": "Vu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Joseph M.",
+        "family": "Guerrero",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Mischael",
+        "family": "Steurer",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Karl",
+        "family": "Schoder",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Tuan",
+        "family": "Ngo",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "78",
+    "reference": [
+      {
+        "issue": "4",
+        "key": "10.1016/j.epsr.2021.107510_bib0001",
+        "doi-asserted-by": "crossref",
+        "first-page": "3188",
+        "DOI": "10.1109/TPWRS.2019.2894769",
+        "article-title": "Power system dynamic state estimation: motivations, definitions, methodologies, and future work",
+        "volume": "34",
+        "author": "Zhao",
+        "year": "2019",
+        "journal-title": "IEEE Trans. Power Syst."
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.epsr.2021.107510_bib0002",
+        "doi-asserted-by": "crossref",
+        "first-page": "411",
+        "DOI": "10.1109/TII.2016.2614396",
+        "article-title": "False data injection on state estimation in power systems-attacks, impacts, and defense: a survey",
+        "volume": "13",
+        "author": "Deng",
+        "year": "2017",
+        "journal-title": "IEEE Trans. Ind. Inf."
+      },
+      {
+        "key": "10.1016/j.epsr.2021.107510_bib0003",
+        "series-title": "Optimal State Estimation",
+        "author": "Simon",
+        "year": "2006"
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.epsr.2021.107510_bib0004",
+        "doi-asserted-by": "crossref",
+        "first-page": "1667",
+        "DOI": "10.1109/TPWRS.2009.2030295",
+        "article-title": "Forecasting-aided state estimation - Part I: Panorama",
+        "volume": "24",
+        "author": "Do Coutto Filho",
+        "year": "2009",
+        "journal-title": "IEEE Trans. Power Syst."
+      },
+      {
+        "issue": "7",
+        "key": "10.1016/j.epsr.2021.107510_bib0005",
+        "doi-asserted-by": "crossref",
+        "first-page": "1670",
+        "DOI": "10.1109/TPAS.1970.292822",
+        "article-title": "A dynamic estimator for tracking the state of a power system",
+        "author": "Debs",
+        "year": "1970",
+        "journal-title": "IEEE Trans. Power Appar. Syst."
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.epsr.2021.107510_bib0006",
+        "doi-asserted-by": "crossref",
+        "first-page": "286",
+        "DOI": "10.1109/TSG.2010.2078842",
+        "article-title": "Short-term load forecast of microgrids by a new bilevel prediction strategy",
+        "volume": "1",
+        "author": "Amjady",
+        "year": "2010",
+        "journal-title": "IEEE Trans. Smart Grid"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.epsr.2021.107510_bib0007",
+        "doi-asserted-by": "crossref",
+        "first-page": "2312",
+        "DOI": "10.1109/TSG.2018.2870600",
+        "article-title": "A survey on state estimation techniques and challenges in smart distribution systems",
+        "volume": "10",
+        "author": "Dehghanpour",
+        "year": "2019",
+        "journal-title": "IEEE Trans. Smart Grid"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.epsr.2021.107510_bib0008",
+        "doi-asserted-by": "crossref",
+        "first-page": "483",
+        "DOI": "10.1109/59.373974",
+        "article-title": "A branch-current-based state estimation method for distribution systems",
+        "volume": "10",
+        "author": "Baran",
+        "year": "1995",
+        "journal-title": "IEEE Trans. Power Syst."
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.epsr.2021.107510_bib0009",
+        "doi-asserted-by": "crossref",
+        "first-page": "1601",
+        "DOI": "10.1109/59.336098",
+        "article-title": "State estimation for real-time monitoring of distribution systems",
+        "volume": "9",
+        "author": "Baran",
+        "year": "1994",
+        "journal-title": "IEEE Trans. Power Syst."
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.epsr.2021.107510_bib0010",
+        "doi-asserted-by": "crossref",
+        "first-page": "645",
+        "DOI": "10.1109/19.492803",
+        "article-title": "Neural networks and pseudo-measurements for real-time monitoring of distribution systems",
+        "volume": "45",
+        "author": "Bernieri",
+        "year": "1996",
+        "journal-title": "IEEE Trans. Instrum. Meas."
+      },
+      {
+        "issue": "10",
+        "key": "10.1016/j.epsr.2021.107510_bib0011",
+        "doi-asserted-by": "crossref",
+        "first-page": "2234",
+        "DOI": "10.1109/TIM.2016.2583239",
+        "article-title": "Real-time monitoring of distribution system based on state estimation",
+        "volume": "65",
+        "author": "Angioni",
+        "year": "2016",
+        "journal-title": "IEEE Trans. Instrum. Meas."
+      },
+      {
+        "issue": "6",
+        "key": "10.1016/j.epsr.2021.107510_bib0012",
+        "doi-asserted-by": "crossref",
+        "first-page": "2761",
+        "DOI": "10.1109/TSG.2016.2521360",
+        "article-title": "Distribution system distributed quasi-dynamic state estimator",
+        "volume": "7",
+        "author": "Huang",
+        "year": "2016",
+        "journal-title": "IEEE Trans. Smart Grid"
+      },
+      {
+        "issue": "9",
+        "key": "10.1016/j.epsr.2021.107510_bib0013",
+        "doi-asserted-by": "crossref",
+        "first-page": "2358",
+        "DOI": "10.1109/TIM.2017.2708278",
+        "article-title": "Sequential discrete Kalman filter for real-time state estimation in power distribution systems: theory and implementation",
+        "volume": "66",
+        "author": "Kettner",
+        "year": "2017",
+        "journal-title": "IEEE Trans. Instrum. Meas."
+      },
+      {
+        "issue": "6",
+        "key": "10.1016/j.epsr.2021.107510_bib0014",
+        "doi-asserted-by": "crossref",
+        "first-page": "6600",
+        "DOI": "10.1109/TPWRS.2018.2847289",
+        "article-title": "State estimation in power distribution systems based on ensemble Kalman filtering",
+        "volume": "33",
+        "author": "Carquex",
+        "year": "2018",
+        "journal-title": "IEEE Trans. Power Syst."
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.epsr.2021.107510_bib0015",
+        "doi-asserted-by": "crossref",
+        "first-page": "1639",
+        "DOI": "10.1109/TSG.2015.2408111",
+        "article-title": "Evaluation of AMI and SCADA data synergy for distribution feeder modeling",
+        "volume": "6",
+        "author": "Huang",
+        "year": "2015",
+        "journal-title": "IEEE Trans. Smart Grid"
+      },
+      {
+        "issue": "5",
+        "key": "10.1016/j.epsr.2021.107510_bib0016",
+        "doi-asserted-by": "crossref",
+        "first-page": "237",
+        "DOI": "10.1049/ip-c.1983.0046",
+        "article-title": "State forecasting in electric power systems",
+        "volume": "130",
+        "author": "Leite da Silva",
+        "year": "1983",
+        "journal-title": "IEE Proc. C Gener. Transm. Distrib."
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.epsr.2021.107510_bib0017",
+        "doi-asserted-by": "crossref",
+        "first-page": "821",
+        "DOI": "10.1109/TSG.2019.2943540",
+        "article-title": "Dynamic distribution state estimation using synchrophasor data",
+        "volume": "11",
+        "author": "Song",
+        "year": "2020",
+        "journal-title": "IEEE Trans. Smart Grid"
+      },
+      {
+        "issue": "20",
+        "key": "10.1016/j.epsr.2021.107510_bib0018",
+        "doi-asserted-by": "crossref",
+        "first-page": "5481",
+        "DOI": "10.1109/TSP.2017.2728498",
+        "article-title": "Prediction-correction algorithms for time-varying constrained optimization",
+        "volume": "65",
+        "author": "Simonetto",
+        "year": "2017",
+        "journal-title": "IEEE Trans. Signal Process."
+      },
+      {
+        "issue": "9",
+        "key": "10.1016/j.epsr.2021.107510_bib0019",
+        "doi-asserted-by": "crossref",
+        "first-page": "3026",
+        "DOI": "10.1109/TIM.2011.2158153",
+        "article-title": "State estimation and branch current learning using independent local Kalman filter with virtual disturbance model",
+        "volume": "60",
+        "author": "Liu",
+        "year": "2011",
+        "journal-title": "IEEE Trans. Instrum. Meas."
+      },
+      {
+        "issue": "8",
+        "key": "10.1016/j.epsr.2021.107510_bib0020",
+        "doi-asserted-by": "crossref",
+        "first-page": "3368",
+        "DOI": "10.1109/TII.2017.2782750",
+        "article-title": "Consensus-based smart grid state estimation algorithm",
+        "volume": "14",
+        "author": "Rana",
+        "year": "2018",
+        "journal-title": "IEEE Trans. Ind. Informatics"
+      },
+      {
+        "key": "10.1016/j.epsr.2021.107510_bib0021",
+        "series-title": "Power System Dynamics and Stability",
+        "author": "Sauer",
+        "year": "1998"
+      },
+      {
+        "key": "10.1016/j.epsr.2021.107510_bib0022",
+        "first-page": "1",
+        "article-title": "Eigenvalue and robustness analysis of a decentralized voltage control scheme for an islanded multi-DER microgrid",
+        "author": "Etemadi",
+        "year": "2012",
+        "journal-title": "IEEE Power Energy Soc. Gen. Meet."
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.epsr.2021.107510_bib0023",
+        "doi-asserted-by": "crossref",
+        "first-page": "613",
+        "DOI": "10.1109/TPEL.2006.890003",
+        "article-title": "Modeling, analysis and testing of autonomous operation of an inverter-based microgrid",
+        "volume": "22",
+        "author": "Pogaku",
+        "year": "2007",
+        "journal-title": "IEEE Trans. Power Electron."
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.epsr.2021.107510_bib0024",
+        "doi-asserted-by": "crossref",
+        "first-page": "1187",
+        "DOI": "10.1109/TPWRS.2012.2212921",
+        "article-title": "A linear state estimation formulation for smart distribution systems",
+        "volume": "28",
+        "author": "Haughton",
+        "year": "2013",
+        "journal-title": "IEEE Trans. Power Syst."
+      },
+      {
+        "key": "10.1016/j.epsr.2021.107510_bib0025",
+        "unstructured": "A. K. Singh, “Decentralized estimation and control for power systems,” no. November, 2014."
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.epsr.2021.107510_bib0026",
+        "doi-asserted-by": "crossref",
+        "first-page": "2443",
+        "DOI": "10.1109/TPWRS.2019.2953256",
+        "article-title": "Correlation-aided robust decentralized dynamic state estimation of power systems with unknown control inputs",
+        "volume": "35",
+        "author": "Zhao",
+        "year": "2020",
+        "journal-title": "IEEE Trans. Power Syst."
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.epsr.2021.107510_bib0027",
+        "doi-asserted-by": "crossref",
+        "first-page": "329",
+        "DOI": "10.1109/T-PAS.1975.31858",
+        "article-title": "Bad data analysis for power system state estimation",
+        "author": "Handschin",
+        "year": "1975",
+        "journal-title": "IEEE Trans. Power Appar. Syst."
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.epsr.2021.107510_bib0028",
+        "doi-asserted-by": "crossref",
+        "first-page": "1",
+        "DOI": "10.1145/1952982.1952995",
+        "article-title": "False data injection attacks against state estimation in electric power grids",
+        "volume": "14",
+        "author": "Liu",
+        "year": "2011",
+        "journal-title": "ACM Trans. Inf. Syst. Secur."
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.epsr.2021.107510_bib0029",
+        "doi-asserted-by": "crossref",
+        "first-page": "2218",
+        "DOI": "10.1109/TSG.2019.2949998",
+        "article-title": "A survey on the detection algorithms for false data injection attacks in smart grids",
+        "volume": "11",
+        "author": "Musleh",
+        "year": "2020",
+        "journal-title": "IEEE Trans. Smart Grid"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.epsr.2021.107510_bib0030",
+        "doi-asserted-by": "crossref",
+        "first-page": "81",
+        "DOI": "10.2307/2528963",
+        "article-title": "Robust estimates, residuals, and outlier detection with Multiresponse data",
+        "volume": "28",
+        "author": "Gnanadesikan",
+        "year": "1972",
+        "journal-title": "Biometrics"
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.epsr.2021.107510_bib0031",
+        "doi-asserted-by": "crossref",
+        "first-page": "370",
+        "DOI": "10.1109/TCNS.2014.2357531",
+        "article-title": "Detection of faults and attacks including false data injection attack in smart grid using kalman filter",
+        "volume": "1",
+        "author": "Manandhar",
+        "year": "2014",
+        "journal-title": "IEEE Trans. Control Netw. Syst."
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.epsr.2021.107510_bib0032",
+        "doi-asserted-by": "crossref",
+        "first-page": "942",
+        "DOI": "10.1109/TPWRS.2011.2175255",
+        "article-title": "An alternative method for power system dynamic state estimation based on unscented transform",
+        "volume": "27",
+        "author": "Wang",
+        "year": "2012",
+        "journal-title": "IEEE Trans. Power Syst."
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.epsr.2021.107510_bib0033",
+        "doi-asserted-by": "crossref",
+        "first-page": "125",
+        "DOI": "10.1109/TPAS.1970.292679",
+        "article-title": "Power system static-state estimation, Part II: Approximate model",
+        "author": "Schweppe",
+        "year": "1970",
+        "journal-title": "IEEE Trans. Power Appar. Syst."
+      },
+      {
+        "key": "10.1016/j.epsr.2021.107510_bib0034",
+        "unstructured": "“New York State Energy Research and Development Authority (NYSERDA). 2018. ‘Design of a Resilient Underground Microgrid in Potsdam, NY,’. Prepared by Clarkson University, GE Energy Consulting, Nova Energy Specialists and National Grid.” NYSERDA Report, p. Number 18-13, 2018."
+      }
+    ],
+    "container-title": [
+      "Electric Power Systems Research"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0378779621004910?httpAccept=text/xml",
+        "content-type": "text/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0378779621004910?httpAccept=text/plain",
+        "content-type": "text/plain",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2025,
+          10,
+          8
+        ]
+      ],
+      "date-time": "2025-10-08T15:35:12Z",
+      "timestamp": 1759937712000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0378779621004910"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2021,
+          12
+        ]
+      ]
+    },
+    "references-count": 34,
+    "alternative-id": [
+      "S0378779621004910"
+    ],
+    "URL": "https://doi.org/10.1016/j.epsr.2021.107510",
+    "relation": {},
+    "ISSN": [
+      "0378-7796"
+    ],
+    "issn-type": [
+      {
+        "value": "0378-7796",
+        "type": "print"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2021,
+          12
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "Elsevier",
+        "name": "publisher",
+        "label": "This article is maintained by"
+      },
+      {
+        "value": "Distributed dynamic state-input estimation for power networks of Microgrids and active distribution systems with unknown inputs",
+        "name": "articletitle",
+        "label": "Article Title"
+      },
+      {
+        "value": "Electric Power Systems Research",
+        "name": "journaltitle",
+        "label": "Journal Title"
+      },
+      {
+        "value": "https://doi.org/10.1016/j.epsr.2021.107510",
+        "name": "articlelink",
+        "label": "CrossRef DOI link to publisher maintained version"
+      },
+      {
+        "value": "article",
+        "name": "content_type",
+        "label": "Content Type"
+      },
+      {
+        "value": "© 2021 Elsevier B.V. All rights reserved.",
+        "name": "copyright",
+        "label": "Copyright"
+      }
+    ],
+    "article-number": "107510"
+  }
+}

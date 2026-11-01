@@ -5,7 +5,7 @@ Figure~\ref{fig:joint-architecture} describes the implemented computation.
 The inference engine, archived as R11, uses a conditional history bank of
 DAE-derived switched state-space predictors. The nonlinear simulator
 generates observations; inference does not solve a new full nonlinear
-simulation for every candidate at every report.
+simulation for every candidate at every report.\AIDraftingCredit{}
 
 Physics enters the candidate dynamics, input directions and oriented
 measurement map. Statistical filtering represents uncertain states and
@@ -105,42 +105,15 @@ has a truncated-Gaussian distribution inherited from previous reports:
              \operatorname{TN}_{[l,u]}(a;\mu,v)\,da.
  \label{eq:narrative-evidence}
 \end{equation}
-With $\Phi$ denoting the standard normal CDF, define
-\begin{align}
- v'&=(v^{-1}+s^\top S^{-1}s)^{-1},\nonumber\\
- \mu'&=v'(\mu/v+s^\top S^{-1}e),\nonumber\\
- Z(\mu,v)&=\Phi((u-\mu)/\sqrt v)-\Phi((l-\mu)/\sqrt v).
-\end{align}
-The implemented local integral follows by completing the square:
-\begin{align}
- \log L_{h,k}&=\log\mathcal N(e;0,S)+\tfrac12\log(v'/v)\nonumber\\
- &\quad+\tfrac12(\mu'^2/v'-\mu^2/v)
-       +\log\frac{Z(\mu',v')}{Z(\mu,v)}.
- \label{eq:amplitude-evidence-main}
-\end{align}
-These standard identities are exact for the stated local conditional
-model. Adaptive proposals, pruning and covariance approximations make the
-complete bank approximate.
-
-The conditional state mean is represented as $m_h+d_h a$. To make the
-filtering approximation explicit, let $T_o,J_o,g_o,u_o,j_o,v_o$ denote the
-archived one-report transition and observation operators for switch $o$.
-The code forms $e=r_k-J_o m_h-j_o$ and $s=J_o d_h+v_o$. With the shared
-covariance $P_\rho$ for the current discrepancy regime $\rho$,
-\begin{align}
- S_o&=R+J_oP_\rho J_o^\top,&
- K_o&=T_oP_\rho J_o^\top S_o^{-1},\nonumber\\
- m_h^+&=T_o m_h+g_o+K_o e,&
- d_h^+&=T_o d_h+u_o-K_o s.
- \label{eq:implemented-conditional-correction}
-\end{align}
-The amplitude distribution is updated by the same integral above. The
-regime covariances are obtained from nominal-operator Riccati equations;
-R11 does not propagate an independent exact covariance for every switched
-history. At episode closure, it retains the mixture mean of the augmented
-state and records the omitted between-history spread. Thus state continuity
-and conditional Bayesian amplitude integration are implemented, while a
-fully Bayesian posterior over states, context and all histories is not.
+The supplement derives the closed form by completing the square and
+works through a numerical example. It also specifies the conditional
+state representation $m_h+d_h a$ and its update. The local amplitude
+integral is exact for the stated conditional Gaussian model. The complete
+bank remains approximate: regime covariances are shared from
+nominal-operator Riccati equations, context estimates enter by substitution,
+and histories are screened and pruned. At episode closure the augmented
+state mixture mean is retained and omitted between-history spread is recorded.
+A fully Bayesian posterior over states, context and all histories is not claimed.
 
 The rolling screen proposes histories; it is not another independent
 observation. Replaying a suffix replaces its original no-new-event suffix
@@ -225,21 +198,11 @@ complete configured procedures; it does not isolate the outer network bank
 from publication decisions. The admission-rule ablation tests a different publication
 decision; it is not a pure recovery-memory ablation.
 
-The per-report birth and restoration hazards are
-$1-\exp[-(1/60)/30]$ and $1-\exp[-(1/30)/30]$.
-Birth mass is split equally between load and line families, then uniformly
-among sources within each family. Load severity has a zero-mean Gaussian
-prior with standard deviation 0.15, truncated to $[-0.2,0.2]$ and integrated
-over four intervals with boundaries $-0.2,-0.1,0,0.1,0.2$.
-After three reports, eligible active histories can produce OFF children
-at either half-report position while inheriting state and severity.
-After likelihood normalization, the beam retains the 96 highest-weight
-recent histories, 64 older histories and at least one per occupied source;
-their union is renormalized and discarded mass is recorded.
-The reproducibility archive maps these operations to the frozen
-\texttt{transitions}, \texttt{process}, and
-\texttt{predictive\_log\_density} routines and preserves the complete
-publication configuration.
+The supplement records the frozen birth/restoration hazards, severity
+prior and integration intervals, restoration-child rules and beam limits,
+together with the execution sequence and illustrative calculations.
+These details preserve the archived configuration; the compact algorithm
+below states the report order and information boundary.
 
 \subsection{Per-Report Algorithm and Computational Boundary}
 

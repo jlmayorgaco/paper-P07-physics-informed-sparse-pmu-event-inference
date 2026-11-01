@@ -1,0 +1,354 @@
+{
+  "key": "tate2008outage",
+  "retrieved_at": "2026-11-01T03:53:22.092398+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1109%2FTPWRS.2008.2004826",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1109/TPWRS.2008.2004826",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:05.956691+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          22
+        ]
+      ],
+      "date-time": "2026-09-22T21:15:19Z",
+      "timestamp": 1790111719167,
+      "version": "4.0.1"
+    },
+    "reference-count": 32,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "4",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2008,
+              11,
+              1
+            ]
+          ],
+          "date-time": "2008-11-01T00:00:00Z",
+          "timestamp": 1225497600000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Trans. Power Syst."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2008,
+          11
+        ]
+      ]
+    },
+    "DOI": "10.1109/tpwrs.2008.2004826",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2008,
+          10,
+          28
+        ]
+      ],
+      "date-time": "2008-10-28T17:33:08Z",
+      "timestamp": 1225215188000
+    },
+    "page": "1644-1652",
+    "source": "Crossref",
+    "is-referenced-by-count": 250,
+    "title": [
+      "Line Outage Detection Using Phasor Angle Measurements"
+    ],
+    "prefix": "10.1109",
+    "volume": "23",
+    "author": [
+      {
+        "given": "Joseph Euzebe",
+        "family": "Tate",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Thomas J.",
+        "family": "Overbye",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref32",
+        "author": "glover",
+        "year": "2008",
+        "journal-title": "Power System Analysis and Design"
+      },
+      {
+        "key": "ref31",
+        "doi-asserted-by": "crossref",
+        "first-page": "1914",
+        "DOI": "10.1109/TPWRS.2005.857386",
+        "article-title": "Power system frequency monitoring network (FNET) implementation",
+        "volume": "20",
+        "author": "zhian",
+        "year": "2005",
+        "journal-title": "IEEE Trans Power Syst"
+      },
+      {
+        "key": "ref30",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2006.888950"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PES.2004.1372874"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PES.2007.386002"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/HICSS.2005.679"
+      },
+      {
+        "key": "ref13",
+        "article-title": "Visualization of large-scale power system operations using phasor measurements",
+        "author": "chun-lien",
+        "year": "2006",
+        "journal-title": "Proc Int Conf Power Systems Technology"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/59.260883"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/5.824004"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/HICSS.2006.355"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/59.476072"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2006.881113"
+      },
+      {
+        "key": "ref19",
+        "year": "2004",
+        "journal-title": "US-Canada Power System Outage Task Force Final Report on August 14 2003 the Blackout in the United States and Canada"
+      },
+      {
+        "key": "ref28",
+        "author": "crow",
+        "year": "2003",
+        "journal-title": "Computational Methods for Electric Power Systems"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/HICSS.2006.139"
+      },
+      {
+        "key": "ref27",
+        "first-page": "303",
+        "author": "anton",
+        "year": "2000",
+        "journal-title": "Elementary Linear Algebra"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/67.207465"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2006.881112"
+      },
+      {
+        "key": "ref29",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCS.1984.1085559"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2007.894859"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PSCE.2006.296290"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPAS.1985.318818"
+      },
+      {
+        "key": "ref2",
+        "year": "2006",
+        "journal-title": "Steps to Establish a Real-Time Transmission Monitoring System for Transmission Owners and Operators Within the Eastern and Western Interconnections"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2007.908476"
+      },
+      {
+        "key": "ref1",
+        "year": "2004",
+        "journal-title": "US-Canada Power System Outage Task Force Final Report on August 14 2003 the Blackout in the United States and Canada"
+      },
+      {
+        "key": "ref20",
+        "year": "2006",
+        "journal-title": "US-Canada Power System Outage Task Force Final Report on the Implementation of the Task Force Recommendations"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PES.2004.1373161"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/NAPS.2005.1560548"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IEEESTD.2006.99376"
+      },
+      {
+        "key": "ref23",
+        "first-page": "176",
+        "author": "forsyth",
+        "year": "2003",
+        "journal-title": "Computer Vision A Modern Approach"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2004.826708"
+      },
+      {
+        "key": "ref25",
+        "author": "wood",
+        "year": "1984",
+        "journal-title": "Power Generation Operation and Control"
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Power Systems"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx5/59/4652575/04652583.pdf?arnumber=4652583",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2021,
+          12,
+          23
+        ]
+      ],
+      "date-time": "2021-12-23T18:43:22Z",
+      "timestamp": 1640285002000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "http://ieeexplore.ieee.org/document/4652583/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2008,
+          11
+        ]
+      ]
+    },
+    "references-count": 32,
+    "journal-issue": {
+      "issue": "4"
+    },
+    "URL": "https://doi.org/10.1109/tpwrs.2008.2004826",
+    "relation": {},
+    "ISSN": [
+      "0885-8950"
+    ],
+    "issn-type": [
+      {
+        "value": "0885-8950",
+        "type": "print"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2008,
+          11
+        ]
+      ]
+    }
+  }
+}

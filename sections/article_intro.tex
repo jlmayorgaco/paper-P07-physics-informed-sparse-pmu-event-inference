@@ -6,11 +6,11 @@ continue moving. A second intervention may begin before that response has
 decayed. With only eight PMUs in a 39-bus network, a change in a measured
 signal may therefore indicate a new source, recovery from an earlier source,
 or an imperfect physical prediction. The task is to distinguish these
-explanations using only the reports available at the decision time.
+explanations using only the reports available at the decision time.\AIDraftingCredit{}
 
 \begin{figure*}[t]\centering
 \includegraphics[width=\textwidth]{figures/generated/narrative_architecture.pdf}
-\caption{Implemented physical-history attribution, organized into model preparation (A), startup context (B), per-report inference (C), and publication (D). The bank predicts before state correction and saves model evidence before proposal selection. Candidate replay replaces a likelihood suffix, so each report contributes once. The feedback loop retains physical and instrumental memory through restoration. Reserved event truth is used only after predictions are sealed.}
+\caption{Implemented physical-history attribution with its original publication policy, organized into model preparation (A), startup context (B), per-report inference (C), and publication (D). The bank predicts before state correction and saves model evidence before proposal selection. Candidate replay replaces a likelihood suffix, so each report contributes once. The feedback loop retains physical and instrumental memory through restoration. Reserved event truth is used only after predictions are sealed. The common-clock controls replace block D as specified in Section~\ref{sec:submission-checks}.}
 \label{fig:joint-architecture}\end{figure*}
 
 Physical restoration is not electrical recovery. A detector that returns
@@ -46,22 +46,22 @@ physical predictors, evidence updates and decision rules.
 before restoration, extra alarms and episode closure. Nominal and uncertain
 network models are evaluated alongside two fixed ExtraTrees adapters;
 Chen's published detector is compared on eligible persistent line openings.
-\item \IfFileExists{generated/ei_x02_macros.tex}{A known-family, known-ON/OFF IEEE-39 component test
-that separates correction of the pre-event reference from a change in the
-event signature. The test estimates context from PMUs and measures response
-fidelity, source decisions and continuous severity.}{A distinction between fitting
-electrical observations and distinguishing their physical sources, with
-explicit limits on what state and source results establish.}
+\item Adversarial tests of scope: a state-retaining physical competitor,
+a classifier fitted under a grouped SIM split, and a retrospective
+integrity/source replay. These tests retain failures and distinguish
+simulation utility from transfer to the reference record.
 \end{enumerate}
 
 A further physical control asks whether recovery increases source separation.
 It distinguishes retaining a consistent prediction from obtaining additional
 information about the source; it is not a comparison of causal detectors.
 
-Completed development streams expose a trade-off: the five-model reference
-obtains \ContMixTimely{}/\ContMixTotal{} timely family/source decisions with
-\ContMixExtras{} extra alarms, while nominal gains one timely decision at
-a higher alarm burden. \IfFileExists{generated/c01_macros.tex}{The separate
+On the common development cohort and publication clock, the five-model bank
+obtains \SSMixTimely{}/\SSMixTotal{} timely family/source decisions with
+\SSMixExtras{} extras, versus \SSSimpleTimely{}/\SSSimpleTotal{} and
+\SSSimpleExtras{} for the simpler physical control. This compares complete
+procedures; it does not isolate a causal effect of history retention.
+\IfFileExists{generated/c01_macros.tex}{The separate
 confirmatory comparison is reported below.}{The prespecified confirmatory
 comparison is still running without method changes.} The claim is scoped
 to the declared load/line catalog. These simulations do not establish an

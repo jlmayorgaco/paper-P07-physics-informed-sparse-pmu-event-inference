@@ -1,0 +1,416 @@
+Line Outage Detection Using Phasor Angle Measurements (https://documents.pserc.wisc.edu/documents/publications/papers/2007_general_publications/tate_overbye_pes_nov2007.pdf)
+citeturn26search12 [wordlim: 200] Published: 18.0 years ago; Crawled: 10.3 years ago; # Line Outage Detection Using Phasor Angle Measurements
+
+Joseph Euzebe Tate, Member, IEEE, and Thomas J. ... **Index Terms—**Event detection, line outages, phasor measurement units. ... National Science Foundation (NSF) awards 0540237 and 0524695, in part by the Power Systems Engineering Research Center, and in part by an NSF Graduate Research Fellowship.
+IEEE TRANSACTIONS ON POWER SYSTEMS, VOL. 23, NO. 4, NOVEMBER 2008
+
+# Line Outage Detection Using Phasor Angle Measurements
+
+Joseph Euzebe Tate, Member, IEEE, and Thomas J. Overbye, Fellow, IEEE
+
+**Abstract—**Although phasor measurement units (PMUs) have become increasingly widespread throughout power networks, the buses monitored by PMUs still constitute a very small percentage of the total number of system buses. Our research explores methods to derive useful information from PMU data in spite of this limited coverage. In particular, we have developed an algorithm which uses known system topology information, together with PMU phasor angle measurements, to detect system line outages. In addition to determining the outaged line, the algorithm also provides an estimate of the pre-outage flow on the outaged line. To demonstrate the effectiveness of our approach, the algorithm is demonstrated using simulated and real PMU data from two systems—a 37-bus study case and the TVA control area.
+
+**Index Terms—**Event detection, line outages, phasor measurement units.
+
+## I. INTRODUCTION
+
+With the increasing loading of the power system, along with the massive interarea transfers enabled by the deregulation of the 1980s and 1990s, there is a clear need to have reliable information about both the local system and external systems. Tellingly, four of the six major North American blackouts were due in part to a lack of situational awareness [1]. Although there is a clear need for sharing of information, there is limited real-time sharing of SCADA or state estimator information in the United States [2]. However, as phasor measurement units (PMUs) [3] have been deployed throughout the North American power grid, there have been significant efforts to ensure that PMU data are shared between all interested parties [4]. Because PMU data are more widely available in near real-time than other power system measurement data, it can provide unique insights into the global operation of the grid. However, new techniques must be developed to apply the data that PMUs provide in a useful manner.
+
+Extensive research in applying PMU information to improve situational awareness has been conducted since their introduction, including applications in state estimation [5]–[7], dynamic security assessment [8]–[10], and visualization [11]–[13]. Yet another key aspect of situational awareness in the power grid is the knowledge of transmission line, transformer, and generator statuses. Beyond incorporation of PMUs into traditional state estimation, which can include topology estimation [14], there has been little research into how PMUs can be used to enhance topology information, particularly outside of the local area. Current network topology processors focus on obtaining local system topology information through the use of predominantly local area measurements [15]–[18]. However, connectivity information over the wide area is very important for system operations and is a major reason for the existence of the NERC System Data Exchange (SDX) [19]. Because there is significant value in improving system operators’ knowledge of external system line outages, we have developed a method which utilizes PMU data to effect this improvement.
+
+Our method makes extensive use of SDX information, as it is currently the best source of system-wide line status information. One of the most telling indications of its usefulness is its application in processing transmission loading reliefs (TLRs) on the North American power grid. However, despite increased awareness of the importance of interarea information exchange since the August 2003 blackout, updates to the SDX are still only required on an hourly basis [20]. Because much can happen on the power grid within an hour, there is a need for tools which are capable of providing more current information on external system outages. Our work looks at ways to improve upon the status information from local topology processors and the NERC SDX by incorporating PMU data which, like SDX information, is also available over the entire interconnect through phasor data concentrators (PDCs) [4]. The method presented here is one possible application in which pre-outage topology information from the NERC SDX is combined with real-time PMU angle measurements to detect single line outages on the system. Although the methods presented here would work with any source of synchronized angle data, PMUs are the only devices which are deployed over the entire power grid and are capable of providing geographically dispersed, synchronized, and accurate phasor angle measurements.
+
+Manuscript received November 26, 2007; revised April 02, 2008. Current version published October 22, 2008. This work was supported in part by the U.S. National Science Foundation (NSF) awards 0540237 and 0524695, in part by the Power Systems Engineering Research Center, and in part by an NSF Graduate Research Fellowship. Data were also provided by the Tennessee Valley Authority for evaluation of our algorithm. Paper no. TPWRS-00864-2007.  
+J. E. Tate is with the Department of Electrical and Computer Engineering, University of Toronto, Toronto, ON M5S 3G4 Canada (e-mail: zeb.tate@utoronto.ca).  
+T. J. Overbye is with the Department of Electrical and Computer Engineering, University of Illinois at Urbana-Champaign, Urbana, IL 61801 USA (e-mail: overbye@uiuc.edu).  
+Color versions of one or more of the figures in this paper are available online at http://ieeexplore.ieee.org.  
+Digital Object Identifier 10.1109/TPWRS.2008.2004826
+
+## II. PROBLEM FORMULATION
+
+The problem addressed in this work is the detection of single line outages using only PMU data, transmission line and transformer parameter data, and system topology information. One key assumption made is that the fast system dynamics are well-damped and that the system settles down into a quasi-stable state following the line outage. We account for the possibility of poor damping of slower, electromechanical oscillations through the
+
+0885-8950/$25.00 © 2008 IEEE--------------------------------------------------------------------------------
+A Real Time Event Detection, Classification and Localization Using Synchrophasor Data (https://doi.org/10.1109%2FTPWRS.2020.2986019)
+citeturn26search0 [wordlim: 200] Published: 6.5 years ago; Crawled: last month; A Real Time Event Detection, Classification and Localization Using Synchrophasor Data | IEEE Journals & Magazine | IEEE Xplore ... # A Real Time Event Detection, Classification and Localization Using Synchrophasor Data
+
+A Real Time Event Detection, Classification and Localization Using Synchrophasor Data | IEEE Journals & Magazine | IEEE Xplore
+
+[Button: Skip to Main Content]
+
+# A Real Time Event Detection, Classification and Localization Using Synchrophasor Data
+
+Publisher: IEEE
+
+[Button: Cite This]
+
+Abstract
+
+## Document Sections
+
+  * I.
+
+Introduction
+
+  * II.
+
+Synchrophasor Data Anomaly Detection
+
+  * III.
+
+Event Detection, Classification, and Localization
+
+  * IV.
+
+Test-bed and Test Cases
+
+  * V.
+
+Simulation and Results
+
+Show Full Outline
+
+Authors
+
+Figures
+
+References
+
+Citations
+
+Keywords
+
+  * Download PDF
+  * Download References
+  * Request Permissions
+  * Save to
+  * Alerts
+
+## Abstract:
+
+With an increasing number of extreme events, grid components and complexity, more alarms are being observed in the power grid control centers. Operators in the control ce...Show More
+
+## Metadata
+
+## Abstract:
+
+With an increasing number of extreme events, grid components and complexity, more alarms are being observed in the power grid control centers. Operators in the control center need to monitor and analyze these alarms to take suitable control actions, if needed, to ensure the system's reliability, stability, security, and resiliency. Although existing alarm and event processing tools help in monitoring and decision making, synchrophasor data along with the topology and component location information can be used in detecting, classifying and locating the event, which is the focus of this work. Phasor Measurement Unit's (PMU's) data quality issue is also addressed before using data for event analysis. The developed algorithms include statistic, clustering, and Maximum Likelihood Criterion (MLE) based anomaly detection, Density-based spatial clustering of applications with noise (DBSCAN) for event detection and physics-based rule/ decision tree for event classification. Further, topology information, statistical techniques, and graph search algorithms are used for event localization. Developed algorithms have been validated with satisfactory results for IEEE 14 bus and 39 Bus as well as with real PMU data from the western US interconnection (WECC).
+
+Published in: IEEE Transactions on Power Systems ( Volume: 35, Issue: 6, November 2020)
+
+Page(s): 4421 - 4431
+
+Date of Publication: 20 April 2020
+
+ISSN Information:
+
+DOI: 10.1109/TPWRS.2020.2986019
+
+### I. Introduction
+
+The power system can become more resilient and less susceptible to large outages if the operators have a wide area, real-time view of the system [1], [2]. The operators need to take control actions based on several alarms that appear in the Energy Management System (EMS). The motivation behind this study is to develop a tool using PMU measurements, which can help enhance the decision making capability of operators in the control room supplementing EMS [3]. In this work, goal is to detect, classify, and locate the physical power system events occurring frequently in the system. Example of these events include line faults, load changes, capacitor bank switching, and generator outages. Proposed algorithm has multiple steps: 1) detect anomalies, 2) classify anomalies into an active power event, reactive power event or fault events and 3) locate event. It is proposed to first detect and then classify events into an active power event, reactive power event or fault events. A generator drop is an example of active power event, whereas switching of a capacitor bank is a reactive power event. Short circuits are classified as faults. In an active power event, the active power flow between the buses changes. A reactive power event affects the reactive power flowing in the line and the voltage of the buses. In case of faults, the current dramatically increases and the voltage can drop down invariably. There will be large frequency variation and the rate of change of frequency increases to a very high value near the fault location [4]. The first step of the event detection algorithm is to detect these changes. Changes in the operating conditions are an indicator of a power system event.--------------------------------------------------------------------------------
+Convolutional Neural Network-assisted fault detection and location using few PMUs - ScienceDirect (https://www.sciencedirect.com/science/article/abs/pii/S0378779624005911)
+citeturn26search1 [wordlim: 200] Crawled: 2 months ago; # Convolutional Neural Network-assisted fault detection and location using few PMUs☆ ... The most commonly recognized models within this domain include the Graph Convolutional Neural Network (GCNN) [3] and the widely adopted Multi-Layer Perceptron (MLP) [4], [5], [6]. ... Furthermore, when considering fault detection and localization, instead of considering network observability, PMUs should be placed in a strategic manner to accurately capture faults system wide.
+
+## Electric Power Systems Research
+
+Date: October 2024
+
+Article: 110705
+
+Volume: Volume 235
+
+## Published by: Elsevier
+
+# Convolutional Neural Network-assisted fault detection and location using few PMUs☆
+
+Author links open overlay panel Tuna Yildiz, Ali Abur
+
+Show more
+
+Cite
+
+Add to Mendeley
+
+Share
+
+10.1016/j.epsr.2024.110705
+
+## Highlights
+
+  * •
+
+ANN approaches are shown to enhance fault detection capabilities for limited number of PMUs.
+
+  * •
+
+CNN model is shown to outperform MLP in terms of fault detection performance.
+
+  * •
+
+Placement of PMUs is shown to have a significant effect on the performance of fault detection.
+
+## Abstract
+
+Detection and identification of faults in large distribution systems with limited metering continue to pose significant challenges for system operators. The prevalence of installed phasor measurement units (PMUs) in power systems, provides an invaluable resource for fault detection and location. Therefore, there is a rich literature on methods that leverage the benefits of these PMUs for the purpose of event detection. However, a notable proportion of the proposed solutions assume the presence of one PMU at every bus, or at a large percentage of buses that will make the system observable. Despite concerted efforts to substantially increase the number of installed PMUs, majority of utilities have yet to attain comprehensive PMU coverage at the terminals of every transmission line. Thus, many of the proposed methods cannot be practically applied to existing power systems with limited number of installed PMUs. Consequently, the objective of this paper is to develop a method, aided by the application of Convolutional Neural Networks, to identify and precisely locate faults within a system, even when only a minimal number of Phasor Measurement Units (PMUs) are present.
+
+## Graphical abstract
+
+Image
+
+  1. Download: Download high-res image (202KB)
+
+Additionally, the location of PMUs is important for system operators in the execution of a range of applications, including but not limited to, State Estimation (SE), Line Outage Detection, and Fault Detection. Consequently, a breadth of methods designed to optimally place PMUs for various types of applications have been developed in the literature [10], [11], [12]. However, most of these methods are based on the assumption of an abundant availability of PMUs, which are then utilized to ensure the observability of the system. Furthermore, when considering fault detection and localization, instead of considering network observability, PMUs should be placed in a strategic manner to accurately capture faults system wide. Thus, this paper introduces an approach to PMU placement, explicitly designed to identify the best locations for these units.
+
+Once all PMU locations are determined, an Artificial Neural Network (ANN) is used to assist and improve the sparse estimation problem solution when there are few installed PMUs. --------------------------------------------------------------------------------
+Identification of outages in power systems with uncertain states and optimal sensor locations - Princeton University (https://collaborate.princeton.edu/en/publications/identification-of-outages-in-power-systems-with-uncertain-states-/)
+citeturn26search2 [wordlim: 200] Published: 11.9 years ago; Crawled: last month; Joint outage identification and state estimation in power systems is studied. ...   * Joint detection and estimation ... Dive into the research topics of 'Identification of outages in power systems with uncertain states and optimal sensor locations'.
+
+# Identification of outages in power systems with uncertain states and optimal sensor locations
+
+  * Yue Zhao
+  * , Jianshu Chen
+  * , Andrea Goldsmith
+  * , H. Vincent Poor
+
+  * Electrical and Computer Engineering
+  * High Meadows Environmental Institute
+  * Center for Statistics & Machine Learning
+
+Research output: Contribution to journal › Article › peer-review
+
+## Abstract
+
+Joint outage identification and state estimation in power systems is studied. A Bayesian framework is employed, and a Gaussian prior distribution of the states is assumed. The joint posterior of the outage hypotheses and the network states is developed in closed form, which can be applied to obtain the optimal joint detector and estimator under any given performance criterion. Employing the minimum probability of error as the performance criterion in identifying outages with uncertain states, the optimal detector is obtained. Efficiently computable performance metrics that capture the probability of error of the optimal detector are developed. Under simplified model assumptions, closed-form expressions for these metrics are derived, and these lead to a mixed integer convex programming problem for optimizing sensor locations. Using convex relaxations, a branch and bound algorithm that finds the globally optimal sensor locations is developed. Significant performance gains from using the optimal detector with the optimal sensor locations are observed from simulations. Furthermore, performance with greedily selected sensor locations is shown to be very close to that with globally optimal sensor locations.
+
+Original language  | English (US)
+Article number  | 6862865
+Pages (from-to)  | 1140-1153
+Number of pages  | 14
+Journal  | IEEE Journal on Selected Topics in Signal Processing
+Volume  | 8
+Issue number  | 6
+DOIs  | 
+
+  * https://doi.org/10.1109/JSTSP.2014.2342191
+State  | Published - Dec 1 2014
+
+## All Science Journal Classification (ASJC) codes
+
+  * Signal Processing
+  * Electrical and Electronic Engineering
+
+## Keywords
+
+  * Chernoff bound
+  * Joint detection and estimation
+  * PMU
+  * branch and bound
+  * mixed integer convex programming
+  * outage identification
+  * sensor placement
+  * smart grid
+
+## Access to Document
+
+  * 10.1109/JSTSP.2014.2342191
+
+## Fingerprint
+
+Dive into the research topics of 'Identification of outages in power systems with uncertain states and optimal sensor locations'. Together they form a unique fingerprint.
+
+--------------------------------------------------------------------------------
+Line outage detection using phasor angle measurements - Illinois Experts (https://experts.illinois.edu/en/publications/line-outage-detection-using-phasor-angle-measurements/)
+citeturn26search3 [wordlim: 200] Published: 18.0 years ago; Crawled: 4 weeks ago; Dive into the research topics of 'Line outage detection using phasor angle measurements'. ... Tate, JE & Overbye, TJ 2008, 'Line outage detection using phasor angle measurements', IEEE Transactions on Power Systems, vol. 23, no. 4, pp.
+
+# Line outage detection using phasor angle measurements
+
+  * Joseph Euzebe Tate
+  * , Thomas J. Overbye
+
+Research output: Contribution to journal › Article › peer-review
+
+## Abstract
+
+Although phasor measurement units (PMUs) have become increasingly widespread throughout power networks, the buses monitored by PMUs still constitute a very small percentage of the total number of system buses. Our research explores methods to derive useful information from PMU data in spite of this limited coverage. In particular, we have developed an algorithm which uses known system topology information, together with PMU phasor angle measurements, to detect system line outages. In addition to determining the outaged line, the algorithm also provides an estimate of the pre-outage flow on the outaged line. To demonstrate the effectiveness of our approach, the algorithm is demonstrated using simulated and real PMU data from two systems - a 37-bus study case and the TVA control area.
+
+Original language  | English (US)
+Pages (from-to)  | 1644-1652
+Number of pages  | 9
+Journal  | IEEE Transactions on Power Systems
+Volume  | 23
+Issue number  | 4
+DOIs  | 
+
+  * https://doi.org/10.1109/TPWRS.2008.2004826
+State  | Published - 2008
+Externally published  | Yes
+
+## Keywords
+
+  * Event detection
+  * Line outages
+  * Phasor measurement units
+
+## ASJC Scopus subject areas
+
+  * Energy Engineering and Power Technology
+  * Electrical and Electronic Engineering
+
+## Online availability
+
+  * 10.1109/TPWRS.2008.2004826
+
+## Fingerprint
+
+Dive into the research topics of 'Line outage detection using phasor angle measurements'. Together they form a unique fingerprint.
+
+Tate, J. E., & Overbye, T. J. (2008). Line outage detection using phasor angle measurements. IEEE Transactions on Power Systems, 23(4), 1644-1652. https://doi.org/10.1109/TPWRS.2008.2004826
+
+Line outage detection using phasor angle measurements. / Tate, Joseph Euzebe; Overbye, Thomas J.
+In: IEEE Transactions on Power Systems, Vol. 23, No. 4, 2008, p. 1644-1652.
+
+Research output: Contribution to journal › Article › peer-review
+
+Tate, JE & Overbye, TJ 2008, 'Line outage detection using phasor angle measurements', IEEE Transactions on Power Systems, vol. 23, no. 4, pp. 1644-1652. https://doi.org/10.1109/TPWRS.2008.2004826
+
+Tate JE, Overbye TJ. Line outage detection using phasor angle measurements. IEEE Transactions on Power Systems. 2008;23(4):1644-1652. doi: 10.1109/TPWRS.2008.2004826
+
+Tate, Joseph Euzebe ; Overbye, Thomas J. / Line outage detection using phasor angle measurements. In: IEEE Transactions on Power Systems. 2008 ; Vol. 23, No. 4. pp. 1644-1652.
+
+@article{316df19ea6ae4278ab3e7389b6edf4f8,
+
+title = "Line outage detection using phasor angle measurements",
+
+abstract = "Although phasor measurement units (PMUs) have become increasingly widespread throughout power networks, the buses monitored by PMUs still constitute a very small percentage of the total number of system buses. Our research explores methods to derive useful information from PMU data in spite of this limited coverage. In particular, we have developed an algorithm which uses known system topology information, together with PMU phasor angle measurements, to detect system line outages. In addition to determining the outaged line, the algorithm also provides an estimate of the pre-outage flow on the outaged line. To demonstrate the effectiveness of our approach, the algorithm is demonstrated using simulated and real PMU data from two systems - a 37-bus study case and the TVA control area.",
+
+keywords = "Event detection, Line outages, Phasor measurement units",
+
+author = "Tate, \{Joseph Euzebe\} and Overbye, \{Thomas J.\}",
+
+note = "Manuscript received November 26, 2007; revised April 02, 2008. Current version published October 22, 2008. This work was supported in part by the U.S. National Science Foundation (NSF) awards 0540237 and 0524695, in part by the Power Systems Engineering Research Center, and in part by an NSF Graduate Research Fellowship. Data were also provided by the Tennessee Valley Authority for evaluation of our algorithm. Paper no. TPWRS-00864-2007.",
+
+year = "2008",
+
+doi = "10.1109/TPWRS.2008.2004826",
+
+language = "English (US)",
+
+volume = "23",
+
+pages = "1644--1652",
+
+journal = "IEEE Transactions on Power Systems",
+
+issn = "0885-8950",
+
+publisher = "Institute of Electrical and Electronics Engineers Inc.",
+
+number = "4",
+
+}
+
+TY - JOUR
+
+T1 - Line outage detection using phasor angle measurements
+
+AU - Tate, Joseph Euzebe
+
+AU - Overbye, Thomas J.
+
+N1 - Manuscript received November 26, 2007; revised April 02, 2008. Current version published October 22, 2008. This work was supported in part by the U.S. National Science Foundation (NSF) awards 0540237 and 0524695, in part by the Power Systems Engineering Research Center, and in part by an NSF Graduate Research Fellowship. Data were also provided by the Tennessee Valley Authority for evaluation of our algorithm. Paper no. TPWRS-00864-2007.
+
+PY - 2008
+
+Y1 - 2008
+
+N2 - Although phasor measurement units (PMUs) have become increasingly widespread throughout power networks, the buses monitored by PMUs still constitute a very small percentage of the total number of system buses. Our research explores methods to derive useful information from PMU data in spite of this limited coverage. In particular, we have developed an algorithm which uses known system topology information, together with PMU phasor angle measurements, to detect system line outages. In addition to determining the outaged line, the algorithm also provides an estimate of the pre-outage flow on the outaged line. To demonstrate the effectiveness of our approach, the algorithm is demonstrated using simulated and real PMU data from two systems - a 37-bus study case and the TVA control area.
+
+AB - Although phasor measurement units (PMUs) have become increasingly widespread throughout power networks, the buses monitored by PMUs still constitute a very small percentage of the total number of system buses. Our research explores methods to derive useful information from PMU data in spite of this limited coverage. In particular, we have developed an algorithm which uses known system topology information, together with PMU phasor angle measurements, to detect system line outages. In addition to determining the outaged line, the algorithm also provides an estimate of the pre-outage flow on the outaged line. To demonstrate the effectiveness of our approach, the algorithm is demonstrated using simulated and real PMU data from two systems - a 37-bus study case and the TVA control area.
+
+KW - Event detection
+
+KW - Line outages
+
+KW - Phasor measurement units
+
+UR - https://www.scopus.com/pages/publications/70350507113
+
+UR - https://www.scopus.com/pages/publications/70350507113#tab=citedBy
+
+U2 - 10.1109/TPWRS.2008.2004826
+
+DO - 10.1109/TPWRS.2008.2004826
+
+M3 - Article
+
+AN - SCOPUS:70350507113
+
+SN - 0885-8950
+
+VL - 23
+
+SP - 1644
+
+EP - 1652
+
+JO - IEEE Transactions on Power Systems
+
+JF - IEEE Transactions on Power Systems
+
+IS - 4
+
+ER ---------------------------------------------------------------------------------
+Line Outage Detection Using Phasor Angle Measurements (https://explore.metascienceobservatory.org/papers/W2106441659)
+citeturn26search4 [wordlim: 200] Published: 18.8 years ago; Crawled: last month; # Line Outage Detection Using Phasor Angle Measurements ... Power Generation, Operation, and Control 1984 • 8,472 citations Computer Vision: A Modern Approach 2002 • 3,815 citations Power System Analysis and Design 2007 • 1,496 citations Power generation 1977 • 1,449 citations Synchronized phasor measurements in power systems 1993 • 1,097 citations Electric power system state estimation 2000 • 755 citations Elementary Linear Algebra 2016 • 721 citations An Alternative for Including Phasor Measurements in State Estimators 2006 • 409 citations Power System Frequency Monitoring Network (FNET) Implementation 2005 • 352 citations An Online Dynamic Security Assessment Scheme Using Phasor Measurements and Decision Trees 2007 • 336 citations Real Time Voltage-Phasor Measurement For Static State Estimation 1985 • 222 citations A Distributed State Estimator Utilizing Synchronized Phasor Measurements 2007 • 184 citations Generalized Line Outage Distribution Factors 2007 • 154 citations Computational Methods for Electric Power Systems 2007 • 128 citations Modeling circuit breakers in weighted least squares state estimation 1993 • 121 citations Identifying the unknown circuit breaker statuses in power networks 1995 • 118 citations Elementary Linear Algebra 2001 • 100 citations Role of Distribution Factors in Congestion Revenue Rights Applications 2004 • 99 citations Performance of "WAMS East" in providing dynamic information for the North East blackout of August 14, 2003 2005 • 70 citations Computational Methods for Electric Power Systems 2002 • 70 citations Analysis of linearized decoupled power flow approximations for steady-state security assessment 1984 • 53 citations Monitoring of Power System Topology in Real-Time 2006 • 52 citations Extended factors for linear contingency analysis 2005 • 48 citations A Topology Error Identification Method Directly Based on Collinearity Tests 2006 • 47 citations Visualizing Real-Time Security Threats Using Hybrid SCADA / PMU Measurement Displays 2005 • 46 citations Real-time estimation of security from voltage collapse using synchronized phasor measurements 2005 • 36 citations Wide Area Frequency Visualization using Smart Client Technology 2007 • 24 citations Eastern Interconnection Phasor Project 2006 • 23 citations PMU Data Characterization and Application to Stability Monitoring 2006 • 15 citations Visualization of Large-Scale Power System Operations Using Phasor Measurements 2006 • 10 citations Post-contingency equilibrium analysis techniques for power systems 2005 • 7 citations
+
+# Line Outage Detection Using Phasor Angle Measurements
+
+Joseph Euzebe Tate, Thomas J. Overbye
+
+DOI: 10.1109/tpwrs.2008.2004826
+
+IEEE Transactions on Power Systems
+
+Data up to Jan 2025
+
+Published 2008
+
+Citations 314
+
+References 31
+
+Fields
+
+Computer scienceEngineeringMathematicsPhysicsReal-time computingElectrical engineeringComputer network+2 more
+
+### Total Citations Per Year
+
+[Button: Per Year][Button: Cumulative]
+
+### Abstract
+
+### References (31)
+
+Power Generation, Operation, and Control 1984 • 8,472 citationsComputer Vision: A Modern Approach 2002 • 3,815 citationsPower System Analysis and Design 2007 • 1,496 citationsPower generation 1977 • 1,449 citationsSynchronized phasor measurements in power systems 1993 • 1,097 citationsElectric power system state estimation 2000 • 755 citationsElementary Linear Algebra 2016 • 721 citationsAn Alternative for Including Phasor Measurements in State Estimators 2006 • 409 citationsPower System Frequency Monitoring Network (FNET) Implementation 2005 • 352 citationsAn Online Dynamic Security Assessment Scheme Using Phasor Measurements and Decision Trees 2007 • 336 citationsReal Time Voltage-Phasor Measurement For Static State Estimation 1985 • 222 citationsA Distributed State Estimator Utilizing Synchronized Phasor Measurements 2007 • 184 citationsGeneralized Line Outage Distribution Factors 2007 • 154 citationsComputational Methods for Electric Power Systems 2007 • 128 citationsModeling circuit breakers in weighted least squares state estimation 1993 • 121 citationsIdentifying the unknown circuit breaker statuses in power networks 1995 • 118 citationsElementary Linear Algebra 2001 • 100 citationsRole of Distribution Factors in Congestion Revenue Rights Applications 2004 • 99 citationsPerformance of "WAMS East" in providing dynamic information for the North East blackout of August 14, 2003 2005 • 70 citationsComputational Methods for Electric Power Systems 2002 • 70 citationsAnalysis of linearized decoupled power flow approximations for steady-state security assessment 1984 • 53 citationsMonitoring of Power System Topology in Real-Time 2006 • 52 citationsExtended factors for linear contingency analysis 2005 • 48 citationsA Topology Error Identification Method Directly Based on Collinearity Tests 2006 • 47 citationsVisualizing Real-Time Security Threats Using Hybrid SCADA / PMU Measurement Displays 2005 • 46 citationsReal-time estimation of security from voltage collapse using synchronized phasor measurements 2005 • 36 citationsWide Area Frequency Visualization using Smart Client Technology 2007 • 24 citationsEastern Interconnection Phasor Project 2006 • 23 citationsPMU Data Characterization and Application to Stability Monitoring 2006 • 15 citationsVisualization of Large-Scale Power System Operations Using Phasor Measurements 2006 • 10 citationsPost-contingency equilibrium analysis techniques for power systems 2005 • 7 citations--------------------------------------------------------------------------------
+A Real Time Event Detection, Classification and Localization Using Synchrophasor Data | Article Information | J-GLOBAL (https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202002231177614580)
+citeturn26search5 [wordlim: 200] Published: 6.8 years ago; Crawled: 2 weeks ago; # A Real Time Event Detection, Classification and Localization Using Synchrophasor Data ... (School of Electrical Engineering and Computer Science, Washington State University, Pullman, WA, USA)
+--------------------------------------------------------------------------------
+IEEE JSTSP 2014 — Lacuna (https://lacuna.tiptreesystems.com/venue/ieee-jstsp/2014)
+citeturn26search6 [wordlim: 200] Crawled: 2 weeks ago; The 2014 edition of the IEEE Journal of Selected Topics in Signal Processing focused on wireless network optimization and the enhancement of multimedia delivery. Research themes centered on coordinating interference in multi-cell networks, fair resource allocation, and statistical delay guarantees via effective capacity. ... Large-Scale MIMO Detection for 3GPP LTE: Algorithms and FPGA Implementations foundational Approximating Matrix Inversion via Trunc ... 3D Visual Discomfort Prediction: Vergence , Foveation, and the Physiological Optics of Accommodation ... Electricity Market Forecasting via Low-Rank Multi-Kernel Learning ... How to Identify an Infection Source With Limited Observations ... Identification of Outages in Power Systems With Uncertain States and Optimal Sensor Locations ... Multi-Layer Graph Analysis for Dynamic Social Networks ... Power System Nonlinear State Estimation Using Distributed Semidefinite Programming
+--------------------------------------------------------------------------------
+Publications (https://overbye.engr.tamu.edu/publications/)
+citeturn26search7 [wordlim: 200] Crawled: today; Tate, T.J. Overbye, “Extracting Steady-State Values from Phasor Measurement Unit Data using FIR and Median Filters,” Proc. ... Overbye, “Double Line Outage Detection using Phasor Angle Measurements,” Proc.
+--------------------------------------------------------------------------------
+Publications (https://www.ele.utoronto.ca/~zeb/publications/)
+citeturn26search8 [wordlim: 200] Crawled: 8.0 years ago;   * Ph.D. dissertation: Event Detection and Visualization Based on Phasor Measurement Units for Improved Situational Awareness ... Tate and T. ... Overbye, "Double line outage detection using phasor angle measurements", IEEE Power and Energy Society General Meeting, July 2009.
+--------------------------------------------------------------------------------
+A new cost effective algorithm for online identification of line outage contingency using current phasor of PMU - ScienceDirect (https://www.sciencedirect.com/science/article/abs/pii/S2352467720303040)
+citeturn26search9 [wordlim: 200] Crawled: 2 months ago; Tate and Overbye proposed a methodology using phasor angle measurements to detect outage of single line [4]. ... Multiple line outage detection is carried out through comparison of simulated phasor angles and measured phasor angles from PMUs in [21].
+--------------------------------------------------------------------------------
+Machine learning methods for power line outage identification - ScienceDirect (https://www.sciencedirect.com/science/article/pii/S1040619020301779)
+citeturn26search10 [wordlim: 200] Published: 5.8 years ago; Crawled: last month; As PMUs become increasingly deployed, power line outage detection and identification based on PMU measurements have received much attention recently. In early work (Tate and Overbye, 2008), system topology information together with PMU phasor angle measurements are used to detect a single line outage. ... Such data are available from Phasor Measurement Units, which are widely available nowadays. ... We consider using three types of classification algorithms for the task of line outage identification.
+--------------------------------------------------------------------------------
+Synchrophasor network-based detection and classification of power system events: A singular value decomposition approach - ScienceDirect (https://www.sciencedirect.com/science/article/pii/S0378779623005345)
+citeturn26search11 [wordlim: 200] Published: 3.1 years ago; Crawled: last month; # Synchrophasor network-based detection and classification of power system events: A singular value decomposition approach☆ ... There are various data-driven synchrophasor-based event detection, spatial localization, and characterization methods that use isolation forest, dynamic programming, clustering technique, Prony analysis, and decision tree [3], [4], [5], [6], [7]. ... In this paper, we propose an SVDs-based method to detect and classify power system events using real-time synchrophasor data collected by a phasor data concentrator (PDC) from different locations.
+

@@ -1,0 +1,703 @@
+{
+  "key": "plietzsch2022powerdynamics",
+  "retrieved_at": "2026-11-01T03:53:23.188602+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1016%2Fj.softx.2021.100861",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1016/j.softx.2021.100861",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:37.834061+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          6,
+          17
+        ]
+      ],
+      "date-time": "2026-06-17T13:46:19Z",
+      "timestamp": 1781703979133,
+      "version": "3.54.5"
+    },
+    "reference-count": 31,
+    "publisher": "Elsevier BV",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2022-01-01T00:00:00Z",
+          "timestamp": 1640995200000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2022-01-01T00:00:00Z",
+          "timestamp": 1640995200000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/legal/tdmrep-license"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              10,
+              19
+            ]
+          ],
+          "date-time": "2021-10-19T00:00:00Z",
+          "timestamp": 1634601600000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "http://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100001659",
+        "name": "Deutsche Forschungsgemeinschaft",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "410409736"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "410409736"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100001659",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/100010661",
+        "name": "Horizon 2020 Framework Programme",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "654113"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "654113"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/100010661",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/501100007601",
+        "name": "Horizon 2020",
+        "doi-asserted-by": "publisher",
+        "id": [
+          {
+            "id": "10.13039/501100007601",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/501100006360",
+        "name": "Federal Ministry for Economy and Energy",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "03Ei4012B"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "03Ei4012B"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100006360",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/501100002347",
+        "name": "Bundesministerium für Bildung und Forschung",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "03EK3055A"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "03EK3055A"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100002347",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "elsevier.com",
+        "sciencedirect.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "SoftwareX"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2022,
+          1
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.softx.2021.100861",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2021,
+          12,
+          13
+        ]
+      ],
+      "date-time": "2021-12-13T05:20:32Z",
+      "timestamp": 1639372832000
+    },
+    "page": "100861",
+    "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 24,
+    "special_numbering": "C",
+    "title": [
+      "PowerDynamics.jl—An experimentally validated open-source package for the dynamical analysis of power grids"
+    ],
+    "prefix": "10.1016",
+    "volume": "17",
+    "author": [
+      {
+        "given": "Anton",
+        "family": "Plietzsch",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Raphael",
+        "family": "Kogler",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Sabine",
+        "family": "Auer",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Julia",
+        "family": "Merino",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Asier",
+        "family": "Gil-de-Muro",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jan",
+        "family": "Liße",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Christina",
+        "family": "Vogel",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-5635-4949",
+        "authenticated-orcid": false,
+        "given": "Frank",
+        "family": "Hellmann",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "78",
+    "reference": [
+      {
+        "key": "10.1016/j.softx.2021.100861_b1",
+        "doi-asserted-by": "crossref",
+        "first-page": "135",
+        "DOI": "10.1016/j.automatica.2016.07.036",
+        "article-title": "A survey on modeling of microgrids—From fundamental physics to phasors and voltage sources",
+        "volume": "74",
+        "author": "Schiffer",
+        "year": "2016",
+        "journal-title": "Automatica"
+      },
+      {
+        "key": "10.1016/j.softx.2021.100861_b2",
+        "series-title": "Modelling of inverter-based generation for power system dynamic studies",
+        "author": "4/C6.35/CIRED",
+        "year": "2018"
+      },
+      {
+        "key": "10.1016/j.softx.2021.100861_b3",
+        "series-title": "The stability and control of power grids with high renewable energy share",
+        "author": "Auer",
+        "year": "2018"
+      },
+      {
+        "key": "10.1016/j.softx.2021.100861_b4",
+        "article-title": "Sneak preview: PowerDynamics.jl – An open-source library for analyzing dynamic stability in power grids with high shares of renewable energy",
+        "author": "Kittel",
+        "year": "2018",
+        "journal-title": "Wind Integr Workshop 2018"
+      },
+      {
+        "key": "10.1016/j.softx.2021.100861_b5",
+        "article-title": "Modeling the dynamics and control of power systems with high share of renewable energies",
+        "author": "Auer",
+        "year": "2018",
+        "journal-title": "Wind Integr Workshop 2018"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.softx.2021.100861_b6",
+        "doi-asserted-by": "crossref",
+        "first-page": "65",
+        "DOI": "10.1137/141000671",
+        "article-title": "Julia: A fresh approach to numerical computing",
+        "volume": "59",
+        "author": "Bezanson",
+        "year": "2017",
+        "journal-title": "SIAM Rev"
+      },
+      {
+        "key": "10.1016/j.softx.2021.100861_b7",
+        "series-title": "2021 IEEE madrid powertech",
+        "first-page": "1",
+        "article-title": "Probabilistic stability assessment for active distribution grids",
+        "author": "Liemann",
+        "year": "2021"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.softx.2021.100861_b8",
+        "doi-asserted-by": "crossref",
+        "first-page": "89",
+        "DOI": "10.1038/nphys2516",
+        "article-title": "How basin stability complements the linear-stability paradigm",
+        "volume": "9",
+        "author": "Menck",
+        "year": "2013",
+        "journal-title": "Nat Phys"
+      },
+      {
+        "key": "10.1016/j.softx.2021.100861_b9",
+        "doi-asserted-by": "crossref",
+        "first-page": "29654",
+        "DOI": "10.1038/srep29654",
+        "article-title": "Survivability of deterministic dynamical systems",
+        "volume": "6",
+        "author": "Hellmann",
+        "year": "2016",
+        "journal-title": "Sci Rep"
+      },
+      {
+        "issue": "6",
+        "key": "10.1016/j.softx.2021.100861_b10",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1063/5.0051387",
+        "article-title": "Networkdynamics. jl—Composing and simulating complex networks in julia",
+        "volume": "31",
+        "author": "Lindner",
+        "year": "2021",
+        "journal-title": "Chaos"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.softx.2021.100861_b11",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.5334/jors.151",
+        "article-title": "Differentialequations. jl–A performant and feature-rich ecosystem for solving differential equations in julia",
+        "volume": "5",
+        "author": "Rackauckas",
+        "year": "2017",
+        "journal-title": "J Open Res Softw"
+      },
+      {
+        "key": "10.1016/j.softx.2021.100861_b12",
+        "series-title": "2018 Power systems computation conference",
+        "first-page": "1",
+        "article-title": "Powermodels. jl: An open-source framework for exploring power flow formulations",
+        "author": "Coffrin",
+        "year": "2018"
+      },
+      {
+        "issue": "10",
+        "key": "10.1016/j.softx.2021.100861_b13",
+        "doi-asserted-by": "crossref",
+        "first-page": "2457",
+        "DOI": "10.1016/j.automatica.2014.08.009",
+        "article-title": "Conditions for stability of droop-controlled inverter-based microgrids",
+        "volume": "50",
+        "author": "Schiffer",
+        "year": "2014",
+        "journal-title": "Automatica"
+      },
+      {
+        "key": "10.1016/j.softx.2021.100861_b14",
+        "series-title": "Modelingtoolkit: A composable graph transformation system for equation-based modeling",
+        "author": "Ma",
+        "year": "2021"
+      },
+      {
+        "key": "10.1016/j.softx.2021.100861_b15",
+        "article-title": "Modelingtoolkit, modelica, and modia: The composable modeling future in julia",
+        "author": "Rackauckas",
+        "year": "2021",
+        "journal-title": "The Winnower"
+      },
+      {
+        "key": "10.1016/j.softx.2021.100861_b16",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.softx.2021.100747",
+        "article-title": "Powersystems. jl—A power system data management package for large scale modeling",
+        "volume": "15",
+        "author": "Lara",
+        "year": "2021",
+        "journal-title": "SoftwareX"
+      },
+      {
+        "issue": "12",
+        "key": "10.1016/j.softx.2021.100861_b17",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1063/1.5001818",
+        "article-title": "Stability of synchrony against local intermittent fluctuations in tree-like power grids",
+        "volume": "27",
+        "author": "Auer",
+        "year": "2017",
+        "journal-title": "Chaos"
+      },
+      {
+        "key": "10.1016/j.softx.2021.100861_b18",
+        "series-title": "A generalized linear response theory of complex networks with an application to renewable fluctuations in microgrids",
+        "author": "Plietzsch",
+        "year": "2019"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.softx.2021.100861_b19",
+        "first-page": "1",
+        "article-title": "Dynamically induced cascading failures in power grids",
+        "volume": "9",
+        "author": "Schäfer",
+        "year": "2018",
+        "journal-title": "Nature Commun"
+      },
+      {
+        "key": "10.1016/j.softx.2021.100861_b20",
+        "series-title": "Power system dynamics and stability",
+        "author": "Sauer",
+        "year": "1998"
+      },
+      {
+        "key": "10.1016/j.softx.2021.100861_b21",
+        "series-title": "Modeling and simulation of IEEE 14-bus system with FACTS controllers",
+        "author": "Kodsi",
+        "year": "2003"
+      },
+      {
+        "key": "10.1016/j.softx.2021.100861_b22",
+        "series-title": "IECON 2012-38th annual conference on IEEE industrial electronics society",
+        "first-page": "5683",
+        "article-title": "Stability analysis and design of droop control method in dq frame for connection in parallel of distributed energy resources",
+        "author": "Planas",
+        "year": "2012"
+      },
+      {
+        "issue": "5",
+        "key": "10.1016/j.softx.2021.100861_b23",
+        "doi-asserted-by": "crossref",
+        "first-page": "458",
+        "DOI": "10.1049/iet-rpg.2012.0319",
+        "article-title": "Design and implementation of a droop control in d–q frame for islanded microgrids",
+        "volume": "7",
+        "author": "Planas",
+        "year": "2013",
+        "journal-title": "IET Renew Power Gener"
+      },
+      {
+        "key": "10.1016/j.softx.2021.100861_b24",
+        "series-title": "Validation of low-voltage energy and renewables integration analysis",
+        "author": "Vogel",
+        "year": "2020"
+      },
+      {
+        "key": "10.1016/j.softx.2021.100861_b25",
+        "doi-asserted-by": "crossref",
+        "first-page": "71",
+        "DOI": "10.1016/j.automatica.2016.07.022",
+        "article-title": "Stability of a class of delayed port-Hamiltonian systems with application to microgrids with distributed rotational and electronic generation",
+        "volume": "74",
+        "author": "Schiffer",
+        "year": "2016",
+        "journal-title": "Automatica"
+      },
+      {
+        "key": "10.1016/j.softx.2021.100861_b26",
+        "series-title": "Diffeqflux. jl-a julia library for neural differential equations",
+        "author": "Rackauckas",
+        "year": "2019"
+      },
+      {
+        "key": "10.1016/j.softx.2021.100861_b27",
+        "series-title": "Predicting dynamic stability of power grids using graph neural networks",
+        "author": "Nauck",
+        "year": "2021"
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.softx.2021.100861_b28",
+        "article-title": "PyPSA: Python for power system analysis",
+        "volume": "6",
+        "author": "Brown",
+        "year": "2018",
+        "journal-title": "J Open Res Softw"
+      },
+      {
+        "issue": "6",
+        "key": "10.1016/j.softx.2021.100861_b29",
+        "doi-asserted-by": "crossref",
+        "first-page": "6510",
+        "DOI": "10.1109/TPWRS.2018.2829021",
+        "article-title": "Pandapower—An open-source python tool for convenient modeling, analysis, and optimization of electric power systems",
+        "volume": "33",
+        "author": "Thurner",
+        "year": "2018",
+        "journal-title": "IEEE Trans Power Syst"
+      },
+      {
+        "key": "10.1016/j.softx.2021.100861_b30",
+        "series-title": "LITS. jl–An open-source julia based simulation toolbox for low-inertia power systems",
+        "author": "Henriquez-Auba",
+        "year": "2020"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.softx.2021.100861_b31",
+        "doi-asserted-by": "crossref",
+        "first-page": "363",
+        "DOI": "10.1145/1089014.1089020",
+        "article-title": "SUNDIALS: Suite of nonlinear and differential/algebraic equation solvers",
+        "volume": "31",
+        "author": "Hindmarsh",
+        "year": "2005",
+        "journal-title": "ACM Trans Math Softw"
+      }
+    ],
+    "container-title": [
+      "SoftwareX"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S2352711021001345?httpAccept=text/xml",
+        "content-type": "text/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S2352711021001345?httpAccept=text/plain",
+        "content-type": "text/plain",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2026,
+          5,
+          15
+        ]
+      ],
+      "date-time": "2026-05-15T21:03:40Z",
+      "timestamp": 1778879020000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://linkinghub.elsevier.com/retrieve/pii/S2352711021001345"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2022,
+          1
+        ]
+      ]
+    },
+    "references-count": 31,
+    "alternative-id": [
+      "S2352711021001345"
+    ],
+    "URL": "https://doi.org/10.1016/j.softx.2021.100861",
+    "relation": {},
+    "ISSN": [
+      "2352-7110"
+    ],
+    "issn-type": [
+      {
+        "value": "2352-7110",
+        "type": "print"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2022,
+          1
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "Elsevier",
+        "name": "publisher",
+        "label": "This article is maintained by"
+      },
+      {
+        "value": "PowerDynamics.jl—An experimentally validated open-source package for the dynamical analysis of power grids",
+        "name": "articletitle",
+        "label": "Article Title"
+      },
+      {
+        "value": "SoftwareX",
+        "name": "journaltitle",
+        "label": "Journal Title"
+      },
+      {
+        "value": "https://doi.org/10.1016/j.softx.2021.100861",
+        "name": "articlelink",
+        "label": "CrossRef DOI link to publisher maintained version"
+      },
+      {
+        "value": "simple-article",
+        "name": "content_type",
+        "label": "Content Type"
+      },
+      {
+        "value": "© 2021 The Authors. Published by Elsevier B.V.",
+        "name": "copyright",
+        "label": "Copyright"
+      }
+    ],
+    "article-number": "100861"
+  }
+}

@@ -1,7 +1,7 @@
 \section{Experimental Design}
 \label{sec:narrative-protocol}
 
-The primary experiment asks whether the causal bank can attribute successive load/line interventions without confusing recovery with a new event. Development, independent evaluation and an auxiliary source-resolution experiment answer different questions and retain separate denominators.
+The primary experiment asks whether the causal bank can attribute successive load/line interventions without confusing recovery with a new event. Development, independent evaluation and an auxiliary source-resolution experiment answer different questions and retain separate denominators.\AIDraftingCredit{}
 
 \begin{table*}[t]\centering\small
 \caption{Experimental populations and their purposes. Conditions and noise realizations repeat a physical parent rather than creating independent trajectories.}\label{tab:narrative-evidence}
@@ -12,6 +12,9 @@ Independent continuous evaluation & 18 event parents, six interventions each; 12
 Persistent-line evaluation & Nine lines, three parent repetitions; same network/noise strata & First stopping decision, source and censoring & Eligible comparison with published line-outage QCD\\
 \IfFileExists{generated/ei_x02_macros.tex}{Signature component test & \EIDictionaryCases{} dictionary and \EITestPhysical{} test trajectories; four loads; three common noise seeds & Nominal, reference correction and mixed-signature correction & Known ON/OFF and family; separate from causal accuracy\\}{}
 Recovery geometry control & 38 trajectories; four recovery histories and 12 correlated source-pair comparisons & Separation with known history and one uncertain severity direction & Supplied prior trajectory, onset, family and pair; not R11 performance\\
+H04 procedure controls & Same development parents and observations as above & Single-state GLR, history banks and newly fitted ET & Common event metrics; distinct score/publication semantics\\
+Grouped SIM learning & \MLTrainGroups{}/\MLValGroups{}/\MLHoldGroups{} fit/validation/reserved groups; \MLTrainRecords{}/\MLValRecords{}/\MLHoldRecords{} records & Frozen classifier selection and reserved performance & Previously open campaigns; no unseen-source claim\\
+RAW reference replay & One retrospective record; \SSRawWindows{} fixed windows, \SSRawPhysicalTotal{} physical-positive & Physical admission, integrity timing and source composition & Metadata-based identities; no exact actuation log or independent field claim\\
 \bottomrule
 \end{tabularx}\end{table*}
 
@@ -19,9 +22,15 @@ The simulator is the IEEE-39 Julia/PowerDynamics research candidate F01. Each ph
 
 H03 and H04 each contain three event parents with six successive load/line interventions and one normal parent, all 80 s long. Schedules are paired across nominal, in-bank R/X and mixed out-of-bank R/X conditions. Each campaign therefore has 18 unique interventions and 54 event realizations. Both campaigns are now development evidence. No interval or generalization claim treats those 54 realizations as independent events.
 
-R11 and its nominal version are frozen co-references. Both ExtraTrees artifacts and their causal preprocessing/publication adapters are frozen as well; neither is retrained on H04 or C01. They receive the same 30-fps observations. This is a comparison of those operational implementations on the stated contract, not a rerun of the hackathon leaderboard.
+R11 and its nominal version are frozen co-references. The two archived
+ExtraTrees artifacts (the R09 references) and their preprocessing/publication
+adapters are also frozen; neither is retrained on H04 or C01. They receive
+the same 30-fps observations. The separately fitted S01 SHORT classifier
+uses the grouped SIM contract described below and is then frozen for H04
+and RAW. It does not replace the archived comparators in C01. These are
+comparisons of specified implementations, not a hackathon leaderboard rerun.
 
-The published physical comparator is Chen \emph{et al.}'s persistent single-line quickest-change detector \cite{chen2016quickest}. Its reduced-network covariance is marginalized to the observed PMU subset after inversion. Parallel CUSUM statistics stop at the first threshold crossing and select a line. Our declared F01 adapter uses nonoverlapping angle increments at 15 Hz, a startup-only scale/drift estimate and the fixed nominal line catalog. Its white-injection/DC assumptions do not describe all F01 instrumental effects. We preserve both matched-law implementation checks and F01 mismatch failures; no ARL guarantee is transferred to colored noise.
+The published physical comparator is Chen \emph{et al.}'s persistent-line quickest-change detector \cite{chen2016quickest}, which considers single- and double-line outages. Our declared F01 adapter restricts its fixed nominal catalog to single-line hypotheses. Its reduced-network covariance is marginalized to the observed PMU subset after inversion. Parallel CUSUM statistics stop at the first threshold crossing and select a line. The adapter uses nonoverlapping angle increments at 15 Hz and a startup-only scale/drift estimate. Its white-injection/DC assumptions do not describe all F01 instrumental effects. We preserve both matched-law implementation checks and F01 mismatch failures; no ARL guarantee is transferred to colored noise.
 
 The eligible common test for Chen is one persistent line opening or a normal record. Its output has no load family or restoration operator. The independent campaign, C01, therefore separates continuous load/line episodes from persistent-line first-stop decisions. Early stops, wrong sources, omissions and horizon censoring remain visible.
 

@@ -1,0 +1,456 @@
+{
+  "key": "foggo2024pmubage",
+  "retrieved_at": "2026-11-01T03:53:22.539332+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1109%2FTPWRS.2023.3280430",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1109/TPWRS.2023.3280430",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:21.709675+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          31
+        ]
+      ],
+      "date-time": "2026-07-31T15:28:28Z",
+      "timestamp": 1785511708723,
+      "version": "3.56.0"
+    },
+    "reference-count": 31,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "2",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2024-03-01T00:00:00Z",
+          "timestamp": 1709251200000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2024-03-01T00:00:00Z",
+          "timestamp": 1709251200000
+        },
+        "content-version": "am",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2024-03-01T00:00:00Z",
+          "timestamp": 1709251200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2024-03-01T00:00:00Z",
+          "timestamp": 1709251200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/100000015",
+        "name": "U.S. Department of Energy",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "DE-OE0000916"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "DE-OE0000916"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/100000015",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Trans. Power Syst."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2024,
+          3
+        ]
+      ]
+    },
+    "DOI": "10.1109/tpwrs.2023.3280430",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2023,
+          6,
+          1
+        ]
+      ],
+      "date-time": "2023-06-01T17:33:02Z",
+      "timestamp": 1685640782000
+    },
+    "page": "3485-3496",
+    "source": "Crossref",
+    "is-referenced-by-count": 15,
+    "title": [
+      "pmuBAGE: The Benchmarking Assortment of Generated PMU Data for Power System Events"
+    ],
+    "prefix": "10.1109",
+    "volume": "39",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-8547-391X",
+        "authenticated-orcid": false,
+        "given": "Brandon",
+        "family": "Foggo",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Department of Electrical and Computer Engineering, University of California, Riverside, CA, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-1892-2455",
+        "authenticated-orcid": false,
+        "given": "Koji",
+        "family": "Yamashita",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Electrical and Computer Engineering, University of California, Riverside, CA, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-5086-5465",
+        "authenticated-orcid": false,
+        "given": "Nanpeng",
+        "family": "Yu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Electrical and Computer Engineering, University of California, Riverside, CA, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref1",
+        "article-title": "Power systems test case archive",
+        "author": "Christie"
+      },
+      {
+        "key": "ref2",
+        "article-title": "Dynamic models for turbine-governors in power system studies",
+        "year": "2013"
+      },
+      {
+        "key": "ref3",
+        "article-title": "Feasibility assessment of synchronous operations of the North American Eastern and Western interconnections",
+        "author": "Overbye",
+        "year": "2021"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2016.2586460"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2018.2823702"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2020.3018936"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/OAJPE.2020.3029278"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2020.2977349"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/RWS52686.2021.9611789"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2015.2413935"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PESGM.2016.7741772"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SGSMA.2019.8784681"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/OAJPE.2021.3061648"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRD.2016.2590961"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2019.2941565"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2020.2971909"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2018.2816027"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2018.2859323"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PowerTech46648.2021.9494800"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PESGM40551.2019.8973580"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2019.2961561"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TDC.2018.8440469"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2020.2991886"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2020.2986439"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s40565-016-0217-4"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2021.3093521"
+      },
+      {
+        "key": "ref27",
+        "first-page": "94",
+        "article-title": "Survey on independent component analysis",
+        "volume": "2",
+        "author": "Hyvarinen",
+        "year": "1999",
+        "journal-title": "Neural Comput. Surv."
+      },
+      {
+        "key": "ref28",
+        "article-title": "pmuBAGE: The benchmarking assortment of generated PMU data for power system events",
+        "author": "Foggo",
+        "year": "2022"
+      },
+      {
+        "key": "ref29",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1198/106186006X113430"
+      },
+      {
+        "key": "ref30",
+        "first-page": "1",
+        "article-title": "Categorical reparameterization with gumbel-softmax",
+        "volume-title": "Proc. Int. Conf. Learn. Representation",
+        "author": "Jang",
+        "year": "2017"
+      },
+      {
+        "key": "ref31",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2017.634"
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Power Systems"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://ieeexplore.ieee.org/ielam/59/10443972/10141680-aam.pdf",
+        "content-type": "application/pdf",
+        "content-version": "am",
+        "intended-application": "syndication"
+      },
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/59/10443972/10141680.pdf?arnumber=10141680",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2024,
+          3,
+          14
+        ]
+      ],
+      "date-time": "2024-03-14T04:27:53Z",
+      "timestamp": 1710390473000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/10141680/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2024,
+          3
+        ]
+      ]
+    },
+    "references-count": 31,
+    "journal-issue": {
+      "issue": "2"
+    },
+    "URL": "https://doi.org/10.1109/tpwrs.2023.3280430",
+    "relation": {},
+    "ISSN": [
+      "0885-8950",
+      "1558-0679"
+    ],
+    "issn-type": [
+      {
+        "value": "0885-8950",
+        "type": "print"
+      },
+      {
+        "value": "1558-0679",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2024,
+          3
+        ]
+      ]
+    }
+  }
+}

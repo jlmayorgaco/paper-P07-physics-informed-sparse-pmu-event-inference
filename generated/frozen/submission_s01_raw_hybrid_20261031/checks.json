@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "plan_sha256": "7463b2a20cae75f55835cfc5436da944b999e1fe867b8f5a3c05d849eeec4c02",
+  "actual_frozen_model": true,
+  "model_sha256": "9b83975d80bbb7e8ae7a387b65de486808699a93d941f5635f370ea92578efcb",
+  "causal_future_perturbation": true,
+  "causal_prefix_truncation": true,
+  "segmentation_preserves_gaps": true,
+  "first_episode_diagnosis_only": true,
+  "same_family_only": true,
+  "simultaneous_allowed": true,
+  "future_diagnosis_excluded": true,
+  "e6_preserves_missing": true,
+  "fault_generation_integrity_unchanged": true,
+  "gap_censor_not_backdated": true,
+  "numerical_failure_retains_prefix": true
+}

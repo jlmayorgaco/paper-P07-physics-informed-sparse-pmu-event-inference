@@ -1,0 +1,368 @@
+[2604.15686] DAE-Aware Bayesian Inference for Joint Generator-Network Parameter Estimation (https://arxiv.org/abs/2604.15686)
+citeturn21view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://arxiv.org/abs/2604.15686","lineno":null}); Total lines: 161
+L0: 【0†Search】 【1†Submit】 【2†Donate†info.arxiv.org】 【3†Log in】
+L1: 
+L2: Search arXiv [Input: Search papers by title, author, abstract, or ID...] [Input] [Input]
+L3: 
+L4: Press Enter to search · 【4†Advanced search】
+L5: 
+L6: # Electrical Engineering and Systems Science > Systems and Control
+L7: 
+L8: [Submitted on 17 Apr 2026]
+L9: # Title:DAE-Aware Bayesian Inference for Joint Generator-Network Parameter Estimation
+L10: 
+L11: Authors:【5†Abdallah Alalem Albustami】, 【6†Ahmad F. Taha】, 【7†Sankaran Mahadevan】
+L12: 
+L13: View a PDF of the paper titled DAE-Aware Bayesian Inference for Joint Generator-Network Parameter Estimation, by Abdallah Alalem Albustami and 2 other authors
+L14: 
+L15: 【8†View PDF】 【9†HTML (experimental)】
+L16: > Abstract:This paper addresses the classic problem of parameter estimation (PE) in multimachine power system models. Such models are typically described by a set of nonlinear differential-algebraic equations (DAE), where generator physics and network power flow equations are coupled.
+L17: DAE models are well established in classic power system textbooks, but parameter identification and estimation of generator inertia and damping together with network branch resistances and reactances for these models remain relatively underexplored. In contrast to prior approaches that rely on ODE approximations, this paper develops a joint Bayesian inference framework to perform PE of generator and network parameters while exploiting grid DAE models.
+L18: It further combines physics-aware statistical modeling with computationally efficient posterior sampling to make joint Bayesian calibration practical. Results on the IEEE 9-bus system show accurate parameter recovery with well-behaved posterior uncertainty, while a short 39-bus study provides evidence that the framework remains effective on a materially larger joint-estimation problem. These results are obtained without requiring overly conservative priors.
+L19: Subjects:  | Systems and Control (eess.SY)
+L20: Cite as:  | 【10†arXiv:2604.15686】 [eess.SY]
+L21:    | (or 【11†arXiv:2604.15686v1】 [eess.SY] for this version)
+L22:    | 【12†https://doi.org/10.48550/arXiv.2604.15686†doi.org】 arXiv-issued DOI via DataCite
+L23: ## Submission history
+L24: 
+L25: From: Abdallah Alalem Albustami [【13†view email】]
+L26: [v1] Fri, 17 Apr 2026 04:18:08 UTC (932 KB)
+L27: 
+L28: Full-text links:
+L29: 
+L30: ## Access Paper:
+L31: 
+L32: View a PDF of the paper titled DAE-Aware Bayesian Inference for Joint Generator-Network Parameter Estimation, by Abdallah Alalem Albustami and 2 other authors
+L33: 
+L34:   * 【8†View PDF】
+L35:   * 【9†HTML (experimental)】
+L36:   * 【14†TeX Source】
+L37: 
+L38: 【15†view license】
+L39: ### Current browse context:
+L40: 
+L41: eess.SY
+L42: 
+L43: 【16†< prev】   |   【17†next >】
+L44: 
+L45: 【18†new】 | 【19†recent】 | 【20†2026-04】
+L46: 
+L47: Change to browse by:
+L48: 
+L49: 【21†cs】
+L50: 【22†cs.SY】
+L51: 【23†eess】
+L52: 
+L53: ### References & Citations
+L54: 
+L55:   * 【24†NASA ADS†ui.adsabs.harvard.edu】
+L56:   * 【25†Google Scholar†scholar.google.com】
+L57:   * 【26†Semantic Scholar†api.semanticscholar.org】
+L58: 
+L59: [Button: export BibTeX citation] Loading...
+L60: 
+L61: ## BibTeX formatted citation
+L62: 
+L63: [Button: ×]
+L64: 
+L65: loading...
+L66: 
+L67: Data provided by:
+L68: 
+L69: ### Bookmark
+L70: 
+L71: [Input] Bibliographic Tools
+L72: # Bibliographic and Citation Tools
+L73: 
+L74: [Input] Bibliographic Explorer Toggle
+L75: 
+L76: Bibliographic Explorer (【27†What is the Explorer?†info.arxiv.org】)
+L77: 
+L78: [Input] Connected Papers Toggle
+L79: 
+L80: Connected Papers (【28†What is Connected Papers?†www.connectedpapers.com】)
+L81: 
+L82: [Input] Litmaps Toggle
+L83: 
+L84: Litmaps (【29†What is Litmaps?†www.litmaps.co】)
+L85: 
+L86: [Input] scite.ai Toggle
+L87: 
+L88: scite Smart Citations (【30†What are Smart Citations?†www.scite.ai】)
+L89: 
+L90: [Input] Code, Data, Media
+L91: # Code, Data and Media Associated with this Article
+L92: 
+L93: [Input] alphaXiv Toggle
+L94: 
+L95: alphaXiv (【31†What is alphaXiv?†alphaxiv.org】)
+L96: 
+L97: [Input] Links to Code Toggle
+L98: 
+L99: CatalyzeX Code Finder for Papers (【32†What is CatalyzeX?†www.catalyzex.com】)
+L100: 
+L101: [Input] DagsHub Toggle
+L102: 
+L103: DagsHub (【33†What is DagsHub?†dagshub.com】)
+L104: 
+L105: [Input] GotitPub Toggle
+L106: 
+L107: Gotit.pub (【34†What is GotitPub?†gotit.pub】)
+L108: 
+L109: [Input] Huggingface Toggle
+L110: 
+L111: Hugging Face (【35†What is Huggingface?†huggingface.co】)
+L112: 
+L113: [Input] ScienceCast Toggle
+L114: ScienceCast (【36†What is ScienceCast?†sciencecast.org】)
+L115: 
+L116: [Input] Demos
+L117: # Demos
+L118: 
+L119: [Input] Replicate Toggle
+L120: 
+L121: Replicate (【37†What is Replicate?†replicate.com】)
+L122: 
+L123: [Input] Spaces Toggle
+L124: 
+L125: Hugging Face Spaces (【38†What is Spaces?†huggingface.co】)
+L126: 
+L127: [Input] Spaces Toggle
+L128: 
+L129: TXYZ.AI (【39†What is TXYZ.AI?†txyz.ai】)
+L130: 
+L131: [Input] Related Papers
+L132: # Recommenders and Search Tools
+L133: 
+L134: [Input] Link to Influence Flower
+L135: 
+L136: Influence Flower (【40†What are Influence Flowers?†influencemap.cmlab.dev】)
+L137: 
+L138: [Input] Core recommender toggle
+L139: 
+L140: CORE Recommender (【41†What is CORE?†core.ac.uk】)
+L141: 
+L142:   * Author
+L143:   * Venue
+L144:   * Institution
+L145:   * Topic
+L146: 
+L147: [Input] About arXivLabs
+L148: # arXivLabs: experimental projects with community collaborators
+L149: 
+L150: arXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.
+L151: 
+L152: Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.
+L153: Have an idea for a project that will add value for arXiv's community? 【42†Learn more about arXivLabs†info.arxiv.org】.
+L154: 
+L155: 【43†Which authors of this paper are endorsers?】 | Disable MathJax (【44†What is MathJax?†info.arxiv.org】)
+L156: 
+L157: We gratefully acknowledge support from our major funders, 【45†member institutions†info.arxiv.org】, , and all contributors.
+L158: 【46†About†info.arxiv.org】 · 【47†Help†info.arxiv.org】 · 【48†Contact†info.arxiv.org】 · 【49†Subscribe†info.arxiv.org】 · 【50†Copyright†info.arxiv.org】 · 【51†Privacy†info.arxiv.org】 · 【52†Accessibility†info.arxiv.org】 · 【53†Operational Status (opens in new tab)†status.arxiv.org】
+L159: 
+L160: Major funding support from
+--------------------------------------------------------------------------------
+[2309.10200] Harnessing Kernel Regression for Stochastic State Estimation in Solar-Integrated Power Grids (https://arxiv.org/abs/2309.10200)
+citeturn21view1 [wordlim: 200] Crawled: 5 months ago; Content type: text/html; Source: open({"ref_id":"https://arxiv.org/abs/2309.10200","lineno":null}); Total lines: 195
+L0: 【0†Skip to main content】
+L1: 
+L2:  【56†Image: Cornell University】
+L3: 
+L4: 【1†Learn about arXiv becoming an independent nonprofit.†tech.cornell.edu】
+L5: 
+L6:  We gratefully acknowledge support from the Simons Foundation, 【2†member institutions†info.arxiv.org】, and all contributors. 【3†Donate†info.arxiv.org】
+L7: 
+L8: 【57†Image: arxiv logo】 > 【4†eess】 > arXiv:2309.10200
+L9: 
+L10: 【5†Help†info.arxiv.org】 | 【6†Advanced Search】
+L11:  All fields Title Author Abstract Comments Journal reference ACM classification MSC classification Report number arXiv identifier DOI ORCID arXiv author ID Help pages Full text
+L12: 
+L13: Search
+L14: 
+L15: 【58†Image: arXiv logo】
+L16: 
+L17: 【7† †www.cornell.edu】
+L18: 
+L19: GO
+L20: ## quick links
+L21: 
+L22:   * 【8†Login】
+L23:   * 【5†Help Pages†info.arxiv.org】
+L24:   * 【9†About†info.arxiv.org】
+L25: 
+L26: # Electrical Engineering and Systems Science > Systems and Control
+L27: 
+L28: arXiv:2309.10200 (eess)
+L29: 
+L30: [Submitted on 18 Sep 2023]
+L31: # Title:Harnessing Kernel Regression for Stochastic State Estimation in Solar-Integrated Power Grids
+L32: 
+L33: Authors:【10†Mohammad Ensaf】, 【11†Masoud Barati】
+L34: 
+L35: View a PDF of the paper titled Harnessing Kernel Regression for Stochastic State Estimation in Solar-Integrated Power Grids, by Mohammad Ensaf and 1 other authors
+L36: 
+L37: 【12†View PDF】
+L38: > Abstract:The paper presents a Gaussian/kernel process regression method for real-time state estimation and forecasting of phase angle and angular speed in systems with a high penetration of solar generation units, operating under a sparse measurements regime on both sunny and cloudy days. The method treats unknown terms in the swing equations, such as solar power, as random processes, thereby transforming these equations into stochastic differential equations.
+L39: The proposed method accurately forecasts and estimates both observed and unobserved operating states, delivering forecasts comparable to those of the standard data-driven Gaussian/kernel process for observed system states. Additionally, the method demonstrates improved accuracy with increased observation frequency and reduced measurement errors in the IEEE 14-bus test system.
+L40: Subjects: Systems and Control (eess.SY)
+L41: Cite as: 【13†arXiv:2309.10200】 [eess.SY]
+L42:   (or  【14†arXiv:2309.10200v1】 [eess.SY] for this version)
+L43:   【15†https://doi.org/10.48550/arXiv.2309.10200†doi.org】
+L44: 
+L45: Focus to learn more
+L46: 
+L47:   arXiv-issued DOI via DataCite
+L48: ## Submission history
+L49: 
+L50: From: Mohammad Ensaf [【16†view email】]
+L51: [v1] Mon, 18 Sep 2023 23:06:15 UTC (3,386 KB)
+L52: 
+L53: Full-text links:
+L54: 
+L55: ## Access Paper:
+L56: 
+L57:  View a PDF of the paper titled Harnessing Kernel Regression for Stochastic State Estimation in Solar-Integrated Power Grids, by Mohammad Ensaf and 1 other authors
+L58: 
+L59:   * 【12†View PDF】
+L60:   * 【17†TeX Source 】
+L61: 
+L62: 【18†view license】
+L63: ### Current browse context:
+L64: 
+L65: eess.SY
+L66: 
+L67: 【19†< prev】    |   【20†next >】
+L68: 
+L69: 【21†new】  |  【22†recent】  | 【23†2023-09】
+L70: 
+L71: Change to browse by:
+L72: 
+L73: 【24†cs】
+L74: 【25†cs.SY】
+L75: 【26†eess】
+L76: 
+L77: ### References & Citations
+L78: 
+L79:   * 【27†NASA ADS†ui.adsabs.harvard.edu】
+L80:   * 【28†Google Scholar†scholar.google.com】
+L81:   * 【29†Semantic Scholar†api.semanticscholar.org】
+L82: 
+L83: export BibTeX citation Loading...
+L84: 
+L85: ## BibTeX formatted citation
+L86: 
+L87: ×
+L88: 
+L89: loading...
+L90: 
+L91: Data provided by:
+L92: ### Bookmark
+L93: 
+L94: 【30† †www.bibsonomy.org】 【31† †reddit.com】
+L95: 
+L96: Bibliographic Tools
+L97: 
+L98: # Bibliographic and Citation Tools
+L99: 
+L100: Bibliographic Explorer Toggle
+L101: 
+L102: Bibliographic Explorer (【32†What is the Explorer?†info.arxiv.org】)
+L103: 
+L104: Connected Papers Toggle
+L105: 
+L106: Connected Papers (【33†What is Connected Papers?†www.connectedpapers.com】)
+L107: 
+L108: Litmaps Toggle
+L109: 
+L110: Litmaps (【34†What is Litmaps?†www.litmaps.co】)
+L111: 
+L112: scite.ai Toggle
+L113: 
+L114: scite Smart Citations (【35†What are Smart Citations?†www.scite.ai】)
+L115: 
+L116: Code, Data, Media
+L117: # Code, Data and Media Associated with this Article
+L118: 
+L119: alphaXiv Toggle
+L120: 
+L121: alphaXiv (【36†What is alphaXiv?†alphaxiv.org】)
+L122: 
+L123: Links to Code Toggle
+L124: 
+L125: CatalyzeX Code Finder for Papers (【37†What is CatalyzeX?†www.catalyzex.com】)
+L126: 
+L127: DagsHub Toggle
+L128: 
+L129: DagsHub (【38†What is DagsHub?†dagshub.com】)
+L130: 
+L131: GotitPub Toggle
+L132: 
+L133: Gotit.pub (【39†What is GotitPub?†gotit.pub】)
+L134: 
+L135: Huggingface Toggle
+L136: 
+L137: Hugging Face (【40†What is Huggingface?†huggingface.co】)
+L138: 
+L139: ScienceCast Toggle
+L140: 
+L141: ScienceCast (【41†What is ScienceCast?†sciencecast.org】)
+L142: 
+L143: Demos
+L144: # Demos
+L145: 
+L146: Replicate Toggle
+L147: 
+L148: Replicate (【42†What is Replicate?†replicate.com】)
+L149: 
+L150: Spaces Toggle
+L151: 
+L152: Hugging Face Spaces (【43†What is Spaces?†huggingface.co】)
+L153: 
+L154: Spaces Toggle
+L155: 
+L156: TXYZ.AI (【44†What is TXYZ.AI?†txyz.ai】)
+L157: 
+L158: Related Papers
+L159: 
+L160: # Recommenders and Search Tools
+L161: 
+L162: Link to Influence Flower
+L163: 
+L164: Influence Flower (【45†What are Influence Flowers?†influencemap.cmlab.dev】)
+L165: 
+L166: Core recommender toggle
+L167: 
+L168: CORE Recommender (【46†What is CORE?†core.ac.uk】)
+L169: 
+L170:   * Author
+L171:   * Venue
+L172:   * Institution
+L173:   * Topic
+L174: 
+L175:  About arXivLabs
+L176: # arXivLabs: experimental projects with community collaborators
+L177: 
+L178: arXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.
+L179: 
+L180: Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.
+L181: Have an idea for a project that will add value for arXiv's community? 【47†Learn more about arXivLabs†info.arxiv.org】.
+L182: 
+L183: 【48†Which authors of this paper are endorsers?】 | Disable MathJax (【49†What is MathJax?†info.arxiv.org】)
+L184: 
+L185:   * 【9†About†info.arxiv.org】
+L186:   * 【5†Help†info.arxiv.org】
+L187: 
+L188:   * contact arXiv Click here to contact arXiv 【50† Contact†info.arxiv.org】
+L189:   * subscribe to arXiv mailings Click here to subscribe 【51† Subscribe†info.arxiv.org】
+L190:   * 【52†Copyright†info.arxiv.org】
+L191:   * 【53†Privacy Policy†info.arxiv.org】
+L192: 
+L193:   * 【54†Web Accessibility Assistance†info.arxiv.org】
+L194:   * 【55†arXiv Operational Status †status.arxiv.org】
+--------------------------------------------------------------------------------
+Internal Error ()
+citeturn21view2 [wordlim: 200] Source: open({"ref_id":"https://doi.org/10.1016/j.ijforecast.2022.03.007","lineno":null}); 
+URL https://doi.org/10.1016/j.ijforecast.2022.03.007 is not accessible via this tool.--------------------------------------------------------------------------------
+Internal Error ()
+citeturn21view3 [wordlim: 200] Source: open({"ref_id":"https://doi.org/10.1109/TPWRS.2021.3104536","lineno":null}); 
+URL https://doi.org/10.1109/TPWRS.2021.3104536 is not accessible via this tool.

@@ -1,0 +1,92 @@
+{
+  "status": "VISUAL_REVIEW_COMPLETE_FOR_CURRENT_DOCUMENTS",
+  "pdf_sha256": {
+    "main": "93a00d2d05d6ce183585254f3d4ab327932300e286687c365e6627ec783ed7fd",
+    "supplement": "03a918358b0e5dc28b26b050f0f68a78a555a0d138f4bd2674c24c814e63f842",
+    "historical_notes": "b343e3df8c07c1cf3d68dd69c8311719c6e5bc612af3199dcbd2030994ace4dd"
+  },
+  "inspected_current_pages": {
+    "main": [
+      4,
+      5,
+      8,
+      9
+    ],
+    "supplement": [],
+    "historical_notes": [
+      33
+    ]
+  },
+  "unchanged_raster_pages_from_prior_review": {
+    "main": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "supplement": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "historical_notes": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ]
+  },
+  "checks": [
+    "Both protected figures visually inspected at final layout; all16 protected hashes pass",
+    "Changed main pages8/9 and historical page33 inspected; no clipping or overlap observed",
+    "Current supplement raster-identical on all10 pages to prior visual review",
+    "Author-confirmed correspondence, five biographies and21 section credits plus biography credit retained"
+  ],
+  "scope": "Visual and provenance checks, not scientific submission readiness",
+  "build_log": "build/submission_s01_citation_build.log",
+  "raster_comparison": "build/submission_s01_citation_visual/RASTER_COMPARISON.json",
+  "previous_visual_review": "docs/submission_successor_20261031/checks/VISUAL_QA_CORRESPONDENCE.json"
+}

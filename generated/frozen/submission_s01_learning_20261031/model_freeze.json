@@ -1,0 +1,100 @@
+{
+  "status": "FROZEN_AFTER_VALIDATION_BEFORE_HOLDOUT",
+  "selected_variant": "SHORT",
+  "selected_model_path": "models/SHORT.joblib",
+  "selected_model_sha256": "9b83975d80bbb7e8ae7a387b65de486808699a93d941f5635f370ea92578efcb",
+  "plan_sha256": "b6ab35502bae7693e0b1eb41d26005d66267b17f14686e2387162995618c8993",
+  "selection_rule": [
+    "Maximize validation joint_before_off event count",
+    "Minimize validation extra alarms on a tie",
+    "Prefer BASELINE on a complete tie"
+  ],
+  "validation": [
+    {
+      "variant": "BASELINE",
+      "partition": "validation_14",
+      "records": 16,
+      "groups": 8,
+      "events": 192,
+      "joint_before_off": 92,
+      "extras": 0,
+      "load_before_off": 5,
+      "line_before_off": 87,
+      "normal_FA": 0,
+      "normal_exposure_s": 0,
+      "open_eof": 0,
+      "prediction_json_sha256": {
+        "SIM0011_M03_PILOT/S005": "1fae1302df5bd18660702d3c9f22ff58f81898a7470884a7a6dc944174d87465",
+        "SIM0011_M03_PILOT/S006": "dd4b1d78402a78f10c1388c80bdc54a088fcd227fd79b3a53feb6246a381f332",
+        "SIM0011_M03_PILOT/S011": "d921fad6576643037e9055a2cd6c484bde4b176bd869bbfd38c2290ce716d20c",
+        "SIM0011_M03_PILOT/S012": "0dc399d74307267064763a7c44669e7cc562eba77d234caf9b0e5085b8d7ae74",
+        "SIM0012_CLOSURE_HOLDOUT/S009": "949e15d2caf76f9245a1cde726331549730e66211c7f62b80d091c5244631096",
+        "SIM0012_CLOSURE_HOLDOUT/S010": "b3ac5ce8d7cb3c1aab02843c8b7342707ca95d04493a61d599176c4f5871f8d5",
+        "SIM0013_MEAN_COVARIANCE_HOLDOUT/S005": "a9e2d6743e0fce93273d22b33c3d26b7eca092ad2408b765f3c962b11628e7bd",
+        "SIM0013_MEAN_COVARIANCE_HOLDOUT/S006": "6765b7494716e2cddaf19eadb240f7a624c269f1e84bb32334b0cde5ce685833",
+        "SIM0014_RECOVERY_OBSERVER_HOLDOUT/S011": "d6a22f707e204182e02df18b2e38c76e26f7791683f7dd980dc99eebc6ad345f",
+        "SIM0014_RECOVERY_OBSERVER_HOLDOUT/S012": "f81fe9ba4c646f08c6a61e7ff95b6e68a0a026e411d250d4197b2275a8642a66",
+        "SIM0015_HYPOTHESIS_REPAIR_HOLDOUT/S005": "db91add14217bfd703514e02ba096c5cd5e8cce8c238020b72af216843d51524",
+        "SIM0015_HYPOTHESIS_REPAIR_HOLDOUT/S006": "07e6844aa0c8def0336984390dcadcb72dc708a520958e18f62248270f512082",
+        "SIM0016_MODE_CONFIRMATION_HOLDOUT/S005": "37be401ec1caad79c6b080611a4142a806b228a20964e1bb28d5e351cf82e368",
+        "SIM0016_MODE_CONFIRMATION_HOLDOUT/S006": "3c197666384be8d6fba08a6b71e7799d04fd56e59835aef114f568aee7da4b58",
+        "SIM0018_BOUNDARY_HOLDOUT/S005": "93f693ac0de1a6b5006ba6e9108d2baa8c7800d16a9eea06b0e876f1555168ca",
+        "SIM0018_BOUNDARY_HOLDOUT/S006": "776795d5e1a20fb5018f7a4f74ac8021f8a3be52fc90a7a007ec05e7849849ec"
+      },
+      "plan_sha256": "b6ab35502bae7693e0b1eb41d26005d66267b17f14686e2387162995618c8993"
+    },
+    {
+      "variant": "SHORT",
+      "partition": "validation_14",
+      "records": 16,
+      "groups": 8,
+      "events": 192,
+      "joint_before_off": 108,
+      "extras": 0,
+      "load_before_off": 16,
+      "line_before_off": 92,
+      "normal_FA": 0,
+      "normal_exposure_s": 0,
+      "open_eof": 0,
+      "prediction_json_sha256": {
+        "SIM0011_M03_PILOT/S005": "526c94df6d92cae0d4f52f958b8a0f42d3e8d3a3b9f80d01ebf26c3ae207bea4",
+        "SIM0011_M03_PILOT/S006": "e4b996f2b43a19e29e0fe154b82b9ad016b7ac89a293478a13d260b795b8a356",
+        "SIM0011_M03_PILOT/S011": "43c25669709a577c8ea7ae61080255ae28fb7fc3a11ede0fb4eb440b03a0a18d",
+        "SIM0011_M03_PILOT/S012": "f2a54fb12562dfcf774e4f1ed542bcf3a33097d5230e4d4edb4524615d530401",
+        "SIM0012_CLOSURE_HOLDOUT/S009": "d1c7ab70975c75ee5a7ea6ff22e6c48e63a334faca4129ce8e65ab552427c8dc",
+        "SIM0012_CLOSURE_HOLDOUT/S010": "648674e3045cb7b1e93941a9a50b02f15c97049b39067d58e1aee1b276eceb09",
+        "SIM0013_MEAN_COVARIANCE_HOLDOUT/S005": "75f5fbcb327413b4365f773ccbb4a0b1857b37fb23844cae7fc59046cd43b8e4",
+        "SIM0013_MEAN_COVARIANCE_HOLDOUT/S006": "b907cb17ddd6ab3bdca52c3abab68edaa3d7ef5ea05b5781731ef0977e6ca707",
+        "SIM0014_RECOVERY_OBSERVER_HOLDOUT/S011": "e29cad7c34cf32379fd386f92ceba435c0168e2ba6c124fc8437e7a46a49f8a4",
+        "SIM0014_RECOVERY_OBSERVER_HOLDOUT/S012": "7e5b0b39be4dd1435b8a0b3ae28563d8372f8fc60591cd14e511a4566765239a",
+        "SIM0015_HYPOTHESIS_REPAIR_HOLDOUT/S005": "768e247b37bbd38ee1739bc2150654286f102f6d6e85969df9e58a32cf00b87e",
+        "SIM0015_HYPOTHESIS_REPAIR_HOLDOUT/S006": "9dc45ccbe5a65307d881dfc8cd5816d8202f2c47ba9190f50cf4666bae7c5311",
+        "SIM0016_MODE_CONFIRMATION_HOLDOUT/S005": "d4b0ebfbcf8d89fcbedd7d31082ad5e7de63481e66dd54008d772e38076cc6a1",
+        "SIM0016_MODE_CONFIRMATION_HOLDOUT/S006": "525f1e418d9d0f85dc1bf1b91bb04f16f1ee3428a1c1aaab30c968d3a35a6b6a",
+        "SIM0018_BOUNDARY_HOLDOUT/S005": "cdda154d8a92909f1421310ea481c36391ca78326fb1fdaa0977829a3850f24f",
+        "SIM0018_BOUNDARY_HOLDOUT/S006": "8c43592c43a053e2752c868b33e60c5d9995482cae39b391e6d898130fe11f92"
+      },
+      "plan_sha256": "b6ab35502bae7693e0b1eb41d26005d66267b17f14686e2387162995618c8993"
+    }
+  ],
+  "candidate_model_sha256": {
+    "BASELINE": "2fcccced9792e1bd13d4ce300faedd1e44a93e25b0d578076701462ba023652d",
+    "SHORT": "9b83975d80bbb7e8ae7a387b65de486808699a93d941f5635f370ea92578efcb"
+  },
+  "holdout_observations_read": false,
+  "raw_training": false,
+  "refit": false,
+  "implementation_sha256": {
+    "checks.py": "883a30f12c36732b0906662f32b4f8a4b8482b5fbbfe9256923019b8e478cb14",
+    "common.py": "4505c9fffd254949993ca25c2be895232a0bac8678f3dc56cc25824403a9c48c",
+    "infer.py": "89ce7d41662e75f78c9a4f092542cbb315c0edd61a4ec143b38e1d64a40d4dc9",
+    "kernels.py": "ebf6d095446439a54c63d0c71839e4f536fa113388749301c3ed7aa4f65cc4d7",
+    "preprocess.py": "63349fe92f2ea6ee029ab2afb6d84bf86f3590fb947b25e01a3d19079890f6e3",
+    "publication.py": "b56a5eda1b7ae9fd2bb4f293ae1d193c0760bccf58a67108b4c885a66eb38e3a",
+    "run.py": "8d88f670f6cffe5f6efe52ac2ca477ac483747fd2b692ba0d293e202013383bf",
+    "validation_metrics.py": "fb987cae175c20b435199a553df02192a3ad3c8bcec8649307db5cfea51a9b84",
+    "reference/model/assets.json": "e237d417f12f1fa3e59c62166d980d017c70b5eab3f1b7733b618e3326a9c7f9",
+    "reference/model/reporting_config.json": "2f9759a0f1f062dd76a16e0b873ced9eed3f3b8402a3a1a9cdd60872148f9d01",
+    "reference/model/stochastic_model.json": "f873cfcd4267f499f719c9003f5a005fdafb019dfdd5b35ac1d62129e870da29"
+  }
+}

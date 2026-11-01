@@ -1,0 +1,109 @@
+Quick Line Fault Detection and Identiﬁcation Using High-Fidelity (https://d197for5662m48.cloudfront.net/documents/publicationstatus/169966/preprint_pdf/fb88c972e89f2492099d5d5e00da2aac.pdf)
+citeturn34search0 [wordlim: 200] Published: 6 months ago; Quick Line Fault Detection and Identiﬁcation Using ... regarding the current system state and its anticipated evolution ... vide Global Positioning System (GPS) time-stamped voltage
+JOURNAL OF LATEX CLASS FILES, VOL. 14, NO. 8, AUGUST 2015
+1
+Quick Line Fault Detection and Identiﬁcation Using
+High-Fidelity Models of Transient Dynamics
+Austin Warner, Student Member, IEEE, Dakota Hamilton, Student Member, IEEE,
+Georgios Fellouris, Member, IEEE, and Dionysios Aliprantis, Senior Member, IEEE
+Abstract—A robust, versatile algorithm is proposed for quick
+detection and identiﬁcation of transmission line faults. Our
+approach is based on time-domain simulations of power system
+transient dynamics using high-ﬁdelity models. The proposed al-
+gorithm operates on real-time data from available PMU sensors,
+which can be sparsely placed and located far from the line fault.
+The algorithm successfully identiﬁes faults during the transient
+regime, while avoiding false alarms. It is also shown to be
+robust against uncertainties in operational parameters, as well
+as adverse events such as sudden load changes. A case study is
+included to illustrate algorithm design, tuning, and performance.
+Index Terms—Change detection algorithms, fault detection,
+phasor measurement units, power system dynamics, power sys-
+tem faults, power system simulation.
+I. INTRODUCTION
+S
+ITUATIONAL awareness is essential for the reliable and
+secure operation of power systems. This term includes
+an array of technologies that provide precise information
+regarding the current system state and its anticipated evolution
+over time, including actions taken to restore or maintain
+normal operation [1]. Due to the highly interconnected nature
+of modern power networks, transmission system operators
+(TSOs) must also be aware of the state of neighboring systems
+that may affect the reliability of their control area. Poor situa-
+tional awareness and lack of information sharing across TSO
+boundaries have been signiﬁcant contributing factors in several
+recent blackouts across the United States and Europe [2]–[4].
+Recent advancements in power system measurement and
+monitoring technology, such as the proliferation of phasor
+measurement units (PMUs), provide new opportunities for
+improving situational awareness in power systems. PMUs pro-
+vide Global Positioning System (GPS) time-stamped voltage
+and current phasor data (magnitude and phase angle) at various
+locations around the network.
+The use of PMU data to quickly detect and identify line
+faults in transmission networks is of growing interest in the
+power systems literature [5]–[12]. In [5], the changes in phase
+angles are monitored and compared against their expected be-
+havior following a transmission line fault, which is computed
+This work was supported by NSF-AMPS 1736454. (Corresponding author:
+Austin Warner.)
+A. Warner and G. Fellouris are with the Department of Statistics, Uni-
+versity of Illinois Urbana–Champaign, Urbana, IL 61801 USA (e-mail:
+awarner5@illinois.edu; fellouri@illinois.edu).
+D. Hamilton and D. Aliprantis are with the Elmore Family School of
+Electrical and Computer Engineering, Purdue University, West Lafayette, IN
+47907 USA (e-mail: hamilt89@purdue.edu; dionysis@purdue.edu).
+based on the linearized, dc power ﬂow equations. Method-
+ology from the quick change detection (QCD) literature was
+introduced in [6], incorporating the persistent nature of the
+fault to detect and identify outages, and a QCD framework
+has since been used in several works [7]–[9]. In QCD, a
+sequence of measurements is obtained online, and an abrupt
+change occurs in the statistical behavior of the measurements.
+The goal is to detect this change as quickly as possible
+while maintaining a desired false alarm rate [13]. Applied to
+situational awareness in power systems, QCD methodology is
+used to detect transmission line faults by monitoring PMU
+data streams for changes characterized by a line fault.
+The algorithms developed in [5], [6] are based on steady-
+state or quasi-steady-state power ﬂow models that are valid
+on the order of minutes to hours. That is, it is assumed that
+the fast dynamics of the system have settled out before a
+line outage can be detected. However, power system transient
+dynamics (developing over sub-second timescales) are often
+critical in ensuring system stability. Therefore, it is important
+to quickly detect and identify faults within these timescales,
+allowing system operators to anticipate the evolution of system
+dynamics and take appropriate actions. In [10], a method is
+proposed for line outage detection at fast timescales using
+the bus impedance matrix, but the transient dynamics of the
+system are not explicitly modeled.
+Some recent works have attempted to consider the transient
+response of the system in line outage detection algorithms,
+leveraging the high-frequency (30–120 Hz), time-synchronized
+sampling of PMU sensors. In [7], the modeling in [6] is ex-
+tended to include time-dependent participation factor matrices
+that model the impact of governor dynamics on changes in
+generator power output, and a QCD procedure is proposed
+to incorporate the transient dynamics of the fault. A small-
+signal, time-variant model of the system dynamics is obtained
+by taking the derivative of the nonlinear, ac power ﬂow
+equations with respect to time in [8]. In [11], the generator
+swing equations are introduced to incorporate the rotor me-
+chanical dynamics in the proposed sparse recovery algorithm.
+Other works have addressed the scalability of the QCD-based
+approach [9], as well as the detection and identiﬁcation of
+multiple simultaneous line outages [11], [12].
+While [7], [8], [11] account for the transient response of
+the system through sensitivities of the power ﬂow equations to
+changes in power injections or the generator swing equations,
+such models represent the slower dynamics (timescales on the
+order of a few seconds) of automatic generation controls, speed
+governors, and generator mechanical dynamics. In contrast, we--------------------------------------------------------------------------------
+ieeexplore.ieee.org (https://ieeexplore.ieee.org/document/9865124/)
+citeturn34view0 [wordlim: 200] Crawled: 2 weeks ago; Content type: text/html; Source: open({"ref_id":"https://ieeexplore.ieee.org/document/9865124/","lineno":null}); Total lines: 3
+L0: # JavaScript is disabled
+L1: 
+L2: In order to continue, we need to verify that you're not a robot. This requires JavaScript. Enable JavaScript and then reload the page.
+

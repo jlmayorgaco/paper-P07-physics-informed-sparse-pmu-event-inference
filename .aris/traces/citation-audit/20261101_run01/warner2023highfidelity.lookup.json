@@ -1,0 +1,195 @@
+{
+  "key": "warner2023highfidelity",
+  "retrieved_at": "2026-11-01T03:53:22.093555+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.36227%2Ftechrxiv.23264519.v1",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.36227/techrxiv.23264519.v1",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:06.894605+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          6,
+          3
+        ]
+      ],
+      "date-time": "2026-06-03T20:11:28Z",
+      "timestamp": 1780517488353,
+      "version": "3.54.1"
+    },
+    "posted": {
+      "date-parts": [
+        [
+          2023,
+          6,
+          16
+        ]
+      ]
+    },
+    "reference-count": 0,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2023,
+              6,
+              16
+            ]
+          ],
+          "date-time": "2023-06-16T00:00:00Z",
+          "timestamp": 1686873600000
+        },
+        "content-version": "unspecified",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [],
+    "abstract": "<jats:p>A robust, versatile algorithm is proposed for quick detection and\nidentification of transmission line faults. Our approach is based on\ntime-domain simulations of power system transient dynamics using\nhigh-fidelity models. The proposed algorithm operates on real-time data\nfrom available PMU sensors, which can be sparsely placed and located far\nfrom the line fault. The algorithm successfully identifies faults during\nthe transient regime, while avoiding false alarms. It is also shown to\nbe robust against uncertainties in operational parameters, as well as\nadverse events such as sudden load changes. A case study is included to\nillustrate algorithm design, tuning, and performance.</jats:p>",
+    "DOI": "10.36227/techrxiv.23264519.v1",
+    "type": "posted-content",
+    "created": {
+      "date-parts": [
+        [
+          2023,
+          6,
+          16
+        ]
+      ],
+      "date-time": "2023-06-16T15:54:14Z",
+      "timestamp": 1686930854000
+    },
+    "source": "Crossref",
+    "is-referenced-by-count": 0,
+    "title": [
+      "Quick Line Fault Detection and Identification Using High-Fidelity Models of Transient Dynamics"
+    ],
+    "prefix": "10.36227",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0001-5945-5913",
+        "authenticated-orcid": false,
+        "given": "Austin",
+        "family": "Warner",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "University of Illinois Urbana-Champaign"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Dakota",
+        "family": "Hamilton",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Georgios",
+        "family": "Fellouris",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-4255-4944",
+        "authenticated-orcid": false,
+        "given": "Dionysios",
+        "family": "Aliprantis",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "container-title": [],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.23264519.v1",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2026,
+          6,
+          3
+        ]
+      ],
+      "date-time": "2026-06-03T19:46:24Z",
+      "timestamp": 1780515984000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://www.techrxiv.org/doi/full/10.36227/techrxiv.23264519.v1"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2023,
+          6,
+          16
+        ]
+      ]
+    },
+    "references-count": 0,
+    "URL": "https://doi.org/10.36227/techrxiv.23264519.v1",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2023,
+          6,
+          16
+        ]
+      ]
+    },
+    "subtype": "preprint"
+  }
+}

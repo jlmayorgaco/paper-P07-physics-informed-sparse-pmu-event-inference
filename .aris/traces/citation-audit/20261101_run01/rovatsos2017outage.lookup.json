@@ -1,0 +1,477 @@
+{
+  "key": "rovatsos2017outage",
+  "retrieved_at": "2026-11-01T03:53:21.887061+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1109%2FTSP.2017.2673802",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1109/TSP.2017.2673802",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:01.482262+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          28
+        ]
+      ],
+      "date-time": "2026-10-28T16:57:15Z",
+      "timestamp": 1793206635014,
+      "version": "4.5.0"
+    },
+    "reference-count": 23,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "11",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2017,
+              6,
+              1
+            ]
+          ],
+          "date-time": "2017-06-01T00:00:00Z",
+          "timestamp": 1496275200000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2017,
+              6,
+              1
+            ]
+          ],
+          "date-time": "2017-06-01T00:00:00Z",
+          "timestamp": 1496275200000
+        },
+        "content-version": "am",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2017,
+              6,
+              1
+            ]
+          ],
+          "date-time": "2017-06-01T00:00:00Z",
+          "timestamp": 1496275200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2017,
+              6,
+              1
+            ]
+          ],
+          "date-time": "2017-06-01T00:00:00Z",
+          "timestamp": 1496275200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/100000001",
+        "name": "National Science Foundation",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "CCF 15-14245"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "CCF 15-14245"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/100000001",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/100000001",
+        "name": "National Science Foundation",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "EECS 14-6231"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "EECS 14-6231"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/100000001",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/100015815",
+        "name": "PSERC",
+        "doi-asserted-by": "crossref",
+        "id": [
+          {
+            "id": "10.13039/100015815",
+            "id-type": "DOI",
+            "asserted-by": "crossref"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/100000001",
+        "name": "National Science Foundation",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "EECS 14-6231"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "EECS 14-6231"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/100000001",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Trans. Signal Process."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2017,
+          6,
+          1
+        ]
+      ]
+    },
+    "DOI": "10.1109/tsp.2017.2673802",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2017,
+          2,
+          23
+        ]
+      ],
+      "date-time": "2017-02-23T19:51:05Z",
+      "timestamp": 1487879465000
+    },
+    "page": "2787-2797",
+    "source": "Crossref",
+    "is-referenced-by-count": 46,
+    "title": [
+      "Statistical Power System Line Outage Detection Under Transient Dynamics"
+    ],
+    "prefix": "10.1109",
+    "volume": "65",
+    "author": [
+      {
+        "given": "Georgios",
+        "family": "Rovatsos",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Xichen",
+        "family": "Jiang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Alejandro D.",
+        "family": "Dominguez-Garcia",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-5490-0037",
+        "authenticated-orcid": false,
+        "given": "Venugopal V.",
+        "family": "Veeravalli",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2008.2004826"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2012.2192142"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ALLERTON.2014.7028569"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2015.2461461"
+      },
+      {
+        "key": "ref14",
+        "author": "bergen",
+        "year": "2000",
+        "journal-title": "Power Systems Analysis"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPAS.1985.318943"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1017/CBO9781316164600",
+        "author": "hajek",
+        "year": "2015",
+        "journal-title": "Random Processes for Engineers"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1201/b17279",
+        "author": "tartakovsky",
+        "year": "2014",
+        "journal-title": "Sequential Analysis Hypothesis Testing and Change-Point Detection"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1214/aos/1176346587"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "crossref",
+        "first-page": "2917",
+        "DOI": "10.1109/18.737522",
+        "article-title": "Information bounds and quick detection of parameter changes in stochastic systems",
+        "volume": "44",
+        "author": "lai",
+        "year": "1998",
+        "journal-title": "IEEE Trans Inf Theory"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2015.2394246"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICASSP.2016.7472217"
+      },
+      {
+        "key": "ref6",
+        "author": "veeravalli",
+        "year": "2013",
+        "journal-title": "Quickest Change Detection"
+      },
+      {
+        "key": "ref5",
+        "author": "poor",
+        "year": "2009",
+        "journal-title": "Quickest Detection"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/59.32475"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/59.192991"
+      },
+      {
+        "key": "ref2",
+        "article-title": "Final report on the August 14th blackout in the United States and Canada: Causes and recommendations",
+        "year": "2004"
+      },
+      {
+        "key": "ref1",
+        "article-title": "Arizona-southern California outages on September 8, 2011: Causes and recommendations",
+        "year": "2012"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/59.131079"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1214/aos/1176350164"
+      },
+      {
+        "key": "ref22",
+        "article-title": "Power system test case archive",
+        "year": "2012"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/18.61123"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/59.207380"
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Signal Processing"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://ieeexplore.ieee.org/ielaam/78/7885613/7862890-aam.pdf",
+        "content-type": "application/pdf",
+        "content-version": "am",
+        "intended-application": "syndication"
+      },
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/78/7885613/07862890.pdf?arnumber=7862890",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2022,
+          4,
+          8
+        ]
+      ],
+      "date-time": "2022-04-08T18:49:00Z",
+      "timestamp": 1649443740000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "http://ieeexplore.ieee.org/document/7862890/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2017,
+          6,
+          1
+        ]
+      ]
+    },
+    "references-count": 23,
+    "journal-issue": {
+      "issue": "11"
+    },
+    "URL": "https://doi.org/10.1109/tsp.2017.2673802",
+    "relation": {},
+    "ISSN": [
+      "1053-587X",
+      "1941-0476"
+    ],
+    "issn-type": [
+      {
+        "value": "1053-587X",
+        "type": "print"
+      },
+      {
+        "value": "1941-0476",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2017,
+          6,
+          1
+        ]
+      ]
+    }
+  }
+}

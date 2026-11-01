@@ -1,0 +1,540 @@
+{
+  "key": "qi2015placement",
+  "retrieved_at": "2026-11-01T03:53:23.192605+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1109%2FTPWRS.2014.2356797",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1109/TPWRS.2014.2356797",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:38.777538+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          24
+        ]
+      ],
+      "date-time": "2026-10-24T17:33:55Z",
+      "timestamp": 1792863235168,
+      "version": "4.5.0"
+    },
+    "reference-count": 55,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "4",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2015,
+              7,
+              1
+            ]
+          ],
+          "date-time": "2015-07-01T00:00:00Z",
+          "timestamp": 1435708800000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2015,
+              7,
+              1
+            ]
+          ],
+          "date-time": "2015-07-01T00:00:00Z",
+          "timestamp": 1435708800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2015,
+              7,
+              1
+            ]
+          ],
+          "date-time": "2015-07-01T00:00:00Z",
+          "timestamp": 1435708800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Trans. Power Syst."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2015,
+          7
+        ]
+      ]
+    },
+    "DOI": "10.1109/tpwrs.2014.2356797",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2014,
+          9,
+          29
+        ]
+      ],
+      "date-time": "2014-09-29T15:30:17Z",
+      "timestamp": 1412004617000
+    },
+    "page": "2041-2054",
+    "source": "Crossref",
+    "is-referenced-by-count": 182,
+    "title": [
+      "Optimal PMU Placement for Power System Dynamic State Estimation by Using Empirical Observability Gramian"
+    ],
+    "prefix": "10.1109",
+    "volume": "30",
+    "author": [
+      {
+        "given": "Junjian",
+        "family": "Qi",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Department of Electrical Engineering and Computer Science, University of Tennessee, Knoxville, TN, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Kai",
+        "family": "Sun",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Electrical Engineering and Computer Science, University of Tennessee, Knoxville, TN, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Wei",
+        "family": "Kang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Applied Mathematics, Naval Postgraduate School, Monterey, CA, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref39",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1155/2013/365909"
+      },
+      {
+        "key": "ref38",
+        "author": "kunder",
+        "year": "1994",
+        "journal-title": "Power System Stability and Control"
+      },
+      {
+        "key": "ref33",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/NAPS.2010.5618970"
+      },
+      {
+        "key": "ref32",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2002.1007908"
+      },
+      {
+        "key": "ref31",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CCA.2003.1223290"
+      },
+      {
+        "key": "ref30",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PTC.2009.5281976"
+      },
+      {
+        "key": "ref37",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2013.2262236"
+      },
+      {
+        "key": "ref36",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/0005-1098(72)90044-1"
+      },
+      {
+        "key": "ref35",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/NAPS.2011.6024865"
+      },
+      {
+        "key": "ref34",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ISGTEUROPE.2010.5639006"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRD.2009.2014030"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2002.807064"
+      },
+      {
+        "key": "ref29",
+        "first-page": "1",
+        "article-title": "PMU placement for power system observability using binary particle swarm optimization",
+        "author": "chakrabarti",
+        "year": "2008",
+        "journal-title": "Proc Australasian Univ Power Eng Conf"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1201/9780203913673"
+      },
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPAS.1970.292678"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1021/ie0511175"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/59.260810"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.compchemeng.2012.07.014"
+      },
+      {
+        "key": "ref24",
+        "first-page": "943",
+        "article-title": "Observability analysis and measurement placement for systems with PMUs",
+        "volume": "2",
+        "author": "xu",
+        "year": "2004",
+        "journal-title": "Proc IEEE Power Syst Conf Expo"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2012.2228242"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2008.922621"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2008.926723"
+      },
+      {
+        "key": "ref50",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2013.2243479"
+      },
+      {
+        "key": "ref51",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/etep.4450030507"
+      },
+      {
+        "key": "ref55",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PES.2009.5275423"
+      },
+      {
+        "key": "ref54",
+        "year": "1991",
+        "journal-title": "Power System Toolbox Version 3 0 Manual"
+      },
+      {
+        "key": "ref53",
+        "author": "anderson",
+        "year": "1977",
+        "journal-title": "Power System Control and Stability"
+      },
+      {
+        "key": "ref52",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.disopt.2006.10.011"
+      },
+      {
+        "key": "ref10",
+        "first-page": "152",
+        "article-title": "On nonlinear observability",
+        "volume": "1",
+        "author": "diop",
+        "year": "1991",
+        "journal-title": "Proc ECC"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CDC.1991.261405"
+      },
+      {
+        "key": "ref40",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/S0895479896303430"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/S1474-6670(17)56442-3"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/rnc.657"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1021/ie0106175"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CDC.2009.5400067"
+      },
+      {
+        "key": "ref16",
+        "author": "kang",
+        "year": "2009",
+        "journal-title": "?Computational analysis of control systems using dynamic optimization ?"
+      },
+      {
+        "key": "ref17",
+        "first-page": "963",
+        "article-title": "Observability and estimation methods using sychrophasors",
+        "author": "sun",
+        "year": "2014",
+        "journal-title": "Proc IFAC World Congr"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3402/tellusa.v64i0.17133"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1021/ie040212v"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2008.926721"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/5.824004"
+      },
+      {
+        "key": "ref6",
+        "first-page": "1",
+        "article-title": "Power system set membership state estimation",
+        "author": "qi",
+        "year": "2012",
+        "journal-title": "Proc IEEE Power and Energy Soc Gen Meet"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2011.2131157"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2013.2258475"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2010.2099672"
+      },
+      {
+        "key": "ref49",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/HICSS.2013.594"
+      },
+      {
+        "key": "ref9",
+        "author": "kailath",
+        "year": "1980",
+        "journal-title": "Linear Systems"
+      },
+      {
+        "key": "ref46",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10898-007-9234-1"
+      },
+      {
+        "key": "ref45",
+        "author": "clarke",
+        "year": "1983",
+        "journal-title": "Optimization and Nonsmooth Analysis"
+      },
+      {
+        "key": "ref48",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICASSP.2001.940586"
+      },
+      {
+        "key": "ref47",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/S0305-0548(97)00031-2"
+      },
+      {
+        "key": "ref42",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1916461.1916468"
+      },
+      {
+        "key": "ref41",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/090772514"
+      },
+      {
+        "key": "ref44",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/040603371"
+      },
+      {
+        "key": "ref43",
+        "first-page": "8",
+        "article-title": "OPTI: Lowering the barrier between open source optimizers and the industrial MATLAB user",
+        "author": "currie",
+        "year": "2012",
+        "journal-title": "Proc Foundat Computer-Aided Process Operations"
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Power Systems"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/59/7124560/06913022.pdf?arnumber=6913022",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2025,
+          10,
+          16
+        ]
+      ],
+      "date-time": "2025-10-16T17:38:13Z",
+      "timestamp": 1760636293000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/6913022/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2015,
+          7
+        ]
+      ]
+    },
+    "references-count": 55,
+    "journal-issue": {
+      "issue": "4"
+    },
+    "URL": "https://doi.org/10.1109/tpwrs.2014.2356797",
+    "relation": {},
+    "ISSN": [
+      "0885-8950",
+      "1558-0679"
+    ],
+    "issn-type": [
+      {
+        "value": "0885-8950",
+        "type": "print"
+      },
+      {
+        "value": "1558-0679",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2015,
+          7
+        ]
+      ]
+    }
+  }
+}

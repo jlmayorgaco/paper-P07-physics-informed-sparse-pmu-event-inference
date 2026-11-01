@@ -1,0 +1,474 @@
+{
+  "key": "li2023eventtriggered",
+  "retrieved_at": "2026-11-01T03:53:22.971208+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1109%2FTCST.2022.3184467",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1109/TCST.2022.3184467",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:31.151716+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          10
+        ]
+      ],
+      "date-time": "2026-09-10T23:05:52Z",
+      "timestamp": 1789081552348,
+      "version": "build-2803163510"
+    },
+    "reference-count": 28,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "2",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2023,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2023-03-01T00:00:00Z",
+          "timestamp": 1677628800000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2023,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2023-03-01T00:00:00Z",
+          "timestamp": 1677628800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2023,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2023-03-01T00:00:00Z",
+          "timestamp": 1677628800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100001809",
+        "name": "National Natural Science Foundation of China",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "52177168"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "52177168"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100001809",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/501100001809",
+        "name": "National Natural Science Foundation of China",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "62003091"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "62003091"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100001809",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Trans. Contr. Syst. Technol."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2023,
+          3
+        ]
+      ]
+    },
+    "DOI": "10.1109/tcst.2022.3184467",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2022,
+          6,
+          30
+        ]
+      ],
+      "date-time": "2022-06-30T15:32:53Z",
+      "timestamp": 1656603173000
+    },
+    "page": "889-896",
+    "source": "Crossref",
+    "is-referenced-by-count": 46,
+    "title": [
+      "A Stochastic Event-Triggered Robust Cubature Kalman Filtering Approach to Power System Dynamic State Estimation With Non-Gaussian Measurement Noises"
+    ],
+    "prefix": "10.1109",
+    "volume": "31",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0003-1166-9482",
+        "authenticated-orcid": false,
+        "given": "Zhen",
+        "family": "Li",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "School of Automation, and the State Key Laboratory for Intelligent Control and Decision of Complex Systems, Beijing Institute of Technology, Beijing, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Sen",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Research Center, Space Engineering University, Beijing, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-3031-9592",
+        "authenticated-orcid": false,
+        "given": "Bin",
+        "family": "Liu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Electrical Engineering, Tsinghua University, Beijing, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-2983-7344",
+        "authenticated-orcid": false,
+        "given": "Samson S.",
+        "family": "Yu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Engineering, Deakin University, Waurn Ponds, VIC, Australia"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-8218-586X",
+        "authenticated-orcid": false,
+        "given": "Peng",
+        "family": "Shi",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Electrical and Electronic Engineering, The University of Adelaide, Adelaide, SA, Australia"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCST.2016.2517574"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCSII.2017.2705482"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2011.2145396"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCST.2015.2445852"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2012.2215890"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2015.2431693"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2013.2281323"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2014.2366196"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2010.2044899"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCST.2011.2116022"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TIE.2020.2987279"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCST.2020.2978908"
+      },
+      {
+        "key": "ref13",
+        "first-page": "301",
+        "article-title": "Comparison of periodic and event based sampling for first order stochastic systems",
+        "volume-title": "Proc. 14th IFAC World Congr.",
+        "volume": "11",
+        "author": "Astrom"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/090757125"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCST.2019.2923374"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCST.2016.2623776"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCSII.2018.2886690"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.2012.2215253"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.2015.2406975"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2017.2761452"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.2009.2019800"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.dsp.2015.09.004"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.automatica.2012.02.014"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/rnc.3319"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCYB.2017.2776976"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.2009.2037467"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2012.2197229"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SSST.2002.1027017"
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Control Systems Technology"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/87/10051120/09810986.pdf?arnumber=9810986",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2024,
+          2,
+          1
+        ]
+      ],
+      "date-time": "2024-02-01T00:11:56Z",
+      "timestamp": 1706746316000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/9810986/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2023,
+          3
+        ]
+      ]
+    },
+    "references-count": 28,
+    "journal-issue": {
+      "issue": "2"
+    },
+    "URL": "https://doi.org/10.1109/tcst.2022.3184467",
+    "relation": {},
+    "ISSN": [
+      "1063-6536",
+      "1558-0865",
+      "2374-0159"
+    ],
+    "issn-type": [
+      {
+        "value": "1063-6536",
+        "type": "print"
+      },
+      {
+        "value": "1558-0865",
+        "type": "electronic"
+      },
+      {
+        "value": "2374-0159",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2023,
+          3
+        ]
+      ]
+    }
+  }
+}

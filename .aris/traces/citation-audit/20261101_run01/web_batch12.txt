@@ -1,0 +1,451 @@
+Fundamentals of Statistical Signal Processing, Volume II: Detection Theory | InformIT (https://www.informit.com/store/fundamentals-of-statistical-signal-processing-volume-9780135041352)
+citeturn31search0 [wordlim: 200] Published: 28.8 years ago; Crawled: last month; Kay's Fundamentals of Statistical Signal Processing, Vol. ... This second volume, entitled Fundamentals of Statistical Signal Processing: Detection Theory, is the application of statistical hypothesis testing to the detection of signals in noise.
+
+# Fundamentals of Statistical Signal Processing, Volume II: Detection Theory
+
+  * By Steven M. Kay
+  * Published Jan 27, 1998 by Pearson.
+
+### Book
+
+  * Your Price: $116.45
+  * List Price: $137.00
+  * Usually ships in 24 hours.
+
+## Description
+
+  * Copyright 1998
+  * Dimensions: 7" x 9-1/4"
+  * Pages: 576
+  * Edition: 1st
+
+  * Book
+  * ISBN-10: 0-13-504135-X
+  * ISBN-13: 978-0-13-504135-2
+
+The most comprehensive overview of signal detection available.
+
+This is a thorough, up-to-date introduction to optimizing detection algorithms for implementation on digital computers. It focuses extensively on real-world signal processing applications, including state-of-the-art speech and communications technology as well as traditional sonar/radar systems.
+
+Start with a quick review of the fundamental issues associated with mathematical detection, as well as the most important probability density functions and their properties. Next, review Gaussian, Chi-Squared, F, Rayleigh, and Rician PDFs, quadratic forms of Gaussian random variables, asymptotic Gaussian PDFs, and Monte Carlo Performance Evaluations.
+Kay's Fundamentals of Statistical Signal Processing, Vol. 1: Estimation Theory (ISBN: 0-13-345711-7).
+
+## Sample Content
+
+### Table of Contents
+
+(NOTE: Most chapters begin with an Introduction and Summary.)
+1. Introduction.
+
+Detection Theory in Signal Processing. The Detection Problem. The Mathematical Detection Problem. Hierarchy of Detection Problems. Role of Asymptotics. Some Notes to the Reader.
+
+2. Summary of Important PDFs.
+
+Fundamental Probability Density Functionshfil Penalty - M and Properties. Quadratic Forms of Gaussian Random Variables. Asymptotic Gaussian PDF. Monte Carlo Performance Evaluation. Number of Required Monte Carlo Trials. Normal Probability Paper. MATLAB Program to Compute Gaussian Right-Tail Probability and its Inverse. MATLAB Program to Compute Central and Noncentral c 2 Right-Tail Probability. MATLAB Program for Monte Carlo Computer Simulation.
+
+3. Statistical Decision Theory I.
+
+Neyman-Pearson Theorem. Receiver Operating Characteristics. Irrelevant Data. Minimum Probability of Error. ### Preface
+
+Preface
+This text is the second volume of a series of books addressing statistical signal processing. The first volume, Fundamentals of Statistical Signal Processing: Estimation Theory, was published in 1993 by Prentice-Hall, Inc. Henceforth, it will be referred to as Kay-I 1993.
+This second volume, entitled Fundamentals of Statistical Signal Processing: Detection Theory, is the application of statistical hypothesis testing to the detection of signals in noise. The series has been written to provide the reader with a broad introduction to the theory and application of statistical signal processing. Hypothesis testing is a subject that is standard fare in the many books available dealing with statistics.
+These books range from the highly theoretical expositions written by statisticians to the more practical treatments contributed by the many users of applied statistics.
+This text is an attempt to strike a balance between these two extremes. The particular audience we have in mind is the community involved in the design and implementation of signal processing algorithms. It is also possible to combine the subjects of estimation and detection into a single semester course by a judicious choice of material from Volumes I and II.
+The necessary background that has been assumed is an exposure to the basic theory of digital signal processing, probability and random processes, and linear and matrix algebra. This book can also be used for self-study and so should be useful to the practicing engineer as well as the student.
+The author would like to acknowledge the contributions of the many people who over the years have provided stimulating discussions of research problems, opportunities to apply the results of that research, and support for conducting research.
+Thanks are due to my colleagues L. Jackson, R. Kumaresan, L. Pakula, and P. Swaszek of the University of Rhode Island, and L. Scharf of the University of Colorado.
+Exposure to practical problems, leading to new research directions, has been provided by H. Woodsum of Sonetech, Bedford, New Hampshire, and by D. Mook and S. Lang of Sanders, a Lockheed-Martin Co., Nashua, New Hampshire.
+The opportunity to apply detection theory to sonar and the research support of J. Kelly of the Naval Undersea Warfare Center, J. Salisbury, formerly of the Naval Undersea Warfare Center, and D. Sheldon of the Naval Undersea Warfare Center, Newport, Rhode Island are also greatly appreciated.
+Thanks are due to J. Sjogren of the Air Force Office of Scientific Research, whose support has allowed the author to investigate the field of statistical signal processing. A debt of gratitude is owed to all my current and former graduate students. They have contributed to the final manuscript through many hours of pedagogical and research discussions as well as by their specific comments and questions. In particular, P. DjuriÕ{c} of the State University of New York proofread much of the manuscript, and S. Talwalkar of Motorola, Plantation, Florida proofread parts of the manuscript and helped with the finer points of MATLAB.
+Steven M. Kay University of Rhode Island Kingston, RI 02881 Email: kay@ele.uri.edu
+
+--------------------------------------------------------------------------------
+Fundamentals of Statistical Signal Processing, Volume III (Paperback) | InformIT (https://www.informit.com/store/fundamentals-of-statistical-signal-processing-volume-9780134878409)
+citeturn31search1 [wordlim: 200] Published: 8.9 years ago; Crawled: last month; In Fundamentals of Statistical Signal Processing, Volume III: Practical Algorithm Development, author Steven M. ... Kay’s Fundamentals of Statistical Signal Processing, Volume I: Estimation Theory (Prentice Hall, 1993; ISBN-13: 978-0-13-345711-7), and Volume II: Detection Theory (Prentice Hall, 1998; ISBN-13: 978-0-13-504135-2).
+
+# Fundamentals of Statistical Signal Processing, Volume III (Paperback)
+
+  * By Steven M. Kay
+  * Published Nov 29, 2017 by Pearson.
+
+### Book
+
+  * Your Price: $155.27
+  * List Price: $182.67
+  * Usually ships in 24 hours.
+
+## About
+
+### Features
+
+  * A one-of-a-kind summary of approaches that work best in actual practice
+  * Includes block diagrams, computer programs, illustrations, exercises, case studies, and more
+  * Contains implementations and illustrations using MATLAB; the MATLAB code for the examples in the book is on the companion CD
+  * Widely applicable to many signal processing fields, from telecommunications and biomedicine to military applications
+  * Reflects the author's 35+ years of experience in research and development of signal processing algorithms
+
+## Description
+
+  * Copyright 2018
+  * Dimensions: 7" x 9-1/8"
+  * Pages: 504
+  * Edition: 1st
+
+  * Book
+  * ISBN-10: 0-13-487840-X
+  * ISBN-13: 978-0-13-487840-9
+
+The Complete, Modern Guide to Developing Well-Performing Signal Processing Algorithms
+
+In Fundamentals of Statistical Signal Processing, Volume III: Practical Algorithm Development, author Steven M. Kay shows how to convert theories of statistical signal processing estimation and detection into software algorithms that can be implemented on digital computers. This final volume of Kay’s three-volume guide builds on the comprehensive theoretical coverage in the first two volumes. Here, Kay helps readers develop strong intuition and expertise in designing well-performing algorithms that solve real-world problems.
+
+Kay begins by reviewing methodologies for developing signal processing algorithms, including mathematical modeling, computer simulation, and performance evaluation. He links concepts to practice by presenting useful analytical results and implementations for design, evaluation, and testing. Next, he highlights specific algorithms that have “stood the test of time,” offers realistic examples from several key application areas, and introduces useful extensions. Finally, he guides readers through translating mathematical algorithms into MATLAB^{® }code and verifying solutions.
+--------------------------------------------------------------------------------
+Fundamentals of Statistical Processing, Volume I: Estimation Theory | InformIT (https://www.informit.com/store/fundamentals-of-statistical-processing-volume-i-estimation-9780133457117)
+citeturn31search2 [wordlim: 200] Published: 33.6 years ago; Crawled: last month; Image: Fundamentals of Statistical Processing, Volume I: Estimation Theory ... Kay ... A unified presentation of parameter estimation for those involved in the design and implementation of statistical signal processing algorithms.
+
+View Larger Image
+
+Image: Fundamentals of Statistical Processing, Volume I: Estimation Theory
+
+Register your product to gain access to bonus material or receive a coupon.
+
+# Fundamentals of Statistical Processing, Volume I: Estimation Theory
+
+  * By Steven M. Kay
+  * Published Mar 26, 1993 by Pearson.
+
+### Book
+
+  * Your Price: $116.45
+  * List Price: $137.00
+  * Usually ships in 24 hours.
+
+Add to cart
+
+
+## About
+
+### Features
+
+  * describes the field of parameter estimation based on time series data.
+
+  * provides a summary of principal approaches as well as a “roadmap” to use in the selection of an estimator.
+
+  * extends many of the results for real data/real parameters to complex data/complex parameters.
+
+  * summarizes as examples many of the important estimators used in practice.
+
+  * illustrates how a digital computer can be used to assess performance of an estimator.
+
+  * emphasizes a linear model to allow an optimal estimator to be found by inspection of a data model.
+--------------------------------------------------------------------------------
+Unit of Biostatistics - Karolinska Institutet (https://www.imm.ki.se/biostatistics/singularinformation/)
+citeturn31search3 [wordlim: 200] Crawled: 1.4 years ago; Theory and mehtods related to the non-regular scenario in likelihood-based inference when the Fisher information matrix is singular at some points in the parameter space. ... Rotnitzky A, Cox DR, Bottai M, Robins JM. Likelihood-based asymptotic inference with singular information.
+Singular information matrix
+
+Theory and mehtods related to the non-regular scenario in likelihood-based inference when the Fisher information matrix is singular at some points in the parameter space.
+Papers
+
+* * *
+
+Rotnitzky A, Cox DR, Bottai M, Robins JM. Likelihood-based asymptotic inference with singular information. Bernoulli, 6(2): 243-284, 2000
+Bottai M. Confidence regions when the Fisher information is zero. Biometrika, 90(1): 73-84, 2003
+Bottai M, Orsini N. Confidence intervals for the variance component of random-effects linear models. The Stata Journal, 4(4): 429-435, 2004
+Bottai M, Geraci M, Lawson A. Testing for Unusual Aggregation of Health Risk in Semiparametric Models. Statistics in Medicine, 27(15): 2902-2921, 2008
+Ekvall KO, Bottai M. Confidence regions near singular information and boundary points with applications to mixed models. Annals of Statistics, 50(3): 1806-1832, 2022  | Presentations
+
+Bottai M. Local level of the Wald test when the information is zero. Proceedings of the Annual National Conference of the Italian Statistical Society, Cleup, Padua, Italy, 361-364, 2002
+Software
+
+* * *
+
+Download software in Stata: net install st0077, from(http://www.stata-journal.com/software/sj4-4/)
+Download software and a worked out example in R from: https://github.com/koekvall/lmmstest
+http://koekvall.github.io/docs/limestest/example.html--------------------------------------------------------------------------------
+Steven M. Kay | InformIT (https://www.informit.com/authors/bio/d1d2698b-8167-4ee1-b898-34b57a6071fc)
+citeturn31search4 [wordlim: 200] Crawled: last week; Kay is one of the world’s leading experts in statistical signal processing. ...   * Fundamentals of Statistical Signal Processing, Volume II: Detection Theory
+
+# Steven M. Kay
+
+Steven M. Kay is one of the world’s leading experts in statistical signal processing. Currently Professor of Electrical Engineering at the University of Rhode Island, Kingston, he has consulted for numerous industrial concerns, the Air Force, Army, and Navy, and has taught short courses to scientists and engineers at NASA and the CIA. Dr. Kay is a Fellow of the IEEE, and a member of Tau Beta Pi, and Sigma Xi and Phi Kappa Phi. He has received the Education Award for “outstanding contributions in education and in writing scholarly book and texts…” from the IEEE Signal Processing society and has been listed as among the 250 most cited researchers in the world in engineering.
+
+  * Fundamentals of Statistical Signal Processing, Volume III (Paperback)
+  * By Steven M. Kay
+  * Book $155.27
+
+  * Fundamentals of Statistical Signal Processing, Volume II: Detection Theory
+  * By Steven M. Kay
+  * Book $116.45
+
+  * Fundamentals of Statistical Processing, Volume I: Estimation Theory
+  * By Steven M. Kay
+  * Book $116.45--------------------------------------------------------------------------------
+The Interacting Multiple Model Algorithm for Systems with Markovian Switching Coefficients - TU Delft Research Portal (https://research.tudelft.nl/en/publications/the-interacting-multiple-model-algorithm-for-systems-with-markovi/)
+citeturn31search5 [wordlim: 200] Published: 38.9 years ago; Crawled: last month; Dive into the research topics of 'The Interacting Multiple Model Algorithm for Systems with Markovian Switching Coefficients'.
+
+# The Interacting Multiple Model Algorithm for Systems with Markovian Switching Coefficients
+
+  * H.A.P. Blom^{*}
+  * , Y Bar-Shalom
+
+^{*}Corresponding author for this work
+
+Research output: Contribution to journal › Article › Scientific › peer-review
+
+## Abstract
+
+An important problem in filtering for linear systems with Markovian switching coefficients (dynamic multiple model systems) is the one of management of hypotheses, which is necessary to limit the computational requirements. A novel approach to hypotheses merging is presented for this problem. The novelty lies in the timing of hypotheses merging. When applied to the problem of filtering for a linear system with Markovian coefficients this yields an elegant way to derive the interacting multiple model (IMM) algorithm. Evaluation of the IMM algorithm makes it clear that it performs very well at a relatively low computational load. These results imply a significant change in the state of the art of approximate Bayesian filtering for systems with Markovian coefficients.
+
+Original language  | English
+Pages (from-to)  | 780-783
+Number of pages  | 4
+Journal  | IEEE Transactions on Automatic Control
+Volume  | 33
+Issue number  | 8
+DOIs  | 
+
+  * https://doi.org/10.1109/9.1299
+Publication status  | Published - 1988
+Externally published  | Yes
+
+## Access to Document
+
+  * 10.1109/9.1299
+
+## Other files and links
+
+  * http://IEEE Log Number 8821022
+
+## Fingerprint
+
+Dive into the research topics of 'The Interacting Multiple Model Algorithm for Systems with Markovian Switching Coefficients'. Together they form a unique fingerprint.
+
+## Cite this
+
+  * APA
+  * Author
+  * BIBTEX
+  * Harvard
+  * Standard
+  * RIS
+  * Vancouver
+
+Blom, H. A. P., & Bar-Shalom, Y. (1988). The Interacting Multiple Model Algorithm for Systems with Markovian Switching Coefficients. IEEE Transactions on Automatic Control, 33(8), 780-783. https://doi.org/10.1109/9.1299
+
+Blom, H.A.P. ; Bar-Shalom, Y. / The Interacting Multiple Model Algorithm for Systems with Markovian Switching Coefficients. 
+author = "H.A.P. Blom and Y Bar-Shalom",
+
+year = "1988",
+
+doi = "10.1109/9.1299",
+
+language = "English",
+
+volume = "33",
+
+pages = "780--783",
+
+journal = "IEEE Transactions on Automatic Control",
+
+issn = "0018-9286",
+
+publisher = "IEEE",
+
+number = "8",
+
+}
+
+Blom, HAP & Bar-Shalom, Y 1988, 'The Interacting Multiple Model Algorithm for Systems with Markovian Switching Coefficients', IEEE Transactions on Automatic Control, vol. 33, no. 8, pp. 780-783. https://doi.org/10.1109/9.1299
+
+The Interacting Multiple Model Algorithm for Systems with Markovian Switching Coefficients. / Blom, H.A.P.; Bar-Shalom, Y.
+In: IEEE Transactions on Automatic Control, Vol. 33, No. 8, 1988, p. 780-783.
+
+Research output: Contribution to journal › Article › Scientific › peer-review
+
+TY - JOUR
+
+T1 - The Interacting Multiple Model Algorithm for Systems with Markovian Switching Coefficients
+
+AU - Blom, H.A.P.
+
+AU - Bar-Shalom, Y
+
+PY - 1988
+
+Y1 - 1988
+
+N2 - An important problem in filtering for linear systems with Markovian switching coefficients (dynamic multiple model systems) is the one of management of hypotheses, which is necessary to limit the computational requirements. A novel approach to hypotheses merging is presented for this problem. The novelty lies in the timing of hypotheses merging. When applied to the problem of filtering for a linear system with Markovian coefficients this yields an elegant way to derive the interacting multiple model (IMM) algorithm. Evaluation of the IMM algorithm makes it clear that it performs very well at a relatively low computational load. These results imply a significant change in the state of the art of approximate Bayesian filtering for systems with Markovian coefficients.
+
+AB - An important problem in filtering for linear systems with Markovian switching coefficients (dynamic multiple model systems) is the one of management of hypotheses, which is necessary to limit the computational requirements. A novel approach to hypotheses merging is presented for this problem. The novelty lies in the timing of hypotheses merging. When applied to the problem of filtering for a linear system with Markovian coefficients this yields an elegant way to derive the interacting multiple model (IMM) algorithm. Evaluation of the IMM algorithm makes it clear that it performs very well at a relatively low computational load. These results imply a significant change in the state of the art of approximate Bayesian filtering for systems with Markovian coefficients.
+
+UR - http://IEEE Log Number 8821022
+
+U2 - 10.1109/9.1299
+
+DO - 10.1109/9.1299
+
+M3 - Article
+
+SN - 0018-9286
+
+VL - 33
+
+SP - 780
+
+EP - 783
+
+JO - IEEE Transactions on Automatic Control
+
+JF - IEEE Transactions on Automatic Control
+
+IS - 8
+
+ER -
+
+Blom HAP, Bar-Shalom Y. The Interacting Multiple Model Algorithm for Systems with Markovian Switching Coefficients. IEEE Transactions on Automatic Control. 1988;33(8):780-783. doi: 10.1109/9.1299--------------------------------------------------------------------------------
+Approximations to Noncentral Distributions | JSTOR (https://www.jstor.org/stable/3315199)
+citeturn31search6 [wordlim: 200] Published: 39.4 years ago; Crawled: last month;   * A Bartlett Type Correction for Rao's Score Test in Cox Regression Model ...   * Likelihood-Based Inference with Singular Information Matrix
+
+Andrea Rotnitzky, David R. ... Econometric Theory, Vol.
+Selected Tables in Statistics. Volume II (H.L. Harter and D.B. Owen, eds.), Amer. Math. Soc., Providence.
+
+Cited by (14)
+
+Items on JSTOR that cite this item:
+
+  * Some design properties of a rejective sampling procedure
+
+WAYNE A. FULLER
+
+Biometrika, Vol. 96, No. 4 (DECEMBER 2009), pp. 933-944
+
+Cited by 7 items on JSTOR
+
+  * A Bartlett Type Correction for Rao's Score Test in Cox Regression Model
+
+Dongsheng Tu, Jiahua Chen, Peide Shi, Yaohua Wu
+
+Sankhyā: The Indian Journal of Statistics (2003-2007), Vol. 67, No. 4 (Nov., 2005), pp. 722-735
+
+  * Likelihood-Based Inference with Singular Information Matrix
+
+Andrea Rotnitzky, David R. Cox, Matteo Bottai, James Robins
+
+Bernoulli, Vol. 6, No. 2 (Apr., 2000), pp. 243-284
+
+Cited by 18 items on JSTOR
+
+  * A Correction Factor for Unit Root Test Statistics
+
+Francesco Bravo
+
+Econometric Theory, Vol. 15, No. 2 (Apr., 1999), pp. 218-227
+
+Cited by 3 items on JSTOR
+
+  * Algorithms AS 318: An Efficient Recursive Algorithm for Computing the Distribution Function and Non-Centrality Parameter of the Non-Central F- Distribution
+--------------------------------------------------------------------------------
+(PDF) Likelihood-Based Inference with Singular Information Matrix (https://www.researchgate.net/publication/38322350_Likelihood-Based_Inference_with_Singular_Information_Matrix)
+citeturn31search7 [wordlim: 200] Published: 26.6 years ago; Crawled: 2 months ago; # Likelihood-Based Inference with Singular Information Matrix ... Andrea Rotnitzky ... We consider likelihood-based asymptotic inference for a p-dimensional parameter θ of an identifiable parametric model with singular information matrix of rank p-1 at θ=θ^{*} and likelihood differentiable up to a specific order. ... regular Cochran±Pitman theory of asymptotic relative ef®ciency.
+
+# Likelihood-Based Inference with Singular Information Matrix
+
+  * April 2000
+  * Bernoulli 6(2):243
+
+DOI:10.2307/3318576
+
+Authors:
+
+Andrea Rotnitzky
+
+  * University of Washington
+
+David Cox
+
+  * Nuffield College, Oxford
+
+Matteo Bottai
+
+Matteo Bottai
+
+  * This person is not on ResearchGate, or hasn't claimed this research yet.
+
+James M Robins
+
+  * Harvard University
+
+Image
+
+Download full-text PDFRead full-text
+
+## Abstract
+
+We consider likelihood-based asymptotic inference for a p-dimensional parameter θ of an identifiable parametric model with singular information matrix of rank p-1 at θ=θ^{*} and likelihood differentiable up to a specific order. We derive the asymptotic distribution of the likelihood ratio test statistics for the simple null hypothesis that θ=θ^{*} and of the maximum likelihood estimator (MLE) of θ when θ=θ^{*}. We show that there exists a reparametrization such that the MLE of the last p-1 components of θ converges at rate $O_{p}\left( n^{-1/2}\right)$ . --------------------------------------------------------------------------------
+IMSTextbook16-Efron-ad_180x250mm.indd (https://www.imstat.org/publications/sts/sts_39_2/sts_39_2.pdf)
+citeturn31search12 [wordlim: 200] Published: 2.5 years ago; Crawled: 2.5 years ago; *Mixture models: Theory, geometry and applications*. ... Semiparametric likelihood inference. ... ROTNITZKY, A., COX, D. ... Likelihood-based inference with singular information matrix.
+ROTHENBERG, T. J. (1971). Identification in parametric models. *Econometrica* 39 577–591. MR0436944 https://doi.org/10.2307/1913267
+
+ROTNITZKY, A., COX, D. R., BOTTAI, M. and ROBINS, J. (2000). Likelihood-based inference with singular information matrix. *Bernoulli* 6 243–284. MR1748721 https://doi.org/10.2307/3318576
+
+SAMWORTH, R. J. (2018). Recent progress in log-concave density estimation. *Statist. Sci.* 33 493–509. MR3881205 https://doi.org/10.1214/18-STS666
+
+SAMWORTH, R. J. and BODHISATTVA, B. (2018). Special issue on “Nonparametric inference under shape constraints”. *Statist. Sci.* 33 469–472. MR3881203 https://doi.org/10.1214/18-STS673
+
+SCHEIPL, F., GREVEN, S. and KÜCHENHOFF, H. (2008). Size and power of tests for a zero random effect variance or polynomial regression in additive and linear mixed models. *Comput. Statist. Data Anal.* 52 3283–3299. MR2427346 https://doi.org/10.1016/j.csda.2007.10.022
+
+SCRUCCA, L., FOP, M., MURPHY, T. B. and RAFTERY, A. E. (2016). mclust 5: Clustering, classification and density estimation using Gaussian finite mixture models. *R J.* 8 289–317.
+
+SELF, S. G. and LIANG, K.-Y. (1987). Asymptotic properties of maximum likelihood estimators and likelihood ratio tests under nonstandard conditions. *J. Amer. Statist. Assoc.* 82 605–610. MR0898365
+
+SEN, P. K. and SILVAPULLE, M. J. (2002). An appraisal of some aspects of statistical inference under inequality constraints. *J. Statist. Plann. Inference* 107 3–43. MR1927753 https://doi.org/10.1016/S0378-3758(02)00242-2
+
+--------------------------------------------------------------------------------
+Microsoft Word - SPH CV 1 (https://www.biostat.washington.edu/sites/default/files/files/users/SPH%2520CV%2520Rotnitzky%25201-24-2023.pdf)
+citeturn31search13 [wordlim: 200] Published: 3.8 years ago; “Likelihood based inference with singular information matrix.” ... Rotnitzky, A., Scharfstein, D., Su, T.L. and Robins, J.
+30. Rotnitzky, A., Cox, D.R., Bottai, M. and Robins, J. (2000). “Likelihood based inference with singular information matrix.” *Bernoulli*, 6, 243-284.  
+31. Rotnitzky, A., Scharfstein, D., Su, T.L. and Robins, J. (2000). “Methods for conducting sensitivity analysis of trials with possibly non-ignorable competing causes of censoring.” *Biometrics*, 57, 111-121.  
+32. Scharfstein, D., Robins, J., Eddings, W. and Rotnitzky, A. (2001) “Inference in Randomized Studies with Informative Censoring and Discrete Time-to-Event Endpoints.” *Biometrics*; 57(2):404-413.  
+33. Schisterman E, Rotnitzky, A. (2001) Estimation of the mean of a K-sample and U-statistic with missing outcomes and auxiliaries. *Biometrika*; 88:713-725.  
+34. Birmingham, J., Rotnitzky, A. and Fitzmaurice, G. (2003) “Pattern-mixture and selection models for analyzing monotone missing data” *Journal of the Royal Statistical Society, Series B*; 65, 275-297.  
+35. Robins, J. and Rotnitzky, A. (2004) “Estimation of Treatment Effects in Randomised Trials with Noncompliance and a Dichotomous Outcome using Structural Mean Models.”. --------------------------------------------------------------------------------
+References tvp4537 (https://www.mathnet.ru/links/50fbc7d4cbf3f793a4ae5efe14f1a4fa/tvp_4537_refs_eng.htm)
+citeturn31search8 [wordlim: 200] Published: 13.8 years ago; Crawled: last month; [58]  | Rotnitzky A., Cox D. R., Bottai M., Robins J., “Likelihood-based inference with singular information matrix”, Bernoulli, 6:2 (2000), 285–302
+[56]  | Rothenberg T. J., “Incredible structure inference”, Identification and Inference for Econometric Models, eds. D. W. K. Andrews, J. H. Stock, Cambdrige University Press, Cambdrige, 2010
+[57]  | Rothenberg T. J., “Identification in parametric models”, Econometrica, 39:3 (1971), 577–591    
+[58]  | Rotnitzky A., Cox D. R., Bottai M., Robins J., “Likelihood-based inference with singular information matrix”, Bernoulli, 6:2 (2000), 285–302    
+[59]  | Sard A., “The measure of the critical values of differentiable maps”, Bull. Amer. Math. Soc., 48 (1942), 883–890    
+[60]  | Sargan J. D., “Identification and lack of identification”, Econometrica, 51:6 (1983), 1605–1633      
+[61]  | Silvey S. D., Statistical Inference, Chapman and Hall, London, 1975, 192 pp.  
+[62]  | Silvey S. D., “The Lagrangian multiplier test”, Ann. Math. Statist., 30 (1959), 389–407    
+[63]  | Stoica P., Marzetta T. L., “Parameter estimation problems with singular information matrices”, IEEE Trans. Signal Process., 49:1 (2001), 87–90      
+[64]  | Stoica P., Söderström T., “On non-singular information matrices and local identifiability”, Internat. J. Control, 36:2 (1982), 323–329    
+[65]  | Telksnys L., Detection of Changes in Random Processes, Optimization Software, New York, 1986  
+[66]  | Wald A., “Note on the identification of economic relations”, Statistical Inference in Dynamic Economic Models, John Wiley, New York, 1950, 238–244
+[67]  | Wang X., “Nonsingularity of Fisher information for autoregressive moving-average processes”, J. Time Ser. Anal., 14:5 (1993), 547–548    
+--------------------------------------------------------------------------------
+Andrea Rotnitzky - Publications (https://academictree-staging.thetransmitter.org/math/publications.php?pid=379527&searchstring=&showfilter=all)
+citeturn31search9 [wordlim: 200] Crawled: last month; 2001  | Scharfstein D, Robins JM, Eddings W, Rotnitzky A. ... Likelihood-based inference with singular information matrix Bernoulli.
+--------------------------------------------------------------------------------
+CONTRIBUTED RESEARCH ARTICLE                                                                 56 (https://journal.r-project.org/issues/2025-4/2025-4.pdf)
+citeturn31search14 [wordlim: 200] Published: 8 months ago; *Statistical Methods in Medical Research*, 27(5):1531–1546, 2018. doi: 10.1177/0962280216664760. ... Rotnitzky, D. ... Likelihood-based inference with singular information matrix.
+--------------------------------------------------------------------------------
+Jaar 2005 
+ 
+Faculteit Wetenschappen (https://citeseerx.ist.psu.edu/document?doi=5ba3f009e71cfdd861934e6e442f6f67f0d5a629&repid=rep1&type=pdf)
+citeturn31search15 [wordlim: 200] Published: 9 months ago; Likelihood-based Inference with Singular Information ... lihood ratio test statistic when dealing with a singular information matrix. ... Y that have ﬁnite mean (see Rotnitzky et al. 2000 for more details). s is a positive
+--------------------------------------------------------------------------------
+Regression analysis of a graphical proportional hazards model for informatively left-truncated current status data. (https://pubmed.ncbi.nlm.nih.gov/40348922/)
+citeturn31search10 [wordlim: 200] Published: 1.5 years ago; Crawled: 3 months ago;   * Rotnitzky A, Cox DR, Bottai M, Robins J (2000) Likelihood-based inference with singular information matrix.
+--------------------------------------------------------------------------------
+Crainiceanu, C. M. and Ruppert, D. (2004). Likelihood ratio tests in linear mixed models with one variance component. *J. R. Stat. Soc. Ser. B. Stat. Methodol.* **66** 165–185. MR2035765 https://doi.org/10.1111/j.1467-9868.2004.00438.x (https://www.imstat.org/publications/aos/aos_50_3/aos_50_3.pdf)
+citeturn31search16 [wordlim: 200] Published: 4.4 years ago; Crawled: 4.4 years ago; *A Modern Approach to Probability Theory*. ... Likelihood-based inference for generalized linear mixed models: Inference with the R package glmm. ... Rotnitzky, A., Cox, D. ... Likelihood-based inference with singular information matrix.
+--------------------------------------------------------------------------------
+[43] Rotnovisky, A., Cox, D.R., Bottai, M. and Robbins, J. (2000). Likelihood-based inference with singular information matrix. *Bernoulli*, 6, 2, 243-284. (https://www.mat.uc.cl/archivos/dip/tesis-postgrado/doctorado-eyp/tesis-hector-gomez.pdf)
+citeturn31search17 [wordlim: 200] Published: 14.8 years ago; Crawled: 14.8 years ago; [43] Rotnovisky, A., Cox, D.R., Bottai, M. and Robbins, J. ... Likelihood-based inference with singular information matrix.
+--------------------------------------------------------------------------------
+Articoli di riviste: "Likelihood-based inference" – Grafiati (https://www.grafiati.com/it/literature-selections/likelihood-based-inference/journal/)
+citeturn31search11 [wordlim: 200] Published: 5.4 years ago; Crawled: 4 months ago; Communications in Statistics - Theory and Methods 44, no. ... Rotnitzky, Andrea, David R. ... "Likelihood-Based Inference with Singular Information Matrix."
+

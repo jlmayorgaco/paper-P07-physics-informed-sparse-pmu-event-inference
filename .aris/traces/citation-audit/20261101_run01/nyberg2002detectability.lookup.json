@@ -1,0 +1,301 @@
+{
+  "key": "nyberg2002detectability",
+  "retrieved_at": "2026-11-01T03:53:23.174418+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1080%2F00207170110121303",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1080/00207170110121303",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:35.027591+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          7
+        ]
+      ],
+      "date-time": "2026-10-07T00:59:22Z",
+      "timestamp": 1791334762310,
+      "version": "4.3.1"
+    },
+    "reference-count": 24,
+    "publisher": "Informa UK Limited",
+    "issue": "7",
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "International Journal of Control"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2002,
+          1
+        ]
+      ]
+    },
+    "DOI": "10.1080/00207170110121303",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2002,
+          7,
+          26
+        ]
+      ],
+      "date-time": "2002-07-26T12:38:19Z",
+      "timestamp": 1027687099000
+    },
+    "page": "490-501",
+    "source": "Crossref",
+    "is-referenced-by-count": 56,
+    "title": [
+      "Criterions for detectability and strong detectability of faults in linear systems"
+    ],
+    "prefix": "10.1080",
+    "volume": "75",
+    "author": [
+      {
+        "given": "Mattias",
+        "family": "Nyberg",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "301",
+    "reference": [
+      {
+        "key": "CIT0001",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/0967-0661(95)96891-R"
+      },
+      {
+        "key": "CIT0002",
+        "volume-title": "Linear System Theory and Design",
+        "author": "CHEN CHI-TSONG",
+        "year": "1984"
+      },
+      {
+        "key": "CIT0003",
+        "first-page": "567",
+        "volume-title": "Fault Detection, Supervision and Safety for Technical Processes",
+        "author": "CHEN J.",
+        "year": "1994"
+      },
+      {
+        "key": "CIT0004",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.1984.1103593"
+      },
+      {
+        "key": "CIT0005",
+        "doi-asserted-by": "crossref",
+        "unstructured": "DING, S. X., DING, E. L. and JEINSCH, T. A numerical approach to analysis and design of FDI systems. IEEE Conference on Decision and Control. Tampa, Florida, USA. pp.1155–1160.",
+        "DOI": "10.1109/CDC.1998.760854"
+      },
+      {
+        "key": "CIT0006",
+        "doi-asserted-by": "crossref",
+        "unstructured": "DING, S. X., DING, E. L. and JEINSCH, T. 1999. “An approach to analysis and design of observer and parity relation based FDI systems”. Vol. P, 37–42. Beijing, China: IFAC.",
+        "DOI": "10.1016/S1474-6670(17)57317-6"
+      },
+      {
+        "key": "CIT0007",
+        "doi-asserted-by": "crossref",
+        "unstructured": "DING, X. and FRANK, P. M. 1991. “Frequency domain approach and threshold selector for robust model-based fault detection and isolation”. 271–276. BadenBaden, Germany: IFAC Fault Detection, Supervision and Safety for Technical Processes.",
+        "DOI": "10.1016/B978-0-08-041275-7.50041-7"
+      },
+      {
+        "key": "CIT0008",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/0313029"
+      },
+      {
+        "key": "CIT0009",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/0005-1098(90)90018-D"
+      },
+      {
+        "key": "CIT0010",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.23919/ECC.1999.7099985",
+        "volume-title": "Using minimal polynomial bases for fault diagnosis",
+        "author": "FRISK E.",
+        "year": "1999"
+      },
+      {
+        "key": "CIT0011",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/S0005-1098(01)00078-4"
+      },
+      {
+        "key": "CIT0012",
+        "volume-title": "Fault Detection and Diagnosis in Engineering Systems",
+        "author": "GERTLER J.",
+        "year": "1998"
+      },
+      {
+        "key": "CIT0013",
+        "volume-title": "Linear Systems",
+        "author": "KAILATH T.",
+        "year": "1980"
+      },
+      {
+        "key": "CIT0014",
+        "volume-title": "Multivarible Feedback Design",
+        "author": "MACIEJOWSKI J. M.",
+        "year": "1989"
+      },
+      {
+        "key": "CIT0015",
+        "doi-asserted-by": "crossref",
+        "unstructured": "MAGNI, J. F. and MOUYON, P. On residual generation by observer and parity space approaches. IEEE Conference on Decision and Control. Tucson, Arizona, USA. pp.185–190.",
+        "DOI": "10.1109/CDC.1992.371760"
+      },
+      {
+        "key": "CIT0016",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/9.272354"
+      },
+      {
+        "key": "CIT0017",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/9.16422"
+      },
+      {
+        "key": "CIT0018",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/0005-1098(94)90047-7"
+      },
+      {
+        "key": "CIT0019",
+        "unstructured": "NYBERG, M. 1999. “Model based fault diagnosis: methods, theory, and automotive engine applications”. Linköping University. PhD thesis, URL: http://www.fs.isy.liu.se/ Publications"
+      },
+      {
+        "key": "CIT0020",
+        "doi-asserted-by": "crossref",
+        "unstructured": "NYBERG, M. and FRISK, E. 1999.A minimal polynomial basis solution to residual generation for fault diagnosis in linear systems, Vol. P, 61–66. Beijing, China: IFAC.",
+        "DOI": "10.1016/S1474-6670(17)57321-8"
+      },
+      {
+        "key": "CIT0021",
+        "doi-asserted-by": "crossref",
+        "unstructured": "NYBERG, M. and NIELSEN, L. Parity functions as universal residual generators and tool for fault detectability analysis. IEEE Conference on Decision and Control. pp.4483–4489.",
+        "DOI": "10.1109/CDC.1997.649673"
+      },
+      {
+        "key": "CIT0022",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/S0005-1098(98)00043-0"
+      },
+      {
+        "key": "CIT0023",
+        "volume-title": "State-Space and Multivariable Theory",
+        "author": "ROSENBROCK H. H.",
+        "year": "1970"
+      },
+      {
+        "key": "CIT0024",
+        "volume-title": "The Polynomial Toolbox 2.0 for Matlab",
+        "year": "1998"
+      }
+    ],
+    "container-title": [
+      "International Journal of Control"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "http://www.tandfonline.com/doi/pdf/10.1080/00207170110121303",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2020,
+          3,
+          3
+        ]
+      ],
+      "date-time": "2020-03-03T21:49:18Z",
+      "timestamp": 1583272158000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "http://www.tandfonline.com/doi/abs/10.1080/00207170110121303"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2002,
+          1
+        ]
+      ]
+    },
+    "references-count": 24,
+    "journal-issue": {
+      "issue": "7",
+      "published-print": {
+        "date-parts": [
+          [
+            2002,
+            1
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "10.1080/00207170110121303"
+    ],
+    "URL": "https://doi.org/10.1080/00207170110121303",
+    "relation": {},
+    "ISSN": [
+      "0020-7179",
+      "1366-5820"
+    ],
+    "issn-type": [
+      {
+        "value": "0020-7179",
+        "type": "print"
+      },
+      {
+        "value": "1366-5820",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2002,
+          1
+        ]
+      ]
+    }
+  }
+}

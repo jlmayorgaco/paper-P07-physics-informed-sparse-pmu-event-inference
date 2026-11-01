@@ -1,0 +1,538 @@
+{
+  "key": "zhang2025functional",
+  "retrieved_at": "2026-11-01T03:53:23.817454+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1109%2FTAC.2024.3462558",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1109/TAC.2024.3462558",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:53.095704+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          27
+        ]
+      ],
+      "date-time": "2026-10-27T19:55:05Z",
+      "timestamp": 1793130905068,
+      "version": "4.5.0"
+    },
+    "reference-count": 48,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "3",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2025,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2025-03-01T00:00:00Z",
+          "timestamp": 1740787200000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2025,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2025-03-01T00:00:00Z",
+          "timestamp": 1740787200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2025,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2025-03-01T00:00:00Z",
+          "timestamp": 1740787200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100001809",
+        "name": "National Natural Science Foundation of China",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "62373059"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "62373059"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100001809",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "name": "Future Battery Industries Cooperative Research Centre"
+      },
+      {
+        "name": "Robert and Maude Gledden, Senior Visiting Fellowship"
+      },
+      {
+        "name": "Institute of Advanced Studies and by the Forrest fellowship, UWA, Australia"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Trans. Automat. Contr."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2025,
+          3
+        ]
+      ]
+    },
+    "DOI": "10.1109/tac.2024.3462558",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2024,
+          9,
+          18
+        ]
+      ],
+      "date-time": "2024-09-18T15:50:27Z",
+      "timestamp": 1726674627000
+    },
+    "page": "1592-1607",
+    "source": "Crossref",
+    "is-referenced-by-count": 19,
+    "title": [
+      "Functional Observability, Structural Functional Observability, and Optimal Sensor Placement"
+    ],
+    "prefix": "10.1109",
+    "volume": "70",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0001-5571-5845",
+        "authenticated-orcid": false,
+        "given": "Yuan",
+        "family": "Zhang",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "School of Automation, Beijing Institute of Technology, Beijing, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-0140-8887",
+        "authenticated-orcid": false,
+        "given": "Tyrone",
+        "family": "Fernando",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Electrical Electronic and Computer Engineering, University of Western Australia, Crawley, WA, Australia"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-2298-2124",
+        "authenticated-orcid": false,
+        "given": "Mohamed",
+        "family": "Darouach",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Centre de Recherche en Automatique de Nancy, IUT de Longwy, Universit&#x00E9; de Lorraine, Cosnes et Romain, France"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/nature10011"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1073/pnas.1215508110"
+      },
+      {
+        "issue": "1",
+        "key": "ref3",
+        "doi-asserted-by": "crossref",
+        "first-page": "1",
+        "DOI": "10.1038/ncomms6415",
+        "article-title": "Target control of complex networks",
+        "volume": "5",
+        "author": "Gao",
+        "year": "2014",
+        "journal-title": "Nature Commun."
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.1973.1100362"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/nature10832"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1073/pnas.2113750119"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCNS.2020.2999304"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/9.855556"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.2010.2042761"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.1966.1098323"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.automatica.2010.10.027"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.2011.2160019"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.2015.2509448"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.2006.884997"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.2022.3151732"
+      },
+      {
+        "key": "ref16",
+        "article-title": "Functional observability, functional observers design and application to reduced-order observer-based control",
+        "author": "Darouach",
+        "year": "2022"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.automatica.2025.112115"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.automatica.2013.01.014"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.automatica.2018.04.032"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.automatica.2023.110914"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2015.2449877"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2019.2916558"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICIAFS.2010.5715698"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.1974.1100557"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/9.58507"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCBB.2018.2797271"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/S0005-1098(03)00104-3"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.automatica.2022.110229"
+      },
+      {
+        "key": "ref29",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1017/CBO9781139177801.004"
+      },
+      {
+        "key": "ref30",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCNS.2015.2453711"
+      },
+      {
+        "key": "ref31",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/BF02579435"
+      },
+      {
+        "key": "ref32",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CDC49753.2023.10384211"
+      },
+      {
+        "key": "ref33",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.automatica.2022.110722"
+      },
+      {
+        "key": "ref34",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1017/cbo9780511810817"
+      },
+      {
+        "key": "ref35",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2514/3.20424"
+      },
+      {
+        "key": "ref36",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCNS.2014.2337974"
+      },
+      {
+        "key": "ref37",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1115/1.1497472"
+      },
+      {
+        "key": "ref38",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CCA.2001.973955"
+      },
+      {
+        "key": "ref39",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.jprocont.2015.09.002"
+      },
+      {
+        "key": "ref40",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-642-03994-2"
+      },
+      {
+        "key": "ref41",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/9.50361"
+      },
+      {
+        "key": "ref42",
+        "article-title": "Generic diagonalizability, structural functional observability and output controllability",
+        "author": "Zhang",
+        "year": "2024"
+      },
+      {
+        "key": "ref43",
+        "volume-title": "Modern Control Engineering",
+        "volume": "4",
+        "author": "Ogata",
+        "year": "2002"
+      },
+      {
+        "key": "ref44",
+        "article-title": "Duality between controllability and observability for target control and estimation in networks",
+        "author": "Montanari",
+        "year": "2024"
+      },
+      {
+        "key": "ref45",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/LCSYS.2017.2711787"
+      },
+      {
+        "key": "ref46",
+        "volume-title": "Computers and Intractability: A. Guide to the Theory of NP-Completeness",
+        "volume": "174",
+        "author": "Garey",
+        "year": "1979"
+      },
+      {
+        "key": "ref47",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.2023.3295698"
+      },
+      {
+        "key": "ref48",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.sysconle.2023.105578"
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Automatic Control"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx8/9/10906769/10681657.pdf?arnumber=10681657",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2025,
+          2,
+          28
+        ]
+      ],
+      "date-time": "2025-02-28T14:03:19Z",
+      "timestamp": 1740751399000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/10681657/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          3
+        ]
+      ]
+    },
+    "references-count": 48,
+    "journal-issue": {
+      "issue": "3"
+    },
+    "URL": "https://doi.org/10.1109/tac.2024.3462558",
+    "relation": {},
+    "ISSN": [
+      "0018-9286",
+      "1558-2523",
+      "2334-3303"
+    ],
+    "issn-type": [
+      {
+        "value": "0018-9286",
+        "type": "print"
+      },
+      {
+        "value": "1558-2523",
+        "type": "electronic"
+      },
+      {
+        "value": "2334-3303",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2025,
+          3
+        ]
+      ]
+    }
+  }
+}

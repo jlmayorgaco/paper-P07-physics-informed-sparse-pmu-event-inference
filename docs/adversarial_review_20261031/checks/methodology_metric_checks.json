@@ -1,0 +1,134 @@
+{
+  "scope": "Synthetic metric checks only; C01 truth, predictions, observations and partial results not read.",
+  "premature_closure": {
+    "true_off_s": 15.0,
+    "restoration_emitted_s": 13.0,
+    "off_delay_s": -2.0,
+    "false_restorations_as_in_evaluate_line_48": 0,
+    "observation": "Premature restoration of a matched event is not counted by false_restorations."
+  },
+  "delayed_diagnosis_first_stop": {
+    "source": "LINE1-2",
+    "onset_s": 10.0,
+    "first_alarm_s": 11.0,
+    "first_emitted_s": 19.0,
+    "prechange_alarm": false,
+    "first_correct": true,
+    "first_stopped": true,
+    "right_censored": false,
+    "delay_s": 1.0,
+    "restricted_correct_delay_s": 9.0
+  },
+  "delayed_diagnosis_note": "Alarm delay is 1 s but source is emitted after 9 s; restricted_correct_delay_s preserves the latter.",
+  "first_stop_source_matrix": [
+    {
+      "alarm_source": "LINE1-2",
+      "diagnosis_source": "LINE1-2",
+      "source_used_by_alarms": "LINE1-2",
+      "outcome": {
+        "source": "LINE1-2",
+        "onset_s": 10.0,
+        "first_alarm_s": 11.0,
+        "first_emitted_s": 19.0,
+        "prechange_alarm": false,
+        "first_correct": true,
+        "first_stopped": true,
+        "right_censored": false,
+        "delay_s": 1.0,
+        "restricted_correct_delay_s": 9.0
+      }
+    },
+    {
+      "alarm_source": "LINE1-2",
+      "diagnosis_source": "LINE2-3",
+      "source_used_by_alarms": "LINE2-3",
+      "outcome": {
+        "source": "LINE1-2",
+        "onset_s": 10.0,
+        "first_alarm_s": 11.0,
+        "first_emitted_s": 19.0,
+        "prechange_alarm": false,
+        "first_correct": false,
+        "first_stopped": true,
+        "right_censored": false,
+        "delay_s": 1.0,
+        "restricted_correct_delay_s": 20.0
+      }
+    },
+    {
+      "alarm_source": "LINE1-2",
+      "diagnosis_source": null,
+      "source_used_by_alarms": "ABSTAIN",
+      "outcome": {
+        "source": "LINE1-2",
+        "onset_s": 10.0,
+        "first_alarm_s": 11.0,
+        "first_emitted_s": null,
+        "prechange_alarm": false,
+        "first_correct": false,
+        "first_stopped": true,
+        "right_censored": false,
+        "delay_s": 1.0,
+        "restricted_correct_delay_s": 20.0
+      }
+    },
+    {
+      "alarm_source": "LINE2-3",
+      "diagnosis_source": "LINE1-2",
+      "source_used_by_alarms": "LINE1-2",
+      "outcome": {
+        "source": "LINE1-2",
+        "onset_s": 10.0,
+        "first_alarm_s": 11.0,
+        "first_emitted_s": 19.0,
+        "prechange_alarm": false,
+        "first_correct": true,
+        "first_stopped": true,
+        "right_censored": false,
+        "delay_s": 1.0,
+        "restricted_correct_delay_s": 9.0
+      }
+    },
+    {
+      "alarm_source": "LINE2-3",
+      "diagnosis_source": "LINE2-3",
+      "source_used_by_alarms": "LINE2-3",
+      "outcome": {
+        "source": "LINE1-2",
+        "onset_s": 10.0,
+        "first_alarm_s": 11.0,
+        "first_emitted_s": 19.0,
+        "prechange_alarm": false,
+        "first_correct": false,
+        "first_stopped": true,
+        "right_censored": false,
+        "delay_s": 1.0,
+        "restricted_correct_delay_s": 20.0
+      }
+    },
+    {
+      "alarm_source": "LINE2-3",
+      "diagnosis_source": null,
+      "source_used_by_alarms": "ABSTAIN",
+      "outcome": {
+        "source": "LINE1-2",
+        "onset_s": 10.0,
+        "first_alarm_s": 11.0,
+        "first_emitted_s": null,
+        "prechange_alarm": false,
+        "first_correct": false,
+        "first_stopped": true,
+        "right_censored": false,
+        "delay_s": 1.0,
+        "restricted_correct_delay_s": 20.0
+      }
+    }
+  ],
+  "illustrative_random_clone_split_leak_probability_six_clones": 0.881622,
+  "conditional_homogeneous_Poisson_zero_alarm_upper95_per_hour": {
+    "H04_204_seconds": 52.865863650952775,
+    "C01_one_stratum_12_times_588_seconds": 1.5284348334459137
+  },
+  "zero_alarm_hours_required_for_point_one_per_hour_under_same_model": 29.957322735539908,
+  "Poisson_caveat": "Illustrations under an assumed homogeneous Poisson process; paired or correlated streams do not automatically satisfy it."
+}

@@ -1,0 +1,519 @@
+{
+  "key": "wang2024group",
+  "retrieved_at": "2026-11-01T03:53:23.611028+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.32604%2Fee.2024.028223",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.32604/ee.2024.028223",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:49.236742+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2025,
+          3,
+          7
+        ]
+      ],
+      "date-time": "2025-03-07T05:11:57Z",
+      "timestamp": 1741324317537,
+      "version": "3.38.0"
+    },
+    "reference-count": 23,
+    "publisher": "Tech Science Press",
+    "issue": "0",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              7,
+              18
+            ]
+          ],
+          "date-time": "2024-07-18T00:00:00Z",
+          "timestamp": 1721260800000
+        },
+        "content-version": "vor",
+        "delay-in-days": 199,
+        "URL": "https://doi.org/10.32604/TSP-CROSSMARKPOLICY"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "ENERGY"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "DOI": "10.32604/ee.2024.028223",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2024,
+          4,
+          3
+        ]
+      ],
+      "date-time": "2024-04-03T08:37:13Z",
+      "timestamp": 1712133433000
+    },
+    "page": "1-10",
+    "update-policy": "https://doi.org/10.32604/tsp-crossmarkpolicy",
+    "source": "Crossref",
+    "is-referenced-by-count": 0,
+    "title": [
+      "A Disturbance Localization Method for Power System Based on Group Sparse Representation and Entropy Weight Method"
+    ],
+    "prefix": "10.32604",
+    "volume": "0",
+    "author": [
+      {
+        "given": "Zeyi",
+        "family": "Wang",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Mingxi",
+        "family": "Jiao",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Daliang",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Minxu",
+        "family": "Liu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Minglei",
+        "family": "Jiang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "He",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Shiqiang",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "member": "17807",
+    "published-online": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "ref1",
+        "doi-asserted-by": "crossref",
+        "first-page": "27",
+        "DOI": "10.1016/j.ijepes.2017.06.023",
+        "article-title": "Proposal of a fuzzy-based PMU for detection and classification of disturbances in power distribution networks",
+        "author": "Sobrinho",
+        "year": "Jan. 2018",
+        "journal-title": "Int. J. Elec. Power"
+      },
+      {
+        "key": "ref2",
+        "first-page": "134",
+        "article-title": "A real-time hierarchical framework for fault detection, classification, and location in power systems using PMUs data and deep learning",
+        "author": "Shadi",
+        "year": "Jan. 2022",
+        "journal-title": "Int. J. Elec. Power"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "crossref",
+        "first-page": "105054",
+        "DOI": "10.1109/ACCESS.2019.2932035",
+        "article-title": "Impact of low data quality on disturbance triangulation application using high-sensity PMU measurements",
+        "volume": "7",
+        "author": "Deng",
+        "year": "Aug. 2019",
+        "journal-title": "IEEE Access"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "crossref",
+        "first-page": "63980",
+        "DOI": "10.1109/ACCESS.2021.3074562",
+        "article-title": "Synergizing PMU data from multiple locations in Indian power grid-case study",
+        "volume": "9",
+        "author": "Ballal",
+        "year": "May 2021",
+        "journal-title": "IEEE Access"
+      },
+      {
+        "key": "ref5",
+        "first-page": "1712",
+        "article-title": "An improved sparse-measurement based fault location technology for distribution networks",
+        "volume": "17",
+        "author": "Jia",
+        "year": "Mar. 2021",
+        "journal-title": "IEEE Trans. Ind. Inform."
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "crossref",
+        "first-page": "413",
+        "DOI": "10.1109/TSG.2022.3186541",
+        "article-title": "Faulted line-section location in distribution system with inverter-interfaced DGs using sparse meters",
+        "volume": "14",
+        "author": "Yang",
+        "year": "Jan. 2023",
+        "journal-title": "IEEE Trans. on Smart Grid"
+      },
+      {
+        "key": "ref7",
+        "first-page": "158",
+        "article-title": "Research on VSC-HVDC fault location method based on compressed sensing (in Chinese)",
+        "volume": "41",
+        "author": "Yu",
+        "year": "Mar. 2020",
+        "journal-title": "Acta Energ. Sol. Sin."
+      },
+      {
+        "key": "ref8",
+        "first-page": "1444",
+        "article-title": "Disturbance location method of power system based on over-complete reconstruction dictionary design (in Chinese)",
+        "volume": "35",
+        "author": "Yu",
+        "year": "Apr. 2020",
+        "journal-title": "Trans. China Electrotech. Soc."
+      },
+      {
+        "key": "ref9",
+        "first-page": "548",
+        "article-title": "A sparse-data-driven approach for fault location in transmission networks",
+        "volume": "8",
+        "author": "Majidi",
+        "year": "Mar. 2017",
+        "journal-title": "IEEE Trans. Smart Grid"
+      },
+      {
+        "key": "ref10",
+        "first-page": "3475",
+        "article-title": "Research on distribution network fault location based on bayesian compressed sensing theory",
+        "volume": "39",
+        "author": "Jia",
+        "year": "Jun. 2019",
+        "journal-title": "Proc. CSEE"
+      },
+      {
+        "key": "ref11",
+        "first-page": "3480",
+        "article-title": "Research on the compressed sensing based fault location within the collection system of a large-scale photovoltaic power plant",
+        "volume": "37",
+        "author": "Jia",
+        "year": "Jun. 2017",
+        "journal-title": "Proc. CSEE"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "crossref",
+        "first-page": "516",
+        "DOI": "10.1109/TPWRS.2009.2036470",
+        "article-title": "Contingency-constrained PMU placement in power networks",
+        "volume": "25",
+        "author": "Aminifar",
+        "year": "Feb. 2010",
+        "journal-title": "IEEE Trans. Power Syst."
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "crossref",
+        "first-page": "6476",
+        "DOI": "10.1049/iet-gtd.2020.0755",
+        "article-title": "Application of random matrix model in multiple abnormal sources detection and location based on PMU monitoring data in distribution network",
+        "volume": "14",
+        "author": "Yan",
+        "year": "Dec. 2020",
+        "journal-title": "IET Gener. Trans. Dis."
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "crossref",
+        "first-page": "293",
+        "DOI": "10.1049/iet-stg.2018.0092",
+        "article-title": "Data-driven disturbance source identification for power system oscillations using credibility search ensemble learning",
+        "author": "Banna",
+        "year": "Jun. 2019",
+        "journal-title": "IET Smart Grid"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1109/TIM.2021.3075744",
+        "article-title": "Detection of short-term voltage disturbances and harmonics using μpMU-based variational mode extraction method",
+        "volume": "70",
+        "author": "Jalilian",
+        "year": "Feb. 2021",
+        "journal-title": "IEEE T. Instru. Meas."
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "crossref",
+        "first-page": "594",
+        "DOI": "10.1109/TMM.2019.2931400",
+        "article-title": "Design of compressed sensing system with probability-based prior information",
+        "volume": "22",
+        "author": "Jiang",
+        "year": "Mar. 2020",
+        "journal-title": "IEEE Trans. Multimedia"
+      },
+      {
+        "key": "ref17",
+        "first-page": "1",
+        "article-title": "Power quality data compression and disturbances recognition based on deep CS-BiLSTM algorithm with cloud-edge collaboration",
+        "volume": "10",
+        "author": "Xia",
+        "year": "Apr. 2022",
+        "journal-title": "Front. Energ. Res."
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "crossref",
+        "first-page": "1425",
+        "DOI": "10.1109/TPWRS.2021.3108481",
+        "article-title": "Real-time event detection based on weibull distribution Using synchrophasor measurements for enhanced situational awareness",
+        "volume": "37",
+        "author": "Lqbal",
+        "year": "Mar. 2022",
+        "journal-title": "IEEE Trans. on Power Systems"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "crossref",
+        "first-page": "2397",
+        "DOI": "10.1109/TPWRD.2020.3047228",
+        "article-title": "Wide-area identification of the size and location of loss of generation events by sparse PMUs",
+        "volume": "36",
+        "author": "Azizi",
+        "year": "Aug. 2021",
+        "journal-title": "IEEE Trans. on Power Delivery"
+      },
+      {
+        "key": "ref20",
+        "series-title": "2023 IEEE 2nd Int. Conf. Electr. Eng., Big Data Algorithms (EEBDA)",
+        "first-page": "1084",
+        "article-title": "A disturbance localization method for power system based on group sparse representation of compressed sensing",
+        "author": "Wang",
+        "year": "2023"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "crossref",
+        "first-page": "109131",
+        "DOI": "10.1109/ACCESS.2023.3321702",
+        "article-title": "An adaptive MP algorithm for underwater acoustic channel estimation based on compressed sensing",
+        "volume": "11",
+        "author": "Mu",
+        "year": "Nov. 2023",
+        "journal-title": "IEEE Access"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "crossref",
+        "first-page": "4673",
+        "DOI": "10.1109/TSG.2018.2866487",
+        "article-title": "Fault classification for transmission lines based on group sparse representation",
+        "volume": "10",
+        "author": "Shi",
+        "year": "Jul. 2019",
+        "journal-title": "IEEE Trans. Smart Grid"
+      },
+      {
+        "key": "ref23",
+        "first-page": "1441",
+        "article-title": "Generalized orthogonal matching pursuit for distributed compressed sensing",
+        "volume": "11",
+        "author": "Xu",
+        "year": "Jul. 2015",
+        "journal-title": "Int. J. Innov. Comput., Inf. Control"
+      }
+    ],
+    "container-title": [
+      "Energy Engineering"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://www.techscience.com/files/energy/2024/TSP_EE-121-8/TSP_EE_28223/TSP_EE_28223.pdf",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2025,
+          3,
+          6
+        ]
+      ],
+      "date-time": "2025-03-06T11:25:34Z",
+      "timestamp": 1741260334000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://www.techscience.com/energy/v121n8/57336"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "references-count": 23,
+    "journal-issue": {
+      "issue": "0",
+      "published-online": {
+        "date-parts": [
+          [
+            2024
+          ]
+        ]
+      },
+      "published-print": {
+        "date-parts": [
+          [
+            2024
+          ]
+        ]
+      }
+    },
+    "URL": "https://doi.org/10.32604/ee.2024.028223",
+    "relation": {},
+    "ISSN": [
+      "1546-0118"
+    ],
+    "issn-type": [
+      {
+        "type": "electronic",
+        "value": "1546-0118"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2022-12-06",
+        "order": 0,
+        "name": "received",
+        "label": "Received",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      },
+      {
+        "value": "2023-02-24",
+        "order": 1,
+        "name": "accepted",
+        "label": "Accepted",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      },
+      {
+        "value": "2024-07-19",
+        "order": 2,
+        "name": "published",
+        "label": "Published Online",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

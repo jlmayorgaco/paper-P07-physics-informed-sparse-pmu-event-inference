@@ -1,0 +1,458 @@
+{
+  "key": "cui2021hybrid",
+  "retrieved_at": "2026-11-01T03:53:22.537083+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1109%2FTPWRS.2020.3017019",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1109/TPWRS.2020.3017019",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:20.713387+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          28
+        ]
+      ],
+      "date-time": "2026-10-28T02:32:38Z",
+      "timestamp": 1793154758162,
+      "version": "4.5.0"
+    },
+    "reference-count": 28,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "2",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2021-03-01T00:00:00Z",
+          "timestamp": 1614556800000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2021-03-01T00:00:00Z",
+          "timestamp": 1614556800000
+        },
+        "content-version": "am",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2021-03-01T00:00:00Z",
+          "timestamp": 1614556800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2021-03-01T00:00:00Z",
+          "timestamp": 1614556800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100008982",
+        "name": "National Science Foundation",
+        "doi-asserted-by": "publisher",
+        "id": [
+          {
+            "id": "10.13039/501100008982",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/100000015",
+        "name": "U.S. Department of Energy",
+        "doi-asserted-by": "publisher",
+        "id": [
+          {
+            "id": "10.13039/100000015",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "name": "NSF",
+        "award": [
+          "EEC-1041877"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "EEC-1041877"
+            ]
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Trans. Power Syst."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2021,
+          3
+        ]
+      ]
+    },
+    "DOI": "10.1109/tpwrs.2020.3017019",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2020,
+          8,
+          17
+        ]
+      ],
+      "date-time": "2020-08-17T17:44:39Z",
+      "timestamp": 1597686279000
+    },
+    "page": "1373-1384",
+    "source": "Crossref",
+    "is-referenced-by-count": 124,
+    "title": [
+      "Hybrid Symbolic-Numeric Framework for Power System Modeling and Analysis"
+    ],
+    "prefix": "10.1109",
+    "volume": "36",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-4259-5925",
+        "authenticated-orcid": false,
+        "given": "Hantao",
+        "family": "Cui",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Department of Electrical Engineering and Computer Science, The University of Tennessee, Knoxville, TN, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-1060-7618",
+        "authenticated-orcid": false,
+        "given": "Fangxing",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Electrical Engineering and Computer Science, The University of Tennessee, Knoxville, TN, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-2867-8556",
+        "authenticated-orcid": false,
+        "given": "Kevin",
+        "family": "Tomsovic",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Electrical Engineering and Computer Science, The University of Tennessee, Knoxville, TN, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1049/iet-esi.2019.0084"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/MPE.2019.2959054"
+      },
+      {
+        "key": "ref12",
+        "article-title": "PSS/E graphical model builder",
+        "year": "2017"
+      },
+      {
+        "key": "ref13",
+        "article-title": "DSATools",
+        "year": "2020"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-642-13669-6"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.softx.2018.01.002"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/59.192924"
+      },
+      {
+        "key": "ref17",
+        "first-page": "24",
+        "article-title": "A component based approach to power system applications development",
+        "author": "džafi?",
+        "year": "0",
+        "journal-title": "Proc 14th Power Syst Comput Conf"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2004.836178"
+      },
+      {
+        "key": "ref19",
+        "first-page": "407",
+        "article-title": "Instructional use of declarative languages for the study of machine transients",
+        "volume": "6",
+        "author": "alvarado",
+        "year": "1991",
+        "journal-title": "IEEE Power Eng Rev"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3384/ecp15119105"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2005.851911"
+      },
+      {
+        "key": "ref27",
+        "author": "kundur",
+        "year": "1994",
+        "journal-title": "Power System Stability and Control"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/59.486097"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2010.2071888"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PESMG.2013.6672387"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PESGM.2016.7742008"
+      },
+      {
+        "key": "ref7",
+        "article-title": "InterPSS: A new generation power system simulation engine",
+        "author": "zhou",
+        "year": "2017"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/59.207380"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/NAPS.2018.8600596"
+      },
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PESMG.2013.6672734"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/0142-0615(96)88162-2"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2010.2051168"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TEC.2003.822316"
+      },
+      {
+        "key": "ref24",
+        "article-title": "Interpss controller modeling language",
+        "author": "zhou",
+        "year": "2012"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.7717/peerj-cs.103"
+      },
+      {
+        "key": "ref26",
+        "article-title": "Governor TGOV1 model reference",
+        "year": "2020"
+      },
+      {
+        "key": "ref25",
+        "article-title": "ANDES documentation",
+        "author": "cui",
+        "year": "2020"
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Power Systems"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://ieeexplore.ieee.org/ielam/59/9358032/9169830-aam.pdf",
+        "content-type": "application/pdf",
+        "content-version": "am",
+        "intended-application": "syndication"
+      },
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/59/9358032/09169830.pdf?arnumber=9169830",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2024,
+          1,
+          15
+        ]
+      ],
+      "date-time": "2024-01-15T16:19:56Z",
+      "timestamp": 1705335596000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/9169830/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2021,
+          3
+        ]
+      ]
+    },
+    "references-count": 28,
+    "journal-issue": {
+      "issue": "2"
+    },
+    "URL": "https://doi.org/10.1109/tpwrs.2020.3017019",
+    "relation": {},
+    "ISSN": [
+      "0885-8950",
+      "1558-0679"
+    ],
+    "issn-type": [
+      {
+        "value": "0885-8950",
+        "type": "print"
+      },
+      {
+        "value": "1558-0679",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2021,
+          3
+        ]
+      ]
+    }
+  }
+}

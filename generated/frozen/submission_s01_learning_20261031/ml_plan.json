@@ -1,0 +1,112 @@
+{
+  "id": "S01_GROUPED_ET_V1",
+  "status": "FROZEN_BEFORE_FEATURE_EXTRACTION_AND_FITTING",
+  "protocol_hashes": {
+    "SIM_REGISTRY.json": "f459baf0af71e1034282f22255618d5c0f0ef369cabbf2e837d87cda95daa8c6",
+    "DEVELOPMENT_SPLIT.json": "af49df26c04778b970e10847e256d151fc8157cd691e61367bdc241dcbf6c1a5"
+  },
+  "implementation_sha256": {
+    "checks.py": "883a30f12c36732b0906662f32b4f8a4b8482b5fbbfe9256923019b8e478cb14",
+    "common.py": "4505c9fffd254949993ca25c2be895232a0bac8678f3dc56cc25824403a9c48c",
+    "infer.py": "89ce7d41662e75f78c9a4f092542cbb315c0edd61a4ec143b38e1d64a40d4dc9",
+    "kernels.py": "ebf6d095446439a54c63d0c71839e4f536fa113388749301c3ed7aa4f65cc4d7",
+    "preprocess.py": "63349fe92f2ea6ee029ab2afb6d84bf86f3590fb947b25e01a3d19079890f6e3",
+    "publication.py": "b56a5eda1b7ae9fd2bb4f293ae1d193c0760bccf58a67108b4c885a66eb38e3a",
+    "run.py": "8d88f670f6cffe5f6efe52ac2ca477ac483747fd2b692ba0d293e202013383bf",
+    "validation_metrics.py": "fb987cae175c20b435199a553df02192a3ad3c8bcec8649307db5cfea51a9b84",
+    "reference/model/assets.json": "e237d417f12f1fa3e59c62166d980d017c70b5eab3f1b7733b618e3326a9c7f9",
+    "reference/model/reporting_config.json": "2f9759a0f1f062dd76a16e0b873ced9eed3f3b8402a3a1a9cdd60872148f9d01",
+    "reference/model/stochastic_model.json": "f873cfcd4267f499f719c9003f5a005fdafb019dfdd5b35ac1d62129e870da29"
+  },
+  "seed": 2601026,
+  "fit_partition": "train_56",
+  "selection_partition": "validation_14",
+  "holdout_partition": "development_holdout_30",
+  "counts": {
+    "train_56": {
+      "groups": 31,
+      "records": 90,
+      "normal_groups": 1
+    },
+    "validation_14": {
+      "groups": 8,
+      "records": 16,
+      "normal_groups": 0
+    },
+    "development_holdout_30": {
+      "groups": 17,
+      "records": 70,
+      "normal_groups": 1
+    }
+  },
+  "variants": {
+    "BASELINE": 846,
+    "SHORT": 1457
+  },
+  "estimator": {
+    "n_estimators": 400,
+    "min_samples_leaf": 2,
+    "max_features": "sqrt",
+    "class_weight": "balanced",
+    "random_state": 2601026,
+    "n_jobs": 1
+  },
+  "fitting_rows": "Every third report starting at zero-based index 360; all train records, equal per-row weight",
+  "targets": "E0 outside [onset,off); exact source ID during intervention; no recovery labels",
+  "reference": {
+    "prefix_reports": 300,
+    "center_scale_reports": [
+      30,
+      300
+    ],
+    "mad_floor": 1e-06,
+    "channels": 47,
+    "pmus": [
+      2,
+      5,
+      6,
+      10,
+      19,
+      22,
+      29,
+      39
+    ],
+    "first_monitoring_report": 360
+  },
+  "preprocessing": "Exact R09 Observations/ColoredInstrument and trailing features; empirical prefix mean recomputed without inverse AC; no DAE fit cache or stationarity gate",
+  "publication": {
+    "persistence_reports": 6,
+    "probabilities_calibrated": false,
+    "confidence_threshold": null
+  },
+  "selection": [
+    "Maximize validation joint_before_off event count",
+    "Minimize validation extra alarms on a tie",
+    "Prefer BASELINE on a complete tie"
+  ],
+  "metric": "R09 first temporal alarm association within min(onset+30,next_onset), independent of predicted label; correct source/family diagnosis emitted before off",
+  "refit_train_plus_validation": false,
+  "hyperparameter_search": false,
+  "raw_training": false,
+  "feature_cache_reuse": false,
+  "resource_limits": {
+    "n_jobs": 1,
+    "blas_threads": 1
+  },
+  "holdout_policy": "Explicit separate command only after MODEL_FREEZE.json; no holdout feature or model selection access in train command",
+  "limitations": [
+    "Retrospective already-opened SIM campaigns, not blind external confirmation",
+    "Only two physical normal groups; no independent normal group in validation",
+    "No false-alarm threshold fitted; validation extras do not estimate independent normal FA/h",
+    "Known load/line sources only; no fault/generation/cyber training labels",
+    "All campaigns retain F01 plant/instrument ancestry"
+  ],
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.16.3",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.7.2",
+    "joblib": "1.5.2",
+    "threadpoolctl": "3.5.0"
+  }
+}

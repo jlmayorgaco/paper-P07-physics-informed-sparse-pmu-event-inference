@@ -1,0 +1,892 @@
+{
+  "key": "zhai2025partial",
+  "retrieved_at": "2026-11-01T03:53:23.816145+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1103%2FPRXEnergy.4.013003",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1103/PRXEnergy.4.013003",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:52.144560+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          29
+        ]
+      ],
+      "date-time": "2026-10-29T21:52:59Z",
+      "timestamp": 1793310779097,
+      "version": "4.5.0"
+    },
+    "reference-count": 85,
+    "publisher": "American Physical Society (APS)",
+    "issue": "1",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2025,
+              2,
+              4
+            ]
+          ],
+          "date-time": "2025-02-04T00:00:00Z",
+          "timestamp": 1738627200000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/100000181",
+        "name": "AFOSR",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "FA9550-21-1-0438"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "FA9550-21-1-0438"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/100000181",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/100005501",
+        "name": "Israel-U.S. Binational Industrial Research and Development Foundation",
+        "doi-asserted-by": "publisher",
+        "id": [
+          {
+            "id": "10.13039/100005501",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "journals.aps.org"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "PRX Energy"
+    ],
+    "accepted": {
+      "date-parts": [
+        [
+          2025,
+          1,
+          15
+        ]
+      ]
+    },
+    "abstract": "<jats:p>The ever-increasing complexity of modern power grids makes them vulnerable to cyber and/or physical attacks. To protect them, accurate attack detection is essential. A challenging scenario is that a localized attack has occurred on a specific transmission line but only a small number of transmission lines elsewhere can be monitored. That is, full state observation of the whole power grid is not feasible, so attack detection and state estimation need to be done with only limited, partial state observations. We articulate a machine-learning framework to address this problem, where the necessity to deal with sequential time-series data with dynamical memories and to avoid a vanishing gradient has led us to choose the long short-term memory (LSTM) architecture. Leveraging the inherent capabilities of LSTM to handle sequential data and capture temporal dependencies, we demonstrate, using three benchmark power-grid networks, that the complete dynamical state of the whole power grid can be faithfully reconstructed and the attack can be accurately localized from limited, partial state observations even in the presence of noise. The performance improves as more observations become available. Further justification for using the LSTM is provided by our comparing its performance with that of alternative machine-learning architectures such as feedforward neural networks and random forest. Despite the gigantic existing literature on applications of LSTM to power grids, to our knowledge, the problem of locating an attack and estimating the state from limited observations had not been addressed before our work. The method developed can potentially be generalized to broad complex cyber-physical systems.</jats:p>",
+    "DOI": "10.1103/prxenergy.4.013003",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2025,
+          2,
+          4
+        ]
+      ],
+      "date-time": "2025-02-04T11:03:46Z",
+      "timestamp": 1738667026000
+    },
+    "update-policy": "https://doi.org/10.1103/crossmark-policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 7,
+    "title": [
+      "Detecting Attacks and Estimating States of Power Grids from Partial Observations with Machine Learning"
+    ],
+    "prefix": "10.1103",
+    "volume": "4",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0003-3702-0454",
+        "authenticated-orcid": true,
+        "given": "Zheng-Meng",
+        "family": "Zhai",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "id": [
+              {
+                "id": "https://ror.org/03efmqc40",
+                "id-type": "ROR",
+                "asserted-by": "publisher"
+              }
+            ],
+            "name": "Arizona State University"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-2096-6876",
+        "authenticated-orcid": true,
+        "given": "Mohammadamin",
+        "family": "Moradi",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "id": [
+              {
+                "id": "https://ror.org/03efmqc40",
+                "id-type": "ROR",
+                "asserted-by": "publisher"
+              }
+            ],
+            "name": "Arizona State University"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-0723-733X",
+        "authenticated-orcid": true,
+        "given": "Ying-Cheng",
+        "family": "Lai",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "id": [
+              {
+                "id": "https://ror.org/03efmqc40",
+                "id-type": "ROR",
+                "asserted-by": "publisher"
+              }
+            ],
+            "name": "Arizona State University"
+          },
+          {
+            "id": [
+              {
+                "id": "https://ror.org/03efmqc40",
+                "id-type": "ROR",
+                "asserted-by": "publisher"
+              }
+            ],
+            "name": "Arizona State University"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "16",
+    "published-online": {
+      "date-parts": [
+        [
+          2025,
+          2,
+          4
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "PRXEnergy.4.013003Cc1R1",
+        "first-page": "161",
+        "type": "journal-article",
+        "volume": "12",
+        "author": "R. Baheti",
+        "year": "2011",
+        "journal-title": "Impact Cont. Tech."
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc2R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/MC.2009.81",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc3R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1103/PhysRevLett.104.058701",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc4R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1209/0295-5075/94/48006",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc5R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1088/1751-8113/47/34/343001",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc6R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/ncomms5323",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc7R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.physrep.2016.06.004",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc8R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/s41467-017-02288-4",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc9R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/s41467-022-30706-9",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc10R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1073/pnas.2216030120",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc11R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1162/neco.1997.9.8.1735",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc12R1",
+        "first-page": "64",
+        "type": "journal-article",
+        "volume": "5",
+        "author": "L. R. Medsker",
+        "year": "2001",
+        "journal-title": "Design Appl."
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc13R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.4249/scholarpedia.1888",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc15R1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "A. Graves, A.-R. Mohamed, and G. Hinton, in 2013 IEEE International Conference on Acoustics, Speech and Signal Processing (IEEE, Vancouver, Canada, 2013), p. 6645.",
+        "DOI": "10.1109/ICASSP.2013.6638947",
+        "type": "other"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc17R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.14445/22315381/IJETT-V48P253",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc18R1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "K. Yao, G. Zweig, M.-Y. Hwang, Y. Shi, and D. Yu, in Interspeech (International Speech Communication Association (ISCA), Lyon, France, 2013), p. 2524.",
+        "DOI": "10.21437/Interspeech.2013-569",
+        "type": "other"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc20R1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "T. Guo, Z. Xu, X. Yao, H. Chen, K. Aberer, and K. Funaya, in 2016 IEEE International Conference on Data Science and Advanced Analytics (DSAA) (IEEE, Montreal, Canada, 2016), p. 816.",
+        "DOI": "10.1109/DSAA.2016.92",
+        "type": "other"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc22R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1103/PhysRevResearch.2.012080",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc23R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.ijforecast.2020.06.008",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc24R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1103/PhysRevResearch.3.013090",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc25R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1103/PhysRevResearch.5.033127",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc26R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1063/5.0138661",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc27R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/s41467-023-41379-3",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc28R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1063/5.0200898",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc29R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/s41467-024-49190-4",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc30R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1103/PhysRevApplied.19.034030",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc32R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/72.963777",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc33R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1103/PRXEnergy.1.033005",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc34R1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Y. Peng, T. Lu, J. Liu, Y. Gao, X. Guo, and F. Xie, in 2013 Ninth International Conference on Intelligent Information Hiding and Multimedia Signal Processing (IEEE, Beijing, China, 2013), p. 442.",
+        "DOI": "10.1109/IIH-MSP.2013.116",
+        "type": "other"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc35R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3390/en13051215",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc36R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ACCESS.2018.2866403",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc37R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.ijepes.2017.12.020",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc38R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.segan.2021.100477",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc39R1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "H. Holm, W. R. Flores, and G. Ericsson, in IEEE PES ISGT Europe 2013 (IEEE, Lyngby, Denmark, 2013), p. 1.",
+        "DOI": "10.1109/ISGTEurope.2013.6695407",
+        "type": "other"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc40R1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "T. Akhtar, B. B. Gupta, and S. Yamaguchi, in 2018 IEEE International Conference on Consumer Electronics (ICCE) (IEEE, Las Vegas, NV, USA, 2018), p. 1.",
+        "DOI": "10.1109/ICCE.2018.8326281",
+        "type": "other"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc41R1",
+        "type": "journal-article",
+        "volume": "207",
+        "author": "M. J. Assante",
+        "year": "2016",
+        "journal-title": "SANS Industrial Control Systems Security Blog"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc42R1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "P. Srikantha and D. Kundur, in 2015 IEEE Power &amp; Energy Society Innovative Smart Grid Technologies Conference (ISGT) (IEEE, Washington, D.C., USA, 2015), p. 1.",
+        "DOI": "10.1109/ISGT.2015.7131790",
+        "type": "other"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc43R1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "S. Liu, X. P. Liu, and A. El Saddik, in 2013 IEEE PES Innovative Smart Grid Technologies Conference (ISGT) (IEEE, Washington, D.C., USA, 2013), p. 1.",
+        "DOI": "10.1109/ISGT.2013.6497846",
+        "type": "other"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc44R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/rnc.4801",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc45R1",
+        "first-page": "1",
+        "type": "journal-article",
+        "volume": "388",
+        "author": "D. U. Case",
+        "year": "2016",
+        "journal-title": "Elec. Info. Sharing Anal. Cen. (E-ISAC)"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc46R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.tej.2017.02.006",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc47R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2796314.2745846",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc48R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2021.3095083",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc49R1",
+        "unstructured": "P. W. Parfomak, Physical security of the US power grid: High-voltage transformer substations (2014).",
+        "type": "other"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc50R1",
+        "unstructured": "P. W. Parfomak, NERC Standards for Bulk Power Physical Security: Is the Grid More Secure? Congressional Research Service, Washington, DC (2018).",
+        "type": "other"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc51R1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "M. Landen, K. Chung, M. Ike, S. Mackay, J.-P. Watson, and W. Lee, Dragon: in Proceedings of the 38th Annual Computer Security Applications Conference (The Association for Computing Machinery (ACM), Austin, TX, USA, 2022), p. 13.",
+        "DOI": "10.1145/3564625.3567969",
+        "type": "other"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc53R1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "V. K. Singh, S. P. Callupe, and M. Govindarasu, in 2019 North American Power Symposium (NAPS) (IEEE, Wichita, Kansas, USA, 2019), p. 1.",
+        "DOI": "10.1109/NAPS46351.2019.9000344",
+        "type": "other"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc54R1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Z. He, A. Raghavan, G. Hu, S. Chai, and R. Lee, in 2019 18th IEEE International Conference on Trust, Security and Privacy in Computing and Communications/13th IEEE International Conference on Big Data Science and Engineering (TrustCom/BigDataSE) (IEEE, Rotorua, New Zealand, 2019), p. 160.",
+        "DOI": "10.1109/TrustCom/BigDataSE.2019.00030",
+        "type": "other"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc55R1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "M. Panthi, in 2020 First International Conference on Power, Control and Computing Technologies (ICPC2T) (IEEE, Raipur, India, 2020), p. 220.",
+        "DOI": "10.1109/ICPC2T48082.2020.9071434",
+        "type": "other"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc56R1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "W. Danilczyk, Y. L. Sun, and H. He, in 2020 52nd North American Power Symposium (NAPS) (IEEE, Tempe, Arizona, USA, 2020), p. 1.",
+        "DOI": "10.1109/NAPS50074.2021.9449682",
+        "type": "other"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc57R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1155/2019/4136874",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc58R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ACCESS.2021.3127042",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc59R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/s41598-024-61491-8",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc60R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3390/su12031109",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc61R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.cie.2020.106435",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc62R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.compind.2021.103498",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc63R1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "C. Feng, T. Li, and D. Chana, in 2017 47th Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN) (IEEE, Denver, CO, USA, 2017), p. 261.",
+        "DOI": "10.1109/DSN.2017.34",
+        "type": "other"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc64R1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "M. M. Devi, M. Sharma, and A. Ganguly, in 2023 IEEE Int. Conf. Ind. Electron. Dev. Appl. (ICIDeA) (IEEE, Imphal, India, 2023), p. 146.",
+        "DOI": "10.1109/ICIDeA59866.2023.10295270",
+        "type": "other"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc65R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/JSYST.2023.3266554",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc66R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TII.2022.3178418",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc67R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/JIOT.2020.2983911",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc68R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2023.3261970",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc69R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2023.3274642",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc70R1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "M. Mohammadpourfard, I. Genc, S. Lakshminarayana, and C. Konstantinou, in 2021 IEEE SmartGridComm (IEEE, Aachen, Germany, 2021), p. 121.",
+        "DOI": "10.1109/SmartGridComm51999.2021.9631994",
+        "type": "other"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc71R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2021.3117977",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc72R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3390/electronics13122256",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc73R1",
+        "unstructured": "B. Donnot, Grid2op—A testbed platform to model sequential decision making in power systems, https://GitHub.com/rte-france/grid2op (2020).",
+        "type": "other"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc75R1",
+        "unstructured": "A. Marot, B. Donnot, G. Dulac-Arnold, A. Kelly, A. O’Sullivan, J. Viebahn, M. Awad, I. Guyon, P. Panciatici, and C. Romero, in NeurIPS 2020 Competition and Demonstration Track (PMLR, 2021), p. 112.",
+        "type": "other"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc76R1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "L. Omnes, A. Marot, and B. Donnot, in 2021 IEEE Madrid PowerTech (IEEE, Madrid, Spain, 2021), p. 1.",
+        "DOI": "10.1109/PowerTech46648.2021.9494982",
+        "type": "other"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc77R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3560815",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc78R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPAMI.2021.3059968",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc79R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1023/A:1010933404324",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc80R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1063/5.0189564",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc81R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.47738/ijiis.v4i1.73",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc82R1",
+        "volume-title": "Deep Learning",
+        "author": "I. Goodfellow",
+        "year": "2016",
+        "type": "book"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc83R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1063/5.0088989",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc84R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.cnsns.2023.107233",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc85R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1063/5.0107583",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc86R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TNNLS.2020.2978386",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc87R1",
+        "type": "journal-article",
+        "volume": "30",
+        "author": "A. Vaswani",
+        "year": "2017",
+        "journal-title": "Adv. Neural Inf. Process. Syst."
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc88R1",
+        "first-page": "6840",
+        "type": "journal-article",
+        "volume": "33",
+        "author": "J. Ho",
+        "year": "2020",
+        "journal-title": "Adv. Neural Inf. Process. Syst."
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc89R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1103/PRXEnergy.2.043007",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc90R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1063/5.0216874",
+        "type": "journal-article"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc91R1",
+        "unstructured": "Z.-M. Zhai, Simulation data of the three power grid benchmarks, https://zenodo.org/records/14004431 (2024).",
+        "type": "other"
+      },
+      {
+        "key": "PRXEnergy.4.013003Cc92R1",
+        "unstructured": "Z.-M. Zhai, Codes for generating all the results, https://github.com/Zheng-Meng/Power-Grid-Attack-Detection (2024).",
+        "type": "other"
+      }
+    ],
+    "container-title": [
+      "PRX Energy"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://link.aps.org/article/10.1103/PRXEnergy.4.013003",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "syndication"
+      },
+      {
+        "URL": "http://harvest.aps.org/v2/journals/articles/10.1103/PRXEnergy.4.013003/fulltext",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          29
+        ]
+      ],
+      "date-time": "2026-09-29T18:21:13Z",
+      "timestamp": 1790706073000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://link.aps.org/doi/10.1103/PRXEnergy.4.013003"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          2,
+          4
+        ]
+      ]
+    },
+    "references-count": 85,
+    "journal-issue": {
+      "issue": "1",
+      "published-print": {
+        "date-parts": [
+          [
+            2025,
+            2
+          ]
+        ]
+      }
+    },
+    "URL": "https://doi.org/10.1103/prxenergy.4.013003",
+    "relation": {},
+    "ISSN": [
+      "2768-5608"
+    ],
+    "issn-type": [
+      {
+        "value": "2768-5608",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2025,
+          2,
+          4
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2024-07-03",
+        "name": "date_received",
+        "label": "Date Received",
+        "group": {
+          "name": "publication_dates",
+          "label": "Publication dates"
+        }
+      },
+      {
+        "value": "Published by the American Physical Society. All rights are reserved, including those for text and data mining, AI training, and similar technologies.",
+        "name": "copyright_statement",
+        "label": "Copyright statement",
+        "group": {
+          "name": "copyright",
+          "label": "copyright"
+        }
+      },
+      {
+        "value": "2025",
+        "name": "copyright_year",
+        "label": "Copyright year",
+        "group": {
+          "name": "copyright",
+          "label": "copyright"
+        }
+      },
+      {
+        "value": "https://creativecommons.org/licenses/by/4.0/",
+        "name": "creative_commons_license",
+        "label": "Creative Commons license",
+        "group": {
+          "name": "licenses",
+          "label": "Licenses"
+        }
+      },
+      {
+        "value": "©2025 The authors",
+        "name": "copyright_holder",
+        "label": "Copyright holder",
+        "group": {
+          "name": "copyright",
+          "label": "copyright"
+        }
+      }
+    ],
+    "article-number": "013003"
+  }
+}

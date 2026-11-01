@@ -1,0 +1,195 @@
+{
+  "key": "cover2006elements",
+  "retrieved_at": "2026-11-01T03:53:22.535862+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1002%2F047174882X",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1002/047174882X",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:19.698216+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          31
+        ]
+      ],
+      "date-time": "2026-10-31T20:43:14Z",
+      "timestamp": 1793479394495,
+      "version": "4.5.0"
+    },
+    "edition-number": "1",
+    "reference-count": 0,
+    "publisher": "Wiley",
+    "isbn-type": [
+      {
+        "value": "9780471241959",
+        "type": "print"
+      },
+      {
+        "value": "9780471748823",
+        "type": "electronic"
+      }
+    ],
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2005,
+              4,
+              7
+            ]
+          ],
+          "date-time": "2005-04-07T00:00:00Z",
+          "timestamp": 1112832000000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "http://doi.wiley.com/10.1002/tdm_license_1.1"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2005,
+          9,
+          16
+        ]
+      ]
+    },
+    "DOI": "10.1002/047174882x",
+    "type": "monograph",
+    "created": {
+      "date-parts": [
+        [
+          2006,
+          7,
+          18
+        ]
+      ],
+      "date-time": "2006-07-18T14:16:57Z",
+      "timestamp": 1153232217000
+    },
+    "source": "Crossref",
+    "is-referenced-by-count": 2560,
+    "title": [
+      "Elements of Information Theory"
+    ],
+    "prefix": "10.1002",
+    "author": [
+      {
+        "given": "Thomas M.",
+        "family": "Cover",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Joy A.",
+        "family": "Thomas",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "311",
+    "published-online": {
+      "date-parts": [
+        [
+          2005,
+          4,
+          7
+        ]
+      ]
+    },
+    "container-title": [],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/047174882X",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/047174882X",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2026,
+          8,
+          17
+        ]
+      ],
+      "date-time": "2026-08-17T21:47:58Z",
+      "timestamp": 1787003278000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://onlinelibrary.wiley.com/doi/book/10.1002/047174882X"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2005,
+          4,
+          7
+        ]
+      ]
+    },
+    "ISBN": [
+      "9780471241959",
+      "9780471748823"
+    ],
+    "references-count": 0,
+    "alternative-id": [
+      "10.1002/047174882X"
+    ],
+    "URL": "https://doi.org/10.1002/047174882x",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2005,
+          4,
+          7
+        ]
+      ]
+    }
+  }
+}

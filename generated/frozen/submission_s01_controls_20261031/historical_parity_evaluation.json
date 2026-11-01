@@ -1,0 +1,4686 @@
+{
+  "status": "HISTORICAL_PARITY_AUDIT_NO_MODEL_CHANGE",
+  "benchmark": "RAW0001_HISTORICAL_21_ORACLE_CONTEXTS",
+  "historical_csv": {
+    "classification": {
+      "correct": 21,
+      "total": 21,
+      "fraction": 1.0
+    },
+    "abnormal_classification": {
+      "correct": 12,
+      "total": 12,
+      "fraction": 1.0
+    },
+    "abnormal_location_exact": {
+      "correct": 8,
+      "total": 12,
+      "fraction": 0.6666666666666666
+    },
+    "abnormal_joint_event_location": {
+      "correct": 8,
+      "total": 12,
+      "fraction": 0.6666666666666666
+    },
+    "normal_classification": {
+      "correct": 9,
+      "total": 9,
+      "fraction": 1.0
+    },
+    "normal_false_contexts": 0,
+    "normal_contexts": 9,
+    "unavailable": 0,
+    "binary_detection": {
+      "tp": 12,
+      "fp": 0,
+      "fn": 0,
+      "tn": 9,
+      "f1": 1.0
+    },
+    "confusion": {
+      "7->7": 3,
+      "0->0": 9,
+      "5->5": 4,
+      "1->1": 1,
+      "2->2": 1,
+      "6->6": 1,
+      "3->3": 1,
+      "4->4": 1
+    },
+    "by_class": {
+      "0": {
+        "n": 9,
+        "classification_correct": 9,
+        "joint_correct": 9
+      },
+      "1": {
+        "n": 1,
+        "classification_correct": 1,
+        "joint_correct": 1
+      },
+      "2": {
+        "n": 1,
+        "classification_correct": 1,
+        "joint_correct": 0
+      },
+      "3": {
+        "n": 1,
+        "classification_correct": 1,
+        "joint_correct": 0
+      },
+      "4": {
+        "n": 1,
+        "classification_correct": 1,
+        "joint_correct": 0
+      },
+      "5": {
+        "n": 4,
+        "classification_correct": 4,
+        "joint_correct": 4
+      },
+      "6": {
+        "n": 1,
+        "classification_correct": 1,
+        "joint_correct": 0
+      },
+      "7": {
+        "n": 3,
+        "classification_correct": 3,
+        "joint_correct": 3
+      }
+    }
+  },
+  "sealed_replay": {
+    "classification": {
+      "correct": 10,
+      "total": 21,
+      "fraction": 0.47619047619047616
+    },
+    "abnormal_classification": {
+      "correct": 2,
+      "total": 12,
+      "fraction": 0.16666666666666666
+    },
+    "abnormal_location_exact": {
+      "correct": 2,
+      "total": 12,
+      "fraction": 0.16666666666666666
+    },
+    "abnormal_joint_event_location": {
+      "correct": 2,
+      "total": 12,
+      "fraction": 0.16666666666666666
+    },
+    "normal_classification": {
+      "correct": 8,
+      "total": 9,
+      "fraction": 0.8888888888888888
+    },
+    "normal_false_contexts": 1,
+    "normal_contexts": 9,
+    "unavailable": 0,
+    "binary_detection": {
+      "tp": 4,
+      "fp": 1,
+      "fn": 8,
+      "tn": 8,
+      "f1": 0.47058823529411764
+    },
+    "confusion": {
+      "7->5": 2,
+      "0->0": 8,
+      "7->0": 1,
+      "5->0": 2,
+      "1->0": 1,
+      "2->0": 1,
+      "5->5": 2,
+      "0->5": 1,
+      "6->0": 1,
+      "3->0": 1,
+      "4->0": 1
+    },
+    "by_class": {
+      "0": {
+        "n": 9,
+        "classification_correct": 8,
+        "joint_correct": 8
+      },
+      "1": {
+        "n": 1,
+        "classification_correct": 0,
+        "joint_correct": 0
+      },
+      "2": {
+        "n": 1,
+        "classification_correct": 0,
+        "joint_correct": 0
+      },
+      "3": {
+        "n": 1,
+        "classification_correct": 0,
+        "joint_correct": 0
+      },
+      "4": {
+        "n": 1,
+        "classification_correct": 0,
+        "joint_correct": 0
+      },
+      "5": {
+        "n": 4,
+        "classification_correct": 2,
+        "joint_correct": 2
+      },
+      "6": {
+        "n": 1,
+        "classification_correct": 0,
+        "joint_correct": 0
+      },
+      "7": {
+        "n": 3,
+        "classification_correct": 0,
+        "joint_correct": 0
+      }
+    }
+  },
+  "parity": {
+    "event_matches": 10,
+    "location_matches": 10,
+    "joint_matches": 10,
+    "total": 21
+  },
+  "top3": {
+    "historical_comparable": false,
+    "reason": "Historical CSV has no Top3; final_model_config.raw_localizer_top3 is null.",
+    "replay_location_membership_abnormal": {
+      "correct": 4,
+      "total": 12,
+      "fraction": 0.3333333333333333
+    },
+    "replay_joint_top3_abnormal": {
+      "correct": 2,
+      "total": 12,
+      "fraction": 0.16666666666666666
+    },
+    "replay_top1_not_in_top3": 0,
+    "scores_are_not_calibrated_probabilities": true
+  },
+  "rows": [
+    {
+      "id": "W001",
+      "name": "chunk2_event7",
+      "start_s": 537.0,
+      "end_s": 567.0,
+      "true_event": 7,
+      "true_location": "PMU2",
+      "historical_available": true,
+      "historical_event": 7,
+      "historical_location": "PMU2",
+      "replay_available": true,
+      "replay_event": 5,
+      "replay_location": "PMU29",
+      "replay_emitted_s": 567.0,
+      "replay_last_report_used_s": 567.0,
+      "event_parity": false,
+      "location_parity": false,
+      "replay_top3": [
+        "PMU29",
+        "PMU10",
+        "PMU2"
+      ],
+      "replay_top3_contains_true_location": true,
+      "replay_top3_joint": false,
+      "top1_present_in_top3": true
+    },
+    {
+      "id": "W002",
+      "name": "chunk3_event0",
+      "start_s": 570.0,
+      "end_s": 600.0,
+      "true_event": 0,
+      "true_location": "none",
+      "historical_available": true,
+      "historical_event": 0,
+      "historical_location": "none",
+      "replay_available": true,
+      "replay_event": 0,
+      "replay_location": "none",
+      "replay_emitted_s": 600.0,
+      "replay_last_report_used_s": 600.0,
+      "event_parity": true,
+      "location_parity": true,
+      "replay_top3": [
+        "none"
+      ],
+      "replay_top3_contains_true_location": true,
+      "replay_top3_joint": true,
+      "top1_present_in_top3": true
+    },
+    {
+      "id": "W003",
+      "name": "chunk4_event7",
+      "start_s": 597.0,
+      "end_s": 627.0,
+      "true_event": 7,
+      "true_location": "PMU39",
+      "historical_available": true,
+      "historical_event": 7,
+      "historical_location": "PMU39",
+      "replay_available": true,
+      "replay_event": 5,
+      "replay_location": "PMU29",
+      "replay_emitted_s": 627.0,
+      "replay_last_report_used_s": 627.0,
+      "event_parity": false,
+      "location_parity": false,
+      "replay_top3": [
+        "PMU29",
+        "PMU19",
+        "PMU39"
+      ],
+      "replay_top3_contains_true_location": true,
+      "replay_top3_joint": false,
+      "top1_present_in_top3": true
+    },
+    {
+      "id": "W004",
+      "name": "chunk6_event7",
+      "start_s": 657.0,
+      "end_s": 687.0,
+      "true_event": 7,
+      "true_location": "PMU39",
+      "historical_available": true,
+      "historical_event": 7,
+      "historical_location": "PMU39",
+      "replay_available": true,
+      "replay_event": 0,
+      "replay_location": "none",
+      "replay_emitted_s": 687.0,
+      "replay_last_report_used_s": 687.0,
+      "event_parity": false,
+      "location_parity": false,
+      "replay_top3": [
+        "none"
+      ],
+      "replay_top3_contains_true_location": false,
+      "replay_top3_joint": false,
+      "top1_present_in_top3": true
+    },
+    {
+      "id": "W005",
+      "name": "chunk7_event0",
+      "start_s": 720.0,
+      "end_s": 750.0,
+      "true_event": 0,
+      "true_location": "none",
+      "historical_available": true,
+      "historical_event": 0,
+      "historical_location": "none",
+      "replay_available": true,
+      "replay_event": 0,
+      "replay_location": "none",
+      "replay_emitted_s": 750.0,
+      "replay_last_report_used_s": 750.0,
+      "event_parity": true,
+      "location_parity": true,
+      "replay_top3": [
+        "none"
+      ],
+      "replay_top3_contains_true_location": true,
+      "replay_top3_joint": true,
+      "top1_present_in_top3": true
+    },
+    {
+      "id": "W006",
+      "name": "chunk8_event5",
+      "start_s": 777.0,
+      "end_s": 807.0,
+      "true_event": 5,
+      "true_location": "PMU29",
+      "historical_available": true,
+      "historical_event": 5,
+      "historical_location": "PMU29",
+      "replay_available": true,
+      "replay_event": 0,
+      "replay_location": "none",
+      "replay_emitted_s": 807.0,
+      "replay_last_report_used_s": 807.0,
+      "event_parity": false,
+      "location_parity": false,
+      "replay_top3": [
+        "none"
+      ],
+      "replay_top3_contains_true_location": false,
+      "replay_top3_joint": false,
+      "top1_present_in_top3": true
+    },
+    {
+      "id": "W007",
+      "name": "chunk9_event0",
+      "start_s": 900.0,
+      "end_s": 930.0,
+      "true_event": 0,
+      "true_location": "none",
+      "historical_available": true,
+      "historical_event": 0,
+      "historical_location": "none",
+      "replay_available": true,
+      "replay_event": 0,
+      "replay_location": "none",
+      "replay_emitted_s": 930.0,
+      "replay_last_report_used_s": 930.0,
+      "event_parity": true,
+      "location_parity": true,
+      "replay_top3": [
+        "none"
+      ],
+      "replay_top3_contains_true_location": true,
+      "replay_top3_joint": true,
+      "top1_present_in_top3": true
+    },
+    {
+      "id": "W008",
+      "name": "chunk10_event5",
+      "start_s": 1017.0,
+      "end_s": 1047.0,
+      "true_event": 5,
+      "true_location": "PMU29",
+      "historical_available": true,
+      "historical_event": 5,
+      "historical_location": "PMU29",
+      "replay_available": true,
+      "replay_event": 0,
+      "replay_location": "none",
+      "replay_emitted_s": 1047.0,
+      "replay_last_report_used_s": 1047.0,
+      "event_parity": false,
+      "location_parity": false,
+      "replay_top3": [
+        "none"
+      ],
+      "replay_top3_contains_true_location": false,
+      "replay_top3_joint": false,
+      "top1_present_in_top3": true
+    },
+    {
+      "id": "W009",
+      "name": "chunk11_event0",
+      "start_s": 1140.0,
+      "end_s": 1170.0,
+      "true_event": 0,
+      "true_location": "none",
+      "historical_available": true,
+      "historical_event": 0,
+      "historical_location": "none",
+      "replay_available": true,
+      "replay_event": 0,
+      "replay_location": "none",
+      "replay_emitted_s": 1170.0,
+      "replay_last_report_used_s": 1170.0,
+      "event_parity": true,
+      "location_parity": true,
+      "replay_top3": [
+        "none"
+      ],
+      "replay_top3_contains_true_location": true,
+      "replay_top3_joint": true,
+      "top1_present_in_top3": true
+    },
+    {
+      "id": "W010",
+      "name": "chunk12_event1",
+      "start_s": 1197.0,
+      "end_s": 1227.0,
+      "true_event": 1,
+      "true_location": "BUS39",
+      "historical_available": true,
+      "historical_event": 1,
+      "historical_location": "BUS39",
+      "replay_available": true,
+      "replay_event": 0,
+      "replay_location": "none",
+      "replay_emitted_s": 1227.0,
+      "replay_last_report_used_s": 1227.0,
+      "event_parity": false,
+      "location_parity": false,
+      "replay_top3": [
+        "none"
+      ],
+      "replay_top3_contains_true_location": false,
+      "replay_top3_joint": false,
+      "top1_present_in_top3": true
+    },
+    {
+      "id": "W011",
+      "name": "chunk13_event0",
+      "start_s": 1230.0,
+      "end_s": 1260.0,
+      "true_event": 0,
+      "true_location": "none",
+      "historical_available": true,
+      "historical_event": 0,
+      "historical_location": "none",
+      "replay_available": true,
+      "replay_event": 0,
+      "replay_location": "none",
+      "replay_emitted_s": 1260.0,
+      "replay_last_report_used_s": 1260.0,
+      "event_parity": true,
+      "location_parity": true,
+      "replay_top3": [
+        "none"
+      ],
+      "replay_top3_contains_true_location": true,
+      "replay_top3_joint": true,
+      "top1_present_in_top3": true
+    },
+    {
+      "id": "W012",
+      "name": "chunk14_event2",
+      "start_s": 2397.0,
+      "end_s": 2427.0,
+      "true_event": 2,
+      "true_location": "LINE23-24",
+      "historical_available": true,
+      "historical_event": 2,
+      "historical_location": "LINE22-35",
+      "replay_available": true,
+      "replay_event": 0,
+      "replay_location": "none",
+      "replay_emitted_s": 2427.0,
+      "replay_last_report_used_s": 2427.0,
+      "event_parity": false,
+      "location_parity": false,
+      "replay_top3": [
+        "none"
+      ],
+      "replay_top3_contains_true_location": false,
+      "replay_top3_joint": false,
+      "top1_present_in_top3": true
+    },
+    {
+      "id": "W013",
+      "name": "chunk15_event0",
+      "start_s": 2430.0,
+      "end_s": 2460.0,
+      "true_event": 0,
+      "true_location": "none",
+      "historical_available": true,
+      "historical_event": 0,
+      "historical_location": "none",
+      "replay_available": true,
+      "replay_event": 0,
+      "replay_location": "none",
+      "replay_emitted_s": 2460.0,
+      "replay_last_report_used_s": 2460.0,
+      "event_parity": true,
+      "location_parity": true,
+      "replay_top3": [
+        "none"
+      ],
+      "replay_top3_contains_true_location": true,
+      "replay_top3_joint": true,
+      "top1_present_in_top3": true
+    },
+    {
+      "id": "W014",
+      "name": "chunk16_event5",
+      "start_s": 2697.0,
+      "end_s": 2727.0,
+      "true_event": 5,
+      "true_location": "PMU29",
+      "historical_available": true,
+      "historical_event": 5,
+      "historical_location": "PMU29",
+      "replay_available": true,
+      "replay_event": 5,
+      "replay_location": "PMU29",
+      "replay_emitted_s": 2727.0,
+      "replay_last_report_used_s": 2727.0,
+      "event_parity": true,
+      "location_parity": true,
+      "replay_top3": [
+        "PMU29",
+        "PMU19",
+        "PMU39"
+      ],
+      "replay_top3_contains_true_location": true,
+      "replay_top3_joint": true,
+      "top1_present_in_top3": true
+    },
+    {
+      "id": "W015",
+      "name": "chunk17_event0",
+      "start_s": 2730.0,
+      "end_s": 2760.0,
+      "true_event": 0,
+      "true_location": "none",
+      "historical_available": true,
+      "historical_event": 0,
+      "historical_location": "none",
+      "replay_available": true,
+      "replay_event": 5,
+      "replay_location": "PMU29",
+      "replay_emitted_s": 2760.0,
+      "replay_last_report_used_s": 2760.0,
+      "event_parity": false,
+      "location_parity": false,
+      "replay_top3": [
+        "PMU29",
+        "PMU2",
+        "PMU6"
+      ],
+      "replay_top3_contains_true_location": false,
+      "replay_top3_joint": false,
+      "top1_present_in_top3": true
+    },
+    {
+      "id": "W016",
+      "name": "chunk18_event5",
+      "start_s": 2937.0,
+      "end_s": 2967.0,
+      "true_event": 5,
+      "true_location": "PMU29",
+      "historical_available": true,
+      "historical_event": 5,
+      "historical_location": "PMU29",
+      "replay_available": true,
+      "replay_event": 5,
+      "replay_location": "PMU29",
+      "replay_emitted_s": 2967.0,
+      "replay_last_report_used_s": 2967.0,
+      "event_parity": true,
+      "location_parity": true,
+      "replay_top3": [
+        "PMU29",
+        "PMU39",
+        "PMU2"
+      ],
+      "replay_top3_contains_true_location": true,
+      "replay_top3_joint": true,
+      "top1_present_in_top3": true
+    },
+    {
+      "id": "W017",
+      "name": "chunk19_event3",
+      "start_s": 2997.0,
+      "end_s": 3027.0,
+      "true_event": 6,
+      "true_location": "BUS2",
+      "historical_available": true,
+      "historical_event": 6,
+      "historical_location": "LINE2-30",
+      "replay_available": true,
+      "replay_event": 0,
+      "replay_location": "none",
+      "replay_emitted_s": 3027.0,
+      "replay_last_report_used_s": 3027.0,
+      "event_parity": false,
+      "location_parity": false,
+      "replay_top3": [
+        "none"
+      ],
+      "replay_top3_contains_true_location": false,
+      "replay_top3_joint": false,
+      "top1_present_in_top3": true
+    },
+    {
+      "id": "W018",
+      "name": "chunk20_event3",
+      "start_s": 3297.0,
+      "end_s": 3327.0,
+      "true_event": 3,
+      "true_location": "BUS2",
+      "historical_available": true,
+      "historical_event": 3,
+      "historical_location": "BUS38",
+      "replay_available": true,
+      "replay_event": 0,
+      "replay_location": "none",
+      "replay_emitted_s": 3327.0,
+      "replay_last_report_used_s": 3327.0,
+      "event_parity": false,
+      "location_parity": false,
+      "replay_top3": [
+        "none"
+      ],
+      "replay_top3_contains_true_location": false,
+      "replay_top3_joint": false,
+      "top1_present_in_top3": true
+    },
+    {
+      "id": "W019",
+      "name": "chunk21_event0",
+      "start_s": 3330.0,
+      "end_s": 3360.0,
+      "true_event": 0,
+      "true_location": "none",
+      "historical_available": true,
+      "historical_event": 0,
+      "historical_location": "none",
+      "replay_available": true,
+      "replay_event": 0,
+      "replay_location": "none",
+      "replay_emitted_s": 3360.0,
+      "replay_last_report_used_s": 3360.0,
+      "event_parity": true,
+      "location_parity": true,
+      "replay_top3": [
+        "none"
+      ],
+      "replay_top3_contains_true_location": true,
+      "replay_top3_joint": true,
+      "top1_present_in_top3": true
+    },
+    {
+      "id": "W020",
+      "name": "chunk22_event4",
+      "start_s": 5097.0,
+      "end_s": 5127.0,
+      "true_event": 4,
+      "true_location": "BUS7",
+      "historical_available": true,
+      "historical_event": 4,
+      "historical_location": "BUS12",
+      "replay_available": true,
+      "replay_event": 0,
+      "replay_location": "none",
+      "replay_emitted_s": 5127.0,
+      "replay_last_report_used_s": 5127.0,
+      "event_parity": false,
+      "location_parity": false,
+      "replay_top3": [
+        "none"
+      ],
+      "replay_top3_contains_true_location": false,
+      "replay_top3_joint": false,
+      "top1_present_in_top3": true
+    },
+    {
+      "id": "W021",
+      "name": "chunk23_event0",
+      "start_s": 5130.0,
+      "end_s": 5160.0,
+      "true_event": 0,
+      "true_location": "none",
+      "historical_available": true,
+      "historical_event": 0,
+      "historical_location": "none",
+      "replay_available": true,
+      "replay_event": 0,
+      "replay_location": "none",
+      "replay_emitted_s": 5160.0,
+      "replay_last_report_used_s": 5160.0,
+      "event_parity": true,
+      "location_parity": true,
+      "replay_top3": [
+        "none"
+      ],
+      "replay_top3_contains_true_location": true,
+      "replay_top3_joint": true,
+      "top1_present_in_top3": true
+    }
+  ],
+  "input_and_time_audit": {
+    "files": [
+      {
+        "file": "Bus10_Competition_Data_nanmask.csv",
+        "staged_sha256": "415630d7c07c7bbdeb8c715a6bacf88094967ebe46081adf5c3e0e4cdfd7c75a",
+        "original_sha256": "784233d4cf0d7c7bc39147240eb95080f007da2bf26b0eeda8862887c952f06e",
+        "hash_matches_stage_manifest": true,
+        "rows": 161379,
+        "start_s": 0.0,
+        "end_s": 5379.266000000003,
+        "missing_masks_equal": true,
+        "measurements_exact_equal": false,
+        "max_abs_staging_roundtrip_difference": 5.820766091346741e-11,
+        "max_scaled_staging_roundtrip_difference": 2.935575042973888e-16,
+        "within_8_machine_epsilon": true,
+        "windows": [
+          {
+            "id": "W001",
+            "name": "chunk2_event7",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 537.0,
+            "actual_max_s": 567.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W002",
+            "name": "chunk3_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 570.0,
+            "actual_max_s": 600.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W003",
+            "name": "chunk4_event7",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 597.0,
+            "actual_max_s": 627.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W004",
+            "name": "chunk6_event7",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 657.0,
+            "actual_max_s": 687.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W005",
+            "name": "chunk7_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 720.0,
+            "actual_max_s": 750.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W006",
+            "name": "chunk8_event5",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 777.0,
+            "actual_max_s": 807.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W007",
+            "name": "chunk9_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 900.0,
+            "actual_max_s": 930.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W008",
+            "name": "chunk10_event5",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 1017.0,
+            "actual_max_s": 1047.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W009",
+            "name": "chunk11_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 1140.0,
+            "actual_max_s": 1170.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W010",
+            "name": "chunk12_event1",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 1197.0,
+            "actual_max_s": 1227.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W011",
+            "name": "chunk13_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 1230.0,
+            "actual_max_s": 1260.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W012",
+            "name": "chunk14_event2",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2397.0,
+            "actual_max_s": 2427.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W013",
+            "name": "chunk15_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2430.0,
+            "actual_max_s": 2460.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W014",
+            "name": "chunk16_event5",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2697.0,
+            "actual_max_s": 2727.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W015",
+            "name": "chunk17_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2730.0,
+            "actual_max_s": 2760.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W016",
+            "name": "chunk18_event5",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2937.0,
+            "actual_max_s": 2967.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W017",
+            "name": "chunk19_event3",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2997.0,
+            "actual_max_s": 3027.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W018",
+            "name": "chunk20_event3",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 3297.0,
+            "actual_max_s": 3327.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W019",
+            "name": "chunk21_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 3330.0,
+            "actual_max_s": 3360.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W020",
+            "name": "chunk22_event4",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 5097.0,
+            "actual_max_s": 5127.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W021",
+            "name": "chunk23_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 5130.0,
+            "actual_max_s": 5160.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          }
+        ]
+      },
+      {
+        "file": "Bus19_Competition_Data_nanmask.csv",
+        "staged_sha256": "ea486de7e93a607c850834f461f74be10e779c0576688d15b5d5c0bcd41dcace",
+        "original_sha256": "efe593c8b8aa1aa6a35aa1e7416214131d3f1362d6da0f7fb77e0db5e6bc8e67",
+        "hash_matches_stage_manifest": true,
+        "rows": 161379,
+        "start_s": 0.0,
+        "end_s": 5379.266000000003,
+        "missing_masks_equal": true,
+        "measurements_exact_equal": false,
+        "max_abs_staging_roundtrip_difference": 5.820766091346741e-11,
+        "max_scaled_staging_roundtrip_difference": 2.9560993282474243e-16,
+        "within_8_machine_epsilon": true,
+        "windows": [
+          {
+            "id": "W001",
+            "name": "chunk2_event7",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 537.0,
+            "actual_max_s": 567.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W002",
+            "name": "chunk3_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 570.0,
+            "actual_max_s": 600.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W003",
+            "name": "chunk4_event7",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 597.0,
+            "actual_max_s": 627.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W004",
+            "name": "chunk6_event7",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 657.0,
+            "actual_max_s": 687.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W005",
+            "name": "chunk7_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 720.0,
+            "actual_max_s": 750.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W006",
+            "name": "chunk8_event5",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 777.0,
+            "actual_max_s": 807.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W007",
+            "name": "chunk9_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 900.0,
+            "actual_max_s": 930.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W008",
+            "name": "chunk10_event5",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 1017.0,
+            "actual_max_s": 1047.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W009",
+            "name": "chunk11_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 1140.0,
+            "actual_max_s": 1170.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W010",
+            "name": "chunk12_event1",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 1197.0,
+            "actual_max_s": 1227.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W011",
+            "name": "chunk13_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 1230.0,
+            "actual_max_s": 1260.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W012",
+            "name": "chunk14_event2",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2397.0,
+            "actual_max_s": 2427.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W013",
+            "name": "chunk15_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2430.0,
+            "actual_max_s": 2460.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W014",
+            "name": "chunk16_event5",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2697.0,
+            "actual_max_s": 2727.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W015",
+            "name": "chunk17_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2730.0,
+            "actual_max_s": 2760.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W016",
+            "name": "chunk18_event5",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2937.0,
+            "actual_max_s": 2967.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W017",
+            "name": "chunk19_event3",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2997.0,
+            "actual_max_s": 3027.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W018",
+            "name": "chunk20_event3",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 3297.0,
+            "actual_max_s": 3327.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W019",
+            "name": "chunk21_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 3330.0,
+            "actual_max_s": 3360.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W020",
+            "name": "chunk22_event4",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 5097.0,
+            "actual_max_s": 5127.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W021",
+            "name": "chunk23_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 5130.0,
+            "actual_max_s": 5160.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          }
+        ]
+      },
+      {
+        "file": "Bus22_Competition_Data_nanmask.csv",
+        "staged_sha256": "21c9967177895da93202edd232d54b0ea0e3f4989f052160c73a97e4e7164a30",
+        "original_sha256": "a9a1722784438c5ddacb2c7fe7fcf5283da8fddefb818025e3efdb32413bb8b9",
+        "hash_matches_stage_manifest": true,
+        "rows": 161379,
+        "start_s": 0.0,
+        "end_s": 5379.266000000003,
+        "missing_masks_equal": true,
+        "measurements_exact_equal": false,
+        "max_abs_staging_roundtrip_difference": 5.820766091346741e-11,
+        "max_scaled_staging_roundtrip_difference": 2.8355382153710853e-16,
+        "within_8_machine_epsilon": true,
+        "windows": [
+          {
+            "id": "W001",
+            "name": "chunk2_event7",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 537.0,
+            "actual_max_s": 567.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W002",
+            "name": "chunk3_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 570.0,
+            "actual_max_s": 600.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W003",
+            "name": "chunk4_event7",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 597.0,
+            "actual_max_s": 627.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W004",
+            "name": "chunk6_event7",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 657.0,
+            "actual_max_s": 687.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W005",
+            "name": "chunk7_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 720.0,
+            "actual_max_s": 750.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W006",
+            "name": "chunk8_event5",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 777.0,
+            "actual_max_s": 807.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W007",
+            "name": "chunk9_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 900.0,
+            "actual_max_s": 930.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W008",
+            "name": "chunk10_event5",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 1017.0,
+            "actual_max_s": 1047.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W009",
+            "name": "chunk11_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 1140.0,
+            "actual_max_s": 1170.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W010",
+            "name": "chunk12_event1",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 1197.0,
+            "actual_max_s": 1227.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W011",
+            "name": "chunk13_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 1230.0,
+            "actual_max_s": 1260.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W012",
+            "name": "chunk14_event2",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2397.0,
+            "actual_max_s": 2427.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W013",
+            "name": "chunk15_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2430.0,
+            "actual_max_s": 2460.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W014",
+            "name": "chunk16_event5",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2697.0,
+            "actual_max_s": 2727.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W015",
+            "name": "chunk17_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2730.0,
+            "actual_max_s": 2760.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W016",
+            "name": "chunk18_event5",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2937.0,
+            "actual_max_s": 2967.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W017",
+            "name": "chunk19_event3",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2997.0,
+            "actual_max_s": 3027.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W018",
+            "name": "chunk20_event3",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 3297.0,
+            "actual_max_s": 3327.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W019",
+            "name": "chunk21_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 3330.0,
+            "actual_max_s": 3360.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W020",
+            "name": "chunk22_event4",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 5097.0,
+            "actual_max_s": 5127.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W021",
+            "name": "chunk23_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 5130.0,
+            "actual_max_s": 5160.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          }
+        ]
+      },
+      {
+        "file": "Bus29_Competition_Data_nanmask.csv",
+        "staged_sha256": "78247d206194808360b2ab612cf6f53f7664dab1ad75ed391edd65c8336ee637",
+        "original_sha256": "e7150a641e27654991c8c553b4a2b833d28dfc233221123e5f570e706e6f2534",
+        "hash_matches_stage_manifest": true,
+        "rows": 161379,
+        "start_s": 0.0,
+        "end_s": 5379.266000000003,
+        "missing_masks_equal": true,
+        "measurements_exact_equal": false,
+        "max_abs_staging_roundtrip_difference": 5.820766091346741e-11,
+        "max_scaled_staging_roundtrip_difference": 2.9139457483286286e-16,
+        "within_8_machine_epsilon": true,
+        "windows": [
+          {
+            "id": "W001",
+            "name": "chunk2_event7",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 537.0,
+            "actual_max_s": 567.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 799,
+            "rows_with_nonfinite_signal": 799
+          },
+          {
+            "id": "W002",
+            "name": "chunk3_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 570.0,
+            "actual_max_s": 600.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W003",
+            "name": "chunk4_event7",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 597.0,
+            "actual_max_s": 627.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 381,
+            "rows_with_nonfinite_signal": 381
+          },
+          {
+            "id": "W004",
+            "name": "chunk6_event7",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 657.0,
+            "actual_max_s": 687.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W005",
+            "name": "chunk7_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 720.0,
+            "actual_max_s": 750.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W006",
+            "name": "chunk8_event5",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 777.0,
+            "actual_max_s": 807.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W007",
+            "name": "chunk9_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 900.0,
+            "actual_max_s": 930.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W008",
+            "name": "chunk10_event5",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 1017.0,
+            "actual_max_s": 1047.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W009",
+            "name": "chunk11_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 1140.0,
+            "actual_max_s": 1170.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W010",
+            "name": "chunk12_event1",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 1197.0,
+            "actual_max_s": 1227.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W011",
+            "name": "chunk13_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 1230.0,
+            "actual_max_s": 1260.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W012",
+            "name": "chunk14_event2",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2397.0,
+            "actual_max_s": 2427.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W013",
+            "name": "chunk15_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2430.0,
+            "actual_max_s": 2460.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W014",
+            "name": "chunk16_event5",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2697.0,
+            "actual_max_s": 2727.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 901,
+            "rows_with_nonfinite_signal": 901
+          },
+          {
+            "id": "W015",
+            "name": "chunk17_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2730.0,
+            "actual_max_s": 2760.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 901,
+            "rows_with_nonfinite_signal": 901
+          },
+          {
+            "id": "W016",
+            "name": "chunk18_event5",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2937.0,
+            "actual_max_s": 2967.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 901,
+            "rows_with_nonfinite_signal": 901
+          },
+          {
+            "id": "W017",
+            "name": "chunk19_event3",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2997.0,
+            "actual_max_s": 3027.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W018",
+            "name": "chunk20_event3",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 3297.0,
+            "actual_max_s": 3327.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W019",
+            "name": "chunk21_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 3330.0,
+            "actual_max_s": 3360.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W020",
+            "name": "chunk22_event4",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 5097.0,
+            "actual_max_s": 5127.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W021",
+            "name": "chunk23_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 5130.0,
+            "actual_max_s": 5160.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          }
+        ]
+      },
+      {
+        "file": "Bus2_Competition_Data_nanmask.csv",
+        "staged_sha256": "f46c58f257b8d6faa47bc73164801de44e8da4a50550ba96837206b965612a5a",
+        "original_sha256": "73526f6cc99c1340377ae7cb3d35deb45e9c35cc557c5cd741f43686c08544a9",
+        "hash_matches_stage_manifest": true,
+        "rows": 161379,
+        "start_s": 0.0,
+        "end_s": 5379.266000000003,
+        "missing_masks_equal": true,
+        "measurements_exact_equal": false,
+        "max_abs_staging_roundtrip_difference": 5.820766091346741e-11,
+        "max_scaled_staging_roundtrip_difference": 2.9041838966777393e-16,
+        "within_8_machine_epsilon": true,
+        "windows": [
+          {
+            "id": "W001",
+            "name": "chunk2_event7",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 537.0,
+            "actual_max_s": 567.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W002",
+            "name": "chunk3_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 570.0,
+            "actual_max_s": 600.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W003",
+            "name": "chunk4_event7",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 597.0,
+            "actual_max_s": 627.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W004",
+            "name": "chunk6_event7",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 657.0,
+            "actual_max_s": 687.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W005",
+            "name": "chunk7_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 720.0,
+            "actual_max_s": 750.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W006",
+            "name": "chunk8_event5",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 777.0,
+            "actual_max_s": 807.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W007",
+            "name": "chunk9_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 900.0,
+            "actual_max_s": 930.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W008",
+            "name": "chunk10_event5",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 1017.0,
+            "actual_max_s": 1047.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W009",
+            "name": "chunk11_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 1140.0,
+            "actual_max_s": 1170.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W010",
+            "name": "chunk12_event1",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 1197.0,
+            "actual_max_s": 1227.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W011",
+            "name": "chunk13_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 1230.0,
+            "actual_max_s": 1260.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W012",
+            "name": "chunk14_event2",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2397.0,
+            "actual_max_s": 2427.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W013",
+            "name": "chunk15_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2430.0,
+            "actual_max_s": 2460.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W014",
+            "name": "chunk16_event5",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2697.0,
+            "actual_max_s": 2727.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W015",
+            "name": "chunk17_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2730.0,
+            "actual_max_s": 2760.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W016",
+            "name": "chunk18_event5",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2937.0,
+            "actual_max_s": 2967.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W017",
+            "name": "chunk19_event3",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2997.0,
+            "actual_max_s": 3027.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W018",
+            "name": "chunk20_event3",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 3297.0,
+            "actual_max_s": 3327.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W019",
+            "name": "chunk21_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 3330.0,
+            "actual_max_s": 3360.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W020",
+            "name": "chunk22_event4",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 5097.0,
+            "actual_max_s": 5127.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W021",
+            "name": "chunk23_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 5130.0,
+            "actual_max_s": 5160.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          }
+        ]
+      },
+      {
+        "file": "Bus39_Competition_Data_nanmask.csv",
+        "staged_sha256": "e68978d227980c4c5ce60327fd55a643571590b346fcec7407ccbb35ea2bb92f",
+        "original_sha256": "80925b189f1715fb332bf58a4a9ffb06012b11f0db1bb021a4f4030d52debb21",
+        "hash_matches_stage_manifest": true,
+        "rows": 161379,
+        "start_s": 0.0,
+        "end_s": 5379.266000000003,
+        "missing_masks_equal": true,
+        "measurements_exact_equal": false,
+        "max_abs_staging_roundtrip_difference": 5.820766091346741e-11,
+        "max_scaled_staging_roundtrip_difference": 3.1475484923364293e-16,
+        "within_8_machine_epsilon": true,
+        "windows": [
+          {
+            "id": "W001",
+            "name": "chunk2_event7",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 537.0,
+            "actual_max_s": 567.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W002",
+            "name": "chunk3_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 570.0,
+            "actual_max_s": 600.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W003",
+            "name": "chunk4_event7",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 597.0,
+            "actual_max_s": 627.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W004",
+            "name": "chunk6_event7",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 657.0,
+            "actual_max_s": 687.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W005",
+            "name": "chunk7_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 720.0,
+            "actual_max_s": 750.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W006",
+            "name": "chunk8_event5",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 777.0,
+            "actual_max_s": 807.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W007",
+            "name": "chunk9_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 900.0,
+            "actual_max_s": 930.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W008",
+            "name": "chunk10_event5",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 1017.0,
+            "actual_max_s": 1047.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W009",
+            "name": "chunk11_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 1140.0,
+            "actual_max_s": 1170.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W010",
+            "name": "chunk12_event1",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 1197.0,
+            "actual_max_s": 1227.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W011",
+            "name": "chunk13_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 1230.0,
+            "actual_max_s": 1260.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W012",
+            "name": "chunk14_event2",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2397.0,
+            "actual_max_s": 2427.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W013",
+            "name": "chunk15_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2430.0,
+            "actual_max_s": 2460.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W014",
+            "name": "chunk16_event5",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2697.0,
+            "actual_max_s": 2727.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W015",
+            "name": "chunk17_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2730.0,
+            "actual_max_s": 2760.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W016",
+            "name": "chunk18_event5",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2937.0,
+            "actual_max_s": 2967.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W017",
+            "name": "chunk19_event3",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2997.0,
+            "actual_max_s": 3027.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W018",
+            "name": "chunk20_event3",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 3297.0,
+            "actual_max_s": 3327.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W019",
+            "name": "chunk21_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 3330.0,
+            "actual_max_s": 3360.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W020",
+            "name": "chunk22_event4",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 5097.0,
+            "actual_max_s": 5127.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W021",
+            "name": "chunk23_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 5130.0,
+            "actual_max_s": 5160.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          }
+        ]
+      },
+      {
+        "file": "Bus5_Competition_Data_nanmask.csv",
+        "staged_sha256": "d36a2afb35d0c934604c50641915839a886504a8a86014c6f995651796c3a820",
+        "original_sha256": "e8f54267c1a5f16ae5019e65125a18eb01ab3ce8d7e349cf6b35a045df8ccf2a",
+        "hash_matches_stage_manifest": true,
+        "rows": 161379,
+        "start_s": 0.0,
+        "end_s": 5379.266000000003,
+        "missing_masks_equal": true,
+        "measurements_exact_equal": false,
+        "max_abs_staging_roundtrip_difference": 5.820766091346741e-11,
+        "max_scaled_staging_roundtrip_difference": 2.9799815137245917e-16,
+        "within_8_machine_epsilon": true,
+        "windows": [
+          {
+            "id": "W001",
+            "name": "chunk2_event7",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 537.0,
+            "actual_max_s": 567.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W002",
+            "name": "chunk3_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 570.0,
+            "actual_max_s": 600.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W003",
+            "name": "chunk4_event7",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 597.0,
+            "actual_max_s": 627.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W004",
+            "name": "chunk6_event7",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 657.0,
+            "actual_max_s": 687.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W005",
+            "name": "chunk7_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 720.0,
+            "actual_max_s": 750.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W006",
+            "name": "chunk8_event5",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 777.0,
+            "actual_max_s": 807.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W007",
+            "name": "chunk9_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 900.0,
+            "actual_max_s": 930.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W008",
+            "name": "chunk10_event5",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 1017.0,
+            "actual_max_s": 1047.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W009",
+            "name": "chunk11_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 1140.0,
+            "actual_max_s": 1170.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W010",
+            "name": "chunk12_event1",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 1197.0,
+            "actual_max_s": 1227.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W011",
+            "name": "chunk13_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 1230.0,
+            "actual_max_s": 1260.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W012",
+            "name": "chunk14_event2",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2397.0,
+            "actual_max_s": 2427.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W013",
+            "name": "chunk15_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2430.0,
+            "actual_max_s": 2460.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W014",
+            "name": "chunk16_event5",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2697.0,
+            "actual_max_s": 2727.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W015",
+            "name": "chunk17_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2730.0,
+            "actual_max_s": 2760.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W016",
+            "name": "chunk18_event5",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2937.0,
+            "actual_max_s": 2967.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W017",
+            "name": "chunk19_event3",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2997.0,
+            "actual_max_s": 3027.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W018",
+            "name": "chunk20_event3",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 3297.0,
+            "actual_max_s": 3327.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W019",
+            "name": "chunk21_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 3330.0,
+            "actual_max_s": 3360.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W020",
+            "name": "chunk22_event4",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 5097.0,
+            "actual_max_s": 5127.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W021",
+            "name": "chunk23_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 5130.0,
+            "actual_max_s": 5160.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          }
+        ]
+      },
+      {
+        "file": "Bus6_Competition_Data_nanmask.csv",
+        "staged_sha256": "e967bb7bd698102eaf4e5a9795db6aa42075fcf25c9c6a2f2aa66646f00cf8d4",
+        "original_sha256": "709e27de654103086c3c437a5e79eefcd270d35d69291a2b3b02af6d4bdd1d57",
+        "hash_matches_stage_manifest": true,
+        "rows": 161379,
+        "start_s": 0.0,
+        "end_s": 5379.266000000003,
+        "missing_masks_equal": true,
+        "measurements_exact_equal": false,
+        "max_abs_staging_roundtrip_difference": 5.820766091346741e-11,
+        "max_scaled_staging_roundtrip_difference": 2.9762390548263677e-16,
+        "within_8_machine_epsilon": true,
+        "windows": [
+          {
+            "id": "W001",
+            "name": "chunk2_event7",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 537.0,
+            "actual_max_s": 567.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W002",
+            "name": "chunk3_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 570.0,
+            "actual_max_s": 600.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W003",
+            "name": "chunk4_event7",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 597.0,
+            "actual_max_s": 627.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W004",
+            "name": "chunk6_event7",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 657.0,
+            "actual_max_s": 687.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W005",
+            "name": "chunk7_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 720.0,
+            "actual_max_s": 750.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W006",
+            "name": "chunk8_event5",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 777.0,
+            "actual_max_s": 807.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W007",
+            "name": "chunk9_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 900.0,
+            "actual_max_s": 930.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W008",
+            "name": "chunk10_event5",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 1017.0,
+            "actual_max_s": 1047.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W009",
+            "name": "chunk11_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 1140.0,
+            "actual_max_s": 1170.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W010",
+            "name": "chunk12_event1",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 1197.0,
+            "actual_max_s": 1227.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W011",
+            "name": "chunk13_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 1230.0,
+            "actual_max_s": 1260.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W012",
+            "name": "chunk14_event2",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2397.0,
+            "actual_max_s": 2427.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W013",
+            "name": "chunk15_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2430.0,
+            "actual_max_s": 2460.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W014",
+            "name": "chunk16_event5",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2697.0,
+            "actual_max_s": 2727.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W015",
+            "name": "chunk17_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2730.0,
+            "actual_max_s": 2760.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W016",
+            "name": "chunk18_event5",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2937.0,
+            "actual_max_s": 2967.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W017",
+            "name": "chunk19_event3",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 2997.0,
+            "actual_max_s": 3027.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W018",
+            "name": "chunk20_event3",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 3297.0,
+            "actual_max_s": 3327.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W019",
+            "name": "chunk21_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 3330.0,
+            "actual_max_s": 3360.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W020",
+            "name": "chunk22_event4",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 5097.0,
+            "actual_max_s": 5127.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          },
+          {
+            "id": "W021",
+            "name": "chunk23_event0",
+            "rows_inclusive": 901,
+            "rows_exclusive": 900,
+            "actual_min_s": 5130.0,
+            "actual_max_s": 5160.0,
+            "min_minus_declared_start_s": 0.0,
+            "end_minus_actual_max_s": 0.0,
+            "includes_declared_end": true,
+            "count_matches_sealed_prediction": true,
+            "missing_present_rows": 0,
+            "rows_with_nonfinite_signal": 0
+          }
+        ]
+      }
+    ],
+    "all_source_and_staged_hashes_verified": true,
+    "all_values_equal_within_serialization_roundoff": true,
+    "all_context_counts_match_predictions": true,
+    "timestamp_origin_differs_context_pmupairs": 0,
+    "max_min_minus_declared_start_s": 0.0,
+    "all_contexts_closed_interval": true,
+    "any_context_loses_endpoint_if_half_open": true,
+    "byte_identity_original_vs_staged_not_expected": "Event was removed and numeric CSVs reserialized; stored source/staged hashes each verified, measurement equality audited separately."
+  },
+  "label_column_diagnostic": {
+    "status": "ANNOTATION_BEARING_DIAGNOSTIC_NOT_CLEAN_INFERENCE",
+    "context": "W001",
+    "base_changed_columns": [
+      "BUS29__label_abnormal",
+      "BUS29__label_event_mode",
+      "GLOBAL__label_abnormal__max",
+      "GLOBAL__label_abnormal__mean",
+      "GLOBAL__label_abnormal__std",
+      "GLOBAL__label_event_mode__max",
+      "GLOBAL__label_event_mode__mean",
+      "GLOBAL__label_event_mode__std"
+    ],
+    "dynamic_changed_columns": [],
+    "non_label_base_changes": [],
+    "active_base_changed_columns": [],
+    "active_localizer_changed_columns": [],
+    "outputs": {
+      "without_Event": {
+        "pred_event": 5,
+        "pred_abnormal": 1,
+        "pred_physical_event": 0,
+        "pred_location": "PMU29",
+        "bad_data_score": 0.13230769230769232,
+        "physical_confidence": 0.36666666666666664
+      },
+      "with_original_Event_ANNOTATION_DIAGNOSTIC_ONLY": {
+        "pred_event": 5,
+        "pred_abnormal": 1,
+        "pred_physical_event": 0,
+        "pred_location": "PMU29",
+        "bad_data_score": 0.13230769230769232,
+        "physical_confidence": 0.36666666666666664
+      }
+    },
+    "physics_rule_flags": {
+      "without_Event": {
+        "missing": true,
+        "line": false,
+        "fault": false,
+        "single_signal_bad_data": false
+      },
+      "with_original_Event_ANNOTATION_DIAGNOSTIC_ONLY": {
+        "missing": true,
+        "line": false,
+        "fault": false,
+        "single_signal_bad_data": false
+      }
+    },
+    "annotations_in_registered_window": {
+      "10": {
+        "0": 901
+      },
+      "19": {
+        "0": 901
+      },
+      "22": {
+        "0": 901
+      },
+      "29": {
+        "5": 799,
+        "0": 102
+      },
+      "2": {
+        "0": 901
+      },
+      "39": {
+        "0": 901
+      },
+      "5": {
+        "0": 901
+      },
+      "6": {
+        "0": 901
+      }
+    },
+    "model_parameters_changed": false,
+    "window_or_threshold_selected_by_diagnostic": false
+  },
+  "source_sha256": {
+    "experiments\\PAPER_SUBMISSION_S01\\run\\legacy_historical\\predictions.json": "ab64062a73bc4a618101c4878e5e85bd6a8693fc3901906afe28aa6eb2249e83",
+    "experiments\\PAPER_SUBMISSION_S01\\run\\legacy_historical\\PREDICTIONS_SEAL.json": "6b77c862f5ccc20db4d305d4744973944babbdfbeeba8deaf5948cf2f64792c1",
+    "experiments\\E4_OTHER_FAMILIES\\M02_V31_VS_HACKATHON_C01\\submitted\\models\\localizer\\raw001_final_predictions.csv": "dfe76b407d6f1988614f6eca712a75e6743ed479379d5fce323470466d1e93e9",
+    "experiments\\PAPER_SUBMISSION_S01\\evaluation\\historical_contexts.json": "07938f8f02acf3e74a5ee49c25dd5110c16f2ac37240c1cf0071e5b20d4f8a58",
+    "experiments\\PAPER_SUBMISSION_S01\\evaluation\\HISTORICAL_AUDIT_PROTOCOL.json": "275fdc701b29de4948ca6c8ddb23b024370c5542dda9cd0b7d9848d65fe1ccf4",
+    "experiments\\PAPER_SUBMISSION_S01\\runtime\\historical_replay.py": "abb92ea34c00eba725238b5eeae5f267d4f449e3b0b7003f635828e97b62e4b5",
+    "experiments\\PAPER_SUBMISSION_S01\\runtime\\legacy_adapter.py": "f0a000f2938e815b74ad8f101c88bf72f7a9529cbe5014195f2d0163982dbae3",
+    "experiments\\PAPER_SUBMISSION_S01\\legacy_reference\\evaluate_raw0001_v2.py": "415a6ef1ee7fc93e6ac5fe760e4d6beea9de5ee08326b7afb54492597919101c",
+    "experiments\\E4_OTHER_FAMILIES\\M02_V31_VS_HACKATHON_C01\\submitted\\src\\models\\hybrid_submission.py": "9cdc6d555b9deeac760a7fbe838fc1b7845bfd7e5409f3d196dca0c624c2e4f4",
+    "experiments\\E4_OTHER_FAMILIES\\M02_V31_VS_HACKATHON_C01\\submitted\\src\\data_factory\\train_hierarchical_pipeline_v2.py": "d94d1da1da6d8a5001e976007f98189723d627e3ef7afc521a0b717997611511",
+    "experiments\\PAPER_SUBMISSION_S01\\evaluation\\score_historical.py": "325d98223b5b3252cb10d1ea55d354cb68ae7b0996010a7790acd7d7bad5eec4"
+  },
+  "no_continuous_results_read": true,
+  "C01_read": false,
+  "RAW0002_read": false,
+  "models_or_runtime_modified": false,
+  "limitations": [
+    "Retrospective timeline-selected contexts, not a continuous detection test or official leaderboard.",
+    "No calibration or model selection on these outcomes.",
+    "A mismatch with the historical CSV is not evidence that a new method improved the historical score.",
+    "Context selection and event labels are supplied to evaluation; inference had only public positions.",
+    "Root cause must distinguish demonstrated input/time/feature differences from unverified historical extraction provenance.",
+    "The archived context calendar conflicts with original Event timing; numerical scores measure failed provenance reproduction and must not support comparative accuracy claims."
+  ],
+  "annotation_calendar_audit": {
+    "status": "INCOMPATIBLE_CALENDAR_NO_CONSTANT_OFFSET",
+    "annotation_use": "Evaluation-only lineage diagnostic; no new inference",
+    "historical_revision": "01178d6dbd92d5e98e80742ec02ff61f67473c8c",
+    "files": [
+      {
+        "file": "Bus10_Competition_Data_nanmask.csv",
+        "bus": "10",
+        "sha256": "784233d4cf0d7c7bc39147240eb95080f007da2bf26b0eeda8862887c952f06e",
+        "historical_git_blob": "1950a132e6de2341cf0d29c6ed542e5c70dccbb2",
+        "current_git_blob": "1950a132e6de2341cf0d29c6ed542e5c70dccbb2",
+        "identical_to_historical_blob": true,
+        "runs": [
+          {
+            "event": 1,
+            "first_sample_s": 1173.1659999999974,
+            "last_sample_s": 1178.0999999999913,
+            "next_sample_s": 1178.1330000000016,
+            "sample_span_s": 4.93399999999383,
+            "rows": 149
+          },
+          {
+            "event": 2,
+            "first_sample_s": 2375.232999999993,
+            "last_sample_s": 2379.399999999994,
+            "next_sample_s": 2379.43299999999,
+            "sample_span_s": 4.167000000001281,
+            "rows": 126
+          },
+          {
+            "event": 3,
+            "first_sample_s": 2976.3659999999945,
+            "last_sample_s": 3293.93299999999,
+            "next_sample_s": 3293.9660000000003,
+            "sample_span_s": 317.56699999999546,
+            "rows": 9528
+          },
+          {
+            "event": 4,
+            "first_sample_s": 3877.732999999993,
+            "last_sample_s": 4182.099999999991,
+            "next_sample_s": 4182.133000000002,
+            "sample_span_s": 304.36699999999837,
+            "rows": 9132
+          }
+        ]
+      },
+      {
+        "file": "Bus19_Competition_Data_nanmask.csv",
+        "bus": "19",
+        "sha256": "efe593c8b8aa1aa6a35aa1e7416214131d3f1362d6da0f7fb77e0db5e6bc8e67",
+        "historical_git_blob": "b37ac92a541b8db7eacf71bb3720cae51d9bc9c9",
+        "current_git_blob": "b37ac92a541b8db7eacf71bb3720cae51d9bc9c9",
+        "identical_to_historical_blob": true,
+        "runs": [
+          {
+            "event": 1,
+            "first_sample_s": 1173.1659999999974,
+            "last_sample_s": 1178.0999999999913,
+            "next_sample_s": 1178.1330000000016,
+            "sample_span_s": 4.93399999999383,
+            "rows": 149
+          },
+          {
+            "event": 2,
+            "first_sample_s": 2375.232999999993,
+            "last_sample_s": 2379.399999999994,
+            "next_sample_s": 2379.43299999999,
+            "sample_span_s": 4.167000000001281,
+            "rows": 126
+          },
+          {
+            "event": 3,
+            "first_sample_s": 2976.3659999999945,
+            "last_sample_s": 3293.93299999999,
+            "next_sample_s": 3293.9660000000003,
+            "sample_span_s": 317.56699999999546,
+            "rows": 9528
+          },
+          {
+            "event": 4,
+            "first_sample_s": 3877.732999999993,
+            "last_sample_s": 4182.099999999991,
+            "next_sample_s": 4182.133000000002,
+            "sample_span_s": 304.36699999999837,
+            "rows": 9132
+          }
+        ]
+      },
+      {
+        "file": "Bus22_Competition_Data_nanmask.csv",
+        "bus": "22",
+        "sha256": "a9a1722784438c5ddacb2c7fe7fcf5283da8fddefb818025e3efdb32413bb8b9",
+        "historical_git_blob": "e8e6fa3a1b60994b4a9734f48bc7ad0c130691ae",
+        "current_git_blob": "e8e6fa3a1b60994b4a9734f48bc7ad0c130691ae",
+        "identical_to_historical_blob": true,
+        "runs": [
+          {
+            "event": 1,
+            "first_sample_s": 1173.1659999999974,
+            "last_sample_s": 1178.0999999999913,
+            "next_sample_s": 1178.1330000000016,
+            "sample_span_s": 4.93399999999383,
+            "rows": 149
+          },
+          {
+            "event": 2,
+            "first_sample_s": 2375.232999999993,
+            "last_sample_s": 2379.399999999994,
+            "next_sample_s": 2379.43299999999,
+            "sample_span_s": 4.167000000001281,
+            "rows": 126
+          },
+          {
+            "event": 3,
+            "first_sample_s": 2976.3659999999945,
+            "last_sample_s": 3293.93299999999,
+            "next_sample_s": 3293.9660000000003,
+            "sample_span_s": 317.56699999999546,
+            "rows": 9528
+          },
+          {
+            "event": 4,
+            "first_sample_s": 3877.732999999993,
+            "last_sample_s": 4182.099999999991,
+            "next_sample_s": 4182.133000000002,
+            "sample_span_s": 304.36699999999837,
+            "rows": 9132
+          }
+        ]
+      },
+      {
+        "file": "Bus29_Competition_Data_nanmask.csv",
+        "bus": "29",
+        "sha256": "e7150a641e27654991c8c553b4a2b833d28dfc233221123e5f570e706e6f2534",
+        "historical_git_blob": "cf886820e219560d4a87a288fbfa6b790f249603",
+        "current_git_blob": "cf886820e219560d4a87a288fbfa6b790f249603",
+        "identical_to_historical_blob": true,
+        "runs": [
+          {
+            "event": 5,
+            "first_sample_s": 536.5659999999916,
+            "last_sample_s": 563.5999999999913,
+            "next_sample_s": 563.6330000000016,
+            "sample_span_s": 27.03399999999965,
+            "rows": 812
+          },
+          {
+            "event": 5,
+            "first_sample_s": 614.3329999999987,
+            "last_sample_s": 643.3999999999942,
+            "next_sample_s": 643.43299999999,
+            "sample_span_s": 29.06699999999546,
+            "rows": 873
+          },
+          {
+            "event": 1,
+            "first_sample_s": 1173.1659999999974,
+            "last_sample_s": 1178.0999999999913,
+            "next_sample_s": 1178.1330000000016,
+            "sample_span_s": 4.93399999999383,
+            "rows": 149
+          },
+          {
+            "event": 2,
+            "first_sample_s": 2375.232999999993,
+            "last_sample_s": 2379.399999999994,
+            "next_sample_s": 2379.43299999999,
+            "sample_span_s": 4.167000000001281,
+            "rows": 126
+          },
+          {
+            "event": 5,
+            "first_sample_s": 2584.665999999997,
+            "last_sample_s": 2776.065999999992,
+            "next_sample_s": 2776.099999999992,
+            "sample_span_s": 191.3999999999951,
+            "rows": 5743
+          },
+          {
+            "event": 5,
+            "first_sample_s": 2935.766000000004,
+            "last_sample_s": 2976.3329999999987,
+            "next_sample_s": 2976.3659999999945,
+            "sample_span_s": 40.56699999999455,
+            "rows": 1218
+          },
+          {
+            "event": 6,
+            "first_sample_s": 2976.3659999999945,
+            "last_sample_s": 2994.800000000003,
+            "next_sample_s": 2994.8329999999987,
+            "sample_span_s": 18.434000000008382,
+            "rows": 554
+          },
+          {
+            "event": 3,
+            "first_sample_s": 2994.8329999999987,
+            "last_sample_s": 3293.93299999999,
+            "next_sample_s": 3293.9660000000003,
+            "sample_span_s": 299.09999999999127,
+            "rows": 8974
+          },
+          {
+            "event": 4,
+            "first_sample_s": 3877.732999999993,
+            "last_sample_s": 4182.099999999991,
+            "next_sample_s": 4182.133000000002,
+            "sample_span_s": 304.36699999999837,
+            "rows": 9132
+          }
+        ]
+      },
+      {
+        "file": "Bus2_Competition_Data_nanmask.csv",
+        "bus": "2",
+        "sha256": "73526f6cc99c1340377ae7cb3d35deb45e9c35cc557c5cd741f43686c08544a9",
+        "historical_git_blob": "e9b720e889fa20211f1a9d24a5273098868bfe60",
+        "current_git_blob": "e9b720e889fa20211f1a9d24a5273098868bfe60",
+        "identical_to_historical_blob": true,
+        "runs": [
+          {
+            "event": 7,
+            "first_sample_s": 3.26600000000326,
+            "last_sample_s": 3.966000000000349,
+            "next_sample_s": 4.0,
+            "sample_span_s": 0.6999999999970887,
+            "rows": 22
+          },
+          {
+            "event": 1,
+            "first_sample_s": 1173.1659999999974,
+            "last_sample_s": 1178.0999999999913,
+            "next_sample_s": 1178.1330000000016,
+            "sample_span_s": 4.93399999999383,
+            "rows": 149
+          },
+          {
+            "event": 2,
+            "first_sample_s": 2375.232999999993,
+            "last_sample_s": 2379.399999999994,
+            "next_sample_s": 2379.433,
+            "sample_span_s": 4.167000000001281,
+            "rows": 126
+          },
+          {
+            "event": 3,
+            "first_sample_s": 2976.3659999999945,
+            "last_sample_s": 3293.933,
+            "next_sample_s": 3293.9660000000003,
+            "sample_span_s": 317.56700000000546,
+            "rows": 9528
+          },
+          {
+            "event": 4,
+            "first_sample_s": 3877.732999999993,
+            "last_sample_s": 4182.099999999991,
+            "next_sample_s": 4182.133000000002,
+            "sample_span_s": 304.36699999999837,
+            "rows": 9132
+          }
+        ]
+      },
+      {
+        "file": "Bus39_Competition_Data_nanmask.csv",
+        "bus": "39",
+        "sha256": "80925b189f1715fb332bf58a4a9ffb06012b11f0db1bb021a4f4030d52debb21",
+        "historical_git_blob": "e3c843ffa542306054a4ac30bc8327959e838511",
+        "current_git_blob": "e3c843ffa542306054a4ac30bc8327959e838511",
+        "identical_to_historical_blob": true,
+        "runs": [
+          {
+            "event": 7,
+            "first_sample_s": 334.36599999999453,
+            "last_sample_s": 335.09999999999127,
+            "next_sample_s": 335.13300000000163,
+            "sample_span_s": 0.7339999999967404,
+            "rows": 23
+          },
+          {
+            "event": 7,
+            "first_sample_s": 336.5329999999958,
+            "last_sample_s": 337.5659999999916,
+            "next_sample_s": 337.59999999999127,
+            "sample_span_s": 1.032999999995809,
+            "rows": 32
+          },
+          {
+            "event": 1,
+            "first_sample_s": 1173.1659999999974,
+            "last_sample_s": 1178.0999999999913,
+            "next_sample_s": 1178.1330000000016,
+            "sample_span_s": 4.93399999999383,
+            "rows": 149
+          },
+          {
+            "event": 2,
+            "first_sample_s": 2375.232999999993,
+            "last_sample_s": 2379.399999999994,
+            "next_sample_s": 2379.433,
+            "sample_span_s": 4.167000000001281,
+            "rows": 126
+          },
+          {
+            "event": 3,
+            "first_sample_s": 2976.3659999999945,
+            "last_sample_s": 3293.933,
+            "next_sample_s": 3293.9660000000003,
+            "sample_span_s": 317.56700000000546,
+            "rows": 9528
+          },
+          {
+            "event": 4,
+            "first_sample_s": 3877.732999999993,
+            "last_sample_s": 4182.099999999991,
+            "next_sample_s": 4182.133000000002,
+            "sample_span_s": 304.36699999999837,
+            "rows": 9132
+          }
+        ]
+      },
+      {
+        "file": "Bus5_Competition_Data_nanmask.csv",
+        "bus": "5",
+        "sha256": "e8f54267c1a5f16ae5019e65125a18eb01ab3ce8d7e349cf6b35a045df8ccf2a",
+        "historical_git_blob": "57cfe2a3291d067009fccc6164418ea6edb5b26a",
+        "current_git_blob": "57cfe2a3291d067009fccc6164418ea6edb5b26a",
+        "identical_to_historical_blob": true,
+        "runs": [
+          {
+            "event": 1,
+            "first_sample_s": 1173.1659999999974,
+            "last_sample_s": 1178.0999999999913,
+            "next_sample_s": 1178.1330000000016,
+            "sample_span_s": 4.93399999999383,
+            "rows": 149
+          },
+          {
+            "event": 2,
+            "first_sample_s": 2375.232999999993,
+            "last_sample_s": 2379.399999999994,
+            "next_sample_s": 2379.43299999999,
+            "sample_span_s": 4.167000000001281,
+            "rows": 126
+          },
+          {
+            "event": 3,
+            "first_sample_s": 2976.3659999999945,
+            "last_sample_s": 3293.93299999999,
+            "next_sample_s": 3293.9660000000003,
+            "sample_span_s": 317.56699999999546,
+            "rows": 9528
+          },
+          {
+            "event": 4,
+            "first_sample_s": 3877.732999999993,
+            "last_sample_s": 4182.099999999991,
+            "next_sample_s": 4182.133000000002,
+            "sample_span_s": 304.36699999999837,
+            "rows": 9132
+          }
+        ]
+      },
+      {
+        "file": "Bus6_Competition_Data_nanmask.csv",
+        "bus": "6",
+        "sha256": "709e27de654103086c3c437a5e79eefcd270d35d69291a2b3b02af6d4bdd1d57",
+        "historical_git_blob": "352eca5b86ed8657afa8f690fb53f3da5ddb2d05",
+        "current_git_blob": "352eca5b86ed8657afa8f690fb53f3da5ddb2d05",
+        "identical_to_historical_blob": true,
+        "runs": [
+          {
+            "event": 1,
+            "first_sample_s": 1173.1659999999974,
+            "last_sample_s": 1178.0999999999913,
+            "next_sample_s": 1178.1330000000016,
+            "sample_span_s": 4.93399999999383,
+            "rows": 149
+          },
+          {
+            "event": 2,
+            "first_sample_s": 2375.232999999993,
+            "last_sample_s": 2379.399999999994,
+            "next_sample_s": 2379.43299999999,
+            "sample_span_s": 4.167000000001281,
+            "rows": 126
+          },
+          {
+            "event": 3,
+            "first_sample_s": 2976.3659999999945,
+            "last_sample_s": 3293.93299999999,
+            "next_sample_s": 3293.9660000000003,
+            "sample_span_s": 317.56699999999546,
+            "rows": 9528
+          },
+          {
+            "event": 4,
+            "first_sample_s": 3877.732999999993,
+            "last_sample_s": 4182.099999999991,
+            "next_sample_s": 4182.133000000002,
+            "sample_span_s": 304.36699999999837,
+            "rows": 9132
+          }
+        ]
+      }
+    ],
+    "contexts": [
+      {
+        "id": "W001",
+        "name": "chunk2_event7",
+        "expected_event": 7,
+        "original_Event_counts_by_bus": {
+          "10": {
+            "0": 901
+          },
+          "19": {
+            "0": 901
+          },
+          "22": {
+            "0": 901
+          },
+          "29": {
+            "0": 102,
+            "5": 799
+          },
+          "2": {
+            "0": 901
+          },
+          "39": {
+            "0": 901
+          },
+          "5": {
+            "0": 901
+          },
+          "6": {
+            "0": 901
+          }
+        },
+        "observed_nonzero_codes": [
+          5
+        ],
+        "expected_nonzero_code_present_any_bus": false,
+        "expected_normal_has_any_nonzero_annotation": null
+      },
+      {
+        "id": "W002",
+        "name": "chunk3_event0",
+        "expected_event": 0,
+        "original_Event_counts_by_bus": {
+          "10": {
+            "0": 901
+          },
+          "19": {
+            "0": 901
+          },
+          "22": {
+            "0": 901
+          },
+          "29": {
+            "0": 901
+          },
+          "2": {
+            "0": 901
+          },
+          "39": {
+            "0": 901
+          },
+          "5": {
+            "0": 901
+          },
+          "6": {
+            "0": 901
+          }
+        },
+        "observed_nonzero_codes": [],
+        "expected_nonzero_code_present_any_bus": null,
+        "expected_normal_has_any_nonzero_annotation": false
+      },
+      {
+        "id": "W003",
+        "name": "chunk4_event7",
+        "expected_event": 7,
+        "original_Event_counts_by_bus": {
+          "10": {
+            "0": 901
+          },
+          "19": {
+            "0": 901
+          },
+          "22": {
+            "0": 901
+          },
+          "29": {
+            "0": 520,
+            "5": 381
+          },
+          "2": {
+            "0": 901
+          },
+          "39": {
+            "0": 901
+          },
+          "5": {
+            "0": 901
+          },
+          "6": {
+            "0": 901
+          }
+        },
+        "observed_nonzero_codes": [
+          5
+        ],
+        "expected_nonzero_code_present_any_bus": false,
+        "expected_normal_has_any_nonzero_annotation": null
+      },
+      {
+        "id": "W004",
+        "name": "chunk6_event7",
+        "expected_event": 7,
+        "original_Event_counts_by_bus": {
+          "10": {
+            "0": 901
+          },
+          "19": {
+            "0": 901
+          },
+          "22": {
+            "0": 901
+          },
+          "29": {
+            "0": 901
+          },
+          "2": {
+            "0": 901
+          },
+          "39": {
+            "0": 901
+          },
+          "5": {
+            "0": 901
+          },
+          "6": {
+            "0": 901
+          }
+        },
+        "observed_nonzero_codes": [],
+        "expected_nonzero_code_present_any_bus": false,
+        "expected_normal_has_any_nonzero_annotation": null
+      },
+      {
+        "id": "W005",
+        "name": "chunk7_event0",
+        "expected_event": 0,
+        "original_Event_counts_by_bus": {
+          "10": {
+            "0": 901
+          },
+          "19": {
+            "0": 901
+          },
+          "22": {
+            "0": 901
+          },
+          "29": {
+            "0": 901
+          },
+          "2": {
+            "0": 901
+          },
+          "39": {
+            "0": 901
+          },
+          "5": {
+            "0": 901
+          },
+          "6": {
+            "0": 901
+          }
+        },
+        "observed_nonzero_codes": [],
+        "expected_nonzero_code_present_any_bus": null,
+        "expected_normal_has_any_nonzero_annotation": false
+      },
+      {
+        "id": "W006",
+        "name": "chunk8_event5",
+        "expected_event": 5,
+        "original_Event_counts_by_bus": {
+          "10": {
+            "0": 901
+          },
+          "19": {
+            "0": 901
+          },
+          "22": {
+            "0": 901
+          },
+          "29": {
+            "0": 901
+          },
+          "2": {
+            "0": 901
+          },
+          "39": {
+            "0": 901
+          },
+          "5": {
+            "0": 901
+          },
+          "6": {
+            "0": 901
+          }
+        },
+        "observed_nonzero_codes": [],
+        "expected_nonzero_code_present_any_bus": false,
+        "expected_normal_has_any_nonzero_annotation": null
+      },
+      {
+        "id": "W007",
+        "name": "chunk9_event0",
+        "expected_event": 0,
+        "original_Event_counts_by_bus": {
+          "10": {
+            "0": 901
+          },
+          "19": {
+            "0": 901
+          },
+          "22": {
+            "0": 901
+          },
+          "29": {
+            "0": 901
+          },
+          "2": {
+            "0": 901
+          },
+          "39": {
+            "0": 901
+          },
+          "5": {
+            "0": 901
+          },
+          "6": {
+            "0": 901
+          }
+        },
+        "observed_nonzero_codes": [],
+        "expected_nonzero_code_present_any_bus": null,
+        "expected_normal_has_any_nonzero_annotation": false
+      },
+      {
+        "id": "W008",
+        "name": "chunk10_event5",
+        "expected_event": 5,
+        "original_Event_counts_by_bus": {
+          "10": {
+            "0": 901
+          },
+          "19": {
+            "0": 901
+          },
+          "22": {
+            "0": 901
+          },
+          "29": {
+            "0": 901
+          },
+          "2": {
+            "0": 901
+          },
+          "39": {
+            "0": 901
+          },
+          "5": {
+            "0": 901
+          },
+          "6": {
+            "0": 901
+          }
+        },
+        "observed_nonzero_codes": [],
+        "expected_nonzero_code_present_any_bus": false,
+        "expected_normal_has_any_nonzero_annotation": null
+      },
+      {
+        "id": "W009",
+        "name": "chunk11_event0",
+        "expected_event": 0,
+        "original_Event_counts_by_bus": {
+          "10": {
+            "0": 901
+          },
+          "19": {
+            "0": 901
+          },
+          "22": {
+            "0": 901
+          },
+          "29": {
+            "0": 901
+          },
+          "2": {
+            "0": 901
+          },
+          "39": {
+            "0": 901
+          },
+          "5": {
+            "0": 901
+          },
+          "6": {
+            "0": 901
+          }
+        },
+        "observed_nonzero_codes": [],
+        "expected_nonzero_code_present_any_bus": null,
+        "expected_normal_has_any_nonzero_annotation": false
+      },
+      {
+        "id": "W010",
+        "name": "chunk12_event1",
+        "expected_event": 1,
+        "original_Event_counts_by_bus": {
+          "10": {
+            "0": 901
+          },
+          "19": {
+            "0": 901
+          },
+          "22": {
+            "0": 901
+          },
+          "29": {
+            "0": 901
+          },
+          "2": {
+            "0": 901
+          },
+          "39": {
+            "0": 901
+          },
+          "5": {
+            "0": 901
+          },
+          "6": {
+            "0": 901
+          }
+        },
+        "observed_nonzero_codes": [],
+        "expected_nonzero_code_present_any_bus": false,
+        "expected_normal_has_any_nonzero_annotation": null
+      },
+      {
+        "id": "W011",
+        "name": "chunk13_event0",
+        "expected_event": 0,
+        "original_Event_counts_by_bus": {
+          "10": {
+            "0": 901
+          },
+          "19": {
+            "0": 901
+          },
+          "22": {
+            "0": 901
+          },
+          "29": {
+            "0": 901
+          },
+          "2": {
+            "0": 901
+          },
+          "39": {
+            "0": 901
+          },
+          "5": {
+            "0": 901
+          },
+          "6": {
+            "0": 901
+          }
+        },
+        "observed_nonzero_codes": [],
+        "expected_nonzero_code_present_any_bus": null,
+        "expected_normal_has_any_nonzero_annotation": false
+      },
+      {
+        "id": "W012",
+        "name": "chunk14_event2",
+        "expected_event": 2,
+        "original_Event_counts_by_bus": {
+          "10": {
+            "0": 901
+          },
+          "19": {
+            "0": 901
+          },
+          "22": {
+            "0": 901
+          },
+          "29": {
+            "0": 901
+          },
+          "2": {
+            "0": 901
+          },
+          "39": {
+            "0": 901
+          },
+          "5": {
+            "0": 901
+          },
+          "6": {
+            "0": 901
+          }
+        },
+        "observed_nonzero_codes": [],
+        "expected_nonzero_code_present_any_bus": false,
+        "expected_normal_has_any_nonzero_annotation": null
+      },
+      {
+        "id": "W013",
+        "name": "chunk15_event0",
+        "expected_event": 0,
+        "original_Event_counts_by_bus": {
+          "10": {
+            "0": 901
+          },
+          "19": {
+            "0": 901
+          },
+          "22": {
+            "0": 901
+          },
+          "29": {
+            "0": 901
+          },
+          "2": {
+            "0": 901
+          },
+          "39": {
+            "0": 901
+          },
+          "5": {
+            "0": 901
+          },
+          "6": {
+            "0": 901
+          }
+        },
+        "observed_nonzero_codes": [],
+        "expected_nonzero_code_present_any_bus": null,
+        "expected_normal_has_any_nonzero_annotation": false
+      },
+      {
+        "id": "W014",
+        "name": "chunk16_event5",
+        "expected_event": 5,
+        "original_Event_counts_by_bus": {
+          "10": {
+            "0": 901
+          },
+          "19": {
+            "0": 901
+          },
+          "22": {
+            "0": 901
+          },
+          "29": {
+            "5": 901
+          },
+          "2": {
+            "0": 901
+          },
+          "39": {
+            "0": 901
+          },
+          "5": {
+            "0": 901
+          },
+          "6": {
+            "0": 901
+          }
+        },
+        "observed_nonzero_codes": [
+          5
+        ],
+        "expected_nonzero_code_present_any_bus": true,
+        "expected_normal_has_any_nonzero_annotation": null
+      },
+      {
+        "id": "W015",
+        "name": "chunk17_event0",
+        "expected_event": 0,
+        "original_Event_counts_by_bus": {
+          "10": {
+            "0": 901
+          },
+          "19": {
+            "0": 901
+          },
+          "22": {
+            "0": 901
+          },
+          "29": {
+            "5": 901
+          },
+          "2": {
+            "0": 901
+          },
+          "39": {
+            "0": 901
+          },
+          "5": {
+            "0": 901
+          },
+          "6": {
+            "0": 901
+          }
+        },
+        "observed_nonzero_codes": [
+          5
+        ],
+        "expected_nonzero_code_present_any_bus": null,
+        "expected_normal_has_any_nonzero_annotation": true
+      },
+      {
+        "id": "W016",
+        "name": "chunk18_event5",
+        "expected_event": 5,
+        "original_Event_counts_by_bus": {
+          "10": {
+            "0": 901
+          },
+          "19": {
+            "0": 901
+          },
+          "22": {
+            "0": 901
+          },
+          "29": {
+            "5": 901
+          },
+          "2": {
+            "0": 901
+          },
+          "39": {
+            "0": 901
+          },
+          "5": {
+            "0": 901
+          },
+          "6": {
+            "0": 901
+          }
+        },
+        "observed_nonzero_codes": [
+          5
+        ],
+        "expected_nonzero_code_present_any_bus": true,
+        "expected_normal_has_any_nonzero_annotation": null
+      },
+      {
+        "id": "W017",
+        "name": "chunk19_event3",
+        "expected_event": 6,
+        "original_Event_counts_by_bus": {
+          "10": {
+            "3": 901
+          },
+          "19": {
+            "3": 901
+          },
+          "22": {
+            "3": 901
+          },
+          "29": {
+            "3": 901
+          },
+          "2": {
+            "3": 901
+          },
+          "39": {
+            "3": 901
+          },
+          "5": {
+            "3": 901
+          },
+          "6": {
+            "3": 901
+          }
+        },
+        "observed_nonzero_codes": [
+          3
+        ],
+        "expected_nonzero_code_present_any_bus": false,
+        "expected_normal_has_any_nonzero_annotation": null
+      },
+      {
+        "id": "W018",
+        "name": "chunk20_event3",
+        "expected_event": 3,
+        "original_Event_counts_by_bus": {
+          "10": {
+            "0": 901
+          },
+          "19": {
+            "0": 901
+          },
+          "22": {
+            "0": 901
+          },
+          "29": {
+            "0": 901
+          },
+          "2": {
+            "0": 901
+          },
+          "39": {
+            "0": 901
+          },
+          "5": {
+            "0": 901
+          },
+          "6": {
+            "0": 901
+          }
+        },
+        "observed_nonzero_codes": [],
+        "expected_nonzero_code_present_any_bus": false,
+        "expected_normal_has_any_nonzero_annotation": null
+      },
+      {
+        "id": "W019",
+        "name": "chunk21_event0",
+        "expected_event": 0,
+        "original_Event_counts_by_bus": {
+          "10": {
+            "0": 901
+          },
+          "19": {
+            "0": 901
+          },
+          "22": {
+            "0": 901
+          },
+          "29": {
+            "0": 901
+          },
+          "2": {
+            "0": 901
+          },
+          "39": {
+            "0": 901
+          },
+          "5": {
+            "0": 901
+          },
+          "6": {
+            "0": 901
+          }
+        },
+        "observed_nonzero_codes": [],
+        "expected_nonzero_code_present_any_bus": null,
+        "expected_normal_has_any_nonzero_annotation": false
+      },
+      {
+        "id": "W020",
+        "name": "chunk22_event4",
+        "expected_event": 4,
+        "original_Event_counts_by_bus": {
+          "10": {
+            "0": 901
+          },
+          "19": {
+            "0": 901
+          },
+          "22": {
+            "0": 901
+          },
+          "29": {
+            "0": 901
+          },
+          "2": {
+            "0": 901
+          },
+          "39": {
+            "0": 901
+          },
+          "5": {
+            "0": 901
+          },
+          "6": {
+            "0": 901
+          }
+        },
+        "observed_nonzero_codes": [],
+        "expected_nonzero_code_present_any_bus": false,
+        "expected_normal_has_any_nonzero_annotation": null
+      },
+      {
+        "id": "W021",
+        "name": "chunk23_event0",
+        "expected_event": 0,
+        "original_Event_counts_by_bus": {
+          "10": {
+            "0": 901
+          },
+          "19": {
+            "0": 901
+          },
+          "22": {
+            "0": 901
+          },
+          "29": {
+            "0": 901
+          },
+          "2": {
+            "0": 901
+          },
+          "39": {
+            "0": 901
+          },
+          "5": {
+            "0": 901
+          },
+          "6": {
+            "0": 901
+          }
+        },
+        "observed_nonzero_codes": [],
+        "expected_nonzero_code_present_any_bus": null,
+        "expected_normal_has_any_nonzero_annotation": false
+      }
+    ],
+    "ordered_event_comparisons": [
+      {
+        "name": "chunk2_event7",
+        "code": 7,
+        "representative_bus": "2",
+        "historical_onset_s": 540.0,
+        "historical_declared_duration_s": 20.0,
+        "original_annotation_run": {
+          "event": 7,
+          "first_sample_s": 3.26600000000326,
+          "last_sample_s": 3.966000000000349,
+          "next_sample_s": 4.0,
+          "sample_span_s": 0.6999999999970887,
+          "rows": 22
+        },
+        "onset_offset_s": -536.7339999999967,
+        "matching_rule": "same code and representative PMU in ordinal order; descriptive, not certified correspondence"
+      },
+      {
+        "name": "chunk4_event7",
+        "code": 7,
+        "representative_bus": "39",
+        "historical_onset_s": 600.0,
+        "historical_declared_duration_s": 20.0,
+        "original_annotation_run": {
+          "event": 7,
+          "first_sample_s": 334.36599999999453,
+          "last_sample_s": 335.09999999999127,
+          "next_sample_s": 335.13300000000163,
+          "sample_span_s": 0.7339999999967404,
+          "rows": 23
+        },
+        "onset_offset_s": -265.63400000000547,
+        "matching_rule": "same code and representative PMU in ordinal order; descriptive, not certified correspondence"
+      },
+      {
+        "name": "chunk6_event7",
+        "code": 7,
+        "representative_bus": "39",
+        "historical_onset_s": 660.0,
+        "historical_declared_duration_s": 20.0,
+        "original_annotation_run": {
+          "event": 7,
+          "first_sample_s": 336.5329999999958,
+          "last_sample_s": 337.5659999999916,
+          "next_sample_s": 337.59999999999127,
+          "sample_span_s": 1.032999999995809,
+          "rows": 32
+        },
+        "onset_offset_s": -323.4670000000042,
+        "matching_rule": "same code and representative PMU in ordinal order; descriptive, not certified correspondence"
+      },
+      {
+        "name": "chunk8_event5",
+        "code": 5,
+        "representative_bus": "29",
+        "historical_onset_s": 780.0,
+        "historical_declared_duration_s": 20.0,
+        "original_annotation_run": {
+          "event": 5,
+          "first_sample_s": 536.5659999999916,
+          "last_sample_s": 563.5999999999913,
+          "next_sample_s": 563.6330000000016,
+          "sample_span_s": 27.03399999999965,
+          "rows": 812
+        },
+        "onset_offset_s": -243.43400000000838,
+        "matching_rule": "same code and representative PMU in ordinal order; descriptive, not certified correspondence"
+      },
+      {
+        "name": "chunk10_event5",
+        "code": 5,
+        "representative_bus": "29",
+        "historical_onset_s": 1020.0,
+        "historical_declared_duration_s": 20.0,
+        "original_annotation_run": {
+          "event": 5,
+          "first_sample_s": 614.3329999999987,
+          "last_sample_s": 643.3999999999942,
+          "next_sample_s": 643.43299999999,
+          "sample_span_s": 29.06699999999546,
+          "rows": 873
+        },
+        "onset_offset_s": -405.6670000000013,
+        "matching_rule": "same code and representative PMU in ordinal order; descriptive, not certified correspondence"
+      },
+      {
+        "name": "chunk12_event1",
+        "code": 1,
+        "representative_bus": "10",
+        "historical_onset_s": 1200.0,
+        "historical_declared_duration_s": 0.15,
+        "original_annotation_run": {
+          "event": 1,
+          "first_sample_s": 1173.1659999999974,
+          "last_sample_s": 1178.0999999999913,
+          "next_sample_s": 1178.1330000000016,
+          "sample_span_s": 4.93399999999383,
+          "rows": 149
+        },
+        "onset_offset_s": -26.83400000000256,
+        "matching_rule": "same code and representative PMU in ordinal order; descriptive, not certified correspondence"
+      },
+      {
+        "name": "chunk14_event2",
+        "code": 2,
+        "representative_bus": "10",
+        "historical_onset_s": 2400.0,
+        "historical_declared_duration_s": 1.0,
+        "original_annotation_run": {
+          "event": 2,
+          "first_sample_s": 2375.232999999993,
+          "last_sample_s": 2379.399999999994,
+          "next_sample_s": 2379.43299999999,
+          "sample_span_s": 4.167000000001281,
+          "rows": 126
+        },
+        "onset_offset_s": -24.7670000000071,
+        "matching_rule": "same code and representative PMU in ordinal order; descriptive, not certified correspondence"
+      },
+      {
+        "name": "chunk16_event5",
+        "code": 5,
+        "representative_bus": "29",
+        "historical_onset_s": 2700.0,
+        "historical_declared_duration_s": 20.0,
+        "original_annotation_run": {
+          "event": 5,
+          "first_sample_s": 2584.665999999997,
+          "last_sample_s": 2776.065999999992,
+          "next_sample_s": 2776.099999999992,
+          "sample_span_s": 191.3999999999951,
+          "rows": 5743
+        },
+        "onset_offset_s": -115.33400000000302,
+        "matching_rule": "same code and representative PMU in ordinal order; descriptive, not certified correspondence"
+      },
+      {
+        "name": "chunk18_event5",
+        "code": 5,
+        "representative_bus": "29",
+        "historical_onset_s": 2940.0,
+        "historical_declared_duration_s": 20.0,
+        "original_annotation_run": {
+          "event": 5,
+          "first_sample_s": 2935.766000000004,
+          "last_sample_s": 2976.3329999999987,
+          "next_sample_s": 2976.3659999999945,
+          "sample_span_s": 40.56699999999455,
+          "rows": 1218
+        },
+        "onset_offset_s": -4.233999999995831,
+        "matching_rule": "same code and representative PMU in ordinal order; descriptive, not certified correspondence"
+      },
+      {
+        "name": "chunk19_event3",
+        "code": 6,
+        "representative_bus": "29",
+        "historical_onset_s": 3000.0,
+        "historical_declared_duration_s": 20.0,
+        "original_annotation_run": {
+          "event": 6,
+          "first_sample_s": 2976.3659999999945,
+          "last_sample_s": 2994.800000000003,
+          "next_sample_s": 2994.8329999999987,
+          "sample_span_s": 18.434000000008382,
+          "rows": 554
+        },
+        "onset_offset_s": -23.63400000000547,
+        "matching_rule": "same code and representative PMU in ordinal order; descriptive, not certified correspondence"
+      },
+      {
+        "name": "chunk20_event3",
+        "code": 3,
+        "representative_bus": "10",
+        "historical_onset_s": 3300.0,
+        "historical_declared_duration_s": 20.0,
+        "original_annotation_run": {
+          "event": 3,
+          "first_sample_s": 2976.3659999999945,
+          "last_sample_s": 3293.93299999999,
+          "next_sample_s": 3293.9660000000003,
+          "sample_span_s": 317.56699999999546,
+          "rows": 9528
+        },
+        "onset_offset_s": -323.63400000000547,
+        "matching_rule": "same code and representative PMU in ordinal order; descriptive, not certified correspondence"
+      },
+      {
+        "name": "chunk22_event4",
+        "code": 4,
+        "representative_bus": "10",
+        "historical_onset_s": 5100.0,
+        "historical_declared_duration_s": 20.0,
+        "original_annotation_run": {
+          "event": 4,
+          "first_sample_s": 3877.732999999993,
+          "last_sample_s": 4182.099999999991,
+          "next_sample_s": 4182.133000000002,
+          "sample_span_s": 304.36699999999837,
+          "rows": 9132
+        },
+        "onset_offset_s": -1222.267000000007,
+        "matching_rule": "same code and representative PMU in ordinal order; descriptive, not certified correspondence"
+      }
+    ],
+    "all_original_files_identical_to_historical_git_blobs": true,
+    "abnormal_contexts_with_expected_code_present": 2,
+    "abnormal_contexts": 12,
+    "normal_contexts_with_nonzero_annotations": 1,
+    "normal_contexts": 9,
+    "onset_offset_range_s": 1218.0330000000113,
+    "constant_offset_compatible_with_one_sample_tolerance": false,
+    "timeline_is_hardcoded_canonical_plus_metadata_minutes": true,
+    "timeline_source_sha256": "933f08318817f887e32a90fcf72744379f3c3ba645a342a91eaeb376d507d272",
+    "timeline_csv_sha256": "92cd10416f413527638347a1e2a43ca2867ba0b52d951c6c70d55140e7948677",
+    "source_hash_note": "Git blob identity uses repository clean filters; original/staged file SHA256 and numeric parity are independently recorded.",
+    "limitations": [
+      "Event run durations describe annotation support, not independently measured actuation duration.",
+      "Physical Event annotations broadcast across PMUs cannot certify physical source location.",
+      "Ordinal matching does not identify historical feature-cache inputs or normal-window boundaries.",
+      "No shifted windows, model reruns, parameter changes or outcome-driven relabeling were performed."
+    ]
+  },
+  "calendar_extension_provenance": {
+    "previous_evaluation_sha256": "fc1bf04ea5060e1fe5e3191c34a64184111da172baab4bbea6c86b7ece8525cf",
+    "original_source_hashes_preserved": true,
+    "extension_script_sha256": "b9e35be0036dee39f033a1c0de1a0ef9f8d79cf7c12d795af459e1b8741eb0e7",
+    "extension_protocol_sha256": "64b7080fea0da451441a7ef6a37ed804646f423667e67920ea1631168fdcd17e"
+  },
+  "scientific_use_status": "VETO_COMPARATIVE_ACCURACY_CALENDAR_NOT_REPRODUCED"
+}

@@ -1,0 +1,530 @@
+{
+  "key": "cheng2022bigan",
+  "retrieved_at": "2026-11-01T03:53:22.534004+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1109%2FTPWRS.2022.3153591",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1109/TPWRS.2022.3153591",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:18.751284+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          24
+        ]
+      ],
+      "date-time": "2026-10-24T17:34:08Z",
+      "timestamp": 1792863248460,
+      "version": "4.5.0"
+    },
+    "reference-count": 38,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "6",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              11,
+              1
+            ]
+          ],
+          "date-time": "2022-11-01T00:00:00Z",
+          "timestamp": 1667260800000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              11,
+              1
+            ]
+          ],
+          "date-time": "2022-11-01T00:00:00Z",
+          "timestamp": 1667260800000
+        },
+        "content-version": "am",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              11,
+              1
+            ]
+          ],
+          "date-time": "2022-11-01T00:00:00Z",
+          "timestamp": 1667260800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              11,
+              1
+            ]
+          ],
+          "date-time": "2022-11-01T00:00:00Z",
+          "timestamp": 1667260800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/100000015",
+        "name": "U.S. Department of Energy",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "DE-OE0000916"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "DE-OE0000916"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/100000015",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Trans. Power Syst."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2022,
+          11
+        ]
+      ]
+    },
+    "DOI": "10.1109/tpwrs.2022.3153591",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2022,
+          2,
+          25
+        ]
+      ],
+      "date-time": "2022-02-25T20:32:32Z",
+      "timestamp": 1645821152000
+    },
+    "page": "4807-4818",
+    "source": "Crossref",
+    "is-referenced-by-count": 30,
+    "title": [
+      "Online Power System Event Detection via Bidirectional Generative Adversarial Networks"
+    ],
+    "prefix": "10.1109",
+    "volume": "37",
+    "author": [
+      {
+        "given": "Yuanbin",
+        "family": "Cheng",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Department of Electrical and Computer Engineering, University of California, Riverside, CA, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-5086-5465",
+        "authenticated-orcid": false,
+        "given": "Nanpeng",
+        "family": "Yu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Electrical and Computer Engineering, University of California, Riverside, CA, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-8547-391X",
+        "authenticated-orcid": false,
+        "given": "Brandon",
+        "family": "Foggo",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Electrical and Computer Engineering, University of California, Riverside, CA, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-1892-2455",
+        "authenticated-orcid": false,
+        "given": "Koji",
+        "family": "Yamashita",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Electrical and Computer Engineering, University of California, Riverside, CA, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref1",
+        "volume-title": "Phasor Measurement Units and Wide Area Monitoring Systems",
+        "author": "Monti",
+        "year": "2016"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s40565-018-0423-3"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/JSYST.2019.2931879"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.rser.2017.05.134"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2017.2720543"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2015.2478421"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TII.2017.2731366"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PEMWA.2012.6316400"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCAD.2014.7001352"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TBDATA.2019.2920350"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2012.2192142"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2015.2413935"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PowerTech46648.2021.9494800"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/iSPEC48194.2019.8975286"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2020.3046602"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2020.2971909"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2019.2957377"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PESGM.2012.6344715"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.ijepes.2018.10.024"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2021.3080279"
+      },
+      {
+        "key": "ref21",
+        "first-page": "2672",
+        "article-title": "Generative adversarial networks",
+        "volume-title": "Proc. 27th Int. Conf. Neural Inf. Process. Syst.",
+        "volume": "2",
+        "author": "Goodfellow",
+        "year": "2014"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-319-59050-9_12"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICDM.2018.00088"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-030-20893-6_39"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-030-30490-4_56"
+      },
+      {
+        "key": "ref26",
+        "first-page": "1",
+        "article-title": "Adversarial feature learning",
+        "volume-title": "Proc. 5th Int. Conf. Learn. Representations",
+        "author": "Donahue",
+        "year": "2017"
+      },
+      {
+        "key": "ref27",
+        "first-page": "214",
+        "article-title": "Wasserstein generative adversarial networks",
+        "volume-title": "Proc. 34th Int. Conf. Mach. Learn.",
+        "volume": "70",
+        "author": "Arjovsky"
+      },
+      {
+        "key": "ref28",
+        "first-page": "5769",
+        "article-title": "Improved training of wasserstein GANs",
+        "volume-title": "Proc. 31st Int. Conf. Neural Inf. Process. Syst.",
+        "author": "Gulrajani",
+        "year": "2017"
+      },
+      {
+        "key": "ref29",
+        "first-page": "698",
+        "article-title": "Are GANs created equal? a large-scale study",
+        "volume-title": "Proc. 32nd Int. Conf. Neural Inf. Process. Syst.",
+        "author": "Lucic",
+        "year": "2018"
+      },
+      {
+        "key": "ref30",
+        "first-page": "1",
+        "article-title": "Unsupervised representation learning with deep convolutional generative adversarial networks",
+        "volume-title": "Proc. 4th Int. Conf. Learn. Representations",
+        "author": "Radford",
+        "year": "2016"
+      },
+      {
+        "key": "ref31",
+        "first-page": "5501",
+        "article-title": "ALICE: Towards understanding adversarial learning for joint distribution matching",
+        "volume-title": "Proc. 31st Int. Conf. Neural Inf. Process. Syst.",
+        "author": "Li",
+        "year": "2017"
+      },
+      {
+        "key": "ref32",
+        "first-page": "2234",
+        "article-title": "Improved techniques for training GANs",
+        "volume-title": "Proc. 30th Int. Conf. Neural Inf. Process. Syst.",
+        "author": "Salimans",
+        "year": "2016"
+      },
+      {
+        "key": "ref33",
+        "volume-title": "Hands-On Artificial Intelligence for IoT: Expert Machine Learning and Deep Learning Techniques for Developing Smarter IoT Systems",
+        "author": "Kapoor",
+        "year": "2019"
+      },
+      {
+        "key": "ref34",
+        "first-page": "1",
+        "article-title": "IEEE Standard for Synchrophasor Data Transfer for Power Systems",
+        "year": "2011",
+        "journal-title": "IEEE Std. C37.118.2-2011 (Revision of IEEE Std C37.118-2005)"
+      },
+      {
+        "key": "ref35",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2021.3093521"
+      },
+      {
+        "key": "ref36",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SmartGridComm47815.2020.9302947"
+      },
+      {
+        "key": "ref37",
+        "first-page": "1",
+        "article-title": "Adam: A method for stochastic optimization",
+        "volume-title": "Proc. 3rd Int. Conf. Learn. Representations",
+        "author": "Kingma",
+        "year": "2015"
+      },
+      {
+        "key": "ref38",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2016.90"
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Power Systems"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://ieeexplore.ieee.org/ielam/59/9927170/9721662-aam.pdf",
+        "content-type": "application/pdf",
+        "content-version": "am",
+        "intended-application": "syndication"
+      },
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/59/9927170/09721662.pdf?arnumber=9721662",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2024,
+          1,
+          17
+        ]
+      ],
+      "date-time": "2024-01-17T22:56:56Z",
+      "timestamp": 1705532216000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/9721662/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2022,
+          11
+        ]
+      ]
+    },
+    "references-count": 38,
+    "journal-issue": {
+      "issue": "6"
+    },
+    "URL": "https://doi.org/10.1109/tpwrs.2022.3153591",
+    "relation": {},
+    "ISSN": [
+      "0885-8950",
+      "1558-0679"
+    ],
+    "issn-type": [
+      {
+        "value": "0885-8950",
+        "type": "print"
+      },
+      {
+        "value": "1558-0679",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2022,
+          11
+        ]
+      ]
+    }
+  }
+}

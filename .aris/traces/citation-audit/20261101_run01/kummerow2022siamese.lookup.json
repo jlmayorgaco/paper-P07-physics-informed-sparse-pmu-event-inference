@@ -1,0 +1,468 @@
+{
+  "key": "kummerow2022siamese",
+  "retrieved_at": "2026-11-01T03:53:22.741378+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1049%2Fstg2.12051",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1049/stg2.12051",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:25.455418+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2025,
+          10,
+          28
+        ]
+      ],
+      "date-time": "2025-10-28T16:44:19Z",
+      "timestamp": 1761669859614,
+      "version": "build-2065373602"
+    },
+    "reference-count": 35,
+    "publisher": "Institution of Engineering and Technology (IET)",
+    "issue": "1",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              8,
+              31
+            ]
+          ],
+          "date-time": "2021-08-31T00:00:00Z",
+          "timestamp": 1630368000000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "http://creativecommons.org/licenses/by-nc-nd/4.0/"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "ietresearch.onlinelibrary.wiley.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "IET Smart Grid"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2022,
+          2
+        ]
+      ]
+    },
+    "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>The automated identification and localisation of grid disturbances is a major research area and key technology for the monitoring and control of future power systems. Current recognition systems rely on sufficient training data and are very error‐prone to disturbance events, which are unseen during training. This study introduces a robust Siamese recurrent neural network using attention‐based embedding functions to simultaneously identify and locate disturbances from synchrophasor data. Additionally, a novel double‐sigmoid classifier is introduced for reliable differentiation between known and unknown disturbance types and locations. Different models are evaluated within an open‐set classification problem for a generic power transmission system considering different unknown disturbance events. A detailed analysis of the results is provided and classification results are compared with a state‐of‐the‐art open‐set classifier.</jats:p>",
+    "DOI": "10.1049/stg2.12051",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2021,
+          8,
+          31
+        ]
+      ],
+      "date-time": "2021-08-31T13:41:30Z",
+      "timestamp": 1630417290000
+    },
+    "page": "51-61",
+    "update-policy": "https://doi.org/10.1002/crossmark_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 5,
+    "title": [
+      "Siamese recurrent neural networks for the robust classification of grid disturbances in transmission power systems considering unknown events"
+    ],
+    "prefix": "10.1049",
+    "volume": "5",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-9620-6008",
+        "authenticated-orcid": false,
+        "given": "André",
+        "family": "Kummerow",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Fraunhofer IOSB IOSB‐AST Ilmenau Fraunhofer Institute of Optronics, System Technologies and Image Exploitation Fraunhofer Center for Machine Learning  Ilmenau Germany"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Cristian",
+        "family": "Monsalve",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Fraunhofer IOSB IOSB‐AST Ilmenau Fraunhofer Institute of Optronics, System Technologies and Image Exploitation Fraunhofer Center for Machine Learning  Ilmenau Germany"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Peter",
+        "family": "Bretschneider",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Fraunhofer IOSB IOSB‐AST Ilmenau Fraunhofer Institute of Optronics, System Technologies and Image Exploitation Fraunhofer Center for Machine Learning  Ilmenau Germany"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "member": "265",
+    "published-online": {
+      "date-parts": [
+        [
+          2021,
+          8,
+          31
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_2_9_2_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PESGM.2017.8274090"
+      },
+      {
+        "key": "e_1_2_9_3_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3390/app10155209"
+      },
+      {
+        "key": "e_1_2_9_4_1",
+        "first-page": "405",
+        "volume-title": "Proceedings of International ETG Congress 2019: 08.– 09.05.2019 in Esslingen am Neckar",
+        "author": "Kummerow A.",
+        "year": "2019"
+      },
+      {
+        "key": "e_1_2_9_5_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s40565-018-0455-8"
+      },
+      {
+        "key": "e_1_2_9_6_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.eswa.2015.05.003"
+      },
+      {
+        "key": "e_1_2_9_7_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PESGM.2014.6939488"
+      },
+      {
+        "key": "e_1_2_9_8_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.procs.2017.05.046"
+      },
+      {
+        "volume-title": "Deep Learning Applied to PMU Data in Power Systems, Dissertation",
+        "year": "2017",
+        "author": "Cardoso P.E.A.",
+        "key": "e_1_2_9_9_1"
+      },
+      {
+        "key": "e_1_2_9_10_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TII.2018.2855428"
+      },
+      {
+        "key": "e_1_2_9_11_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PESGM.2017.8274283"
+      },
+      {
+        "key": "e_1_2_9_12_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRD.2016.2520958"
+      },
+      {
+        "key": "e_1_2_9_13_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRD.2016.2590961"
+      },
+      {
+        "volume-title": "The Sixth International Conference on Smart Grids, Green Communications and IT Energy‐Aware Technologies : June 26–30, 2016",
+        "year": "2016",
+        "author": "Fries S.",
+        "key": "e_1_2_9_14_1"
+      },
+      {
+        "key": "e_1_2_9_15_1",
+        "article-title": "A PMU‐based multivariate model for classifying power system events",
+        "author": "Ma R.",
+        "year": "2018",
+        "journal-title": "ArXiv, abs/1812.00246"
+      },
+      {
+        "key": "e_1_2_9_16_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2020.3039274"
+      },
+      {
+        "key": "e_1_2_9_17_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/JSEN.2020.3029459"
+      },
+      {
+        "key": "e_1_2_9_18_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TNS.2017.2697919"
+      },
+      {
+        "key": "e_1_2_9_19_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICEI.2018.00038"
+      },
+      {
+        "key": "e_1_2_9_20_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TII.2021.3072397"
+      },
+      {
+        "key": "e_1_2_9_21_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2020.3043782"
+      },
+      {
+        "key": "e_1_2_9_22_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPAMI.2012.256"
+      },
+      {
+        "key": "e_1_2_9_23_1",
+        "article-title": "The open set recognition problem and its implications and opportunities in visual computing",
+        "author": "Rocha A.",
+        "year": "2016",
+        "journal-title": "Forensics Secur"
+      },
+      {
+        "key": "e_1_2_9_24_1",
+        "unstructured": "A. Bendale T. Boult Towards open world recognition"
+      },
+      {
+        "key": "e_1_2_9_25_1",
+        "unstructured": "A. Bendale T. Boult Towards open set deep networks"
+      },
+      {
+        "key": "e_1_2_9_26_1",
+        "unstructured": "L. Shu H. Xu B. Liu DOC: deep open classification of text documents"
+      },
+      {
+        "key": "e_1_2_9_27_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/JPROC.2020.2989782"
+      },
+      {
+        "key": "e_1_2_9_28_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ISGTEurope.2019.8905711"
+      },
+      {
+        "key": "e_1_2_9_29_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3390/sym11091066"
+      },
+      {
+        "key": "e_1_2_9_30_1",
+        "series-title": "Similarity‐Based Pattern Recognition: Third International Workshop, SIMBAD 2015, Copenhagen, Denmark, October 12–14, 2015: Proceedings",
+        "first-page": "84",
+        "volume-title": "Lecture Notes in Computer Science",
+        "author": "Hoffer E.",
+        "year": "2015"
+      },
+      {
+        "volume-title": "Deep Metric Learning and Image Classification with Nearest Neighbour Gaussian Kernels",
+        "author": "Meyer B.J.",
+        "key": "e_1_2_9_31_1"
+      },
+      {
+        "volume-title": "Prototypical Networks for Few‐Shot Learning",
+        "year": "2017",
+        "author": "Snell J.",
+        "key": "e_1_2_9_32_1"
+      },
+      {
+        "key": "e_1_2_9_33_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR42600.2020.00882"
+      },
+      {
+        "first-page": "207",
+        "series-title": "Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers), Berlin, Germany",
+        "author": "Zhou P.",
+        "key": "e_1_2_9_34_1"
+      },
+      {
+        "volume-title": "Beyond Triplet Loss: A Deep Quadruplet Network for Person Re‐identification",
+        "author": "Chen W.",
+        "key": "e_1_2_9_35_1"
+      },
+      {
+        "key": "e_1_2_9_36_1",
+        "unstructured": "GitHub F. Chollet Keras"
+      }
+    ],
+    "container-title": [
+      "IET Smart Grid"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1049/stg2.12051",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://onlinelibrary.wiley.com/doi/full-xml/10.1049/stg2.12051",
+        "content-type": "application/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://ietresearch.onlinelibrary.wiley.com/doi/pdf/10.1049/stg2.12051",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2025,
+          10,
+          28
+        ]
+      ],
+      "date-time": "2025-10-28T16:35:41Z",
+      "timestamp": 1761669341000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/stg2.12051"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2021,
+          8,
+          31
+        ]
+      ]
+    },
+    "references-count": 35,
+    "journal-issue": {
+      "issue": "1",
+      "published-print": {
+        "date-parts": [
+          [
+            2022,
+            2
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "10.1049/stg2.12051"
+    ],
+    "URL": "https://doi.org/10.1049/stg2.12051",
+    "archive": [
+      "Portico"
+    ],
+    "relation": {},
+    "ISSN": [
+      "2515-2947",
+      "2515-2947"
+    ],
+    "issn-type": [
+      {
+        "type": "print",
+        "value": "2515-2947"
+      },
+      {
+        "type": "electronic",
+        "value": "2515-2947"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2021,
+          8,
+          31
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2021-03-08",
+        "order": 0,
+        "name": "received",
+        "label": "Received",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      },
+      {
+        "value": "2021-08-15",
+        "order": 2,
+        "name": "accepted",
+        "label": "Accepted",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      },
+      {
+        "value": "2021-08-31",
+        "order": 3,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

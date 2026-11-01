@@ -1,0 +1,565 @@
+{
+  "key": "katanic2024recursive",
+  "retrieved_at": "2026-11-01T03:53:21.672788+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1049%2Fgtd2.13308",
+      "status": "success",
+      "resolved": "https://api.crossref.org/works/10.1049%2Fgtd2.13308"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          12
+        ]
+      ],
+      "date-time": "2026-10-12T18:56:11Z",
+      "timestamp": 1791831371361,
+      "version": "4.3.4"
+    },
+    "reference-count": 53,
+    "publisher": "Institution of Engineering and Technology (IET)",
+    "issue": "22",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              30
+            ]
+          ],
+          "date-time": "2024-10-30T00:00:00Z",
+          "timestamp": 1730246400000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "http://creativecommons.org/licenses/by-nc-nd/4.0/"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100001711",
+        "name": "Schweizerischer Nationalfonds zur Förderung der Wissenschaftlichen Forschung",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "51NF40_225155"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "51NF40_225155"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100001711",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "ietresearch.onlinelibrary.wiley.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "IET Generation Trans &amp;amp; Dist"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2024,
+          11
+        ]
+      ]
+    },
+    "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>Power systems are highly complex, large‐scale engineering systems subject to many uncertainties, which makes accurate mathematical modeling challenging. This article introduces a novel centralized dynamic state estimator designed specifically for power systems where some component models are missing. Including the available dynamic evolution equations, algebraic network equations, and phasor measurements, the least squares criterion is applied to estimate all dynamic and algebraic states recursively. The approach generalizes the iterated extended Kalman filter and does not require static network observability, relying on the network topology and parameters. Furthermore, a topological criterion is established for placing phasor measurement units (PMUs), termed topological estimability, which guarantees the uniqueness of the solution. A numerical study evaluates the performance under short circuits in the network and load changes and shows superior tracking performance compared to robust procedures from the literature with computational times in accordance with the typical PMU sampling rates.</jats:p>",
+    "DOI": "10.1049/gtd2.13308",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2024,
+          10,
+          30
+        ]
+      ],
+      "date-time": "2024-10-30T09:57:30Z",
+      "timestamp": 1730282250000
+    },
+    "page": "3657-3668",
+    "update-policy": "https://doi.org/10.1002/crossmark_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 8,
+    "title": [
+      "Recursive dynamic state estimation for power systems with an incomplete nonlinear DAE model"
+    ],
+    "prefix": "10.1049",
+    "volume": "18",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0009-0000-2585-0990",
+        "authenticated-orcid": false,
+        "given": "Milos",
+        "family": "Katanic",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Department of Information Technology and Electrical Engineering ETH Zurich Switzerland"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "John",
+        "family": "Lygeros",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Information Technology and Electrical Engineering ETH Zurich Switzerland"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Gabriela",
+        "family": "Hug",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Information Technology and Electrical Engineering ETH Zurich Switzerland"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "265",
+    "published-online": {
+      "date-parts": [
+        [
+          2024,
+          10,
+          30
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_2_10_2_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1201/9780203913673"
+      },
+      {
+        "key": "e_1_2_10_3_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/0142-0615(90)90003-T"
+      },
+      {
+        "key": "e_1_2_10_4_1",
+        "unstructured": "Farantatos E.:Questions and answers—Let's talk about synchrophasors PMUs & applications.https://www.naspi.org/node/822. Accessed 23 Nov 2022."
+      },
+      {
+        "key": "e_1_2_10_5_1",
+        "unstructured": "Scholtz E.:Observer‐Based Monitors and Distributed Wave Controllers for Electromechanical Disturbances in Power Systems.Massachusetts Institute of Technology Department of Electrical Engineering and Computer Science(2004)"
+      },
+      {
+        "key": "e_1_2_10_6_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/B978-0-12-814005-5.00014-5"
+      },
+      {
+        "key": "e_1_2_10_7_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2011.2145396"
+      },
+      {
+        "key": "e_1_2_10_8_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2016.2580584"
+      },
+      {
+        "key": "e_1_2_10_9_1",
+        "volume-title": "2016 IEEE Power and Energy Society General Meeting (PESGM)",
+        "author": "Cui Y.",
+        "year": "2016"
+      },
+      {
+        "key": "e_1_2_10_10_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2011.2175255"
+      },
+      {
+        "key": "e_1_2_10_11_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2016.2580584"
+      },
+      {
+        "key": "e_1_2_10_12_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2014.2356797"
+      },
+      {
+        "key": "e_1_2_10_13_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2016.2548244"
+      },
+      {
+        "key": "e_1_2_10_14_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2022.3184190"
+      },
+      {
+        "key": "e_1_2_10_15_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Nadeem M. Taha A.F.:Robust dynamic state estimation of multi‐machine power networks with solar farms and dynamics loads. In:2022 IEEE 61st Conference on Decision and Control (CDC) pp.7174–7179.IEEE Piscataway(2022)",
+        "DOI": "10.1109/CDC51059.2022.9993096"
+      },
+      {
+        "key": "e_1_2_10_16_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2022.3163196"
+      },
+      {
+        "key": "e_1_2_10_17_1",
+        "first-page": "1",
+        "volume-title": "2022 North American Power Symposium (NAPS)",
+        "author": "Katanic M.",
+        "year": "2022"
+      },
+      {
+        "key": "e_1_2_10_18_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2019.2894769"
+      },
+      {
+        "key": "e_1_2_10_19_1",
+        "volume-title": "Dynamic Estimation and Control of Power Systems",
+        "author": "Abhinav S.",
+        "year": "2018"
+      },
+      {
+        "key": "e_1_2_10_20_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2013.2281323"
+      },
+      {
+        "key": "e_1_2_10_21_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2016.2628344"
+      },
+      {
+        "key": "e_1_2_10_22_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2017.2688131"
+      },
+      {
+        "key": "e_1_2_10_23_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2017.2761452"
+      },
+      {
+        "key": "e_1_2_10_24_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ACCESS.2019.2900228"
+      },
+      {
+        "key": "e_1_2_10_25_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCSI.2020.2965141"
+      },
+      {
+        "key": "e_1_2_10_26_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2020.2994898"
+      },
+      {
+        "key": "e_1_2_10_27_1",
+        "unstructured": "Feng F. Zhou Y. Zhang P.:Neuro‐dynamic state estimation for networked microgrids.https://arxiv.org/abs/2208.12288."
+      },
+      {
+        "key": "e_1_2_10_28_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.epsr.2018.07.019"
+      },
+      {
+        "key": "e_1_2_10_29_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ISGTEurope52324.2021.9640127"
+      },
+      {
+        "key": "e_1_2_10_30_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Ishihara J.Y. Campos J.C.T. Terra M.H.:Optimal recursive estimation for discrete‐time descriptor systems. In:Proceedings of the 2004 American Control Conference vol.1 pp.188–193.IEEE Piscataway(2004)",
+        "DOI": "10.23919/ACC.2004.1383602"
+      },
+      {
+        "key": "e_1_2_10_31_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/9.159570"
+      },
+      {
+        "key": "e_1_2_10_32_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PROC.1979.11233"
+      },
+      {
+        "key": "e_1_2_10_33_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.ces.2010.04.020"
+      },
+      {
+        "key": "e_1_2_10_34_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2014.2302213"
+      },
+      {
+        "key": "e_1_2_10_35_1",
+        "unstructured": "Katanic M. Lygeros J. Hug G.:Recursive dynamic state estimation for power systems with an incomplete nonlinear DAE model2023.https://arxiv.org/abs/2305.10065v2."
+      },
+      {
+        "key": "e_1_2_10_36_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/0470045345"
+      },
+      {
+        "key": "e_1_2_10_37_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/9.250476"
+      },
+      {
+        "key": "e_1_2_10_38_1",
+        "volume-title": "Lecture Notes in Control and Information Sciences",
+        "author": "Dai L.",
+        "year": "2014"
+      },
+      {
+        "key": "e_1_2_10_39_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPAS.1980.319578"
+      },
+      {
+        "key": "e_1_2_10_40_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Scholtz E. Lesieutre B.C.:Graphical observer design suitable for large‐scale DAE power systems. In:2008 47th IEEE Conference on Decision and Control pp.2955–2960.IEEE Piscataway(2008)",
+        "DOI": "10.1109/CDC.2008.4739260"
+      },
+      {
+        "key": "e_1_2_10_41_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.1980.1102506"
+      },
+      {
+        "key": "e_1_2_10_42_1",
+        "unstructured": "Hiskens I.:IEEE PES task force on benchmark systems for stability controls Technical Report.IEEE Power & Energy Society Piscataway NJ(2013)"
+      },
+      {
+        "issue": "14",
+        "key": "e_1_2_10_43_1",
+        "first-page": "38",
+        "article-title": "An aggregate dynamic model for distributed energy resources for power system stability studies",
+        "volume": "06",
+        "author": "Pourbeik P.",
+        "year": "2019",
+        "journal-title": "Cigre Sci. Eng"
+      },
+      {
+        "key": "e_1_2_10_44_1",
+        "volume-title": "Power System Dynamics: Stability and Control",
+        "author": "Machowski J.",
+        "year": "2020"
+      },
+      {
+        "key": "e_1_2_10_45_1",
+        "unstructured": "Dynamic models for turbine‐governors in power system studies Technical Report.IEEE Power & Energy Society Piscataway(2013)"
+      },
+      {
+        "key": "e_1_2_10_46_1",
+        "volume-title": "EPRI Power System Engineering Series",
+        "author": "Kundur P.",
+        "year": "1994"
+      },
+      {
+        "key": "e_1_2_10_47_1",
+        "volume-title": "Power Systems",
+        "author": "Milano F.",
+        "year": "2010"
+      },
+      {
+        "key": "e_1_2_10_48_1",
+        "unstructured": "IEEE Standard for Synchrophasor Measurements for Power Systems. IEEE Std C371181‐2011 (Revision of IEEE Std C37118‐2005) pp.1–61.IEEE Piscataway(2011)"
+      },
+      {
+        "key": "e_1_2_10_49_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s12532-018-0139-4"
+      },
+      {
+        "key": "e_1_2_10_50_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRD.2017.2762927"
+      },
+      {
+        "key": "e_1_2_10_51_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2017.2688131"
+      },
+      {
+        "key": "e_1_2_10_52_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2008.922621"
+      },
+      {
+        "key": "e_1_2_10_53_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2020.3022563"
+      },
+      {
+        "key": "e_1_2_10_54_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2015.2485280"
+      }
+    ],
+    "container-title": [
+      "IET Generation, Transmission &amp; Distribution"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://ietresearch.onlinelibrary.wiley.com/doi/pdf/10.1049/gtd2.13308",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2025,
+          10,
+          28
+        ]
+      ],
+      "date-time": "2025-10-28T09:50:01Z",
+      "timestamp": 1761645001000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/gtd2.13308"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2024,
+          10,
+          30
+        ]
+      ]
+    },
+    "references-count": 53,
+    "journal-issue": {
+      "issue": "22",
+      "published-print": {
+        "date-parts": [
+          [
+            2024,
+            11
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "10.1049/gtd2.13308"
+    ],
+    "URL": "https://doi.org/10.1049/gtd2.13308",
+    "archive": [
+      "Portico"
+    ],
+    "relation": {},
+    "ISSN": [
+      "1751-8687",
+      "1751-8695"
+    ],
+    "issn-type": [
+      {
+        "value": "1751-8687",
+        "type": "print"
+      },
+      {
+        "value": "1751-8695",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2024,
+          10,
+          30
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2024-07-17",
+        "order": 0,
+        "name": "received",
+        "label": "Received",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      },
+      {
+        "value": "2024-10-10",
+        "order": 2,
+        "name": "accepted",
+        "label": "Accepted",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      },
+      {
+        "value": "2024-10-30",
+        "order": 3,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

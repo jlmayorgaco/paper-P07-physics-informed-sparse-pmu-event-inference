@@ -1,0 +1,329 @@
+Limited circulation. For review only (https://par.nsf.gov/servlets/purl/10279337)
+citeturn24search12 [wordlim: 200] Published: 8 months ago; of DSE methods based on power network’s differential-algebraic
+equations (DAEs), this paper develops a novel observer-based ... are satisﬁed for various power networks, is designed to handle ... mation, differential-algebraic equation, robust H∞observer. ... Consequently, this results in the prevalence of research ... ordinary differential equation (ODE) model.
+Limited circulation. For review only
+IEEE TCNS Submission no.: 21-0335.2
+Observers for Differential Algebraic Equation
+Models of Power Networks: Jointly Estimating
+Dynamic and Algebraic States
+Sebastian A. Nugroho⋆, Ahmad F. Taha⋆,†, Nikolaos Gatsis⋆, and Junbo Zhao‡
+Abstract—Phasor measurement units (PMUs) have become
+instrumental in modern power systems for enabling real-time,
+wide-area monitoring and control. Accordingly, many studies
+have investigated efﬁcient and robust dynamic state estimation
+(DSE) methods in order to accurately compute the dynamic
+states of generation units. Nonetheless, most of them forego the
+dynamic-algebraic nature of power networks and only consider
+their nonlinear dynamic representations. Motivated by the lack
+of DSE methods based on power network’s differential-algebraic
+equations (DAEs), this paper develops a novel observer-based
+DSE framework in order to perform simultaneous estimation
+of the dynamic and algebraic states of multi-machine power
+networks. Speciﬁcally, we leverage the DAE dynamics of a power
+--------------------------------------------------------------------------------
+Observers for Differential Algebraic Equation Models of Power Networks: Jointly Estimating Dynamic and Algebraic States (https://arxiv.org/abs/2202.13254)
+citeturn24academia13 [wordlim: 200] Published: 4.7 years ago; Title: Observers for Differential Algebraic Equation Models of Power Networks: Jointly Estimating Dynamic and Algebraic States ... Motivated by the lack of DSE methods based on power network's differential-algebraic equations (DAEs), this paper develops a novel observer-based DSE framework in order to perform simultaneous estimation of the dynamic and algebraic states of multi-machine power networks.
+Title: Observers for Differential Algebraic Equation Models of Power Networks: Jointly Estimating Dynamic and Algebraic States
+Authors: Sebastian Nugroho, Ahmad Taha, Nikolaos Gatsis, Junbo Zhao
+Date: Sat Feb 26 23:51:59 2022
+
+Phasor measurement units ({PMUs}) have become instrumental in modern power systems for enabling real-time, wide-area monitoring and control. Accordingly, many studies have investigated efficient and robust dynamic state estimation (DSE) methods in order to accurately compute the dynamic states of generation units. Nonetheless, most of them forego the dynamic-algebraic nature of power networks and only consider their nonlinear dynamic representations. Motivated by the lack of DSE methods based on power network's differential-algebraic equations (DAEs), this paper develops a novel observer-based DSE framework in order to perform simultaneous estimation of the dynamic and algebraic states of multi-machine power networks. Specifically, we leverage the DAE dynamics of a power network around an operating point and combine them with a PMU-based measurement model capable of capturing bus voltages and line currents. The proposed $\mathcal{H}_{\infty}$ observer, which only requires detectability and impulse observability conditions which are satisfied for various power networks, is designed to handle various noise, unknown inputs, and input sensor failures. The results obtained from performing extensive numerical simulations on the IEEE $9$-bus and $39$-bus systems showcase the effectiveness of the proposed approach for DSE purposes.--------------------------------------------------------------------------------
+Recursive Dynamic State Estimation for Power Systems with an Incomplete Nonlinear DAE Model (https://arxiv.org/abs/2305.10065)
+citeturn24academia14 [wordlim: 200] Published: 3.5 years ago; Title: Recursive Dynamic State Estimation for Power Systems with an Incomplete Nonlinear DAE Model ... Including the available dynamic evolution equations, algebraic network equations, and phasor measurements, we apply the least squares criterion to estimate all dynamic and algebraic states recursively.
+Title: Recursive Dynamic State Estimation for Power Systems with an Incomplete Nonlinear DAE Model
+Authors: Milos Katanic, John Lygeros, Gabriela Hug
+Date: Wed May 17 09:09:34 2023
+
+Power systems are highly complex, large-scale engineering systems subject to many uncertainties, which makes accurate mathematical modeling challenging. This paper proposes a novel, centralized dynamic state estimator for power systems that lack models of some components. Including the available dynamic evolution equations, algebraic network equations, and phasor measurements, we apply the least squares criterion to estimate all dynamic and algebraic states recursively. The approach results in an algorithm that generalizes the iterated extended Kalman filter and does not require static network observability. We further derive a graph theoretic condition for placing phasor measurement units that guarantees the uniqueness of the solution. A numerical study evaluates the performance under short circuits in the network and load changes and shows superior tracking performance compared to robust procedures from the literature within computational times that are feasible for real-time application.--------------------------------------------------------------------------------
+ETH Library (https://www.research-collection.ethz.ch/bitstreams/cc694933-79b1-4417-90dc-0433bc43cdf4/download)
+citeturn24search15 [wordlim: 200] Published: 6 months ago; Recursive dynamic state estimation for power systems with an
+incomplete nonlinear DAE model ... is applied to estimate all dynamic and algebraic states recursively. ... PMUs promoted the research interest in dynamic state estima- ... of state estimation methods that do not rely on static network
+Received: 17 July 2024
+Revised: 9 October 2024
+Accepted: 10 October 2024
+IET Generation, Transmission & Distribution
+DOI: 10.1049/gtd2.13308
+ORIGINAL RESEARCH
+Recursive dynamic state estimation for power systems with an
+incomplete nonlinear DAE model
+Milos Katanic
+John Lygeros
+Gabriela Hug
+Department of Information Technology and
+Electrical Engineering, ETH, Zurich, Switzerland
+Correspondence
+Milos Katanic, Department of Information
+Technology and Electrical Engineering, ETH,
+Zurich, Switzerland.
+Email: mkatanic@ethz.ch
+Funding information
+Swiss National Science Foundation, Grant/Award
+Number: 51NF40_225155
+Abstract
+Power systems are highly complex, large-scale engineering systems subject to many uncer-
+tainties, which makes accurate mathematical modeling challenging. This article introduces
+a novel centralized dynamic state estimator designed speciﬁcally for power systems where
+some component models are missing. Including the available dynamic evolution equa-
+tions, algebraic network equations, and phasor measurements, the least squares criterion
+--------------------------------------------------------------------------------
+Recursive dynamic state estimation for power systems with an incomplete nonlinear DAE model - Katanic - 2024 - IET Generation, Transmission & Distribution - Wiley Online Library (https://doi.org/10.1049/gtd2.13308)
+citeturn24search0 [wordlim: 200] Published: 2.0 years ago; Crawled: 2 days ago; The advent of PMUs promoted the research interest in dynamic state estimation (DSE) for power systems. ... Reference [15] shows that inequality constraints can be explicitly incorporated into the least squares estimation by reformulating them into equality constraints using complementarity theory. ...   * We propose a centralized, recursive, least squares estimator for algebraic and dynamic state estimation for power systems with a partially known model. ... Due to unknown injectors, the employed power system estimation model is incomplete and is given by the following continuous-time, stochastic, under-constrained, nonlinear, semi-explicit DAE system: ... To derive the optimal filter for nonlinear systems, we extend the approach from [29], outlined in Appendix in [34], by first linearizing the dynamic equations and subsequently applying the optimal recursive filtering to the obtained affine system. ... We can now formulate the optimization problem to calculate the least-squares estimate at time step , in a similar way as for linear systems (see (20) in Appendix in [34])
+To the best of our knowledge, no method for optimal DSE for power systems with a partially known nonlinear DAE model exists at present.
+
+### 1.2 Contributions
+
+This paper aims to fill the above-mentioned research gap. Specifically, the contributions can be stated as follows:
+
+  * We propose a centralized, recursive, least squares estimator for algebraic and dynamic state estimation for power systems with a partially known model. The method allows one to isolate a part of the system and estimate differential and algebraic states within without making any assumptions about the rest of the system. To derive the recursion, we extend the Kalman filtering for under-determined linear DAE systems from [29] to nonlinear cases. This methodology does not separate prediction and update steps but simultaneously processes time evolution and measurement equations, which results in a generalization of the one-step iterated extended Kalman filter (IEKF). Moreover, it provides the possibility of adding new or removing existing models. Thus, for example, once a dynamic model of a generator or a load becomes available, it can be integrated into the estimation framework without redesigning the estimator. And vice versa, if a model proves suspicious, it can be omitted as long as estimability is still guaranteed;
+  * This article achieves unique state reconstruction and introduces the notion of topological estimability, which provides a location-dependent minimum number of real-time measurements that must be placed in the system. Estimability provides a guarantee that all system states can be uniquely estimated, given the available models and measurements (see [30] for a rigorous definition). The proposed graph theoretic approach is purely topological, independent of system parameters or operating points. It essentially requires that all components with unavailable models be connectable to a PMU measurement via transmission lines through mutually disjoint paths. We show that estimability can be achieved with fewer measurements than static network observability. In addition, there is no requirement to place PMUs at any specific node type.
+
+### 1.3 Outline
+
+The remainder of the article is structured as follows. Section 2 proposes the estimation algorithm. Section 3 addresses the topological estimability condition. In Section 4, simulation results are discussed. Finally, Section 5 concludes the paper.
+
+## 2 ESTIMATION
+
+### 2.1 Power system modeling
+
+In this work, we consider a power system that lacks models of some components. We call these devices unknown injectors, and they can be static or dynamic components that inject positive or negative power into the grid. They can be generators or loads with unknown models or, for example, distribution grids whose models, parameters, and real-time measurements are inaccessible to transmission system operators. Due to unknown injectors, the employed power system estimation model is incomplete and is given by the following continuous-time, stochastic, under-constrained, nonlinear, semi-explicit DAE system:
+
+(1a)
+
+(1b)
+
+where and are, respectively, the vectors of the differential and algebraic states and and , with , are nonlinear, differentiable, Lipschitz continuous functions representing the time evolution and algebraic nodal current balance equations in rectangular coordinates (see [31] for details). and are continuous-time Gaussian white noise vectors of independent random variables with and , where and are positive definite noise covariances. Internal states of individual dynamic models are coupled through the network, which is assumed to be connected. Inputs (set points) are not explicitly stated in (1a)–(1b), but are regarded as known parameters. As the number of states is larger than the number of equations, this system of equations is under-determined, and hence, the initial value problem (IVP) is not uniquely solvable. Therefore, we rely on time-discrete measurements to uniquely infer the system trajectory. Note that as a consequence, the standard approaches to Kalman filtering for nonlinear DAE systems from the literature [32] cannot be applied as they require the invertibility of the Jacobian in (1b).
+
+One may be tempted to complete the power system model by modeling the unknown components with their expected injection obtained from historical values or other forecasting methods. However, in this paper, we show that wrong forecasts can cause the estimation to converge to a wrong system state even if robust estimation methods are used. 
+To derive the optimal filter for nonlinear systems, we extend the approach from [29], outlined in Appendix in [34], by first linearizing the dynamic equations and subsequently applying the optimal recursive filtering to the obtained affine system. Furthermore, we propose to apply the scheme several times iteratively, where each iteration yields a new (better) state estimate and, hence, a better linearization point. In the literature, such an iterative estimation procedure is called the iterated extended Kalman filter (IEKF) [35]. The idea is that the successive linearization will render the linearization error negligible compared to noise. The approach is similar to applying the Gauss-Newton method to solve the original nonlinear optimization problem [36]. Denoting , as the estimate of once has been processed, we assume that , and its covariance are available.
+
+First note that (2a)–(2b) need to be linearized around the previous estimate , but also around the current iterate of the current estimate . Under the assumption has full column rank, the minimum is attained at
+
+(12)
+
+or
+
+(13)
+
+To simplify the notation, we drop the subscript after the vertical bar, as it is implicitly clear from the time step at which an estimate was obtained. As we are only interested in the estimation of the most recent state of the system , rewriting the terms from the linear case (25) in [34] and including the additional terms introduced by the linearization gives
+
+(14)
+
+The second equality follows from factoring out and in the third and fourth summand, the third equality follows by factoring out in the curly brackets, and the fourth equality follows from the associativity of matrix multiplication. Hence, the final expression is given by the following recursion:
+
+(15)
+
+If and are linear, , and the recursion coincides with (25) in [34]. Moreover, for standard state space systems , the recursion (15) reduces to the classical Kalman filter in the one-step form (see [35, p. 131]).
+
+Finally, we execute the algorithm iteratively in the form of the IEKF. Applying (15) gives the new estimate iterate . The Jacobians can be reevaluated for this estimate, and the procedure can be repeated until convergence; as a termination criterion, we can take , for a small . Algorithm 1 provides the pseudo-code of the proposed IEKF for time step .
+
+### ALGORITHM 1. IEKF for under-determined DAE systems
+
+Input:
+Output:
+Calculate from (9)
+do
+Calculate from (9)
+Apply (15) to calculate and
+while
+--------------------------------------------------------------------------------
+A multiple model multiple hypothesis filter for Markovian switching systems - ScienceDirect (https://www.sciencedirect.com/science/article/pii/S0005109804003243)
+citeturn24search1 [wordlim: 200] Published: 21.6 years ago; Crawled: last week; A multiple model multiple hypothesis filter for Markovian switching systems☆ ... The timing of the hypotheses merging and pruning is the same as in the IMM, i.e. before the prediction and update step.
+This is the crucial difference with the IMM filter, where a fixed number of hypotheses is propagated over time, regardless of the situation at hand. Furthermore, the ${\mathrm{M}}^{3}\mathrm{H}$ filter has the ability to deal with a variable hypotheses merging depth, where the IMM has a fixed hypotheses merging depth, i.e. a hypotheses merging depth of one in case of the standard IMM. The timing of the hypotheses merging and pruning is the same as in the IMM, i.e. before the prediction and update step. The novelty of the ${\mathrm{M}}^{3}\mathrm{H}$ filter is the combination of the pruning and merging strategies and their timing.
+
+The contribution of this paper is that it provides the user with a new filter, the ${\mathrm{M}}^{3}\mathrm{H}$ filter, for a class of hybrid Markovian switching systems. This filter can be used as an excellent alternative for the popular IMM filter.
+
+Moreover, for a realistic application, i.e. a target tracking application, it is shown that the ${\mathrm{M}}^{3}\mathrm{H}$ filter outperforms the IMM filter in terms of performance and computational load.
+
+  * •
+
+$z(k)\in {\mathbb{R}}^{p(m(k))}$ is the measurement.
+
+  * •
+
+$t(k)\in \mathbb{R}$ is time.
+
+  * •
+
+$w(k,m(k))\in {\mathbb{R}}^{n(m(k))}$ is the process noise.
+
+  * •
+
+$v(k,m(k))\in {\mathbb{R}}^{p(m(k))}$ is the measurement noise.
+
+### The multiple model multiple hypothesis filter
+
+In this section the ${\mathrm{M}}^{3}\mathrm{H}$ filter is presented by providing an algorithmic filter description. The various steps are given in some detail, many of the steps involve similar operations as in the IMM filter, very detailed and explicit descriptions of these operations are given in (Mazor, Averbuch, Bar-Shalom, & Dayan, 1998).
+
+In the ${\mathrm{M}}^{3}\mathrm{H}$ algorithm, certain parameters have to be chosen or set by the designer in advance. These are a pruning threshold, $\epsilon $, this represents a threshold on the hypothesis
+
+
+### A radar target tracking example
+
+This section compares the performance and computational load of the ${\mathrm{M}}^{3}\mathrm{H}$ filter to the performance and computational load of the IMM filter for a typical target tracking application of a long-range surveillance radar.
+
+Although in a true target tracking application also other aspects, like data association and extraction play important roles and have a huge influence on the computational load and performance of the total system, see (Blackman & Popoli, 1999), we will only consider the filtering
+
+### Conclusions
+
+In this paper a new filter for Markovian switching systems has been presented. The filter uses both pruning and merging techniques. An adaptive computational load is a powerful feature of the new filter. In difficult situations the load is increased and in easy situations the load is decreased. A realistic target tracking example shows that in different representative scenarios the new filter outperforms the popular and widely used IMM filter at a lower computational load. The ${\mathrm{M}}^{3}\mathrm{H}$ filter can be
+
+--------------------------------------------------------------------------------
+Unbiased Minimum-Variance Input and State Estimation for (https://ftp.esat.kuleuven.be/pub/pub/stadius/gillijns/reports/TR-05-228-a.pdf)
+citeturn24search16 [wordlim: 200] Published: 1.4 years ago; Unbiased Minimum-Variance Input and State Estimation for ... aK.U.Leuven, Department of Electrical Engineering (ESAT), Research group SCD-SISTA, ... recursive ﬁlter, optimal in the minimum-variance unbiased sense, is developed where the estimation of the state and the input
+Unbiased Minimum-Variance Input and State Estimation for
+Linear Discrete-Time Systems ⋆
+Steven Gillijns a,1, Bart De Moor a,
+aK.U.Leuven, Department of Electrical Engineering (ESAT), Research group SCD-SISTA,
+Kasteelpark Arenberg 10, 3001 Leuven, Belgium
+Abstract
+This paper addresses the problem of simultaneously estimating the state and the input of a linear discrete-time system. A
+recursive ﬁlter, optimal in the minimum-variance unbiased sense, is developed where the estimation of the state and the input
+are interconnected. The input estimate is obtained from the innovation by least-squares estimation and the state estimation
+problem is transformed into a standard Kalman ﬁltering problem. Necessary and suﬃcient conditions for the existence of the
+ﬁlter are given and relations to earlier results are discussed.
+Key words: Kalman ﬁltering; Recursive state estimation; Unknown input estimation; Minimum-variance estimation
+1
+Introduction
+Kitanidis [Kit87], on the other hand, developed an opti-
+mal recursive state ﬁlter which is based on the assump-
+input. However, the optimality of the input estimate has
+not been proved.
+This paper is an extension of [Kit87] and [DZ97] to com-
+bined MVU input and state estimation. We propose a
+recursive ﬁlter where the estimation of the unknown in-
+put and the state are interconnected. We prove that this
+approach yields the same state update as in [Kit87] and
+[DZ97] and the same input estimate as in [Hsi00], thereby
+also showing that the latter input estimate is indeed op-
+timal.
+For discrete-time systems, earliest attempts were based
+on augmenting the state vector with an unknown input
+vector, where a prescribed model for the unknown in-
+put is assumed. To reduce computation costs of the aug-
+mented state ﬁlter, Friedland [Fri69] proposed the two-
+stage Kalman ﬁlter where the estimation of the state and
+the unknown input are decoupled. Although successfully
+used in many applications, both methods are limited to
+the case where a model for the dynamical evolution of
+the unknown input is available.
+⋆This paper was not presented at any IFAC meeting.
+Email addresses: steven.gillijns@esat.kuleuven.be
+(Steven Gillijns), bart.demoor@esat.kuleuven.be (Bart
+De Moor).
+1 Corresponding author. Tel. +32-16-32-17-09. Fax +32-16-
+32-19-70.
+This paper is organized as follows. In section 2, the prob-
+lem is formulated and the structure of the recursive ﬁlter
+is presented. Section 3 deals with optimal reconstruc-
+tion of the unknown input. Next, the state estimation
+problem is solved in section 4. Finally, a proof of global
+optimality is provided in section 5.
+Preprint submitted to Automatica
+September 15, 2006--------------------------------------------------------------------------------
+Recursive dynamic state estimation for power systems with an incomplete nonlinear DAE model - Katanic - 2024 - IET Generation, Transmission & Distribution - Wiley Online Library (https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/gtd2.13308)
+citeturn24search2 [wordlim: 200] Published: 2.0 years ago; Crawled: last month; The benchmark model is extended to include dynamic PV generator models from [42], connected to nodes 20, 21, and 23, each producing 100 MW at steady state. ... Hence, interface node 16 can be considered as a node with an unknown dynamic model by the proposed estimation scheme, and only the topology and network parameters of the highlighted area are needed for the DSE. ... Therefore, all shaded elements in Figure 2, connected to nodes $$16, 20, 21, 23$$, and 24, are unknown to the estimator, which makes the estimation model incomplete.
+## 4 NUMERICAL RESULTS
+
+### 4.1 Simulation setup
+
+To validate the performance of the proposed method, we perform numerical simulations on a power system comprising synchronous generators (SG), photovoltaic (PV) generators, loads, and a network interconnecting them. Other generator and load types can be integrated into the framework in a straightforward manner.
+
+The IEEE 39-bus test system is used, whose parameters are taken from [41]. The benchmark model is extended to include dynamic PV generator models from [42], connected to nodes 20, 21, and 23, each producing 100 MW at steady state. The ground-truth values are obtained by a simulation that employs the sixth order, subtransient synchronous generator model [43], including the IEEE DC1A automatic voltage regulator [43] and the simple TGOV1 turbine model [44]. The subtransient reactances are set to 90% of their transient counterparts, whereas the subtransient time constants are 100 times smaller than the transient counterparts [45]. We assume that the exciter, the turbine model, and the generators' power and voltage set points are known. However, we consider all PV and load models unknown to the estimator. Obtaining accurate models of many distributed PVs is challenging in practice; the same holds for time-varying residential and commercial loads in distribution grids, and modeling them as static consumers with their power inferred from historical data may be unreliable, especially during disturbances and transient events [46]. If dynamic models or reliable real-time consumption data are available, they can be incorporated into the framework in a straightforward manner.
+
+FIGURE 2
+
+Open in figure viewerPowerPoint
+
+Single line diagram of the IEEE 39-bus test system. The estimation is performed on the highlighted area; shaded elements are unknown to the estimator. Voltage phasor measurements are denoted by the red circles, and current phasor measurements are denoted by the red squares.
+
+Therefore, all shaded elements in Figure 2, connected to nodes $$16, 20, 21, 23$$, and 24, are unknown to the estimator, which makes the estimation model incomplete. We assume no prior knowledge and make no assumptions regarding the injections of these nodes. The estimation model comprises 36 differential states, 22 algebraic states, and only 48 equations. PMU measurements are assumed to arrive simultaneously every $$20 \,{\rm ms}$$ [47]; their values are obtained by adding Gaussian measurement noise with a standard deviation in the range 0.001–0.003 p.u. to the real and imaginary voltage and current ground-truth values, which is according to the IEEE standard [47].
+
+All simulations are implemented in Python on an Intel i7-10510U CPU @ 1.80GHz with 16GB RAM. Cholesky factorization is used to factorize the state estimation covariance matrix in (15), which can be ill-conditioned. All Jacobians are computed by the algorithmic differentiation using CasADi's symbolic framework [48].
+
+### 4.3 Case study 1: network short circuit
+
+Short circuits are one of the most severe disturbances with respect to their impact on power system stability, but also with respect to the stability of the implemented numerical methods for simulation. Here, we simulate a three-phase short circuit at $$t=8 \,{\rm s}$$ in the middle between two PMU sampling events on the line between nodes 5 and 8, which is cleared after $$60 \,{\rm ms}$$ on both ends. Note that the operator of the shaded area from Figure 2 (and hence the proposed estimator) has no direct awareness of this disturbance. The estimation is initialized with a voltage flat start; the differential states are initialized with a uniform random error from the ground truth with bounds $$\pm 10\%$$, except for the rotor speeds, where the bound is $$\pm 0.1\%$$. PMUs are placed to satisfy the conditions of Theorem 2. PMU voltage measurements are placed at nodes 19, 23, and 34; PMU branch current measurements are located at lines $$16-19$$, $$16-24$$, and $$22-23$$.
+
+To certify topological estimability, we assign the PMU at line $$16-24$$ to node 24, and the PMU at line $$22-23$$ to node 22 and observe that topological estimability (Theorem 2) for the proposed method is satisfied as all unknown injectors can be connected to a node with an assigned PMU measurement by disjoint paths: injector 16 to node 16, injector 20 to node 34, injector 21 to node 22, injector 23 to node 23, and finally injector 24 to node 24 (see Figure 2). By contrast, the power system is statically not observable, or, more precisely, ignoring the dynamic equations, the voltages are not uniquely estimable from the given PMU measurements.
+
+--------------------------------------------------------------------------------
+(PDF) Brief paper: Unbiased minimum-variance input and state estimation for linear discrete-time systems (https://www.researchgate.net/publication/222546274_Brief_paper_Unbiased_minimum-variance_input_and_state_estimation_for_linear_discrete-time_systems)
+citeturn24search3 [wordlim: 200] Published: 19.8 years ago; Crawled: 2 months ago; # Brief paper: Unbiased minimum-variance input and state estimation for linear discrete-time systems
+
+  * January 2007 ... The input estimate is obtained from the innovation by least-squares estimation and the state estimation problem is transformed into a standard Kalman filtering problem.
+
+Image: ResearchGate Logo
+
+Discover the world's research
+
+  * 25+ million members
+  * 160+ million publication pages
+  * 2.3+ billion citations
+Join for free
+
+Public Full-text 1
+
+Content uploaded by Bart L.R. De Moor
+
+Author content
+
+All content in this area was uploaded by Bart L.R. De Moor on Mar 20, 2020
+
+Content may be subject to copyright.
+
+Automatica 43 (2007) 111 – 116
+
+www.elsevier.com/locate/automatica
+
+Brief paper
+
+Unbiased minimum-variance input and state estimation
+
+for linear discrete-time systems夡
+
+Steven Gillijns∗, Bart De Moor
+
+SCD-SISTA, ESAT, K.U. Leuven, Kasteelpark Arenberg 10, 3001 Leuven, Belgium
+
+Received 24 November 2005; received in revised form 24 March 2006; accepted 2 August 2006
+
+Available online 19 October 2006
+
+Abstract
+
+This paper addresses the problem of simultaneously estimating the state and the input of a linear discrete-time system. A recursive ﬁlter,
+
+optimal in the minimum-variance unbiased sense, is developed where the estimation of the state and the input are interconnected. The input
+
+estimate is obtained from the innovation by least-squares estimation and the state estimation problem is transformed into a standard Kalman
+
+--------------------------------------------------------------------------------
+Observers for differential algebraic equation models of power networks: Jointly estimating dynamic and algebraic states (https://bibbase.org/network/publication/nugroho-taha-gatsis-zhao-observersfordifferentialalgebraicequationmodelsofpowernetworksjointlyestimatingdynamicandalgebraicstates-2022)
+citeturn24search4 [wordlim: 200] Crawled: 3 weeks ago; F","Gatsis, N.","Zhao, J."],"key":"nugroho2022observers","id":"nugroho2022observers","bibbaseid":"nugroho-taha-gatsis-zhao-observersfordifferentialalgebraicequationmodelsofpowernetworksjointlyestimatingdynamicandalgebraicstates-2022","role":"author","urls":{},"metadata":{"authorlinks":{}}},"bibtype":"article","biburl":"https://bibbase.org/network/files/iAWHqsjAjxneBPtjE","dataSources":["HxdgNoEZ6cjeFWbqA","ZmHsR34Cdw8rYB343","RgYZjczJcYgg4ohJw","WNXEuKH9brcyhkKus","bFPt2PdAyuyjRDYki","BXy8d2i4DPMXWwoYJ"],"keywords":[],"search_terms":["observers","differential","algebraic","equation","models","power","networks","jointly","estimating","dynamic","algebraic","states","nugroho","taha","gatsis","zhao"],"title":"Observers for differential algebraic equation models of power networks: Jointly estimating dynamic and algebraic states","year":2022}
+--------------------------------------------------------------------------------
+Unbiased minimum-variance input and state estimation for linear discrete-time systems (https://oamonitor.ireland.openaire.eu/national/search/publication?pid=10.1016%2Fj.automatica.2006.08.002)
+citeturn24search5 [wordlim: 200] Published: 19.8 years ago; Crawled: 2 weeks ago; Unbiased minimum-variance input and state estimation for linear discrete-time systems
+
+description Publication keyboard_double_arrow_right Article 01 Jan 2007 English Publisher:Elsevier BV Journal:Automatica, volume 43, pages 111-116 (issn: 0005-1098, Copyright policy ) ... Unbiased minimum-variance input and state estimation for linear discrete-time systems
+--------------------------------------------------------------------------------
+Recursive dynamic state estimation for power systems with an incomplete nonlinear DAE model - Katanic - 2024 - IET Generation, Transmission & Distribution - Wiley Online Library (https://ietresearch.onlinelibrary.wiley.com/doi/abs/10.1049/gtd2.13308)
+citeturn24search6 [wordlim: 200] Published: 2.0 years ago; Crawled: last month; In contrast to the standard IEKF, which only deals with linear ODE models, the proposed method treats incomplete nonlinear differential-algebraic-equation models. ... This work was supported as a part of NCCR Automation, a National Centre of Competence in Research, funded by the Swiss National Science Foundation (grant number 51NF40_225155). ...   * 1 Abur, A., Expósito, A.G.: Power System State Estimation: Theory and Implementation. ...   * 8 Cui, Y., Kavasseri, R.: A particle filter for dynamic state estimation in multi-machine systems with detailed models.
+--------------------------------------------------------------------------------
+dblp: Recursive Dynamic State Estimation for Power Systems with an Incomplete Nonlinear DAE Model. (https://dblp.uni-trier.de/rec/journals/corr/abs-2305-10065.html)
+citeturn24search7 [wordlim: 200] Crawled: 4 months ago; Recursive Dynamic State Estimation for Power Systems with an Incomplete Nonlinear DAE Model.
+--------------------------------------------------------------------------------
+Delft University of Technology (https://research.tudelft.nl/files/155565431/1_s2.0_S0888327023003965_main.pdf)
+citeturn24search17 [wordlim: 200] Published: last year; De Moor, Unbiased minimum-variance input and state estimation for linear discrete-time systems, Automatica 43 (1) (2007) 111–116, ... De Moor, Unbiased minimum-variance input and state estimation for linear discrete-time systems with direct feedthrough, Automatica 43
+--------------------------------------------------------------------------------
+Nikolaos Gatsis - Research Papers & Publications | ArxivLens (https://arxivlens.com/author/details/nikolaos-gatsis-5795-37024215)
+citeturn24search8 [wordlim: 200] Crawled: today; ### Observers for Differential Algebraic Equation Models of Power Networks: Jointly Estimating Dynamic and Algebraic States ... This paper proposes an observer-based framework for dynamic state estimation (DSE) in power networks, leveraging differential-algebraic equations (DAEs) to simultaneously estimate dynamic and algebraic states. ... ### Revisiting the Water Quality Sensor Placement Problem: Optimizing Network Observability and State Estimation Metrics ... This paper proposes a geometric programming-based model predictive control approach for managing nonlinear, DAE-constrained water distribution networks, solving complex hydraulic models without simplifying assumptions, and demonstrating its effectiveness through a case study.
+--------------------------------------------------------------------------------
+Observers for Differential Algebraic Equation Models of Power Networks: Jointly Estimating Dynamic and Algebraic States - researchr publication (https://researchr.org/publication/NugrohoTGZ22)
+citeturn24search9 [wordlim: 200] Published: 4.8 years ago; Crawled: last month; # Observers for Differential Algebraic Equation Models of Power Networks: Jointly Estimating Dynamic and Algebraic States ... Observers for Differential Algebraic Equation Models of Power Networks: Jointly Estimating Dynamic and Algebraic States.
+--------------------------------------------------------------------------------
+(PDF) Unbiased Minimum-variance Filtering for Input Reconstruction (2007) | Harish J. Palanthandalam-Madapusi | 64 Citations (https://scispace.com/papers/unbiased-minimum-variance-filtering-for-input-reconstruction-593j8wjmuj)
+citeturn24search10 [wordlim: 200] Published: 19.3 years ago; Crawled: 3 months ago; Open Access Proceedings Article 10.1109/ACC.2007.4282834 ... TL;DR: This paper derives an unbiased minimum-variance filter to estimate the unknown input and the state, when the state space matrices are known, and shows that the Kalman filter and other filters in the literature are special cases of the filter derived in this paper. ... (III.37)Since x̂k|k is an unbiased estimate of xk, the state estimation error εk satisfiesE[εk] = 0.
+--------------------------------------------------------------------------------
+Revisiting the LQR Problem of Singular Systems (https://www.ieee-jas.com/en/article/doi/10.1109/JAS.2024.124665)
+citeturn24search11 [wordlim: 200] Published: 2.2 years ago; Crawled: 2 months ago; Zhao, “Observers for differential algebraic equation models of power nNetworks: Jointly estimating dynamic and algebraic states,” IEEE Trans. ... Wirsen, “Solvability and stability of a power system DAE model,” Syst.
+

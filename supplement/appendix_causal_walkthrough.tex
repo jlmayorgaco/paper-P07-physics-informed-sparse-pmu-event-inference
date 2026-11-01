@@ -1,0 +1,340 @@
+\section{How to Read and Reproduce the Current Method}
+\label{app:causal-walkthrough}
+
+This companion begins with the recovery-aware causal method used in the
+current article. Sections~\ref{app:causal-walkthrough}--\ref{app:current-scenarios}
+give its execution order, local derivations, worked examples and simulation
+contracts. The separately compiled Historical Technical Notes preserve
+full diagnosability proofs, earlier state-reconstruction and batch-estimator
+studies, and secondary evidence. The earlier studies support particular
+components; they are not additional tests of the complete causal algorithm.\AIDraftingCredit{}
+
+The article retains the physical model, the defining evidence integral,
+the recovery mechanism, the decision outputs and decisive results. This
+supplement supplies the intermediate calculations. The Historical Technical
+Notes develop functional observability, nuisance-profiled information and
+source ambiguity, and distinguish the implemented batch estimator $\mathcal E_{\mathrm B}$ from
+the proposed joint estimator $\mathcal E_{\mathrm J}$. Neither should be
+silently substituted for the causal history bank, archived as R11.
+The conditional Gaussian updates use standard filtering identities
+\cite{sarkka2013bayesian}; the derivation below specifies their role and
+the approximations made by the implemented bank.
+
+\subsection{Inputs, Outputs and the Information Boundary}
+
+The inputs are successive reports from eight PMUs, the fixed physical and
+instrumental operators, the admitted load/line catalog and the frozen
+method configuration. The output is a timestamped sequence of detection,
+family/source and restoration messages, together with retained attribution
+masses. True ON/OFF times, true sources and generating severities belong
+to the evaluator. They are not inputs to the causal algorithm.
+
+Three times must remain distinct: the latest observed report, the estimated
+physical onset, and the public emission time. Looking back to propose an
+onset is compatible with causality when the message is emitted only after
+the required reports arrive. It does not permit backdating the public alarm.
+
+\subsection{Execution Order for One Stream}
+
+\begin{enumerate}
+\item \textbf{Load the frozen operators.} Retain voltage reference,
+oriented terminal currents, load input directions, switch modes and
+instrument memory. A line opening changes the network and observation
+operators. It is not represented by fitting a load amplitude.
+\item \textbf{Fit the startup context.} Use the first 300 reports for
+operating factors, common reference and noise scale. For each network
+hypothesis, set the voltage/current discrepancy to the difference between
+the observed prefix mean and its reference prediction. Keep that offset
+fixed afterwards. Frequency and ROCOF use their empirical prefix centers.
+The prefix is not scored again as independent model-selection evidence.
+\item \textbf{Predict the next report.} Propagate the retained histories
+and evaluate each network model's predictive density before correcting
+states or choosing new histories with the current report.
+\item \textbf{Propose candidate onsets.} The frozen screen uses lags
+0--18 reports within a ten-second stored state history. Each proposal
+starts from a stored state before its proposed onset, including any
+recovery already present. The bank does not enumerate every possible
+onset in the stored interval.
+\item \textbf{Score histories.} For loads, integrate severity with the
+bounded prior and the local conditional Gaussian likelihood. For lines,
+score the admitted switched operator. Score a report before using that
+same report for its conditional state correction.
+\item \textbf{Update and compress.} Update severity and conditional
+states, network weights, restoration children and the retained beam.
+Record discarded mass. At episode closure retain the augmented-state
+mixture mean; the omitted between-history spread is a documented
+approximation, not an exact posterior covariance.
+\item \textbf{Publish and record.} Aggregate active mass $M$, cause
+mass $\Gamma$ and $\Delta M$. Apply the frozen detection, diagnosis and
+restoration rules. Save emission time and the last report used, in addition
+to estimated onset and source. Continue propagation through OFF.
+\end{enumerate}
+
+\subsection{Why Replayed Reports Are Not New Evidence}
+
+Let a retained parent have log score
+$\ell_{0:k}=\ell_{0:\tau-1}+\ell^{\rm old}_{\tau:k}$.
+Replacing its suffix by a newly proposed physical history gives
+\begin{equation}
+ \ell^{\rm new}_{0:k}
+ =\ell_{0:k}-\ell^{\rm old}_{\tau:k}+\ell^{\rm new}_{\tau:k}.
+ \label{eq:supp-suffix-replacement}
+\end{equation}
+Transition and prior terms must accompany their corresponding history.
+The rolling screen supplies a proposal, not an extra independent
+likelihood. Adding the new suffix without removing the old suffix would
+count the same reports twice. This bookkeeping statement does not make
+adaptive screening or beam pruning exact Bayesian inference.
+
+\subsection{Frozen Numerical Choices}
+
+The input grid is 30 reports/s. The five network hypotheses are nominal,
+global $\pm2\%$ and selected-branch $\pm3\%$ paired R/X perturbations.
+Each hypothesis is fixed in time; the weights change. They do not identify
+a continuous impedance posterior.
+
+The per-report birth and restoration hazards are
+$1-\exp[-(1/60)/30]$ and $1-\exp[-(1/30)/30]$.
+Birth mass is divided equally between load and line families, then
+uniformly among the admitted sources within each family. Load severity
+has a zero-mean Gaussian prior with standard deviation 0.15, truncated to
+$[-0.2,0.2]$ and integrated over intervals bounded by
+$-0.2,-0.1,0,0.1,0.2$. After three reports, eligible active histories can
+create OFF children at either half-report position, inheriting state and
+severity. After likelihood normalization, the beam retains the union of
+the 96 highest-weight recent histories, 64 older histories and at least
+one per occupied source. The union is renormalized.
+
+Active mass 0.99 for six reports confirms detection; restoration mass
+0.99 for 15 reports confirms OFF. Source/line confirmation and episode
+replacement additionally follow the archived publication configuration.
+These thresholds are implementation settings, not guarantees of
+probability calibration or false-alarm control. Nominal and mixture use
+their frozen publication paths, so their comparison does not isolate
+network averaging alone. The admission-rule ablation changes publication,
+not the recovery dynamics.
+
+\section{Local Calculations and Worked Examples}
+\label{app:causal-calculations}
+
+\subsection{Completing the Bounded-Amplitude Integral}
+\label{sec:supp-causal-integral}
+
+For one retained severity interval, write
+$e=sa+\epsilon$, with $\epsilon\sim\mathcal N(0,S)$,
+$S\succ0$, and $a\sim\operatorname{TN}_{[l,u]}(\mu,v)$, $v>0$.
+Here $\mu,v$ are parameters of the underlying untruncated Gaussian, not
+the bounded distribution's moments. With
+$g=s^\top S^{-1}s$ and $q=s^\top S^{-1}e$, expansion gives
+\begin{align}
+ &(e-sa)^\top S^{-1}(e-sa)+(a-\mu)^2/v\nonumber\\
+ &\quad=e^\top S^{-1}e+\mu^2/v-\mu'^2/v'
+                  +(a-\mu')^2/v',\\
+ &v'=(v^{-1}+g)^{-1},\qquad
+ \mu'=v'(\mu/v+q).
+\end{align}
+Define $Z(\mu,v)=\Phi((u-\mu)/\sqrt v)-\Phi((l-\mu)/\sqrt v)$.
+Integrating the last Gaussian square over $[l,u]$ yields
+\begin{align}
+ \log L={}&-\tfrac12[e^\top S^{-1}e+\log|S|+n_y\log(2\pi)]\nonumber\\
+ &+\tfrac12[\log(v'/v)+\mu'^2/v'-\mu^2/v]\nonumber\\
+ &+\log Z(\mu',v')-\log Z(\mu,v).
+ \label{eq:supp-causal-integral}
+\end{align}
+The posterior on that interval is
+$\operatorname{TN}_{[l,u]}(\mu',v')$. With
+$\alpha=(l-\mu')/\sqrt{v'}$, $\beta=(u-\mu')/\sqrt{v'}$,
+$Z'=\Phi(\beta)-\Phi(\alpha)$ and standard normal density $\phi$,
+its mean is
+\begin{equation}
+ \mathbb E[a\mid e]=\mu'+\sqrt{v'}\,
+       \frac{\phi(\alpha)-\phi(\beta)}{Z'}.
+\end{equation}
+Thus neither the untruncated mean $\mu'$ nor a best-fit severity can simply
+replace the integral. The implementation combines retained intervals using
+their weights. The identity is exact for this conditional Gaussian model;
+it does not remove linearization, shared-covariance or pruning error.
+
+\subsection{Numerical Example of One Interval}
+
+This dimensionless example illustrates the calculation; it is not an
+IEEE-39 simulation or a new performance result. Set
+$S=1$, $s=2$, $e=1$, $\mu=0$, $v=1$ and $[l,u]=[0,1]$.
+Then $g=4$, $q=2$, $v'=0.2$ and $\mu'=0.4$. Substitution in
+\eqref{eq:supp-causal-integral} gives
+$L\simeq0.342688$ and
+$\mathbb E[a\mid e]\simeq0.464941$.
+The different posterior mean follows from truncation.
+The script \nolinkurl{scripts/verify_supplement_examples.py} checks the
+closed form against direct numerical integration, including the posterior
+mean. It checks algebra only and does not modify a frozen experiment.\AIDraftingCredit{}
+
+\subsection{Conditional State Correction}
+\label{sec:supp-causal-state}
+
+Represent the conditional state mean as $m_h+d_h a$. Let
+$T_o,J_o,g_o,u_o,j_o,v_o$ denote the archived one-report transition and
+observation operators for switch $o$. The code forms
+$e=r_k-J_o m_h-j_o$ and $s=J_o d_h+v_o$. With shared covariance
+$P_\rho$ in discrepancy regime $\rho$,
+\begin{align}
+ S_o&=R+J_oP_\rho J_o^\top,&
+ K_o&=T_oP_\rho J_o^\top S_o^{-1},\nonumber\\
+ m_h^+&=T_o m_h+g_o+K_o e,&
+ d_h^+&=T_o d_h+u_o-K_o s.
+ \label{eq:implemented-conditional-correction}
+\end{align}
+To see the last line, apply the correction to a fixed amplitude:
+\[
+ T_o(m_h+d_h a)+g_o+u_o a+K_o(e-sa)
+     =m_h^++d_h^+a.
+\]
+The severity distribution is updated by the same likelihood integral.
+Regime covariances come from nominal-operator Riccati equations. R11 does
+not propagate an independent exact covariance for every switched history.
+At closure the mean is retained and the omitted mixture spread recorded.
+
+\subsection{Restoration Is Not a State Reset}
+
+Consider the illustrative scalar system
+$\dot x=-x+u$, $y=x$, with $x(0)=0$. Apply $u=a$ for
+$0\le t<\kappa$ and restore $u=0$ afterwards. Direct integration gives
+\begin{equation}
+ x(t)=\begin{cases}
+ a(1-e^{-t}),&0\le t<\kappa,\\
+ a(1-e^{-\kappa})e^{-(t-\kappa)},&t\ge\kappa.
+ \end{cases}
+\end{equation}
+Both expressions agree at $\kappa$. For $a=1$ and $\kappa=2$,
+$x(2)=0.864665$ and $x(3)=0.318092$ even though the intervention is OFF.
+Resetting the reference to equilibrium would discard that predictable
+recovery. This example explains state continuity; it does not claim that
+one exponential describes the multimode IEEE-39 response.
+
+\subsection{Active Mass, Cause Mass and Model Reweighting}
+
+For one model, suppose an illustrative cell has mass 0.60 in active
+histories and 0.30 in restored histories, with 0.10 elsewhere. Its active
+mass is $M_c=0.60$, while its originating-cause mass is $\Gamma_c=0.90$.
+Recovery can therefore remain attributable without declaring the input
+active. These assigned masses illustrate definitions, not calibrated
+probabilities from an experiment.
+
+For two reports, adding and subtracting
+$\sum_\ell w_{\ell,k}M_{\ell,c,k-1}$ proves
+\begin{align}
+ \Delta M_c={}&\sum_\ell w_{\ell,k}
+       (M_{\ell,c,k}-M_{\ell,c,k-1})\nonumber\\
+ &+\sum_\ell(w_{\ell,k}-w_{\ell,k-1})M_{\ell,c,k-1}.
+\end{align}
+For example, unchanged conditional masses $(0.8,0.2)$ and network weights
+changing from $(0.5,0.5)$ to $(0.75,0.25)$ move $M_c$ from 0.50 to 0.65.
+The entire 0.15 change comes from model reweighting. A rising aggregate
+mass need not mean that each model found stronger within-model evidence.
+
+\section{Simulation Scenarios and Reproduction Order}
+\label{app:current-scenarios}
+
+\subsection{Plant, Measurement and Provenance}
+
+The active simulator is the frozen research candidate
+\texttt{SIM0001\_JuliaPD\_F01}, not an officially validated equivalent of
+RAW0001. Its contract fixes Julia 1.11.9, PowerDynamics 5.0.0,
+NetworkDynamics 1.3.0 and IEEE39 0.1.0. Initial states, effective parameter
+vectors, terminal map, reporting operator and stochastic model come from
+that snapshot. Nominal inventory files do not replace the effective
+operating point. The load law is the frozen impedance law.\AIDraftingCredit{}
+
+The voltage buses are $\{2,5,6,10,19,22,29,39\}$. Each current is an
+oriented branch-terminal measurement, not a nodal injection. BUS5 retains
+the provisional historical 5--6 branch, terminal 5, hypothesis; producer
+CT identity is unconfirmed and BUS39 remains partially validated.
+Execution uses full-precision configuration files rather than rounded
+tables. RAW0001 provided retrospective calibration context. RAW0002
+remains outside these studies.
+
+Each physical parent is integrated continuously through its interventions.
+Differential states remain continuous at switching, while algebraic values
+are recomputed consistently. Reports use $t=k/30$ with endpoints included;
+the switch-aligned report uses the post-switch algebraic value. Solver
+steps are recorded separately and observations are not interpolated across
+a switch. The causal instrumental history is preserved through OFF.
+
+\subsection{Continuous Development and Confirmation}
+
+H03 and H04 each contain three 80-s event parents with six interventions
+and one 80-s normal parent. Crossing the four parents with three R/X
+conditions gives 12 physical trajectories, 18 unique interventions and
+54 event realizations per campaign. Both are development evidence in
+the current article. Repeated conditions are not independent event draws.
+
+C01 prespecifies 18 continuous parents, 27 persistent-line parents
+(nine lines, three repetitions), and 12 normal parents. The three R/X
+conditions produce $3(18+27+12)=171$ intended physical trajectories;
+two instrumental-noise scales yield 342 observed records. The continuous
+parents contain $18\times6=108$ unique interventions. Their six
+condition/noise realizations are repeated observations of those parents.
+The 120-s and 600-s grids contain 3601 and 18001 reports, respectively.
+\IfFileExists{generated/c01_macros.tex}{Completed results appear in the
+dedicated confirmation tables.}{At this document snapshot, complete
+confirmation artifacts have not been imported; these counts specify the
+intended design and are not completed performance results.}
+
+Continuous evaluation pairs an alarm temporally before inspecting its
+predicted label. The first unmatched post-ON alarm is eligible up to the
+next ON, with the inherited 30-s cap. Timely attribution requires correct
+family and asset emitted before physical OFF. Unmatched alarms, false
+restorations and open episodes are retained. Persistent-line evaluation
+instead scores the first stopping decision, including early stops,
+wrong sources, omissions and censoring. Chen2016 is eligible on that lane;
+it has no load or restoration output. Confidence intervals use 10,000
+paired parent-cluster resamples, not independent PMU samples.
+
+\subsection{Separate Signature and Recovery Controls}
+
+The E\_i/X02 signature study uses a single load at buses
+$\{3,7,16,24\}$, a 10-s record, known ON at 3 s and OFF at 6 s,
+and one scalar operating-context direction. It contains 57 dictionary/check
+trajectories and 85 test trajectories (80 interventions and five controls),
+with three common noise seeds producing 255 observed test records.
+The context and severity are estimated from measurements, while onset
+and family are supplied. The generating source is used to assess the
+response approximation and severity error. Those conditional metrics do
+not measure unknown-onset causal attribution.
+
+The X04 recovery geometry control uses 38 trajectories. Prior load
+histories at buses 7 and 24, followed by delays of 0.5 and 2 s,
+give four recovery contexts. Three source-pair comparisons within each
+context give 12 correlated comparisons. The prior input is active from
+2 to 3 s; the subsequent response is examined over 1.5 s. The supplied
+history, onset, family and two-candidate universe define an oracle control,
+with one uncertain prior-severity direction. It does not evaluate R11,
+unknown onset, event cardinality or operational false alarms.
+
+\subsection{Reproduction Without Changing the Experiment}
+
+\begin{enumerate}
+\item Read each campaign's frozen plan and manifest. Select the intended
+population before interpreting any denominator. Keep current causal,
+signature, recovery-control and historical batch studies separate.
+\item Resolve the F01 state, parameter and measurement files from its
+snapshot. For any new simulation create a new run directory; a new
+hypothesis requires a successor candidate. Do not run historical preparation
+scripts inside a frozen baseline.
+\item Preserve ON/OFF continuity, report endpoints, noise seeds and the
+boundary between observations and reserved event truth. Run inference
+before releasing truth to the evaluator.
+\item Retain solver/inference failures in intended denominators. Aggregate
+at the declared parent level and preserve the original comparators and
+publication rules. Do not retune from confirmation results.
+\item Rebuild the two documents from the versioned tables and figures with
+\nolinkurl{scripts/build_manuscript_bundle.ps1}. Its default compilation
+does not regenerate scientific artifacts or import new campaign results.
+An explicit artifact refresh is a separate operation.
+\end{enumerate}
+
+The repository keeps the current walkthrough in this appendix, the frozen
+campaign evidence under \texttt{generated/frozen/}, and the earlier
+mathematical development in the separately compiled Historical Technical Notes. A successful PDF
+build verifies document consistency; it is not a new scientific validation.
+\FloatBarrier

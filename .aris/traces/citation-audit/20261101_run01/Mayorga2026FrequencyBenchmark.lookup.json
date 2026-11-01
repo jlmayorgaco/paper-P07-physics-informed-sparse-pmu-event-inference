@@ -1,0 +1,344 @@
+{
+  "key": "Mayorga2026FrequencyBenchmark",
+  "retrieved_at": "2026-11-01T03:53:22.303910+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1109%2FSGSMA65955.2026.11618772",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1109/SGSMA65955.2026.11618772",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:12.215598+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          31
+        ]
+      ],
+      "date-time": "2026-07-31T05:00:24Z",
+      "timestamp": 1785474024865,
+      "version": "3.56.0"
+    },
+    "reference-count": 15,
+    "publisher": "IEEE",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              6,
+              1
+            ]
+          ],
+          "date-time": "2026-06-01T00:00:00Z",
+          "timestamp": 1780272000000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              6,
+              1
+            ]
+          ],
+          "date-time": "2026-06-01T00:00:00Z",
+          "timestamp": 1780272000000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              6,
+              1
+            ]
+          ],
+          "date-time": "2026-06-01T00:00:00Z",
+          "timestamp": 1780272000000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2026,
+          6
+        ]
+      ]
+    },
+    "DOI": "10.1109/sgsma65955.2026.11618772",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          30
+        ]
+      ],
+      "date-time": "2026-07-30T19:05:45Z",
+      "timestamp": 1785438345000
+    },
+    "page": "1-6",
+    "source": "Crossref",
+    "is-referenced-by-count": 0,
+    "title": [
+      "Benchmarking Dynamic Frequency Estimators for Low-Inertia IBR Grids: A Latency-Robustness Trade-Off Analysis"
+    ],
+    "prefix": "10.1109",
+    "author": [
+      {
+        "given": "Jorge Luis Mayorga",
+        "family": "Taborda",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Universidad de los Andes",
+            "place": [
+              "Bogotá, Colombia"
+            ],
+            "department": [
+              "Department of Electrical and Electronics Engineering"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yessica Africano",
+        "family": "Rodriguez",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Universidad de los Andes",
+            "place": [
+              "Bogotá, Colombia"
+            ],
+            "department": [
+              "Department of Electrical and Electronics Engineering"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Fernando",
+        "family": "Jimenez",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Universidad de los Andes",
+            "place": [
+              "Bogotá, Colombia"
+            ],
+            "department": [
+              "Department of Electrical and Electronics Engineering"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.23919/PSCC.2018.8450880"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.segan.2025.101827"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ACCESS.2025.3570908"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.35833/MPCE.2024.000907"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/REST59987.2024.10645455"
+      },
+      {
+        "issue": "2",
+        "key": "ref6",
+        "first-page": "364",
+        "article-title": "An improved DFT-based method for the accurate measurement of frequency, amplitude, and phase of power system signals",
+        "volume": "63",
+        "author": "Belega",
+        "year": "2014",
+        "journal-title": "IEEE Transactions on Instrumentation and Measurement"
+      },
+      {
+        "issue": "6",
+        "key": "ref7",
+        "first-page": "2112",
+        "article-title": "Dynamic phasor estimation using a Taylor-Fourier multisignal model",
+        "volume": "60",
+        "author": "Platas-García",
+        "year": "2011",
+        "journal-title": "IEEE Transactions on Instrumentation and Measurement"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPEL.2016.2565642"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TIM.2018.2882907"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TIM.2019.2955797"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ISIE45552.2021.9576275"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2018.2846744"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/KPEC54747.2022.9814727"
+      },
+      {
+        "key": "ref14",
+        "volume-title": "IEEE standard for synchrophasor measurements for power systems (C37.118.1-2011, amendment C37.118.1a-2014)",
+        "year": "2011"
+      },
+      {
+        "key": "ref15",
+        "volume-title": "IEC/IEEE international standard 60255-118-1: Synchrophasor measurements for power systems",
+        "year": "2018"
+      }
+    ],
+    "event": {
+      "name": "2026 5th International Conference on Smart Grid Synchronized Measurements and Analytics (SGSMA)",
+      "location": "Santiago de Chile, Chile",
+      "start": {
+        "date-parts": [
+          [
+            2026,
+            6,
+            1
+          ]
+        ]
+      },
+      "end": {
+        "date-parts": [
+          [
+            2026,
+            6,
+            4
+          ]
+        ]
+      }
+    },
+    "container-title": [
+      "2026 5th International Conference on Smart Grid Synchronized Measurements and Analytics (SGSMA)"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx8/11618537/11618759/11618772.pdf?arnumber=11618772",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          31
+        ]
+      ],
+      "date-time": "2026-07-31T04:40:14Z",
+      "timestamp": 1785472814000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/11618772/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          6
+        ]
+      ]
+    },
+    "references-count": 15,
+    "URL": "https://doi.org/10.1109/sgsma65955.2026.11618772",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2026,
+          6
+        ]
+      ]
+    }
+  }
+}

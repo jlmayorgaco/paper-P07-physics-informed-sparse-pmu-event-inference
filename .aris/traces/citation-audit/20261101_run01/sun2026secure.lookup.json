@@ -1,0 +1,516 @@
+{
+  "key": "sun2026secure",
+  "retrieved_at": "2026-11-01T03:53:23.608157+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1109%2FTCYB.2026.3681691",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1109/TCYB.2026.3681691",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:47.369509+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          23
+        ]
+      ],
+      "date-time": "2026-07-23T20:01:16Z",
+      "timestamp": 1784836876080,
+      "version": "3.55.0"
+    },
+    "reference-count": 49,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "8",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              8,
+              1
+            ]
+          ],
+          "date-time": "2026-08-01T00:00:00Z",
+          "timestamp": 1785542400000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              8,
+              1
+            ]
+          ],
+          "date-time": "2026-08-01T00:00:00Z",
+          "timestamp": 1785542400000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              8,
+              1
+            ]
+          ],
+          "date-time": "2026-08-01T00:00:00Z",
+          "timestamp": 1785542400000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100001809",
+        "name": "National Natural Science Foundation of China",
+        "doi-asserted-by": "crossref",
+        "award": [
+          "U23A20337"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "U23A20337"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100001809",
+            "id-type": "DOI",
+            "asserted-by": "crossref"
+          }
+        ]
+      },
+      {
+        "name": "Research Fund of State Key Laboratory of Synthetical Automation for Process Industries",
+        "award": [
+          "2018ZCX03"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "2018ZCX03"
+            ]
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Trans. Cybern."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2026,
+          8
+        ]
+      ]
+    },
+    "DOI": "10.1109/tcyb.2026.3681691",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          16
+        ]
+      ],
+      "date-time": "2026-04-16T19:54:02Z",
+      "timestamp": 1776369242000
+    },
+    "page": "4625-4633",
+    "source": "Crossref",
+    "is-referenced-by-count": 0,
+    "title": [
+      "Joint Estimation of States, Sparse Sensor Attacks, and Unknown Inputs in Discrete-Time Cyber--Physical Systems"
+    ],
+    "prefix": "10.1109",
+    "volume": "56",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0009-0000-3926-2452",
+        "authenticated-orcid": false,
+        "given": "Qingdong",
+        "family": "Sun",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Northeastern University",
+            "place": [
+              "Shenyang, Liaoning, China"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-8911-0112",
+        "authenticated-orcid": false,
+        "given": "Guang-Hong",
+        "family": "Yang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Northeastern University",
+            "place": [
+              "Shenyang, Liaoning, China"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/s41467-019-12490-1"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.arcontrol.2019.03.010"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCYB.2023.3255583"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCYB.2025.3526686"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCYB.2025.3596377"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCYB.2020.2972686"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TICPS.2024.3523265"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCYB.2022.3219987"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCYB.2024.3429649"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/JIOT.2024.3495046"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCYB.2020.2992762"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCYB.2025.3535867"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TII.2022.3198699"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCYB.2024.3502790"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TASE.2025.3546583"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCYB.2024.3413969"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TNSE.2024.3457911"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.2020.3043311"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2024.3368076"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TFUZZ.2023.3333314"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TII.2021.3111221"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCYB.2018.2825984"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TII.2023.3299385"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TIE.2023.3347834"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TII.2023.3308337"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/23307706.2025.2519520"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCYB.2025.3612502"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCYB.2025.3557269"
+      },
+      {
+        "key": "ref29",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.2023.3278839"
+      },
+      {
+        "key": "ref30",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.automatica.2022.110395"
+      },
+      {
+        "key": "ref31",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.automatica.2022.110740"
+      },
+      {
+        "key": "ref32",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.2017.2766759"
+      },
+      {
+        "key": "ref33",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.2018.2819686"
+      },
+      {
+        "key": "ref34",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TFUZZ.2020.2990772"
+      },
+      {
+        "key": "ref35",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.2024.3451216"
+      },
+      {
+        "key": "ref36",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/JAS.2023.123351"
+      },
+      {
+        "key": "ref37",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.automatica.2022.110759"
+      },
+      {
+        "key": "ref38",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/tcns.2025.3534459"
+      },
+      {
+        "key": "ref39",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.automatica.2022.110558"
+      },
+      {
+        "key": "ref40",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2023.3242015"
+      },
+      {
+        "key": "ref41",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.2024.3446837"
+      },
+      {
+        "key": "ref42",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCYB.2025.3599202"
+      },
+      {
+        "key": "ref43",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.automatica.2019.02.016"
+      },
+      {
+        "key": "ref44",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.2015.2492159"
+      },
+      {
+        "key": "ref45",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.ymssp.2021.108060"
+      },
+      {
+        "key": "ref46",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.ymssp.2004.02.002"
+      },
+      {
+        "key": "ref47",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1049/iet-cta.2018.5970"
+      },
+      {
+        "key": "ref48",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/jiot.2025.3645267"
+      },
+      {
+        "key": "ref49",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCNS.2020.3029160"
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Cybernetics"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx8/6221036/11614966/11482494.pdf?arnumber=11482494",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          23
+        ]
+      ],
+      "date-time": "2026-07-23T19:03:53Z",
+      "timestamp": 1784833433000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/11482494/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          8
+        ]
+      ]
+    },
+    "references-count": 49,
+    "journal-issue": {
+      "issue": "8"
+    },
+    "URL": "https://doi.org/10.1109/tcyb.2026.3681691",
+    "relation": {},
+    "ISSN": [
+      "2168-2267",
+      "2168-2275"
+    ],
+    "issn-type": [
+      {
+        "value": "2168-2267",
+        "type": "print"
+      },
+      {
+        "value": "2168-2275",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2026,
+          8
+        ]
+      ]
+    }
+  }
+}

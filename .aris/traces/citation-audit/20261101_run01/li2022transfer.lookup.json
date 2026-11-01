@@ -1,0 +1,553 @@
+{
+  "key": "li2022transfer",
+  "retrieved_at": "2026-11-01T03:53:22.945201+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1109%2FTPWRS.2022.3153445",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1109/TPWRS.2022.3153445",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:30.211721+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          24
+        ]
+      ],
+      "date-time": "2026-10-24T17:39:38Z",
+      "timestamp": 1792863578478,
+      "version": "4.5.0"
+    },
+    "reference-count": 39,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "6",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              11,
+              1
+            ]
+          ],
+          "date-time": "2022-11-01T00:00:00Z",
+          "timestamp": 1667260800000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by/4.0/legalcode"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              11,
+              1
+            ]
+          ],
+          "date-time": "2022-11-01T00:00:00Z",
+          "timestamp": 1667260800000
+        },
+        "content-version": "am",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by/4.0/legalcode"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/100000001",
+        "name": "National Science Foundation",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "1810537"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "1810537"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/100000001",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/100000001",
+        "name": "National Science Foundation",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "2048288"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "2048288"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/100000001",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/100000015",
+        "name": "U.S. Department of Energy",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "1858-1631"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "1858-1631"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/100000015",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/100000015",
+        "name": "U.S. Department of Energy",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "1987-1626"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "1987-1626"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/100000015",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/100000015",
+        "name": "U.S. Department of Energy",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "2243-9355"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "2243-9355"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/100000015",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Trans. Power Syst."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2022,
+          11
+        ]
+      ]
+    },
+    "DOI": "10.1109/tpwrs.2022.3153445",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2022,
+          2,
+          25
+        ]
+      ],
+      "date-time": "2022-02-25T15:32:32Z",
+      "timestamp": 1645803152000
+    },
+    "page": "4424-4435",
+    "source": "Crossref",
+    "is-referenced-by-count": 55,
+    "title": [
+      "A Transfer Learning Framework for Power System Event Identification"
+    ],
+    "prefix": "10.1109",
+    "volume": "37",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-5641-1058",
+        "authenticated-orcid": false,
+        "given": "Haoran",
+        "family": "Li",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Department of Electrical, Computer and Energy Engineering, Arizona State University, Tempe, AZ, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Zhihao",
+        "family": "Ma",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Electrical, Computer and Energy Engineering, Arizona State University, Tempe, AZ, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-5267-1303",
+        "authenticated-orcid": false,
+        "given": "Yang",
+        "family": "Weng",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Electrical, Computer and Energy Engineering, Arizona State University, Tempe, AZ, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2017.2749369"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SGSMA.2019.8784550"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PESGM40551.2019.8973580"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2021.3081608"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ACCESS.2020.3003568"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.ijepes.2020.105947"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TKDE.2009.191"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2012.6248055"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1609/aaai.v25i1.8090"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1553374.1553411"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3115/1610075.1610094"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CEC.2012.6252893"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2019.2947781"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICDM50108.2020.00130"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/APPEEC48164.2020.9220684"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1186/s40537-017-0089-0"
+      },
+      {
+        "key": "ref17",
+        "first-page": "1095",
+        "article-title": "Heterogeneous domain adaptation for multiple classes",
+        "volume-title": "Proc. Artif. Intell. Statist.",
+        "author": "Zhou",
+        "year": "2014"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.24963/ijcai.2018/412"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2016.549"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2013.274"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.egypro.2016.10.126"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.ins.2020.03.088"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SmartGridComm.2019.8909705"
+      },
+      {
+        "key": "ref24",
+        "first-page": "1",
+        "article-title": "To transfer or not to transfer",
+        "volume-title": "Proc. Neural Inf. Process. Syst. Workshop Transfer Learn.",
+        "volume": "898",
+        "author": "Rosenstein",
+        "year": "2005"
+      },
+      {
+        "key": "ref25",
+        "article-title": "Illinois 200-Bus system: ACTIVSg200",
+        "year": "2016"
+      },
+      {
+        "key": "ref26",
+        "article-title": "SouthCarolina 500-Bus system: ACTIVSg500",
+        "year": "2016"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s40565-018-0455-8"
+      },
+      {
+        "key": "ref28",
+        "article-title": "Illinois Center for a Smarter Electric Grid, IEEE 14-Bus system",
+        "year": "2013"
+      },
+      {
+        "key": "ref29",
+        "article-title": "Real-time application of synchrophasors for improving reliability",
+        "year": "2017"
+      },
+      {
+        "key": "ref30",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1155/2021/6691362"
+      },
+      {
+        "issue": "1",
+        "key": "ref31",
+        "first-page": "723",
+        "article-title": "A kernel two-sample test",
+        "volume": "13",
+        "author": "Gretton",
+        "year": "2012",
+        "journal-title": "J. Mach. Learn. Res."
+      },
+      {
+        "key": "ref32",
+        "article-title": "General electric concorda PSLF",
+        "year": "2018"
+      },
+      {
+        "key": "ref33",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/JSYST.2019.2963546"
+      },
+      {
+        "key": "ref34",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCNS.2022.3199084"
+      },
+      {
+        "key": "ref35",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2016.90"
+      },
+      {
+        "key": "ref36",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICASID.2019.8925267"
+      },
+      {
+        "key": "ref37",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s11517-020-02163-3"
+      },
+      {
+        "key": "ref38",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SmartGridComm.2018.8587554"
+      },
+      {
+        "key": "ref39",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TNN.2010.2091281"
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Power Systems"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://ieeexplore.ieee.org/ielam/59/9927170/9721668-aam.pdf",
+        "content-type": "application/pdf",
+        "content-version": "am",
+        "intended-application": "syndication"
+      },
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/59/9927170/09721668.pdf?arnumber=9721668",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2024,
+          1,
+          17
+        ]
+      ],
+      "date-time": "2024-01-17T17:56:52Z",
+      "timestamp": 1705514212000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/9721668/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2022,
+          11
+        ]
+      ]
+    },
+    "references-count": 39,
+    "journal-issue": {
+      "issue": "6"
+    },
+    "URL": "https://doi.org/10.1109/tpwrs.2022.3153445",
+    "relation": {},
+    "ISSN": [
+      "0885-8950",
+      "1558-0679"
+    ],
+    "issn-type": [
+      {
+        "value": "0885-8950",
+        "type": "print"
+      },
+      {
+        "value": "1558-0679",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2022,
+          11
+        ]
+      ]
+    }
+  }
+}

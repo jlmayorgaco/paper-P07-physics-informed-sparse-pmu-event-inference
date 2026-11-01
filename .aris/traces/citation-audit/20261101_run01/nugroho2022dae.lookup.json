@@ -1,0 +1,662 @@
+{
+  "key": "nugroho2022dae",
+  "retrieved_at": "2026-11-01T03:53:21.883423+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1109%2FTCNS.2022.3158754",
+      "status": "success",
+      "resolved": "https://api.crossref.org/works/10.1109%2FTCNS.2022.3158754"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          6
+        ]
+      ],
+      "date-time": "2026-09-06T18:45:18Z",
+      "timestamp": 1788720318456,
+      "version": "build-2803163510"
+    },
+    "reference-count": 54,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "3",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              9,
+              1
+            ]
+          ],
+          "date-time": "2022-09-01T00:00:00Z",
+          "timestamp": 1661990400000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              9,
+              1
+            ]
+          ],
+          "date-time": "2022-09-01T00:00:00Z",
+          "timestamp": 1661990400000
+        },
+        "content-version": "am",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              9,
+              1
+            ]
+          ],
+          "date-time": "2022-09-01T00:00:00Z",
+          "timestamp": 1661990400000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              9,
+              1
+            ]
+          ],
+          "date-time": "2022-09-01T00:00:00Z",
+          "timestamp": 1661990400000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "funder": [
+      {
+        "name": "Valero Energy Corporation"
+      },
+      {
+        "DOI": "10.13039/501100008982",
+        "name": "National Science Foundation",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "1719043"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "1719043"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100008982",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/501100008982",
+        "name": "National Science Foundation",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "1847125"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "1847125"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100008982",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/501100008982",
+        "name": "National Science Foundation",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "2152450"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "2152450"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100008982",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/501100008982",
+        "name": "National Science Foundation",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "2151571"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "2151571"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100008982",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Trans. Control Netw. Syst."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2022,
+          9
+        ]
+      ]
+    },
+    "DOI": "10.1109/tcns.2022.3158754",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2022,
+          3,
+          15
+        ]
+      ],
+      "date-time": "2022-03-15T15:43:49Z",
+      "timestamp": 1647359029000
+    },
+    "page": "1531-1543",
+    "source": "Crossref",
+    "is-referenced-by-count": 25,
+    "title": [
+      "Observers for Differential Algebraic Equation Models of Power Networks: Jointly Estimating Dynamic and Algebraic States"
+    ],
+    "prefix": "10.1109",
+    "volume": "9",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0001-7555-687X",
+        "authenticated-orcid": false,
+        "given": "Sebastian A.",
+        "family": "Nugroho",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Department of Electrical Engineering and Computer Science, University of Michigan, Ann Arbor, MI, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-0486-2794",
+        "authenticated-orcid": false,
+        "given": "Ahmad F.",
+        "family": "Taha",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Civil and Environmental Engineering, Vanderbilt University, Nashville, TN, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-5238-649X",
+        "authenticated-orcid": false,
+        "given": "Nikolaos",
+        "family": "Gatsis",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Electrical and Computer Engineering, The University of Texas at San Antonio, San Antonio, TX, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-8498-9666",
+        "authenticated-orcid": false,
+        "given": "Junbo",
+        "family": "Zhao",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Electrical and Computer Engineering, University of Connecticut, Storrs, CT, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ACC.2013.6580901"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2019.2894769"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ACCESS.2018.2876883"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2019.2949977"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2016.2628344"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2015.2400633"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2016.2580584"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.sysconle.2016.08.003"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/9781119355755"
+      },
+      {
+        "key": "ref10",
+        "article-title": "On the use of PMUs in power system state estimation",
+        "volume-title": "Proc. 17th Power Syst. Comput. Conf.",
+        "author": "Gomez-Exposito",
+        "year": "2011"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ISGT.2016.7781269"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TIM.2015.2510598"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.35833/MPCE.2020.000125"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2016.2548244"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PESGM.2015.7286336"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSTE.2013.2280246"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ISCAS.2002.1010694"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.23919/ACC.2017.7963863"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CDC.2017.8264572"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCST.2018.2882554"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCNS.2019.2930452"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1049/iet-gtd.2020.1275"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1007/978-1-84800-066-7",
+        "volume-title": "Nonlinear and Adaptive Control with Applications.",
+        "author": "Astolfi",
+        "year": "2008"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.2016.2614889"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2014.2366196"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/9.400467"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/9.739112"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.2009.2023962"
+      },
+      {
+        "issue": "12",
+        "key": "ref29",
+        "doi-asserted-by": "crossref",
+        "first-page": "2217",
+        "DOI": "10.1109/TAC.2003.820149",
+        "article-title": "$\\mathcal {H}_{\\infty }$ filtering for singular systems",
+        "volume": "48",
+        "author": "Xu",
+        "year": "2003",
+        "journal-title": "IEEE Trans. Autom. Control"
+      },
+      {
+        "key": "ref30",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.sysconle.2006.07.010"
+      },
+      {
+        "key": "ref31",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CCTA48906.2021.9658690"
+      },
+      {
+        "key": "ref32",
+        "doi-asserted-by": "crossref",
+        "article-title": "Observers for differential algebraic equation models of power networks: Jointly estimating dynamic and algebraic states",
+        "author": "Nugroho",
+        "DOI": "10.1109/TCNS.2022.3158754"
+      },
+      {
+        "key": "ref33",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2012.2185959"
+      },
+      {
+        "key": "ref34",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2006.881112"
+      },
+      {
+        "key": "ref35",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2010.2051168"
+      },
+      {
+        "key": "ref36",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-1-4419-6397-0"
+      },
+      {
+        "key": "ref37",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CCA.2014.6981321"
+      },
+      {
+        "key": "ref38",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/MED.2014.6961520"
+      },
+      {
+        "key": "ref39",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.1971.1099826"
+      },
+      {
+        "key": "ref40",
+        "volume-title": "Robust Control and Filtering of Singular Systems",
+        "author": "Xu",
+        "year": "2006"
+      },
+      {
+        "key": "ref41",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/BFb0002475"
+      },
+      {
+        "key": "ref42",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2011.2145396"
+      },
+      {
+        "key": "ref43",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ISIE45063.2020.9152259"
+      },
+      {
+        "key": "ref44",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2017.2663107"
+      },
+      {
+        "key": "ref45",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2013.2262236"
+      },
+      {
+        "key": "ref46",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.ifacol.2015.05.049"
+      },
+      {
+        "key": "ref47",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/00207729508929120"
+      },
+      {
+        "key": "ref48",
+        "first-page": "284",
+        "article-title": "Yalmip: A toolbox for modeling and optimization in MATLAB",
+        "volume-title": "Proc. CACSD Conf.",
+        "author": "Lfberg",
+        "year": "2004"
+      },
+      {
+        "key": "ref49",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-1-4757-3216-0_8"
+      },
+      {
+        "key": "ref50",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-1-4613-1635-0"
+      },
+      {
+        "key": "ref51",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2008.922621"
+      },
+      {
+        "key": "ref52",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRD.2017.2762927"
+      },
+      {
+        "key": "ref53",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2014.2302213"
+      },
+      {
+        "key": "ref54",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1115/1.3662552"
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Control of Network Systems"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://ieeexplore.ieee.org/ielam/6509490/9894848/9735348-aam.pdf",
+        "content-type": "application/pdf",
+        "content-version": "am",
+        "intended-application": "syndication"
+      },
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/6509490/9894848/09735348.pdf?arnumber=9735348",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2024,
+          1,
+          17
+        ]
+      ],
+      "date-time": "2024-01-17T19:14:46Z",
+      "timestamp": 1705518886000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/9735348/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2022,
+          9
+        ]
+      ]
+    },
+    "references-count": 54,
+    "journal-issue": {
+      "issue": "3"
+    },
+    "URL": "https://doi.org/10.1109/tcns.2022.3158754",
+    "relation": {},
+    "ISSN": [
+      "2325-5870",
+      "2372-2533"
+    ],
+    "issn-type": [
+      {
+        "value": "2325-5870",
+        "type": "electronic"
+      },
+      {
+        "value": "2372-2533",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2022,
+          9
+        ]
+      ]
+    }
+  }
+}

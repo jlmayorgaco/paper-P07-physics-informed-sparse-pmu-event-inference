@@ -1,0 +1,171 @@
+{
+  "key": "sarkka2013bayesian",
+  "retrieved_at": "2026-11-01T03:53:21.894409+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1017%2FCBO9781139344203",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1017/CBO9781139344203",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:02.409254+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          28
+        ]
+      ],
+      "date-time": "2026-10-28T17:02:15Z",
+      "timestamp": 1793206935891,
+      "version": "4.5.0"
+    },
+    "edition-number": "1",
+    "reference-count": 0,
+    "publisher": "Cambridge University Press",
+    "isbn-type": [
+      {
+        "value": "9781107030657",
+        "type": "print"
+      },
+      {
+        "value": "9781139344203",
+        "type": "electronic"
+      },
+      {
+        "value": "9781107619289",
+        "type": "print"
+      }
+    ],
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2014,
+              6,
+              5
+            ]
+          ],
+          "date-time": "2014-06-05T00:00:00Z",
+          "timestamp": 1401926400000
+        },
+        "content-version": "unspecified",
+        "delay-in-days": 273,
+        "URL": "https://www.cambridge.org/core/terms"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2013,
+          9,
+          5
+        ]
+      ]
+    },
+    "abstract": "<jats:p>Filtering and smoothing methods are used to produce an accurate estimate of the state of a time-varying system based on multiple observational inputs (data). Interest in these methods has exploded in recent years, with numerous applications emerging in fields such as navigation, aerospace engineering, telecommunications and medicine. This compact, informal introduction for graduate students and advanced undergraduates presents the current state-of-the-art filtering and smoothing methods in a unified Bayesian framework. Readers learn what non-linear Kalman filters and particle filters are, how they are related, and their relative advantages and disadvantages. They also discover how state-of-the-art Bayesian parameter estimation methods can be combined with state-of-the-art filtering and smoothing algorithms. The book's practical and algorithmic approach assumes only modest mathematical prerequisites. Examples include Matlab computations, and the numerous end-of-chapter exercises include computational assignments. Matlab code is available for download at www.cambridge.org/sarkka, promoting hands-on work with the methods.</jats:p>",
+    "DOI": "10.1017/cbo9781139344203",
+    "type": "monograph",
+    "created": {
+      "date-parts": [
+        [
+          2014,
+          6,
+          9
+        ]
+      ],
+      "date-time": "2014-06-09T03:42:23Z",
+      "timestamp": 1402285343000
+    },
+    "source": "Crossref",
+    "is-referenced-by-count": 1428,
+    "title": [
+      "Bayesian Filtering and Smoothing"
+    ],
+    "prefix": "10.1017",
+    "author": [
+      {
+        "given": "Simo",
+        "family": "Särkkä",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "56",
+    "published-online": {
+      "date-parts": [
+        [
+          2014,
+          6,
+          5
+        ]
+      ]
+    },
+    "container-title": [],
+    "original-title": [],
+    "deposited": {
+      "date-parts": [
+        [
+          2022,
+          10,
+          12
+        ]
+      ],
+      "date-time": "2022-10-12T01:08:26Z",
+      "timestamp": 1665536906000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://www.cambridge.org/core/product/identifier/9781139344203/type/book"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2013,
+          9,
+          5
+        ]
+      ]
+    },
+    "ISBN": [
+      "9781107030657",
+      "9781139344203",
+      "9781107619289"
+    ],
+    "references-count": 0,
+    "URL": "https://doi.org/10.1017/cbo9781139344203",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2013,
+          9,
+          5
+        ]
+      ]
+    }
+  }
+}

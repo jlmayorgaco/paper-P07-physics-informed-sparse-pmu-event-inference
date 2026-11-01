@@ -1,0 +1,385 @@
+A method for quantitative fault diagnosability analysis of stochastic linear descriptor models - ScienceDirect (https://www.sciencedirect.com/science/article/pii/S0005109813001349)
+citeturn23search0 [wordlim: 200] Published: 13.4 years ago; Crawled: today; # A method for quantitative fault diagnosability analysis of stochastic linear descriptor models☆ ... Analyzing fault diagnosability performance for a given model, before developing a diagnosis algorithm, can be used to answer questions like “How difficult is it to detect a fault ${f}_{i}$?” ... The objective here is to develop a method for quantitative diagnosability analysis of discrete-time descriptor models in the form $$Ex[t+1]=Ax\left[t\right]+{B}_{u}u\left[t\right]+{B}_{f}f\left[t\right]+{B}_{v}v\left[t\right]$$ $$y\left[t\right]=Cx\left[t\right]+{D}_{u}u\left[t\right]+{D}_{f}f\left[t\right]+{D}_{\epsilon }\epsilon \left[t\right]$$ where $x\in {\mathbb{R}}^{{l}_{x}}$ are state variables, $y\in {\mathbb{R}}^{{l}_{y}}$ are measured signals, $u\in {\mathbb{R}}^{{l}_{u}}$ are input signals, $f\in {\mathbb{R}}^{{l}_{f}}$ are modeled faults, $v\sim \mathcal{N}(0,{\Lambda }_{v})$ and $\epsilon \sim \mathcal{N}(0,{\Lambda }_{\epsilon })$ are i.i.d.
+
+## Automatica
+
+Date: June 2013
+
+Pages: 1591-1600
+
+Volume: Volume 49, Issue 6
+
+View accessibility information
+
+## Published by: Elsevier
+
+Research article
+
+Get rights and content
+
+# A method for quantitative fault diagnosability analysis of stochastic linear descriptor models☆
+
+Author links open overlay panel Daniel Eriksson ^{1}, Erik Frisk, Mattias Krysander
+
+10.1016/j.automatica.2013.02.045
+
+## Abstract
+
+Analyzing fault diagnosability performance for a given model, before developing a diagnosis algorithm, can be used to answer questions like “How difficult is it to detect a fault ${f}_{i}$?” or “How difficult is it to isolate a fault ${f}_{i}$ from a fault ${f}_{j}$?”. The main contributions are the derivation of a measure, distinguishability, and a method for analyzing fault diagnosability performance of discrete-time descriptor models. The method, based on the Kullback–Leibler divergence, utilizes a stochastic characterization of the different fault modes to quantify diagnosability performance. Another contribution is the relation between distinguishability and the fault to noise ratio of residual generators. It is also shown how to design residual generators with maximum fault to noise ratio if the noise is assumed to be i.i.d. Gaussian signals. Finally, the method is applied to a heavy duty diesel engine model to exemplify how to analyze diagnosability performance of non-linear dynamic models.
+
+## Keywords
+
+Fault diagnosability analysis
+
+;
+
+Fault detection and isolation
+
+;
+
+Model-based diagnosis
+
+## Introduction
+
+Diagnosis and supervision of industrial systems concern detecting and isolating faults that occur in the system. As technical systems have grown in complexity, the demand for functional safety and reliability has drawn significant research in model-based fault detection and isolation. The maturity of the research field is verified by the amount of existing reference literature, for example Gertler (1998), Isermann (2005), and Patton, Frank, and Clark (2010).
+
+When developing a diagnosis algorithm, knowledge of achievable diagnosability performance given the model of the system, such as detectability and isolability, is useful. Such information indicates if a test with certain diagnosability properties can be created or if more sensors are needed to get satisfactory diagnosability performance; see Commault, Dion, and Yacoub Agha (2008) and Raghuraj, Bhushan, and Rengaswamy (1999). In Düştegör, Frisk, Cocquempot, Krysander, and Staroswiecki (2006), a structural diagnosability analysis is used during the modeling process to derive a sufficiently good model which achieves a required diagnosability performance. In these previous works, information of diagnosability performance is required before a diagnosis algorithm is developed.
+
+The main limiting factor of fault diagnosability performance of a model-based diagnosis algorithm is the model uncertainty. Model uncertainties exist because of, for example, non-modeled system behavior, process noise, or measurement noise. Models with large uncertainties make it difficult to detect and isolate small faults. Without sufficient information of possible diagnosability properties, engineering time could be wasted on, e.g., developing tests to detect a fault that in reality is impossible to detect.
+
+The main contribution of this work is a method to quantify detectability and isolability properties of a model when taking model uncertainties and fault time profiles into consideration. It can also be used to compare achievable diagnosability performance between different models to evaluate how much performance is gained by using an improved model.
+
+Different types of measures to evaluate the detectability performance of diagnosis algorithms exist in the literature; see for example Antônio dos Santos and Yoneyama (2011), Chen, Lewis Mingori, and Speyer (2003), Hamelin and Sauter (2000), and Wheeler (2011). A contribution of this work with respect to these previously published papers, is to quantify diagnosability performance given the model without designing a diagnosis algorithm.
+
+There are several works describing methods from classical detection theory, for example, the books (Basseville and Nikiforov, 1993, Kay, 1998), which can be used for quantified detectability analysis using a stochastic characterization of faults. In contrast to these works, isolability performance is also considered here which is important when identifying the faults present in the system.
+
+There exist systematic methods for analyzing fault isolability performance in dynamic systems; see Frisk et al. (2010), Pucel, Mayer, and Stumptner (2009), and Travé-Massuyès, Escobet, and Olive (2006). However these approaches are deterministic and only give qualitative statements whether a fault is isolable or not. These methods give an optimistic result of isolability performance and they tell nothing about how difficult it is to detect or isolate the faults in practice, due to model uncertainties.
+
+The results in this paper are based on the early work done in Eriksson et al., 2011a, Eriksson et al., 2011b where a measure is derived, named distinguishability, for quantitative fault detectability and isolability analysis. First, the problem is formulated in Section 2. The measure is derived in Section 3 for linear discrete-time descriptor models. How to compute the special case when the noise is i.i.d. Gaussian is discussed in Section 4. In Section 5 the relation between distinguishability and the performance of linear residual generators is derived. Finally, it is shown in Section 6, via a linearization scheme, how the developed methodology can be used to analyze a non-linear dynamic model of a heavy duty diesel engine.
+
+## Section snippets
+
+### Problem formulation
+
+The objective here is to develop a method for quantitative diagnosability analysis of discrete-time descriptor models in the form $$Ex[t+1]=Ax\left[t\right]+{B}_{u}u\left[t\right]+{B}_{f}f\left[t\right]+{B}_{v}v\left[t\right]$$ $$y\left[t\right]=Cx\left[t\right]+{D}_{u}u\left[t\right]+{D}_{f}f\left[t\right]+{D}_{\epsilon }\epsilon \left[t\right]$$ where $x\in {\mathbb{R}}^{{l}_{x}}$ are state variables, $y\in {\mathbb{R}}^{{l}_{y}}$ are measured signals, $u\in {\mathbb{R}}^{{l}_{u}}$ are input signals, $f\in {\mathbb{R}}^{{l}_{f}}$ are modeled faults, $v\sim \mathcal{N}(0,{\Lambda }_{v})$ and $\epsilon \sim \mathcal{N}(0,{\Lambda }_{\epsilon })$ are i.i.d. Gaussian random vectors with zero mean and symmetric positive definite covariance matrices ${\Lambda }_{v}\in {\mathbb{R}}^{{l}_{v}\times {l}_{v}}$ and ${\Lambda }_{\epsilon }\in {\mathbb{R}}^{{l}_{\epsilon }\times {l}_{\epsilon }}$. Model uncertainties and noise are
+
+### Distinguishability
+
+This section defines a stochastic characterization for the fault modes and introduces a quantitative diagnosability measure based on the Kullback–Leibler divergence.
+
+### Computation of distinguishability
+
+The definition of distinguishability in Section 3.3, given a model in the form (4), is general for any type of multivariate pdf (10) describing the vector $\tau $ for a given $\theta \in {\Theta }_{i}$. Computing (15) requires solving a minimization problem which can in general be difficult. In this section, the vector $e$ in (4) is assumed to be Gaussian distributed with covariance ${\Lambda }_{e}\in {\mathbb{R}}^{n({l}_{v}+{l}_{\epsilon })\times n({l}_{v}+{l}_{\epsilon })}$. Model uncertainties and disturbances only containing a limited band of frequencies, e.g., low-frequency disturbances,
+
+### Relation to residual generators
+
+An important property of the computed distinguishability for a model (4) with Gaussian distributed stochastic vector $e$ is the connection to the performance of residual generators. The connection between distinguishability and residual generators shows the relation between computed distinguishability and achievable diagnosability performance. In this section, these relations are derived.
+
+A linear residual generator is here defined, in a direct stochastic extension to the definitions in Frisk and
+
+### Diesel engine model analysis
+
+Distinguishability, as a measure of quantified isolability, has been defined for discrete-time linear descriptor models written in the form (4). Typically, many industrial systems exhibit non-linear behavior. The purpose here is to demonstrate how the developed theory can be used also to analyze dynamic non-linear models of industrial complexity. Here, a model of a heavy duty diesel engine is analyzed by linearizing at different operating points of the engine and then computing
+
+### Conclusions
+
+The topic addressed in this paper is how to quantify diagnosability properties of a given model, without designing any diagnosis system. Here, discrete-time dynamic descriptor models are considered where uncertainties are described by stochastic processes with known characteristics. The descriptor model is written as a window model by considering the model dynamics for a time window of certain length.
+
+A key contribution is the definition of distinguishability, a detectability and isolability
+
+
+The work is partially supported by the Swedish Research Council within the Linnaeus Center CADICS. The material in this paper was partially presented at the 50th IEEE Conference on Decision and Control (CDC), December 12–15, 2011, Orlando, Florida, USA, and the 22nd International Workshop on Principles of Diagnosis (DX-11), October 4–7, 2011, Murnau, Germany. This paper was recommended for publication in revised form by Associate Editor Michele Basseville under the direction of Editor Torsten Söderström.--------------------------------------------------------------------------------
+Functional Observability and the Design of Minimum Order Linear Functional Observers | IEEE Journals & Magazine | IEEE Xplore (https://ieeexplore.ieee.org/servlet/Login?logout=%2Fdocument%2F5409605%2F)
+citeturn23search1 [wordlim: 200] Published: 16.7 years ago; Crawled: last month; # Functional Observability and the Design of Minimum Order Linear Functional Observers ... The design of a minimum-order linear functional observer for linear time-invariant systems has been an open problem for over four decades.
+
+# Functional Observability and the Design of Minimum Order Linear Functional Observers
+
+Publisher: IEEE
+
+Abstract
+
+Authors
+
+  * Download PDF
+  * Download References
+  * Request Permissions
+  * Save to
+  * Alerts
+
+## Abstract:
+
+The design of a minimum-order linear functional observer for linear time-invariant systems has been an open problem for over four decades. This technical note provides a ...Show More
+
+## Metadata
+
+## Abstract:
+
+The design of a minimum-order linear functional observer for linear time-invariant systems has been an open problem for over four decades. This technical note provides a solution to this problem. The technical note also introduces the concept of Functional Observability/Detectability and shows that the well-known concept of Observability/Detectability is a special case of Functional Observability/Detectability.
+
+Published in: IEEE Transactions on Automatic Control ( Volume: 55, Issue: 5, May 2010)
+
+Page(s): 1268 - 1273
+
+Date of Publication: 08 February 2010
+
+ISSN Information:
+
+DOI: 10.1109/TAC.2010.2042761--------------------------------------------------------------------------------
+Matched subspace detectors - Signal Processing, IEEE Transactions on (https://www.mssc.mu.edu/~daniel/mscs6960/spring2010/ScharfFriedlanderTSP94.pdf)
+citeturn23search12 [wordlim: 200] Published: 16.8 years ago; Crawled: 6 months ago; Scharf, Fellow, IEEE, and Benjamin Friedlander, Fellow, IEEE ... The matched filter, or more accurately the *matched signal detector*, is one of the basic building blocks of signal processing; however, in many applications the rank-1 matched signal detector is replaced by a multitank *matched subspace detector*. ... First, we include structured interference in the measurement model, and second we use the principle of the generalized likelihood ratio test (GLRT) to derive matched subspace detectors. ... This work was supported by the Office of Naval Research, Mathematics Division, Statistics and Probability Branch, under Contracts N00014-89-J1070 and N00014-91-J1602, and by the National Science Foundation under Grant MIP-90-17221.
+IEEE TRANSACTIONS ON SIGNAL PROCESSING, VOL. 42, NO. 8, AUGUST 1994
+
+2146
+
+# Matched Subspace Detectors
+
+Louis L. Scharf, Fellow, IEEE, and Benjamin Friedlander, Fellow, IEEE
+
+**Abstract—**In this paper we formulate a general class of problems for detecting subspace signals in subspace interference and broadband noise. We derive the generalized likelihood ratio (GLR) for each problem in the class. We then establish the invariances for the GLR and argue that these are the natural invariances for the problem. In each case, the GLR is a maximal invariant statistic, and the distribution of the maximal invariant statistic is monotone. This means that the GLR test (GLRT) is the uniformly most powerful invariant detector. We illustrate the utility of this finding by solving a number of problems for detecting subspace signals in subspace interference and broadband noise. In each case we give the distribution for the detector and compute performance curves.
+
+## I. INTRODUCTION
+
+The matched filter, or more accurately the *matched signal detector*, is one of the basic building blocks of signal processing; however, in many applications the rank-1 matched signal detector is replaced by a multitank *matched subspace detector*. 
+We shall assume that the signal \(x\) obeys the linear subspace model
+
+\[
+\mathbf{x} = H\theta,\quad H \in \mathbb{R}^{N \times p},\ \theta \in \mathbb{R}^p \qquad (2.2)
+\]
+
+and the noise is MVN with mean \(S\phi\) and covariance \(R = \sigma^2 R_0\):
+
+\[
+\mathbf{v} \sim \mathcal{N}[S\phi,\sigma^2 R_0],\quad S \in \mathbb{R}^{N \times t},\ \phi \in \mathbb{R}^t,\ t < N - p,\ R_0 > 0 \in \mathbb{R}^{N \times N}. \qquad (2.3)
+\]
+
+Manuscript received July 3, 1993; revised November 11, 1993. This work was supported by the Office of Naval Research, Mathematics Division, Statistics and Probability Branch, under Contracts N00014-89-J1070 and N00014-91-J1602, and by the National Science Foundation under Grant MIP-90-17221. The associate editor coordinating the review of this paper and approving it for publication was Prof. Kevin M. Buckley.  
+L. L. Scharf is with the Department of Electrical & Computer Engineering, University of Colorado, Boulder, Colorado 80309-0425 USA.  
+B. Friedlander is with the Department of Electrical & Computer Engineering, University of California-Davis, Davis, CA 95616 USA.  
+IEEE Log Number 9401912.
+
+1053-587X/94$04.00 © 1994 IEEE--------------------------------------------------------------------------------
+IEEE TRANSACTIONS ON AUTOMATIC CONTROL, VOL. 55, NO. 5, MAY 2010 (https://lsc.amss.ac.cn/~jif/paper/%5BJ74%5D.pdf)
+citeturn23search13 [wordlim: 200] Published: 8 months ago; Functional Observability and the Design of Minimum ... Abstract—The design of a minimum-order linear functional observer
+1268
+IEEE TRANSACTIONS ON AUTOMATIC CONTROL, VOL. 55, NO. 5, MAY 2010
+Functional Observability and the Design of Minimum
+Order Linear Functional Observers
+Tyrone Lucius Fernando, Hieu Minh Trinh, and Les Jennings
+Abstract—The design of a minimum-order linear functional observer
+for linear time-invariant systems has been an open problem for over four
+decades. This technical note provides a solution to this problem. The
+technical note also introduces the concept of Functional Observability/De-
+tectability and shows that the well-known concept of Observability/De-
+tectability is a special case of Functional Observability/Detectability.
+Index Terms—Functional detectability, functional observability, func-
+tional observers, minimum order observers.
+I. INTRODUCTION
+[5] W. Ren and E. Atkins, “Distributed multi-vehicle coordinated control
+via local information exchange,” Int. J. Robust Nonlin. Control, vol. 17,
+no. 10–11, pp. 1002–1033, Jul. 2007.
+[6] S. E. Tuna, LQR-Based Coupling Gain for Synchronization of Linear
+--------------------------------------------------------------------------------
+Functional observability and subspace reconstruction in nonlinear systems (https://www.repository.cam.ac.uk/items/45d8001b-afb7-422a-9042-3e486b823491)
+citeturn23search2 [wordlim: 200] Crawled: last month; ## Functional observability and subspace reconstruction in nonlinear systems ... The observability of a system establishes fundamental conditions under which such reconstruction is possible. ... Here, we establish the theoretic condition to reconstruct a nonlinear functional of state variables from measurement processes, generalizing the concept of functional observability to nonlinear systems.
+
+## Functional observability and subspace reconstruction in nonlinear systems
+
+##### Published version
+
+##### Peer-reviewed
+
+## Repository URI
+
+https://www.repository.cam.ac.uk/handle/1810/345421
+
+## Repository DOI
+
+https://doi.org/10.17863/CAM.92843
+
+
+## Files
+
+Published version (19.33 MB)
+
+## Type
+
+Article
+
+
+## Authors
+
+Montanari, Arthur N
+
+Freitas, Leandro
+
+Proverbio, Daniele
+
+Gonçalves, Jorge
+
+## Abstract
+
+Time-series analysis is fundamental for modeling and predicting dynamical behaviors from time-ordered data, with applications in many disciplines such as physics, biology, finance, and engineering. Measured time-series data, however, are often low dimensional or even univariate, thus requiring embedding methods to reconstruct the original system's state space. The observability of a system establishes fundamental conditions under which such reconstruction is possible. However, complete observability is too restrictive in applications where reconstructing the entire state space is not necessary and only a specific subspace is relevant. Here, we establish the theoretic condition to reconstruct a nonlinear functional of state variables from measurement processes, generalizing the concept of functional observability to nonlinear systems. When the functional observability condition holds, we show how to construct a map from the embedding space to the desired functional of state variables, characterizing the quality of such reconstruction. The theoretical results are then illustrated numerically using chaotic systems with contrasting observability properties. By exploring the presence of functionally unobservable regions in embedded attractors, we also apply our theory for the early warning of seizure-like events in simulated and empirical data. The studies demonstrate that the proposed functional observability condition can be assessed a priori to guide time-series analysis and experimental design for the dynamical characterization of complex systems.
+
+## Keywords
+
+51 Physical Sciences
+
+## Journal Title
+
+Physical Review Research
+
+## Journal ISSN
+
+2643-1564
+2643-1564
+
+## Volume Title
+
+4
+
+## Publisher
+
+American Physical Society (APS)
+
+## Publisher DOI
+
+https://doi.org/10.1103/physrevresearch.4.043195
+
+## Rights and licensing
+
+Except where otherwised noted, this item's license is described as Attribution 4.0 International
+
+## Collections
+
+University of Cambridge Research Outputs (Articles and Conferences)
+
+##### Apollo--------------------------------------------------------------------------------
+Functional observability and subspace reconstruction in nonlinear systems (https://arxiv.org/abs/2301.04108)
+citeturn23academia14 [wordlim: 200] Published: 3.8 years ago; Title: Functional observability and subspace reconstruction in nonlinear systems ... The observability of a system establishes fundamental conditions under which such reconstruction is possible.
+Title: Functional observability and subspace reconstruction in nonlinear systems
+Authors: Arthur N. Montanari, Leandro Freitas, Daniele Proverbio, Jorge Gonçalves
+Date: Tue Jan 10 18:16:54 2023
+
+Time-series analysis is fundamental for modeling and predicting dynamical behaviors from time-ordered data, with applications in many disciplines such as physics, biology, finance, and engineering. Measured time-series data, however, are often low dimensional or even univariate, thus requiring embedding methods to reconstruct the original system's state space. The observability of a system establishes fundamental conditions under which such reconstruction is possible. However, complete observability is too restrictive in applications where reconstructing the entire state space is not necessary and only a specific subspace is relevant. Here, we establish the theoretic condition to reconstruct a nonlinear functional of state variables from measurement processes, generalizing the concept of functional observability to nonlinear systems. When the functional observability condition holds, we show how to construct a map from the embedding space to the desired functional of state variables, characterizing the quality of such reconstruction. The theoretical results are then illustrated numerically using chaotic systems with contrasting observability properties. By exploring the presence of functionally unobservable regions in embedded attractors, we also apply our theory for the early warning of seizure-like events in simulated and empirical data. The studies demonstrate that the proposed functional observability condition can be assessed a priori to guide time-series analysis and experimental design for the dynamical characterization of complex systems.--------------------------------------------------------------------------------
+(PDF) Matched subspace detectors (https://www.researchgate.net/publication/3315398_Matched_Subspace_Detectors)
+citeturn23search3 [wordlim: 200] Crawled: 2 months ago; Article PDF Available ... In this paper we study the problem ... matched subspace detector. ... N00014-91-J1602, and by the National Science Foun- ... subspace model ... spectrum analysis, wherein narrowband lines interfere ... The span-level abstraction, where decisions depend on distances to class subspaces, is also consistent with classical matched-subspace detection viewpoints based on residual energy (Scharf and Friedlander, 1994). ...
+Article PDF Available
+
+# Matched subspace detectors
+
+  * September 1994
+  * IEEE Transactions on Signal Processing 42(8):2146-2157
+
+DOI:10.1109/78.301849
+
+  * Source
+  * IEEE Xplore
+
+Authors:
+
+Louis L. Scharf
+
+  * Colorado State University
+
+B. Friedlander
+
+B. Friedlander
+
+  * This person is not on ResearchGate, or hasn't claimed this research yet.
+
+Image
+
+Download full-text PDFRead full-text
+
+## Abstract
+
+We formulate a general class of problems for detecting subspace signals in subspace interference and broadband noise. We derive the generalized likelihood ratio (GLR) for each problem in the class. We then establish the invariances for the GLR and argue that these are the natural invariances for the problem. In each case, the GLR is a maximal invariant statistic, and the distribution of the maximal invariant statistic is monotone. This means that the GLR test (GLRT) is the uniformly most powerful invariant detector. --------------------------------------------------------------------------------
+A method for quantitative fault diagnosability (https://citeseerx.ist.psu.edu/document?doi=c30b390f082a438fdb43d7386bebffe4e90da5cf&repid=rep1&type=pdf)
+citeturn23search15 [wordlim: 200] Published: 8 months ago; A method for quantitative fault diagnosability analysis of
+stochastic linear descriptor models ⋆ ... Analyzing fault diagnosability performance for a given model, before developing a diagnosis algorithm, can be used to answer
+A method for quantitative fault diagnosability analysis of
+stochastic linear descriptor models ⋆
+Daniel Eriksson ∗, Erik Frisk, Mattias Krysander
+Department of Electrical Engineering, Link¨oping University
+SE-581 83 Link¨oping, Sweden. {daner,frisk,matkr}@isy.liu.se.
+Abstract
+Analyzing fault diagnosability performance for a given model, before developing a diagnosis algorithm, can be used to answer
+questions like “How diﬃcult is it to detect a fault fi?” or “How diﬃcult is it to isolate a fault fi from a fault fj?”. The main
+contributions are the derivation of a measure, distinguishability, and a method for analyzing fault diagnosability performance of
+discrete-time descriptor models. The method, based on the Kullback-Leibler divergence, utilizes a stochastic characterization of
+the diﬀerent fault modes to quantify diagnosability performance. Another contribution is the relation between distinguishability
+and the fault to noise ratio of residual generators. It is also shown how to design residual generators with maximum fault to
+--------------------------------------------------------------------------------
+2146
+IEEE TRANSACfIONS ON SIGNAL PROCESSING, VOL. (https://mountainscholar.org/bitstream/10217/740/1/ECElls00006.pdf)
+citeturn23search16 [wordlim: 200] Published: 2.2 years ago; SCHARFAND FRIEDLANDER: MATCHED SUBSPACE DETECTORS . ... the X2 distributed matched subspace detector is plotted for
+SCHARFAND FRIEDLANDER: MATCHED SUBSPACE DETECTORS .
+2155
+T(y)
+0.9 ....
+0.8
+~
+0.7
+~
+0.6
+o:l
+0.4
+0.3
+~
+O.SI
+0.2
+0.1
+0
+0
+20
+SNR[dBI
+Fig. 12.
+Invariances for £2.
+Fig. 13.
+ROC curves for detecting subspace signal in subspace inlerference
+and broadband noise of unknown level; p = 2 and N is variable.
+where F denotes an F-distribution with parameters p and s- p.
+This distribution is monotone in A2 ~ 0, so the GLRT
+is UMP-invariant for testing Ho versus HI. Its false alarm
+and detection probabilities are
+Section VII, and it should be invariant to scalings that intro-
+duce unknown variances. These are the natural invariances for
+the problem.
+Optimality and Performance: The (N/2)-root GLR is the
+unique invariant statistic for testing Ha versus HI. It is
+the ratio of quadratic forms in P~PGP~ and P~P'bP~.
+Each of the quadratic forms may be thought of as a norm-
+squared of a statistic P GP~y or P'bP~y. These statistics
+are, respectively, distributed as
+(8.10)
+PFA = 1 - P[Fp,s-p(O) ::; 'TI]
+PD = 1 - P[Fp,s_p(A2 ) ::; 'TI].
+--------------------------------------------------------------------------------
+dblp: A method for quantitative fault diagnosability analysis of stochastic linear descriptor models. (https://dblp.uni-trier.de/rec/journals/automatica/ErikssonFK13.html)
+citeturn23search4 [wordlim: 200] Crawled: last week; A method for quantitative fault diagnosability analysis of stochastic linear descriptor models.
+--------------------------------------------------------------------------------
+Geometries, invariances, and SNR interpretations of matched and adaptive subspace detectors | IIETA (https://www.iieta.org/journals/ts/paper/10.3166/TS.15.527-534)
+citeturn23search5 [wordlim: 200] Crawled: last month; ts15_6_527-534.pdf ... Friedlander, "Matched subspace detectors", [EE Trans. ... Scharf, "The CFAR adaptive subspace detector in a scaleinvariant GLRT", IEEE Trans .
+--------------------------------------------------------------------------------
+Matched Subspace Detectors Explained | PDF | Linear Map | Linear Subspace (https://www.scribd.com/document/833542987/Matched-Subspace-Detectors)
+citeturn23search6 [wordlim: 200] Published: 32.3 years ago; Crawled: 1.7 years ago; SCHARF AND FRIEDLANDER:MATCHED SUBSPACE DETECTORS 2149 ... SCHARF AND FRIEDLANDER:MATCHED SUBSPACE DETECTORS 2151 ... Detector diagram.
+--------------------------------------------------------------------------------
+A method for quantitative fault diagnosability analysis of stochastic linear descriptor models - MaRDI portal (https://portal.mardi4nfdi.de/wiki/A_method_for_quantitative_fault_diagnosability_analysis_of_stochastic_linear_descriptor_models)
+citeturn23search7 [wordlim: 200] Published: 9.5 years ago; Crawled: last month; # A method for quantitative fault diagnosability analysis of stochastic linear descriptor models
+--------------------------------------------------------------------------------
+dblp: Benjamin Friedlander (https://dblp.org/pid/41/6284.html)
+citeturn23search8 [wordlim: 200] Crawled: 4 days ago; Scharf, Benjamin Friedlander:
+Matched subspace detectors.
+--------------------------------------------------------------------------------
+A method for quantitative fault diagnosability analysis of stochastic linear descriptor models (https://pascal-francis.inist.fr/vibad/index.php?action=getRecordDetail&idt=27358198)
+citeturn23search9 [wordlim: 200] Crawled: last month; "O:16:\"EuropePMCOpenUrl\":35:{s:10:\"\u0000*\u0000openUrl\";N;s:6:\"\u0000*\u0000fmt\";s:7:\"journal\";s:6:\"\u0000*\u0000doi\";s:32:\"10.1016\/j.automatica.2013.02.045\";s:6:\"\u0000*\u0000pii\";s:0:\"\";s:7:\"\u0000*\u0000pmid\";s:0:\"\";s:9:\"\u0000*\u0000atitle\";s:94:\"A method for quantitative fault diagnosability analysis of stochastic linear descriptor models\";s:9:\"\u0000*\u0000jtitle\";s:19:\"Automatica (Oxford)\";s:9:\"\u0000*\u0000stitle\";s:17:\"Automatica (Oxf.)\";s:7:\"\u0000*\u0000date\";s:4:\"2013\";s:9:\"\u0000*\u0000volume\";s:2:\"49\";s:8:\"\u0000*\u0000issue\";s:1:\"6\";s:8:\"\u0000*\u0000spage\";s:4:\"1591\";s:8:\"\u0000*\u0000epage\";s:4:\"1600\";s:8:\"\u0000*\u0000pages\";s:0:\"\";s:7:\"\u0000*\u0000issn\";s:9:\"0005-1098\";s:8:\"\u0000*\u0000eissn\";s:0:\"\";s:9:\"\u0000*\u0000aulast\";s:8:\"ERIKSSON\";s:10:\"\u0000*\u0000aufirst\";s:6:\"Daniel\";s:9:\"\u0000*\u0000auinit\";s:0:\"\";s:10:\"\u0000*\u0000auinitm\";s:0:\"\";s:5:\"\u0000*\u0000au\";a:2:{i:0;s:11:\"FRISK, Erik\";i:1;s:18:\"KRYSANDER, Mattias\";}s:9:\"\u0000*\u0000aucorp\";s:0:\"\";s:7:\"\u0000*\u0000isbn\";s:0:\"\";s:8:\"\u0000*\u0000coden\";s:6:\"ATCAA9\";s:8:\"\u0000*\u0000genre\";s:7:\"article\";s:7:\"\u0000*\u0000part\";s:0:\"\";s:9:\"\u0000*\u0000btitle\";s:0:\"\";s:8:\"\u0000*\u0000title\";s:94:\"A method for quantitative fault diagnosability analysis of stochastic linear descriptor models\";s:8:\"\u0000*\u0000place\";s:10:\"Kidlington\";s:6:\"\u0000*\u0000pub\";s:8:\"Elsevier\";s:10:\"\u0000*\u0000edition\";s:0:\"\";s:9:\"\u0000*\u0000tpages\";s:2:\"10\";s:9:\"\u0000*\u0000series\";s:0:\"\";s:8:\"\u0000*\u0000proxy\";s:30:\"http:\/\/proxyout.inist.fr:8080\/\";s:12:\"\u0000*\u0000integrite\";b:1;}"
+--------------------------------------------------------------------------------
+On functional observability and functional observer design - ScienceDirect (https://www.sciencedirect.com/science/article/pii/S0005109825000068)
+citeturn23search10 [wordlim: 200] Published: 1.7 years ago; Crawled: 2 weeks ago; However, in the present paper, we introduce a new definition of functional observability, in the spirit of the definition of full state observability introduced by Hautus (1969). ... Section 3 focuses on the functional observer design, specifically addressing the design of functional observers of order kr+\mu with pole placement.
+--------------------------------------------------------------------------------
+Two-Channel Matched Subspace Detectors (https://ideas.repec.org/h/spr/sprchp/978-3-031-13331-2_7.html)
+citeturn23search11 [wordlim: 200] Published: 4.8 years ago; Crawled: last month; # Two-Channel Matched Subspace Detectors ...   * Louis Scharf ... For each noise and signal model, the invariances of the hypothesis testing problem and its GLR are established. ... [Input][Button: Matched subspace detector]
+--------------------------------------------------------------------------------
+Observability (https://en.wikipedia.org/wiki/Observability)
+citeturn23search17 [wordlim: 200] Crawled: 4 months ago; Functional observability is an important concept because it determines the sufficient and necessary condition under which a functional observer (also known as a Darouach observer ) can be designed to asymptotically estimate ${\displaystyle \mathbf {z} (t)}$. ... "Functional observability and the design of minimum order linear functional observers". ... "Existence and design of functional observers for linear systems".
+

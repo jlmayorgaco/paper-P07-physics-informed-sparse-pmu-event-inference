@@ -1,0 +1,561 @@
+{
+  "key": "biswas2025quality",
+  "retrieved_at": "2026-11-01T03:53:22.516077+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1109%2FACCESS.2025.3560602",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1109/ACCESS.2025.3560602",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:16.877861+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          8,
+          18
+        ]
+      ],
+      "date-time": "2026-08-18T00:11:14Z",
+      "timestamp": 1787011874661,
+      "version": "build-2736575974"
+    },
+    "reference-count": 50,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2025,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2025-01-01T00:00:00Z",
+          "timestamp": 1735689600000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by/4.0/legalcode"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2025,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2025-01-01T00:00:00Z",
+          "timestamp": 1735689600000
+        },
+        "content-version": "am",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by/4.0/legalcode"
+      }
+    ],
+    "funder": [
+      {
+        "name": "Department of Energy’s Transmission Reliability and Renewables Integration (TRRI) Program"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Access"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    },
+    "DOI": "10.1109/access.2025.3560602",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2025,
+          4,
+          14
+        ]
+      ],
+      "date-time": "2025-04-14T13:40:06Z",
+      "timestamp": 1744638006000
+    },
+    "page": "66445-66457",
+    "source": "Crossref",
+    "is-referenced-by-count": 1,
+    "title": [
+      "An Open-Access Repository of Synchrophasor Data Quality Examples: Curation and Example Applications"
+    ],
+    "prefix": "10.1109",
+    "volume": "13",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0003-2090-6830",
+        "authenticated-orcid": false,
+        "given": "Shuchismita",
+        "family": "Biswas",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Pacific Northwest National Laboratory, Richland, WA, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-0730-4309",
+        "authenticated-orcid": false,
+        "given": "Tianzhixi",
+        "family": "Yin",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Pacific Northwest National Laboratory, Richland, WA, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Syed",
+        "family": "Ahsan Raza Naqvi",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Pacific Northwest National Laboratory, Richland, WA, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-9595-6635",
+        "authenticated-orcid": false,
+        "given": "Jim",
+        "family": "Follum",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Pacific Northwest National Laboratory, Richland, WA, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Antos",
+        "family": "Cheeramban Varghese",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Pacific Northwest National Laboratory, Richland, WA, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Tawsif",
+        "family": "Ahmad",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Pacific Northwest National Laboratory, Richland, WA, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-2169-3075",
+        "authenticated-orcid": false,
+        "given": "Pavel",
+        "family": "Etingov",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Pacific Northwest National Laboratory, Richland, WA, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2010.2044815"
+      },
+      {
+        "key": "ref2",
+        "first-page": "22",
+        "article-title": "Analysis of 1996 Western American electric blackouts",
+        "volume-title": "Proc. Bulk Power Syst. Dyn. Control",
+        "author": "Venkatasubramanian"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ACCESS.2019.2932035"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2015.2478421"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SGSMA58694.2024.10571397"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.24251/HICSS.2023.324"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/pesgm46819.2021.9637837"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.ijepes.2016.12.010"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2022.3229255"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRD.2023.3284418"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/NAPS.2013.6666926"
+      },
+      {
+        "key": "ref12",
+        "article-title": "Model validation using phasor measurement unit data",
+        "year": "2015"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2014.2322821"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ACCESS.2024.3427667"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2014.2347047"
+      },
+      {
+        "key": "ref16",
+        "article-title": "Voltage transformer failure prediction with synchrophasor data",
+        "volume-title": "Proc. 25th Annu. Georgia Tech Fault Disturbance Anal. Conf.",
+        "author": "Rhodes"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.24251/HICSS.2024.365"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2172/2242496"
+      },
+      {
+        "key": "ref19",
+        "article-title": "Field demonstration of an automated generator evaluation tool at BPA",
+        "author": "Follum",
+        "year": "2024"
+      },
+      {
+        "key": "ref20",
+        "first-page": "27",
+        "article-title": "Synchrophasors: Definition, measurement, and application",
+        "volume-title": "Proc. 59th Annu. Georgia Tech Protective Relaying",
+        "author": "Adamiak"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PECI.2014.6804563"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/OAJPE.2022.3197553"
+      },
+      {
+        "key": "ref23",
+        "article-title": "A framework for the attributes of PMU data quality and a methodology for examining data quality impacts to synchrophasor applications",
+        "year": "2017"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TII.2021.3072397"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/JIOT.2022.3177686"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/NAPS.2016.7747928"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ACCESS.2023.3321317"
+      },
+      {
+        "key": "ref28",
+        "article-title": "Realistic labelled PMU data for cyber-power anomaly detection using real-time synchrophasor testbed",
+        "author": "Hussain",
+        "year": "2024"
+      },
+      {
+        "key": "ref29",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/NAPS.2016.7747930"
+      },
+      {
+        "key": "ref30",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ACCESS.2024.3404886"
+      },
+      {
+        "key": "ref31",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.2172/1860940",
+        "article-title": "FOA 1861 data curation overview",
+        "author": "Banning",
+        "year": "2021"
+      },
+      {
+        "key": "ref32",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SGSMA51733.2022.9806010"
+      },
+      {
+        "key": "ref33",
+        "volume-title": "Leap Second Effects on Synchrophasor Systems—Recent Leap Second Experiences",
+        "author": "Silverstein",
+        "year": "2016"
+      },
+      {
+        "key": "ref34",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/d41586-022-03783-5"
+      },
+      {
+        "key": "ref35",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CDC56724.2024.10886198"
+      },
+      {
+        "key": "ref36",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ieeestd.2014.6804630"
+      },
+      {
+        "key": "ref37",
+        "article-title": "Technical aspects of leap second propagation and evaluation",
+        "volume": "115",
+        "author": "Burnicki",
+        "year": "2015",
+        "journal-title": "Requirements for UTC and Civil Timekeeping on Earth Colloquium. Science and Technology Series"
+      },
+      {
+        "key": "ref38",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/APPEEC.2012.6307736"
+      },
+      {
+        "key": "ref39",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CPEM.2012.6250886"
+      },
+      {
+        "key": "ref40",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PESGM.2012.6345142"
+      },
+      {
+        "key": "ref41",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2172/1411936"
+      },
+      {
+        "key": "ref42",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SGSMA58694.2024.10571449"
+      },
+      {
+        "key": "ref43",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2172/1959775"
+      },
+      {
+        "key": "ref44",
+        "volume-title": "What is Random Forest",
+        "year": "2023"
+      },
+      {
+        "key": "ref45",
+        "volume-title": "Introduction to Data Mining",
+        "author": "Tan",
+        "year": "2021"
+      },
+      {
+        "key": "ref46",
+        "article-title": "Random forests",
+        "author": "Breiman",
+        "year": "2001"
+      },
+      {
+        "key": "ref47",
+        "volume-title": "Scikit Learn",
+        "year": "2023"
+      },
+      {
+        "key": "ref48",
+        "volume-title": "Imbalanced-Learn Documentation",
+        "year": "2024"
+      },
+      {
+        "key": "ref49",
+        "article-title": "PES-TR110: Forced oscillations in power systems",
+        "year": "2023"
+      },
+      {
+        "key": "ref50",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPAS.1979.319407"
+      }
+    ],
+    "container-title": [
+      "IEEE Access"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://ieeexplore.ieee.org/ielam/6287639/10820123/10964498-aam.pdf",
+        "content-type": "application/pdf",
+        "content-version": "am",
+        "intended-application": "syndication"
+      },
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx8/6287639/10820123/10964498.pdf?arnumber=10964498",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2025,
+          4,
+          22
+        ]
+      ],
+      "date-time": "2025-04-22T01:26:34Z",
+      "timestamp": 1745285194000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/10964498/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    },
+    "references-count": 50,
+    "URL": "https://doi.org/10.1109/access.2025.3560602",
+    "relation": {},
+    "ISSN": [
+      "2169-3536"
+    ],
+    "issn-type": [
+      {
+        "value": "2169-3536",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,431 @@
+{
+  "key": "azizi2021log",
+  "retrieved_at": "2026-11-01T03:53:22.314683+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1109%2FTPWRD.2020.3047228",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1109/TPWRD.2020.3047228",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:14.079256+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          1,
+          23
+        ]
+      ],
+      "date-time": "2026-01-23T21:22:02Z",
+      "timestamp": 1769203322199,
+      "version": "3.49.0"
+    },
+    "reference-count": 32,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "4",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              8,
+              1
+            ]
+          ],
+          "date-time": "2021-08-01T00:00:00Z",
+          "timestamp": 1627776000000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              8,
+              1
+            ]
+          ],
+          "date-time": "2021-08-01T00:00:00Z",
+          "timestamp": 1627776000000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              8,
+              1
+            ]
+          ],
+          "date-time": "2021-08-01T00:00:00Z",
+          "timestamp": 1627776000000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Trans. Power Delivery"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2021,
+          8
+        ]
+      ]
+    },
+    "DOI": "10.1109/tpwrd.2020.3047228",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2020,
+          12,
+          24
+        ]
+      ],
+      "date-time": "2020-12-24T21:40:55Z",
+      "timestamp": 1608846055000
+    },
+    "page": "2397-2407",
+    "source": "Crossref",
+    "is-referenced-by-count": 14,
+    "title": [
+      "Wide-Area Identification of the Size and Location of Loss of Generation Events by Sparse PMUs"
+    ],
+    "prefix": "10.1109",
+    "volume": "36",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-9274-1177",
+        "authenticated-orcid": false,
+        "given": "Sadegh",
+        "family": "Azizi",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-6770-7161",
+        "authenticated-orcid": false,
+        "given": "Mohammad Rezaei",
+        "family": "Jegarluei",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-5388-0011",
+        "authenticated-orcid": false,
+        "given": "Ahmad Salehi",
+        "family": "Dobakhshari",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-0190-4904",
+        "authenticated-orcid": false,
+        "given": "Gaoyuan",
+        "family": "Liu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-6538-6982",
+        "authenticated-orcid": false,
+        "given": "Vladimir",
+        "family": "Terzija",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref32",
+        "author": "meyer",
+        "year": "2001",
+        "journal-title": "Matrix Analysis and Applied Linear Algebra"
+      },
+      {
+        "key": "ref31",
+        "year": "2011",
+        "journal-title": "IEEE Standard for Synchrophasor Data Transfer for Power Systems"
+      },
+      {
+        "key": "ref30",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/JPROC.2010.2060450"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRD.2014.2306062"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2019.2915249"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2018.2843381"
+      },
+      {
+        "key": "ref13",
+        "first-page": "1",
+        "article-title": "Underfrequency load shedding based on PMU estimates of frequency and ROCOF",
+        "author": "derviškadi?",
+        "year": "2018",
+        "journal-title": "Proc IEEE PES Innov Smart Grid Technol Conf Eur"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TIM.2019.2907756"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2010.2050345"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2010.2052934"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2015.2424412"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2018.2872868"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2018.2824851"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPAS.1970.292678"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/9780470758786"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2011.2167163"
+      },
+      {
+        "key": "ref3",
+        "author": "anderson",
+        "year": "1999",
+        "journal-title": "Power System Protection"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2010.2059715"
+      },
+      {
+        "key": "ref29",
+        "year": "2011",
+        "journal-title": "IEEE Standard for Synchrophasor Measurements for Power Systems"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2006.879315"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2018.2879542"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRD.2009.2036356"
+      },
+      {
+        "key": "ref2",
+        "article-title": "D4.3: Development and tests of new protection solutions when reaching 100% PE penetration",
+        "author": "azizi",
+        "year": "0"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2014.2333776"
+      },
+      {
+        "key": "ref1",
+        "article-title": "Interim report into the low frequency demand disconnection (LFDD) following generator trips and frequency excursion on 9 Aug 2019",
+        "year": "2019"
+      },
+      {
+        "key": "ref20",
+        "author": "tleis",
+        "year": "2008",
+        "journal-title": "Power Systems Modeling and Fault Analysis Theory and Practice"
+      },
+      {
+        "key": "ref22",
+        "author": "kuh",
+        "year": "2009",
+        "journal-title": "Basic Circuit Theory"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2016.2608927"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2016.2601379"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1201/9780203913673"
+      },
+      {
+        "key": "ref26",
+        "article-title": "MATPOWER, a MATLAB power system simulation package&#x201D;",
+        "author": "zimmerman",
+        "year": "2007"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2016.2580002"
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Power Delivery"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/61/9496059/09307251.pdf?arnumber=9307251",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2022,
+          5,
+          10
+        ]
+      ],
+      "date-time": "2022-05-10T14:50:16Z",
+      "timestamp": 1652194216000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/9307251/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2021,
+          8
+        ]
+      ]
+    },
+    "references-count": 32,
+    "journal-issue": {
+      "issue": "4"
+    },
+    "URL": "https://doi.org/10.1109/tpwrd.2020.3047228",
+    "relation": {},
+    "ISSN": [
+      "0885-8977",
+      "1937-4208"
+    ],
+    "issn-type": [
+      {
+        "value": "0885-8977",
+        "type": "print"
+      },
+      {
+        "value": "1937-4208",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2021,
+          8
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,244 @@
+{
+  "key": "bell1994ieks",
+  "retrieved_at": "2026-11-01T03:53:22.334332+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1137%2F0804035",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1137/0804035",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:15.941709+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          5
+        ]
+      ],
+      "date-time": "2026-10-05T08:31:10Z",
+      "timestamp": 1791189070309,
+      "version": "4.1.0"
+    },
+    "reference-count": 14,
+    "publisher": "Society for Industrial & Applied Mathematics (SIAM)",
+    "issue": "3",
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "SIAM J. Optim."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          1994,
+          8
+        ]
+      ]
+    },
+    "abstract": "<jats:p>The Kalman smoother is known to be the maximum likelihood estimator when the measurement and transition functions are affine; i.e., a linear function plus a constant. A new proof of this result is presented that shows that the Kalman smoother decomposes a large least squares problem into a sequence of much smaller problems. The iterated Kalman smoother is then presented and shown to be a Gauss–Newton method for maximizing the likelihood function in the nonaffine case. This method takes advantage of the decomposition obtained with the Kalman smoother.</jats:p>",
+    "DOI": "10.1137/0804035",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2005,
+          2,
+          23
+        ]
+      ],
+      "date-time": "2005-02-23T08:02:14Z",
+      "timestamp": 1109145734000
+    },
+    "page": "626-636",
+    "source": "Crossref",
+    "is-referenced-by-count": 123,
+    "title": [
+      "The Iterated Kalman Smoother as a Gauss–Newton Method"
+    ],
+    "prefix": "10.1137",
+    "volume": "4",
+    "author": [
+      {
+        "given": "Bradley M.",
+        "family": "Bell",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "351",
+    "published-online": {
+      "date-parts": [
+        [
+          2006,
+          7,
+          13
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "R1",
+        "unstructured": "B. D. O. Anderson, J. B. Moore, Optimal Filtering, Prentice-Hall, Englewood Cliffs, NJ, 1987, 138–140"
+      },
+      {
+        "key": "R2",
+        "volume-title": "An introduction to multivariate statistical analysis",
+        "author": "Anderson T. W.",
+        "year": "1958"
+      },
+      {
+        "key": "R3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/9.250476"
+      },
+      {
+        "key": "R4",
+        "unstructured": "W. L. Brogan, Modern Control Theory, Quantum Publishers, New York, 1974, 102–103"
+      },
+      {
+        "key": "R5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-1-4612-4528-5"
+      },
+      {
+        "key": "R6",
+        "volume-title": "Numerical methods for unconstrained optimization and nonlinear equations",
+        "author": "Dennis J. E.",
+        "year": "1983"
+      },
+      {
+        "key": "R7",
+        "unstructured": "R. Fletcher, Practical methods of optimization, A Wiley-Interscience Publication, John Wiley & Sons Ltd., Chichester, 1987, 114–, 2nd ed.89j:650500905.65002"
+      },
+      {
+        "key": "R8",
+        "unstructured": "A.  Gelb, Applied optimal estimation, The MIT Press, Cambridge, Mass.London, 1974, 190–49:10419"
+      },
+      {
+        "key": "R9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/0165-1684(90)90102-5"
+      },
+      {
+        "key": "R10",
+        "unstructured": "D. F. Liang, C. T. Leondes, Comparisons of nonlinear recursive filters for systems with non-negligible nonlinearities, Advances in the Techniques and Technology of the Application ofNonlinear Filters and Kalman Filters, AGARDograph, Vol. 256, North Atlantic Treaty Organization Advisory Group for Aerospace Research and Development, 1982, 16–17"
+      },
+      {
+        "key": "R11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2514/3.3166"
+      },
+      {
+        "key": "R12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/B978-1-4831-6716-9.50010-2"
+      },
+      {
+        "key": "R13",
+        "doi-asserted-by": "crossref",
+        "unstructured": "L. Tan, J. Dowling, C. McCorkell, H. McCabe, State estimation for optimal control of a non-linear system, Proc. IECON '91, IEEE CH22976-91-0000-2235, 1991, 2235–2239",
+        "DOI": "10.1109/IECON.1991.238995"
+      },
+      {
+        "key": "R14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/0005-1098(69)90110-1"
+      }
+    ],
+    "container-title": [
+      "SIAM Journal on Optimization"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://epubs.siam.org/doi/pdf/10.1137/0804035",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2026,
+          8,
+          21
+        ]
+      ],
+      "date-time": "2026-08-21T16:17:59Z",
+      "timestamp": 1787329079000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://epubs.siam.org/doi/10.1137/0804035"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          1994,
+          8
+        ]
+      ]
+    },
+    "references-count": 14,
+    "journal-issue": {
+      "issue": "3",
+      "published-print": {
+        "date-parts": [
+          [
+            1994,
+            8
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "10.1137/0804035"
+    ],
+    "URL": "https://doi.org/10.1137/0804035",
+    "relation": {},
+    "ISSN": [
+      "1052-6234",
+      "1095-7189"
+    ],
+    "issn-type": [
+      {
+        "value": "1052-6234",
+        "type": "print"
+      },
+      {
+        "value": "1095-7189",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          1994,
+          8
+        ]
+      ]
+    }
+  }
+}

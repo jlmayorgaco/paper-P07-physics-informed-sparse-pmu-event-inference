@@ -1,0 +1,30 @@
+{
+  "id": "S01_UNIFIED_PUBLICATION_V1",
+  "status": "FROZEN_BEFORE_COMPOSITION_AFTER_COMPONENT_EVALUATION",
+  "component_results_already_known": true,
+  "new_performance_selection": false,
+  "runtime_sha256": "b08ff689738b0ec7764175c35b2643a9516374a1b3f8231fd9c3347c75a166b9",
+  "input_sha256": {
+    "run/ml_raw_segmented/PREDICTIONS_SEAL.json": "b2d08d2429e9539a2e9c1ff648bc3bd57bfe8384aff5bcf0176124c82d0218d7",
+    "run/cyber_composition_v2/PREDICTIONS_SEAL.json": "dc6040e767c0ac8efe532265c14b1d0b86e8ac83afbc0d62b4673152a533a351",
+    "run/raw_physical_prefix/RESULT.json": "2b36b7c297017d2aacc4c89c527aeef6fbcc92d62e166a6b0df18dd9fd99c0c5",
+    "run/ml_raw_segmented/prediction.npz": "78ce32a8199c5be63b54abeefa2065829abf3777e2c1cf86fffad33e5d5dbf60",
+    "run/ml_raw_segmented/prediction.json": "506c0f89a0eff4fd3a5892c281748e056d6f35e9c10b340f46c586688f1aa72e",
+    "run/ml_raw_segmented/hybrid_predictions.json": "9dcea4d4ce5de441d3e24c790f0a97a12be496acc765d984afc297916fa65979",
+    "run/ml_raw_segmented/READ_AUDIT.json": "727114303aae67ea2ff22eef4b17b9a2368d3ee13f2c652facbfec4035a7c300",
+    "run/ml_raw_segmented/CHECKS.json": "cabb20515f920162a612ea33bda42d8a93f46c1f54ab9ec0d1b87daaf91247a9",
+    "run/cyber_composition_v2/availability.npz": "5857f49af401d0546ef90a727e0658da5a13d07b29d8cc9cee317f11fbed63e6",
+    "run/cyber_composition_v2/prediction.json": "e73181b9a15667d3eb354698f615b4268efe202c1b38fdd2f7bd4afd25c6f678"
+  },
+  "physical_plane": "Unmodified sealed ZIP/SHORT hybrid completed windows",
+  "integrity_plane": "Cyber V2 interval diagnoses plus its immediate missingness messages",
+  "current_state": "Only current-report availability messages can update missingness; completed windows never reopen it",
+  "corruption": "Interval assertion only; no backdating, forward filling or invented restoration",
+  "physical_inference": "R11 unavailable under the frozen startup gate; do not relabel ML as R11",
+  "missing_and_startup": "Retain every report and unavailable ML status; never encode unavailable as E0",
+  "clock": "Merged delivery uses maximum component emission; each original component emission remains explicit",
+  "evaluation": "Post-seal exact projections to existing components, not a newly optimized global score",
+  "truth_used": false,
+  "raw0002_access": false,
+  "c01_access": false
+}

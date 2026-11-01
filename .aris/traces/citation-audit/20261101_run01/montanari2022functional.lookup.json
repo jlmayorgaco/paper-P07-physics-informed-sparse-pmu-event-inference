@@ -1,0 +1,706 @@
+{
+  "key": "montanari2022functional",
+  "retrieved_at": "2026-11-01T03:53:21.677217+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1103%2FPhysRevResearch.4.043195",
+      "status": "success",
+      "resolved": "https://api.crossref.org/works/10.1103%2FPhysRevResearch.4.043195"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          1
+        ]
+      ],
+      "date-time": "2026-07-01T02:53:59Z",
+      "timestamp": 1782874439453,
+      "version": "3.54.5"
+    },
+    "reference-count": 81,
+    "publisher": "American Physical Society (APS)",
+    "issue": "4",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              12,
+              16
+            ]
+          ],
+          "date-time": "2022-12-16T00:00:00Z",
+          "timestamp": 1671148800000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100004901",
+        "name": "Fundação de Amparo à Pesquisa do Estado de Minas Gerais",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "APQ-00781-21"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "APQ-00781-21"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100004901",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/501100003593",
+        "name": "Conselho Nacional de Desenvolvimento Científico e Tecnológico",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "409487/2021-0"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "409487/2021-0"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100003593",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/501100001866",
+        "name": "Fonds National de la Recherche Luxembourg",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "PRIDE DTU CriTiCS 10907093"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "PRIDE DTU CriTiCS 10907093"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100001866",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "journals.aps.org"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "Phys. Rev. Research"
+    ],
+    "DOI": "10.1103/physrevresearch.4.043195",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2022,
+          12,
+          16
+        ]
+      ],
+      "date-time": "2022-12-16T15:32:40Z",
+      "timestamp": 1671204760000
+    },
+    "update-policy": "https://doi.org/10.1103/crossmark-policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 16,
+    "title": [
+      "Functional observability and subspace reconstruction in nonlinear systems"
+    ],
+    "prefix": "10.1103",
+    "volume": "4",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-4866-3888",
+        "authenticated-orcid": true,
+        "given": "Arthur N.",
+        "family": "Montanari",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-8757-807X",
+        "authenticated-orcid": true,
+        "given": "Leandro",
+        "family": "Freitas",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-0122-479X",
+        "authenticated-orcid": true,
+        "given": "Daniele",
+        "family": "Proverbio",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-5228-6165",
+        "authenticated-orcid": true,
+        "given": "Jorge",
+        "family": "Gonçalves",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "16",
+    "published-online": {
+      "date-parts": [
+        [
+          2022,
+          12,
+          16
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "PhysRevResearch.4.043195Cc1R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/BF01053745"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc2R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.physleta.2009.09.042"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc3R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1063/1.5023860"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc4R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1103/PhysRevE.105.044205"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc5R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1103/PhysRevA.46.3111"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc6R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.physrep.2006.11.001"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc7R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1126/science.1227079"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc8R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1063/1.5001820"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc9R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.neucom.2019.03.017"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc10R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.physa.2019.123843"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc11R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1063/1.5020371"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc12R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s11071-020-05691-7"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc13R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5194/npg-27-261-2020"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc14R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1209/0295-5075/103/50004"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc15R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1103/PhysRevE.71.066213"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc16R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1088/0305-4470/38/28/004"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc17R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.1959.1104873"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc18R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.1966.1098323"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc19R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1115/1.3662552"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc20R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.1977.1101601"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc21R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1103/PhysRevLett.64.821"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc22R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1063/1.1487570"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc23R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1063/1.4963013"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc24R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1063/1.5049903"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc25R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1063/1.5093197"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc26R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCNS.2017.2728201"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc27R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1103/PhysRevE.98.022318"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc28R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1063/1.5085321"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc29R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1063/1.4975124"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc30R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1063/1.4985291"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc31R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1073/pnas.1215508110"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc32R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1073/pnas.2104732118"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc33R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCNS.2014.2310254"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc34R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1103/PhysRevLett.110.208701"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc35R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1103/PhysRevX.5.011005"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc36R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1103/PhysRevE.98.020303"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc37R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TNSE.2019.2946535"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc38R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s40313-020-00633-5"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc39R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1103/PhysRevLett.78.4193"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc40R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1103/PhysRevE.97.052202"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc41R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.quascirev.2013.10.025"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc42R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1371/journal.pone.0195265"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc43R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/JSEN.2019.2947489"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc44R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1073/pnas.1424320112"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc45R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1093/brain/awu133"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc46R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.2010.2042761"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc47R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.2011.2160019"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc48R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/9.855556"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc49R1",
+        "volume-title": "Functional Observers for Dynamical Systems",
+        "author": "T. Hieu",
+        "year": "2012"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc50R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2019.2916558"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc51R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.jfranklin.2015.02.006"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc52R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1073/pnas.2113750119"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc53R1",
+        "volume-title": "Nonlinear Systems Analysis",
+        "author": "M. Vidyasagar",
+        "year": "1978"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc55R1",
+        "volume-title": "Linear System Theory and Design",
+        "author": "C.-T. Chen",
+        "year": "1999"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc56R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/0167-2789(92)90242-F"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc57R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5402/2011/164564"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc58R1",
+        "volume-title": "Dynamical Systems and Turbulence",
+        "author": "F. Takens",
+        "year": "1981"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc59R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/S0362-546X(96)00149-6"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc60R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.2015.2509448"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc62R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1103/PhysRevE.85.036204"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc63R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1103/PhysRevE.101.032207"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc64R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1098/rspb.1984.0024"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc65R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1063/1.2975967"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc66R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1371/journal.pone.0081759"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc67R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1093/brain/awl241"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc68R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/S1474-4422(13)70075-9"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc69R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1093/brain/awy210"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc70R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2170/physiolsci.RP004708"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc71R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1523/ENEURO.0485-18.2019"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc72R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/nature08227"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc73R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.26188/5b6a999fa2316"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc74R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.physd.2011.02.012"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc75R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/s41467-020-15908-3"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc76R1",
+        "volume-title": "Surveys in Differential-Algebraic Equations IV",
+        "author": "T. Berger",
+        "year": "2017"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc77R1",
+        "volume-title": "Local Bifurcation, Center Manifolds and Normal Forms in Infinte-Dimensional Dynamical Systems",
+        "author": "M. Haragus",
+        "year": "2010"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc78R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10955-017-1938-0"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc79R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1088/1361-6544/aaaf42"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc80R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1103/PhysRevE.106.L032402"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc81R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCST.2022.3173891"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc82R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1073/pnas.1517384113"
+      },
+      {
+        "key": "PhysRevResearch.4.043195Cc83R1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1103/PhysRevE.83.066209"
+      }
+    ],
+    "container-title": [
+      "Physical Review Research"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://link.aps.org/article/10.1103/PhysRevResearch.4.043195",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "syndication"
+      },
+      {
+        "URL": "http://harvest.aps.org/v2/journals/articles/10.1103/PhysRevResearch.4.043195/fulltext",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2022,
+          12,
+          16
+        ]
+      ],
+      "date-time": "2022-12-16T15:32:51Z",
+      "timestamp": 1671204771000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://link.aps.org/doi/10.1103/PhysRevResearch.4.043195"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2022,
+          12,
+          16
+        ]
+      ]
+    },
+    "references-count": 81,
+    "journal-issue": {
+      "issue": "4",
+      "published-print": {
+        "date-parts": [
+          [
+            2022,
+            12
+          ]
+        ]
+      }
+    },
+    "URL": "https://doi.org/10.1103/physrevresearch.4.043195",
+    "relation": {},
+    "ISSN": [
+      "2643-1564"
+    ],
+    "issn-type": [
+      {
+        "value": "2643-1564",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2022,
+          12,
+          16
+        ]
+      ]
+    },
+    "article-number": "043195"
+  }
+}

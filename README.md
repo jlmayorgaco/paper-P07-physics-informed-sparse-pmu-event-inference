@@ -6,6 +6,18 @@ en el artículo. Sus copias de recuperación y controles están documentados en
 de una columna y una arquitectura del método organizada en cuatro fases.
 Trabajar directamente en `main`, según [AGENTS.md](AGENTS.md).
 
+[Revisión S01 del 31-oct-2026](docs/submission_successor_20261031/STATUS.md):
+matemática corregida, comparador físico de estado único, entrenamiento SIM
+agrupado y parte de integridad de la hackathon ejecutados. En RAW, el híbrido
+solo mejora una ventana de fuente física; no se afirma buen desempeño global.
+La salida física y de integridad ya está unificada: conserva las decisiones
+selladas y distingue disponibilidad actual de diagnósticos de intervalo.
+El [artículo](output/pdf/P07_Event_Attribution_Article.pdf) y el
+[suplemento](output/pdf/P07_Event_Attribution_Supplement.pdf) compilan por separado.
+El [ZIP de fuentes](output/source/P07_Article_Supplement_Source.zip) también
+se compila en una carpeta aislada mediante `scripts/verify_source_package.py`.
+C01 y los metadatos editoriales finales siguen pendientes; el paquete es para revisión.
+
 [Resultados E_i en IEEE-39 y reescritura](docs/ei-x02-results.md): nominal, recentrado y firmas condicionadas, con trazabilidad completa. El artículo separa el ensayo de firmas del método causal congelado. La imagen original de eventos y el diagrama aprobado se conservan.
 
 [Corpus científico y continuidad](docs/corpus/README.md): objetivos de la conversación, ecuaciones implementadas, ideas adjudicadas, resultados con fuentes y revisión del nuevo chat compartido. Distingue lo que puede incorporarse al artículo actual de lo que necesita otra validación; no modifica C01.
@@ -27,11 +39,12 @@ El [contraste con Warner y los métodos cercanos](docs/novelty-and-closest-metho
 | Path | Purpose |
 | --- | --- |
 | `main.tex` | IEEE Access article: recovery-aware attribution, physical prediction, source resolution and frozen operational evaluation |
-| `supplement.tex`, `supplement/` | Detailed proofs, Fisher-information analysis, stepwise Bayesian estimators, frozen contracts, and secondary results |
+| `supplement.tex`, `supplement/` | Current causal method, derivations, worked examples, integrity and evaluation contracts |
+| `historical_notes.tex` | Preserved earlier theory, state/batch studies, historical qualifications and secondary results |
 | `metadata.tex` | Title, author list, affiliations, and running headers |
 | `preamble.tex` | Shared packages and mathematical notation |
 | `sections/` | One LaTeX source file per manuscript section |
-| `references.bib` | Verified, cited bibliography entries only |
+| `references.bib` | Article and supplement bibliographic records; source checks are documented in `docs/` |
 | `figures/` | Source figures and the figure roadmap |
 | `tables/` | Evidence-backed modular manuscript tables |
 | `docs/` | Scope, claims, experiment, and editorial records, including the binding paper contract |
@@ -51,33 +64,59 @@ python scripts/generate_paper_artifacts.py
 
 `SOURCE_MANIFEST.csv` records a SHA-256 hash and source-relative path for every imported state or event artifact. `SOURCE_SNAPSHOT.txt` records the source branch and commit. The generator asserts the principal denominators before writing LaTeX macros, tables, and vector figures.
 
-## Build
+## Build and document split
 
-The root manuscript uses the official `ieeeaccess.cls` supplied with the repository. The build compiles the supplement and the main article as separate PDFs. `main.tex` does not append supplementary pages. Run:
+The project has **an article and its detailed companion**, plus separately
+preserved historical technical notes. `main.tex` produces the compact IEEE
+Access article; `supplement.tex` explains its current method step by step.
+`historical_notes.tex` preserves the earlier research without making it a
+required part of the article's argument. The script builds all three and
+creates a combined article/supplement PDF for convenient review:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File scripts/build_manuscript_bundle.ps1
 ```
 
-The current MiKTeX installation has no Perl engine. The equivalent manual sequence is:
+| Source / delivery file | Contents |
+| --- | --- |
+| `main.tex` / [Article](output/pdf/P07_Event_Attribution_Article.pdf) | Problem, physical mechanism, essential equations, causal algorithm, decisive results and limitations |
+| `supplement.tex` / [Supplement](output/pdf/P07_Event_Attribution_Supplement.pdf) | Current method step by step; local derivations; examples; scenarios; integrity, metrics and reproduction |
+| `historical_notes.tex` / [Historical notes](output/pdf/P07_Historical_Technical_Notes.pdf) | Earlier corrected theory and state/batch studies, kept with their original evidence limits |
+| [Combined review](output/pdf/P07_Event_Attribution_Review_Bundle.pdf) | Article followed by the complete supplement, with bookmarks for both documents |
+
+The build uses **pdfLaTeX + BibTeX directly**. It does not need `latexmk` or Perl.
+The installed `latexmk` currently fails because Perl is unavailable. The
+integrated viewer also reported a MiKTeX log-permission failure; its Tectonic
+fallback fails on the IEEE Access class's pdfTeX-specific spot-color commands.
+For Overleaf select **pdfLaTeX**, and choose `main.tex` or `supplement.tex` as
+Main document. The source files and official class are preserved.
+
+By default the build compiles the versioned evidence already present. It does
+not run simulations, re-import results, or regenerate scientific assets.
+To explicitly regenerate the existing editorial/theory artifacts, use
+`-RefreshArtifacts`; inspect those changes before publishing. Source-results
+import remains the separate operation described above.
+
+The manual compilation sequence is:
 
 ```powershell
-python scripts/verify_theory_identities.py
-python scripts/verify_cone_bayes_identities.py
-python scripts/verify_information_limits.py
-python scripts/verify_discrepancy_design.py
-pdflatex -interaction=nonstopmode -halt-on-error supplement.tex
-bibtex supplement
-pdflatex -interaction=nonstopmode -halt-on-error supplement.tex
-pdflatex -interaction=nonstopmode -halt-on-error supplement.tex
-Copy-Item supplement.pdf output/pdf/P07_Physics_Informed_State_Reconstruction_Event_Source_Inference_Supplement.pdf -Force
 pdflatex -interaction=nonstopmode -halt-on-error main.tex
 bibtex main
 pdflatex -interaction=nonstopmode -halt-on-error main.tex
 pdflatex -interaction=nonstopmode -halt-on-error main.tex
+pdflatex -interaction=nonstopmode -halt-on-error supplement.tex
+bibtex supplement
+pdflatex -interaction=nonstopmode -halt-on-error supplement.tex
+pdflatex -interaction=nonstopmode -halt-on-error supplement.tex
+python scripts/verify_supplement_examples.py
+python scripts/verify_protected_figures.py --pdf main.pdf
+python scripts/publish_manuscript_bundle.py
 ```
 
-The resulting `main.pdf` contains the principal article followed by the complete supplement, while `supplement.pdf` remains available as a standalone companion. Both review copies under `output/pdf/` are tracked for direct delivery. The principal article retains the scientific argument and decisive evidence; the supplement contains the paper-by-paper literature matrix, electrical conventions, complete proofs, nuisance-profiled Fisher information, sparse and temporal identifiability results, the executed 137-hypothesis Bayesian algorithm, the candidate-conditioned joint-estimator design, frozen contracts, and secondary diagnostics. Run the artifact generator before compiling whenever the frozen snapshot changes.
+The two long historical PDF filenames remain updated aliases for the separate
+article and supplement. The explicitly named `Review_Bundle` is the combined
+copy. Recovery details and the content map are recorded in
+[the document recovery note](docs/DOCUMENT_RECOVERY_20261031.md).
 
 ## GitHub and Overleaf workflow
 

@@ -1,0 +1,796 @@
+{
+  "key": "ngo2024pignn",
+  "retrieved_at": "2026-11-01T03:53:22.984020+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1016%2Fj.apenergy.2023.122602",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1016/j.apenergy.2023.122602",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:33.076937+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          1
+        ]
+      ],
+      "date-time": "2026-11-01T01:54:29Z",
+      "timestamp": 1793498069890,
+      "version": "4.5.0"
+    },
+    "reference-count": 44,
+    "publisher": "Elsevier BV",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2024-03-01T00:00:00Z",
+          "timestamp": 1709251200000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2024-03-01T00:00:00Z",
+          "timestamp": 1709251200000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/legal/tdmrep-license"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2025,
+              1,
+              6
+            ]
+          ],
+          "date-time": "2025-01-06T00:00:00Z",
+          "timestamp": 1736121600000
+        },
+        "content-version": "am",
+        "delay-in-days": 311,
+        "URL": "http://www.elsevier.com/open-access/userlicense/1.0/"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2024-03-01T00:00:00Z",
+          "timestamp": 1709251200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-017"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2024-03-01T00:00:00Z",
+          "timestamp": 1709251200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2024-03-01T00:00:00Z",
+          "timestamp": 1709251200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-012"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2024-03-01T00:00:00Z",
+          "timestamp": 1709251200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2024-03-01T00:00:00Z",
+          "timestamp": 1709251200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-004"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "elsevier.com",
+        "sciencedirect.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "Applied Energy"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2024,
+          3
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.apenergy.2023.122602",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2024,
+          1,
+          5
+        ]
+      ],
+      "date-time": "2024-01-05T22:53:00Z",
+      "timestamp": 1704495180000
+    },
+    "page": "122602",
+    "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 222,
+    "special_numbering": "C",
+    "title": [
+      "Physics-informed graphical neural network for power system state estimation"
+    ],
+    "prefix": "10.1016",
+    "volume": "358",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0009-0005-9755-5313",
+        "authenticated-orcid": false,
+        "given": "Quang-Ha",
+        "family": "Ngo",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-1832-7621",
+        "authenticated-orcid": false,
+        "given": "Bang L.H.",
+        "family": "Nguyen",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Tuyen V.",
+        "family": "Vu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jianhua",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Tuan",
+        "family": "Ngo",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "78",
+    "reference": [
+      {
+        "key": "10.1016/j.apenergy.2023.122602_b1",
+        "series-title": "Smart grids",
+        "author": "IEA",
+        "year": "2022"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.apenergy.2023.122602_b2",
+        "doi-asserted-by": "crossref",
+        "first-page": "262",
+        "DOI": "10.1109/TPWRD.2015.2452967",
+        "article-title": "Rapid voltage changes in power system networks and their effect on flicker",
+        "volume": "31",
+        "author": "Barros",
+        "year": "2016",
+        "journal-title": "IEEE Trans Power Deliv"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.apenergy.2023.122602_b3",
+        "doi-asserted-by": "crossref",
+        "first-page": "2312",
+        "DOI": "10.1109/TSG.2018.2870600",
+        "article-title": "A survey on state estimation techniques and challenges in smart distribution systems",
+        "volume": "10",
+        "author": "Dehghanpour",
+        "year": "2019",
+        "journal-title": "IEEE Trans Smart Grid"
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.apenergy.2023.122602_b4",
+        "doi-asserted-by": "crossref",
+        "first-page": "3188",
+        "DOI": "10.1109/TPWRS.2019.2894769",
+        "article-title": "Power system dynamic state estimation: Motivations, definitions, methodologies, and future work",
+        "volume": "34",
+        "author": "Zhao",
+        "year": "2019",
+        "journal-title": "IEEE Trans Power Syst"
+      },
+      {
+        "key": "10.1016/j.apenergy.2023.122602_b5",
+        "series-title": "Data-driven learning-based optimization for distribution system state estimation",
+        "author": "Zamzam",
+        "year": "2019"
+      },
+      {
+        "key": "10.1016/j.apenergy.2023.122602_b6",
+        "doi-asserted-by": "crossref",
+        "first-page": "1",
+        "DOI": "10.1109/TIM.2022.3167722",
+        "article-title": "State and topology estimation for unobservable distribution systems using deep neural networks",
+        "volume": "71",
+        "author": "Azimian",
+        "year": "2022",
+        "journal-title": "IEEE Trans Instrum Meas"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.apenergy.2023.122602_b7",
+        "doi-asserted-by": "crossref",
+        "first-page": "4",
+        "DOI": "10.1109/MIE.2019.2958039",
+        "article-title": "Cyber-physical microgrids: Toward future resilient communities",
+        "volume": "14",
+        "author": "Vu",
+        "year": "2020",
+        "journal-title": "IEEE Ind Electron Mag"
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.apenergy.2023.122602_b8",
+        "doi-asserted-by": "crossref",
+        "first-page": "3205",
+        "DOI": "10.1109/TPWRS.2016.2628344",
+        "article-title": "A robust iterated extended Kalman filter for power system dynamic state estimation",
+        "volume": "32",
+        "author": "Zhao",
+        "year": "2017",
+        "journal-title": "IEEE Trans Power Syst"
+      },
+      {
+        "key": "10.1016/j.apenergy.2023.122602_b9",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.epsr.2021.107510",
+        "article-title": "Distributed dynamic state-input estimation for power networks of microgrids and active distribution systems with unknown inputs",
+        "volume": "201",
+        "author": "Nguyen",
+        "year": "2021",
+        "journal-title": "Electr Power Syst Res"
+      },
+      {
+        "issue": "6",
+        "key": "10.1016/j.apenergy.2023.122602_b10",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.3390/s21062085",
+        "article-title": "The new trend of state estimation: From model-driven to hybrid-driven methods",
+        "volume": "21",
+        "author": "Jin",
+        "year": "2021",
+        "journal-title": "Sensors"
+      },
+      {
+        "issue": "6",
+        "key": "10.1016/j.apenergy.2023.122602_b11",
+        "doi-asserted-by": "crossref",
+        "first-page": "4347",
+        "DOI": "10.1109/TPWRS.2020.2988352",
+        "article-title": "Physics-aware neural networks for distribution system state estimation",
+        "volume": "35",
+        "author": "Zamzam",
+        "year": "2020",
+        "journal-title": "IEEE Trans Power Syst"
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.apenergy.2023.122602_b12",
+        "doi-asserted-by": "crossref",
+        "first-page": "607",
+        "DOI": "10.35833/MPCE.2019.000565",
+        "article-title": "Physics-guided deep learning for power system state estimation",
+        "volume": "8",
+        "author": "Wang",
+        "year": "2020",
+        "journal-title": "J Mod Power Syst Clean Energy"
+      },
+      {
+        "key": "10.1016/j.apenergy.2023.122602_b13",
+        "first-page": "1",
+        "article-title": "Physics-informed graphical learning and Bayesian averaging for robust distribution state estimation",
+        "author": "Cao",
+        "year": "2023",
+        "journal-title": "IEEE Trans Power Syst"
+      },
+      {
+        "issue": "6",
+        "key": "10.1016/j.apenergy.2023.122602_b14",
+        "doi-asserted-by": "crossref",
+        "first-page": "5969",
+        "DOI": "10.1109/TPWRS.2023.3311638",
+        "article-title": "Probabilistic physics-informed graph convolutional network for active distribution system voltage prediction",
+        "volume": "38",
+        "author": "Su",
+        "year": "2023",
+        "journal-title": "IEEE Trans Power Syst"
+      },
+      {
+        "issue": "5",
+        "key": "10.1016/j.apenergy.2023.122602_b15",
+        "doi-asserted-by": "crossref",
+        "first-page": "3577",
+        "DOI": "10.1109/TPWRS.2021.3134952",
+        "article-title": "Estimate three-phase distribution line parameters with physics-informed graphical learning method",
+        "volume": "37",
+        "author": "Wang",
+        "year": "2022",
+        "journal-title": "IEEE Trans Power Syst"
+      },
+      {
+        "key": "10.1016/j.apenergy.2023.122602_b16",
+        "series-title": "Physics-informed graphical neural network for parameter & state estimations in power systems",
+        "author": "Pagnier",
+        "year": "2021"
+      },
+      {
+        "key": "10.1016/j.apenergy.2023.122602_b17",
+        "series-title": "Physics-informed deep neural network method for limited observability state estimation",
+        "author": "Ostrometzky",
+        "year": "2019"
+      },
+      {
+        "key": "10.1016/j.apenergy.2023.122602_b18",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.epsr.2022.108362",
+        "article-title": "Physics-informed geometric deep learning for inference tasks in power systems",
+        "volume": "211",
+        "author": "de Jongh",
+        "year": "2022",
+        "journal-title": "Electr Power Syst Res"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.apenergy.2023.122602_b19",
+        "first-page": "209",
+        "article-title": "Deep learning in power systems research: A review",
+        "volume": "7",
+        "author": "Khodayar",
+        "year": "2021",
+        "journal-title": "CSEE J Power Energy Syst"
+      },
+      {
+        "key": "10.1016/j.apenergy.2023.122602_b20",
+        "series-title": "2021 IEEE international conference on technology, research, and innovation for betterment of society (TRIBES)",
+        "first-page": "1",
+        "article-title": "Power system state estimation and forecasting using CNN based hybrid deep learning models",
+        "author": "Yarlagadda",
+        "year": "2021"
+      },
+      {
+        "key": "10.1016/j.apenergy.2023.122602_b21",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1049/iet-gtd.2020.0836",
+        "article-title": "Power system state estimation using conditional generative adversarial network",
+        "volume": "14",
+        "author": "He",
+        "year": "2020",
+        "journal-title": "IET Gener Transm Distrib"
+      },
+      {
+        "issue": "15",
+        "key": "10.1016/j.apenergy.2023.122602_b22",
+        "doi-asserted-by": "crossref",
+        "first-page": "4069",
+        "DOI": "10.1109/TSP.2019.2926023",
+        "article-title": "Real-time power system state estimation and forecasting via deep neural networks",
+        "volume": "67",
+        "author": "Zhang",
+        "year": "2019",
+        "journal-title": "IEEE Trans Signal Process"
+      },
+      {
+        "key": "10.1016/j.apenergy.2023.122602_b23",
+        "doi-asserted-by": "crossref",
+        "first-page": "57",
+        "DOI": "10.1016/j.aiopen.2021.01.001",
+        "article-title": "Graph neural networks: A review of methods and applications",
+        "volume": "1",
+        "author": "Zhou",
+        "year": "2020",
+        "journal-title": "AI Open"
+      },
+      {
+        "key": "10.1016/j.apenergy.2023.122602_b24",
+        "first-page": "1",
+        "article-title": "Graph neural network-based distribution system state estimators",
+        "author": "Madbhavi",
+        "year": "2023",
+        "journal-title": "IEEE Trans Ind Inf"
+      },
+      {
+        "key": "10.1016/j.apenergy.2023.122602_b25",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Park Sangwoo, Gama Fernando, Lavaei Javad, Sojoudi Somayeh. Distributed Power System State Estimation Using Graph Convolutional Neural Networks. In: Hawaii international conference on system sciences. 2023.",
+        "DOI": "10.24251/HICSS.2023.339"
+      },
+      {
+        "key": "10.1016/j.apenergy.2023.122602_b26",
+        "article-title": "Graph neural networks on factor graphs for robust, fast, and scalable linear state estimation with PMUs",
+        "volume": "34",
+        "author": "Kundacina",
+        "year": "2023",
+        "journal-title": "Sustain Energy Grids Netw"
+      },
+      {
+        "key": "10.1016/j.apenergy.2023.122602_b27",
+        "series-title": "Spatial-temporal recurrent graph neural networks for fault diagnostics in power distribution systems",
+        "author": "Nguyen",
+        "year": "2022"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.apenergy.2023.122602_b28",
+        "first-page": "614",
+        "article-title": "Informed machine learning – a taxonomy and survey of integrating prior knowledge into learning systems",
+        "volume": "35",
+        "author": "von Rueden",
+        "year": "2023",
+        "journal-title": "IEEE Trans Knowl Data Eng"
+      },
+      {
+        "key": "10.1016/j.apenergy.2023.122602_b29",
+        "doi-asserted-by": "crossref",
+        "first-page": "686",
+        "DOI": "10.1016/j.jcp.2018.10.045",
+        "article-title": "Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations",
+        "volume": "378",
+        "author": "Raissi",
+        "year": "2019",
+        "journal-title": "J Comput Phys"
+      },
+      {
+        "key": "10.1016/j.apenergy.2023.122602_b30",
+        "series-title": "2020 IEEE power & energy society general meeting (PESGM)",
+        "first-page": "1",
+        "article-title": "Physics-informed neural networks for power systems",
+        "author": "Misyris",
+        "year": "2020"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.apenergy.2023.122602_b31",
+        "doi-asserted-by": "crossref",
+        "first-page": "572",
+        "DOI": "10.1109/TPWRS.2022.3162473",
+        "article-title": "Applications of physics-informed neural networks in power systems - a review",
+        "volume": "38",
+        "author": "Huang",
+        "year": "2023",
+        "journal-title": "IEEE Trans Power Syst"
+      },
+      {
+        "issue": "36",
+        "key": "10.1016/j.apenergy.2023.122602_b32",
+        "doi-asserted-by": "crossref",
+        "first-page": "8098",
+        "DOI": "10.1021/acs.jpca.1c05102",
+        "article-title": "Stiff-pinn: Physics-informed neural network for stiff chemical kinetics",
+        "volume": "125",
+        "author": "Ji",
+        "year": "2021",
+        "journal-title": "J Phys Chem A"
+      },
+      {
+        "issue": "10",
+        "key": "10.1016/j.apenergy.2023.122602_b33",
+        "doi-asserted-by": "crossref",
+        "first-page": "11567",
+        "DOI": "10.1109/TPEL.2022.3176468",
+        "article-title": "Parameter estimation of power electronic converters with physics-informed machine learning",
+        "volume": "37",
+        "author": "Zhao",
+        "year": "2022",
+        "journal-title": "IEEE Trans Power Electron"
+      },
+      {
+        "key": "10.1016/j.apenergy.2023.122602_b34",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Hossain Md Jakir, Rahnamay-Naeini Mahshid. State Estimation in Smart Grids Using Temporal Graph Convolution Networks. In: 2021 North American power symposium (NAPS). 2021, p. 01–5.",
+        "DOI": "10.1109/NAPS52732.2021.9654642"
+      },
+      {
+        "key": "10.1016/j.apenergy.2023.122602_b35",
+        "unstructured": "Kipf Thomas N, Welling Max. Semi-Supervised Classification with Graph Convolutional Networks. In: International conference on learning representations. 2017."
+      },
+      {
+        "key": "10.1016/j.apenergy.2023.122602_b36",
+        "doi-asserted-by": "crossref",
+        "first-page": "60588",
+        "DOI": "10.1109/ACCESS.2021.3071274",
+        "article-title": "Graph neural network: A comprehensive review on non-euclidean space",
+        "volume": "9",
+        "author": "Asif",
+        "year": "2021",
+        "journal-title": "IEEE Access"
+      },
+      {
+        "key": "10.1016/j.apenergy.2023.122602_b37",
+        "doi-asserted-by": "crossref",
+        "first-page": "71050",
+        "DOI": "10.1109/ACCESS.2020.2987324",
+        "article-title": "Driven by data or derived through physics? A review of hybrid physics guided machine learning techniques with cyber-physical system (CPS) focus",
+        "volume": "8",
+        "author": "Rai",
+        "year": "2020",
+        "journal-title": "IEEE Access"
+      },
+      {
+        "key": "10.1016/j.apenergy.2023.122602_b38",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.epsr.2023.109551",
+        "article-title": "Gradient-enhanced physics-informed neural networks for power systems operational support",
+        "volume": "223",
+        "author": "Mohammadian",
+        "year": "2023",
+        "journal-title": "Electr Power Syst Res"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.apenergy.2023.122602_b39",
+        "doi-asserted-by": "crossref",
+        "first-page": "345",
+        "DOI": "10.35833/MPCE.2021.000058",
+        "article-title": "A review of graph neural networks and their applications in power systems",
+        "volume": "10",
+        "author": "Liao",
+        "year": "2021",
+        "journal-title": "J Mod Power Syst Clean Energy"
+      },
+      {
+        "issue": "5",
+        "key": "10.1016/j.apenergy.2023.122602_b40",
+        "doi-asserted-by": "crossref",
+        "first-page": "1043",
+        "DOI": "10.35833/MPCE.2020.000362",
+        "article-title": "Neural-network-based power system state estimation with extended observability",
+        "volume": "9",
+        "author": "Tian",
+        "year": "2021",
+        "journal-title": "J Mod Power Syst Clean Energy"
+      },
+      {
+        "key": "10.1016/j.apenergy.2023.122602_b41",
+        "doi-asserted-by": "crossref",
+        "first-page": "23359",
+        "DOI": "10.1109/ACCESS.2020.2967638",
+        "article-title": "Scalable distribution systems state estimation using long short-term memory networks as surrogates",
+        "volume": "8",
+        "author": "Cao",
+        "year": "2020",
+        "journal-title": "IEEE Access"
+      },
+      {
+        "key": "10.1016/j.apenergy.2023.122602_b42",
+        "series-title": "Survey of dropout methods for deep neural networks",
+        "author": "Labach",
+        "year": "2019"
+      },
+      {
+        "key": "10.1016/j.apenergy.2023.122602_b43",
+        "series-title": "Revisiting small batch training for deep neural networks",
+        "author": "Masters",
+        "year": "2018"
+      },
+      {
+        "key": "10.1016/j.apenergy.2023.122602_b44",
+        "series-title": "Fast graph representation learning with PyTorch geometric",
+        "author": "Fey",
+        "year": "2019"
+      }
+    ],
+    "container-title": [
+      "Applied Energy"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0306261923019669?httpAccept=text/xml",
+        "content-type": "text/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0306261923019669?httpAccept=text/plain",
+        "content-type": "text/plain",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2025,
+          10,
+          5
+        ]
+      ],
+      "date-time": "2025-10-05T14:54:58Z",
+      "timestamp": 1759676098000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0306261923019669"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2024,
+          3
+        ]
+      ]
+    },
+    "references-count": 44,
+    "alternative-id": [
+      "S0306261923019669"
+    ],
+    "URL": "https://doi.org/10.1016/j.apenergy.2023.122602",
+    "relation": {},
+    "ISSN": [
+      "0306-2619"
+    ],
+    "issn-type": [
+      {
+        "value": "0306-2619",
+        "type": "print"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2024,
+          3
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "Elsevier",
+        "name": "publisher",
+        "label": "This article is maintained by"
+      },
+      {
+        "value": "Physics-informed graphical neural network for power system state estimation",
+        "name": "articletitle",
+        "label": "Article Title"
+      },
+      {
+        "value": "Applied Energy",
+        "name": "journaltitle",
+        "label": "Journal Title"
+      },
+      {
+        "value": "https://doi.org/10.1016/j.apenergy.2023.122602",
+        "name": "articlelink",
+        "label": "CrossRef DOI link to publisher maintained version"
+      },
+      {
+        "value": "article",
+        "name": "content_type",
+        "label": "Content Type"
+      },
+      {
+        "value": "© 2023 Elsevier Ltd. All rights reserved.",
+        "name": "copyright",
+        "label": "Copyright"
+      }
+    ],
+    "article-number": "122602"
+  }
+}

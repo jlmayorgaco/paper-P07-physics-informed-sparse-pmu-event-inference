@@ -1,0 +1,181 @@
+{
+  "key": "kalman1960",
+  "retrieved_at": "2026-11-01T03:53:22.740629+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1115%2F1.3662552",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1115/1.3662552",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:24.517707+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          31
+        ]
+      ],
+      "date-time": "2026-10-31T23:35:21Z",
+      "timestamp": 1793489721534,
+      "version": "4.5.0"
+    },
+    "reference-count": 0,
+    "publisher": "ASME International",
+    "issue": "1",
+    "content-domain": {
+      "domain": [
+        "asmedigitalcollection.asme.org"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          1960,
+          3,
+          1
+        ]
+      ]
+    },
+    "abstract": "<jats:p>The classical filtering and prediction problem is re-examined using the Bode-Shannon representation of random processes and the “state-transition” method of analysis of dynamic systems. New results are: (1) The formulation and methods of solution of the problem apply without modification to stationary and nonstationary statistics and to growing-memory and infinite-memory filters. (2) A nonlinear difference (or differential) equation is derived for the covariance matrix of the optimal estimation error. From the solution of this equation the co-efficients of the difference (or differential) equation of the optimal linear filter are obtained without further calculations. (3) The filtering problem is shown to be the dual of the noise-free regulator problem. The new method developed here is applied to two well-known problems, confirming and extending earlier results. The discussion is largely self-contained and proceeds from first principles; basic concepts of the theory of random processes are reviewed in the Appendix.</jats:p>",
+    "DOI": "10.1115/1.3662552",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2011,
+          11,
+          8
+        ]
+      ],
+      "date-time": "2011-11-08T16:15:52Z",
+      "timestamp": 1320768952000
+    },
+    "page": "35-45",
+    "update-policy": "https://doi.org/10.1115/crossmarkpolicy-asme",
+    "source": "Crossref",
+    "is-referenced-by-count": 24286,
+    "title": [
+      "A New Approach to Linear Filtering and Prediction Problems"
+    ],
+    "prefix": "10.1115",
+    "volume": "82",
+    "author": [
+      {
+        "given": "R. E.",
+        "family": "Kalman",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Research Institute for Advanced Study, Baltimore, Md."
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "33",
+    "published-online": {
+      "date-parts": [
+        [
+          1960,
+          3,
+          1
+        ]
+      ]
+    },
+    "container-title": [
+      "Journal of Basic Engineering"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "http://asmedigitalcollection.asme.org/fluidsengineering/article-pdf/82/1/35/5518977/35_1.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "syndication"
+      },
+      {
+        "URL": "http://asmedigitalcollection.asme.org/fluidsengineering/article-pdf/82/1/35/5518977/35_1.pdf",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2019,
+          11,
+          7
+        ]
+      ],
+      "date-time": "2019-11-07T09:49:48Z",
+      "timestamp": 1573120188000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://asmedigitalcollection.asme.org/fluidsengineering/article/82/1/35/397706/A-New-Approach-to-Linear-Filtering-and-Prediction"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          1960,
+          3,
+          1
+        ]
+      ]
+    },
+    "references-count": 0,
+    "journal-issue": {
+      "issue": "1",
+      "published-print": {
+        "date-parts": [
+          [
+            1960,
+            3,
+            1
+          ]
+        ]
+      }
+    },
+    "URL": "https://doi.org/10.1115/1.3662552",
+    "relation": {},
+    "ISSN": [
+      "0021-9223"
+    ],
+    "issn-type": [
+      {
+        "value": "0021-9223",
+        "type": "print"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          1960,
+          3,
+          1
+        ]
+      ]
+    }
+  }
+}

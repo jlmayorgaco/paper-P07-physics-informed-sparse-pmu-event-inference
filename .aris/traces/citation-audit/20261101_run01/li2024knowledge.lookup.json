@@ -1,0 +1,435 @@
+{
+  "key": "li2024knowledge",
+  "retrieved_at": "2026-11-01T03:53:21.676716+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1049%2Fgtd2.13331",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1049/gtd2.13331",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:53:59.530402+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2025,
+          10,
+          27
+        ]
+      ],
+      "date-time": "2025-10-27T13:55:24Z",
+      "timestamp": 1761573324057,
+      "version": "build-2065373602"
+    },
+    "reference-count": 28,
+    "publisher": "Institution of Engineering and Technology (IET)",
+    "issue": "24",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              12,
+              5
+            ]
+          ],
+          "date-time": "2024-12-05T00:00:00Z",
+          "timestamp": 1733356800000
+        },
+        "content-version": "vor",
+        "delay-in-days": 4,
+        "URL": "http://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100001809",
+        "name": "National Natural Science Foundation of China",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "52377098"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "52377098"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100001809",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "ietresearch.onlinelibrary.wiley.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "IET Generation Trans &amp;amp; Dist"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2024,
+          12
+        ]
+      ]
+    },
+    "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>Accurate and fast disturbance localisation is critical for taking timely controls to prevent power system instability. With the increased complexity of systems, the physical model‐based disturbance localisation is challenging to achieve good performance due to model deficiency. Phasor measurement unit (PMU)‐based approaches are developed but their performance has been significantly affected by the number of PMUs. To this end, this article proposes a joint data and knowledge‐driven disturbance localisation method. A spatiotemporal graph convolutional network is proposed to effectively capture the spatiotemporal dependence with a limited number of PMU measurements. By integrating the physical constraints of disturbance type‐topology information and localisation cost characteristics, a composite constraint loss function is proposed that embed physical knowledge into the data‐driven method. This leads to the development of the disturbance localisation method and allows quick identification, improved localisation accuracy, and interpretability of the algorithm. Simulation results carried out on the IEEE 39‐bus system and IEEE 118‐bus system verify the effectiveness and robustness of the proposed method.</jats:p>",
+    "DOI": "10.1049/gtd2.13331",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2024,
+          12,
+          5
+        ]
+      ],
+      "date-time": "2024-12-05T22:44:14Z",
+      "timestamp": 1733438654000
+    },
+    "page": "4078-4089",
+    "update-policy": "https://doi.org/10.1002/crossmark_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 0,
+    "title": [
+      "A joint data and knowledge‐driven method for power system disturbance localisation"
+    ],
+    "prefix": "10.1049",
+    "volume": "18",
+    "author": [
+      {
+        "given": "Zikang",
+        "family": "Li",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "State Grid Shanghai Urban Electric Power Supply Company  Shanghai China"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Jiyang",
+        "family": "Tian",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "State Key Laboratory of Alternate Electrical Power System with Renewable Energy Sources North China Electric Power University  Baoding Hebei China"
+          },
+          {
+            "name": "School of Electrical and Electronic Engineering University of Manchester  Manchester UK"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-9569-3430",
+        "authenticated-orcid": false,
+        "given": "Hao",
+        "family": "Liu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "State Key Laboratory of Alternate Electrical Power System with Renewable Energy Sources North China Electric Power University  Beijing China"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "member": "265",
+    "published-online": {
+      "date-parts": [
+        [
+          2024,
+          12,
+          5
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_2_12_2_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1049/iet-gtd.2017.1698"
+      },
+      {
+        "key": "e_1_2_12_3_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2018.2803141"
+      },
+      {
+        "key": "e_1_2_12_4_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2018.2875150"
+      },
+      {
+        "key": "e_1_2_12_5_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TII.2018.2798579"
+      },
+      {
+        "key": "e_1_2_12_6_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2020.3040163"
+      },
+      {
+        "key": "e_1_2_12_7_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TII.2018.2855428"
+      },
+      {
+        "key": "e_1_2_12_8_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TII.2017.2772081"
+      },
+      {
+        "key": "e_1_2_12_9_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TII.2017.2777148"
+      },
+      {
+        "key": "e_1_2_12_10_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2019.2912350"
+      },
+      {
+        "key": "e_1_2_12_11_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TII.2017.2731366"
+      },
+      {
+        "key": "e_1_2_12_12_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2021.3064250"
+      },
+      {
+        "key": "e_1_2_12_13_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TII.2021.3072397"
+      },
+      {
+        "key": "e_1_2_12_14_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2018.2824851"
+      },
+      {
+        "key": "e_1_2_12_15_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2020.2986019"
+      },
+      {
+        "key": "e_1_2_12_16_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2010.2052934"
+      },
+      {
+        "key": "e_1_2_12_17_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1049/iet-stg.2018.0081"
+      },
+      {
+        "key": "e_1_2_12_18_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1049/iet-gtd.2016.1851"
+      },
+      {
+        "key": "e_1_2_12_19_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2019.2941565"
+      },
+      {
+        "key": "e_1_2_12_20_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2019.2917794"
+      },
+      {
+        "key": "e_1_2_12_21_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/MSP.2017.2693418"
+      },
+      {
+        "key": "e_1_2_12_22_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TII.2019.2910416"
+      },
+      {
+        "key": "e_1_2_12_23_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TNNLS.2020.2978386"
+      },
+      {
+        "key": "e_1_2_12_24_1",
+        "unstructured": "denOord A.C. et al.:WaveNet: A generative model for raw audio.https://arxiv.org/abs/1609.03499"
+      },
+      {
+        "key": "e_1_2_12_25_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2009.2036470"
+      },
+      {
+        "key": "e_1_2_12_26_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2019.2896327"
+      },
+      {
+        "key": "e_1_2_12_27_1",
+        "unstructured": "Hansen A.D. Jauch C. Sorensen P.:Dynamic wind turbine models in power system simulation tool digsilent. Tech. Rep. Risø‐R‐400(EN) Risø National Laboratory Risø Denmark(2003)"
+      },
+      {
+        "key": "e_1_2_12_28_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2021.3084469"
+      },
+      {
+        "key": "e_1_2_12_29_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2017.2695963"
+      }
+    ],
+    "container-title": [
+      "IET Generation, Transmission &amp; Distribution"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://ietresearch.onlinelibrary.wiley.com/doi/pdf/10.1049/gtd2.13331",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2025,
+          10,
+          27
+        ]
+      ],
+      "date-time": "2025-10-27T12:48:21Z",
+      "timestamp": 1761569301000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/gtd2.13331"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2024,
+          12
+        ]
+      ]
+    },
+    "references-count": 28,
+    "journal-issue": {
+      "issue": "24",
+      "published-print": {
+        "date-parts": [
+          [
+            2024,
+            12
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "10.1049/gtd2.13331"
+    ],
+    "URL": "https://doi.org/10.1049/gtd2.13331",
+    "archive": [
+      "Portico"
+    ],
+    "relation": {},
+    "ISSN": [
+      "1751-8687",
+      "1751-8695"
+    ],
+    "issn-type": [
+      {
+        "type": "print",
+        "value": "1751-8687"
+      },
+      {
+        "type": "electronic",
+        "value": "1751-8695"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2024,
+          12
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2024-07-10",
+        "order": 0,
+        "name": "received",
+        "label": "Received",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      },
+      {
+        "value": "2024-11-11",
+        "order": 2,
+        "name": "accepted",
+        "label": "Accepted",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      },
+      {
+        "value": "2024-12-05",
+        "order": 3,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

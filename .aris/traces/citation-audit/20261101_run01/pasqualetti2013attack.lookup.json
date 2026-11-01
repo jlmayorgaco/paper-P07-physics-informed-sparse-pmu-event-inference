@@ -1,0 +1,518 @@
+{
+  "key": "pasqualetti2013attack",
+  "retrieved_at": "2026-11-01T03:53:23.176628+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1109%2FTAC.2013.2266831",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1109/TAC.2013.2266831",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:35.962123+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          31
+        ]
+      ],
+      "date-time": "2026-10-31T19:45:54Z",
+      "timestamp": 1793475954992,
+      "version": "4.5.0"
+    },
+    "reference-count": 53,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "11",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2013,
+              11,
+              1
+            ]
+          ],
+          "date-time": "2013-11-01T00:00:00Z",
+          "timestamp": 1383264000000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/100000001",
+        "name": "National Science Foundation",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "CNS-1135819"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "CNS-1135819"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/100000001",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Trans. Automat. Contr."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2013,
+          11
+        ]
+      ]
+    },
+    "DOI": "10.1109/tac.2013.2266831",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2013,
+          6,
+          21
+        ]
+      ],
+      "date-time": "2013-06-21T14:02:10Z",
+      "timestamp": 1371823330000
+    },
+    "page": "2715-2729",
+    "source": "Crossref",
+    "is-referenced-by-count": 1989,
+    "title": [
+      "Attack Detection and Identification in Cyber-Physical Systems"
+    ],
+    "prefix": "10.1109",
+    "volume": "58",
+    "author": [
+      {
+        "given": "Fabio",
+        "family": "Pasqualetti",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Florian",
+        "family": "Dorfler",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Francesco",
+        "family": "Bullo",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref39",
+        "author": "munkres",
+        "year": "2000",
+        "journal-title": "Topology"
+      },
+      {
+        "key": "ref38",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/S0005-1098(03)00104-3"
+      },
+      {
+        "key": "ref33",
+        "author": "kumar",
+        "year": "1999",
+        "journal-title": "Control of Nonlinear Differential Algebraic Equation Systems"
+      },
+      {
+        "key": "ref32",
+        "author": "osiadacz",
+        "year": "1987",
+        "journal-title": "Simulation and Analysis of Gas Networks"
+      },
+      {
+        "key": "ref31",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ACC.2011.5991344"
+      },
+      {
+        "key": "ref30",
+        "author": "scholtz",
+        "year": "2004",
+        "journal-title": "Observer-based monitors and distributed wave controllers for electromechanical disturbances in power systems"
+      },
+      {
+        "key": "ref37",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1201/9780203913673",
+        "author": "abur",
+        "year": "2004",
+        "journal-title": "Power System State Estimation Theory and Implementation"
+      },
+      {
+        "key": "ref36",
+        "author": "boulos",
+        "year": "2006",
+        "journal-title": "Comprehensive Water Distribution Systems Analysis Handbook for Engineers and Planners"
+      },
+      {
+        "key": "ref35",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s11081-008-9040-8"
+      },
+      {
+        "key": "ref34",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-1-84882-624-3"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/0024-3795(93)90424-M"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/BF02551379"
+      },
+      {
+        "key": "ref29",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2010.2046347"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1049/et.2010.0410"
+      },
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-0-387-75462-8_6"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.2010.2088690"
+      },
+      {
+        "key": "ref22",
+        "first-page": "161",
+        "article-title": "Stealthy deception attacks on water SCADA systems",
+        "author": "amin",
+        "year": "2010",
+        "journal-title": "Hybrid Syst Comput Control"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.2011.2158130"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-1-4612-1082-5"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCST.2009.2035515"
+      },
+      {
+        "key": "ref26",
+        "article-title": "False data injection attacks in control systems",
+        "author": "mo",
+        "year": "2010",
+        "journal-title": "Proc 1st Workshop Secure Control Syst"
+      },
+      {
+        "key": "ref25",
+        "author": "basile",
+        "year": "1991",
+        "journal-title": "Controlled and Conditioned Invariants in Linear System Theory"
+      },
+      {
+        "key": "ref50",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/0005-1098(90)90138-8"
+      },
+      {
+        "key": "ref51",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/BF01098963"
+      },
+      {
+        "key": "ref53",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/59.780914"
+      },
+      {
+        "key": "ref52",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2010.2051168"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CDC.2010.5717318"
+      },
+      {
+        "key": "ref11",
+        "first-page": "911",
+        "article-title": "Secure control against replay attacks",
+        "author": "mo",
+        "year": "2010",
+        "journal-title": "Proc Allerton Conf Commun Control Comput"
+      },
+      {
+        "key": "ref40",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/0024-3795(94)90489-8"
+      },
+      {
+        "key": "ref12",
+        "first-page": "90",
+        "article-title": "A decoupled feedback structure for covertly appropriating network control systems",
+        "author": "smith",
+        "year": "2011",
+        "journal-title": "Proc IFAC World Congr"
+      },
+      {
+        "key": "ref13",
+        "first-page": "4063",
+        "article-title": "Stackelberg-game analysis of correlated attacks in cyber-physical systems",
+        "author": "zhu",
+        "year": "2011",
+        "journal-title": "Proc Amer Control Conf"
+      },
+      {
+        "key": "ref14",
+        "article-title": "Secure state-estimation for dynamical systems under active adversaries",
+        "author": "hamza",
+        "year": "2011",
+        "journal-title": "Proc Allerton Conf Commun Control Comput"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CCA.1996.558870"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SMARTGRID.2010.5622046"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CDC.2011.6160641"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2011.2160297"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/JPROC.2011.2165269"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/00396338.2011.555586"
+      },
+      {
+        "key": "ref3",
+        "author": "kuvshinkova",
+        "year": "2003",
+        "journal-title": "?SQL Slammer worm lessons learned for consideration by the electricity sector ?"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/9.16422"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1049/et:20080602"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-642-00602-9_3"
+      },
+      {
+        "key": "ref7",
+        "author": "basseville",
+        "year": "1993",
+        "journal-title": "Detection of Abrupt Changes Theory and Application"
+      },
+      {
+        "key": "ref49",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TIT.2005.858979"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1653662.1653666"
+      },
+      {
+        "key": "ref46",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.cam.2010.11.031"
+      },
+      {
+        "key": "ref45",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCAD.1982.1270004"
+      },
+      {
+        "key": "ref48",
+        "author": "garey",
+        "year": "1979",
+        "journal-title": "Computers and Intractability"
+      },
+      {
+        "key": "ref47",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/JSTSP.2013.2245300"
+      },
+      {
+        "key": "ref42",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/BFb0002475"
+      },
+      {
+        "key": "ref41",
+        "author": "tokarzewski",
+        "year": "2006",
+        "journal-title": "Finite Zeros in Discrete Time Control Systems"
+      },
+      {
+        "key": "ref44",
+        "author": "skogestad",
+        "year": "2005",
+        "journal-title": "Multivariable Feedback Control Analysis and Design"
+      },
+      {
+        "key": "ref43",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1007/978-1-84628-615-5",
+        "author": "isidori",
+        "year": "1995",
+        "journal-title": "Nonlinear Control Systems"
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Automatic Control"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/9/6642086/06545301.pdf?arnumber=6545301",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2021,
+          11,
+          29
+        ]
+      ],
+      "date-time": "2021-11-29T15:36:47Z",
+      "timestamp": 1638200207000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "http://ieeexplore.ieee.org/document/6545301/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2013,
+          11
+        ]
+      ]
+    },
+    "references-count": 53,
+    "journal-issue": {
+      "issue": "11"
+    },
+    "URL": "https://doi.org/10.1109/tac.2013.2266831",
+    "relation": {},
+    "ISSN": [
+      "0018-9286",
+      "1558-2523"
+    ],
+    "issn-type": [
+      {
+        "value": "0018-9286",
+        "type": "print"
+      },
+      {
+        "value": "1558-2523",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2013,
+          11
+        ]
+      ]
+    }
+  }
+}

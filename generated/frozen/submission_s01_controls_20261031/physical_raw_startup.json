@@ -1,0 +1,13 @@
+{
+  "available": false,
+  "reports_used": 300,
+  "last_report_used_s": 9.966666666666667,
+  "observation_sha256": "862a88595a65c0cbbf06b192c041260976e25784ab55e8ba553c63eff68858d9",
+  "prefix_sha256": "ef83aaee2d9e4a39256bfe719a5f81224a2904490f83e9e679a3081049fb3418",
+  "truth_read": false,
+  "prefix_selected": false,
+  "thresholds_changed": false,
+  "source_sha256": "09b6351c69c4c8667781b431e58d872f0a824c289818073241512854dae90840",
+  "error": "ValueError('Noise estimate outside support: rocof 0.0009971766263150836')",
+  "consequence": "Frozen R11 startup contract does not admit this raw prefix; full physical replay is unavailable under that contract"
+}

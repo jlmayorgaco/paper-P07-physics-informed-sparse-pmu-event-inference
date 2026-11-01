@@ -1,0 +1,417 @@
+{
+  "key": "hu2026openset",
+  "retrieved_at": "2026-11-01T03:53:22.738418+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1109%2FTII.2026.3690931",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1109/TII.2026.3690931",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:23.585959+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          7
+        ]
+      ],
+      "date-time": "2026-09-07T20:10:28Z",
+      "timestamp": 1788811828492,
+      "version": "build-2803163510"
+    },
+    "reference-count": 26,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "9",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              9,
+              1
+            ]
+          ],
+          "date-time": "2026-09-01T00:00:00Z",
+          "timestamp": 1788220800000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              9,
+              1
+            ]
+          ],
+          "date-time": "2026-09-01T00:00:00Z",
+          "timestamp": 1788220800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              9,
+              1
+            ]
+          ],
+          "date-time": "2026-09-01T00:00:00Z",
+          "timestamp": 1788220800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              9,
+              1
+            ]
+          ],
+          "date-time": "2026-09-01T00:00:00Z",
+          "timestamp": 1788220800000
+        },
+        "content-version": "am",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      }
+    ],
+    "funder": [
+      {
+        "name": "U. S. Department of Energy's Office of Energy Efficiency and Renewable Energy"
+      },
+      {
+        "DOI": "10.13039/100011883",
+        "name": "Solar Energy Technologies Office",
+        "doi-asserted-by": "crossref",
+        "award": [
+          "DE-EE0011375"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "DE-EE0011375"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/100011883",
+            "id-type": "DOI",
+            "asserted-by": "crossref"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Trans. Ind. Inf."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2026,
+          9
+        ]
+      ]
+    },
+    "DOI": "10.1109/tii.2026.3690931",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2026,
+          5,
+          20
+        ]
+      ],
+      "date-time": "2026-05-20T19:54:56Z",
+      "timestamp": 1779306896000
+    },
+    "page": "8104-8115",
+    "source": "Crossref",
+    "is-referenced-by-count": 0,
+    "title": [
+      "Generative AI for Open-Set Event Detection and Classification in Power Systems Using Synchrophasor Data"
+    ],
+    "prefix": "10.1109",
+    "volume": "22",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-6136-0371",
+        "authenticated-orcid": false,
+        "given": "Yi",
+        "family": "Hu",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Michigan Technological University",
+            "place": [
+              "Houghton, MI, USA"
+            ],
+            "department": [
+              "Department of Electrical and Computer Engineering"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Zheyuan",
+        "family": "Cheng",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Danovo Energy Solutions, formerly Quanta Technology",
+            "place": [
+              "Raleigh, NC, USA"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.tej.2003.10.002"
+      },
+      {
+        "key": "ref2",
+        "article-title": "Ice storm makes Christmas a dark day for tens of thousands",
+        "year": "2025"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2015.2478421"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PEMWA.2012.6316400"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2014.2316476"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCAD.2014.7001352"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2018.2796442"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TII.2017.2731366"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2018.2859323"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TII.2018.2855428"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TII.2018.2865765"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ACCESS.2021.3087016"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PESGM.2012.6344715"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2020.2971909"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ISGT49243.2021.9372227"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TIM.2021.3115583"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2021.3081608"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/BigData50022.2020.9378106"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICGEA60749.2024.10561078"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2022.3153591"
+      },
+      {
+        "key": "ref21",
+        "first-page": "9786",
+        "article-title": "Unsupervised discovery of interpretable directions in the GaN latent space",
+        "volume-title": "Proc. Int. Conf. Mach. Learn.",
+        "author": "Voynov"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IGCC.2015.7393695"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2019.2941565"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/OAJPE.2021.3061648"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/5.726791"
+      },
+      {
+        "key": "ref26",
+        "article-title": "Automated high-speed power system event detection and classification using synchrophasor data",
+        "author": "Cheng",
+        "year": "2024"
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Industrial Informatics"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://ieeexplore.ieee.org/ielam/9424/11673945/11527391-aam.pdf",
+        "content-type": "application/pdf",
+        "content-version": "am",
+        "intended-application": "syndication"
+      },
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx8/9424/11673945/11527391.pdf?arnumber=11527391",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          7
+        ]
+      ],
+      "date-time": "2026-09-07T19:19:38Z",
+      "timestamp": 1788808778000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/11527391/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          9
+        ]
+      ]
+    },
+    "references-count": 26,
+    "journal-issue": {
+      "issue": "9"
+    },
+    "URL": "https://doi.org/10.1109/tii.2026.3690931",
+    "relation": {},
+    "ISSN": [
+      "1551-3203",
+      "1941-0050"
+    ],
+    "issn-type": [
+      {
+        "value": "1551-3203",
+        "type": "print"
+      },
+      {
+        "value": "1941-0050",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2026,
+          9
+        ]
+      ]
+    }
+  }
+}

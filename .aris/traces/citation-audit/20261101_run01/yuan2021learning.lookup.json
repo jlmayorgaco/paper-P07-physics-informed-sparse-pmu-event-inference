@@ -1,0 +1,459 @@
+{
+  "key": "yuan2021learning",
+  "retrieved_at": "2026-11-01T03:53:23.612323+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1109%2FTPWRS.2021.3081608",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1109/TPWRS.2021.3081608",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:50.171841+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          24
+        ]
+      ],
+      "date-time": "2026-10-24T17:37:26Z",
+      "timestamp": 1792863446358,
+      "version": "4.5.0"
+    },
+    "reference-count": 30,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "6",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              11,
+              1
+            ]
+          ],
+          "date-time": "2021-11-01T00:00:00Z",
+          "timestamp": 1635724800000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              11,
+              1
+            ]
+          ],
+          "date-time": "2021-11-01T00:00:00Z",
+          "timestamp": 1635724800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              11,
+              1
+            ]
+          ],
+          "date-time": "2021-11-01T00:00:00Z",
+          "timestamp": 1635724800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "funder": [
+      {
+        "name": "U.S. Department of Energy Office of Electricity",
+        "award": [
+          "DEOE0000910"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "DEOE0000910"
+            ]
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Trans. Power Syst."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2021,
+          11
+        ]
+      ]
+    },
+    "DOI": "10.1109/tpwrs.2021.3081608",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2021,
+          5,
+          18
+        ]
+      ],
+      "date-time": "2021-05-18T20:03:56Z",
+      "timestamp": 1621368236000
+    },
+    "page": "5044-5055",
+    "source": "Crossref",
+    "is-referenced-by-count": 41,
+    "title": [
+      "Learning-Based Real-Time Event Identification Using Rich Real PMU Data"
+    ],
+    "prefix": "10.1109",
+    "volume": "36",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-6623-4905",
+        "authenticated-orcid": false,
+        "given": "Yuxuan",
+        "family": "Yuan",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yifei",
+        "family": "Guo",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-2701-6817",
+        "authenticated-orcid": false,
+        "given": "Kaveh",
+        "family": "Dehghanpour",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-0656-0562",
+        "authenticated-orcid": false,
+        "given": "Zhaoyu",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-5345-2225",
+        "authenticated-orcid": false,
+        "given": "Yanchao",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref30",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1148/radiology.143.1.7063747"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRD.2016.2590961"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PESGM.2012.6344715"
+      },
+      {
+        "key": "ref12",
+        "author": "sokolova",
+        "year": "2006",
+        "journal-title": "Beyond Accuracy F-Score and ROC A Family of Discriminant Measures for Performance Evaluation"
+      },
+      {
+        "key": "ref13",
+        "first-page": "40",
+        "article-title": "Encoding time series as images for visual inspection and classification using tiled convolutional neural networks",
+        "author": "wang",
+        "year": "2015",
+        "journal-title": "Assoc Adv Artif Intell"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "crossref",
+        "first-page": "121",
+        "DOI": "10.1109/TSG.2011.2106521",
+        "article-title": "Wavelet-based disturbance analysis for power system wide-area monitoring",
+        "volume": "2",
+        "author": "gao",
+        "year": "2011",
+        "journal-title": "IEEE Trans Smart Grid"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1371/journal.pone.0023378"
+      },
+      {
+        "key": "ref16",
+        "article-title": "A deep convolutional auto-encoder with pooling-unpooling layers in caffe",
+        "author": "t",
+        "year": "2017"
+      },
+      {
+        "key": "ref17",
+        "author": "goodfellow",
+        "year": "2016",
+        "journal-title": "Deep Learning"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPAMI.2015.2389824"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TASLP.2016.2602884"
+      },
+      {
+        "key": "ref28",
+        "first-page": "3146",
+        "article-title": "Lightgbm: A highly efficient gradient boosting decision tree",
+        "author": "ke",
+        "year": "2017",
+        "journal-title": "Proc Adv Neural Inform Process Syst"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2018.2859323"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.jisa.2019.02.008"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "crossref",
+        "first-page": "1154",
+        "DOI": "10.1109/TSG.2015.2478421",
+        "article-title": "Wavelet-based event detection method using pmu data",
+        "volume": "8",
+        "author": "kim",
+        "year": "2017",
+        "journal-title": "IEEE Trans Smart Grid"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRD.2008.921121"
+      },
+      {
+        "key": "ref29",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2016.2616385"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2014.2383693"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2019.2941565"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRD.2016.2520958"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2020.3020790"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2012.2195232"
+      },
+      {
+        "key": "ref1",
+        "first-page": "859",
+        "article-title": "Real-time area angle monitoring using synchrophasors: A practical framework and utility deployment",
+        "volume": "12",
+        "author": "ju",
+        "year": "2021"
+      },
+      {
+        "key": "ref20",
+        "first-page": "448",
+        "article-title": "Batch normalization: Accelerating deep network training by reducing internal covariate shift",
+        "author": "ioffe",
+        "year": "0",
+        "journal-title": "Proc 32nd Int Conf Mach Learn"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2006.68"
+      },
+      {
+        "key": "ref21",
+        "article-title": "Fractional max-pooling",
+        "author": "graham",
+        "year": "0"
+      },
+      {
+        "key": "ref24",
+        "first-page": "281",
+        "article-title": "Random search for hyper-parameter optimization",
+        "volume": "13",
+        "author": "bergstra",
+        "year": "2012",
+        "journal-title": "J Mach Learn Res"
+      },
+      {
+        "key": "ref23",
+        "article-title": "Adam: A method for stochastic optimization",
+        "author": "kingma",
+        "year": "0",
+        "journal-title": "Int Conf Learning Representations"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ISGTEurope.2014.7028892"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PESGM40551.2019.8973580"
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Power Systems"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/59/9580179/09435067.pdf?arnumber=9435067",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2022,
+          5,
+          10
+        ]
+      ],
+      "date-time": "2022-05-10T14:49:00Z",
+      "timestamp": 1652194140000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/9435067/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2021,
+          11
+        ]
+      ]
+    },
+    "references-count": 30,
+    "journal-issue": {
+      "issue": "6"
+    },
+    "URL": "https://doi.org/10.1109/tpwrs.2021.3081608",
+    "relation": {},
+    "ISSN": [
+      "0885-8950",
+      "1558-0679"
+    ],
+    "issn-type": [
+      {
+        "value": "0885-8950",
+        "type": "print"
+      },
+      {
+        "value": "1558-0679",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2021,
+          11
+        ]
+      ]
+    }
+  }
+}

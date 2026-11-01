@@ -1,0 +1,506 @@
+{
+  "key": "warner2024matrix",
+  "retrieved_at": "2026-11-01T03:53:22.099840+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.3150%2F23-BEJ1671",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.3150/23-BEJ1671",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:08.078012+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          8
+        ]
+      ],
+      "date-time": "2026-10-08T06:22:44Z",
+      "timestamp": 1791440564628,
+      "version": "4.3.3"
+    },
+    "reference-count": 57,
+    "publisher": "Bernoulli Society for Mathematical Statistics and Probability",
+    "issue": "3",
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "Bernoulli"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2024,
+          8,
+          1
+        ]
+      ]
+    },
+    "abstract": "<jats:p>The problem of sequential change diagnosis is considered, where observations are obtained on-line, an abrupt change occurs in their distribution, and the goal is to quickly detect the change and accurately identify the post-change distribution, while controlling the false alarm rate. A finite set of alternatives is postulated for the post-change regime, but no prior information is assumed for the unknown change point. A drawback of many algorithms that have been proposed for this problem is the implicit use of pre-change data for determining the post-change distribution. This can lead to very large conditional probabilities of misidentification, given that there was no false alarm, unless the change occurs soon after monitoring begins. A novel, recursive algorithm is proposed and shown to resolve this issue without the use of additional tuning parameters and without sacrificing control of the worst-case delay in Lorden’s sense. A theoretical analysis is conducted for a general family of sequential change diagnosis procedures, which supports the proposed algorithm and revises certain state-of-the-art results. Additionally, a novel, comprehensive method is proposed for the design and evaluation of sequential change diagnosis algorithms. This method is illustrated with simulation studies, where existing procedures are compared to the proposed.</jats:p>",
+    "DOI": "10.3150/23-bej1671",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2024,
+          5,
+          15
+        ]
+      ],
+      "date-time": "2024-05-15T01:23:15Z",
+      "timestamp": 1715736195000
+    },
+    "page": "2228-2252",
+    "source": "Crossref",
+    "is-referenced-by-count": 3,
+    "title": [
+      "Sequential change diagnosis revisited and the Adaptive Matrix CuSum"
+    ],
+    "prefix": "10.3150",
+    "volume": "30",
+    "author": [
+      {
+        "given": "Austin",
+        "family": "Warner",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Department of Statistics, University of Illinois Urbana-Champaign, Urbana, U.S.A"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Georgios",
+        "family": "Fellouris",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Statistics, University of Illinois Urbana-Champaign, Urbana, U.S.A"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "1726",
+    "reference": [
+      {
+        "key": "12",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Hinkley, D.V. (1970). Inference about the change-point in a sequence of random variables. <i>Biometrika</i> <b>57</b> 1–17. <a href=\"http://doiurl\">10.1093/biomet/57.1.1</a>",
+        "DOI": "10.1093/biomet/57.1.1"
+      },
+      {
+        "key": "48",
+        "unstructured": "Tartakovsky, A., Nikiforov, I. and Basseville, M. (2015). <i>Sequential Analysis: Hypothesis Testing and Changepoint Detection</i>. <i>Monographs on Statistics and Applied Probability</i> <b>136</b>. Boca Raton, FL: CRC Press."
+      },
+      {
+        "key": "9",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Gösmann, J., Stoehr, C., Heiny, J. and Dette, H. (2022). Sequential change point detection in high dimensional time series. <i>Electron. J. Stat.</i> <b>16</b> 3608–3671. <a href=\"http://doiurl\">10.1214/22-ejs2027</a>",
+        "DOI": "10.1214/22-EJS2027"
+      },
+      {
+        "key": "1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Bakhache, B. and Nikiforov, I. (1999). Reliable detection of faults in navigation systems. In <i>Proceedings of the 38th IEEE Conference on Decision and Control (Cat. No. 99CH36304)</i> <b>5</b> 4976–4981. IEEE.",
+        "DOI": "10.1109/CDC.1999.833335"
+      },
+      {
+        "key": "2",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Bissell, A. (1969). Cusum techniques for quality control. <i>J. R. Stat. Soc. Ser. C. Appl. Stat.</i> <b>18</b> 1–25.",
+        "DOI": "10.2307/2346436"
+      },
+      {
+        "key": "3",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Chen, Y., Wang, T. and Samworth, R.J. (2022). High-dimensional, multiscale online changepoint detection. <i>J. R. Stat. Soc. Ser. B. Stat. Methodol.</i> <b>84</b> 234–266. <a href=\"http://doiurl\">10.1111/rssb.12447</a>",
+        "DOI": "10.1111/rssb.12447"
+      },
+      {
+        "key": "4",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Chen, Y.C., Banerjee, T., Dominguez-Garcia, A.D. and Veeravalli, V.V. (2015). Quickest line outage detection and identification. <i>IEEE Trans. Power Syst.</i> <b>31</b> 749–758.",
+        "DOI": "10.1109/TPWRS.2015.2394246"
+      },
+      {
+        "key": "5",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Dayanik, S., Goulding, C. and Poor, H.V. (2008). Bayesian sequential change diagnosis. <i>Math. Oper. Res.</i> <b>33</b> 475–496. <a href=\"http://doiurl\">10.1287/moor.1070.0307</a>",
+        "DOI": "10.1287/moor.1070.0307"
+      },
+      {
+        "key": "6",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Dayanik, S., Powell, W.B. and Yamazaki, K. (2013). Asymptotically optimal Bayesian sequential change detection and identification rules. <i>Ann. Oper. Res.</i> <b>208</b> 337–370. <a href=\"http://doiurl\">10.1007/s10479-012-1121-6</a>",
+        "DOI": "10.1007/s10479-012-1121-6"
+      },
+      {
+        "key": "7",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Fellouris, G. and Sokolov, G. (2016). Second-order asymptotic optimality in multisensor sequential change detection. <i>IEEE Trans. Inf. Theory</i> <b>62</b> 3662–3675. <a href=\"http://doiurl\">10.1109/TIT.2016.2549042</a>",
+        "DOI": "10.1109/TIT.2016.2549042"
+      },
+      {
+        "key": "8",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Fienberg, S.E. and Shmueli, G. (2005). Statistical issues and challenges associated with rapid detection of bio-terrorist attacks. <i>Stat. Med.</i> <b>24</b> 513–529. <a href=\"http://doiurl\">10.1002/sim.2032</a>",
+        "DOI": "10.1002/sim.2032"
+      },
+      {
+        "key": "10",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Han, D. and Tsung, F. (2007). Detection and diagnosis of unknown abrupt changes using CUSUM multi-chart schemes. <i>Sequential Anal.</i> <b>26</b> 225–249. <a href=\"http://doiurl\">10.1080/07474940701404765</a>",
+        "DOI": "10.1080/07474940701404765"
+      },
+      {
+        "key": "11",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Hawkins, D.M., Qiu, P. and Kang, C.W. (2003). The changepoint model for statistical process control. <i>J. Qual. Technol.</i> <b>35</b> 355–366.",
+        "DOI": "10.1080/00224065.2003.11980233"
+      },
+      {
+        "key": "13",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Huang, Y.-C., Huang, Y.-J. and Lin, S.-C. (2021). Asymptotic optimality in Byzantine distributed quickest change detection. <i>IEEE Trans. Inf. Theory</i> <b>67</b> 5942–5962. <a href=\"http://doiurl\">10.1109/TIT.2021.3100423</a>",
+        "DOI": "10.1109/TIT.2021.3100423"
+      },
+      {
+        "key": "14",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Joe Qin, S. (2003). Statistical process monitoring: Basics and beyond. <i>J. Chemom.</i> <b>17</b> 480–502.",
+        "DOI": "10.1002/cem.800"
+      },
+      {
+        "key": "15",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Lai, T.L. (1998). Information bounds and quick detection of parameter changes in stochastic systems. <i>IEEE Trans. Inf. Theory</i> <b>44</b> 2917–2929. <a href=\"http://doiurl\">10.1109/18.737522</a>",
+        "DOI": "10.1109/18.737522"
+      },
+      {
+        "key": "16",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Lai, T.L. (2000). Sequential multiple hypothesis testing and efficient fault detection-isolation in stochastic systems. <i>IEEE Trans. Inf. Theory</i> <b>46</b> 595–608. <a href=\"http://doiurl\">10.1109/18.825826</a>",
+        "DOI": "10.1109/18.825826"
+      },
+      {
+        "key": "17",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Lai, T.L. and Shan, J.Z. (1999). Efficient recursive algorithms for detection of abrupt changes in signals and control systems. <i>IEEE Trans. Automat. Control</i> <b>44</b> 952–966. <a href=\"http://doiurl\">10.1109/9.763211</a>",
+        "DOI": "10.1109/9.763211"
+      },
+      {
+        "key": "18",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Lai, T.L. and Xing, H. (2010). Sequential change-point detection when the pre- and post-change parameters are unknown. <i>Sequential Anal.</i> <b>29</b> 162–175. <a href=\"http://doiurl\">10.1080/07474941003741078</a>",
+        "DOI": "10.1080/07474941003741078"
+      },
+      {
+        "key": "19",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Lau, T.S., Tay, W.P. and Veeravalli, V.V. (2019). A binning approach to quickest change detection with unknown post-change distribution. <i>IEEE Trans. Signal Process.</i> <b>67</b> 609–621. <a href=\"http://doiurl\">10.1109/TSP.2018.2881666</a>",
+        "DOI": "10.1109/TSP.2018.2881666"
+      },
+      {
+        "key": "20",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Liang, Y. and Veeravalli, V.V. (2022). Non-parametric quickest mean-change detection. <i>IEEE Trans. Inf. Theory</i> <b>68</b> 8040–8052.",
+        "DOI": "10.1109/TIT.2022.3191957"
+      },
+      {
+        "key": "21",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Lorden, G. (1971). Procedures for reacting to a change in distribution. <i>Ann. Math. Stat.</i> <b>42</b> 1897–1908. <a href=\"http://doiurl\">10.1214/aoms/1177693055</a>",
+        "DOI": "10.1214/aoms/1177693055"
+      },
+      {
+        "key": "22",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Ma, X., Lai, L. and Cui, S. (2021). Two-stage Bayesian sequential change diagnosis. <i>IEEE Trans. Signal Process.</i> <b>69</b> 6131–6147. <a href=\"http://doiurl\">10.1109/TSP.2021.3115426</a>",
+        "DOI": "10.1109/TSP.2021.3115426"
+      },
+      {
+        "key": "23",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Malladi, D.P. and Speyer, J.L. (1999). A generalized Shiryayev sequential probability ratio test for change detection and isolation. <i>IEEE Trans. Automat. Control</i> <b>44</b> 1522–1534. <a href=\"http://doiurl\">10.1109/9.780416</a>",
+        "DOI": "10.1109/9.780416"
+      },
+      {
+        "key": "24",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Mei, Y. (2006). Sequential change-point detection when unknown parameters are present in the pre-change distribution. <i>Ann. Statist.</i> <b>34</b> 92–122. <a href=\"http://doiurl\">10.1214/009053605000000859</a>",
+        "DOI": "10.1214/009053605000000859"
+      },
+      {
+        "key": "25",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Mei, Y. (2010). Efficient scalable schemes for monitoring a large number of data streams. <i>Biometrika</i> <b>97</b> 419–433. <a href=\"http://doiurl\">10.1093/biomet/asq010</a>",
+        "DOI": "10.1093/biomet/asq010"
+      },
+      {
+        "key": "26",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Moustakides, G.V. (1986). Optimal stopping times for detecting changes in distributions. <i>Ann. Statist.</i> <b>14</b> 1379–1387. <a href=\"http://doiurl\">10.1214/aos/1176350164</a>",
+        "DOI": "10.1214/aos/1176350164"
+      },
+      {
+        "key": "27",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Nikiforov, I.V. (1995). A generalized change detection problem. <i>IEEE Trans. Inf. Theory</i> <b>41</b> 171–187. <a href=\"http://doiurl\">10.1109/18.370109</a>",
+        "DOI": "10.1109/18.370109"
+      },
+      {
+        "key": "28",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Nikiforov, I.V. (2000). A simple recursive algorithm for diagnosis of abrupt changes in random signals. <i>IEEE Trans. Inf. Theory</i> <b>46</b> 2740–2746. <a href=\"http://doiurl\">10.1109/18.887891</a>",
+        "DOI": "10.1109/18.887891"
+      },
+      {
+        "key": "29",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Nikiforov, I.V. (2003). A lower bound for the detection/isolation delay in a class of sequential tests. <i>IEEE Trans. Inf. Theory</i> <b>49</b> 3037–3047. <a href=\"http://doiurl\">10.1109/TIT.2003.818398</a>",
+        "DOI": "10.1109/TIT.2003.818398"
+      },
+      {
+        "key": "30",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Nikiforov, I.V. (2016). Sequential detection/isolation of abrupt changes. <i>Sequential Anal.</i> <b>35</b> 268–301. <a href=\"http://doiurl\">10.1080/07474946.2016.1206354</a>",
+        "DOI": "10.1080/07474946.2016.1206354"
+      },
+      {
+        "key": "31",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Nikiforov, I., Varavva, V. and Kireichikov, V. (1993). Application of statistical fault detection algorithms to navigation systems monitoring. <i>Automatica</i> <b>29</b> 1275–1290.",
+        "DOI": "10.1016/0005-1098(93)90050-4"
+      },
+      {
+        "key": "32",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Oskiper, T. and Poor, H.V. (2002). Online activity detection in a multiuser environment using the matrix CUSUM algorithm. <i>IEEE Trans. Inf. Theory</i> <b>48</b> 477–493. <a href=\"http://doiurl\">10.1109/18.979323</a>",
+        "DOI": "10.1109/18.979323"
+      },
+      {
+        "key": "33",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Page, E.S. (1954). Continuous inspection schemes. <i>Biometrika</i> <b>41</b> 100–115. <a href=\"http://doiurl\">10.1093/biomet/41.1-2.100</a>",
+        "DOI": "10.1093/biomet/41.1-2.100"
+      },
+      {
+        "key": "34",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Pergamenchtchikov, S.M., Tartakovsky, A.G. and Spivak, V.S. (2022). Minimax and pointwise sequential changepoint detection and identification for general stochastic models. <i>J. Multivariate Anal.</i> <b>190</b> Paper No. 104977, 22. <a href=\"http://doiurl\">10.1016/j.jmva.2022.104977</a>",
+        "DOI": "10.1016/j.jmva.2022.104977"
+      },
+      {
+        "key": "35",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Pollak, M. (1985). Optimal detection of a change in distribution. <i>Ann. Statist.</i> <b>13</b> 206–227. <a href=\"http://doiurl\">10.1214/aos/1176346587</a>",
+        "DOI": "10.1214/aos/1176346587"
+      },
+      {
+        "key": "36",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Rolka, H., Burkom, H., Cooper, G.F., Kulldorff, M., Madigan, D. and Wong, W.-K. (2007). Issues in applied statistics for public health bioterrorism surveillance using multiple data streams: Research needs. <i>Stat. Med.</i> <b>26</b> 1834–1856. <a href=\"http://doiurl\">10.1002/sim.2793</a>",
+        "DOI": "10.1002/sim.2793"
+      },
+      {
+        "key": "37",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Ru, J., Jilkov, V.P., Li, X.R. and Bashi, A. (2009). Detection of target maneuver onset. <i>IEEE Trans. Aerosp. Electron. Syst.</i> <b>45</b> 536–554.",
+        "DOI": "10.1109/TAES.2009.5089540"
+      },
+      {
+        "key": "38",
+        "unstructured": "Shewhart, W.A. (1931). <i>Economic Control of Quality of Manufactured Product</i>. London: Macmillan And Co Ltd."
+      },
+      {
+        "key": "39",
+        "unstructured": "Shin, J., Ramdas, A. and Rinaldo, A. (2022). E-detectors: A nonparametric framework for online changepoint detection. arXiv preprint <a href=\"https://arxiv.org/abs/arXiv:2203.03532\">arXiv:2203.03532</a>."
+      },
+      {
+        "key": "40",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Shiryaev, A.N. (1963). On optimum methods in quickest detection problems. <i>Theory Probab. Appl.</i> <b>8</b> 22–46. <a href=\"http://doiurl\">10.1137/1108002</a>",
+        "DOI": "10.1137/1108002"
+      },
+      {
+        "key": "41",
+        "unstructured": "Shiryaev, A.N. (2008). <i>Optimal Stopping Rules</i>. <i>Stochastic Modelling and Applied Probability</i> <b>8</b>. Berlin: Springer. Translated from the 1976 Russian second edition by A. B. Aries, Reprint of the 1978 translation."
+      },
+      {
+        "key": "42",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Siegmund, D. (1979). Corrected diffusion approximations in certain random walk problems. <i>Adv. in Appl. Probab.</i> <b>11</b> 701–719. <a href=\"http://doiurl\">10.2307/1426855</a>",
+        "DOI": "10.2307/1426855"
+      },
+      {
+        "key": "43",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Siegmund, D. (2013). Change-points: From sequential detection to biology and back. <i>Sequential Anal.</i> <b>32</b> 2–14. <a href=\"http://doiurl\">10.1080/07474946.2013.751834</a>",
+        "DOI": "10.1080/07474946.2013.751834"
+      },
+      {
+        "key": "44",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Siegmund, D. and Venkatraman, E.S. (1995). Using the generalized likelihood ratio statistic for sequential detection of a change-point. <i>Ann. Statist.</i> <b>23</b> 255–271. <a href=\"http://doiurl\">10.1214/aos/1176324466</a>",
+        "DOI": "10.1214/aos/1176324466"
+      },
+      {
+        "key": "45",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Tartakovsky, A.G. (2008). Multidecision quickest change-point detection: Previous achievements and open problems. <i>Sequential Anal.</i> <b>27</b> 201–231. <a href=\"http://doiurl\">10.1080/07474940801989202</a>",
+        "DOI": "10.1080/07474940801989202"
+      },
+      {
+        "key": "46",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Tartakovsky, A.G. (2021). An asymptotic theory of joint sequential changepoint detection and identification for general stochastic models. <i>IEEE Trans. Inf. Theory</i> <b>67</b> 4768–4783. <a href=\"http://doiurl\">10.1109/TIT.2021.3064344</a>",
+        "DOI": "10.1109/TIT.2021.3064344"
+      },
+      {
+        "key": "47",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Tartakovsky, A.G., Li, X.R. and Yaralov, G. (2003). Sequential detection of targets in multichannel systems. <i>IEEE Trans. Inf. Theory</i> <b>49</b> 425–445. <a href=\"http://doiurl\">10.1109/TIT.2002.807288</a>",
+        "DOI": "10.1109/TIT.2002.807288"
+      },
+      {
+        "key": "49",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Tartakovsky, A.G., Rozovskii, B.L., Blazek, R.B. and Kim, H. (2006b). A novel approach to detection of intrusions in computer networks via adaptive sequential and batch-sequential change-point detection methods. <i>IEEE Trans. Signal Process.</i> <b>54</b> 3372–3382.",
+        "DOI": "10.1109/TSP.2006.879308"
+      },
+      {
+        "key": "50",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Tartakovsky, A.G., Rozovskii, B.L., Blažek, R.B. and Kim, H. (2006a). Detection of intrusions in information systems by sequential change-point methods. <i>Stat. Methodol.</i> <b>3</b> 252–293. <a href=\"http://doiurl\">10.1016/j.stamet.2005.05.003</a>",
+        "DOI": "10.1016/j.stamet.2005.05.003"
+      },
+      {
+        "key": "51",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Warner, A. and Fellouris, G. (2022). CuSum for sequential change diagnosis. In <i>2022 IEEE International Symposium on Info. Theory</i> 486–491. <a href=\"http://doiurl\">10.1109/ISIT50566.2022.9834755</a>",
+        "DOI": "10.1109/ISIT50566.2022.9834755"
+      },
+      {
+        "key": "52",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Warner, A. and Fellouris, G. (2024). Supplement to “Sequential change diagnosis revisited and the Adaptive Matrix CuSum.” <a href=\"http://doiurl\">10.3150/23-BEJ1671SUPP</a>",
+        "DOI": "10.3150/23-BEJ1671"
+      },
+      {
+        "key": "53",
+        "unstructured": "Wei, S. and Xie, Y. (2022). Online kernel CUSUM for change-point detection. arXiv preprint <a href=\"https://arxiv.org/abs/arXiv:2211.15070\">arXiv:2211.15070</a>."
+      },
+      {
+        "key": "54",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Xie, L., Moustakides, G.V. and Xie, Y. (2023). Window-limited CUSUM for sequential change detection. <i>IEEE Trans. Inf. Theory</i> <b>69</b> 5990–6005.",
+        "DOI": "10.1109/TIT.2023.3274646"
+      },
+      {
+        "key": "55",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Xie, Y. and Siegmund, D. (2013). Sequential multi-sensor change-point detection. <i>Ann. Statist.</i> <b>41</b> 670–692. <a href=\"http://doiurl\">10.1214/13-AOS1094</a>",
+        "DOI": "10.1214/13-AOS1094"
+      },
+      {
+        "key": "56",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Xie, L., Zou, S., Xie, Y. and Veeravalli, V.V. (2021). Sequential (quickest) change detection: Classical results and new directions. <i>IEEE J. Sel. Areas Inf. Theory</i> <b>2</b> 494–514.",
+        "DOI": "10.1109/JSAIT.2021.3072962"
+      },
+      {
+        "key": "57",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Yang, H., Hadjiliadis, O. and Ludkovski, M. (2017). Quickest detection in the Wiener disorder problem with post-change uncertainty. <i>Stochastics</i> <b>89</b> 654–685. <a href=\"http://doiurl\">10.1080/17442508.2016.1276908</a>",
+        "DOI": "10.1080/17442508.2016.1276908"
+      }
+    ],
+    "container-title": [
+      "Bernoulli"
+    ],
+    "original-title": [],
+    "deposited": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          7
+        ]
+      ],
+      "date-time": "2026-10-07T17:32:29Z",
+      "timestamp": 1791394349000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://projecteuclid.org/journals/bernoulli/volume-30/issue-3/Sequential-change-diagnosis-revisited-and-the-Adaptive-Matrix-CuSum/10.3150/23-BEJ1671.full"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2024,
+          8,
+          1
+        ]
+      ]
+    },
+    "references-count": 57,
+    "journal-issue": {
+      "issue": "3",
+      "published-online": {
+        "date-parts": [
+          [
+            2024,
+            8,
+            1
+          ]
+        ]
+      }
+    },
+    "URL": "https://doi.org/10.3150/23-bej1671",
+    "relation": {},
+    "ISSN": [
+      "1350-7265"
+    ],
+    "issn-type": [
+      {
+        "value": "1350-7265",
+        "type": "print"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2024,
+          8,
+          1
+        ]
+      ]
+    }
+  }
+}

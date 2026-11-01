@@ -1,0 +1,497 @@
+{
+  "key": "zhao2014outages",
+  "retrieved_at": "2026-11-01T03:53:22.297477+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1109%2FJSTSP.2014.2342191",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1109/JSTSP.2014.2342191",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:11.272593+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          6,
+          3
+        ]
+      ],
+      "date-time": "2026-06-03T18:42:17Z",
+      "timestamp": 1780512137277,
+      "version": "3.54.1"
+    },
+    "reference-count": 30,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "6",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2014,
+              12,
+              1
+            ]
+          ],
+          "date-time": "2014-12-01T00:00:00Z",
+          "timestamp": 1417392000000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2014,
+              12,
+              1
+            ]
+          ],
+          "date-time": "2014-12-01T00:00:00Z",
+          "timestamp": 1417392000000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2014,
+              12,
+              1
+            ]
+          ],
+          "date-time": "2014-12-01T00:00:00Z",
+          "timestamp": 1417392000000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/100000181",
+        "name": "Air Force Office of Scientific Research",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "Grant FA9550-09-1-0643"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "Grant FA9550-09-1-0643"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/100000181",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/100000006",
+        "name": "Office of Naval Research",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "Grant N00014-12-1-0767"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "Grant N00014-12-1-0767"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/100000006",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/100000774",
+        "name": "Defense Threat Reduction Agency",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "Grant HDTRA1-08-1-0010"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "Grant HDTRA1-08-1-0010"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/100000774",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE J. Sel. Top. Signal Process."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2014,
+          12
+        ]
+      ]
+    },
+    "DOI": "10.1109/jstsp.2014.2342191",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2014,
+          7,
+          23
+        ]
+      ],
+      "date-time": "2014-07-23T20:10:23Z",
+      "timestamp": 1406146223000
+    },
+    "page": "1140-1153",
+    "source": "Crossref",
+    "is-referenced-by-count": 45,
+    "title": [
+      "Identification of Outages in Power Systems With Uncertain States and Optimal Sensor Locations"
+    ],
+    "prefix": "10.1109",
+    "volume": "8",
+    "author": [
+      {
+        "given": "Yue",
+        "family": "Zhao",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Department of Electrical Engineering, Stanford University"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jianshu",
+        "family": "Chen",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Electrical Engineering, University of California, Los Angeles"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Andrea",
+        "family": "Goldsmith",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Engineering, Stanford University"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "H. Vincent",
+        "family": "Poor",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Dean, School of Engineering and Applied Sciences, Princeton University"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref30",
+        "year": "2006",
+        "journal-title": "IEEE Standard for Synchrophasors for Power System"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/MSP.2012.2187037"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SMARTGRID.2010.5622045"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPAS.1970.292678"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "crossref",
+        "first-page": "176",
+        "DOI": "10.1109/59.32475",
+        "article-title": "Detection of topology errors by State Estimation",
+        "volume": "4",
+        "author": "wu",
+        "year": "1989",
+        "journal-title": "IEEE Trans Power Sys"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/59.192991"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/NAPS.2012.6336364"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/59.260810"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2005.846209"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PES.2011.6039076"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2013.2283079"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/67.207465"
+      },
+      {
+        "key": "ref28",
+        "year": "0",
+        "journal-title": "?Power Systems Test Case Archive ?"
+      },
+      {
+        "key": "ref3",
+        "year": "2004",
+        "journal-title": "?Final Report on August 14 2003 the Blackout in the United States and Canada ?"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/rnc.4590010404"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2008.2004826"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2007.908476"
+      },
+      {
+        "key": "ref29",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2010.2051168"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2012.2192142"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PES.2009.5275906"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "crossref",
+        "first-page": "4416",
+        "DOI": "10.1109/CDC.2013.6760569",
+        "article-title": "Optimal joint detection and estimation in linear models",
+        "author": "chen",
+        "year": "2013",
+        "journal-title": "Proc IEEE Conf Decision and Control"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1201/9780203913673",
+        "author": "abur",
+        "year": "2004",
+        "journal-title": "Power System State Estimation Theory and Implementation"
+      },
+      {
+        "key": "ref1",
+        "first-page": "1",
+        "article-title": "On PMU location selection for line outage detection in wide-area transmission networks",
+        "author": "zhao",
+        "year": "2012",
+        "journal-title": "Proc IEEE Power Energy Soc General Meeting"
+      },
+      {
+        "key": "ref20",
+        "first-page": "232",
+        "article-title": "Smart grid data integrity attacks: Characterizations and countermeasures",
+        "author": "giani",
+        "year": "2011",
+        "journal-title": "Proc IEEE Int Conf Smart Grid Commun (SmartGridComm)"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-1-4757-2341-0"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2011.2119336"
+      },
+      {
+        "key": "ref24",
+        "author": "kailath",
+        "year": "2000",
+        "journal-title": "Linear Estimation"
+      },
+      {
+        "key": "ref23",
+        "author": "wood",
+        "year": "1996",
+        "journal-title": "Power Generation Operation and Control"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1017/CBO9780511804441"
+      },
+      {
+        "key": "ref25",
+        "author": "van trees",
+        "year": "2004",
+        "journal-title": "Detection Estimation and Modulation Theory"
+      }
+    ],
+    "container-title": [
+      "IEEE Journal of Selected Topics in Signal Processing"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/4200690/6950939/06862865.pdf?arnumber=6862865",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2024,
+          3,
+          11
+        ]
+      ],
+      "date-time": "2024-03-11T18:06:39Z",
+      "timestamp": 1710180399000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/6862865/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2014,
+          12
+        ]
+      ]
+    },
+    "references-count": 30,
+    "journal-issue": {
+      "issue": "6"
+    },
+    "URL": "https://doi.org/10.1109/jstsp.2014.2342191",
+    "relation": {},
+    "ISSN": [
+      "1932-4553",
+      "1941-0484"
+    ],
+    "issn-type": [
+      {
+        "value": "1932-4553",
+        "type": "print"
+      },
+      {
+        "value": "1941-0484",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2014,
+          12
+        ]
+      ]
+    }
+  }
+}

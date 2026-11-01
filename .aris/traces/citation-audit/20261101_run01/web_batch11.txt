@@ -1,0 +1,413 @@
+Wide-Area Line Outage Monitoring by Sparse Phasor Measurements (https://waibuwang.eurekamag.com/research/108/050/108050902.php)
+citeturn30search0 [wordlim: 200] Published: 3.8 years ago; Crawled: last week; #### IEEE Transactions on Power Systems 38(4): 3621-3631 ... High speed, along with the robustness against partial communication network failures and losses of the time synchronization signal, makes the method suitable for real-time applications. ... 2012: On PMU location selection for line outage detection in wide-area transmission networks IEEE Power and Energy Society General Meeting: 6344572
+
+# Wide-Area Line Outage Monitoring by Sparse Phasor Measurements
+
+##### Azizi, S.; Jegarluei, M.R.; Kettner, A.M.; Dobakhshari, A.S.
+
+#### IEEE Transactions on Power Systems 38(4): 3621-3631
+
+#### 2023
+
+* * *
+
+ISSN/ISBN: 0885-8950
+
+DOI: 10.1109/tpwrs.2022.3201067
+Accession: 108050902
+
+##### Summary
+
+Timely identification of transmission line outages is key to situational awareness and preventing the propagation of disturbed system conditions. Although a line may get disconnected from both ends simultaneously, sequential tripping of the opposite ends of the line is more common regardless of whether the outage is planned or administered by protective relays. This paper proposes a method for line outage monitoring and identifying the sequence of events that a line is undergoing before getting disconnected from both ends. Using the bus impedance matrix, a transfer function is derived to relate the line outage to the variations of phasors collected in the control center. A closed-form solution is put forward to identify the disconnected line based on the weighted sum of squared residuals concept. --------------------------------------------------------------------------------
+Monitoring and control of power system oscillations using FACTS/HVDC and wide-area phasor measurements (https://eurekamag.com/research/104/863/104863338.php)
+citeturn30search1 [wordlim: 200] Crawled: today; 2009: A robust SMES controller design for stabilization of inter-area oscillations based on wide area synchronized phasor measurements Electric Power Systems Research 79(12): 1738-1749 ... 2023: Wide-Area Line Outage Monitoring by Sparse Phasor Measurements IEEE Transactions on Power Systems 38(4): 3621-3631
+
+Azizi, S.; Jegarluei, M.R.; Kettner, A.M.; Dobakhshari, A.S. 2023: Wide-Area Line Outage Monitoring by Sparse Phasor Measurements IEEE Transactions on Power Systems 38(4): 3621-3631
+
+Abazari, S.; Dardori, A.A.; Yazdi, M.B. 2015: Facts device wide area robust control for damping power system inter-area oscillations: A comparison between svc and TCSC UPB Scientific Bulletin, Series C: Electrical Engineering and Computer Science 77(1): 141-156
+
+Yutaka Ota; Hiroyuki Ukai; Koichi Nakamura; Hideki Fujita 2004: Midterm stability evaluation of wide-area power system using synchronized phasor measurements Electrical Engineering in Japan 147(1): 25-32
+
+Arulkumar, V.; Thangavel, S. 2015: Implementation for wide area power system monitoring and protection using phasor measuring units International Journal of Applied Engineering Research 10(20): 17964-17969
+
+Chakrabortty, A.; Chow, J.H.; Salazar, A. 2011: A Measurement-Based Framework for Dynamic Equivalencing of Large Power Systems Using Wide-Area Phasor Measurements IEEE Transactions on Smart Grid 2(1): 68-81
+--------------------------------------------------------------------------------
+NLR-TP-2002-052 (https://reports.nlr.nl/server/api/core/bitstreams/0101be88-55dc-48ca-a996-0c1085f4dc40/content)
+citeturn30search12 [wordlim: 200] Published: 20.6 years ago; Multi-Target-Multisensor ... stochastic hybrid state model of aircraft, NLR ... Blom, A sophisticated tracking algorithm for ... Bar-Shalom, The Interacting
+Multiple Model algorithm for systems with
+Markovian coefficients, Proc. 25th IEEE Conf. on
+Decision and Control, Athens, Greece, December
+1986, pp. 1758-1764.
+[4]
+H.A.P. Blom and W.C. Huisman, An aircraft
+trajectory segmentation and classification method
+based on the mode of flight concept, NLR-report
+TR-87-100 L, 1987.
+[5]
+H.A.P. Blom and Y. Bar-Shalom, The Interacting
+Multiple Model algorithm for systems with
+Markovian switching coefficients, IEEE Tr. on
+Automatic Control, Vol. 33 (1988), pp. 780-783.
+[6]
+R.A. Hogendoorn, H.A.P. Blom, Bayesian Track
+Initiation by time-reversion of Trajectory Models,
+Proc. IEEE Int. Conf. on Control Appl., April 1989,
+Jerusalem, paper WA-1-5.
+[7]
+F. 
+Voorbraak, 
+A 
+computationally 
+efficient
+approximation of Dempster-Shafer theory, Int. J.
+Man-Machine Studies, 1989, Vol. 30, pp. 525-536.
+[8]
+H.A.P. Blom, Bayesian estimation for decision-
+directed stochastic control, Ph.D. thesis, Delft Univ.
+of Technology, 1990.
+[9]
+H.A.P. Blom, Hybrid state estimation for systems
+with semi-Markov swithcing coefficients, Proc.
+European Control Conference, Grenoble, France,
+July, 1991, pp. 1132-1137.
+[10] H.A.P. Blom, R.A. Hoogendoorn, B.A. van Doorn
+and W.H.L. Neven, Organisation and registration of
+data for multi-sensor jump-diffusion tracking, NLR
+Technical Report, TR 91301 L, 1991.
+[11] H.A.P. Blom, R.A. Hogendoorn and B.A. van
+Doorn, Design of a Multisensor Tracking system for--------------------------------------------------------------------------------
+Preprint Proc. 43rd IEEE Conference on Decision and Control, December 14-17, 2004, Atlantis, Paradise Island, Bahamas (https://hybridge.nlr.nl/documents/R9.2_CDC2004-Final-Usletter-Preprint.pdf)
+citeturn30search13 [wordlim: 200] Published: 5 months ago; similarity with the switching/interaction step of IMM, this ... Follow-up research is to combine IMMPF with ... Rubin, “Using the SIR algorithm to simulate posterior ... Irwin, “Multiple Model Bootstrap Filter for ... Bar-Shalom, “The Interacting Multiple Model
+Cambridge, UK, 1998.
+[4] Y. Boers, J.N. Driessen, F. Verschure, W.P.M.H. Heemels, and A.
+Juloski, A multi target track before detect application, SPIE Conf.
+Small Targets Tracking, 2003.
+[5] S. McGinnity and G. W. Irwin, “Multiple Model Bootstrap Filter for
+Maneuvering Target Tracking,” IEEE Tr. on Aerospace and
+Electronic Systems, Vol. 36, 2000, pp. 1006-1012.
+[6] S. McGinnity and G. W. Irwin, “Maneuvering Tar-get Tracking
+using a Multiple-Model Bootstrap Filter,” Eds. A. Doucet, N. de
+Freitas and N. Gordon, Sequential Monte Carlo Methods in
+Practice, Springer 2001, pp. 479-497.
+[7] A. Doucet, N. J. Gordon and V. Krishnamurthy, “Particle Filters for
+State Estimation of Jump Markov Linear Systems,” IEEE Tr. on
+Signal Processing, Vol. 49, 2001, pp. 613-624.
+[8] X. Koutsoukis, J. Kurien, and F. Zhao, “Monitoring and Diagnosis
+of hybrid systems using particle filtering methods,” Proc.
+Mathematical Theory of Networks and Systems (MTNS), 2002.
+[9] H.A.P. Blom, “An efficient filter for abruptly changing systems,”
+Proc. of the 23rd IEEE CDC, 1984, pp.656-658.
+[10] H.A.P. Blom and Y. Bar-Shalom, “The Interacting Multiple Model
+algorithm for systems with Markovian switching coefficients,” IEEE
+Tr. on Automatic Control, Vol. 33 (1988), pp. 780-783.
+[11] J.K. Tugnait, A.H. Haddad, “A detection-estimation scheme for state
+estimation in switching environments,” Automatica, Vol. 15 (1979),
+pp. 477-481.
+[12] H.A.P. Blom and E.A. Bloem, “Joint IMMPDA Particle filter,” Proc.
+6th Int. Conf. on Information Fusion, July 8-11, 2003, Vol. 1, pp.
+785-792.
+[13] C. Musso, N. Oudjane, and F. Le Gland, “Improving Regularised
+Particle Filters,” Eds. A. Doucet, N. de Freitas and N. Gordon,
+Sequential Monte Carlo Methods in Practice, Springer 2001, pp.
+247-271.
+APPENDIX A
+In this appendix we derive characterizations of the
+elementary transitions I.b in the Theorem.
+From the law of total probability follows:--------------------------------------------------------------------------------
+NLR-TP-2006-683 (https://reports.nlr.nl/server/api/core/bitstreams/2a5b2973-64a5-40a5-bef0-7b69f81f6407/content)
+citeturn30search14 [wordlim: 200] Published: 19.8 years ago; Bar-Shalom, “The Interacting Multiple Model
+algorithm for systems with Markovian switching coefﬁcients,” IEEE ... Bloem, “Interacting Multiple Model Joint
+NLR-TP-2006-683
+[4] Blackman, S.S., et al, “Application of IMM/MHT Tracking with
+Spectral Features to Ground Targets,” Signal and Data Processing of
+Small Targets 1999, SPIE, Vol. 3809, Jul. 1999, pp. 456-465.
+[5] Blackman, S. S., and R. Popoli, “Design and analysis of modern
+tracking systems,” Artech House, Boston, 1999
+[6] Blom, H. A. P., “An efﬁcient ﬁlter for abruptly changing systems,”
+Proc. 23th IEEE Conf. on Decision and Control, 1984, pp. 656-658.
+[7] Blom, H. A. P., and Y. Bar-Shalom, “The Interacting Multiple Model
+algorithm for systems with Markovian switching coefﬁcients,” IEEE
+Tr. Automatic Control, Vol. 33 (1988), pp. 780-783.
+[8] Blom, H. A. P., and E. A. Bloem, “Probabilistic Data Association
+Avoiding Track Coalescence,” IEEE Tr. Automatic Control, Vol. 45
+(2000), pp. 247-259.
+[9] Blom, H. A. P., and E. A. Bloem, “Interacting Multiple Model Joint
+Probabilistic Data Asscoiation avoiding track coalescence,” Proc. IEEE
+Conf. Decision and Control, December, 2002, pp. --------------------------------------------------------------------------------
+Transmission Line Outage Detection with Limited (https://par.nsf.gov/servlets/purl/10483094)
+citeturn30search15 [wordlim: 200] Published: 8 months ago; for line outage detection in wide-area transmission networks,” in Proc. ... Ahmad Salehi Dobakhshari, “Wide-Area Line Outage Monitoring by ... vol.38, no.4, pp.3621-3631, 2023.
+Transactions on Industrial Informatics, vol. 12, no. 2, pp. 532-543, April
+2016.
+[10] Sadegh Azizi, Mohammad Rezaei Jegarluei, Andreas Martin Kettner,
+Ahmad Salehi Dobakhshari, “Wide-Area Line Outage Monitoring by
+Sparse Phasor Measurements,” IEEE Transactions on Power Systems,
+vol.38, no.4, pp.3621-3631, 2023.
+[11] J. E. Tate and T. J. Overbye, “Double line outage detection using phasor
+angle measurements,” in Proc. IEEE Power & Energy Soc. General
+Meeting, pp. 1-5, 2009.
+[12] G. Giannakis, V. Kekatos, N. Gatsis, S. Kim, H. Zhu and B. Wollenberg,
+“Monitoring and optimization for power grids: A signal processing
+perspective,” IEEE Signal Processing Magazine, vol. 30, no. 5, pp. 107-
+128, May 2013.
+[13] J. Wu, J. Xiong and Y. Shi, “Efficient Location Identification of Multiple
+Line Outages With Limited PMUs in Smart Grids,” IEEE Transactions
+on Power Systems, vol. 30, no. 4, pp. 1659-1668, July 2015.
+[14] Mehebub Alam, Shubhrajyoti Kundu, Siddhartha Sankar Thakur, Anil
+Kumar, Sumit Banerje, “A New AC Model for Transmission Line Outage
+Identification,” Advances in Systems, Control and Automations, vol. 708,
+pp. 223, 2021.
+Authorized licensed use limited to: University of Puerto Rico - Mayaguez. Downloaded on December 29,2023 at 17:55:40 UTC from IEEE Xplore.  Restrictions apply.--------------------------------------------------------------------------------
+NLR-TP-2006-692 (https://reports.nlr.nl/server/api/core/bitstreams/86298ba0-f69b-4f78-bc77-ce58be36cf58/content)
+citeturn30search16 [wordlim: 200] Published: 18.6 years ago; clutter using an Interacting Multiple Model Joint Probabilistic Data As- ... Bar-Shalom, “The Interacting Multiple Model
+algorithm for systems with Markovian switching coefﬁcients,” IEEE Tr.
+Bar-Shalom, Multitarget Multisensor Tracking,
+Vol. II, Artech House, 1992, pp. 93-110.
+[5] Y. Bar-Shalom, R. Li, “Multitarget-multisensor tracking: Principles and
+techniques, 1995.
+[6] H. A. P. Blom, “An efﬁcient ﬁlter for abruptly changing systems,” Proc.
+23th IEEE Conference on Decision and Control, (1984), pp. 656-658.
+[7] H. A. P. Blom and Y. Bar-Shalom, “The Interacting Multiple Model
+algorithm for systems with Markovian switching coefﬁcients,” IEEE Tr.
+on Automatic Control, Vol. 33 (1988), pp. 780-783.
+[8] H. A. P. Blom and E. A. Bloem, “Probabilistic Data Association
+Avoiding Track Coalescence,” IEEE Tr. on Automatic Control, Vol. 45
+(2000), pp. 247-259.
+[9] H. A. P. Blom and E. A. Bloem, “Combining IMM and JPDA for
+tracking multiple maneuvering targets in clutter,” Proc. 5th Int. Conf.
+on Information Fusion, July 8-11, 2002, Annapolis, MD, USA, Vol. 1,
+pp. 705-712.
+• The SIR-H joint particle ﬁlter is least sensitive to diver-
+gence of track because of switching to running on false
+measurements; this advantage shows both when targets
+are clearly separated from each other and when target
+paths come close to each other.
+Recently both [12] and [47] explored the potential effect
+on performance of extending IMMJPDA and IMMJPDA*
+to joint tracking versions, i.e. to versions where the multi-
+target states/modes are jointly estimated. Tugnait [47] showed--------------------------------------------------------------------------------
+NLR-TP-2002-443 (https://reports.nlr.nl/server/api/core/bitstreams/43b2e86b-a984-4bd0-9e17-cdc732ba7cab/content)
+citeturn30search17 [wordlim: 200] Published: 5 months ago; Bar-Shalom, The Interacting Multiple Model algorithm for systems with
+--------------------------------------------------------------------------------
+Identifying Sources of Subsynchronous Resonance Using Wide-Area Phasor Measurements (https://eurekamag.com/research/100/812/100812827.php)
+citeturn30search2 [wordlim: 200] Crawled: last month; 2009: A robust SMES controller design for stabilization of inter-area oscillations based on wide area synchronized phasor measurements Electric Power Systems Research 79(12): 1738-1749 ... 2023: Wide-Area Line Outage Monitoring by Sparse Phasor Measurements IEEE Transactions on Power Systems 38(4): 3621-3631 ... 2014: Application of synchronised phasor measurements to wide-area fault diagnosis and location Iet Generation, Transmission and Distribution 8(4): 716-729
+--------------------------------------------------------------------------------
+Practical aspects of testing Phasor Data Concentrators for wide area monitoring systems (https://eurekamag.com/research/108/406/108406222.php)
+citeturn30search3 [wordlim: 200] Crawled: 3 months ago; 2025: Fault-Tolerant Placement of Phasor Measurement Units and Communication Infrastructure in SDN-Enabled Wide-Area Monitoring Systems IEEE Transactions on Instrumentation and Measurement 74: 9002511 ... 2023: Wide-Area Line Outage Monitoring by Sparse Phasor Measurements IEEE Transactions on Power Systems 38(4): 3621-3631
+--------------------------------------------------------------------------------
+A review on on-line voltage stability monitoring indices and methods based on local phasor measurements (https://gradio.eurekamag.com/research/110/411/110411767.php)
+citeturn30search4 [wordlim: 200] Published: 15.8 years ago; Crawled: last week; 2005: On-line voltage stability index of power system based on synchronized phasor measurement Zhongguo Dianji Gongcheng Xuebao/Proceedings of the Chinese Society of Electrical Engineering 25(1): 13-17 ... 2023: Wide-Area Line Outage Monitoring by Sparse Phasor Measurements IEEE Transactions on Power Systems 38(4): 3621-3631
+--------------------------------------------------------------------------------
+EurekaMag Full Text Articles Chapter 108051 (https://catalog.eurekamag.com/research/108/050/)
+citeturn30search5 [wordlim: 200] Crawled: 2 weeks ago; 2023: Wide-Area Line Outage Monitoring by Sparse Phasor Measurements. IEEE Transactions on Power Systems 38(4): 3621-3631 Ma, J.
+--------------------------------------------------------------------------------
+Network Performance Monitoring for Phasor Measurement Unit based Wide Area Monitoring (https://eurekamag.com/research/108/160/108160270.php)
+citeturn30search6 [wordlim: 200] Published: 10 months ago; Crawled: last month; 2025: Fault-Tolerant Placement of Phasor Measurement Units and Communication Infrastructure in SDN-Enabled Wide-Area Monitoring Systems IEEE Transactions on Instrumentation and Measurement 74: 9002511 ... 2023: Wide-Area Line Outage Monitoring by Sparse Phasor Measurements IEEE Transactions on Power Systems 38(4): 3621-3631
+--------------------------------------------------------------------------------
+Determination of the minimum number of shared phasor measurements for a new line outage detection approach in external power network (https://waibuwang.eurekamag.com/research/106/230/106230079.php)
+citeturn30search7 [wordlim: 200] Published: 9.8 years ago; Crawled: 2 weeks ago; 2023: Wide-Area Line Outage Monitoring by Sparse Phasor Measurements IEEE Transactions on Power Systems 38(4): 3621-3631 ... 2020: Maiden application of rank correlation coefficient for line outage detection using current phasor of PMUs International Transactions on Electrical Energy Systems 30(10): e12562
+--------------------------------------------------------------------------------
+Sparse estimation based external system line outage detection (https://eurekamag.com/research/108/072/108072651.php)
+citeturn30search8 [wordlim: 200] Crawled: 4 months ago; 2023: Wide-Area Line Outage Monitoring by Sparse Phasor Measurements IEEE Transactions on Power Systems 38(4): 3621-3631 ... 2019: Overhead transmission line outage rate estimation under wind storms IEEJ Transactions on Electrical and Electronic Engineering 14(1): 57-66
+--------------------------------------------------------------------------------
+A review on on-line voltage stability monitoring indices and methods based on local phasor measurements (https://eurekamag.com/research/110/411/110411767.php)
+citeturn30search9 [wordlim: 200] Crawled: last month; 2023: Wide-Area Line Outage Monitoring by Sparse Phasor Measurements IEEE Transactions on Power Systems 38(4): 3621-3631
+--------------------------------------------------------------------------------
+Using an on-line BSE technique for wide-area oscillations monitoring (https://eurekamag.com/research/109/685/109685718.php)
+citeturn30search10 [wordlim: 200] Crawled: 2 months ago; 2023: Wide-Area Line Outage Monitoring by Sparse Phasor Measurements IEEE Transactions on Power Systems 38(4): 3621-3631 ... 2021: Design on Dynamic Monitoring System of Wide Area Transmission Line Based on Meteorological Parameters Proceedings - 2021 IEEE Sustainable Power and Energy Conference: Energy Transition for Carbon Neutrality, iSPEC 2021: 643-648
+--------------------------------------------------------------------------------
+2023 IEEE Power Systems Index | PDF | Electric Power | Power (Physics) (https://www.scribd.com/document/941430535/IEEE-Transactions-on-Power-Systems)
+citeturn30search11 [wordlim: 200] Published: 3.0 years ago; Crawled: last year; 2023 4080-4094 Azizi, S., Jegarluei, M.R., Kettner, A.M., and Dobakhshari, A.S., Wide-Area
+Ai, X., see Zhou, H., TPWRS May 2023 2705-2718 Line Outage Monitoring by Sparse Phasor Measurements; TPWRS July
+Ai, X., see Zhou, B., TPWRS May 2023 2434-2446 2023 3621-3631 ... Kettner, A.M., see Azizi, S., TPWRS July 2023 3621-3631 Technologies; TPWRS Jan. ... for Electricity Theft Attack-Resilient Power Grid; TPWRS Jan. 2023 537-548 tem Planning and Operations; TPWRS Jan. ... Khorsand, M., see Soltani, Z., TPWRS May 2023 2018-2034 Lee, G., Kwon, D., Kim, Y., and Moon, S., A New Communication-Free Grid
+--------------------------------------------------------------------------------
+[2607.00116] A Shallow Recurrent Decoder for Dynamic State Estimation with a Limited Number of PMUs in Power Systems (https://arxiv.org/abs/2607.00116)
+citeturn30view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({"ref_id":"https://arxiv.org/abs/2607.00116","pattern":"Authors:"}); Total lines: 161
+L9: # Title:A Shallow Recurrent Decoder for Dynamic State Estimation with a Limited Number of PMUs in Power Systems
+L10: 
+L11: Authors:【5†Andrea Pomarico】, 【6†Alberto Berizzi】, 【7†J. Nathan Kutz】
+L12: 
+L13: View a PDF of the paper titled A Shallow Recurrent Decoder for Dynamic State Estimation with a Limited Number of PMUs in Power Systems, by Andrea Pomarico and 2 other authors
+L14: 
+L15: 【8†View PDF】 【9†HTML (experimental)】
+L25: ## Submission history
+L26: 
+L27: From: Andrea Pomarico [【13†view email】]
+L28: [v1] Tue, 30 Jun 2026 19:54:31 UTC (3,253 KB)
+L29: 
+L30: Full-text links:
+L31: 
+L32: ## Access Paper:
+L33: 
+L34: View a PDF of the paper titled A Shallow Recurrent Decoder for Dynamic State Estimation with a Limited Number of PMUs in Power Systems, by Andrea Pomarico and 2 other authors
+L35: 
+L36:   * 【8†View PDF】
+L37:   * 【9†HTML (experimental)】
+L38:   * 【14†TeX Source】
+L39: 
+L40: 【15†view license】
+L155: Have an idea for a project that will add value for arXiv's community? 【42†Learn more about arXivLabs†info.arxiv.org】.
+L156: 
+L157: 【43†Which authors of this paper are endorsers?】 | Disable MathJax (【44†What is MathJax?†info.arxiv.org】)
+L158: 
+L159: We gratefully acknowledge support from our 【45†major funders†info.arxiv.org】, 【46†member institutions†info.arxiv.org】, , and all contributors.
+--------------------------------------------------------------------------------
+Codex | AI Coding Partner from OpenAI | OpenAI (https://openai.com/codex/)
+citeturn30view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({"ref_id":"https://openai.com/codex/","pattern":"Codex"}); Total lines: 246
+L41: ### Business
+L42: 
+L43: Secure, shared workspace with admin controls and flexible pricing for teams using Codex across repositories.
+L44: 
+L45: ₹1,800
+L46: 
+L47: / user / month*
+L48: 
+L49: 【5†Try ChatGPT Business(opens in a new window)†chatgpt.com】
+L50: 
+L51: *For 2+ seats, billed annually
+L52: Unlimited subject to abuse guardrails. 【6†Learn more⁠(opens in a new window)†help.openai.com】
+L53: 
+L54: ## The best way to build with agents
+L55: ### Built to drive real engineering work
+L56: 
+L57: Give Codex your toughest engineering problems, from hard-to-find bugs to complex refactors and new features. Codex works efficiently, delivering high-quality results with fewer tokens.
+L58: 
+L59: ### Designed for multi-agent workflows
+L60: 
+L61: Codex runs many agents in parallel, using computer and browser tools to verify work until your requirements are met. Follow progress, steer agents, and review results in one place.
+L62: ### Keep tasks moving in the cloud
+L63: 
+L64: Codex keeps going when you close your laptop, with reusable cloud environments for every repo. Start tasks, follow progress, and pick up where you left off from another device.
+L65: 
+L66: ### Scale code review confidently
+L67: 
+L68: Keep code changes moving as your team builds faster. Codex automatically reviews pull requests, surfaces findings, and answers questions, so you can focus where your judgment is needed most.
+L69: ## Bring Codex directly to your workflows
+L70: 
+L71: Connect your tools and add specialized capabilities with plugins. Give Codex the context and access it needs to take action across your apps and do more of the work for you.
+L72: 
+L73: 【7†Browse plugins(opens in a new window)†chatgpt.com】
+L74: 
+L75: 【8†Image†images.ctfassets.net】
+L76: 
+L77: 【9†Image†images.ctfassets.net】
+L78: 
+L79: 【8†Image†images.ctfassets.net】
+L80: 
+L81: 【9†Image†images.ctfassets.net】
+L82: 
+L83: 【8†Image†images.ctfassets.net】
+L84: 
+L85: 【9†Image†images.ctfassets.net】
+L86: 
+L87: 【10†Image†images.ctfassets.net】
+L88: 【11†Image†images.ctfassets.net】
+L89: 
+L90: 【10†Image†images.ctfassets.net】
+L91: 
+L92: 【11†Image†images.ctfassets.net】
+L93: 
+L94: 【10†Image†images.ctfassets.net】
+L95: 
+L96: 【11†Image†images.ctfassets.net】
+L97: 
+L98: 【12†Image†images.ctfassets.net】
+L99: 
+L100: 【13†Image†images.ctfassets.net】
+L101: 
+L102: 【12†Image†images.ctfassets.net】
+L103: 
+L104: 【13†Image†images.ctfassets.net】
+L105: 
+L106: 【12†Image†images.ctfassets.net】
+L107: 
+L108: 【13†Image†images.ctfassets.net】
+L109: 
+L110: 【14†Image†images.ctfassets.net】
+L111: 
+L112: 【15†Image†images.ctfassets.net】
+L113: 
+L114: 【14†Image†images.ctfassets.net】
+L115: 
+L116: 【15†Image†images.ctfassets.net】
+L117: 【14†Image†images.ctfassets.net】
+L118: 
+L119: 【15†Image†images.ctfassets.net】
+L120: ## The same agent everywhere you code
+L121: 
+L122: Use Codex across ChatGPT, your editor, and the terminal, all connected by your ChatGPT account.
+L123: 
+L124: 【16†Learn more in the developer docs(opens in a new window)†developers.openai.com】
+L125: 
+L126: ### Codex in ChatGPT
+L127: 
+L128: ### Codex cloud
+L129: 
+L130: 【17†Try on web(opens in a new window)†chatgpt.com】
+L131: 
+L132: ### Codex IDE extension
+L133: 
+L134: ### Codex CLI
+L135: ## What builders are saying
+L136: 
+L137: “At Wonderful, Codex CLI has completely replaced every other agentic harness for our core technology and architecture work requiring deep reasoning and understanding.”
+L138: 
+L139: Daniel Sikorskiy, Chief Architect, Wonderful
+L140: 
+L141: “At Harvey, Codex transformed how we build by cutting early iteration time by 30–50%, freeing engineers to focus on system design and high-leverage decisions.”
+L142: 
+L143: Joey Wang, Mobile Lead, Harvey
+L144: “With Codex, we ship in a weekend what previously took a quarter. It’s become our go-to for projects we wouldn’t have otherwise been able to take on.”
+L145: 
+L146: Tess Rosania, Software Engineer, Sierra
+L147: 
+L148: “The recent Codex releases have been a step change. Codex PR reviews catch bugs our team would have missed, and we ship with more confidence because of it. Now we’re pulling the CLI and desktop app into more of our workflows—each release raises the bar.”
+L149: 
+L150: Austin Ray, AI Dev X Team Lead, Ramp
+L151: “Codex performed best in our backend Python code-review benchmark. It was the only one to catch tricky backward compatibility issues and consistently found the hard bugs that other bots missed.”
+L152: 
+L153: Aaron Wang, Senior Software Engineer, Duolingo
+L154: 
+L155: “I needed to update another team’s codebase for a release. Codex handled the refactor and test generation, delivering fully tested code I handed back fast—keeping the feature on schedule without added risk.”
+L156: 
+L157: Tres Wong-Godfrey, Tech Lead, Cisco Meraki
+L158: ## Start building with Codex
+L159: 
+L160: Now available in the ChatGPT app.
+L161: 
+L162: Research
+L163: 
+L164:   * 【18†Research Index】
+L165:   * 【19†Research Overview】
+L166:   * 【20†Economic Research】
+L167: 
+L168: Latest Advancements
+L169: 
+L170:   * 【21†GPT-6.1 Sol】
+L171:   * 【22†GPT-6 Astra】
+L172:   * 【23†GPT-5.6】
+L173:   * 【24†GPT-5.5】
+L174: 
+L175: Safety
+L176: 
+L177:   * 【25†Safety Approach】
+L178:   * 【26†Deployment Safety(opens in a new window)†deploymentsafety.openai.com】
+L179:   * 【27†Security & Privacy】
+L180:   * 【28†Trust & Transparency】
+L181: 
+L182: Products
+L183:   * 【2†ChatGPT(opens in a new window)†chatgpt.com】
+L184:   * 【29†ChatGPT Business(opens in a new window)†chatgpt.com】
+L185:   * 【30†ChatGPT Enterprise(opens in a new window)†chatgpt.com】
+L186:   * 【31†ChatGPT for Education(opens in a new window)†chatgpt.com】
+L187:   * 【32†Codex†chatgpt.com】
+L188:   * 【33†Dots(opens in a new window)†chatgpt.com】
+L189:   * 【34†Release Notes】
+L190: 
+L191: API Platform
+L192: 
+L193:   * 【35†Overview】
+L194:   * 【36†API Log In(opens in a new window)†platform.openai.com】
+L195:   * 【37†Docs(opens in a new window)†developers.openai.com】
+L196: 
+L197: Business
+

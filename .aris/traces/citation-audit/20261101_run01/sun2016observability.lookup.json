@@ -1,0 +1,512 @@
+{
+  "key": "sun2016observability",
+  "retrieved_at": "2026-11-01T03:53:23.604480+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1016%2Fj.conengprac.2016.01.013",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1016/j.conengprac.2016.01.013",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:46.437387+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          6,
+          19
+        ]
+      ],
+      "date-time": "2026-06-19T19:21:57Z",
+      "timestamp": 1781896917240,
+      "version": "3.54.5"
+    },
+    "reference-count": 30,
+    "publisher": "Elsevier BV",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2016,
+              8,
+              1
+            ]
+          ],
+          "date-time": "2016-08-01T00:00:00Z",
+          "timestamp": 1470009600000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2016,
+              8,
+              1
+            ]
+          ],
+          "date-time": "2016-08-01T00:00:00Z",
+          "timestamp": 1470009600000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/legal/tdmrep-license"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "elsevier.com",
+        "sciencedirect.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "Control Engineering Practice"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2016,
+          8
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.conengprac.2016.01.013",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2016,
+          2,
+          15
+        ]
+      ],
+      "date-time": "2016-02-15T21:02:15Z",
+      "timestamp": 1455570135000
+    },
+    "page": "160-172",
+    "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 38,
+    "special_numbering": "C",
+    "title": [
+      "Power system observability and dynamic state estimation for stability monitoring using synchrophasor measurements"
+    ],
+    "prefix": "10.1016",
+    "volume": "53",
+    "author": [
+      {
+        "given": "Kai",
+        "family": "Sun",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Junjian",
+        "family": "Qi",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Wei",
+        "family": "Kang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "78",
+    "reference": [
+      {
+        "issue": "3",
+        "key": "10.1016/j.conengprac.2016.01.013_bib1",
+        "doi-asserted-by": "crossref",
+        "first-page": "1014",
+        "DOI": "10.1109/TPWRD.2009.2014030",
+        "article-title": "Optimal placement of phasor measurement units using immunity genetic algorithm",
+        "volume": "24",
+        "author": "Aminifar",
+        "year": "2009",
+        "journal-title": "IEEE Transactions on Power Delivery"
+      },
+      {
+        "key": "10.1016/j.conengprac.2016.01.013_bib2",
+        "series-title": "Power systems control and stability",
+        "author": "Anderson",
+        "year": "1994"
+      },
+      {
+        "key": "10.1016/j.conengprac.2016.01.013_bib3",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Baechle, M., Knazkins, V., Larsson, M., & Korba, P. (2014). Improved rotor angular speed measurement: a key for proper power grid stabilization. IEEE power & energy society general meeting, National Harbor, MD, USA.",
+        "DOI": "10.1109/PESGM.2014.6939533"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.conengprac.2016.01.013_bib4",
+        "doi-asserted-by": "crossref",
+        "first-page": "707",
+        "DOI": "10.1109/59.260810",
+        "article-title": "Power system observability with minimal phasor measurement placement",
+        "volume": "8",
+        "author": "Baldwin",
+        "year": "1993",
+        "journal-title": "IEEE Transactions on Power Systems"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.conengprac.2016.01.013_bib5",
+        "doi-asserted-by": "crossref",
+        "first-page": "1433",
+        "DOI": "10.1109/TPWRS.2008.922621",
+        "article-title": "Optimal placement of phasor measurement units for power system observability",
+        "volume": "23",
+        "author": "Chakrabarti",
+        "year": "2008",
+        "journal-title": "IEEE Transactions on Power Systems"
+      },
+      {
+        "key": "10.1016/j.conengprac.2016.01.013_bib6",
+        "unstructured": "Chow, J., & Rogers, G. (2008). User manual for power system toolbox, version 3.0, 1991–2008"
+      },
+      {
+        "key": "10.1016/j.conengprac.2016.01.013_bib501",
+        "article-title": "An initial model for complex dynamics in electric power system blackouts",
+        "author": "Dobson",
+        "year": "2001",
+        "journal-title": "34th Hawaii International Conference System Science"
+      },
+      {
+        "key": "10.1016/j.conengprac.2016.01.013_bib7",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Fahroo, F., & Ross, I. M. (1998). Costate estimation by a Legendre pseudospectral method. The AIAA guidance, navigation and control conference, Boston, MA.",
+        "DOI": "10.2514/6.1998-4222"
+      },
+      {
+        "issue": "7",
+        "key": "10.1016/j.conengprac.2016.01.013_bib8",
+        "doi-asserted-by": "crossref",
+        "first-page": "1115",
+        "DOI": "10.1109/TAC.2006.878570",
+        "article-title": "A pseudospectral method for the optimal control of constrained feedback linearizable systems",
+        "volume": "51",
+        "author": "Gong",
+        "year": "2006",
+        "journal-title": "IEEE Transactions on Automatic Control"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.conengprac.2016.01.013_bib9",
+        "doi-asserted-by": "crossref",
+        "first-page": "1525",
+        "DOI": "10.1109/TPWRS.2008.926723",
+        "article-title": "Optimal placement of PMUs by integer linear programming",
+        "volume": "23",
+        "author": "Gou",
+        "year": "2008",
+        "journal-title": "IEEE Transactions on Power Systems"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.conengprac.2016.01.013_bib10",
+        "doi-asserted-by": "crossref",
+        "first-page": "401",
+        "DOI": "10.1109/JPROC.2003.823141",
+        "article-title": "Unscented filtering and nonlinear estimation",
+        "volume": "92",
+        "author": "Julier",
+        "year": "2004",
+        "journal-title": "Proceedings of the IEEE"
+      },
+      {
+        "key": "10.1016/j.conengprac.2016.01.013_bib11",
+        "unstructured": "Kang, W. (2011). The consistency of partial observability for PDEs. arxiv:1111.5846v1."
+      },
+      {
+        "key": "10.1016/j.conengprac.2016.01.013_bib12",
+        "unstructured": "Kang, W., & Sun, K. (2013). Detection of instability using synchrophasors: A theoretical investigation on observability with synchrophasor networks. EPRI Technical Report, No. 3002002061."
+      },
+      {
+        "key": "10.1016/j.conengprac.2016.01.013_bib13",
+        "unstructured": "Kang, W., & Xu, L. (2009a). Computational analysis of control systems using dynamic optimization. arxiv:0906.0215v2."
+      },
+      {
+        "key": "10.1016/j.conengprac.2016.01.013_bib14",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Kang, W., & Xu, L. (2009b). A quantitative measure of observability and controllability. The 48th IEEE CDC, Shanghai, China.",
+        "DOI": "10.1109/CDC.2009.5399945"
+      },
+      {
+        "key": "10.1016/j.conengprac.2016.01.013_bib15",
+        "doi-asserted-by": "crossref",
+        "first-page": "17133",
+        "DOI": "10.3402/tellusa.v64i0.17133",
+        "article-title": "Optimal placement of mobile sensors for data assimilations",
+        "volume": "64",
+        "author": "Kang",
+        "year": "2012",
+        "journal-title": "Tellus A"
+      },
+      {
+        "key": "10.1016/j.conengprac.2016.01.013_bib16",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Krener, Arthur J., & Ide, K. (2009). Measures of unobservability. The 48th IEEE CDC, Shanghai, China.",
+        "DOI": "10.1109/CDC.2009.5400067"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.conengprac.2016.01.013_bib17",
+        "doi-asserted-by": "crossref",
+        "first-page": "69",
+        "DOI": "10.1109/TPWRS.2002.807064",
+        "article-title": "Nondominated sorting genetic algorithm for optimal phasor measurement placement",
+        "volume": "18",
+        "author": "Milosevic",
+        "year": "2003",
+        "journal-title": "IEEE Transactions on Power Systems"
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.conengprac.2016.01.013_bib18",
+        "doi-asserted-by": "crossref",
+        "first-page": "2041",
+        "DOI": "10.1109/TPWRS.2014.2356797",
+        "article-title": "Optimal PMU placement for power system dynamic state estimation by using empirical observability gramian",
+        "volume": "30",
+        "author": "Qi",
+        "year": "2015",
+        "journal-title": "IEEE Transactions on Power Systems"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.conengprac.2016.01.013_bib502",
+        "doi-asserted-by": "crossref",
+        "first-page": "3410",
+        "DOI": "10.1109/TPWRS.2013.2243479",
+        "article-title": "Towards estimating the statistics of simulated cascades of outages with branching processes",
+        "volume": "28",
+        "author": "Qi",
+        "year": "2013",
+        "journal-title": "IEEE Transactions on Power Systems"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.conengprac.2016.01.013_bib503",
+        "doi-asserted-by": "crossref",
+        "first-page": "804",
+        "DOI": "10.1109/TPWRS.2014.2337284",
+        "article-title": "An interaction model for simulation and mitigation of cascading failures",
+        "volume": "30",
+        "author": "Qi",
+        "year": "2015",
+        "journal-title": "IEEE Transactions on Power Systems"
+      },
+      {
+        "key": "10.1016/j.conengprac.2016.01.013_bib504",
+        "article-title": "Dynamic state estimation for multi-machine power system by unscented Kalman filter with enhanced numerical stability",
+        "author": "Qi",
+        "year": "2015",
+        "journal-title": "arXiv"
+      },
+      {
+        "issue": "15",
+        "key": "10.1016/j.conengprac.2016.01.013_bib19",
+        "doi-asserted-by": "crossref",
+        "first-page": "5645",
+        "DOI": "10.1021/ie040212v",
+        "article-title": "Determining optimal sensor locations for state and parameter estimation for stable nonlinear systems",
+        "volume": "44",
+        "author": "Singh",
+        "year": "2005",
+        "journal-title": "Industrial & Engineering Chemistry Research"
+      },
+      {
+        "issue": "10",
+        "key": "10.1016/j.conengprac.2016.01.013_bib20",
+        "doi-asserted-by": "crossref",
+        "first-page": "3615",
+        "DOI": "10.1021/ie0511175",
+        "article-title": "Sensor location for stable nonlinear dynamic systems: Multiple sensor case",
+        "volume": "45",
+        "author": "Singh",
+        "year": "2006",
+        "journal-title": "Industrial & Engineering Chemistry Research"
+      },
+      {
+        "key": "10.1016/j.conengprac.2016.01.013_bib21",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Sun, K., & Kang, W. (2014). Observability and estimation methods using synchrophasor. The 19th IFAC world congress, Cape Town, South Africa.",
+        "DOI": "10.3182/20140824-6-ZA-1003.00182"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.conengprac.2016.01.013_bib22",
+        "doi-asserted-by": "crossref",
+        "first-page": "1544",
+        "DOI": "10.1109/TPWRS.2010.2099672",
+        "article-title": "A new unified scheme for controlled power system separation using synchronized phasor measurements",
+        "volume": "26",
+        "author": "Sun",
+        "year": "2011",
+        "journal-title": "IEEE Transactions on Power Systems"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.conengprac.2016.01.013_bib23",
+        "doi-asserted-by": "crossref",
+        "first-page": "915",
+        "DOI": "10.1109/TPWRS.2010.2055900",
+        "article-title": "An adaptive power system equivalent for real-time estimation of stability margin using phase-plane trajectories",
+        "volume": "26",
+        "author": "Sun",
+        "year": "2011",
+        "journal-title": "IEEE Transactions on Power Systems"
+      },
+      {
+        "key": "10.1016/j.conengprac.2016.01.013_bib24",
+        "unstructured": "Sun, K., Luo, X., & Wong, J. (2012). Early warning of wide-area angular stability problems using synchrophasors. IEEE power & energy society general meeting, San Diego, CA, USA"
+      },
+      {
+        "key": "10.1016/j.conengprac.2016.01.013_bib505",
+        "first-page": "3461",
+        "article-title": "The square-root unscented Kalman filter for state and parameter-estimation",
+        "volume": "6",
+        "author": "Van Der Merwe",
+        "year": "2001",
+        "journal-title": "IEEE International Conference Acoustics, Speech, and Signal Processing (ICASSP)"
+      },
+      {
+        "key": "10.1016/j.conengprac.2016.01.013_bib25",
+        "unstructured": "Xu, B., & Abur, A. (2004). Observability analysis and measurement placement for systems with PMUs. IEEE power systems conference and exposition (Vol. 2, 943–946)."
+      }
+    ],
+    "container-title": [
+      "Control Engineering Practice"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0967066116300132?httpAccept=text/xml",
+        "content-type": "text/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0967066116300132?httpAccept=text/plain",
+        "content-type": "text/plain",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2025,
+          10,
+          18
+        ]
+      ],
+      "date-time": "2025-10-18T20:37:12Z",
+      "timestamp": 1760819832000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0967066116300132"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2016,
+          8
+        ]
+      ]
+    },
+    "references-count": 30,
+    "alternative-id": [
+      "S0967066116300132"
+    ],
+    "URL": "https://doi.org/10.1016/j.conengprac.2016.01.013",
+    "relation": {},
+    "ISSN": [
+      "0967-0661"
+    ],
+    "issn-type": [
+      {
+        "value": "0967-0661",
+        "type": "print"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2016,
+          8
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "Elsevier",
+        "name": "publisher",
+        "label": "This article is maintained by"
+      },
+      {
+        "value": "Power system observability and dynamic state estimation for stability monitoring using synchrophasor measurements",
+        "name": "articletitle",
+        "label": "Article Title"
+      },
+      {
+        "value": "Control Engineering Practice",
+        "name": "journaltitle",
+        "label": "Journal Title"
+      },
+      {
+        "value": "https://doi.org/10.1016/j.conengprac.2016.01.013",
+        "name": "articlelink",
+        "label": "CrossRef DOI link to publisher maintained version"
+      },
+      {
+        "value": "article",
+        "name": "content_type",
+        "label": "Content Type"
+      },
+      {
+        "value": "Published by Elsevier Ltd.",
+        "name": "copyright",
+        "label": "Copyright"
+      }
+    ]
+  }
+}

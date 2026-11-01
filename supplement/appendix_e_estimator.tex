@@ -3,8 +3,9 @@
 
 This appendix distinguishes a state-reconstruction component from two event
 estimator contracts. Sections~\ref{sec:supp-state-recursion}--\ref{sec:supp-evaluated-event-bank}
-specify the state recursion and the implemented batch physical-manifold Bayes
-estimator $\mathcal E_{\mathrm B}$. Section~\ref{sec:supp-joint-design} specifies
+specify the state recursion and the normalized batch physical-manifold Bayes
+model $\mathcal E_{\mathrm B}$, distinguishing its historical implementation
+from the corrected normalization. Section~\ref{sec:supp-joint-design} specifies
 the proposed joint Hybrid-DAE estimator $\mathcal E_{\mathrm J}$. Filtering,
 smoothing, quadrature, and optimization are numerical operations within those
 contracts, not additional estimator proposals.
@@ -131,7 +132,7 @@ $\bm q^{\mathsf T}\bm Z^{\mathsf T}\bm H\bm Z\bm q=0$, so $\bm q=\bm0$ and $\bm 
 
 This covariance is local and unimodal. The reported joint NEES-like failure shows that it is not calibrated for the full shifted-plant experiment.
 
-\subsection{Implemented Batch Physical-Manifold Bayes $\mathcal E_{\mathrm B}$}
+\subsection{Batch Physical-Manifold Bayes: Model and Historical Implementation}
 \label{sec:supp-evaluated-event-bank}
 
 Let $\bm r$ be the centered $T$-frame PMU window. For support $S$ with amplitudes $\bm a_S$, the evaluated mean is
@@ -151,7 +152,8 @@ The W2 likelihood is
  \bm\Sigma_T&=\bm R_T(\rho)\otimes\bm\Omega.
  \label{eq:supp-evaluated-likelihood}
 \end{align}
-The covariance is fitted only on normal calibration records and remains fixed across supports. The selected priors are
+The covariance is fitted only on normal calibration records and remains fixed
+across supports. The intended normalized model $\mathcal E_{\mathrm B}$ uses
 \begin{align}
  p(K=0,1,2)&=(0.20,0.50,0.30),\\
  p(S\mid K)&=\binom{16}{K}^{-1},\\
@@ -159,6 +161,23 @@ The covariance is fitted only on normal calibration records and remains fixed ac
  &\sigma_a&=0.05.
  \label{eq:supp-evaluated-priors}
 \end{align}
+
+The archived implementation used the same physical response and covariance,
+but its single-source integral carried an extra factor $1/(2\pi)$ relative
+to the null and pair integrals. Writing $\widehat Z_S$ for the normalized
+quadrature approximation to the evidence defined below, its score was
+\[
+ \widetilde Z_S=\widehat Z_S(2\pi)^{-\mathbf1\{|S|=1\}}.
+\]
+Consequently, its support posterior is equivalent to using the normalized
+quadrature scores with cardinality prior proportional to
+$(0.20,0.50/(2\pi),0.30)$, rather
+than \eqref{eq:supp-evaluated-priors}. The historical performance values
+retain this effective-prior qualification. An isolated corrected successor
+passes linear-Gaussian normalization checks, but its physical performance
+has not been recomputed. The formulas below specify the intended normalized
+model; they do not silently correct the archived results or describe the
+separate causal R11 amplitude integral.
 
 For reference, the linear single-source model has a closed form.
 
@@ -236,16 +255,25 @@ With $Q$-node Gauss--Hermite abscissas $x_q$ and weights $w_q$, the Gaussian-pri
  p(\bm r\mid S,\sqrt2\sigma_a\bm x_{\bm q}).
  \label{eq:supp-gauss-hermite-evidence}
 \end{equation}
-The implementation uses $Q=31$ and evaluates \eqref{eq:supp-gauss-hermite-evidence} in the log domain using log-sum-exp. Independent adaptive Gauss--Kronrod integration checks representative two-dimensional cases. These checks support numerical integration under the frozen model; they do not validate the physical model itself.
+The archived implementation uses $Q=31$ and log-sum-exp for its quadrature
+scores. Equation~\eqref{eq:supp-gauss-hermite-evidence} gives the correctly
+normalized rule; the archived single-source factor described above must be
+retained when reproducing historical outcomes. Independent adaptive
+Gauss--Kronrod checks of representative two-dimensional cases support those
+pair integrals, not cross-cardinality normalization or physical fidelity.
 
 \subsection{Posterior Outputs and the Cardinality--Localization Distinction}
 
-The normalized support posterior is
+For the intended normalized model, the support posterior is
 \begin{equation}
  p(S\mid\bm r)=
  \frac{Z_Sp(S)}{\sum_{R\in\mathcal H}Z_Rp(R)}.
  \label{eq:supp-support-posterior}
 \end{equation}
+The historical posterior instead uses $\widetilde Z_S$ with the originally
+declared prior, or equivalently $\widehat Z_S$ with the effective prior specified
+above. Normalizing the final scores to sum to one does not repair the
+single-source evidence factor.
 It induces cardinality, source-inclusion, and amplitude distributions:
 \begin{align}
  p(K=k\mid\bm r)&=\sum_{|S|=k}p(S\mid\bm r),\label{eq:supp-cardinality-posterior}\\
@@ -295,12 +323,15 @@ For set-valued output, sort supports by posterior mass and define the smallest c
 \end{equation}
 Candidate-set size and coverage are more informative than an arbitrary Top-$m$ when the posterior is multimodal. The present paper has not yet calibrated an abstention threshold or credible-set coverage prospectively.
 
-\subsection{Step-by-Step Evaluated Bayesian Algorithm}
+\subsection{Historical Batch Algorithm and Normalization Boundary}
 
-Table~\ref{tab:supp-evaluated-algorithm} records the exact order of the load-support computation. Steps marked ``evaluated'' produced the 137-hypothesis results; optional outputs are mathematically defined but are not promoted to validated claims.
+Table~\ref{tab:supp-evaluated-algorithm} records the load-support computation
+and identifies the normalization defect in the implementation that produced
+the archived 137-hypothesis outcomes. Optional outputs remain distinct from
+validated claims. No corrected-prior physical outcome is reported here.
 
 \begin{table*}[t]
-\caption{Evaluated 137-hypothesis Bayesian load-support algorithm.}
+\caption{Historical 137-hypothesis load-support algorithm, with its evidence-normalization qualification.}
 \label{tab:supp-evaluated-algorithm}
 \centering
 \scriptsize
@@ -313,11 +344,11 @@ Step & Operation & Computation and frozen choice & Status \\
 1 & Validate plant & Check equilibrium, terminal-current orientation, sampling, nonlinear solve acceptance, and first-order response before building the bank & Evaluated \\
 2 & Build physical dictionary & Generate centered $\bm D_i$, self-curvature $\bm Q_i$, and cross-interaction $\bm Q_{ij}$ from simulator-consistent interventions & Evaluated \\
 3 & Fit noise on CAL & Estimate channel covariance and AR(1) dependence from normal calibration records; freeze W2 before event TEST & Evaluated \\
-4 & Freeze priors and integrator & Set $p(K)$, uniform support priors, Gaussian amplitude slab, GH31 nodes/weights, and independent GK checks & Evaluated \\
+4 & Freeze priors and integrator & Declare $p(K)$, uniform support priors, Gaussian amplitude slab, GH31 nodes/weights, and pairwise GK checks; the effective cardinality prior differs because of step 7 & Historical \\
 5 & Form the residual & Align the known onset, subtract the frozen normal mean, retain the fixed PMU/channel order, and apply the declared temporal covariance & Evaluated \\
 6 & Enumerate supports & Construct $H_0$, 16 single-source supports, and 120 two-source supports; no learned source label prunes the bank & Evaluated \\
-7 & Integrate each support & Evaluate \eqref{eq:supp-support-evidence} with \eqref{eq:supp-gauss-hermite-evidence}; retain quadrature-weighted amplitude moments & Evaluated \\
-8 & Normalize once & Add the support prior in log space, subtract the global log-sum-exp, and obtain \eqref{eq:supp-support-posterior} & Evaluated \\
+7 & Integrate each support & Form quadrature scores and amplitude moments; the archived single-source score includes the extra $1/(2\pi)$ factor & Historical defect \\
+8 & Normalize once & Add the declared support prior and subtract global log-sum-exp; the result has the effective cardinality prior described above & Historical \\
 9 & Read decisions in order & Report event presence, $p(K\mid\bm r)$, conditional support ranking, source inclusion, and conditional amplitude intervals separately & Evaluated \\
 10 & Quantify ambiguity & Compute entropy, effective multiplicity, or $\mathcal C_q$ without relabeling them as validated abstention guarantees & Defined; partial evidence \\
 11 & Record provenance & Store the plant identifier, support, amplitude, noise seed, likelihood version, and frozen artifact hash for every independent record & Evaluated \\
@@ -334,9 +365,11 @@ likelihood-node evaluations for $K\le2$. With $G=16$ and $Q=31$, this is 115,817
 
 An incremental implementation of $\mathcal E_{\mathrm B}$ is computational,
 not a new estimator. If the exact innovations factorization includes the same
-initial AR(1) density, then at every frozen prefix it must reproduce the batch
-quadratic form, evidence, and posterior to numerical tolerance. This is a
-regression test, not evidence for the joint model below.
+initial AR(1) density and normalization contract, then at every frozen prefix
+it must reproduce the corresponding batch quadratic form, evidence, and
+posterior to numerical tolerance. Historical replay retains the archived
+factor; a corrected successor uses the normalized evidence and declared prior.
+This is a regression test, not evidence for the joint model below.
 
 \subsection{Proposed Joint Hybrid-DAE Bayes $\mathcal E_{\mathrm J}$}
 \label{sec:supp-joint-design}
@@ -378,13 +411,18 @@ regression condition is
  =p_{\mathrm B}(S,\bm a_S\mid\bm r,\bm\eta_0,\tau_0,c_{\rm load}).
  \label{eq:supp-joint-batch-reduction}
 \end{equation}
-The equality is not claimed for an unrestricted nonlinear DAE likelihood; it
-holds only when the complete statistical contract is shared.
+Here $p_{\mathrm B}$ refers to the intended normalized model, not the
+historical score with its single-source factor. The equality is not claimed
+for an unrestricted nonlinear DAE likelihood; it holds only when the complete
+statistical contract is shared.
 
 \begin{theorem}[Local cone--Laplace evidence]
-Let $L_{S,\epsilon}$ be the log likelihood plus the log of a proper prior in
-identifiable local coordinates of dimension $d_S$. Suppose the rescaled
-feasible domains converge locally to a closed polyhedral cone $\bm K_S$ and
+Let $L_{S,\epsilon}$ be the log likelihood plus the log of a proper prior
+density, including the chart measure, in identifiable local coordinates of
+dimension $d_S$. Let $\bm\xi_0$ be feasible with finite
+$L_{S,\epsilon}(\bm\xi_0)$. Suppose the indicators of the rescaled feasible
+domains converge Lebesgue-almost everywhere to that of a closed polyhedral
+cone $\bm K_S$ with nonempty interior in $\mathbb R^{d_S}$, and
 \begin{equation}
  L_{S,\epsilon}(\bm\xi_0+\epsilon\bm u)
  -L_{S,\epsilon}(\bm\xi_0)
@@ -393,9 +431,10 @@ feasible domains converge locally to a closed polyhedral cone $\bm K_S$ and
  +r_\epsilon(\bm u),
  \label{eq:supp-cone-laplace-expansion}
 \end{equation}
-where $\bm H_S\succ\bm0$ and $r_\epsilon\to0$ uniformly on compact sets.
-Assume an integrable dominating envelope and negligible evidence from distant
-modes. Then
+where $\bm H_S\succ\bm0$ and $r_\epsilon\to0$ uniformly on compact feasible
+sets. Assume the rescaled integrands, including the domain indicators, have
+an integrable dominating envelope, and evidence outside this local chart is
+$o(e^{L_{S,\epsilon}(\bm\xi_0)}\epsilon^{d_S})$. Then
 \begin{align}
  Z_{S,\epsilon}
  ={}&e^{L_{S,\epsilon}(\bm\xi_0)}\epsilon^{d_S}
@@ -415,13 +454,16 @@ modes. Then
 
 \paragraph{Proof.}
 Set $\bm\xi=\bm\xi_0+\epsilon\bm u$, which contributes the Jacobian
-$\epsilon^{d_S}$. The compact-uniform expansion gives pointwise convergence of
-the rescaled integrand to
-$\exp(\bm h_S^{\mathsf T}\bm u-\bm u^{\mathsf T}\bm H_S\bm u/2)$.
+$\epsilon^{d_S}$. The expansion and indicator convergence give
+almost-everywhere convergence of the rescaled integrand to
+$\mathbf1_{\bm K_S}(\bm u)
+\exp(\bm h_S^{\mathsf T}\bm u-\bm u^{\mathsf T}\bm H_S\bm u/2)$.
 The assumed envelope permits dominated convergence, while the distant-mode
 condition localizes the original integral. Completing the square in the
 limiting quadratic integral gives the Gaussian normalizer and the cone
-probability in \eqref{eq:supp-laplace-evidence}. $\hfill\square$
+probability in \eqref{eq:supp-laplace-evidence}. The cone has nonempty
+interior, so this probability is positive and the additive limit can be
+written as the stated multiplicative equivalent. $\hfill\square$
 
 For an interior model $\bm K_S=\mathbb R^{d_S}$ and the probability factor is
 one. For one or more boundary amplitudes it is a Gaussian orthant probability,
@@ -430,8 +472,14 @@ in addition to this cone probability. Chart Jacobians, prior normalizers, and
 candidate-dependent covariance determinants belong in $L_{S,\epsilon}$ or the
 measure term. Comparing only optimized residuals drops both volume and boundary
 terms and does not produce a posterior.
+The theorem does not cover a domain whose tangent cone has zero Gaussian
+mass in these coordinates. In such a domain the quadratic-scale integral can
+have zero leading coefficient while the evidence remains positive at a
+smaller scale; a different scaling or feasible chart is then required.
 
-For a small-noise Gaussian Hybrid-DAE trajectory map
+For observations $\bm y_\epsilon=\bm\mu_0+\epsilon\bm z$ with covariance
+$\epsilon^2\bm\Sigma$ independent of the local coordinates, a continuous
+positive prior density at $\bm\xi_0$, and a Hybrid-DAE trajectory map
 $\bm\mu_S(\bm\xi_0+\epsilon\bm u)
 =\bm\mu_0+\epsilon\bm J_S\bm u+O(\epsilon^2)$,
 \begin{equation}
@@ -454,8 +502,11 @@ not the $n^{-1/2}$ rate of regular quadratic Laplace theory.
 
 \begin{proposition}[Exact reduction along redundant fibers]
 Suppose a parameter chart $\bm\theta\leftrightarrow(\bm\xi,\bm\zeta)$ is
-one-to-one on the prior support and the observable map satisfies
-$\bm\mu(\bm\theta)=\overline{\bm\mu}(\bm\xi)$ there. If
+one-to-one on the prior support and the complete conditional data law is
+constant along every fiber:
+$p(\bm y\mid\bm\xi,\bm\zeta)=p(\bm y\mid\bm\xi)$.
+For a Gaussian model this requires both mean and covariance to be independent
+of $\bm\zeta$, not only the mean map. If
 $\widetilde\pi(\bm\xi,\bm\zeta)$ is the transformed proper prior, then the
 evidence equals the reduced integral with induced prior
 \begin{equation}
@@ -478,22 +529,31 @@ For a merely local chart, the same reduction is asymptotic only after a
 localization condition excludes evidence from distant branches.
 
 \begin{theorem}[Mixed regular and higher-order evidence]
-In whitened coordinates, suppose the first observable expansion after
-redundancy removal is
+In whitened coordinates, let $\bm\xi\in\mathbb R^r$ and $a\in\mathbb R$
+have an open neighborhood of $(\bm0,0)$ in the parameter domain. Suppose the
+first observable expansion after redundancy removal, for an integer $k\ge1$, is
 \begin{equation}
  \bm\mu(\bm\xi,a)=\bm\mu_0+\bm A\bm\xi
  +\frac{\bm c_k}{k!}a^k
  +o(\|\bm\xi\|+|a|^k),
  \label{eq:supp-mixed-singular-map}
 \end{equation}
-where $\bm A$ has rank $r$, the proper prior density is continuous and positive
+where $\bm A$ has $r$ columns and rank $r$, the proper prior density is continuous and positive
 at the origin, and
 \begin{equation}
  \bm c_{k,\perp}=(\bm I-\bm P_{\bm A})\bm c_k\ne\bm0.
  \label{eq:supp-normal-higher-order-coefficient}
 \end{equation}
-Assume a dominating envelope and negligible evidence away from this branch.
-For the Gaussian-normalizer-free evidence kernel with noise scale $\epsilon$,
+For the centered observation $\bm y=\bm\mu_0$, define the
+Gaussian-normalizer-free evidence kernel
+\[
+ M_\epsilon=\int
+ \exp\!\left[-\frac{\|\bm\mu(\bm\xi,a)-\bm\mu_0\|_2^2}
+ {2\epsilon^2}\right]\pi(\bm\xi,a)\,d\bm\xi\,da.
+\]
+Assume an integrable dominating envelope after the rescaling
+$\bm\xi=\epsilon\bm u$, $a=\epsilon^{1/k}t$, and evidence away from this
+branch of order $o(\epsilon^{r+1/k})$. Then
 \begin{align}
  M_\epsilon\sim{}&C\epsilon^{r+1/k},
  \label{eq:supp-mixed-singular-evidence-rate}\\
@@ -519,6 +579,14 @@ coordinates yields $(2\pi)^{r/2}|\bm A^{\mathsf T}\bm A|^{-1/2}$; integration
 of the normal component over $t\in\mathbb R$ gives the gamma-function factor.
 Dominated convergence supplies the prior density at the origin and the stated
 limit. $\hfill\square$
+
+The displayed constant is for the centered observation and a bilateral
+interior amplitude. For $\bm y_\epsilon=\bm\mu_0+\epsilon\bm z$, the limiting
+kernel instead contains
+$\|\bm A\bm u+\bm c_kt^k/k!-\bm z\|_2^2$, so the constant generally depends
+on $\bm z$. A one-sided amplitude requires integration over its actual
+rescaled domain and its proper prior density; the bilateral constant cannot
+be used unchanged.
 
 For one additional amplitude, the theorem separates three cardinality cases.
 A regular direction supplies an $O(\epsilon)$ Occam factor, a direction first
@@ -606,11 +674,15 @@ rectangular coordinates before magnitude and angle are formed.
 
 \subsection{Estimator Claim Boundary}
 
-The state recursion is an independently evaluated component. $\mathcal E_{\mathrm B}$
-computes normalized Bayesian evidence under the frozen quadratic W2/L2 model and
-is the implemented reference event estimator. $\mathcal E_{\mathrm J}$, its
-reduction test, learned discrepancy, unknown-onset/family inference,
+The state recursion is an independently evaluated component. The equations
+for $\mathcal E_{\mathrm B}$ define normalized Bayesian evidence under the
+quadratic W2/L2 model. Its archived implementation produced the historical
+outcomes with the single-source normalization defect and effective prior
+identified above; those outcomes have not been recomputed under the corrected
+prior. The corrected successor's algebraic checks are not physical-performance
+results. The proposed joint estimator $\mathcal E_{\mathrm J}$ and its
+reduction test, learned discrepancy, joint unknown-onset/family inference,
 changing-PMU operation, virtual outputs, and sequential stopping remain
-specified but unexecuted. The physical recentering is a regularized constrained
-estimator with separately assessed uncertainty; it is not relabeled as either
-event estimator.
+specified but unexecuted. This boundary concerns that joint extension, not
+the separate causal R11 history bank. Physical recentering remains a
+regularized constrained estimator with separately assessed uncertainty.

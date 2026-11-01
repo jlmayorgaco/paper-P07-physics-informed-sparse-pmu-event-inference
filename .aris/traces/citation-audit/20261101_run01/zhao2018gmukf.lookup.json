@@ -1,0 +1,424 @@
+{
+  "key": "zhao2018gmukf",
+  "retrieved_at": "2026-11-01T03:53:23.819733+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1109%2FJSTSP.2018.2827261",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1109/JSTSP.2018.2827261",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:54.021478+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          23
+        ]
+      ],
+      "date-time": "2026-10-23T22:51:14Z",
+      "timestamp": 1792795874282,
+      "version": "4.5.0"
+    },
+    "reference-count": 38,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "4",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2018,
+              8,
+              1
+            ]
+          ],
+          "date-time": "2018-08-01T00:00:00Z",
+          "timestamp": 1533081600000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/100000001",
+        "name": "National Science Foundation",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "ECCS-1711191"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "ECCS-1711191"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/100000001",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "name": "Advanced Grid Modeling program of the U.S. Department of Energy (DOE) Office of Electricity Delivery & Energy Reliability",
+        "id": [
+          {
+            "id": "https://ror.org/02y6dp041",
+            "id-type": "ROR",
+            "asserted-by": "crossref"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE J. Sel. Top. Signal Process."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2018,
+          8
+        ]
+      ]
+    },
+    "DOI": "10.1109/jstsp.2018.2827261",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2018,
+          4,
+          16
+        ]
+      ],
+      "date-time": "2018-04-16T16:44:46Z",
+      "timestamp": 1523897086000
+    },
+    "page": "578-592",
+    "source": "Crossref",
+    "is-referenced-by-count": 152,
+    "title": [
+      "A Robust Generalized-Maximum Likelihood Unscented Kalman Filter for Power System Dynamic State Estimation"
+    ],
+    "prefix": "10.1109",
+    "volume": "12",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-8498-9666",
+        "authenticated-orcid": false,
+        "given": "Junbo",
+        "family": "Zhao",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-6134-3945",
+        "authenticated-orcid": false,
+        "given": "Lamine",
+        "family": "Mili",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref38",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1214/aos/1032181171"
+      },
+      {
+        "key": "ref33",
+        "author": "hampel",
+        "year": "1986",
+        "journal-title": "Robust Statistics The Approach Based on Influence Functions"
+      },
+      {
+        "key": "ref32",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-1-4612-5604-5"
+      },
+      {
+        "key": "ref31",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSP.2007.894262"
+      },
+      {
+        "key": "ref30",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/0471725250"
+      },
+      {
+        "key": "ref37",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/01621459.1992.10476254"
+      },
+      {
+        "key": "ref36",
+        "article-title": "Modeling of gas turbines and steam turbines in combined cycle power plants",
+        "year": "2003"
+      },
+      {
+        "key": "ref35",
+        "article-title": "Benchmark systems for small-signal stability analysis and control",
+        "year": "2015",
+        "journal-title": "IEEE PES Piscataway"
+      },
+      {
+        "key": "ref34",
+        "author": "sauer",
+        "year": "1998",
+        "journal-title": "Power System Dynamics and Stability"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2016.2548244"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PESGM.2015.7286337"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRD.2017.2762927"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSP.2009.2039731"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2018.2790390"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2014.2347047"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/59.780909"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2013.2251482"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2017.2785344"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2014.2331317"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.2002.800742"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2011.2145396"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/9.847726"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2002.805016"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.epsr.2013.05.016"
+      },
+      {
+        "key": "ref29",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/59.496203"
+      },
+      {
+        "key": "ref5",
+        "first-page": "376",
+        "article-title": "Feasibility studies of applying Kalman filter techniques to power system dynamic state estimation",
+        "author": "huang",
+        "year": "0",
+        "journal-title": "Proc IEEE 8th Int Power Engineering Conf"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2013.2281323"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2016.2628344"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/59.910791"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2011.2175255"
+      },
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2017.2679121"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2014.2345698"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1049/iet-rsn.2009.0170"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "crossref",
+        "first-page": "143",
+        "DOI": "10.1029/94JC00572",
+        "article-title": "Sequential data assimilation with a nonlinear quasigeostrophic\n model using Monte Carlo methods to forecast error statistics",
+        "volume": "99",
+        "author": "evensen",
+        "year": "1994",
+        "journal-title": "J Geophys Res"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/LSP.2017.2669238"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1049/iet-smt.2011.0169"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2017.2761452"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.dsp.2015.09.004"
+      }
+    ],
+    "container-title": [
+      "IEEE Journal of Selected Topics in Signal Processing"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/4200690/8423790/08338134.pdf?arnumber=8338134",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2022,
+          1,
+          12
+        ]
+      ],
+      "date-time": "2022-01-12T11:23:47Z",
+      "timestamp": 1641986627000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/8338134/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          8
+        ]
+      ]
+    },
+    "references-count": 38,
+    "journal-issue": {
+      "issue": "4"
+    },
+    "URL": "https://doi.org/10.1109/jstsp.2018.2827261",
+    "relation": {},
+    "ISSN": [
+      "1932-4553",
+      "1941-0484"
+    ],
+    "issn-type": [
+      {
+        "value": "1932-4553",
+        "type": "print"
+      },
+      {
+        "value": "1941-0484",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2018,
+          8
+        ]
+      ]
+    }
+  }
+}

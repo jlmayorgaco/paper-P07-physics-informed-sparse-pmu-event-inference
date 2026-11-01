@@ -1,0 +1,192 @@
+{
+  "key": "phadke2008synchronized",
+  "retrieved_at": "2026-11-01T03:53:23.176909+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1007%2F978-0-387-76537-2",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1007/978-0-387-76537-2",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:36.890199+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          31
+        ]
+      ],
+      "date-time": "2026-10-31T22:15:31Z",
+      "timestamp": 1793484931675,
+      "version": "4.5.0"
+    },
+    "publisher-location": "Boston, MA",
+    "reference-count": 0,
+    "publisher": "Springer US",
+    "isbn-type": [
+      {
+        "value": "9780387765358",
+        "type": "print"
+      },
+      {
+        "value": "9780387765372",
+        "type": "electronic"
+      }
+    ],
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2008,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2008-01-01T00:00:00Z",
+          "timestamp": 1199145600000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "http://www.springer.com/tdm"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2008
+        ]
+      ]
+    },
+    "DOI": "10.1007/978-0-387-76537-2",
+    "type": "book",
+    "created": {
+      "date-parts": [
+        [
+          2008,
+          8,
+          12
+        ]
+      ],
+      "date-time": "2008-08-12T05:45:42Z",
+      "timestamp": 1218519942000
+    },
+    "source": "Crossref",
+    "is-referenced-by-count": 1340,
+    "title": [
+      "Synchronized Phasor Measurements and Their Applications"
+    ],
+    "prefix": "10.1007",
+    "author": [
+      {
+        "given": "A.G.",
+        "family": "Phadke",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "J.S.",
+        "family": "Thorp",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "297",
+    "container-title": [
+      "Power Electronics and Power Systems"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://link.springer.com/content/pdf/10.1007/978-0-387-76537-2.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "http://link.springer.com/content/pdf/10.1007/978-0-387-76537-2",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2019,
+          4,
+          6
+        ]
+      ],
+      "date-time": "2019-04-06T06:41:13Z",
+      "timestamp": 1554532873000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "http://link.springer.com/10.1007/978-0-387-76537-2"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2008
+        ]
+      ]
+    },
+    "ISBN": [
+      "9780387765358",
+      "9780387765372"
+    ],
+    "references-count": 0,
+    "URL": "https://doi.org/10.1007/978-0-387-76537-2",
+    "relation": {},
+    "ISSN": [
+      "2196-3185",
+      "2196-3193"
+    ],
+    "issn-type": [
+      {
+        "value": "2196-3185",
+        "type": "print"
+      },
+      {
+        "value": "2196-3193",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2008
+        ]
+      ]
+    }
+  }
+}

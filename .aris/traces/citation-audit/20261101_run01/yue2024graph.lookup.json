@@ -1,0 +1,651 @@
+{
+  "key": "yue2024graph",
+  "retrieved_at": "2026-11-01T03:53:23.814141+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1016%2Fj.epsr.2024.110644",
+      "status": "success",
+      "resolved": "https://api.crossref.org/works/10.1016%2Fj.epsr.2024.110644"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          23
+        ]
+      ],
+      "date-time": "2026-09-23T08:48:37Z",
+      "timestamp": 1790153317764,
+      "version": "4.0.1"
+    },
+    "reference-count": 23,
+    "publisher": "Elsevier BV",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              1
+            ]
+          ],
+          "date-time": "2024-10-01T00:00:00Z",
+          "timestamp": 1727740800000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              1
+            ]
+          ],
+          "date-time": "2024-10-01T00:00:00Z",
+          "timestamp": 1727740800000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/legal/tdmrep-license"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              1
+            ]
+          ],
+          "date-time": "2024-10-01T00:00:00Z",
+          "timestamp": 1727740800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-017"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              1
+            ]
+          ],
+          "date-time": "2024-10-01T00:00:00Z",
+          "timestamp": 1727740800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              1
+            ]
+          ],
+          "date-time": "2024-10-01T00:00:00Z",
+          "timestamp": 1727740800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-012"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              1
+            ]
+          ],
+          "date-time": "2024-10-01T00:00:00Z",
+          "timestamp": 1727740800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              1
+            ]
+          ],
+          "date-time": "2024-10-01T00:00:00Z",
+          "timestamp": 1727740800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-004"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/100006134",
+        "name": "Office of Energy Efficiency and Renewable Energy",
+        "doi-asserted-by": "publisher",
+        "id": [
+          {
+            "id": "10.13039/100006134",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/100000015",
+        "name": "U.S. Department of Energy",
+        "doi-asserted-by": "publisher",
+        "id": [
+          {
+            "id": "10.13039/100000015",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/100011883",
+        "name": "Solar Energy Technologies Office",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "DE-EE0009356"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "DE-EE0009356"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/100011883",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "elsevier.com",
+        "sciencedirect.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "Electric Power Systems Research"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2024,
+          10
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.epsr.2024.110644",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2024,
+          6,
+          29
+        ]
+      ],
+      "date-time": "2024-06-29T07:34:31Z",
+      "timestamp": 1719646471000
+    },
+    "page": "110644",
+    "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 12,
+    "special_numbering": "C",
+    "title": [
+      "Graph-learning-assisted state estimation using sparse heterogeneous measurements"
+    ],
+    "prefix": "10.1016",
+    "volume": "235",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0003-4146-0436",
+        "authenticated-orcid": false,
+        "given": "Han",
+        "family": "Yue",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0009-0009-3494-5815",
+        "authenticated-orcid": false,
+        "given": "Wentao",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-8161-8878",
+        "authenticated-orcid": false,
+        "given": "Ugur Can",
+        "family": "Yilmaz",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Tuna",
+        "family": "Yildiz",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Heqing",
+        "family": "Huang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Hongfu",
+        "family": "Liu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-1366-4637",
+        "authenticated-orcid": false,
+        "given": "Yuzhang",
+        "family": "Lin",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-8751-9125",
+        "authenticated-orcid": false,
+        "given": "Ali",
+        "family": "Abur",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "78",
+    "reference": [
+      {
+        "key": "10.1016/j.epsr.2024.110644_b1",
+        "article-title": "A survey of power system state estimation using multiple data sources: PMUs, SCADA, AMI, and beyond",
+        "author": "Cheng",
+        "year": "2023",
+        "journal-title": "IEEE Trans. Smart Grid"
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.epsr.2024.110644_b2",
+        "doi-asserted-by": "crossref",
+        "first-page": "3168",
+        "DOI": "10.1109/TPWRS.2019.2893821",
+        "article-title": "A multi-timescale data-driven approach to enhance distribution system observability",
+        "volume": "34",
+        "author": "Yuan",
+        "year": "2019",
+        "journal-title": "IEEE Trans. Power Syst."
+      },
+      {
+        "key": "10.1016/j.epsr.2024.110644_b3",
+        "series-title": "2020 IEEE Power & Energy Society Innovative Smart Grid Technologies Conference",
+        "first-page": "1",
+        "article-title": "Robust medium-voltage distribution system state estimation using multi-source data",
+        "author": "Zhao",
+        "year": "2020"
+      },
+      {
+        "issue": "5",
+        "key": "10.1016/j.epsr.2024.110644_b4",
+        "doi-asserted-by": "crossref",
+        "first-page": "1096",
+        "DOI": "10.1109/TIM.2013.2295657",
+        "article-title": "Optimal meter placement for robust measurement systems in active distribution grids",
+        "volume": "63",
+        "author": "Liu",
+        "year": "2014",
+        "journal-title": "IEEE Trans. Instrum. Meas."
+      },
+      {
+        "issue": "6",
+        "key": "10.1016/j.epsr.2024.110644_b5",
+        "doi-asserted-by": "crossref",
+        "first-page": "4910",
+        "DOI": "10.1109/TPWRS.2019.2919157",
+        "article-title": "Bayesian state estimation for unobservable distribution systems via deep learning",
+        "volume": "34",
+        "author": "Mestav",
+        "year": "2019",
+        "journal-title": "IEEE Trans. Power Syst."
+      },
+      {
+        "key": "10.1016/j.epsr.2024.110644_b6",
+        "series-title": "2014 IEEE International Conference on Acoustics, Speech and Signal Processing",
+        "first-page": "3450",
+        "article-title": "Power system line outage detection and identification a quickest change detection approach",
+        "author": "Banerjee",
+        "year": "2014"
+      },
+      {
+        "key": "10.1016/j.epsr.2024.110644_b7",
+        "doi-asserted-by": "crossref",
+        "first-page": "1",
+        "DOI": "10.1109/TPWRS.2022.3201067",
+        "article-title": "Wide-area line outage monitoring by sparse phasor measurements",
+        "author": "Azizi",
+        "year": "2022",
+        "journal-title": "IEEE Trans. Power Syst."
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.epsr.2024.110644_b8",
+        "first-page": "1074",
+        "article-title": "Quick line outage identification in urban distribution grids via smart meters",
+        "volume": "8",
+        "author": "Liao",
+        "year": "2022",
+        "journal-title": "CSEE J. Power Energy Syst."
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.epsr.2024.110644_b9",
+        "doi-asserted-by": "crossref",
+        "first-page": "1644",
+        "DOI": "10.1109/TPWRS.2008.2004826",
+        "article-title": "Line outage detection using phasor angle measurements",
+        "volume": "23",
+        "author": "Tate",
+        "year": "2008",
+        "journal-title": "IEEE Trans. Power Syst."
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.epsr.2024.110644_b10",
+        "doi-asserted-by": "crossref",
+        "first-page": "1640",
+        "DOI": "10.1109/TSG.2013.2260361",
+        "article-title": "Analog-digital power system state estimation based on information theory—Part I: Theory",
+        "volume": "4",
+        "author": "Sun",
+        "year": "2013",
+        "journal-title": "IEEE Trans. Smart Grid"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.epsr.2024.110644_b11",
+        "doi-asserted-by": "crossref",
+        "first-page": "1647",
+        "DOI": "10.1109/TSG.2013.2260362",
+        "article-title": "Analog-digital power system state estimation based on information theory—Part II: Implementation and application",
+        "volume": "4",
+        "author": "Sun",
+        "year": "2013",
+        "journal-title": "IEEE Trans. Smart Grid"
+      },
+      {
+        "key": "10.1016/j.epsr.2024.110644_b12",
+        "series-title": "Advances in Neural Information Processing Systems",
+        "article-title": "Attention is all you need",
+        "author": "Vaswani",
+        "year": "2017"
+      },
+      {
+        "issue": "20",
+        "key": "10.1016/j.epsr.2024.110644_b13",
+        "first-page": "10",
+        "article-title": "Graph attention networks",
+        "volume": "1050",
+        "author": "Velickovic",
+        "year": "2017",
+        "journal-title": "Statistics"
+      },
+      {
+        "key": "10.1016/j.epsr.2024.110644_b14",
+        "series-title": "International Conference on Artificial Neural Networks, 2021",
+        "first-page": "253",
+        "article-title": "EGAT: Edge-featured graph attention network",
+        "author": "Wang",
+        "year": "2021"
+      },
+      {
+        "key": "10.1016/j.epsr.2024.110644_b15",
+        "unstructured": "J. Gehring, M. Auli, D. Grangier, D. Yarats, Y.N. Dauphin, Convolutional sequence to sequence learning, in: International Conference on Machine Learning, 2017."
+      },
+      {
+        "key": "10.1016/j.epsr.2024.110644_b16",
+        "doi-asserted-by": "crossref",
+        "unstructured": "K. He, X. Zhang, S. Ren, J. Sun, Deep residual learning for image recognition, in: IEEE Conference on Computer Vision and Pattern Recognition, 2016.",
+        "DOI": "10.1109/CVPR.2016.90"
+      },
+      {
+        "key": "10.1016/j.epsr.2024.110644_b17",
+        "series-title": "Layer normalization",
+        "author": "Ba",
+        "year": "2016"
+      },
+      {
+        "key": "10.1016/j.epsr.2024.110644_b18",
+        "first-page": "1",
+        "article-title": "A robust parallel distributed state estimation for large scale distribution systems",
+        "author": "Yilmaz",
+        "year": "2023",
+        "journal-title": "IEEE Trans. Power Syst."
+      },
+      {
+        "key": "10.1016/j.epsr.2024.110644_b19",
+        "series-title": "IEEE Power Engineering Society General Meeting, 2005",
+        "first-page": "454",
+        "article-title": "Usefulness of DC power flow for active power flow analysis",
+        "volume": "Vol. 1",
+        "author": "Purchala",
+        "year": "2005"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.epsr.2024.110644_b20",
+        "doi-asserted-by": "crossref",
+        "first-page": "1035",
+        "DOI": "10.1109/TPWRS.2012.2220865",
+        "article-title": "External system line outage identification using phasor measurement units",
+        "volume": "28",
+        "author": "Emami",
+        "year": "2013",
+        "journal-title": "IEEE Trans. Power Syst."
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.epsr.2024.110644_b21",
+        "doi-asserted-by": "crossref",
+        "first-page": "267",
+        "DOI": "10.1111/j.2517-6161.1996.tb02080.x",
+        "article-title": "Regression shrinkage and selection via the LASSO",
+        "volume": "58",
+        "author": "Tibshirani",
+        "year": "1996",
+        "journal-title": "J. R. Stat. Soc. Ser. B Stat. Methodol."
+      },
+      {
+        "key": "10.1016/j.epsr.2024.110644_b22",
+        "doi-asserted-by": "crossref",
+        "unstructured": "T. Yildiz, A. Abur, Improved Line Outage Detection in Transmission Systems with Few PMUs, in: 2022 North American Power Symposium, NAPS, 2022, pp. 1–5.",
+        "DOI": "10.1109/NAPS56150.2022.10012140"
+      },
+      {
+        "key": "10.1016/j.epsr.2024.110644_b23",
+        "unstructured": "A.R. Al-Roomi, Power flow test systems repository. MathWorks. [Online]. Available: https://al-roomi.org/power-flow/118-bus-system."
+      }
+    ],
+    "container-title": [
+      "Electric Power Systems Research"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0378779624005303?httpAccept=text/xml",
+        "content-type": "text/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0378779624005303?httpAccept=text/plain",
+        "content-type": "text/plain",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2024,
+          10,
+          6
+        ]
+      ],
+      "date-time": "2024-10-06T22:09:29Z",
+      "timestamp": 1728252569000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0378779624005303"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2024,
+          10
+        ]
+      ]
+    },
+    "references-count": 23,
+    "alternative-id": [
+      "S0378779624005303"
+    ],
+    "URL": "https://doi.org/10.1016/j.epsr.2024.110644",
+    "relation": {},
+    "ISSN": [
+      "0378-7796"
+    ],
+    "issn-type": [
+      {
+        "value": "0378-7796",
+        "type": "print"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2024,
+          10
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "Elsevier",
+        "name": "publisher",
+        "label": "This article is maintained by"
+      },
+      {
+        "value": "Graph-learning-assisted state estimation using sparse heterogeneous measurements",
+        "name": "articletitle",
+        "label": "Article Title"
+      },
+      {
+        "value": "Electric Power Systems Research",
+        "name": "journaltitle",
+        "label": "Journal Title"
+      },
+      {
+        "value": "https://doi.org/10.1016/j.epsr.2024.110644",
+        "name": "articlelink",
+        "label": "CrossRef DOI link to publisher maintained version"
+      },
+      {
+        "value": "article",
+        "name": "content_type",
+        "label": "Content Type"
+      },
+      {
+        "value": "© 2024 Elsevier B.V. All rights are reserved, including those for text and data mining, AI training, and similar technologies.",
+        "name": "copyright",
+        "label": "Copyright"
+      }
+    ],
+    "article-number": "110644"
+  }
+}

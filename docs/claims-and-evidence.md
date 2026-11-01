@@ -1,5 +1,24 @@
 # Claims and evidence register
 
+## Submission successor S01 (31 Oct; current executed boundary)
+
+The current article's central claim is recovery-aware physical-history attribution under its declared load/line simulation contract. S01 adds adversarial controls and reports transfer failures; it does not turn the manuscript into an all-family deployment claim.
+
+| Claim | Evidence class | Executed result and limit |
+|---|---|---|
+| The full physical procedure is useful against a simpler state-retaining competitor | Empirical-secondary, open H04 | Common-clock five-model bank 51/54 timely with 3 extras; single-state short GLR 37/54 with 37. Nominal history bank 44/54 with 6. This compares whole procedures, not a pure memory ablation or matched false-alarm rates. Three event calendars and one normal parent are repeated under conditions. |
+| Grouped training controls replica leakage | Protocol plus retrospective development | 31/8/17 fit/validation/reserved groups; 90/16/70 records. SHORT selected at 108/192 validation versus 92/192. Reserved SHORT 302/576: load 28/288, line 274/288, 3 extras. No unseen-source or blind-test claim; only two normal groups exist. |
+| The physics procedure helps beyond the newly fitted classifier on H04 | Empirical-secondary, common cohort | Frozen SHORT obtains 27/54 timely (load 0/27, line 27/27) with 3 extras, versus the physical bank's 51/54 with 3. Publisher semantics differ. H04 shares the reserved normal parent, so its normal exposure is not additional independent evidence. |
+| Cyber composition preserves distinct identities and clocks | Implemented interface plus retrospective RAW evidence | Missing and corrupt PMU identity remain distinct from physical source. All four missing intervals are correctly localized by both interfaces; mean first notice 12.13 s versus 0 s in received-report time. This is not computation latency or attack-intent identification. |
+| SIM learning improves RAW source inference globally | Not supported | Source-only hybrid changes joint correctness 1/24 to 2/24, one gain/no losses, solely line 23–24. Fault 1/1 is unchanged; generation 0/11 and load 0/11 remain. All 180 windows and incomplete/startup reports are retained. One reused record is not independent confirmation. |
+| R11 transfers unchanged to RAW | Falsified under the declared admission contract | The first 300-report prefix violates noise-scale and stationarity support. No later prefix, relaxed gate or alternate instrument model is substituted into frozen R11. |
+| The archived hackathon score has been reproduced | Not supported | Original 21-context calendar conflicts with the unchanged RAW files. Preserve that antecedent, but use current-annotation fixed-window replay for the executed comparison. |
+| Mathematical repairs imply improved experimental performance | Not claimed | M1–M7 repair assumptions/constants/domains in historical derivations; empirical tables are not altered to imply a rerun. |
+
+The unified physical/integrity publication is executed and independently verified: all 180 physical and integrity windows, 12 availability messages and six report arrays project exactly to their sealed components. An independent consumer reconstructs current missingness and ML availability over 161379 reports without disagreement. Completed intervals never reopen restored missing episodes. This proves composition, not an additional performance improvement or physical-filter transfer.
+
+Evidence imports are `generated/frozen/submission_s01_controls_20261031`, `submission_s01_learning_20261031`, `submission_s01_raw_hybrid_20261031`, `submission_s01_ml_h04_20261031` and `submission_s01_system_20261031`. Each retains exact source hashes. C01 remains unfinished; partial predictions and truth are not used. The narrower evidence can support a defensible paper after final confirmation and editorial closure, but the user's requested strong all-family RAW performance has not been achieved.
+
 ## Recovery control X04 (31 Oct)
 
 Full F01, 38 continuous trajectories, 47 instrumental coordinates, four

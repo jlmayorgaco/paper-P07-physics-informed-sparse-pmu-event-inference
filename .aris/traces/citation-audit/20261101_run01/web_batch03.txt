@@ -1,0 +1,308 @@
+Quickest Line Outage Detection and Identification (https://people.ece.ubc.ca/chen/papers/journal/07041234.pdf)
+citeturn22search12 [wordlim: 200] Published: 11.8 years ago; Quickest Line Outage Detection and Identification ... To detect and identify transmission line outages, a linearized incremental small-signal power system model is used in conjunction with high-speed synchronized voltage phase angle measurements obtained from phasor measurement units. ... The work of Chen and Domínguez-García is supported in part by PSERC, the National Science Foundation (NSF) under grant ECCS-CAR-0954420, and the Natural Sciences and Engineering Research Council of Canada under its Postgraduate Scholarship Program.
+Quickest Line Outage Detection and Identification
+
+Yu Christine Chen, *Student Member, IEEE*, Taposh Banerjee, *Student Member, IEEE*,  
+Alejandro D. Domínguez-García, *Member, IEEE*, and Venugopal V. Veeravalli, *Fellow, IEEE*
+
+**Abstract—** A method is proposed to detect and identify power system transmission line outages in near real-time. The method exploits the statistical properties of the small random fluctuations in electricity generation and demand that a power system is subject to as time evolves. To detect and identify transmission line outages, a linearized incremental small-signal power system model is used in conjunction with high-speed synchronized voltage phase angle measurements obtained from phasor measurement units. By monitoring the statistical properties of voltage phase angle time-series, line outages are detected and identified using techniques borrowed from the theory of quickest change detection. As illustrated through case studies, the proposed method is effective in detecting and identifying single- and double-line outages in an accurate and timely fashion.
+
+## I. INTRODUCTION
+
+To monitor real-time operational reliability, power system operators rely heavily on a model of the system obtained offline; this model contains the transmission network topology, parameters, and historical and forecasted power generation and demand [1], [2]. Thus, the validity and accuracy of online studies are contingent upon the accuracy of the system model used, which is, in turn, heavily dependent upon accurate records and telemetry from remotely monitored circuit breakers. Erroneous records or telemetry, including knowledge of transmission line statuses, have contributed to numerous major North American blackouts [1], [2]. For example, in the 2011 San Diego blackout, operators could not detect that certain lines were overloaded or close to being overloaded because the network model was not up-to-date, causing state estimator results to be inaccurate [2]. Therefore, in order to update the model used in operational reliability studies in a timely manner to reflect current system conditions, there exists an impetus to develop efficient and robust online tools to detect and identify network topology changes. The development of such tools to identify transmission line outages and, in general, changes in network topology, can be enabled by the widespread deployment of phasor measurement units (PMUs). Unlike current system measurements, PMUs measure voltage and current phasors at a very high speed (usually 30 measurements per second) [3], and phasors measured at different locations by different devices are time-synchronized [4].
+
+In this paper, by exploiting the statistical properties of voltage phase angle measurements obtained from PMUs, we propose a method to detect and identify line outages in near real-time based on the theory of quickest change detection (QCD). In QCD, a decision maker observes a sequence of random variables, the probability distribution of which changes abruptly due to some event that occurs at an unknown time, such as a line outage in the present setting. The objective is to detect this change in distribution as quickly as possible subject to a fixed rate of false alarm before the change [5].
+
+We model the incremental changes in net power injection at each bus as independent random variables, the probability distribution of which is determined by random fluctuations in generation and demand. Then, we use an incremental small-signal power flow model to relate the probability distributions of the power injections and the voltage angle measurements via a linear mapping. A decision maker observes the sequence of incremental changes in bus voltage phase angle measurements obtained from PMUs, the statistical properties of which change due to a line outage. By feeding this data sequentially to a QCD algorithm, we can detect the change in distribution. Furthermore, in the proposed QCD-based framework, a sequence of observations is classified into one among multiple hypotheses based on statistical properties of the observed measurements [6]. Hence, the true line outage is identified among a set of credible line outages, and the network topology can be updated in a timely manner.
+
+Issues of inaccurate state estimation results arising from topology errors have been apparent for many years [7]. Numerous approaches have been proposed to detect and identify topology errors in the context of state estimation [8], [9], [10]. The specific issue of determining external system topology errors was explored in [11]. Owing to the potential improvement in situational awareness offered by the widespread deployment of PMUs, recent work has focused on external system line-outage detection and/or identification by taking advantage of voltage phase angle measurements [12], [13], [14]. These rely on the phase angle difference between two sets of PMU voltage phasor measurements obtained before and after the event, and proceed to identify the line outage location via hypothesis testing [12], sparse vector estimation [13], or mixed-integer nonlinear optimization [14]. Existing approaches, however, do not exploit the fact that the line outage is persistent, i.e., once a line outage occurs, it remains so until it is detected and brought back into service. In our QCD-based framework, the persistence of the fault is exploited to detect the line outage with lower rate of false alarms and misdetections.
+
+This paper builds on our preliminary work reported in [15], providing extensions in several directions. First, in the line-outage model, we expound on the voltage phase angle difference between the measurement sets acquired immediately before and after the outage occurs. Second, we modify the QCD
+
+The authors are with the Department of Electrical and Computer Engineering of the University of Illinois at Urbana-Champaign, Urbana, IL, 61801, USA. E-mail: {chen267, banerje5, aledan, vvv}@illinois.edu.  
+The work of Banerjee and Veeravalli is supported in part by the National Science Foundation (NSF) under grant DMS 12-22498. The work of Chen and Domínguez-García is supported in part by PSERC, the National Science Foundation (NSF) under grant ECCS-CAR-0954420, and the Natural Sciences and Engineering Research Council of Canada under its Postgraduate Scholarship Program.--------------------------------------------------------------------------------
+Statistical Power System Line Outage Detection Under Transient Dynamics - Illinois Experts (https://experts.illinois.edu/en/publications/statistical-power-system-line-outage-detection-under-transient-dy/)
+citeturn22search0 [wordlim: 200] Published: 9.4 years ago; Crawled: 2 weeks ago; # Statistical Power System Line Outage Detection Under Transient Dynamics ... Research output: Contribution to journal › Article › peer-review ... The proposed algorithm incorporates the transient dynamics of the power system following a line outage and is applied to the measurements of voltage phase angles, which are collected using phasor measurement units.
+
+# Statistical Power System Line Outage Detection Under Transient Dynamics
+
+  * Georgios Rovatsos
+  * , Xichen Jiang
+  * , Alejandro D. Domínguez-García
+  * , Venugopal V. Veeravalli
+
+  * Electrical and Computer Engineering
+  * Information Trust Institute
+  * Coordinated Science Lab
+  * Statistics
+
+Research output: Contribution to journal › Article › peer-review
+
+## Abstract
+
+A quickest change detection (QCD) algorithm is proposed to address the problem of detecting and identifying line outages in a power system. The statistics of electricity demand are assumed to be known and propagated through a linearized model of the equations describing the power flow balance at each node of the network. The proposed algorithm incorporates the transient dynamics of the power system following a line outage and is applied to the measurements of voltage phase angles, which are collected using phasor measurement units. This adaptive algorithm is developed by treating the QCD problem as a dynamic composite hypothesis testing problem. It is shown to have superior performance compared with other line outage detection algorithms previously proposed in the literature. Case studies demonstrating this gain in performance are illustrated through the IEEE 118-bus test system.
+
+Original language  | English (US)
+Article number  | 7862890
+Pages (from-to)  | 2787-2797
+Number of pages  | 11
+Journal  | IEEE Transactions on Signal Processing
+Volume  | 65
+Issue number  | 11
+DOIs  | 
+
+  * https://doi.org/10.1109/TSP.2017.2673802
+State  | Published - Jun 1 2017
+
+## Keywords
+
+  * CuSum test
+  * Line outage detection and identification
+  * line fault
+  * power systems dynamics
+  * quickest change detection
+--------------------------------------------------------------------------------
+Bayesian Inference of Parameters in Power System Dynamic Models Using Trajectory Sensitivities | IEEE Journals & Magazine | IEEE Xplore (https://ieeexplore.ieee.org/document/9512471/)
+citeturn22search1 [wordlim: 200] Published: 5.2 years ago; Crawled: last month; # Bayesian Inference of Parameters in Power System Dynamic Models Using Trajectory Sensitivities ... The linear model together with Gaussian prior leads to a conjugate family where the parameter posterior, model evidence, and their gradients can be computed in closed form, markedly improving scalability for large-scale power systems.
+
+# Bayesian Inference of Parameters in Power System Dynamic Models Using Trajectory Sensitivities
+
+Publisher: IEEE
+
+## Abstract:
+
+We propose an analytically tractable Bayesian method to infer parameters in power system dynamic models from noisy measurements of bus-voltage magnitudes and frequencies ...Show More
+
+## Metadata
+
+## Abstract:
+
+We propose an analytically tractable Bayesian method to infer parameters in power system dynamic models from noisy measurements of bus-voltage magnitudes and frequencies as well as active- and reactive-power injections. The proposed method is computationally appealing as it bypasses the large number of system model simulations typically required in sampling-based Bayesian inference. Instead, it relies on analytical linearization of the nonlinear system differential-algebraic-equation model enabled by trajectory sensitivities. Central to the proposed method is the construction of a linearized model with the maximum probability of being (closest to) the actual nonlinear model that gave rise to the measurement data. The linear model together with Gaussian prior leads to a conjugate family where the parameter posterior, model evidence, and their gradients can be computed in closed form, markedly improving scalability for large-scale power systems. We illustrate the effectiveness and key features of the proposed method with numerical case studies for a three-bus system. Algorithmic scalability is then demonstrated via case studies involving the New England 39-bus test system.
+
+Published in: IEEE Transactions on Power Systems ( Volume: 37, Issue: 2, March 2022)
+
+Page(s): 1253 - 1263
+
+Date of Publication: 12 August 2021
+
+ISSN Information:
+
+DOI: 10.1109/TPWRS.2021.3104536--------------------------------------------------------------------------------
+Physics-Informed Gaussian Process Regression for States Estimation and Forecasting in Power Grids | Journal Article | PNNL (https://www.pnnl.gov/publications/physics-informed-gaussian-process-regression-states-estimation-and-forecasting-power)
+citeturn22search2 [wordlim: 200] Published: 2.6 years ago; Crawled: last month; ## Physics-Informed Gaussian Process Regression for States Estimation and Forecasting in Power Grids ... Physics-Informed Gaussian Process Regression for States Estimation and Forecasting in Power Grids.
+
+April 5, 2024
+
+Journal Article
+
+## Physics-Informed Gaussian Process Regression for States Estimation and Forecasting in Power Grids
+
+## Abstract
+
+Real-time state estimation and forecasting is critical for efficient operation of power grids. In this paper, a physics-informed Gaussian process regression (PhI-GPR) method is presented and used for forecasting and estimating the phase angle, angular speed, and wind mechanical power of a three-generator power grid system using sparse measurements. In standard data-driven Gaussian process regression (GPR), parameterized models for the prior statistics are fit by maximizing the marginal likelihood of observed data, whereas in PhI-GPR, we compute the prior statistics by solving stochastic equations governing power grid dynamics. The short-term forecast of a power grid system dominated by wind generation is complicated by the stochastic nature of the wind and the resulting uncertain mechanical wind power. Here, we assume that the power-grid dynamic is governed by the swing equations, and we treat the unknown terms in the swing equations (specifically, the mechanical wind power) as random processes, which turns these equations into stochastic differential equations. We solve these equations for the mean and variance of the power grid system using the Monte Carlo simulations method. We demonstrate that the proposed PhI-GPR method can accurately forecast and estimate both observed and unobserved states. For observed states, we show that PhI-GPR provides a forecast comparable to the standard data-driven GPR, with both forecasts being significantly more accurate than the autoregressive integrated moving average (ARIMA) forecast. Both standard data-driven GPR and ARIMA cannot be used for forecasting and estimating of the unobserved states. We also show that the ARIMA forecast is much more sensitive to observation frequency and measurement errors than the PhI-GPR forecast.
+
+Published: April 5, 2024
+
+## Citation
+
+Tartakovsky A.M., T. Ma, D.A. Barajas-Solano, and R. Tipireddy. 2022. Physics-Informed Gaussian Process Regression for States Estimation and Forecasting in Power Grids. International Journal of Forecasting 39, no. 2:967-980. PNNL-SA-151765. doi:10.1016/j.ijforecast.2022.03.007--------------------------------------------------------------------------------
+Quickest Line Outage Detection and Identiﬁcation: (https://aledan.ece.illinois.edu/files/2017/09/NAPS_2017.pdf)
+citeturn22search13 [wordlim: 200] Published: 6 months ago; Quickest Line Outage Detection and Identiﬁcation: ... Xichen Jiang∗, Yu Christine Chen†, Venugopal V. ... several areas such that the algorithm for line outage detection ... recent proposed methods exploit the fast sampling of voltage ... of the PMU placement problem, most of the research has been ... identiﬁcation, based on the theory of quickest change detection
+Quickest Line Outage Detection and Identiﬁcation:
+Measurement Placement and System Partitioning
+Xichen Jiang∗, Yu Christine Chen†, Venugopal V. Veeravalli‡, Alejandro D. Dom´ınguez-Garc´ıa‡
+∗Western Washington University. Email:{xichen.jiang}@wwu.edu
+†University of British Columbia. Email:{chen}@ece.ubc.ca
+‡University of Illinois. Email: {vvv, aledan}@illinois.edu
+Abstract—This paper addresses the problem of detecting and
+identifying transmission line outages in near real-time. To this
+end, we utilize the statistical properties of electricity generation
+and demand, and apply a quickest change detection algorithm
+to measurements of voltage phase angles collected using phasor
+measurement units (PMUs). We propose a procedure for opti-
+mally selecting the buses for PMU placement with the goal of
+minimizing the worst case line outage detection delay. In addition,
+we propose a method to optimally partition the power system into
+several areas such that the algorithm for line outage detection
+can be applied in parallel to each area for faster detection. We
+illustrate the proposed ideas via case studies involving the IEEE
+30-bus test system.
+I. INTRODUCTION
+is to detect a change in this probability distribution after
+the occurrence of a line outage as quickly as possible while
+maintaining a desired false alarm rate.
+In this paper, we consider the problem of identifying a
+subset of buses for placing the PMUs to be utilized by the
+QCD algorithms proposed in [3]–[5]. We propose an optimal
+PMU placement strategy in the sense of minimizing the worst-
+case line outage detection delay, for a ﬁxed false alarm rate.
+We formulate this as an integer programming problem and
+present a greedy algorithm for solving it, and show that for
+our test cases, optimally deploying PMUs at approximately
+one third of the system buses is adequate for timely line
+outage detection. Next, we achieve a faster detection time
+by proposing a method to partition the power system into
+smaller subsystems so that the proposed QCD-based detection
+algorithms can be applied to all the areas concurrently. --------------------------------------------------------------------------------
+A Control Chart Approach to Power System Line Outage Detection Under Transient Dynamics (https://hero.epa.gov/reference/7849682/)
+citeturn22search3 [wordlim: 200] Published: 5.8 years ago; Crawled: 2 weeks ago; ## A Control Chart Approach to Power System Line Outage Detection Under Transient Dynamics ... Using voltage phase angle data collected from a limited number of PMUs, we propose a real-time dynamic outage detection scheme based on alternating current (AC) power flow model and statistical change detection theory.
+
+## A Control Chart Approach to Power System Line Outage Detection Under Transient Dynamics
+
+Yang, X; Chen, Nan; Zhai, C
+
+HERO ID
+
+7849682
+
+Reference Type
+
+Journal Article
+
+Year
+
+2021
+
+HERO ID  | 7849682
+In Press  | No
+Year  | 2021
+Title  | A Control Chart Approach to Power System Line Outage Detection Under Transient Dynamics
+Authors  | Yang, X; Chen, Nan; Zhai, C
+Journal  | I E E E Transactions on Power Systems
+Volume  | 36
+Issue  | 1
+Page Numbers  | 127-135
+Abstract  | Online transmission line outage detection over the entire network enables timely corrective action to be taken, which prevents a local event from cascading into a large scale blackout. Line outage detection aims to detect an outage as soon as possible after it happened. Traditional methods either do not consider the transient dynamics following an outage or require a full Phasor Measurement Unit (PMU) deployment. Using voltage phase angle data collected from a limited number of PMUs, we propose a real-time dynamic outage detection scheme based on alternating current (AC) power flow model and statistical change detection theory. The proposed method can capture system dynamics since it retains the time-variant and nonlinear nature of the power system. The method is computationally efficient and scales to large and realistic networks. Extensive simulation studies on IEEE 39-bus and 2383-bus systems demonstrated the effectiveness of the proposed method.
+Doi  | 10.1109/TPWRS.2020.3006465
+Wosid  | WOS:000607385700012
+Is Certified Translation  | No
+Dupe Override  | No
+Is Public  | No
+Keyword  | Phasor measurement units; Power system dynamics; Manganese; Transient analysis; Real-time systems; Anomaly detection; generalized likelihood ratio; line outage; outage localization; phasor measurement unit; transient dynamics--------------------------------------------------------------------------------
+Bayesian Inference of Parameters in Power System Dynamic Model Using Trajectory Sensitivities (https://people.ece.ubc.ca/~chen/papers/journal/2021_TPWRS_Parameter.pdf)
+citeturn22search14 [wordlim: 200] Published: 5.2 years ago; Bayesian Inference of Parameters in Power System Dynamic Model Using Trajectory Sensitivities ... **Index Terms—**Bayesian inference, Bayesian model selection, Bayes factor, dynamic model, parameter estimation, trajectory sensitivities ... These approaches typically do not quantify the uncertainty in the resulting parameter estimates affected by, e.g., the quantity and quality of measurement data.
+Bayesian Inference of Parameters in Power System Dynamic Model Using Trajectory Sensitivities
+
+Rubinder Nagi, *Student Member, IEEE*, Xun Huan, and Yu Christine Chen, *Member, IEEE*
+
+**Abstract—**We propose an analytically tractable Bayesian method to infer parameters in power system dynamic models from noisy measurements of bus-voltage magnitudes and frequencies as well as active- and reactive-power injections. The proposed method is computationally appealing as it bypasses the large number of system model simulations typically required in sampling-based Bayesian inference. Instead, it relies on analytical linearization of the nonlinear system differential-algebraic-equation model enabled by trajectory sensitivities. Central to the proposed method is the construction of a linearized model with the maximum probability of being (closest to) the actual nonlinear model that gave rise to the measurement data. The linear model together with Gaussian prior leads to a conjugate family where the parameter posterior, model evidence, and their gradients can be computed in closed form, markedly improving scalability for large-scale power systems. 
+Classical Bayesian inference uses Markov chain Monte Carlo (MCMC) algorithms (see, e.g., [11], [12]) that typically require thousands (or more) repeated simulations of the system model under study. However, since models of large-scale power systems consist of many nonlinear differential-algebraic equations (DAEs) describing generator and load dynamics coupled across an expansive transmission network, MCMC can become computationally impractical, even prohibitive. Our strategy avoids MCMC altogether by linearizing the nonlinear DAE model around a nominal system trajectory (not a single operating point) resulting from potentially major disturbances like large-signal load changes or faults. The linearized time-varying model comprises trajectory sensitivities that are analytically derived by differentiating the DAEs with respect to parameters, which are then evaluated along the nominal trajec-
+
+R. Nagi and Y. C. Chen are with the Department of Electrical and Computer Engineering at the University of British Columbia, Vancouver, BC, Canada. E-mail: {rubinder, chen}@ece.ubc.ca. They gratefully acknowledge the support of the Natural Sciences and Engineering Research Council of Canada (NSERC), funding reference number RGPIN-2016-04271.  
+X. Huan is with the Department of Mechanical Engineering at the University of Michigan, Ann Arbor, MI, United States. E-mail: xhuan@umich.edu.--------------------------------------------------------------------------------
+1
+Statistical Power System Line Outage Detection
+U (https://aledan.ece.illinois.edu/files/2017/04/TSP_2017.pdf)
+citeturn22search15 [wordlim: 200] Published: 9.7 years ago; line outage detection problem is treated as a problem of ... to the non-composite QCD problem under the presence of ... a test statistic for each possible line outage in parallel, and ... QCD setting, where no transient dynamics are present, a log-
+5
+test. First, we present the Meanshift test, a detection scheme
+that can be shown to be equivalent to that proposed in [10]
+for detecting line outages. Next, we present a modiﬁed version
+of the Shewhart test (see e.g., [6]) that accounts for transient
+dynamics but without using the history of the observations.
+A. Meanshift Test
+The Meanshift test presented here is a “oneshot” detection
+scheme, i.e., only the most recent observation is used to
+calculate the test statistics. For this algorithm, a single log-
+likelihood ratio between the distribution of the observations
+at the changepoint and before the changepoint is used to
+detect the outage. Thus, when using the Meanshift test, the
+line outage detection problem is treated as a problem of
+detecting the meanshift that occurs at the changepoint. In
+particular, deﬁne the meanshift statistic corresponding to line
+ℓas follows:
+W M
+ℓ[k] = log f (0)
+ℓ
+(∆ˆθ[k])
+of [3] needs to be modiﬁed to take this transient behavior into
+consideration. Toward this end, we introduce the Generalized
+Dynamic CuSum (G-D-CuSum) test. This test is derived by
+exploiting the so-called Dynamic CuSum (D-CuSum) test, a
+test also proposed in this work. This test arises as a solution
+to the non-composite QCD problem under the presence of
+an arbitrary number of transient periods. The D-CuSum test
+statistic is derived by formulating the transient QCD problem
+as a dynamic composite hypothesis testing problem at each
+time instant. The G-D-CuSum algorithm uses the test statistics
+of the D-CuSum test in a generalized manner, i.e., calculates
+a test statistic for each possible line outage in parallel, and
+declares an outage when one of the line statistics crosses a
+pre-determined positive threshold corresponding to the line.
+We refer the reader to the Appendix for an in depth analysis
+of the D-CuSum test and the derivation of the test statistics
+based on the maximum likelihood ratio interpretation of the
+CuSum test.
+By using the D-CuSum test statistic as a basis, we propose
+the G-D-CuSum test. The statistic for line ℓis given as follows:
+used. The basis of this algorithm is that each statistic is used
+to capture one of the transient distributions. As a result, at
+each different period that the process goes through, one of the
+Ωstatistics will dominate the others, leading to the adaptive
+nature of the algorithm. The test statistics are designed to use
+prior information from other test statistics, exploiting the fact
+that distribution changes occur in a sequential manner. It is
+also important to note that the structure of the algorithm is
+not affected by the duration of any of the transient periods.
+This is because the test statistic is calculated by maximizing a
+log-likelihood ratio over all possible changepoint allocations
+(see the Appendix).
+IV. OTHER ALGORITHMS FOR CHANGE DETECTION
+In this section, we present two additional change detection
+algorithms that are of lower complexity than the G-D-CuSum
+A test widely used in QCD theory to detect a persistent
+change in the distribution of a sequence, mainly due to the ease
+of its implementation is the Shewhart test [6]. In the classic
+QCD setting, where no transient dynamics are present, a log-
+likelihood ratio between the persistent post-outage distribution
+and the pre-outage distribution is used. By modifying the
+structure of the test to account for the meanshift and transient
+phenomenon after an outage, we derive a test that is better
+in terms of performance compared to the Meanshift test. This
+is done by introducing an additional log-likelihood ratio term
+for each transient response period and one for the meanshift.--------------------------------------------------------------------------------
+1
+Quickest Line Outage Detection and Identiﬁcation (https://aledan.ece.illinois.edu/files/2017/04/TPWRS_2016_b.pdf)
+citeturn22search16 [wordlim: 200] Published: 11.8 years ago; Yu Christine Chen (S’10) received the B.A.Sc. degree in Engineering Science ... His research interests are in detection and estimation theory, sequential ... Abur, “External system line outage identiﬁcation ... “Power system line outage detection and identiﬁcation—a quickest ... http://energy.gov/sites/prod/ﬁles/2013/08/f2/SynchrophasorRptAug2013.pdf ... Thompson Best Paper Award, the National Science Foundation CAREER
+10
+Yu Christine Chen (S’10) received the B.A.Sc. degree in Engineering Science
+(major in Electrical Engineering) from the University of Toronto in 2009.
+She received the M.S. and Ph.D. degrees in Electrical Engineering from the
+University of Illinois at Urbana-Champaign in 2011 and 2014, respectively.
+She is currently an Assistant Professor in the Department of Electrical and
+Computer Engineering at The University of British Columbia, where she is
+afﬁliated with the Electric Power and Energy Systems Group. Her research
+interests include power system analysis, monitoring, and control.
+Taposh Banerjee received his M.E. in Telecommunications from the E.C.E.
+Department of the Indian Institute of Science, Bangalore, and a Ph.D. in E.C.E.
+from the University of Illinois at Urbana-Champaign. He is now a postdoctoral
+research fellow at the EECS department, University of Michigan, Ann Arbor.
+His research interests are in detection and estimation theory, sequential
+analysis, information theory, wireless communications and communication
+--------------------------------------------------------------------------------
+Physics-informed Gaussian process regression for states estimation and forecasting in power grids - ScienceDirect (https://www.sciencedirect.com/science/article/pii/S0169207022000474)
+citeturn22search4 [wordlim: 200] Published: 3.6 years ago; Crawled: 2 weeks ago; There are two general types of forecasting methods, including machine learning (ML) forecasting techniques (e.g., fuzzy regression models (Hong and Wang, 2014, Song et al., 2005), support vector machine (Fentis et al., 2016), deep neural networks (Grant et al., 2014, Thiyagarajan and Kumar, 2016, Yeung et al., 2017), gradient boosting machines (Huang and Perry, 2016, Landry et al., 2016, Lloyd, 2014, Taieb and Hyndman, 2014, Xenochristou et al., 2020), and Gaussian process regression (GPR) (Cai et al., 2020, Quiñonero-Candela and Rasmussen, 2005, Snelson and Ghahramani, 2006, Williams and Rasmussen, 2006)), and statistical techniques (e.g., Markov chains (Yoder, Hering, Navidi, & Larson, 2014), data mining (Ahmad and Chen, 2018, Kusiak et al., 2009), multiple linear regression models (Charlton and Singleton, 2014, Hong, 2012, Hong et al., 2013, Luo et al., 2018, Sobhani et al., 2020, Wang et al., 2016), semi-parametric additive models (Fan and Hyndman, 2011, Goude et al., 2013, Hyndman and Fan, 2009, Nedellec et al., 2014), auto-regressive integrated moving average (ARIMA) models (Brockwell and Davis, 2016, de Oliveira and Oliveira, 2018, Hyndman and Athanasopoulos, 2018, Singh et al., 2019), and exponential smoothing models (Gardner, 2006, Hong et al., 2014, Hyndman and Athanasopoulos, 2018)). ... This work proposes a physics-informed GPR (PhI-GPR) method for real-time forecast and estimation of power grid states.
+If fully known, physics-based models should be able to accurately forecast the dynamics of complex systems because the conservation laws on which these models are based hold both in the past and future. However, physics-based models are not fully known for complex systems such as power grid systems. For example, in a model of an electrical grid dominated by wind energy, the wind mechanical power is uncertain and, in general, impossible to predict in the future with absolute certainty. Therefore, physics-based models alone cannot be used for accurate deterministic forecasting of the states of the power grid.
+
+This work proposes a physics-informed GPR (PhI-GPR) method for real-time forecast and estimation of power grid states. In GPR, a state of the power grid is represented as a linear combination of measured values of this state. The coefficients are found as a function of this state’s prior mean and covariance functions. In standard “data-driven” GPR, prior statistics are chosen by fitting parameterized models. --------------------------------------------------------------------------------
+Bayesian Inference of Parameters in Power System Dynamic Models Using Trajectory Sensitivities | Article Information | J-GLOBAL (https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202202289636723608)
+citeturn22search5 [wordlim: 200] Crawled: 5 months ago; # Bayesian Inference of Parameters in Power System Dynamic Models Using Trajectory Sensitivities
+--------------------------------------------------------------------------------
+(PDF) Distribution Grid Line Outage Identification With Unknown Pattern and Performance Guarantee (https://www.researchgate.net/publication/374180578_Distribution_Grid_Line_Outage_Identification_With_Unknown_Pattern_and_Performance_Guarantee)
+citeturn22search6 [wordlim: 200] Published: 3.1 years ago; Crawled: 2 months ago; # Distribution Grid Line Outage Identification With Unknown Pattern and Performance Guarantee ...   * This person is not on ResearchGate, or hasn't claimed this research yet. ... Download full-text PDF Download full-text PDF Read full-text ... D ISTRIBUTION grid line outage occurrence detection and ... part by the National Science Foundation (NSF) under Grant ECCS-1810537 ... Chenhan Xiao is with the School of Electrical, Computer and Energy ... strates that our proposed algorithm could quickly detect line
+--------------------------------------------------------------------------------
+A Control Chart Approach to Power System Line Outage Detection Under Transient Dynamics | Request PDF (https://www.researchgate.net/publication/337048213_A_Control_Chart_Approach_to_Power_System_Line_Outage_Detection_Under_Transient_Dynamics)
+citeturn22search7 [wordlim: 200] Crawled: 5 months ago; Synchrophasor Measurement Technology in Power Systems: Panorama and State-of-the-Art ... Relevant research articles appeared in the IEEE and IET publications from 1983 through 2014 are rigorously surveyed in this paper to represent a panorama of research progress lines. ... The use of Phasor Measurement Units (PMU) has enabled monitoring the power system dynamics online. ... This paper describes the construction of a reduced-order five-machine dynamic equivalent electro-mechanical model of the Western Electricity Coordinating Council (WECC) 500 kV power system network using slow mode oscillations of power flows derived from phasor measurement unit data. ... The conclusions are drawn with the possible applications of the model for transient stability assessment, and prediction of stability limits needed to sustain increasing wind power penetration in the WECC. ... Dimensionality Reduction of Synchrophasor Data for Early Event Detection: Linearized Analysis ... We consider the problem of identifying a single line outage in a power grid by using data from phasor measurement units (PMUs).
+--------------------------------------------------------------------------------
+Search Results - "CUSUM technique" :: Library Catalog (https://iris.sena.edu.co/EDS/Search?dfApplied=1&filter%5B%5D=EXPAND%3A%22fulltext%22&filter%5B%5D=Publisher%3A%22ieee%22&lookfor=%22CUSUM+technique%22&type=SU)
+citeturn22search8 [wordlim: 200] Crawled: 2 months ago; ## Statistical Power System Line Outage Detection Under Transient Dynamics.
+--------------------------------------------------------------------------------
+Full article: An Adaptive Sampling Strategy for Online Monitoring of Partially Observed Networks (https://www.tandfonline.com/doi/abs/10.1080/00401706.2025.2580634)
+citeturn22search9 [wordlim: 200] Published: 10 months ago; Crawled: 2 weeks ago; ## Related Research Data ... (Open in a new window)Web of Science ®(Open in a new window)Google Scholar ...   * Chen, Y. ... (2015), “Quickest Line Outage Detection and Identification,” IEEE Transactions on Power Systems, 31, 749–758.
+--------------------------------------------------------------------------------
+Multiple Line-Outage Detection in Power System With Load Stochastic Perturbations (2020) | Shihao Nie | 12 Citations (https://scispace.com/papers/multiple-line-outage-detection-in-power-system-with-load-2d65f6fbiv)
+citeturn22search10 [wordlim: 200] Published: 6.1 years ago; Crawled: 2 months ago; Abstract: In this brief, we consider multiple line-outage detection problem based on dynamic model of the power system subjects to load stochastic perturbations. ... Statistical Power System Line Outage Detection Under Transient Dynamics
+--------------------------------------------------------------------------------
+(PDF) Quick Line Fault Detection and Identification Using High-Fidelity Models of Transient Dynamics (https://www.researchgate.net/publication/371665015_Quick_Line_Fault_Detection_and_Identification_Using_High-Fidelity_Models_of_Transient_Dynamics)
+citeturn22search11 [wordlim: 200] Crawled: 5 months ago; research directions. ... “Statistical power system line outage detection under transient dynam- ... system line outage detection under transient dynamics,” IEEE Trans.
+

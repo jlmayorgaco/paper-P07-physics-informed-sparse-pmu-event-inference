@@ -1,0 +1,565 @@
+{
+  "key": "jamei2020limits",
+  "retrieved_at": "2026-11-01T03:53:21.666744+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1109%2FJSAC.2019.2951971",
+      "status": "success",
+      "resolved": "https://api.crossref.org/works/10.1109%2FJSAC.2019.2951971"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          9
+        ]
+      ],
+      "date-time": "2026-09-09T04:05:13Z",
+      "timestamp": 1788926713512,
+      "version": "build-2803163510"
+    },
+    "reference-count": 39,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "1",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2020,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2020-01-01T00:00:00Z",
+          "timestamp": 1577836800000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2020,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2020-01-01T00:00:00Z",
+          "timestamp": 1577836800000
+        },
+        "content-version": "am",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2020,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2020-01-01T00:00:00Z",
+          "timestamp": 1577836800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2020,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2020-01-01T00:00:00Z",
+          "timestamp": 1577836800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/100000015",
+        "name": "U.S. Department of Energy",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "DE-AC02-05CH11231"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "DE-AC02-05CH11231"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/100000015",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/100000015",
+        "name": "U.S. Department of Energy",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "DE-OE0000780"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "DE-OE0000780"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/100000015",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE J. Select. Areas Commun."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2020,
+          1
+        ]
+      ]
+    },
+    "DOI": "10.1109/jsac.2019.2951971",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2019,
+          11,
+          6
+        ]
+      ],
+      "date-time": "2019-11-06T20:48:41Z",
+      "timestamp": 1573073321000
+    },
+    "page": "180-192",
+    "source": "Crossref",
+    "is-referenced-by-count": 53,
+    "title": [
+      "Phasor Measurement Units Optimal Placement and Performance Limits for Fault Localization"
+    ],
+    "prefix": "10.1109",
+    "volume": "38",
+    "author": [
+      {
+        "given": "Mahdi",
+        "family": "Jamei",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-0871-3115",
+        "authenticated-orcid": false,
+        "given": "Raksha",
+        "family": "Ramakrishna",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-3442-2418",
+        "authenticated-orcid": false,
+        "given": "Teklemariam",
+        "family": "Tesfay",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-7107-3448",
+        "authenticated-orcid": false,
+        "given": "Reinhard",
+        "family": "Gentz",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-1029-8851",
+        "authenticated-orcid": false,
+        "given": "Ciaran",
+        "family": "Roberts",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Anna",
+        "family": "Scaglione",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Sean",
+        "family": "Peisert",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref39",
+        "year": "2012",
+        "journal-title": "DNP3&#x2013;Distributed Network Protocol 3 0&#x2013;Google Project Hosting"
+      },
+      {
+        "key": "ref38",
+        "author": "modbus",
+        "year": "2004",
+        "journal-title": "MODBUS Messaging on TCP/IP Implementation Guide v1 0a"
+      },
+      {
+        "key": "ref33",
+        "first-page": "29",
+        "article-title": "Reference guide: The open distribution system simulator (opendss)",
+        "volume": "7",
+        "author": "dugan",
+        "year": "2012",
+        "journal-title": "Electr Power Res Inst"
+      },
+      {
+        "key": "ref32",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PESW.2001.916993"
+      },
+      {
+        "key": "ref31",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSP.2016.2573748"
+      },
+      {
+        "key": "ref30",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1073/pnas.0437847100"
+      },
+      {
+        "key": "ref37",
+        "first-page": "1",
+        "year": "2012",
+        "journal-title": "IEEE Std 1815-2012 (Revision of IEEE Std 1815-2010) - Redline 1815-2012"
+      },
+      {
+        "key": "ref36",
+        "year": "0",
+        "journal-title": "LBNL Stream-Processing Architecture for Real-Time Cyber-Physical Security (SPARCS)"
+      },
+      {
+        "key": "ref35",
+        "author": "peisert",
+        "year": "2017",
+        "journal-title": "LBNL Open Power Data"
+      },
+      {
+        "key": "ref34",
+        "article-title": "Wireless sensor data transport, aggregation and security",
+        "author": "gentz",
+        "year": "2017"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1115/POWER2014-32231"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "crossref",
+        "first-page": "1345",
+        "DOI": "10.1109/TSG.2016.2587583",
+        "article-title": "Fault location in distribution networks through graph marking",
+        "volume": "9",
+        "author": "džafi?",
+        "year": "2018",
+        "journal-title": "IEEE Trans Smart Grid"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2011.2129544"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRD.2005.858806"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "crossref",
+        "first-page": "2947",
+        "DOI": "10.1109/TSG.2014.2330624",
+        "article-title": "Fault detection, identification, and location in smart grid based on data-driven computational methods",
+        "volume": "5",
+        "author": "jiang",
+        "year": "2014",
+        "journal-title": "IEEE Trans Smart Grid"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/78.258082"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2008.919249"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PES.2011.6039376"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRD.2012.2199525"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2012.2197228"
+      },
+      {
+        "key": "ref28",
+        "volume": "41",
+        "author": "bernstein",
+        "year": "2005",
+        "journal-title": "Matrix Mathematics Theory Facts and Formulas With Application to Linear Systems Theory"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2017.2681962"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/MIC.2016.102"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PESGM.2017.8273895"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2018.2832126"
+      },
+      {
+        "key": "ref29",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1214/aoms/1177729694"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2017.2764882"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2017.2688981"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/61.584379"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/MSP.2014.122"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TIE.2014.2387093"
+      },
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SmartGridComm.2018.8587461"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRD.2005.855457"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSP.2013.2238935"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRD.2011.2106146"
+      },
+      {
+        "key": "ref24",
+        "author": "lorenzo",
+        "year": "2018",
+        "journal-title": "Cooperative and Graph Signal Processing"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/B978-0-12-813677-5.00011-0"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TDC.2012.6281582"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/DSW.2019.8755588"
+      }
+    ],
+    "container-title": [
+      "IEEE Journal on Selected Areas in Communications"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://ieeexplore.ieee.org/ielam/49/8974630/8892526-aam.pdf",
+        "content-type": "application/pdf",
+        "content-version": "am",
+        "intended-application": "syndication"
+      },
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/49/8974630/08892526.pdf?arnumber=8892526",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2022,
+          4,
+          27
+        ]
+      ],
+      "date-time": "2022-04-27T14:24:04Z",
+      "timestamp": 1651069444000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/8892526/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2020,
+          1
+        ]
+      ]
+    },
+    "references-count": 39,
+    "journal-issue": {
+      "issue": "1"
+    },
+    "URL": "https://doi.org/10.1109/jsac.2019.2951971",
+    "relation": {},
+    "ISSN": [
+      "0733-8716",
+      "1558-0008"
+    ],
+    "issn-type": [
+      {
+        "value": "0733-8716",
+        "type": "print"
+      },
+      {
+        "value": "1558-0008",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2020,
+          1
+        ]
+      ]
+    }
+  }
+}

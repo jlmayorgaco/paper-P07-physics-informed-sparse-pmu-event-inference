@@ -1,0 +1,128 @@
+\section{Adversarial Controls and the Transfer Boundary}
+\label{sec:submission-checks}
+
+\subsection{A Simpler Physical Competitor}
+A stronger simplicity check retains one committed physical and instrumental
+state, rather than resetting to equilibrium after each event. Short GLR
+alternatives test the same admitted load and line operators over at most
+19 reports. Load ON severity is profiled within the original bounds; an
+accepted OFF changes the operator while retaining the inferred state.
+Alternative histories then expire. This is a complete simpler procedure,
+not a deliberately memoryless reset baseline.
+
+The single-state procedure and nominal history bank share fitted nominal
+operators; the five-model bank additionally mixes the declared resistance
+and reactance alternatives. All use a six-report source-stability clock.
+The two archived history-bank
+outputs are republished with that clock. The GLR includes a fixed penalty
+for its maximum search count; neither this penalty nor a numerically
+shared threshold makes its scores posterior probabilities or equalizes
+false-alarm rates. Table~\ref{tab:single-state-control} aggregates all twelve records.
+\input{tables/generated/single_state_control}
+The five-model bank obtains \SSMixTimely{}/\SSMixTotal{} timely decisions
+with \SSMixExtras{} extras, versus \SSSimpleTimely{}/\SSSimpleTotal{} and
+\SSSimpleExtras{} for the single-state procedure. This favors the full
+procedure in this development contrast, but does not isolate history
+averaging from severity integration, search or regime selection. These are
+three event calendars with repeated conditions. The zero alarms over
+\SSNormalSeconds{} normal seconds are too little exposure to establish a
+low operational alarm rate. The changed counts relative to the original
+publication policy also show that the decision clock is consequential.
+The corresponding orphan-restoration counts are \SSSimpleOrphan{},
+\SSNomOrphan{} and \SSMixOrphan{} for the single-state, nominal and five-model
+procedures; zero premature matched closures does not imply error-free restoration.
+The original publisher gave \ContMixTimely{}/\ContMixTotal{} with
+\ContMixExtras{} extras for the mixture and
+\ContNomTimely{}/\ContNomTotal{} with \ContNomExtras{} for nominal.
+The common publisher gives \SSMixTimely{}/\SSMixTotal{} with
+\SSMixExtras{} and \SSNomTimely{}/\SSNomTotal{} with \SSNomExtras{},
+respectively. These are different decision policies on the same H04 outputs,
+not conflicting estimates of one endpoint.
+
+\subsection{What Grouped SIM Training Establishes}
+We also fit two ExtraTrees variants using dependency groups, rather than
+randomly splitting correlated reports. The approximately 70/30 split is
+subdivided into \MLTrainGroups{} fitting, \MLValGroups{} validation and
+\MLHoldGroups{} reserved groups. SHORT is selected on validation and
+frozen before the reserved evaluation. Table~\ref{tab:grouped-learning}
+retains its marked load/line asymmetry. Its
+\MLHoldTimely{}/\MLHoldEvents{} timely reserved decisions and
+\MLHoldExtras{} extras do not establish adequate general transfer.
+The corpus was already open and all physical sources remain represented
+in development; this is neither a blind test nor an unseen-source split.
+Only one reserved normal dependency group underlies the
+\MLHoldNormalSeconds{} normal seconds with \MLHoldNormalAlarms{} alarms.
+\input{tables/generated/grouped_learning}
+
+Replaying the selected classifier on the common H04 cohort gives
+\ETCommonTimely{}/\ETCommonTotal{} timely diagnoses and \ETCommonExtras{}
+extras: \ETCommonLoad{}/\ETCommonLoadTotal{} loads and
+\ETCommonLine{}/\ETCommonLineTotal{} lines. The physical bank's benefit
+therefore lies chiefly in loads in this contrast; the classifier resolves
+all tested lines. Its frozen publisher uses six identical argmax labels,
+without the physical procedures' score threshold. This is a common-cohort,
+common-metric comparison of complete procedures, with different publishers.
+H04's normal parent also appears in the reserved SIM fraction and is not
+additional independent normal evidence.\AIDraftingCredit{}
+
+\subsection{Measurement Integrity and RAW0001}
+The frozen physical filter does not admit RAW0001: the initial prefix
+violates its ROCOF noise-scale and temporal-stationarity support. The
+following ZIP and segmented-ML replays therefore examine complementary
+integrity and source interfaces; they do not validate R11 transfer.
+The submitted multi-family artifact is replayed on all
+\SSRawWindows{} fixed windows of RAW0001. Its predictions are emitted at
+window completion. A separate availability monitor reports missing PMUs
+from received flags and finite-value masks; it keeps missing-PMU identity,
+corrupt-PMU identity and physical source distinct. Such diagnoses do not
+establish malicious intent. Complete-window corruption diagnoses describe
+their observed interval and are not broadcast backwards as causal labels.
+
+Against the current annotation support, the submitted artifact detects an
+abnormality in \SSRawDetected{}/\SSRawPositive{} positive windows, with
+\SSRawFalse{} false-positive window among \SSRawNormal{} normal windows;
+all \SSRawAvailable{} windows produce outputs. Correct physical-family
+coverage is \SSRawPhysicalCorrect{}/\SSRawPhysicalTotal{}. The availability
+monitor identifies all \SSMissingTotal{} missing reports and their PMU,
+whereas corruption localization is correct in
+\SSCorruptLocated{}/\SSCorruptTotal{} positive windows. A separate spurious
+corruption window is retained. These denominators describe one retrospective
+record, not independent field trials. Both implementations identify all
+\MissingEpisodes{} missing intervals and their PMU; the immediate interface
+reduces mean first-notice delay from \MissingLegacyDelay{} to
+\MissingImmediateDelay{} seconds on the received-report clock. This limited
+publication benefit does not measure wall-clock latency or physical inference.
+Its event-code annotations do not certify individual physical actuation
+boundaries, so actuation delay and restoration are not scored.
+
+The archived source spreadsheet permits a separate metadata-based source
+comparison. A frozen hybrid uses the SIM-trained SHORT classifier only to
+replace the submitted artifact's load/line source when a first same-family
+diagnosis has already been emitted within that window. Predicted mixed
+physical/missing cases are eligible under the same rule. All classes,
+integrity diagnoses and window emission times remain fixed. Missing input
+splits the ML stream into complete segments with explicit unavailable
+startup; their prefixes are not verified normal. This is a segmented ML
+transfer test, not a successful execution of the physical history bank.
+\input{tables/generated/raw_source_hybrid}
+Joint correctness changes from \RawZIPJoint{}/\RawZIPTotal{} to
+\RawHybridJoint{}/\RawHybridTotal{}: \RawHybridGains{} paired gain and
+\RawHybridLosses{} losses, with \RawHybridFallbacks{}/\SSRawWindows{}
+total windows retaining the ZIP source. The gain corrects the line location; load and generation
+remain unresolved. A single improved window in one previously used record
+does not establish reliable all-family transfer.
+
+The implemented interface combines these physical and integrity outputs in
+one chronological stream. Exact projection checks recover all
+\SystemWindows{} component windows and the availability state across
+\SystemReports{} reports. This verifies composition without adding a
+performance gain; completed-window evidence cannot reopen an already
+restored missing-PMU episode.
+
+The calendar
+recovered for the archived hackathon table does not match the actual RAW
+annotations; its score is not a reproduced comparator. Relabeling windows
+or relaxing one admission gate would not validate the physical/instrument
+model. The archive preserves these failures and the current-calendar
+evaluation. Superiority over the
+historical all-family system remains unestablished.

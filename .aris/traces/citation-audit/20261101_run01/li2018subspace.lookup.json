@@ -1,0 +1,535 @@
+{
+  "key": "li2018subspace",
+  "retrieved_at": "2026-11-01T03:53:22.931993+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1109%2FTPWRS.2018.2796442",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1109/TPWRS.2018.2796442",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:28.353765+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          23
+        ]
+      ],
+      "date-time": "2026-10-23T21:16:30Z",
+      "timestamp": 1792790190080,
+      "version": "4.5.0"
+    },
+    "reference-count": 47,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "5",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2018,
+              9,
+              1
+            ]
+          ],
+          "date-time": "2018-09-01T00:00:00Z",
+          "timestamp": 1535760000000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2018,
+              9,
+              1
+            ]
+          ],
+          "date-time": "2018-09-01T00:00:00Z",
+          "timestamp": 1535760000000
+        },
+        "content-version": "am",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2018,
+              9,
+              1
+            ]
+          ],
+          "date-time": "2018-09-01T00:00:00Z",
+          "timestamp": 1535760000000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2018,
+              9,
+              1
+            ]
+          ],
+          "date-time": "2018-09-01T00:00:00Z",
+          "timestamp": 1535760000000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "funder": [
+      {
+        "name": "Engineering Research Center Program of the National Science Foundation"
+      },
+      {
+        "name": "Department of Energy under the supplement to NSF",
+        "award": [
+          "EEC-1041877"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "EEC-1041877"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "CURENT Industry Partnership Program"
+      },
+      {
+        "name": "NSF",
+        "award": [
+          "1508875"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "1508875"
+            ]
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Trans. Power Syst."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2018,
+          9
+        ]
+      ]
+    },
+    "DOI": "10.1109/tpwrs.2018.2796442",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2018,
+          1,
+          22
+        ]
+      ],
+      "date-time": "2018-01-22T22:25:47Z",
+      "timestamp": 1516659947000
+    },
+    "page": "4937-4947",
+    "source": "Crossref",
+    "is-referenced-by-count": 40,
+    "title": [
+      "Real-Time Event Identification Through Low-Dimensional Subspace Characterization of High-Dimensional Synchrophasor Data"
+    ],
+    "prefix": "10.1109",
+    "volume": "33",
+    "author": [
+      {
+        "given": "Wenting",
+        "family": "Li",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-0928-9691",
+        "authenticated-orcid": false,
+        "given": "Meng",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-6021-0112",
+        "authenticated-orcid": false,
+        "given": "Joe H.",
+        "family": "Chow",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref39",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-1-4614-1803-0"
+      },
+      {
+        "key": "ref38",
+        "author": "anderson",
+        "year": "2003",
+        "journal-title": "Power System Control and Stability"
+      },
+      {
+        "key": "ref33",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2014.2316476"
+      },
+      {
+        "key": "ref32",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2015.2413935"
+      },
+      {
+        "key": "ref31",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2016.2552229"
+      },
+      {
+        "key": "ref30",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2014.2330624"
+      },
+      {
+        "key": "ref37",
+        "volume": "7",
+        "author": "kundur",
+        "year": "1994",
+        "journal-title": "Power System Stability and Control"
+      },
+      {
+        "key": "ref36",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-642-00834-4_19"
+      },
+      {
+        "key": "ref35",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1214/13-AOS1199"
+      },
+      {
+        "key": "ref34",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSP.2016.2597131"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/59.744537"
+      },
+      {
+        "key": "ref40",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/59.207380"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PES.2009.5275350"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRD.2007.900065"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PES.2006.1709431"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/S0142-0615(03)00045-0"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRD.2013.2285097"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/61.368408"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1049/iet-gtd.2010.0254"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ACSSC.2012.6489031"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2017.2656146"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1017/CBO9781139020411"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2008.2004826"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSP.2017.2673802"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PSCE.2006.296165"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2015.2440562"
+      },
+      {
+        "key": "ref29",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.laa.2011.07.018"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2012.2192142"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2004.841158"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2014.2368078"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-0-387-76537-2"
+      },
+      {
+        "key": "ref9",
+        "first-page": "1",
+        "article-title": "Oscillation monitoring system based on wide area synchrophasors in power systems",
+        "author": "liu",
+        "year": "0",
+        "journal-title": "Proc iREP Symp Bulk Power System Dyn Control&#x2014;VII Revitalizing Oper Rel"
+      },
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PESGM.2017.8273827"
+      },
+      {
+        "key": "ref46",
+        "author": "brown",
+        "year": "1956",
+        "journal-title": "Exponential Smoothing for Predicting Demand"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2014.2314116"
+      },
+      {
+        "key": "ref45",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PESGM.2016.7741972"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PES.2009.5275906"
+      },
+      {
+        "key": "ref47",
+        "author": "smith",
+        "year": "1997",
+        "journal-title": "The Scientist and Engineer's Guide to Digital Signal Processing"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/NAPS.2016.7748003"
+      },
+      {
+        "key": "ref42",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/59.49090"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/JSTSP.2014.2342191"
+      },
+      {
+        "key": "ref41",
+        "first-page": "697",
+        "article-title": "Streaming pattern discovery in multiple time-series",
+        "author": "papadimitriou",
+        "year": "0",
+        "journal-title": "Proc Int Conf On Very Large Data Bases"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2014.2357751"
+      },
+      {
+        "key": "ref44",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRD.2015.2403591"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2015.2461461"
+      },
+      {
+        "key": "ref43",
+        "author": "rogers",
+        "year": "2012",
+        "journal-title": "Power System Oscillations"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2015.2440562"
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Power Systems"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://ieeexplore.ieee.org/ielaam/59/8444484/8265216-aam.pdf",
+        "content-type": "application/pdf",
+        "content-version": "am",
+        "intended-application": "syndication"
+      },
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/59/8444484/08265216.pdf?arnumber=8265216",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2022,
+          4,
+          8
+        ]
+      ],
+      "date-time": "2022-04-08T18:47:13Z",
+      "timestamp": 1649443633000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/8265216/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          9
+        ]
+      ]
+    },
+    "references-count": 47,
+    "journal-issue": {
+      "issue": "5"
+    },
+    "URL": "https://doi.org/10.1109/tpwrs.2018.2796442",
+    "relation": {},
+    "ISSN": [
+      "0885-8950",
+      "1558-0679"
+    ],
+    "issn-type": [
+      {
+        "value": "0885-8950",
+        "type": "print"
+      },
+      {
+        "value": "1558-0679",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2018,
+          9
+        ]
+      ]
+    }
+  }
+}

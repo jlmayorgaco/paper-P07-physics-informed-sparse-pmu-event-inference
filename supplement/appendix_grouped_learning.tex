@@ -1,0 +1,111 @@
+\section{Grouped Learning and Integrity Publication}
+\label{app:grouped-learning}
+
+\subsection{Retrospective SIM Training Contract}
+The SIM11--19 registry contains 176 observation records from 88 physical
+cases. Connected components join shared physical histories and observation
+replicas before splitting. Of 56 dependency groups, \MLTrainGroups{} are
+used for fitting, \MLValGroups{} for model selection and \MLHoldGroups{}
+for the reserved development evaluation: \MLTrainRecords{},
+\MLValRecords{} and \MLHoldRecords{} records, respectively. This implements
+the requested approximately 70/30 development/reserved partition with an
+internal validation subset. All campaigns were already open; the split is
+retrospective and does not establish unseen-source or external generalization.
+
+Both ExtraTrees variants use 400 trees, minimum leaf size two, square-root
+feature sampling, balanced class weights and seed 2601026. Fitting uses
+every third report starting at index 360. The target is normal outside an
+intervention and one of 18 load/line sources during it; recovery is not a
+separate training class. The baseline has 846 trailing features; SHORT adds
+611 features. Their input is the same 47-channel representation with a
+300-report empirical reference, colored filtering and median/MAD scaling.
+No DAE fit or RAW annotation enters fitting. The empirical reference has no
+startup stationarity guarantee; it is distinct from the physical filter's
+admission gate.\AIDraftingCredit{}
+
+The publication adapter requires six consecutive winning source labels.
+Scores are not claimed to be calibrated probabilities. Selection maximizes
+validation diagnoses with correct family and source emitted before OFF,
+then minimizes extra alarms, preferring the baseline on a complete tie.
+SHORT is frozen after \MLShortValTimely{}/\MLShortValEvents{} versus
+\MLBaseValTimely{}/\MLBaseValEvents{} validation successes. There is no
+refit on validation and no subsequent parameter or threshold selection
+from the reserved \MLHoldRecords{} records. The declared metric associates
+the first temporal alarm independently of its predicted class, within
+30 seconds or before the next onset, whichever comes first; success also
+requires diagnosis before the current OFF.
+
+The reserved result is \MLHoldTimely{}/\MLHoldEvents{}, comprising
+\MLHoldLoad{}/\MLHoldLoadTotal{} load and
+\MLHoldLine{}/\MLHoldLineTotal{} line interventions, with \MLHoldExtras{}
+extra alarms. Only two distinct normal dependency groups exist: one in
+training and one reserved; validation has none. The
+\MLHoldNormalSeconds{} normal seconds are repeated observations of the
+reserved normal group, with \MLHoldNormalAlarms{} alarms. They do not
+provide independent long-duration operational exposure. In particular,
+neither report-level binomial intervals nor a validation false-alarm rate
+would be justified. Load weakness and the common F01 ancestry limit
+transfer claims even when the group assignment is disjoint.
+
+The selected model is also replayed on all twelve H04 records, using the
+same successor event metrics as the physical controls. It obtains
+\ETCommonTimely{}/\ETCommonTotal{} timely decisions, \ETCommonExtras{}
+extras, \ETCommonOrphan{} orphan restorations and \ETCommonMissing{}
+missing closures, including missed events. All missed events are loads;
+all tested lines are diagnosed before OFF. Its six-argmax publisher has no
+confidence threshold, so this is not an identical decision-clock ablation.
+The three H04 event groups are disjoint from the SIM fitting, validation
+and reserved groups, but its single normal group is shared with the
+reserved group. The inference-only replay reads no truth, registry or split.
+An earlier roster contained unused event/normal metadata; it is preserved
+and documented. Removing that metadata reproduces every output array and
+event exactly on all twelve records, before separate post-seal scoring.
+
+\subsection{Missing-PMU Notice Timing}
+The continuous RAW replay contains \MissingEpisodes{} observed missing
+intervals. The exact submitted artifact and the immediate availability
+interface both identify all intervals and their affected PMU. First correct
+notices have mean delay \MissingLegacyDelay{} versus
+\MissingImmediateDelay{} seconds, respectively. The clock is the received
+report timestamp relative to the first affected report; zero means emission
+on that report, not zero computation or communication latency. Notices
+before onset cannot match a later missing interval, and a later correct
+source cannot repair an incorrect first notice. This is a publication benefit
+from already-observed flags and finite-value masks, not evidence of a new
+malicious-attack detector or improved physical-source inference.
+
+\subsection{Segmented ML Transfer and Source Composition}
+The classifier consumes the phase-A voltage/current magnitudes and angles,
+frequency and ROCOF in the declared eight-PMU order. Complete segments
+require all 48 measurements finite and all presence flags true; missing
+reports are never removed to join their neighboring samples. Each segment
+gets its own 300-report empirical reference and remains unavailable through
+index 359. Segment startup is not certified normal and physical state is
+not preserved across gaps. The same frozen classifier and publication rule
+are used; no RAW source label, event code or score enters inference.
+
+For a submitted-artifact prediction of line or load, including its predicted
+physical component in a mixed missing case, source replacement requires the
+first ML diagnosis of an episode with that same predicted family, emitted
+inside the completed window no later than the artifact's own emission.
+Later revisions cannot repair that first diagnosis. The earliest eligible
+diagnosis is selected; otherwise the ZIP source is retained. Fault,
+generation, integrity outputs and all window class labels and times are
+unchanged. The archived Top-3 list remains identified as the original ZIP
+list; it is not presented as the hybrid's reranked posterior.
+
+The completed replay has \RawHybridSegments{} complete segments and
+\RawHybridRoutes{} selected source substitution, with
+\RawHybridFallbacks{} fallbacks. The evaluator verifies full report
+coverage, explicit startup unavailability, causal message times and every
+replacement against the frozen rule before scoring. Source identity is
+supplied only to this later evaluator by the original metadata workbook:
+fault BUS39, line 23--24, generation BUS2 and load BUS7. Current event-code
+support determines which fixed windows contain each family; the workbook's
+approximate times do not supply exact action onsets or restorations.
+All physical-positive windows, including generation outside the learned
+catalog, enter the denominator. Paired joint correctness is
+\RawZIPJoint{}/\RawZIPTotal{} versus
+\RawHybridJoint{}/\RawHybridTotal{}. These are dependent windows of one
+retrospective record; no population-level significance or official
+competition improvement is inferred.

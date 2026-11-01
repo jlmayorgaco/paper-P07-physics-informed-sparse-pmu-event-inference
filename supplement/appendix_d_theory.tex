@@ -306,20 +306,33 @@ If instead $\bm\nu\sim\mathcal N(\bm m_{\nu},\bm\Gamma)$ with a proper prior, ma
 Woodbury's identity shows that \eqref{eq:supp-bayesian-fisher} tends to the no-nuisance information as $\bm\Gamma\rightarrow\bm0$ and to \eqref{eq:supp-efficient-fisher-projector} as a full-rank nuisance prior becomes diffuse. Thus zero deterministic efficient information is not a universal impossibility statement: a restrictive proper prior can still supply separation.
 
 \begin{corollary}[Pre-event information cannot reduce local event information]
-If pre-event data add nuisance precision $\bm\Lambda_{\mathrm{pre}}\succeq\bm0$, then
+If pre-event data add nuisance precision $\bm\Lambda_{\mathrm{pre}}\succeq\bm0$
+and $\bm I_{\nu\nu}+\bm\Lambda_{\mathrm{pre}}\succ\bm0$, then
 \begin{equation}
  I_{a\mid\nu,\mathrm{pre}}
  =I_{aa}-\bm I_{a\nu}
  (\bm I_{\nu\nu}+\bm\Lambda_{\mathrm{pre}})^{-1}\bm I_{\nu a}
  \label{eq:supp-preevent-fisher}
 \end{equation}
-is nondecreasing in $\bm\Lambda_{\mathrm{pre}}$.
+is nondecreasing in $\bm\Lambda_{\mathrm{pre}}$ over this positive-definite
+domain, with all information blocks expressed in the same coordinates.
 \end{corollary}
 
 \paragraph{Justification.}
-If $\bm\Lambda_2\succeq\bm\Lambda_1\succeq\bm0$, matrix inversion reverses the order. Premultiplication and postmultiplication by the cross-information blocks preserve the positive-semidefinite order, and subtraction reverses it once more. $\hfill\square$
+If $\bm\Lambda_2\succeq\bm\Lambda_1\succeq\bm0$ and both total nuisance
+precision matrices are positive definite, matrix inversion reverses the order.
+Premultiplication and postmultiplication by the cross-information blocks
+preserve the positive-semidefinite order, and subtraction reverses it once
+more. $\hfill\square$
 
-For a known source, known positive sign, and fixed covariance, the standardized matched statistic
+For redundant nuisance coordinates, first express the comparison in a common
+identifiable quotient on which the total precision is positive definite.
+The ordinary inverse in \eqref{eq:supp-preevent-fisher} is not defined on a
+singular nuisance block.
+
+For the centered experiment $\bm r=a\bm d+\bm\varepsilon$ with
+$\bm\varepsilon\sim\mathcal N(\bm0,\bm\Sigma)$, a known source, a known
+positive sign, and $I=\bm d^{\mathsf T}\bm\Sigma^{-1}\bm d>0$, the standardized matched statistic
 \begin{equation}
  T=\frac{\bm d^{\mathsf T}\bm\Sigma^{-1}\bm r}
  {\sqrt{\bm d^{\mathsf T}\bm\Sigma^{-1}\bm d}}
@@ -336,7 +349,10 @@ This is a conditional known-source benchmark, not the threshold of the 137-suppo
 
 \subsection{First-Order Multi-Event Support Geometry and Onset Information}
 
-Let two first-order source signatures be $\bm d_g$ and $\bm d_j$ under fixed precision $\bm G\succeq\bm0$. Allow the competing source to refit its amplitude. The local profiled distance satisfies
+Let two first-order source signatures be $\bm d_g$ and $\bm d_j$ under fixed
+precision $\bm G\succeq\bm0$, with
+$\bm d_j^{\mathsf T}\bm G\bm d_j>0$. Allow the competing source to refit its
+local amplitude. The local profiled distance satisfies
 \begin{align}
  b_{\star}(a)
  &=a\frac{\bm d_j^{\mathsf T}\bm G\bm d_g}
@@ -350,6 +366,10 @@ Let two first-order source signatures be $\bm d_g$ and $\bm d_j$ under fixed pre
  \label{eq:supp-profiled-pairwise-fisher}
 \end{align}
 Equation~\eqref{eq:supp-profiled-pairwise-fisher} is a pairwise local separation quantity, not the Fisher information for amplitudes conditional on the true support.
+If $\bm d_j^{\mathsf T}\bm G\bm d_j=0$, the competing tangent contributes no
+direction in this first-order metric; use the projector formulation below
+without scalar division. Separation through higher-order terms of a nonlinear
+competitor requires a separate analysis.
 
 The pairwise formula extends to arbitrary supports. Let $\bm N_c$ be the
 unwhitened nuisance Jacobian, let $\bm G_e=[\bm g_1,\ldots,\bm g_M]$ collect the
@@ -637,16 +657,21 @@ feasible set is contained in the new one. Likewise, a nested superset still
 has zero margin when it can match the shared amplitudes and set every added
 amplitude to zero.
 
-For nontrivial closed cones $\mathcal C_S,\mathcal C_C$, the directed
+For nontrivial closed cones $\mathcal C_S,\mathcal C_C$, the minimum
 scale-free separation
 \begin{equation}
- \delta(\mathcal C_S\!\rightarrow\!\mathcal C_C)
+ \delta(\mathcal C_S,\mathcal C_C)
  =\min_{\substack{\bm x\in\mathcal C_S\\\|\bm x\|_2=1}}
  \operatorname{dist}(\bm x,\mathcal C_C)
  \label{eq:supp-directed-cone-separation}
 \end{equation}
-vanishes exactly when the cones share a nonzero vector. It reduces to
-$\sin\theta_{\min}$ for subspaces, but need not be symmetric. Consequently,
+vanishes exactly when the cones share a nonzero vector and is symmetric.
+Indeed, let $\rho_\star$ be the maximum of $\bm x^{\mathsf T}\bm y$ over
+unit vectors in the two cones. Their unit sections are compact, and minimizing
+$\|\bm x-t\bm y\|_2^2$ over $t\ge0$ gives
+$1-[\bm x^{\mathsf T}\bm y]_+^2$. Hence
+$\delta^2=1-[\rho_\star]_+^2$, unchanged by exchanging the cones.
+For subspaces it reduces to $\sin\theta_{\min}$. Consequently,
 the classical signed-sparse condition
 $\operatorname{spark}(\overline{\bm F})>2K$ remains sufficient under
 one-sided constraints, while its failure need not imply a physically feasible
@@ -675,7 +700,8 @@ Unknown onset has a separate degeneracy. For $\bm\mu(a,\tau)=a\bm d(\tau)$ and f
  \end{bmatrix}.
  \label{eq:supp-onset-fisher-matrix}
 \end{equation}
-Profiling amplitude by a Schur complement gives
+When $\bm d^{\mathsf T}\bm\Sigma^{-1}\bm d>0$, profiling amplitude by a
+Schur complement gives
 \begin{equation}
  I_{\tau\mid a}=a^2\left[
  \dot{\bm d}^{\mathsf T}\bm\Sigma^{-1}\dot{\bm d}
@@ -684,7 +710,12 @@ Profiling amplitude by a Schur complement gives
  \right].
  \label{eq:supp-onset-efficient-information}
 \end{equation}
-At $a=0$, onset is unidentifiable. If $\dot{\bm d}$ is proportional to $\bm d$, delay and gain are locally confounded even for nonzero amplitude. The evaluated bank avoids this unresolved problem by fixing onset.
+At $a=0$, onset is unidentifiable. If the amplitude tangent is zero, the scalar
+division above is unavailable; the full score-tangent geometry must be used.
+If $\dot{\bm d}$ is proportional to nonzero $\bm d$, delay and gain are locally
+confounded even for nonzero amplitude. The historical batch load bank fixes
+onset; the current causal history bank instead proposes onsets and does not
+inherit a regular onset-identifiability guarantee from this calculation.
 
 \subsection{Candidate Indistinguishability and Sparse Injectivity}
 
@@ -742,11 +773,17 @@ Unknown initial-state nuisance can be removed locally by whitening and projectio
 Theorem~\ref{thm:supp-sparse-uniqueness} then applies with $\widetilde{\mathcal H}_T$. Define the restricted margin
 \begin{equation}
  \gamma_{2K}(T)=
- \min_{1\le |U|\le2K}\sigma_{\min}
- (\widetilde{\mathcal H}_{T,U}).
+ \min_{1\le |U|\le2K}
+ \sqrt{\lambda_{\min}\!\left(
+ \widetilde{\mathcal H}_{T,U}^{\mathsf T}
+ \widetilde{\mathcal H}_{T,U}\right)}.
  \label{eq:supp-restricted-margin}
 \end{equation}
-If two $K$-sparse explanations both fit data within whitened residual $\epsilon$, then
+Each term equals
+$\inf_{\|\bm v\|_2=1}\|\widetilde{\mathcal H}_{T,U}\bm v\|_2$,
+including zero when the coefficient map has a nontrivial kernel. If
+$\gamma_{2K}(T)>0$ and two $K$-sparse explanations both fit data within
+whitened residual $\epsilon$, then
 \begin{equation}
  \|\bm a-\bm b\|_2\le\frac{2\epsilon}{\gamma_{2K}(T)}.
  \label{eq:supp-stability-bound}

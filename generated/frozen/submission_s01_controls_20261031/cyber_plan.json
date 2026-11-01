@@ -1,0 +1,13 @@
+{
+  "id": "S01_COMPOSITIONAL_INTEGRITY_V2",
+  "fitted_bad_data_detector": "Exact submitted ZIP; no retraining or threshold selection from RAW",
+  "missing_detector": "Current DATA_PRESENT flag and finite-value mask for all 14 received measurement fields at each PMU",
+  "missing_publication": "Emit current mask changes immediately; a nonempty source set opens an integrity episode, empty closes it, and a changed nonempty set supersedes the prior diagnosis",
+  "bad_data_publication": "One diagnosis of the just-completed 30s observation interval at the actual final report time; never retroactively broadcast it as an online decision or assume it stays active afterwards",
+  "composition": "Physical event/source, missing PMU sources and corrupt PMU sources remain separate. Simultaneous missingness and corruption cannot overwrite one another.",
+  "input_boundary": "Only cleaned measurement files and sealed observation-only legacy predictions; never Event/Location annotations",
+  "historical_calendar_used": false,
+  "intent_claim": "Data availability or corruption does not establish malicious cyber intent",
+  "raw_status": "Retrospective integration/evaluation, not independent or official competition validation",
+  "version_note": "The completed exact-legacy replay used archived adapter schema V1. V2 recomposes the same sealed event/location predictions with independently measured missing masks, preserving all old files."
+}

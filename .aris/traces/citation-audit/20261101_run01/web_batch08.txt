@@ -1,0 +1,462 @@
+This is a repository copy of Wide-Area Line Outage Monitoring by Sparse Phasor (https://eprints.whiterose.ac.uk/190192/1/Line%20Outage%20Paper.pdf)
+citeturn27search12 [wordlim: 200] Published: last year; Wide-Area Line Outage Monitoring by Sparse ... This paper proposes a method for line outage monitoring and ... by phasor measurement units (PMUs) have opened promising ... system with measurement and communication infrastructure,
+1
+Wide-Area Line Outage Monitoring by Sparse
+Phasor Measurements
+S. Azizi, Senior Member, IEEE, M. R. Jegarluei, Student Member, IEEE, A. M. Kettner, Member, IEEE,
+and A. S. Dobakhshari, Member, IEEE
+Abstract—Timely identiﬁcation of transmission line outages is
+key to situational awareness and preventing the propagation of
+disturbed system conditions. Although a line may get discon-
+nected from both ends simultaneously, sequential tripping of the
+opposite ends of the line is more common regardless of whether
+the outage is planned or administered by protective relays.
+This paper proposes a method for line outage monitoring and
+identifying the sequence of events that a line is undergoing before
+getting disconnected from both ends. Using the bus impedance
+matrix, a transfer function is derived to relate the line outage
+to the variations of phasors collected in the control center. A
+closed-form solution is put forward to identify the disconnected
+line based on the weighted sum of squared residuals concept.
+The proposed method does not require the network to be fully
+observable, nor does it count on the reception of any ﬁxed set of
+measurements. As opposed to existing solutions, the method does
+not rely on power ﬂow derivations, a feature that highly reduces
+its decision time. High speed, along with the robustness against
+partial communication network failures and losses of the time
+synchronization signal, makes the method suitable for real-time
+applications. Extensive simulations conducted on the IEEE 39-bus
+and 118-bus test systems demonstrate the superior performance
+of the proposed method compared to existing ones.
+Index Terms—Situational awareness, phasor measurement unit
+(PMU), superimposed circuit, transmission lines.
+I. INTRODUCTION
+M
+ANY operational, control, and protection applications
+require the most recent network topology to function
+properly [1]. Monitoring the connection status of transmission
+lines and identifying their outages in near real-time is crucial to
+system operators in order to effectively mitigate the resulting
+impacts and prevent cascading outages. The inability of the
+supervisory control and data acquisition (SCADA) system
+to reliably capture these dynamics has contributed to some
+blackouts to date [2], [3]. Data with high refresh rates provided
+by phasor measurement units (PMUs) have opened promising
+avenues for addressing these pressing monitoring needs [4].
+A trivial solution to line outage identiﬁcation would be con-
+tinuous monitoring of the statuses of all line circuit breakers
+(CBs). However, this would require full coverage of the power
+system with measurement and communication infrastructure,
+which is costly. Moreover, indeﬁnite latencies of system-
+wide communication might introduce long delays of up to
+seconds into outage detection by direct monitoring of line
+Sadegh Azizi and Mohammad Rezaei Jegarluei are with the School of
+Electronic and Electrical Engineering, University of Leeds, Leeds LS2 9JT,
+UK (e-mail: s.azizi@leeds.ac.uk; elmrj@leeds.ac.uk).
+Andreas Martin Kettner is with PSI NEPLAN AG, Oberwachtstrasse 2,
+CH-8700 K¨usnacht, Z¨urich, Switzerland (e-mail: andreas.kettner@neplan.ch).
+Ahmad Salehi Dobakhshari is with the Faculty of Engineering, University
+of Guilan, Rasht 4199613776, Iran (e-mail: salehi ahmad@guilan.ac.ir).
+CBs [5]. This is the case while real-time applications require
+prompt situational awareness updates if they are to guarantee
+secure operation for the system [4]. Therefore, other alternative
+solutions not relying on the reception of a ﬁxed set of data
+have attracted extensive attention in recent years.
+The concept of measurement residuals in state estimation
+along with SCADA data is utilized in [6] and [7] to detect
+changes in the power system topology. However, the low
+refresh rate of the SCADA system reduces the suitability
+of such methods for real-time applications. Tate et al. have
+proposed a pioneering approach to line outage identiﬁcation
+by PMU data based upon the DC power ﬂow assumptions
+[8], [9]. More precisely, power transfer distribution factors
+are employed to relate the disconnected line to the quasi
+steady-state variations of voltage phase angles across the grid.
+This approach is further extended by [10]–[23] to improve
+performance whilst keeping the computational burden low.
+For instance, the authors in [10]–[13] take advantage of the
+theory of quickest change detection, assuming that incremental
+changes of active power injections in the system are inde-
+pendent random variables. These methods function properly
+only if the incremental active power injections following line
+outages can be characterized by Gaussian distribution models.
+The main drawback of the line outage identiﬁcation methods
+described above is that they depend on power transfer distri-
+bution factors which are obtained using the DC power ﬂow
+approximation. This makes line outage identiﬁcation subject to
+failure/incorrect results when the approximation is inaccurate.
+The fast-decoupled power ﬂow principle is employed in [24]
+to overcome this shortcoming. Nevertheless, the effectiveness
+of this improved method also deteriorates as the coupling be-
+tween active and reactive power ﬂows in the system increases.
+Running AC power ﬂow for every possible line outage, as
+presented in [25] and [26], can improve the identiﬁcation
+accuracy at the expense of a greatly increased computational
+burden. Power-ﬂow-based methods rely on the quasi-steady-
+state response of the system. Thus, a majority of these methods
+cannot beneﬁt from quantities measured during the transient
+period following the line outage. This inevitably prolongs the
+process of identifying the disconnected line and hinders the
+integration of these methods into real-time applications.
+Unplanned outages of transmission lines are typically
+caused by short-circuit faults, overloading, or malfunction of
+protective relays. Transmission lines may also be disconnected
+on purpose for maintenance or operation reasons. Regardless
+of the outage cause, circuit breakers (CBs) at the opposite
+ends of transmission lines almost never open simultaneously
+owing to the uncertainties w.r.t. the actuation time of CBs [27].
+Line outage is, in fact, a process that may take hundreds of--------------------------------------------------------------------------------
+Functional Observability, Structural Functional Observability and Optimal Sensor Placement - the UWA Profiles and Research Repository (https://research-repository.uwa.edu.au/en/publications/functional-observability-structural-functional-observability-and-/)
+citeturn27search0 [wordlim: 200] Published: 1.7 years ago; Crawled: 2 weeks ago;   * https://doi.org/10.1109/TAC.2024.3462558 ...   * 10.1109/TAC.2024.3462558
+A complete graph-theoretic characterization for SFO is proposed. Based on these results, the problems of selecting the minimal sensors from a prior set to achieve functional observability and SFO are shown to be NP-hard. Nevertheless, supermodular set functions are established, leading to greedy heuristics that can find approximation solutions to these problems with provable guarantees in polynomial time. A closed-form solution along with a constructive procedure is also given for the unconstrained case on systems with diagonalizable state matrices. Notably, our results also yield a polynomial-time verifiable case for structural target controllability, a problem that may be hard otherwise.
+
+Original language  | English
+Pages (from-to)  | 1592-1607
+Number of pages  | 16
+Journal  | IEEE Transactions on Automatic Control
+Volume  | 70
+Issue number  | 3
+DOIs  | 
+
+  * https://doi.org/10.1109/TAC.2024.3462558
+Publication status  | Published - Mar 2025
+
+## Access to Document
+
+  * 10.1109/TAC.2024.3462558
+
+## Fingerprint
+
+Dive into the research topics of 'Functional Observability, Structural Functional Observability and Optimal Sensor Placement'. Together they form a unique fingerprint.
+
+View full fingerprint
+
+## Cite this
+
+  * APA
+  * Author
+  * BIBTEX
+  * Harvard
+  * Standard
+  * RIS
+  * Vancouver
+
+Zhang, Y., Fernando, T., & Darouach, M. (2025). Functional Observability, Structural Functional Observability and Optimal Sensor Placement. IEEE Transactions on Automatic Control, 70(3), 1592-1607. https://doi.org/10.1109/TAC.2024.3462558
+
+Zhang, Yuan ; Fernando, Tyrone ; Darouach, Mohamed. / Functional Observability, Structural Functional Observability and Optimal Sensor Placement. In: IEEE Transactions on Automatic Control. 2025 ; Vol. 70, No. 3. pp. 1592-1607.
+
+@article{b3b9503c589c4b269b6f494b2769cc44,
+
+title = "Functional Observability, Structural Functional Observability and Optimal Sensor Placement",
+
+abstract = "In this paper, new characterizations for functional observability, functional detectability, and structural functional observability (SFO) are developed, and based on them, the related optimal sensor placement problems are investigated. Notably, our results also yield a polynomial-time verifiable case for structural target controllability, a problem that may be hard otherwise.",
+
+keywords = "Graph-theoretic characterization, modal functional observability, sensor placement, structural functional observability",
+
+author = "Yuan Zhang and Tyrone Fernando and Mohamed Darouach",
+
+note = "Publisher Copyright: {\textcopyright} 1963-2012 IEEE.",
+
+year = "2025",
+
+month = mar,
+
+doi = "10.1109/TAC.2024.3462558",
+
+language = "English",
+
+volume = "70",
+
+pages = "1592--1607",
+
+journal = "IEEE Transactions on Automatic Control",
+
+issn = "0018-9286",
+
+publisher = "IEEE, Institute of Electrical and Electronics Engineers",
+
+number = "3",
+
+}
+
+Zhang, Y, Fernando, T & Darouach, M 2025, 'Functional Observability, Structural Functional Observability and Optimal Sensor Placement', IEEE Transactions on Automatic Control, vol. 70, no. 3, pp. 1592-1607. https://doi.org/10.1109/TAC.2024.3462558
+
+Research output: Contribution to journal › Article › peer-review
+Afterwards, SFO is redefined rigorously from a generic perspective, contrarily to the definition of structural observability. A complete graph-theoretic characterization for SFO is proposed. Based on these results, the problems of selecting the minimal sensors from a prior set to achieve functional observability and SFO are shown to be NP-hard. Nevertheless, supermodular set functions are established, leading to greedy heuristics that can find approximation solutions to these problems with provable guarantees in polynomial time. A closed-form solution along with a constructive procedure is also given for the unconstrained case on systems with diagonalizable state matrices. Notably, our results also yield a polynomial-time verifiable case for structural target controllability, a problem that may be hard otherwise.
+
+KW - Graph-theoretic characterization
+
+KW - modal functional observability
+
+KW - sensor placement
+
+KW - structural functional observability
+
+UR - https://www.scopus.com/pages/publications/105001088490
+
+U2 - 10.1109/TAC.2024.3462558
+
+DO - 10.1109/TAC.2024.3462558
+
+M3 - Article
+
+SN - 0018-9286
+
+VL - 70
+
+SP - 1592
+
+EP - 1607
+
+JO - IEEE Transactions on Automatic Control
+
+JF - IEEE Transactions on Automatic Control
+
+IS - 3
+
+ER -
+
+Zhang Y, Fernando T, Darouach M. Functional Observability, Structural Functional Observability and Optimal Sensor Placement. IEEE Transactions on Automatic Control. 2025 Mar;70(3):1592-1607. doi: 10.1109/TAC.2024.3462558--------------------------------------------------------------------------------
+Wide-Area Line Outage Monitoring by Sparse Phasor Measurements - White Rose Research Online (https://eprints.whiterose.ac.uk/id/eprint/190192/)
+citeturn27search1 [wordlim: 200] Published: 4.2 years ago; Crawled: last month; # Wide-Area Line Outage Monitoring by Sparse Phasor Measurements ... Keywords:  | Phasor measurement units , Transmission line measurements , Monitoring , Power transmission lines , Real-time systems , Mathematical models , Impedance
+# Wide-Area Line Outage Monitoring by Sparse Phasor Measurements
+
+Azizi, S orcid.org/0000-0002-9274-1177, Rezaei Jegarluei, M orcid.org/0000-0002-6770-7161, Kettner, A et al. (1 more author) (2022) Wide-Area Line Outage Monitoring by Sparse Phasor Measurements. IEEE Transactions on Power Systems. ISSN: 0885-8950
+
+## Abstract
+
+Timely identification of transmission line outages is key to situational awareness and preventing the propagation of disturbed system conditions. Although a line may get disconnected from both ends simultaneously, sequential tripping of the opposite ends of the line is more common regardless of whether the outage is planned or administered by protective relays. This paper proposes a method for line outage monitoring and identifying the sequence of events that a line is undergoing before getting disconnected from both ends. Using the bus impedance matrix, a transfer function is derived to relate the line outage to the variations of phasors collected in the control center. A closed-form solution is put forward to identify the disconnected line based on the weighted sum of squared residuals concept. The proposed method does not require the network to be fully observable, nor does it count on the reception of any fixed set of measurements. As opposed to existing solutions, the method does not rely on power flow derivations, a feature that highly reduces its decision time. High speed, along with the robustness against partial communication network failures and losses of the time synchronization signal, makes the method suitable for real-time applications. Extensive simulations conducted on the IEEE 39-bus and 118-bus test systems demonstrate the superior performance of the proposed method compared to existing ones.
+
+## Metadata
+
+Item Type:  | Article
+Authors/Creators:  | 
+
+  * Azizi, S https://orcid.org/0000-0002-9274-1177
+  * Rezaei Jegarluei, M https://orcid.org/0000-0002-6770-7161
+  * Kettner, A
+  * Salehi Dobakhshari, A
+Copyright, Publisher and Additional Information:  | © 2022 IEEE. Personal use of this material is permitted. Permission from IEEE must be obtained for all other uses, in any current or future media, including reprinting/republishing this material for advertising or promotional purposes, creating new collective works, for resale or redistribution to servers or lists, or reuse of any copyrighted component of this work in other works.
+Keywords:  | Phasor measurement units , Transmission line measurements , Monitoring , Power transmission lines , Real-time systems , Mathematical models , Impedance
+Dates:  | 
+
+  * Accepted: 18 August 2022
+  * Published (online): 23 August 2022
+Institution:  | The University of Leeds
+Academic Units:  | The University of Leeds > Faculty of Engineering & Physical Sciences (Leeds) > School of Electronic & Electrical Engineering (Leeds) > Institute of Communication & Power Networks (Leeds)
+Date Deposited:  | 24 Aug 2022 14:25
+Last Modified:  | 02 Mar 2023 11:53
+Status:  | Published online
+Publisher:  | IEEE
+Identification Number:  | 10.1109/TPWRS.2022.3201067
+Open Archives Initiative ID (OAI ID):  | oai:eprints.whiterose.ac.uk:190192
+
+## Download
+
+### Accepted Version
+
+Filename: Line Outage Paper.pdf
+
+CLICK TO DOWNLOAD--------------------------------------------------------------------------------
+Wide-Area Line Outage Monitoring by Sparse Phasor Measurements (https://eprints.whiterose.ac.uk/id/eprint/190192/1/Line%20Outage%20Paper.pdf)
+citeturn27search13 [wordlim: 200] Published: 5 months ago; system of equations using PMU measurements to identify ... domain by tackling the unaddressed challenges of line outage ... The advantages of the proposed line outage monitoring ... of phasor measurement devices.
+2
+Rest of Pre-Event Circuit
+j
+j
+Rest of Pre-Event Circuit i pre | | Pre-Event | --- | --- | --- | --- Rest of Pre-Event Circuit None | | Transmission Line |( , )
+pre
+i j
+J
+( , )
+pre
+i j
+J
+
+( , )
+pre
+j i
+J
+
+i
+(a)
+(b)
+Rest of Pre-Event Circuit 
+j
+(a) Rest of Pre-Event Circuit | | | --- | --- | --- | --- (a) i post | | Post-Event | (a) None | | Transmission Line |( , )
+post
+i j
+J
+( , )
+post
+i j
+J
+
+( , )
+post
+j i
+J
+
+i
+(d)
+(c)
+Fig. 1. (a) Pre-event circuit, (b) pre-event circuit in which line i–j is replaced
+by equivalent current sources, (c) post-event circuit, and (d) post-event circuit
+in which line i–j is replaced by equivalent current sources.
+using the Superposition Theorem. This helps to develop a
+system of equations using PMU measurements to identify
+the disconnected line by means of a residual-based index
+in the context of the least-squares method. Accounting for
+temporary losses of the time synchronization signal, the system
+of equations derived is rearranged such that its linearity is
+maintained, thus removing the need for using iterative solving
+algorithms.
+A. Derivations of Superimposed Voltages and Currents
+milliseconds from onset to completion [27]. Existing methods,
+however, are unable to address these practical aspects pertain-
+ing to the problem. These deﬁciencies partly result from the
+assumption of approximate static relationships between power
+injections and voltage phase angles only, and disregarding
+other useful information provided by PMUs, namely voltage
+magnitudes and current phasors [28].
+This paper is aimed at progressing into a more practical
+domain by tackling the unaddressed challenges of line outage
+monitoring. In contrast to existing approaches, the proposed
+method takes advantage of powerful theorems in Circuit
+Theory [29]. This enables the application of circuit equations
+to accurately formulate the relationships between variations
+of current and voltage phasors without further simplifying
+assumptions, unlike fast-decoupled- or DC-power-ﬂow-based
+methods. In view of the quality issues associated with fre-
+quency measurements [30], this work is focused on identifying
+the disturbed line without using the frequency data of PMUs.
+An overdetermined system of linear equations is developed
+for each candidate line, with a closed-form solution. As a
+result, delayed or missing data of PMUs would not affect
+the method’s performance. The candidate line resulting in the
+least weighted sum of squared residuals (WSSR) is identiﬁed
+as the disconnected line. To cope with temporary loss of
+the time-synchronization signal, appropriate modiﬁcations are
+proposed that enable the method to function properly with
+unsynchronized input phasors.
+The advantages of the proposed line outage monitoring
+method over the existing ones can be summarized as follows:
+• Exploiting the full potential of voltage and current pha-
+sors measured following the line event.
+• Placing no rigid constraints on the number and locations
+of phasor measurement devices.
+• Not relying on the approximate DC power-ﬂow assump-
+tions.
+• Tracking the sequence of events undergone by the line.
+• Not resorting to uncertain statistical models to character-
+ize the power system behavior.
+The term “disturbed line” is used hereafter to refer to a line
+with a sudden event that has changed the topology of the power
+system. This event could be a short-circuit fault on the line
+or its disconnection from one or two ends. Fig. 1(a) shows
+the positive-sequence equivalent circuit of a power system
+with particular emphasis on a disturbed line i–j. For the
+sake of clarity, nodal injected currents and line ﬂow currents
+are distinctly denoted by I and J, respectively. The sending-
+and receiving-end currents of line i–j are denoted by Jpre
+(i,j)
+and Jpre
+(j,i), respectively. As shown in Fig. 1(b), for a given
+operating point, the line can be equivalently represented by
+current sources at the terminals, which inject the same amount
+of current as the line does based on the Substitution Theorem.
+It follows that the node voltages and branch currents in these
+two circuits are identical.
+To facilitate circuit analyses within the time frame of
+interest, generators are represented by a voltage source in
+series with their subtransient impedance [31]. The Thevenin-
+Norton Equivalent Theorem is then used to convert these into
+current sources in parallel with the corresponding impedances
+[29]. For the circuit of Fig. 1(b), the bus impedance matrix
+(after excluding line i–j from the original circuit) is denoted
+by Z. The nodal circuit equations can be written as follows
+Vpre = ZIpre
+(1)
+• Accounting for unsynchronized input phasors and tem-
+porary losses of the time synchronization signal.
+These signiﬁcant improvements along with the simplicity of
+the method make it a viable option for integration into real-
+time applications run in the control center.
+The remainder of this paper is organized as follows. Section
+II details the proposed method and elaborates on how to moni-
+tor the sequence of events that result in the line disconnection.
+It also presents a simple technique accounting for losses of
+the time-synchronization signal. Performance assessment is
+carried out in Section III, using extensive simulation studies on
+the IEEE 39-bus and 118-bus test systems. Finally, the paper
+is concluded in Section IV.
+II. PROPOSED FORMULATION
+This section discusses the derivation of the circuit equations
+describing a line outage from inception to completion from
+both ends. First, the currents and voltages in the system are
+formulated as linear functions of two unknown current sources
+where Vpre and Ipre are the vectors of node voltages and
+nodal injections, respectively. The two extra current injections
+representing line i–j are added to the i-th and j-th elements
+of Ipre, respectively.
+Let us assume that line i–j is undergoing an event, which
+can be a short-circuit fault or the disconnection from one or
+both ends, as shown in Fig. 1(c). The bus impedance matrix--------------------------------------------------------------------------------
+untitled (https://wzy.ece.iastate.edu/CV/c201.pdf)
+citeturn27search14 [wordlim: 200] Published: 4.6 years ago; Crawled: 4.6 years ago; # Learning Latent Interactions for Event Classification via Graph Neural Networks and PMU Data ... **Index Terms—** Event identification, graph neural network, interaction graph inference, phasor measurement units. ... In [5], by using PMU data in Korea, a wavelet-based event classification model was developed by observing the difference between voltage and frequency signals. ... In [10], a scheme was proposed for supervisory protection and situational awareness, which presented a new metric to identify PMU with the strongest signature and an extreme learning machine-based event classifier. ... *(Corresponding author: Zhaoyu Wang.) ... The authors are with the Department of Electrical and Computer Engineering, Iowa State University, Ames, IA 50011 USA (e-mail: yuanyx@iastate.edu; wzy@iastate.edu; yanchao@iastate.edu).
+IEEE TRANSACTIONS ON POWER SYSTEMS
+
+# Learning Latent Interactions for Event Classification via Graph Neural Networks and PMU Data
+
+Yuxuan Yuan, *Graduate Student Member, IEEE*, Zhaoyu Wang, *Senior Member, IEEE*, and Yanchao Wang
+
+**Abstract—** Phasor measurement units (PMUs) are being widely installed on power systems, providing a unique opportunity to enhance wide-area situational awareness. One essential application is the use of PMU data for real-time event identification. However, how to take full advantage of all PMU data in event identification is still an open problem. Thus, we propose a novel method that performs event identification by mining interaction graphs among different PMUs. The proposed interaction graph inference method follows an entirely data-driven manner without knowing the physical topology. Moreover, unlike previous works that treat interactive learning and event identification as two different stages, our method learns interactions jointly with the identification task, thereby improving the accuracy of graph learning and ensuring seamless integration between the two stages. --------------------------------------------------------------------------------
+Learning Latent Interactions for Event classification via Graph Neural Networks and PMU Data (https://arxiv.org/abs/2010.01616)
+citeturn27academia15 [wordlim: 200] Published: 6.1 years ago; Title: Learning Latent Interactions for Event classification via Graph Neural Networks and PMU Data
+Authors: Yuxuan Yuan, Zhaoyu Wang, Yanchao Wang ... Thus, we propose a novel method that performs event identification by mining interaction graphs among different PMUs.
+Title: Learning Latent Interactions for Event classification via Graph Neural Networks and PMU Data
+Authors: Yuxuan Yuan, Zhaoyu Wang, Yanchao Wang
+Date: Sun Oct  4 16:11:51 2020
+
+Phasor measurement units (PMUs) are being widely installed on power systems, providing a unique opportunity to enhance wide-area situational awareness. One essential application is the use of PMU data for real-time event identification. However, how to take full advantage of all PMU data in event identification is still an open problem. Thus, we propose a novel method that performs event identification by mining interaction graphs among different PMUs. The proposed interaction graph inference method follows an entirely data-driven manner without knowing the physical topology. Moreover, unlike previous works that treat interactive learning and event identification as two different stages, our method learns interactions jointly with the identification task, thereby improving the accuracy of graph learning and ensuring seamless integration between the two stages. Moreover, to capture multi-scale event patterns, a dilated inception-based method is investigated to perform feature extraction of PMU data. To test the proposed data-driven approach, a large real-world dataset from tens of PMU sources and the corresponding event logs have been utilized in this work. Numerical results validate that our method has higher classification accuracy compared to previous methods.--------------------------------------------------------------------------------
+Learning Latent Interactions for Event Classification via Graph Neural Networks and PMU Data (https://ieeexplore.ieee.org/abstract/document/9732528)
+citeturn27search2 [wordlim: 200] Published: 4.6 years ago; Crawled: 3 months ago; # Learning Latent Interactions for Event Classification via Graph Neural Networks and PMU Data ... Authors ... Thus, we propose a novel method that performs event identification by mining interaction graphs among different PMUs.
+The proposed interaction graph inference method follows an entirely data-driven manner without knowing the physical topology. Moreover, unlike previous works that treat interactive learning and event identification as two different stages, our method learns interactions jointly with the identification task, thereby improving the accuracy of graph learning and ensuring seamless integration between the two stages. Moreover, to capture multi-scale event patterns, a dilated inception-based method is investigated to perform feature extraction of PMU data. To test the proposed data-driven approach, a large real-world dataset from tens of PMU sources and the corresponding event logs have been utilized in this work. Numerical results validate that our method has higher classification accuracy compared to previous methods.
+
+Published in: IEEE Transactions on Power Systems ( Volume: 38, Issue: 1, January 2023)
+
+Page(s): 617 - 629
+
+Date of Publication: 10 March 2022
+
+## ISSN Information:
+
+DOI: 10.1109/TPWRS.2022.3158248
+--------------------------------------------------------------------------------
+On Diagonalizable Systems with Random Structure | SIAM Journal on Control and Optimization (https://epubs.siam.org/doi/abs/10.1137/26M1845195)
+citeturn27search3 [wordlim: 200] Published: 5 days ago; Crawled: 4 days ago; Control, 70 (2025), pp. 1592–1607, https://doi.org/10.1109/TAC.2024.3462558.
+--------------------------------------------------------------------------------
+Line Outage Detection Using Phasor Angle Measurements | Request PDF (https://www.researchgate.net/publication/224340996_Line_Outage_Detection_Using_Phasor_Angle_Measurements)
+citeturn27search4 [wordlim: 200] Published: 17.9 years ago; Crawled: 2 months ago; To demonstrate the effectiveness of our approach, the algorithm is demonstrated using simulated and real PMU data from two systems - a 37-bus study case and the TVA control area. ... The problem studied in this paper is similar to the problem of line failures detection using phase angle measurements [5], [6], [7], [26]. ... Phasor measurement units (PMUs) create ample real-time monitoring opportunities for modern power systems. ... When a transmission outage occurs, neighboring lines and buses are often affected, and many line-outage detection methods have used PMUs to detect these changes by observing changes in voltage and current phasors, using pre-outage and post-outage data [6,33,31]. ... ... This study analyses significant constraints, implementation issues, and research deficiencies in current studies, substantiated by quantitative performance measures and practical assessments. ... By formulating the sparse line outage detection problem in a standard compressive sensing form, a binary matching pursuit algorithm is proposed to solve the problem.
+--------------------------------------------------------------------------------
+ENERGY | Free Full-Text | A Disturbance Localization Method for Power System Based on Group Sparse Representation and Entropy Weight Method (https://www.techscience.com/energy/v121n8/57336/html)
+citeturn27search5 [wordlim: 200] Published: 2.3 years ago; Crawled: last month; Due to the limitations in applicability and accuracy when employing only a single electrical quantity as an observation metric, this paper opts to utilize the aforementioned three electrical quantities as observation metrics for designing an overcomplete disturbance dictionary for localization purposes. ... The disturbance location process outlined in this study encompasses several crucial steps: The acquisition of disturbance data, the development of a group sparse dictionary, the reconstruction of compressed sensing, and the identification of disturbance positions using the entropy weight method.
+--------------------------------------------------------------------------------
+Big Data Insights on Synchrophasor Analytics | PDF | Statistical Classification | Machine Learning (https://www.scribd.com/document/790525828/Big-Data-Analysis-of-Synchrophasor-Data-Outcomes-of-Research-Activities-Supported-by-DOE-FOA-1861-PNNL-2022)
+citeturn27search6 [wordlim: 200] Published: 4.1 years ago; Crawled: 2.0 years ago; event classification using imperfect real-world PMU data,” arXiv preprint arXiv:2110.10128, ... Wang, ”Learning Latent Interactions for Event Identification via
+--------------------------------------------------------------------------------
+Fifteenth Language Resources and Evaluation Conference - ACL Anthology (https://aclanthology.org/events/lrec-2026/)
+citeturn27search7 [wordlim: 200] Crawled: yesterday; Furthermore, we provide a detailed error analysis that points out promising directions for future research. ... CausalSense: Leveraging Common Sense Knowledge and LLMs for Joint Event Extraction and Relation Classification ... Vrittanta-EN: A Benchmark Dataset for Event Trigger Detection and Classification Advancing Event Understanding in English Narrative Discourse ... A comprehensive evaluation is conducted across a wide range of models, including classical machine learning baselines (SVM, Naive Bayes), neural sequential models (LSTM, BiLSTM, BiLSTM-CRF), encoder-only transformers (BERT, RoBERTa, ALBERT, DistilBERT, DeBERTa, ELECTRA), and encoder-decoder models (T5, BART), along with large language models (GPT-4.1, DeepSeek-V3.2-Exp, Claude Sonnet 4) under both zero-shot and five-shot settings. ... The dataset, code, and annotation guidelines will be publicly released upon paper acceptance.
+--------------------------------------------------------------------------------
+Search | arXiv e-print repository (https://accelresearching.com/accel-zinc-picolinate-50mg/?_=%2Fsearch%2F%23nLw79nwZb1b3uPkZUsgpm5M%3D&query=Fernando%2C+T&searchtype=author)
+citeturn27search8 [wordlim: 200] Crawled: 6 days ago; doi 10.1109/TAC.2025.3634469 ... Submitted 17 September, 2024; v1 submitted 17 July, 2023; originally announced July 2023. ... Raman Study of Layered Breathing Kagome Lattice Semiconductor Nb3Cl8 ... We outline the limitations of the proposed approaches and propose future research directions that could be pursued to advance the area of multi-modal person re-id.
+--------------------------------------------------------------------------------
+GridGraph-LLM: A grid topology and graph-aware large language model for contingency analysis and transmission outage localization - ScienceDirect (https://www.sciencedirect.com/science/article/abs/pii/S0306261926011013)
+citeturn27search9 [wordlim: 200] Crawled: 2 months ago; U.S. power grids are challenged by intertwined uncertainties from the unprecedented integration of inverter-based energy resources and geospatially clustered large loads. ... System operators have been reporting situational awareness needs due to potential locational impacts caused by remote transmission nodes (e.g., unexpected transmission line outages or congestions), highlighting the critical need for accurate contingency detection and failure localization. ... In parallel, synchrophasor-based methods have enabled faster outage detection and localization using voltage and current phasor variations [4]. ... To address these challenges, data-driven approaches have been increasingly explored for contingency identification and transmission line outage localization. ... However, conventional graph-based models primarily rely on localized message passing, which limits their capacity to capture system-wide interactions under stressed operating conditions.
+--------------------------------------------------------------------------------
+61st Annual Meeting of the Association for Computational Linguistics - ACL Anthology (https://aclanthology.org/events/acl-2023/)
+citeturn27search10 [wordlim: 200] Published: 3.3 years ago; Crawled: yesterday; We propose APE model to learn the two parts of knowledge in two serial learning phases without causing catastrophic forgetting. ... Learning with Partial Annotations for Event Detection ... In this work, we conduct a seminal study for learning with partial annotations for ED.We propose a new trigger localization formulation using contrastive learning to distinguish ground-truth triggers from contexts, showing a decent robustness for addressing partial annotation noise. ... UTC-IE: A Unified Token-pair Classification Architecture for Information Extraction ... Specifically, it models axis-aware interaction with plus-shaped self-attention and local interaction with Convolutional Neural Network over token pairs.
+--------------------------------------------------------------------------------
+US11283877B2 - Software application and logic to modify configuration of an autonomous vehicle - Google Patents (https://patents.google.com/patent/US11283877B2/en)
+citeturn27search11 [wordlim: 200] Published: 4.6 years ago; Crawled: today; Similarly, relative localization system 2212 includes a Lidar localization processor 2254 d for processing Lidar data 2272, 2D tile map data 2220, 3D map data 2222, and 3D local map data 2223, among other optional data.
+

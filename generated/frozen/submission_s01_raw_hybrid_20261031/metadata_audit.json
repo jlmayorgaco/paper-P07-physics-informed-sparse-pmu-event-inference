@@ -1,0 +1,277 @@
+{
+  "status": "ARCHIVED_SOURCE_METADATA_FOUND_EXACT_ACTUATION_LOG_NOT_FOUND_IN_SEARCHED_PATHS",
+  "workbook": {
+    "path": "data\\metadata\\Event Timeline & Location.xlsx",
+    "sha256": "02afb97f4e317c35a79af0a33699db4e4abd765ab0c10858d2339122b0c7a6f2",
+    "rows": [
+      {
+        "sheet": "Sheet1",
+        "row": 1,
+        "values": [
+          "Event Number",
+          "Event Type",
+          "Event Impcat",
+          "Approximated Time",
+          "Event Location"
+        ]
+      },
+      {
+        "sheet": "Sheet1",
+        "row": 2,
+        "values": [
+          1,
+          "Cyber event",
+          "Data drop at BUS 29",
+          " 10th min",
+          "Bus 29"
+        ]
+      },
+      {
+        "sheet": "Sheet1",
+        "row": 3,
+        "values": [
+          3,
+          "Physical Event",
+          "Triple line to ground fault at BUS 39",
+          " 20th min",
+          "Bus 39"
+        ]
+      },
+      {
+        "sheet": "Sheet1",
+        "row": 4,
+        "values": [
+          4,
+          "Physical Event",
+          "Line outage Between BUS 24 and BUS23",
+          " 40th min",
+          "Bus 24"
+        ]
+      },
+      {
+        "sheet": "Sheet1",
+        "row": 5,
+        "values": [
+          5,
+          "Cyber Event",
+          "Data drop  at BUS 29",
+          " 45th min",
+          "Bus 29"
+        ]
+      },
+      {
+        "sheet": "Sheet1",
+        "row": 6,
+        "values": [
+          7,
+          "Cyber & Power Event",
+          "Concurrent data drop BUS 29   & generation change at BUS 2",
+          "50th min",
+          "Bus 29 and Bus 2"
+        ]
+      },
+      {
+        "sheet": "Sheet1",
+        "row": 8,
+        "values": [
+          8,
+          "Physical Event",
+          "Generation change at BUS 2",
+          "50th min",
+          "Bus 2"
+        ]
+      },
+      {
+        "sheet": "Sheet1",
+        "row": 10,
+        "values": [
+          9,
+          "Physical Event",
+          "Generation change",
+          "55th min",
+          "Bus 2"
+        ]
+      },
+      {
+        "sheet": "Sheet1",
+        "row": 12,
+        "values": [
+          10,
+          "Physical Event",
+          "Load change",
+          "65th min",
+          "Bus 7"
+        ]
+      },
+      {
+        "sheet": "Sheet1",
+        "row": 13,
+        "values": [
+          11,
+          "Physical Event",
+          "Load change",
+          "70th min",
+          "Bus 7"
+        ]
+      },
+      {
+        "sheet": "Sheet1",
+        "row": 14,
+        "values": [
+          "*Corresponding PMU numbers associated with the BUS number is provided in the PMUbus_ Location file in the README folder",
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ],
+    "historical_revision": "01178d6dbd92d5e98e80742ec02ff61f67473c8c",
+    "historical_blob": "cab2e071cb93d46c0db21d762f12704d6b652c7f",
+    "current_blob": "cab2e071cb93d46c0db21d762f12704d6b652c7f",
+    "identical_to_historical_blob": true,
+    "git_history": [
+      "4d9b9b701993a7243ea75f4db961f0f25eb076fb 2026-04-18 18:15:56 -0500 Refactory in Clean Architecture",
+      "b5077b0c1d61f191774e9b35a20d9e15bb16d1cf 2026-04-11 09:40:34 -0500 V1 and POC Refactoring",
+      "0719974c99723c8135cbef245836375f7a7b9bf4 2026-04-09 22:44:17 -0500 Init Scafolding"
+    ]
+  },
+  "source_claims": [
+    {
+      "event_family": "fault",
+      "family_code": 1,
+      "source": "BUS39",
+      "sheet_rows": [
+        3
+      ],
+      "approximate_minutes": [
+        20
+      ]
+    },
+    {
+      "event_family": "line_outage",
+      "family_code": 2,
+      "source": "LINE23-24",
+      "sheet_rows": [
+        4
+      ],
+      "approximate_minutes": [
+        40
+      ],
+      "note": "Event Location column says Bus24; full impact text identifies the line between buses24 and23."
+    },
+    {
+      "event_family": "generation_change",
+      "family_code": 3,
+      "source": "BUS2",
+      "sheet_rows": [
+        6,
+        8,
+        10
+      ],
+      "approximate_minutes": [
+        50,
+        50,
+        55
+      ],
+      "note": "Composite and separate generation rows are not independently timed by the long global Event3 support."
+    },
+    {
+      "event_family": "load_change",
+      "family_code": 4,
+      "source": "BUS7",
+      "sheet_rows": [
+        12,
+        13
+      ],
+      "approximate_minutes": [
+        65,
+        70
+      ]
+    }
+  ],
+  "naming_crosswalk": {
+    "path": "data\\metadata\\PMUbus_ Location.txt",
+    "sha256": "fa2a8c60f2414c2760b89dec2213bcada33daf7ec319c1fa36f658c7f408d4e0",
+    "entries": [
+      {
+        "bus": 2,
+        "original_device_id": "PMU6",
+        "project_bus_indexed_alias": "PMU2"
+      },
+      {
+        "bus": 5,
+        "original_device_id": "PMU7",
+        "project_bus_indexed_alias": "PMU5"
+      },
+      {
+        "bus": 6,
+        "original_device_id": "PMU8",
+        "project_bus_indexed_alias": "PMU6"
+      },
+      {
+        "bus": 10,
+        "original_device_id": "PMU3",
+        "project_bus_indexed_alias": "PMU10"
+      },
+      {
+        "bus": 19,
+        "original_device_id": "PMU5",
+        "project_bus_indexed_alias": "PMU19"
+      },
+      {
+        "bus": 22,
+        "original_device_id": "PMU4",
+        "project_bus_indexed_alias": "PMU22"
+      },
+      {
+        "bus": 29,
+        "original_device_id": "PMU2",
+        "project_bus_indexed_alias": "PMU29"
+      },
+      {
+        "bus": 39,
+        "original_device_id": "PMU1",
+        "project_bus_indexed_alias": "PMU39"
+      }
+    ],
+    "warning": "Original numbered devices are not the same namespace as project PMU{bus} labels. For example original PMU2 is at Bus29, while project PMU2 means the sensor at Bus2."
+  },
+  "source_status": "Pre-existing repository metadata, independent of S01 predictions; not an independently authenticated simulator actuation log.",
+  "exact_onsets_available": false,
+  "exact_offsets_available": false,
+  "actuator_magnitudes_available": false,
+  "usable_scope": "Can support explicitly metadata-based physical source labels by family in a new retrospective analysis; cannot certify causal-action delay or restoration timing.",
+  "original_EVALUATION_files_modified": false,
+  "limitations": [
+    "Metadata says approximate minutes, not report-clock timestamps.",
+    "Multiple generation entries lie inside or adjacent to one Event3 annotation run; no one-to-one action correspondence was proved.",
+    "Two load entries at65 and70minutes do not establish which action is application, reversal or another load change.",
+    "No causal source may be inferred from a broadcast PMU Event label alone.",
+    "The archived canonical timeline is a derived reconstruction and conflicts with measured annotations; it is not a producer actuation log.",
+    "A precise log may exist outside the searched repository paths; the user has been asked about its location by the parent task."
+  ],
+  "corroborating_existing_contract": {
+    "path": "SIM0001_JuliaPD_F01/evidence/physical_pilot/events/protocol.json",
+    "line": 92,
+    "statement": "Official metadata gives source and approximate minute; exact actuator duration/intensity are not provided."
+  },
+  "inspected_derived_reference_hashes": {
+    "SIM0001_JuliaPD_F01\\evidence\\physical_pilot\\events\\protocol.json": "5afffc3d487458958a6c9d031a90b107c9990316417366ff8d79772338ccf169",
+    "sgsma_lab\\src\\sgsma_lab\\resources\\events.yaml": "bcf54a1b2974104861bb8c00a1812c71ef1deb5e6a4ccfc4c4faa089f24b43c5",
+    "experiments\\PAPER_SUBMISSION_S01\\legacy_reference\\raw_timeline.py": "933f08318817f887e32a90fcf72744379f3c3ba645a342a91eaeb376d507d272"
+  },
+  "searched_scope": [
+    "data/metadata",
+    "src/data_engineering",
+    "src/application",
+    "src/infrastructure/io",
+    "pipelines",
+    "sgsma_lab/docs",
+    "sgsma_lab/src/sgsma_lab/resources",
+    "SIM0001_JuliaPD_F01/evidence/physical_pilot/events"
+  ],
+  "C01_read": false,
+  "RAW0002_read": false,
+  "script_sha256": "e4742847c6698756601d0ad2f1a090b2f92bd7207aa3cfa0f1d5740a6a7f99c8"
+}

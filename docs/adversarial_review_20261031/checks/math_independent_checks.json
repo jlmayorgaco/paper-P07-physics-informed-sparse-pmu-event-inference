@@ -1,0 +1,126 @@
+{
+  "causal_integral_and_conditional_state": {
+    "cases": 12,
+    "max_relative_evidence_error": 6.661338147750939e-16,
+    "max_conditional_state_mean_error": 8.881784197001252e-16,
+    "scope": "exact conditional Gaussian algebra only; shared Riccati/pruning not validated"
+  },
+  "fisher_and_prefix": {
+    "cases": 30,
+    "max_identity_error": 9.325873406851315e-15,
+    "minimum_prefix_increment": 3.441915756763336e-05
+  },
+  "cone_minimum_gap": {
+    "forward": 0.4999999999999999,
+    "reverse": 0.4999999999999999,
+    "analytical": 0.5,
+    "conclusion": "Definition in appendix D is symmetric; the asymmetry sentence is false."
+  },
+  "cone_laplace_cusp": {
+    "results": [
+      {
+        "epsilon": 0.2,
+        "evidence": 0.02779177146700384,
+        "over_epsilon_cubed": 3.473971433375479
+      },
+      {
+        "epsilon": 0.1,
+        "evidence": 0.0036736010012781758,
+        "over_epsilon_cubed": 3.673601001278175
+      },
+      {
+        "epsilon": 0.05,
+        "evidence": 0.0004671219598092811,
+        "over_epsilon_cubed": 3.7369756784742476
+      },
+      {
+        "epsilon": 0.025,
+        "evidence": 5.865784120362352e-05,
+        "over_epsilon_cubed": 3.7541018370319046
+      },
+      {
+        "epsilon": 0.0125,
+        "evidence": 7.340773139381704e-06,
+        "over_epsilon_cubed": 3.758475847363431
+      }
+    ],
+    "leading_constant": 3.7599424119465006,
+    "limiting_gaussian_cone_probability": 0.0,
+    "conclusion": "Need positive Gaussian mass/full-dimensional cone for multiplicative equivalent; otherwise only a zero leading coefficient is proved."
+  },
+  "mixed_higher_order_constant": {
+    "signed_normal_integral": 2.155800549540928,
+    "formula": 2.1558005495409276,
+    "shifted_observation": [
+      {
+        "z": 0.0,
+        "normal_integral": 2.155800549540928,
+        "relative_to_noiseless": 1.0
+      },
+      {
+        "z": 1.0,
+        "normal_integral": 2.526653924454917,
+        "relative_to_noiseless": 1.1720258281745783
+      },
+      {
+        "z": -1.0,
+        "normal_integral": 0.90149308074285,
+        "relative_to_noiseless": 0.4181709114671209
+      }
+    ],
+    "one_sided_factor_at_fixed_prior_density": 0.5,
+    "conclusion": "Displayed constant is correct for signed interior a and noiseless centered data; these conditions need stating."
+  },
+  "restricted_margin_convention": {
+    "standard_rectangular_svd_margin": 1.0,
+    "difference_norm": 1.4142135623730951,
+    "observed_difference": 0.0,
+    "rayleigh_minimum": 0.0,
+    "conclusion": "Use sqrt(lambda_min(H_U.T@H_U)) or inf over unit coefficient vectors; otherwise the general stability statement fails for wide matrices."
+  },
+  "preevent_inverse_domain": {
+    "nuisance_fisher": [
+      [
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0
+      ]
+    ],
+    "rank": 1,
+    "allowed_pre_event_precision": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "conclusion": "Ordinary inverse in pre-event corollary needs positive definiteness or identifiable quotient."
+  },
+  "redundant_fiber_requires_full_law": {
+    "marginalized_density_y0": 0.46883744412274375,
+    "density_at_arbitrary_representative_zeta0": 0.3989422804014327,
+    "analytical_ratio": 1.1752011936438014,
+    "conclusion": "Mean map is constant along zeta fibers but likelihood is not; require full conditional-law invariance, e.g. fixed covariance."
+  },
+  "acknowledged_legacy_normalizer": {
+    "declared": [
+      0.2,
+      0.5,
+      0.3
+    ],
+    "effective": [
+      0.34507897532063486,
+      0.13730256169841298,
+      0.5176184629809523
+    ],
+    "single_log_evidence_offset": -1.8378770664093453,
+    "conclusion": "Zero-response posterior equals effective prior; historical defect already disclosed, distinct from R11."
+  },
+  "all_checks_passed": true
+}

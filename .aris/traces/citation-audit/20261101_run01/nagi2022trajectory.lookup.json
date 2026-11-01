@@ -1,0 +1,434 @@
+{
+  "key": "nagi2022trajectory",
+  "retrieved_at": "2026-11-01T03:53:21.873522+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1109%2FTPWRS.2021.3104536",
+      "status": "success",
+      "resolved": "https://api.crossref.org/works/10.1109%2FTPWRS.2021.3104536"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          25
+        ]
+      ],
+      "date-time": "2026-09-25T16:09:56Z",
+      "timestamp": 1790352596654,
+      "version": "4.1.0"
+    },
+    "reference-count": 33,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "2",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2022-03-01T00:00:00Z",
+          "timestamp": 1646092800000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2022-03-01T00:00:00Z",
+          "timestamp": 1646092800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2022-03-01T00:00:00Z",
+          "timestamp": 1646092800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100000038",
+        "name": "Natural Sciences and Engineering Research Council of Canada",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "RGPIN-2016-04271"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "RGPIN-2016-04271"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100000038",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Trans. Power Syst."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2022,
+          3
+        ]
+      ]
+    },
+    "DOI": "10.1109/tpwrs.2021.3104536",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2021,
+          8,
+          12
+        ]
+      ],
+      "date-time": "2021-08-12T20:11:10Z",
+      "timestamp": 1628799070000
+    },
+    "page": "1253-1263",
+    "source": "Crossref",
+    "is-referenced-by-count": 12,
+    "title": [
+      "Bayesian Inference of Parameters in Power System Dynamic Models Using Trajectory Sensitivities"
+    ],
+    "prefix": "10.1109",
+    "volume": "37",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-0430-0591",
+        "authenticated-orcid": false,
+        "given": "Rubinder",
+        "family": "Nagi",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Department of Electrical and Computer Engineering, The University of British Columbia, Vancouver, BC, Canada"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-6544-2764",
+        "authenticated-orcid": false,
+        "given": "Xun",
+        "family": "Huan",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Mechanical Engineering, University of Michigan, Ann Arbor, MI, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-6101-4989",
+        "authenticated-orcid": false,
+        "given": "Yu Christine",
+        "family": "Chen",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Electrical and Computer Engineering, The University of British Columbia, Vancouver, BC, Canada"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref1",
+        "article-title": "Power system model validation",
+        "year": "2010"
+      },
+      {
+        "key": "ref2",
+        "volume-title": "Verification of Models and Data for Generator Excitation Control System or Plant Volt/Var Control Functions",
+        "year": "2014"
+      },
+      {
+        "key": "ref3",
+        "volume-title": "Verification of Models and Data for Turbine/Governor and Load Control or Active Power/Frequency Control Functions",
+        "year": "2014"
+      },
+      {
+        "key": "ref4",
+        "article-title": "Steps to establish a real-time transmission monitoring system for transmission owners and operators within the eastern and western interconnections.",
+        "year": "2006"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPAS.1982.317522"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2014.2316916"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/59.867170"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/59.962416"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1093/oso/9780198568315.001.0001"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1103/RevModPhys.83.943"
+      },
+      {
+        "key": "ref11",
+        "volume-title": "Markov Chain Monte Carlo in Practice",
+        "author": "Gilks",
+        "year": "1996"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1201/b10905"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/81.828574"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/01621459.1995.10476572"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1006/jmps.1999.1278"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1111/j.1467-9574.2011.00515.x"
+      },
+      {
+        "key": "ref17",
+        "article-title": "Data assimilation",
+        "volume-title": "Texts in Applied Mathematics",
+        "author": "Law",
+        "year": "2015"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2013.2251482"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2014.2331317"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2017.2760163"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2016.2625277"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2019.2942133"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2019.2892464"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/59.709082"
+      },
+      {
+        "key": "ref25",
+        "volume-title": "Power System Dynamics and Stability",
+        "author": "Sauer",
+        "year": "1998"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2005.851911"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2018.2846737"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1201/9780203913673"
+      },
+      {
+        "key": "ref29",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1111/1467-9868.00294"
+      },
+      {
+        "key": "ref30",
+        "article-title": "Phasor measurement unit (PMU) datasheet",
+        "year": "2017"
+      },
+      {
+        "key": "ref31",
+        "article-title": "Balancing and frequency control",
+        "year": "2011"
+      },
+      {
+        "key": "ref32",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1201/9781420009248.sec2"
+      },
+      {
+        "key": "ref33",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1088/0266-5611/30/11/114007"
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Power Systems"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/59/9729649/09512471.pdf?arnumber=9512471",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2024,
+          1,
+          11
+        ]
+      ],
+      "date-time": "2024-01-11T22:39:25Z",
+      "timestamp": 1705012765000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/9512471/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2022,
+          3
+        ]
+      ]
+    },
+    "references-count": 33,
+    "journal-issue": {
+      "issue": "2"
+    },
+    "URL": "https://doi.org/10.1109/tpwrs.2021.3104536",
+    "relation": {},
+    "ISSN": [
+      "0885-8950",
+      "1558-0679"
+    ],
+    "issn-type": [
+      {
+        "value": "0885-8950",
+        "type": "print"
+      },
+      {
+        "value": "1558-0679",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2022,
+          3
+        ]
+      ]
+    }
+  }
+}

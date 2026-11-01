@@ -1,0 +1,489 @@
+{
+  "key": "pandey2020realtime",
+  "retrieved_at": "2026-11-01T03:53:21.885490+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1109%2FTPWRS.2020.2986019",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1109/TPWRS.2020.2986019",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:00.515214+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          31
+        ]
+      ],
+      "date-time": "2026-10-31T21:29:57Z",
+      "timestamp": 1793482197615,
+      "version": "4.5.0"
+    },
+    "reference-count": 36,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "6",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2020,
+              11,
+              1
+            ]
+          ],
+          "date-time": "2020-11-01T00:00:00Z",
+          "timestamp": 1604188800000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2020,
+              11,
+              1
+            ]
+          ],
+          "date-time": "2020-11-01T00:00:00Z",
+          "timestamp": 1604188800000
+        },
+        "content-version": "am",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2020,
+              11,
+              1
+            ]
+          ],
+          "date-time": "2020-11-01T00:00:00Z",
+          "timestamp": 1604188800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2020,
+              11,
+              1
+            ]
+          ],
+          "date-time": "2020-11-01T00:00:00Z",
+          "timestamp": 1604188800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100008982",
+        "name": "National Science Foundation",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "1840192"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "1840192"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100008982",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Trans. Power Syst."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2020,
+          11
+        ]
+      ]
+    },
+    "DOI": "10.1109/tpwrs.2020.2986019",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2020,
+          4,
+          20
+        ]
+      ],
+      "date-time": "2020-04-20T15:51:14Z",
+      "timestamp": 1587397874000
+    },
+    "page": "4421-4431",
+    "source": "Crossref",
+    "is-referenced-by-count": 108,
+    "title": [
+      "A Real Time Event Detection, Classification and Localization Using Synchrophasor Data"
+    ],
+    "prefix": "10.1109",
+    "volume": "35",
+    "author": [
+      {
+        "given": "Shikhar",
+        "family": "Pandey",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-3518-8018",
+        "authenticated-orcid": false,
+        "given": "Anurag K.",
+        "family": "Srivastava",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Brett G.",
+        "family": "Amidan",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref33",
+        "article-title": "Real Time Digital Simulator (RTDS)",
+        "year": "0"
+      },
+      {
+        "key": "ref32",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/FSKD.2009.848"
+      },
+      {
+        "key": "ref31",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/BMEI.2015.7401622"
+      },
+      {
+        "key": "ref30",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2015.2490599"
+      },
+      {
+        "key": "ref36",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2018.2824851"
+      },
+      {
+        "key": "ref35",
+        "first-page": "9",
+        "article-title": "Unsupervised and semi-supervised clustering: a brief survey",
+        "volume": "1",
+        "author": "grira",
+        "year": "2004",
+        "journal-title": "A Review of Machine Learning Techniques for Processing Multimedia Content"
+      },
+      {
+        "key": "ref34",
+        "first-page": "226",
+        "article-title": "A density-based algorithm for discovering clusters in large spatial databases with noise.",
+        "volume": "96",
+        "author": "ester",
+        "year": "0",
+        "journal-title": "KDD"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TII.2018.2855428"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IGCC.2015.7393695"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2016.2559444"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TII.2015.2420951"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2013.2245155"
+      },
+      {
+        "key": "ref15",
+        "first-page": "1",
+        "article-title": "Optimization algorithms for catching data manipulators in power system estimation loops",
+        "author": "liao",
+        "year": "2018",
+        "journal-title": "IEEE Trans Control Syst Technol"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2013.2284098"
+      },
+      {
+        "key": "ref17",
+        "article-title": "PMU data quality: A framework for the attributes of pmu data quality and quality impacts to synchrophasor applications",
+        "author": "naspi",
+        "year": "2017"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2010.2098422"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2014.2307577"
+      },
+      {
+        "key": "ref28",
+        "first-page": "712",
+        "article-title": "Online estimation of steady-state load models considering data anomalies",
+        "volume": "54",
+        "author": "pandey",
+        "year": "2017",
+        "journal-title": "IEEE Trans Industry Appl"
+      },
+      {
+        "key": "ref4",
+        "article-title": "A real time synchrophasor data-driven approach for event detection in the power grid",
+        "author": "pandey",
+        "year": "2017"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICDM.2006.43"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PESGM40551.2019.8974015"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2014.2316476"
+      },
+      {
+        "key": "ref29",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2020.2968611"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2007.895162"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "crossref",
+        "first-page": "1154",
+        "DOI": "10.1109/TSG.2015.2478421",
+        "article-title": "Wavelet-based event detection method using pmu data",
+        "volume": "8",
+        "author": "kim",
+        "year": "2015",
+        "journal-title": "IEEE Trans Smart Grid"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2014.2312418"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s40565-018-0455-8"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2018.2859323"
+      },
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-319-50532-9_9"
+      },
+      {
+        "key": "ref20",
+        "first-page": "1",
+        "article-title": "Data mining based anomaly detection in PMU measurements and event detection",
+        "author": "banerjee",
+        "year": "0",
+        "journal-title": "North American SynchroPhasor Initiative"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/59.49090"
+      },
+      {
+        "key": "ref21",
+        "first-page": "1",
+        "article-title": "Ensemble based algorithm for synchrophasor data anomaly detection",
+        "author": "zhou",
+        "year": "2018",
+        "journal-title": "IEEE Trans Smart Grid"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/AERO.2005.1559688"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1136/bmj.f2340"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s40565-019-0541-6"
+      },
+      {
+        "key": "ref25",
+        "first-page": "226",
+        "article-title": "A density-based algorithm for discovering clusters in large spatial databases with noise",
+        "volume": "96",
+        "author": "m",
+        "year": "0",
+        "journal-title": "KDD"
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Power Systems"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://ieeexplore.ieee.org/ielam/59/9239415/9072390-aam.pdf",
+        "content-type": "application/pdf",
+        "content-version": "am",
+        "intended-application": "syndication"
+      },
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/59/9239415/09072390.pdf?arnumber=9072390",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2022,
+          4,
+          27
+        ]
+      ],
+      "date-time": "2022-04-27T09:58:19Z",
+      "timestamp": 1651053499000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/9072390/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2020,
+          11
+        ]
+      ]
+    },
+    "references-count": 36,
+    "journal-issue": {
+      "issue": "6"
+    },
+    "URL": "https://doi.org/10.1109/tpwrs.2020.2986019",
+    "relation": {},
+    "ISSN": [
+      "0885-8950",
+      "1558-0679"
+    ],
+    "issn-type": [
+      {
+        "value": "0885-8950",
+        "type": "print"
+      },
+      {
+        "value": "1558-0679",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2020,
+          11
+        ]
+      ]
+    }
+  }
+}

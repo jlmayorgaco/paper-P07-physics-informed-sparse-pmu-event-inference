@@ -1,0 +1,803 @@
+{
+  "key": "tartakovsky2023gp",
+  "retrieved_at": "2026-11-01T03:53:22.090828+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1016%2Fj.ijforecast.2022.03.007",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1016/j.ijforecast.2022.03.007",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:04.992024+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          20
+        ]
+      ],
+      "date-time": "2026-10-20T16:23:59Z",
+      "timestamp": 1792513439096,
+      "version": "4.5.0"
+    },
+    "reference-count": 52,
+    "publisher": "Elsevier BV",
+    "issue": "2",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2023,
+              4,
+              1
+            ]
+          ],
+          "date-time": "2023-04-01T00:00:00Z",
+          "timestamp": 1680307200000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2023,
+              4,
+              1
+            ]
+          ],
+          "date-time": "2023-04-01T00:00:00Z",
+          "timestamp": 1680307200000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/legal/tdmrep-license"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              3,
+              4
+            ]
+          ],
+          "date-time": "2024-03-04T00:00:00Z",
+          "timestamp": 1709510400000
+        },
+        "content-version": "am",
+        "delay-in-days": 338,
+        "URL": "http://www.elsevier.com/open-access/userlicense/1.0/"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "elsevier.com",
+        "sciencedirect.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "International Journal of Forecasting"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2023,
+          4
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.ijforecast.2022.03.007",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2022,
+          4,
+          26
+        ]
+      ],
+      "date-time": "2022-04-26T21:56:23Z",
+      "timestamp": 1651010183000
+    },
+    "page": "967-980",
+    "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 27,
+    "title": [
+      "Physics-informed Gaussian process regression for states estimation and forecasting in power grids"
+    ],
+    "prefix": "10.1016",
+    "volume": "39",
+    "author": [
+      {
+        "given": "Alexandre M.",
+        "family": "Tartakovsky",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Tong",
+        "family": "Ma",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "David A.",
+        "family": "Barajas-Solano",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Ramakrishna",
+        "family": "Tipireddy",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "78",
+    "reference": [
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b1",
+        "doi-asserted-by": "crossref",
+        "first-page": "460",
+        "DOI": "10.1016/j.enbuild.2018.01.066",
+        "article-title": "Short and medium-term forecasting of cooling and heating load demand in building environment with data-mining based approaches",
+        "volume": "166",
+        "author": "Ahmad",
+        "year": "2018",
+        "journal-title": "Energy and Buildings"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b2",
+        "unstructured": "Arnold, L. (1974). Stochastic differential equations. New York."
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b3",
+        "series-title": "Introduction to time series and forecasting",
+        "author": "Brockwell",
+        "year": "2016"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b4",
+        "doi-asserted-by": "crossref",
+        "first-page": "2112",
+        "DOI": "10.1016/j.renene.2019.08.018",
+        "article-title": "Gaussian process regression for numerical wind speed prediction enhancement",
+        "volume": "146",
+        "author": "Cai",
+        "year": "2020",
+        "journal-title": "Renewable Energy"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b5",
+        "first-page": "50",
+        "article-title": "Hybrid wavelet-pso-anfis approach for short-term wind power forecasting in portugal",
+        "volume": "2",
+        "author": "Catalao",
+        "year": "2011",
+        "journal-title": "IEEE Transactions on Sustainable Energy"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b6",
+        "doi-asserted-by": "crossref",
+        "first-page": "364",
+        "DOI": "10.1016/j.ijforecast.2013.07.003",
+        "article-title": "A refined parametric model for short term load forecasting",
+        "volume": "30",
+        "author": "Charlton",
+        "year": "2014",
+        "journal-title": "International Journal of Forecasting"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b7",
+        "series-title": "Apik: Active physics-informed kriging model with partial differential equations",
+        "author": "Chen",
+        "year": "2020"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b8",
+        "doi-asserted-by": "crossref",
+        "first-page": "748",
+        "DOI": "10.1016/j.ijforecast.2018.05.006",
+        "article-title": "Improving time series forecasting: An approach combining bootstrap aggregation, clusters and exponential smoothing",
+        "volume": "34",
+        "author": "Dantas",
+        "year": "2018",
+        "journal-title": "International Journal of Forecasting"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b9",
+        "doi-asserted-by": "crossref",
+        "first-page": "776",
+        "DOI": "10.1016/j.energy.2017.12.049",
+        "article-title": "Forecasting mid-long term electric energy consumption through bagging arima and exponential smoothing methods",
+        "volume": "144",
+        "author": "de Oliveira",
+        "year": "2018",
+        "journal-title": "Energy"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b10",
+        "doi-asserted-by": "crossref",
+        "first-page": "134",
+        "DOI": "10.1109/TPWRS.2011.2162082",
+        "article-title": "Short-term load forecasting based on a semi-parametric additive model",
+        "volume": "27",
+        "author": "Fan",
+        "year": "2011",
+        "journal-title": "IEEE Transactions on Power Systems"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b11",
+        "series-title": "2016 International renewable and sustainable energy conference",
+        "first-page": "1092",
+        "article-title": "Short-term pv power forecasting using support vector regression and local monitoring data",
+        "author": "Fentis",
+        "year": "2016"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b12",
+        "doi-asserted-by": "crossref",
+        "first-page": "637",
+        "DOI": "10.1016/j.ijforecast.2006.03.005",
+        "article-title": "Exponential smoothing: The state of the art—Part II",
+        "volume": "22",
+        "author": "Gardner",
+        "year": "2006",
+        "journal-title": "International Journal of Forecasting"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b13",
+        "doi-asserted-by": "crossref",
+        "first-page": "147",
+        "DOI": "10.1214/14-STS487",
+        "article-title": "Cross-covariance functions for multivariate geostatistics",
+        "volume": "30",
+        "author": "Genton",
+        "year": "2015",
+        "journal-title": "Statistical Science"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b14",
+        "series-title": "2006 American control conference",
+        "first-page": "6",
+        "article-title": "What is the ensemble kalman filter and how well does it work?",
+        "author": "Gillijns",
+        "year": "2006"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b15",
+        "doi-asserted-by": "crossref",
+        "first-page": "440",
+        "DOI": "10.1109/TSG.2013.2278425",
+        "article-title": "Local short and middle term electricity load forecasting with semi-parametric additive models",
+        "volume": "5",
+        "author": "Goude",
+        "year": "2013",
+        "journal-title": "IEEE Transactions on Smart Grid"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b16",
+        "doi-asserted-by": "crossref",
+        "first-page": "1935",
+        "DOI": "10.3390/en7041935",
+        "article-title": "Short-term electrical peak demand forecasting in a large government building using artificial neural networks",
+        "volume": "7",
+        "author": "Grant",
+        "year": "2014",
+        "journal-title": "Energies"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b17",
+        "doi-asserted-by": "crossref",
+        "first-page": "1549",
+        "DOI": "10.1142/S0218127499001085",
+        "article-title": "Global basin structure of attraction of two degrees of freedom swing equation system",
+        "volume": "09",
+        "author": "Hasegawa",
+        "year": "1999",
+        "journal-title": "International Journal of Bifurcation and Chaos"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b18",
+        "series-title": "Short term electric load forecasting",
+        "author": "Hong",
+        "year": "2012"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b19",
+        "series-title": "Global energy forecasting competition 2012",
+        "author": "Hong",
+        "year": "2014"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b20",
+        "doi-asserted-by": "crossref",
+        "first-page": "91",
+        "DOI": "10.1007/s10700-013-9166-9",
+        "article-title": "Fuzzy interaction regression for short term load forecasting",
+        "volume": "13",
+        "author": "Hong",
+        "year": "2014",
+        "journal-title": "Fuzzy Optimization and Decision Making"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b21",
+        "doi-asserted-by": "crossref",
+        "first-page": "456",
+        "DOI": "10.1109/TSG.2013.2274373",
+        "article-title": "Long term probabilistic load forecasting and normalization with hourly information",
+        "volume": "5",
+        "author": "Hong",
+        "year": "2013",
+        "journal-title": "IEEE Transactions on Smart Grid"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b22",
+        "doi-asserted-by": "crossref",
+        "first-page": "1081",
+        "DOI": "10.1016/j.ijforecast.2015.11.002",
+        "article-title": "A semi-empirical approach using gradient boosting and k-nearest neighbors regression for gefcom2014 probabilistic solar power forecasting",
+        "volume": "32",
+        "author": "Huang",
+        "year": "2016",
+        "journal-title": "International Journal of Forecasting"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b23",
+        "doi-asserted-by": "crossref",
+        "first-page": "33",
+        "DOI": "10.1109/MSP.2012.2187037",
+        "article-title": "State estimation in electric power grids: Meeting new challenges presented by the requirements of the future grid",
+        "volume": "29",
+        "author": "Huang",
+        "year": "2012",
+        "journal-title": "IEEE Signal Processing Magazine"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b24",
+        "series-title": "Forecasting: principles and practice",
+        "author": "Hyndman",
+        "year": "2018"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b25",
+        "doi-asserted-by": "crossref",
+        "first-page": "1142",
+        "DOI": "10.1109/TPWRS.2009.2036017",
+        "article-title": "Density forecasting for long-term peak electricity demand",
+        "volume": "25",
+        "author": "Hyndman",
+        "year": "2009",
+        "journal-title": "IEEE Transactions on Power Systems"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b26",
+        "doi-asserted-by": "crossref",
+        "first-page": "125",
+        "DOI": "10.1109/TEC.2008.2006552",
+        "article-title": "Short-term prediction of wind farm power: A data mining approach",
+        "volume": "24",
+        "author": "Kusiak",
+        "year": "2009",
+        "journal-title": "IEEE Transactions on Energy Conversion"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b27",
+        "doi-asserted-by": "crossref",
+        "first-page": "1061",
+        "DOI": "10.1016/j.ijforecast.2016.02.002",
+        "article-title": "Probabilistic gradient boosting machines for gefcom2014 wind forecasting",
+        "volume": "32",
+        "author": "Landry",
+        "year": "2016",
+        "journal-title": "International Journal of Forecasting"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b28",
+        "doi-asserted-by": "crossref",
+        "first-page": "1136",
+        "DOI": "10.1109/TIA.2012.2199449",
+        "article-title": "Short-term wind-power prediction based on wavelet transform–support vector machine and statistic-characteristics analysis",
+        "volume": "48",
+        "author": "Liu",
+        "year": "2012",
+        "journal-title": "IEEE Transactions on Industry Applications"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b29",
+        "doi-asserted-by": "crossref",
+        "first-page": "369",
+        "DOI": "10.1016/j.ijforecast.2013.07.002",
+        "article-title": "Gefcom2012 hierarchical load forecasting: Gradient boosting machines and gaussian processes",
+        "volume": "30",
+        "author": "Lloyd",
+        "year": "2014",
+        "journal-title": "International Journal of Forecasting"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b30",
+        "doi-asserted-by": "crossref",
+        "first-page": "89",
+        "DOI": "10.1016/j.ijforecast.2017.08.004",
+        "article-title": "Benchmarking robustness of load forecasting models under data integrity attacks",
+        "volume": "34",
+        "author": "Luo",
+        "year": "2018",
+        "journal-title": "International Journal of Forecasting"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b31",
+        "doi-asserted-by": "crossref",
+        "first-page": "691",
+        "DOI": "10.1007/BF02179457",
+        "article-title": "Numerical solution of differential equations with colored noise",
+        "volume": "77",
+        "author": "Milshtein",
+        "year": "1994",
+        "journal-title": "Journal of Statistical Physics"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b32",
+        "doi-asserted-by": "crossref",
+        "first-page": "375",
+        "DOI": "10.1016/j.ijforecast.2013.07.004",
+        "article-title": "Gefcom2012: Electric load forecasting and backcasting with semi-parametric models",
+        "volume": "30",
+        "author": "Nedellec",
+        "year": "2014",
+        "journal-title": "International Journal of Forecasting"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b33",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1088/1367-2630/17/1/015012",
+        "article-title": "Comparative analysis of existing models for power-grid synchronization",
+        "volume": "17",
+        "author": "Nishikawa",
+        "year": "2015",
+        "journal-title": "New Journal of Physics"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b34",
+        "first-page": "1939",
+        "article-title": "A unifying view of sparse approximate gaussian process regression",
+        "volume": "6",
+        "author": "Quiñonero-Candela",
+        "year": "2005",
+        "journal-title": "Journal of Machine Learning Research"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b35",
+        "doi-asserted-by": "crossref",
+        "first-page": "125",
+        "DOI": "10.1016/j.jcp.2017.11.039",
+        "article-title": "Hidden physics models: Machine learning of nonlinear partial differential equations",
+        "volume": "357",
+        "author": "Raissi",
+        "year": "2018",
+        "journal-title": "Journal of Computational Physics"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b36",
+        "doi-asserted-by": "crossref",
+        "first-page": "3701",
+        "DOI": "10.1109/TPWRS.2017.2764492",
+        "article-title": "Ensemble kalman filter for dynamic state estimation of power grids stochastically driven by time-correlated mechanical input power",
+        "volume": "33",
+        "author": "Rosenthal",
+        "year": "2018",
+        "journal-title": "IEEE Transactions on Power Systems"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b37",
+        "doi-asserted-by": "crossref",
+        "first-page": "758",
+        "DOI": "10.1016/j.renene.2019.01.031",
+        "article-title": "Repeated wavelet transform based arima model for very short-term wind speed forecasting",
+        "volume": "136",
+        "author": "Singh",
+        "year": "2019",
+        "journal-title": "Renewable Energy"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b38",
+        "doi-asserted-by": "crossref",
+        "first-page": "75",
+        "DOI": "10.1016/j.ijforecast.2019.03.017",
+        "article-title": "A hybrid method of exponential smoothing and recurrent neural networks for time series forecasting",
+        "volume": "36",
+        "author": "Smyl",
+        "year": "2020",
+        "journal-title": "International Journal of Forecasting"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b39",
+        "series-title": "Advances in neural information processing systems",
+        "first-page": "1257",
+        "article-title": "Sparse gaussian processes using pseudo-inputs",
+        "author": "Snelson",
+        "year": "2006"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b40",
+        "doi-asserted-by": "crossref",
+        "first-page": "324",
+        "DOI": "10.1016/j.ijforecast.2019.04.022",
+        "article-title": "Temperature anomaly detection for electric load forecasting",
+        "volume": "36",
+        "author": "Sobhani",
+        "year": "2020",
+        "journal-title": "International Journal of Forecasting"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b41",
+        "doi-asserted-by": "crossref",
+        "first-page": "96",
+        "DOI": "10.1109/TPWRS.2004.835632",
+        "article-title": "Short-term load forecasting for the holidays using fuzzy linear regression method",
+        "volume": "20",
+        "author": "Song",
+        "year": "2005",
+        "journal-title": "IEEE Transactions on Power Systems"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b42",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1615/JMachLearnModelComput.2020035155",
+        "article-title": "A survey of constrained gaussian process regression: Approaches and implementation challenges",
+        "volume": "1",
+        "author": "Swiler",
+        "year": "2020",
+        "journal-title": "Journal of Machine Learning for Modeling and Computing"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b43",
+        "doi-asserted-by": "crossref",
+        "first-page": "382",
+        "DOI": "10.1016/j.ijforecast.2013.07.005",
+        "article-title": "A gradient boosting approach to the kaggle load forecasting competition",
+        "volume": "30",
+        "author": "Taieb",
+        "year": "2014",
+        "journal-title": "International Journal of Forecasting"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b44",
+        "doi-asserted-by": "crossref",
+        "first-page": "184",
+        "DOI": "10.1016/j.energy.2016.03.070",
+        "article-title": "Using the ensemble kalman filter for electricity load forecasting and analysis",
+        "volume": "104",
+        "author": "Takeda",
+        "year": "2016",
+        "journal-title": "Energy"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b45",
+        "doi-asserted-by": "crossref",
+        "first-page": "656",
+        "DOI": "10.1016/j.procs.2016.05.250",
+        "article-title": "Real time energy management and load forecasting in smart grid using compactrio",
+        "volume": "85",
+        "author": "Thiyagarajan",
+        "year": "2016",
+        "journal-title": "Procedia Computer Science"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b46",
+        "doi-asserted-by": "crossref",
+        "first-page": "873",
+        "DOI": "10.1137/130940050",
+        "article-title": "Probabilistic density function method for stochastic odes of power systems with uncertain power input",
+        "volume": "3",
+        "author": "Wang",
+        "year": "2015",
+        "journal-title": "SIAM/ASA Journal on Uncertainty Quantification"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b47",
+        "doi-asserted-by": "crossref",
+        "first-page": "585",
+        "DOI": "10.1016/j.ijforecast.2015.09.006",
+        "article-title": "Electric load forecasting with recency effect: A big data approach",
+        "volume": "32",
+        "author": "Wang",
+        "year": "2016",
+        "journal-title": "International Journal of Forecasting"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b48",
+        "series-title": "Gaussian processes for machine learning. Vol. 2",
+        "author": "Williams",
+        "year": "2006"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b49",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1029/2019WR026304",
+        "article-title": "Water demand forecasting accuracy and influencing factors at different spatial scales using a gradient boosting machine",
+        "volume": "56",
+        "author": "Xenochristou",
+        "year": "2020",
+        "journal-title": "Water Resources Research"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b50",
+        "doi-asserted-by": "crossref",
+        "first-page": "410",
+        "DOI": "10.1016/j.jcp.2019.06.041",
+        "article-title": "Physics-informed cokriging: A Gaussian-process-regression-based multifidelity method for data-model convergence",
+        "volume": "395",
+        "author": "Yang",
+        "year": "2019",
+        "journal-title": "Journal of Computational Physics"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b51",
+        "series-title": "Learning deep neural network representations for koopman operators of nonlinear dynamical systems",
+        "author": "Yeung",
+        "year": "2017"
+      },
+      {
+        "key": "10.1016/j.ijforecast.2022.03.007_b52",
+        "doi-asserted-by": "crossref",
+        "first-page": "1425",
+        "DOI": "10.1002/we.1641",
+        "article-title": "Short-term forecasting of categorical changes in wind power with markov chain models",
+        "volume": "17",
+        "author": "Yoder",
+        "year": "2014",
+        "journal-title": "Wind Energy"
+      }
+    ],
+    "container-title": [
+      "International Journal of Forecasting"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0169207022000474?httpAccept=text/xml",
+        "content-type": "text/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0169207022000474?httpAccept=text/plain",
+        "content-type": "text/plain",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2025,
+          9,
+          30
+        ]
+      ],
+      "date-time": "2025-09-30T03:40:49Z",
+      "timestamp": 1759203649000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0169207022000474"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2023,
+          4
+        ]
+      ]
+    },
+    "references-count": 52,
+    "journal-issue": {
+      "issue": "2",
+      "published-print": {
+        "date-parts": [
+          [
+            2023,
+            4
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "S0169207022000474"
+    ],
+    "URL": "https://doi.org/10.1016/j.ijforecast.2022.03.007",
+    "relation": {},
+    "ISSN": [
+      "0169-2070"
+    ],
+    "issn-type": [
+      {
+        "value": "0169-2070",
+        "type": "print"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2023,
+          4
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "Elsevier",
+        "name": "publisher",
+        "label": "This article is maintained by"
+      },
+      {
+        "value": "Physics-informed Gaussian process regression for states estimation and forecasting in power grids",
+        "name": "articletitle",
+        "label": "Article Title"
+      },
+      {
+        "value": "International Journal of Forecasting",
+        "name": "journaltitle",
+        "label": "Journal Title"
+      },
+      {
+        "value": "https://doi.org/10.1016/j.ijforecast.2022.03.007",
+        "name": "articlelink",
+        "label": "CrossRef DOI link to publisher maintained version"
+      },
+      {
+        "value": "article",
+        "name": "content_type",
+        "label": "Content Type"
+      },
+      {
+        "value": "© 2022 International Institute of Forecasters. Published by Elsevier B.V. All rights reserved.",
+        "name": "copyright",
+        "label": "Copyright"
+      }
+    ]
+  }
+}

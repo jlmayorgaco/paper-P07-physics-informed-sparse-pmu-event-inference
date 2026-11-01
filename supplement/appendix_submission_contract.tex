@@ -1,0 +1,145 @@
+\section{Measurement Integrity and the Historical Submission Interface}
+\label{app:integrity-interface}
+
+An electrical intervention and a measurement failure are separate objects.
+The physical output identifies a family and asset; the integrity output
+identifies missing or corrupt PMU observations. Missingness alone does not
+establish malicious intent. A concurrent physical event and missing PMU can
+therefore have two different locations.\AIDraftingCredit{}
+
+The successor interface reuses the fitted detector, classifier and localizer
+from the actual submitted archive, rather than a similarly named exploratory
+pipeline. Archive member hashes are checked before inference. The input
+schema admits timestamps, three-phase voltage/current magnitudes and angles,
+frequency, ROCOF and the observed availability flag. Event labels, locations
+and annotated ON/OFF times are excluded. The fitted feature lists are also
+checked for label fields. This distinction matters because a historical
+diagnostic utility estimated a baseline from labeled normal samples over
+the complete record; that utility is not part of this inference interface.
+
+The submitted classifier uses a physical-family head, a bad-data head and a
+missing/composition head with fixed rules. Its E5 and E7 outputs refer to
+missing and bad-data PMUs, respectively. E6 denotes missing data together
+with a physical prediction; its legacy location is the physical source,
+not the missing PMU. In the archived configuration, both composition and
+physical-confidence thresholds are zero, so E6 requires a nonzero physical
+prediction in a window with missing data; it is not a calibrated test of
+concurrent causation. E8 is the legacy mixed-physical proxy class, not an
+open-set rejection guarantee.
+
+The availability interface evaluates each received report without looking
+ahead. It retains the affected PMU and channel mask rather than replacing
+missing measurements with future samples. The historical bad-data classifier
+uses a complete window and reports its result at the end. Within-window
+interpolation and centered features are permitted only under that delayed
+decision contract. Broadcasting the result to earlier timestamps does not
+make those earlier labels causal. The inherited cyber/integrity component
+is a comparator and integration component, not a newly claimed detector.
+
+The implemented composition has two temporal scopes. Received-report
+availability messages update the current missing-PMU state. Completed-window
+records describe only their observed intervals; they retain separate physical
+and integrity fields and cannot assert current corruption or physical
+restoration. Their joint emission is the later component emission, with each
+original time retained. For example, a window that contains missing data can
+finish after the PMU has resumed reporting; publishing that interval must not
+reopen the missing episode. Likewise, an earlier ML source diagnosis does not
+advance the submitted classifier's window-completion time.
+
+The sealed stream contains \SystemMessages{} messages, including
+\SystemWindows{} completed windows. Post-seal projection checks reproduce
+the physical source, integrity diagnosis, source-selection provenance and
+unavailable states of the components, and recover current availability on
+all \SystemReports{} reports without disagreement. The comparison retains
+the original component evaluations. It neither reruns inference nor creates
+a combined accuracy from report-level missingness and window-level physical
+diagnosis. The frozen physical filter remains explicitly unavailable.
+
+\section{Alarm, Diagnosis and Restoration Are Different Decisions}
+\label{app:decision-metrics}
+
+Let $\tau$ and $\omega$ be true ON and OFF, and let
+$t_A$, $t_D$ and $t_R$ denote the emission times of an alarm, source
+diagnosis and restoration. The detector can signal before it has a source.
+An eventual correct source at $t_D>t_A$ is not a correct location already
+available at $t_A$. Timely attribution requires a correct family and source
+at $t_D<\omega$. Estimated onset times never replace emission times in a
+delay metric.\AIDraftingCredit{}
+
+An event is associated with the first eligible unmatched alarm using time,
+before inspecting the predicted label. Incorrect labels remain associated
+errors rather than being reassigned to another event to improve the score.
+An alarm without a diagnosis, a wrong diagnosis, and no alarm are distinct
+outcomes. Restricted delay includes failures up to the evaluation horizon;
+conditional delay among successes is reported separately.
+
+A restoration of an unmatched episode and a premature restoration of a
+matched event are also different errors. With a tolerance $\delta$ fixed
+before scoring, premature restoration is $t_R<\omega-\delta$; its lost
+active duration is $[\omega-t_R]_+$. Signed restoration delay is
+$t_R-\omega$. Report its distribution, missing closures and episodes still
+open at the horizon; a median alone can hide early closures.
+
+The original C01 evaluator is preserved. Its false-restoration
+counter counts restorations of unmatched episodes, and its
+first-correct field can use the diagnosis associated with the
+first alarm even when emitted later. The successor evaluation reports these
+quantities with their restricted meanings and adds explicit premature
+closure and joint-decision metrics. This is a correction of evaluation
+semantics, not a change to the frozen detector or evidence that either
+failure occurred in a particular C01 record.
+
+\section{Retrospective RAW Comparison and Independent Units}
+\label{app:raw-contract}
+
+The archived RAW0001 table contains 21 contexts, including nine labeled-normal
+and twelve abnormal contexts. Its recovered loader places a 30-s window
+three seconds before a supplied abnormal onset, and selects normal contexts
+from supplied normal intervals. Even a successful reproduction would measure
+classification and localization within event-guided contexts, not continuous
+detection. However, the recovered calendar is incompatible with the event
+annotations in the actual RAW files. File-history checks show that those
+RAW files have not changed, and the timing differences cannot be corrected
+by a common offset. The archived score is therefore not a reproduced
+comparison endpoint. The unsuccessful reconstruction and its provenance
+audit are retained; predictions from mismatched windows are not counted as
+accuracy against the archived labels.\AIDraftingCredit{}
+
+A separate complete-record replay uses fixed windows without event-guided
+placement and retains all normal, physical, missing and corrupt periods.
+Both interfaces preserve availability failures and abstentions. Physical
+and integrity locations are scored separately where their meanings differ;
+the legacy single-label export is retained for comparison. Physical-source
+scoring additionally requires verified source annotations; an event-code
+sequence alone cannot identify every intervention boundary or source.
+The separately sealed successor analysis uses the recovered original
+source workbook for physical identity, retaining current event-code
+support for window membership. Its coarse timing does not resolve the
+individual actuation or restoration times.
+This replay is not an official competition score. RAW0001 previously informed F01
+calibration, so even a frozen new replay remains retrospective.
+
+Simulation partitions use the complete physical parent and all of its
+derived windows, conditions and noise realizations. Validation belongs
+inside the development fraction. Repartitioning previously inspected
+campaigns does not restore independent-test status. Uncertainty calculations
+resample physical parents, retaining their paired conditions together.
+Different PMU channels and adjacent 30-Hz reports are not independent trials.
+
+\section{Repository Boundaries and Reproduction}
+
+The article and current supplement compile independently from
+\texttt{main.tex} and \texttt{supplement.tex}. The separate
+\texttt{historical\_notes.tex} preserves corrected geometry and evidence
+theorems, earlier state reconstruction, the historical batch estimator,
+the proposed joint estimator and their original empirical qualifications.
+Moving this material does not remove negative results or upgrade an
+unexecuted estimator to an implemented one.\AIDraftingCredit{}
+
+The submission successor is versioned in the research repository under
+\nolinkurl{experiments/PAPER_SUBMISSION_S01/}. It contains the source
+provenance, observation-only interface, metric specification, synthetic
+regressions, and separate historical-window and complete-record outputs.
+Performance tables enter the manuscript only after prediction sealing and
+evaluation. A successful code check or PDF build is not itself a performance
+result.

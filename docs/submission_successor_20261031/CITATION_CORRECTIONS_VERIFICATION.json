@@ -1,0 +1,572 @@
+{
+  "verification": "citation-corrections-delta",
+  "verdict": "PASS",
+  "reason_code": "all_seven_requested_corrections_verified",
+  "summary": "All seven requested corrections verified; 71 bibliography entries and all other 39 audited inputs unchanged. Original audit and traces preserved. Residual uncertainties remain.",
+  "generated_at": "2026-11-01T04:08:19.179997+00:00",
+  "scope": "Delta verification only; this artifact does not replace or upgrade the original full citation audit.",
+  "source_audit": {
+    "path": "CITATION_AUDIT.json",
+    "verdict": "WARN",
+    "generated_at": "2026-11-01T04:02:13.946145+00:00",
+    "preserved": true
+  },
+  "pre_hash_manifest": "docs/submission_successor_20261031/CITATION_CORRECTIONS_INPUTS.json",
+  "pre_hashes_agree_with_original_audit": {
+    "references.bib": true,
+    "sections/narrative_protocol.tex": true
+  },
+  "post_hashes": {
+    "main.tex": "sha256:12e8be9d4d4afc92ae948d6446b40b1ac5cb5cdb03ff82c4ee6c83941b2ad076",
+    "preamble.tex": "sha256:d059158359cac3ef596a00a83d4a8ed6c53792029f86b05e066f1fcb2f2a1c4a",
+    "generated/results_macros.tex": "sha256:afb4c23f1f3346e2a2a5781ac9337e7b47dc076c6ab92e17a1c9778489cbe476",
+    "generated/continuous_macros.tex": "sha256:b23f0db4d88677cec9c57a8f3ca681c6c3e09ed32d60d4e685c2caee1779f602",
+    "generated/narrative_macros.tex": "sha256:3b7bf0d1c23f1507c0da47d8e32dbe5697e45e4b97c8bf87590c2904d3978031",
+    "generated/ei_x02_macros.tex": "sha256:941b622f8190074890b55f9b7f81bf121cb4a6a6991979f123b2638738fc7618",
+    "generated/submission_s01_macros.tex": "sha256:8a2ce39d58484b9d19650d025bb7eacdb4fcc2f395503be648934ad70c55c25a",
+    "generated/submission_s01_learning_macros.tex": "sha256:3c38f738a1392e1e9330e08849124cf507c388952149e5f7713e26fd54c63c28",
+    "generated/submission_s01_raw_macros.tex": "sha256:ee1ad590181e9626852121de90cc563a6b9ebc9ed83da9f02ae5cb909582114d",
+    "generated/submission_s01_ml_h04_macros.tex": "sha256:563d0e1822e3699c3d188eb7959aabf74a66d85615ed2d99321c061d659e56e6",
+    "generated/submission_s01_system_macros.tex": "sha256:fce1d1c432f89e70904272b61bd33b756adaa6cde949ac540bc48bda077a238d",
+    "metadata.tex": "sha256:49096e330b0f94e8025efba9f4e917d454f0193a04d8c0fdde08f40c30ee042c",
+    "sections/article_intro.tex": "sha256:6a218a1bbcf08f97c6da2683b669e36e23a6439bb63124e5aefaa115010faadb",
+    "sections/article_related.tex": "sha256:b0bb591f977190a0df4545d4718908de921bf0c52413b5fa30a949d606831a40",
+    "sections/narrative_problem.tex": "sha256:5acae1903777f573c2e191c1f95ce62e83cd6ec14b548904bc4a69eda37dba89",
+    "sections/article_method.tex": "sha256:ab76807da9fceb1d5eddde92e944d21806e0a13492bf5f6c1b4de4143d1f697d",
+    "sections/narrative_protocol.tex": "sha256:70da7fd33ed14672f8f39ae853d3c4b2bfab6b7a56ee0abff2f409687655ecc6",
+    "sections/narrative_results.tex": "sha256:29dabc1657d34eacb74e3fafe0a713937d3eddaf4129d71028c6b63fbc7c88b9",
+    "tables/generated/narrative_results.tex": "sha256:54035ff1cad2778c84ff67bb4c39fcaf168309407d58b43b15754768256402f7",
+    "sections/article_submission_checks.tex": "sha256:f14c2a4a874dda16c4b183c7f686980ab2212c865e8d42b87b8a92ce5978590e",
+    "tables/generated/single_state_control.tex": "sha256:f90ef61af284ca9384f1651e7b1e829a3d001843fe493c1eecf1850ed9af043d",
+    "tables/generated/grouped_learning.tex": "sha256:82d9b7e3bdd7c81c0270bfce5afb9a7cfc88c04291d50ee8922f9c14bb0f7d67",
+    "tables/generated/raw_source_hybrid.tex": "sha256:4fcbce805e1b1647e5666c11cec4fad8e2e530234d798165d51101a849d63e9d",
+    "sections/article_signature_summary.tex": "sha256:86df8d605e481746ae36d238392b87b2ddbdf0a6b43cc97f4957a87562786ff5",
+    "sections/article_interpretation.tex": "sha256:44d92a7eff5e5a42b416261d54be482c7bfc05fe3ff29482bfefd09dbcb10af8",
+    "sections/article_information.tex": "sha256:aff97f499e4468623c26f1f0bcd0ed8cdd59c701b2e6e4f0b66ee7c266558829",
+    "sections/article_final_conclusion.tex": "sha256:3f147c8299dcde6c357fc0ea6c732d16f6fe8f32a7d0110b827ff189581e8037",
+    "author_biographies.tex": "sha256:e4026c21593ed328d955da755fed4fcf3589cad3812ed32e3af2ec133196cfaf",
+    "supplement.tex": "sha256:6b9e20934d80f4458de4124f9e41b627cf2e80213fe68d2ecc8b1bbfac0daed1",
+    "supplement/appendix_causal_walkthrough.tex": "sha256:429b93a2610a02fd706f69a8467cfd359ae707b7b34488a2779907d826990b34",
+    "supplement/appendix_submission_contract.tex": "sha256:2a51018a5fa0eefe2c703ed999da77b1ff1399b39c0547c8fd3dfcfb3fe23dd6",
+    "supplement/appendix_single_state.tex": "sha256:18f0569fc69c70bea57204ff1fe36c46d6a78613b11e5acc31e1e6a029d15afc",
+    "supplement/appendix_grouped_learning.tex": "sha256:19b7f1fd2dc3cb007955ea2070e5d4d8105885afde6d67fa7cf0bb208db52916",
+    "sections/article_recovery_x04.tex": "sha256:9ce1b312457782975b74fda98d7e51d007800b511be8becbb988c7db183e30f0",
+    "sections/article_ei_x02.tex": "sha256:de95d8589b02e725852f1db2b343e7b5378130c816c041b2e264c57cc3d2b3c0",
+    "figures/ei_x02_architecture.tex": "sha256:f5faccd942e3566327ff66a49530470b02fa926e61e847d546f8c2f48e6d2e25",
+    "tables/generated/ei_x02_results_compact.tex": "sha256:40a5218f809b48121412d6c531c528f50534d3f82e90465d6b0291aa9ba60864",
+    "generated/ei_x02_interpretation.tex": "sha256:5fb2b2b56c02c1193ab62647f2026fbffd1025f032b6ada3340e3a3d1d78d390",
+    "references.bib": "sha256:c07007d78436ad296e115fb4cca5688c792b08690552cbde647bfcd290806f7a",
+    ".aris/citation-audit/contexts.txt": "sha256:0ae75677239fd9bce3ebde18aeee41ea9e389bc409383b41719915b930626cea",
+    ".aris/citation-audit/input_manifest.json": "sha256:35abbfbeacece79b7b33b7c889cc0bf2ed24fde7270a15d08c529dc5b92e8c63",
+    "CITATION_AUDIT.json": "sha256:cf07f5f9868cc4b217ba5be1bd6623f6a6f495eda3fc872660c5d9e49bc9e3f2",
+    "CITATION_AUDIT.md": "sha256:1291a1b3b20f554d15f46eec27a1e4d5baff168fffffabffddc7dbb4c77da5a7",
+    "docs/submission_successor_20261031/CITATION_CORRECTIONS_INPUTS.json": "sha256:8c3ee85c6fa5a0df7a1bbf726631d8b2a0fec2bb0354d4bf87fda31464c712c0"
+  },
+  "per_change": [
+    {
+      "key": "azizi2021log",
+      "verdict": "PASS",
+      "scope": "metadata correction only",
+      "file": "references.bib",
+      "line": 182,
+      "field_deltas": {
+        "author": {
+          "before": "S. Azizi and M. R. Rezaei Jegarluei and A. Salehi Dobakhshari and G. Liu and V. Terzija",
+          "after": "S. Azizi and M. Rezaei Jegarluei and A. Salehi Dobakhshari and G. Liu and V. Terzija"
+        }
+      },
+      "source_audit_trace": ".aris/traces/citation-audit/20261101_run01/azizi2021log.md",
+      "evidence_urls": [
+        "https://api.crossref.org/works/10.1109/TPWRD.2020.3047228",
+        "https://ieeexplore.ieee.org/document/9307251/",
+        "https://eprints.whiterose.ac.uk/id/eprint/169323/"
+      ],
+      "note": "Corrected fields match the prior audit recommendation and existing primary evidence; other fields are unchanged."
+    },
+    {
+      "key": "azizi2023line",
+      "verdict": "PASS",
+      "scope": "metadata correction only",
+      "file": "references.bib",
+      "line": 215,
+      "field_deltas": {
+        "author": {
+          "before": "S. Azizi and M. R. Rezaei Jegarluei and A. M. Kettner and A. Salehi Dobakhshari",
+          "after": "S. Azizi and M. Rezaei Jegarluei and A. M. Kettner and A. Salehi Dobakhshari"
+        }
+      },
+      "source_audit_trace": ".aris/traces/citation-audit/20261101_run01/azizi2023line.md",
+      "evidence_urls": [
+        "https://api.crossref.org/works/10.1109/TPWRS.2022.3201067",
+        "https://ieeexplore.ieee.org/document/9865124/",
+        "https://eprints.whiterose.ac.uk/190192/1/Line%20Outage%20Paper.pdf",
+        "https://eprints.whiterose.ac.uk/id/eprint/190192/"
+      ],
+      "note": "Author normalization verified. Existing year=2023, volume=38, number=4, pages=3621--3631 were preserved; the original primary-source uncertainty about final issue metadata is NOT resolved."
+    },
+    {
+      "key": "yuan2023gnn",
+      "verdict": "PASS",
+      "scope": "metadata correction only",
+      "file": "references.bib",
+      "line": 204,
+      "field_deltas": {
+        "author": {
+          "before": "Y. Yuan and Y. Wang and Z. Wang",
+          "after": "Y. Yuan and Z. Wang and Y. Wang"
+        }
+      },
+      "source_audit_trace": ".aris/traces/citation-audit/20261101_run01/yuan2023gnn.md",
+      "evidence_urls": [
+        "https://api.crossref.org/works/10.1109/TPWRS.2022.3158248",
+        "https://ieeexplore.ieee.org/document/9732528/",
+        "https://wzy.ece.iastate.edu/CV/c201.pdf"
+      ],
+      "note": "Corrected fields match the prior audit recommendation and existing primary evidence; other fields are unchanged."
+    },
+    {
+      "key": "zhang2025functional",
+      "verdict": "PASS",
+      "scope": "metadata correction only",
+      "file": "references.bib",
+      "line": 248,
+      "field_deltas": {
+        "author": {
+          "before": "T. Zhang and T. L. Fernando and M. Darouach",
+          "after": "Y. Zhang and T. L. Fernando and M. Darouach"
+        },
+        "title": {
+          "before": "Functional Observability, Functional Detectability, and Structural Functional Observability of Linear Systems",
+          "after": "Functional Observability, Structural Functional Observability, and Optimal Sensor Placement"
+        }
+      },
+      "source_audit_trace": ".aris/traces/citation-audit/20261101_run01/zhang2025functional.md",
+      "evidence_urls": [
+        "https://api.crossref.org/works/10.1109/TAC.2024.3462558",
+        "https://ieeexplore.ieee.org/document/10681657/",
+        "https://research-repository.uwa.edu.au/en/publications/functional-observability-structural-functional-observability-and-/"
+      ],
+      "note": "Corrected fields match the prior audit recommendation and existing primary evidence; other fields are unchanged."
+    },
+    {
+      "key": "moshtagh2025topology",
+      "verdict": "PASS",
+      "scope": "metadata correction only",
+      "file": "references.bib",
+      "line": 453,
+      "field_deltas": {
+        "number": {
+          "before": null,
+          "after": "6"
+        },
+        "pages": {
+          "before": null,
+          "after": "4547--4560"
+        },
+        "volume": {
+          "before": null,
+          "after": "40"
+        }
+      },
+      "source_audit_trace": ".aris/traces/citation-audit/20261101_run01/moshtagh2025topology.md",
+      "evidence_urls": [
+        "https://api.crossref.org/works/10.1109/TPWRS.2025.3572848",
+        "https://ieeexplore.ieee.org/document/11018475/",
+        "https://asu.elsevierpure.com/en/publications/topology-aware-graph-neural-network-based-state-estimation-for-pm/"
+      ],
+      "note": "Corrected fields match the prior audit recommendation and existing primary evidence; other fields are unchanged."
+    },
+    {
+      "key": "hu2026openset",
+      "verdict": "PASS",
+      "scope": "metadata correction only",
+      "file": "references.bib",
+      "line": 464,
+      "field_deltas": {
+        "note": {
+          "before": "Early access",
+          "after": null
+        },
+        "number": {
+          "before": null,
+          "after": "9"
+        },
+        "pages": {
+          "before": null,
+          "after": "8104--8115"
+        },
+        "volume": {
+          "before": null,
+          "after": "22"
+        }
+      },
+      "source_audit_trace": ".aris/traces/citation-audit/20261101_run01/hu2026openset.md",
+      "evidence_urls": [
+        "https://api.crossref.org/works/10.1109/TII.2026.3690931",
+        "https://ieeexplore.ieee.org/document/11527391/",
+        "https://ieeexplore.ieee.org/document/11527391/"
+      ],
+      "note": "Corrected fields match the prior audit recommendation and existing primary evidence; other fields are unchanged."
+    },
+    {
+      "key": "chen2016quickest",
+      "verdict": "PASS",
+      "scope": "contextual scope attribution",
+      "file": "sections/narrative_protocol.tex",
+      "line": 33,
+      "before": "The published physical comparator is Chen \\emph{et al.}'s persistent single-line quickest-change detector \\cite{chen2016quickest}. Its reduced-network covariance is marginalized to the observed PMU subset after inversion. Parallel CUSUM statistics stop at the first threshold crossing and select a line. Our declared F01 adapter uses nonoverlapping angle increments at 15 Hz, a startup-only scale/drift estimate and the fixed nominal line catalog. Its white-injection/DC assumptions do not describe all F01 instrumental effects. We preserve both matched-law implementation checks and F01 mismatch failures; no ARL guarantee is transferred to colored noise.",
+      "after": "The published physical comparator is Chen \\emph{et al.}'s persistent-line quickest-change detector \\cite{chen2016quickest}, which considers single- and double-line outages. Our declared F01 adapter restricts its fixed nominal catalog to single-line hypotheses. Its reduced-network covariance is marginalized to the observed PMU subset after inversion. Parallel CUSUM statistics stop at the first threshold crossing and select a line. The adapter uses nonoverlapping angle increments at 15 Hz and a startup-only scale/drift estimate. Its white-injection/DC assumptions do not describe all F01 instrumental effects. We preserve both matched-law implementation checks and F01 mismatch failures; no ARL guarantee is transferred to colored noise.",
+      "source_audit_trace": ".aris/traces/citation-audit/20261101_run01/chen2016quickest.md",
+      "evidence_urls": [
+        "https://api.crossref.org/works/10.1109/TPWRS.2015.2394246",
+        "http://ieeexplore.ieee.org/document/7041234/",
+        "https://people.ece.ubc.ca/chen/papers/journal/07041234.pdf"
+      ],
+      "note": "Published single/double-line capability is explicitly separated from the F01 adapter single-line catalog. The same source remains cited. Reverting only this paragraph in memory exactly reproduces the original file hash.",
+      "rollback_reproduces_original_hash": true
+    }
+  ],
+  "bibliography_delta": {
+    "entries_before": 77,
+    "entries_after": 77,
+    "keys_added": [],
+    "keys_removed": [],
+    "changed_entries": [
+      "azizi2021log",
+      "azizi2023line",
+      "hu2026openset",
+      "moshtagh2025topology",
+      "yuan2023gnn",
+      "zhang2025functional"
+    ],
+    "unchanged_entries": [
+      "albustami2026dae",
+      "anguluri2023group",
+      "blom1988imm",
+      "boers2005m3h",
+      "chen2016quickest",
+      "conte2023fault",
+      "ensaf2023kernel",
+      "eriksson2013diagnosability",
+      "fernando2010functional",
+      "gillijns2007input",
+      "jamei2020limits",
+      "katanic2024recursive",
+      "li2024knowledge",
+      "montanari2022functional",
+      "nagi2022trajectory",
+      "nugroho2022dae",
+      "openaiCodex2026",
+      "pandey2020realtime",
+      "rovatsos2017outage",
+      "sarkka2013bayesian",
+      "scharf1994matched",
+      "tartakovsky2023gp",
+      "tate2008outage",
+      "warner2023highfidelity",
+      "warner2024matrix",
+      "yildiz2024few",
+      "yildiz2025sparse",
+      "zhao2014outages",
+      "Mayorga2026FrequencyBenchmark",
+      "abdelhai2021transfer",
+      "bell1994ieks",
+      "biswas2025quality",
+      "chatterjee2020robust",
+      "cheng2022bigan",
+      "cover2006elements",
+      "cui2021hybrid",
+      "foggo2024pmubage",
+      "hou1998input",
+      "kalman1960",
+      "kay1993estimation",
+      "kummerow2022siamese",
+      "kummerow2023nuisance",
+      "kummerow2023sigmoid",
+      "li2018subspace",
+      "li2019cnn",
+      "li2022transfer",
+      "li2023eventtriggered",
+      "ngo2024pignn",
+      "nguyen2021unknown",
+      "nyberg2002detectability",
+      "pasqualetti2013attack",
+      "phadke2008synchronized",
+      "plietzsch2022powerdynamics",
+      "pomarico2026shred",
+      "qi2015placement",
+      "qu2023joint",
+      "rauch1965smoothing",
+      "rimkus2025gnn",
+      "rotnitzky2000singular",
+      "sarkka2020linesearch",
+      "showkatbakhsh2020secure",
+      "stuart2010inverse",
+      "sun2016observability",
+      "sun2026secure",
+      "tsybakov2009nonparametric",
+      "wang2024group",
+      "yuan2021learning",
+      "yue2024graph",
+      "zhai2025partial",
+      "zhao2018gmukf",
+      "zhao2019dse"
+    ],
+    "unchanged_entry_count": 71,
+    "entry_types_unchanged": true,
+    "no_unexpected_field_changes": true,
+    "note": "Only whitespace outside BibTeX entries is ignored. The 71 unchanged entries match the original entry text exactly."
+  },
+  "protocol_delta": {
+    "exact_single_paragraph_change": true,
+    "in_memory_rollback_hash": "sha256:1cd8c2aa36c8453fe5f4364cdabb2bdafde357b0899a38548e363b8b6855e18e",
+    "matches_original_hash": true
+  },
+  "other_audited_inputs": {
+    "count": 39,
+    "all_unchanged": true,
+    "per_file": {
+      "main.tex": {
+        "before": "sha256:12e8be9d4d4afc92ae948d6446b40b1ac5cb5cdb03ff82c4ee6c83941b2ad076",
+        "after": "sha256:12e8be9d4d4afc92ae948d6446b40b1ac5cb5cdb03ff82c4ee6c83941b2ad076",
+        "unchanged": true
+      },
+      "preamble.tex": {
+        "before": "sha256:d059158359cac3ef596a00a83d4a8ed6c53792029f86b05e066f1fcb2f2a1c4a",
+        "after": "sha256:d059158359cac3ef596a00a83d4a8ed6c53792029f86b05e066f1fcb2f2a1c4a",
+        "unchanged": true
+      },
+      "generated/results_macros.tex": {
+        "before": "sha256:afb4c23f1f3346e2a2a5781ac9337e7b47dc076c6ab92e17a1c9778489cbe476",
+        "after": "sha256:afb4c23f1f3346e2a2a5781ac9337e7b47dc076c6ab92e17a1c9778489cbe476",
+        "unchanged": true
+      },
+      "generated/continuous_macros.tex": {
+        "before": "sha256:b23f0db4d88677cec9c57a8f3ca681c6c3e09ed32d60d4e685c2caee1779f602",
+        "after": "sha256:b23f0db4d88677cec9c57a8f3ca681c6c3e09ed32d60d4e685c2caee1779f602",
+        "unchanged": true
+      },
+      "generated/narrative_macros.tex": {
+        "before": "sha256:3b7bf0d1c23f1507c0da47d8e32dbe5697e45e4b97c8bf87590c2904d3978031",
+        "after": "sha256:3b7bf0d1c23f1507c0da47d8e32dbe5697e45e4b97c8bf87590c2904d3978031",
+        "unchanged": true
+      },
+      "generated/ei_x02_macros.tex": {
+        "before": "sha256:941b622f8190074890b55f9b7f81bf121cb4a6a6991979f123b2638738fc7618",
+        "after": "sha256:941b622f8190074890b55f9b7f81bf121cb4a6a6991979f123b2638738fc7618",
+        "unchanged": true
+      },
+      "generated/submission_s01_macros.tex": {
+        "before": "sha256:8a2ce39d58484b9d19650d025bb7eacdb4fcc2f395503be648934ad70c55c25a",
+        "after": "sha256:8a2ce39d58484b9d19650d025bb7eacdb4fcc2f395503be648934ad70c55c25a",
+        "unchanged": true
+      },
+      "generated/submission_s01_learning_macros.tex": {
+        "before": "sha256:3c38f738a1392e1e9330e08849124cf507c388952149e5f7713e26fd54c63c28",
+        "after": "sha256:3c38f738a1392e1e9330e08849124cf507c388952149e5f7713e26fd54c63c28",
+        "unchanged": true
+      },
+      "generated/submission_s01_raw_macros.tex": {
+        "before": "sha256:ee1ad590181e9626852121de90cc563a6b9ebc9ed83da9f02ae5cb909582114d",
+        "after": "sha256:ee1ad590181e9626852121de90cc563a6b9ebc9ed83da9f02ae5cb909582114d",
+        "unchanged": true
+      },
+      "generated/submission_s01_ml_h04_macros.tex": {
+        "before": "sha256:563d0e1822e3699c3d188eb7959aabf74a66d85615ed2d99321c061d659e56e6",
+        "after": "sha256:563d0e1822e3699c3d188eb7959aabf74a66d85615ed2d99321c061d659e56e6",
+        "unchanged": true
+      },
+      "generated/submission_s01_system_macros.tex": {
+        "before": "sha256:fce1d1c432f89e70904272b61bd33b756adaa6cde949ac540bc48bda077a238d",
+        "after": "sha256:fce1d1c432f89e70904272b61bd33b756adaa6cde949ac540bc48bda077a238d",
+        "unchanged": true
+      },
+      "metadata.tex": {
+        "before": "sha256:49096e330b0f94e8025efba9f4e917d454f0193a04d8c0fdde08f40c30ee042c",
+        "after": "sha256:49096e330b0f94e8025efba9f4e917d454f0193a04d8c0fdde08f40c30ee042c",
+        "unchanged": true
+      },
+      "sections/article_intro.tex": {
+        "before": "sha256:6a218a1bbcf08f97c6da2683b669e36e23a6439bb63124e5aefaa115010faadb",
+        "after": "sha256:6a218a1bbcf08f97c6da2683b669e36e23a6439bb63124e5aefaa115010faadb",
+        "unchanged": true
+      },
+      "sections/article_related.tex": {
+        "before": "sha256:b0bb591f977190a0df4545d4718908de921bf0c52413b5fa30a949d606831a40",
+        "after": "sha256:b0bb591f977190a0df4545d4718908de921bf0c52413b5fa30a949d606831a40",
+        "unchanged": true
+      },
+      "sections/narrative_problem.tex": {
+        "before": "sha256:5acae1903777f573c2e191c1f95ce62e83cd6ec14b548904bc4a69eda37dba89",
+        "after": "sha256:5acae1903777f573c2e191c1f95ce62e83cd6ec14b548904bc4a69eda37dba89",
+        "unchanged": true
+      },
+      "sections/article_method.tex": {
+        "before": "sha256:ab76807da9fceb1d5eddde92e944d21806e0a13492bf5f6c1b4de4143d1f697d",
+        "after": "sha256:ab76807da9fceb1d5eddde92e944d21806e0a13492bf5f6c1b4de4143d1f697d",
+        "unchanged": true
+      },
+      "sections/narrative_results.tex": {
+        "before": "sha256:29dabc1657d34eacb74e3fafe0a713937d3eddaf4129d71028c6b63fbc7c88b9",
+        "after": "sha256:29dabc1657d34eacb74e3fafe0a713937d3eddaf4129d71028c6b63fbc7c88b9",
+        "unchanged": true
+      },
+      "tables/generated/narrative_results.tex": {
+        "before": "sha256:54035ff1cad2778c84ff67bb4c39fcaf168309407d58b43b15754768256402f7",
+        "after": "sha256:54035ff1cad2778c84ff67bb4c39fcaf168309407d58b43b15754768256402f7",
+        "unchanged": true
+      },
+      "sections/article_submission_checks.tex": {
+        "before": "sha256:f14c2a4a874dda16c4b183c7f686980ab2212c865e8d42b87b8a92ce5978590e",
+        "after": "sha256:f14c2a4a874dda16c4b183c7f686980ab2212c865e8d42b87b8a92ce5978590e",
+        "unchanged": true
+      },
+      "tables/generated/single_state_control.tex": {
+        "before": "sha256:f90ef61af284ca9384f1651e7b1e829a3d001843fe493c1eecf1850ed9af043d",
+        "after": "sha256:f90ef61af284ca9384f1651e7b1e829a3d001843fe493c1eecf1850ed9af043d",
+        "unchanged": true
+      },
+      "tables/generated/grouped_learning.tex": {
+        "before": "sha256:82d9b7e3bdd7c81c0270bfce5afb9a7cfc88c04291d50ee8922f9c14bb0f7d67",
+        "after": "sha256:82d9b7e3bdd7c81c0270bfce5afb9a7cfc88c04291d50ee8922f9c14bb0f7d67",
+        "unchanged": true
+      },
+      "tables/generated/raw_source_hybrid.tex": {
+        "before": "sha256:4fcbce805e1b1647e5666c11cec4fad8e2e530234d798165d51101a849d63e9d",
+        "after": "sha256:4fcbce805e1b1647e5666c11cec4fad8e2e530234d798165d51101a849d63e9d",
+        "unchanged": true
+      },
+      "sections/article_signature_summary.tex": {
+        "before": "sha256:86df8d605e481746ae36d238392b87b2ddbdf0a6b43cc97f4957a87562786ff5",
+        "after": "sha256:86df8d605e481746ae36d238392b87b2ddbdf0a6b43cc97f4957a87562786ff5",
+        "unchanged": true
+      },
+      "sections/article_interpretation.tex": {
+        "before": "sha256:44d92a7eff5e5a42b416261d54be482c7bfc05fe3ff29482bfefd09dbcb10af8",
+        "after": "sha256:44d92a7eff5e5a42b416261d54be482c7bfc05fe3ff29482bfefd09dbcb10af8",
+        "unchanged": true
+      },
+      "sections/article_information.tex": {
+        "before": "sha256:aff97f499e4468623c26f1f0bcd0ed8cdd59c701b2e6e4f0b66ee7c266558829",
+        "after": "sha256:aff97f499e4468623c26f1f0bcd0ed8cdd59c701b2e6e4f0b66ee7c266558829",
+        "unchanged": true
+      },
+      "sections/article_final_conclusion.tex": {
+        "before": "sha256:3f147c8299dcde6c357fc0ea6c732d16f6fe8f32a7d0110b827ff189581e8037",
+        "after": "sha256:3f147c8299dcde6c357fc0ea6c732d16f6fe8f32a7d0110b827ff189581e8037",
+        "unchanged": true
+      },
+      "author_biographies.tex": {
+        "before": "sha256:e4026c21593ed328d955da755fed4fcf3589cad3812ed32e3af2ec133196cfaf",
+        "after": "sha256:e4026c21593ed328d955da755fed4fcf3589cad3812ed32e3af2ec133196cfaf",
+        "unchanged": true
+      },
+      "supplement.tex": {
+        "before": "sha256:6b9e20934d80f4458de4124f9e41b627cf2e80213fe68d2ecc8b1bbfac0daed1",
+        "after": "sha256:6b9e20934d80f4458de4124f9e41b627cf2e80213fe68d2ecc8b1bbfac0daed1",
+        "unchanged": true
+      },
+      "supplement/appendix_causal_walkthrough.tex": {
+        "before": "sha256:429b93a2610a02fd706f69a8467cfd359ae707b7b34488a2779907d826990b34",
+        "after": "sha256:429b93a2610a02fd706f69a8467cfd359ae707b7b34488a2779907d826990b34",
+        "unchanged": true
+      },
+      "supplement/appendix_submission_contract.tex": {
+        "before": "sha256:2a51018a5fa0eefe2c703ed999da77b1ff1399b39c0547c8fd3dfcfb3fe23dd6",
+        "after": "sha256:2a51018a5fa0eefe2c703ed999da77b1ff1399b39c0547c8fd3dfcfb3fe23dd6",
+        "unchanged": true
+      },
+      "supplement/appendix_single_state.tex": {
+        "before": "sha256:18f0569fc69c70bea57204ff1fe36c46d6a78613b11e5acc31e1e6a029d15afc",
+        "after": "sha256:18f0569fc69c70bea57204ff1fe36c46d6a78613b11e5acc31e1e6a029d15afc",
+        "unchanged": true
+      },
+      "supplement/appendix_grouped_learning.tex": {
+        "before": "sha256:19b7f1fd2dc3cb007955ea2070e5d4d8105885afde6d67fa7cf0bb208db52916",
+        "after": "sha256:19b7f1fd2dc3cb007955ea2070e5d4d8105885afde6d67fa7cf0bb208db52916",
+        "unchanged": true
+      },
+      "sections/article_recovery_x04.tex": {
+        "before": "sha256:9ce1b312457782975b74fda98d7e51d007800b511be8becbb988c7db183e30f0",
+        "after": "sha256:9ce1b312457782975b74fda98d7e51d007800b511be8becbb988c7db183e30f0",
+        "unchanged": true
+      },
+      "sections/article_ei_x02.tex": {
+        "before": "sha256:de95d8589b02e725852f1db2b343e7b5378130c816c041b2e264c57cc3d2b3c0",
+        "after": "sha256:de95d8589b02e725852f1db2b343e7b5378130c816c041b2e264c57cc3d2b3c0",
+        "unchanged": true
+      },
+      "figures/ei_x02_architecture.tex": {
+        "before": "sha256:f5faccd942e3566327ff66a49530470b02fa926e61e847d546f8c2f48e6d2e25",
+        "after": "sha256:f5faccd942e3566327ff66a49530470b02fa926e61e847d546f8c2f48e6d2e25",
+        "unchanged": true
+      },
+      "tables/generated/ei_x02_results_compact.tex": {
+        "before": "sha256:40a5218f809b48121412d6c531c528f50534d3f82e90465d6b0291aa9ba60864",
+        "after": "sha256:40a5218f809b48121412d6c531c528f50534d3f82e90465d6b0291aa9ba60864",
+        "unchanged": true
+      },
+      "generated/ei_x02_interpretation.tex": {
+        "before": "sha256:5fb2b2b56c02c1193ab62647f2026fbffd1025f032b6ada3340e3a3d1d78d390",
+        "after": "sha256:5fb2b2b56c02c1193ab62647f2026fbffd1025f032b6ada3340e3a3d1d78d390",
+        "unchanged": true
+      },
+      ".aris/citation-audit/contexts.txt": {
+        "before": "sha256:0ae75677239fd9bce3ebde18aeee41ea9e389bc409383b41719915b930626cea",
+        "after": "sha256:0ae75677239fd9bce3ebde18aeee41ea9e389bc409383b41719915b930626cea",
+        "unchanged": true
+      },
+      ".aris/citation-audit/input_manifest.json": {
+        "before": "sha256:35abbfbeacece79b7b33b7c889cc0bf2ed24fde7270a15d08c529dc5b92e8c63",
+        "after": "sha256:35abbfbeacece79b7b33b7c889cc0bf2ed24fde7270a15d08c529dc5b92e8c63",
+        "unchanged": true
+      }
+    }
+  },
+  "original_reports": {
+    "CITATION_AUDIT.json": {
+      "recorded_before": "sha256:cf07f5f9868cc4b217ba5be1bd6623f6a6f495eda3fc872660c5d9e49bc9e3f2",
+      "current": "sha256:cf07f5f9868cc4b217ba5be1bd6623f6a6f495eda3fc872660c5d9e49bc9e3f2",
+      "unchanged": true
+    },
+    "CITATION_AUDIT.md": {
+      "recorded_before": "sha256:1291a1b3b20f554d15f46eec27a1e4d5baff168fffffabffddc7dbb4c77da5a7",
+      "current": "sha256:1291a1b3b20f554d15f46eec27a1e4d5baff168fffffabffddc7dbb4c77da5a7",
+      "unchanged": true
+    }
+  },
+  "original_traces": {
+    "path": ".aris/traces/citation-audit/20261101_run01/",
+    "file_count": 173,
+    "aggregate_sha256_before_verification": "sha256:94b976ae445dbab54b7d120ba435dbb4aa24f31be6bb0276b26f0c658969d095",
+    "aggregate_sha256_after_verification": "sha256:94b976ae445dbab54b7d120ba435dbb4aa24f31be6bb0276b26f0c658969d095",
+    "unchanged_during_verification": true,
+    "aggregation": "SHA256 of sorted relative-path + NUL + sha256-prefixed-file-hash records joined by LF; no final LF.",
+    "limitation": "Trace start/end preservation is checked for this delta-verification turn. No earlier per-trace hash manifest was supplied."
+  },
+  "residual_uncertainties": [
+    {
+      "key": "azizi2023line",
+      "status": "UNCHANGED_UNCERTAINTY",
+      "note": "Final 2023 issue metadata was not newly verified from an accessible primary version-of-record source. Only the author spelling correction is now verified."
+    },
+    {
+      "key": "warner2023highfidelity",
+      "status": "UNCHANGED_UNCERTAINTY",
+      "note": "No byte-identity check against TechRxiv v1 was added. The full-text-mirror limitation recorded in the original audit remains."
+    },
+    {
+      "key": "reviewer_independence",
+      "status": "NOT_CROSS_MODEL_CERTIFIED",
+      "note": "This is the same inherited collaboration subagent performing a delta check. The unavailable gpt-5.4/Codex MCP mechanism was not used; neither exact model identity nor cross-model independence is certified."
+    }
+  ],
+  "not_performed": [
+    "new full bibliography audit",
+    "new primary-source lookups",
+    "manuscript edits",
+    "compilation or PDF visual checks",
+    "commits, push or submission"
+  ],
+  "review_mechanism": "Same fresh-audit collaboration subagent /root/citation_final, now verifying the applied delta; inherited model identity/effort not independently verified."
+}

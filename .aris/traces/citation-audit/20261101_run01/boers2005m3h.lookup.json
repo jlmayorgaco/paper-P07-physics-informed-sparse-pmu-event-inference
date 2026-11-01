@@ -1,0 +1,322 @@
+{
+  "key": "boers2005m3h",
+  "retrieved_at": "2026-11-01T03:53:21.313718+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1016%2Fj.automatica.2004.11.018",
+      "status": "success",
+      "resolved": "https://api.crossref.org/works/10.1016%2Fj.automatica.2004.11.018"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          24
+        ]
+      ],
+      "date-time": "2026-10-24T17:40:25Z",
+      "timestamp": 1792863625472,
+      "version": "4.5.0"
+    },
+    "reference-count": 18,
+    "publisher": "Elsevier BV",
+    "issue": "4",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2005,
+              4,
+              1
+            ]
+          ],
+          "date-time": "2005-04-01T00:00:00Z",
+          "timestamp": 1112313600000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "Automatica"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2005,
+          4
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.automatica.2004.11.018",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2005,
+          1,
+          15
+        ]
+      ],
+      "date-time": "2005-01-15T12:30:29Z",
+      "timestamp": 1105792229000
+    },
+    "page": "709-716",
+    "source": "Crossref",
+    "is-referenced-by-count": 28,
+    "title": [
+      "A multiple model multiple hypothesis filter for Markovian switching systems"
+    ],
+    "prefix": "10.1016",
+    "volume": "41",
+    "author": [
+      {
+        "given": "Yvo",
+        "family": "Boers",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Hans",
+        "family": "Driessen",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "78",
+    "reference": [
+      {
+        "key": "10.1016/j.automatica.2004.11.018_bib1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Ainsleigh, P. L., & Luginbuhl, T. E. (2004). A family of multiple model smoothers for signal classification. In Proceedings of the IEEE aerospace (AES) conference, Big Sky, MT.",
+        "DOI": "10.1109/AERO.2004.1367982"
+      },
+      {
+        "key": "10.1016/j.automatica.2004.11.018_bib2",
+        "series-title": "Optimal control of stochastic systems",
+        "author": "Bagchi",
+        "year": "1993"
+      },
+      {
+        "key": "10.1016/j.automatica.2004.11.018_bib3",
+        "series-title": "Multi target multi sensor tracking",
+        "author": "Bar-Shalom",
+        "year": "1995"
+      },
+      {
+        "key": "10.1016/j.automatica.2004.11.018_bib4",
+        "series-title": "Design and analysis of modern tracking systems",
+        "author": "Blackman",
+        "year": "1999"
+      },
+      {
+        "key": "10.1016/j.automatica.2004.11.018_bib5",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Blom, H. A. P. (1984). An efficient filter for abruptly changing systems. In Proceedings of the 23rd IEEE conference on decision and control, Las Vegas. NV (pp. 666–658).",
+        "DOI": "10.1109/CDC.1984.272089"
+      },
+      {
+        "key": "10.1016/j.automatica.2004.11.018_bib6",
+        "unstructured": "Blom, H. A. P. (1990). Bayesian Estimation for Decision—Directed stochastic control. Ph.D. thesis, Delft University of Technology."
+      },
+      {
+        "key": "10.1016/j.automatica.2004.11.018_bib7",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1109/9.1299",
+        "article-title": "The interacting multiple model algorithm for systems with Markovian switching coefficients",
+        "volume": "33",
+        "author": "Blom",
+        "year": "1988",
+        "journal-title": "IEEE Transactions on Automatic Control"
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.automatica.2004.11.018_bib8",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1109/TAES.2002.1145771",
+        "article-title": "Automatic track filter tuning by randomized algorithms",
+        "volume": "38",
+        "author": "Boers",
+        "year": "2002",
+        "journal-title": "IEEE Transactions on Aerospace and Electronic Systems"
+      },
+      {
+        "issue": "12",
+        "key": "10.1016/j.automatica.2004.11.018_bib9",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/S0005-1098(02)00184-X",
+        "article-title": "Hybrid state estimation",
+        "volume": "38",
+        "author": "Boers",
+        "year": "2002",
+        "journal-title": "Automatica"
+      },
+      {
+        "key": "10.1016/j.automatica.2004.11.018_bib10",
+        "series-title": "Adaptive filtering and change detection",
+        "author": "Gustafsson",
+        "year": "2000"
+      },
+      {
+        "key": "10.1016/j.automatica.2004.11.018_bib11",
+        "series-title": "Stochastic processes and filtering theory",
+        "author": "Jazwinski",
+        "year": "1970"
+      },
+      {
+        "key": "10.1016/j.automatica.2004.11.018_bib12",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Koch, W. (1999a). Adaptive parameter control for phase-array tracking. In Proceedings of the SPIE conference on signal and data processing of small targets, Denver, CO.",
+        "DOI": "10.1117/12.364042"
+      },
+      {
+        "key": "10.1016/j.automatica.2004.11.018_bib13",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Koch, W. (1999b). Generalized smoothing for multiple model/multiple hypothesis filtering: experimental results. In Proceedings of the European control conference, Karlsruhe, Germany.",
+        "DOI": "10.23919/ECC.1999.7099801"
+      },
+      {
+        "key": "10.1016/j.automatica.2004.11.018_bib14",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Mallick, M., Zhang, K., & Rong Li, X. (2003). Comparative analysis of multiple-lag out-of-sequence measurement filtering algorithms. In Proceedings of the SPIE conference on signal and data processing of small targets, San Diego, CA.",
+        "DOI": "10.1117/12.506789"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.automatica.2004.11.018_bib15",
+        "doi-asserted-by": "crossref",
+        "first-page": "103",
+        "DOI": "10.1109/7.640267",
+        "article-title": "Interacting multiple model methods in target tracking",
+        "volume": "35",
+        "author": "Mazor",
+        "year": "1998",
+        "journal-title": "IEEE Transactions on Aerospace and Electronic Systems"
+      },
+      {
+        "key": "10.1016/j.automatica.2004.11.018_bib16",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Mulder, F., Driessen, J. N., Rulof, F., & Zwaga, J. (2003). Advanced sensor data fusion in msdflib. In Proceedings of FUSION 2003, Cairns, Australia.",
+        "DOI": "10.1109/ICIF.2003.177373"
+      },
+      {
+        "key": "10.1016/j.automatica.2004.11.018_bib17",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Pattipati, K. P., & Sandell, N. R., 1983. A unified view of state estimation in switching environments. In Proceedings of the American control conference (pp. 458–465).",
+        "DOI": "10.23919/ACC.1983.4788158"
+      },
+      {
+        "key": "10.1016/j.automatica.2004.11.018_bib18",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/0005-1098(82)90012-7",
+        "article-title": "Detection and estimation for abruptly changing systems",
+        "volume": "18",
+        "author": "Tugnait",
+        "year": "1982",
+        "journal-title": "Automatica"
+      }
+    ],
+    "container-title": [
+      "Automatica"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0005109804003243?httpAccept=text/xml",
+        "content-type": "text/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0005109804003243?httpAccept=text/plain",
+        "content-type": "text/plain",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2020,
+          4,
+          5
+        ]
+      ],
+      "date-time": "2020-04-05T10:04:52Z",
+      "timestamp": 1586081092000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0005109804003243"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2005,
+          4
+        ]
+      ]
+    },
+    "references-count": 18,
+    "journal-issue": {
+      "issue": "4",
+      "published-print": {
+        "date-parts": [
+          [
+            2005,
+            4
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "S0005109804003243"
+    ],
+    "URL": "https://doi.org/10.1016/j.automatica.2004.11.018",
+    "relation": {},
+    "ISSN": [
+      "0005-1098"
+    ],
+    "issn-type": [
+      {
+        "value": "0005-1098",
+        "type": "print"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2005,
+          4
+        ]
+      ]
+    }
+  }
+}

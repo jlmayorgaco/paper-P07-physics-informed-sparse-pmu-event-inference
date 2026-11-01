@@ -1,0 +1,654 @@
+{
+  "key": "rimkus2025gnn",
+  "retrieved_at": "2026-11-01T03:53:23.383465+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1111%2Fsjos.12763",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1111/sjos.12763",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:41.612341+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          3
+        ]
+      ],
+      "date-time": "2026-09-03T17:15:11Z",
+      "timestamp": 1788455711099,
+      "version": "build-2803163510"
+    },
+    "reference-count": 54,
+    "publisher": "Wiley",
+    "issue": "2",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2025,
+              1,
+              2
+            ]
+          ],
+          "date-time": "2025-01-02T00:00:00Z",
+          "timestamp": 1735776000000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "http://creativecommons.org/licenses/by-nc-nd/4.0/"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100008982",
+        "name": "National Science Foundation of Sri Lanka",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "DMS‐1923142"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "DMS‐1923142"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100008982",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/501100008982",
+        "name": "National Science Foundation of Sri Lanka",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "DMS‐2123761"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "DMS‐2123761"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100008982",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "onlinelibrary.wiley.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "Scandinavian J Statistics"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2025,
+          6
+        ]
+      ]
+    },
+    "abstract": "<jats:title>Abstract</jats:title><jats:p>Localization of faults in a large power system is one of the most important and difficult tasks of power systems monitoring. A fault, typically a shorted line, can be seen almost instantaneously by all measurement devices throughout the system, but determining its location in a geographically vast and topologically complex system is difficult. The task becomes even more difficult if measurements devices are placed only at some network nodes. We show that regression graph neural networks we construct, combined with a suitable statistical methodology, can solve this task very well. A chief advance of our methods is that we construct networks that produce localization without having being trained on data that contain fault localization information. We show that a synergy of statistics and deep learning can produce results that none of these approaches applied separately can achieve.</jats:p>",
+    "DOI": "10.1111/sjos.12763",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2025,
+          1,
+          2
+        ]
+      ],
+      "date-time": "2025-01-02T17:59:38Z",
+      "timestamp": 1735840778000
+    },
+    "page": "572-594",
+    "update-policy": "https://doi.org/10.1002/crossmark_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 4,
+    "title": [
+      "Graph neural networks for the localization of faults in a partially observed regional transmission system"
+    ],
+    "prefix": "10.1111",
+    "volume": "52",
+    "author": [
+      {
+        "given": "Mantautas",
+        "family": "Rimkus",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Department of Statistics Colorado State University  Fort Collins Colorado USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-9979-6536",
+        "authenticated-orcid": false,
+        "given": "Piotr",
+        "family": "Kokoszka",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Statistics Colorado State University  Fort Collins Colorado USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Dongliang",
+        "family": "Duan",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Electrical and Computer Engineering University of Wyoming  Laramie Wyoming USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Xuao",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Electrical and Computer Engineering University of Wyoming  Laramie Wyoming USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Haonan",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Statistics Colorado State University  Fort Collins Colorado USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "311",
+    "published-online": {
+      "date-parts": [
+        [
+          2025,
+          1,
+          2
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_2_9_2_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/etep.1848"
+      },
+      {
+        "key": "e_1_2_9_3_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.ijepes.2014.03.068"
+      },
+      {
+        "key": "e_1_2_9_4_1",
+        "volume-title": "The thirty‐sixth international conference on machine learning (ICML'19)",
+        "author": "Abu‐El‐Haija S.",
+        "year": "2019"
+      },
+      {
+        "key": "e_1_2_9_5_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3389/fdata.2021.692493"
+      },
+      {
+        "key": "e_1_2_9_6_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2009.2036470"
+      },
+      {
+        "key": "e_1_2_9_7_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1609/aaai.v34i04.5716"
+      },
+      {
+        "key": "e_1_2_9_8_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPAMI.2013.50"
+      },
+      {
+        "key": "e_1_2_9_9_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PVSC.2016.7749930"
+      },
+      {
+        "key": "e_1_2_9_10_1",
+        "volume-title": "Advances in neural information processing systems 34 (NeurIPS 2021)",
+        "author": "Chen Y.",
+        "year": "2021"
+      },
+      {
+        "key": "e_1_2_9_11_1",
+        "volume-title": "Power system toolbox",
+        "author": "Cheung K. W.",
+        "year": "2009"
+      },
+      {
+        "key": "e_1_2_9_12_1",
+        "volume-title": "BigLearn",
+        "author": "Collobert R.",
+        "year": "2011"
+      },
+      {
+        "key": "e_1_2_9_13_1",
+        "first-page": "894",
+        "volume-title": "Proceedings of the 34 th international conference on machine learning",
+        "author": "Cuturi M.",
+        "year": "2017"
+      },
+      {
+        "key": "e_1_2_9_14_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.compeleceng.2018.01.043"
+      },
+      {
+        "key": "e_1_2_9_15_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.epsr.2012.01.020"
+      },
+      {
+        "key": "e_1_2_9_16_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2021.3093521"
+      },
+      {
+        "key": "e_1_2_9_17_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2016.2633227"
+      },
+      {
+        "key": "e_1_2_9_18_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/JSEN.2020.2987321"
+      },
+      {
+        "key": "e_1_2_9_19_1",
+        "volume-title": "Deep learning",
+        "author": "Goodfellow I.",
+        "year": "2016"
+      },
+      {
+        "key": "e_1_2_9_20_1",
+        "first-page": "342",
+        "volume-title": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+        "author": "Guen V.",
+        "year": "2022"
+      },
+      {
+        "key": "e_1_2_9_21_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-031-01588-5"
+      },
+      {
+        "key": "e_1_2_9_22_1",
+        "first-page": "1025",
+        "volume-title": "Advances in neural information processing systems",
+        "author": "Hamilton W.",
+        "year": "2017"
+      },
+      {
+        "key": "e_1_2_9_23_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/JSYST.2021.3056536"
+      },
+      {
+        "key": "e_1_2_9_24_1",
+        "volume-title": "Statistical process monitoring using advanced data‐driven and deep learning approaches",
+        "author": "Harrou F.",
+        "year": "2020"
+      },
+      {
+        "key": "e_1_2_9_25_1",
+        "first-page": "1",
+        "volume-title": "2021 north American power symposium (NAPS)",
+        "author": "Jakir M.",
+        "year": "2021"
+      },
+      {
+        "key": "e_1_2_9_26_1",
+        "first-page": "12",
+        "volume-title": "International conference on learning representations",
+        "author": "Kingma D.",
+        "year": "2014"
+      },
+      {
+        "key": "e_1_2_9_27_1",
+        "volume-title": "International conference on learning representations",
+        "author": "Kipf T.",
+        "year": "2017"
+      },
+      {
+        "key": "e_1_2_9_28_1",
+        "first-page": "971",
+        "volume-title": "Advances in neural information processing systems",
+        "author": "Klambauer G.",
+        "year": "2017"
+      },
+      {
+        "key": "e_1_2_9_29_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.17713/ajs.v52i4.1511"
+      },
+      {
+        "key": "e_1_2_9_30_1",
+        "first-page": "1",
+        "volume-title": "2021 IEEE Madrid PowerTech",
+        "author": "Li W.",
+        "year": "2021"
+      },
+      {
+        "key": "e_1_2_9_31_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2019.2917794"
+      },
+      {
+        "key": "e_1_2_9_32_1",
+        "volume-title": "International conference on learning representations",
+        "author": "Li Y.",
+        "year": "2018"
+      },
+      {
+        "key": "e_1_2_9_33_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.35833/MPCE.2021.000058"
+      },
+      {
+        "key": "e_1_2_9_34_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.24251/HICSS.2023.339"
+      },
+      {
+        "key": "e_1_2_9_35_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1017/CBO9780511841040"
+      },
+      {
+        "key": "e_1_2_9_36_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/23737484.2023.2199957"
+      },
+      {
+        "key": "e_1_2_9_37_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3459637.3482464"
+      },
+      {
+        "key": "e_1_2_9_38_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1049/iet-gtd.2013.0033"
+      },
+      {
+        "key": "e_1_2_9_39_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TNN.2008.2005141"
+      },
+      {
+        "key": "e_1_2_9_40_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ACCESS.2018.2809045"
+      },
+      {
+        "key": "e_1_2_9_41_1",
+        "volume-title": "Power System Fault Diagnosis",
+        "author": "Shafiullah M.",
+        "year": "2022"
+      },
+      {
+        "key": "e_1_2_9_42_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PESMG.2013.6672718"
+      },
+      {
+        "key": "e_1_2_9_43_1",
+        "volume-title": "AAAI conference on artificial intelligence",
+        "author": "Wu Y.",
+        "year": "2020"
+      },
+      {
+        "key": "e_1_2_9_44_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TNNLS.2020.2978386"
+      },
+      {
+        "key": "e_1_2_9_45_1",
+        "volume-title": "International conference on learning representations",
+        "author": "Xu K.",
+        "year": "2018"
+      },
+      {
+        "key": "e_1_2_9_46_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/15325008.2013.862327"
+      },
+      {
+        "key": "e_1_2_9_47_1",
+        "first-page": "28877",
+        "article-title": "Do transformers really perform bad for graph representation?",
+        "volume": "34",
+        "author": "Ying C.",
+        "year": "2021",
+        "journal-title": "Advances in Neural Information Processing Systems"
+      },
+      {
+        "key": "e_1_2_9_48_1",
+        "first-page": "10871",
+        "volume-title": "ICML'20: Proceedings of the 37th international conference on machine learning",
+        "author": "You Y.",
+        "year": "2020"
+      },
+      {
+        "key": "e_1_2_9_49_1",
+        "first-page": "3634",
+        "volume-title": "Proceedings of the 27th international joint conference on artificial intelligence, IJCAI'18",
+        "author": "Yu B.",
+        "year": "2018"
+      },
+      {
+        "key": "e_1_2_9_50_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/BigData47090.2019.9006377"
+      },
+      {
+        "key": "e_1_2_9_51_1",
+        "volume-title": "Dive into deep learning",
+        "author": "Zhang A.",
+        "year": "2023"
+      },
+      {
+        "key": "e_1_2_9_52_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2012.2186595"
+      },
+      {
+        "key": "e_1_2_9_53_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TIA.2021.3083645"
+      },
+      {
+        "key": "e_1_2_9_54_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.aiopen.2021.01.001"
+      },
+      {
+        "key": "e_1_2_9_55_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/JIOT.2020.3040195"
+      }
+    ],
+    "container-title": [
+      "Scandinavian Journal of Statistics"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/sjos.12763",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2025,
+          7,
+          17
+        ]
+      ],
+      "date-time": "2025-07-17T04:44:15Z",
+      "timestamp": 1752727455000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://onlinelibrary.wiley.com/doi/10.1111/sjos.12763"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          1,
+          2
+        ]
+      ]
+    },
+    "references-count": 54,
+    "journal-issue": {
+      "issue": "2",
+      "published-print": {
+        "date-parts": [
+          [
+            2025,
+            6
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "10.1111/sjos.12763"
+    ],
+    "URL": "https://doi.org/10.1111/sjos.12763",
+    "archive": [
+      "Portico"
+    ],
+    "relation": {},
+    "ISSN": [
+      "0303-6898",
+      "1467-9469"
+    ],
+    "issn-type": [
+      {
+        "value": "0303-6898",
+        "type": "print"
+      },
+      {
+        "value": "1467-9469",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2025,
+          1,
+          2
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2024-03-24",
+        "order": 0,
+        "name": "received",
+        "label": "Received",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      },
+      {
+        "value": "2024-11-11",
+        "order": 2,
+        "name": "accepted",
+        "label": "Accepted",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      },
+      {
+        "value": "2025-01-02",
+        "order": 3,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,797 @@
+Quick Line Fault Detection and Identiﬁcation Using High-Fidelity (https://d197for5662m48.cloudfront.net/documents/publicationstatus/169966/preprint_pdf/fb88c972e89f2492099d5d5e00da2aac.pdf)
+citeturn36search12 [wordlim: 200] Published: 6 months ago; Quick Line Fault Detection and Identiﬁcation Using ... Austin Warner, Student Member, IEEE, Dakota Hamilton, Student Member, IEEE,
+Georgios Fellouris, Member, IEEE, and Dionysios Aliprantis, Senior Member, IEEE
+JOURNAL OF LATEX CLASS FILES, VOL. 14, NO. 8, AUGUST 2015
+1
+Quick Line Fault Detection and Identiﬁcation Using
+High-Fidelity Models of Transient Dynamics
+Austin Warner, Student Member, IEEE, Dakota Hamilton, Student Member, IEEE,
+Georgios Fellouris, Member, IEEE, and Dionysios Aliprantis, Senior Member, IEEE
+Abstract—A robust, versatile algorithm is proposed for quick
+detection and identiﬁcation of transmission line faults. Our
+approach is based on time-domain simulations of power system
+transient dynamics using high-ﬁdelity models. The proposed al-
+gorithm operates on real-time data from available PMU sensors,
+which can be sparsely placed and located far from the line fault.
+The algorithm successfully identiﬁes faults during the transient
+regime, while avoiding false alarms. It is also shown to be
+robust against uncertainties in operational parameters, as well
+as adverse events such as sudden load changes. A case study is
+included to illustrate algorithm design, tuning, and performance.
+Index Terms—Change detection algorithms, fault detection,
+PMUs pro-
+vide Global Positioning System (GPS) time-stamped voltage
+and current phasor data (magnitude and phase angle) at various
+locations around the network.
+The use of PMU data to quickly detect and identify line
+faults in transmission networks is of growing interest in the
+power systems literature [5]–[12]. In [5], the changes in phase
+angles are monitored and compared against their expected be-
+havior following a transmission line fault, which is computed
+This work was supported by NSF-AMPS 1736454. (Corresponding author:
+Austin Warner.)
+A. Warner and G. Fellouris are with the Department of Statistics, Uni-
+versity of Illinois Urbana–Champaign, Urbana, IL 61801 USA (e-mail:
+awarner5@illinois.edu; fellouri@illinois.edu).
+D. Hamilton and D. Aliprantis are with the Elmore Family School of
+Electrical and Computer Engineering, Purdue University, West Lafayette, IN
+47907 USA (e-mail: hamilt89@purdue.edu; dionysis@purdue.edu).
+based on the linearized, dc power ﬂow equations. Method-
+ology from the quick change detection (QCD) literature was
+--------------------------------------------------------------------------------
+Introduction to Nonparametric Estimation - Alexandre B. Tsybakov - Google Books (https://books.google.com/books/about/Introduction_to_Nonparametric_Estimation.html?id=mwB8rUBsbqoC)
+citeturn36search0 [wordlim: 200] Published: 18.0 years ago; Crawled: last month; Tsybakov Springer Science & Business Media, Oct 22, 2008 - Mathematics - 214 pages This book will be a valuable reference for researchers in the eare of nonparametrics. ... ISBN  | 0387790527, 9780387790527
+
+# Introduction to Nonparametric Estimation
+
+Alexandre B. TsybakovSpringer Science & Business Media, Oct 22, 2008 - Mathematics - 214 pages This book will be a valuable reference for researchers in the eare of nonparametrics. [Input]
+[Input]   [Input]
+Preview this book »
+
+### Selected pages
+
+Table of Contents
+
+Index
+
+References
+
+### Contents
+
+Nonparametric estimators  | 1
+ | 
+Lower bounds on the minimax risk  | 77
+ | 
+Asymptotic efficiency and adaptation  | 137
+ | 
+Appendix  | 191
+ | 
+
+Bibliography  | 202
+ | 
+Index  | 211
+ | 
+Copyright  | 
+
+### Other editions - View all
+
+ | Introduction to Nonparametric Estimation
+Alexandre B. Tsybakov
+No preview available - 2010
+ | 
+
+ | Introduction to Nonparametric Estimation
+Alexandre B. Tsybakov
+No preview available - 2008
+
+### Common terms and phrases
+
+absolutely continuous arg min asymptotically constant defined Definition ellipsoid Epanechnikov example finite fn(x function f Gaussian sequence model Hellinger distance Hölder class hypotheses implies inf max infimum James-Stein estimator K²(u)du kernel density estimator kernel estimator kernel of order Kmax Kullback divergence l²(N Lebesgue measure Lemma lim inf inf linear estimator lower bound minimax risk minimization MISE Nmax nonparametric regression nonparametric regression model obtain optimal rate oracle inequality P₁ parameter Pinsker estimator probability density probability measures projection estimator PROOF Proposition prove random variables rate of convergence satisfying Section Sobolev class squared risk statistical sufficiently superefficient Suppose Theorem 2.2 trigonometric basis Tsybakov unbiased estimator upper bound variance vector weights white noise model Wper X₁ ε² θΕΘ ρε ρω σ²
+
+### Bibliographic information
+
+Title  | Introduction to Nonparametric Estimation
+Springer Series in Statistics
+Mathematics and Statistics
+Mathematics and Statistics (R0)
+Author  | Alexandre B. Tsybakov
+Edition  | illustrated
+Publisher  | Springer Science & Business Media, 2008
+ISBN  | 0387790527, 9780387790527
+Length  | 214 pages
+Subjects  | Mathematics › Probability & Statistics › General
+Export Citation  | BiBTeX EndNote RefMan--------------------------------------------------------------------------------
+Introduction to Nonparametric Estimation - Alexandre B. Tsybakov - Google Books (https://books.google.com/books?hl=en&oi=book_result&vid=ISBN9780387790527)
+citeturn36search1 [wordlim: 200] Published: 18.0 years ago; Crawled: last month; Tsybakov Springer Science & Business Media, Oct 22, 2008 - Mathematics - 214 pages This book will be a valuable reference for researchers in the eare of nonparametrics. ... ISBN  | 0387790527, 9780387790527
+
+# Introduction to Nonparametric Estimation
+
+Alexandre B. TsybakovSpringer Science & Business Media, Oct 22, 2008 - Mathematics - 214 pages This book will be a valuable reference for researchers in the eare of nonparametrics. [Input]
+
+### Selected pages
+
+Page 8
+
+Table of Contents
+
+### Contents
+
+Nonparametric estimators  | 1
+ | 
+Lower bounds on the minimax risk  | 77
+ | 
+Asymptotic efficiency and adaptation  | 137
+ | 
+Appendix  | 191
+ | 
+
+Bibliography  | 202
+ | 
+Index  | 211
+ | 
+Copyright  | 
+
+### Other editions - View all
+
+ | Introduction to Nonparametric Estimation
+Alexandre B. Tsybakov
+No preview available - 2010
+ | 
+
+ | Introduction to Nonparametric Estimation
+Alexandre B. Tsybakov
+No preview available - 2008
+ | 
+
+### Common terms and phrases
+
+absolutely continuous arg min asymptotically constant defined Definition ellipsoid Epanechnikov example finite fn(x function f Gaussian sequence model Hellinger distance Hölder class hypotheses implies inf max infimum James-Stein estimator K²(u)du kernel density estimator kernel estimator kernel of order Kmax Kullback divergence l²(N Lebesgue measure Lemma lim inf inf linear estimator lower bound minimax risk minimization MISE Nmax nonparametric regression nonparametric regression model obtain optimal rate oracle inequality P₁ parameter Pinsker estimator probability density probability measures projection estimator PROOF Proposition prove random variables rate of convergence satisfying Section Sobolev class squared risk statistical sufficiently superefficient Suppose Theorem 2.2 trigonometric basis Tsybakov unbiased estimator upper bound variance vector weights white noise model Wper X₁ ε² θΕΘ ρε ρω σ²
+
+### Bibliographic information
+
+Title  | Introduction to Nonparametric Estimation
+Springer Series in Statistics
+Mathematics and Statistics
+Mathematics and Statistics (R0)
+Author  | Alexandre B. Tsybakov
+Edition  | illustrated
+Publisher  | Springer Science & Business Media, 2008
+ISBN  | 0387790527, 9780387790527
+Length  | 214 pages
+Subjects  | Mathematics › Probability & Statistics › General
+Business & Economics / Econometrics
+Business & Economics / Economics / General
+Computers / Artificial Intelligence / Computer Vision & Pattern Recognition
+Computers / Computer Science
+Computers / Information Technology
+Computers / Software Development & Engineering / General
+Mathematics / Probability & Statistics / General
+Mathematics / Probability & Statistics / Stochastic Processes
+Technology & Engineering / Electrical
+Technology & Engineering / Signals & Signal Processing
+   |  
+Export Citation  | BiBTeX EndNote RefMan--------------------------------------------------------------------------------
+Introduction to Nonparametric Estimation | 9780387790510, 9780387790527 | VitalSource (https://www.vitalsource.com/products/introduction-to-nonparametric-estimation-alexandre-b-tsybakov-v9780387790527)
+citeturn36search2 [wordlim: 200] Crawled: yesterday; ## eText ISBN:9780387790527 ... Tsybakov and published by Springer.
+
+# Introduction to Nonparametric Estimation
+
+  * Author(s) Alexandre B. Tsybakov
+
+  * Publisher Published by Springer Copyright © 2009
+  * ## Print ISBN: 9780387790510
+
+"ISBN-13 9780387790510"
+  * Format Fixed Layout
+
+  * Available from $ 41.70 USD
+SKU: 9780387790527R30
+
+  *   * ## eBook
+
+## eText ISBN:9780387790527
+
+[Input]30 Days
+
+$41.70
+
+[Input]60 Days
+
+$55.60
+
+[Input]90 Days
+
+$69.50
+
+[Input]120 Days
+
+$83.40
+
+[Input]180 Days
+
+$90.35
+
+[Input]Lifetime
+
+$139.00
+
+eTextbook LicenseImageOpen digital license dialog Opens in new window
+
+$41.70 USD
+
+Expires on: Nov 29, 2026
+
+Purchase in Bulk or as Gift
+
+The product description is not available yet.
+
+### Return Policy
+
+Easy 0-day returns when[Button: these requirements ]are met. View all policies.Opens in new window
+
+### Study Tools
+
+Built-in study tools like highlights and more
+
+  * Image
+
+### Read Aloud
+
+Listen and follow along as Bookshelf reads to you
+
+  * Image
+
+### Offline Access
+
+Access your eTextbook anytime and anywhere
+
+  * Image
+
+### Global Search
+
+Search across book content, figures, and your workbook
+
+### Introduction to Nonparametric Estimation is written by Alexandre B. Tsybakov and published by Springer. The Digital and eTextbook ISBNs for Introduction to Nonparametric Estimation are 9780387790527, 0387790527 and the print ISBNs are 9780387790510, 0387790519. Save up to 80% versus print by going digital with VitalSource.--------------------------------------------------------------------------------
+(PDF) Quick Line Fault Detection and Identification Using High-Fidelity Models of Transient Dynamics (https://www.researchgate.net/publication/371657943_Quick_Line_Fault_Detection_and_Identification_Using_High-Fidelity_Models_of_Transient_Dynamics)
+citeturn36search3 [wordlim: 200] Crawled: 5 months ago; # Quick Line Fault Detection and Identification Using High-Fidelity Models of Transient Dynamics ... Download file PDF Read file ... Austin Warner, Student Member, IEEE, Dakota Hamilton, Student Member, IEEE,
+
+Georgios Fellouris, Member, IEEE, and Dionysios Aliprantis, Senior Member, IEEE
+
+Preprint PDF Available
+
+# Quick Line Fault Detection and Identification Using High-Fidelity Models of Transient Dynamics
+
+  * June 2023
+
+DOI:10.36227/techrxiv.23264519
+
+  * License
+  * CC BY 4.0
+
+Authors:
+
+Austin Warner
+
+Austin Warner
+
+  * This person is not on ResearchGate, or hasn't claimed this research yet.
+
+Dakota Hamilton
+
+Dakota Hamilton
+
+  * This person is not on ResearchGate, or hasn't claimed this research yet.
+
+Georgios Fellouris
+
+  * University of Illinois Urbana-Champaign
+
+Dionysios C Aliprantis
+
+  * Purdue University West Lafayette
+
+Image
+
+Download file PDFRead file
+
+
+## Abstract and Figures
+
+p>A robust, versatile algorithm is proposed for quick detection and identification of transmission line faults. Our approach is based on time-domain simulations of power system transient dynamics using high-fidelity models. The proposed algorithm operates on real-time data from available PMU sensors, which can be sparsely placed and located far from the line fault. 
+High-Fidelity Models of Transient Dynamics
+
+Austin Warner, Student Member, IEEE, Dakota Hamilton, Student Member, IEEE,
+
+Georgios Fellouris, Member, IEEE, and Dionysios Aliprantis, Senior Member, IEEE
+
+Abstract—A robust, versatile algorithm is proposed for quick
+
+detection and identiﬁcation of transmission line faults. Our
+
+approach is based on time-domain simulations of power system
+
+transient dynamics using high-ﬁdelity models. The proposed al-
+
+gorithm operates on real-time data from available PMU sensors,
+
+which can be sparsely placed and located far from the line fault.
+
+The algorithm successfully identiﬁes faults during the transient
+
+regime, while avoiding false alarms. It is also shown to be
+
+robust against uncertainties in operational parameters, as well
+
+as adverse events such as sudden load changes. A case study is
+
+included to illustrate algorithm design, tuning, and performance.
+
+Index Terms—Change detection algorithms, fault detection,
+
+phasor measurement units, power system dynamics, power sys-
+
+tem faults, power system simulation.
+
+I. I NTRODUCTION
+
+S ITUATIONAL awareness is essential for the reliable and
+
+secure operation of power systems. This term includes
+
+an array of technologies that provide precise information
+
+regarding the current system state and its anticipated evolution
+
+over time, including actions taken to restore or maintain
+
+normal operation [1]. Due to the highly interconnected nature
+
+of modern power networks, transmission system operators
+
+(TSOs) must also be aware of the state of neighboring systems
+
+--------------------------------------------------------------------------------
+Details for: Introduction to Nonparametric Estimation / › Koha online catalog (https://katalog.bibliothek.kit.edu/bib/1084112)
+citeturn36search4 [wordlim: 200] Published: 17.8 years ago; Crawled: 3 weeks ago; Tsybakov ... Resource type: Ressourcentyp: Buch (Online)Book (Online)Language: English Series: Springer Series in Statistics | SpringerLink Bücher Publisher: New York, NY : Springer-Verlag New York, 2009 Description: Online-Ressource (X, 214p, digital)ISBN:
+
+  * 9780387790527
+
+Custom cover image
+
+ (koha:biblionumber:1084112)
+
+Normal view MARC view ISBD view
+
+# Introduction to Nonparametric Estimation / by Alexandre B. Tsybakov
+
+By:
+
+  * Cybakov, Aleksandr B [aut]
+Resource type: Ressourcentyp: Buch (Online)Book (Online)Language: English Series: Springer Series in Statistics | SpringerLink BücherPublisher: New York, NY : Springer-Verlag New York, 2009 Description: Online-Ressource (X, 214p, digital)ISBN:
+
+  * 9780387790527
+  * 128307270X
+  * 9781283072700
+Subject(s):
+
+  * Nichtparametrische Schätzung
+  * Dichteschätzung
+  * Asymptotik
+  * Pattern recognition
+  * Signal processing
+  * Image processing
+  * Speech processing systems
+  * Probabilities
+  * Mathematical statistics
+  * Computer science
+  * Optical pattern recognition
+  * Distribution (Probability theory)
+  * Statistics
+  * Econometrics
+--------------------------------------------------------------------------------
+Introduction to nonparametric estimation by Alexandre B. Tsybakov | Open Library (https://openlibrary.org/books/OL23696782M/Introduction_to_nonparametric_estimation)
+citeturn36search5 [wordlim: 200] Crawled: last month;     9780387790510, 9780387790527 ... Tsybakov |date=2009 |title=Introduction to nonparametric estimation |publication-place=New York |publisher=Springer |isbn=978-0-387-79051-0 |lccn=2008939894 |ol=23696782M}}
+
+  * Locate
+Introduction to nonparametric estimation 2009, Springer in English  | 
+
+
+## Book Details
+
+* * *
+
+### Edition Notes
+
+Includes bibliographical references and index.
+
+Published in
+    New York, London
+Series
+    Springer series in statistics
+
+### Classifications
+
+Dewey Decimal Class
+    519.5
+Library of Congress
+    QA278.8 .T79 2009, QA276-280QA276-280Q3, QA276-280
+
+### The Physical Object
+
+Pagination
+    xii, 214 p. ;
+Number of pages
+    214
+
+### Edition Identifiers
+
+Open Library
+    OL23696782M
+ISBN 10
+    0387790519, 0387790527
+ISBN 13
+    9780387790510, 9780387790527
+LCCN
+
+### Work Identifiers
+
+Work ID
+    OL9187487W
+
+### Source records
+
+  * Library of Congress MARC record
+  * Internet Archive item record
+  * Better World Books record
+
+## Community Reviews (0)
+
+No community reviews have been submitted for this work.
+
++ Log in to add your community review
+
+## Lists
+
+Download catalog record: RDF / JSON / OPDS | Wikipedia citation
+
+## Wikipedia citation
+
+×Close
+
+Copy and paste this code into your Wikipedia page. Need help?
+
+{{cite book|author=Alexandre B. Tsybakov |date=2009 |title=Introduction to nonparametric estimation |publication-place=New York |publisher=Springer |isbn=978-0-387-79051-0 |lccn=2008939894 |ol=23696782M}}
+--------------------------------------------------------------------------------
+Details for: Introduction to Nonparametric Estimation › SIB CICY catalog (https://sib.cicy.mx/cgi-bin/koha/opac-detail.pl?biblionumber=59140)
+citeturn36search6 [wordlim: 200] Crawled: 3 months ago;   * Tsybakov, Alexandre B [author.] ...   * SpringerLink (Online service) ...   * 9780387790527
+
+# Introduction to Nonparametric Estimation [electronic resource] / by Alexandre B. Tsybakov.
+
+Por:
+
+  * Tsybakov, Alexandre B [author.]
+Colaborador(es):
+
+  * SpringerLink (Online service)
+Tipo de material: Image: TextoTexto Series Springer Series in StatisticsEditor: New York, NY : Springer New York, 2009 Descripción: X, 214p. online resource Tipo de contenido:
+
+  * text
+Tipo de medio:
+
+  * computer
+Tipo de soporte:
+
+  * online resource
+ISBN:
+
+  * 9780387790527
+  * 99780387790527
+Tema(s):
+
+  * STATISTICS
+  * COMPUTER SCIENCE
+  * OPTICAL PATTERN RECOGNITION
+  * DISTRIBUTION (PROBABILITY THEORY)
+  * MATHEMATICAL STATISTICS
+  * ECONOMETRICS
+  * STATISTICS
+  * STATISTICAL THEORY AND METHODS
+  * PROBABILITY AND STATISTICS IN COMPUTER SCIENCE
+  * PATTERN RECOGNITION
+  * ECONOMETRICS
+  * SIGNAL, IMAGE AND SPEECH PROCESSING
+  * PROBABILITY THEORY AND STOCHASTIC PROCESSES
+--------------------------------------------------------------------------------
+Introduction to nonparametric estimation [electronic resource] (https://library.kaist.ac.kr/search/ctlgSearch/posesn/view.do?bibctrlno=468947&se=b0&ty=B)
+citeturn36search7 [wordlim: 200] Published: 17.8 years ago; Crawled: last month; Tsybakov. ... 발행사항  | New York, NY : Springer-Verlag New York, 2009. ... ISBN  | 9780387790527 (electronic bk.) 9780387790510 (paper)
+
+Image
+
+미리보기
+
+서지주요정보
+Introduction to nonparametric estimation [electronic resource]
+---
+서명 / 저자  | Introduction to nonparametric estimation [electronic resource] / by Alexandre B. Tsybakov.
+[Input]
+저자명  | Tsybakov, Alexandre B.
+[Input]
+단체명  | Tsybakov, Alexandre B.
+발행사항  | New York, NY : Springer-Verlag New York, 2009.
+[Input]
+총서명  | Springer series in statistics, 0172-7397
+[Input]
+Online Access  | http://dx.doi.org/10.1007/b13794URL
+
+#### 서지기타정보
+
+서지기타정보
+청구기호  | QA278.8 .T882 2009
+형태사항  | 224 p. : ill., digital ; 24 cm.
+언어  | English
+주제  | Nonparametric statistics.
+Estimation theory.
+Statistics.
+보유판 및 특별호 저록  | Springer eBooks
+ISBN  | 9780387790527 (electronic bk.) 9780387790510 (paper)
+
+#### 책소개
+
+전체보기
+
+#### 목차
+
+전체보기--------------------------------------------------------------------------------
+Introduction to Nonparametric Estimation - Tsybakov, Alexandre B. - Lesestoff (https://bildungsservice.lesestoff.ch/en/detail/ISBN-2244000126423/Tsybakov-Alexandre-B./Introduction-to-Nonparametric-Estimation)
+citeturn36search8 [wordlim: 200] Crawled: last week; Tsybakov, Alexandre B. ... Additional ISBN/GTIN 9780387790527 ... Publisher Springer New York
+
+# Introduction to Nonparametric Estimation
+
+by
+
+Tsybakov, Alexandre B.
+
+E-book PDF E-book
+
+Ranking 24013 inMathematik
+
+CHF 142.00
+
+Add to basket
+
+## Description
+
+Methods of nonparametric estimation are located at the core of modern statistical science. The aim of this book is to give a short but mathematically self-contained introduction to the theory of nonparametric estimation. The emphasis is on the construction of optimal estimators; therefore the concepts of minimax optimality and adaptivity, as well as the oracle approach, occupy the central place in the book.
+This is a concise text developed from lecture notes and ready to be used for a course on the graduate level. The main idea is to introduce the fundamental concepts of the theory while maintaining the exposition suitable for a first approach in the field. Therefore, the results are not always given in the most general form but rather under assumptions that lead to shorter or more elegant proofs.
+The book has three chapters. Chapter 1 presents basic nonparametric regression and density estimators and analyzes their properties. Chapter 2 is devoted to a detailed treatment of minimax lower bounds. Chapter 3 develops more advanced topics: Pinsker's theorem, oracle inequalities, Stein shrinkage, and sharp minimax adaptivity.
+
+## Details
+
+Additional ISBN/GTIN 9780387790527
+
+Product Type E-book
+
+Binding E-book
+
+Format PDF
+
+Format note watermark
+
+PublisherSpringer New York
+
+Publishing date 22/10/2008
+
+SeriesSpringer Series in Statistics
+
+Pages 214 pages
+
+Language English
+
+File size 2381 Kbytes
+
+Illustrations X, 214 p.
+
+Article no.1029635
+
+Catalogs VC
+
+Data source no.12642--------------------------------------------------------------------------------
+Details zu: Introduction to nonparametric estimation / › Koha - Katalog (https://katalog.bibliothek.kit.edu/bib/322397)
+citeturn36search9 [wordlim: 200] Crawled: 3 months ago; Tsybakov ... Resource type: Ressourcentyp: Buch Buch Verlagsnummer: 10957929 Sprache: Englisch Reihen: Springer series in statistics Verlag: New York, NY : Springer, c 2009 Auflage: [rev. and extended version of the French Book]Beschreibung: XII, 214 S : graph. ... Andere physische Formen: Kein Titel | 9780387790527 | Erscheint auch als: Introduction to Nonparametric Estimation.
+
+# Introduction to nonparametric estimation / Alexandre B. Tsybakov
+
+Von:
+
+  * Cybakov, Aleksandr B [aut]
+Resource type: Ressourcentyp: Buch Buch Verlagsnummer: 10957929 Sprache: Englisch Reihen: Springer series in statisticsVerlag: New York, NY : Springer, c 2009 Auflage: [rev. and extended version of the French Book]Beschreibung: XII, 214 S : graph. Darst ; 235 mm x 155 mm ISBN:
+
+  * 9780387790510
+Schlagwörter:
+
+  * Nichtparametrische Schätzung
+  * Dichteschätzung
+  * Asymptotik
+  * Nonparametric statistics
+  * Estimation theory
+Subject(s): Schlagwörter: Nichtparametrische Schätzung | Dichteschätzung | AsymptotikGenre/Form:
+
+  * Lehrbuch
+Andere physische Formen: Kein Titel | 9780387790527 | Erscheint auch als: Introduction to Nonparametric Estimation. Online-Ausgabe New York, NY : Springer-Verlag New York, 2009. Online-Ressource (X, 214p, digital) | Erscheint auch als: Introduction to nonparametric estimation. --------------------------------------------------------------------------------
+"Introduction to Nonparametric Estimation" als eBook kaufen (https://www.orellfuessli.ch/shop/home/artikeldetails/A1031436117)
+citeturn36search10 [wordlim: 200] Published: 18.0 years ago; Crawled: 4 months ago; Tsybakov ... 9780387790527 ... 9780387790527
+
+Image: Produktbild: Introduction to Nonparametric Estimation
+
+  *   *   * Alexandre B. Tsybakov
+
+# Introduction to Nonparametric Estimation
+
+Aus der Reihe Springer Series in Statistics
+
+  *     * Hardcover
+    * Taschenbuch
+    * eBook ausgewählt
+
+* * *
+
+  * Form:Einzelkauf Download
+
+* * *
+
+  * Sprache:Englisch
+
+* * *
+
+Fr. 150.90
+
+inkl. gesetzl. MwSt.
+
+[Input]
+
+Artikel erhalten
+
+Sofort per Download lieferbar
+
+[Input] In den Warenkorb
+
+## Beschreibung
+
+Weiterlesen
+
+## Produktdetails
+
+### Format
+
+PDF
+
+### Kopierschutz
+
+Nein
+
+### Family Sharing
+
+Nein
+
+### Text-to-Speech
+
+Nein
+
+### Erscheinungsdatum
+
+22.10.2008
+
+### Verlag
+
+Springer New York
+
+### Seitenzahl
+
+214 (Printausgabe)
+
+### Dateigröße
+
+2381 KB
+
+### Sprache
+
+Englisch
+
+### EAN
+
+9780387790527
+
+Weitere Details
+
+[Button: Overlay schließen ]
+
+## Beschreibung
+
+### Rezension
+
+From the reviews:
+
+“The book is meant to be an introduction to the rich theory of nonparametric estimation through some simple models and examples. --------------------------------------------------------------------------------
+Introduction to Nonparametric Estimation - Alexandre B. Tsybakov - Google Livros (https://books.google.com.br/books?id=mwB8rUBsbqoC)
+citeturn36search11 [wordlim: 200] Published: 18.0 years ago; Crawled: last month; Tsybakov Springer Science & Business Media, 22 de out. de 2008 - 214 páginas This book will be a valuable reference for researchers in the eare of nonparametrics. ... ISBN  | 0387790527, 9780387790527
+
+# Introduction to Nonparametric Estimation
+
+Alexandre B. TsybakovSpringer Science & Business Media, 22 de out. de 2008 - 214 páginas This book will be a valuable reference for researchers in the eare of nonparametrics. [Input][Input]
+Ver uma prévia deste livro »
+
+### Páginas selecionadas
+
+Página 8
+
+Índice
+
+### Conteúdo
+
+Nonparametric estimators  | 1
+ | 
+Lower bounds on the minimax risk  | 77
+ | 
+Asymptotic efficiency and adaptation  | 137
+ | 
+Appendix  | 191
+ | 
+
+Bibliography  | 202
+ | 
+Index  | 211
+
+### Outras edições - Ver todos
+
+ | Introduction to Nonparametric Estimation
+Alexandre B. Tsybakov
+Prévia não disponível - 2010
+ | 
+
+ | Introduction to Nonparametric Estimation
+Alexandre B. Tsybakov
+Prévia não disponível - 2008
+
+### Termos e frases comuns
+
+absolutely continuous arg min asymptotically constant defined Definition ellipsoid Epanechnikov example finite fn(x function f Gaussian sequence model Hellinger distance Hölder class hypotheses implies inf max infimum James-Stein estimator K²(u)du kernel density estimator kernel estimator kernel of order Kmax Kullback divergence l²(N Lebesgue measure Lemma lim inf inf linear estimator lower bound minimax risk minimization MISE Nmax nonparametric regression nonparametric regression model obtain optimal rate oracle inequality P₁ parameter Pinsker estimator probability density probability measures projection estimator PROOF Proposition prove random variables rate of convergence satisfying Section Sobolev class squared risk statistical sufficiently superefficient Suppose Theorem 2.2 trigonometric basis Tsybakov unbiased estimator upper bound variance vector weights white noise model Wper X₁ ε² θΕΘ ρε ρω σ²
+
+### Informações bibliográficas
+
+Título  | Introduction to Nonparametric Estimation
+Springer Series in Statistics
+Mathematics and Statistics
+Mathematics and Statistics (R0)
+Autor  | Alexandre B. Tsybakov
+Edição  | ilustrada
+Editora  | Springer Science & Business Media, 2008
+ISBN  | 0387790527, 9780387790527
+Num. págs.  | 214 páginas--------------------------------------------------------------------------------
+Optimization and Control for Scalable Modeling and Inference in Dynamical Systems (https://knowledge.uchicago.edu/record/16764/files/thesis.pdf)
+citeturn36search13 [wordlim: 200] Published: 8 months ago; Tsybakov. ... * Springer New York, 2009. ISBN 9780387790527. doi:10.1007/b13794.
+[202] Shanyin Tong and Georg Stadler. *Large deviation theory-based adaptive importance sampling for rare events in high dimensions.* *SIAM/ASA Journal on Uncertainty Quantification,* 11(3):788–813, July 2023. ISSN 2166-2525. doi:10.1137/22m1524758.
+
+[203] Fredi Tröltzsch. *Optimal Control of Partial Differential Equations.* American Mathematical Society, April 2010. ISBN 9781470411749. doi:10.1090/gsm/112.
+
+[204] Alexandre B. Tsybakov. *Introduction to Nonparametric Estimation.* Springer New York, 2009. ISBN 9780387790527. doi:10.1007/b13794.
+
+[205] Stefan Ulbrich. *Analytical Background and Optimality Theory,* pages 1–95. Springer Netherlands, 2009. ISBN 9781402088391. doi:10.1007/978-1-4020-8839-1_1.
+
+[206] D. Venturi, T. P. Sapsis, H. Cho, and G. E. Karniadakis. A computable evolution equation for the joint response-excitation probability density function of stochastic dynamical systems. *Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences,* 468(2139):759–783, November 2011. ISSN 1471-2946. doi:10.1098/rspa.2011.0186.
+
+[207] Robin Verschueren, Mario Zanon, Rien Quirynen, and Moritz Diehl. A sparsity preserving convexification procedure for indefinite quadratic programs arising in direct optimal control. *SIAM Journal on Optimization,* 27(3):2085–2109, January 2017. ISSN 1095-7189. doi:10.1137/16m1081543.
+
+[208] Claire Voisin. *Hodge Theory and Complex Algebraic Geometry II.* Cambridge University Press, July 2003. ISBN 9780511615177. doi:10.1017/cbo9780511615177.
+
+[209] P. Wang, D. M. Tartakovsky, K. D. Jarman, and A. M. Tartakovsky. Cdf solutions of buckley–leverett equation with uncertain parameters. *Multiscale Modeling and Simulation,* 11(1):118–133, January 2013. ISSN 1540-3467. doi:10.1137/120865574.
+
+211--------------------------------------------------------------------------------
+Published as a conference paper at ICLR 2024 (https://proceedings.iclr.cc/paper_files/paper/2024/file/7b5d3047939b63ed97fcbbee23f8eb77-Paper-Conference.pdf)
+citeturn36search14 [wordlim: 200] Published: 2.6 years ago; Tsybakov. ... Springer Series in Statistics. ... ISBN 9780387790527.
+--------------------------------------------------------------------------------
+84                                                                 BIBLIOGRAPHY (https://www.iutzeler.org/assets/teaching/RobOpt/main.pdf)
+citeturn36search15 [wordlim: 200] Published: 8 months ago; Springer Verlag, Heidelberg, 1993a. ... Tsybakov. ... ISBN 9780387790527.
+--------------------------------------------------------------------------------
+Internal Error ()
+citeturn36view0 [wordlim: 200] Source: open({"ref_id":"https://www.techrxiv.org/doi/full/10.36227/techrxiv.23264519.v1","lineno":null}); 
+URL https://www.techrxiv.org/doi/full/10.36227/techrxiv.23264519.v1 is not accessible via this tool.

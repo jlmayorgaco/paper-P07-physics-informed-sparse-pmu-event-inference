@@ -1,0 +1,24 @@
+{
+  "status": "SIX_NEW_MISSING_LATENCY_FIXTURES_PASS_PRIOR_ARTIFACTS_UNCHANGED",
+  "tests": 6,
+  "failures": 0,
+  "errors": 0,
+  "python": "3.13.9",
+  "command": "python -B -m unittest discover -s experiments/PAPER_SUBMISSION_S01/evaluation -p test_missing_latency.py -v",
+  "new_artifact_sha256": {
+    "evaluation/MISSING_LATENCY_PROTOCOL.json": "b8b47dfc7b755b099a335be22ac19e5a7e225ea5bf16ca64b1186d6ba44aa187",
+    "evaluation/compare_missing_latency.py": "cce2a8204ffebb3a46fa5e5649336fd6f3f280376a893098235da75aeb0184c5",
+    "evaluation/test_missing_latency.py": "b1b794b8e800901be8f516a2f210b41923a4f9d15766adcfc771a9e0f5108226",
+    "run/cyber_composition_v2/MISSING_LATENCY_COMPARISON.json": "21427ab2d79b98ca7fbb7f1e15544e30eb3e5cec844b14e42afa7cf827705e87",
+    "evaluation/audit_raw_physical_metadata.py": "e4742847c6698756601d0ad2f1a090b2f92bd7207aa3cfa0f1d5740a6a7f99c8",
+    "evaluation/RAW_PHYSICAL_METADATA_AUDIT.json": "1dc9ecc1e8828a280f0a5042e2e2a173faacd1f1c64ffddae50d4eef263809b3",
+    "MISSING_LATENCY_AND_SOURCE_REVIEW.md": "f1521d801c7624d02f380021f7c3ca60852be537ef103a941b2f5988a4d81ba5"
+  },
+  "prior_frozen_artifact_sha256": {
+    "evaluation\\RAW_AUDIT_VALIDATION.json": "1b95ce3b30d8a61d32b3a4ec44fd8ac312b2192ad25f0cf9ef844d119202c169",
+    "run\\legacy_historical\\EVALUATION.json": "22d4cdfdf0d6bfc330045a88d25d3dd91a9f8dfc4686f0f719f8431787c88791",
+    "run\\legacy_continuous\\EVALUATION.json": "4a07355e8088157030450cb8e6f788664e681a3c8d65a4b2cf6ecd492689d097",
+    "run\\cyber_composition_v2\\EVALUATION.json": "d42dee01f977191c51e96cdb1b4a493e48f843508c72f14637aa7b3a616fe83d"
+  },
+  "existing_RAW_AUDIT_VALIDATION_overwritten": false
+}

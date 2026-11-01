@@ -1,0 +1,414 @@
+{
+  "key": "yildiz2025sparse",
+  "retrieved_at": "2026-11-01T03:53:22.125886+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1109%2FTPWRS.2024.3446237",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1109/TPWRS.2024.3446237",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:10.327900+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          24
+        ]
+      ],
+      "date-time": "2026-10-24T17:31:12Z",
+      "timestamp": 1792863072642,
+      "version": "4.5.0"
+    },
+    "reference-count": 26,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "2",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2025,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2025-03-01T00:00:00Z",
+          "timestamp": 1740787200000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2025,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2025-03-01T00:00:00Z",
+          "timestamp": 1740787200000
+        },
+        "content-version": "am",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2025,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2025-03-01T00:00:00Z",
+          "timestamp": 1740787200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2025,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2025-03-01T00:00:00Z",
+          "timestamp": 1740787200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "funder": [
+      {
+        "name": "U.S. Department of Energy&#x0027;s Office of Energy Efficiency and Renewable Energy"
+      },
+      {
+        "DOI": "10.13039/100011883",
+        "name": "Solar Energy Technologies Office",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "DE-EE0009356"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "DE-EE0009356"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/100011883",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Trans. Power Syst."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2025,
+          3
+        ]
+      ]
+    },
+    "DOI": "10.1109/tpwrs.2024.3446237",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2024,
+          8,
+          20
+        ]
+      ],
+      "date-time": "2024-08-20T11:43:59Z",
+      "timestamp": 1724154239000
+    },
+    "page": "1843-1853",
+    "source": "Crossref",
+    "is-referenced-by-count": 10,
+    "title": [
+      "Sparse PMU Placement Algorithm for Enhanced Detection and Identification of Power Grid Events"
+    ],
+    "prefix": "10.1109",
+    "volume": "40",
+    "author": [
+      {
+        "given": "Tuna",
+        "family": "Yildiz",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Electrical and Computer Engineering Department, Northeastern University, Boston, MA, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-8751-9125",
+        "authenticated-orcid": false,
+        "given": "Ali",
+        "family": "Abur",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Electrical and Computer Engineering Department, Northeastern University, Boston, MA, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref1",
+        "article-title": "Final report on the august 14, 2003 blackout in the United States and Canada: Causes and recommendations",
+        "author": "Muir",
+        "year": "2004",
+        "journal-title": "Dept. Energy"
+      },
+      {
+        "key": "ref2",
+        "article-title": "Arizona-southern california outages on 8 September 2011: Causes and recommendations",
+        "year": "2012",
+        "journal-title": "FERC and NERC"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2012.2192142"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PSCC.2016.7540860"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/JSAC.2019.2951964"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SSD.2018.8570582"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICECE57408.2022.10088794"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s12667-014-0129-1"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCS1.2017.8326016"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TDC.2018.8440454"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ISGTEurope.2014.7028797"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1049/iet-gtd.2019.1951"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRD.2022.3144462"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.35833/MPCE.2021.000615"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.ijepes.2012.03.011"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRD.2019.2929097"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3390/en15062125"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PMAPS47429.2020.9183480"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1111/j.2517-6161.1996.tb02080.x"
+      },
+      {
+        "key": "ref20",
+        "volume-title": "Power Generation, Operation, and Control",
+        "author": "Wood",
+        "year": "2013"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/NAPS56150.2022.10012140"
+      },
+      {
+        "key": "ref22",
+        "first-page": "1",
+        "article-title": "Fault location using sparse L1 estimator and phasor measurement Units",
+        "volume-title": "Proc. Int. Conf. Power Syst. Transients",
+        "author": "Mouco",
+        "year": "2019"
+      },
+      {
+        "key": "ref23",
+        "article-title": "Using neural networks to detect line outages from PMU data",
+        "author": "Lee",
+        "year": "2017"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.tej.2020.106885"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1214/13-EJS815"
+      },
+      {
+        "key": "ref26",
+        "article-title": "Keras",
+        "author": "Chollet",
+        "year": "2015"
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Power Systems"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://ieeexplore.ieee.org/ielam/59/10896966/10640266-aam.pdf",
+        "content-type": "application/pdf",
+        "content-version": "am",
+        "intended-application": "syndication"
+      },
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx8/59/10896966/10640266.pdf?arnumber=10640266",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2025,
+          2,
+          21
+        ]
+      ],
+      "date-time": "2025-02-21T02:17:55Z",
+      "timestamp": 1740104275000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/10640266/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          3
+        ]
+      ]
+    },
+    "references-count": 26,
+    "journal-issue": {
+      "issue": "2"
+    },
+    "URL": "https://doi.org/10.1109/tpwrs.2024.3446237",
+    "relation": {},
+    "ISSN": [
+      "0885-8950",
+      "1558-0679"
+    ],
+    "issn-type": [
+      {
+        "value": "0885-8950",
+        "type": "print"
+      },
+      {
+        "value": "1558-0679",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2025,
+          3
+        ]
+      ]
+    }
+  }
+}

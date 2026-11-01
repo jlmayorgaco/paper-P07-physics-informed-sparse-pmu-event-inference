@@ -1,0 +1,304 @@
+{
+  "key": "blom1988imm",
+  "retrieved_at": "2026-11-01T03:53:21.313208+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1109%2F9.1299",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1109/9.1299",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:53:56.685025+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          30
+        ]
+      ],
+      "date-time": "2026-10-30T10:33:02Z",
+      "timestamp": 1793356382748,
+      "version": "4.5.0"
+    },
+    "reference-count": 21,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "8",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              1988,
+              1,
+              1
+            ]
+          ],
+          "date-time": "1988-01-01T00:00:00Z",
+          "timestamp": 567993600000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Trans. Automat. Contr."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          1988
+        ]
+      ]
+    },
+    "DOI": "10.1109/9.1299",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2002,
+          8,
+          24
+        ]
+      ],
+      "date-time": "2002-08-24T16:40:30Z",
+      "timestamp": 1030207230000
+    },
+    "page": "780-783",
+    "source": "Crossref",
+    "is-referenced-by-count": 2101,
+    "title": [
+      "The interacting multiple model algorithm for systems with Markovian switching coefficients"
+    ],
+    "prefix": "10.1109",
+    "volume": "33",
+    "author": [
+      {
+        "given": "H.A.P.",
+        "family": "Blom",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Y.",
+        "family": "Bar-Shalom",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref10",
+        "doi-asserted-by": "crossref",
+        "first-page": "458",
+        "DOI": "10.23919/ACC.1983.4788158",
+        "article-title": "A unified view of state estimation in switching environments",
+        "author": "pattipati",
+        "year": "1983",
+        "journal-title": "Proc 1983 Amer Contr Conf"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/00207178708933826"
+      },
+      {
+        "key": "ref12",
+        "first-page": "333",
+        "year": "1980",
+        "journal-title": "Analysis and Optimization of Stochastic Systems"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CDC.1983.269736"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/0005-1098(82)90012-7"
+      },
+      {
+        "key": "ref15",
+        "first-page": "1047",
+        "article-title": "Performance analysis for hybrid state estimation problems",
+        "author": "washburn",
+        "year": "1985",
+        "journal-title": "Proc 1985 Amer Contr Conf"
+      },
+      {
+        "key": "ref16",
+        "author": "weiss",
+        "year": "1983",
+        "journal-title": "A comparison of finite filtering methods for status directed processes"
+      },
+      {
+        "key": "ref17",
+        "first-page": "349",
+        "article-title": "Finite computable filters for linear systems subject to time-varying model uncertainty",
+        "author": "weiss",
+        "year": "1983",
+        "journal-title": "Proc NAECON"
+      },
+      {
+        "key": "ref18",
+        "author": "westwood",
+        "year": "1984",
+        "journal-title": "Filtering algorithms for the linear estimation problem with switching parameters"
+      },
+      {
+        "key": "ref19",
+        "author": "willsky",
+        "year": "1984",
+        "journal-title": "Detection of Abrupt Changes in Dynamic Systems"
+      },
+      {
+        "key": "ref4",
+        "first-page": "1758",
+        "article-title": "Overlooked potential of systems with Markovian coefficients",
+        "author": "blom",
+        "year": "1986",
+        "journal-title": "Proc 25th IEEE Conf Decision Contr"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CDC.1984.272089"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CDC.1984.272086"
+      },
+      {
+        "key": "ref5",
+        "author": "chong",
+        "year": "1982",
+        "journal-title": "A general theory for Bayeslan Multitarget tracking and classification"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAES.1983.309374"
+      },
+      {
+        "key": "ref7",
+        "first-page": "811",
+        "article-title": "On asymptotic approximation for some nonlinear filtering problems",
+        "author": "marcus",
+        "year": "1984",
+        "journal-title": "Proc 9th IFAC Triennial World Congr"
+      },
+      {
+        "key": "ref2",
+        "author": "basseville",
+        "year": "1986",
+        "journal-title": "Detection of abrupt changes in signals and dynamical systems"
+      },
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/00207178508933420"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.1986.1104306"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.1980.1102392"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPAMI.1987.4767898"
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Automatic Control"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx4/9/86/00001299.pdf?arnumber=1299",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2021,
+          11,
+          29
+        ]
+      ],
+      "date-time": "2021-11-29T15:21:08Z",
+      "timestamp": 1638199268000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "http://ieeexplore.ieee.org/document/1299/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          1988
+        ]
+      ]
+    },
+    "references-count": 21,
+    "journal-issue": {
+      "issue": "8"
+    },
+    "URL": "https://doi.org/10.1109/9.1299",
+    "relation": {},
+    "ISSN": [
+      "0018-9286"
+    ],
+    "issn-type": [
+      {
+        "value": "0018-9286",
+        "type": "print"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          1988
+        ]
+      ]
+    }
+  }
+}

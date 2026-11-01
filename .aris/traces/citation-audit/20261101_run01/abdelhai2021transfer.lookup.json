@@ -1,0 +1,477 @@
+{
+  "key": "abdelhai2021transfer",
+  "retrieved_at": "2026-11-01T03:53:22.314241+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1109%2FACCESS.2021.3111727",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1109/ACCESS.2021.3111727",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:13.146894+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          1,
+          23
+        ]
+      ],
+      "date-time": "2026-01-23T21:10:48Z",
+      "timestamp": 1769202648909,
+      "version": "3.49.0"
+    },
+    "reference-count": 32,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2021-01-01T00:00:00Z",
+          "timestamp": 1609459200000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by/4.0/legalcode"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2021-01-01T00:00:00Z",
+          "timestamp": 1609459200000
+        },
+        "content-version": "am",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by/4.0/legalcode"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/100000015",
+        "name": "Department of Energy",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "DE-OE0000913"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "DE-OE0000913"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/100000015",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Access"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2021
+        ]
+      ]
+    },
+    "DOI": "10.1109/access.2021.3111727",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2021,
+          9,
+          10
+        ]
+      ],
+      "date-time": "2021-09-10T20:20:52Z",
+      "timestamp": 1631305252000
+    },
+    "page": "127420-127432",
+    "source": "Crossref",
+    "is-referenced-by-count": 15,
+    "title": [
+      "Transfer Learning for Event Detection From PMU Measurements With Scarce Labels"
+    ],
+    "prefix": "10.1109",
+    "volume": "9",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0001-5173-5291",
+        "authenticated-orcid": false,
+        "given": "Ameen Abdel",
+        "family": "Hai",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Tatjana",
+        "family": "Dokic",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-1495-2128",
+        "authenticated-orcid": false,
+        "given": "Martin",
+        "family": "Pavlovski",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Taif",
+        "family": "Mohamed",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Daniel",
+        "family": "Saranovic",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-7011-3762",
+        "authenticated-orcid": false,
+        "given": "Mohammad",
+        "family": "Alqudah",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-8925-4415",
+        "authenticated-orcid": false,
+        "given": "Mladen",
+        "family": "Kezunovic",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-2051-0142",
+        "authenticated-orcid": false,
+        "given": "Zoran",
+        "family": "Obradovic",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref32",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/BF02589501"
+      },
+      {
+        "key": "ref31",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TNN.2010.2091281"
+      },
+      {
+        "key": "ref30",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1093/bioinformatics/16.5.412"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PSCC.2016.7540867"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRD.2016.2590961"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2015.2478421"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TIA.2019.2958786"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2014.2340446"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2018.2859323"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TII.2018.2855428"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2019.2898676"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.23919/ELECO47770.2019.8990506"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/BigData47090.2019.9005720"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2500853.2500858"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/335191.335437"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICDM.2018.00068"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1541880.1541882"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2014.2316476"
+      },
+      {
+        "key": "ref29",
+        "first-page": "1",
+        "article-title": "Evaluation: From precision, recall and F-measure to ROC, informedness, markedness and correlation",
+        "volume": "2",
+        "author": "powers",
+        "year": "2008",
+        "journal-title": "J Mach Learn Technol"
+      },
+      {
+        "key": "ref5",
+        "first-page": "6054",
+        "article-title": "Transfer learning for anomaly detection through localized and unsupervised instance selection",
+        "author": "vercruyssen",
+        "year": "2020",
+        "journal-title": "Proc AAAI Conf Artif Intell"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRD.2013.2285097"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2016.2559444"
+      },
+      {
+        "key": "ref2",
+        "article-title": "Data mining techniques and tools for synchrophasor data",
+        "year": "2019",
+        "journal-title": "North American Synchro-Phasor Initiative"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRD.2016.2520958"
+      },
+      {
+        "key": "ref1",
+        "article-title": "NASPI 2020 survey of industry best practices for archiving synchronized measurements",
+        "year": "2020",
+        "journal-title": "NASPI Data and Network Management Task Team"
+      },
+      {
+        "key": "ref20",
+        "first-page": "1",
+        "article-title": "A CNN based transfer learning method for high impedance fault detection",
+        "author": "zhang",
+        "year": "2020",
+        "journal-title": "Proc Power Energy Soc Gen Meet (PESGM)"
+      },
+      {
+        "key": "ref22",
+        "article-title": "An introduction to domain adaptation and transfer learning",
+        "author": "kouw",
+        "year": "2018",
+        "journal-title": "arXiv 1812 11806"
+      },
+      {
+        "key": "ref21",
+        "first-page": "3007",
+        "article-title": "TODTLER: Two-order-deep transfer learning",
+        "author": "van haaren",
+        "year": "2015",
+        "journal-title": "Proc 29th AAAI Conf Artif Intell"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1111/coin.12156"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.14569/IJARAI.2013.020206"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2200/S00196ED1V01Y200906AIM006"
+      },
+      {
+        "key": "ref25",
+        "year": "2021",
+        "journal-title": "Scikit-Learn&#x2014;Machine Learning in Python"
+      }
+    ],
+    "container-title": [
+      "IEEE Access"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://ieeexplore.ieee.org/ielam/6287639/9312710/9534901-aam.pdf",
+        "content-type": "application/pdf",
+        "content-version": "am",
+        "intended-application": "syndication"
+      },
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/6287639/9312710/09534901.pdf?arnumber=9534901",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2022,
+          4,
+          8
+        ]
+      ],
+      "date-time": "2022-04-08T18:53:39Z",
+      "timestamp": 1649444019000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/9534901/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2021
+        ]
+      ]
+    },
+    "references-count": 32,
+    "URL": "https://doi.org/10.1109/access.2021.3111727",
+    "relation": {},
+    "ISSN": [
+      "2169-3536"
+    ],
+    "issn-type": [
+      {
+        "value": "2169-3536",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2021
+        ]
+      ]
+    }
+  }
+}

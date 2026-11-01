@@ -3,7 +3,15 @@
 
 \input{sections/article_information}
 
-\input{sections/article_recovery_x04}
+\subsection{Recovery Is Not a Universal Source-Information Gain}
+A separate full-F01 control supplies the prior history, later onset, family
+and candidate source pair. Profiled source separation is essentially
+unchanged under the known history and decreases when the tested
+prior-severity uncertainty is added; the binary source comparison gains
+no mean accuracy. The full scenarios, figure and numerical results are
+retained in the supplementary recovery control. This negative result
+supports retaining recovery for prediction consistency, without claiming
+that it universally adds source information or proves an R11 performance gain.
 
 \subsection{Operational Meaning and Scope}
 The physical distinction underlying the stream method is simple:
@@ -31,11 +39,13 @@ new contributions here. The methodological claim concerns the specified
 competition among intervention and recovery histories; the experiments
 measure its operational behavior. Numerical superiority is claimed only
 where a common-data comparison supports it, not over Warner or other
-procedures that were not executed.
+procedures that were not executed.\AIDraftingCredit{}
 
-The continuous catalog contains nine load buses and nine lines and requires
-an intervention-free startup. Missing PMUs, unknown families, source-excluded
-causal transfer and field operation are untested. F01 retains a provisional
+The continuous physical catalog contains nine load buses and nine lines and requires
+an intervention-free startup. Its operation through missing PMUs, unknown
+families, source-excluded causal transfer and field conditions is unvalidated.
+The separate retrospective integrity interface in Section~\ref{sec:submission-checks}
+does not extend that physical catalog. F01 retains a provisional
 BUS5 current terminal and excludes BUS39 current angle. Agreement with
 this research model does not establish the producer's CT placement or
 exact reproduction of RAW0001. Local predictors, history pruning, covariance

@@ -1,16 +1,22 @@
+% !TeX program = pdflatex
+% Main article only. Build both documents with scripts/build_manuscript_bundle.ps1.
 % ieeeaccess.cls reuses \year as a metadata setter. Preserve the TeX primitive
 % so PGF/TikZ can initialize its deterministic machinery while loading.
 \let\PSevenTeXYear\year
 \documentclass{ieeeaccess}
 
 \input{preamble}
-\usepackage{pdfpages}
 \usepackage{placeins}
 \input{generated/results_macros}
 \input{generated/continuous_macros}
 \input{generated/narrative_macros}
 \IfFileExists{generated/c01_macros.tex}{\input{generated/c01_macros}}{}
 \IfFileExists{generated/ei_x02_macros.tex}{\input{generated/ei_x02_macros}}{}
+\IfFileExists{generated/submission_s01_macros.tex}{\input{generated/submission_s01_macros}}{}
+\IfFileExists{generated/submission_s01_learning_macros.tex}{\input{generated/submission_s01_learning_macros}}{}
+\IfFileExists{generated/submission_s01_raw_macros.tex}{\input{generated/submission_s01_raw_macros}}{}
+\IfFileExists{generated/submission_s01_ml_h04_macros.tex}{\input{generated/submission_s01_ml_h04_macros}}{}
+\IfFileExists{generated/submission_s01_system_macros.tex}{\input{generated/submission_s01_system_macros}}{}
 
 \begin{document}
 \input{metadata}
@@ -35,17 +41,16 @@ keep ongoing interventions separate from their remaining response.
 gives \COneMixTimely{}/\COneMixTotal{} timely family/source decisions with
 \COneMixExtras{} extra alarms for the five-model bank, versus
 \COneNomTimely{}/\COneNomTotal{} and \COneNomExtras{} for nominal.}{Completed
-development streams give \ContMixTimely{}/\ContMixTotal{} timely family/source
-decisions with \ContMixExtras{} extra alarms; nominal gains one timely
-decision at a higher alarm burden. Independent confirmation is in progress.}
-\IfFileExists{generated/ei_x02_macros.tex}{In a separate known-onset load
-test with supplied load family, conditioned signatures reduce median
-relative severity error, evaluated at the generating source, from
-\EIRecentSeverity{}\% to \EICondSeverity{}\%, while matching reference-only
-source accuracy.}{}
+development replays with a common publication clock give
+\SSMixTimely{}/\SSMixTotal{} timely family/source decisions with
+\SSMixExtras{} extra alarms, versus \SSSimpleTimely{}/\SSSimpleTotal{} and
+\SSSimpleExtras{} for a simpler state-retaining physical procedure.
+Independent confirmation is in progress.}
 The contribution is a specified recovery-aware attribution mechanism and
 an evaluation separating detection, timely location and restoration.
-The scope is a known load/line catalog; probability calibration, all-family
+The frozen physical startup contract rejects the retrospective RAW reference;
+a separate learned source hybrid corrects only one additional physical window.
+The supported scope is a known load/line catalog; probability calibration, all-family
 diagnosis and real-time deployment remain unestablished.
 \end{abstract}
 
@@ -63,21 +68,25 @@ event detection, model uncertainty, phasor measurement units, physics-informed i
 \input{sections/article_method}
 \FloatBarrier
 \input{sections/narrative_protocol}
-\FloatBarrier
+% Let results fill the column while the protocol table moves to the next page.
 \input{sections/narrative_results}
 % Allow following text to fill the column while the full-width history figure floats.
 \IfFileExists{sections/08c_c01_confirmatory.tex}{\input{sections/08c_c01_confirmatory}\FloatBarrier}{}
-\IfFileExists{generated/ei_x02_macros.tex}{\input{sections/article_ei_x02}}{}
+\IfFileExists{generated/submission_s01_macros.tex}{\input{sections/article_submission_checks}}{}
+\IfFileExists{generated/ei_x02_macros.tex}{\input{sections/article_signature_summary}}{}
 \input{sections/article_interpretation}
 \input{sections/article_final_conclusion}
 
 \section*{Acknowledgment}
-OpenAI Codex assisted with drafting and restructuring the main text,
+OpenAI Codex~\cite{openaiCodex2026} assisted with drafting and restructuring
+the abstract, all numbered main sections, author biographies and supplementary derivations, protocols and examples,
 LaTeX preparation, and plotting and execution-infrastructure code.
 The authors retain responsibility for the scientific content, verification,
-and final submission.\EOD
+and final submission.
 \FloatBarrier
 \bibliographystyle{IEEEtran}
 \bibliography{references}
+\input{author_biographies}
+\EOD
 
 \end{document}

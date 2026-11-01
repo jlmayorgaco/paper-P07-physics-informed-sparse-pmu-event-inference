@@ -1,0 +1,65 @@
+\section{Executable Single-State Comparison}
+\label{app:single-state}
+
+This control uses the same conditional nominal plant and measurement
+operators as the nominal history bank, but retains only one committed mode and its
+augmented conditional state. Temporary alternatives live for at most
+19 reports. The five-model history bank additionally mixes resistance and
+reactance alternatives. Proposals begin at report index 300 and publication
+at index 360, with zero-based indices. Each available report after proposal
+startup starts two subframe transition candidates
+for every admitted source when inactive, or two OFF candidates for the
+committed source when active. Every candidate uses the covariance regime
+chosen from preceding reports; the current sample cannot select its own
+predictive covariance.\AIDraftingCredit{}
+
+For a load ON alternative, write the innovation as $e_k-a s_k$. The affine
+conditional state is $m_k+a d_k$. Accumulate over its contiguous suffix
+\begin{align}
+ G&=\sum_k s_k^\top S_k^{-1}s_k,\\
+ U&=\sum_k s_k^\top S_k^{-1}e_k,\\
+ C&=-\frac12\sum_k\left(e_k^\top S_k^{-1}e_k
+        +\log|S_k|+p\log(2\pi)\right).
+\end{align}
+Then $\widehat a=\operatorname{clip}(U/G,-0.2,0.2)$ when $G>0$, with
+$\widehat a=0$ for a flat objective. The profile contrast is
+\begin{equation}
+ \Lambda=C+\widehat aU-\tfrac12\widehat a^2G-C_{\rm ref}.
+\end{equation}
+Here $C_{\rm ref}$ is the sum of the committed predictor's pre-update
+conditional log densities on exactly the same suffix. A line uses its
+discrete switched operator, without fitting a load amplitude. The reference
+uses its preceding severity estimate for prediction and can refine that
+estimate after receiving the new report. A candidate never changes the
+reference state before commitment. A load OFF alternative holds its birth
+amplitude fixed rather than re-profiling it.
+
+ON scores subtract $\log(18\times2\times19)$; OFF scores subtract
+$\log(2\times19)$. These fixed search penalties are heuristics. Maximizing
+over overlapping suffixes and bounded amplitudes does not produce a
+calibrated posterior or a sequential false-alarm guarantee. For the history
+banks, ON uses the log odds of $M(c)$ and OFF the log odds of
+$M_{\rm cause}(c)P({\rm OFF}\mid c)$.
+
+The common clock requires the same winning ON source to exceed
+$\log99$ for six consecutive monitored reports. It emits alarm and source
+diagnosis together. Six qualifying OFF reports for that source close the
+episode. A clock-induced commitment selects the candidate's current
+conditional state. Its estimate may change through hypothesis selection;
+it is never replaced with equilibrium or a zero state. A missing report
+propagates the retained mode without measurement correction, clears the
+short alternatives and contributes no confirmation evidence. The H04
+comparison contains no such post-startup missing observations.
+
+After OFF, the preceding discrepancy regime persists until 60 consecutive
+available, inferred-inactive reports meet the inherited quiet criterion.
+Its innovation is computed with the normal operator from the preceding
+committed state. A new active episode or missing report clears that quiet
+run. Retrospective source labels and event times never enter these steps.
+
+The comparison has one fixed publication clock but different evidence
+semantics, search and severity treatment. It therefore compares complete
+procedures. It does not establish a matched false-alarm operating point,
+nor isolate a causal effect of long-history averaging. The source tree,
+execution hashes, every prediction and the successor event metrics are
+preserved in the experiment manifest.

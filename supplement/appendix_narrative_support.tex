@@ -17,28 +17,12 @@ Can stricter episode admission remove extras for free? & It rejects a real BUS16
 Does the result persist under an independent draw? & C01 is prespecified & No further method selection on that examination & Results enter only after complete evaluation\\\bottomrule
 \end{tabularx}\end{table*}
 
-\subsection{The Causal Implementation's Local Amplitude Integral}
-
-This calculation describes the retained local Gaussian history model used by R11, not a replacement for the batch estimator's GH31 quadrature. For one load-history interval, write its new-report residual as
-\[
- e=s a+\epsilon,\qquad \epsilon\sim\mathcal N(0,S),\qquad
- a\sim\operatorname{TN}_{[l,u]}(\mu,v).
-\]
-The physical transition/observation operators supply $s$; conditional state and colored-noise propagation supply $S$. Here $\mu,v$ parameterize the underlying untruncated normal density, not its bounded mean and variance. Define
-\[
- g=s^\top S^{-1}s,\quad q=s^\top S^{-1}e,\quad
- v'=\frac{v}{1+vg},\quad \mu'=\mu+v'(q-\mu g),
-\]
-and $Z(\mu,v)=\Phi((u-\mu)/\sqrt v)-\Phi((l-\mu)/\sqrt v)$.
-Completing the square gives
-\begin{align*}
- \log p(e\mid h)={}&-\tfrac12(e^\top S^{-1}e+\log|S|+n_y\log(2\pi))\\
- &+\tfrac12\left[\log(v'/v)+\mu'^2/v'-\mu^2/v\right]\\
- &+\log Z(\mu',v')-\log Z(\mu,v).
-\end{align*}
-Reported amplitude moments use the corresponding truncated-normal moments. The integral is evaluated over the retained amplitude intervals; it is not replaced by the best-fitting amplitude alone. Fixed line-mode hypotheses use their switched operator without a load-amplitude integral.
-
-The square completion is standard. Its role here is to show precisely how a physical sensitivity and an uncertain intensity enter the executable likelihood. It is exact for this conditional Gaussian model; linearization, covariance sharing, nuisance substitution and history pruning prevent an exact unrestricted nonlinear-posterior claim. The frozen implementation is \texttt{integrated\_loglike} in the R11 \texttt{observer/static\_rx.py}; the one-report model weights call it before current-report screening. Rolling proposals do not create a second copy of the same observations.
+\subsection{Connection to the Current Causal Method}
+The complete local amplitude derivation and conditional-state update now
+appear in Appendix~\ref{app:causal-calculations}, with worked examples.
+They describe the causal history bank, not the batch estimator's GH31
+quadrature. The remaining evidence in this appendix preserves the earlier
+state-recovery and source-resolution contracts.
 
 \subsection{State Recovery and Model Adequacy}
 The matched B2 mean hidden-voltage error is \BTwoTVE{}, compared with \BZeroTVE{} for the equilibrium reference. Under the tested operating shifts, frozen errors of \EZeroHFrozenHalf{}, \EZeroHFrozenOne{} and \EZeroHFrozenMax{} become \EZeroHCorrectedHalf{}, \EZeroHCorrectedOne{} and \EZeroHCorrectedMax{} after regularized physical recentering. The nuisance information rank is \EZeroHRank{} of \EZeroHDimension{}. This supports a useful point target while leaving parameter non-uniqueness and joint covariance failure visible.

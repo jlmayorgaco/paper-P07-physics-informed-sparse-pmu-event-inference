@@ -1,0 +1,769 @@
+(PDF) Quick Line Fault Detection and Identification Using High-Fidelity Models of Transient Dynamics (https://www.researchgate.net/publication/371657943_Quick_Line_Fault_Detection_and_Identification_Using_High-Fidelity_Models_of_Transient_Dynamics)
+citeturn38view0 [wordlim: 200] Crawled: last week; Content type: text/html; Source: find({"ref_id":"https://www.researchgate.net/publication/371657943_Quick_Line_Fault_Detection_and_Identification_Using_High-Fidelity_Models_of_Transient_Dynamics","pattern":"clearing"}); Total lines: 2555
+L1898: included. Since we focus on detecting the fault within a user-
+L1899: 
+L1900: speciﬁed window, if the algorithm does not detect the fault
+L1901: 
+L1902: within this window, it may not detect it at all. However,
+L1903: 
+L1904: we could explicitly account for the stabilization after the
+L1905: 
+L1906: fault by modifying the proposed QCD algorithm [21], thereby
+L1907: 
+L1908: eventually detecting the faults that may be missed within the
+L1909: 
+L1910: window, even if missed detection is very rare.
+L1911: 
+L1912: Second, it is of practical interest, especially for larger power
+L1913: systems, to identify a convenient way to vary the detection
+L1914: 
+L1915: thresholds between transmission lines [22]. In particular, the
+L1916: 
+L1917: algorithm performance may be improved by selecting larger
+L1918: 
+L1919: thresholds for detecting the fault of transmission lines that are
+L1920: 
+L1921: electrically close to the PMU sensors, and smaller thresholds
+L1922: 
+L1923: for distant lines.
+L1924: 
+L1925: A third extension would be to include other uncertainties
+L1926: 
+L1927: in the model building process (e.g., fault impedance, fault
+L1928: clearing time, or uncertainty in the loads). For example, in
+L1929: 
+L1930: this paper, we used a point forecast for the loads, but it may
+L1931: 
+L1932: be advantageous to replace these point forecasts with statistical
+L1933: 
+L1934: distributions and extend the proposed QCD algorithm to
+L1935: 
+L1936: incorporate these underlying distributions.
+L1937: 
+L1938: A PPENDIX
+L1939: 
+L1940: Proof of Proposition 2: We proceed as in the proof of
+L1941: 
+L1942: [17, Th. 7]. Let U > M,h > 0. By the deﬁnition of τ(h),
+L1943: 
+L1944: P∞(τ(h)≤U) = P∞W t(`, p)≥h for some `∈ L,
+L1945: 
+L1946: p∈ P, t ∈ {M, . . . , U }.(21)
+L1947: By the union bound, the quantity in (21) is upper bounded by
+L1948: 
+L1949: X
+L1950: 
+L1951: p∈P X
+L1952: 
+L1953: `∈L
+L1954: 
+L1955: P∞(W t(`, p)≥h for some t∈ {M, . . . , U }).(22)
+L1956: 
+L1957: The summand in (22) can be upper bounded as follows:
+L1958: 
+L1959: P∞(W t(`, p)≥h for some t∈ {M, . . . , U })
+L1960: 
+L1961: =P∞max
+L1962: 
+L1963: M≤t≤U max
+L1964: 
+L1965: t−M≤k<t Λ k:t(`, p)≥h
+L1966: 
+L1967: ≤
+L1968: 
+L1969: U−1
+L1970: 
+L1971: X
+L1972: 
+L1973: k=0
+L1974: 
+L1975: P∞max
+L1976: 
+L1977: k+1≤t≤k+M Λ k:t(`, p)≥h.(23)
+L1978: 
+L1979: Comparing (23) to the statement of the proposition, it remains
+L1980: 
+L1981: to show that, in case (i),
+L1982: 
+L1983: P∞max
+L1984: 
+L1985: k+1≤t≤k+M Λ k:t(`, p)≥h≤exp −h/(2 σ 2),(24)
+L1986: 
+L1987: and, in case (ii),
+L1988: 
+L1989: P∞max
+L1990: k+1≤t≤k+M Λ k:t(`, p)≥h≤exp[−h√2/σ],(25)
+L1991: 
+L1992: for all k≥0,`∈ L,p∈ P, and h > 0. We prove only (24)
+L1993: 
+L1994: since (25) follows from similar arguments.
+L1995: 
+L1996: Fix k and let t∈ {k+ 1, . . . , k +M}.By the assumption
+L1997: 
+L1998: of the proposition, before the fault, i.e., under P∞, we have
+L1999: 
+L2000: X t
+L2001: 
+L2002: iid
+L2003: 
+L2004: ∼Gaussian(µ 0, σ 2 I),(26)
+L2005: 
+L2006: where I is a d×d identity matrix and d is the dimension
+L2007: 
+L2008: of X t. Let f∞be the density of X t under P∞, i.e.,
+L2009: 
+L2010: f∞(X t)=(σ 2 2 π)−d/2 exp −k X t−µ 0 k 2
+L2011: 
+L2012: 2/(2 σ 2).(27)
+L2013: For s∈ {1, . . . , M },for each `∈ L,p∈ P, deﬁne the density
+L2014: 
+L2015: function
+L2016: 
+L2017: f`,p
+L2018: 
+L2019: s(X t)
+L2020: 
+L2021: ≡(σ 2 2 π)−d/2 exp −k X t−µ s(`, p)k 2
+L2022: 
+L2023: 2/(2 σ 2).(28)
+L2024: 
+L2025: The function f`,p
+L2026: 
+L2027: s can be thought of as a density for an
+L2028: 
+L2029: observation which is obtained s measurement cycles after a
+L2030: 
+L2031: fault occurs in line `at position p, though we do not assume
+L2032: 
+L2033: anywhere in this proof that f`,p
+L2034: 
+L2035: s is the true density of the data
+L2036: 
+L2037: after the fault. Using these functions, we construct a likelihood
+L2038: ratio which compares a fault occurring in line `at position p
+L2039: 
+L2040: at time ν=k to no fault occurring:
+L2041: 
+L2042: L k:t(`, p)≡
+L2043: 
+L2044: t
+L2045: 
+L2046: Y
+L2047: 
+L2048: j=k+1
+L2049: 
+L2050: f`,p
+L2051: 
+L2052: j−k(X j)
+L2053: 
+L2054: f∞(X j), t ∈ {k+ 1, . . . , k +M}.
+L2055: 
+L2056: (29)
+L2057: 
+L2058: Setting q= 2, the statistic Λ k:t(`, p)is proportional to this
+L2059: 
+L2060: log-likelihood ratio, speciﬁcally,
+L2061: 
+L2062: log L k:t(`, p)
+L2063: 
+L2064: = (2 σ 2)−1
+L2065: 
+L2066: t
+L2067: 
+L2068: X
+L2069: 
+L2070: j=k+1 ||X j−µ 0||2
+L2071: 
+L2072: 2− ||X j−µ j−k(`, p)||2
+L2073: 
+L2074: 2
+L2075: 
+L2076: = (2 σ 2)−1 Λ k:t(`, p).(30)
+L2077: 
+L2078: Consequently, for all k≥0,`∈ L,p∈ P, the process
+L2079: 
+L2080: exp (2 σ 2)−1 Λ k:t(`, p), t =k+ 1 ...,k+Mis a non-
+--------------------------------------------------------------------------------
+(PDF) Quick Line Fault Detection and Identification Using High-Fidelity Models of Transient Dynamics (https://www.researchgate.net/publication/371657943_Quick_Line_Fault_Detection_and_Identification_Using_High-Fidelity_Models_of_Transient_Dynamics)
+citeturn38view1 [wordlim: 200] Crawled: last week; Content type: text/html; Source: find({"ref_id":"https://www.researchgate.net/publication/371657943_Quick_Line_Fault_Detection_and_Identification_Using_High-Fidelity_Models_of_Transient_Dynamics","pattern":"moving"}); Total lines: 2555
+No matching text found for "moving"--------------------------------------------------------------------------------
+(PDF) Quick Line Fault Detection and Identification Using High-Fidelity Models of Transient Dynamics (https://www.researchgate.net/publication/371657943_Quick_Line_Fault_Detection_and_Identification_Using_High-Fidelity_Models_of_Transient_Dynamics)
+citeturn38view2 [wordlim: 200] Crawled: last week; Content type: text/html; Source: find({"ref_id":"https://www.researchgate.net/publication/371657943_Quick_Line_Fault_Detection_and_Identification_Using_High-Fidelity_Models_of_Transient_Dynamics","pattern":"window"}); Total lines: 2555
+L524: simulation window (on the order of tenths of a second). A
+L525: 
+L526: variable time-step solver with a maximum time step of 8.33 ms
+L527: 
+L528: is used to simulate the system of DAEs.
+L529: 
+L530: The simulated voltage and current phasors yield synthetic
+L531: 
+L532: PMU data. Given the transmission line that fails, denoted
+L533: 
+L534: by `, the position on the line of the fault, denoted by p,1
+L535: 
+L536: and values for the loads, the simulator solves the DAEs for
+L537: 
+L538: the transient dynamics, and provides a time series of synthetic
+L1021: these upper bounds can be very conservative, in the sense that
+L1022: 
+L1023: choosing h so that these upper bounds are equal to α can
+L1024: 
+L1025: result in choosing a much larger h than is actually necessary
+L1026: 
+L1027: to satisfy (14). Therefore, choosing h in this manner may be
+L1028: 
+L1029: detrimental to the algorithm’s ability to detect faults quickly.
+L1030: 
+L1031: Instead, we propose a numerical, simulation-based tuning
+L1032: 
+L1033: of the algorithm that (i) does not rely on the assumption
+L1034: 
+L1035: that µ 0 is unbiased, (ii) incorporates a trade-off between the
+L1036: detection/identiﬁcation tasks and the false alarm probability,
+L1037: 
+L1038: and (iii) enables practitioners to tune the algorithm to be robust
+L1039: 
+L1040: against adverse events, such as sudden load changes.
+L1041: 
+L1042: We focus on detecting and identifying the transmission line
+L1043: 
+L1044: fault within a small, user-speciﬁed window of time. Let P`
+L1045: 
+L1046: ν
+L1047: 
+L1048: be the probability distribution of the measurement sequence
+L1049: 
+L1050: {X t, t ∈N}when a fault occurs in transmission line `at
+L1051: 
+L1052: time ν. For the sake of simplicity, we treat P`
+L1053: 
+L1054: ν as a mixture
+L1055: distribution with respect to other relevant random variables,
+L1056: 
+L1057: e.g., the point of the fault on the line and the loads. We deﬁne
+L1058: 
+L1059: the conditional probability of identiﬁcation in the window
+L1060: 
+L1061: (CPIW) as
+L1062: 
+L1063: CPIW ≡P`
+L1064: 
+L1065: ν(`∈ D(r), τ (h)≤ν+M|τ(h)> ν ),(18)
+L1066: 
+L1067: for `∈ L,ν∈ {M, . . . , U −M}, and r∈ {1,...,|L|}, where
+L1068: 
+L1069: D(r)is deﬁned in (12).For given `,ν,h, and r, the CPIW is
+L1070: 
+L1071: the conditional probability that the fault is detected within M
+L1072: 
+L1073: measurement cycles after it occurs at time ν, and the statistic
+L1074: corresponding to the faulted line, i.e., Y τ(h)(`), is also among
+L1075: 
+L1076: the r largest statistics, given that the fault was not declared
+L1077: 
+L1078: before it occurred.
+L1079: 
+L1080: The CPIW metric varies—in value and in interpretation—
+L1081: 
+L1082: with choice of r. When r= 1, this is the conditional prob-
+L1083: 
+L1084: ability of identifying the exact transmission line within a
+L1085: 
+L1086: window after the fault occurs, given that there was not a
+L1087: 
+L1088: false alarm before the fault, which is similar to the iden-
+L1089: 
+L1090: tiﬁcation criterion proposed in [17] (although unconditional
+L1091: probabilities are considered in that work). On the other hand,
+L1092: 
+L1093: when D(r)is the entire set of transmission lines, i.e., when
+L1094: 
+L1095: r=|L|, this metric is the conditional probability of detecting
+L1096: 
+L1097: the fault, independently of the identiﬁcation task. The latter
+L1098: 
+L1099: case corresponds to the detection criterion considered in [18].
+L1100: 
+L1101: However, the results presented in [18] rely on an assumption of
+L1102: 
+L1103: identically distributed data during the transient regime, which
+L1104: 
+L1105: is not the case in the present work.
+L1106: IV. T UNING & E VAL UATION
+L1107: 
+L1108: In this section, we tune (i.e., select the threshold value h)
+L1109: 
+L1110: and evaluate the proposed algorithm on an example power
+L1111: 
+L1112: system through several simulated scenarios. We also illustrate
+L1113: 
+L1114: that the performance of the algorithm is robust to the choice of
+L1115: 
+L1116: threshold, and performs well even under large deviations from
+L1117: 
+L1118: the assumptions used to compute the synthetic data utilized
+L1119: 
+L1120: by the line fault model. Speciﬁcally, we simulate transmission
+L1121: line faults, sudden load changes, and long durations where no
+L1122: 
+L1123: fault occurs. In each case, the impact of actual loads differing
+L1124: 
+L1125: from the nominal forecast is also investigated.
+L1126: 
+L1127: A. Power System Model: IEEE 39-Bus System
+L1128: 
+L1129: We consider the IEEE 39-bus New England power sys-
+L1130: 
+L1131: tem [16]. The network consists of 39 buses, connected by
+L1132: 
+L1133: 34 transmission lines and 12 transformers. The synchronous
+L1134: 
+L1135: JOURNAL OF L
+L1136: 
+L1137: A
+L1138: 
+L1139: T
+L1140: 
+L1141: E
+L1142: 
+L1143: X CLASS FILES, VOL. 14, NO. 8, AUGUST 2015 6
+L1144: 
+L1145: Control Area 1
+L1146: 
+L1147: Control Area 2
+L1148: 
+L1149: Control Area 3
+L1150: 39 4
+L1151: 
+L1152: 5
+L1153: 
+L1154: 7
+L1155: 
+L1156: 8
+L1157: 
+L1158: 9
+L1159: 
+L1160: 6
+L1161: 
+L1162: 31
+L1163: 
+L1164: 11
+L1165: 
+L1166: 12
+L1167: 
+L1168: 10
+L1169: 
+L1170: 32
+L1171: 
+L1172: 13
+L1173: 
+L1174: 14
+L1175: 
+L1176: 15
+L1177: 
+L1178: 16
+L1179: 
+L1180: 19
+L1181: 
+L1182: 20
+L1183: 
+L1184: 34 33
+L1185: 
+L1186: 21
+L1187: 
+L1188: 24
+L1189: 
+L1190: 22
+L1191: 
+L1192: 35
+L1193: 
+L1194: 36 23
+L1195: 
+L1196: 38
+L1197: 
+L1198: 29
+L1199: 
+L1200: 2826 27
+L1201: 
+L1202: 17
+L1203: 
+L1204: 18
+L1205: 
+L1206: 3
+L1207: 
+L1208: 25
+L1209: 
+L1210: 37
+L1211: 
+L1212: 1
+L1213: 
+L1214: 2
+L1215: 
+L1216: 30
+L1217: 
+L1218: = PMU Sensor
+L1219: 
+L1220: Fig. 2. IEEE 39-bus New England power system.
+L1221: 
+L1222: generators are equipped with automatic voltage regulators and
+L1223: 
+L1224: power system stabilizers. We partition the system into three
+L1225: 
+L1226: “control areas” (from the 39-bus system case data ﬁle included
+L1227: 
+L1228: with MATPOWER [19]), as shown in Fig. 2.
+L1229: 
+L1230: We take the perspective of a TSO for Control Area 1
+L1231: (CA–1). We assume we have good situational awareness of
+L1232: 
+L1233: the network within our control area; therefore, our goal is to
+L1234: 
+L1235: quickly detect and identify transmission line faults occurring
+L1236: 
+L1237: in the neighboring control areas, i.e., CA–2 & CA–3, by
+L1238: 
+L1239: using PMU data from buses within CA–1. We model the fault
+L1240: 
+L1241: of every transmission line for the detection algorithm, i.e.,
+L1242: 
+L1243: L is the collection of all transmission lines in the system;
+L1244: 
+L1245: however, the performance of the algorithm with respect to (18)
+L1246: is evaluated based on short-circuit faults of lines only in the
+L1247: 
+L1248: adjacent control areas, i.e., CA–2 & CA–3.
+L1249: 
+L1250: We use two PMU sensors positioned close to the bound-
+L1251: 
+L1252: ary with the adjacent control areas. Speciﬁcally, the PMUs
+L1253: 
+L1254: are on buses 14 and 39 (Fig. 2). They supply a total of
+L1255: 
+L1256: nine phasor measurements (magnitude and angle) representing
+L1257: 
+L1258: the two bus voltages plus seven currents (including lines,
+L1259: 
+L1260: generators, and loads). The PMU sampling rate is 60 Hz.
+L1261: We consider a detection window size of M= 5, and the
+L1262: 
+L1263: operational period is U= 1 hr.3 The set of fault positions is
+L1264: 
+L1265: P={0.1,0.2,...,0.9}. The detection statistic (2) uses q= 1.
+L1266: 
+L1267: B. Simulations
+L1268: 
+L1269: We express the simulated PMU data as
+L1270: 
+L1271: X t=m t+t,(19)
+L1272: 
+L1273: where m t is a time series obtained from solving the system
+L1274: 
+L1275: of DAEs, and t is a sequence of zero-mean Gaussian random
+L1276: 
+L1277: vectors with independence between measurements (over time)
+L1278: 
+L1279: and within measurements (between each component of the
+L1280: measurement vector). We generate random values of the loads,
+L1281: 
+L1282: therefore the time series m t is random and takes different
+L1283: 
+L1284: values in each simulated event. Hence, the sequence m t is
+L1285: 
+L1286: 3 For the system considered here, the detection model can be established
+L1287: 
+L1288: in less than 5 minutes running MATLAB code on an Intel(R) Core(TM) i7-
+L1289: 
+L1290: 6500U CPU @ 2.50 GHz with 16GB DDR3.
+L1291: 
+L1292: -0.5
+L1293: 
+L1294: 0
+L1295: 
+L1296: 0.5
+L1297: 
+L1298: Current
+L1299: 
+L1300: (pu)
+L1301: 
+L1302: 0.2
+L1303: 
+L1304: 0.4
+L1305: 
+L1306: Magnitude
+L1307: 
+L1308: (pu)
+L1309: 
+L1310: 2
+L1311: 
+L1312: 2.5
+L1313: 
+L1314: 3
+L1315: 
+L1316: Phase Angle
+L1317: 
+L1318: (rad)
+L1319: 
+L1320: 0 0.05 0.1 0.15
+L1321: 
+L1322: Time (s)
+L1323: 
+L1324: 0
+L1325: 
+L1326: 2
+L1327: 
+L1328: 4
+L1329: 
+L1330: 6
+L1331: 
+L1332: 8
+L1333: 
+L1334: Detection
+L1456: when the fault occurs any time after the burn-in period. The
+L1457: 
+L1458: fault position on the line is generated according to a uniform
+L1459: 
+L1460: distribution, and we assume the fault is cleared after the
+L1461: 
+L1462: detection window has passed.
+L1463: 
+L1464: Fig. 4 shows the worst-case (i.e., minimum) CPIW among
+L1465: 
+L1466: transmission lines in each control area, point-wise for each h.5
+L1467: 
+L1468: The algorithm performs well in terms of detection, i.e., when
+L1469: 
+L1470: r=|L| (third row of Fig. 4). Indeed, we observe zero
+L1471: missed detections for any of the N simulations in any of
+L1472: 
+L1473: the transmission lines when h < 9, even when the loads are
+L1474: 
+L1475: very different from the forecast used to build the detection
+L1476: 
+L1477: algorithm. When h is large, e.g., more than 20, the algorithm
+L1478: 
+L1479: is not able to detect the fault within M measurements in many
+L1480: 
+L1481: situations.
+L1482: 
+L1483: For r= 3 (second row of Fig. 4), the algorithm performs
+L1484: 
+L1485: similarly to when r=|L|. Speciﬁcally, even when the mean
+L1486: 
+L1487: of the true loads differs signiﬁcantly from the forecasted mean,
+L1609: within a window of length 2 M after the sudden load change
+L1610: 
+L1611: occurs, given that an alarm did not occur before the sudden
+L1612: 
+L1613: load change. That is, we estimate
+L1614: 
+L1615: P∗
+L1616: 
+L1617: ν(τ(h)≤ν+ 2 M|τ(h)> ν),(20)
+L1618: 
+L1619: where P∗
+L1620: 
+L1621: ν is the probability distribution of the sequence
+L1622: 
+L1623: {X t, t ∈N}when a sudden load change occurs at time ν.6 We
+L1624: 
+L1625: refer to this quantity as the probability of induced false alarm,
+L1626: 
+L1627: in contrast to false alarms which occur during typical steady-
+L1628: 6 This quantity depends on the location (bus), direction, and magnitude of
+L1629: 
+L1630: the load change, but we suppress this notation for simplicity.
+L1631: 
+L1632: JOURNAL OF L
+L1633: 
+L1634: A
+L1635: 
+L1636: T
+L1637: 
+L1638: E
+L1639: 
+L1640: X CLASS FILES, VOL. 14, NO. 8, AUGUST 2015 8
+L1641: 
+L1642: Probability of Induced False Alarm
+L1643: 
+L1644: 012
+L1645: 
+L1646: 0
+L1647: 
+L1648: 2
+L1649: 
+L1650: 4
+L1651: 
+L1652: 6
+L1653: 
+L1654: 8
+L1655: 
+L1656: 10-3 Bus 15
+L1657: 
+L1658: 012
+L1659: 
+L1660: 0
+L1661: 
+L1662: 0.1
+L1663: 
+L1664: 0.2
+L1665: 
+L1666: 0.3
+L1667: 
+L1668: 0.4
+L1669: 
+L1670: Bus 8
+L1671: 
+L1672: 012
+L1673: 
+L1674: 0
+L1675: 
+L1676: 0.02
+L1677: 
+L1866: system dynamics to generate synthetic PMU data, which was
+L1867: 
+L1868: used to construct a quick change detection and identiﬁcation
+L1869: 
+L1870: procedure. We demonstrated building and tuning the algorithm
+L1871: 
+L1872: for an example power system and tested its performance under
+L1873: 
+L1874: various conditions.
+L1875: 
+L1876: The algorithm achieved quick detection and identiﬁcation of
+L1877: 
+L1878: faults, while avoiding false alarms during steady-state moni-
+L1879: 
+L1880: toring and sudden load changes. Additionally, the algorithm
+L1881: 
+L1882: performed well even when a biased load forecast was used
+L1883: for its construction. It was also shown that a wide range
+L1884: 
+L1885: of thresholds can be chosen without loss of performance.
+L1886: 
+L1887: Finally, the algorithm required only sparse, localized PMU
+L1888: 
+L1889: data to detect and identify transmission line outages occur-
+L1890: 
+L1891: ring in neighboring control areas, thus enhancing situational
+L1892: 
+L1893: awareness across TSO boundaries.
+L1894: 
+L1895: There are several possible extensions to the proposed proce-
+L1896: 
+L1897: dure. First, the persistent nature of the fault could be explicitly
+L1898: included. Since we focus on detecting the fault within a user-
+L1899: 
+L1900: speciﬁed window, if the algorithm does not detect the fault
+L1901: 
+L1902: within this window, it may not detect it at all. However,
+L1903: 
+L1904: we could explicitly account for the stabilization after the
+L1905: 
+L1906: fault by modifying the proposed QCD algorithm [21], thereby
+L1907: 
+L1908: eventually detecting the faults that may be missed within the
+L1909: 
+L1910: window, even if missed detection is very rare.
+L1911: 
+L1912: Second, it is of practical interest, especially for larger power
+L1913: systems, to identify a convenient way to vary the detection
+L1914: 
+L1915: thresholds between transmission lines [22]. In particular, the
+L1916: 
+L1917: algorithm performance may be improved by selecting larger
+L1918: 
+L1919: thresholds for detecting the fault of transmission lines that are
+L1920: 
+L1921: electrically close to the PMU sensors, and smaller thresholds
+L1922: 
+L1923: for distant lines.
+L1924: 
+L1925: A third extension would be to include other uncertainties
+L1926: 
+L1927: in the model building process (e.g., fault impedance, fault
+L1928: clearing time, or uncertainty in the loads). For example, in
+L1929: 
+L1930: this paper, we used a point forecast for the loads, but it may
+L1931: 
+L1932: be advantageous to replace these point forecasts with statistical
+L1933: 
+L1934: distributions and extend the proposed QCD algorithm to
+L1935: 
+L1936: incorporate these underlying distributions.
+L1937: 
+L1938: A PPENDIX
+L1939: 
+L1940: Proof of Proposition 2: We proceed as in the proof of
+L1941: 
+L1942: [17, Th. 7]. Let U > M,h > 0. By the deﬁnition of τ(h),
+L1943: 
+L1944: P∞(τ(h)≤U) = P∞W t(`, p)≥h for some `∈ L,
+L1945: 
+L1946: p∈ P, t ∈ {M, . . . , U }.(21)
+L1947: By the union bound, the quantity in (21) is upper bounded by
+L1948: 
+L1949: X
+L1950: 
+L1951: p∈P X
+L1952: 
+L1953: `∈L
+L1954: 
+L1955: P∞(W t(`, p)≥h for some t∈ {M, . . . , U }).(22)
+L1956: 
+L1957: The summand in (22) can be upper bounded as follows:
+L1958: 
+L1959: P∞(W t(`, p)≥h for some t∈ {M, . . . , U })
+L1960: 
+L1961: =P∞max
+L1962: 
+L1963: M≤t≤U max
+L1964: 
+L1965: t−M≤k<t Λ k:t(`, p)≥h
+L1966: 
+L1967: ≤
+L1968: 
+L1969: U−1
+L1970: 
+L1971: X
+L1972: 
+L1973: k=0
+L1974: 
+L1975: P∞max
+L1976: 
+L1977: k+1≤t≤k+M Λ k:t(`, p)≥h.(23)
+L1978: 
+L1979: Comparing (23) to the statement of the proposition, it remains
+L1980: 
+L1981: to show that, in case (i),
+L1982: 
+L1983: P∞max
+L1984: 
+L1985: k+1≤t≤k+M Λ k:t(`, p)≥h≤exp −h/(2 σ 2),(24)
+L1986: 
+L1987: and, in case (ii),
+L1988: 
+L1989: P∞max
+L1990: k+1≤t≤k+M Λ k:t(`, p)≥h≤exp[−h√2/σ],(25)
+L1991: 
+L1992: for all k≥0,`∈ L,p∈ P, and h > 0. We prove only (24)
+L1993: 
+L1994: since (25) follows from similar arguments.
+L1995: 
+L1996: Fix k and let t∈ {k+ 1, . . . , k +M}.By the assumption
+L1997: 
+L1998: of the proposition, before the fault, i.e., under P∞, we have
+L1999: 
+L2000: X t
+L2001: 
+L2002: iid
+L2003: 
+L2004: ∼Gaussian(µ 0, σ 2 I),(26)
+L2005: 
+L2006: where I is a d×d identity matrix and d is the dimension
+L2007: 
+L2008: of X t. Let f∞be the density of X t under P∞, i.e.,
+L2009: 
+L2010: f∞(X t)=(σ 2 2 π)−d/2 exp −k X t−µ 0 k 2
+L2011: 
+L2012: 2/(2 σ 2).(27)
+

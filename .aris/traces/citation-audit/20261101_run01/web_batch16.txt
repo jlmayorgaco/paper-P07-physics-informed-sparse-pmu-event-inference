@@ -1,0 +1,599 @@
+Topology-Aware Graph Neural Network-Based State Estimation for PMU-Unobservable Power Systems | Request PDF (https://www.researchgate.net/publication/392258426_Topology-Aware_Graph_Neural_Network-Based_State_Estimation_for_PMU-Unobservable_Power_Systems)
+citeturn35search0 [wordlim: 200] Crawled: 2 months ago; # Topology-Aware Graph Neural Network-Based State Estimation for PMU-Unobservable Power Systems ...   * Power Systems, IEEE Transactions on 40(6):4547-4560 ... This paper proposes a novel deep geometric learning approach based on graph neural networks (GNNs) to estimate the states of PMU-unobservable power systems.
+
+# Topology-Aware Graph Neural Network-Based State Estimation for PMU-Unobservable Power Systems
+
+  * January 2025
+  * Power Systems, IEEE Transactions on 40(6):4547-4560
+
+DOI:10.1109/TPWRS.2025.3572848
+
+Authors:
+
+Shiva Moshtagh
+
+Shiva Moshtagh
+
+  * This person is not on ResearchGate, or hasn't claimed this research yet.
+
+Behrouz Azimian
+
+Behrouz Azimian
+
+  * This person is not on ResearchGate, or hasn't claimed this research yet.
+
+Mohammad Golgol
+
+Mohammad Golgol
+
+  * This person is not on ResearchGate, or hasn't claimed this research yet.
+
+Anamitra Pal
+
+  * Arizona State University
+
+Image: Request Full-text Paper PDF
+
+## Abstract
+
+Traditional optimization-based techniques for time-synchronized state estimation (SE) often suffer from high online computational burden, limited phasor measurement unit (PMU) coverage, and presence of non-Gaussian measurement noise. Although conventional learning-based models have been developed to overcome these challenges, they are negatively impacted by topology changes and real-time data loss. This paper proposes a novel deep geometric learning approach based on graph neural networks (GNNs) to estimate the states of PMU-unobservable power systems. The proposed approach combines graph convolution and multi-head graph attention layers inside a customized end-to-end learning framework to handle topology changes and real-time data loss. An upper bound on SE error as a function of topology change is also derived. Experimental results for different test systems demonstrate superiority of the proposed customized GNN-SE (CGNN-SE) over traditional optimization-based techniques as well as conventional learning-based models in presence of topology changes, PMU failures, bad data, non-Gaussian measurement noise, and large system implementation.
+
+## No full-text available
+
+Image: Request Full-text Paper PDF
+
+To read the full-text of this research,
+you can request a copy directly from the authors.
+
+Request full-text PDF--------------------------------------------------------------------------------
+Topology-Aware Graph Neural Network-Based State Estimation for PMU-Unobservable Power Systems - Arizona State University (https://asu.elsevierpure.com/en/publications/topology-aware-graph-neural-network-based-state-estimation-for-pm/)
+citeturn35search1 [wordlim: 200] Published: 1.8 years ago; Crawled: last month; Topology-Aware Graph Neural Network-Based State Estimation for PMU-Unobservable Power Systems. IEEE Transactions on Power Systems, 40(6), 4547-4560. https://doi.org/10.1109/TPWRS.2025.3572848
+
+Topology-Aware Graph Neural Network-Based State Estimation for PMU-Unobservable Power Systems.
+## Cite this
+
+  * APA
+  * Standard
+  * Harvard
+  * Vancouver
+  * Author
+  * BIBTEX
+  * RIS
+
+Moshtagh, S., Azimian, B., Golgol, M., & Pal, A. (2025). Topology-Aware Graph Neural Network-Based State Estimation for PMU-Unobservable Power Systems. IEEE Transactions on Power Systems, 40(6), 4547-4560. https://doi.org/10.1109/TPWRS.2025.3572848
+
+Topology-Aware Graph Neural Network-Based State Estimation for PMU-Unobservable Power Systems. / Moshtagh, Shiva; Azimian, Behrouz; Golgol, Mohammad et al.
+In: IEEE Transactions on Power Systems, Vol. 40, No. 6, 2025, p. 4547-4560.
+
+Research output: Contribution to journal › Article › peer-review
+
+Moshtagh, S, Azimian, B, Golgol, M & Pal, A 2025, 'Topology-Aware Graph Neural Network-Based State Estimation for PMU-Unobservable Power Systems', IEEE Transactions on Power Systems, vol. 40, no. 6, pp. 4547-4560. https://doi.org/10.1109/TPWRS.2025.3572848
+
+Moshtagh S, Azimian B, Golgol M, Pal A. Topology-Aware Graph Neural Network-Based State Estimation for PMU-Unobservable Power Systems. IEEE Transactions on Power Systems. 2025;40(6):4547-4560. doi: 10.1109/TPWRS.2025.3572848
+
+Moshtagh, Shiva ; Azimian, Behrouz ; Golgol, Mohammad et al. / Topology-Aware Graph Neural Network-Based State Estimation for PMU-Unobservable Power Systems. In: IEEE Transactions on Power Systems. 2025 ; Vol. 40, No. 6. pp. 4547-4560.
+
+@article{51cb7685dfa641df90328c2df3a51c9e,
+
+title = "Topology-Aware Graph Neural Network-Based State Estimation for PMU-Unobservable Power Systems",
+
+abstract = "Traditional optimization-based techniques for time-synchronized state estimation (SE) often suffer from high online computational burden, limited phasor measurement unit (PMU) coverage, and presence of non-Gaussian measurement noise. Although conventional learning-based models have been developed to overcome these challenges, they are negatively impacted by topology changes and real-time data loss. This paper proposes a novel deep geometric learning approach based on graph neural networks (GNNs) to estimate the states of PMU-unobservable power systems. The proposed approach combines graph convolution and multi-head graph attention layers inside a customized end-to-end learning framework to handle topology changes and real-time data loss. An upper bound on SE error as a function of topology change is also derived. Experimental results for different test systems demonstrate superiority of the proposed customized GNN-SE (CGNN-SE) over traditional optimization-based techniques as well as conventional learning-based models in presence of topology changes, PMU failures, bad data, non-Gaussian measurement noise, and large system implementation.",
+
+keywords = "Graph neural network, phasor measurement unit, state estimation, topology change, unobservability",
+
+author = "Shiva Moshtagh and Behrouz Azimian and Mohammad Golgol and Anamitra Pal",
+
+note = "Publisher Copyright: {\textcopyright} 1969-2012 IEEE.",
+
+year = "2025",
+
+doi = "10.1109/TPWRS.2025.3572848",
+
+language = "English (US)",
+
+volume = "40",
+
+pages = "4547--4560",
+
+journal = "IEEE Transactions on Power Systems",
+
+issn = "0885-8950",
+
+publisher = "Institute of Electrical and Electronics Engineers Inc.",
+
+number = "6",
+
+}
+
+TY - JOUR
+
+T1 - Topology-Aware Graph Neural Network-Based State Estimation for PMU-Unobservable Power Systems
+
+AU - Moshtagh, Shiva
+
+AU - Azimian, Behrouz
+
+AU - Golgol, Mohammad
+
+AU - Pal, Anamitra
+
+N1 - Publisher Copyright: © 1969-2012 IEEE.
+
+PY - 2025
+
+Y1 - 2025
+
+N2 - Traditional optimization-based techniques for time-synchronized state estimation (SE) often suffer from high online computational burden, limited phasor measurement unit (PMU) coverage, and presence of non-Gaussian measurement noise. Although conventional learning-based models have been developed to overcome these challenges, they are negatively impacted by topology changes and real-time data loss. This paper proposes a novel deep geometric learning approach based on graph neural networks (GNNs) to estimate the states of PMU-unobservable power systems. The proposed approach combines graph convolution and multi-head graph attention layers inside a customized end-to-end learning framework to handle topology changes and real-time data loss. An upper bound on SE error as a function of topology change is also derived. Experimental results for different test systems demonstrate superiority of the proposed customized GNN-SE (CGNN-SE) over traditional optimization-based techniques as well as conventional learning-based models in presence of topology changes, PMU failures, bad data, non-Gaussian measurement noise, and large system implementation.
+
+AB - Traditional optimization-based techniques for time-synchronized state estimation (SE) often suffer from high online computational burden, limited phasor measurement unit (PMU) coverage, and presence of non-Gaussian measurement noise. Although conventional learning-based models have been developed to overcome these challenges, they are negatively impacted by topology changes and real-time data loss. This paper proposes a novel deep geometric learning approach based on graph neural networks (GNNs) to estimate the states of PMU-unobservable power systems. The proposed approach combines graph convolution and multi-head graph attention layers inside a customized end-to-end learning framework to handle topology changes and real-time data loss. An upper bound on SE error as a function of topology change is also derived. Experimental results for different test systems demonstrate superiority of the proposed customized GNN-SE (CGNN-SE) over traditional optimization-based techniques as well as conventional learning-based models in presence of topology changes, PMU failures, bad data, non-Gaussian measurement noise, and large system implementation.
+
+KW - Graph neural network
+
+KW - phasor measurement unit
+
+KW - state estimation
+
+KW - topology change
+
+KW - unobservability
+
+UR - https://www.scopus.com/pages/publications/105007944691
+
+UR - https://www.scopus.com/pages/publications/105007944691#tab=citedBy
+
+U2 - 10.1109/TPWRS.2025.3572848
+
+DO - 10.1109/TPWRS.2025.3572848
+
+M3 - Article
+
+AN - SCOPUS:105007944691
+
+SN - 0885-8950
+
+VL - 40
+
+SP - 4547
+
+EP - 4560
+
+JO - IEEE Transactions on Power Systems
+
+JF - IEEE Transactions on Power Systems
+
+IS - 6
+
+ER ---------------------------------------------------------------------------------
+Topology-Aware Graph Neural Network-Based State Estimation for PMU-Unobservable Power Systems (https://eurekamag.com/research/099/718/099718538.php)
+citeturn35search2 [wordlim: 200] Published: 1.8 years ago; Crawled: last month; # Topology-Aware Graph Neural Network-Based State Estimation for PMU-Unobservable Power Systems ... #### IEEE Transactions on Power Systems 40(6): 4547-4560 ... This paper proposes a novel deep geometric learning approach based on graph neural networks (GNNs) to estimate the states of PMU-unobservable power systems.
+
+# Topology-Aware Graph Neural Network-Based State Estimation for PMU-Unobservable Power Systems
+
+##### Moshtagh, S.; Azimian, B.; Golgol, M.; Pal, A.
+
+#### IEEE Transactions on Power Systems 40(6): 4547-4560
+
+#### 2025
+
+* * *
+
+ISSN/ISBN: 0885-8950
+
+DOI: 10.1109/tpwrs.2025.3572848
+Accession: 099718538
+
+##### Summary
+
+Traditional optimization-based techniques for time-synchronized state estimation (SE) often suffer from high online computational burden, limited phasor measurement unit (PMU) coverage, and presence of non-Gaussian measurement noise. Although conventional learning-based models have been developed to overcome these challenges, they are negatively impacted by topology changes and real-time data loss. This paper proposes a novel deep geometric learning approach based on graph neural networks (GNNs) to estimate the states of PMU-unobservable power systems. The proposed approach combines graph convolution and multi-head graph attention layers inside a customized end-to-end learning framework to handle topology changes and real-time data loss. 2025: A Graph Neural Network-based Dynamic Network Topology Detection Method in Power Systems Proceedings - 2025 3rd Power Electronics and Power System Conference, PEPSC 2025: 41-45】
+
+* * *
+
+Han, Z.'ang; Chen, C.; Cao, Y.; Wang, L.; Li, Y.; Sun, C. 2026: Distribution System Topology Detection and State Estimation Using a Physics-consistent Dynamic Spatiotemporal Graph Neural Network Zhongguo Dianji Gongcheng Xuebao/Proceedings of the Chinese Society of Electrical Engineering 46(11): 4449-4466
+
+* * *
+
+Ebtia, A.; Ghafouri, M.; Debbabi, M.; Kassouf, M.; Mohammadi, A. 2025: Power Distribution Network Topology Detection Using Dual-Graph Structure Graph Neural Network Model IEEE Transactions on Smart Grid 16(2): 1833-1850
+
+* * *
+
+Wu, Z.; Wang, Q.; Liu, X. 2022: State Estimation for Power System Based on Graph Neural Network Proceedings of 2022 IEEE 5th International Electrical and Energy Conference, CIEEC 2022: 1431-1436
+
+* * *
+
+Wang, L.; Ma, C.; Li, X. 2026: Entity-Aware Graph Neural Network for Multi-Intent Spoken Language Understanding in Power Dispatch Systems Proceedings - IEEE International Symposium on Circuits and Systems: 1306-1309
+--------------------------------------------------------------------------------
+Topology-Aware Graph Neural Network-Based State Estimation for PMU-Unobservable Power Systems | Article Information | J-GLOBAL (https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202502271759625585)
+citeturn35search3 [wordlim: 200] Published: 1.8 years ago; Crawled: last month; # Topology-Aware Graph Neural Network-Based State Estimation for PMU-Unobservable Power Systems ... Volume： 40  Issue： 6  Page： 4547-4560  Publication year： 2025
+
+J-GLOBAL ID：202502271759625585   Reference number：25A2895947
+
+# Topology-Aware Graph Neural Network-Based State Estimation for PMU-Unobservable Power Systems
+
+PMU不可観測電力系統のためのトポロジー意識グラフニューラルネットワークベース状態推定〖JST機械翻訳〗
+
+Author (4)：
+
+Moshtagh Shiva
+
+About Moshtagh Shiva
+
+  * Search "202550001223864207"
+  * Search "Moshtagh Shiva"
+
+(School of Electrical, Computer, and Energy Engineering (ECEE), Arizona State University (ASU), Tempe, AZ, USA)
+
+About School of Electrical, Computer, and Energy Engineering (ECEE), Arizona State University (ASU), Tempe, AZ, USA
+
+  * Search "201751000118268084"
+  * Search "School of Electrical, Computer, and Energy Engineering (ECEE), Arizona State University (ASU), Tempe, AZ, USA"
+
+, 
+
+Azimian Behrouz
+
+About Azimian Behrouz
+
+  * Search "202550001223864193"
+  * Search "Azimian Behrouz"
+
+(School of Electrical, Computer, and Energy Engineering (ECEE), Arizona State University (ASU), Tempe, AZ, USA)
+
+About School of Electrical, Computer, and Energy Engineering (ECEE), Arizona State University (ASU), Tempe, AZ, USA
+
+  * Search "201751000118268084"
+  * Search "School of Electrical, Computer, and Energy Engineering (ECEE), Arizona State University (ASU), Tempe, AZ, USA"
+
+, 
+
+Golgol Mohammad
+
+About Golgol Mohammad
+
+  * Search "202550001231170834"
+  * Search "Golgol Mohammad"
+
+(School of Electrical, Computer, and Energy Engineering (ECEE), Arizona State University (ASU), Tempe, AZ, USA)
+
+About School of Electrical, Computer, and Energy Engineering (ECEE), Arizona State University (ASU), Tempe, AZ, USA
+
+  * Search "201751000118268084"
+  * Search "School of Electrical, Computer, and Energy Engineering (ECEE), Arizona State University (ASU), Tempe, AZ, USA"
+
+, 
+
+Pal Anamitra
+
+About Pal Anamitra
+
+  * Search "202550001210657644"
+  * Search "Pal Anamitra"
+
+(School of Electrical, Computer, and Energy Engineering (ECEE), Arizona State University (ASU), Tempe, AZ, USA)
+
+About School of Electrical, Computer, and Energy Engineering (ECEE), Arizona State University (ASU), Tempe, AZ, USA
+
+  * Search "201751000118268084"
+  * Search "School of Electrical, Computer, and Energy Engineering (ECEE), Arizona State University (ASU), Tempe, AZ, USA"
+
+Material：
+
+IEEE Transactions on Power Systems  (IEEE Trans Power Syst)
+
+About IEEE Transactions on Power Systems
+
+  * Search "C0872B"
+  * Search ISSN,ISBN,CODEN
+  * Detailed information
+
+Volume： 40  Issue： 6  Page： 4547-4560  Publication year： 2025 
+JST Material Number： C0872B  ISSN： 0885-8950  CODEN： ITPSEG  Document type： Article
+Article type： 原著論文  Country of issue： United States (USA)  Language： ENGLISH (EN)
+
+Abstract/Point：
+
+Abstract/Point
+Japanese summary of the article(about several hundred characters).
+All summary is available on JDreamIII(charged).
+On J-GLOBAL, this item will be available after more than half a year after the record posted. In addtion, medical articles require to login to MyJ-GLOBAL.
+
+Traditional optimization-based...
+
+Register(free) or Log In to access 
+
+Please login to MyJ-GLOBAL to see full information. --------------------------------------------------------------------------------
+Wide-Area Line Outage Monitoring by Sparse Phasor Measurements (https://waibuwang.eurekamag.com/research/108/050/108050902.php)
+citeturn35search4 [wordlim: 200] Published: 3.8 years ago; Crawled: last week; #### IEEE Transactions on Power Systems 38(4): 3621-3631 ... DOI: 10.1109/tpwrs.2022.3201067
+
+# Wide-Area Line Outage Monitoring by Sparse Phasor Measurements
+
+##### Azizi, S.; Jegarluei, M.R.; Kettner, A.M.; Dobakhshari, A.S.
+
+#### IEEE Transactions on Power Systems 38(4): 3621-3631
+
+#### 2023
+
+* * *
+
+ISSN/ISBN: 0885-8950
+
+DOI: 10.1109/tpwrs.2022.3201067
+Accession: 108050902
+
+##### Summary
+
+Timely identification of transmission line outages is key to situational awareness and preventing the propagation of disturbed system conditions. Although a line may get disconnected from both ends simultaneously, sequential tripping of the opposite ends of the line is more common regardless of whether the outage is planned or administered by protective relays. This paper proposes a method for line outage monitoring and identifying the sequence of events that a line is undergoing before getting disconnected from both ends. Using the bus impedance matrix, a transfer function is derived to relate the line outage to the variations of phasors collected in the control center. A closed-form solution is put forward to identify the disconnected line based on the weighted sum of squared residuals concept. --------------------------------------------------------------------------------
+dblp: Yi Hu (disambiguation) (https://dblp.org/pid/77/1274.html)
+citeturn35search5 [wordlim: 200] Crawled: 2 weeks ago; Generative AI for Open-Set Event Detection and Classification in Power Systems Using Synchrophasor Data. ... Informatics 22(9): 8104-8115 (2026)
+    * ask others
+
+      * Google
+      * Google Scholar
+      * Semantic Scholar
+      * Internet Archive Scholar
+      * CiteSeerX
+      * PubPeer
+
+    * share record
+
+      * Bluesky
+      * Reddit
+      * BibSonomy
+      * LinkedIn
+
+persistent URL:
+
+      * https://dblp.org/rec/journals/tii/HuC26
+
+Yi HuImage: 0000-0002-6136-0371, Zheyuan Cheng:
+Generative AI for Open-Set Event Detection and Classification in Power Systems Using Synchrophasor Data. IEEE Trans. Ind. Informatics 22(9): 8104-8115 (2026)
+
+[j162]
+
+    * view
+
+      * electronic edition via DOI
+      * unpaywalled version
+      * details & citations
+--------------------------------------------------------------------------------
+dblp: Yi Hu (disambiguation) (https://dblp.dagstuhl.de/pid/77/1274.html)
+citeturn35search6 [wordlim: 200] Crawled: 4 days ago; Generative AI for Open-Set Event Detection and Classification in Power Systems Using Synchrophasor Data. ... Informatics 22(9): 8104-8115 (2026)
+
+      * https://dblp.org/rec/journals/tii/HuC26
+
+Yi HuImage: 0000-0002-6136-0371, Zheyuan Cheng:
+Generative AI for Open-Set Event Detection and Classification in Power Systems Using Synchrophasor Data. IEEE Trans. Ind. Informatics 22(9): 8104-8115 (2026)
+  * Image: Journal Articles
+
+[j162]
+
+    * view
+
+      * electronic edition via DOI
+      * unpaywalled version
+      * details & citations
+
+authority control:
+
+      *  
+
+    * export record
+
+      * BibTeX
+      * RIS
+      * RDF N-Triples
+      * RDF Turtle
+      * RDF/XML
+      * XML
+      * plain text
+
+dblp key:
+
+      * journals/tmc/PengLRHWHJ26
+
+    * ask others
+
+      * Google
+      * Google Scholar
+      * Semantic Scholar
+      * Internet Archive Scholar
+--------------------------------------------------------------------------------
+Adaptive State Estimation for High‐Renewable Power Systems Via Physics‐Guided Graph Neural Networks - Zhong - IEEJ Transactions on Electrical and Electronic Engineering - Wiley Online Library (https://onlinelibrary.wiley.com/doi/10.1002/tee.70340)
+citeturn35search7 [wordlim: 200] Published: 3 months ago; Crawled: yesterday; To tackle the strong stochasticity and non-Gaussian measurement noise introduced by high-penetration renewable integration, the unobservability caused by insufficient Phasor Measurement Unit (PMU) coverage, and the heavy online computational burden of traditional Time-Synchronized State Estimation (TSSE) as well as the sensitivity of existing learning-based models to topology changes and real-time measurement loss, this paper proposes a physics-guided Graph Neural Network (GNN)-based topology-adaptive state estimation method.
+
+# Adaptive State Estimation for High-Renewable Power Systems Via Physics-Guided Graph Neural Networks
+
+Wei Zhong, 
+
+Corresponding Author
+
+Wei Zhong
+
+Non-member
+
+  * zzhiquan@126.com
+
+State Grid NARI Nanjing Control System Co., Ltd., Nanjing, 211106 China
+
+Correspondence to: Wei Zhong. E-mail: zzhiquan@126.com
+
+Rui Wu, 
+
+Rui Wu
+
+Non-member
+
+State Grid NARI Nanjing Control System Co., Ltd., Nanjing, 211106 China
+
+Search for more papers by this author
+
+Gang Chen, 
+
+Gang Chen
+
+Non-member
+
+State Grid NARI Nanjing Control System Co., Ltd., Nanjing, 211106 China
+
+Search for more papers by this author
+
+Yaozhong Bi, 
+
+Yaozhong Bi
+
+Non-member
+
+State Grid NARI Nanjing Control System Co., Ltd., Nanjing, 211106 China
+
+Search for more papers by this author
+
+Jiandong Tang, 
+
+Jiandong Tang
+
+Non-member
+
+State Grid NARI Nanjing Control System Co., Ltd., Nanjing, 211106 China
+
+First published: 03 August 2026
+
+https://doi.org/10.1002/tee.70340Digital Object Identifier (DOI)
+
+### Abstract
+
+To tackle the strong stochasticity and non-Gaussian measurement noise introduced by high-penetration renewable integration, the unobservability caused by insufficient Phasor Measurement Unit (PMU) coverage, and the heavy online computational burden of traditional Time-Synchronized State Estimation (TSSE) as well as the sensitivity of existing learning-based models to topology changes and real-time measurement loss, this paper proposes a physics-guided Graph Neural Network (GNN)-based topology-adaptive state estimation method. The approach embeds power-system physical constraints and statistical priors into the geometric learning pipeline, enabling high-speed and robust estimation without iterative computations or matrix inversions. First, a Gaussian Mixture Model (GMM) is employed to characterize missing features arising from limited PMU deployment, and the expected activations are computed in the first GNN layer to intrinsically address unobservability while enhancing adaptability to renewable-induced randomness. Second, a topology-adaptive architecture combining a Graph Convolutional Network (GCN) and a Multi-Head Graph Attention Network (MH-GAT) is constructed, and an upper bound on the state-estimation error with respect to topology perturbations is derived, allowing the estimator to accommodate line outages and PMU failures without retraining. Finally, simulations on the IEEE 118-bus system demonstrate that, the proposed method achieves higher accuracy and lower online latency under complex operating conditions. © 2026 Institute of Electrical Engineers of Japan and Wiley Periodicals LLC.
+
+--------------------------------------------------------------------------------
+Deep Reinforcement Learning-Based Voltage-Var Control for Active Distribution Networks Using GAT-SimAM (https://www.mdpi.com/1996-1073/19/21/5087)
+citeturn35search8 [wordlim: 200] Published: 6 days ago; Crawled: 5 days ago; Topology-aware graph-neural-network-based state estimation for PMU-unobservable power systems. ... 2025, 40, 4547–4560.
+  24. Ngo, Q.H.; Nguyen, B.L.H.; Vu, T.V.; Zhang, J.; Ngo, T. Physics-informed graphical neural network for power-system state estimation. Appl. Energy 2024, 358, 122602. [Google Scholar] [CrossRef] [Scilit]
+  25. Moshtagh, S.; Azimian, B.; Golgol, M.; Pal, A. Topology-aware graph-neural-network-based state estimation for PMU-unobservable power systems. IEEE Trans. Power Syst. 2025, 40, 4547–4560. [Google Scholar] [CrossRef] [Scilit]
+  26. Han, Z.A.; Chen, C.; Cao, Y.J.; Wang, L.L.; Li, Y.; Sun, C.H. Distribution-network topology detection and state estimation based on a physics-consistent dynamic spatial-temporal graph neural network. Proc. CSEE 2025. (In Chinese) [Google Scholar]
+  27. Velickovic, P.; Cucurull, G.; Casanova, A.; Romero, A.; Lio, P.; Bengio, Y. Graph attention networks. arXiv 2017, arXiv:1710.10903. [Google Scholar]
+  28. Liu, X.F.; Yin, S.; Zhang, Y.H.; Deng, F.Z. Reactive-power optimization for new power systems based on an interpretable graph attention network. Power Syst. Technol. 2026, 50, 1008–1018. (In Chinese) [Google Scholar]
+  29. Zhu, T.; Hai, D.; Li, W.Y.; Huang, W.; Zhou, S.C.; Wu, M.H.; Wang, Y.F. Voltage and reactive-power optimization of distribution networks based on graph neural networks and reinforcement learning. South. Power Syst. Technol. 2024, 18, 67–78. (In Chinese) [Google Scholar]
+  30. Zhu, Z.S.; Chen, W.L.; Zhang, X.B. Distribution-network voltage control based on graph deep reinforcement learning. Electr. Power Autom. Equip. 2026, 46, 137–145. (In Chinese) [Google Scholar]
+--------------------------------------------------------------------------------
+PMU不可観測電力系統のためのトポロジー意識グラフニューラルネットワークベース状態推定〖JST機械翻訳〗 | 文献情報 | J-GLOBAL 科学技術総合リンクセンター (https://jglobal.jst.go.jp/detail?JGLOBAL_ID=202502271759625585)
+citeturn35search9 [wordlim: 200] Published: 1.8 years ago; Crawled: last month; Topology-Aware Graph Neural Network-Based State Estimation for PMU-Unobservable Power Systems ... 巻： 40  号： 6  ページ： 4547-4560  発行年： 2025年
+
+文献
+
+J-GLOBAL ID：202502271759625585   整理番号：25A2895947
+
+# PMU不可観測電力系統のためのトポロジー意識グラフニューラルネットワークベース状態推定〖JST機械翻訳〗
+
+Topology-Aware Graph Neural Network-Based State Estimation for PMU-Unobservable Power Systems
+
+著者 (4件)：
+
+Moshtagh Shiva
+
+
+(School of Electrical, Computer, and Energy Engineering (ECEE), Arizona State University (ASU), Tempe, AZ, USA)
+
+School of Electrical, Computer, and Energy Engineering (ECEE), Arizona State University (ASU), Tempe, AZ, USA について
+
+Azimian Behrouz
+
+
+(School of Electrical, Computer, and Energy Engineering (ECEE), Arizona State University (ASU), Tempe, AZ, USA)
+
+School of Electrical, Computer, and Energy Engineering (ECEE), Arizona State University (ASU), Tempe, AZ, USA について
+
+Golgol Mohammad
+
+
+(School of Electrical, Computer, and Energy Engineering (ECEE), Arizona State University (ASU), Tempe, AZ, USA)
+
+School of Electrical, Computer, and Energy Engineering (ECEE), Arizona State University (ASU), Tempe, AZ, USA について
+
+Pal Anamitra
+
+
+(School of Electrical, Computer, and Energy Engineering (ECEE), Arizona State University (ASU), Tempe, AZ, USA)
+
+School of Electrical, Computer, and Energy Engineering (ECEE), Arizona State University (ASU), Tempe, AZ, USA について
+
+資料名：
+
+IEEE Transactions on Power Systems  (IEEE Transactions on Power Systems)
+
+IEEE Transactions on Power Systems について
+
+  * JST資料番号 C0872B ですべてを検索
+  * ISSN,ISBN,CODENですべてを検索
+  * 資料情報を見る
+
+巻： 40  号： 6  ページ： 4547-4560  発行年： 2025年 
+JST資料番号： C0872B  ISSN： 0885-8950  CODEN： ITPSEG  資料種別： 逐次刊行物 (A)
+記事区分： 原著論文  発行国： アメリカ合衆国 (USA)  言語： 英語 (EN)
+
+抄録/ポイント：
+
+抄録/ポイント
+文献の概要を数百字程度の日本語でまとめたものです。
+部分表示の続きは、JDreamⅢ(有料)でご覧頂けます。
+J-GLOBALでは書誌(タイトル、著者名等)登載から半年以上経過後に表示されますが、医療系文献の場合はMyJ-GLOBALでのログインが必要です。
+--------------------------------------------------------------------------------
+Heterogeneous Node-Oriented Consistency Optimization Method for Instrument Transformer Monitoring Data in Energy-Storage-Integrated Smart Grids | EAI Endorsed Transactions on Energy Web (https://publications.eai.eu/index.php/ew/article/view/13213)
+citeturn35search10 [wordlim: 200] Published: 3 months ago; Crawled: last month; State Estimation for Active Distribution NetworksConsidering Bad Data in Measurements and TopologyParameters. ... Topology-Aware Graph Neural Network-Based State Estimation forPMU-Unobservable Power Systems. ... 2025;40(6):4547-60.
+Reviewof digital twin technology in low-voltage distributionarea and the implementation path based on the‘6C’development goals. Energies. 2025;18(17):4459.
+
+[16] Al-Shetwi AQ, Atawi IE, El-Hameed MA, Abuelrub A.Digital Twin Technology for Renewable Energy, SmartGrids, Energy Storage and Vehicle-to-Grid Integration:Advancements, applications, key players, challenges andfuture perspectives in modernising sustainable grids.IET Smart Grid. 2025;8(1):e70026.
+
+[17] Haotian Wu JL Jiaming Pei. FedCW: Client Selectionwith Adaptive Weight in Heterogeneous FederatedLearning. Computers, Materials & Continua.2026;86(1):1-20. Available from: http://www.techscience.com/cmc/v86n1/64483.
+
+[18] Pei J. F3: Fair Federated Learning Framework withadaptive regularization. Knowledge-Based Systems.2025;316:113392.
+
+[19] Abur A, Exposito AG. Power System State Estimation:Theory and Implementation. New York, NY, USA: MarcelDekker; 2004.
+
+[20] Ngo QH, Nguyen BLH, Vu TV, Zhang J, Ngo T. Physics-Informed Graphical Neural Network for Power SystemState Estimation. Applied Energy. 2024;358:122602.
+
+[21] Cibaku E, Gama F, Park S. Boosting Efficiency in StateEstimation of Power Systems by Leveraging AttentionMechanism. Energy and AI. 2024;16:100369.
+
+[22] Moshtagh S, Azimian B, Golgol M, Pal A. Topology-Aware Graph Neural Network-Based State Estimation forPMU-Unobservable Power Systems. IEEE Transactionson Power Systems. 2025;40(6):4547-60.
+
+--------------------------------------------------------------------------------
+(PDF) A Gaussian Process Regression Framework for Enhancing Convergence in Power System State Estimation (https://www.researchgate.net/publication/402545574_A_Gaussian_Process_Regression_Framework_for_Enhancing_Convergence_in_Power_System_State_Estimation)
+citeturn35search11 [wordlim: 200] Published: 8 months ago; Crawled: 5 months ago; Pal, “Topology-aware
+
+Graph Neural Network-based State Estimation for PMU-unobservable
+
+Power Systems,” IEEE Transactions on Power Systems 40 (2025): 4547–
+https://doi.org/10.48550/arXiv.1910.09658 .
+
+10 .
+
+B. Donon, R. Clément, B. Donnot, A. Marot, I. Guyon, and M.
+
+Schoenauer, “Neural Networks for Power Flow: Graph Neural Solver,”
+
+Electric Power Systems Reserch 189 (2020): 106547, https://doi.org/10.1016/
+
+j.epsr.2020.106547 .
+
+11 . S. Moshtagh, B. Azimian, M. Golgol, and A. Pal, “Topology-aware
+
+Graph Neural Network-based State Estimation for PMU-unobservable
+
+Power Systems,” IEEE Transactions on Power Systems 40 (2025): 4547–
+
+4560, https://doi.org/10.1109/TPWRS.2025.3572848 .
+
+IET Generation, Transmission & Distribution,2026 13 of 14
+
+12 . Q.-H. Ngo, B. Nguyen, T. Vu, and H.-S. Pu, “Physics-informed
+
+Graphical Neural Network for Power System State Estimation,” Applied
+
+Energy 358 (2024): 122602, https://doi.org/10.1016/j.apenergy.2023.122602 .
+
+13 . R. Patel, S. Bhartiya, and R. Gudi, “State Estimation Using Physics
+
+Constrained Neural Networks,” in Proceedings of the 2022 IEEE Sym-
+
+posium on Advanced Control of Industrial Processes (AdCONIP) , (IEEE,
+--------------------------------------------------------------------------------
+Anamitra Pal                                                                 Curriculum Vitae (https://search.asu.edu/profile/3023947/cv)
+citeturn35search12 [wordlim: 200] Published: 8 months ago; Crawled: 8 months ago; Pal, “Topology-aware graph neural network-based state estimation for PMU-unobservable power systems,” IEEE Trans. ... 4547-4560, Nov.
+

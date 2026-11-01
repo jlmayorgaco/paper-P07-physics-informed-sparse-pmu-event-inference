@@ -1,0 +1,524 @@
+{
+  "key": "eriksson2013diagnosability",
+  "retrieved_at": "2026-11-01T03:53:21.317841+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1016%2Fj.automatica.2013.02.045",
+      "status": "success",
+      "resolved": "https://api.crossref.org/works/10.1016%2Fj.automatica.2013.02.045"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          2
+        ]
+      ],
+      "date-time": "2026-10-02T06:55:52Z",
+      "timestamp": 1790924152770,
+      "version": "4.1.0"
+    },
+    "reference-count": 33,
+    "publisher": "Elsevier BV",
+    "issue": "6",
+    "content-domain": {
+      "domain": [
+        "elsevier.com",
+        "sciencedirect.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "Automatica"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2013,
+          6
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.automatica.2013.02.045",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2013,
+          3,
+          18
+        ]
+      ],
+      "date-time": "2013-03-18T10:31:22Z",
+      "timestamp": 1363602682000
+    },
+    "page": "1591-1600",
+    "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 82,
+    "title": [
+      "A method for quantitative fault diagnosability analysis of stochastic linear descriptor models"
+    ],
+    "prefix": "10.1016",
+    "volume": "49",
+    "author": [
+      {
+        "given": "Daniel",
+        "family": "Eriksson",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Erik",
+        "family": "Frisk",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Mattias",
+        "family": "Krysander",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "78",
+    "reference": [
+      {
+        "issue": "1",
+        "key": "10.1016/j.automatica.2013.02.045_br000005",
+        "doi-asserted-by": "crossref",
+        "first-page": "158",
+        "DOI": "10.1016/j.automatica.2010.10.030",
+        "article-title": "A Bayesian solution to the multiple composite hypothesis testing for fault diagnosis in dynamic systems",
+        "volume": "47",
+        "author": "Antônio dos Santos",
+        "year": "2011",
+        "journal-title": "Automatica"
+      },
+      {
+        "key": "10.1016/j.automatica.2013.02.045_br000010",
+        "series-title": "Detection of abrupt changes: theory and application",
+        "author": "Basseville",
+        "year": "1993"
+      },
+      {
+        "key": "10.1016/j.automatica.2013.02.045_br000015",
+        "series-title": "Statistical inference",
+        "author": "Casella",
+        "year": "2001"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.automatica.2013.02.045_br000020",
+        "doi-asserted-by": "crossref",
+        "first-page": "377",
+        "DOI": "10.1016/S0005-1098(02)00245-5",
+        "article-title": "Optimal stochastic fault detection filter",
+        "volume": "39",
+        "author": "Chen",
+        "year": "2003",
+        "journal-title": "Automatica"
+      },
+      {
+        "issue": "8",
+        "key": "10.1016/j.automatica.2013.02.045_br000025",
+        "doi-asserted-by": "crossref",
+        "first-page": "2074",
+        "DOI": "10.1016/j.automatica.2007.12.014",
+        "article-title": "Structural analysis for the sensor location problem in fault detection and isolation",
+        "volume": "44",
+        "author": "Commault",
+        "year": "2008",
+        "journal-title": "Automatica"
+      },
+      {
+        "issue": "6",
+        "key": "10.1016/j.automatica.2013.02.045_br000030",
+        "doi-asserted-by": "crossref",
+        "first-page": "597",
+        "DOI": "10.1016/j.conengprac.2005.04.008",
+        "article-title": "Structural analysis of fault isolability in the DAMADICS benchmark",
+        "volume": "14",
+        "author": "Düştegör",
+        "year": "2006",
+        "journal-title": "Control Engineering Practice"
+      },
+      {
+        "key": "10.1016/j.automatica.2013.02.045_br000035",
+        "unstructured": "Economic Commission for Europe Inland Transport Committee (2010). Regulation No 49 of the Economic Commission for Europe of the United Nations (UN/ECE). August."
+      },
+      {
+        "key": "10.1016/j.automatica.2013.02.045_br000040",
+        "doi-asserted-by": "crossref",
+        "first-page": "2034",
+        "DOI": "10.1016/j.jmva.2006.03.007",
+        "article-title": "Interpreting Kullback–Leibler divergence with the Neyman–Pearson lemma",
+        "volume": "97",
+        "author": "Eguchi",
+        "year": "2006",
+        "journal-title": "Journal of Multivariate Analysis"
+      },
+      {
+        "key": "10.1016/j.automatica.2013.02.045_br000045",
+        "unstructured": "Eriksson, Daniel, Krysander, Mattias, & Frisk, Erik (2011a). Quantitative fault diagnosability performance of linear dynamic descriptor models. In 22nd international workshop on principles of diagnosis (DX-11). Murnau, Germany."
+      },
+      {
+        "key": "10.1016/j.automatica.2013.02.045_br000050",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Eriksson, Daniel, Krysander, Mattias, & Frisk, Erik (2011b). Quantitative stochastic fault diagnosability analysis. In 50th IEEE conference on decision and control. Orlando, Florida, USA.",
+        "DOI": "10.1109/CDC.2011.6160362"
+      },
+      {
+        "key": "10.1016/j.automatica.2013.02.045_br000055",
+        "unstructured": "Frisk, Erik, Bregon, Anibal, Åslund, Jan, Krysander, Mattias, Pulido, Belarmino, & Biswas, Gautam (2010). Diagnosability analysis considering causal interpretations for differential constraints. In 21st international workshop on principles of diagnosis (DX-10). Portland, Oregon, USA."
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.automatica.2013.02.045_br000060",
+        "doi-asserted-by": "crossref",
+        "first-page": "364",
+        "DOI": "10.1016/j.automatica.2008.08.013",
+        "article-title": "Sensor placement for fault isolation in linear differential-algebraic systems",
+        "volume": "45",
+        "author": "Frisk",
+        "year": "2009",
+        "journal-title": "Automatica"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.automatica.2013.02.045_br000065",
+        "doi-asserted-by": "crossref",
+        "first-page": "437",
+        "DOI": "10.1016/j.automatica.2005.10.009",
+        "article-title": "Robust residual generation for diagnosis including a reference model for residual behavior",
+        "volume": "42",
+        "author": "Frisk",
+        "year": "2006",
+        "journal-title": "Automatica"
+      },
+      {
+        "issue": "9",
+        "key": "10.1016/j.automatica.2013.02.045_br000070",
+        "doi-asserted-by": "crossref",
+        "first-page": "1417",
+        "DOI": "10.1016/S0005-1098(01)00078-4",
+        "article-title": "A minimal polynomial basis solution to residual generation for fault diagnosis in linear systems",
+        "volume": "37",
+        "author": "Frisk",
+        "year": "2001",
+        "journal-title": "Automatica"
+      },
+      {
+        "issue": "5",
+        "key": "10.1016/j.automatica.2013.02.045_br000075",
+        "doi-asserted-by": "crossref",
+        "first-page": "653",
+        "DOI": "10.1016/S0967-0661(97)00047-6",
+        "article-title": "Fault detection and isolation using parity relations",
+        "volume": "5",
+        "author": "Gertler",
+        "year": "1997",
+        "journal-title": "Control Engineering Practice"
+      },
+      {
+        "key": "10.1016/j.automatica.2013.02.045_br000080",
+        "series-title": "Fault detection and diagnosis in engineering systems",
+        "author": "Gertler",
+        "year": "1998"
+      },
+      {
+        "key": "10.1016/j.automatica.2013.02.045_br000085",
+        "series-title": "Control theory: multivariable & nonlinear methods",
+        "author": "Glad",
+        "year": "2000"
+      },
+      {
+        "issue": "11",
+        "key": "10.1016/j.automatica.2013.02.045_br000090",
+        "doi-asserted-by": "crossref",
+        "first-page": "1747",
+        "DOI": "10.1016/S0005-1098(00)00101-1",
+        "article-title": "Robust fault detection in uncertain dynamic systems",
+        "volume": "36",
+        "author": "Hamelin",
+        "year": "2000",
+        "journal-title": "Automatica"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.automatica.2013.02.045_br000095",
+        "doi-asserted-by": "crossref",
+        "first-page": "71",
+        "DOI": "10.1016/j.arcontrol.2004.12.002",
+        "article-title": "Model-based fault-detection and diagnosis—status and applications",
+        "volume": "29",
+        "author": "Isermann",
+        "year": "2005",
+        "journal-title": "Annual Reviews in Control"
+      },
+      {
+        "key": "10.1016/j.automatica.2013.02.045_br000100",
+        "series-title": "Fundamentals of statistical signal processing: detection theory",
+        "author": "Kay",
+        "year": "1998"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.automatica.2013.02.045_br000105",
+        "doi-asserted-by": "crossref",
+        "first-page": "79",
+        "DOI": "10.1214/aoms/1177729694",
+        "article-title": "On information and sufficiency",
+        "volume": "22",
+        "author": "Kullback",
+        "year": "1951",
+        "journal-title": "The Annals of Mathematical Statistics"
+      },
+      {
+        "key": "10.1016/j.automatica.2013.02.045_br000110",
+        "series-title": "Differential-algebraic equations: analysis and numerical solution",
+        "author": "Kunkel",
+        "year": "2006"
+      },
+      {
+        "issue": "7",
+        "key": "10.1016/j.automatica.2013.02.045_br000115",
+        "doi-asserted-by": "crossref",
+        "first-page": "490",
+        "DOI": "10.1080/00207170110121303",
+        "article-title": "Criterions for detectability and strong detectability of faults in linear systems",
+        "volume": "75",
+        "author": "Nyberg",
+        "year": "2002",
+        "journal-title": "International Journal of Control"
+      },
+      {
+        "issue": "12",
+        "key": "10.1016/j.automatica.2013.02.045_br000120",
+        "doi-asserted-by": "crossref",
+        "first-page": "1995",
+        "DOI": "10.1109/TAC.2006.884960",
+        "article-title": "Residual generation for fault diagnosis of systems described by linear differential-algebraic equations",
+        "volume": "51",
+        "author": "Nyberg",
+        "year": "2006",
+        "journal-title": "IEEE Transactions on Automatic Control"
+      },
+      {
+        "key": "10.1016/j.automatica.2013.02.045_br000125",
+        "series-title": "Issues of fault diagnosis for dynamic systems",
+        "author": "Patton",
+        "year": "2010"
+      },
+      {
+        "key": "10.1016/j.automatica.2013.02.045_br000130",
+        "series-title": "Introduction to mathematical systems theory: a behavioral approach",
+        "volume": "Vol. 26",
+        "author": "Polderman",
+        "year": "1998"
+      },
+      {
+        "key": "10.1016/j.automatica.2013.02.045_br000135",
+        "unstructured": "Pucel, Xavier, Mayer, Wolfgang, & Stumptner, Markus (2009). Diagnosability analysis without fault models. In proceedings of the 20th international workshop on principles of diagnosis, DX’09 (pp. 67–74). Stockholm, Sweden, June."
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.automatica.2013.02.045_br000140",
+        "doi-asserted-by": "crossref",
+        "first-page": "310",
+        "DOI": "10.1002/aic.690450212",
+        "article-title": "Locating sensors in complex chemical plants based on fault diagnostic observability criteria",
+        "volume": "45",
+        "author": "Raghuraj",
+        "year": "1999",
+        "journal-title": "AIChE Journal"
+      },
+      {
+        "issue": "6",
+        "key": "10.1016/j.automatica.2013.02.045_br000145",
+        "doi-asserted-by": "crossref",
+        "first-page": "1146",
+        "DOI": "10.1109/TSMCA.2006.878984",
+        "article-title": "Diagnosability analysis based on component-supported analytical redundancy relations",
+        "volume": "36",
+        "author": "Travé-Massuyès",
+        "year": "2006",
+        "journal-title": "IEEE Transactions on Systems, Man, and Cybernetics, Part A"
+      },
+      {
+        "issue": "7",
+        "key": "10.1016/j.automatica.2013.02.045_br000150",
+        "doi-asserted-by": "crossref",
+        "first-page": "960",
+        "DOI": "10.1177/0954407011398177",
+        "article-title": "Modelling diesel engines with a variable-geometry turbocharger and exhaust gas recirculation by optimization of model parameters for capturing non-linear system dynamics",
+        "volume": "225",
+        "author": "Wahlström",
+        "year": "2011",
+        "journal-title": "Proceedings of the Institution of Mechanical Engineers, Part D, Journal of Automobile Engineering"
+      },
+      {
+        "key": "10.1016/j.automatica.2013.02.045_br000155",
+        "unstructured": "Wheeler, Timothy J. (2011). Probabilistic performance analysis of fault diagnosis schemes. Ph.D. Thesis. University of California. Berkeley."
+      },
+      {
+        "issue": "8",
+        "key": "10.1016/j.automatica.2013.02.045_br000160",
+        "doi-asserted-by": "crossref",
+        "first-page": "1410",
+        "DOI": "10.1016/j.automatica.2007.01.005",
+        "article-title": "Disturbance decoupling in fault detection of linear periodic systems",
+        "volume": "43",
+        "author": "Zhang",
+        "year": "2007",
+        "journal-title": "Automatica"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.automatica.2013.02.045_br000165",
+        "doi-asserted-by": "crossref",
+        "first-page": "543",
+        "DOI": "10.1016/S0005-1098(02)00269-8",
+        "article-title": "An LMI approach to design robust fault detection filter for uncertain LTI systems",
+        "volume": "39",
+        "author": "Zhong",
+        "year": "2003",
+        "journal-title": "Automatica"
+      }
+    ],
+    "container-title": [
+      "Automatica"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0005109813001349?httpAccept=text/xml",
+        "content-type": "text/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0005109813001349?httpAccept=text/plain",
+        "content-type": "text/plain",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2019,
+          7,
+          11
+        ]
+      ],
+      "date-time": "2019-07-11T02:49:32Z",
+      "timestamp": 1562813372000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0005109813001349"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2013,
+          6
+        ]
+      ]
+    },
+    "references-count": 33,
+    "journal-issue": {
+      "issue": "6",
+      "published-print": {
+        "date-parts": [
+          [
+            2013,
+            6
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "S0005109813001349"
+    ],
+    "URL": "https://doi.org/10.1016/j.automatica.2013.02.045",
+    "relation": {},
+    "ISSN": [
+      "0005-1098"
+    ],
+    "issn-type": [
+      {
+        "value": "0005-1098",
+        "type": "print"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2013,
+          6
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "Elsevier",
+        "name": "publisher",
+        "label": "This article is maintained by"
+      },
+      {
+        "value": "A method for quantitative fault diagnosability analysis of stochastic linear descriptor models",
+        "name": "articletitle",
+        "label": "Article Title"
+      },
+      {
+        "value": "Automatica",
+        "name": "journaltitle",
+        "label": "Journal Title"
+      },
+      {
+        "value": "https://doi.org/10.1016/j.automatica.2013.02.045",
+        "name": "articlelink",
+        "label": "CrossRef DOI link to publisher maintained version"
+      },
+      {
+        "value": "article",
+        "name": "content_type",
+        "label": "Content Type"
+      },
+      {
+        "value": "Copyright © 2013 Elsevier Ltd. All rights reserved.",
+        "name": "copyright",
+        "label": "Copyright"
+      }
+    ]
+  }
+}

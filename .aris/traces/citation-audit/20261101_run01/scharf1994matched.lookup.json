@@ -1,0 +1,219 @@
+{
+  "key": "scharf1994matched",
+  "retrieved_at": "2026-11-01T03:53:21.919514+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1109%2F78.301849",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1109/78.301849",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:03.992278+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          29
+        ]
+      ],
+      "date-time": "2026-10-29T14:27:44Z",
+      "timestamp": 1793284064526,
+      "version": "4.5.0"
+    },
+    "reference-count": 8,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "8",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              1994,
+              1,
+              1
+            ]
+          ],
+          "date-time": "1994-01-01T00:00:00Z",
+          "timestamp": 757382400000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Trans. Signal Process."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          1994
+        ]
+      ]
+    },
+    "DOI": "10.1109/78.301849",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2002,
+          8,
+          24
+        ]
+      ],
+      "date-time": "2002-08-24T19:31:03Z",
+      "timestamp": 1030217463000
+    },
+    "page": "2146-2157",
+    "source": "Crossref",
+    "is-referenced-by-count": 825,
+    "title": [
+      "Matched subspace detectors"
+    ],
+    "prefix": "10.1109",
+    "volume": "42",
+    "author": [
+      {
+        "given": "L.L.",
+        "family": "Scharf",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "B.",
+        "family": "Friedlander",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref4",
+        "author": "dunn",
+        "year": "1986",
+        "journal-title": "Sufficiency and invariance principles applied to four detection problems"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICASSP.1984.1172792"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/78.157294"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/18.119729"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/78.286957"
+      },
+      {
+        "key": "ref7",
+        "author": "ferguson",
+        "year": "1967",
+        "journal-title": "Mathematical Statistics"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TIT.1971.1054668"
+      },
+      {
+        "key": "ref1",
+        "author": "scharf",
+        "year": "1991",
+        "journal-title": "Statistical Signal Processing"
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Signal Processing"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx4/78/7453/00301849.pdf?arnumber=301849",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2021,
+          11,
+          29
+        ]
+      ],
+      "date-time": "2021-11-29T20:14:53Z",
+      "timestamp": 1638216893000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "http://ieeexplore.ieee.org/document/301849/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          1994
+        ]
+      ]
+    },
+    "references-count": 8,
+    "journal-issue": {
+      "issue": "8"
+    },
+    "URL": "https://doi.org/10.1109/78.301849",
+    "relation": {},
+    "ISSN": [
+      "1053-587X"
+    ],
+    "issn-type": [
+      {
+        "value": "1053-587X",
+        "type": "print"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          1994
+        ]
+      ]
+    }
+  }
+}

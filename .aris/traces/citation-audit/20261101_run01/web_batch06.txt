@@ -1,0 +1,338 @@
+Fault Detection and Localization in Active Distribution Networks Using Optimally Placed Phasor Measurements Units | IEEE Journals & Magazine | IEEE Xplore (https://ieeexplore.ieee.org/document/9751367/)
+citeturn25search0 [wordlim: 200] Published: 4.6 years ago; Crawled: last month; # Fault Detection and Localization in Active Distribution Networks Using Optimally Placed Phasor Measurements Units ... This paper introduces an algorithm able to detect and localize the occurrence of a fault in an Active Distribution Network, using the measurements collected by Phasor Mea...
+
+# Fault Detection and Localization in Active Distribution Networks Using Optimally Placed Phasor Measurements Units
+
+Publisher: IEEE
+
+Abstract
+
+Authors
+
+## Abstract:
+
+This paper introduces an algorithm able to detect and localize the occurrence of a fault in an Active Distribution Network, using the measurements collected by Phasor Mea...Show More
+
+## Metadata
+
+## Abstract:
+
+This paper introduces an algorithm able to detect and localize the occurrence of a fault in an Active Distribution Network, using the measurements collected by Phasor Measurement Units (PMUs). First, a basic algorithm that works under the assumption that all grid buses are equipped with a PMU is designed. Then, formal observability conditions that allow detection and localization with a reduced number of PMUs are provided. Based on these conditions, the algorithm is extended to perform correctly when not all network buses are monitored. Moreover, an Optimal Positioning Algorithm, always based on the observability conditions, is designed. This algorithm allows the user to customize the fault localization resolution. The approach is validated through simulations carried out on a benchmark active distribution network.
+
+Published in: IEEE Transactions on Power Systems ( Volume: 38, Issue: 1, January 2023)
+
+Page(s): 714 - 727
+
+Date of Publication: 07 April 2022
+
+ISSN Information:
+
+DOI: 10.1109/TPWRS.2022.3165685
+--------------------------------------------------------------------------------
+Sparse PMU Placement Algorithm for Enhanced Detection and Identification of Power Grid Events | IEEE Journals & Magazine | IEEE Xplore (https://ieeexplore.ieee.org/document/10640266/)
+citeturn25search1 [wordlim: 200] Published: 2.2 years ago; Crawled: last month; # Sparse PMU Placement Algorithm for Enhanced Detection and Identification of Power Grid Events
+
+# Sparse PMU Placement Algorithm for Enhanced Detection and Identification of Power Grid Events
+
+Publisher: IEEE
+
+## Abstract:
+
+This paper is concerned about the challenge of timely and accurate detection and identification of events involving line outages and faults in power grids. Given the incr...Show More
+
+## Metadata
+
+## Abstract:
+
+This paper is concerned about the challenge of timely and accurate detection and identification of events involving line outages and faults in power grids. Given the increasing number of installed phasor measurement units (PMU), their measurements are prime sources to be exploited to address this challenge since their high refresh rates allows to capture post- and pre- event phasor values. The challenge is mainly due to the fact that the number of installed PMUs is typically not sufficient to receive measurements from terminal bus(es) of every line. This challenge be addressed by applying model-based sparse estimation methods or data-driven approaches such as convolutional neural networks (CNN) and graphical neural networks (GCN). It should however be noted that success rates of these methods are very strongly related to strategic placement of PMUs, as their locations significantly influence the accuracy of line outage detection and fault identification as noted in [21]. This dependency constitutes the main motivation of the paper whose focus is development of a strategic PMU placement algorithm to maximize the performance of the event detection and identification methods that use PMU measurements as their inputs. An algorithm that is designed to yield the best possible locations to install a limited number of PMUs, optimizing their utility for model-based sparse estimation methods as well as advanced data-driven approaches is developed and implemented. Performance of the method is demonstrated with only 83 PMUs for the 1354 Bus system, and with 50 PMUs for the 196 bus system.
+
+Published in: IEEE Transactions on Power Systems ( Volume: 40, Issue: 2, March 2025)
+
+Page(s): 1843 - 1853
+
+Date of Publication: 20 August 2024
+
+ISSN Information:
+
+DOI: 10.1109/TPWRS.2024.3446237
+--------------------------------------------------------------------------------
+Phasor Measurement Units Optimal Placement and Performance Limits for Fault Localization (https://escholarship.org/uc/item/566174gb)
+citeturn25search2 [wordlim: 200] Crawled: last month; Phasor Measurement Units Optimal Placement and Performance Limits for Fault Localization ... The focus is on a non-trivial operating regime where the number of Phasor Measurement Unit (PMU) sensors available is insufficient to have full observability of the grid state.
+
+Download PDF
+
+  * Main
+    * PDF
+
+Phasor Measurement Units Optimal Placement and Performance Limits for Fault Localization
+
+2020
+
+  * Jamei, M;
+  * Ramakrishna, R;
+  * Tesfay, T;
+  * Gentz, R;
+  * Roberts, C;
+  * Scaglione, A;
+  * Peisert, S
+et al.
+
+## Published Web Location
+
+https://doi.org/10.1109/JSAC.2019.2951971
+
+[Button: ...][Button: Main Content][Button: Metrics]Author & Article Info
+
+Abstract
+
+In this paper, the performance limits of faults localization are investigated using synchrophasor data. The focus is on a non-trivial operating regime where the number of Phasor Measurement Unit (PMU) sensors available is insufficient to have full observability of the grid state. Proposed analysis uses the Kullback Leibler (KL) divergence between the distributions corresponding to different fault location hypotheses associated with the observation model. This analysis shows that the most likely locations are concentrated in clusters of buses more tightly connected to the actual fault site akin to graph communities. Consequently, a PMU placement strategy is derived that achieves a near-optimal resolution for localizing faults for a given number of sensors. The problem is also analyzed from the perspective of sampling a graph signal, and how the placement of the PMUs i.e. the spatial sampling pattern and the topological characteristic of the grid affect the ability to successfully localize faults. To highlight the superior performance of presented fault localization and placement algorithms, the proposed strategy is applied to a modified IEEE 34, IEEE-123 bus test cases and to data from a real distribution grid. Additionally, the detection of cyber-physical attacks is also examined where PMU data and relevant Supervisory Control and Data Acquisition (SCADA) network traffic information are compared to determine if a network breach has affected the integrity of the system information and/or operations.--------------------------------------------------------------------------------
+(PDF) The Interacting Multiple Model Algorithm for Systems with Markovian Switching Coefficient (https://www.researchgate.net/publication/3020085_The_Interacting_Multiple_Model_Algorithm_for_Systems_with_Markovian_Switching_Coefficient)
+citeturn25search3 [wordlim: 200] Crawled: 6 months ago; # The Interacting Multiple Model Algorithm for Systems with Markovian Switching Coefficient
+
+  * September 1988 ... When applied to the problem of filtering for a linear system with Markovian coefficients, the method is an elegant way to derive the interacting-multiple-model (IMM) algorithm.
+Article PDF Available
+
+# The Interacting Multiple Model Algorithm for Systems with Markovian Switching Coefficient
+
+  * September 1988
+  * IEEE Transactions on Automatic Control 33(8):780 - 783
+
+DOI:10.1109/9.1299
+
+  * Source
+  * IEEE Xplore
+
+Authors:
+
+Henk A P Blom
+
+  * Delft University of Technology
+
+Yaakov bar-shalom
+
+  * University of Connecticut
+
+Image
+
+Download full-text PDFRead full-text
+
+## Abstract
+
+An important problem in filtering for linear systems with Markovian switching coefficients (dynamic multiple model systems) is the management of hypotheses, which is necessary to limit the computational requirements. A novel approach to hypotheses merging is presented for this problem. The novelty lies in the timing of hypotheses merging. When applied to the problem of filtering for a linear system with Markovian coefficients, the method is an elegant way to derive the interacting-multiple-model (IMM) algorithm. Evaluation of the IMM algorithm shows that it performs well at a relatively low computational load. These results imply a significant change in the state of the art of approximate Bayesian filtering for systems with Markovian coefficients
+
+Public Full-text 1
+
+Content uploaded by Henk A P Blom
+
+Author content
+
+All content in this area was uploaded by Henk A P Blom on Oct 28, 2013
+
+Content may be subject to copyright.--------------------------------------------------------------------------------
+Fault Detection and Localization in Active Distribution Networks using Optimally Placed Phasor Measurements Units (https://arxiv.org/abs/2204.05690)
+citeturn25academia12 [wordlim: 200] Published: 4.6 years ago; Title: Fault Detection and Localization in Active Distribution Networks using Optimally Placed Phasor Measurements Units ... This paper introduces an algorithm able to detect and localize the occurrance of a fault in an Active Distribution Network, using the measurements collected by Phasor Measurement Units (PMUs).
+Title: Fault Detection and Localization in Active Distribution Networks using Optimally Placed Phasor Measurements Units
+Authors: Francesco Conte, Fabio D'Agostino, Bruno Gabriele, Giacomo-Piero Schiapparelli, Federico Silvestro
+Date: Tue Apr 12 10:33:50 2022
+
+This paper introduces an algorithm able to detect and localize the occurrance of a fault in an Active Distribution Network, using the measurements collected by Phasor Measurement Units (PMUs). First, a basic algorithm that works under the assumption that all grid buses are equipped with a PMU is designed. Then, formal observability conditions that allow detection and localization with a reduced number of PMUs are provided. Based on these conditions, the algorithm is extended to perform correctly when not all network buses are monitored. Moreover, an Optimal Positioning Algorithm, always based on the observability conditions, is designed. This algorithm allows the user to customize the fault localization resolution. The approach is validated through simulations carried out on a benchmark active distribution network.--------------------------------------------------------------------------------
+Phasor Measurement Units Optimal Placement and Performance Limits for Fault Localization (https://www.cs.ucdavis.edu/~peisert/research/2020-JSAC-PMULocalization)
+citeturn25search13 [wordlim: 200] Crawled: 5 months ago; Phasor Measurement Units Optimal Placement and Performance Limits for Fault Localization ... The focus is on a non-trivial operating regime where the number of Phasor Measurement Unit (PMU) sensors available is insufficient to have full observability of the grid state. ... In [12], a Gaussian Markov random field (GMRF) is defined for phasor angles along with a fault detection algorithm and subsequently a decentralized approach is used for fault localization.
+Phasor Measurement Units Optimal Placement and Performance Limits for Fault Localization
+
+Mahdi Jamei, Raksha Ramakrishna, Teklemariam Tesfay, Reinhard Gentz, Ciaran Roberts, Anna Scaglione, Sean Peisert
+
+Abstract—In this paper, the performance limits of faults localization are investigated using synchrophasor data. The focus is on a non-trivial operating regime where the number of Phasor Measurement Unit (PMU) sensors available is insufficient to have full observability of the grid state. Proposed analysis uses the Kullback Leibler (KL) divergence between different fault location hypotheses, which are associated with the observation model. This analysis shows that the most likely locations are concentrated in clusters of buses more tightly connected to the actual fault site akin to graph communities. Consequently, a PMU placement strategy is derived that achieves a near-optimal resolution for localizing faults for a given number of sensors. The problem is also analyzed from the perspective of sampling a graph signal, and how the placement of the PMUs i.e. the spatial sampling pattern and the topological characteristic of the grid affect the ability to successfully localize faults is studied. To highlight the superior performance of presented fault localization and placement algorithms, the proposed strategy is applied to a modified IEEE 34, IEEE-123 bus test cases and to data from a real distribution grid. Additionally, the detection of cyber-physical attacks is also examined where PMU data and relevant Supervisory Control and Data Acquisition (SCADA) network traffic information are compared to determine if a network breach has affected the integrity of the system information and/or operations [2].
+
+Index Terms—Cluster Detection, Cyber-Physical Security, Fault Location, Identification, Intrusion Detection, Optimal PMU Placement, Phasor Measurement Units.
+
+I. INTRODUCTION
+
+One of the valuable uses of synchrophasor data from Phasor Measurement Units (PMU) is for fault localization. However, when the number of PMUs available are fewer than those required for full observability, pin-pointing the location can be problematic, as locating faults amounts to solving an underdetermined system of linear equations that has infinitely many solutions.
+--------------------------------------------------------------------------------
+1
+Fault Detection and Localization in Active
+Distr (https://scispace.com/pdf/fault-detection-and-localization-in-active-distribution-2g4s67h8.pdf)
+citeturn25search14 [wordlim: 200] Published: 4.6 years ago; Fault Detection and Localization in Active
+Distribution Networks using Optimally Placed ... [8], event detection and localization, and optimal positioning ... active distribution network.
+1
+Fault Detection and Localization in Active
+Distribution Networks using Optimally Placed
+Phasor Measurements Units
+Francesco Conte, Senior Member, IEEE, Fabio D’Agostino, Member, IEEE, Bruno Gabriele, Student
+Member, IEEE, Giacomo-Piero Schiapparelli, Member, IEEE, and Federico Silvestro, Senior Member, IEEE
+operating conditions. Such an approach opens to a plethora
+of applications both in operation and planning e.g. state
+estimation [3], [4], [5], system and load modelling [6], [7],
+[8], event detection and localization, and optimal positioning
+of measurement devices and switches [9].
+Within this context, the present paper focuses on the prob-
+lem of fault detection and localization (FDL) in Active Dis-
+tribution Networks (ADNs) using the measurements provided
+by PMUs. The goal is to detect the occurrence of a short-
+circuit in the DN and state in which portion of the grid it has
+happened.
+Abstract—This paper introduces an algorithm able to detect
+and localize the occurrence of a fault in an Active Distribution
+--------------------------------------------------------------------------------
+Fault Detection, Classification, and Localization in ADNs with Optimally Placed Micro-PMUs | IEEE Conference Publication | IEEE Xplore (https://ieeexplore.ieee.org/document/10408392/)
+citeturn25search4 [wordlim: 200] Published: 2.9 years ago; Crawled: last month; It is increasingly challenging to accurately identify, classify, and localize faults in active distribution networks (ADNs). ... In this paper, a holistic fault detection, classification, and coordinated localization framework are presented using optimally placed micro-phasor measurement units (µPMUs) with voltage sag characteristics. This research introduces a coordinated fault strategy by first determining the approximate fault location using machine learning (ML) techniques, then using the closest µPMUs to determine the exact fault location. Fault detection and classification are accomplished through a simple feed-forward neural network, whereas an ensemble bagged trees classifier is utilized for fault localization.
+
+# Fault Detection, Classification, and Localization in ADNs with Optimally Placed Micro-PMUs
+
+Publisher: IEEE
+
+## Abstract:
+
+It is increasingly challenging to accurately identify, classify, and localize faults in active distribution networks (ADNs). By accurately identifying faults, distributio...Show More
+
+## Metadata
+
+## Abstract:
+
+It is increasingly challenging to accurately identify, classify, and localize faults in active distribution networks (ADNs). By accurately identifying faults, distribution system operators (DSOs) will be able to provide reliable power to customers while reducing downtime and minimizing their maintenance costs. In this paper, a holistic fault detection, classification, and coordinated localization framework are presented using optimally placed micro-phasor measurement units (µPMUs) with voltage sag characteristics. This research introduces a coordinated fault strategy by first determining the approximate fault location using machine learning (ML) techniques, then using the closest µPMUs to determine the exact fault location. Fault detection and classification are accomplished through a simple feed-forward neural network, whereas an ensemble bagged trees classifier is utilized for fault localization. Moreover, with the proposed method, fault impedance, and ground resistance can also be correlated. The effectiveness of the method is verified in IEEE-13 and IEEE-34 node test feeders, including the effects of various µPMU placement methods from previous literature.
+
+Published in: 2023 IEEE International Conference on Energy Technologies for Future Grids (ETFG)
+
+Date of Conference: 03-06 December 2023
+
+Date Added to IEEE Xplore: 02 February 2024
+
+ISBN Information:
+
+DOI: 10.1109/ETFG55873.2023.10408392
+
+Publisher: IEEE
+
+Conference Location: Wollongong, Australia
+--------------------------------------------------------------------------------
+Board Number  | Section  | Session Title  | Paper Title  | Paper Number  | Authors (https://submissions.mirasmart.com/PESGM2025/PDF/Poster%20Session%20Handout%20final%20-7-7-25b.pdf)
+citeturn25search15 [wordlim: 200] Published: last year; Session  | Incipient Fault Detection based Active Protection of Photovoltaic ... Session  | Optimal Shunt Reactor Planning for Offshore Wind Farm  | 25PESGM-000387  | Gary Chang, Iverson Li, Christian Sinatra and Wei-Yun Huang ... Session  | Fault Detection and Localization in Active Distribution Networks
+Using Optimally Placed Phasor Measurements Units  | 25PESGM-000518  | Francesco Conte, Fabio D'Agostino, Bruno Gabriele, Giacomo-
+Chengshan Wang
+7061  | Purple - Transactions  | Transactions Paper Poster
+Session  | Robust Resilience Enhancement by EV Charging Infrastructure
+Planning in Coupled Power Distribution and Transportation
+Systems  | 25PESGM-000500  | Jianfeng Wen, Wei Gan, Chia-Chi Chu, Lin Jiang and Jiajie Luo
+7062  | Purple - Transactions  | Transactions Paper Poster
+Session  | Limitations and Performance of Pressure Relief Devices in On-
+Load Tap Changer Compartments under Arcing Faults  | 25PESGM-000509  | chenguang yan, Hao Liu, Che Xu, Hongxi Yang, Jiaxu Guo, Peng
+Zhang, Shuyou Zhu and Baohui Zhang
+7063  | Purple - Transactions  | Transactions Paper Poster
+Session  | Fault Detection and Localization in Active Distribution Networks
+Using Optimally Placed Phasor Measurements Units  | 25PESGM-000518  | Francesco Conte, Fabio D'Agostino, Bruno Gabriele, Giacomo-
+Piero Schiapparelli and Federico Silvestro
+7064  | Purple - Transactions  | Transactions Paper Poster
+Session  | A Spatio-temporal Decomposition Method for the Coordinated
+Economic Dispatch of Integrated Transmission and Distribution
+Grids  | 25PESGM-000521  | Qi Wang, Wenchuan Wu, Chenhui Lin, Yue Yang and Bin Wang
+7065  | Purple - Transactions  | Transactions Paper Poster
+Session  | Managing Renewable Energy Risk in the Brazilian Forward Market:
+The Impact of Hourly Hedging  | 25PESGM-000553  | Alexandre Street, Bruno Fanzeres and Gustavo Carvalho--------------------------------------------------------------------------------
+Fault Detection and Localization in Active Distribution Networks Using Optimally Placed Phasor Measurements Units (https://www.iris.unicampus.it/bitstream/20.500.12610/72468/1/TPS%202022.pdf)
+citeturn25search16 [wordlim: 200] Published: 3.9 years ago; Crawled: 3.9 years ago; CONTE et al.: FAULT DETECTION AND LOCALIZATION IN ACTIVE DISTRIBUTION NETWORKS 715 ... In [25], PMU that measure only voltages are optimally placed to obtain a given level of state estimation accuracy, considering also different kind of network configurations. ... The papers [38] and [39] propose an optimal PMUs placement method in reconfigurable DNs by multi-objective mixed-integer optimization. ... With respect to this paper, detection robustness is improved by using a double check and adopting different indices, one involving the Weighted Measurement Residual (WMR) and one involving the estimated zero-sequence injected currents.
+CONTE et al.: FAULT DETECTION AND LOCALIZATION IN ACTIVE DISTRIBUTION NETWORKS 715
+
+optimal positioning. In this case, localization results are approximated, but estimation errors are characterized by a probabilistic model.
+
+Some interesting approaches for Fault Localization (FL) by PMUs’ measurements are proposed also for Transmission Networks (TNs). This is the case of [18], [19] and [20]. In these works, the fault location is intended as the position of a fault along a transmission line.
+
+A problem correlated to FDL is the optimal positioning of PMUs. Indeed, the number of buses in a DN can be very high and to install a PMU at each bus may result not achievable from the economical point of view. Therefore, many papers study methods to find the minimum number and the suitable positions of PMUs, in order to keep the level of observability required to carry out state estimation and/or FDL.
+
+In [21], [22] and [23], three different optimization approaches are proposed to optimally place meters that measure bus voltages and lines power flows, with the objective of minimizing the state estimation error, exploiting also pseudo-measurements. The papers [38] and [39] propose an optimal PMUs placement method in reconfigurable DNs by multi-objective mixed-integer optimization.
+
+B. Paper Contributions
+
+The present paper introduces an algorithm for FDL in radial ADNs. The approach is inspired by the one of [10], where a series of WLS SEs are carried out considering all possible network topologies, for each fault location (each line). Differently from [10], the objective is to realize FDL without positioning PMUs at each bus, but looking for the minimum necessary number of such devices. The contributions of the paper are listed in the following.
+
+• A Fault Detection and Localization Algorithm (FDLA) able to detect, characterize and identify the line (localize) where a fault has occurred is introduced, assuming that all buses are monitored by a PMU, similarly to [10]. With respect to this paper, detection robustness is improved by using a double check and adopting different indices, one involving the Weighted Measurement Residual (WMR) and one involving the estimated zero-sequence injected currents. Moreover, localization is realized with a different criteria.
+
+• Formal observability conditions are provided, that allow the FDLA to work correctly, by removing the assumption that all buses are monitored by a PMU. Moreover, it is proved that, in this case, the grid results to be partitioned into connected lines clusters, within which it is not possible to distinguish in which line the fault has occurred. Theoretical results are specifically referred to the objective of detecting the fault and to localize the faulted portion of a radial ADNs. This marks a difference with the existing literature, which provide fault observability results mainly for meshed TNs ([18]–[20], [31]–[34]), and with the objective of stating the exact position of the fault along the transmission line.
+
+• Based on these theoretical results, the FDLA is transformed into a Fault Detection and Cluster Localization Algorithm (FDCLA), that, given a position of the PMUs in the grid, recognizes the lines cluster where the fault has occurred.
+
+• A PMUs Optimal Positioning Algorithm (OPA) is developed. It is based on the observability conditions previously provided. The advantage of the method is that the OPA can be customized to: obtain a desired localization resolution, in terms of number and composition of lines clusters; allow FDL with any possible network topology, in the case of reconfigurable ADNs.
+
+The PMUs OPA and the FDCLA are validated by simulations carried out on a benchmark ADN. Preliminary results of this paper have been published in [40].
+
+The paper is organized as follows: Section II reports the problem formulation; Section III introduces the FDLA; Section IV defines the theoretical observability and fault localizability conditions; Section V provides the FDCLA; Section VI introduce the OPA; Section VII presents simulation results; Section VIII provides the paper conclusions.--------------------------------------------------------------------------------
+References - Fundamentals of Object Tracking (https://www.cambridge.org/core/books/abs/fundamentals-of-object-tracking/references/08626863532F338908105503DAFE894D)
+citeturn25search5 [wordlim: 200] Published: 15.2 years ago; Crawled: 3 weeks ago; Blom, H. ... (1988) The interacting multiple model algorithm for systems with Markovian switching coefficients, IEEE Proceedings on Auto Control AC, 33(8), 780–783.
+R. (1991) Interacting multiple model filter for tracking maneuvering targets in spherical coordinates, in IEEE Proceedings of SOUTHEASTCON' 91, Williamsburg, VA, vol. 2, 1991, pp. 1055–1059.CrossRefGoogle Scholar
+
+Blom, H. A. P. (1984 a) A sophisticated tracking algorithm for ATC surveillance data, in Proc. International Radar Conference, Paris, May.Google Scholar
+
+Blom, H. A. P. (1984 b) An efficient filter for abruptly changing systems, in Proc. 23rd IEEE Conference on Decision and Control, Las Vegas, NV, December, pp. 656–658.CrossRefGoogle Scholar
+
+Blom, H. A. P. and Bar-Shalom, Y. (1988) The interacting multiple model algorithm for systems with Markovian switching coefficients, IEEE Proceedings on Auto Control AC, 33(8), 780–783.CrossRefGoogle Scholar
+
+Blom, H. A. P. and Bloem, E. (2002) Combining IMM and JPDA for tracking multiple maneuvering targets in clutter, in Proc. 5th International Conference on Information Fusion, Fusion 2002, Annapolis, MD, July, vol. 1, pp. 705–712.Google Scholar
+
+Bochardt, O., Calhoun, R., Uhlmann, J. K. and Julier, S. J. (2006) Generalized information representation and compression using covariance union, in Proc. 9th International Conference on Information Fusion, Fusion 2006, Florence, Italy, July, pp. 1–7.Google Scholar
+
+--------------------------------------------------------------------------------
+Multiple-model Estimation With Variable Structure Part V: Likely-model Set Algorithm - Aerospace and Electronic Systems, IEEE Transactions on (https://users.encs.concordia.ca/~ymzhang/publications/T-AES36-2-00YMZ.pdf)
+citeturn25search17 [wordlim: 200] Crawled: 11 months ago; [6] Blom, H. ... (1988)  
+The interacting multiple model algorithm for systems with Markovian switching coefficients. ... Maneuvering target tracking using adaptive turn rate models in the interacting multiple model algorithm. ... Leondes (Ed.), *Control and Dynamic Systems: Advances in Theory and Applications,* vol.
+REFERENCES
+
+[1] Ackerson, G. A., and Fu, K. S. (1970)  
+On state estimation in switching environments.  
+*IEEE Transactions on Automatic Control, AC-15* (Jan. 1970), 10–17.
+
+[2] Anderson, B. D. O., and Moore, J. B. (1979)  
+*Optimal Filtering.*  
+Englewood Cliffs, NJ: Prentice-Hall, 1979.
+
+[3] Averbuch, A., Itzikowitz, S., and Kapon, T. (1991)  
+Radar target tracking—Viterbi versus IMM.  
+*IEEE Transactions on Aerospace and Electronic Systems,*  
+*27* (May 1991), 550–563.
+
+[4] Bar-Shalom, Y., and Li, X. R. (1993)  
+*Estimation and Tracking: Principles, Techniques, and Software.*  
+Boston, MA: Artech House, 1993.
+
+[5] Bar-Shalom, Y., and Li, X. R. (1995)  
+*Multitarget-Multisensor Tracking: Principles and Techniques.*  
+Storrs, CT: YBS Publishing, 1995.
+
+[6] Blom, H. A. P., and Bar-Shalom, Y. (1988)  
+The interacting multiple model algorithm for systems with Markovian switching coefficients.  
+*IEEE Transactions on Automatic Control, 33* (Aug. 1988), 780–783.
+
+[7] Brown, R. G. (1983)  
+*Introduction to Random Signals and Kalman Filtering.--------------------------------------------------------------------------------
+Multi-fractional order estimator (https://en.wikipedia.org/wiki/Multi-fractional_order_estimator)
+citeturn25search18 [wordlim: 200] Crawled: 1.1 years ago; The MFOE also intersects with signal processing, estimation theory, economics, finance, statistics, and the method of moments. ... Blom, H. ... (1988). "The interacting multiple model algorithm for systems with Markovian switching coefficients".
+Multi-fractional order estimator
+*  Blom, H.A.P.; Bar-Shalom, Y. (1988). "The interacting multiple model algorithm for systems with Markovian switching coefficients". IEEE Transactions on Automatic Control. 33 (8). Institute of Electrical and Electronics Engineers (IEEE): 780–783. doi:10.1109/9.1299. ISSN 0018-9286. 
+*  Bar-Shalom, Y. (1996). "Estimation and Tracking: Principles, Techniques, and Software [Reviews and Abstracts]". IEEE Antennas and Propagation Magazine. 38 (1). Institute of Electrical and Electronics Engineers (IEEE): 62. Bibcode:1996IAPM...38...62B. doi:10.1109/map.1996.491294. ISSN 1045-9243. 
+*  Mazor, E.; Averbuch, A.; Bar-Shalom, Y.; Dayan, J. (1998). "Interacting multiple model methods in target tracking: a survey". IEEE Transactions on Aerospace and Electronic Systems. 34 (1). Institute of Electrical and Electronics Engineers (IEEE): 103–123. Bibcode:1998ITAES..34..103M. doi:10.1109/7.640267. ISSN 0018-9251. 
+*  Bell, Jeff (2015). "Ordinary Least Squares Revolutionized: Establishing the Vital Missing Empirically Determined Statistical Prediction Variance". SSRN Electronic Journal. Elsevier BV. doi:10.2139/ssrn.2573840. ISSN 1556-5068. 
+*  Bell, Jeff (2020-01-27). "Ordinary Least Squares Revolutionized: Establishing the Vital Missing Empirically Determined Statistical Prediction Variance". Rochester, NY. doi:10.2139/ssrn.2573840. S2CID 124520162. SSRN 2573840. {{cite journal}}: Cite journal requires |journal= (help) 
+--------------------------------------------------------------------------------
+Yaakov Bar-Shalom (https://en.wikipedia.org/wiki/Yaakov_Bar-Shalom)
+citeturn25search19 [wordlim: 200] Crawled: last month; His research includes tracking solutions when the origins or identities of sensor detections are ambiguous, and the interacting multiple model (IMM) approach for tracking maneuvering targets. ... Estimation with Applications to Tracking and Navigation: Theory Algorithms and Software. ... * Blom, Henk A. ... ; Bar-Shalom, Yaakov (1988). "The Interacting Multiple Model Algorithm for Systems with Markovian Switching Coefficients".
+--------------------------------------------------------------------------------
+dblp: Fault Detection and Localization in Active Distribution Networks using Optimally Placed Phasor Measurements Units. (https://dblp.dagstuhl.de/rec/journals/corr/abs-2204-05690.html)
+citeturn25search6 [wordlim: 200] Published: 4.5 years ago; Crawled: last month; Fault Detection and Localization in Active Distribution Networks using Optimally Placed Phasor Measurements Units.
+--------------------------------------------------------------------------------
+A switched IMM-Extended Viterbi estimator-based algorithm for maneuvering target tracking - ScienceDirect (https://www.sciencedirect.com/science/article/pii/S000510981000419X)
+citeturn25search7 [wordlim: 200] Published: 15.8 years ago; Crawled: 3 weeks ago; The proposed algorithm consists of two interacting multiple model-extended Viterbi (IMM-EV) algorithms, coupled with proposed detection schemes for maneuver occurrences and terminations as well as for switching initializations. ... In particular, the interacting multiple model (IMM) algorithm of Blom and Bar-Shalom (1988) has been popular for target tracking application (Li & Bar-Shalom, 1993) in which target motions are covered by the dynamics of an MJLS. ... His research interests are in the areas of systems control and signal processing.
+--------------------------------------------------------------------------------
+Search Results - "Phasor measurement" :: Library Catalog (https://iris.sena.edu.co/EDS/Search?dfApplied=1&filter%5B%5D=EXPAND%3A%22fulltext%22&filter%5B%5D=SubjectEDS%3A%22current+measurement%22&lookfor=%22Phasor+measurement%22&type=SU)
+citeturn25search8 [wordlim: 200] Crawled: 3 days ago; ## Phasor Measurement Units Optimal Placement and Performance Limits for Fault Localization.
+--------------------------------------------------------------------------------
+Input estimation with multiple model for maneuvering target tracking - ScienceDirect (https://www.sciencedirect.com/science/article/abs/pii/S0967066102001089)
+citeturn25search9 [wordlim: 200] Published: 23.9 years ago; Crawled: 2 months ago; This multiple modeling technique has evolved to the interacting multiple model (IMM) algorithm by Blom and Bar-shalom (1988), in which the change of the system dynamics is modeled as a Markovian parameter having a transition probability. ... The proposed algorithm accompanied with the Bogler's algorithm (Bogler, 1987) and the IMM algorithm (Blom and Bar-Shalom, 1988) is applied to a two-dimensional planar tracking problem to verify the performance through a series of simulation runs.
+--------------------------------------------------------------------------------
+Phasor Measurement Units Optimal Placement and Performance Limits for Fault Localization - researchr publication (https://researchr.org/publication/JameiRTGRSP20)
+citeturn25search10 [wordlim: 200] Crawled: 2 months ago; # Phasor Measurement Units Optimal Placement and Performance Limits for Fault Localization
+--------------------------------------------------------------------------------
+Cyber Security of Power Distribution Systems by Detecting Differences Between Real-time Micro-Synchrophasor Measurements and Cyber-Reported SCADA | Berkeley Lab Cybersecurity R&D (https://secpriv.lbl.gov/project/ceds-upmu/)
+citeturn25search11 [wordlim: 200] Published: 12.1 years ago; Crawled: last month; Mahdi Jamei, Raksha Ramakrishna, Teklemariam Tesfay, Reinhard Gentz, Ciaran Roberts, Anna Scaglione, and Sean Peisert, “Phasor Measurement Units Optimal Placement and Performance Limits for Fault Localization,” IEEE Journal on Selected Areas in Communications (J-SAC), Special Issue on Communications and Data Analytics in Smart Grid, accepted 2 October, 2019. ... Mahdi Jamei, Anna Scaglione, and Sean Peisert, “Low-Resolution Fault Localization Using Phasor Measurement Units with Community Detection,” Proceedings of the 2018 IEEE International Conference on Communications, Control, and Computing Technologies for Smart Grids (SmartGridComm), Allborg, Denmark, October 29–31, 2018.
+--------------------------------------------------------------------------------
+A Survey of Manoeuvring Target Tracking Methods (https://arxiv.org/abs/1503.07828)
+citeturn25academia20 [wordlim: 200] Published: 11.7 years ago; The problem of manoeuvre detection is covered. Classical and current filtering methods for manoeuvre tracking are presented including multi-level process noise, input estimation, variable dimension filtering, two-stage filter, the interacting multiple model algorithm, and generalised pseudo-Bayesian algorithms.
+

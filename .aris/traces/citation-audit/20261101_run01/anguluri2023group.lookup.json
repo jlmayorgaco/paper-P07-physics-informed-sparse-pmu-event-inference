@@ -1,0 +1,490 @@
+{
+  "key": "anguluri2023group",
+  "retrieved_at": "2026-11-01T03:53:21.312195+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1109%2FTCNS.2023.3258627",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1109/TCNS.2023.3258627",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:53:55.758688+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          5,
+          6
+        ]
+      ],
+      "date-time": "2026-05-06T12:44:55Z",
+      "timestamp": 1778071495794,
+      "version": "3.51.4"
+    },
+    "reference-count": 38,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "4",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2023,
+              12,
+              1
+            ]
+          ],
+          "date-time": "2023-12-01T00:00:00Z",
+          "timestamp": 1701388800000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2023,
+              12,
+              1
+            ]
+          ],
+          "date-time": "2023-12-01T00:00:00Z",
+          "timestamp": 1701388800000
+        },
+        "content-version": "am",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2023,
+              12,
+              1
+            ]
+          ],
+          "date-time": "2023-12-01T00:00:00Z",
+          "timestamp": 1701388800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2023,
+              12,
+              1
+            ]
+          ],
+          "date-time": "2023-12-01T00:00:00Z",
+          "timestamp": 1701388800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100008982",
+        "name": "National Science Foundation",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "OAC-1934766"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "OAC-1934766"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100008982",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "name": "U.S.-Israel Energy Center"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Trans. Control Netw. Syst."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2023,
+          12
+        ]
+      ]
+    },
+    "DOI": "10.1109/tcns.2023.3258627",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2023,
+          3,
+          17
+        ]
+      ],
+      "date-time": "2023-03-17T17:24:14Z",
+      "timestamp": 1679073854000
+    },
+    "page": "1997-2009",
+    "source": "Crossref",
+    "is-referenced-by-count": 8,
+    "title": [
+      "Localization and Estimation of Unknown Forced Inputs: A Group LASSO Approach"
+    ],
+    "prefix": "10.1109",
+    "volume": "10",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0003-2537-2778",
+        "authenticated-orcid": false,
+        "given": "Rajasekhar",
+        "family": "Anguluri",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "School of Electrical, Computer, and Energy Engineering, Arizona State University, Tempe, AZ, USA"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-4779-0102",
+        "authenticated-orcid": false,
+        "given": "Oliver",
+        "family": "Kosut",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Electrical, Computer, and Energy Engineering, Arizona State University, Tempe, AZ, USA"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-8122-5444",
+        "authenticated-orcid": false,
+        "given": "Lalitha",
+        "family": "Sankar",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Electrical, Computer, and Energy Engineering, Arizona State University, Tempe, AZ, USA"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s40565-017-0273-4"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s40565-016-0216-5"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2020.2982267"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2018.2834229"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PESGM.2016.7741772"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1214/11-aos896"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5705/ss.2011.075"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1111/j.1467-9868.2007.00627.x"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s00034-010-9214-4"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1561/2200000016"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPWRS.2018.2879222"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PESGM.2017.8273770"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PECI.2017.7935743"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSG.2020.3028188"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.2013.2266831"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/JSTSP.2013.2245300"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/2050-7038.12050"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.2014.2303233"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CDC.2010.5718068"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSP.2019.2899812"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ACC.2015.7172159"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.23919/ECC.2019.8795699"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.automatica.2015.10.040"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.2010.2088690"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/tcns.2023.3258627"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSP.2010.2044837"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TIT.2009.2016018"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.automatica.2019.01.011"
+      },
+      {
+        "key": "ref29",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.2009.2028976"
+      },
+      {
+        "key": "ref30",
+        "article-title": "On the $\\ell _{1}$-$\\ell _{q}$ regularized regression",
+        "author": "Liu",
+        "year": "2008"
+      },
+      {
+        "key": "ref31",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1017/9781108627771"
+      },
+      {
+        "key": "ref32",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TIT.2004.828141"
+      },
+      {
+        "key": "ref33",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/59.207380"
+      },
+      {
+        "key": "ref34",
+        "article-title": "Report on the 68-bus, 16-machine, 5-area system",
+        "author": "Singh",
+        "year": "2013"
+      },
+      {
+        "key": "ref35",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/1.9781611974997"
+      },
+      {
+        "key": "ref36",
+        "volume-title": "Generalized Inverses: Theory and Applications",
+        "author": "Ben-Israel",
+        "year": "2003"
+      },
+      {
+        "key": "ref37",
+        "article-title": "Input and state estimation for discrete-time linear systems with application to target tracking and fault detection",
+        "author": "Ansari",
+        "year": "2018"
+      },
+      {
+        "key": "ref38",
+        "article-title": "Advanced statistical theory, lecture 8",
+        "author": "Rinaldo",
+        "year": "2019"
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Control of Network Systems"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://ieeexplore.ieee.org/ielam/6509490/10364889/10075525-aam.pdf",
+        "content-type": "application/pdf",
+        "content-version": "am",
+        "intended-application": "syndication"
+      },
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/6509490/10364889/10075525.pdf?arnumber=10075525",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2024,
+          1,
+          12
+        ]
+      ],
+      "date-time": "2024-01-12T00:13:15Z",
+      "timestamp": 1705018395000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/10075525/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2023,
+          12
+        ]
+      ]
+    },
+    "references-count": 38,
+    "journal-issue": {
+      "issue": "4"
+    },
+    "URL": "https://doi.org/10.1109/tcns.2023.3258627",
+    "relation": {},
+    "ISSN": [
+      "2325-5870",
+      "2372-2533"
+    ],
+    "issn-type": [
+      {
+        "value": "2325-5870",
+        "type": "electronic"
+      },
+      {
+        "value": "2372-2533",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2023,
+          12
+        ]
+      ]
+    }
+  }
+}

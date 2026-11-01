@@ -1,0 +1,519 @@
+{
+  "key": "yildiz2024few",
+  "retrieved_at": "2026-11-01T03:53:22.102562+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1016%2Fj.epsr.2024.110705",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1016/j.epsr.2024.110705",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:09.384582+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          8,
+          3
+        ]
+      ],
+      "date-time": "2026-08-03T05:01:19Z",
+      "timestamp": 1785733279838,
+      "version": "3.56.0"
+    },
+    "reference-count": 16,
+    "publisher": "Elsevier BV",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              1
+            ]
+          ],
+          "date-time": "2024-10-01T00:00:00Z",
+          "timestamp": 1727740800000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              1
+            ]
+          ],
+          "date-time": "2024-10-01T00:00:00Z",
+          "timestamp": 1727740800000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/legal/tdmrep-license"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              6,
+              29
+            ]
+          ],
+          "date-time": "2026-06-29T00:00:00Z",
+          "timestamp": 1782691200000
+        },
+        "content-version": "am",
+        "delay-in-days": 636,
+        "URL": "http://www.elsevier.com/open-access/userlicense/1.0/"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              1
+            ]
+          ],
+          "date-time": "2024-10-01T00:00:00Z",
+          "timestamp": 1727740800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-017"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              1
+            ]
+          ],
+          "date-time": "2024-10-01T00:00:00Z",
+          "timestamp": 1727740800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              1
+            ]
+          ],
+          "date-time": "2024-10-01T00:00:00Z",
+          "timestamp": 1727740800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-012"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              1
+            ]
+          ],
+          "date-time": "2024-10-01T00:00:00Z",
+          "timestamp": 1727740800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              1
+            ]
+          ],
+          "date-time": "2024-10-01T00:00:00Z",
+          "timestamp": 1727740800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-004"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/100006134",
+        "name": "Office of Energy Efficiency and Renewable Energy",
+        "doi-asserted-by": "publisher",
+        "id": [
+          {
+            "id": "10.13039/100006134",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/100000015",
+        "name": "U.S. Department of Energy",
+        "doi-asserted-by": "publisher",
+        "id": [
+          {
+            "id": "10.13039/100000015",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/100011883",
+        "name": "Solar Energy Technologies Office",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "DE-EE0009356"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "DE-EE0009356"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/100011883",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "elsevier.com",
+        "sciencedirect.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "Electric Power Systems Research"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2024,
+          10
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.epsr.2024.110705",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2024,
+          6,
+          29
+        ]
+      ],
+      "date-time": "2024-06-29T13:13:17Z",
+      "timestamp": 1719666797000
+    },
+    "page": "110705",
+    "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 12,
+    "special_numbering": "C",
+    "title": [
+      "Convolutional Neural Network-assisted fault detection and location using few PMUs"
+    ],
+    "prefix": "10.1016",
+    "volume": "235",
+    "author": [
+      {
+        "given": "Tuna",
+        "family": "Yildiz",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-8751-9125",
+        "authenticated-orcid": false,
+        "given": "Ali",
+        "family": "Abur",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "78",
+    "reference": [
+      {
+        "key": "10.1016/j.epsr.2024.110705_b1",
+        "first-page": "5",
+        "article-title": "Modelling and analysis of electric power systems",
+        "author": "Andersson",
+        "year": "2008",
+        "journal-title": "ETH Zurich"
+      },
+      {
+        "key": "10.1016/j.epsr.2024.110705_b2",
+        "series-title": "Power Systems Modelling and Fault Analysis: Theory and Practice",
+        "author": "Tleis",
+        "year": "2007"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.epsr.2024.110705_b3",
+        "doi-asserted-by": "crossref",
+        "first-page": "119",
+        "DOI": "10.1109/JSAC.2019.2951964",
+        "article-title": "Fault location in power distribution systems via deep graph convolutional networks",
+        "volume": "38",
+        "author": "Chen",
+        "year": "2020",
+        "journal-title": "IEEE J. Sel. Areas Commun."
+      },
+      {
+        "key": "10.1016/j.epsr.2024.110705_b4",
+        "series-title": "2018 15th International Multi-Conference on Systems, Signals & Devices",
+        "first-page": "94",
+        "article-title": "Smart fault detection and classification for distribution grid hybridizing ST and MLP-NN",
+        "author": "Aljohani",
+        "year": "2018"
+      },
+      {
+        "key": "10.1016/j.epsr.2024.110705_b5",
+        "series-title": "2022 12th International Conference on Electrical and Computer Engineering",
+        "first-page": "252",
+        "article-title": "Deep neural network based fault classification and location detection in power transmission line",
+        "author": "Ahmed",
+        "year": "2022"
+      },
+      {
+        "key": "10.1016/j.epsr.2024.110705_b6",
+        "doi-asserted-by": "crossref",
+        "first-page": "85",
+        "DOI": "10.1007/s12667-014-0129-1",
+        "article-title": "Methodologies in power systems fault detection and diagnosis",
+        "volume": "6",
+        "author": "Aleem",
+        "year": "2015",
+        "journal-title": "Energy Syst."
+      },
+      {
+        "key": "10.1016/j.epsr.2024.110705_b7",
+        "series-title": "Fault location using sparse L1 estimator and phasor measurement units",
+        "author": "Mouco",
+        "year": "2019"
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.epsr.2024.110705_b8",
+        "doi-asserted-by": "crossref",
+        "first-page": "2938",
+        "DOI": "10.1109/TPWRS.2015.2469606",
+        "article-title": "Fault location using wide-area measurements and sparse estimation",
+        "volume": "31",
+        "author": "Feng",
+        "year": "2016",
+        "journal-title": "IEEE Trans. Power Syst."
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.epsr.2024.110705_b9",
+        "doi-asserted-by": "crossref",
+        "first-page": "267",
+        "DOI": "10.1111/j.2517-6161.1996.tb02080.x",
+        "article-title": "Regression shrinkage and selection via the lasso",
+        "volume": "58",
+        "author": "Tibshirani",
+        "year": "1996",
+        "journal-title": "J. R. Stat. Soc. Ser. B Stat. Methodol."
+      },
+      {
+        "key": "10.1016/j.epsr.2024.110705_b10",
+        "series-title": "2017 IEEE International Conference on Circuits and Systems",
+        "first-page": "334",
+        "article-title": "Optimal PMU placement for coordinated observability of power system under contingencies",
+        "author": "Shrivastava",
+        "year": "2017"
+      },
+      {
+        "key": "10.1016/j.epsr.2024.110705_b11",
+        "series-title": "2018 IEEE/PES Transmission and Distribution Conference and Exposition (T&D)",
+        "first-page": "1",
+        "article-title": "Multi-phase PMU placement considering reliability of power system network",
+        "author": "Kumar",
+        "year": "2018"
+      },
+      {
+        "key": "10.1016/j.epsr.2024.110705_b12",
+        "series-title": "IEEE PES Innovative Smart Grid Technologies, Europe",
+        "first-page": "1",
+        "article-title": "Optimal PMU placement for state estimation robustness",
+        "author": "Göl",
+        "year": "2014"
+      },
+      {
+        "key": "10.1016/j.epsr.2024.110705_b13",
+        "first-page": "93",
+        "article-title": "Ordinary least squares",
+        "volume": "93",
+        "author": "Dismuke",
+        "year": "2006",
+        "journal-title": "Methods Des. Outcomes Res."
+      },
+      {
+        "key": "10.1016/j.epsr.2024.110705_b14",
+        "doi-asserted-by": "crossref",
+        "unstructured": "S. Ben Driss, M. Soua, R. Kachouri, M. Akil, A comparison study between MLP and Convolutional Neural Network models for character recognition, in: SPIE Conference on Real-Time Image and Video Processing, Anaheim, CA, United States, 2017, HAL Id: hal-01525504.",
+        "DOI": "10.1117/12.2262589"
+      },
+      {
+        "key": "10.1016/j.epsr.2024.110705_b15",
+        "series-title": "Deep Learning",
+        "author": "Goodfellow",
+        "year": "2016"
+      },
+      {
+        "key": "10.1016/j.epsr.2024.110705_b16",
+        "series-title": "Keras",
+        "author": "Chollet",
+        "year": "2015"
+      }
+    ],
+    "container-title": [
+      "Electric Power Systems Research"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0378779624005911?httpAccept=text/xml",
+        "content-type": "text/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0378779624005911?httpAccept=text/plain",
+        "content-type": "text/plain",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2025,
+          6,
+          17
+        ]
+      ],
+      "date-time": "2025-06-17T01:54:12Z",
+      "timestamp": 1750125252000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0378779624005911"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2024,
+          10
+        ]
+      ]
+    },
+    "references-count": 16,
+    "alternative-id": [
+      "S0378779624005911"
+    ],
+    "URL": "https://doi.org/10.1016/j.epsr.2024.110705",
+    "relation": {},
+    "ISSN": [
+      "0378-7796"
+    ],
+    "issn-type": [
+      {
+        "value": "0378-7796",
+        "type": "print"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2024,
+          10
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "Elsevier",
+        "name": "publisher",
+        "label": "This article is maintained by"
+      },
+      {
+        "value": "Convolutional Neural Network-assisted fault detection and location using few PMUs",
+        "name": "articletitle",
+        "label": "Article Title"
+      },
+      {
+        "value": "Electric Power Systems Research",
+        "name": "journaltitle",
+        "label": "Journal Title"
+      },
+      {
+        "value": "https://doi.org/10.1016/j.epsr.2024.110705",
+        "name": "articlelink",
+        "label": "CrossRef DOI link to publisher maintained version"
+      },
+      {
+        "value": "article",
+        "name": "content_type",
+        "label": "Content Type"
+      },
+      {
+        "value": "© 2024 Elsevier B.V. All rights are reserved, including those for text and data mining, AI training, and similar technologies.",
+        "name": "copyright",
+        "label": "Copyright"
+      }
+    ],
+    "article-number": "110705"
+  }
+}

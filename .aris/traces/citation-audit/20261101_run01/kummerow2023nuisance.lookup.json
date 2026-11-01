@@ -1,0 +1,408 @@
+{
+  "key": "kummerow2023nuisance",
+  "retrieved_at": "2026-11-01T03:53:22.751819+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1515%2Fauto-2023-0023",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1515/auto-2023-0023",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:26.464225+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2023,
+          10,
+          28
+        ]
+      ],
+      "date-time": "2023-10-28T09:46:48Z",
+      "timestamp": 1698486408141
+    },
+    "reference-count": 31,
+    "publisher": "Walter de Gruyter GmbH",
+    "issue": "10",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2023,
+              10,
+              1
+            ]
+          ],
+          "date-time": "2023-10-01T00:00:00Z",
+          "timestamp": 1696118400000
+        },
+        "content-version": "unspecified",
+        "delay-in-days": 0,
+        "URL": "http://creativecommons.org/licenses/by/4.0"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2023,
+          10,
+          26
+        ]
+      ]
+    },
+    "abstract": "<jats:title>Abstract</jats:title>\n               <jats:p>The online classification of grid disturbances in power transmission systems has been investigated since many years and shows promising results on measured and simulated PMU signals. Nonetheless, a practical deployment of machine learning techniques is still challenging due to robustness problems, which may lead to severe misclassifications in the model application. This paper formulates an advanced evaluation procedure for disturbance classification methods by introducing additional measurement noise, unknown operational points, and unknown disturbance events in the test dataset. Based on preliminary work, Siamese Sigmoid Networks are used as classification approach and are compared against several benchmark models for a simulated power transmission system at 400 kV. Different test scenarios are proposed to evaluate the disturbance classification models assuming a limited and full observability of the grid with PMUs.</jats:p>",
+    "DOI": "10.1515/auto-2023-0023",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2023,
+          10,
+          17
+        ]
+      ],
+      "date-time": "2023-10-17T09:23:06Z",
+      "timestamp": 1697534586000
+    },
+    "page": "867-877",
+    "source": "Crossref",
+    "is-referenced-by-count": 0,
+    "title": [
+      "Influence of nuisance variables on the PMU-based disturbance classification in power transmission systems"
+    ],
+    "prefix": "10.1515",
+    "volume": "71",
+    "author": [
+      {
+        "given": "André",
+        "family": "Kummerow",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Department of Cognitive Energy Systems, Fraunhofer IOSB, IOSB-AST , Ilmenau , Germany"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Peter",
+        "family": "Bretschneider",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Cognitive Energy Systems, Fraunhofer IOSB, IOSB-AST , Ilmenau , Germany"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "member": "374",
+    "published-online": {
+      "date-parts": [
+        [
+          2023,
+          10,
+          17
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "2023102710243817027_j_auto-2023-0023_ref_001",
+        "doi-asserted-by": "crossref",
+        "unstructured": "C. Liu, S. McArthur, and S.-J. Lee, “Remedial action schemes and defense systems,” in Smart Grid Handbook, Chichester, UK, John Wiley & Sons, Ltd, 2016, pp. 1–10.",
+        "DOI": "10.1002/9781118755471.sgd032"
+      },
+      {
+        "key": "2023102710243817027_j_auto-2023-0023_ref_002",
+        "unstructured": "A. Kummerow, C. Brosinsky, C. Monsalve, S. Nicolai, P. Bretschneider, and D. Westermann, “PMU-based online and offline applications for modern power system control centers in hybrid AC-HVDC transmission systems,” in Proceedings of International ETG Congress 2019, 2019, pp. 405–410."
+      },
+      {
+        "key": "2023102710243817027_j_auto-2023-0023_ref_003",
+        "doi-asserted-by": "crossref",
+        "unstructured": "C. Brosinsky, A. Kummerow, A. Naumann, A. Krönig, S. Balischewski, and D. Westermann, “A new development platform for the next generation of power system control center functionalities for hybrid AC-HVDC transmission systems,” in IEEE Power & Energy Society General Meeting, 2017, pp. 1–5.",
+        "DOI": "10.1109/PESGM.2017.8274090"
+      },
+      {
+        "key": "2023102710243817027_j_auto-2023-0023_ref_004",
+        "doi-asserted-by": "crossref",
+        "unstructured": "A. Phadke, M. Pai, A. Stankovic, and J. Thorp, Synchronized Phasor Measurements and Their Applications, New York, NY; Heidelberg, Springer, 2008.",
+        "DOI": "10.1007/978-0-387-76537-2"
+      },
+      {
+        "key": "2023102710243817027_j_auto-2023-0023_ref_005",
+        "doi-asserted-by": "crossref",
+        "unstructured": "N. Sharma, A. Tiwari, K. Verma, and S. Singh, “Applications of phasor measurement units (PMUs) in electric power system networks incorporated with FACTS controllers,” Int. J. Eng. Sci. Technol., vol. 3, no. 3, p. 19, 2011. https://doi.org/10.4314/ijest.v3i3.68423.",
+        "DOI": "10.4314/ijest.v3i3.68423"
+      },
+      {
+        "key": "2023102710243817027_j_auto-2023-0023_ref_006",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Y. Chen, L. Xie, and P. Kumar, “Power system event classification via dimensionality reduction of synchrophasor data,” in IEEE 8th Sensor Array and Multichannel Signal Processing Workshop (SAM), 2014, pp. 57–60.",
+        "DOI": "10.1109/SAM.2014.6882337"
+      },
+      {
+        "key": "2023102710243817027_j_auto-2023-0023_ref_007",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Y. Ge, A. Flueck, D.-K. Kim, J.-B. Ahn, J.-D. Lee, and D.-Y. Kwon, “Power system real-time event detection and associated data archival reduction based on synchrophasors,” IEEE Trans. Smart Grid, vol. 6, no. 4, pp. 2088–2097, 2015. https://doi.org/10.1109/tsg.2014.2383693.",
+        "DOI": "10.1109/TSG.2014.2383693"
+      },
+      {
+        "key": "2023102710243817027_j_auto-2023-0023_ref_008",
+        "doi-asserted-by": "crossref",
+        "unstructured": "M. Biswal, Y. Hao, P. Chen, S. Brahma, H. Cao, and P. Leo, “Signal features for classification of power system disturbances using PMU data,” in 19th Power Systems Computation Conference, 2016, pp. 1–7.",
+        "DOI": "10.1109/PSCC.2016.7540867"
+      },
+      {
+        "key": "2023102710243817027_j_auto-2023-0023_ref_009",
+        "doi-asserted-by": "crossref",
+        "unstructured": "A. Singh and M. Fozdar, “Supervisory framework for event detection and classification using wavelet transform,” in IEEE PES General Meeting, 2017, pp. 1–5.",
+        "DOI": "10.1109/PESGM.2017.8274283"
+      },
+      {
+        "key": "2023102710243817027_j_auto-2023-0023_ref_010",
+        "doi-asserted-by": "crossref",
+        "unstructured": "A. Mathew and M. Aravind, “PMU based disturbance analysis and fault localization of a large grid using wavelets and list processing,” in Proceedings of the 2016 IEEE Region 10 Conference (TENCON), 2016, pp. 879–883.",
+        "DOI": "10.1109/TENCON.2016.7848131"
+      },
+      {
+        "key": "2023102710243817027_j_auto-2023-0023_ref_011",
+        "doi-asserted-by": "crossref",
+        "unstructured": "J. Ma, Y. Makarov, R. Diao, P. Etingov, J. Dagle, and E. Tuglie, “The characteristic ellipsoid methodology and its application in power systems,” IEEE Trans. Power Syst., vol. 27, no. 4, pp. 2206–2214, 2012. https://doi.org/10.1109/tpwrs.2012.2195232.",
+        "DOI": "10.1109/TPWRS.2012.2195232"
+      },
+      {
+        "key": "2023102710243817027_j_auto-2023-0023_ref_012",
+        "doi-asserted-by": "crossref",
+        "unstructured": "G. Gajjar and S. Soman, “Auto detection of power system events using wide area frequency measurements,” in Eighteenth National Power Systems Conference (NPSC), 2014, pp. 1–6.",
+        "DOI": "10.1109/NPSC.2014.7103879"
+      },
+      {
+        "key": "2023102710243817027_j_auto-2023-0023_ref_013",
+        "doi-asserted-by": "crossref",
+        "unstructured": "D. Nguyen, R. Barella, S. Wallace, X. Zhao, and X. Liang, “Smart grid line event classification using supervised learning over PMU data streams,” in Sixth International Green and Sustainable Computing Conference, 2015, pp. 1–8.",
+        "DOI": "10.1109/IGCC.2015.7393695"
+      },
+      {
+        "key": "2023102710243817027_j_auto-2023-0023_ref_014",
+        "doi-asserted-by": "crossref",
+        "unstructured": "O. Dahal, H. Cao, S. Brahma, and R. Kavaseri, “Evaluating performance of classifiers for supervisory protection using disturbance data from phasor measurement units,” in IEEE PES Innovative Smart Grid Technologies Conference Europe (ISGT-Europe), 2014, pp. 1–6.",
+        "DOI": "10.1109/ISGTEurope.2014.7028892"
+      },
+      {
+        "key": "2023102710243817027_j_auto-2023-0023_ref_015",
+        "unstructured": "S. Fries and C.-P. Rückemann, “Finding needles in a haystack: line event detection on smart grid PMU data streams,” in The Sixth International Conference on Smart Grids, vol. 6, Green Communications and IT Energy-Aware Technologies, 2016, p. 6."
+      },
+      {
+        "key": "2023102710243817027_j_auto-2023-0023_ref_016",
+        "doi-asserted-by": "crossref",
+        "unstructured": "R. Yadav, A. Pradhan, and I. Kamwa, “Real-time multiple event detection and classification in power system using signal energy transformations,” IEEE Trans. Ind. Inf., vol. 15, pp. 1521–1531, 2018. https://doi.org/10.1109/tii.2018.2855428.",
+        "DOI": "10.1109/TII.2018.2855428"
+      },
+      {
+        "key": "2023102710243817027_j_auto-2023-0023_ref_017",
+        "unstructured": "P. E. A. Cardoso, Deep Learning Applied to PMU Data in Power Systems, Porto, Portugal, Faculdade de Engenharia, 2016."
+      },
+      {
+        "key": "2023102710243817027_j_auto-2023-0023_ref_018",
+        "doi-asserted-by": "crossref",
+        "unstructured": "W. Wang, H. Yin, C. Chen, et al.., “Frequency disturbance event detection based on synchrophasors and deep learning,” IEEE Trans. Smart Grid, vol. 4, pp. 3593–3605, 2020. https://doi.org/10.1109/tsg.2020.2971909.",
+        "DOI": "10.1109/TSG.2020.2971909"
+      },
+      {
+        "key": "2023102710243817027_j_auto-2023-0023_ref_019",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Y. Zhu, C. Liu, and K. Sun, “Image embedding of PMU data for deep learning towards transient disturbance classification,” in IEEE International Conference on Energy Internet (ICEI), 2018, pp. 169–174.",
+        "DOI": "10.1109/ICEI.2018.00038"
+      },
+      {
+        "key": "2023102710243817027_j_auto-2023-0023_ref_020",
+        "doi-asserted-by": "crossref",
+        "unstructured": "K. Mahapatra, S. Lu, A. Sengupta, and N. R. Chaudhuri, “Power system disturbance classification with online event-driven neuromorphic computing,” IEEE Trans. Smart Grid, vol. 12, no. 3, p. 11, 2021.",
+        "DOI": "10.1109/TSG.2020.3043782"
+      },
+      {
+        "key": "2023102710243817027_j_auto-2023-0023_ref_021",
+        "doi-asserted-by": "crossref",
+        "unstructured": "T. Athay, R. Podmore, and S. Virmani, “A practical method for the direct analysis of transient stability,” IEEE Trans. Power Appar. Syst., vol. 2, pp. 573–584, 1979. https://doi.org/10.1109/tpas.1979.319407.",
+        "DOI": "10.1109/TPAS.1979.319407"
+      },
+      {
+        "key": "2023102710243817027_j_auto-2023-0023_ref_022",
+        "doi-asserted-by": "crossref",
+        "unstructured": "S. Brahma, R. Kavasseri, H. Cao, N. R. Chaudhuri, T. Alexopoulos, and Y. Cui, “Real-time identification of dynamic events in power systems using PMU data, and potential applications—models, promises, and challenges,” IEEE Trans. Power Delivery, vol. 32, pp. 294–301, 2017. https://doi.org/10.1109/tpwrd.2016.2590961.",
+        "DOI": "10.1109/TPWRD.2016.2590961"
+      },
+      {
+        "key": "2023102710243817027_j_auto-2023-0023_ref_023",
+        "doi-asserted-by": "crossref",
+        "unstructured": "A. Kummerow, M. Dirbas, C. Monsalve, and P. Bretschneider, “Siamese Sigmoid Networks for the open classification of grid disturbances in power transmission systems,” IET Smart Grid, vol. 7, no. 1, pp. 11–146, 2022. https://doi.org/10.1049/stg2.12083.",
+        "DOI": "10.1049/stg2.12083"
+      },
+      {
+        "key": "2023102710243817027_j_auto-2023-0023_ref_024",
+        "doi-asserted-by": "crossref",
+        "unstructured": "A. Kummerow, M. Dirbas, C. Monsalve, S. Nicolai, and P. Bretschneider, “Robust disturbance classification in power transmission systems with denoising recurrent autoencoders,” Sustain. Energy, Grids Netw., vol. 32, no. 15, p. 10, 2022. https://doi.org/10.1016/j.segan.2022.100803.",
+        "DOI": "10.1016/j.segan.2022.100803"
+      },
+      {
+        "key": "2023102710243817027_j_auto-2023-0023_ref_025",
+        "doi-asserted-by": "crossref",
+        "unstructured": "A. Kummerow, C. Monsalve, and P. Bretschneider, “Siamese recurrent neural networks for the robust classification of grid disturbances in transmission power systems considering unknown events,” IET Smart Grid, vol. 5, pp. 11–61, 2021. https://doi.org/10.1049/stg2.12051.",
+        "DOI": "10.1049/stg2.12051"
+      },
+      {
+        "key": "2023102710243817027_j_auto-2023-0023_ref_026",
+        "doi-asserted-by": "crossref",
+        "unstructured": "A. Kummerow, C. Monsalve, S. Nicolai, and P. Bretschneider, “Simultaneous online identification and localization of disturbances in power transmission systems,” in IEEE PES Innovative Smart Grid Technologies Europe (ISGT-Europe), 2019, pp. 1–5.",
+        "DOI": "10.1109/ISGTEurope.2019.8905711"
+      },
+      {
+        "key": "2023102710243817027_j_auto-2023-0023_ref_027",
+        "doi-asserted-by": "crossref",
+        "unstructured": "M. Biswal, S. M. Brahma, and H. Cao, “Supervisory protection and automated event diagnosis using PMU data,” IEEE Trans. Power Delivery, vol. 31, no. 4, pp. 1855–1863, 2016. https://doi.org/10.1109/tpwrd.2016.2520958.",
+        "DOI": "10.1109/TPWRD.2016.2520958"
+      },
+      {
+        "key": "2023102710243817027_j_auto-2023-0023_ref_028",
+        "doi-asserted-by": "crossref",
+        "unstructured": "F. Schroff, D. Kalenichenko, and J. Philbin, “FaceNet: a unified embedding for face recognition and clustering,” in IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2015, pp. 815–823.",
+        "DOI": "10.1109/CVPR.2015.7298682"
+      },
+      {
+        "key": "2023102710243817027_j_auto-2023-0023_ref_029",
+        "doi-asserted-by": "crossref",
+        "unstructured": "L. Shu, H. Xu, and B. Liu, “DOC: deep open classification of text documents,” in Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing, 2017, pp. 2911–2916.",
+        "DOI": "10.18653/v1/D17-1314"
+      },
+      {
+        "key": "2023102710243817027_j_auto-2023-0023_ref_030",
+        "unstructured": "C. Geng, S.-J. Huang, and S. Chen, “Recent advances in open set recognition: a survey,” arXiv, 2018."
+      },
+      {
+        "key": "2023102710243817027_j_auto-2023-0023_ref_031",
+        "doi-asserted-by": "crossref",
+        "unstructured": "A. Kummerow, M. Dirbas, C. Monsalve, S. Nicolai, and P. Bretschneider, “Influence of autoregressive noise on phasor data based disturbance classification,” in International Conference on Smart Energy Systems and Technologies (SEST), 2021, pp. 1–6.",
+        "DOI": "10.1109/SEST50973.2021.9543278"
+      }
+    ],
+    "container-title": [
+      "at - Automatisierungstechnik"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://www.degruyter.com/document/doi/10.1515/auto-2023-0023/xml",
+        "content-type": "application/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://www.degruyter.com/document/doi/10.1515/auto-2023-0023/pdf",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2023,
+          10,
+          27
+        ]
+      ],
+      "date-time": "2023-10-27T10:25:34Z",
+      "timestamp": 1698402334000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://www.degruyter.com/document/doi/10.1515/auto-2023-0023/html"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2023,
+          10,
+          1
+        ]
+      ]
+    },
+    "references-count": 31,
+    "journal-issue": {
+      "issue": "10",
+      "published-online": {
+        "date-parts": [
+          [
+            2023,
+            10,
+            17
+          ]
+        ]
+      },
+      "published-print": {
+        "date-parts": [
+          [
+            2023,
+            10,
+            26
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "10.1515/auto-2023-0023"
+    ],
+    "URL": "https://doi.org/10.1515/auto-2023-0023",
+    "relation": {},
+    "ISSN": [
+      "0178-2312",
+      "2196-677X"
+    ],
+    "issn-type": [
+      {
+        "value": "0178-2312",
+        "type": "print"
+      },
+      {
+        "value": "2196-677X",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2023,
+          10,
+          1
+        ]
+      ]
+    }
+  }
+}

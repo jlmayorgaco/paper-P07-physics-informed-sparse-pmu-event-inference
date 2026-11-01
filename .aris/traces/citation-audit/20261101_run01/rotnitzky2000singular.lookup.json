@@ -1,0 +1,183 @@
+{
+  "key": "rotnitzky2000singular",
+  "retrieved_at": "2026-11-01T03:53:23.398772+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.2307%2F3318576",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.2307/3318576",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:42.549325+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          7
+        ]
+      ],
+      "date-time": "2026-10-07T00:58:07Z",
+      "timestamp": 1791334687162,
+      "version": "4.3.1"
+    },
+    "reference-count": 0,
+    "publisher": "JSTOR",
+    "issue": "2",
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "Bernoulli"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2000,
+          4
+        ]
+      ]
+    },
+    "DOI": "10.2307/3318576",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2006,
+          4,
+          18
+        ]
+      ],
+      "date-time": "2006-04-18T05:49:16Z",
+      "timestamp": 1145339356000
+    },
+    "page": "243",
+    "source": "Crossref",
+    "is-referenced-by-count": 108,
+    "title": [
+      "Likelihood-Based Inference with Singular Information Matrix"
+    ],
+    "prefix": "10.2307",
+    "volume": "6",
+    "author": [
+      {
+        "given": "Andrea",
+        "family": "Rotnitzky",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "David R.",
+        "family": "Cox",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Matteo",
+        "family": "Bottai",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "James",
+        "family": "Robins",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "1121",
+    "container-title": [
+      "Bernoulli"
+    ],
+    "original-title": [],
+    "deposited": {
+      "date-parts": [
+        [
+          2018,
+          4,
+          18
+        ]
+      ],
+      "date-time": "2018-04-18T08:19:00Z",
+      "timestamp": 1524039540000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://www.jstor.org/stable/3318576?origin=crossref"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2000,
+          4
+        ]
+      ]
+    },
+    "references-count": 0,
+    "journal-issue": {
+      "issue": "2",
+      "published-print": {
+        "date-parts": [
+          [
+            2000,
+            4
+          ]
+        ]
+      }
+    },
+    "URL": "https://doi.org/10.2307/3318576",
+    "relation": {},
+    "ISSN": [
+      "1350-7265"
+    ],
+    "issn-type": [
+      {
+        "value": "1350-7265",
+        "type": "print"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2000,
+          4
+        ]
+      ]
+    }
+  }
+}

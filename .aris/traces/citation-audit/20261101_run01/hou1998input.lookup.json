@@ -1,0 +1,195 @@
+{
+  "key": "hou1998input",
+  "retrieved_at": "2026-11-01T03:53:22.724873+00:00",
+  "requests": [
+    {
+      "url": "https://api.crossref.org/works/10.1016%2FS0005-1098%2898%2900021-1",
+      "status": "error",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1016/S0005-1098(98)00021-1",
+      "status": "success",
+      "retrieved_at": "2026-11-01T03:54:22.655738+00:00"
+    }
+  ],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          4
+        ]
+      ],
+      "date-time": "2026-10-04T13:22:38Z",
+      "timestamp": 1791120158674,
+      "version": "4.1.0"
+    },
+    "reference-count": 0,
+    "publisher": "Elsevier BV",
+    "issue": "6",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              1998,
+              6,
+              1
+            ]
+          ],
+          "date-time": "1998-06-01T00:00:00Z",
+          "timestamp": 896659200000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "Automatica"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          1998,
+          6
+        ]
+      ]
+    },
+    "DOI": "10.1016/s0005-1098(98)00021-1",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2002,
+          7,
+          26
+        ]
+      ],
+      "date-time": "2002-07-26T00:26:58Z",
+      "timestamp": 1027643218000
+    },
+    "page": "789-794",
+    "source": "Crossref",
+    "is-referenced-by-count": 202,
+    "title": [
+      "Input Observability and Input Reconstruction"
+    ],
+    "prefix": "10.1016",
+    "volume": "34",
+    "author": [
+      {
+        "given": "M.",
+        "family": "HOU",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "R.J.",
+        "family": "PATTON",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "78",
+    "container-title": [
+      "Automatica"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0005109898000211?httpAccept=text/xml",
+        "content-type": "text/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0005109898000211?httpAccept=text/plain",
+        "content-type": "text/plain",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2019,
+          4,
+          12
+        ]
+      ],
+      "date-time": "2019-04-12T05:24:11Z",
+      "timestamp": 1555046651000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0005109898000211"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          1998,
+          6
+        ]
+      ]
+    },
+    "references-count": 0,
+    "journal-issue": {
+      "issue": "6",
+      "published-print": {
+        "date-parts": [
+          [
+            1998,
+            6
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "S0005109898000211"
+    ],
+    "URL": "https://doi.org/10.1016/s0005-1098(98)00021-1",
+    "relation": {},
+    "ISSN": [
+      "0005-1098"
+    ],
+    "issn-type": [
+      {
+        "value": "0005-1098",
+        "type": "print"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          1998,
+          6
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "id": "S01_ET_SHORT_H04_V2_METADATA_FREE",
+  "status": "FROZEN_BEFORE_METADATA_FREE_AUDIT_REPLAY",
+  "frozen_utc": "2026-11-01T02:27:55.463436+00:00",
+  "model_variant": "SHORT",
+  "model_sha256": "9b83975d80bbb7e8ae7a387b65de486808699a93d941f5635f370ea92578efcb",
+  "model_freeze_sha256": "50f360b3fdca403f9ce84d73b8f927c026c89167b09e34befdfc7add13185f3c",
+  "training_plan_sha256": "b6ab35502bae7693e0b1eb41d26005d66267b17f14686e2387162995618c8993",
+  "registry_sha256": "f459baf0af71e1034282f22255618d5c0f0ef369cabbf2e837d87cda95daa8c6",
+  "split_sha256": "af49df26c04778b970e10847e256d151fc8157cd691e61367bdc241dcbf6c1a5",
+  "runner_sha256": "217b45ca1f88c7c7a965e593ce42826a8cb4218558a6df5adceb983109e62c59",
+  "evaluator_sha256": "48ef0edd55a2013d3cfb7cbffaef080deabc4a744fb739a936abaa43f915d346",
+  "successor_metrics_sha256": "eff5e1b2d71e45e5ba9883808e6a34758813c1c11e60703790be79e48f10a7f9",
+  "records": [
+    {
+      "record_id": "S001",
+      "uid": "H04_R12_OPEN_DEVELOPMENT/S001",
+      "observation_path": "experiments/E5_VALIDATION_PAPER/M03_R12_CAUSAL_BIRTH/protocol/new_holdout/data/observed/S001.npz",
+      "observation_sha256": "da147212987882c6c4c1a3ac9fa9b745a9fa20413a4dbe45fbda0eabe21ccc78",
+      "reports": 2401,
+      "duration_s": 80
+    },
+    {
+      "record_id": "S002",
+      "uid": "H04_R12_OPEN_DEVELOPMENT/S002",
+      "observation_path": "experiments/E5_VALIDATION_PAPER/M03_R12_CAUSAL_BIRTH/protocol/new_holdout/data/observed/S002.npz",
+      "observation_sha256": "860c844d9c56e52344ee78f9ee15294dbe8800cd550cad0ed11b29642ab0774c",
+      "reports": 2401,
+      "duration_s": 80
+    },
+    {
+      "record_id": "S003",
+      "uid": "H04_R12_OPEN_DEVELOPMENT/S003",
+      "observation_path": "experiments/E5_VALIDATION_PAPER/M03_R12_CAUSAL_BIRTH/protocol/new_holdout/data/observed/S003.npz",
+      "observation_sha256": "27615582d3150635b5d3f0c87b2054c6d715e01c89b7788db05719c3b67584bb",
+      "reports": 2401,
+      "duration_s": 80
+    },
+    {
+      "record_id": "S004",
+      "uid": "H04_R12_OPEN_DEVELOPMENT/S004",
+      "observation_path": "experiments/E5_VALIDATION_PAPER/M03_R12_CAUSAL_BIRTH/protocol/new_holdout/data/observed/S004.npz",
+      "observation_sha256": "e689e8ef18e1fc27e869a50fe351d0fcca6898bb8f325c1475f87bee0bff5286",
+      "reports": 2401,
+      "duration_s": 80
+    },
+    {
+      "record_id": "S005",
+      "uid": "H04_R12_OPEN_DEVELOPMENT/S005",
+      "observation_path": "experiments/E5_VALIDATION_PAPER/M03_R12_CAUSAL_BIRTH/protocol/new_holdout/data/observed/S005.npz",
+      "observation_sha256": "d9c19e377be7013cc495d2e6e1f57dbcd719b24e6acc84fcbfc93a4869866f1c",
+      "reports": 2401,
+      "duration_s": 80
+    },
+    {
+      "record_id": "S006",
+      "uid": "H04_R12_OPEN_DEVELOPMENT/S006",
+      "observation_path": "experiments/E5_VALIDATION_PAPER/M03_R12_CAUSAL_BIRTH/protocol/new_holdout/data/observed/S006.npz",
+      "observation_sha256": "5ced5716e4da2bcd1ef21a1ba2cefc89a2c26d3bbc1221c506c59d7d105cefdf",
+      "reports": 2401,
+      "duration_s": 80
+    },
+    {
+      "record_id": "S007",
+      "uid": "H04_R12_OPEN_DEVELOPMENT/S007",
+      "observation_path": "experiments/E5_VALIDATION_PAPER/M03_R12_CAUSAL_BIRTH/protocol/new_holdout/data/observed/S007.npz",
+      "observation_sha256": "01caf2df0f216137a0f6bfd9beba8cb07bfaeba3dc65f0e7e651a2f0dff37fd8",
+      "reports": 2401,
+      "duration_s": 80
+    },
+    {
+      "record_id": "S008",
+      "uid": "H04_R12_OPEN_DEVELOPMENT/S008",
+      "observation_path": "experiments/E5_VALIDATION_PAPER/M03_R12_CAUSAL_BIRTH/protocol/new_holdout/data/observed/S008.npz",
+      "observation_sha256": "a12f217fd427f00ecedd2a517f9a2a642a67ebe81edcac0490166ed9149d7abc",
+      "reports": 2401,
+      "duration_s": 80
+    },
+    {
+      "record_id": "S009",
+      "uid": "H04_R12_OPEN_DEVELOPMENT/S009",
+      "observation_path": "experiments/E5_VALIDATION_PAPER/M03_R12_CAUSAL_BIRTH/protocol/new_holdout/data/observed/S009.npz",
+      "observation_sha256": "a22ba5be421e14defd476777df9dbee52d08745017ca7ca10d02b907f2cd1ed3",
+      "reports": 2401,
+      "duration_s": 80
+    },
+    {
+      "record_id": "S010",
+      "uid": "H04_R12_OPEN_DEVELOPMENT/S010",
+      "observation_path": "experiments/E5_VALIDATION_PAPER/M03_R12_CAUSAL_BIRTH/protocol/new_holdout/data/observed/S010.npz",
+      "observation_sha256": "f3bd40268ae8fd71138a67a9b81f20e3d24fb672f493e3d8cab1f8d4cff7b6da",
+      "reports": 2401,
+      "duration_s": 80
+    },
+    {
+      "record_id": "S011",
+      "uid": "H04_R12_OPEN_DEVELOPMENT/S011",
+      "observation_path": "experiments/E5_VALIDATION_PAPER/M03_R12_CAUSAL_BIRTH/protocol/new_holdout/data/observed/S011.npz",
+      "observation_sha256": "c802bbf926caaf019d107edc4149da56791d70c27a08e3a4ce7fe0d7fd46c41d",
+      "reports": 2401,
+      "duration_s": 80
+    },
+    {
+      "record_id": "S012",
+      "uid": "H04_R12_OPEN_DEVELOPMENT/S012",
+      "observation_path": "experiments/E5_VALIDATION_PAPER/M03_R12_CAUSAL_BIRTH/protocol/new_holdout/data/observed/S012.npz",
+      "observation_sha256": "60ade3960519c157bf2a854dee36d5114c8fe7dd84dcb3aa77cc8169e282e4b0",
+      "reports": 2401,
+      "duration_s": 80
+    }
+  ],
+  "population": "All 12 open H04 records, 54 event replays and all normal controls; no exclusion by output",
+  "inference": "One load_selected call; existing extract then predict_features API; n_jobs=1 and BLAS threads=1",
+  "observations": "Only time_s and six F01-order N-by-8 observation matrices; no registry or truth opened during inference",
+  "preprocessing": "Frozen ML empirical300 prefix and median/MAD30:300, 47 channels and trailing1457 SHORT features; no inverseAC gate",
+  "publication": "Unchanged frozen ML EpisodeAdapter: six stable argmax reports after k360; E0 restores, new source supersedes; no confidence threshold",
+  "publication_difference": "Same six-report persistence count, but not the probability/GLR EvidenceClock; no matched false-alarm point or pure representation ablation",
+  "evaluation": "Only after all intended predictions are sealed: evaluation/metrics.py evaluate_continuous with default30s temporal association and normal_alarm_metrics from12s",
+  "unavailable_policy": "Save every extraction/inference failure as unavailable with empty messages; keep its intended-event denominator; no imputation or interval reselection",
+  "overlaps": "See post-seal group audit; no per-record kind/group fields are present in this inference manifest",
+  "tuning": false,
+  "retraining": false,
+  "selection_after_H04": false,
+  "source_held_out_claim": false,
+  "independent_confirmation": false,
+  "RAW_access": false,
+  "C01_access": false,
+  "limitations": [
+    "Three repeated event calendars, one normal parent across conditions",
+    "All known sources are supported in supervised training; no source-exclusion generalization claim",
+    "Previously open SIM development and shared F01 ancestry",
+    "The ML publisher and preprocessing differ from physical predictors; full-procedure comparison only"
+  ],
+  "entrypoint_sha256": "de5dfe37ad8f722bbf650549979f7cee8b832c3485a0ebaf3dd91597401d980c",
+  "v1_plan_sha256": "c847c249a677c094906c58d194567b89b4d2a7e146b441936793e21e8a822ba8",
+  "overlap_audit": "Per-record group/kind metadata is inspected only in the separate post-seal evaluator",
+  "deviation": "V1 inference roster contained unused normal/event kind metadata. It did not enter features/model/publication. V2 removes even those metadata; V1 stays intact.",
+  "audit_replay": true,
+  "new_independent_result": false,
+  "expected_parity": "Exact prediction arrays and emitted event objects against preserved V1, tested only after all V2 predictions are sealed"
+}
