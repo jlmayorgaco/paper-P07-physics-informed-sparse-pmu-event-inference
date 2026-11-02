@@ -7,7 +7,8 @@ with ZipFile(out,"w",ZIP_DEFLATED,compresslevel=6) as z:
     for p in sorted(closure.rglob("*")):
         if not p.is_file() or p==out: continue
         rel=p.relative_to(closure)
-        if "inputs" in rel.parts or any(x.lower() in {"tmp","cache","__pycache__"} for x in rel.parts): continue
+        if "inputs" in rel.parts or any(x.lower() in {"tmp","cache","__pycache__","logs","backups"} for x in rel.parts): continue
+        if p.name in {"INDEPENDENT_TECHNICAL_CHECK.md","verify_protected_figures_initial.txt","verify_protected_event_figure_initial.txt","P07_PreA01_Review_Package.sha256"}: continue
         if p.suffix.lower() in {".aux",".blg",".fls",".log",".pyc"}: continue
         z.write(p,Path("closure_luna")/rel)
 print(out)

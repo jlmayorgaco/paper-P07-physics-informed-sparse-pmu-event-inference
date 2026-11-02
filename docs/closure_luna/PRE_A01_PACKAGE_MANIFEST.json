@@ -1,14 +1,14 @@
 {
   "package_state": "PRE_A01_REVIEW_ONLY_P4_PENDING",
-  "created_local": "2026-11-02T17:25:44-05:00",
+  "created_local": "2026-11-02T17:28:02-05:00",
   "preview": "tmp/p07_closure_preview_v6",
   "a01": {
     "progress": {
       "stage": "inference",
-      "task": 33,
+      "task": 34,
       "tasks": 72,
-      "record": "S121",
-      "arm": "PROFILE_NO_CARRY"
+      "record": "S063",
+      "arm": "PROFILE_MEMORY"
     },
     "state": "ACTIVE_INFERENCE_PARTIAL",
     "partial_outcomes_used": false,
@@ -28,7 +28,7 @@
     },
     "brief": {
       "path": "docs/closure_luna/review_outputs/P07_Coauthor_Review_PRE_A01.pdf",
-      "sha256": "1EBF4FF53E42E1DCE6AF8C6D5E887071F95F3A84724E3FC211A8F07B094DC2F3",
+      "sha256": "6EB21B02D7F0208C76D85A1CA0959BCF7603CE2118BD0FCD70F27904F37E88B7",
       "pages": 1
     }
   },

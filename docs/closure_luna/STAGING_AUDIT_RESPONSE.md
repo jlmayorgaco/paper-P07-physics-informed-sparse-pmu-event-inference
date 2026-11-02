@@ -1,6 +1,6 @@
 # Staging audit response
 
-Updated automatically: 2026-11-02T17:25:44-05:00 (America/Bogota).
+Updated automatically: 2026-11-02T17:28:02-05:00 (America/Bogota).
 
 - Corrected the within-hypothesis history-mass normalization so the null is counted once; separated within-network history masses from outer network weights and described retrospective-birth suffix replacement without claiming a full Markov transition matrix.
 - Fixed TeX row terminators and compacted the restoration/cost tables until all columns and values were visible.

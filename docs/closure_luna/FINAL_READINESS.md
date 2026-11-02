@@ -1,6 +1,6 @@
 # Final readiness — pre-A01 checkpoint
 
-Updated automatically: 2026-11-02T17:25:44-05:00 (America/Bogota).
+Updated automatically: 2026-11-02T17:28:02-05:00 (America/Bogota).
 
 ## Ready for technical review
 
@@ -11,6 +11,6 @@ Updated automatically: 2026-11-02T17:25:44-05:00 (America/Bogota).
 
 ## P4 pending
 
-A01 remains active at task 33/72 (S121, PROFILE_NO_CARRY). No completion marker or imported final paper was verified, and no partial outcome was used. This is a pre-ablation review candidate, not the final post-A01 manuscript or submission package.
+A01 remains active (stage=inference, task=34, tasks=72, record=S063, arm=PROFILE_MEMORY). No completion marker or imported final paper was verified, and no partial outcome was used. This is a pre-ablation review candidate, not the final post-A01 manuscript or submission package.
 
 No author message or journal submission was made. Active article, supplement, and scientific result files were not overwritten. This package excludes `staging/inputs/`, A01 partial outputs and the separate science repository.
