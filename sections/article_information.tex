@@ -1,55 +1,34 @@
-\subsection{Response Fit, Severity and Source Identity}
+\subsection{Prediction Is Not Identification}
 \label{sec:narrative-information}
 
-A retained physical history predicts the response still present after
-restoration and defines the state from which a new intervention begins.
-For the exact observation map $\Psi$ and the same pre-intervention history
-$h$, the incremental response is
+For the exact observation map $\Psi$, compare a new intervention $e$ with
+and without the same earlier history $h$:
 \begin{equation}
  s_{e\mid h}(t)=\Psi_t(h\oplus e)-\Psi_t(h).
  \label{eq:history-increment}
 \end{equation}
-The two paths share their initial physical and instrumental states.
-In an additive linear time-invariant system, superposition makes this
-increment independent of the prior state. Nonlinear dynamics can change
-its shape, but do not guarantee greater source separation. Preserving
-recovery is a model-consistency requirement, not a claim that an earlier
-disturbance universally helps localization. The stream implementation
-approximates these paths with its declared switched predictors; it does
-not solve the full nonlinear DAE for each hypothesis.
+Both paths start from the same physical and instrumental state. For an additive intervention under the same linear time-invariant
+dynamics, this increment is independent of the prior state. A topology
+change can alter the state matrix, so that statement does not apply to
+switched linear models in general. Neither switching nor nonlinearity
+guarantees more source information.
+Our stream implementation approximates both paths with local switched
+predictors. It does not solve the full nonlinear DAE for every history.
 
-A better physical prediction need not produce a better location. Competing
-sources may remain similar after their severities and initial conditions
-are fitted. For a response $s_h$ at specified severity and context, the
-distance to an admitted competitor is
+A good fit to one source does not establish that competing sources can be
+separated. With severity and nuisance coordinates $\beta_j$ profiled over
+their admitted set $\mathcal A_j$, a local separation measure is
 \begin{equation}
  d_h^2=\min_{j\ne h}\ \min_{\beta_j\in\mathcal A_j}
        \|s_h-s_j(\beta_j)\|_{\Sigma^{-1}}^2.
  \label{eq:narrative-separation}
 \end{equation}
-The set $\mathcal A_j$ fixes allowed signs, severities and nuisance
-coordinates. Small distance makes source discrimination noise-sensitive;
-it is not a universal error formula or a calibrated decision certificate
-\cite{eriksson2013diagnosability,scharf1994matched}.
-
-Three outcomes remain separate: prediction error at a specified physical
-source, ranking of competing sources, and uncertainty calibration. A
-response improvement establishes the first. It establishes the second only
-if source decisions improve under the same observations, horizon and
-decision rule. Neither establishes the third automatically. A nonlinear
-response comparison is needed before treating a surrogate's residual
-confusion as an unavoidable physical limit.
-
-The separately compiled Historical Technical Notes retain the earlier state-reconstruction and
-simultaneous-load studies, with their separate observation contracts and
-prior-normalization qualification. Their known-onset scores are not
-combined with the causal results here. In particular, recovering hidden
-voltages does not certify the source that moved them.
-
-To first order, a component of the context derivative parallel to a nominal
-source signature can be absorbed by fitting a different severity. Correct
-source ranking can therefore coexist with biased intensity. Components
-orthogonal to that signature cannot be removed by this rescaling. This
-explains why source accuracy can reach a test ceiling while response and
-severity errors still distinguish the models; it is a standard projection
-argument, not a new identifiability theorem.
+Small distance makes location noise-sensitive; it is neither a universal
+error bound nor a calibrated posterior
+\cite{eriksson2013diagnosability,scharf1994matched}. Fit, source ranking
+and uncertainty calibration require separate tests. The supplementary
+controls retain their known-onset and observation contracts; their state
+reconstruction scores are not pooled with the causal study. Severity
+fitting can absorb context error parallel to a source signature while
+leaving intensity biased. This standard projection effect explains why
+correct location and inaccurate response amplitude can coexist.

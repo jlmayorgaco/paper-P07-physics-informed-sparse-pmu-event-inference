@@ -1,41 +1,105 @@
 \section{Experimental Design}
 \label{sec:narrative-protocol}
 
-The primary experiment asks whether the causal bank can attribute successive load/line interventions without confusing recovery with a new event. Development, independent evaluation and an auxiliary source-resolution experiment answer different questions and retain separate denominators.\AIDraftingCredit{}
+The test asks whether one method can attribute six successive load or line
+interventions in a continuous trajectory, including an intervention that
+begins while the preceding response is still recovering. The plant is a
+fixed Julia/PowerDynamics IEEE 39-bus research candidate. Each parent is
+integrated once across all ON and OFF actions; differential states are not
+reset. PMU reports are exported at 30 frames/s, independently of solver
+steps. A switch-aligned report uses the post-switch algebraic value.
+RAW0001 informed the simulator retrospectively and is not an independent
+test record.
+
+The sealed evaluation has 18 six-event continuous parents, 27 persistent
+line-opening parents and 12 normal parents. Every parent is replayed under
+matched R/X, an R/X change represented in the model bank and an R/X change
+outside it. Two instrumental-noise scales give 171 physical trajectories
+and 342 observed records. The 648 continuous event realizations repeat
+108 interventions; the physical parent, rather than the PMU frame or
+replay, is the uncertainty unit. The earlier development examples in
+Fig.~\ref{fig:narrative-rolling} are not part of this sealed comparison.
+
+\subsection{What the Feature Baseline Actually Does}
+The hackathon submission was a hierarchical detector, event classifier
+and typed localizer based on ExtraTrees. It summarized each 30-s PMU
+window with voltage/current magnitude and angle statistics, frequency,
+ROCOF, missingness, phase spread, approximate P/Q, rolling changes,
+RLS/Kalman level innovations and graph-temporal differences. Its selected
+bundle reports 45,162 input features and internal simulated-validation
+macro-F1 0.960 with exact localization 0.852. These numbers describe that
+archive's broader nine-label, window-level task; they are not scores on
+the present event-level cohort. The original submission is preserved.
+
+To compare at 30 reports/s, an earlier development campaign built two
+\emph{new}, frozen causal ExtraTrees adapters from 47 PMU coordinates.
+Each coordinate is centered and robustly scaled using the quiet prefix.
+For trailing windows of 1, 5 and 10\,s, the reference adapter computes
+median, standard deviation, 10th/90th percentiles, a recent-quarter
+change and RMS first difference. This gives $47\times3\times6=846$
+features per report. The short-window adapter adds the current value and
+mean, standard deviation and two lag changes at 3, 8 and 15 reports,
+giving 1,457 features in total. Both use 400 trees, balanced class weights,
+19 classes (quiet plus 18 assets), and six-report confirmation; tree votes
+are scores, not calibrated event probabilities. Their training parents
+precede and are disjoint from the sealed cohort. Neither model was
+retrained or threshold-adjusted on these outcomes. The original split contains 32 local physical IDs for fitting (64
+records, 78,784 training rows) and eight for validation (16 records).
+A later dependency audit maps these to 26 fitting and eight validation
+groups, with two normal-control groups shared across those sets. This
+limits independence of the internal validation; it is not evidence of
+leakage into the separate confirmatory cohort. The reference and
+short-window classifiers already obtain only 0/72 and 4/72 timely load
+attributions in that development validation. Their frozen performance
+therefore does not represent a successfully optimized load classifier.
+
+A later grouped retraining study uses 31 fit, eight validation and 17
+reserved physical groups: approximately 70/30 development/reserved,
+with an inner validation partition. That model is a separate artifact,
+not either comparator executed in the confirmatory study. Randomly
+splitting PMU reports 70/30 would allow correlated trajectories to cross
+partitions. RAW0001 is a known retrospective transfer check, not the
+reserved 30\% or an external test. The supplement distinguishes these
+three evaluation contracts.
 
 \begin{table*}[t]\centering\small
-\caption{Experimental populations and their purposes. Conditions and noise realizations repeat a physical parent rather than creating independent trajectories.}\label{tab:narrative-evidence}
-\begin{tabularx}{\textwidth}{@{}lXXX@{}}\toprule
-Population & Configuration & Main outcome & Interpretation\\\midrule
-Continuous development & Three event parents, six interventions each; one normal parent; three network conditions & Timely family/source, extras and restoration & Open development evidence, not independent confirmation\\
-Independent continuous evaluation & 18 event parents, six interventions each; 12 normal parents; three network conditions and two noise scales & Paired attribution, false alarms, delays and failures & Prespecified comparison of unchanged methods\\
-Persistent-line evaluation & Nine lines, three parent repetitions; same network/noise strata & First stopping decision, source and censoring & Eligible comparison with published line-outage QCD\\
-\IfFileExists{generated/ei_x02_macros.tex}{Signature component test & \EIDictionaryCases{} dictionary and \EITestPhysical{} test trajectories; four loads; three common noise seeds & Nominal, reference correction and mixed-signature correction & Known ON/OFF and family; separate from causal accuracy\\}{}
-Recovery geometry control & 38 trajectories; four recovery histories and 12 correlated source-pair comparisons & Separation with known history and one uncertain severity direction & Supplied prior trajectory, onset, family and pair; not R11 performance\\
-H04 procedure controls & Same development parents and observations as above & Single-state GLR, history banks and newly fitted ET & Common event metrics; distinct score/publication semantics\\
-Grouped SIM learning & \MLTrainGroups{}/\MLValGroups{}/\MLHoldGroups{} fit/validation/reserved groups; \MLTrainRecords{}/\MLValRecords{}/\MLHoldRecords{} records & Frozen classifier selection and reserved performance & Previously open campaigns; no unseen-source claim\\
-RAW reference replay & One retrospective record; \SSRawWindows{} fixed windows, \SSRawPhysicalTotal{} physical-positive & Physical admission, integrity timing and source composition & Metadata-based identities; no exact actuation log or independent field claim\\
-\bottomrule
+\caption{Three distinct inference contracts. Historical hackathon
+validation and the sealed causal comparison have different units and
+cannot be subtracted as if they were the same score.}
+\label{tab:three-contracts}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabularx}{\textwidth}{@{}p{0.11\textwidth}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}\toprule
+ & Hackathon submission (historical) & Causal ExtraTrees comparators & Physical history bank \\\midrule
+Input and clock & Eight PMUs; one decision per 30-s window & Same 47 PMU coordinates as physical bank; 30 reports/s & Same 47 coordinates; 30 reports/s \\
+Information used & Engineered window features; supervised family/location labels & Trailing statistics; supervised active-asset labels from earlier simulated parents & Nominal DAE, candidate asset operators, PMU terminal map and quiet prefix \\
+Decision & Hierarchical detector/classifier/localizer & Tree vote, then six-report episode confirmation & Conditional history evidence, active/cause masses and fixed publication rules \\
+Tested scope here & Not rerun on the sealed cohort & Nine loads, nine lines, successive events & Same nine loads and nine lines, successive events \\
+Main limitation & Window-level historical score is not a causal event-level score & May miss load sources absent from its learned feature boundaries & More extra alarms under out-of-bank R/X \\\bottomrule
 \end{tabularx}\end{table*}
 
-The simulator is the IEEE-39 Julia/PowerDynamics research candidate F01. Each physical parent is integrated continuously, preserving differential states through ON/OFF. Its PMU reporting grid is separate from solver steps: a 120-s record contains 3601 reports per PMU and a 600-s normal record contains 18001, including endpoints. At a switch-aligned report the export uses the post-switch algebraic value. Measurement references, load law and stochastic instrument parameters are fixed across events. RAW0001 supplied retrospective calibration context, not independent test data.
+The sealed methods are the five-model physical bank, its nominal-network
+version and these two causal ExtraTrees adapters. All receive the same
+30-frame/s PMU stream and retain their own frozen decision rules. This
+tests complete procedures at their declared operating points, not a
+matched-false-alarm or unlimited-supervision comparison. The physical
+banks also have different publication rules, so their contrast does not
+isolate network-model averaging.
 
-H03 and H04 each contain three event parents with six successive load/line interventions and one normal parent, all 80 s long. Schedules are paired across nominal, in-bank R/X and mixed out-of-bank R/X conditions. Each campaign therefore has 18 unique interventions and 54 event realizations. Both campaigns are now development evidence. No interval or generalization claim treats those 54 realizations as independent events.
+Chen \emph{et al.}'s published quickest-change detector
+\cite{chen2016quickest} is eligible only for persistent line openings and
+normal records. The declared adapter uses nonoverlapping 15-Hz angle
+increments, a nominal single-line catalog and prefix-estimated drift and
+scale. It stops at its first alarm. Its DC and white-injection assumptions
+do not fully describe the simulator's colored PMU noise; no published
+average-run-length guarantee is transferred to these records.
 
-R11 and its nominal version are frozen co-references. The two archived
-ExtraTrees artifacts (the R09 references) and their preprocessing/publication
-adapters are also frozen; neither is retrained on H04 or C01. They receive
-the same 30-fps observations. The separately fitted S01 SHORT classifier
-uses the grouped SIM contract described below and is then frozen for H04
-and RAW. It does not replace the archived comparators in C01. These are
-comparisons of specified implementations, not a hackathon leaderboard rerun.
-
-The published physical comparator is Chen \emph{et al.}'s persistent-line quickest-change detector \cite{chen2016quickest}, which considers single- and double-line outages. Our declared F01 adapter restricts its fixed nominal catalog to single-line hypotheses. Its reduced-network covariance is marginalized to the observed PMU subset after inversion. Parallel CUSUM statistics stop at the first threshold crossing and select a line. The adapter uses nonoverlapping angle increments at 15 Hz and a startup-only scale/drift estimate. Its white-injection/DC assumptions do not describe all F01 instrumental effects. We preserve both matched-law implementation checks and F01 mismatch failures; no ARL guarantee is transferred to colored noise.
-
-The eligible common test for Chen is one persistent line opening or a normal record. Its output has no load family or restoration operator. The independent campaign, C01, therefore separates continuous load/line episodes from persistent-line first-stop decisions. Early stops, wrong sources, omissions and horizon censoring remain visible.
-
-For continuous events, an alarm is associated temporally before predicted family/source is inspected. The first unmatched alarm after ON is eligible up to the next ON, with the inherited 30-s cap. A timely joint decision requires the correct family and asset emitted before true OFF. Unmatched alarms are extras; false restorations and open episodes are reported separately. These definitions prevent an eventual correct answer from hiding a late diagnosis.
-
-C01 specifies 18 continuous parents, 27 persistent-line parents and 12 normal parents, with three R/X conditions and instrumental-noise scales of one and two. The 171 intended physical trajectories yield 342 observed records. Conditions represent nominal parameters, perturbations represented in the bank and mixed perturbations outside it. Solver and inference failures remain in the intended denominators. Comparisons use 10,000 paired parent-cluster resamples; repeated conditions/noise do not count as independent parents. Predictions are fixed before the evaluator opens reserved truth.
-
-Logical decision delay is measured on report timestamps. Wall-clock cost is recorded separately with hardware, process concurrency and one-thread BLAS settings; parallel execution of independent records does not make a within-record inference method real-time. \IfFileExists{generated/c01_macros.tex}{The completed independent results follow the development examples.}{The independent evaluation is in progress. The following section reports completed development results only.}
+For continuous streams, an alarm is matched temporally before inspecting
+its source. A timely decision requires the right family and asset before
+true OFF. Unmatched event-stream alarms are extras. Restoration messages
+on unmatched episodes are counted separately; this count is not every
+possible physical OFF-timing error. For persistent lines, the first stop
+is scored as correct, premature, wrong-source or censored. Failed records
+remain in the intended denominators. Paired 95\% intervals resample
+physical parents 10,000 times. Logical delay uses report timestamps;
+wall-clock inference cost is a separate quantity. Full calendars,
+thresholds and reproduction details are in the supplement.

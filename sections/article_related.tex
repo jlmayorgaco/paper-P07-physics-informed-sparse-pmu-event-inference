@@ -1,73 +1,49 @@
 \section{Related Work}
 \label{sec:narrative-related}
 
-\subsection{State Estimation and Physical Source Inference}
-Unknown-input and DAE estimators recover electrical states despite
-incomplete models or exogenous inputs
-\cite{gillijns2007input,nugroho2022dae,katanic2024recursive}. Functional
-observability asks whether a requested state quantity can be recovered
-\cite{fernando2010functional,montanari2022functional}. Source inference asks
-which intervention can explain the trajectory. Descriptor-model
-diagnosability and nuisance-profiled tests formalize this distinction
-\cite{eriksson2013diagnosability,scharf1994matched}.
+DAE and unknown-input estimators recover hidden states or inputs
+\cite{gillijns2007input,nugroho2022dae,katanic2024recursive}; functional
+observability and diagnosability ask which states or sources can be
+distinguished \cite{fernando2010functional,montanari2022functional,
+eriksson2013diagnosability,scharf1994matched}. Physical outage inference
+already uses network hypotheses, uncertain states and sequential tests
+\cite{tate2008outage,zhao2014outages,chen2016quickest,
+rovatsos2017outage}. Sparse input recovery estimates forcing locations
+and unknown initial states in linear dynamics \cite{anguluri2023group}.
+Sensor placement limits the information available at remote PMUs
+\cite{jamei2020limits,conte2023fault,yildiz2025sparse}.
 
-Physical hypotheses support outage inference from phasor angles
-\cite{tate2008outage}, Bayesian inference with uncertain states
-\cite{zhao2014outages}, and sequential detection under stochastic operation
-\cite{chen2016quickest,rovatsos2017outage}. Anguluri \emph{et al.} recover
-sparse forcing locations, inputs and an unknown initial state using group
-LASSO for linear dynamics \cite{anguluri2023group}. These are precedents
-for source recovery; group LASSO is not an executed comparator in our
-frozen campaign. Sensor placement also affects source distinguishability
-\cite{jamei2020limits,conte2023fault,yildiz2025sparse}.\AIDraftingCredit{}
+Warner \emph{et al.} compare simulated voltage/current paths across an
+unknown-onset window for short-circuit line identification
+\cite{warner2023highfidelity}. Our load/line task continues through
+restoration and successive events; their method has not been run on this
+cohort. Multiple-model filters and adaptive history banks already retain
+conditional modes \cite{blom1988imm,boers2005m3h}; sequential diagnosis
+has established error/delay theory under specified observation laws
+\cite{warner2024matrix}. Our screened, pruned bank inherits none of those
+general optimality or delay guarantees.
 
-\subsection{Trajectory-Based and Sequential Diagnosis}
-Warner \emph{et al.} compare simulated voltage/current fault trajectories
-over a moving onset window and return candidate lines
-\cite{warner2023highfidelity}. Their evaluated target is short-circuit
-identification before clearing; load changes are an adverse-event test.
-Our target follows load changes and line openings through restoration and
-successive interventions. Physical trajectory libraries, remote PMUs and
-retrospective onset scanning are shared ingredients. Their procedure was
-not run on our data, so no numerical superiority is inferred.
-
-The Adaptive Matrix CuSum derives sequential identification error/delay
-results under specified observation laws \cite{warner2024matrix}.
-Multiple-model filtering already propagates conditional state/mode
-hypotheses \cite{blom1988imm}. The multiple-model multiple-hypothesis
-filter maintains mode-sequence histories and adapts their number through
-pruning and merging \cite{boers2005m3h}. Retaining histories or adapting
-bank size is therefore not an original principle of our method.
-Our pruned history bank uses these ideas,
-but its approximate covariances, proposal screen and fitted startup context
-do not inherit their general guarantees. The complete procedure evaluated
-here makes retained recovery compete with later interventions and reports
-timely attribution and alarm burden. These comparisons do not isolate
-recovery memory from the other admission and publication rules.
-
-\subsection{Learned Diagnosis and Physical Uncertainty}
-Learned and knowledge-driven representations identify PMU disturbances and
-assets \cite{pandey2020realtime,li2024knowledge,yildiz2024few}. We compare
-two fixed ExtraTrees adapters from the SGSMA project. Their performance
-tests transfer of those implementations, not the limits of all supervised
-learning. A known physical catalog and source-excluded supervised training
-also impose different information constraints.
-
-Physical stochastic models support latent-state estimation
-\cite{ensaf2023kernel,tartakovsky2023gp}, while joint DAE parameter inference
-addresses uncertain generators and networks \cite{albustami2026dae}.
-Our stream method uses a finite bank of constant network hypotheses.
-Trajectory sensitivities and Gaussian evidence have also been combined
-for Bayesian parameter inference in power-system DAEs
-\cite{nagi2022trajectory}. Their use alone does not distinguish an event
-attribution algorithm. The separate signature test examines a local event--context derivative;
-it does not identify every plant parameter or replace the stream method
-with an unrestricted joint estimator.
+Learned PMU classifiers and physical uncertainty models provide other
+routes \cite{pandey2020realtime,li2024knowledge,yildiz2024few,
+ensaf2023kernel,tartakovsky2023gp,albustami2026dae,nagi2022trajectory}.
+For example, Li \emph{et al.} embed disturbance-type/topology and
+localization-cost constraints in a spatiotemporal graph-convolutional
+model \cite{li2024knowledge}. Our physical route instead computes the
+observation likelihood of candidate interventions; its graph is the
+admittance network and terminal map, not a learned message-passing layer.
+The two frozen ExtraTrees implementations test supervised references,
+not all learned diagnosis. The new contribution claimed here is the
+specified sparse-PMU procedure and its evidence: new interventions and
+retained recovery histories compete for the same causal reports, with
+component experiments explaining the role and limits of physical
+representation. We do not claim that combining physics, Bayes and a
+tensor is itself new. Table~\ref{tab:literature-capability} distinguishes the
+neighboring tasks and the comparators actually executed here.
 
 \begin{table*}[t]\centering\small
-\caption{Closest inference contracts. Only Chen and the fixed ExtraTrees
-adapters are executed comparators in the confirmatory stream campaign.
-An untested capability is not an algorithmic impossibility.}
+\caption{Closest inference contracts. Chen and the two fixed ExtraTrees
+adapters are the executed comparators. An untested capability is not an
+algorithmic impossibility.}
 \label{tab:literature-capability}
 \begin{tabularx}{\textwidth}{@{}lXXX@{}}\toprule
 Route & Mechanism & Evaluated target & Role in this study\\\midrule

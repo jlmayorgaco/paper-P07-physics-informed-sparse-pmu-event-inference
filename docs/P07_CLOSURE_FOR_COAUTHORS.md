@@ -8,6 +8,13 @@
 
 **Idea.** Comparar historias de intervención y recuperación desde estados anteriores estimados, con el mismo mapa instrumental, separando masa activa y causa retenida.
 
+**Comparación con nuestro trabajo de hackathon.** La entrega original usa
+ExtraTrees jerárquico y 45.162 features en ventanas de 30 s para nueve
+clases. C01 compara dos sucesores causales de esa idea, entrenados antes
+del conjunto sellado, con el banco físico sobre el mismo flujo de ocho PMU.
+La tabla principal ahora muestra cargas, líneas y extras para las cuatro
+rutas. La puntuación histórica de la entrega no es una métrica de C01.
+
 **Prueba que puede refutar la utilidad.** Comparación congelada con nominal, dos ExtraTrees y Chen en su contrato admisible, usando decisiones emitidas, falsos positivos, demoras y fallos; conservar derrotas. X02/X04 separan la calidad del predictor de la decisión de origen.
 
 **Consecuencia.** Un procedimiento físico ejecutable para atribución temporal y una evidencia que permite elegir entre configuraciones según errores y demora. No se deduce un filtro globalmente óptimo ni un nuevo principio de Bayes.
@@ -34,13 +41,13 @@ Las rutas `run/runtime` pertenecen a `experiments/PAPER_CONFIRMATORY_C01/`; `obs
 
 - Explicitada la reducción del operador de medición: la física conecta un bus no medido con las ocho PMU mediante restricciones de red y dinámica.
 - Explicitada la corrección de media y dirección de severidad; la limitación de covarianza compartida ya no queda escondida tras la palabra «Bayesian».
-- La página de coautores obtiene las cifras de macros/artefactos completos y el estado de C01 solo de metadatos operacionales.
+- La página de coautores obtiene las cifras de la importación C01 sellada y verifica sus hashes y denominadores antes de compilar.
 - Conservados el título, los métodos, los casos y las figuras protegidas. No se añaden GNN, wavelets, THD, nuevos candidatos ni experimentos de rendimiento.
 
 ## Qué se cierra y qué sigue pendiente
 
-El alcance, los comparadores, el argumento y las pruebas X02/X03/X04 están cerrados para esta entrega. C01 sigue ejecutándose; una campaña activa no puede declararse terminada por una decisión editorial. `C01_COAUTHOR_STATUS.json` conserva fecha, progreso, mezcla de duraciones y proyección basada en los últimos 12 registros completos de cada duración. El rango es una envolvente de tiempos recientes, no un intervalo probabilístico.
+El alcance, los comparadores, el argumento y las pruebas X02/X03/X04 están cerrados para esta entrega. C01 terminó sin reajustes: 171 trayectorias físicas, 342 registros observados y predicciones selladas antes de abrir la verdad. `C01_COAUTHOR_STATUS.json` y la [síntesis confirmatoria](c01-confirmatory-results.md) reemplazan la proyección de tiempo anterior. Los 648 eventos continuos son seis replays correlacionados de 108 intervenciones, no 648 eventos independientes.
 
-Antes de someter: completar C01, verificar los 171/342 denominadores previstos y sus fallos, integrar las comparaciones por contrato, exposición, censuras e intervalos por padre, revisar las afirmaciones según el resultado, y obtener revisión de autores/metadatos/reproducibilidad. No escoger otra variante tras ver C01. Una derrota se reporta; no dispara otra corrección por bus.
+Antes de someter: revisión científica de autores de la afirmación metodológica y de la derrota de alarmas fuera del banco R/X; verificación final de citas, metadatos, figuras y paquete reproducible. Los denominadores, fallos, exposición, censuras e intervalos por padre ya están integrados. No escoger otra variante tras ver C01. Una derrota se reporta; no dispara otra corrección por bus.
 
-El borrador y la página pueden circular ahora entre coautores con C01 marcada pendiente. No se han enviado mensajes a David ni a Masoud.
+El borrador y la página pueden circular ahora entre coautores con C01 completa y sus límites explícitos. No se han enviado mensajes a David ni a Masoud.

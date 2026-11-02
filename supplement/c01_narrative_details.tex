@@ -1,0 +1,66 @@
+\section{Complete Confirmatory Outcomes and Diagnostic Audit}
+\label{app:complete-confirmation}
+
+The frozen test contains 171 physical trajectories and 342 observed
+records. Every method has an accounted output for every intended record;
+the solver-rejection and inference-failure ledgers are empty. The
+continuous, persistent-line and normal physical-parent counts are 18,
+27 and 12. Three network conditions and two noise levels repeat these
+parents. Normal controls are shared between evaluation lanes, not doubled
+independent exposure. Tables below are generated directly from the sealed
+summary, records, event matches and paired intervals.\AIDraftingCredit{}
+
+\input{tables/generated/review_continuous}
+\input{tables/generated/c01_operational}
+\input{tables/generated/c01_delays}
+\input{tables/generated/c01_first_stop}
+\input{tables/generated/c01_persistent_coverage}
+
+\subsection{Timely Coverage Versus Classification}
+The additional confusion view in Fig.~\ref{fig:review-confusion} is a
+posthoc descriptive audit. It uses the original evaluator's temporal
+episode association and the first public diagnosis; it does not rematch
+events using source labels. A diagnosis emitted after physical OFF is
+counted as unavailable for this view. All diagnoses that are timely and
+matched in these four procedures have the correct family and exact
+source. The large load gap therefore reflects whether a diagnosis is
+available before OFF, not a measured advantage in conditional label
+accuracy among timely outputs. Unmatched alarms remain in the separate
+alarm tables. Normal records are not mixed into this event-level matrix.
+
+\begin{figure*}[t]\centering
+\includegraphics[width=.96\textwidth]{figures/generated/review_c01_confusion.pdf}
+\caption{Posthoc confusion audit of the frozen continuous test, with 324
+realizations per true family. No timely diagnosis includes omitted and
+late diagnoses. Counts reuse the registered episode matches; all 432
+prediction JSON files used were checked against the prediction seal.
+These panels do not include unmatched alarms or constitute a new
+predeclared endpoint.}
+\label{fig:review-confusion}\end{figure*}
+
+\input{tables/generated/review_sources}
+\input{tables/generated/review_paired}
+
+\subsection{Maintaining a Sustained Event After the First Stop}
+The first-stop score alone hides subsequent fragmentation. Although both
+physical banks and both learned comparators correctly identify all 162
+persistent openings first, the learned comparators later return to an
+inactive label and issue additional alarms. Table~\ref{tab:review_persistence}
+describes those already recorded outputs. It does not change the frozen
+first-stop outcome or extend Chen's one-stop contract into a recurrent
+monitor. Retained open episodes are appropriate when an intervention
+continues beyond the record.
+\input{tables/generated/review_persistence}
+
+\subsection{Measurement Integrity Is a Separate Executed Component}
+\input{tables/generated/review_integrity}
+The availability interface correctly identifies all four missing-data
+intervals at the first received report that reveals the loss. This is a
+received-report clock, not zero transport or computation latency.
+Bad-data labels come from the inherited window classifier. Neither
+missingness nor corruption proves malicious intent. The composition
+preserves physical-source and affected-PMU identities but does not run a
+joint physical/cyber Bayesian filter; the physical bank is unavailable on
+the retrospective RAW0001 replay under its startup noise-scale contract.
+
+\FloatBarrier

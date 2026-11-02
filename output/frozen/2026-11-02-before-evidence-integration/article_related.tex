@@ -1,0 +1,48 @@
+\section{Related Work}
+\label{sec:narrative-related}
+
+DAE and unknown-input estimators recover hidden states or inputs
+\cite{gillijns2007input,nugroho2022dae,katanic2024recursive}; functional
+observability and diagnosability ask which states or sources can be
+distinguished \cite{fernando2010functional,montanari2022functional,
+eriksson2013diagnosability,scharf1994matched}. Physical outage inference
+already uses network hypotheses, uncertain states and sequential tests
+\cite{tate2008outage,zhao2014outages,chen2016quickest,
+rovatsos2017outage}. Sparse input recovery estimates forcing locations
+and unknown initial states in linear dynamics \cite{anguluri2023group}.
+Sensor placement limits the information available at remote PMUs
+\cite{jamei2020limits,conte2023fault,yildiz2025sparse}.
+
+Warner \emph{et al.} compare simulated voltage/current paths across an
+unknown-onset window for short-circuit line identification
+\cite{warner2023highfidelity}. Our load/line task continues through
+restoration and successive events; their method has not been run on this
+cohort. Multiple-model filters and adaptive history banks already retain
+conditional modes \cite{blom1988imm,boers2005m3h}; sequential diagnosis
+has established error/delay theory under specified observation laws
+\cite{warner2024matrix}. Our screened, pruned bank inherits none of those
+general optimality or delay guarantees.
+
+Learned PMU classifiers and physical uncertainty models provide other
+routes \cite{pandey2020realtime,li2024knowledge,yildiz2024few,
+ensaf2023kernel,tartakovsky2023gp,albustami2026dae,nagi2022trajectory}.
+The two frozen ExtraTrees implementations test one supervised reference,
+not all learned diagnosis. The executed novelty claim is narrower: new
+interventions and retained recovery histories compete for the same causal
+PMU reports. Table~\ref{tab:literature-capability} distinguishes the
+neighboring tasks and the comparators actually executed here.
+
+\begin{table*}[t]\centering\small
+\caption{Closest inference contracts. Chen and the two fixed ExtraTrees
+adapters are the executed comparators. An untested capability is not an
+algorithmic impossibility.}
+\label{tab:literature-capability}
+\begin{tabularx}{\textwidth}{@{}lXXX@{}}\toprule
+Route & Mechanism & Evaluated target & Role in this study\\\midrule
+Chen / Rovatsos & Network likelihoods and sequential tests & Line outages; Rovatsos includes transients & Chen on persistent-line first decisions\\
+Warner high-fidelity & Simulated V/I paths and onset search & Short-circuit line candidates & Closest trajectory precedent; no common-data run\\
+Adaptive Matrix CuSum & Sequential diagnosis with error/delay analysis & One unknown distributional change & Statistical precedent; no inherited guarantee\\
+DAE / stochastic-state estimation & Physical state and uncertainty models & States, unknown inputs or parameters & Components and adjacent tasks\\
+Learned PMU diagnosis & Features or constrained representations & Event families and locations & Two frozen ExtraTrees references\\
+Physical history bank here & Estimated-past-state paths and recovery & Successive catalog load/line events & Timely attribution, extras and restoration\\\bottomrule
+\end{tabularx}\end{table*}

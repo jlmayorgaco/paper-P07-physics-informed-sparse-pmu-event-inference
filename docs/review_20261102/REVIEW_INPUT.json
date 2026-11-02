@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-02",
+  "files": [
+    {
+      "path": "main.pdf",
+      "sha256": "efc4da34a3429ea9f5e1314303131d84d541befcd5e1a46687b2e75ea85ac1bf"
+    },
+    {
+      "path": "supplement.pdf",
+      "sha256": "53b88eb88984ac4dded107ebdb7e64abcbd541348f44f10c10425ccb625e827e"
+    },
+    {
+      "path": "main.tex",
+      "sha256": "aadbbf61fbf467685cc8b334de37aee5bd8bf2f23fd13dbedb0fb52869d3ec1a"
+    },
+    {
+      "path": "supplement.tex",
+      "sha256": "6b9e20934d80f4458de4124f9e41b627cf2e80213fe68d2ecc8b1bbfac0daed1"
+    },
+    {
+      "path": "sections/article_intro.tex",
+      "sha256": "b004a0b4bc63c7024c412760310f0ae89d22864675d9b13f5a434596ad6f3642"
+    },
+    {
+      "path": "sections/article_method.tex",
+      "sha256": "791761695ddaf0618c4065b999fc672ba8c8a00a0dea1f92de2948727086020f"
+    },
+    {
+      "path": "sections/narrative_protocol.tex",
+      "sha256": "b8e021b96f2ccdf0b3f2e22e9222e7b220104b2494f998c78dad6ee2743d374b"
+    },
+    {
+      "path": "sections/08c_c01_confirmatory.tex",
+      "sha256": "abe9900a502f729e68c36ebe2722de53f74fedc51521f63bbf25d49bd7f1b053"
+    },
+    {
+      "path": "sections/article_evidence_bridge.tex",
+      "sha256": "af71bbb2400b6bd1184d8b3aac9b4bdb4e1a0c554b33d4155e90ee0754cc66e5"
+    }
+  ],
+  "review_scope": "Scientific manuscript, local evidence and implementation; no re-running or retuning methods"
+}

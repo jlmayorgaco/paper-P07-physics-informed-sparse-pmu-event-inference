@@ -31,6 +31,10 @@ def main():
         path = ROOT / name
         if path.exists():
             sources.add(path)
+    # The controlled-study supplement explicitly points readers to these tables.
+    ablation = ROOT / 'generated/frozen/ablation_a01_20261102'
+    if ablation.exists():
+        sources.update(p for p in ablation.iterdir() if p.is_file())
     manifest = {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(sources)}
     instructions = '''P07 article and supplement source snapshot
 
@@ -40,8 +44,9 @@ All local files actually read by these builds are included with their paths.
 The PDF copies are supplied separately in output/pdf in the working repository.
 
 This is a review snapshot, not a certificate of submission readiness. The
-independent confirmatory campaign and final author metadata/biographies remain
-subject to the current repository status. No external submission is performed.
+confirmatory campaign is complete; scientific interpretation, references,
+and final author metadata/biographies remain subject to coauthor review.
+No external submission is performed.
 Historical Technical Notes are preserved as a separate repository document.
 '''
     destination = ROOT / 'output/source/P07_Article_Supplement_Source.zip'

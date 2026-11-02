@@ -20,14 +20,14 @@ def write_tables(root, summary):
     for (condition,noise),group in cont.groupby(['condition','noise']):
         d=group.set_index('method')
         cells=[val(d.loc[m,'median_diagnosis_delay_s'])+'/'+val(d.loc[m,'median_restoration_delay_s']) for m in ['R11','R11_NOMINAL','ET_REFERENCE','ET_CANDIDATE']]
-        rows.append(condition.replace('_',r'\_')+f' & {noise:g} & '+' & '.join(cells)+r'\\')
-    table('c01_delays.tex','Conditional median diagnosis/restoration delays (s), kept within each paired stratum. These medians summarize successful outputs and must be read alongside omissions, unavailable records and censoring; -- denotes no finite estimate. Logical delays do not measure computational throughput.','llrrrr',r'R/X condition & Noise & Physical 5-model & Physical nominal & ExtraTrees & ET short',rows)
+        rows.append({'MATCH':'Matched','RX_IN_SUPPORT':'In-bank','RX_OUT_SUPPORT':'Out-of-bank'}[condition]+f' & {noise:g} & '+' & '.join(cells)+r'\\')
+    table('c01_delays.tex','Conditional median diagnosis/restoration delays (s), kept within each paired stratum. These medians summarize matched emitted diagnoses/restoration messages with finite delay and must be read alongside omissions, unavailable records and censoring; -- denotes no finite estimate. Logical delays do not measure computational throughput.','llrrrr',r'R/X condition & Noise & Physical 5-model & Physical nominal & ExtraTrees & ET short',rows)
     pers=summary[summary.lane=='persistent_line']; rows=[]
     for (condition,noise),group in pers.groupby(['condition','noise']):
         d=group.set_index('method'); cells=[]
         for m in ['R11','R11_NOMINAL','CHEN2016']:
             a=d.loc[m]; cells.append(f"{int(a.first_correct)}/{int(a.events)}; {int(a.first_prechange)}/{int(a.first_right_censored)}; "+val(a.mean_restricted_correct_delay_s))
-        rows.append(condition.replace('_',r'\_')+f' & {noise:g} & '+' & '.join(cells)+r'\\')
+        rows.append({'MATCH':'Matched','RX_IN_SUPPORT':'In-bank','RX_OUT_SUPPORT':'Out-of-bank'}[condition]+f' & {noise:g} & '+' & '.join(cells)+r'\\')
     table('c01_first_stop.tex','Persistent-line comparison on the common observations. Each cell gives correct first source / intended openings; pre-change stops / right-censored openings; mean restricted correct delay (s). Wrong first sources remain in the denominator. Restricted delay retains the horizon penalty for failures and censoring defined by the frozen evaluator.','llrrr',r'R/X condition & Noise & Physical 5-model & Physical nominal & Chen2016',rows)
     rows=[]
     for method in ['R11','R11_NOMINAL','ET_REFERENCE','ET_CANDIDATE','CHEN2016']:

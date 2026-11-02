@@ -1,0 +1,70 @@
+{
+  "status": "CONFIRMATORY_EXECUTED_NO_RETUNING",
+  "files": [
+    {
+      "path": "BY_SOURCE.csv",
+      "sha256": "9c33c29f6693dbbebde30a9a2ba655c4a3a5e7ea78fdaed395730ca0eb1a4b4c",
+      "source": "experiments/PAPER_CONFIRMATORY_C01/run/results/BY_SOURCE.csv"
+    },
+    {
+      "path": "EVALUATION_AUDIT.json",
+      "sha256": "e1420d0a71fe9ad48c260d36f471c204999b74d0846b74226126af2c64690f41",
+      "source": "experiments/PAPER_CONFIRMATORY_C01/run/results/EVALUATION_AUDIT.json"
+    },
+    {
+      "path": "EVENTS.csv",
+      "sha256": "f343e4909016459c1b2e7e113afa0e286a1ccd4b9ebb5e052bbf2c851491f741",
+      "source": "experiments/PAPER_CONFIRMATORY_C01/run/results/EVENTS.csv"
+    },
+    {
+      "path": "EXTRAS.csv",
+      "sha256": "e58a11dc072b32a01169a9caa8c64ff99cd67313d9051837b73712e0d03d1ccc",
+      "source": "experiments/PAPER_CONFIRMATORY_C01/run/results/EXTRAS.csv"
+    },
+    {
+      "path": "PAIRED_INTERVALS.csv",
+      "sha256": "bc471895bf9fd93a1eda924c595b28fbaecc5eaf2eb581494a4606228aec022c",
+      "source": "experiments/PAPER_CONFIRMATORY_C01/run/results/PAIRED_INTERVALS.csv"
+    },
+    {
+      "path": "PERSISTENT_FIRST_STOP.csv",
+      "sha256": "05c3fff65156b2fb4403138eacf2aaf854aec8f2437a8ae19c9cd8beb83b0d45",
+      "source": "experiments/PAPER_CONFIRMATORY_C01/run/results/PERSISTENT_FIRST_STOP.csv"
+    },
+    {
+      "path": "PREDICTIONS_SEAL.json",
+      "sha256": "fc417463e96f59dbb6c42d96d30106b99043e16ea698bf394ad8047bd8068cb0",
+      "source": "experiments/PAPER_CONFIRMATORY_C01/run/results/PREDICTIONS_SEAL.json"
+    },
+    {
+      "path": "RECORDS.csv",
+      "sha256": "08c610d458297e28a426c79a8d7c51c921f556083057b357b93cb84b2615fab8",
+      "source": "experiments/PAPER_CONFIRMATORY_C01/run/results/RECORDS.csv"
+    },
+    {
+      "path": "SUMMARY.csv",
+      "sha256": "3dd5daaa266d83854a1d2ea854b0ed92768c830e0a65efcb1d9fe8e80284b0d1",
+      "source": "experiments/PAPER_CONFIRMATORY_C01/run/results/SUMMARY.csv"
+    },
+    {
+      "path": "PLAN.json",
+      "sha256": "03ee431d3dfa28de500340b63c7fad9a8db05628707e6a2afeefc7c9388bc170",
+      "source": "experiments/PAPER_CONFIRMATORY_C01/protocol/PLAN.json"
+    },
+    {
+      "path": "FREEZE.json",
+      "sha256": "6bdb3f740e87ae13fbe0efa6122f7d144fdb77c9f05fc409ffcbf4793eacc269",
+      "source": "experiments/PAPER_CONFIRMATORY_C01/protocol/FREEZE.json"
+    },
+    {
+      "path": "EXECUTION_FREEZE.json",
+      "sha256": "aabb50a07022855ce21dcb242df36a892ee40ebae254e7e2e940a3501fae4e56",
+      "source": "experiments/PAPER_CONFIRMATORY_C01/protocol/EXECUTION_FREEZE.json"
+    },
+    {
+      "path": "REQUEST.json",
+      "sha256": "c4a5a530a232fb6397343dbacff50f2637fc82e3965b14a85cd466a65174bda5",
+      "source": "experiments/PAPER_CONFIRMATORY_C01/execution_request/REQUEST.json"
+    }
+  ]
+}

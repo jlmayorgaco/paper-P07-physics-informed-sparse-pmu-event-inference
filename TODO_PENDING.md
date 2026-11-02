@@ -1,6 +1,8 @@
+> C01 completed without retuning; see [results and failure ledger](docs/c01-confirmatory-results.md). Scientific coauthor review, citation/metadata checks and submission decision remain open. Older research backlog below is separate.
+
 # Active paper closure — 2026-10-29
 
-The active finite closure is [PAPER_PLAN.md](PAPER_PLAN.md): execute the frozen C01 comparison, aggregate all outcomes, then finish the manuscript audit. R11 and nominal remain fixed; no more per-bus candidate repair. The complete joint-estimator/theory items below remain a separate research backlog and are not silently marked implemented by the causal component. Submission is blocked by missing confirmatory results and final evidence/citation/reproducibility review.
+The active finite closure is [PAPER_PLAN.md](PAPER_PLAN.md): C01 executed and the complete outcomes were integrated into the manuscript. R11 and nominal remain fixed; no more per-bus candidate repair. The complete joint-estimator/theory items below remain a separate research backlog and are not silently marked implemented by the causal component. Submission awaits scientific coauthor review and final evidence/citation/reproducibility checks.
 
 
 # Pending research gates

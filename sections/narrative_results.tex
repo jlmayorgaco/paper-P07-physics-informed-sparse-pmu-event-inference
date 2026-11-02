@@ -1,36 +1,49 @@
-\section{Continuous-Stream Results}
+\section{Development Comparisons and Worked Sequence}
 \label{sec:narrative-results}
 
-\subsection{Timely Attribution and Extra Alarms Measure Different Outcomes}
+\input{sections/article_hackathon_transfer}
 
-This section uses each frozen method's original publication policy.
-The common-clock physical control in Section~\ref{sec:submission-checks}
-re-publishes the same history-bank outputs under a different declared rule;
-its counts are a separate endpoint. The ExtraTrees rows here are the
-archived R09 references, distinct from the newly fitted S01 classifier.\AIDraftingCredit{}
+\subsection{Following Successive Events Through Recovery}
 
-\input{tables/generated/narrative_results}
+The example in Fig.~\ref{fig:narrative-rolling} follows six physical
+interventions without restarting the network. With matched R/X, all six
+sources are identified before their OFF times. Under a network change
+outside the bank, an extra bus-20 diagnosis precedes the real bus-31 load;
+bus 31 is then diagnosed only after its physical restoration. The lower
+panel shows the mechanism visible to the method: active bus-31 mass rises
+late in the mismatched record. This is one development trajectory, not a
+performance estimate.
 
-In H04, both ExtraTrees adapters and both physical references identify all tested lines in time (Table~\ref{tab:narrative-results}). The difference is in loads: the five-model bank obtains \NarMixLoadTimely{}/\NarMixLoadTotal{} timely decisions, nominal \NarNomLoadTimely{}/\NarNomLoadTotal{}, and these ExtraTrees adapters \NarETLoadTimely{}/\NarETLoadTotal{}. This tests transfer of the frozen adapters; it neither rules out supervised load detection nor reproduces the historical multi-class hackathon score.
-
-The five-model bank detects and eventually attributes \NarMixJoint{}/\NarMixEvents{} realizations, but only \ContMixTimely{} diagnoses precede physical OFF. Nominal has \ContNomTimely{} timely diagnoses, with \ContNomExtras{} extras versus \ContMixExtras{}. Detection, eventual attribution and timely attribution therefore give different answers. The configured five-model procedure yields one fewer timely diagnosis and three fewer extra alarms than nominal; this comparison does not isolate model uncertainty.
-
-\subsection{Recovery and a New Event Must Remain Competing Explanations}
-
-Figure~\ref{fig:narrative-rolling} shows what the counts omit. The physical state continues evolving after OFF. Retained cause/recovery histories explain that trajectory without resetting the network; a later source must compete against both no-new-event recovery and other interventions.
-
-
-
-The out-of-bank BUS31 case shows a remaining timing failure: the source is recovered eventually but too late. The network mixture changes how much mass is assigned to that source, and \eqref{eq:continuous-delta} separates that revision from within-model evidence. This decomposition distinguishes changing within-model evidence from changing network weights; it is an interpretation of the delayed decision.
-
-\begin{figure}[!htbp]\centering
+\begin{figure}[t]\centering
 \includegraphics[width=\columnwidth]{figures/generated/narrative_tradeoff.pdf}
-\caption{The decision that an accuracy-only table hides. H04 development outcomes trade timely attribution against unmatched event-stream alarms. The onset-witness ablation removes all extras but loses a real BUS16 intervention; it is retained as negative evidence. Labels use 54 paired realizations of 18 interventions and do not imply 54 independent trials.}
+\caption{Development decision trade-off on 18 interventions replayed under three R/X settings. A stricter onset witness eliminates extra alarms but misses a true bus-16 load. The 54 plotted realizations share physical parents. These controls were not selected using the later sealed evaluation.}
 \label{fig:narrative-tradeoff}\end{figure}
 
-The onset-witness ablation obtains zero extras but only \ContAdmissionTimely{}/\ContAdmissionTotal{} timely attributions: weak early evidence rejects a real BUS16 load. It inherits the physical states and masses, so suppressing the alarm does not repair the underlying explanation. This negative experiment leaves R11 and nominal frozen for C01.
+The development controls also show that deleting alarms is easy if true
+events may be lost (Fig.~\ref{fig:narrative-tradeoff}). The stricter onset
+witness has no extras but loses a real bus-16 intervention. The frozen
+five-model procedure was therefore evaluated with its original publication
+rule; no rule was revised from the sealed outcomes.
 
-\begin{figure*}[p]\centering
-\includegraphics[width=.95\textwidth]{figures/generated/narrative_rolling.pdf}
-\caption{From a continuous sequence to source attribution. Top: reserved physical ON--OFF intervals in development parent H002. Middle: active masses for nominal-network observations (MATCH) and mixed R/X changes outside the bank (OUT SUPPORT). Orange dotted lines mark true OFF for evaluation only. Bottom: BUS31 in the latter record; the cumulative terms of $\Delta M$, rebased at 34 s, sum to the change in active mass. Diagnosis arrives after OFF. The figure shows an eventual correct source that fails timely attribution; the color scale represents approximate mass, not calibrated probability.}
+\begin{figure*}[t]\centering
+\includegraphics[width=.92\textwidth]{figures/generated/reader_episode_story.pdf}
+\caption{One development sequence. Bars show reserved physical ON--OFF truth;
+circles are correct diagnoses emitted before OFF; crosses mark an extra
+bus-20 alarm and a bus-31 diagnosis emitted after OFF. Both lower decision
+rows use the same physical bank under different R/X conditions. The lower
+panel shows approximate active mass for bus 31: with R/X outside the bank,
+the correct explanation becomes dominant only after restoration. Truth is
+shown retrospectively and never enters inference.}
 \label{fig:narrative-rolling}\end{figure*}
+
+\subsection{Comparison With a Simpler Physical Procedure}
+An earlier development control uses the same nominal physical and PMU
+operators, one retained state and a short generalized likelihood-ratio
+search. With a common six-report publication clock, it obtains
+\SSSimpleTimely{}/\SSSimpleTotal{} timely decisions and
+\SSSimpleExtras{} extras; the history mixture obtains
+\SSMixTimely{}/\SSMixTotal{} with \SSMixExtras{}. This is an executed
+physical comparator, separate from the later confirmatory cohort.
+Different search, severity treatment and score semantics prevent it from
+being a pure Bayes or memory ablation. Its equations and full table are
+included in the supplement.

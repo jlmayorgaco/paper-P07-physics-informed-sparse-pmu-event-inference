@@ -85,7 +85,7 @@
   Whiten instrument noise};
 \node[phys] (predict) at (10.8,5.65) {
   \textbf{3\quad Predict histories}\\
-  State / covariance forecast\\
+  Conditional state forecast\\
   Save model density};
 \node[hist] (birth) at (15.15,5.65) {
   \textbf{4\quad Propose onsets}\\
@@ -128,8 +128,8 @@
   $\Delta M$: evolution + model reweighting};
 \node[decision,text width=4.4cm] (rules) at (8.65,.85) {
   \textbf{Apply fixed publication rules}\\
-  Alarm: $0.99$ for 6 reports\\
-  OFF: $0.99$ for 15 reports};
+  Alarm / public OFF: 6 reports\\
+  Internal OFF clock: 15 reports};
 \node[decision,text width=4.5cm] (output) at (14.6,.85) {
   \textbf{Time-stamped decisions}\\
   Alarm, family/source, restoration\\

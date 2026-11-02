@@ -105,14 +105,19 @@ severity. After likelihood normalization, the beam retains the union of
 the 96 highest-weight recent histories, 64 older histories and at least
 one per occupied source. The union is renormalized.
 
-Active mass 0.99 for six reports confirms detection; restoration mass
-0.99 for 15 reports confirms OFF. Source/line confirmation and episode
-replacement additionally follow the archived publication configuration.
+The internal observer confirms active-mass evidence at 0.99 for six reports
+and has a separate 15-report internal OFF clock. The public R11 publisher
+requires an internal pending episode and six reports of source-qualified
+active support above 0.99; its public OFF requires six reports of the
+diagnosed cell's joint cause-and-restoration mass above 0.99. The detailed source qualification, diagnosis and replacement rules are
+given below.
 These thresholds are implementation settings, not guarantees of
 probability calibration or false-alarm control. Nominal and mixture use
 their frozen publication paths, so their comparison does not isolate
 network averaging alone. The admission-rule ablation changes publication,
 not the recovery dynamics.
+
+\input{supplement/appendix_publication_rules}
 
 \section{Local Calculations and Worked Examples}
 \label{app:causal-calculations}

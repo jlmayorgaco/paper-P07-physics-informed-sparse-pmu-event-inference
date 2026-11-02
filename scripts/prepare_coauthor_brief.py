@@ -1,145 +1,161 @@
-"""One-page coauthor brief from completed evidence and operational C01 status.
-
-Does not read C01 predictions, scientific results, truth or PMU recordings.
-"""
+"""Build the one-page coauthor brief from sealed C01 results and fixed controls."""
 from pathlib import Path
 from datetime import datetime
 from zoneinfo import ZoneInfo
 import hashlib
 import json
-import re
-import statistics
-from collections import Counter
+
+import pandas as pd
+import pymupdf
 from reportlab.lib import colors
 from reportlab.lib.styles import ParagraphStyle
-from reportlab.lib.enums import TA_LEFT
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
-import pymupdf
+
 
 ROOT = Path(__file__).resolve().parents[1]
 SG = ROOT.parent / 'SGSMA26-Physics-Informed-AD'
-RUN = SG / 'experiments/PAPER_CONFIRMATORY_C01/run'
+FROZEN = ROOT / 'generated/frozen/c01_20261029'
 OUT = ROOT / 'output/pdf/P07_Coauthor_Brief_David_Masoud.pdf'
 
 
-def read(path):
-    return json.loads(path.read_text(encoding='utf-8-sig'))
-
-
 def main():
-    progress = read(RUN / 'RECORD_PROGRESS.json')
-    records = read(RUN / 'data/INPUTS.json')  # public id, duration, hash only
-    done = progress['completed']
-    if done and progress['last_record'] != records[done - 1]['id']:
-        raise RuntimeError('Progress is not a contiguous prefix; timing projection needs review')
-    remaining = records[done:]
-    counts = Counter(r['duration_s'] for r in remaining)
-    timing = {}
-    for duration in counts:
-        vals = []
-        for record in reversed(records[:done]):
-            if record['duration_s'] != duration:
-                continue
-            paths = [RUN / 'timings' / f'{mode}_{record["id"]}.json'
-                     for mode in ['bank', 'r11', 'ml', 'chen']]
-            if all(p.exists() for p in paths):
-                vals.append(sum(read(p)['seconds'] for p in paths))
-            if len(vals) == 12:
-                break
-        if not vals:
-            raise RuntimeError('No completed comparable timing records')
-        timing[str(duration)] = dict(n=len(vals), median_s=statistics.median(vals),
-                                    min_s=min(vals), max_s=max(vals), remaining=counts[duration])
-    hours = {key: sum(c['remaining'] * c[key] for c in timing.values()) / 3600
-             for key in ['median_s', 'min_s', 'max_s']}
-    status = dict(local_time=datetime.now(ZoneInfo('America/Bogota')).isoformat(),
-                  progress=progress, stage=read(RUN / 'PROGRESS.json'),
-                  timing_by_duration=timing, remaining_hours=hours,
-                  interpretation='Timing projection, not a statistical confidence interval; excludes evaluation/build. Current record counted in full.',
-                  methods_changed=False, scientific_partial_results_read=False)
-    (ROOT / 'docs/C01_COAUTHOR_STATUS.json').write_text(json.dumps(status, indent=2) + '\n')
+    manifest_file = FROZEN / 'MANIFEST.json'
+    manifest = json.loads(manifest_file.read_text(encoding='utf-8'))
+    for item in manifest['files']:
+        source = FROZEN / item['path']
+        if not source.is_file() or hashlib.sha256(source.read_bytes()).hexdigest() != item['sha256']:
+            raise RuntimeError(f'C01 import differs from seal: {item["path"]}')
+    complete = json.loads((SG / 'experiments/PAPER_CONFIRMATORY_C01/run/COMPLETE.json').read_text())
+    if complete['status'] != 'COMPLETE_WITH_ALL_INTENDED_DENOMINATORS' or complete['models_retuned']:
+        raise RuntimeError('C01 has not passed the frozen completion gate')
+    audit = json.loads((FROZEN / 'EVALUATION_AUDIT.json').read_text())
+    if audit['intended_observed_records'] != 342 or not audit['prediction_sealed_before_truth']:
+        raise RuntimeError('C01 audit is incomplete')
+    summary = pd.read_csv(FROZEN / 'SUMMARY.csv')
+    cont = summary[summary.lane == 'continuous']
+    persistent = summary[summary.lane == 'persistent_line']
+    total = cont.groupby('method')[['events', 'timely', 'event_extras']].sum()
+    outside = cont[cont.condition == 'RX_OUT_SUPPORT'].groupby('method')[['events', 'timely', 'event_extras']].sum()
+    line = persistent.groupby('method')[['events', 'first_correct', 'first_prechange', 'normal_records_with_alarm']].sum()
+    if int(total.loc['R11', 'events']) != 648 or int(line.loc['CHEN2016', 'events']) != 162:
+        raise RuntimeError('Unexpected C01 denominators')
 
-    sources = [ROOT / 'generated/continuous_macros.tex',
-               ROOT / 'generated/ei_x02_macros.tex',
-               ROOT / 'generated/frozen/recovery_x04_20261031/results/SUMMARY.json']
-    macros = {}
-    for source in sources[:2]:
-        macros.update(re.findall(r'\\newcommand\{\\(\w+)\}\{([^}]+)\}', source.read_text()))
-    x4 = read(sources[2])
-    m = lambda name: macros[name]
     stamp = datetime.now(ZoneInfo('America/Bogota')).strftime('%d %b %Y, %H:%M Colombia')
+    names = [('Physical bank (5 models)', 'R11'), ('Physical bank (nominal)', 'R11_NOMINAL'),
+             ('ExtraTrees reference', 'ET_REFERENCE'), ('ExtraTrees short', 'ET_CANDIDATE')]
+    rows = [['Frozen continuous method', 'Timely / 648', 'Extras', 'Outside-bank timely / 216', 'Outside-bank extras']]
+    for label, key in names:
+        rows.append([label, f'{int(total.loc[key,"timely"])}/648', str(int(total.loc[key,'event_extras'])),
+                     f'{int(outside.loc[key,"timely"])}/216', str(int(outside.loc[key,'event_extras']))])
+    chen = line.loc['CHEN2016']
+    records = pd.read_csv(FROZEN / 'RECORDS.csv')
+    maintained = records[records.lane == 'persistent_line'].groupby('method')['extras'].sum()
     sections = [
-        ('Question and contribution',
-         'Can eight PMUs distinguish a new load/line intervention from the electrical recovery of an earlier one? '
-         'P07 specifies a causal physical-history attribution procedure: retained states survive restoration, '
-         'new interventions compete with recovery, and active-event mass is distinguished from originating-cause mass. '
-         'This connects the physical cause, its active interval and the remaining response in one sequential explanation, tested against operational errors rather than accuracy alone.'),
-        ('Where physics and Bayes enter',
-         'Kirchhoff constraints, Ybus, oriented branch currents and machine/control dynamics determine reduced DAE predictors. '
-         'Known PMU locations select the observation map; phase and instrument memory supply frequency/ROCOF predictions. '
-         'States and operating context come from past PMU reports. Conditional Gaussian evidence integrates truncated load severity; '
-         'predictive likelihoods weight five constant R/X hypotheses. Onset screening, shared regime covariances, pruning and publication rules make the complete procedure approximate.'),
-        ('Completed evidence: development, not C01 confirmation', ''),
-        ('What the controlled experiments establish',
-         f'With load family and ON/OFF supplied, recentering and conditioned signatures both recover {m("EICondJoint")}/{m("EICondEventRecords")} sources '
-         f'(80 physical event cases, three shared-noise realizations). Conditioning lowers median relative response error '
-         f'{m("EIRecentResponse")}% to {m("EICondResponse")}% and severity error at the generating source '
-         f'{m("EIRecentSeverity")}% to {m("EICondSeverity")}%. A separate {x4["physical_trajectories"]}-trajectory recovery control '
-         'finds no mean binary-localization gain (98.35% for both arms; 12 correlated, known-history/onset comparisons). '
-         'Better fit, source identity and calibrated uncertainty are distinct outcomes.'),
-        ('Difference from the hackathon and the literature',
-         'The contribution changes the explanation and temporal evaluation, rather than adding a source-label classifier. '
-         'H04 favors the physical procedures on loads but not on extra-alarm count; it is not an official leaderboard comparison. '
-         'Warner already uses physical trajectories and onset search; IMM/M3H already retains mode histories. '
-         'No numerical advantage over an unexecuted matched M3H/Warner method is claimed.'),
-        ('Limits and the fixed route to submission',
-         f'C01: {done}/{len(records)} records complete at this snapshot; 171 physical trajectories have finished. '
-         f'Estimated remaining processing is {hours["median_s"]:.0f} h (recent timing envelope {hours["min_s"]:.0f}-{hours["max_s"]:.0f} h), plus evaluation/build. '
-         'Finish the frozen comparison of R11, nominal and both ExtraTrees adapters; score Chen2016 on persistent openings. '
-         'Audit all intended cases, normal exposure, delays, censoring and parent-paired intervals, then finalize claims with the coauthors. '
-         'Scope remains nine load and nine line assets, an event-free startup and a declared simulator. No field, unseen-source, all-family, real-time or calibrated-probability claim; BUS5 terminal and BUS39 angle limitations remain. No new method versions or test tuning.')
+        ('Question and actual contribution',
+         'How can eight PMUs distinguish the physical cause of a network disturbance? The paper connects '
+         'network-constrained reconstruction, physical response signatures and Bayesian history attribution, '
+         'with engineered-feature ExtraTrees as a retained alternative. The implemented causal bank predicts '
+         'each candidate intervention from estimated past states, integrates load severity and retains recovery. '
+         'Active and cause masses expose its decisions. These are approximate conditional calculations, not '
+         'a new Bayes theorem or a globally optimal filter.'),
+        ('Earlier evidence is part of the paper',
+         'Separate component tests recover hidden voltages, quantify feature gains and show that mixed-source '
+         'sensitivities improve local response fit. A direct historical transfer of the submitted ZIP yields '
+         '0/96 joint source decisions versus 96/96 for an earlier physical estimator; its confusion matrices '
+         'are included, with the development/domain advantage explicit. The archived batch Bayesian support '
+         'test retains its evidence-normalization caveat. None of these tests isolates a tensor/Bayes contribution '
+         'to final causal accuracy. C01 uses new causal ExtraTrees comparators, not the original 30-s submission.'),
+        ('Sealed comparison: 171 physical trajectories, 342 observed records', ''),
+        ('Other outcomes that change the interpretation',
+         f'Continuous: the physical bank attributes 322/324 loads and 322/324 lines before OFF; the ExtraTrees reference attributes '
+         f'15/324 loads and 315/324 lines; the short-window variant gets 30/324 loads and 322/324 lines. '
+         'All timely matched decisions have correct family/source: the main gap is timely coverage, not conditional classification accuracy. '
+         f'Persistent line: both physical banks and both ExtraTrees adapters make 162/162 correct first decisions; Chen2016 makes '
+         f'{int(chen["first_correct"])}/162, with {int(chen["first_prechange"])} pre-change stops. '
+         f'After first detection, physical banks produce 0 extras versus {int(maintained["ET_REFERENCE"])}/{int(maintained["ET_CANDIDATE"])} for the two trees (post hoc persistence audit). '
+         f'Chen stops on all {int(chen["normal_records_with_alarm"])}/72 normal records; physical banks and trees alarm on 0/72, with different exposure.'),
+        ('Interpretation and limits',
+         'The sealed study supports timely attribution on the declared nine-load/nine-line simulator catalog, especially loads, while '
+         'exposing an alarm burden under network mismatch. Replayed conditions and noise share parents; 648 is not '
+         '648 independent events. Original tree validation shares two normal groups with fitting; the later grouped 70/30 study is a different model. No official '
+         'hackathon-score improvement, source-excluded transfer, all-family diagnosis, calibrated probabilities, '
+         'field operation or real-time throughput is established. Warner trajectory search and IMM/multiple-history '
+         'methods are acknowledged; no matched numerical advantage over them is claimed.'),
+        ('For David and Masoud',
+         'Ready for scientific coauthor review, not yet certified for journal submission. The central claim is the complete procedure and its measured trade-off. The comparison does not '
+         'isolate recovery memory and the methods have different fixed false-alarm budgets. Decide whether to '
+         'state only the complete-procedure claim or obtain a controlled component/comparator test. See the five-perspective audit for reproducibility and claim limits. '
+         'No method was retuned after the sealed comparison.')
     ]
-    rows = [['H04 procedure', 'Timely family + source', 'Extra alarms'],
-            ['Physical: five models', f'{m("ContMixTimely")}/{m("ContMixTotal")}', m('ContMixExtras')],
-            ['Physical: nominal', f'{m("ContNomTimely")}/{m("ContNomTotal")}', m('ContNomExtras')],
-            ['Both frozen ExtraTrees adapters', f'{m("ContETTimely")}/{m("ContETTotal")}', m('ContETExtras')]]
-    note = '54 realizations repeat 18 interventions across three network conditions; normal exposure is only 204 s per method. Nominal/mixture publication paths also differ, so this is not an isolated R/X-bank ablation.'
+
+    ablation = ROOT / 'generated/frozen/ablation_a01_20261102'
+    if (ablation / 'SUMMARY.csv').exists():
+        audit_a = json.loads((ablation / 'EVALUATION_AUDIT.json').read_text())
+        assert audit_a['intended_outputs'] == 96
+        manifest_a = json.loads((ablation / 'MANIFEST.json').read_text())
+        for name in ('SUMMARY.csv', 'EVALUATION_AUDIT.json'):
+            assert hashlib.sha256((ablation / name).read_bytes()).hexdigest() == manifest_a[name]['sha256']
+        a = pd.read_csv(ablation / 'SUMMARY.csv');a = a[a.lane == 'continuous'].set_index('method')
+        pairs = [('marginal/carry','BAYES_MEMORY'),('profile/carry','PROFILE_MEMORY'),('marginal/reset','BAYES_NO_CARRY'),('profile/reset','PROFILE_NO_CARRY')]
+        outcomes = '; '.join(f'{label}: {int(a.loc[key,"timely"])}/108 and {int(a.loc[key,"extras"])} extras' for label,key in pairs)
+        sections[-1] = ('Controlled component study and coauthor decision',
+            'Same-bank posthoc study: ' + outcomes + '. Same thresholds; observed alarm rates may differ. '
+            'The score arm retains conditional Bayesian state estimation; reset removes physical-state carry at inferred closure only. '
+            'Interpret these contrasts with the paired intervals. External transfer, stronger-comparator coverage and scientific packaging remain open. Author declarations are pending before submission.')
+    else:
+        sections[-1] = ('For David and Masoud',
+            'Coauthor-review draft. A controlled 24-record factorial study is running with the same five-model bank and publisher: '
+            'marginal versus profile amplitude scores, and physical-state carry versus reset at inferred closure. '
+            'No effect is claimed before completion. This is a posthoc study on existing data, not independent confirmation. '
+            'Scientific packaging, bibliography and author declarations remain pending before submission.')
+
     pdfmetrics.registerFont(TTFont('BriefArial', 'C:/Windows/Fonts/arial.ttf'))
     pdfmetrics.registerFont(TTFont('BriefArialBold', 'C:/Windows/Fonts/arialbd.ttf'))
-    body = ParagraphStyle('body', fontName='BriefArial', fontSize=10, leading=13, spaceAfter=5.5)
-    head = ParagraphStyle('head', fontName='BriefArialBold', fontSize=10, leading=12, textColor=colors.HexColor('#125570'), spaceBefore=7, spaceAfter=4)
-    small = ParagraphStyle('small', parent=body, fontSize=8.2, leading=10.2)
+    body = ParagraphStyle('body', fontName='BriefArial', fontSize=10, leading=13, spaceAfter=5)
+    head = ParagraphStyle('head', fontName='BriefArialBold', fontSize=10.5, leading=13,
+                          textColor=colors.HexColor('#125570'), spaceBefore=8, spaceAfter=3)
+    small = ParagraphStyle('small', parent=body, fontSize=8.5, leading=10.5)
     title = ParagraphStyle('title', fontName='BriefArialBold', fontSize=17, leading=20, spaceAfter=5)
-    story = [Paragraph('P07 | Contribution, evidence and closure', title),
+    story = [Paragraph('P07 | Contribution, evidence and limits', title),
              Paragraph(f'For David Celeita and Masoud Barati | Coauthor-review draft | {stamp}', small)]
-    md = ['# P07: contribution, evidence and closure', '', 'Coauthor-review draft | ' + stamp, '']
-    for heading, text in sections:
-        story.append(Paragraph(heading, head)); md += ['## ' + heading, '']
-        if text:
-            story.append(Paragraph(text, body)); md += [text, '']
+    md = ['# P07: contribution, evidence and limits', '', 'Coauthor-review draft | ' + stamp, '']
+    for heading, paragraph in sections:
+        story.append(Paragraph(heading, head))
+        md.extend(['## ' + heading, ''])
+        if paragraph:
+            story.append(Paragraph(paragraph, body))
+            md.extend([paragraph, ''])
         else:
-            t = Table([[Paragraph(c, small) for c in row] for row in rows], colWidths=[240, 160, 112])
-            t.setStyle(TableStyle([('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#e7f0f3')),
-                                   ('VALIGN', (0, 0), (-1, -1), 'TOP'),
-                                   ('BOTTOMPADDING', (0, 0), (-1, -1), 4),
-                                   ('TOPPADDING', (0, 0), (-1, -1), 4)]))
-            story += [t, Spacer(1, 4), Paragraph(note, small)]
-            md += ['| ' + ' | '.join(rows[0]) + ' |', '|---|---|---|']
-            md += ['| ' + ' | '.join(row) + ' |' for row in rows[1:]]
-            md += ['', note, '']
-    doc = SimpleDocTemplate(str(OUT), pagesize=(595.28, 841.89), leftMargin=41.6, rightMargin=41.6,
-                            topMargin=30, bottomMargin=27, title='P07: contribution, evidence and closure')
+            table = Table([[Paragraph(str(cell), small) for cell in row] for row in rows],
+                          colWidths=[128, 76, 43, 152, 111])
+            table.setStyle(TableStyle([('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#e7f0f3')),
+                                       ('VALIGN', (0, 0), (-1, -1), 'TOP'),
+                                       ('BOTTOMPADDING', (0, 0), (-1, -1), 3),
+                                       ('TOPPADDING', (0, 0), (-1, -1), 3)]))
+            story.extend([table, Spacer(1, 2)])
+            md.extend(['| ' + ' | '.join(rows[0]) + ' |', '|---|---:|---:|---:|---:|'])
+            md.extend(['| ' + ' | '.join(row) + ' |' for row in rows[1:]])
+            md.append('')
+    doc = SimpleDocTemplate(str(OUT), pagesize=(595.28, 841.89), leftMargin=40,
+                            rightMargin=40, topMargin=29, bottomMargin=26,
+                            title='P07: contribution, evidence and limits')
     doc.build(story)
     with pymupdf.open(OUT) as pdf:
         if len(pdf) != 1:
-            raise RuntimeError(f'Brief must be one page; got {len(pdf)}')
+            raise RuntimeError(f'Brief must remain one page; got {len(pdf)}')
     (ROOT / 'docs/P07_COAUTHOR_BRIEF.md').write_text('\n'.join(md), encoding='utf-8')
-    manifest = dict(status=status, numerical_sources=[dict(path=str(p.relative_to(ROOT)), sha256=hashlib.sha256(p.read_bytes()).hexdigest()) for p in sources],
-                    output_sha256=hashlib.sha256(OUT.read_bytes()).hexdigest())
-    (ROOT / 'docs/P07_COAUTHOR_BRIEF_MANIFEST.json').write_text(json.dumps(manifest, indent=2) + '\n')
-    print(json.dumps(dict(pdf=str(OUT), pages=1, completed=done, remaining=len(remaining), hours=hours), indent=2))
+    status = {'status': 'C01_COMPLETE', 'completed_records': 342, 'physical_trajectories': 171,
+              'date_local': stamp, 'methods_changed': False, 'remaining_hours': 0,
+              'scientific_results_source': 'generated/frozen/c01_20261029/SUMMARY.csv'}
+    (ROOT / 'docs/C01_COAUTHOR_STATUS.json').write_text(json.dumps(status, indent=2) + '\n')
+    provenance = {'c01_manifest_sha256': hashlib.sha256(manifest_file.read_bytes()).hexdigest(),
+                  'c01_summary_sha256': hashlib.sha256((FROZEN / 'SUMMARY.csv').read_bytes()).hexdigest(),
+                  'c01_records_sha256': hashlib.sha256((FROZEN / 'RECORDS.csv').read_bytes()).hexdigest(),
+                  'brief_sha256': hashlib.sha256(OUT.read_bytes()).hexdigest(), 'pages': 1}
+    (ROOT / 'docs/P07_COAUTHOR_BRIEF_MANIFEST.json').write_text(json.dumps(provenance, indent=2) + '\n')
+    print(json.dumps(status, indent=2))
 
 
 if __name__ == '__main__':

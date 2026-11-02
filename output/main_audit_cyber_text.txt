@@ -1,0 +1,1822 @@
+
+===PAGE 1===
+Digital Object Identifier
+Physics-Informed Bayesian Event Attribution
+From Sparse PMUs
+JORGE LUIS MAYORGA TABORDA1, YESSICA AFRICANO RODRIGUEZ1, MASOUD BARATI2,
+PAYMAN DEHGHANIAN3, AND DAVID FELIPE CELEITA RODRÍGUEZ4
+1Universidad de los Andes, Bogotá, Colombia
+2Department of Electrical and Computer Engineering, University of Pittsburgh, Pittsburgh, PA, USA
+3Department of Electrical and Computer Engineering, The George Washington University, Washington, DC, USA
+4Faculty of Engineering, Universidad de La Sabana, Chía, Colombia
+Corresponding author: Jorge Luis Mayorga Taborda (e-mail: jl.mayorga236@uniandes.edu.co).
+ABSTRACT Sparse PMU measurements can reveal a disturbance without uniquely identifying its cause. We
+study how network equations and conditional Bayesian evidence complement feature-based classification
+for this task. A bank of switched differential-algebraic predictors compares source, onset, severity and
+restoration histories, retaining electrical and instrumental memory between interventions. Local severity
+integration and fixed-network model averaging produce separate active-event and originating-cause masses.
+Component experiments examine hidden-voltage reconstruction, engineered-feature localization and mixed-
+source response sensitivities; these are distinguished from the final causal estimator. In a frozen IEEE 39-
+bus comparison with eight PMUs, 18 six-event schedules are replayed under three network conditions and
+two noise levels. The physical bank makes 644/648 timely family/source decisions with 72 extra alarms,
+compared with 330/648 and 29 for a causal ExtraTrees reference. Its strongest gain is load-source attribution;
+line attribution is similar to the short-window learned comparator. Most extra physical alarms occur under
+network changes outside the model bank. A separate historical transfer experiment retains the original
+hackathon submission and its confusion matrix. These results support physical hypothesis comparison on
+a specified simulator catalog, not calibrated event probabilities, an isolated tensor/Bayes accuracy gain, or
+uniform superiority over learned diagnosis.
+INDEX TERMS event detection, model uncertainty, phasor measurement units, physics-informed inference,
+sequential diagnosis, source localization.
+I. INTRODUCTION
+E
+IGHT PMUs observe only a small part of a 39-bus
+network, yet an operator needs to know whether a
+disturbance occurred, which physical mechanism caused it,
+and where it began. An unmeasured bus can change several
+remote PMU signals, while different sources can produce
+similar measured responses. The problem is therefore both
+electrical and statistical: reconstruct the response allowed by
+the network, then compare its possible causes under uncertain
+state, severity and noise.
+Our starting point is a feature-based hackathon system.
+Voltage, current, frequency and spatial/temporal descriptors
+supported an ExtraTrees detector, classifier and localizer. We
+retain that route and its results. The complementary route
+asks an explicit counterfactual question: if this source had
+changed at a candidate past time, what would all eight PMUs
+have measured up to now? Physical equations provide the
+candidate path; conditional Bayesian evidence accounts for
+unknown severity and competing histories. After restoration,
+those histories must still explain the remaining machine mo-
+tion.
+Physical restoration does not erase machine motion. A flat
+reference can mislabel its remaining oscillation as a second
+event; suppressing all alarms during recovery can hide an
+actual second event. A corrected voltage offset also need not
+correct the response to a later input.
+DAE estimators recover unmeasured electrical states [1];
+outage detectors compare physical hypotheses [2], [3]; and
+simulated trajectories support sparse-PMU fault diagno-
+sis [4]. These ingredients are established. Our question is
+whether a continuing recovery should explain a new PMU
+change or yield to a later intervention hypothesis.
+The contribution is a specified causal attribution procedure
+and an empirical account of where physical structure helps
+and fails. Three results connect the earlier components to the
+complete comparison:
+PREPRINT
+1
+
+
+===PAGE 2===
+Mayorga Taborda et al., Physics-Informed Bayesian Attribution From Sparse PMUs
+A
+PREPARE THE PHYSICAL MODEL BANK
+B
+ESTIMATE AND FREEZE THE STARTUP CONTEXT
+C
+UPDATE CAUSALLY AT EACH PMU REPORT
+D
+DECIDE AND PUBLISH
+Network and PMU map
+DAE; Ybus, Yterm
+Eight PMUs; oriented I
+Five R/X hypotheses
+Nominal; global ±2% R/X
+Branch subset: ±3% R/X
+Switched predictors
+Aℓ,q, Bℓ,q, Cℓ,q, Dℓ,q
+Load inputs; line modes
+Augmented state
+Physical and filter memory
+Latent AR discrepancy
+Startup measurements
+300 reports; eight PMUs
+Context, phase and noise
+Model-specific context
+Estimate operating factors
+Keep R/X hypotheses fixed
+Frozen correction
+Fix V/I intercept bbℓ
+Center, scale and whiten
+Initialize histories
+Physical, filter and AR state
+10-s memory; 12-s warmup
+1
+PMU report k
+V, I, f, ROCOF; 30/s
+47 retained coordinates
+2
+Transform reports
+Frozen intercept and scale
+Whiten instrument noise
+3
+Predict histories
+Conditional state forecast
+Save model density
+4
+Propose onsets
+Birth screen: lags 0–18
+Retrieve pre-onset states
+5
+Replay histories
+New input versus recovery
+Replace likelihood suffix
+6
+Score histories
+Load: integrate severity
+Line: switched predictor
+7
+Correct and weight
+Update state and severity
+Saved density →wℓ,k
+8
+Retain through OFF
+No physical-state reset
+Keep history and cause
+Lh,k
+History h: family, asset, onset, severity and restoration
+retained state; next report
+Aggregate physical attribution
+Active mass Mc,k; cause mass Γc,k
+∆M: evolution + model reweighting
+Apply fixed publication rules
+Alarm / public OFF: 6 reports
+Internal OFF clock: 15 reports
+Time-stamped decisions
+Alarm, family/source, restoration
+Onset estimate; last report used
+Evaluation only, after sealing predictions: reserved event truth →timely source decisions, extra alarms and episode closure.
+Measurements and context
+Physical state and memory
+Competing histories
+Conditional evidence
+Decisions
+FIGURE 1. Implemented physical inference in four stages. (A) Construct switched network and PMU predictors. (B) Estimate the startup context and fix its
+observation correction. (C) Compare new intervention histories with retained recovery at each report, using stored pre-onset states. (D) Aggregate
+attribution and publish qualified alarm, source and restoration decisions. The public six-report rules and the internal 15-report OFF clock are distinct;
+their support conditions are specified in Section IV. Dashed feedback retains state for the next report. Reserved truth enters only the later evaluation.
+1) Network-conditioned state reconstruction, physical
+feature ablations and mixed-source sensitivity exper-
+iments quantify three ways of extracting information
+from sparse PMUs. Their contracts and limits are re-
+ported separately; they are not presented as one already
+validated joint filter.
+2) The continuous procedure compares new interventions
+with retained recovery histories, integrates local load
+severity, and separates active mass M from originating-
+cause mass Γ. Its ∆M records the changing attribution.
+The predictor and Bayesian history calculation, rather
+than the array’s shape, carry the physical information.
+3) A direct historical transfer of the submitted system and
+a new same-stream comparison with causal ExtraTrees
+distinguish feature failure, source attribution and alarm
+cost. The latter also compares a published outage de-
+tector on its eligible persistent-line task.
+The complete physical bank attributes 322/324 load realiza-
+tions before OFF versus 15/324 for the causal ExtraTrees
+reference. Under out-of-bank R/X it raises 68 versus 10
+unmatched alarms. Thus the supported gain is timely load
+attribution with a larger alarm burden, not uniformly better
+diagnosis. Neither the isolated benefit of recovery memory
+nor an end-to-end accuracy gain caused specifically by ten-
+sor/Bayes components has been measured.
+The test uses nine candidate load buses and nine lines in a
+fixed IEEE-39 simulation. It does not establish an all-family
+hackathon score, calibrated event probabilities or real-time
+deployment.
+II. RELATED WORK
+DAE and unknown-input estimators recover hidden states or
+inputs [1], [5], [6]; functional observability and diagnosability
+ask which states or sources can be distinguished [7]–[10].
+Physical outage inference already uses network hypotheses,
+uncertain states and sequential tests [2], [3], [11], [12]. Sparse
+input recovery estimates forcing locations and unknown ini-
+tial states in linear dynamics [13]. Sensor placement limits the
+2
+PREPRINT
+
+
+===PAGE 3===
+Mayorga Taborda et al., Physics-Informed Bayesian Attribution From Sparse PMUs
+information available at remote PMUs [14]–[16].
+Warner et al. compare simulated voltage/current paths
+across an unknown-onset window for short-circuit line iden-
+tification [4]. Our load/line task continues through restora-
+tion and successive events; their method has not been run
+on this cohort. Multiple-model filters and adaptive history
+banks already retain conditional modes [17], [18]; sequential
+diagnosis has established error/delay theory under specified
+observation laws [19]. Our screened, pruned bank inherits
+none of those general optimality or delay guarantees.
+Learned PMU classifiers and physical uncertainty models
+provide other routes [20]–[26]. For example, Li et al. embed
+disturbance-type/topology and localization-cost constraints
+in a spatiotemporal graph-convolutional model [21]. Our
+physical route instead computes the observation likelihood
+of candidate interventions; its graph is the admittance net-
+work and terminal map, not a learned message-passing layer.
+The two frozen ExtraTrees implementations test supervised
+references, not all learned diagnosis. The new contribution
+claimed here is the specified sparse-PMU procedure and its
+evidence: new interventions and retained recovery histories
+compete for the same causal reports, with component exper-
+iments explaining the role and limits of physical represen-
+tation. We do not claim that combining physics, Bayes and
+a tensor is itself new. Table 1 distinguishes the neighboring
+tasks and the comparators actually executed here.
+III. PROBLEM AND MEASUREMENT MODEL
+At report k, inference uses measurements through tk = k/30
+to decide whether a physical intervention occurred. Detection
+concerns its presence; classification selects a physical oper-
+ator; localization selects a bus or branch. These outputs can
+become reliable at different times. We record the estimated
+physical onset bτ separately from the alarm and diagnosis
+emission times.
+Figure 2 introduces the broader measurement phenomena
+using the known RAW0001 reference record. Faults, line
+changes, generation changes and load changes alter the phys-
+ical network; missing or corrupted reports alter observation
+integrity. The present causal test addresses load changes and
+line openings with restoration. The other panels provide con-
+text, not additional validated event classes.
+The network has 39 buses, but the prescribed PMU set is
+P = {2, 5, 6, 10, 19, 22, 29, 39}.
+(1)
+Voltage is measured at each PMU bus. Current is measured
+at a specified branch terminal, which can differ from that bus.
+The causal implementation uses 47 coordinates: eight voltage
+magnitudes, eight voltage angles, eight current magnitudes,
+seven current angles, eight absolute frequencies and eight
+ROCOFs, at 30 reports/s. BUS39 current angle is excluded
+because its interpretation remains partially validated. The
+BUS5 current terminal retains the provisional historical 5–
+6 assignment. These are declared measurement assumptions,
+not identities inferred from classification accuracy.
+The exported magnitudes are in V and A, angles in degrees,
+frequency in Hz and ROCOF in Hz/s. Internal centered coor-
+dinates do not replace the absolute frequency contract. These
+are reporting-rate phasor measurements; waveform harmon-
+ics or THD are not measured by these channels.
+The physical model is
+˙x = fq(x, z, u; θ),
+0 = gq(x, z, u; θ),
+(2)
+yk = Mk(x0:k, z0:k, q0:k; θM) + b + εk.
+(3)
+Here x contains machine and control dynamics, z the alge-
+braic network variables, q the topology/intervention mode,
+and θM the measurement convention. The causal measure-
+ment map uses current algebraic variables for voltage and
+terminal current and retained phase/instrument history for
+frequency and ROCOF. The history notation makes that mem-
+ory explicit; the instantaneous electrical map used in the
+Schur reduction below is its voltage/current component. A
+machine’s rotor speed is not substituted for bus frequency.
+An intervention history is h = (e, c, τ, a, κ): family, source,
+onset, severity and restoration time, with κ = ∞for a
+sustained event. Its duration is κ−τ when restoration occurs.
+A load changes its local P/Q setpoints; a line opening switches
+its branch primitive. For the supported impulse-free switches,
+x(τ +) = x(τ −),
+gq+(x(τ −), z(τ +), u; θ) = 0.
+(4)
+The algebraic voltage/current response may jump even
+though dynamic states remain continuous. Physical restora-
+tion reverses the intervention operator. It does not return the
+machines to their pre-event state, so electrical recovery can
+continue after OFF.
+The generator stores event schedules and true states sepa-
+rately from the PMU stream. Inference receives the nominal
+network, permitted calibration and reports through the current
+time. It receives no source, switch time, true R/X realization
+or solver state. Initial operating context and noise scale are
+estimated from 300 startup reports; monitoring begins after
+the inherited 12-s warmup. The startup contract assumes no
+intervention in that prefix.
+IV. RECOVERY-AWARE PHYSICAL ATTRIBUTION
+Figure 1 gives the report-level logic. A history is a proposed
+cause and trajectory, not just a bus label. The inference bank
+predicts the next report under no new event, a new load or
+line action, or retained recovery. Its switched predictors come
+from the network DAE and oriented PMU terminal map.
+Statistical filtering handles uncertain states and residual error.
+The nonlinear simulator generates the observations; inference
+uses local predictors, not a new full simulation for every
+hypothesis and report.
+A. CONSTRUCT THE PREDICTOR FROM THE NETWORK
+Kirchhoff constraints and complex power connect sources to
+remote PMUs:
+Ibus = YbusV,
+Iterm,r = Yterm,rV,
+Si = ViI ∗
+bus,i.
+(5)
+PREPRINT
+3
+
+
+===PAGE 4===
+Mayorga Taborda et al., Physics-Informed Bayesian Attribution From Sparse PMUs
+TABLE 1. Closest inference contracts. Chen and the two fixed ExtraTrees adapters are the executed comparators. An untested capability is not an
+algorithmic impossibility.
+Route
+Mechanism
+Evaluated target
+Role in this study
+Chen / Rovatsos
+Network
+likelihoods
+and
+sequential tests
+Line outages; Rovatsos includes
+transients
+Chen on persistent-line first de-
+cisions
+Warner high-fidelity
+Simulated V/I paths and onset
+search
+Short-circuit line candidates
+Closest trajectory precedent; no
+common-data run
+Adaptive Matrix CuSum
+Sequential diagnosis with er-
+ror/delay analysis
+One
+unknown
+distributional
+change
+Statistical precedent; no inher-
+ited guarantee
+DAE / stochastic-state estimation
+Physical state and uncertainty
+models
+States, unknown inputs or pa-
+rameters
+Components and adjacent tasks
+Learned PMU diagnosis
+Features or constrained repre-
+sentations
+Event families and locations
+Two frozen ExtraTrees refer-
+ences
+Physical history bank here
+Estimated-past-state paths and
+recovery
+Successive
+catalog
+load/line
+events
+Timely attribution, extras and
+restoration
+0.0
+0.5
+1.0
+1.5
+Time from label onset, t −t0 (s)
+0.25
+0.50
+0.75
+1.00
+|VA|/VA, pre
+0.244 of baseline
+(a) Fault at bus 39
+PMU 39
+PMU 5
+PMU 19
+0
+2
+4
+6
+Time from label onset, t −t0 (s)
+0.7
+1.0
+1.4
+1.8
+|IA|/IA, pre
+(b) Outage of line 23-24
+PMU 22
+PMU 39
+PMU 2
+0
+10
+20
+30
+Time from label onset, t −t0 (s)
+−200
+−100
+0
+f −fpre (mHz)
+(c) Generation change at bus 2
+PMU 2
+PMU 39
+0
+10
+20
+30
+40
+Time from label onset, t −t0 (s)
+0.95
+1.00
+1.10
+1.15
+|IA|/IA, pre
+(d) Load change at bus 7
+PMU 6
+PMU 10
+PMU 5
+0
+10
+20
+30
+Time from label onset, t −t0 (s)
+No
+Yes
+Data available
+812 PMU 29 frames absent
+(e) Missing data at PMU 29
+PMU 29
+PMU 22
+0.0
+0.5
+1.0
+1.5
+2.0
+Time from label onset, t −t0 (s)
+1.00
+1.05
+1.10
+|Vϕ|/Vϕ, pre
+Phase C only
+(f) Corrupted voltage at PMU 2
+Phase C
+Phase A
+Phase B
+Low
+High
+Clock signal
+FIGURE 2. Representative signatures from the archived RAW0001 reference simulation: fault, line outage, generation change, load change, missing PMU
+data and corrupted voltage. Alignment uses retrospective label onset for illustration; inference receives no such alignment. The gray clock in (e) is an
+illustrative reference, not another measured channel. Only load and line mechanisms enter the causal evaluation below. RAW0001 is known retrospective
+evidence, not independent field validation.
+Terminal rows retain orientation, line charging and trans-
+former ratios. A measured terminal current is not a nodal
+injection. A line opening changes the branch stamp and
+therefore the algebraic voltages and measured currents. A
+terminal map changes directly only if the switched branch is
+itself measured; none of the nine tested line candidates is a
+measured PMU terminal. The load operator scales both Pset
+and Qset by 1 + a with the fixed constant-impedance ZIP
+fractions, while the line operator switches the selected branch
+between active and open modes.
+On a regular index-one DAE chart with a fixed angle
+reference,
+δz = −g−1
+z
+(gxδx + guδu),
+δ ˙x = Ared
+q δx + Bred
+q δu,
+Ared
+q
+= fx −fzg−1
+z
+gx,
+Bred
+q
+= fu −fzg−1
+z
+gu.
+(6)
+For the instantaneous electrical observation map Hq(x, z, u),
+the corresponding output operators are
+Cred
+q
+= Hx −Hzg−1
+z
+gx,
+Dred
+q
+= Hu −Hzg−1
+z
+gu.
+(7)
+They propagate a perturbation at an unmeasured source to the
+selected voltage and oriented-current channels. Network con-
+nectivity enters through the branch stamps in gq and, where
+4
+PREPRINT
+
+
+===PAGE 5===
+Mayorga Taborda et al., Physics-Informed Bayesian Attribution From Sparse PMUs
+G
+G
+G
+G
+G
+G
+G
+G
+G
+G
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+P
+P
+P
+P
+P
+P
+P
+P
+P PMU voltage bus
+Transformer
+Candidate line opening
+Candidate load change
+FIGURE 3. IEEE 39-bus single-line diagram: 46 branches, 12 transformers
+and 10 generators. Blue bars and P marks locate the eight voltage PMUs.
+Orange branches and load arrows identify the nine line and nine load
+candidates; gray arrows denote other loads. Current terminals follow the
+separate measurement contract. All routes are orthogonal.
+TABLE 2. Scope of the executed causal component. The source is an
+intervention asset; it is not necessarily a measured PMU bus.
+Case
+Physical operator
+Executed claim
+Normal
+No intervention
+Monitor after startup
+Load
+Local P/Q factor; op-
+tional restoration
+Nine candidate buses
+Line
+Branch
+open;
+optional reclose
+Nine
+candidate
+branches
+Fault/generation
+Different
+shunt/input/trip
+operators
+Outside
+this
+causal
+test
+Missing/bad data
+Measurement-
+integrity mechanism
+Outside causal test
+Unknown
+Unresolved diagnosis
+Not a new physical
+family
+applicable, Hq; eliminating unmeasured algebraic variables
+generally produces dense reduced operators. The graph there-
+fore constrains the prediction without a learned graph em-
+bedding. A changed terminal operator would also contribute
+directly through Hq; the tested line modes keep the same
+terminal map. The implementation discretizes the admitted
+switch modes and adds causal phase-history operators for
+frequency and ROCOF. Inertia, controls and load law remain
+those of the fixed plant.
+After augmenting instrumental memory, a conditional pre-
+dictor has the local form
+ξk+1 = Aℓ,qξk + bℓ,q + Bℓ,qa + wk,
+rk = Cℓ,qξk + dℓ,q + Dℓ,qa + vk.
+(8)
+Here rk contains reference-corrected, scaled and instrument-
+whitened PMU coordinates, ℓis a fixed network hypoth-
+esis, and ξk contains physical deviation states, phase his-
+tory and predicted measurement-filter memory. Observed
+colored-instrument filters whiten measurements; their corre-
+sponding predictor memory is deterministic. Additional la-
+tent AR states represent persistent discrepancy, with preset
+quiet/load/line/recovery covariance and drift regimes. This
+statistical discrepancy model is distinct from the plant equa-
+tions. vk denotes the remaining innovation. A load has scalar
+severity within its specified P/Q direction. A line uses a
+switched operator rather than a fictitious load-amplitude fit.
+States from different equilibria are not interpreted as an abso-
+lute rotor-state mixture.
+B. ESTIMATE CONTEXT FROM THE STARTUP PREFIX
+Each network hypothesis uses the same 300 startup reports to
+estimate operating factors, reference phase and noise scale.
+Voltage/current coordinates receive a constant discrepancy
+correction,
+bbℓ= y0:299 −yref
+ℓ,
+bℓ,k = bbℓ
+(k ≥300).
+(9)
+Angular differences respect wrapping and the common ref-
+erence. Frequency and ROCOF use empirical prefix centers.
+The correction remains fixed so it cannot track a later load
+step and subtract its signature. This estimates an observation
+discrepancy, not the true impedances. Prefix estimates enter
+by substitution rather than through a full joint parameter
+posterior.
+C. COMPARE UNKNOWN-ONSET HISTORIES
+The method retains ten seconds of past conditional states.
+Its frozen birth screen searches lags of 0–18 reports and
+proposes selected onsets; it does not enumerate every onset
+in the 300-report history. Each history specifies family, asset,
+onset, restoration mode and severity. It starts from the stored
+conditional state before its proposed onset. That state already
+contains any ongoing recovery; an alarm does not reset the
+predictor to equilibrium.
+For a retained load history, conditional Gaussian filtering
+yields a residual e, severity response s and covariance S.
+Unknown severity has a truncated-Gaussian distribution in-
+herited from previous reports:
+Lh,k =
+Z u
+l
+N(e; sa, S) TN[l,u](a; µ, v) da.
+(10)
+The supplement derives the closed form by completing the
+square and works through a numerical example. It also spec-
+ifies the conditional state representation mh + dha and its
+update. The local amplitude integral is exact for the stated
+conditional Gaussian model. The complete bank remains
+approximate: regime covariances are shared from nominal-
+operator Riccati equations, context estimates enter by sub-
+stitution, and histories are screened and pruned. At episode
+closure the augmented state mixture mean is retained and
+PREPRINT
+5
+
+
+===PAGE 6===
+Mayorga Taborda et al., Physics-Informed Bayesian Attribution From Sparse PMUs
+omitted between-history spread is recorded. A fully Bayesian
+posterior over states, context and all histories is not claimed.
+The rolling screen proposes histories; it is not another
+independent observation. Replaying a suffix replaces its orig-
+inal no-new-event suffix likelihood. The sequential update
+therefore counts each report once, rather than repeatedly ac-
+cumulating overlapping ten-second windows.
+D. REPRESENT FIXED NETWORK UNCERTAINTY
+The bank contains nominal, global ±2%, and selected-branch
+±3% paired R/X hypotheses. Parameters stay constant within
+a hypothesis. Its outer weight uses a predictive density formed
+before the current-report state update and proposal selection:
+wℓ,k =
+wℓ,k−1pℓ(yk | Fk−1,bbℓ)
+P
+j wj,k−1pj(yk | Fk−1,bbj)
+.
+(11)
+Startup-fitting reports are not scored again as independent
+model-selection evidence. The mixture covers a finite set
+of network alternatives rather than identifying a continuous
+impedance posterior.
+E. KEEP RECOVERY AS A COMPETING PHYSICAL
+EXPLANATION
+Restoring an input or topology at κ does not restore the
+pre-event state: x(κ+) = x(κ−). On a regular local post-
+restoration chart, the difference from a same-context no-new-
+intervention trajectory obeys
+δxh(t) ≃Φ0(t, κ)δxh(κ),
+δynet
+h (t) ≃C0(t)Φ0(t, κ)δxh(κ),
+t > κ.
+(12)
+Here ynet denotes voltage/current coordinates before the in-
+strument map. Instrumental memory is retained as well. This
+local interpretation of known dynamics explains why the
+reference after OFF is a trajectory, not a zero residual; it is
+not a new propagation theorem.
+For conditional history mass πℓ,h,k, define active and
+originating-cause masses for an admissible family/source cell
+c:
+Mc,k =
+X
+ℓ
+wℓ,k
+X
+h:c(h)=c
+πℓ,h,k 1{h active at k},
+Γc,k =
+X
+ℓ
+wℓ,k
+X
+h:c(h)=c
+πℓ,h,k.
+(13)
+A retained history can stop being active while its cause still
+explains recovery. Later interventions compete with those
+histories. The implementation stores 18 admissible cells, not
+every family at every bus. After confirmed episode closure,
+explicit histories are compressed into the retained state mean.
+Cause masses describe the current bank, not a permanent
+ledger of all past interventions.
+Writing the conditional active mass as Mℓ,c,k yields
+∆Mc,k =
+X
+ℓ
+wℓ,k(Mℓ,c,k −Mℓ,c,k−1)
++
+X
+ℓ
+(wℓ,k −wℓ,k−1)Mℓ,c,k−1.
+(14)
+The terms distinguish within-model evolution from model
+reweighting. This accounting identity aids interpretation,
+without constituting a new tensor factorization. The masses
+are approximate attribution weights; probability calibration
+and globally optimal filtering are not established.
+F. EMIT SEPARATE DETECTION, DIAGNOSIS AND
+RESTORATION MESSAGES
+The internal observer proposes an alarm after six reports
+above the 0.99 active-mass threshold. Public alarm publica-
+tion additionally requires an internal pending episode and six
+reports of qualified active support: the frozen source screen
+qualifies load cells, while admitted line cells qualify through
+their switched operator. Public OFF requires six reports above
+0.99 for the diagnosed cell’s joint cause-and-restoration mass.
+The observer also has a separate, more conservative 15-report
+internal OFF clock. The archived source confirmation and
+episode-replacement rules determine the public diagnosis.
+Every message records emission time and the last report used.
+A diagnosis can be correct eventually but too late to precede
+physical OFF.
+The nominal comparator uses the same nominal condi-
+tional model with its own fixed publication path. Compar-
+ing nominal and mixture evaluates two complete configured
+procedures; it does not isolate the outer network bank from
+publication decisions. The admission-rule ablation tests a dif-
+ferent publication decision; it is not a pure recovery-memory
+ablation.
+The supplement records the frozen birth/restoration haz-
+ards, severity prior and integration intervals, restoration-
+child rules and beam limits, together with the execution se-
+quence and illustrative calculations. These details preserve
+the archived configuration; the compact algorithm below
+states the report order and information boundary.
+G. PER-REPORT ALGORITHM AND COMPUTATIONAL
+BOUNDARY
+Algorithm 1: one causal update. Input: nominal model,
+fixed method configuration and PMU reports. Initialize con-
+text, reference, noise and conditional states from the 300
+startup reports. Event truth is never an input.
+1) Transform report k; predict it from each retained phys-
+ical or recovery history. Save each network model’s
+predictive density before screening or correcting with
+this report.
+2) Screen onsets in the latest 18 reports. Start each pro-
+posed history from its stored pre-onset state and replay
+its suffix, replacing the old suffix likelihood once.
+3) Score histories, integrating load severity or using the
+switched line operator. Then correct state and severity,
+update network weights, and prune by the fixed rules.
+Retain state and cause through restoration.
+4) Aggregate active mass M, cause mass Γ and ∆M.
+Apply the frozen alarm, source and OFF rules; record
+emission time, estimated onset and last report used.
+6
+PREPRINT
+
+
+===PAGE 7===
+Mayorga Taborda et al., Physics-Informed Bayesian Attribution From Sparse PMUs
+−5
+0
+5
+Terminal current change (%)
+OFF
+Load at bus 24
+−10
+0
+10
+OFF
+Open line 9–39
+0
+1
+2
+3
+Time since ON (s)
+−0.01
+0.00
+0.01
+ROCOF (Hz/s)
+0
+1
+2
+3
+Time since ON (s)
+−0.04
+−0.02
+0.00
+0.02
+PMU 2
+PMU 39
+FIGURE 4. Two interventions from one continuous development record. Current change and ROCOF at PMUs 2 and 39 remain dynamic after physical OFF
+(dashed line). The gray interval is the true active period, shown only for explanation; inference uses all eight PMUs without event timing. These two PMUs
+illustrate the traces and were fixed for both panels.
+The nonlinear simulator constructs observations; this algo-
+rithm propagates local switched predictors. The input grid is
+30 reports/s. Causality concerns report availability; acquisi-
+tion throughput, computation time and the electrical history
+needed for a decision are separate quantities. Wall-clock real-
+time operation has not been established.
+V. WHAT PHYSICAL STRUCTURE AND LEARNED
+FEATURES RECOVER
+The continuous estimator builds on three distinct questions:
+what can be reconstructed at unmeasured buses, what re-
+sponse distinguishes candidate sources, and how evidence
+should be assigned when several explanations fit. The follow-
+ing component experiments answer parts of these questions.
+They use different cohorts and are not ablations of the final
+continuous estimator. Figure 5 places their measured effects
+side by side without pooling their scores.
+A. RECOVERING UNMEASURED VOLTAGES IS NOT YET
+EVENT ATTRIBUTION
+In 100 nominal test trajectories, the mean hidden-voltage
+relative error falls from 0.3402% for the equilibrium refer-
+ence to 0.00990% for snapshot weighted least squares and
+0.00963% for a causal Kalman reconstructor. Most of this
+improvement comes from conditioning the physical network
+on the measured phasors; temporal filtering adds a smaller
+improvement. This supports reconstruction under that model
+and sensor placement, not unique recovery of every source.
+The independently evaluated Kalman reconstructor is not
+silently substituted for the conditional observer in Fig. 1.
+B. PHYSICAL FEATURES REMAIN A USEFUL LEARNED
+ROUTE
+The historical feature study raises physical-source Top-1 from
+49.6% with 136 features to 54.8% with graph-temporal fea-
+tures added, and 59.0% with the full 448-feature set. Voltage
+level, relative angle, frequency, time scale and spatial coher-
+ence carry complementary information; Fig. 5(b) reports an
+executed feature comparison rather than an inferred explana-
+tion of tree importance. Electrical features make a classifier
+physics-informed in its representation. They do not enforce
+Kirchhoff balance on its predicted label or compute the PMU
+response of a candidate intervention.
+For phase-to-neutral RMS phasors and a declared current
+orientation,
+Sij = Pij + jQij =
+X
+ϕ∈{a,b,c}
+ViϕI ∗
+ij,ϕ.
+(15)
+This is terminal power, not the bus’s net injection unless all
+relevant terminals are accounted for. Frequency and ROCOF
+complement the phasors but share the instrument’s angle
+processing; the likelihood must account for that dependence.
+Fundamental-frequency phasors also do not determine har-
+monic distortion. Thus adding nominally physical features
+does not by itself supply missing harmonic or nodal-injection
+measurements.
+C. TWO DIFFERENT USES OF A TENSOR
+A response tensor stores how the measured channels change
+with source and elapsed time. In the archived two-load exper-
+iment, its contraction is
+sq,n(a) =
+X
+i
+Dqniai +
+X
+i
+Qqnia2
+i +
+X
+i<j
+Qqnijaiaj,
+(16)
+PREPRINT
+7
+
+
+===PAGE 8===
+Mayorga Taborda et al., Physics-Informed Bayesian Attribution From Sparse PMUs
+Nominal
+WLS
+Kalman
+10−2
+10−1
+100
+Hidden-voltage relative error (%)
+0.3402
+0.0099
+0.0096
+(a) Reconstruct unmeasured buses
+100 nominal trajectories
+Base
+136
++ graph
+184
+All
+448
+0
+20
+40
+60
+Physical-source Top-1 (%)
+49.6
+54.8
+59.0
+(b) Enrich learned features
+Historical typed ExtraTrees
+D
+D + Qi
+D + Qi + Qij
+10−3
+10−2
+10−1
+100
+Median whitened response error
+0.205
+0.469
+0.00307
+(c) Include source interactions
+32 archived two-load responses
+FIGURE 5. Three separate component experiments. (a) Mean relative error of the 31 unmeasured bus voltages under a matched nominal model; this is
+not a PMU compliance TVE test. (b) Mean physical-source Top-1 over three model seeds, each scored on 7,915 labeled physical samples, in the historical
+typed-ExtraTrees feature study; whiskers show the seed range, not a confidence interval. These 136–448-feature models are neither the final hackathon
+submission nor the causal comparators. (c) Median whitened prediction error at the archived 120-report horizon for two-load responses: mixed-source
+terms matter, while adding only self-curvature worsens this metric. Each panel has its own units and cohort.
+where q indexes PMU coordinates, n elapsed reports and
+i, j load sources. Centered nonlinear simulations estimate the
+coefficients; the Q terms include their Taylor scaling. The
+mixed term represents the interaction of two simultaneous
+load changes. Across 32 archived two-source responses, me-
+dian whitened error is 0.205 for D, 0.469 after self-curvature,
+and 0.00307 after mixed terms. This is evidence for response
+fidelity in that local experiment. It is not a measured clas-
+sification gain from inserting this second-order tensor into
+the continuous load/line bank, which uses switched local
+predictors instead.
+The
+attribution
+array
+M
+has
+a
+different
+role:
+its
+source/family entries collect conditional history masses, and
+∆M describes their evolution, as defined in (13)–(14). Its pre-
+dictive content comes from the physical hypotheses. Merely
+storing their weights in a multidimensional array creates
+neither information nor a new tensor-learning algorithm.
+D. WHY INTEGRATE SEVERITY RATHER THAN SELECT THE
+BEST FIT?
+An extra source with zero amplitude can reproduce a smaller
+source set. Best-fit residual alone therefore cannot decide
+cardinality. In the archived load-support estimator, the model-
+selection quantity is
+ZS =
+Z
+p(r | sS(a), Σ)p(a | S) da,
+p(S | r) ∝ZSp(S).
+(17)
+Integration accounts for the prior volume of amplitudes con-
+sistent with the data, rather than rewarding only the best-
+fitting amplitude. This is standard Bayesian model com-
+parison applied to an electrical response model, not a new
+Bayes rule. The archived implementation evaluates the null,
+16 single-source and 120 pair supports with 31-point Gauss–
+Hermite quadrature per amplitude. Table 3 shows both its
+successes and its loss of resolution for weak sources.
+TABLE 3. Archived joint cardinality-and-support decisions. Onset, load
+family and operating context are supplied. These are noise replays of
+shared physical trajectories, not independent continuous detections.
+Amplitude regime
+Replays
+Joint support Top-1
+Finite / finite
+1,440
+100.00%
+Moderate / moderate
+1,440
+98.82%
+Weak / strong
+1,440
+66.25%
+Weak / weak
+5,760
+24.38%
+An audit found a one-source evidence normalization offset
+in this archive: the implemented cardinality prior is pro-
+portional to (0.20, 0.50/(2π), 0.30) rather than the declared
+(0.20, 0.50, 0.30). The table preserves the executed results
+under that effective prior; it does not validate calibrated
+posterior probabilities or a corrected replay. The continuous
+estimator uses separate, independently checked local evi-
+dence code. Consequently these component results motivate
+the physical/Bayesian construction, but do not establish that
+adding Bayes or tensor storage alone causes its final accuracy
+advantage.
+VI. EXPERIMENTAL DESIGN
+The test asks whether one method can attribute six successive
+load or line interventions in a continuous trajectory, including
+an intervention that begins while the preceding response is
+still recovering. The plant is a fixed Julia/PowerDynamics
+IEEE 39-bus research candidate. Each parent is integrated
+once across all ON and OFF actions; differential states are not
+reset. PMU reports are exported at 30 frames/s, independently
+of solver steps. A switch-aligned report uses the post-switch
+algebraic value. RAW0001 informed the simulator retrospec-
+tively and is not an independent test record.
+The sealed evaluation has 18 six-event continuous parents,
+27 persistent line-opening parents and 12 normal parents.
+Every parent is replayed under matched R/X, an R/X change
+8
+PREPRINT
+
+
+===PAGE 9===
+Mayorga Taborda et al., Physics-Informed Bayesian Attribution From Sparse PMUs
+represented in the model bank and an R/X change outside it.
+Two instrumental-noise scales give 171 physical trajectories
+and 342 observed records. The 648 continuous event realiza-
+tions repeat 108 interventions; the physical parent, rather than
+the PMU frame or replay, is the uncertainty unit. The earlier
+development examples in Fig. 8 are not part of this sealed
+comparison.
+A. WHAT THE FEATURE BASELINE ACTUALLY DOES
+The hackathon submission was a hierarchical detector, event
+classifier and typed localizer based on ExtraTrees. It summa-
+rized each 30-s PMU window with voltage/current magnitude
+and angle statistics, frequency, ROCOF, missingness, phase
+spread, approximate P/Q, rolling changes, RLS/Kalman level
+innovations and graph-temporal differences. Its selected bun-
+dle reports 45,162 input features and internal simulated-
+validation macro-F1 0.960 with exact localization 0.852.
+These numbers describe that archive’s broader nine-label,
+window-level task; they are not scores on the present event-
+level cohort. The original submission is preserved.
+To compare at 30 reports/s, an earlier development cam-
+paign built two new, frozen causal ExtraTrees adapters from
+47 PMU coordinates. Each coordinate is centered and ro-
+bustly scaled using the quiet prefix. For trailing windows of 1,
+5 and 10 s, the reference adapter computes median, standard
+deviation, 10th/90th percentiles, a recent-quarter change and
+RMS first difference. This gives 47 × 3 × 6 = 846 features
+per report. The short-window adapter adds the current value
+and mean, standard deviation and two lag changes at 3, 8 and
+15 reports, giving 1,457 features in total. Both use 400 trees,
+balanced class weights, 19 classes (quiet plus 18 assets), and
+six-report confirmation; tree votes are scores, not calibrated
+event probabilities. Their training parents precede and are
+disjoint from the sealed cohort. Neither model was retrained
+or threshold-adjusted on these outcomes. The feature lists and
+training protocol are archived with the executables.
+The sealed methods are the five-model physical bank, its
+nominal-network version and these two causal ExtraTrees
+adapters. All receive the same 30-frame/s PMU stream and
+retain their own frozen decision rules. This tests complete
+procedures at their declared operating points, not a matched-
+false-alarm or unlimited-supervision comparison. The physi-
+cal banks also have different publication rules, so their con-
+trast does not isolate network-model averaging.
+Chen et al.’s published quickest-change detector [2] is
+eligible only for persistent line openings and normal records.
+The declared adapter uses nonoverlapping 15-Hz angle in-
+crements, a nominal single-line catalog and prefix-estimated
+drift and scale. It stops at its first alarm. Its DC and white-
+injection assumptions do not fully describe the simulator’s
+colored PMU noise; no published average-run-length guar-
+antee is transferred to these records.
+For continuous streams, an alarm is matched temporally
+before inspecting its source. A timely decision requires the
+right family and asset before true OFF. Unmatched event-
+stream alarms are extras. Restoration messages on unmatched
+episodes are counted separately; this count is not every possi-
+ble physical OFF-timing error. For persistent lines, the first
+stop is scored as correct, premature, wrong-source or cen-
+sored. Failed records remain in the intended denominators.
+Paired 95% intervals resample physical parents 10,000 times.
+Logical delay uses report timestamps; wall-clock inference
+cost is a separate quantity. Full calendars, thresholds and
+reproduction details are in the supplement.
+VII. DEVELOPMENT COMPARISONS AND WORKED
+SEQUENCE
+A. DIRECT TRANSFER OF THE SUBMITTED HACKATHON
+SYSTEM
+Before the confirmatory continuous study, the unchanged
+submitted ZIP and an earlier physical estimator were exe-
+cuted on the same 124 windows: 96 event realizations and
+28 normal windows. Figure 6 preserves their actual family
+confusions. The submitted ExtraTrees pipeline detected 32 of
+the 96 events, assigned the right family to 23, and the right
+family and exact source to 0. The earlier physical estimator
+obtained 96/96 for all three quantities. Neither alarmed in the
+28 normal windows. The source result was checked against
+the submission’s output CSVs, not inferred from the family
+matrix.
+This comparison exposes a transfer failure of the delivered
+system on the later simulator’s load/line catalog. It does not
+show an official hackathon-score improvement. The submit-
+ted model retains its broader training domain and 30-s win-
+dow rule, whereas the physical estimator knows the simulator
+and its 12 candidate origins. These were development cases,
+and the comparison permits both methods the same window
+endpoint. The next study therefore uses separately trained
+causal ExtraTrees comparators, successive events and a new
+frozen cohort. Its results must be read as a second experiment,
+not as more independent repetitions of the perfect develop-
+ment score.
+B. FOLLOWING SUCCESSIVE EVENTS THROUGH
+RECOVERY
+The example in Fig. 8 follows six physical interventions with-
+out restarting the network. With matched R/X, all six sources
+are identified before their OFF times. Under a network change
+outside the bank, an extra bus-20 diagnosis precedes the real
+bus-31 load; bus 31 is then diagnosed only after its physical
+restoration. The lower panel shows the mechanism visible to
+the method: active bus-31 mass rises late in the mismatched
+record. This is one development trajectory, not a performance
+estimate.
+The development controls also show that deleting alarms
+is easy if true events may be lost (Fig. 7). The stricter onset
+witness has no extras but loses a real bus-16 intervention. The
+frozen five-model procedure was therefore evaluated with its
+original publication rule; no rule was revised from the sealed
+outcomes.
+PREPRINT
+9
+
+
+===PAGE 10===
+Mayorga Taborda et al., Physics-Informed Bayesian Attribution From Sparse PMUs
+TABLE 4. Three distinct inference contracts. Historical hackathon validation and the sealed causal comparison have different units and cannot be
+subtracted as if they were the same score.
+Hackathon submission (historical)
+Causal ExtraTrees comparators
+Physical history bank
+Input and clock
+Eight PMUs; one decision per 30-s
+window
+Same 47 PMU coordinates as
+physical bank; 30 reports/s
+Same 47 coordinates; 30 reports/s
+Information
+used
+Engineered window features;
+supervised family/location labels
+Trailing statistics; supervised
+active-asset labels from earlier
+simulated parents
+Nominal DAE, candidate asset
+operators, PMU terminal map and
+quiet prefix
+Decision
+Hierarchical
+detector/classifier/localizer
+Tree vote, then six-report episode
+confirmation
+Conditional history evidence,
+active/cause masses and fixed
+publication rules
+Tested
+scope
+here
+Not rerun on the sealed cohort
+Nine loads, nine lines, successive
+events
+Same nine loads and nine lines,
+successive events
+Main limitation
+Window-level historical score is not a
+causal event-level score
+May miss load sources absent from its
+learned feature boundaries
+More extra alarms under out-of-bank
+R/X
+Normal
+Line
+Load
+Other
+Predicted family
+Normal (28)
+Line (48)
+Load (48)
+True family
+28
+100%
+0
+0%
+0
+0%
+0
+0%
+32
+67%
+16
+33%
+0
+0%
+0
+0%
+32
+67%
+0
+0%
+7
+15%
+9
+19%
+Submitted ExtraTrees
+Normal
+Line
+Load
+Other
+Predicted family
+Normal (28)
+Line (48)
+Load (48)
+28
+100%
+0
+0%
+0
+0%
+0
+0%
+0
+0%
+48
+100%
+0
+0%
+0
+0%
+0
+0%
+0
+0%
+48
+100%
+0
+0%
+Earlier physical estimator
+FIGURE 6. Historical development transfer on shared observation windows. Cells show counts and row percentages. All out-of-scope predictions are
+retained as ‘‘Other’’; the submitted system’s nine such predictions were the unknown-event label. This is a family matrix, not a localization matrix. The
+physical comparator is an earlier estimator, not the final continuous bank. The 96 event realizations reuse 36 physical event trajectories; the normal
+windows come from six physical trajectories.
+VIII. SEALED EVALUATION: ACCURACY AND ALARM
+COST
+The five-model bank makes 644/648 timely family-and-
+source decisions with 72 unmatched event-stream alarms.
+Its nominal counterpart makes 643/648 with 92 extras. The
+frozen causal ExtraTrees reference makes 330/648 with 29;
+its short-window variant makes 352/648 with 16 extras. These
+are paired replays of 108 interventions, not 648 independent
+events. Figure 9 shows why the totals differ: the physical
+banks recover nearly all loads, while both learned adapters
+already recover most tested lines. The extra alarm burden of
+the physical banks rises sharply when true R/X changes fall
+outside their five-model bank.
+The paired intervals in Fig. 10 confirm a timely-attribution
+advantage over this ExtraTrees reference in each tested stra-
+tum. They also show a higher rate of unmatched alarms under
+out-of-bank R/X. Those intervals resample physical parents,
+preserving correlation across noise replays and network con-
+ditions. They do not establish superiority at a common false-
+alarm operating point. The physical bank’s stratum median
+diagnosis delay is about 0.27 s in matched and in-bank condi-
+TABLE 5. Sealed continuous-stream decisions. Each family has 324
+replayed instances from 108 distinct interventions; extras are unmatched
+alarms on event records. The methods retain unequal alarm operating
+points.
+Method
+Load
+Line
+Extras
+Physical bank
+322/324
+322/324
+72
+Nominal bank
+322/324
+321/324
+92
+ExtraTrees
+15/324
+315/324
+29
+ExtraTrees short
+30/324
+322/324
+16
+tions; the ExtraTrees medians range from 0.19 to 0.30 s. There
+is no general latency advantage.
+The separate persistent-line test scores the first stop. Both
+physical banks and both ExtraTrees adapters identify the
+right line first on 162/162 openings. The declared Chen2016
+adapter does so on 74/162; 66 records stop before the opening
+and 22 stop afterward on a wrong line. It also stops on all
+72 paired normal records, whereas the continuous methods
+alarm on none. Chen’s normal exposure ends at its first stop
+(2,522 s); the other methods monitor 42,336 s each. These un-
+10
+PREPRINT
+
+
+===PAGE 11===
+Mayorga Taborda et al., Physics-Informed Bayesian Attribution From Sparse PMUs
+0
+2
+4
+6
+8
+10
+12
+Unmatched event-stream alarms
+25
+30
+35
+40
+45
+50
+55
+Timely family + source / 54
+5-model
+53/54
+Nominal
+54/54
+ExtraTrees
+27/54
+ET short
+27/54
+Onset witness
+52/54
+FIGURE 7. Development decision trade-off on 18 interventions replayed
+under three R/X settings. A stricter onset witness eliminates extra alarms
+but misses a true bus-16 load. The 54 plotted realizations share physical
+parents. These controls were not selected using the later sealed
+evaluation.
+equal exposures and the adapter’s white-injection assumption
+prevent a general claim against published quickest-change
+detection. Full stratified tables, failure ledgers, restoration
+outcomes and censoring are in the supplement.
+The experiment establishes performance on the specified
+nine-load, nine-line simulator catalog. It does not estab-
+lish a new hackathon score, unseen-source generalization,
+calibrated event probabilities, field operation or real-time
+throughput.
+IX. INTERPRETATION AND LIMITS
+A. PREDICTION IS NOT IDENTIFICATION
+For the exact observation map Ψ, compare a new intervention
+e with and without the same earlier history h:
+se|h(t) = Ψt(h ⊕e) −Ψt(h).
+(18)
+Both paths start from the same physical and instrumental
+state. In a linear time-invariant model this increment does not
+depend on prior state; nonlinearity may change it but does not
+guarantee more source information. Our stream implementa-
+tion approximates both paths with local switched predictors.
+It does not solve the full nonlinear DAE for every history.
+A good fit to one source does not establish that competing
+sources can be separated. With severity and nuisance coordi-
+nates βj profiled over their admitted set Aj, a local separation
+measure is
+d2
+h = min
+j̸=h
+min
+βj∈Aj ∥sh −sj(βj)∥2
+Σ−1.
+(19)
+Small distance makes location noise-sensitive; it is neither a
+universal error bound nor a calibrated posterior [9], [10]. Fit,
+source ranking and uncertainty calibration require separate
+tests. The supplementary controls retain their known-onset
+and observation contracts; their state reconstruction scores
+are not pooled with the causal study. Severity fitting can
+absorb context error parallel to a source signature while leav-
+ing intensity biased. This standard projection effect explains
+why correct location and inaccurate response amplitude can
+coexist.
+B. WHAT RECOVERY MEMORY ESTABLISHES
+A separate full-DAE control supplies the earlier history and
+later onset. Source separation stays essentially unchanged
+when that history is known and falls when prior severity is
+uncertain; binary source accuracy has no mean gain. Retain-
+ing recovery is therefore justified as a consistent prediction of
+the continuing response, not as a universal increase in location
+information. The stream comparison tests the complete frozen
+procedure. Its admission-rule ablation does not isolate every
+operation that retains recovery.
+A separate signature test holds pre-event measurements
+and offset equal while changing the event–context response
+term. It isolates a response approximation, not an improve-
+ment of the unchanged causal detector. Known timing, one
+scalar context and four load sources bound that result.
+C. WHAT THE COMPARISON DOES NOT ESTABLISH
+Trajectory libraries, sequential likelihoods and multiple-
+model filters precede this work. The claim here is the speci-
+fied competition of new interventions with retained recovery,
+and its measured behavior, rather than a general filtering
+optimum. Warner’s trajectory procedure was not run on this
+cohort. The feature baseline’s trailing summaries describe
+how signals changed, but do not encode the counterfactual
+response of each candidate source through the network and
+PMU terminal map. That is a concrete difference in infor-
+mation used by the algorithms and is consistent with the
+observed load gap; these experiments do not prove that a
+better feature set or larger training set could not close it.
+The original hackathon submission addressed nine labels with
+30-s decisions. It is a useful earlier result and a source of
+feature design, but its internal validation score cannot be com-
+pared numerically with event-level timely attribution here.
+The two causal ExtraTrees adapters were trained separately
+for this task; their load misses do not establish a new official
+hackathon score or rule out better supervised models. Chen’s
+first-stop adapter is tested only on persistent lines under DC
+and white-injection assumptions.
+D. BROADER HACKATHON SCOPE AND RETROSPECTIVE
+TRANSFER
+The earlier all-family pipeline and integrity interface are
+retained as separate results. An archived observation-only
+composition reproduces all 180 physical/integrity windows
+and reconstructs availability over 161379 reports; this veri-
+fies interface consistency, not additional detection accuracy.
+On retrospectively annotated RAW0001 windows, a source-
+only learned hybrid changes joint family/source correctness
+from 1/24 to 2/24, with one gain and no losses. It is not
+PREPRINT
+11
+
+
+===PAGE 12===
+Mayorga Taborda et al., Physics-Informed Bayesian Attribution From Sparse PMUs
+15
+20
+25
+30
+35
+40
+45
+50
+55
+Time (s)
+R/X outside bank
+Matched network
+True ON–OFF
+B24
+L9-39
+L4-14
+B31
+L26-27
+B16
+extra: bus 20
+bus 31 after OFF
+Six interventions in one state-continuous record
+38
+39
+40
+41
+42
+Time (s)
+0.0
+0.5
+1.0
+Active mass: bus 31
+physical OFF
+Matched R/X
+R/X outside bank
+FIGURE 8. One development sequence. Bars show reserved physical ON–OFF truth; circles are correct diagnoses emitted before OFF; crosses mark an
+extra bus-20 alarm and a bus-31 diagnosis emitted after OFF. Both lower decision rows use the same physical bank under different R/X conditions. The
+lower panel shows approximate active mass for bus 31: with R/X outside the bank, the correct explanation becomes dominant only after restoration.
+Truth is shown retrospectively and never enters inference.
+the physical bank and does not establish broad transfer. The
+frozen physical bank’s startup noise/stationarity assumptions
+fail on that record; no later quiet prefix was substituted to
+force admission. The supplement preserves these outcomes
+alongside the simulation results.
+E. SIMULATION AND DEPLOYMENT BOUNDARY
+The causal catalog has nine load buses and nine lines, with
+a quiet startup. Missing PMUs, unknown families, unre-
+stricted simultaneous sources, unseen-source transfer and
+field records remain untested. The generating plant and in-
+ference predictors share the F01 equation family and PMU
+map. The three R/X conditions perturb parameters within that
+family; they do not test a different producer, control law or
+instrument installation. Thus the high within-simulator hit
+rate is not evidence of the same rate on RAW0001 or a field
+network. The simulator keeps a provisional BUS5 current
+terminal and omits BUS39 current angle. Its noise includes
+temporal and cross-PMU dependence within signal families
+but omits the archived cross-family factor; frequency/ROCOF
+noise follows phase estimation. Hence agreement with this
+simulator does not verify the source producer’s CT placement
+or a complete physical PMU installation.
+Out-of-bank R/X preserves most timely source decisions
+but sharply raises unmatched alarms. The parent-cluster in-
+tervals describe these simulated parents, not all grids or
+PMU layouts. Context fitting, history pruning and shared
+covariance approximations also prevent a calibrated-posterior
+claim. Report-causal operation has not been timed as a real-
+time service; the implementation is not validated for protec-
+tion or control.
+X. CONCLUSION
+We connected sparse-PMU reconstruction, physical response
+signatures and feature-based diagnosis to event attribution
+through competing physical histories. Load/line predictors
+start from estimated past states and retain the cause of the
+response after restoration. Active mass M and its increment
+∆M expose the changing explanation rather than replacing
+the physical dynamics.
+The sealed continuous evaluation gives 644/648 timely
+family/source decisions with 72 extra alarms for the mixture,
+and 643/648 with 92 for nominal. The frozen ExtraTrees
+reference gives 330/648 with 29 extras. Most mixture extras
+arise under out-of-bank R/X, so the gain in timely attribution
+does not imply uniformly better alarm control.
+The component experiments preserve useful earlier find-
+ings: network conditioning recovers hidden voltage informa-
+tion, graph-temporal features improve a historical learned
+localizer, and mixed-source terms reduce local response error.
+They do not establish an isolated causal gain from Bayes or
+tensor storage in the final estimator.
+The earlier hackathon pipeline remains a broader nine-
+label, feature-based system. Its 30-s-window validation is a
+separate result; the causal ExtraTrees successor in this paper
+provides the direct same-stream comparison. The physical
+bank’s strongest supported gain is timely load-source attri-
+bution, while learned features already diagnose most lines in
+this catalog with fewer unmatched alarms.
+The gain concerns a specified load/line catalog in one
+simulator. The larger alarm burden under unmodeled R/X and
+the absence of an isolated recovery-memory ablation limit
+any causal explanation of that gain. The method does not yet
+12
+PREPRINT
+
+
+===PAGE 13===
+Mayorga Taborda et al., Physics-Informed Bayesian Attribution From Sparse PMUs
+0
+50
+100
+150
+200
+250
+300
+350
+Correct family + source before OFF / 324
+Physical bank
+Nominal bank
+ExtraTrees
+ExtraTrees short
+322
+322
+322
+321
+15
+315
+30
+322
+A. Benefit is concentrated in loads
+Load
+Line
+Matched
+R/X in bank
+R/X outside
+0
+20
+40
+60
+80
+Extra alarms / 216 event realizations
+68
+B. Mismatch increases unmatched alarms
+Physical bank
+Nominal bank
+ExtraTrees
+ExtraTrees short
+FIGURE 9. Sealed continuous evaluation. (A) Timely correct family and source by event family, with 324 paired realizations per family. (B) Unmatched
+event-stream alarms across the two noise levels within each R/X condition, with 216 event realizations per condition. The plots display the gain in load
+attribution and the alarm cost under out-of-bank network error together. Each method retains its own frozen publication rule and false-alarm budget.
+35
+40
+45
+50
+55
+60
+Timely gain (percentage points)
+Matched · noise ×1
+Matched · noise ×2
+R/X in bank · ×1
+R/X in bank · ×2
+R/X outside · ×1
+R/X outside · ×2
+A. More events attributed in time
+−20
+0
+20
+40
+60
+80
+Extra alarms per event-hour: difference
+B. More unmatched alarms with R/X mismatch
+Physical bank minus frozen ExtraTrees reference; 95% parent-cluster intervals
+FIGURE 10. Physical bank minus frozen ExtraTrees reference in the six paired strata. Points and 95% intervals come from 10,000 physical-parent
+resamples. Left: percentage-point difference in timely attribution; right: difference in unmatched alarms per event-record hour, whose denominator
+includes the 12-s startup. The orange rows expose the out-of-bank R/X failure. The intervals describe this finite simulated population.
+establish all-family diagnosis, calibrated event probabilities,
+field transfer or real-time deployment.
+The next methodological test should hold the physical dic-
+tionary and publication rule fixed while comparing profiled
+residuals with integrated severity evidence, then remove his-
+tory memory without changing the alarm budget. A separate
+source-excluded comparison could test a graph model or a
+learned correction of physical residuals. Joint state/context
+uncertainty and measured event-probability calibration re-
+main open; these are proposed tests, not results added to the
+present campaign.
+ACKNOWLEDGMENT
+OpenAI Codex [27] assisted with drafting and restructuring
+the abstract, all numbered main sections, author biographies
+and supplementary derivations, protocols and examples, La-
+TeX preparation, and plotting and execution-infrastructure
+code. The authors retain responsibility for the scientific con-
+tent, verification, and final submission.
+REFERENCES
+[1] M. Katanic, J. Lygeros, and G. Hug, ‘‘Recursive dynamic state estimation
+for power systems with an incomplete nonlinear DAE model,’’ IET Gener-
+ation, Transmission & Distribution, vol. 18, no. 22, pp. 3657–3668, 2024.
+[2] Y. C. Chen, T. Banerjee, A. D. Domínguez-García, and V. V. Veeravalli,
+‘‘Quickest line outage detection and identification,’’ IEEE Transactions on
+Power Systems, vol. 31, no. 1, pp. 749–758, 2016.
+[3] G. Rovatsos, X. Jiang, A. D. Domínguez-García, and V. V. Veeravalli,
+‘‘Statistical power system line outage detection under transient dynamics,’’
+IEEE Transactions on Signal Processing, vol. 65, no. 11, pp. 2787–2797,
+2017.
+[4] A. Warner, D. Hamilton, G. Fellouris, and D. Aliprantis, ‘‘Quick line
+fault detection and identification using high-fidelity models of transient
+dynamics,’’ TechRxiv preprint, version 1, 2023, posted June 16, 2023; cited
+as a preprint.
+PREPRINT
+13
+
+
+===PAGE 14===
+Mayorga Taborda et al., Physics-Informed Bayesian Attribution From Sparse PMUs
+[5] S. Gillijns and B. D. Moor, ‘‘Unbiased minimum-variance input and state
+estimation for linear discrete-time systems,’’ Automatica, vol. 43, no. 1, pp.
+111–116, 2007.
+[6] S. A. Nugroho, A. F. Taha, N. Gatsis, and J. Zhao, ‘‘Observers for dif-
+ferential algebraic equation models of power networks: Jointly estimating
+dynamic and algebraic states,’’ IEEE Transactions on Control of Network
+Systems, vol. 9, no. 3, pp. 1531–1543, 2022.
+[7] T. L. Fernando, H. M. Trinh, and L. Jennings, ‘‘Functional observability
+and the design of minimum order linear functional observers,’’ IEEE
+Transactions on Automatic Control, vol. 55, no. 5, pp. 1268–1273, 2010.
+[8] A. N. Montanari, L. Freitas, D. Proverbio, and J. Gonçalves, ‘‘Functional
+observability and subspace reconstruction in nonlinear systems,’’ Physical
+Review Research, vol. 4, no. 4, p. 043195, 2022.
+[9] D. Eriksson, E. Frisk, and M. Krysander, ‘‘A method for quantitative fault
+diagnosability analysis of stochastic linear descriptor models,’’ Automat-
+ica, vol. 49, no. 6, pp. 1591–1600, 2013.
+[10] L. L. Scharf and B. Friedlander, ‘‘Matched subspace detectors,’’ IEEE
+Transactions on Signal Processing, vol. 42, no. 8, pp. 2146–2157, 1994.
+[11] J. E. Tate and T. J. Overbye, ‘‘Line outage detection using phasor angle
+measurements,’’ IEEE Transactions on Power Systems, vol. 23, no. 4, pp.
+1644–1652, 2008.
+[12] Y. Zhao, J. Chen, A. Goldsmith, and H. V. Poor, ‘‘Identification of outages
+in power systems with uncertain states and optimal sensor locations,’’ IEEE
+Journal of Selected Topics in Signal Processing, vol. 8, no. 6, pp. 1140–
+1153, 2014.
+[13] R. Anguluri, O. Kosut, and L. Sankar, ‘‘Localization and estimation of
+unknown forced inputs: A group LASSO approach,’’ IEEE Transactions
+on Control of Network Systems, vol. 10, no. 4, pp. 1997–2009, 2023.
+[14] M. Jamei, R. Ramakrishna, T. Tesfay, R. Gentz, C. Roberts, A. Scaglione,
+and S. Peisert, ‘‘Phasor measurement units optimal placement and perfor-
+mance limits for fault localization,’’ IEEE Journal on Selected Areas in
+Communications, vol. 38, no. 1, pp. 180–192, 2020.
+[15] F. Conte, F. D’Agostino, B. Gabriele, G.-P. Schiapparelli, and F. Silvestro,
+‘‘Fault detection and localization in active distribution networks using op-
+timally placed phasor measurements units,’’ IEEE Transactions on Power
+Systems, vol. 38, no. 1, pp. 714–727, 2023.
+[16] T. Yildiz and A. Abur, ‘‘Sparse PMU placement algorithm for enhanced
+detection and identification of power grid events,’’ IEEE Transactions on
+Power Systems, vol. 40, no. 2, pp. 1843–1853, 2025.
+[17] H. A. P. Blom and Y. Bar-Shalom, ‘‘The interacting multiple model algo-
+rithm for systems with markovian switching coefficients,’’ IEEE Transac-
+tions on Automatic Control, vol. 33, no. 8, pp. 780–783, 1988.
+[18] Y. Boers and H. Driessen, ‘‘A multiple model multiple hypothesis filter for
+Markovian switching systems,’’ Automatica, vol. 41, no. 4, pp. 709–716,
+2005.
+[19] A. Warner and G. Fellouris, ‘‘Sequential change diagnosis revisited and the
+adaptive matrix CuSum,’’ Bernoulli, vol. 30, no. 3, pp. 2228–2252, 2024.
+[20] S. Pandey, A. K. Srivastava, and B. G. Amidan, ‘‘A real time event de-
+tection, classification and localization using synchrophasor data,’’ IEEE
+Transactions on Power Systems, vol. 35, no. 6, pp. 4421–4431, 2020.
+[21] Z. Li, J. Tian, and H. Liu, ‘‘A joint data and knowledge-driven method for
+power system disturbance localisation,’’ IET Generation, Transmission &
+Distribution, vol. 18, no. 24, pp. 4078–4089, 2024.
+[22] T. Yildiz and A. Abur, ‘‘Convolutional neural network-assisted fault detec-
+tion and location using few PMUs,’’ Electric Power Systems Research, vol.
+235, p. 110705, 2024.
+[23] M.
+Ensaf
+and
+M.
+Barati,
+‘‘Harnessing
+kernel
+regression
+for
+stochastic state estimation in solar-integrated power grids,’’ arXiv
+preprint
+arXiv:2309.10200,
+2023,
+version
+1.
+[Online].
+Available:
+https://arxiv.org/abs/2309.10200
+[24] A. M. Tartakovsky, T. Ma, D. A. Barajas-Solano, and R. Tipireddy,
+‘‘Physics-informed gaussian process regression for states estimation and
+forecasting in power grids,’’ International Journal of Forecasting, vol. 39,
+no. 2, pp. 967–980, 2023.
+[25] A. Alalem Albustami, A. F. Taha, and S. Mahadevan, ‘‘DAE-aware
+bayesian inference for joint generator-network parameter estimation,’’
+arXiv preprint arXiv:2604.15686, 2026, preprint. [Online]. Available:
+https://arxiv.org/abs/2604.15686
+[26] R. Nagi, X. Huan, and Y. C. Chen, ‘‘Bayesian inference of parameters
+in power system dynamic models using trajectory sensitivities,’’ IEEE
+Transactions on Power Systems, vol. 37, no. 2, pp. 1253–1263, 2022.
+[27] OpenAI, ‘‘Codex,’’ [Online]. Available: https://openai.com/codex/, ac-
+cessed: Oct. 31, 2026. AI system used for disclosed writing and code
+assistance.
+JORGE LUIS MAYORGA TABORDA studied electronic engineering at Uni-
+versidad de los Andes, Bogotá, Colombia. His academic work has addressed
+distributed control using population dynamics, including applications to
+urban traffic systems.
+YESSICA AFRICANO RODRIGUEZ carried out undergraduate thesis work
+on photovoltaic integration at Universidad de los Andes, Bogotá, Colombia.
+Her published research includes co-simulation and stochastic assessment of
+photovoltaic hosting capacity in distribution systems.
+MASOUD BARATI received the Ph.D. degree in
+electrical engineering from the Illinois Institute of
+Technology in 2013. He is with the Department of
+Electrical and Computer Engineering, University
+of Pittsburgh, Pittsburgh, PA, USA. His research
+includes mathematical modeling and optimization
+of electric power systems.
+PAYMAN DEHGHANIAN received the Ph.D. de-
+gree from Texas A&M University in 2017. He
+is an Associate Professor with the Department of
+Electrical and Computer Engineering, The George
+Washington University, Washington, DC, USA.
+His research includes power-system reliability, re-
+silience, and data-informed decision-making.
+DAVID FELIPE CELEITA RODRÍGUEZ received
+the Ph.D. degree in engineering from Universidad
+de los Andes, Bogotá, Colombia. He is an Asso-
+ciate Professor and Director of Outreach and En-
+gagement with the Faculty of Engineering, Univer-
+sidad de La Sabana, Chía, Colombia. His research
+includes power-system protection, fault location,
+and real-time simulation.
+14
+PREPRINT

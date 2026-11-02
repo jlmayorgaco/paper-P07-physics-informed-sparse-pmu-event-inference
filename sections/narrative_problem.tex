@@ -6,7 +6,7 @@ whether a physical intervention occurred. Detection concerns its presence;
 classification selects a physical operator; localization selects a bus or
 branch. These outputs can become reliable at different times. We record
 the estimated physical onset $\widehat\tau$ separately from the alarm and
-diagnosis emission times.\AIDraftingCredit{}
+diagnosis emission times.
 
 Figure~\ref{fig:reference-event-types} introduces the broader measurement
 phenomena using the known RAW0001 reference record. Faults, line changes,
@@ -41,9 +41,9 @@ waveform harmonics or THD are not measured by these channels.
 The physical model is
 \begin{align}
  \dot x&=f_q(x,z,u;\theta),&0&=g_q(x,z,u;\theta),\label{eq:narrative-dae}\\
- y_k&=\mathcal M_q(x_k,z_k;\theta_M)+b+\varepsilon_k.\label{eq:narrative-measurement}
+ y_k&=\mathcal M_k(x_{0:k},z_{0:k},q_{0:k};\theta_M)+b+\varepsilon_k.\label{eq:narrative-measurement}
 \end{align}
-Here $x$ contains machine and control dynamics, $z$ the algebraic network variables, $q$ the topology/intervention mode, and $\theta_M$ the measurement convention. The measurement map includes gains, phase references, orientation and the causal frequency/ROCOF estimator. A machine's rotor speed is not substituted for bus frequency.
+Here $x$ contains machine and control dynamics, $z$ the algebraic network variables, $q$ the topology/intervention mode, and $\theta_M$ the measurement convention. The causal measurement map uses current algebraic variables for voltage and terminal current and retained phase/instrument history for frequency and ROCOF. The history notation makes that memory explicit; the instantaneous electrical map used in the Schur reduction below is its voltage/current component. A machine's rotor speed is not substituted for bus frequency.
 
 An intervention history is $h=(e,c,\tau,a,\kappa)$: family, source, onset,
 severity and restoration time, with $\kappa=\infty$ for a sustained event.
@@ -64,7 +64,7 @@ Normal & No intervention & Monitor after startup\\
 Load & Local P/Q factor; optional restoration & Nine candidate buses\\
 Line & Branch open; optional reclose & Nine candidate branches\\
 Fault/generation & Different shunt/input/trip operators & Outside this causal test\\
-Missing/bad data & Measurement-integrity mechanism & Outside C01\\
+Missing/bad data & Measurement-integrity mechanism & Outside causal test\\
 Unknown & Unresolved diagnosis & Not a new physical family\\\bottomrule
 \end{tabularx}\end{table}
 

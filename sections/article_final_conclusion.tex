@@ -1,29 +1,44 @@
 \section{Conclusion}
 \label{sec:conclusion}
 
-We formulated sparse-PMU event attribution through competing physical
-histories. Load/line predictors start from estimated past states and retain
-the cause of the response after restoration. Active mass $M$ and its
-increment $\Delta M$ expose the changing explanation rather than replacing
-the physical dynamics.\AIDraftingCredit{}
+The proposed procedure attributes load and line interventions by comparing
+their predicted PMU responses with the observed stream. Each candidate
+starts from an estimated past state. Restoration changes its input or
+topology while its physical state continues to evolve. The method
+integrates local load severity and reports event activity separately from
+the cause of a continuing response.
 
-\IfFileExists{generated/c01_macros.tex}{The independent continuous
+The sealed continuous
 evaluation gives \COneMixTimely{}/\COneMixTotal{} timely family/source
 decisions with \COneMixExtras{} extra alarms for the mixture, and
 \COneNomTimely{}/\COneNomTotal{} with \COneNomExtras{} for nominal.
-Stratified results and paired intervals determine where each choice is
-useful.}{Under the common development publication clock, the mixture obtains
-\SSMixTimely{}/\SSMixTotal{} timely family/source decisions with
-\SSMixExtras{} extras, versus \SSSimpleTimely{}/\SSSimpleTotal{} and
-\SSSimpleExtras{} for the simpler state-retaining physical control.
-Independent confirmation remains in progress.}
+The frozen ExtraTrees reference gives \COneETTimely{}/\COneETTotal{}
+with \COneETExtras{} extras. Most mixture extras arise under out-of-bank
+R/X, so the gain in timely attribution does not imply uniformly better
+alarm control.
 
-The frozen physical procedure rejects the RAW startup contract. The
-separate integrity and learned-source interfaces provide only limited
-retrospective improvements, preserving the transfer boundary.
+The component experiments preserve useful earlier findings: network
+conditioning recovers hidden voltage information, graph-temporal features
+improve a historical learned localizer, and mixed-source terms reduce
+local response error. They do not establish an isolated causal gain from
+Bayes or tensor storage in the final estimator.
 
-The result is a specified physical attribution procedure and a testable
-separation of recovery, reference error and source discrimination. Its
-scope remains the declared simulation contracts. It does not establish
-all-family diagnosis, universal source recovery, calibrated probabilities
-or real-time deployment.
+The earlier hackathon pipeline remains a broader nine-label,
+feature-based system. Its 30-s-window validation is a separate result;
+the causal ExtraTrees successor in this paper provides the direct
+same-stream comparison. The physical bank's strongest supported gain is
+timely load-source attribution, while learned features already diagnose
+most lines in this catalog with fewer unmatched alarms.
+
+The evidence concerns a specified load/line catalog in one simulator.
+Unmodeled R/X increases the alarm burden. The controlled component study
+addresses amplitude scoring and state carry at inferred closure; it does
+not remove all Bayesian estimation or all temporal memory. All-family
+diagnosis, calibrated event probabilities, field transfer and real-time
+deployment remain outside the demonstrated scope.
+
+A source-excluded comparison would test whether the procedure generalizes
+beyond its supported catalog. A learned correction of physical residuals
+could address model mismatch, provided it is evaluated independently of
+source-label fitting. Joint state/context uncertainty and event-probability
+calibration also require further validation.

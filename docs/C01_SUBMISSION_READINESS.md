@@ -1,5 +1,15 @@
 # Qué cerrará C01 y qué significa «publicable»
 
+**Dictamen científico actualizado (2-nov-2026):** ver
+[`P07_PRE_SUBMISSION_AUDIT_2026-11-02.md`](P07_PRE_SUBMISSION_AUDIT_2026-11-02.md).
+El borrador se puede circular a coautores para una revisión exigente; todavía
+no se certifica como listo para someter a IEEE Access. La principal cuestión
+abierta es atribuir causalmente la mejora a la memoria de recuperación, ya que
+C01 compara procedimientos completos con presupuestos de falsas alarmas
+distintos.
+
+**Actualización 2-nov-2026:** C01 terminó: 171 trayectorias físicas, 342 registros observados y todos los denominadores previstos. [Resultados, derrotas y límites](c01-confirmatory-results.md). El manuscrito compilado y la página de una hoja están listos para revisión científica de David y Masoud; siguen pendientes su juicio sobre la novedad acotada, verificación final de referencias/metadatos y decisión de envío. El texto de planificación fechado 29-oct que sigue abajo queda como historial, no como estado actual.
+
 El [ensayo E_i X02](ei-x02-results.md) está completo y se incorporó como
 componente separado: mejora respuesta/intensidad sin más aciertos de origen
 que recentrar. No sustituye C01 ni valida incertidumbre conjunta. La revisión

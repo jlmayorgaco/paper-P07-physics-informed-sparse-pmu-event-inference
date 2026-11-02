@@ -1,0 +1,89 @@
+\section{Experimental Design}
+\label{sec:narrative-protocol}
+
+The test asks whether one method can attribute six successive load or line
+interventions in a continuous trajectory, including an intervention that
+begins while the preceding response is still recovering. The plant is a
+fixed Julia/PowerDynamics IEEE 39-bus research candidate. Each parent is
+integrated once across all ON and OFF actions; differential states are not
+reset. PMU reports are exported at 30 frames/s, independently of solver
+steps. A switch-aligned report uses the post-switch algebraic value.
+RAW0001 informed the simulator retrospectively and is not an independent
+test record.
+
+The sealed evaluation has 18 six-event continuous parents, 27 persistent
+line-opening parents and 12 normal parents. Every parent is replayed under
+matched R/X, an R/X change represented in the model bank and an R/X change
+outside it. Two instrumental-noise scales give 171 physical trajectories
+and 342 observed records. The 648 continuous event realizations repeat
+108 interventions; the physical parent, rather than the PMU frame or
+replay, is the uncertainty unit. The earlier development examples in
+Fig.~\ref{fig:narrative-rolling} are not part of this sealed comparison.
+
+\subsection{What the Feature Baseline Actually Does}
+The hackathon submission was a hierarchical detector, event classifier
+and typed localizer based on ExtraTrees. It summarized each 30-s PMU
+window with voltage/current magnitude and angle statistics, frequency,
+ROCOF, missingness, phase spread, approximate P/Q, rolling changes,
+RLS/Kalman level innovations and graph-temporal differences. Its selected
+bundle reports 45,162 input features and internal simulated-validation
+macro-F1 0.960 with exact localization 0.852. These numbers describe that
+archive's broader nine-label, window-level task; they are not scores on
+the present event-level cohort. The original submission is preserved.
+
+To compare at 30 reports/s, an earlier development campaign built two
+\emph{new}, frozen causal ExtraTrees adapters from 47 PMU coordinates.
+Each coordinate is centered and robustly scaled using the quiet prefix.
+For trailing windows of 1, 5 and 10\,s, the reference adapter computes
+median, standard deviation, 10th/90th percentiles, a recent-quarter
+change and RMS first difference. This gives $47\times3\times6=846$
+features per report. The short-window adapter adds the current value and
+mean, standard deviation and two lag changes at 3, 8 and 15 reports,
+giving 1,457 features in total. Both use 400 trees, balanced class weights,
+19 classes (quiet plus 18 assets), and six-report confirmation; tree votes
+are scores, not calibrated event probabilities. Their training parents
+precede and are disjoint from the sealed cohort. Neither model was
+retrained or threshold-adjusted on these outcomes. The feature lists and
+training protocol are archived with the executables.
+
+\begin{table*}[t]\centering\small
+\caption{Three distinct inference contracts. Historical hackathon
+validation and the sealed causal comparison have different units and
+cannot be subtracted as if they were the same score.}
+\label{tab:three-contracts}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabularx}{\textwidth}{@{}p{0.11\textwidth}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}\toprule
+ & Hackathon submission (historical) & Causal ExtraTrees comparators & Physical history bank \\\midrule
+Input and clock & Eight PMUs; one decision per 30-s window & Same 47 PMU coordinates as physical bank; 30 reports/s & Same 47 coordinates; 30 reports/s \\
+Information used & Engineered window features; supervised family/location labels & Trailing statistics; supervised active-asset labels from earlier simulated parents & Nominal DAE, candidate asset operators, PMU terminal map and quiet prefix \\
+Decision & Hierarchical detector/classifier/localizer & Tree vote, then six-report episode confirmation & Conditional history evidence, active/cause masses and fixed publication rules \\
+Tested scope here & Not rerun on the sealed cohort & Nine loads, nine lines, successive events & Same nine loads and nine lines, successive events \\
+Main limitation & Window-level historical score is not a causal event-level score & May miss load sources absent from its learned feature boundaries & More extra alarms under out-of-bank R/X \\\bottomrule
+\end{tabularx}\end{table*}
+
+The sealed methods are the five-model physical bank, its nominal-network
+version and these two causal ExtraTrees adapters. All receive the same
+30-frame/s PMU stream and retain their own frozen decision rules. This
+tests complete procedures at their declared operating points, not a
+matched-false-alarm or unlimited-supervision comparison. The physical
+banks also have different publication rules, so their contrast does not
+isolate network-model averaging.
+
+Chen \emph{et al.}'s published quickest-change detector
+\cite{chen2016quickest} is eligible only for persistent line openings and
+normal records. The declared adapter uses nonoverlapping 15-Hz angle
+increments, a nominal single-line catalog and prefix-estimated drift and
+scale. It stops at its first alarm. Its DC and white-injection assumptions
+do not fully describe the simulator's colored PMU noise; no published
+average-run-length guarantee is transferred to these records.
+
+For continuous streams, an alarm is matched temporally before inspecting
+its source. A timely decision requires the right family and asset before
+true OFF. Unmatched event-stream alarms are extras. Restoration messages
+on unmatched episodes are counted separately; this count is not every
+possible physical OFF-timing error. For persistent lines, the first stop
+is scored as correct, premature, wrong-source or censored. Failed records
+remain in the intended denominators. Paired 95\% intervals resample
+physical parents 10,000 times. Logical delay uses report timestamps;
+wall-clock inference cost is a separate quantity. Full calendars,
+thresholds and reproduction details are in the supplement.

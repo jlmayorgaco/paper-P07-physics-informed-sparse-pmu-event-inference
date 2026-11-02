@@ -1,18 +1,14 @@
 \section{Recovery-Aware Physical Attribution}
 \label{sec:narrative-method}
 
-Figure~\ref{fig:joint-architecture} describes the implemented computation.
-The inference engine, archived as R11, uses a conditional history bank of
-DAE-derived switched state-space predictors. The nonlinear simulator
-generates observations; inference does not solve a new full nonlinear
-simulation for every candidate at every report.\AIDraftingCredit{}
-
-Physics enters the candidate dynamics, input directions and oriented
-measurement map. Statistical filtering represents uncertain states and
-discrepancy around those predictions. Thus the evaluated method is
-model-based inference; it does not train a neural network with a physics
-loss or learn a source-label classifier. A good residual fit alone is
-insufficient: competing histories must also yield a timely source decision.
+Figure~\ref{fig:joint-architecture} gives the report-level logic. A
+history is a proposed cause and trajectory, not just a bus label. The
+inference bank predicts the next report under no new event, a new load or
+line action, or retained recovery. Its switched predictors come from the
+network DAE and oriented PMU terminal map. Statistical filtering handles
+uncertain states and residual error. The nonlinear simulator generates the
+observations; inference uses local predictors, not a new full simulation
+for every hypothesis and report.
 
 \subsection{Construct the Predictor From the Network}
 
@@ -24,8 +20,26 @@ Kirchhoff constraints and complex power connect sources to remote PMUs:
 \end{equation}
 Terminal rows retain orientation, line charging and transformer ratios.
 A measured terminal current is not a nodal injection. A line opening
-changes its branch primitive and terminal map; a load changes its admitted
-P/Q input direction.
+changes the branch stamp and therefore the algebraic voltages and measured
+currents. A terminal map changes directly only if the switched branch is
+itself measured; none of the nine tested line candidates is a measured PMU
+terminal. The load operator scales both $P_{\rm set}$ and $Q_{\rm set}$
+by $1+a$ with the fixed constant-impedance ZIP fractions, while the line
+operator switches the selected branch between active and open modes.
+
+The executed plant has 114 differential states, 78 algebraic variables
+and 38 load-input coordinates. Its ten Sauer--Pai machines use AVR Type I
+with quadratic ceiling and TGOV1 governors, except the bus-39 machine,
+which has no external governor or excitation-control inputs. All 19 load
+models use constant-impedance ZIP fractions. With injection sign convention,
+\begin{equation}
+ P_i=(1+a_i)P_i^0\left|V_i/V_{{\rm set},i}\right|^2,\qquad
+ Q_i=(1+a_i)Q_i^0\left|V_i/V_{{\rm set},i}\right|^2.
+ \label{eq:implemented-load-law}
+\end{equation}
+Here $P_i^0<0$ represents consumption; reactive injection can be positive
+for a capacitive load. The archived equilibrium and voltage setpoints,
+including those at buses 31 and 39, define the executed operating point.
 
 On a regular index-one DAE chart with a fixed angle reference,
 \begin{align}
@@ -44,13 +58,17 @@ corresponding output operators are
 \end{equation}
 They propagate a perturbation at an unmeasured source to the selected
 voltage and oriented-current channels. Network connectivity enters through
-the branch stamps in $g_q$ and $H_q$; eliminating unmeasured algebraic
+the branch stamps in $g_q$ and, where applicable, $H_q$; eliminating unmeasured algebraic
 variables generally produces dense reduced operators. The graph therefore
 constrains the prediction without a learned graph embedding. A changed
-terminal operator also contributes directly through $H_q$, not only
-through the changed voltage. The implementation discretizes the admitted
+terminal operator would also contribute directly through $H_q$; the
+tested line modes keep the same terminal map. The implementation discretizes the admitted
 switch modes and adds causal phase-history operators for frequency and
-ROCOF. Inertia, controls and load law remain those of the fixed plant.
+ROCOF. The generator estimates phase derivatives with a robust,
+magnitude-weighted quadratic fit over 21 reports. The predictor approximates
+that operation with a fixed unweighted quadratic fit over the same history;
+these operators need not agree when weights change. Inertia, controls and
+load law remain those of the fixed plant.
 
 After augmenting instrumental memory, a conditional predictor has the
 local form
@@ -68,7 +86,10 @@ with preset quiet/load/line/recovery covariance and drift regimes. This
 statistical discrepancy model is distinct from the plant equations.
 $v_k$ denotes the remaining innovation. A load has scalar severity within
 its specified P/Q direction. A line uses a switched operator rather than
-a fictitious load-amplitude fit. States from different equilibria are not
+a fictitious load-amplitude fit. Equation~\eqref{eq:implemented-predictor} states the generic local model;
+the implemented update combines propagation and observation into an
+operator on the previous state. The supplement gives that indexing and
+the associated transition gain explicitly. States from different equilibria are not
 interpreted as an absolute rotor-state mixture.
 
 \subsection{Estimate Context From the Startup Prefix}
@@ -121,8 +142,8 @@ likelihood. The sequential update therefore counts each report once,
 rather than repeatedly accumulating overlapping ten-second windows.
 
 \begin{figure*}[t]\centering
-\includegraphics[width=.96\textwidth]{figures/generated/narrative_signals.pdf}
-\caption{Simulated observations supplied to inference. One fixed development parent provides a load and a line example at all eight PMUs. Shading marks physical ON--OFF for evaluation only. Magnitude changes use the local pre-event center; frequency is centered for display while its exported channel remains absolute Hz. Source, severity and operating context affect the curves, so they are not universal class templates.}
+\includegraphics[width=.91\textwidth]{figures/generated/reader_observed_signals.pdf}
+\caption{Two interventions from one continuous development record. Current change and ROCOF at PMUs 2 and 39 remain dynamic after physical OFF (dashed line). The gray interval is the true active period, shown only for explanation; inference uses all eight PMUs without event timing. These two PMUs illustrate the traces and were fixed for both panels.}
 \label{fig:narrative-signals}\end{figure*}
 
 \subsection{Represent Fixed Network Uncertainty}
@@ -185,10 +206,18 @@ probability calibration and globally optimal filtering are not established.
 
 \subsection{Emit Separate Detection, Diagnosis and Restoration Messages}
 
-The fixed publication rules require active mass 0.99 for six reports to
-confirm an alarm, and restoration mass 0.99 for 15 reports to confirm OFF.
-The archived source/line confirmation and episode-replacement rules
-determine the public diagnosis. Every message records emission time and
+The internal observer proposes an alarm after six reports above the 0.99
+active-mass threshold. Public alarm publication additionally requires an
+internal pending episode and six reports of qualified active support:
+the frozen source screen qualifies load cells, while admitted line cells
+qualify through their switched operator. Public OFF requires six reports
+above 0.99 for the diagnosed cell's joint cause-and-restoration mass.
+The observer also has a separate, more conservative 15-report internal
+OFF clock. Diagnosis selects the family with greatest summed cause mass and then
+the highest-mass source within that family. It is emitted after six
+reports of stable cause support or at the 15-report post-alarm deadline.
+The supplement defines the source screen, early line rule and episode
+replacement, including how internal messages are propagated publicly. Every message records emission time and
 the last report used. A diagnosis can be correct eventually but too late
 to precede physical OFF.
 
@@ -206,29 +235,23 @@ below states the report order and information boundary.
 
 \subsection{Per-Report Algorithm and Computational Boundary}
 
-\noindent\textbf{Algorithm 1: causal physical-history attribution.}
-The inputs are the nominal model, fixed method configuration and successive
-PMU reports. Reserved event truth never enters these steps.
+\noindent\textbf{Algorithm 1: one causal update.}
+Input: nominal model, fixed method configuration and PMU reports.
+Initialize context, reference, noise and conditional states from the 300
+startup reports. Event truth is never an input.
 \begin{enumerate}
-\item Estimate operating context, common reference and noise scale from the
-startup prefix. Initialize conditional states and retain the eligible past
-states needed by retrospective proposals.
-\item At report $k$, apply the frozen centering, scaling and instrumental
-transformation. Propagate each retained physical/recovery history and its
-conditional uncertainty to predict this report. Compute and save the outer
-model predictive density before current-report screening and state correction.
-\item Apply the frozen short-lag birth screen using retained past states.
-A proposed history starts before its selected onset; replay
-replaces the corresponding likelihood suffix rather than adding it twice.
-\item Score candidate histories and replayed suffixes before correcting
-their states with the reports being scored. Integrate the allowed load severity and apply
-the archived switched operator for a line hypothesis.
-\item Correct the conditional states and severity distributions; update
-network weights and the retained history bank using the fixed rules.
-Preserve dynamic state and originating cause through restoration.
+\item Transform report $k$; predict it from each retained physical or
+recovery history. Save each network model's predictive density before
+screening or correcting with this report.
+\item Screen onsets in the latest 18 reports. Start each proposed history
+from its stored pre-onset state and replay its suffix, replacing the old
+suffix likelihood once.
+\item Score histories, integrating load severity or using the switched
+line operator. Then correct state and severity, update network weights,
+and prune by the fixed rules. Retain state and cause through restoration.
 \item Aggregate active mass $M$, cause mass $\Gamma$ and $\Delta M$.
-Apply the fixed alarm, diagnosis and OFF-publication rules. Store emission
-time, estimated onset, family/source and the last report used.
+Apply the frozen alarm, source and OFF rules; record emission time,
+estimated onset and last report used.
 \end{enumerate}
 The nonlinear simulator constructs observations; this algorithm propagates
 local switched predictors. The input grid is 30 reports/s. Causality
