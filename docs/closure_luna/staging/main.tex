@@ -1,0 +1,68 @@
+% !TeX program = pdflatex
+% Main article only. Build both documents with scripts/build_manuscript_bundle.ps1.
+% ieeeaccess.cls reuses \year as a metadata setter. Preserve the TeX primitive
+% so PGF/TikZ can initialize its deterministic machinery while loading.
+\let\PSevenTeXYear\year
+\documentclass{ieeeaccess}
+
+\input{preamble}
+\usepackage{placeins}
+\input{generated/results_macros}
+\input{generated/continuous_macros}
+\input{generated/narrative_macros}
+\input{generated/c01_macros}
+\input{generated/reader_macros}
+\input{generated/evidence_bridge_macros}
+\input{generated/review_audit_macros}
+\IfFileExists{generated/ei_x02_macros.tex}{\input{generated/ei_x02_macros}}{}
+\IfFileExists{generated/submission_s01_macros.tex}{\input{generated/submission_s01_macros}}{}
+\IfFileExists{generated/submission_s01_learning_macros.tex}{\input{generated/submission_s01_learning_macros}}{}
+\IfFileExists{generated/submission_s01_raw_macros.tex}{\input{generated/submission_s01_raw_macros}}{}
+\IfFileExists{generated/submission_s01_ml_h04_macros.tex}{\input{generated/submission_s01_ml_h04_macros}}{}
+\IfFileExists{generated/submission_s01_system_macros.tex}{\input{generated/submission_s01_system_macros}}{}
+
+\begin{document}
+\input{metadata}
+\hypersetup{
+  pdftitle={Physics-Informed Bayesian Event Attribution From Sparse PMUs},
+  pdfauthor={Jorge Luis Mayorga Taborda; Yessica Africano Rodriguez; Masoud Barati; Payman Dehghanian; David Felipe Celeita Rodriguez},
+  pdfsubject={Causal physical event attribution, recovery, and source resolution from sparse PMUs},
+  pdfkeywords={dynamic state estimation, functional observability, phasor measurement units, physics-informed inference, source localization}
+}
+
+\begin{abstract}
+Eight PMUs observe only part of an IEEE 39-bus system, so a disturbance can be detected without uniquely identifying its cause. We evaluate a recovery-aware physical hypothesis bank for continuous attribution of load changes and line openings in a fixed simulated catalog. Switched differential-algebraic and oriented PMU-terminal models generate candidate observation paths; a local truncated-Gaussian integral handles unknown load severity, and the finite history bank retains predicted physical and instrumental response after OFF. The full bank remains approximate through plug-in context, shared regime covariances, screening and pruning. Across 18 six-intervention schedules, three network conditions and two noise scales, it assigns the correct family and source before OFF in 644 of 648 event realizations, with 72 unmatched alarms. Two causal ExtraTrees references reach 330/648 with 29 alarms and 352/648 with 16 alarms; both were weak on load attribution during development, so the comparison does not establish general superiority over machine learning. A posthoc audit finds that 0/644 available physical-bank restorations and 0/643 nominal restorations occur more than one report early, versus 52/330 and 26/352 for the learned methods; many learned events have no restoration value. These dependent replays do not isolate the effect of memory. The results support a coverage--alarm tradeoff for this model family and catalog, not calibrated probabilities, field validation or real-time operation.
+\end{abstract}
+
+\begin{keywords}
+event detection, model uncertainty, phasor measurement units, physics-informed inference, sequential diagnosis, source localization.
+\end{keywords}
+
+\titlepgskip=-21pt
+\maketitle
+\raggedbottom
+
+\input{sections/article_intro}
+\input{sections/article_related}
+\input{sections/narrative_problem}
+\input{sections/article_method}
+\FloatBarrier
+\input{sections/article_evidence_bridge}
+\input{sections/narrative_protocol}
+% Let results fill the column while the protocol table moves to the next page.
+\input{sections/narrative_results}
+% Allow following text to fill the column while the full-width history figure floats.
+\input{sections/08c_c01_confirmatory}
+\input{sections/article_closure_results}
+\input{sections/article_ablation_design}
+\input{sections/article_controlled_ablation}
+\input{sections/article_interpretation}
+\input{sections/article_final_conclusion}
+
+\FloatBarrier
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+\input{author_biographies}
+\EOD
+
+\end{document}

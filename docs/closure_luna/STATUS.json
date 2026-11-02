@@ -1,0 +1,41 @@
+{
+  "phase": "P0_P3_STAGING_COMPLETE_P4_WAITING_FOR_A01",
+  "status": "PRE_A01_REVIEW_PACKAGE_READY",
+  "last_verified_local_time": "2026-11-02T17:25:44-05:00",
+  "a01": {
+    "progress": {
+      "stage": "inference",
+      "task": 33,
+      "tasks": 72,
+      "record": "S121",
+      "arm": "PROFILE_NO_CARRY"
+    },
+    "state": "ACTIVE_INFERENCE_PARTIAL",
+    "partial_outcomes_used": false,
+    "completion_marker_present": false,
+    "paper_updated_marker_present": false
+  },
+  "paper_state": "staged candidate and isolated pre-A01 review PDFs; active article/supplement/results not overwritten",
+  "completed_phases": {
+    "P0": "baseline and protected figure contract",
+    "P1": "claim/evidence register",
+    "P2": "aggregated restoration/runtime/domain derived outputs",
+    "P3": "method, measurement contract and bounded claims staged",
+    "P5": "editorial pass and reviewer corrections",
+    "P6": "isolated article/supplement/brief compiled; selected pages visually reviewed"
+  },
+  "pending_phases": {
+    "P4": "A01 completion seal, guarded verification/import, final integration and rebuild",
+    "P7": "post-A01 final package and publication readiness"
+  },
+  "review_artifacts": {
+    "article": "docs/closure_luna/review_outputs/P07_Article_PRE_A01_Review.pdf",
+    "supplement": "docs/closure_luna/review_outputs/P07_Supplement_PRE_A01_Review.pdf",
+    "brief": "docs/closure_luna/review_outputs/P07_Coauthor_Review_PRE_A01.pdf"
+  },
+  "open_blockers": [
+    "A01 completion and final import",
+    "author declarations/permissions for final submission"
+  ],
+  "next_action": "After A01 completes, run the explicit guarded check/apply script; compare automatic import against staging, compile and inspect the final PDFs, then refresh readiness."
+}

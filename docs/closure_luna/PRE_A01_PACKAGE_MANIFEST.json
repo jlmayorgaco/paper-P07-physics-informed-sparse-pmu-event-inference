@@ -1,0 +1,105 @@
+{
+  "package_state": "PRE_A01_REVIEW_ONLY_P4_PENDING",
+  "created_local": "2026-11-02T17:25:44-05:00",
+  "preview": "tmp/p07_closure_preview_v6",
+  "a01": {
+    "progress": {
+      "stage": "inference",
+      "task": 33,
+      "tasks": 72,
+      "record": "S121",
+      "arm": "PROFILE_NO_CARRY"
+    },
+    "state": "ACTIVE_INFERENCE_PARTIAL",
+    "partial_outcomes_used": false,
+    "completion_marker_present": false,
+    "paper_updated_marker_present": false
+  },
+  "artifacts": {
+    "article": {
+      "path": "docs/closure_luna/review_outputs/P07_Article_PRE_A01_Review.pdf",
+      "sha256": "BF97A5D0BF48E0CCD2807DE3EE67A4672BE0185B5077E536FF57283B71AC5B95",
+      "pages": 18
+    },
+    "supplement": {
+      "path": "docs/closure_luna/review_outputs/P07_Supplement_PRE_A01_Review.pdf",
+      "sha256": "F43B6902AB7BB5303499A8E611574674EC9C3142774C2D8BCE1A0FFCBF84FC33",
+      "pages": 16
+    },
+    "brief": {
+      "path": "docs/closure_luna/review_outputs/P07_Coauthor_Review_PRE_A01.pdf",
+      "sha256": "1EBF4FF53E42E1DCE6AF8C6D5E887071F95F3A84724E3FC211A8F07B094DC2F3",
+      "pages": 1
+    }
+  },
+  "source_sha256": {
+    "main.tex": "50e9b881703b984c0de55f26188195f17b727016548433c81f7ec19246130897",
+    "references.bib": "f273e4c4fb531ed56cb27004b7b441953d8168e637c4c99fc8f7c537923e8e6e",
+    "sections/article_intro.tex": "c2a233913beb2f2acdfe0e0637e8845b1fb8077c9e0e2c85b119c06663c14c43",
+    "sections/article_related.tex": "32b7a72f2cca492b84cc06560e33162a18aa67bdcd2f0311865ebfa09b72cc23",
+    "sections/article_method.tex": "c9e5ee136542f929e7329bc3600b1f9a6e23e96d38b307076c845fbdf06b4e4a",
+    "sections/narrative_protocol.tex": "9169b7283c0bed073c7fb31747fe31f41e2e9adebf73f3a4ddfb233a3558de0c",
+    "sections/article_closure_results.tex": "744125543f747e3db5dd766827ddd2b3fa532009728fd87a640b27d6dafbd8a6",
+    "scripts/c01_main_tables.py": "6a4b2aba2291ea3f2f9eeb00fedb8820fb49fff8a8b8074d553b3380967553b3",
+    "supplement.tex": "68aac2d8c9ea69e7d48b849007544d50bb7556149abd460b01126984f0e18311",
+    "supplement/measurement_contract.tex": "e8a2b8a94e1d305e633625aae7212b841ba061335d77e382555744db384e6f30",
+    "supplement/domain_profile.tex": "c0ebd1f3319a17209afb73f0e41555caf03573c49acc6f05f3d21901fefb873f",
+    "tables/generated/closure_restoration.tex": "78501bfe69533abcfa82d7baef534060875e735f81ccb1581d25bde85b842769",
+    "tables/generated/closure_compute_cost.tex": "48b080c9f4f64ae65c1bc291a4b94a2a83b05e452acd8bb91463e3777f52be19",
+    "figures/generated/closure_restoration.pdf": "910553299ebb85c67467703e914b9c715dfb9f22907d92ed48d395911d064747",
+    "figures/generated/closure_restoration.png": "25abae1e09168927a8931d911b30c29a462889da9a8172071e89f67ef07d8ffc"
+  },
+  "qa_renders": [
+    {
+      "path": "tmp/p07_closure_preview_v6/qa-final-main-p5.png",
+      "sha256": "B6F033F71E03ACD275F400A9C930D793790FB823A19DA7668B0B019807AC2F80",
+      "last_write_local": "2026-11-02T17:20:52-05:00"
+    },
+    {
+      "path": "tmp/p07_closure_preview_v6/qa-final-main-p6.png",
+      "sha256": "5D2575CBD853281FD391D4159FDACD211020BF9AE53DB5C4C1D6DCF5A3B6B304",
+      "last_write_local": "2026-11-02T17:20:52-05:00"
+    },
+    {
+      "path": "tmp/p07_closure_preview_v6/qa-final-main-p13.png",
+      "sha256": "E478832EB2AFFCA510BD27332F550C7E00B6F12DDDD8344691FE33D8EF471961",
+      "last_write_local": "2026-11-02T17:22:43-05:00"
+    },
+    {
+      "path": "tmp/p07_closure_preview_v6/qa-final-main-p15.png",
+      "sha256": "F24E2138DB1F8777725A747955CAFFDAE42FE85B2ADD5194DCA63DB4C4563BCB",
+      "last_write_local": "2026-11-02T17:22:43-05:00"
+    },
+    {
+      "path": "tmp/p07_closure_preview_v6/qa-final-main-p18.png",
+      "sha256": "B0522F6C6A1DFF6756E90B8BB85D2DE6B01BEDD1846DE795A98720D8FE6C37FF",
+      "last_write_local": "2026-11-02T17:22:43-05:00"
+    },
+    {
+      "path": "tmp/p07_closure_preview_v6/qa-final-supp-p6.png",
+      "sha256": "63C73BA73B70304B495DD462D1CFEAA6FBD869DE31A9C2DD0FAE5E615EB2DA79",
+      "last_write_local": "2026-11-02T17:20:52-05:00"
+    },
+    {
+      "path": "tmp/p07_closure_preview_v6/qa-final-supp-p16.png",
+      "sha256": "831F6646994DA0FECED01197725A4320C4DDF349DA628C623ADC41539612E57D",
+      "last_write_local": "2026-11-02T17:20:52-05:00"
+    }
+  ],
+  "checks": {
+    "article_no_unresolved_refs": true,
+    "article_no_duplicate_labels": true,
+    "article_no_visible_internal_run_aliases": true,
+    "supplement_no_unresolved_refs": true,
+    "supplement_no_visible_internal_run_aliases": true,
+    "closure_section_input_count": 1,
+    "closure_figures_and_tables_each_once": true,
+    "protected_figure_check": "16 frozen hashes verified; Figure 2 page 5; IEEE-39 figure page 6",
+    "visual_review_pages": [
+      "article 5,6,13,15,18",
+      "supplement 6,16"
+    ],
+    "preview_prepare_repeated_twice": "byte-identical source hash check passed; no writes"
+  },
+  "scope": "Pre-A01 review only; P4 and final post-A01 readiness remain pending."
+}
