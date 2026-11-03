@@ -1,33 +1,28 @@
-# P07: contribution, evidence and closure
+# P07: contribution, evidence and limits
 
-Coauthor-review draft | 03 Nov 2026, 10:01 Colombia
+Review draft | 03 Nov 2026, 12:46 Colombia
 
-## Question and contribution
+## Contribution
 
-Can eight PMUs distinguish a new load/line intervention from the electrical recovery of an earlier one? P07 specifies a causal physical-history attribution procedure: retained states survive restoration, new interventions compete with recovery, and active-event mass is distinguished from originating-cause mass. This connects the physical cause, its active interval and the remaining response in one sequential explanation, tested against operational errors rather than accuracy alone.
+A sparse-PMU procedure compares new load/line interventions with the response retained after restoration. Switched DAE predictors start from estimated past states; active and originating-cause weights distinguish an intervention from its continuing effect. This is an electrical history-filter construction, not a new Bayes rule, IMM/M3H recursion or tensor factorization.
 
-## Where physics and Bayes enter
+## Independent simulated comparison
 
-Kirchhoff constraints, Ybus, oriented branch currents and machine/control dynamics determine reduced DAE predictors. Known PMU locations select the observation map; phase and instrument memory supply frequency/ROCOF predictions. States and operating context come from past PMU reports. Conditional Gaussian evidence integrates truncated load severity; predictive likelihoods weight five constant R/X hypotheses. Onset screening, shared regime covariances, pruning and publication rules make the complete procedure approximate.
-
-## Completed evidence: development, not C01 confirmation
-
-| H04 procedure | Timely family + source | Extra alarms |
+| Procedure | Timely family + source | Extra alarms |
 |---|---|---|
-| Physical: five models | 53/54 | 4 |
-| Physical: nominal | 54/54 | 7 |
-| Both frozen ExtraTrees adapters | 27/54 | 3 |
+| Physical bank | 644/648 | 72 |
+| Nominal bank | 643/648 | 92 |
+| ExtraTrees | 330/648 | 29 |
+| ExtraTrees short | 352/648 | 16 |
 
-54 realizations repeat 18 interventions across three network conditions; normal exposure is only 204 s per method. Nominal/mixture publication paths also differ, so this is not an isolated R/X-bank ablation.
+## What the controlled results establish
 
-## What the controlled experiments establish
-
-With load family and ON/OFF supplied, recentering and conditioned signatures both recover 240/240 sources (80 physical event cases, three shared-noise realizations). Conditioning lowers median relative response error 1.25% to 0.0561% and severity error at the generating source 1.2% to 0.329%. A separate 38-trajectory recovery control finds no mean binary-localization gain (98.35% for both arms; 12 correlated, known-history/onset comparisons). Better fit, source identity and calibrated uncertainty are distinct outcomes.
+On 18 existing continuous parents, preserving physical-state deviations gives 108/108 timely attributions and 1 extra; resetting them gives 75/108 and 166 extras. Marginal and bounded-profile scores tie on those endpoints. This posthoc test supports state carry, not a general necessity claim for Bayes. A development-only continuous single-state GLR control exists; it still needs independent validation under matched information and calibration.
 
 ## Difference from the hackathon and the literature
 
-The contribution changes the explanation and temporal evaluation, rather than adding a source-label classifier. H04 favors the physical procedures on loads but not on extra-alarm count; it is not an official leaderboard comparison. Warner already uses physical trajectories and onset search; IMM/M3H already retains mode histories. No numerical advantage over an unexecuted matched M3H/Warner method is claimed.
+The gain over the fixed causal ExtraTrees adapters is predominantly timely load coverage; line coverage is similar to the short-window model. This is not an improved official hackathon score. Physical trajectory diagnosis and M3H histories have direct precedents. The useful result is recovery-consistent attribution with explicit operational errors and limitations, rather than novelty of the individual ingredients.
 
-## Limits and the fixed route to submission
+## Corrections and remaining submission blockers
 
-C01: 342/342 records complete at this snapshot; 171 physical trajectories have finished. Estimated remaining processing is 0 h (recent timing envelope 0-0 h), plus evaluation/build. Finish the frozen comparison of R11, nominal and both ExtraTrees adapters; score Chen2016 on persistent openings. Audit all intended cases, normal exposure, delays, censoring and parent-paired intervals, then finalize claims with the coauthors. Scope remains nine load and nine line assets, an event-free startup and a declared simulator. No field, unseen-source, all-family, real-time or calibrated-probability claim; BUS5 terminal and BUS39 angle limitations remain. No new method versions or test tuning.
+The manuscript now uses monitored exposure (108 s per 120-s event record); alarm-rate differences and their intervals rise by 120/108, without changing predictions or matches. It states the balanced phase-A/47-coordinate map, observation memory and measured compute cost. Remaining scientific gaps: independent continuous-observer/control comparison at matched information and alarm budgets, cross-model transfer, and calibration of attribution masses. Author approval and declarations remain open. B01 is separate and still running; no partial outcome is used here.

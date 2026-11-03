@@ -21,6 +21,16 @@ for source recovery; group LASSO is not an executed comparator in our
 frozen campaign. Sensor placement also affects source distinguishability
 \cite{jamei2020limits,conte2023fault,yildiz2025sparse}.
 
+Recent learned reconstruction also targets sparse sensing. Pomarico
+\emph{et al.}'s SHRED preprint evaluates dynamic-state reconstruction on
+IEEE-39 from a limited number of PMUs \cite{pomarico2026shred}. Its target
+is state reconstruction rather than the source/ON/OFF episode contract
+here. Dey \emph{et al.} detect and localize distribution-network topology
+changes from phasors using learned statistics, with hardware-in-the-loop
+validation \cite{dey2026topology}. Neither sparse sensing nor change
+localization alone distinguishes the present contribution. These are
+adjacent tasks, not executed performance baselines in this study.
+
 \subsection{Trajectory-Based and Sequential Diagnosis}
 Warner \emph{et al.} compare simulated voltage/current fault trajectories
 over a moving onset window and return candidate lines
@@ -50,8 +60,9 @@ Learned and knowledge-driven representations identify PMU disturbances and
 assets \cite{pandey2020realtime,li2024knowledge,yildiz2024few}. We compare
 two fixed ExtraTrees adapters from the SGSMA project. Their performance
 tests transfer of those implementations, not the limits of all supervised
-learning. A known physical catalog and source-excluded supervised training
-also impose different information constraints.
+learning. A physical catalog and a fixed learned adapter have different
+access to candidate-source responses. This comparison does not equalize
+that information or establish a source-excluded generalization result.
 
 Physical stochastic models support latent-state estimation
 \cite{ensaf2023kernel,tartakovsky2023gp}, while joint DAE parameter inference
@@ -74,6 +85,7 @@ Route & Mechanism & Evaluated target & Role in this study\\\midrule
 Chen / Rovatsos & Network likelihoods and sequential tests & Line outages; Rovatsos includes transients & Chen on persistent-line first decisions\\
 Warner high-fidelity & Simulated V/I paths and onset search & Short-circuit line candidates & Closest trajectory precedent; no common-data run\\
 Adaptive Matrix CuSum & Sequential diagnosis with error/delay analysis & One unknown distributional change & Statistical precedent; no inherited guarantee\\
+IMM / M3H & Conditional filters, mode histories and mixture reduction & Hybrid switching-state estimation & Direct history-filter precedent; no common-data baseline here\\
 DAE / stochastic-state estimation & Physical state and uncertainty models & States, unknown inputs or parameters & Components and adjacent tasks\\
 Learned PMU diagnosis & Features or constrained representations & Event families and locations & Two frozen ExtraTrees references\\
 Physical history bank here & Estimated-past-state paths and recovery & Successive catalog load/line events & Timely attribution, extras and restoration\\\bottomrule

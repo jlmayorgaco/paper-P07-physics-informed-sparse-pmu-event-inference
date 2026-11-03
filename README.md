@@ -1,4 +1,6 @@
-# P07 — Physics-Based Event Attribution From Sparse PMUs With Recovery Memory
+# P07 â€” Physics-Based Event Attribution From Sparse PMUs With Recovery Memory
+
+Scientific audit revision (3 November): the article has eight sections and a narrower recovery-consistency claim. See the [audit response, implemented corrections and remaining scientific gaps](docs/SCIENTIFIC_AUDIT_RESPONSE_20261103.md). This is a coauthor-review draft, not a submission-ready manuscript.
 
 C01 completed without retuning: 171 physical trajectories and all 342 observed records. See the [results and failure ledger](docs/c01-confirmatory-results.md). Scientific coauthor review remains open.
 

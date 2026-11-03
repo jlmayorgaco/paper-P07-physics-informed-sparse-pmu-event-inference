@@ -17,6 +17,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from matplotlib.lines import Line2D
+from monitored_exposure import corrected_intervals
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -240,9 +241,11 @@ def c01_intervals(intervals: pd.DataFrame) -> None:
         axis.grid(axis="x", alpha=.12)
     ax.set_yticks(range(6), names, fontsize=7)
     ax.set_xlim(35, 60)
-    bx.set_xlim(-25, 83)
+    alarm_rows=rows[rows.metric=='extras_per_event_hour']
+    span=float(alarm_rows.upper95.max()-alarm_rows.lower95.min())
+    bx.set_xlim(float(alarm_rows.lower95.min())-.1*span,float(alarm_rows.upper95.max())+.1*span)
     ax.set_xlabel("Timely gain (percentage points)")
-    bx.set_xlabel("Extra alarms per event-hour: difference")
+    bx.set_xlabel("Extra alarms / monitored event-hour: difference")
     ax.set_title("A. More events attributed in time", loc="left", fontsize=9)
     bx.set_title("B. More unmatched alarms with R/X mismatch", loc="left", fontsize=9)
     fig.suptitle("Physical bank minus frozen ExtraTrees reference; 95% parent-cluster intervals",
@@ -261,7 +264,7 @@ def main() -> None:
     episode_story(records)
     summary = pd.read_csv(C01 / "SUMMARY.csv")
     by_source = pd.read_csv(C01 / "BY_SOURCE.csv")
-    intervals = pd.read_csv(C01 / "PAIRED_INTERVALS.csv")
+    intervals = corrected_intervals()
     c01_tradeoff(summary, by_source)
     c01_intervals(intervals)
     family = by_source[by_source.lane == "continuous"].groupby(["method", "family"])[["events", "timely"]].sum()

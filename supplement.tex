@@ -7,12 +7,16 @@
 \newtheorem{theorem}{Theorem}
 \input{generated/results_macros}
 \input{generated/continuous_macros}
+\input{generated/narrative_macros}
+\input{generated/evidence_bridge_macros}
+\input{generated/ei_x02_macros}
+\input{generated/submission_s01_macros}
 \IfFileExists{generated/c01_macros.tex}{\input{generated/c01_macros}}{}
 
 \begin{document}
 \history{}
 \doi{}
-\title{Supplementary Material for Physics-Based Event Attribution From Sparse PMUs With Recovery Memory}
+\title{Supplementary Material for Recovery-Aware Physical Attribution of Load and Line Events From Sparse PMUs}
 \author{\uppercase{Jorge Luis Mayorga Taborda}\authorrefmark{1}, \uppercase{Yessica Africano Rodriguez}\authorrefmark{1}, \uppercase{Masoud Barati}\authorrefmark{2}, \uppercase{Payman Dehghanian}\authorrefmark{3}, AND \uppercase{David Felipe Celeita Rodr\'iguez}\authorrefmark{4}}
 \address[1]{Universidad de los Andes, Bogot\'a, Colombia}
 \address[2]{Department of Electrical and Computer Engineering, University of Pittsburgh, Pittsburgh, PA, USA}
@@ -20,7 +24,7 @@
 \address[4]{Faculty of Engineering, Universidad de La Sabana, Ch\'ia, Colombia}
 \markboth{Mayorga Taborda \headeretal, Supplementary Material}{Mayorga Taborda \headeretal, Supplementary Material}
 \hypersetup{
-  pdftitle={Supplementary Material for Physics-Based Event Attribution From Sparse PMUs With Recovery Memory},
+  pdftitle={Supplementary Material for Recovery-Aware Physical Attribution of Load and Line Events From Sparse PMUs},
   pdfauthor={Jorge Luis Mayorga Taborda; Yessica Africano Rodriguez; Masoud Barati; Payman Dehghanian; David Felipe Celeita Rodriguez}
 }
 
@@ -101,7 +105,7 @@ For branch $e=(i,j)$ with complex tap $t_e$, series admittance $y_e$, and termin
 \end{equation}
 The implemented PMU operator selects the actual terminal and orientation. Replacing this current with complete bus-injection current changes the likelihood.
 
-Positive-sequence phasors define the balanced model. Negative- and zero-sequence components remain integrity or unbalance evidence. Ideal continuous-frequency channels satisfy
+The balanced generator represents one fundamental phasor and exports its phase-A coordinates. B/C are deterministic phase rotations; negative- and zero-sequence disturbances are not simulated in this evaluation. Ideal continuous-frequency channels satisfy
 \begin{equation}
  f_i^{\mathrm{phys}}=f_0+\frac{1}{2\pi}\frac{d\angle V_i}{dt},\qquad
  \operatorname{ROCOF}_i^{\mathrm{phys}}=\frac{1}{2\pi}\frac{d^2\angle V_i}{dt^2},
@@ -142,6 +146,8 @@ Load change & Modify the active/reactive withdrawal model & load buses & $\Delta
 \bottomrule
 \end{tabularx}
 \end{table*}
+
+\input{supplement/measurement_contract}
 
 \section{Metrics, Causality, and Evaluation Units}
 
@@ -237,6 +243,14 @@ experiments in the main article.}
 \FloatBarrier
 \input{supplement/appendix_f_single_event_pilot}
 
+\FloatBarrier
+\input{sections/article_evidence_bridge}
+\input{supplement/appendix_single_state}
+\input{sections/article_ei_x02}
+\section{Recovery Geometry and Source Separation}
+\input{sections/article_information}
+\input{sections/article_recovery_x04}
+\input{supplement/development_streams}
 \FloatBarrier
 \input{supplement/appendix_narrative_support}
 \input{supplement/appendix_archived_source_resolution}

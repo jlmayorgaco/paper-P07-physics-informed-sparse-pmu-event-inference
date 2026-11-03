@@ -12,6 +12,12 @@ from zipfile import ZIP_DEFLATED, ZipFile
 ROOT = Path(__file__).resolve().parents[1]
 TARGET = ROOT / "output/P07_Para_David_y_Masoud.zip"
 FILES = [
+    "docs/SCIENTIFIC_AUDIT_RESPONSE_20261103.md",
+    "generated/monitored_exposure_audit.json",
+    "generated/scientific_revision_audit.json",
+    "generated/paired_monitored_intervals.csv",
+    "scripts/monitored_exposure.py",
+    "scripts/build_scientific_revision.py",
     "output/pdf/P07_Event_Attribution_Article.pdf",
     "output/pdf/P07_Event_Attribution_Supplement.pdf",
     "output/pdf/P07_Historical_Technical_Notes.pdf",
@@ -54,9 +60,9 @@ FILES = [
 
 def main() -> None:
     readme = (
-        "P07 coauthor review package — 2 November 2026\n\n"
-        "Read the coauthor brief, research contribution and main article first. "
-        "The main article integrates reconstruction, feature ablations, response tensors and the actual historical submission confusion matrices, with separate experimental contracts. "
+        "P07 coauthor review package — scientific revision, 3 November 2026\n\n"
+        "Read the current scientific-audit response, coauthor brief and main article first; older research notes retain their component-study scopes. "
+        "The eight-section article focuses on physical recovery, independent load/line attribution and controlled state-carry evidence. Auxiliary reconstruction, feature, context and simultaneous-source studies remain in the supplement. Read docs/SCIENTIFIC_AUDIT_RESPONSE_20261103.md for corrections and scientific gaps. "
         "C01 completed 171 physical trajectories and 342 observed records without "
         "method retuning. The source package rebuilds the article. The evidence "
         "concerns the F01 load/line catalog; the out-of-bank R/X alarm burden "

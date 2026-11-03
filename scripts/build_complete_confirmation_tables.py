@@ -3,6 +3,7 @@ from pathlib import Path
 import hashlib,json
 import pandas as pd
 from c01_main_tables import write_tables
+from monitored_exposure import corrected_intervals
 ROOT=Path(__file__).resolve().parents[1]
 F=ROOT/'generated/frozen/c01_20261029'
 LABEL={'R11':'Physical bank','R11_NOMINAL':'Nominal bank','ET_REFERENCE':'ExtraTrees','ET_CANDIDATE':'ExtraTrees short','CHEN2016':'Chen'}
@@ -36,13 +37,13 @@ def main():
         d=g.groupby('method').agg(n=('event','size'),timely=('timely','sum'))
         rows.append(f'{fam.title()} / {source} & '+' & '.join(f'{int(d.loc[m,"timely"])}/{int(d.loc[m,"n"])}' for m in methods)+r'\\')
     table('review_sources','Timely decisions by source in the continuous test. These are correlated realizations of the registered physical schedules, not source-excluded generalization.','lrrrr',r'Family / asset & Physical bank & Nominal bank & ExtraTrees & ET short',rows)
-    p=pd.read_csv(F/'PAIRED_INTERVALS.csv');rows=[]
+    p=corrected_intervals();rows=[]
     for (cond,noise,m,ref),g in p[p.lane=='continuous'].groupby(['condition','noise','method','reference']):
         z=g.set_index('metric');cells=[]
         for metric,factor in [('timely_fraction',100),('extras_per_event_hour',1)]:
             q=z.loc[metric];cells.append(f'{q.difference*factor:.2f} [{q.lower95*factor:.2f}, {q.upper95*factor:.2f}]')
         rows.append(f'{COND[cond]} & {noise:g} & {LABEL[m]} & {LABEL[ref]} & '+' & '.join(cells)+r'\\')
-    table('review_paired','Paired physical-bank minus learned-comparator differences. Timely attribution is in percentage points; extras are per full event-record hour, including startup. Brackets are the frozen 95-percent parent-bootstrap intervals.','ll ll rr',r'Network & Noise & Method & Reference & Timely difference & Extra-rate difference',rows)
+    table('review_paired','Paired physical-bank minus learned-comparator differences. Timely attribution is in percentage points; extras are per monitored event-record hour, excluding 12 s of startup from each 120-s record. The registered rate differences and 95-percent parent-bootstrap bounds are exactly rescaled by 120/108; original counts, matches and intervals remain archived.','ll ll rr',r'Network & Noise & Method & Reference & Timely difference & Extra-rate difference',rows)
     cyber=json.loads((ROOT/'generated/frozen/submission_s01_system_20261031/validation.json').read_text())
     rows=[]
     for kind,z in cyber['existing_interval_integrity_metrics']['completed_interval_components'].items():

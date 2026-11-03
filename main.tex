@@ -24,36 +24,35 @@
 \begin{document}
 \input{metadata}
 \hypersetup{
-  pdftitle={Physics-Informed Bayesian Event Attribution From Sparse PMUs},
+  pdftitle={Recovery-Aware Physical Attribution of Load and Line Events From Sparse PMUs},
   pdfauthor={Jorge Luis Mayorga Taborda; Yessica Africano Rodriguez; Masoud Barati; Payman Dehghanian; David Felipe Celeita Rodriguez},
   pdfsubject={Causal physical event attribution, recovery, and source resolution from sparse PMUs},
   pdfkeywords={dynamic state estimation, functional observability, phasor measurement units, physics-informed inference, source localization}
 }
 
 \begin{abstract}
-Sparse PMU measurements can reveal a disturbance without uniquely
-identifying its cause. We study how network equations and conditional
-Bayesian evidence complement feature-based classification for this task.
-A bank of switched differential-algebraic predictors compares source,
-onset, severity and restoration histories, retaining electrical and
-instrumental memory between interventions. Local severity integration and
-fixed-network model averaging produce separate active-event and
-originating-cause masses. Component experiments examine hidden-voltage
-reconstruction, engineered-feature localization and mixed-source response
-sensitivities; these are distinguished from the final causal estimator.
-In a frozen IEEE 39-bus comparison with eight PMUs, 18 six-event schedules
-are replayed under three network conditions and two noise levels. The
-physical bank makes \COneMixTimely{}/\COneMixTotal{} timely family/source
-decisions with \COneMixExtras{} extra alarms, compared with
-\COneETTimely{}/\COneETTotal{} and \COneETExtras{} for a causal ExtraTrees
-reference. Its strongest gain is load-source attribution; line attribution
-is similar to the short-window learned comparator. Most extra physical
-alarms occur under network changes outside the model bank. A separate
-historical transfer experiment retains the original hackathon submission
-and its confusion matrix. The results identify a useful coverage--alarm
-trade-off within the simulated catalog. Transfer to a different network
-model, calibration of event probabilities and the separate contribution
-of each inference component require further evidence.
+After a load is restored or a line is reclosed, residual dynamics can
+resemble a new intervention. We study sequential attribution from eight
+PMUs in an IEEE 39-bus model with nine candidate load buses and nine lines.
+A bank of switched differential-algebraic predictors compares intervention
+and recovery histories from estimated past states. Conditional Bayesian
+evidence integrates load severity, while separate active and cause weights
+retain the explanation of a restored intervention. In an independent
+simulation evaluation, 108 interventions are replayed under three network
+conditions and two noise levels. The physical bank produces
+\COneMixTimely{}/\COneMixTotal{} correct family/source decisions before
+restoration with \COneMixExtras{} unmatched alarms, versus
+\COneETTimely{}/\COneETTotal{} with \COneETExtras{} for a fixed causal
+ExtraTrees adapter. The gain concentrates on loads; line coverage matches
+the short-window learned comparator. A controlled posthoc study separates
+severity scoring from physical-state carry: marginal and profiled scores
+tie, whereas retaining the state gives 108/108 timely decisions and one
+extra alarm, compared with 75/108 and 166 after resetting physical
+deviations. These findings support continuous physical prediction during
+recovery. Unequal alarm operating points and shared generator/predictor
+models limit the comparison; independent validation of the
+continuous-observer control remains needed
+to isolate the benefit of explicit recovery histories.
 \end{abstract}
 
 \begin{keywords}
@@ -69,12 +68,10 @@ event detection, model uncertainty, phasor measurement units, physics-informed i
 \input{sections/narrative_problem}
 \input{sections/article_method}
 \FloatBarrier
-\input{sections/article_evidence_bridge}
 \input{sections/narrative_protocol}
-% Let results fill the column while the protocol table moves to the next page.
-\input{sections/narrative_results}
-% Allow following text to fill the column while the full-width history figure floats.
+\section{Results and Controlled Comparisons}\label{sec:narrative-results}
 \input{sections/08c_c01_confirmatory}
+\input{sections/narrative_results}
 \input{sections/article_ablation_design}
 \input{sections/article_controlled_ablation}
 \input{sections/article_interpretation}

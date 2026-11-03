@@ -46,23 +46,18 @@ physical predictors, evidence updates and decision rules.
 before restoration, extra alarms and episode closure. Nominal and uncertain
 network models are evaluated alongside two fixed ExtraTrees adapters;
 Chen's published detector is compared on eligible persistent line openings.
-\item \IfFileExists{generated/ei_x02_macros.tex}{A known-family, known-ON/OFF IEEE-39 component test
-that separates correction of the pre-event reference from a change in the
-event signature. The test estimates context from PMUs and measures response
-fidelity, source decisions and continuous severity.}{A distinction between fitting
-electrical observations and distinguishing their physical sources, with
-explicit limits on what state and source results establish.}
+\item A controlled severity-score/state-carry study on identical records.
+It identifies a strong effect of preserving physical-state deviations at
+inferred closure, while marginalization and bounded profiling tie on the
+reported endpoints. The control also defines the remaining question:
+whether explicit recovery histories outperform a simpler continuous observer.
 \end{enumerate}
 
-A further physical control asks whether recovery increases source separation.
-It distinguishes retaining a consistent prediction from obtaining additional
-information about the source; it is not a comparison of causal detectors.
-
-Completed development streams expose a trade-off: the five-model reference
-obtains \ContMixTimely{}/\ContMixTotal{} timely family/source decisions with
-\ContMixExtras{} extra alarms, while nominal gains one timely decision at
-a higher alarm burden. \IfFileExists{generated/c01_macros.tex}{The separate
-confirmatory comparison is reported below.}{The prespecified confirmatory
-comparison is still running without method changes.} The claim is scoped
-to the declared load/line catalog. These simulations do not establish an
-all-family hackathon score, calibrated event probabilities or real-time deployment.
+The independent comparison gives \COneMixTimely{}/\COneMixTotal{} timely
+attributions with \COneMixExtras{} extra alarms. The advantage over the
+fixed learned adapters concerns load coverage, while network mismatch
+increases alarm burden. This evaluates configured procedures at their
+original thresholds. It motivates recovery-consistent inference without
+establishing superiority at equal false-alarm rates. Auxiliary voltage,
+feature, simultaneous-source and context-signature studies are retained
+in the supplement with their own cohorts.

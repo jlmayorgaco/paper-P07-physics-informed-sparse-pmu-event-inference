@@ -32,6 +32,19 @@ and ROCOF in Hz/s. Internal centered coordinates do not replace the
 absolute frequency contract. These are reporting-rate phasor measurements;
 waveform harmonics or THD are not measured by these channels.
 
+The causal stream is exported from one balanced complex phasor per PMU:
+phase A supplies the voltage and current magnitudes and angles. The CSV
+exporter constructs B and C by equal magnitudes and angle offsets of
+$-120^\circ$ and $+120^\circ$. Retaining A therefore loses no independent
+phase information in these synthetic records; it is not measured
+positive-sequence extraction or a model of unbalanced faults. The vector is
+$y_k=(|V_A|_{\mathcal P},\angle V_A{}_{\mathcal P},
+|I_A|_{\mathcal P},\angle I_A{}_{\mathcal P\setminus\{39\}},
+f_{\mathcal P},\dot f_{\mathcal P})_k$.
+The supplementary measurement table gives all eight current-terminal
+assignments, polarities, gains and phase offsets. Products of voltage and
+current measured at different terminals are power proxies.
+
 % PROTECTED FIGURE: retain this single-column IEEE-39 diagram. See AGENTS.md.
 \begin{figure}[t]\centering
 \includegraphics[width=\columnwidth]{figures/generated/narrative_topology.pdf}
@@ -41,9 +54,17 @@ waveform harmonics or THD are not measured by these channels.
 The physical model is
 \begin{align}
  \dot x&=f_q(x,z,u;\theta),&0&=g_q(x,z,u;\theta),\label{eq:narrative-dae}\\
- y_k&=\mathcal M_q(x_k,z_k;\theta_M)+b+\varepsilon_k.\label{eq:narrative-measurement}
+ h_k&=H_q(x_k,z_k,u_k),\nonumber\\
+ \eta_k&=F_M(\eta_{k-1},h_k;\theta_M),\nonumber\\
+ y_k&=G_M(\eta_k,h_k;\theta_M)+b+\varepsilon_k.\label{eq:narrative-measurement}
 \end{align}
-Here $x$ contains machine and control dynamics, $z$ the algebraic network variables, $q$ the topology/intervention mode, and $\theta_M$ the measurement convention. The measurement map includes gains, phase references, orientation and the causal frequency/ROCOF estimator. A machine's rotor speed is not substituted for bus frequency.
+Here $x$ contains machine and control dynamics, $z$ the algebraic network
+variables, $q$ the topology/intervention mode, and $\theta_M$ the measurement
+convention. $H_q$ selects electrical phasors; $\eta_k$ retains the causal
+phase history used for frequency/ROCOF and the measurement-filter state.
+The observation thus depends on an augmented state. Bus frequency comes
+from phase evolution, not a machine's rotor speed. Instrumental noise is
+applied according to the declared generator contract.
 
 An intervention history is $h=(e,c,\tau,a,\kappa)$: family, source, onset,
 severity and restoration time, with $\kappa=\infty$ for a sustained event.
@@ -56,6 +77,12 @@ supported impulse-free switches,
 \end{equation}
 The algebraic voltage/current response may jump even though dynamic states remain continuous. Physical restoration reverses the intervention operator. It does not return the machines to their pre-event state, so electrical recovery can continue after OFF.
 
+Switch-aligned reports use the consistent post-switch algebraic solution.
+The local reduction requires an invertible algebraic Jacobian after fixing
+the angle reference; the catalog excludes islanding line alternatives.
+Successful solves and local residual checks validate the admitted cases,
+not global regularity for arbitrary switching topologies.
+
 \begin{table}[t]\centering\small
 \caption{Scope of the executed causal component. The source is an intervention asset; it is not necessarily a measured PMU bus.}\label{tab:narrative-scope}
 \begin{tabularx}{\columnwidth}{@{}lXX@{}}\toprule
@@ -64,7 +91,7 @@ Normal & No intervention & Monitor after startup\\
 Load & Local P/Q factor; optional restoration & Nine candidate buses\\
 Line & Branch open; optional reclose & Nine candidate branches\\
 Fault/generation & Different shunt/input/trip operators & Outside this causal test\\
-Missing/bad data & Measurement-integrity mechanism & Outside C01\\
+Missing/bad data & Measurement-integrity mechanism & Outside the stream test\\
 Unknown & Unresolved diagnosis & Not a new physical family\\\bottomrule
 \end{tabularx}\end{table}
 

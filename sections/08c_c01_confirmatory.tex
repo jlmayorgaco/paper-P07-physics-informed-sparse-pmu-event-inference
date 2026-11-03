@@ -1,4 +1,4 @@
-\section{Sealed Evaluation: Accuracy and Alarm Cost}
+\subsection{Independent Evaluation: Timely Attribution and Alarm Cost}
 \label{sec:c01-results}
 
 The five-model bank makes \COneMixTimely{}/\COneMixTotal{} timely
@@ -37,6 +37,20 @@ attribution and the alarm cost under out-of-bank network error together.
 Each method retains its own frozen publication rule and false-alarm budget.}
 \label{fig:c01-main}\end{figure*}
 
+\begin{figure*}[t]\centering
+\includegraphics[width=.92\textwidth]{figures/generated/diagnosis_delay_distribution.pdf}
+\caption{Posthoc descriptive distribution of correct diagnosis time, using
+all 324 realizations per true family in each denominator. An incorrect or
+absent diagnosis contributes no cumulative mass. Curves include late
+correct decisions and are therefore distinct from the before-OFF endpoint;
+physical OFF varies between events. The correlated replays are not
+independent observations.}
+\label{fig:diagnosis-time}\end{figure*}
+
+Figure~\ref{fig:diagnosis-time} separates a fast conditional median from
+coverage: a method can have short delays on its available diagnoses while
+leaving many load events without a timely source decision.
+
 A posthoc audit of the original episode matches further separates
 coverage from classification. Every matched diagnosis emitted before OFF
 has the correct family and source in all four procedures; their errors
@@ -61,8 +75,10 @@ no general latency advantage.
 \caption{Physical bank minus frozen ExtraTrees reference in the six paired
 strata. Points and 95\% intervals come from 10,000 physical-parent
 resamples. Left: percentage-point difference in timely attribution; right:
-difference in unmatched alarms per event-record hour, whose denominator
-includes the 12-s startup. The orange rows expose the out-of-bank R/X
+difference in unmatched alarms per monitored event-record hour, excluding
+the 12-s startup from each 120-s record. The original rate differences
+and interval bounds are rescaled exactly by $120/108$; counts and episode
+matches are unchanged. The orange rows expose the out-of-bank R/X
 failure. The intervals describe this finite simulated population.}
 \label{fig:c01-ci}\end{figure*}
 
@@ -83,7 +99,16 @@ exposures and the adapter's white-injection assumption prevent a general
 claim against published quickest-change detection. Full stratified tables,
 failure ledgers, restoration outcomes and censoring are in the supplement.
 
-The experiment establishes performance on the specified nine-load,
-nine-line simulator catalog. It does not establish a new hackathon score,
-unseen-source generalization, calibrated event probabilities, field
-operation or real-time throughput.
+The physical dictionary supplies responses for each catalog source,
+whereas the learned adapters retain their original training and feature
+maps. The comparison therefore measures transfer of those particular
+implementations, rather than an information-matched test of physics
+against supervised learning. It also uses different alarm operating points.
+
+\subsection{Computational Cost}
+\input{tables/generated/closure_compute_cost}
+The recorded median history-inference stage exceeds the record duration;
+its amortized processing rate is below the 30-report/s input cadence.
+The stage ranges show substantial variation. Per-report latency
+percentiles, peak memory and a matched-hardware speed comparison were not
+recorded; causal emission timestamps must not be read as wall-clock latency.

@@ -1,10 +1,15 @@
 # Current manuscript claim boundary
 
+## Scientific revision, 3 November 2026
+
+The main claim is a specified recovery-consistent physical attribution procedure and its measured load/line coverage--alarm trade-off. The controlled state-carry effect is demonstrated; an incremental marginal-versus-profile benefit is not. A preliminary continuous-state GLR control is now in the main article, but independent information-matched validation remains open. Rates use monitored exposure, excluding startup, through an exact documented unit conversion; original C01/A01 files are unchanged. Auxiliary state, tensor and signature results remain separate. See [the current audit response](docs/SCIENTIFIC_AUDIT_RESPONSE_20261103.md); the older component register below preserves its historical scope.
+
+
 ## Continuous component addendum, 2026-10-29
 
 - R11 and R11_NOMINAL are frozen research references. Generated H04 table: `tables/generated/continuous_h04.csv`; exact provenance: `generated/frozen/continuous_20261029/MANIFEST.json`.
 - R11's restricted unknown-onset load/line result is secondary development evidence. It does not replace E_B or validate the full E_J restriction regression.
-- M and ΔM implement finite-model marginalization and an exact update decomposition. Their algebra alone is not claimed as a novel tensor estimator or calibrated posterior.
+- M and Î”M implement finite-model marginalization and an exact update decomposition. Their algebra alone is not claimed as a novel tensor estimator or calibrated posterior.
 - The Chen2016 persistent-outage core and its declared F01 adapter are implemented and tested. Its matched-law checks are implementation validation; F01 normal false alarms are retained. A compatible confirmatory superiority claim is pending.
 - The frozen continuous comparison is complete on 171 physical trajectories and 342 observed records. Predictions were sealed before evaluation and methods were not retuned. Its 648 event replays share physical parents; they are not 648 independent events. Changing PMUs, unseen-source causal transfer, field operation and all-family hackathon superiority remain untested.
 - A posthoc 2-by-2 component study reused 18 continuous parents, with 24 records in each arm and 96/96 intended outputs available. Both marginal and bounded-profile score arms tie on timely attribution and extras within each carry stratum. Physical-state carry at inferred closure yields 108/108 timely events and one extra alarm; the reset arms yield 75/108 and 166 extras. The profile arm retains conditional Bayesian state estimation and fixed prior weights, so this does not establish that Bayes is necessary. Parent intervals are descriptive, and no matched-false-alarm superiority claim is made.

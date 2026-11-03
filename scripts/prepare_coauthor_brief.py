@@ -1,146 +1,66 @@
-"""One-page coauthor brief from completed evidence and operational C01 status.
-
-Does not read C01 predictions, scientific results, truth or PMU recordings.
-"""
+"""One-page review brief derived from complete sealed C01 and A01 ledgers."""
 from pathlib import Path
 from datetime import datetime
 from zoneinfo import ZoneInfo
-import hashlib
-import json
-import re
-import statistics
-from collections import Counter
+import hashlib,json
+import pandas as pd
+import pymupdf
 from reportlab.lib import colors
 from reportlab.lib.styles import ParagraphStyle
-from reportlab.lib.enums import TA_LEFT
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
+from reportlab.platypus import SimpleDocTemplate,Paragraph,Table,TableStyle,Spacer
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
-import pymupdf
 
-ROOT = Path(__file__).resolve().parents[1]
-SG = ROOT.parent / 'SGSMA26-Physics-Informed-AD'
-RUN = SG / 'experiments/PAPER_CONFIRMATORY_C01/run'
-OUT = ROOT / 'output/pdf/P07_Coauthor_Brief_David_Masoud.pdf'
-
-
-def read(path):
-    return json.loads(path.read_text(encoding='utf-8-sig'))
+ROOT=Path(__file__).resolve().parents[1]
+OUT=ROOT/'output/pdf/P07_Coauthor_Brief_David_Masoud.pdf'
 
 
 def main():
-    progress = read(RUN / 'RECORD_PROGRESS.json')
-    records = read(RUN / 'data/INPUTS.json')  # public id, duration, hash only
-    done = progress['completed']
-    if done and progress['last_record'] != records[done - 1]['id']:
-        raise RuntimeError('Progress is not a contiguous prefix; timing projection needs review')
-    remaining = records[done:]
-    counts = Counter(r['duration_s'] for r in remaining)
-    timing = {}
-    for duration in counts:
-        vals = []
-        for record in reversed(records[:done]):
-            if record['duration_s'] != duration:
-                continue
-            paths = [RUN / 'timings' / f'{mode}_{record["id"]}.json'
-                     for mode in ['bank', 'r11', 'ml', 'chen']]
-            if all(p.exists() for p in paths):
-                vals.append(sum(read(p)['seconds'] for p in paths))
-            if len(vals) == 12:
-                break
-        if not vals:
-            raise RuntimeError('No completed comparable timing records')
-        timing[str(duration)] = dict(n=len(vals), median_s=statistics.median(vals),
-                                    min_s=min(vals), max_s=max(vals), remaining=counts[duration])
-    hours = {key: sum(c['remaining'] * c[key] for c in timing.values()) / 3600
-             for key in ['median_s', 'min_s', 'max_s']}
-    status = dict(local_time=datetime.now(ZoneInfo('America/Bogota')).isoformat(),
-                  progress=progress, stage=read(RUN / 'PROGRESS.json'),
-                  timing_by_duration=timing, remaining_hours=hours,
-                  interpretation='Timing projection, not a statistical confidence interval; excludes evaluation/build. Current record counted in full.',
-                  methods_changed=False, scientific_partial_results_read=False)
-    (ROOT / 'docs/C01_COAUTHOR_STATUS.json').write_text(json.dumps(status, indent=2) + '\n')
-
-    sources = [ROOT / 'generated/continuous_macros.tex',
-               ROOT / 'generated/ei_x02_macros.tex',
-               ROOT / 'generated/frozen/recovery_x04_20261031/results/SUMMARY.json']
-    macros = {}
-    for source in sources[:2]:
-        macros.update(re.findall(r'\\newcommand\{\\(\w+)\}\{([^}]+)\}', source.read_text()))
-    x4 = read(sources[2])
-    m = lambda name: macros[name]
-    stamp = datetime.now(ZoneInfo('America/Bogota')).strftime('%d %b %Y, %H:%M Colombia')
-    sections = [
-        ('Question and contribution',
-         'Can eight PMUs distinguish a new load/line intervention from the electrical recovery of an earlier one? '
-         'P07 specifies a causal physical-history attribution procedure: retained states survive restoration, '
-         'new interventions compete with recovery, and active-event mass is distinguished from originating-cause mass. '
-         'This connects the physical cause, its active interval and the remaining response in one sequential explanation, tested against operational errors rather than accuracy alone.'),
-        ('Where physics and Bayes enter',
-         'Kirchhoff constraints, Ybus, oriented branch currents and machine/control dynamics determine reduced DAE predictors. '
-         'Known PMU locations select the observation map; phase and instrument memory supply frequency/ROCOF predictions. '
-         'States and operating context come from past PMU reports. Conditional Gaussian evidence integrates truncated load severity; '
-         'predictive likelihoods weight five constant R/X hypotheses. Onset screening, shared regime covariances, pruning and publication rules make the complete procedure approximate.'),
-        ('Completed evidence: development, not C01 confirmation', ''),
-        ('What the controlled experiments establish',
-         f'With load family and ON/OFF supplied, recentering and conditioned signatures both recover {m("EICondJoint")}/{m("EICondEventRecords")} sources '
-         f'(80 physical event cases, three shared-noise realizations). Conditioning lowers median relative response error '
-         f'{m("EIRecentResponse")}% to {m("EICondResponse")}% and severity error at the generating source '
-         f'{m("EIRecentSeverity")}% to {m("EICondSeverity")}%. A separate {x4["physical_trajectories"]}-trajectory recovery control '
-         'finds no mean binary-localization gain (98.35% for both arms; 12 correlated, known-history/onset comparisons). '
-         'Better fit, source identity and calibrated uncertainty are distinct outcomes.'),
-        ('Difference from the hackathon and the literature',
-         'The contribution changes the explanation and temporal evaluation, rather than adding a source-label classifier. '
-         'H04 favors the physical procedures on loads but not on extra-alarm count; it is not an official leaderboard comparison. '
-         'Warner already uses physical trajectories and onset search; IMM/M3H already retains mode histories. '
-         'No numerical advantage over an unexecuted matched M3H/Warner method is claimed.'),
-        ('Limits and the fixed route to submission',
-         f'C01: {done}/{len(records)} records complete at this snapshot; 171 physical trajectories have finished. '
-         f'Estimated remaining processing is {hours["median_s"]:.0f} h (recent timing envelope {hours["min_s"]:.0f}-{hours["max_s"]:.0f} h), plus evaluation/build. '
-         'Finish the frozen comparison of R11, nominal and both ExtraTrees adapters; score Chen2016 on persistent openings. '
-         'Audit all intended cases, normal exposure, delays, censoring and parent-paired intervals, then finalize claims with the coauthors. '
-         'Scope remains nine load and nine line assets, an event-free startup and a declared simulator. No field, unseen-source, all-family, real-time or calibrated-probability claim; BUS5 terminal and BUS39 angle limitations remain. No new method versions or test tuning.')
-    ]
-    rows = [['H04 procedure', 'Timely family + source', 'Extra alarms'],
-            ['Physical: five models', f'{m("ContMixTimely")}/{m("ContMixTotal")}', m('ContMixExtras')],
-            ['Physical: nominal', f'{m("ContNomTimely")}/{m("ContNomTotal")}', m('ContNomExtras')],
-            ['Both frozen ExtraTrees adapters', f'{m("ContETTimely")}/{m("ContETTotal")}', m('ContETExtras')]]
-    note = '54 realizations repeat 18 interventions across three network conditions; normal exposure is only 204 s per method. Nominal/mixture publication paths also differ, so this is not an isolated R/X-bank ablation.'
-    pdfmetrics.registerFont(TTFont('BriefArial', 'C:/Windows/Fonts/arial.ttf'))
-    pdfmetrics.registerFont(TTFont('BriefArialBold', 'C:/Windows/Fonts/arialbd.ttf'))
-    body = ParagraphStyle('body', fontName='BriefArial', fontSize=10, leading=13, spaceAfter=5.5)
-    head = ParagraphStyle('head', fontName='BriefArialBold', fontSize=10, leading=12, textColor=colors.HexColor('#125570'), spaceBefore=7, spaceAfter=4)
-    small = ParagraphStyle('small', parent=body, fontSize=8.2, leading=10.2)
-    title = ParagraphStyle('title', fontName='BriefArialBold', fontSize=17, leading=20, spaceAfter=5)
-    story = [Paragraph('P07 | Contribution, evidence and closure', title),
-             Paragraph(f'For David Celeita and Masoud Barati | Coauthor-review draft | {stamp}', small)]
-    md = ['# P07: contribution, evidence and closure', '', 'Coauthor-review draft | ' + stamp, '']
-    for heading, text in sections:
-        story.append(Paragraph(heading, head)); md += ['## ' + heading, '']
-        if text:
-            story.append(Paragraph(text, body)); md += [text, '']
+    from build_reader_figures import verify_manifest,C01
+    verify_manifest(C01)
+    c=pd.read_csv(C01/'SUMMARY.csv');c=c[c.lane=='continuous']
+    aroot=ROOT/'generated/frozen/ablation_a01_20261102'
+    manifest=json.loads((aroot/'MANIFEST.json').read_text())
+    entries=manifest.get('files',manifest)
+    if isinstance(entries,dict):entries=[dict(path=k,**v) for k,v in entries.items()]
+    for item in entries:
+        assert hashlib.sha256((aroot/item['path']).read_bytes()).hexdigest()==item['sha256']
+    a=pd.read_csv(aroot/'SUMMARY.csv');a=a[a.lane=='continuous'].set_index('method')
+    methods=['R11','R11_NOMINAL','ET_REFERENCE','ET_CANDIDATE']
+    names=['Physical bank','Nominal bank','ExtraTrees','ExtraTrees short']
+    rows=[['Procedure','Timely family + source','Extra alarms']]
+    for method,name in zip(methods,names):
+        x=c[c.method==method];rows.append([name,f'{int(x.timely.sum())}/{int(x.events.sum())}',str(int(x.event_extras.sum()))])
+    carry=a.loc['BAYES_MEMORY'];reset=a.loc['BAYES_NO_CARRY'];profile=a.loc['PROFILE_MEMORY']
+    assert int(profile.timely)==int(carry.timely) and int(profile.extras)==int(carry.extras)
+    sections=[
+      ('Contribution', 'A sparse-PMU procedure compares new load/line interventions with the response retained after restoration. Switched DAE predictors start from estimated past states; active and originating-cause weights distinguish an intervention from its continuing effect. This is an electrical history-filter construction, not a new Bayes rule, IMM/M3H recursion or tensor factorization.'),
+      ('Independent simulated comparison',None),
+      ('What the controlled results establish',f'On 18 existing continuous parents, preserving physical-state deviations gives {int(carry.timely)}/{int(carry.events)} timely attributions and {int(carry.extras)} extra; resetting them gives {int(reset.timely)}/{int(reset.events)} and {int(reset.extras)} extras. Marginal and bounded-profile scores tie on those endpoints. This posthoc test supports state carry, not a general necessity claim for Bayes. A development-only continuous single-state GLR control exists; it still needs independent validation under matched information and calibration.'),
+      ('Difference from the hackathon and the literature','The gain over the fixed causal ExtraTrees adapters is predominantly timely load coverage; line coverage is similar to the short-window model. This is not an improved official hackathon score. Physical trajectory diagnosis and M3H histories have direct precedents. The useful result is recovery-consistent attribution with explicit operational errors and limitations, rather than novelty of the individual ingredients.'),
+      ('Corrections and remaining submission blockers','The manuscript now uses monitored exposure (108 s per 120-s event record); alarm-rate differences and their intervals rise by 120/108, without changing predictions or matches. It states the balanced phase-A/47-coordinate map, observation memory and measured compute cost. Remaining scientific gaps: independent continuous-observer/control comparison at matched information and alarm budgets, cross-model transfer, and calibration of attribution masses. Author approval and declarations remain open. B01 is separate and still running; no partial outcome is used here.')]
+    pdfmetrics.registerFont(TTFont('BriefArial','C:/Windows/Fonts/arial.ttf'))
+    pdfmetrics.registerFont(TTFont('BriefArialBold','C:/Windows/Fonts/arialbd.ttf'))
+    body=ParagraphStyle('body',fontName='BriefArial',fontSize=9.3,leading=11.4,spaceAfter=4)
+    head=ParagraphStyle('head',fontName='BriefArialBold',fontSize=10,leading=12,textColor=colors.HexColor('#125570'),spaceBefore=6,spaceAfter=3)
+    small=ParagraphStyle('small',parent=body,fontSize=8.2,leading=10)
+    title=ParagraphStyle('title',fontName='BriefArialBold',fontSize=16,leading=19,spaceAfter=5)
+    stamp=datetime.now(ZoneInfo('America/Bogota')).strftime('%d %b %Y, %H:%M Colombia')
+    story=[Paragraph('P07 | Contribution, evidence and limits',title),Paragraph('For David Celeita and Masoud Barati | Review draft | '+stamp,small)]
+    md=['# P07: contribution, evidence and limits','','Review draft | '+stamp,'']
+    for heading,text in sections:
+        story.append(Paragraph(heading,head));md+=['## '+heading,'']
+        if text:story.append(Paragraph(text,body));md += [text,'']
         else:
-            t = Table([[Paragraph(c, small) for c in row] for row in rows], colWidths=[240, 160, 112])
-            t.setStyle(TableStyle([('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#e7f0f3')),
-                                   ('VALIGN', (0, 0), (-1, -1), 'TOP'),
-                                   ('BOTTOMPADDING', (0, 0), (-1, -1), 4),
-                                   ('TOPPADDING', (0, 0), (-1, -1), 4)]))
-            story += [t, Spacer(1, 4), Paragraph(note, small)]
-            md += ['| ' + ' | '.join(rows[0]) + ' |', '|---|---|---|']
-            md += ['| ' + ' | '.join(row) + ' |' for row in rows[1:]]
-            md += ['', note, '']
-    doc = SimpleDocTemplate(str(OUT), pagesize=(595.28, 841.89), leftMargin=41.6, rightMargin=41.6,
-                            topMargin=30, bottomMargin=27, title='P07: contribution, evidence and closure')
-    doc.build(story)
-    with pymupdf.open(OUT) as pdf:
-        if len(pdf) != 1:
-            raise RuntimeError(f'Brief must be one page; got {len(pdf)}')
-    (ROOT / 'docs/P07_COAUTHOR_BRIEF.md').write_text('\n'.join(md), encoding='utf-8')
-    manifest = dict(status=status, numerical_sources=[dict(path=str(p.relative_to(ROOT)), sha256=hashlib.sha256(p.read_bytes()).hexdigest()) for p in sources],
-                    output_sha256=hashlib.sha256(OUT.read_bytes()).hexdigest())
-    (ROOT / 'docs/P07_COAUTHOR_BRIEF_MANIFEST.json').write_text(json.dumps(manifest, indent=2) + '\n')
-    print(json.dumps(dict(pdf=str(OUT), pages=1, completed=done, remaining=len(remaining), hours=hours), indent=2))
+            tab=Table([[Paragraph(str(v),small) for v in row] for row in rows],colWidths=[220,180,112]);tab.setStyle(TableStyle([('BACKGROUND',(0,0),(-1,0),colors.HexColor('#e7f0f3')),('VALIGN',(0,0),(-1,-1),'TOP'),('TOPPADDING',(0,0),(-1,-1),3),('BOTTOMPADDING',(0,0),(-1,-1),3)]))
+            story += [tab,Spacer(1,3),Paragraph('108 interventions replayed under three network conditions and two noise levels; 18 event parents, not 648 independent experiments. Unequal alarm operating points.',small)]
+            md += ['| '+' | '.join(rows[0])+' |','|---|---|---|']+['| '+' | '.join(row)+' |' for row in rows[1:]]+['']
+    SimpleDocTemplate(str(OUT),pagesize=(595.28,841.89),leftMargin=41.6,rightMargin=41.6,topMargin=28,bottomMargin=25,title='P07: contribution, evidence and limits').build(story)
+    with pymupdf.open(OUT) as doc:assert len(doc)==1
+    (ROOT/'docs/P07_COAUTHOR_BRIEF.md').write_text('\n'.join(md),encoding='utf-8')
+    files=[OUT,C01/'SUMMARY.csv',aroot/'SUMMARY.csv',ROOT/'generated/monitored_exposure_audit.json']
+    (ROOT/'docs/P07_COAUTHOR_BRIEF_MANIFEST.json').write_text(json.dumps({'state':'COMPLETE_EVIDENCE_REVIEW_DRAFT_NOT_SUBMISSION_READY','sources':{str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in files}},indent=2)+'\n')
+    print('COAUTHOR_BRIEF_ONE_PAGE_COMPLETE_EVIDENCE')
 
 
-if __name__ == '__main__':
-    main()
+if __name__=='__main__':main()

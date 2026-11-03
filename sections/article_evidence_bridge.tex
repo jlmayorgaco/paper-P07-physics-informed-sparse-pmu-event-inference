@@ -32,7 +32,7 @@ improvement comes from conditioning the physical network on the measured
 phasors; temporal filtering adds a smaller improvement. This supports
 reconstruction under that model and sensor placement, not unique recovery
 of every source. The independently evaluated Kalman reconstructor is not
-silently substituted for the conditional observer in Fig.~\ref{fig:joint-architecture}.
+silently substituted for the conditional observer in the main article.
 
 \subsection{Physical Features Remain a Useful Learned Route}
 The historical feature study raises physical-source Top-1 from
@@ -88,7 +88,7 @@ the physical cross-source interaction $Q_{qnij}$; the array's shape alone
 does not provide an accuracy or computational advantage.
 In the continuous estimator, $M$ is instead a vector of aggregated
 source/family weights at each report, and $\Delta M$ is its temporal
-difference, as defined in \eqref{eq:active-cause-masses}--\eqref{eq:continuous-delta}.
+difference, as defined in the main article.
 That implementation does not require a tensor decomposition or a
 tensor-learning library.
 

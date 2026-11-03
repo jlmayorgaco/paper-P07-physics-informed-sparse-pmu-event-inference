@@ -2,7 +2,7 @@
 \label{sec:narrative-method}
 
 Figure~\ref{fig:joint-architecture} describes the implemented computation.
-The inference engine, archived as R11, uses a conditional history bank of
+The inference engine uses a conditional history bank of
 DAE-derived switched state-space predictors. The nonlinear simulator
 generates observations; inference does not solve a new full nonlinear
 simulation for every candidate at every report.
@@ -136,7 +136,7 @@ covariance $P_\rho$ for the current discrepancy regime $\rho$,
 \end{align}
 The amplitude distribution is updated by the same integral above. The
 regime covariances are obtained from nominal-operator Riccati equations;
-R11 does not propagate an independent exact covariance for every switched
+The implementation does not propagate an independent exact covariance for every switched
 history. At episode closure, it retains the mixture mean of the augmented
 state and records the omitted between-history spread. Thus state continuity
 and conditional Bayesian amplitude integration are implemented, while a
@@ -180,8 +180,7 @@ the difference from a same-context no-new-intervention trajectory obeys
 \end{align}
 Here $y^{\rm net}$ denotes voltage/current coordinates before the instrument map.
 Instrumental memory is retained as well. This local interpretation of known
-dynamics explains why the reference after OFF is a trajectory, not a zero
-residual; it is not a new propagation theorem.
+dynamics explains why the reference after OFF is a predicted trajectory.
 
 For conditional history mass $\pi_{\ell,h,k}$, define active and
 originating-cause masses for an admissible family/source cell $c$:
@@ -206,8 +205,8 @@ Writing the conditional active mass as $M_{\ell,c,k}$ yields
  \label{eq:continuous-delta}
 \end{align}
 The terms distinguish within-model evolution from model reweighting.
-This accounting identity aids interpretation, without constituting a new
-tensor factorization. The masses are approximate attribution weights;
+This identity separates within-model evidence from network-model
+reweighting. The masses are approximate attribution weights;
 probability calibration and globally optimal filtering are not established.
 
 \subsection{Emit Separate Detection, Diagnosis and Restoration Messages}
@@ -240,6 +239,29 @@ The reproducibility archive maps these operations to the frozen
 \texttt{transitions}, \texttt{process}, and
 \texttt{predictive\_log\_density} routines and preserves the complete
 publication configuration.
+
+\subsection{Relation to Multiple-Hypothesis Filtering}
+For a retained history $h$, let $p_\ell(h\mid h')$ contain the admitted
+birth, continuation and restoration transitions. Before pruning, its
+normalized evidence update has the standard form
+\begin{equation}
+ \pi_{\ell,h,k}\ \propto\ L_{\ell,h,k}
+       \sum_{h'}p_\ell(h\mid h')\pi_{\ell,h',k-1}.
+ \label{eq:history-bayes-update}
+\end{equation}
+IMM filtering approximates mode-conditioned state mixtures; the M3H
+filter retains mode-sequence hypotheses \cite{blom1988imm,boers2005m3h}.
+Equation~\eqref{eq:history-bayes-update} is that established mechanism.
+Here the modes are oriented electrical intervention operators, histories
+include restoration time, and the output separates active intervention
+from its originating cause through \eqref{eq:active-cause-masses}.
+Retrospective births reuse a stored pre-onset state, while closure
+compresses histories into a retained augmented-state mean. This specifies
+an application of history filtering rather than a new general recursion.
+The state-carry experiment tests one operation in this construction;
+the preliminary single-state control below requires independent,
+information-matched validation to identify the incremental benefit of
+explicit recovery hypotheses.
 
 \subsection{Per-Report Algorithm and Computational Boundary}
 

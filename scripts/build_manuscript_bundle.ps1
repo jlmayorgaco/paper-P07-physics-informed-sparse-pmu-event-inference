@@ -37,6 +37,8 @@ try {
         Invoke-CheckedCommand -Command 'python' -Arguments @('scripts/verify_discrepancy_design.py')
         Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/verify_causal_amplitude_identity.py')
     }
+    Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_scientific_revision.py')
+    Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_reader_figures.py')
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_evidence_bridge.py')
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_complete_confirmation_tables.py')
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/verify_supplement_examples.py')
