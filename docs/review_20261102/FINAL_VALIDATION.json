@@ -1,0 +1,64 @@
+{
+  "date_utc": "2026-11-02T17:58:57.960972+00:00",
+  "status": "COAUTHOR_REVIEW_NOT_SUBMISSION_READY",
+  "manuscript_pages": 15,
+  "supplement_pages": 15,
+  "brief_pages": 1,
+  "five_review_reports": true,
+  "no_method_retuning": true,
+  "raw0002_opened": false,
+  "visual_review": "All pages rendered; contact sheets inspected; physical equations, final results, new confusion/table pages and brief inspected at larger size. No observed clipping in these pages.",
+  "protected_figures": "16 hashes verified; event figure page 4 and IEEE39 page 5",
+  "source_package_validation": {
+    "status": "PASS",
+    "source_package_sha256": "751640f0daa230ef9a1a8475e587b569da36cd469a051c9ad39a94a59da4bbac",
+    "isolated_directory": "C:\\Users\\walla\\Documents\\Github\\paper-P07-physics-informed-sparse-pmu-event-inference\\build\\source-smoke-uopgdy85",
+    "input_files": 102,
+    "documents": {
+      "main": {
+        "pages": 15,
+        "text_and_pagination_match": true
+      },
+      "supplement": {
+        "pages": 15,
+        "text_and_pagination_match": true
+      }
+    },
+    "system_TeX_dependencies_required": true,
+    "scientific_readiness_certified": false
+  },
+  "local_integral_verification": {
+    "scope": "Local Gaussian algebra; independent numerical quadrature; no new simulator evidence",
+    "checks": [
+      {
+        "bounds": [
+          -0.2,
+          0.3
+        ],
+        "absolute_error": 1.1102230246251565e-16,
+        "passed": true
+      },
+      {
+        "bounds": [
+          -0.3,
+          0.0
+        ],
+        "absolute_error": 0.0,
+        "passed": true
+      }
+    ]
+  },
+  "limitations": [
+    "Full simulations not rerun in this audit",
+    "Bibliography not fully independently recertified",
+    "Scientific runtime clean-install not established by LaTeX source build",
+    "LaTeX class/font warnings remain; successful compilation does not certify scientific readiness"
+  ],
+  "sha256": {
+    "main.pdf": "9c948b49db1b99a9b378f086d4aa9f33c707886956cd7b26f92fb9f3b3d37fda",
+    "supplement.pdf": "050018c88b653bac64c35df2f244ba7d1d1fe2bc75757ed7b5b14c9df8a63e79",
+    "output/pdf/P07_Coauthor_Brief_David_Masoud.pdf": "ef43dff35dd8d3711d06caee2254eec2c909f26c3f7d089e6b1ea0b7b68da52e",
+    "docs/review_20261102/AUDITORIA_COMPLETA_P07.md": "742bea82a53008751046548d5a98d3ef081665f6e73a40c5f0859a177696f496",
+    "generated/frozen/c01_20261029/MANIFEST.json": "716509b1fb6491516aca355dcdcbbcc896eb8e33f89041623834b67e9c2d3cc3"
+  }
+}

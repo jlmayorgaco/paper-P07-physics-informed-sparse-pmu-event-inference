@@ -61,12 +61,7 @@ the known load/line catalog, F01 operation and specified R/X/noise ranges; it
 does not establish the hackathon leaderboard, unseen-source causal transfer,
 calibrated event probabilities or field validation.
 '''
-    # The generated draft is only a bootstrap. Preserve the reviewed C01
-    # interpretation on subsequent artifact refreshes; the sealed numeric
-    # tables and figures below still regenerate from the imported CSVs.
-    c01_section = ROOT/'sections/08c_c01_confirmatory.tex'
-    if not c01_section.exists():
-        c01_section.write_text(text,encoding='utf-8')
+    (ROOT/'sections/08c_c01_confirmatory.tex').write_text(text,encoding='utf-8')
     section=ROOT/'supplement/c01_narrative_details.tex';section.write_text(r'''\section{Complete C01 Confirmation Tables}
 \input{tables/generated/c01_continuous}
 \input{tables/generated/c01_persistent_line}

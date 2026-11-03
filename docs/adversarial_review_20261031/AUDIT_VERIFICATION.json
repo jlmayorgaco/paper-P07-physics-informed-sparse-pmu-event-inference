@@ -1,0 +1,22 @@
+{
+  "manuscript_files_verified": 68,
+  "changed_manuscript_files": [],
+  "local_links_verified": 33,
+  "broken_local_links": [],
+  "check_artifacts": {
+    "math_independent_checks.py": {
+      "source_parses": true,
+      "result_exists": true
+    },
+    "methodology_metric_checks.py": {
+      "source_parses": true,
+      "result_exists": true
+    },
+    "runtime_scope_checks.py": {
+      "source_parses": true,
+      "result_exists": true
+    }
+  },
+  "review_only": true,
+  "meaning": "Hashes verify preservation of submitted manuscript sources; individual check outputs are algebra/fixture/scope evidence, not performance validation."
+}

@@ -1,7 +1,38 @@
 {
-  "c01_manifest_sha256": "716509b1fb6491516aca355dcdcbbcc896eb8e33f89041623834b67e9c2d3cc3",
-  "c01_summary_sha256": "3dd5daaa266d83854a1d2ea854b0ed92768c830e0a65efcb1d9fe8e80284b0d1",
-  "c01_records_sha256": "08c610d458297e28a426c79a8d7c51c921f556083057b357b93cb84b2615fab8",
-  "brief_sha256": "636e660d54a8780be4c1864803d2fa3a5128858a728a939e27721f1fc6c247d0",
-  "pages": 1
+  "status": {
+    "local_time": "2026-11-03T10:01:26.968663-05:00",
+    "progress": {
+      "completed": 342,
+      "intended_observed": 342,
+      "last_record": "S342"
+    },
+    "stage": {
+      "stage": "complete",
+      "status": "COMPLETE"
+    },
+    "timing_by_duration": {},
+    "remaining_hours": {
+      "median_s": 0.0,
+      "min_s": 0.0,
+      "max_s": 0.0
+    },
+    "interpretation": "Timing projection, not a statistical confidence interval; excludes evaluation/build. Current record counted in full.",
+    "methods_changed": false,
+    "scientific_partial_results_read": false
+  },
+  "numerical_sources": [
+    {
+      "path": "generated\\continuous_macros.tex",
+      "sha256": "b23f0db4d88677cec9c57a8f3ca681c6c3e09ed32d60d4e685c2caee1779f602"
+    },
+    {
+      "path": "generated\\ei_x02_macros.tex",
+      "sha256": "941b622f8190074890b55f9b7f81bf121cb4a6a6991979f123b2638738fc7618"
+    },
+    {
+      "path": "generated\\frozen\\recovery_x04_20261031\\results\\SUMMARY.json",
+      "sha256": "e823b2c1549de1772a2f4601c1b7f67a56f9b0af9c25b8c423a50fa2b7baae52"
+    }
+  ],
+  "output_sha256": "65e91e8d8cb4ff38c14d4811ad48e9fceef5b703e0a4b5dad96d6cb23d992aa6"
 }

@@ -15,7 +15,7 @@ def write_tables(root, summary):
     for method in ['R11','R11_NOMINAL','ET_REFERENCE','ET_CANDIDATE']:
         d=cont[cont.method==method]; n=int(d.normal_parents.sum())
         rows.append(labels[method]+f" & {int((d.intended_records-d.available_records).sum())} & {int(d.normal_records_with_alarm.sum())}/{n} & {int(d.normal_FA.sum())} & {d.normal_available_s.sum()/3600:.3f} & {int(d.false_restorations.sum())} & {int(d.open_eof.sum())}"+r'\\')
-    table('c01_operational.tex','Continuous monitoring: unavailable intended records, normal-record alarm incidence, normal alarm counts and available normal exposure, unmatched-episode restorations and open episodes. Counts combine six repeated strata descriptively; normal parents are not independent across strata. Missing outputs remain intended failures.','lrrrrrr',r'Method & Unavailable & Normal incidence & Normal alarms & Exposure (h) & Unmatched episode restorations & Open at end',rows)
+    table('c01_operational.tex','Continuous monitoring: unavailable intended records, normal-record alarm incidence, normal alarm counts and available normal exposure, false restorations and open episodes. Counts combine six repeated strata descriptively; normal parents are not independent across strata. Missing outputs remain intended failures.','lrrrrrr',r'Method & Unavailable & Normal incidence & Normal alarms & Exposure (h) & False OFF & Open at end',rows)
     rows=[]
     for (condition,noise),group in cont.groupby(['condition','noise']):
         d=group.set_index('method')

@@ -1,9 +1,21 @@
 {
-  "status": "C01_COMPLETE",
-  "completed_records": 342,
-  "physical_trajectories": 171,
-  "date_local": "03 Nov 2026, 00:07 Colombia",
+  "local_time": "2026-11-03T10:01:26.968663-05:00",
+  "progress": {
+    "completed": 342,
+    "intended_observed": 342,
+    "last_record": "S342"
+  },
+  "stage": {
+    "stage": "complete",
+    "status": "COMPLETE"
+  },
+  "timing_by_duration": {},
+  "remaining_hours": {
+    "median_s": 0.0,
+    "min_s": 0.0,
+    "max_s": 0.0
+  },
+  "interpretation": "Timing projection, not a statistical confidence interval; excludes evaluation/build. Current record counted in full.",
   "methods_changed": false,
-  "remaining_hours": 0,
-  "scientific_results_source": "generated/frozen/c01_20261029/SUMMARY.csv"
+  "scientific_partial_results_read": false
 }
