@@ -1,12 +1,12 @@
 {
-  "date_utc": "2026-10-31T22:13:16.615413+00:00",
+  "date_utc": "2026-11-02T15:43:31.237546+00:00",
   "C01_execution_verify_returncode": 0,
   "methods_retuned": false,
   "new_method_versions": false,
   "RAW0002_opened": false,
   "push": false,
   "coauthors_contacted": false,
-  "article_status": "Coauthor review; C01 pending",
+  "article_status": "Coauthor review; C01 complete and integrated",
   "theory_checked_against": [
     "physics/build_static_rx.jl",
     "run/runtime/conditional_builder.py",
@@ -380,5 +380,13 @@
   "brief_pages": 1,
   "protected_paper_assets": 16,
   "visual_review": "Final one-page brief, main article contact sheet, equations and final page inspected; protected event and IEEE39 figures visible.",
-  "undefined_reference_warnings": false
+  "undefined_reference_warnings": false,
+  "C01_completed_observed_records": 342,
+  "C01_completed_physical_trajectories": 171,
+  "C01_sealed_prediction_files_verified": 3421,
+  "C01_import_manifest_files_verified": 13,
+  "protected_paper_figure_hashes_verified": 16,
+  "article_pdf_pages": 17,
+  "brief_pdf_pages": 1,
+  "coauthor_package": "output/P07_Para_David_y_Masoud.zip"
 }

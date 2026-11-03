@@ -1,5 +1,43 @@
 # Claims and evidence register
 
+## Auditoria completa del 2 de noviembre de 2026
+
+Ver [dictamen y reparaciones](review_20261102/AUDITORIA_COMPLETA_P07.md). La cobertura oportuna y persistencia sustentan el procedimiento completo; no se ha aislado una ganancia causal de Bayes o del tensor. La nueva confusion es descriptiva post hoc y no cambia C01.
+
+## Integración de la evidencia acumulada (2 Nov; revisión vigente)
+
+El título y la narrativa ahora conectan reconstrucción, features, firmas de
+interacción y atribución física bayesiana. Véase
+[P07_RESEARCH_CONTRIBUTION.md](P07_RESEARCH_CONTRIBUTION.md). La nueva sección
+de componentes y la comparación histórica contra el ZIP son resultados
+separados, no ablations retrospectivas de C01. Los archivos nuevos se verifican
+contra sus sellos; no cambian los resultados congelados. La normalización
+histórica de E_B y los límites de transferencia RAW permanecen explícitos.
+El claim principal es el procedimiento completo y su comportamiento medido;
+no se afirma que «usar tensores y Bayes» por sí solo explique toda su ganancia.
+
+## Method and comparator identity (2 Nov; reader audit)
+
+The original hackathon artifact is a 30-s-window hierarchical ExtraTrees
+detector/classifier/localizer with 45,162 selected base and dynamic features.
+Its internal SIM metrics in `models/final_metrics.json` are a historical
+nine-label result, not the continuous C01 result. C01 instead runs two
+separately trained, frozen, report-causal ExtraTrees successors: 846 trailing
+features and 1,457 with short-window additions, each using 400 trees and a
+six-report publication adapter. The frozen physical bank receives the same
+47 PMU coordinates, plus the declared nominal DAE and asset operators.
+See [`HACKATHON_TO_C01_METHOD_TRACE.md`](HACKATHON_TO_C01_METHOD_TRACE.md)
+for code paths and the exact comparison boundary. The methods share C01
+observations but have distinct training information and alarm operating
+points. The C01 simulation uses the same F01 equation family and PMU map
+as the physical predictor; R/X perturbations do not test model-form transfer.
+
+## C01 confirmation (2 Nov; current evidence)
+
+The sealed C01 campaign completed 171 physical trajectories and all 342 observed records without retuning. Continuous R11 five-model obtains 644/648 timely family/source attributions with 72 extras versus ExtraTrees reference 330/648 with 29; its nominal reference obtains 643/648 with 92. Under out-of-bank R/X, R11 still obtains 212/216 timely decisions but incurs 68 extras and 54 false restorations. Both R11 and ExtraTrees make 162/162 correct first stops on persistent line openings; the declared Chen2016 adapter makes 74/162 and alarms on all 72 paired normal records under a much shorter stop-limited exposure. These are six correlated network/noise replays of 18 continuous, 27 persistent-line, and 12 normal parents, not independent denominators. Full source, exposure, failure, censoring, and paired-interval tables are in [`c01-confirmatory-results.md`](c01-confirmatory-results.md) and the hashed import `generated/frozen/c01_20261029/`. The supported claim is restricted timely attribution on the known F01 load/line catalog, with a clear alarm-control failure under network mismatch. This does not establish official hackathon improvement, field transfer, calibrated probabilities, or superiority over an unexecuted Warner/M3H adaptation.
+
+Historical sections below retain the evidence status at their stated dates; any statement that C01 is pending has been superseded by this confirmation.
+
 ## Submission successor S01 (31 Oct; current executed boundary)
 
 The current article's central claim is recovery-aware physical-history attribution under its declared load/line simulation contract. S01 adds adversarial controls and reports transfer failures; it does not turn the manuscript into an all-family deployment claim.
@@ -17,7 +55,7 @@ The current article's central claim is recovery-aware physical-history attributi
 
 The unified physical/integrity publication is executed and independently verified: all 180 physical and integrity windows, 12 availability messages and six report arrays project exactly to their sealed components. An independent consumer reconstructs current missingness and ML availability over 161379 reports without disagreement. Completed intervals never reopen restored missing episodes. This proves composition, not an additional performance improvement or physical-filter transfer.
 
-Evidence imports are `generated/frozen/submission_s01_controls_20261031`, `submission_s01_learning_20261031`, `submission_s01_raw_hybrid_20261031`, `submission_s01_ml_h04_20261031` and `submission_s01_system_20261031`. Each retains exact source hashes. C01 remains unfinished; partial predictions and truth are not used. The narrower evidence can support a defensible paper after final confirmation and editorial closure, but the user's requested strong all-family RAW performance has not been achieved.
+Evidence imports are `generated/frozen/submission_s01_controls_20261031`, `submission_s01_learning_20261031`, `submission_s01_raw_hybrid_20261031`, `submission_s01_ml_h04_20261031` and `submission_s01_system_20261031`. Each retains exact source hashes. C01 was subsequently completed and imported with its own seal. The requested strong all-family RAW performance has not been achieved.
 
 ## Recovery control X04 (31 Oct)
 
@@ -66,7 +104,7 @@ The governing R11 contribution is the specified competition between successive i
 - **Implemented capability:** past-state-conditioned load/line histories; separate active and originating-cause masses; finite R/X mixing; no source-label head.
 - **Development evidence:** H04 family/timely/extras and nominal/mixture trade-off. The admission ablation is not a pure recovery-memory ablation.
 - **Not established:** numerical advantage over Warner/Adaptive Matrix CuSum; calibrated event probabilities; causal benefit of each memory operation; source-excluded transfer or official hackathon-score improvement.
-- **Confirmation pending:** C01 remains unchanged and its partial outputs are not used to choose claims or methods. Empirical utility, methodological difference and author approval are distinct gates.
+- **Confirmation completed 1 Nov:** C01 remains unchanged, and its complete sealed outputs are reported above. Empirical utility, methodological difference and author approval remain distinct judgments.
 
 The earlier entries below retain their component-specific contracts; they do not override these restrictions for R11.
 
@@ -77,7 +115,7 @@ The earlier entries below retain their component-specific contracts; they do not
 | Restricted causal load/line inference runs without true onset/source inputs. | Imported H03/H04 CSV, source seals, Section V causal component | Empirical-secondary; fixed catalog, F01, stationary prefix. Not E_J completion. |
 | Network mixing trades alarm burden against timely attribution. | Generated `continuous_h04.csv` and `continuous_tradeoff.pdf` | Empirical-secondary; preserve nominal and admission-ablation regressions. No uniform superiority. |
 | Published Chen2016 persistent QCD has an executable reproduction. | Imported core/tests and MATCHED outputs | Implementation validation on three-bus law; declared F01 adapter, mismatch failures retained. No original 118-bus replication or F01 ARL guarantee. |
-| The new common test is prespecified. | Imported C01 PLAN/FREEZE | Protocol only; results unavailable, not confirmation. |
+| The new common test was prespecified. | Imported C01 PLAN/FREEZE and sealed `c01_20261029` results | Executed confirmation within the declared F01 catalog; complete denominators and losses are reported above. |
 
 
 This register governs manuscript wording. Every imported artifact is hashed in `generated/frozen/SOURCE_MANIFEST.csv`; the source branch and commit are recorded in `generated/frozen/SOURCE_SNAPSHOT.txt`.

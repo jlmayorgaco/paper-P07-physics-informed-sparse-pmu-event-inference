@@ -10,7 +10,10 @@
 \input{generated/results_macros}
 \input{generated/continuous_macros}
 \input{generated/narrative_macros}
-\IfFileExists{generated/c01_macros.tex}{\input{generated/c01_macros}}{}
+\input{generated/c01_macros}
+\input{generated/reader_macros}
+\input{generated/evidence_bridge_macros}
+\input{generated/review_audit_macros}
 \IfFileExists{generated/ei_x02_macros.tex}{\input{generated/ei_x02_macros}}{}
 \IfFileExists{generated/submission_s01_macros.tex}{\input{generated/submission_s01_macros}}{}
 \IfFileExists{generated/submission_s01_learning_macros.tex}{\input{generated/submission_s01_learning_macros}}{}
@@ -21,37 +24,36 @@
 \begin{document}
 \input{metadata}
 \hypersetup{
-  pdftitle={Physics-Based Event Attribution From Sparse PMUs With Recovery Memory},
+  pdftitle={Physics-Informed Bayesian Event Attribution From Sparse PMUs},
   pdfauthor={Jorge Luis Mayorga Taborda; Yessica Africano Rodriguez; Masoud Barati; Payman Dehghanian; David Felipe Celeita Rodriguez},
   pdfsubject={Causal physical event attribution, recovery, and source resolution from sparse PMUs},
   pdfkeywords={dynamic state estimation, functional observability, phasor measurement units, physics-informed inference, source localization}
 }
 
 \begin{abstract}
-An electrical network can continue oscillating after a load is restored or
-a line is reclosed. A later intervention can then resemble the recovery of
-an earlier one. We address this ambiguity by comparing physical histories
-from eight sparse PMUs. DAE-derived switched predictors use voltage,
-oriented terminal current, frequency and ROCOF, start from estimated past
-states, and preserve recovery through restoration. A ten-second state
-history supports screened onset proposals; conditional evidence integrates load severity and
-updates fixed network hypotheses. Active-event and originating-cause masses
-keep ongoing interventions separate from their remaining response.
-\IfFileExists{generated/c01_macros.tex}{The independent continuous evaluation
-gives \COneMixTimely{}/\COneMixTotal{} timely family/source decisions with
-\COneMixExtras{} extra alarms for the five-model bank, versus
-\COneNomTimely{}/\COneNomTotal{} and \COneNomExtras{} for nominal.}{Completed
-development replays with a common publication clock give
-\SSMixTimely{}/\SSMixTotal{} timely family/source decisions with
-\SSMixExtras{} extra alarms, versus \SSSimpleTimely{}/\SSSimpleTotal{} and
-\SSSimpleExtras{} for a simpler state-retaining physical procedure.
-Independent confirmation is in progress.}
-The contribution is a specified recovery-aware attribution mechanism and
-an evaluation separating detection, timely location and restoration.
-The frozen physical startup contract rejects the retrospective RAW reference;
-a separate learned source hybrid corrects only one additional physical window.
-The supported scope is a known load/line catalog; probability calibration, all-family
-diagnosis and real-time deployment remain unestablished.
+Sparse PMU measurements can reveal a disturbance without uniquely
+identifying its cause. We study how network equations and conditional
+Bayesian evidence complement feature-based classification for this task.
+A bank of switched differential-algebraic predictors compares source,
+onset, severity and restoration histories, retaining electrical and
+instrumental memory between interventions. Local severity integration and
+fixed-network model averaging produce separate active-event and
+originating-cause masses. Component experiments examine hidden-voltage
+reconstruction, engineered-feature localization and mixed-source response
+sensitivities; these are distinguished from the final causal estimator.
+In a frozen IEEE 39-bus comparison with eight PMUs, 18 six-event schedules
+are replayed under three network conditions and two noise levels. The
+physical bank makes \COneMixTimely{}/\COneMixTotal{} timely family/source
+decisions with \COneMixExtras{} extra alarms, compared with
+\COneETTimely{}/\COneETTotal{} and \COneETExtras{} for a causal ExtraTrees
+reference. Its strongest gain is load-source attribution; line attribution
+is similar to the short-window learned comparator. Most extra physical
+alarms occur under network changes outside the model bank. A separate
+historical transfer experiment retains the original hackathon submission
+and its confusion matrix. The results identify a useful coverage--alarm
+trade-off within the simulated catalog. Transfer to a different network
+model, calibration of event probabilities and the separate contribution
+of each inference component require further evidence.
 \end{abstract}
 
 \begin{keywords}
@@ -67,22 +69,17 @@ event detection, model uncertainty, phasor measurement units, physics-informed i
 \input{sections/narrative_problem}
 \input{sections/article_method}
 \FloatBarrier
+\input{sections/article_evidence_bridge}
 \input{sections/narrative_protocol}
 % Let results fill the column while the protocol table moves to the next page.
 \input{sections/narrative_results}
 % Allow following text to fill the column while the full-width history figure floats.
-\IfFileExists{sections/08c_c01_confirmatory.tex}{\input{sections/08c_c01_confirmatory}\FloatBarrier}{}
-\IfFileExists{generated/submission_s01_macros.tex}{\input{sections/article_submission_checks}}{}
-\IfFileExists{generated/ei_x02_macros.tex}{\input{sections/article_signature_summary}}{}
+\input{sections/08c_c01_confirmatory}
+\input{sections/article_ablation_design}
+\input{sections/article_controlled_ablation}
 \input{sections/article_interpretation}
 \input{sections/article_final_conclusion}
 
-\section*{Acknowledgment}
-OpenAI Codex~\cite{openaiCodex2026} assisted with drafting and restructuring
-the abstract, all numbered main sections, author biographies and supplementary derivations, protocols and examples,
-LaTeX preparation, and plotting and execution-infrastructure code.
-The authors retain responsibility for the scientific content, verification,
-and final submission.
 \FloatBarrier
 \bibliographystyle{IEEEtran}
 \bibliography{references}

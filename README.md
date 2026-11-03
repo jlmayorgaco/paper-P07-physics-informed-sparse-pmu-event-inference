@@ -1,3 +1,5 @@
+> C01 completed without retuning: 171 physical trajectories and all 342 observed records. See [results and failure ledger](docs/c01-confirmatory-results.md). Scientific coauthor review remains open.
+
 # P07 — Physics-Based Event Attribution From Sparse PMUs With Recovery Memory
 
 **Figuras protegidas:** la Figura 2 de eventos y el unifilar IEEE-39 deben permanecer
@@ -24,13 +26,13 @@ C01 y los metadatos editoriales finales siguen pendientes; el paquete es para re
 
 [Integración del chat de revisión y giro DICE-PMU](docs/SHARED_REVIEW_INTEGRATION_20261030.md): algoritmo por reporte, precedentes, contratos de métricas, normalización del banco auxiliar y candidato separado. La imagen de tipos de eventos permanece intacta.
 
-Revisión actual: [auditoría del artículo principal, 30-oct-2026](docs/MAIN_ARTICLE_AUDIT_20261030.md). El [PDF principal](output/pdf/P07_Event_Attribution_Article.pdf) contiene solo el artículo. C01 todavía está en ejecución; el borrador no anticipa sus resultados ni se declara listo para envío.
+Revisión actual: [auditoría del artículo principal, 30-oct-2026](docs/MAIN_ARTICLE_AUDIT_20261030.md) y [resultado C01 sellado](docs/c01-confirmatory-results.md). El [PDF principal](output/pdf/P07_Event_Attribution_Article.pdf) contiene el artículo con la comparación confirmatoria. Es un borrador para revisión científica de coautores; no está enviado.
 
 **Título de trabajo:** *Physics-Based Event Attribution From Sparse PMUs With Recovery Memory*
 
 **Objetivo:** explicar qué intervención física produce una historia PMU y cuándo puede distinguirse de sus alternativas. El artículo sigue la predicción DAE, la evidencia causal, M/ΔM y la decisión; separa resultados de desarrollo y confirmación.
 
-Ver [guía narrativa en español](NARRATIVA_P07.md), [plan del argumento](PAPER_PLAN.md) y [auditoría de la revisión](docs/narrative-revision-2026-10-30.md). El texto anterior y su PDF se conservan en `archive/narrative_before_20261030/`. C01 sigue ejecutándose sin reajustes; sus resultados se integrarán al completar la evaluación.
+Ver [guía narrativa en español](NARRATIVA_P07.md), [plan del argumento](PAPER_PLAN.md) y [auditoría de la revisión](docs/narrative-revision-2026-10-30.md). El texto anterior y su PDF se conservan en `archive/narrative_before_20261030/`. C01 terminó sin reajustes y sus resultados se integraron en el PDF actual.
 
 El [contraste con Warner y los métodos cercanos](docs/novelty-and-closest-methods.md) define el aporte defendible y sus límites. La [revisión de la línea physics-informed de Barati](docs/barati-physics-informed-options.md) distingue lo incorporado de extensiones futuras. Ninguna cambia el método congelado.
 

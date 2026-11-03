@@ -1,0 +1,61 @@
+\section{Related Work}
+\label{sec:narrative-related}
+
+DAE and unknown-input estimators recover hidden states or inputs
+\cite{gillijns2007input,nugroho2022dae,katanic2024recursive}; functional
+observability and diagnosability ask which states or sources can be
+distinguished \cite{fernando2010functional,montanari2022functional,
+eriksson2013diagnosability,scharf1994matched}. Physical outage inference
+already uses network hypotheses, uncertain states and sequential tests
+\cite{tate2008outage,zhao2014outages,chen2016quickest,
+rovatsos2017outage}. Sparse input recovery estimates forcing locations
+and unknown initial states in linear dynamics \cite{anguluri2023group}.
+Sensor placement limits the information available at remote PMUs
+\cite{jamei2020limits,conte2023fault,yildiz2025sparse}.
+
+Warner \emph{et al.} compare simulated voltage/current paths across an
+unknown-onset window for short-circuit line identification
+\cite{warner2023highfidelity}. Yang, Chen and Zhai combine partial-PMU
+algebraic measurements with particle-filter estimates of generator dynamic
+states, then monitor outage signatures with an EWMA on the IEEE-39 system
+\cite{yang2021particle}. This is a close physical precedent for line
+outage detection; the present evaluation instead attributes load and line
+interventions through OFF and successive recovery. Neither study is run as a
+same-data benchmark here. Multiple-model filters and adaptive history banks
+already retain conditional modes \cite{blom1988imm,boers2005m3h}; sequential
+diagnosis has established error/delay theory under specified observation
+laws \cite{warner2024matrix}. Our screened, pruned bank inherits none of
+those general optimality or delay guarantees.
+
+Learned PMU classifiers and physical uncertainty models provide other
+routes \cite{pandey2020realtime,li2024knowledge,yildiz2024few,
+ensaf2023kernel,tartakovsky2023gp,albustami2026dae,nagi2022trajectory}.
+For example, Li \emph{et al.} embed disturbance-type/topology and
+localization-cost constraints in a spatiotemporal graph-convolutional
+model \cite{li2024knowledge}. Our physical route instead computes the
+observation likelihood of candidate interventions; its graph is the
+admittance network and terminal map, not a learned message-passing layer.
+The two frozen ExtraTrees implementations test supervised references,
+not all learned diagnosis. The new contribution claimed here is the
+specified sparse-PMU procedure and its evidence: new interventions and
+retained recovery histories compete for the same causal reports, with
+component experiments explaining the role and limits of physical
+representation. We do not claim that combining physics, Bayes and a
+tensor is itself new. Table~\ref{tab:literature-capability} distinguishes the
+neighboring tasks and the comparators actually executed here.
+
+\begin{table*}[t]\centering\small
+\caption{Closest inference contracts. Chen and the two fixed ExtraTrees
+adapters are the executed comparators. An untested capability is not an
+algorithmic impossibility.}
+\label{tab:literature-capability}
+\begin{tabularx}{\textwidth}{@{}lXXX@{}}\toprule
+Route & Mechanism & Evaluated target & Role in this study\\\midrule
+Chen / Rovatsos & Network likelihoods and sequential tests & Line outages; Rovatsos includes transients & Chen on persistent-line first decisions\\
+Warner high-fidelity & Simulated V/I paths and onset search & Short-circuit line candidates & Closest trajectory precedent; no common-data run\\
+Yang--Chen--Zhai (2021) & Particle filter for generator states; EWMA outage monitoring & Line-outage detection with partial PMUs on IEEE-39 & Closely related line detector; no continuous load/restoration comparison\\
+Adaptive Matrix CuSum & Sequential diagnosis with error/delay analysis & One unknown distributional change & Statistical precedent; no inherited guarantee\\
+DAE / stochastic-state estimation & Physical state and uncertainty models & States, unknown inputs or parameters & Components and adjacent tasks\\
+Learned PMU diagnosis & Features or constrained representations & Event families and locations & Two frozen ExtraTrees references\\
+Physical history bank here & Estimated-past-state paths and recovery & Successive catalog load/line events & Timely attribution, extras and restoration\\\bottomrule
+\end{tabularx}\end{table*}

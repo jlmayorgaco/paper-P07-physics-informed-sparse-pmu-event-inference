@@ -1,0 +1,5 @@
+check,result,value,note
+C01 complete-intended-records,True,342,Frozen evaluation audit; expected all 342 observed records.
+physical_rejections,True,0,Any rejection remains in source audit; none found in frozen C01.
+inference_failures,True,0,Any failure remains in source audit; none found in frozen C01.
+summary_arithmetic_parity,True,36,Per-noise report F1 and pooled event counts checked against frozen SUMMARY.csv.

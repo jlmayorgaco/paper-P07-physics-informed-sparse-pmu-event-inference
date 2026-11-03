@@ -1,0 +1,78 @@
+{
+  "status": "POSTHOC_DESCRIPTIVE_NO_REMATCHING",
+  "lane": "continuous",
+  "criterion": "off_delay_s < -1/30 s",
+  "criterion_interpretation": "more than one 30 Hz report early",
+  "early_denominator": "associated restoration values available for each method",
+  "missing_denominator": "648 intended event realizations per method; missing values include omissions and are not necessarily open episodes",
+  "replays": "dependent; no significance test",
+  "inputs": {
+    "SUMMARY.csv": "3dd5daaa266d83854a1d2ea854b0ed92768c830e0a65efcb1d9fe8e80284b0d1",
+    "EVENTS.csv": "f343e4909016459c1b2e7e113afa0e286a1ccd4b9ebb5e052bbf2c851491f741",
+    "PAIRED_INTERVALS.csv": "bc471895bf9fd93a1eda924c595b28fbaecc5eaf2eb581494a4606228aec022c",
+    "EVALUATION_AUDIT.json": "e1420d0a71fe9ad48c260d36f471c204999b74d0846b74226126af2c64690f41",
+    "PREDICTIONS_SEAL.json": "fc417463e96f59dbb6c42d96d30106b99043e16ea698bf394ad8047bd8068cb0"
+  },
+  "results": [
+    {
+      "method": "R11",
+      "display_name": "Physical history bank",
+      "intended_event_realizations": 648,
+      "timely_attributions": 644,
+      "event_extras": 72,
+      "associated_restorations_available": 644,
+      "early_restorations_gt_one_report": 0,
+      "early_restorations_fraction_of_available": 0.0,
+      "events_without_associated_restoration_value": 4,
+      "missing_fraction_of_648": 0.006172839506172839,
+      "minimum_signed_off_delay_s": 0.1671358821032242,
+      "median_signed_off_delay_s": 0.1822116035900194,
+      "maximum_signed_off_delay_s": 0.3490993398415014
+    },
+    {
+      "method": "R11_NOMINAL",
+      "display_name": "Nominal physical bank",
+      "intended_event_realizations": 648,
+      "timely_attributions": 643,
+      "event_extras": 92,
+      "associated_restorations_available": 643,
+      "early_restorations_gt_one_report": 0,
+      "early_restorations_fraction_of_available": 0.0,
+      "events_without_associated_restoration_value": 5,
+      "missing_fraction_of_648": 0.007716049382716049,
+      "minimum_signed_off_delay_s": 0.1671358821032242,
+      "median_signed_off_delay_s": 0.1822116035900194,
+      "maximum_signed_off_delay_s": 0.3490993398415014
+    },
+    {
+      "method": "ET_REFERENCE",
+      "display_name": "Causal ExtraTrees",
+      "intended_event_realizations": 648,
+      "timely_attributions": 330,
+      "event_extras": 29,
+      "associated_restorations_available": 330,
+      "early_restorations_gt_one_report": 52,
+      "early_restorations_fraction_of_available": 0.15757575757575756,
+      "events_without_associated_restoration_value": 318,
+      "missing_fraction_of_648": 0.49074074074074076,
+      "minimum_signed_off_delay_s": -4.30986689066442,
+      "median_signed_off_delay_s": 0.1815996179923047,
+      "maximum_signed_off_delay_s": 0.5281590886589314
+    },
+    {
+      "method": "ET_CANDIDATE",
+      "display_name": "Short-window ExtraTrees",
+      "intended_event_realizations": 648,
+      "timely_attributions": 352,
+      "event_extras": 16,
+      "associated_restorations_available": 352,
+      "early_restorations_gt_one_report": 26,
+      "early_restorations_fraction_of_available": 0.07386363636363637,
+      "events_without_associated_restoration_value": 296,
+      "missing_fraction_of_648": 0.4567901234567901,
+      "minimum_signed_off_delay_s": -2.9858727309633686,
+      "median_signed_off_delay_s": 0.1847922540810671,
+      "maximum_signed_off_delay_s": 0.3042390701454458
+    }
+  ]
+}

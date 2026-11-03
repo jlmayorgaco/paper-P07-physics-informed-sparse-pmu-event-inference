@@ -1,0 +1,13 @@
+method,condition,noise_strata,intended_records,available_records,unavailable_records,tp,fp,fn,report_f1,f1_denominator,abstentions,monitored_reports,open_eof,report_f1_definition
+R11,MATCH,1.0|2.0 (pooled; no retuning),60,60,0,21292,1134,1640,0.9388421006217206,45358,0,540060,0,"2*TP/(2*TP+FP+FN), TP/FP/FN summed over event and normal records"
+R11,RX_IN_SUPPORT,1.0|2.0 (pooled; no retuning),60,60,0,21293,1125,1639,0.9390518191841235,45350,0,540060,0,"2*TP/(2*TP+FP+FN), TP/FP/FN summed over event and normal records"
+R11,RX_OUT_SUPPORT,1.0|2.0 (pooled; no retuning),60,60,0,21108,5763,1824,0.8476597795313535,49803,0,540060,0,"2*TP/(2*TP+FP+FN), TP/FP/FN summed over event and normal records"
+R11_NOMINAL,MATCH,1.0|2.0 (pooled; no retuning),60,60,0,21297,1193,1635,0.9377394214257408,45422,0,540060,0,"2*TP/(2*TP+FP+FN), TP/FP/FN summed over event and normal records"
+R11_NOMINAL,RX_IN_SUPPORT,1.0|2.0 (pooled; no retuning),60,60,0,21289,1147,1643,0.9385029095397637,45368,0,540060,0,"2*TP/(2*TP+FP+FN), TP/FP/FN summed over event and normal records"
+R11_NOMINAL,RX_OUT_SUPPORT,1.0|2.0 (pooled; no retuning),60,60,0,21174,6854,1758,0.8310047095761381,50960,0,540060,0,"2*TP/(2*TP+FP+FN), TP/FP/FN summed over event and normal records"
+ET_REFERENCE,MATCH,1.0|2.0 (pooled; no retuning),60,60,0,9708,641,13224,0.5833959316126318,33281,0,540060,0,"2*TP/(2*TP+FP+FN), TP/FP/FN summed over event and normal records"
+ET_REFERENCE,RX_IN_SUPPORT,1.0|2.0 (pooled; no retuning),60,60,0,9743,649,13189,0.5847437282439083,33324,0,540060,0,"2*TP/(2*TP+FP+FN), TP/FP/FN summed over event and normal records"
+ET_REFERENCE,RX_OUT_SUPPORT,1.0|2.0 (pooled; no retuning),60,60,0,9694,643,13238,0.5827647359403649,33269,0,540060,0,"2*TP/(2*TP+FP+FN), TP/FP/FN summed over event and normal records"
+ET_CANDIDATE,MATCH,1.0|2.0 (pooled; no retuning),60,60,0,11090,672,11842,0.6393036259872024,34694,0,540060,0,"2*TP/(2*TP+FP+FN), TP/FP/FN summed over event and normal records"
+ET_CANDIDATE,RX_IN_SUPPORT,1.0|2.0 (pooled; no retuning),60,60,0,11085,653,11847,0.6394577444476492,34670,0,540060,0,"2*TP/(2*TP+FP+FN), TP/FP/FN summed over event and normal records"
+ET_CANDIDATE,RX_OUT_SUPPORT,1.0|2.0 (pooled; no retuning),60,60,0,11072,640,11860,0.6391871608359312,34644,0,540060,0,"2*TP/(2*TP+FP+FN), TP/FP/FN summed over event and normal records"

@@ -1,0 +1,32 @@
+{
+  "csv_contract_records": 112,
+  "csv_pmus_per_record": 8,
+  "csv_fields_per_pmu": 14,
+  "units": [
+    "V",
+    "A",
+    "deg",
+    "Hz",
+    "Hz/s"
+  ],
+  "max_csv_roundtrip_error": 5.820766091346741e-11,
+  "preserved_nan_values": 7168,
+  "labels_in_inference": false,
+  "exact_cli_parity": true,
+  "baseline_files_checked": 5159,
+  "changed": [],
+  "protocol_and_scripts_unchanged": true,
+  "environment": {
+    "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\sgsma_lab\\workspace\\benchmarks\\f01_line_load_b01\\clean_python\\Scripts\\python.exe",
+    "packages": {
+      "numpy": "2.3.5",
+      "scipy": "1.16.3",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.7.2",
+      "joblib": "1.6.0",
+      "matplotlib": "3.10.8",
+      "threadpoolctl": "3.7.0"
+    }
+  }
+}

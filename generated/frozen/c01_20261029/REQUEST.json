@@ -1,0 +1,11 @@
+{
+  "status": "REQUESTS_PREPARED_NO_SIMULATION_RUN",
+  "freeze_sha256": "6bdb3f740e87ae13fbe0efa6122f7d144fdb77c9f05fc409ffcbf4793eacc269",
+  "parents": 57,
+  "physical_trajectories": 171,
+  "planned_observed_records": 342,
+  "physical_duration_s": 37800,
+  "reference": "SIM0001_JuliaPD_F01",
+  "truth_must_not_be_in_inference_input": true,
+  "continuous_states": true
+}

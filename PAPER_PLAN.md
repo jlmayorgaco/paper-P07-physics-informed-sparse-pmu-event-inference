@@ -1,6 +1,8 @@
+> C01 completed without retuning: 171 physical trajectories, 342 observed records. See [results and failure ledger](docs/c01-confirmatory-results.md). Scientific coauthor review remains open.
+
 # P07 — argumento y mapa de lectura revisados
 
-**Cierre para coautores, 31-oct:** [contrato y auditoría del método](docs/P07_CLOSURE_FOR_COAUTHORS.md) y [página de contribución/evidencia](docs/P07_COAUTHOR_BRIEF.md). No se crean más versiones ni se agregan métodos. La DAE, el mapa de medición y la integral condicional se explican con su correspondencia al código; las aproximaciones quedan explícitas. C01 se deja terminar y sus resultados completos determinarán las conclusiones, sin reajustes.
+**Cierre para coautores, 2-nov:** [contrato y auditoría del método](docs/P07_CLOSURE_FOR_COAUTHORS.md), [página de contribución/evidencia](docs/P07_COAUTHOR_BRIEF.md) y [C01 completa](docs/c01-confirmatory-results.md). No se crean más versiones ni se agregan métodos. La DAE, el mapa de medición y la integral condicional se explican con su correspondencia al código; las aproximaciones quedan explícitas. C01 terminó sin reajustes y sus resultados, incluida la regresión de extras fuera del banco R/X, gobiernan las conclusiones.
 
 El [corpus de continuidad](docs/corpus/README.md) reconcilia conversación, ideas y fuentes. El [ensayo IEEE-39 X02](docs/ei-x02-results.md) ya prueba E_i en un contrato restringido: mejora respuesta e intensidad, sin más aciertos de origen que recentrar. No se añade silenciosamente a R11/C01. El atlas predictivo, la incertidumbre conjunta y el refinamiento selectivo siguen pendientes.
 
@@ -39,14 +41,14 @@ La comparación detallada y sus límites están en [novelty-and-closest-methods.
 
 El artículo es autónomo; el suplemento se compila por separado. La revisión actual está en [PAPER_REVISION_X02.md](docs/PAPER_REVISION_X02.md). El predictor causal es local y conserva memoria física/instrumental; no resuelve una DAE no lineal por celda y reporte. X02 construye sus derivadas con trayectorias no lineales completas, en otro contrato. El artículo anterior y su PDF están en `archive/before_EI_X02_revision/`.
 
-## C01 sigue intacta
+## C01 confirmada e intacta
 
-No se miran resultados parciales para reescribir o ajustar el método. El ejecutor sigue congelado en SGSMA. Al completar la importación, `scripts/refresh_narrative_c01.py` y `scripts/c01_main_tables.py` integran en el artículo principal la comparación continua, Chen en aperturas persistentes, normales, exposición, fallos, demoras y censuras. Los detalles adicionales siguen en el suplemento. La campaña no debe sobrescribir esta revisión con la estructura anterior.
+No se usaron resultados parciales para reescribir o ajustar el método. El ejecutor quedó congelado en SGSMA. La importación sellada integra en el artículo principal la comparación continua, Chen en aperturas persistentes, normales, exposición, fallos, demoras y censuras. Los detalles adicionales están en los CSV y el suplemento. No regenerar secciones editoriales anteriores sobre esta revisión.
 
-Falta terminar C01, interpretar resultados completos y revisar afirmaciones/reproducibilidad/coautores para envío. No se exige ahora otra familia ni otra corrección por bus. No se abre RAW0002 ni se hace push.
+Falta revisión científica y aprobación de coautores, verificación final de citas/metadatos y del paquete reproducible antes de envío. C01 se interpretó con su pérdida de control de alarmas fuera del banco R/X. No se exige otra familia ni otra corrección por bus. No se abre RAW0002 ni se hace push.
 
 ## Auditoría del chat público y recuperación — 31-oct-2026
 
 La revisión completa de `6ae64dc7` está en [el corpus](docs/corpus/REVIEW_6ae64dc7.md). X03 reproduce los 108 casos del prototipo externo y sus 14 pruebas; no sustituye F01. X04 ejecutó 38 trayectorias continuas F01: las firmas condicionadas no mejoran la exactitud media frente a equilibrio en las 12 comparaciones con inicio e historia conocidos (98,35 % ambas). Una dirección incierta de severidad previa reduce la separación mediana a 0,8532 de equilibrio. Son controles de componente, no resultados del detector ni prueba universal de no identificabilidad.
 
-El artículo incorpora M3H y el antecedente de sensibilidad DAE, explicita el orden causal y las reglas congeladas del banco, y distingue ajuste, identidad y calibración. La comparación nominal/mezcla no aísla el efecto del banco R/X porque también cambian reglas de publicación. La [revisión independiente](docs/REVIEW_RECOVERY_20261031.md) registra las correcciones. C01 permanece intacta y en ejecución; el manuscrito se prepara para revisión de coautores, no se declara listo para envío hasta integrar y auditar la campaña completa.
+El artículo incorpora M3H y el antecedente de sensibilidad DAE, explicita el orden causal y las reglas congeladas del banco, y distingue ajuste, identidad y calibración. La comparación nominal/mezcla no aísla el efecto del banco R/X porque también cambian reglas de publicación. La [revisión independiente](docs/REVIEW_RECOVERY_20261031.md) registra las correcciones. C01 terminó intacta y se auditó; el manuscrito se prepara para revisión científica de coautores, sin declararse enviado ni aceptado.

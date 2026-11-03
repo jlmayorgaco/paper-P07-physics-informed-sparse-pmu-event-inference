@@ -1,0 +1,7 @@
+{
+  "windows": 124,
+  "all_csv_decisions_match": true,
+  "top1_differs_from_first_top3": 18,
+  "top1_absent_from_top3": 4,
+  "interpretation": "Top1 is official CSV decision; Top3 is distinct auxiliary runtime ranking, preserved without repair"
+}

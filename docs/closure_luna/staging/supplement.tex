@@ -1,0 +1,71 @@
+% !TeX program = pdflatex
+% Supplementary material: detailed derivations, protocols, and secondary results.
+\let\PSevenTeXYear\year
+\documentclass{ieeeaccess}
+
+\input{preamble}
+\usepackage{placeins}
+\newtheorem{theorem}{Theorem}
+\makeatletter
+\setlength{\@dblfptop}{0pt}
+\setlength{\@dblfpsep}{16pt}
+\setlength{\@dblfpbot}{0pt plus 1fil}
+\makeatother
+\input{generated/results_macros}
+\input{generated/continuous_macros}
+\IfFileExists{generated/c01_macros.tex}{\input{generated/c01_macros}}{}
+\IfFileExists{generated/ei_x02_macros.tex}{\input{generated/ei_x02_macros}}{}
+\IfFileExists{generated/submission_s01_learning_macros.tex}{\input{generated/submission_s01_learning_macros}}{}
+\IfFileExists{generated/submission_s01_raw_macros.tex}{\input{generated/submission_s01_raw_macros}}{}
+\IfFileExists{generated/submission_s01_ml_h04_macros.tex}{\input{generated/submission_s01_ml_h04_macros}}{}
+\IfFileExists{generated/submission_s01_system_macros.tex}{\input{generated/submission_s01_system_macros}}{}
+
+\begin{document}
+\history{}
+\doi{}
+\title{Supplementary Material for Physics-Informed Bayesian Event Attribution From Sparse PMUs}
+\author{\uppercase{Jorge Luis Mayorga Taborda}\authorrefmark{1}, \uppercase{Yessica Africano Rodriguez}\authorrefmark{1}, \uppercase{Masoud Barati}\authorrefmark{2}, \uppercase{Payman Dehghanian}\authorrefmark{3}, AND \uppercase{David Felipe Celeita Rodr\'iguez}\authorrefmark{4}}
+\address[1]{Universidad de los Andes, Bogot\'a, Colombia}
+\address[2]{Department of Electrical and Computer Engineering, University of Pittsburgh, Pittsburgh, PA, USA}
+\address[3]{Department of Electrical and Computer Engineering, The George Washington University, Washington, DC, USA}
+\address[4]{Faculty of Engineering, Universidad de La Sabana, Ch\'ia, Colombia}
+\corresp{Corresponding author: Jorge Luis Mayorga Taborda (e-mail: jl.mayorga236@uniandes.edu.co).}
+\markboth{Mayorga Taborda \headeretal, Supplementary Material}{Mayorga Taborda \headeretal, Supplementary Material}
+\hypersetup{
+  pdftitle={Supplementary Material for Physics-Informed Bayesian Event Attribution From Sparse PMUs},
+  pdfauthor={Jorge Luis Mayorga Taborda; Yessica Africano Rodriguez; Masoud Barati; Payman Dehghanian; David Felipe Celeita Rodriguez}
+}
+
+\begin{abstract}
+This supplement gives the executable statistical contract of the causal
+physical-history method: local DAE reduction, candidate transitions,
+truncated-severity evidence, state updates, restoration, worked examples,
+and scenario-level reproduction. It also defines the measurement-integrity
+interface and separates causal alarm, diagnosis and restoration metrics
+from the historical hackathon window evaluation. Earlier reconstruction,
+batch-source and proposed joint-estimator studies are preserved in the
+separately compiled Historical Technical Notes. Their results do not enter
+the causal method's denominators.
+\end{abstract}
+\begin{keywords}
+phasor measurement units, physical event attribution, measurement integrity,
+causal inference, reproducibility.
+\end{keywords}
+\titlepgskip=-21pt
+\maketitle
+\raggedbottom
+\appendices
+\input{supplement/appendix_causal_walkthrough}
+\input{supplement/measurement_contract}
+\input{supplement/domain_profile}
+\input{supplement/appendix_submission_contract}
+\input{supplement/appendix_single_state}
+\IfFileExists{generated/submission_s01_learning_macros.tex}{\input{supplement/appendix_grouped_learning}}{}
+\input{sections/article_recovery_x04}
+\IfFileExists{generated/ei_x02_macros.tex}{\input{sections/article_ei_x02}}{}
+\input{supplement/c01_narrative_details}
+\input{supplement/ablation_a01}
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+\EOD
+\end{document}

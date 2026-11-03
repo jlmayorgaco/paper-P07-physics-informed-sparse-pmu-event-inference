@@ -1,0 +1,1174 @@
+
+===PAGE 1===
+Digital Object Identifier
+Supplementary Material for Physics-Based Event
+Attribution From Sparse PMUs With Recovery
+Memory
+JORGE LUIS MAYORGA TABORDA1, YESSICA AFRICANO RODRIGUEZ1, MASOUD BARATI2,
+PAYMAN DEHGHANIAN3, AND DAVID FELIPE CELEITA RODRÍGUEZ4
+1Universidad de los Andes, Bogotá, Colombia
+2Department of Electrical and Computer Engineering, University of Pittsburgh, Pittsburgh, PA, USA
+3Department of Electrical and Computer Engineering, The George Washington University, Washington, DC, USA
+4Faculty of Engineering, Universidad de La Sabana, Chía, Colombia
+Corresponding author: Jorge Luis Mayorga Taborda (e-mail: jl.mayorga236@uniandes.edu.co).
+ABSTRACT This supplement gives the executable statistical contract of the causal physical-history method:
+local DAE reduction, candidate transitions, truncated-severity evidence, state updates, restoration, worked
+examples, and scenario-level reproduction. It also defines the measurement-integrity interface and separates
+causal alarm, diagnosis and restoration metrics from the historical hackathon window evaluation. Earlier
+reconstruction, batch-source and proposed joint-estimator studies are preserved in the separately compiled
+Historical Technical Notes. Their results do not enter the causal method’s denominators.
+INDEX TERMS
+phasor measurement units, physical event attribution, measurement integrity, causal
+inference, reproducibility.
+APPENDIX A HOW TO READ AND REPRODUCE THE
+CURRENT METHOD
+This companion begins with the recovery-aware causal
+method used in the current article. Sections A–C give its
+execution order, local derivations, worked examples and sim-
+ulation contracts. The separately compiled Historical Tech-
+nical Notes preserve full diagnosability proofs, earlier state-
+reconstruction and batch-estimator studies, and secondary
+evidence. The earlier studies support particular components;
+they are not additional tests of the complete causal algorithm.1
+The article retains the physical model, the defining evi-
+dence integral, the recovery mechanism, the decision outputs
+and decisive results. This supplement supplies the interme-
+diate calculations. The Historical Technical Notes develop
+functional observability, nuisance-profiled information and
+source ambiguity, and distinguish the implemented batch esti-
+mator EB from the proposed joint estimator EJ. Neither should
+be silently substituted for the causal history bank, archived as
+R11. The conditional Gaussian updates use standard filtering
+identities [2]; the derivation below specifies their role and the
+approximations made by the implemented bank.
+1Drafting/revision assistance: OpenAI Codex [1].
+A. INPUTS, OUTPUTS AND THE INFORMATION
+BOUNDARY
+The inputs are successive reports from eight PMUs, the fixed
+physical and instrumental operators, the admitted load/line
+catalog and the frozen method configuration. The out-
+put is a timestamped sequence of detection, family/source
+and restoration messages, together with retained attribution
+masses. True ON/OFF times, true sources and generating
+severities belong to the evaluator. They are not inputs to the
+causal algorithm.
+Three times must remain distinct: the latest observed re-
+port, the estimated physical onset, and the public emission
+time. Looking back to propose an onset is compatible with
+causality when the message is emitted only after the required
+reports arrive. It does not permit backdating the public alarm.
+B. EXECUTION ORDER FOR ONE STREAM
+1) Load the frozen operators. Retain voltage reference,
+oriented terminal currents, load input directions, switch
+modes and instrument memory. A line opening changes
+the network and observation operators. It is not repre-
+sented by fitting a load amplitude.
+2) Fit the startup context. Use the first 300 reports for
+operating factors, common reference and noise scale.
+For each network hypothesis, set the voltage/current
+PREPRINT
+1
+
+
+===PAGE 2===
+Mayorga Taborda et al., Supplementary Material
+discrepancy to the difference between the observed
+prefix mean and its reference prediction. Keep that off-
+set fixed afterwards. Frequency and ROCOF use their
+empirical prefix centers. The prefix is not scored again
+as independent model-selection evidence.
+3) Predict the next report. Propagate the retained histo-
+ries and evaluate each network model’s predictive den-
+sity before correcting states or choosing new histories
+with the current report.
+4) Propose candidate onsets. The frozen screen uses lags
+0–18 reports within a ten-second stored state history.
+Each proposal starts from a stored state before its pro-
+posed onset, including any recovery already present.
+The bank does not enumerate every possible onset in
+the stored interval.
+5) Score histories. For loads, integrate severity with the
+bounded prior and the local conditional Gaussian like-
+lihood. For lines, score the admitted switched operator.
+Score a report before using that same report for its
+conditional state correction.
+6) Update and compress. Update severity and condi-
+tional states, network weights, restoration children and
+the retained beam. Record discarded mass. At episode
+closure retain the augmented-state mixture mean; the
+omitted between-history spread is a documented ap-
+proximation, not an exact posterior covariance.
+7) Publish and record. Aggregate active mass M, cause
+mass Γ and ∆M. Apply the frozen detection, diagnosis
+and restoration rules. Save emission time and the last
+report used, in addition to estimated onset and source.
+Continue propagation through OFF.
+C. WHY REPLAYED REPORTS ARE NOT NEW EVIDENCE
+Let a retained parent have log score ℓ0:k = ℓ0:τ−1 + ℓold
+τ:k.
+Replacing its suffix by a newly proposed physical history
+gives
+ℓnew
+0:k = ℓ0:k −ℓold
+τ:k + ℓnew
+τ:k .
+(1)
+Transition and prior terms must accompany their correspond-
+ing history. The rolling screen supplies a proposal, not an
+extra independent likelihood. Adding the new suffix without
+removing the old suffix would count the same reports twice.
+This bookkeeping statement does not make adaptive screen-
+ing or beam pruning exact Bayesian inference.
+D. FROZEN NUMERICAL CHOICES
+The input grid is 30 reports/s. The five network hypotheses
+are nominal, global ±2% and selected-branch ±3% paired
+R/X perturbations. Each hypothesis is fixed in time; the
+weights change. They do not identify a continuous impedance
+posterior.
+The per-report birth and restoration hazards are 1 −
+exp[−(1/60)/30] and 1−exp[−(1/30)/30]. Birth mass is di-
+vided equally between load and line families, then uniformly
+among the admitted sources within each family. Load sever-
+ity has a zero-mean Gaussian prior with standard deviation
+0.15, truncated to [−0.2, 0.2] and integrated over intervals
+bounded by −0.2, −0.1, 0, 0.1, 0.2. After three reports, eli-
+gible active histories can create OFF children at either half-
+report position, inheriting state and severity. After likelihood
+normalization, the beam retains the union of the 96 highest-
+weight recent histories, 64 older histories and at least one per
+occupied source. The union is renormalized.
+The internal observer confirms active-mass evidence at
+0.99 for six reports and has a separate 15-report internal
+OFF clock. The public R11 publisher requires an internal
+pending episode and six reports of source-qualified active
+support above 0.99; its public OFF requires six reports of
+the diagnosed cell’s joint cause-and-restoration mass above
+0.99. Source/line confirmation and episode replacement fol-
+low the archived publication configuration. These thresholds
+are implementation settings, not guarantees of probability
+calibration or false-alarm control. Nominal and mixture use
+their frozen publication paths, so their comparison does not
+isolate network averaging alone. The admission-rule ablation
+changes publication, not the recovery dynamics.
+APPENDIX B LOCAL CALCULATIONS AND WORKED
+EXAMPLES
+A. COMPLETING THE BOUNDED-AMPLITUDE INTEGRAL
+For one retained severity interval, write e = sa + ϵ, with ϵ ∼
+N(0, S), S ≻0, and a ∼TN[l,u](µ, v), v > 0. Here µ, v
+are parameters of the underlying untruncated Gaussian, not
+the bounded distribution’s moments. With g = s⊤S−1s and
+q = s⊤S−1e, expansion gives
+(e −sa)⊤S−1(e −sa) + (a −µ)2/v
+= e⊤S−1e + µ2/v −µ′2/v′ + (a −µ′)2/v′,
+(2)
+v′ = (v−1 + g)−1,
+µ′ = v′(µ/v + q).
+(3)
+Define Z(µ, v) = Φ((u−µ)/√v)−Φ((l −µ)/√v). Integrat-
+ing the last Gaussian square over [l, u] yields
+log L = −1
+2[e⊤S−1e + log |S| + ny log(2π)]
++ 1
+2[log(v′/v) + µ′2/v′ −µ2/v]
++ log Z(µ′, v′) −log Z(µ, v).
+(4)
+The posterior on that interval is TN[l,u](µ′, v′). With α = (l−
+µ′)/
+√
+v′, β = (u−µ′)/
+√
+v′, Z ′ = Φ(β)−Φ(α) and standard
+normal density ϕ, its mean is
+E[a | e] = µ′ +
+√
+v′ ϕ(α) −ϕ(β)
+Z ′
+.
+(5)
+Thus neither the untruncated mean µ′ nor a best-fit severity
+can simply replace the integral. The implementation com-
+bines retained intervals using their weights. The identity is
+exact for this conditional Gaussian model; it does not remove
+linearization, shared-covariance or pruning error.
+B. NUMERICAL EXAMPLE OF ONE INTERVAL
+This dimensionless example illustrates the calculation; it is
+not an IEEE-39 simulation or a new performance result. Set
+S = 1, s = 2, e = 1, µ = 0, v = 1 and [l, u] = [0, 1]. Then
+2
+PREPRINT
+
+
+===PAGE 3===
+Mayorga Taborda et al., Supplementary Material
+g = 4, q = 2, v′ = 0.2 and µ′ = 0.4. Substitution in (4) gives
+L ≃0.342688 and E[a | e] ≃0.464941. The different poste-
+rior mean follows from truncation. The script scripts/verify_
+supplement_examples.py checks the closed form against di-
+rect numerical integration, including the posterior mean. It
+checks algebra only and does not modify a frozen experi-
+ment.2
+C. CONDITIONAL STATE CORRECTION
+Represent the conditional state mean as mh + dha. Let
+To, Jo, go, uo, jo, vo denote the archived one-report transition
+and observation operators for switch o. The code forms e =
+rk −Jomh −jo and s = Jodh + vo. With shared covariance Pρ
+in discrepancy regime ρ,
+So = R + JoPρJ ⊤
+o ,
+Ko = ToPρJ ⊤
+o S−1
+o ,
+m+
+h = Tomh + go + Koe,
+d+
+h = Todh + uo −Kos.
+(6)
+To see the last line, apply the correction to a fixed amplitude:
+To(mh + dha) + go + uoa + Ko(e −sa) = m+
+h + d+
+h a.
+The severity distribution is updated by the same likelihood
+integral. Regime covariances come from nominal-operator
+Riccati equations. R11 does not propagate an independent
+exact covariance for every switched history. At closure the
+mean is retained and the omitted mixture spread recorded.
+D. RESTORATION IS NOT A STATE RESET
+Consider the illustrative scalar system ˙x = −x + u, y = x,
+with x(0) = 0. Apply u = a for 0 ≤t < κ and restore u = 0
+afterwards. Direct integration gives
+x(t) =
+(
+a(1 −e−t),
+0 ≤t < κ,
+a(1 −e−κ)e−(t−κ),
+t ≥κ.
+(7)
+Both expressions agree at κ. For a
+=
+1 and κ
+=
+2,
+x(2) = 0.864665 and x(3) = 0.318092 even though the inter-
+vention is OFF. Resetting the reference to equilibrium would
+discard that predictable recovery. This example explains state
+continuity; it does not claim that one exponential describes
+the multimode IEEE-39 response.
+E. ACTIVE MASS, CAUSE MASS AND MODEL
+REWEIGHTING
+For one model, suppose an illustrative cell has mass 0.60
+in active histories and 0.30 in restored histories, with 0.10
+elsewhere. Its active mass is Mc = 0.60, while its originating-
+cause mass is Γc = 0.90. Recovery can therefore remain
+attributable without declaring the input active. These assigned
+masses illustrate definitions, not calibrated probabilities from
+an experiment.
+2Drafting/revision assistance: OpenAI Codex [1].
+For two reports, adding and subtracting P
+ℓwℓ,kMℓ,c,k−1
+proves
+∆Mc =
+X
+ℓ
+wℓ,k(Mℓ,c,k −Mℓ,c,k−1)
++
+X
+ℓ
+(wℓ,k −wℓ,k−1)Mℓ,c,k−1.
+(8)
+For example, unchanged conditional masses (0.8, 0.2) and
+network weights changing from (0.5, 0.5) to (0.75, 0.25)
+move Mc from 0.50 to 0.65. The entire 0.15 change comes
+from model reweighting. A rising aggregate mass need not
+mean that each model found stronger within-model evidence.
+APPENDIX C SIMULATION SCENARIOS AND
+REPRODUCTION ORDER
+A. PLANT, MEASUREMENT AND PROVENANCE
+The active simulator is the frozen research candidate
+SIM0001_JuliaPD_F01, not an officially validated
+equivalent of RAW0001. Its contract fixes Julia 1.11.9,
+PowerDynamics 5.0.0, NetworkDynamics 1.3.0 and IEEE39
+0.1.0. Initial states, effective parameter vectors, terminal map,
+reporting operator and stochastic model come from that snap-
+shot. Nominal inventory files do not replace the effective
+operating point. The load law is the frozen impedance law.3
+The voltage buses are {2, 5, 6, 10, 19, 22, 29, 39}. Each
+current is an oriented branch-terminal measurement, not a
+nodal injection. BUS5 retains the provisional historical 5–6
+branch, terminal 5, hypothesis; producer CT identity is un-
+confirmed and BUS39 remains partially validated. Execution
+uses full-precision configuration files rather than rounded
+tables. RAW0001 provided retrospective calibration context.
+RAW0002 remains outside these studies.
+Each physical parent is integrated continuously through its
+interventions. Differential states remain continuous at switch-
+ing, while algebraic values are recomputed consistently. Re-
+ports use t = k/30 with endpoints included; the switch-
+aligned report uses the post-switch algebraic value. Solver
+steps are recorded separately and observations are not inter-
+polated across a switch. The causal instrumental history is
+preserved through OFF.
+B. CONTINUOUS DEVELOPMENT AND CONFIRMATION
+H03 and H04 each contain three 80-s event parents with
+six interventions and one 80-s normal parent. Crossing the
+four parents with three R/X conditions gives 12 physical
+trajectories, 18 unique interventions and 54 event realizations
+per campaign. Both are development evidence in the current
+article. Repeated conditions are not independent event draws.
+C01 prespecifies 18 continuous parents, 27 persistent-line
+parents (nine lines, three repetitions), and 12 normal parents.
+The three R/X conditions produce 3(18 + 27 + 12) = 171
+intended physical trajectories; two instrumental-noise scales
+yield 342 observed records. The continuous parents contain
+18 × 6 = 108 unique interventions. Their six condition/noise
+3Drafting/revision assistance: OpenAI Codex [1].
+PREPRINT
+3
+
+
+===PAGE 4===
+Mayorga Taborda et al., Supplementary Material
+realizations are repeated observations of those parents. The
+120-s and 600-s grids contain 3601 and 18001 reports, respec-
+tively. Completed results appear in the dedicated confirmation
+tables.
+Continuous evaluation pairs an alarm temporally before
+inspecting its predicted label. The first unmatched post-ON
+alarm is eligible up to the next ON, with the inherited 30-s cap.
+Timely attribution requires correct family and asset emitted
+before physical OFF. Unmatched alarms, false restorations
+and open episodes are retained. Persistent-line evaluation
+instead scores the first stopping decision, including early
+stops, wrong sources, omissions and censoring. Chen2016 is
+eligible on that lane; it has no load or restoration output. Con-
+fidence intervals use 10,000 paired parent-cluster resamples,
+not independent PMU samples.
+C. SEPARATE SIGNATURE AND RECOVERY CONTROLS
+The E_i/X02 signature study uses a single load at buses
+{3, 7, 16, 24}, a 10-s record, known ON at 3 s and OFF at
+6 s, and one scalar operating-context direction. It contains 57
+dictionary/check trajectories and 85 test trajectories (80 in-
+terventions and five controls), with three common noise seeds
+producing 255 observed test records. The context and severity
+are estimated from measurements, while onset and family are
+supplied. The generating source is used to assess the response
+approximation and severity error. Those conditional metrics
+do not measure unknown-onset causal attribution.
+The X04 recovery geometry control uses 38 trajectories.
+Prior load histories at buses 7 and 24, followed by delays of
+0.5 and 2 s, give four recovery contexts. Three source-pair
+comparisons within each context give 12 correlated compar-
+isons. The prior input is active from 2 to 3 s; the subsequent
+response is examined over 1.5 s. The supplied history, onset,
+family and two-candidate universe define an oracle control,
+with one uncertain prior-severity direction. It does not evalu-
+ate R11, unknown onset, event cardinality or operational false
+alarms.
+D. REPRODUCTION WITHOUT CHANGING THE
+EXPERIMENT
+1) Read each campaign’s frozen plan and manifest. Select
+the intended population before interpreting any denom-
+inator. Keep current causal, signature, recovery-control
+and historical batch studies separate.
+2) Resolve the F01 state, parameter and measurement files
+from its snapshot. For any new simulation create a new
+run directory; a new hypothesis requires a successor
+candidate. Do not run historical preparation scripts in-
+side a frozen baseline.
+3) Preserve ON/OFF continuity, report endpoints, noise
+seeds and the boundary between observations and re-
+served event truth. Run inference before releasing truth
+to the evaluator.
+4) Retain solver/inference failures in intended denomina-
+tors. Aggregate at the declared parent level and preserve
+the original comparators and publication rules. Do not
+retune from confirmation results.
+5) Rebuild the two documents from the versioned tables
+and figures with scripts/build_manuscript_bundle.ps1.
+Its default compilation does not regenerate scientific
+artifacts or import new campaign results. An explicit
+artifact refresh is a separate operation.
+The
+repository
+keeps
+the
+current
+walkthrough
+in
+this
+appendix,
+the
+frozen
+campaign
+evidence
+under
+generated/frozen/, and the earlier mathematical de-
+velopment in the separately compiled Historical Technical
+Notes. A successful PDF build verifies document consis-
+tency; it is not a new scientific validation.
+APPENDIX D MEASUREMENT INTEGRITY AND THE
+HISTORICAL SUBMISSION INTERFACE
+An electrical intervention and a measurement failure are
+separate objects. The physical output identifies a family and
+asset; the integrity output identifies missing or corrupt PMU
+observations. Missingness alone does not establish malicious
+intent. A concurrent physical event and missing PMU can
+therefore have two different locations.4
+The successor interface reuses the fitted detector, classi-
+fier and localizer from the actual submitted archive, rather
+than a similarly named exploratory pipeline. Archive mem-
+ber hashes are checked before inference. The input schema
+admits timestamps, three-phase voltage/current magnitudes
+and angles, frequency, ROCOF and the observed availability
+flag. Event labels, locations and annotated ON/OFF times are
+excluded. The fitted feature lists are also checked for label
+fields. This distinction matters because a historical diagnostic
+utility estimated a baseline from labeled normal samples over
+the complete record; that utility is not part of this inference
+interface.
+The submitted classifier uses a physical-family head, a
+bad-data head and a missing/composition head with fixed
+rules. Its E5 and E7 outputs refer to missing and bad-data
+PMUs, respectively. E6 denotes missing data together with a
+physical prediction; its legacy location is the physical source,
+not the missing PMU. In the archived configuration, both
+composition and physical-confidence thresholds are zero, so
+E6 requires a nonzero physical prediction in a window with
+missing data; it is not a calibrated test of concurrent causation.
+E8 is the legacy mixed-physical proxy class, not an open-set
+rejection guarantee.
+The availability interface evaluates each received report
+without looking ahead. It retains the affected PMU and chan-
+nel mask rather than replacing missing measurements with
+future samples. The historical bad-data classifier uses a com-
+plete window and reports its result at the end. Within-window
+interpolation and centered features are permitted only under
+that delayed decision contract. Broadcasting the result to
+earlier timestamps does not make those earlier labels causal.
+4Drafting/revision assistance: OpenAI Codex [1].
+4
+PREPRINT
+
+
+===PAGE 5===
+Mayorga Taborda et al., Supplementary Material
+The inherited cyber/integrity component is a comparator and
+integration component, not a newly claimed detector.
+The implemented composition has two temporal scopes.
+Received-report availability messages update the current
+missing-PMU state. Completed-window records describe
+only their observed intervals; they retain separate physical
+and integrity fields and cannot assert current corruption or
+physical restoration. Their joint emission is the later compo-
+nent emission, with each original time retained. For example,
+a window that contains missing data can finish after the
+PMU has resumed reporting; publishing that interval must
+not reopen the missing episode. Likewise, an earlier ML
+source diagnosis does not advance the submitted classifier’s
+window-completion time.
+The sealed stream contains 206 messages, including 180
+completed windows. Post-seal projection checks reproduce
+the physical source, integrity diagnosis, source-selection
+provenance and unavailable states of the components, and
+recover current availability on all 161379 reports without
+disagreement. The comparison retains the original component
+evaluations. It neither reruns inference nor creates a com-
+bined accuracy from report-level missingness and window-
+level physical diagnosis. The frozen physical filter remains
+explicitly unavailable.
+APPENDIX E ALARM, DIAGNOSIS AND RESTORATION
+ARE DIFFERENT DECISIONS
+Let τ and ω be true ON and OFF, and let tA, tD and tR
+denote the emission times of an alarm, source diagnosis and
+restoration. The detector can signal before it has a source. An
+eventual correct source at tD > tA is not a correct location
+already available at tA. Timely attribution requires a correct
+family and source at tD < ω. Estimated onset times never
+replace emission times in a delay metric.5
+An event is associated with the first eligible unmatched
+alarm using time, before inspecting the predicted label. In-
+correct labels remain associated errors rather than being re-
+assigned to another event to improve the score. An alarm
+without a diagnosis, a wrong diagnosis, and no alarm are
+distinct outcomes. Restricted delay includes failures up to
+the evaluation horizon; conditional delay among successes is
+reported separately.
+A restoration of an unmatched episode and a premature
+restoration of a matched event are also different errors. With
+a tolerance δ fixed before scoring, premature restoration is
+tR < ω −δ; its lost active duration is [ω −tR]+. Signed
+restoration delay is tR −ω. Report its distribution, missing
+closures and episodes still open at the horizon; a median alone
+can hide early closures.
+The original C01 evaluator is preserved. Its false-
+restoration
+counter
+counts
+restorations
+of
+unmatched
+episodes, and its first-correct field can use the diagnosis
+associated with the first alarm even when emitted later.
+The successor evaluation reports these quantities with their
+5Drafting/revision assistance: OpenAI Codex [1].
+restricted meanings and adds explicit premature closure and
+joint-decision metrics. This is a correction of evaluation
+semantics, not a change to the frozen detector or evidence
+that either failure occurred in a particular C01 record.
+APPENDIX F RETROSPECTIVE RAW COMPARISON AND
+INDEPENDENT UNITS
+The archived RAW0001 table contains 21 contexts, includ-
+ing nine labeled-normal and twelve abnormal contexts. Its
+recovered loader places a 30-s window three seconds before
+a supplied abnormal onset, and selects normal contexts from
+supplied normal intervals. Even a successful reproduction
+would measure classification and localization within event-
+guided contexts, not continuous detection. However, the re-
+covered calendar is incompatible with the event annotations
+in the actual RAW files. File-history checks show that those
+RAW files have not changed, and the timing differences
+cannot be corrected by a common offset. The archived score is
+therefore not a reproduced comparison endpoint. The unsuc-
+cessful reconstruction and its provenance audit are retained;
+predictions from mismatched windows are not counted as
+accuracy against the archived labels.6
+A separate complete-record replay uses fixed windows
+without event-guided placement and retains all normal, phys-
+ical, missing and corrupt periods. Both interfaces preserve
+availability failures and abstentions. Physical and integrity
+locations are scored separately where their meanings differ;
+the legacy single-label export is retained for comparison.
+Physical-source scoring additionally requires verified source
+annotations; an event-code sequence alone cannot identify
+every intervention boundary or source. The separately sealed
+successor analysis uses the recovered original source work-
+book for physical identity, retaining current event-code sup-
+port for window membership. Its coarse timing does not re-
+solve the individual actuation or restoration times. This replay
+is not an official competition score. RAW0001 previously in-
+formed F01 calibration, so even a frozen new replay remains
+retrospective.
+Simulation partitions use the complete physical parent and
+all of its derived windows, conditions and noise realizations.
+Validation belongs inside the development fraction. Repar-
+titioning previously inspected campaigns does not restore
+independent-test status. Uncertainty calculations resample
+physical parents, retaining their paired conditions together.
+Different PMU channels and adjacent 30-Hz reports are not
+independent trials.
+APPENDIX G REPOSITORY BOUNDARIES AND
+REPRODUCTION
+The article and current supplement compile independently
+from main.tex and supplement.tex. The separate
+historical_notes.tex preserves corrected geometry
+and evidence theorems, earlier state reconstruction, the his-
+torical batch estimator, the proposed joint estimator and their
+6Drafting/revision assistance: OpenAI Codex [1].
+PREPRINT
+5
+
+
+===PAGE 6===
+Mayorga Taborda et al., Supplementary Material
+original empirical qualifications. Moving this material does
+not remove negative results or upgrade an unexecuted esti-
+mator to an implemented one.7
+The submission successor is versioned in the research
+repository under experiments/PAPER_SUBMISSION_S01/.
+It contains the source provenance, observation-only inter-
+face, metric specification, synthetic regressions, and separate
+historical-window and complete-record outputs. Performance
+tables enter the manuscript only after prediction sealing and
+evaluation. A successful code check or PDF build is not itself
+a performance result.
+APPENDIX H EXECUTABLE SINGLE-STATE COMPARISON
+This control uses the same conditional nominal plant and
+measurement operators as the nominal history bank, but re-
+tains only one committed mode and its augmented conditional
+state. Temporary alternatives live for at most 19 reports. The
+five-model history bank additionally mixes resistance and
+reactance alternatives. Proposals begin at report index 300
+and publication at index 360, with zero-based indices. Each
+available report after proposal startup starts two subframe
+transition candidates for every admitted source when inactive,
+or two OFF candidates for the committed source when active.
+Every candidate uses the covariance regime chosen from
+preceding reports; the current sample cannot select its own
+predictive covariance.8
+For a load ON alternative, write the innovation as ek −ask.
+The affine conditional state is mk + adk. Accumulate over its
+contiguous suffix
+G =
+X
+k
+s⊤
+k S−1
+k
+sk,
+(9)
+U =
+X
+k
+s⊤
+k S−1
+k
+ek,
+(10)
+C = −1
+2
+X
+k
+ e⊤
+k S−1
+k
+ek + log |Sk| + p log(2π)
+
+.
+(11)
+Then ba = clip(U/G, −0.2, 0.2) when G > 0, with ba = 0 for
+a flat objective. The profile contrast is
+Λ = C + baU −1
+2ba2G −Cref .
+(12)
+Here Cref is the sum of the committed predictor’s pre-update
+conditional log densities on exactly the same suffix. A line
+uses its discrete switched operator, without fitting a load
+amplitude. The reference uses its preceding severity estimate
+for prediction and can refine that estimate after receiving the
+new report. A candidate never changes the reference state
+before commitment. A load OFF alternative holds its birth
+amplitude fixed rather than re-profiling it.
+ON scores subtract log(18 × 2 × 19); OFF scores subtract
+log(2×19). These fixed search penalties are heuristics. Max-
+imizing over overlapping suffixes and bounded amplitudes
+7Drafting/revision assistance: OpenAI Codex [1].
+8Drafting/revision assistance: OpenAI Codex [1].
+does not produce a calibrated posterior or a sequential false-
+alarm guarantee. For the history banks, ON uses the log odds
+of M(c) and OFF the log odds of Mcause(c)P(OFF | c).
+The common clock requires the same winning ON source
+to exceed log 99 for six consecutive monitored reports. It
+emits alarm and source diagnosis together. Six qualifying
+OFF reports for that source close the episode. A clock-
+induced commitment selects the candidate’s current con-
+ditional state. Its estimate may change through hypothesis
+selection; it is never replaced with equilibrium or a zero
+state. A missing report propagates the retained mode with-
+out measurement correction, clears the short alternatives and
+contributes no confirmation evidence. The H04 comparison
+contains no such post-startup missing observations.
+After OFF, the preceding discrepancy regime persists until
+60 consecutive available, inferred-inactive reports meet the
+inherited quiet criterion. Its innovation is computed with the
+normal operator from the preceding committed state. A new
+active episode or missing report clears that quiet run. Retro-
+spective source labels and event times never enter these steps.
+The comparison has one fixed publication clock but dif-
+ferent evidence semantics, search and severity treatment. It
+therefore compares complete procedures. It does not establish
+a matched false-alarm operating point, nor isolate a causal
+effect of long-history averaging. The source tree, execution
+hashes, every prediction and the successor event metrics are
+preserved in the experiment manifest.
+APPENDIX I GROUPED LEARNING AND INTEGRITY
+PUBLICATION
+A. RETROSPECTIVE SIM TRAINING CONTRACT
+The SIM11–19 registry contains 176 observation records
+from 88 physical cases. Connected components join shared
+physical histories and observation replicas before splitting. Of
+56 dependency groups, 31 are used for fitting, 8 for model se-
+lection and 17 for the reserved development evaluation: 90, 16
+and 70 records, respectively. This implements the requested
+approximately 70/30 development/reserved partition with an
+internal validation subset. All campaigns were already open;
+the split is retrospective and does not establish unseen-source
+or external generalization.
+Both ExtraTrees variants use 400 trees, minimum leaf size
+two, square-root feature sampling, balanced class weights
+and seed 2601026. Fitting uses every third report starting
+at index 360. The target is normal outside an intervention
+and one of 18 load/line sources during it; recovery is not a
+separate training class. The baseline has 846 trailing features;
+SHORT adds 611 features. Their input is the same 47-channel
+representation with a 300-report empirical reference, colored
+filtering and median/MAD scaling. No DAE fit or RAW an-
+notation enters fitting. The empirical reference has no startup
+stationarity guarantee; it is distinct from the physical filter’s
+admission gate.9
+9Drafting/revision assistance: OpenAI Codex [1].
+6
+PREPRINT
+
+
+===PAGE 7===
+Mayorga Taborda et al., Supplementary Material
+The publication adapter requires six consecutive win-
+ning source labels. Scores are not claimed to be calibrated
+probabilities. Selection maximizes validation diagnoses with
+correct family and source emitted before OFF, then mini-
+mizes extra alarms, preferring the baseline on a complete
+tie. SHORT is frozen after 108/192 versus 92/192 validation
+successes. There is no refit on validation and no subsequent
+parameter or threshold selection from the reserved 70 records.
+The declared metric associates the first temporal alarm inde-
+pendently of its predicted class, within 30 seconds or before
+the next onset, whichever comes first; success also requires
+diagnosis before the current OFF.
+The reserved result is 302/576, comprising 28/288 load
+and 274/288 line interventions, with 3 extra alarms. Only two
+distinct normal dependency groups exist: one in training and
+one reserved; validation has none. The 3696 normal seconds
+are repeated observations of the reserved normal group, with
+0 alarms. They do not provide independent long-duration op-
+erational exposure. In particular, neither report-level binomial
+intervals nor a validation false-alarm rate would be justified.
+Load weakness and the common F01 ancestry limit transfer
+claims even when the group assignment is disjoint.
+The selected model is also replayed on all twelve H04
+records, using the same successor event metrics as the phys-
+ical controls. It obtains 27/54 timely decisions, 3 extras, 3
+orphan restorations and 27 missing closures, including missed
+events. All missed events are loads; all tested lines are diag-
+nosed before OFF. Its six-argmax publisher has no confidence
+threshold, so this is not an identical decision-clock ablation.
+The three H04 event groups are disjoint from the SIM fitting,
+validation and reserved groups, but its single normal group
+is shared with the reserved group. The inference-only replay
+reads no truth, registry or split. An earlier roster contained un-
+used event/normal metadata; it is preserved and documented.
+Removing that metadata reproduces every output array and
+event exactly on all twelve records, before separate post-seal
+scoring.
+B. MISSING-PMU NOTICE TIMING
+The continuous RAW replay contains 4 observed missing in-
+tervals. The exact submitted artifact and the immediate avail-
+ability interface both identify all intervals and their affected
+PMU. First correct notices have mean delay 12.13 versus 0
+seconds, respectively. The clock is the received report times-
+tamp relative to the first affected report; zero means emission
+on that report, not zero computation or communication la-
+tency. Notices before onset cannot match a later missing inter-
+val, and a later correct source cannot repair an incorrect first
+notice. This is a publication benefit from already-observed
+flags and finite-value masks, not evidence of a new malicious-
+attack detector or improved physical-source inference.
+C. SEGMENTED ML TRANSFER AND SOURCE
+COMPOSITION
+The classifier consumes the phase-A voltage/current mag-
+nitudes and angles, frequency and ROCOF in the declared
+eight-PMU order. Complete segments require all 48 mea-
+surements finite and all presence flags true; missing reports
+are never removed to join their neighboring samples. Each
+segment gets its own 300-report empirical reference and re-
+mains unavailable through index 359. Segment startup is not
+certified normal and physical state is not preserved across
+gaps. The same frozen classifier and publication rule are used;
+no RAW source label, event code or score enters inference.
+For a submitted-artifact prediction of line or load, including
+its predicted physical component in a mixed missing case,
+source replacement requires the first ML diagnosis of an
+episode with that same predicted family, emitted inside the
+completed window no later than the artifact’s own emission.
+Later revisions cannot repair that first diagnosis. The earliest
+eligible diagnosis is selected; otherwise the ZIP source is
+retained. Fault, generation, integrity outputs and all window
+class labels and times are unchanged. The archived Top-3 list
+remains identified as the original ZIP list; it is not presented
+as the hybrid’s reranked posterior.
+The completed replay has 5 complete segments and 1
+selected source substitution, with 179 fallbacks. The evalu-
+ator verifies full report coverage, explicit startup unavailabil-
+ity, causal message times and every replacement against the
+frozen rule before scoring. Source identity is supplied only
+to this later evaluator by the original metadata workbook:
+fault BUS39, line 23–24, generation BUS2 and load BUS7.
+Current event-code support determines which fixed windows
+contain each family; the workbook’s approximate times do
+not supply exact action onsets or restorations. All physical-
+positive windows, including generation outside the learned
+catalog, enter the denominator. Paired joint correctness is
+1/24 versus 2/24. These are dependent windows of one ret-
+rospective record; no population-level significance or official
+competition improvement is inferred.
+APPENDIX J DOES RECOVERY INCREASE SOURCE
+SEPARATION?
+A separate physical control tests this possibility without
+changing the stream method. We solve 38 complete F01
+trajectories of 8 s with 241 PMU reports each. A prior 8%
+load change at bus 7 or 24 is applied at 2 s and restored
+at 3 s. A weak 0.06% load change follows after 0.5 or 2
+s. The candidate pairs are 18/27, 16/21 and 3/21, and the
+observation horizon is 1.5 s. Controls and prior-severity dif-
+ferences account for the remaining trajectories. Within each
+matched history, the secondary-event and no-secondary-event
+trajectories share the same prefix. Physical and instrumental
+states are retained through restoration.10
+This is an oracle component test: the prior trajectory, sec-
+ondary onset, load family and candidate pair are supplied.
+Finite-amplitude differences of nonlinear trajectories provide
+incremental responses; these are secants, not newly derived
+analytical tangents. The 47-coordinate F01 measurement op-
+erator is followed by its frozen innovations transform. For a
+10Drafting/revision assistance: OpenAI Codex [1].
+PREPRINT
+7
+
+
+===PAGE 8===
+Mayorga Taborda et al., Supplementary Material
+geometric control, we profile nonnegative competing ampli-
+tudes. Adding a rank-one covariance from uncertainty of 0.01
+in the previous load fraction tests sensitivity to a nuisance
+direction; it is not a causal posterior over the full state.
+The median ratio is 1.0006 with known history and 0.8532
+with that nuisance direction; none of the 12 latter ratios
+exceeds one (Fig. 1). An illustrative binary likelihood com-
+parison, using a signed Gaussian amplitude prior of stan-
+dard deviation 0.0015 and 300 common Gaussian innovation
+draws per generating source, gives the same mean accuracy,
+98.35%, for equilibrium and conditioned signatures. Two
+cells worsen and one improves. This likelihood experiment
+integrates signed amplitudes, whereas the distance profiles
+nonnegative amplitudes; the distance is not asserted to bound
+its error. The noise assumption is an innovations-domain
+control, not validation of the complete instrumental generator.
+These correlated, known-onset comparisons establish neither
+an R11 improvement nor general equivalence. They provide
+no support for claiming that recovery universally creates use-
+ful source information.
+APPENDIX K OPERATING-POINT SIGNATURE
+EXPERIMENT
+A. REFERENCE CORRECTION AND RESPONSE
+CORRECTION
+The stream bank already builds local predictors at estimated
+operating points. A separate experiment tests why changing
+a reference alone may be insufficient. It compares three re-
+sponse approximations with identical observations, channels,
+timing, amplitude prior and inference horizon. It is a con-
+trolled test of a mixed derivative, not another version of R11.
+Let η denote a scalar operating change and a the signed
+load factor. Central differences of complete nonlinear DAE
+trajectories give
+Di(η) ≃yi(η, h) −yi(η, −h)
+2h
+,
+Ei ≃Di(d) −Di(−d)
+2d
+.
+(13)
+The event follows the same ON/OFF schedule in every deriva-
+tive trajectory. The fixed Q0
+i is the coefficient of a2, obtained
+from the centered second difference divided by 2h2. After
+removing the frozen common angle drift, the three predicted
+histories are
+µN
+i (a) = y0 + aD0
+i + a2Q0
+i ,
+µR
+i (a) = µN
+i (a) + bb,
+µE
+i (a) = µR
+i (a) + abηEi.
+(14)
+Both corrected variants use exactly the same prefix offset
+bb. This comparator corrects the measured PMU reference; it
+is not the separate nonlinear AC hidden-state reconstruction
+algorithm in the historical study. Only the last changes the
+event signature. The first two consequently have identical
+incremental response models even when their absolute fits
+differ. Context bη is estimated by generalized least squares
+TABLE 1. Controlled known-onset load test. Response error uses 80
+physical cases; joint and source-only correctness use 240 noisy event
+records. Severity error is evaluated at the generating source. The 15
+normal windows are not normal-hours exposure.
+Measure
+Nominal Recentered Conditioned
+Response error (%)
+1.25
+1.25
+0.0561
+Joint correct
+114/240
+240/240
+240/240
+Source-only correct
+114/240
+240/240
+240/240
+Normal selections
+12/15
+0/15
+0/15
+Severity error (%)
+3.45
+1.2
+0.329
+from the pre-event PMUs and the nominal context direction.
+No test context, source or severity enters inference.
+B. TEST CASES AND DECISION CONTRACT
+The frozen F01 plant supplies all trajectories. The scalar η
+scales PQ operating injections and active PV dispatch; fea-
+sible initialization can change permitted operating setpoints,
+but not machine constants, line impedances, ZIP fractions
+or the PMU model. Central event/context steps are 0.005
+and 0.01, with step-halving checks. Dictionary construction
+uses 57 trajectories. The test contains 85 physical cases:
+80 load interventions and 5 controls at operating changes
+−3%, −2%, 0, +2%, +3%. Each load changes P/Q together
+by ±0.1% or ±1% at BUS3, BUS7, BUS16 or BUS24. None
+belongs to the prescribed voltage-measurement PMU set; the
+separate oriented current-terminal assignments remain fixed.
+Each case is one ten-second integration, with ON at 3
+s, OFF at 6 s and no state reset. The context fit ends at
+2.5 s. Three frozen instrumental noise seeds produce 255
+paired records. The nonlinear PMU frequency/ROCOF op-
+erator runs before its archived instrumental noise is added.
+Both corrected methods retain the same measured prefix, so
+an advantage cannot arise from supplying one method a better
+initial reference.11
+This experiment supplies the load family and ON/OFF
+times. It estimates source and continuous severity using the
+same bounded Gaussian prior and amplitude-integrated likeli-
+hood in all three variants. The no-event hypothesis is retained.
+The fixed colored-instrument transform is common; plug-in
+prefix estimates and clipped noise still limit probability cal-
+ibration. Thus these decisions are not unknown-onset detec-
+tor scores and normal-window decisions are not continuous
+false-alarm rates.
+C. RESPONSE ERROR AND SOURCE DECISIONS
+Relative to recentering alone, the mixed term reduces mean
+incremental response error: the paired difference is -1.15 per-
+centage points (95% interval [-1.31, -1]). The corresponding
+joint-decision difference is 0 percentage points ([0, 0]), which
+does not establish a directional improvement in joint source
+decisions. The recentered and conditioned source decisions
+are already at the test ceiling. Median absolute relative sever-
+ity error, evaluated at the generating source, changes from
+11Drafting/revision assistance: OpenAI Codex [1].
+8
+PREPRINT
+
+
+===PAGE 9===
+Mayorga Taborda et al., Supplementary Material
+0.5
+2
+Delay after restoration (s)
+Prior 7: 3 vs 21
+Prior 7: 16 vs 21
+Prior 7: 18 vs 27
+Prior 24: 3 vs 21
+Prior 24: 16 vs 21
+Prior 24: 18 vs 27
+1.001
+1.000
+1.001
+1.000
+1.001
+1.001
+1.000
+1.000
+1.000
+1.001
+1.006
+1.003
+(a) Previous trajectory treated as known
+0.5
+2
+Delay after restoration (s)
+0.750
+0.857
+0.715
+0.843
+0.810
+0.888
+0.852
+0.867
+0.849
+0.854
+0.932
+0.908
+(b) Uncertain previous severity
+0.65
+0.70
+0.75
+0.80
+0.85
+0.90
+0.95
+1.00
+1.05
+Profiled squared distance / equilibrium
+FIGURE 1. Full-F01 physical control, not an R11 performance comparison. Each cell is the profiled squared separation during recovery divided by its
+equilibrium value. The same source pairs are evaluated with the previous trajectory treated as known (left) and with one uncertain previous-severity
+direction (right). Values below one mean less separation. Adding nuisance covariance reduces precision at fixed signatures by construction; the left panel
+separately shows the small change in physical response geometry. The 12 cells share four recovery histories.
+Same pre-event PMUs
+Estimate bη and offset bb.
+Use only reports before 2.5 s.
+Separate physical dictionary
+Complete DAE trajectories produce
+D0
+i , Q0
+i and mixed derivative Ei.
+Same held-out observations
+Four candidate loads; known
+ON/OFF.
+Truth is unavailable to inference.
+Nominal
+y0 + aD0
+i + a2Q0
+i
+Recentered
+Nominal prediction +bb
+Conditioned
+Recentered prediction +abηEi
+Same inference and evaluation: colored-instrument transform, amplitude integral and priors.
+Compare response error, source/presence decisions and severity; retain every test case.
+FIGURE 2. Executed signature ablation, separate from the causal stream algorithm in the main article. The three variants share the data and decision
+calculation; only reference and event-response terms differ.
+1.2% to 0.329%. Its mean paired change is -0.738 percent-
+age points ([-0.898, -0.582]). Both variants select the correct
+source in every tested event record, so this severity com-
+parison does not discard source errors. Their source masses
+numerically saturate at one; zero recorded log-loss is not
+evidence of calibrated uncertainty.
+The gain is not uniform across all comparisons: at the
+nominal operating point, estimating an unnecessary refer-
+ence/context can worsen severity relative to keeping the cor-
+rect fixed reference. Figure 3 retains that case rather than
+reporting only shifted operation.
+The derivative stability checks change Ei by 0.283–0.427%
+when the context step is halved. Halving the event step in
+the two checked directions changes it by at most 0.00977%.
+These are local numerical checks, not a global smoothness or
+identifiability certificate. Percentages of event severity refer
+to the P/Q input factors; actual load power also responds to
+voltage under the frozen impedance law.
+Paired intervals resample physical test cases, keeping their
+noise seeds and methods together. The same three noise
+seeds are reused across cases; these intervals describe case
+variation conditional on those common noise realizations,
+not uncertainty over a noise population or transfer to ar-
+bitrary sources or plants. The step-halving checks and all
+case outcomes remain in the frozen artifact package. Better
+fidelity, if observed, is not sufficient to establish calibrated
+source probabilities, all-family diagnosis or a benefit in the
+unchanged causal campaign.
+ACKNOWLEDGMENT
+OpenAI Codex [1] assisted with drafting and revision of the
+abstract and all numbered appendices, including the deriva-
+tions, worked examples and protocols, and with LaTeX and
+code preparation. The section footnotes identify this writing
+assistance separately from scientific references. The authors
+retain responsibility for verification and the final manuscript.
+REFERENCES
+[1] OpenAI, ‘‘Codex,’’ [Online]. Available: https://openai.com/codex/, ac-
+cessed: Oct. 31, 2026. AI system used for disclosed writing and code
+assistance.
+PREPRINT
+9
+
+
+===PAGE 10===
+Mayorga Taborda et al., Supplementary Material
+−2
+0
+2
+Operating change (%)
+10−4
+10−3
+10−2
+10−1
+100
+Median response error (%)
+(a) Response
+−2
+0
+2
+Operating change (%)
+0
+20
+40
+60
+80
+100
+Joint correct (%)
+(b) Source / presence
+Nominal
+Recentered
+Conditioned
+−2
+0
+2
+Operating change (%)
+100
+101
+Median severity error (%)
+(c) Severity
+FIGURE 3. Separate effects of recentering and conditioning. (a) Incremental response error in the fixed physical test cases, evaluated at the generating
+source and severity to isolate approximation error. (b) Correct source and presence decisions on noisy observations, after marginalizing severity. (c)
+Relative severity error evaluated at the generating source. The panels measure different outcomes. Noise realizations repeat physical cases and are not
+counted as additional independent trajectories. Nominal and recentered incremental predictions coincide.
+[2] S. Särkkä, Bayesian Filtering and Smoothing.
+Cambridge, U.K.: Cam-
+bridge University Press, 2013.
+10
+PREPRINT
+
+
+===PAGE 11===
+Mayorga Taborda et al., Supplementary Material
+−20
+−10
+0
+10
+Δ|I|, PMU6 (A)
+−1.50
+−1.25
+−1.00
+−0.75
+−0.50
+−0.25
+0.00
+ΔθV, PMU29 (deg)
+3
+4
+5
+6
+7
+8
+Time (s)
+−20
+−10
+0
+10
+20
+30
+Δf, PMU2 (mHz)
+3
+4
+5
+6
+7
+8
+Time (s)
+−0.003
+−0.002
+−0.001
+0.000
+0.001
+0.002
+ROCOF, PMU29 (Hz/s)
+Observed
+Physical truth
+Nominal
+Recentered
+Conditioned
+FIGURE 4. Fixed illustrative test: BUS7, η = +3%, load factor +1%, seed 390502. Gray traces are the delivered PMU observations. Colored curves use each
+method’s selected source and estimated severity; a no-event selection keeps its baseline. The dotted black curve is physical truth, used only for
+illustration. The plotted channels and case were fixed without selecting the largest improvement. Shading marks physical ON/OFF for evaluation.
+PREPRINT
+11

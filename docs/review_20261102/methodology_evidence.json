@@ -1,0 +1,79 @@
+{
+  "review": "independent methodology audit, read-only",
+  "C01_methods_changed": false,
+  "RAW0002_read": false,
+  "original_C01_ET_split": {
+    "train_local_physical_ids": 32,
+    "validation_local_physical_ids": 8,
+    "train_records": 64,
+    "validation_records": 16,
+    "fit_rows": 78784,
+    "global_train_groups": 26,
+    "global_validation_groups": 8,
+    "shared_normal_dependency_groups": [
+      "G_241039bf209bb85b92fe",
+      "G_41c4f849ad529a8d66c9"
+    ],
+    "note": "Dependency overlap is original train/validation, not a demonstrated C01 test leak."
+  },
+  "persistent_secondary": [
+    {
+      "method": "CHEN2016",
+      "events": 162,
+      "extras": 66,
+      "false_restorations": 0,
+      "open_eof": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "method": "ET_CANDIDATE",
+      "events": 162,
+      "extras": 179,
+      "false_restorations": 178,
+      "open_eof": 61,
+      "tp": 298030,
+      "fp": 0,
+      "fn": 182600
+    },
+    {
+      "method": "ET_REFERENCE",
+      "events": 162,
+      "extras": 164,
+      "false_restorations": 164,
+      "open_eof": 16,
+      "tp": 145256,
+      "fp": 0,
+      "fn": 335374
+    },
+    {
+      "method": "R11",
+      "events": 162,
+      "extras": 0,
+      "false_restorations": 0,
+      "open_eof": 162,
+      "tp": 479820,
+      "fp": 0,
+      "fn": 810
+    },
+    {
+      "method": "R11_NOMINAL",
+      "events": 162,
+      "extras": 0,
+      "false_restorations": 0,
+      "open_eof": 162,
+      "tp": 479820,
+      "fp": 0,
+      "fn": 810
+    }
+  ],
+  "c01_supplement_include_exists": false,
+  "source_sha256": {
+    "C:\\Users\\walla\\Documents\\Github\\paper-P07-physics-informed-sparse-pmu-event-inference\\generated\\frozen\\c01_20261029\\RECORDS.csv": "08c610d458297e28a426c79a8d7c51c921f556083057b357b93cb84b2615fab8",
+    "C:\\Users\\walla\\Documents\\Github\\paper-P07-physics-informed-sparse-pmu-event-inference\\generated\\frozen\\c01_20261029\\EVENTS.csv": "f343e4909016459c1b2e7e113afa0e286a1ccd4b9ebb5e052bbf2c851491f741",
+    "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\E5_VALIDATION_PAPER\\M03_R09_NUISANCE_DEV\\ml\\PROTOCOL.json": "821bef1ed79814a6b6d30b2c69f7c506696c7adf27c3b7fc2f0efcc3ba61413b",
+    "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\E5_VALIDATION_PAPER\\M03_R09_NUISANCE_DEV\\ml\\COMPLETE.json": "a195c6f55d46c6ee5ae20bedc3288db997b8f4b176523ffef83d21e2d27e5087",
+    "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_SUBMISSION_S01\\protocol\\SIM_REGISTRY.json": "f459baf0af71e1034282f22255618d5c0f0ef369cabbf2e837d87cda95daa8c6"
+  }
+}
