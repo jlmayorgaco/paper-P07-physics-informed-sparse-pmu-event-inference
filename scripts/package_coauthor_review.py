@@ -12,6 +12,7 @@ from zipfile import ZIP_DEFLATED, ZipFile
 ROOT = Path(__file__).resolve().parents[1]
 TARGET = ROOT / "output/P07_Para_David_y_Masoud.zip"
 FILES = [
+    "docs/P07_VALIDATION_ACTIONS.md",
     "docs/SCIENTIFIC_AUDIT_RESPONSE_20261103.md",
     "generated/monitored_exposure_audit.json",
     "generated/scientific_revision_audit.json",

@@ -24,3 +24,7 @@ Las diferencias e intervalos de alarmas usan ahora tiempo monitorizado: 108 s po
 4. Revisión científica de coautores, permisos/declaraciones, comprobación bibliográfica final y confirmación del código/dependencias a entregar.
 
 La [respuesta completa a la auditoría](../SCIENTIFIC_AUDIT_RESPONSE_20261103.md) distingue correcciones ejecutadas de evidencia aún faltante. No se promete aceptación ni se envía el manuscrito a autores o revista. B01 continúa separado; RAW0002 sigue cerrado.
+
+## Trabajo activo para fortalecer la contribución
+
+B01 prueba calibración y verosimilitud aprendida desde SIM. C02 prepara una comparación independiente con las 18 fuentes en entrenamiento, un observador físico continuo, banco nominal y calibración previa del presupuesto de alarmas. Ya tiene 102 escenarios sellados y 24 pruebas aprobadas; la implementación completa continúa antes de iniciar simulaciones. El resumen y la conclusión presentan primero las capacidades medidas; las condiciones de validez permanecen en la discusión. Véase `docs/P07_VALIDATION_ACTIONS.md`.

@@ -1,5 +1,5 @@
 {
-  "status": "SCIENTIFIC_AUDIT_REVISION_COAUTHOR_REVIEW_NOT_SUBMISSION_READY",
+  "status": "SCIENTIFIC_IMPROVEMENT_ACTIVE_REVIEW_DRAFT",
   "created_local": "2026-11-03T12:50:27.824419-05:00",
   "page_counts": {
     "article": 15,
@@ -18,7 +18,7 @@
     "duplicate_labels": 0,
     "unresolved_reference_markers": 0,
     "source_package_inputs": 133,
-    "source_package_smoke": "PASS: final package recompilation matches text and pagination",
+    "source_package_smoke": "Exact-text isolated package check from preceding scientific revision; current changes are narrative-only, current source package rebuilt",
     "all_main_and_supplement_pages_rendered": true,
     "all_main_and_supplement_pages_visually_reviewed": true
   },
@@ -32,8 +32,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "e600ddc00186bea38e01ab7099e090ec2b2aeb82f4145a4322beafe591d09163",
-      "bytes": 2627
+      "sha256": "7e1ea78261da311024a8fefb7375ecda9571095c82ddb9e8ada32946c75f9a6f",
+      "bytes": 2826
     },
     {
       "path": "docs/C01_COAUTHOR_STATUS.json",
@@ -47,23 +47,28 @@
     },
     {
       "path": "docs/P07_CLOSURE_FOR_COAUTHORS.md",
-      "sha256": "37a81ec25fbab534172b4f5a8e3e589c4b83bee8290be26e88bec58ae449ea66",
-      "bytes": 6605
+      "sha256": "342ec5e00215c33bee39ef5c467061437da7fbbe104163288b59073a3c36a95a",
+      "bytes": 6441
     },
     {
       "path": "docs/P07_COAUTHOR_BRIEF.md",
-      "sha256": "086151ebe63b5bcbd8dd1ebf400707c035cec57be217b3ed32bf4228707739bc",
-      "bytes": 2322
+      "sha256": "2ccb6f54597ae68b99e675707709ae0b7a53bfb338da596aecef6167dcae649c",
+      "bytes": 2325
     },
     {
       "path": "docs/P07_COAUTHOR_BRIEF_MANIFEST.json",
-      "sha256": "e1f0d49332aa25961f99144d770e6fe376dcb6b74f6837fb617a69a4b746904c",
+      "sha256": "4e88b20008bbe952dbb4a98af0dcd7e8b3a81bb5fa172a5e5d94dfeb4dffa095",
       "bytes": 586
     },
     {
+      "path": "docs/P07_VALIDATION_ACTIONS.md",
+      "sha256": "c8bfd7990fe8fdd8542a59d6d512be9a1d4764631917347a845f61c2292b3ffd",
+      "bytes": 2953
+    },
+    {
       "path": "docs/SCIENTIFIC_AUDIT_RESPONSE_20261103.md",
-      "sha256": "92b025e323e0896447d728e8d21c2f4f7ca6d9acca448f18e05cd49303c81230",
-      "bytes": 10852
+      "sha256": "c3b5df76b3bce92180ec5a8b3cc6a0e88d24d84044601314245687fae5546922",
+      "bytes": 10509
     },
     {
       "path": "docs/editorial_closure/A01_STAGING_APPLIED.json",
@@ -72,8 +77,8 @@
     },
     {
       "path": "docs/editorial_closure/FINAL_READINESS.md",
-      "sha256": "4a0fe5bcc3b3980015ae675c4252bf9873c667f892c2980ae9281c8e22b9c586",
-      "bytes": 2819
+      "sha256": "91cd641b5465bbb5cab0a7493cf221f88b5bf3ec6130eff19ac17a148b7cb240",
+      "bytes": 3407
     },
     {
       "path": "docs/editorial_closure/README.md",
@@ -82,8 +87,8 @@
     },
     {
       "path": "docs/editorial_closure/STATUS.json",
-      "sha256": "88dde3667e5a406b1b16dcb6fce798c862b614089632a4237292b21f78b7007c",
-      "bytes": 2370
+      "sha256": "9bf91650dc77d6714fdb585cc77f22f0f9b4a83a1d62f872652ceccea9f7a2ba",
+      "bytes": 2719
     },
     {
       "path": "figures/frozen/PROTECTED_FIGURES.json",
@@ -202,8 +207,8 @@
     },
     {
       "path": "main.tex",
-      "sha256": "5b7d1dc73866556834961e3e64f7282a4cd0659b62926cc3fb53b396f3109bef",
-      "bytes": 4169
+      "sha256": "acf99d3f3d978cc24575151d1be453b3de6dbaad372fe36f24968bc693986e4d",
+      "bytes": 4040
     },
     {
       "path": "metadata.tex",
@@ -212,23 +217,23 @@
     },
     {
       "path": "output/P07_Para_David_y_Masoud.zip",
-      "sha256": "53fa29691760ab5ad4c2b959ccc800ab4f51354ca4f8d9da295b9a7e33e1e8cb",
-      "bytes": 22356198
+      "sha256": "aea709e7b64112e8cc88825281ddf35e6985089bb871d966371044b034881db1",
+      "bytes": 22357503
     },
     {
       "path": "output/pdf/P07_Coauthor_Brief_David_Masoud.pdf",
-      "sha256": "4298198e51399ea9d66f0d42a7b19776a6af48c26f095f3810a00ee3abd639c6",
-      "bytes": 75307
+      "sha256": "e061c91ea98b742de0a9445e70983b9022d2cffb4c3e0ee2104776a0bbdf6dc3",
+      "bytes": 75263
     },
     {
       "path": "output/pdf/P07_Event_Attribution_Article.pdf",
-      "sha256": "106352bf92be82308c02b46120bf0cc3bfab9338f407f152e27b0a3afe2f08e4",
-      "bytes": 7166588
+      "sha256": "d577f493712e4c70641920f087635d2b293b27c453c97d063bd534b076cfc2c8",
+      "bytes": 7166630
     },
     {
       "path": "output/pdf/P07_Event_Attribution_Review_Bundle.pdf",
-      "sha256": "bca0141d019b516060b5301f6c394c72f39794dd886e1af07be5353bf461cf83",
-      "bytes": 8076919
+      "sha256": "710e860f0741a15dfbd034b2aa87562fac9fc5a63b81c0f704683e78d88f2122",
+      "bytes": 8076891
     },
     {
       "path": "output/pdf/P07_Event_Attribution_Supplement.pdf",
@@ -237,8 +242,8 @@
     },
     {
       "path": "output/pdf/P07_Physics_Informed_State_Reconstruction_Event_Source_Inference.pdf",
-      "sha256": "106352bf92be82308c02b46120bf0cc3bfab9338f407f152e27b0a3afe2f08e4",
-      "bytes": 7166588
+      "sha256": "d577f493712e4c70641920f087635d2b293b27c453c97d063bd534b076cfc2c8",
+      "bytes": 7166630
     },
     {
       "path": "output/pdf/P07_Physics_Informed_State_Reconstruction_Event_Source_Inference_Supplement.pdf",
@@ -247,12 +252,12 @@
     },
     {
       "path": "output/source/P07_Article_Supplement_Source.zip",
-      "sha256": "9d7b6ffb318ace759de266bcdcc5a1193193b2512b0a492f8c6a58d97e500624",
-      "bytes": 7423126
+      "sha256": "96a8d00b80671fa8690e81429637401b633a5f448886697aee956814f6ca43b6",
+      "bytes": 7423067
     },
     {
       "path": "output/source/SOURCE_PACKAGE.json",
-      "sha256": "bfbc13e5df8aadaa9ca751ca69db32987e9dc98147155309753d6a3b7e56cbde",
+      "sha256": "aa58f6ef99a16ad4e01f860877a2f84ae3eb27b574f045383c9eb945fda42b59",
       "bytes": 310
     },
     {
@@ -287,13 +292,13 @@
     },
     {
       "path": "scripts/package_coauthor_review.py",
-      "sha256": "c699fa29efd9220359982d6c632fc6fe7bd67b2b9967c3d0cc078a606d85e17b",
-      "bytes": 5070
+      "sha256": "ef42326382331f6d8341045e0cb1edb2e4a7e5e0ed52e44cc1c5f2ef1775dae4",
+      "bytes": 5109
     },
     {
       "path": "scripts/prepare_coauthor_brief.py",
-      "sha256": "39225f5f7bae06b643e745b1cea08b0b400f54c87a494f1046055d606d4ac3c8",
-      "bytes": 6420
+      "sha256": "67d56ad6408b70299148c3c8e3dd6e6d4535da3d187f8c30738864ad3b60cd8d",
+      "bytes": 6423
     },
     {
       "path": "sections/08c_c01_confirmatory.tex",
@@ -322,8 +327,8 @@
     },
     {
       "path": "sections/article_final_conclusion.tex",
-      "sha256": "fa6b8aacc6a6684b7e3473784d397615fb863b383505d5b13f287fbd40f8bd2e",
-      "bytes": 1221
+      "sha256": "2722299febbc87bda9c55e3bbeebb0605816b0b39d58dee4c84532f8a3298042",
+      "bytes": 1236
     },
     {
       "path": "sections/article_information.tex",
@@ -332,13 +337,13 @@
     },
     {
       "path": "sections/article_interpretation.tex",
-      "sha256": "d0cc14456d39207cfe33b108881074b980dbc1e949dc51eb4ae0752a3a24cd11",
-      "bytes": 4576
+      "sha256": "6f50012dff0b34c90586e039b46e31bc103d0e239e5b5c1471cd3fb10da4d39d",
+      "bytes": 4590
     },
     {
       "path": "sections/article_intro.tex",
-      "sha256": "ec2d4eb3c39309774c5523d847283b8bb37b329ced9466a5290a1c74e8433c83",
-      "bytes": 4125
+      "sha256": "a0bb821e72bf201a33931b2a5ef9a446f8a4e532ff922a16b98d8c9761b7f61e",
+      "bytes": 4080
     },
     {
       "path": "sections/article_method.tex",
@@ -400,5 +405,6 @@
       "sha256": "355f939511523601dcc195d8a137e52e70c2534e2733c6da8a38d14a896fe831",
       "bytes": 501
     }
-  ]
+  ],
+  "active_experiments": "B01 in progress; C02 being implemented, no outcomes yet"
 }

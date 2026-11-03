@@ -1,10 +1,12 @@
-# P07 â€” Physics-Based Event Attribution From Sparse PMUs With Recovery Memory
+# P07 — Recovery-Aware Physical Attribution of Load and Line Events From Sparse PMUs
 
 Scientific audit revision (3 November): the article has eight sections and a narrower recovery-consistency claim. See the [audit response, implemented corrections and remaining scientific gaps](docs/SCIENTIFIC_AUDIT_RESPONSE_20261103.md). This is a coauthor-review draft, not a submission-ready manuscript.
 
 C01 completed without retuning: 171 physical trajectories and all 342 observed records. See the [results and failure ledger](docs/c01-confirmatory-results.md). Scientific coauthor review remains open.
 
 The article preserves the protected event-types image and IEEE-39 single-line diagram. Their hashes and validation procedure are documented in [PROTECTED_FIGURES.md](docs/PROTECTED_FIGURES.md). Project-specific editing constraints are in [AGENTS.md](AGENTS.md).
+
+The active validation work is described in [P07 validation actions](docs/P07_VALIDATION_ACTIONS.md): B01 calibration is running; the independent, all-source C02 comparison is being implemented.
 
 ## Manuscript and results
 

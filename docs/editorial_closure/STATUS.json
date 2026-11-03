@@ -44,5 +44,9 @@
     "Independent plant/model transfer and attribution-mass calibration for stronger deployment/uncertainty claims",
     "Scientific coauthor review, author declarations and permissions"
   ],
-  "next_action": "Review the scoped contribution and choose the necessary independent controls; do not tune on C01/A01 or use partial B01 outcomes."
+  "next_action": "Complete B01 and the authorized C02 implementation; execute C02 after B01 releases resources, using its frozen design and validation-only calibration. Build the central argument around demonstrated capabilities.",
+  "active_scientific_work": {
+    "B01": "CAL in progress; no partial results imported",
+    "C02": "102 scenarios designed/sealed; 24 unit tests; causal learning, GLR entrypoint and CAL/TEST guards implemented; full pipeline in progress, no simulation yet"
+  }
 }
