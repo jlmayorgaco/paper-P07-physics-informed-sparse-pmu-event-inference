@@ -20,5 +20,5 @@
    figuras en su tamaño final y ejecutar `python scripts/verify_protected_figures.py
    --pdf main.pdf`. La compilación por sí sola no demuestra que siguen presentes.
 
-Estas reglas aplican por igual a Codex, Claude y otros agentes. No convierten en
-resultados ejecutados los módulos que el manuscrito describe como propuestos.
+Estas reglas no convierten en resultados ejecutados los módulos que el manuscrito
+describe como propuestos.

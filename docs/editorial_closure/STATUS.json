@@ -1,0 +1,39 @@
+{
+  "phase": "P4_WAITING_FOR_A01_COMPLETION",
+  "status": "PRE_A01_REVIEW_COMPLETE_A01_ACTIVE",
+  "last_checked_local_date": "2026-11-02",
+  "a01": {
+    "stage": "inference",
+    "task": 61,
+    "tasks": 72,
+    "record": "S321",
+    "arm": "PROFILE_MEMORY",
+    "state": "ACTIVE_INFERENCE_PARTIAL",
+    "partial_outcomes_used": false,
+    "completion_marker_present": false,
+    "paper_updated_marker_present": false
+  },
+  "paper_state": "Pre-A01 editorial sources and metrics are staged under this directory. The article and supplement are not updated from partial A01 outcomes.",
+  "completed_phases": {
+    "P0": "baseline and protected-figure contract",
+    "P1": "claim/evidence register",
+    "P2": "C01 restoration/runtime/domain derived outputs",
+    "P3": "method, measurement contract and bounded claims staged",
+    "P5": "editorial corrections and source preparation",
+    "P6": "isolated pre-A01 article/supplement/brief review outputs retained"
+  },
+  "pending_phases": {
+    "P4": "A01 completion seal, guarded verification, explicit import and final integration",
+    "P7": "post-A01 package and submission-readiness review"
+  },
+  "review_artifacts": {
+    "article": "docs/editorial_closure/review_outputs/P07_Article_PRE_A01_Review.pdf",
+    "supplement": "docs/editorial_closure/review_outputs/P07_Supplement_PRE_A01_Review.pdf",
+    "brief": "docs/editorial_closure/review_outputs/P07_Coauthor_Review_PRE_A01.pdf"
+  },
+  "open_blockers": [
+    "A01 completion and guarded final import",
+    "author declarations and permissions for submission"
+  ],
+  "next_action": "Continue the frozen A01 run. After completion, run scripts/verify_a01_gate_and_apply_staging.ps1 in check-only mode; verify the seal, denominator and parity checks; inspect the exact editorial allowlist; then apply staging and rebuild/inspect final PDFs."
+}

@@ -71,7 +71,7 @@ def main():
     ax.set_xticks(range(3),['K = 0','K = 1','K = 2']);ax.set_ylim(0,.66);ax.set_ylabel('Cardinality mass')
     ax.set_title('(b) Same likelihood must recover the prior',loc='left',fontsize=9);ax.legend(frameon=False,fontsize=6.3);ax.grid(axis='y',alpha=.15);ax.set_axisbelow(True)
     save(fig,'review_kernel_audit')
-    audit=dict(source_review=manifest['source_review'],archived_inputs_sha256={n:imported[n] for n in names},legacy_results_changed=False,C01_outcomes_used=False,Top3_conditioned_on_two_sources=True,legacy_normalization_qualified=True,weak_transition_curve_excluded='Source repeats global Top-1 across severities',synthetic_not_physical_kernel_check=True,event_types_figure_unchanged=True)
+    audit=dict(archived_inputs_sha256={n:imported[n] for n in names},legacy_results_changed=False,C01_outcomes_used=False,Top3_conditioned_on_two_sources=True,legacy_normalization_qualified=True,weak_transition_curve_excluded='Source repeats global Top-1 across severities',synthetic_not_physical_kernel_check=True,event_types_figure_unchanged=True)
     (ROOT/'generated/shared_review_evidence_audit.json').write_text(json.dumps(audit,indent=2)+'\n');verify()
     print('SHARED_REVIEW_EVIDENCE_GENERATED')
 

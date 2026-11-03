@@ -86,7 +86,7 @@ def main():
         ('For David and Masoud',
          'Ready for scientific coauthor review, not yet certified for journal submission. The central claim is the complete procedure and its measured trade-off. The comparison does not '
          'isolate recovery memory and the methods have different fixed false-alarm budgets. Decide whether to '
-         'state only the complete-procedure claim or obtain a controlled component/comparator test. See the five-perspective audit for reproducibility and claim limits. '
+         'state only the complete-procedure claim or obtain a controlled component/comparator test. '
          'No method was retuned after the sealed comparison.')
     ]
 

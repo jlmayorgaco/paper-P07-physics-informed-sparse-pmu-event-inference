@@ -20,9 +20,6 @@ FILES = [
     "docs/P07_COAUTHOR_BRIEF.md",
     "docs/P07_COAUTHOR_BRIEF_MANIFEST.json",
     "docs/P07_CLOSURE_FOR_COAUTHORS.md",
-    "docs/P07_PRE_SUBMISSION_AUDIT_2026-11-02.md",
-    "docs/P07_READER_REVISION_2026-11-02.md",
-    "docs/P07_READER_PASS_2026-11-02.md",
     "docs/HACKATHON_TO_C01_METHOD_TRACE.md",
     "docs/METHODS_AND_RESULTS_HANDOFF.md",
     "docs/P07_RESEARCH_CONTRIBUTION.md",
@@ -58,7 +55,7 @@ FILES = [
 def main() -> None:
     readme = (
         "P07 coauthor review package — 2 November 2026\n\n"
-        "Read the one-page brief, P07_RESEARCH_CONTRIBUTION.md, pre-submission audit and main article first. "
+        "Read the coauthor brief, research contribution and main article first. "
         "The main article integrates reconstruction, feature ablations, response tensors and the actual historical submission confusion matrices, with separate experimental contracts. "
         "C01 completed 171 physical trajectories and 342 observed records without "
         "method retuning. The source package rebuilds the article. The evidence "
@@ -67,7 +64,7 @@ def main() -> None:
         "No message has been sent to coauthors.\n"
     )
     files = FILES + [str(p.relative_to(ROOT)).replace(chr(92), "/") for p in sorted((ROOT / "generated/frozen/historical_submission_comparison_20261102").glob("*"))]
-    for folder in ('docs/review_20261102', 'generated/review_diagnostics_20261102', 'generated/frozen/ablation_a01_20261102'):
+    for folder in ('generated/review_diagnostics_20261102', 'generated/frozen/ablation_a01_20261102'):
         files += [p.relative_to(ROOT).as_posix() for p in sorted((ROOT / folder).glob('*')) if p.is_file() and p.suffix in ('.md', '.json', '.csv')]
     evidence = json.loads((ROOT / "generated/EVIDENCE_BRIDGE_PROVENANCE.json").read_text())
     files += [x["path"].replace(chr(92), "/") for x in evidence["inputs"]]
