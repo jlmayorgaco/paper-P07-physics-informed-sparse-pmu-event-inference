@@ -37,6 +37,8 @@ try {
         Invoke-CheckedCommand -Command 'python' -Arguments @('scripts/verify_discrepancy_design.py')
         Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/verify_causal_amplitude_identity.py')
     }
+    Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_evidence_bridge.py')
+    Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_complete_confirmation_tables.py')
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/verify_supplement_examples.py')
     if (Test-Path -LiteralPath 'tables/generated/ei_x02_results.tex') {
         Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/compact_signature_table.py')
@@ -70,6 +72,10 @@ try {
     }
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/publish_manuscript_bundle.py')
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/package_submission_sources.py')
+    if (Test-Path -LiteralPath 'generated/frozen/ablation_a01_20261102/SUMMARY.csv') {
+        Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/prepare_coauthor_brief.py')
+        Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/package_coauthor_review.py')
+    }
     Write-Host 'Article: output/pdf/P07_Event_Attribution_Article.pdf'
     Write-Host 'Supplement: output/pdf/P07_Event_Attribution_Supplement.pdf'
     Write-Host 'Combined review: output/pdf/P07_Event_Attribution_Review_Bundle.pdf'
