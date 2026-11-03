@@ -37,6 +37,16 @@ Raíz de código: `../SGSMA26-Physics-Informed-AD/`.
 
 Las rutas `run/runtime` pertenecen a `experiments/PAPER_CONFIRMATORY_C01/`; `observer` pertenece a `experiments/E5_VALIDATION_PAPER/M03_R11_FROZEN_DISCREPANCY/`.
 
+El estudio factorial controlado también terminó: cuatro brazos cubren 24
+registros cada uno, con 96/96 salidas disponibles y cero fallos. Los dos
+puntajes empatan en los endpoints informados. Los brazos con arrastre físico
+logran 108/108 eventos oportunos y una alarma extra; los de reinicio logran
+75/108 y 166 alarmas extra. El puntaje perfilado conserva la estimación
+condicional bayesiana, de modo que el resultado respalda el arrastre físico
+al cierre inferido en esta cohorte, no la necesidad de la inferencia
+bayesiana. El contraste es posthoc, no una confirmación independiente ni una
+prueba de superioridad con falsas alarmas igualadas.
+
 ## Cambios editoriales de este cierre
 
 - Explicitada la reducción del operador de medición: la física conecta un bus no medido con las ocho PMU mediante restricciones de red y dinámica.

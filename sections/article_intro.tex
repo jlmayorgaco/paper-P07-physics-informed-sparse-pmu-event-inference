@@ -38,31 +38,28 @@ should explain a new PMU change or yield to a later intervention hypothesis.
 
 We formulate a causal attribution procedure that keeps the estimated
 physical response after an intervention ends and tests subsequent changes
-against that continuing response. The paper makes three contributions:
+against that continuing response. The paper makes three bounded contributions:
 \begin{enumerate}
-\item Network-conditioned state reconstruction, physical feature ablations
-and mixed-source sensitivity experiments measure how network equations
-recover unmeasured voltages and distinguish candidate inputs. Each
-experiment retains its own data and evaluation conditions.
-\item The continuous procedure compares new interventions with retained
-recovery histories, integrates local load severity, and separates active
-mass $M$ from originating-cause mass $\Gamma$. Its $\Delta M$ records the
-changing attribution. These quantities summarize the hypothesis weights;
-the physical information enters through the candidate trajectories.
-\item A direct historical transfer of the submitted system and a new
-same-stream comparison with causal ExtraTrees distinguish feature failure,
-source attribution and alarm cost. The latter also compares a published
-outage detector on its eligible persistent-line task.
+\item It specifies an executable physical measurement contract in which a
+switched DAE and oriented terminal map generate the candidate PMU paths.
+\item It evaluates a continuous history bank that compares new load or line
+interventions with retained recovery, integrates local load severity, and
+reports active mass $M$ separately from originating-cause mass $\Gamma$.
+These are summaries of an approximate, screened hypothesis bank.
+\item It measures timely family/source attribution, unmatched alarms and
+restoration behavior on a prespecified catalog, and states exactly how that
+evidence differs from two frozen ExtraTrees procedures and historical
+window-based results.
 \end{enumerate}
 The complete physical bank attributes
 \ReaderPhysicalLoad{}/\ReaderFamilyTotal{} load realizations before OFF
 versus \ReaderETLoad{}/\ReaderFamilyTotal{} for the causal ExtraTrees
 reference. Under out-of-bank R/X it raises \ReaderPhysicalOutsideExtras{}
 versus \ReaderETOutsideExtras{} unmatched alarms. Thus the supported gain
-is timely load attribution with a larger alarm burden. A subsequent
-controlled study separates amplitude-evidence scoring from physical-state
-carry at closure. Its design and completion status are reported separately
-from the original comparison.
+is timely load attribution with a larger alarm burden. A separate posthoc component study tests amplitude-evidence scoring and
+physical-state carry at inferred closure. It is not an independent confirmation
+and cannot establish a benefit until all four arms and their intervals are
+reviewed.
 
 The test uses nine candidate load buses and nine lines in a fixed IEEE-39
 simulation. It does not establish an all-family hackathon score, calibrated

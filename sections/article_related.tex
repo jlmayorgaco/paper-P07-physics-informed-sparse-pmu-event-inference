@@ -15,13 +15,17 @@ Sensor placement limits the information available at remote PMUs
 
 Warner \emph{et al.} compare simulated voltage/current paths across an
 unknown-onset window for short-circuit line identification
-\cite{warner2023highfidelity}. Our load/line task continues through
-restoration and successive events; their method has not been run on this
-cohort. Multiple-model filters and adaptive history banks already retain
-conditional modes \cite{blom1988imm,boers2005m3h}; sequential diagnosis
-has established error/delay theory under specified observation laws
-\cite{warner2024matrix}. Our screened, pruned bank inherits none of those
-general optimality or delay guarantees.
+\cite{warner2023highfidelity}. Yang, Chen and Zhai combine partial-PMU
+algebraic measurements with particle-filter estimates of generator dynamic
+states, then monitor outage signatures with an EWMA on the IEEE-39 system
+\cite{yang2021particle}. This is a close physical precedent for line
+outage detection; the present evaluation instead attributes load and line
+interventions through OFF and successive recovery. Neither study is run as a
+same-data benchmark here. Multiple-model filters and adaptive history banks
+already retain conditional modes \cite{blom1988imm,boers2005m3h}; sequential
+diagnosis has established error/delay theory under specified observation
+laws \cite{warner2024matrix}. Our screened, pruned bank inherits none of
+those general optimality or delay guarantees.
 
 Learned PMU classifiers and physical uncertainty models provide other
 routes \cite{pandey2020realtime,li2024knowledge,yildiz2024few,
@@ -49,6 +53,7 @@ algorithmic impossibility.}
 Route & Mechanism & Evaluated target & Role in this study\\\midrule
 Chen / Rovatsos & Network likelihoods and sequential tests & Line outages; Rovatsos includes transients & Chen on persistent-line first decisions\\
 Warner high-fidelity & Simulated V/I paths and onset search & Short-circuit line candidates & Closest trajectory precedent; no common-data run\\
+Yang--Chen--Zhai (2021) & Particle filter for generator states; EWMA outage monitoring & Line-outage detection with partial PMUs on IEEE-39 & Closely related line detector; no continuous load/restoration comparison\\
 Adaptive Matrix CuSum & Sequential diagnosis with error/delay analysis & One unknown distributional change & Statistical precedent; no inherited guarantee\\
 DAE / stochastic-state estimation & Physical state and uncertainty models & States, unknown inputs or parameters & Components and adjacent tasks\\
 Learned PMU diagnosis & Features or constrained representations & Event families and locations & Two frozen ExtraTrees references\\

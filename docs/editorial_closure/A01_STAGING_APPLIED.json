@@ -1,0 +1,32 @@
+{
+  "status": "EDITORIAL_STAGING_APPLIED_AFTER_COMPLETE_A01",
+  "applied_local": "2026-11-03T00:03:25.3286066-05:00",
+  "a01_manifest_sha256": "711c9073ff68db9df83255a7d89e1997d896e16a77829359df6c24270655a55c",
+  "a01_complete_sha256": "44d5bbef9ebffd79394ab78e1ea47da3eb90382d7c95d8ba05393be5d69d3323",
+  "target_hashes": {
+    "sections/article_method.tex": "42c88f56db4149e04d33c563b9cc323db553572715a0a35a35813c81c099b6f4",
+    "sections/article_closure_results.tex": "8deba76d128a69e2c8dc3195b8ff36ce40f9b73fa9eefff10c00830e84c5fcec",
+    "generated/closure_analysis/RESTORATION_AUDIT.json": "bb668b5f1a0d54fd7e93c975b2642b61aa2fa327b1b42bdfd47bb64c0625ce3e",
+    "generated/closure_analysis/COMPUTE_COST.json": "8d02856af53588c9ff1afee1689965229ecc497f7497091c2091b29c130cd338",
+    "sections/article_intro.tex": "6e40ce5ddfd3f967e1837ad4735b04e05f8547d282e61acd6bd6447ed4ef3ca4",
+    "figures/generated/closure_restoration.png": "25abae1e09168927a8931d911b30c29a462889da9a8172071e89f67ef07d8ffc",
+    "sections/article_recovery_x04.tex": "6472399402b1d81905999ebe102c1474bc0d802de17e4d475a550a2b5af77c55",
+    "supplement/domain_profile.tex": "b1873ef7e1c30b925682a7503978188cd887d8c37c3b40adb38dddb36ce18fa6",
+    "tables/generated/closure_restoration.tex": "78501bfe69533abcfa82d7baef534060875e735f81ccb1581d25bde85b842769",
+    "generated/closure_analysis/DOMAIN_PROFILE.json": "24373e0b2693278b73782378764b098e19d21a87ad283b8a7f9273b68ee06e75",
+    "sections/narrative_protocol.tex": "f3ebe850e1f3445ff508c58b64fe1d8037a4dbc380140f02c9358e52109d3569",
+    "main.tex": "50e9b881703b984c0de55f26188195f17b727016548433c81f7ec19246130897",
+    "supplement/appendix_submission_contract.tex": "a26bb64672255ea10ef2dc1d0c55474c8dae49f95dcb990247cbb9d992aaca7f",
+    "sections/article_ei_x02.tex": "6a5add43d95f5959237f3f32701d28bb48ba361ad58607f58e867dbd2f9a2cc3",
+    "generated/closure_analysis/COMPUTE_COST.csv": "1df783db426996e757f213491a3fe45a84c5b10afbf0f48bd8a197a692f1dd2a",
+    "generated/closure_analysis/RESTORATION_AUDIT.csv": "53a6bf62c3e0bce64db896e56710c8227778a5e6d9d7644d49a96525d594516e",
+    "supplement.tex": "68aac2d8c9ea69e7d48b849007544d50bb7556149abd460b01126984f0e18311",
+    "figures/generated/closure_restoration.pdf": "910553299ebb85c67467703e914b9c715dfb9f22907d92ed48d395911d064747",
+    "sections/article_related.tex": "d35215bff95354ad63a718cb0fa6b9644f508cac8d529acad9169019e6098539",
+    "supplement/measurement_contract.tex": "76eb742f414f66d6c7441fffd9445274da8c6c788e61c200cfc7fb562f9da7bc",
+    "scripts/c01_main_tables.py": "6a4b2aba2291ea3f2f9eeb00fedb8820fb49fff8a8b8074d553b3380967553b3",
+    "references.bib": "c6bc6419074db442afd02e07803fc594ed6c63278e90917877a757c50491a263",
+    "tables/generated/closure_compute_cost.tex": "48b080c9f4f64ae65c1bc291a4b94a2a83b05e452acd8bb91463e3777f52be19",
+    "supplement/appendix_causal_walkthrough.tex": "d584219520339f75528111d5b63d15540461f987fd84eda46fc07a9aaeb679a4"
+  }
+}

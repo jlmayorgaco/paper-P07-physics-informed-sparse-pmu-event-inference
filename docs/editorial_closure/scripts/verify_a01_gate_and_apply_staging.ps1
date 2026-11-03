@@ -18,7 +18,13 @@ function Assert-Baseline([string]$Relative) {
     if ((Get-Hash $target) -ne $baselineHashes[$Relative]) { throw "Active source changed since closure baseline: $Relative" }
 }
 # This is an explicit finalization command, never a watcher. It is safe to run in check-only mode while A01 is active.
-$live = Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match 'PAPER_ABLATION_A01' }
+$live = Get-CimInstance Win32_Process | Where-Object {
+    $isRunner = $_.Name -match '^(python|pythonw|julia|pwsh|powershell)\.exe$'
+    $mentionsA01 = $_.CommandLine -match 'PAPER_ABLATION_A01'
+    $isGitInventory = $_.Name -eq 'git.exe' -and $_.CommandLine -match 'ls-files\s+--others'
+    $isThisGuard = $_.ProcessId -eq $PID
+    $isRunner -and $mentionsA01 -and -not $isGitInventory -and -not $isThisGuard
+}
 if ($live) { throw "A01 process/import still active; no files copied. PIDs: $($live.ProcessId -join ', ')" }
 $completePath = Join-Path $run 'COMPLETE.json'
 $progressPath = Join-Path $run 'PROGRESS.json'

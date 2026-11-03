@@ -15,7 +15,7 @@ supplement supplies the intermediate calculations. The Historical Technical
 Notes develop functional observability, nuisance-profiled information and
 source ambiguity, and distinguish the implemented batch estimator $\mathcal E_{\mathrm B}$ from
 the proposed joint estimator $\mathcal E_{\mathrm J}$. Neither should be
-silently substituted for the causal history bank, archived as R11.
+silently substituted for the causal physical history bank.
 The conditional Gaussian updates use standard filtering identities
 \cite{sarkka2013bayesian}; the derivation below specifies their role and
 the approximations made by the implemented bank.
@@ -106,7 +106,7 @@ the 96 highest-weight recent histories, 64 older histories and at least
 one per occupied source. The union is renormalized.
 
 The internal observer confirms active-mass evidence at 0.99 for six reports
-and has a separate 15-report internal OFF clock. The public R11 publisher
+and has a separate 15-report internal OFF clock. The public physical-bank publisher
 requires an internal pending episode and six reports of source-qualified
 active support above 0.99; its public OFF requires six reports of the
 diagnosed cell's joint cause-and-restoration mass above 0.99. The detailed source qualification, diagnosis and replacement rules are
@@ -195,7 +195,7 @@ To see the last line, apply the correction to a fixed amplitude:
      =m_h^++d_h^+a.
 \]
 The severity distribution is updated by the same likelihood integral.
-Regime covariances come from nominal-operator Riccati equations. R11 does
+Regime covariances come from nominal-operator Riccati equations. The physical history bank does
 not propagate an independent exact covariance for every switched history.
 At closure the mean is retained and the omitted mixture spread recorded.
 
@@ -273,7 +273,7 @@ conditions gives 12 physical trajectories, 18 unique interventions and
 54 event realizations per campaign. Both are development evidence in
 the current article. Repeated conditions are not independent event draws.
 
-C01 prespecifies 18 continuous parents, 27 persistent-line parents
+The confirmatory evaluation prespecifies 18 continuous parents, 27 persistent-line parents
 (nine lines, three repetitions), and 12 normal parents. The three R/X
 conditions produce $3(18+27+12)=171$ intended physical trajectories;
 two instrumental-noise scales yield 342 observed records. The continuous
@@ -313,7 +313,7 @@ give four recovery contexts. Three source-pair comparisons within each
 context give 12 correlated comparisons. The prior input is active from
 2 to 3 s; the subsequent response is examined over 1.5 s. The supplied
 history, onset, family and two-candidate universe define an oracle control,
-with one uncertain prior-severity direction. It does not evaluate R11,
+with one uncertain prior-severity direction. It does not evaluate the causal physical method,
 unknown onset, event cardinality or operational false alarms.
 
 \subsection{Reproduction Without Changing the Experiment}

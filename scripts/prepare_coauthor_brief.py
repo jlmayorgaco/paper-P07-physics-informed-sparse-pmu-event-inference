@@ -66,7 +66,7 @@ def main():
          '0/96 joint source decisions versus 96/96 for an earlier physical estimator; its confusion matrices '
          'are included, with the development/domain advantage explicit. The archived batch Bayesian support '
          'test retains its evidence-normalization caveat. None of these tests isolates a tensor/Bayes contribution '
-         'to final causal accuracy. C01 uses new causal ExtraTrees comparators, not the original 30-s submission.'),
+         'to final causal accuracy. The frozen continuous comparison uses new causal ExtraTrees comparators, not the original 30-s submission.'),
         ('Sealed comparison: 171 physical trajectories, 342 observed records', ''),
         ('Other outcomes that change the interpretation',
          f'Continuous: the physical bank attributes 322/324 loads and 322/324 lines before OFF; the ExtraTrees reference attributes '
@@ -101,9 +101,7 @@ def main():
         pairs = [('marginal/carry','BAYES_MEMORY'),('profile/carry','PROFILE_MEMORY'),('marginal/reset','BAYES_NO_CARRY'),('profile/reset','PROFILE_NO_CARRY')]
         outcomes = '; '.join(f'{label}: {int(a.loc[key,"timely"])}/108 and {int(a.loc[key,"extras"])} extras' for label,key in pairs)
         sections[-1] = ('Controlled component study and coauthor decision',
-            'Same-bank posthoc study: ' + outcomes + '. Same thresholds; observed alarm rates may differ. '
-            'The score arm retains conditional Bayesian state estimation; reset removes physical-state carry at inferred closure only. '
-            'Interpret these contrasts with the paired intervals. External transfer, stronger-comparator coverage and scientific packaging remain open. Author declarations are pending before submission.')
+            'Posthoc study on 18 parents/108 events: ' + outcomes + '. Both carry arms also have one unmatched restoration; both reset arms have 130 and 33/108 events without a timely diagnosis. Median diagnosis delay is 0.267 s with carry and 0.337 s after reset. Normal controls have 0 false alarms in 1,764 s measured exposure (588 s from each of three 600-s records). Paired 18-parent intervals for carry versus reset are +0.306 timely fraction (95% CI 0.241-0.380) and -275 extras per event-record hour (95% CI -325 to -223.333), descriptive and posthoc. The marginal and bounded-profile scores tie on these endpoints. The profile arm retains conditional Bayesian state estimation and fixed priors; reset removes only physical-state carry at inferred closure, not instrumental memory or simulated state. These outcomes do not establish independent confirmation or superiority at matched false-alarm rates. Author declarations remain open.')
     else:
         sections[-1] = ('For David and Masoud',
             'Coauthor-review draft. A controlled 24-record factorial study is running with the same five-model bank and publisher: '

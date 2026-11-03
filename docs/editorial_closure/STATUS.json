@@ -1,39 +1,45 @@
 {
-  "phase": "P4_WAITING_FOR_A01_COMPLETION",
-  "status": "PRE_A01_REVIEW_COMPLETE_A01_ACTIVE",
-  "last_checked_local_date": "2026-11-02",
+  "phase": "P7_FINAL_REVIEW_READY",
+  "status": "POST_A01_INTEGRATED_AND_VISUALLY_VERIFIED",
+  "last_checked_local_date": "2026-11-03",
   "a01": {
-    "stage": "inference",
-    "task": 61,
-    "tasks": 72,
-    "record": "S321",
-    "arm": "PROFILE_MEMORY",
-    "state": "ACTIVE_INFERENCE_PARTIAL",
-    "partial_outcomes_used": false,
-    "completion_marker_present": false,
-    "paper_updated_marker_present": false
+    "state": "COMPLETE",
+    "records": 24,
+    "arms": 4,
+    "new_inferences": 72,
+    "intended_outputs": 96,
+    "available_outputs": 96,
+    "failures": 0,
+    "methods_retuned": false,
+    "predictions_sealed_before_evaluation": true,
+    "baseline_parity_reports": 3601,
+    "baseline_parity_max_error": 0.0,
+    "events_identical": true,
+    "posthoc_existing_data": true,
+    "raw0002_opened": false
   },
-  "paper_state": "Pre-A01 editorial sources and metrics are staged under this directory. The article and supplement are not updated from partial A01 outcomes.",
+  "paper_state": "The frozen posthoc component outcomes and bounded restoration/runtime/domain analysis are integrated in the active article and supplement. The final article and supplement passed compilation, reference checks, protected-figure checks and page-by-page visual review.",
   "completed_phases": {
     "P0": "baseline and protected-figure contract",
     "P1": "claim/evidence register",
     "P2": "C01 restoration/runtime/domain derived outputs",
-    "P3": "method, measurement contract and bounded claims staged",
+    "P3": "method, measurement contract and bounded claims",
+    "P4": "A01 completion seal, parity, denominator/import checks and allowlist integration",
     "P5": "editorial corrections and source preparation",
-    "P6": "isolated pre-A01 article/supplement/brief review outputs retained"
+    "P6": "retained pre-A01 review outputs",
+    "P7": "post-A01 package, visual review and readiness record"
   },
-  "pending_phases": {
-    "P4": "A01 completion seal, guarded verification, explicit import and final integration",
-    "P7": "post-A01 package and submission-readiness review"
-  },
-  "review_artifacts": {
-    "article": "docs/editorial_closure/review_outputs/P07_Article_PRE_A01_Review.pdf",
-    "supplement": "docs/editorial_closure/review_outputs/P07_Supplement_PRE_A01_Review.pdf",
-    "brief": "docs/editorial_closure/review_outputs/P07_Coauthor_Review_PRE_A01.pdf"
+  "final_artifacts": {
+    "article": "output/pdf/P07_Event_Attribution_Article.pdf",
+    "supplement": "output/pdf/P07_Event_Attribution_Supplement.pdf",
+    "review_bundle": "output/pdf/P07_Event_Attribution_Review_Bundle.pdf",
+    "coauthor_brief": "output/pdf/P07_Coauthor_Brief_David_Masoud.pdf",
+    "source_zip": "output/source/P07_Article_Supplement_Source.zip",
+    "coauthor_zip": "output/P07_Para_David_y_Masoud.zip",
+    "manifest": "docs/editorial_closure/FINAL_MANIFEST.json"
   },
   "open_blockers": [
-    "A01 completion and guarded final import",
-    "author declarations and permissions for submission"
+    "Author declarations and permissions for journal submission"
   ],
-  "next_action": "Continue the frozen A01 run. After completion, run scripts/verify_a01_gate_and_apply_staging.ps1 in check-only mode; verify the seal, denominator and parity checks; inspect the exact editorial allowlist; then apply staging and rebuild/inspect final PDFs."
+  "next_action": "Share the review package for coauthor review and obtain the remaining author declarations and submission permissions. No author messages or journal submission have been made."
 }

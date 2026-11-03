@@ -110,9 +110,9 @@ enter by substitution rather than through a full joint parameter posterior.
 
 \subsection{Compare Unknown-Onset Histories}
 
-The method retains ten seconds of past conditional states. Its frozen
-birth screen searches lags of 0--18 reports and proposes selected onsets;
-it does not enumerate every onset in the 300-report history.
+The method retains ten seconds of past conditional states. Its frozen birth screen proposes selected onsets at 19 candidate lags,
+0--18, within a 20-report candidate window. It does not enumerate every
+onset in the 300-report history.
 Each history specifies family, asset, onset,
 restoration mode and severity. It starts from the stored conditional state
 before its proposed onset. That state already contains any ongoing
@@ -140,6 +140,35 @@ The rolling screen proposes histories; it is not another independent
 observation. Replaying a suffix replaces its original no-new-event suffix
 likelihood. The sequential update therefore counts each report once,
 rather than repeatedly accumulating overlapping ten-second windows.
+
+Within each fixed network hypothesis $\ell$, let $\mathcal H_{\ell,k}$
+denote its screened non-null histories and
+$\mathcal A_{\ell,k}=\mathcal H_{\ell,k}\cup\{0\}$ include the
+null history $0$ (no intervention). For each currently admitted candidate
+$h$, let $\bar\pi_{\ell,h,k}$ denote its predicted mass before scoring the
+current report. For an existing history this prediction applies the
+implementation's OFF hazards to survivors and children, generated on demand.
+For a proposed birth at report $\tau$, it includes the null-parent mass,
+the frozen birth prior, and the replay likelihood ratio
+$\exp(\ell^{\rm new}_{\tau:k-1}-\ell^{\rm old}_{\tau:k-1})$ with the
+corresponding transition and prior terms. Thus the proposal replaces the
+old no-event suffix before the current report is scored; the reports in the
+replayed suffix are not counted twice. The supplement gives the corresponding score identity. The report update and within-hypothesis
+normalization are
+\begin{align}
+\widetilde\pi_{\ell,h,k}&=L_{\ell,h,k}\bar\pi_{\ell,h,k},\qquad
+\widetilde\pi_{\ell,0,k}=L_{\ell,0,k}\bar\pi_{\ell,0,k},\nonumber\\
+\pi_{\ell,h,k}&=\frac{\widetilde\pi_{\ell,h,k}}
+ {\sum_{j\in\mathcal A_{\ell,k}}\widetilde\pi_{\ell,j,k}}.
+\label{eq:history-mass-update}
+\end{align}
+This is a normalization scheme for the currently admitted candidates, not
+a full Markov transition over all possible histories. After each update, the
+screen and beam prune hypotheses and the retained masses are renormalized
+jointly with the null. The outer weights $w_{\ell,k}$ are updated from
+network-level predictive densities and combine these conditional masses in
+$M$ and $\Gamma$; they are not part of the within-bank normalizer. The
+resulting masses do not define a calibrated posterior.
 
 \begin{figure*}[t]\centering
 \includegraphics[width=.91\textwidth]{figures/generated/reader_observed_signals.pdf}
@@ -206,8 +235,8 @@ probability calibration and globally optimal filtering are not established.
 
 \subsection{Emit Separate Detection, Diagnosis and Restoration Messages}
 
-The internal observer proposes an alarm after six reports above the 0.99
-active-mass threshold. Public alarm publication additionally requires an
+The internal observer proposes an alarm after the six-report persistence
+rule above the 0.99 active-mass threshold. Public alarm publication additionally requires an
 internal pending episode and six reports of qualified active support:
 the frozen source screen qualifies load cells, while admitted line cells
 qualify through their switched operator. Public OFF requires six reports
@@ -243,7 +272,7 @@ startup reports. Event truth is never an input.
 \item Transform report $k$; predict it from each retained physical or
 recovery history. Save each network model's predictive density before
 screening or correcting with this report.
-\item Screen onsets in the latest 18 reports. Start each proposed history
+\item Screen 19 candidate onset lags (0--18) within the 20-report window. Start each proposed history
 from its stored pre-onset state and replay its suffix, replacing the old
 suffix likelihood once.
 \item Score histories, integrating load severity or using the switched
