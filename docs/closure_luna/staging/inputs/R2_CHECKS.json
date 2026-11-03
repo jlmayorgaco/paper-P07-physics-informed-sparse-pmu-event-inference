@@ -1,0 +1,94 @@
+{
+  "scope": "Posthoc audit only. No C01 metric changes. Early restoration criterion chosen for this descriptive review: signed delay < -1/30 s. Replays are dependent; no significance claim.",
+  "hashes": {
+    "C:\\Users\\walla\\Documents\\Github\\paper-P07-physics-informed-sparse-pmu-event-inference\\main.pdf": "3b098f6f0682eedf39217c0ae28a73116bc2a8541cfe7aaddedd3d88ab64b07f",
+    "C:\\Users\\walla\\Documents\\Github\\paper-P07-physics-informed-sparse-pmu-event-inference\\main.tex": "797039997c56d6ca09b9d9ee2dca87f59b1445782ed8450c230c7cf9e8d9e4f8",
+    "C:\\Users\\walla\\Documents\\Github\\paper-P07-physics-informed-sparse-pmu-event-inference\\sections\\article_controlled_ablation.tex": "af0fcaa02b1dc0be1023b86e8307190948c9b08654d0369a0e53bef83e79f735",
+    "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_CONFIRMATORY_C01\\run\\results\\SUMMARY.csv": "3dd5daaa266d83854a1d2ea854b0ed92768c830e0a65efcb1d9fe8e80284b0d1",
+    "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_CONFIRMATORY_C01\\run\\results\\EVENTS.csv": "f343e4909016459c1b2e7e113afa0e286a1ccd4b9ebb5e052bbf2c851491f741",
+    "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_CONFIRMATORY_C01\\run\\results\\PAIRED_INTERVALS.csv": "bc471895bf9fd93a1eda924c595b28fbaecc5eaf2eb581494a4606228aec022c",
+    "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_CONFIRMATORY_C01\\run\\results\\EVALUATION_AUDIT.json": "e1420d0a71fe9ad48c260d36f471c204999b74d0846b74226126af2c64690f41"
+  },
+  "continuous": {
+    "ET_CANDIDATE": {
+      "events": 648,
+      "timely": 352,
+      "joint": 352,
+      "event_extras": 16,
+      "false_restorations": 16
+    },
+    "ET_REFERENCE": {
+      "events": 648,
+      "timely": 330,
+      "joint": 330,
+      "event_extras": 29,
+      "false_restorations": 29
+    },
+    "R11": {
+      "events": 648,
+      "timely": 644,
+      "joint": 645,
+      "event_extras": 72,
+      "false_restorations": 58
+    },
+    "R11_NOMINAL": {
+      "events": 648,
+      "timely": 643,
+      "joint": 645,
+      "event_extras": 92,
+      "false_restorations": 68
+    }
+  },
+  "restoration": {
+    "ET_CANDIDATE": {
+      "intended_event_realizations": 648,
+      "matched_alarms": 352,
+      "associated_restorations_available": 352,
+      "early_more_than_one_report": 26,
+      "minimum_signed_delay_s": -2.9858727309633686,
+      "maximum_signed_delay_s": 0.3042390701454458,
+      "no_associated_restoration": 296
+    },
+    "ET_REFERENCE": {
+      "intended_event_realizations": 648,
+      "matched_alarms": 330,
+      "associated_restorations_available": 330,
+      "early_more_than_one_report": 52,
+      "minimum_signed_delay_s": -4.30986689066442,
+      "maximum_signed_delay_s": 0.5281590886589314,
+      "no_associated_restoration": 318
+    },
+    "R11": {
+      "intended_event_realizations": 648,
+      "matched_alarms": 647,
+      "associated_restorations_available": 644,
+      "early_more_than_one_report": 0,
+      "minimum_signed_delay_s": 0.1671358821032242,
+      "maximum_signed_delay_s": 0.3490993398415014,
+      "no_associated_restoration": 4
+    },
+    "R11_NOMINAL": {
+      "intended_event_realizations": 648,
+      "matched_alarms": 648,
+      "associated_restorations_available": 643,
+      "early_more_than_one_report": 0,
+      "minimum_signed_delay_s": 0.1671358821032242,
+      "maximum_signed_delay_s": 0.3490993398415014,
+      "no_associated_restoration": 5
+    }
+  },
+  "bootstrap_parents": {
+    "('continuous', 'extras_per_event_hour')": [
+      18
+    ],
+    "('continuous', 'report_detection_f1')": [
+      30
+    ],
+    "('continuous', 'timely_fraction')": [
+      30
+    ],
+    "('persistent_line', 'first_correct_fraction')": [
+      39
+    ]
+  }
+}
