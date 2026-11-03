@@ -1,0 +1,28 @@
+Ejecuta el plan completo de cierre P07 que está en:
+C:/Users/walla/Documents/Github/paper-P07-physics-informed-sparse-pmu-event-inference/docs/PLAN_CIERRE_P07_PARA_LUNA.md
+
+Lee el plan antes de actuar y sigue su orden P0–P7. Trabaja autónomamente dentro
+de sus límites; resuelve detalles editoriales y de infraestructura con las
+alternativas indicadas. No me pidas elegir entre opciones que el plan ya decide.
+
+Objetivo: cerrar el artículo existente para revisión de David y Masoud, con
+resultados completos, contribución precisa y paquete reproducible. No crear
+versiones por bus, métodos nuevos, GNN ni GPU; no reajustar C01/A01, abrir
+RAW0002, modificar baselines, cambiar la imagen de eventos o hacer push.
+
+Verifica el proceso A01 por PID Y línea de comandos. No dupliques la corrida.
+Mientras corre, prepara revisión y derivados en staging según el plan. Integra
+solo sus resultados completos, incluidos efectos nulos o regresiones. No
+presentes un resultado pendiente como demostrado. Si hay un bloqueo real,
+documenta evidencia y continúa el trabajo que no dependa de él.
+
+La auditoría exigente está en docs/review_20261102_strict_current/AUDITORIA_P07.md.
+Debes responder sus objeciones con cambios verificables o con afirmaciones
+estrechadas, no con promesas. Conserva los resultados históricos sin mezclarlos
+con el método final. Prioriza cobertura oportuna, alarmas y cierre de episodios.
+
+Mantén docs/closure_luna/PROGRESS.md y STATUS.json para retomar sin reiniciar.
+Entrega PDF principal, suplemento, página coautores, ZIP y FINAL_READINESS.md.
+No envíes mensajes a autores ni sometas el paper. No prometas aceptación ni
+ausencia de objeciones. Separa listo para revisión científica de pendientes de
+autores antes de envío. Empieza por P0 y completa todo lo ejecutable.

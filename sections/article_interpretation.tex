@@ -3,80 +3,63 @@
 
 \input{sections/article_information}
 
-\subsection{What Recovery Memory Establishes}
-A separate full-DAE control supplies the earlier history and later onset.
-Source separation stays essentially unchanged when that history is known
-and falls when prior severity is uncertain; binary source accuracy has no
-mean gain. Retaining recovery is therefore justified as a consistent
-prediction of the continuing response, not as a universal increase in
-location information. The stream comparison tests the complete frozen
-procedure. Its admission-rule ablation does not isolate every operation
-that retains recovery.
+\input{sections/article_recovery_x04}
 
-\IfFileExists{generated/ei_x02_macros.tex}{A separate signature test holds
-pre-event measurements and offset equal while changing the event--context
-response term. It isolates a response approximation, not an improvement
-of the unchanged causal detector. Known timing, one scalar context and
-four load sources bound that result.}{Operating-point changes can leave an
-event response misspecified after offset correction; this component
-requires a separate matched test.}
+\subsection{Operational Meaning and Scope}
+The physical distinction underlying the stream method is simple:
+restoration changes an input or topology, but does not erase the machine
+state. Retaining that state lets recovery compete with a new intervention.
+The development comparison also shows why alarm count and timely location
+must be reported together. Stricter admission can suppress extras while
+rejecting a real load. The existing admission ablation does not isolate
+the contribution of every recovery-memory operation.
 
-\subsection{What the Comparison Does Not Establish}
-Trajectory libraries, sequential likelihoods and multiple-model filters
-precede this work. The claim here is the specified competition of new
-interventions with retained recovery, and its measured behavior, rather
-than a general filtering optimum. Warner's trajectory procedure was not
-run on this cohort. The feature baseline's trailing summaries describe
-how signals changed, but do not encode the counterfactual response of
-\emph{each candidate source} through the network and PMU terminal map.
-That is a concrete difference in information used by the algorithms and
-is consistent with the observed load gap; these experiments do not prove
-that a better feature set or larger training set could not close it.
-The original hackathon submission addressed nine labels with 30-s
-decisions. It is a useful earlier result and a source of feature design,
-but its internal validation score cannot be compared numerically with
-event-level timely attribution here. The two causal ExtraTrees adapters
-were trained separately for this task; their load misses do not establish
-a new official hackathon score or rule out better supervised models.
-Chen's first-stop adapter is tested only on persistent lines under DC and
-white-injection assumptions.
+\IfFileExists{generated/ei_x02_macros.tex}{The signature experiment addresses
+a different source of error. Its corrected variants receive the same
+pre-event measurements and offset. Any difference between them therefore
+comes from the event--context term and its estimated context, rather than
+a privileged baseline or longer window. This isolates the tested response
+approximation, but not an improvement of the unchanged causal detector.
+Known timing, one scalar context and four load sources make it a controlled
+component test.}{Changing an operating reference can also leave the event
+response misspecified. A matched signature experiment is needed to
+distinguish that error from an onset or recovery failure.}
 
-\subsection{Broader Hackathon Scope and Retrospective Transfer}
-The earlier all-family pipeline and integrity interface are retained as
-separate results. An archived observation-only composition reproduces
-all \SystemWindows{} physical/integrity windows and reconstructs
-availability over \SystemReports{} reports; this verifies interface
-consistency, not additional detection accuracy. On retrospectively
-annotated RAW0001 windows, a source-only learned hybrid changes joint
-family/source correctness from \RawZIPJoint{}/\RawZIPTotal{} to
-\RawHybridJoint{}/\RawHybridTotal{}, with one gain and no losses. It is
-not the physical bank and does not establish broad transfer. The frozen
-physical bank rejects that record because the prefix ROCOF noise scale
-is outside its admitted support; no later quiet prefix was substituted
-to force admission.
-The supplement preserves these outcomes alongside the simulation results.
+Our construction builds on trajectory-based diagnosis, sequential
+likelihoods and multiple-model filtering. Their general principles are not
+new contributions here. The methodological claim concerns the specified
+competition among intervention and recovery histories; the experiments
+measure its operational behavior. Numerical superiority is claimed only
+where a common-data comparison supports it, not over Warner or other
+procedures that were not executed.
 
-\subsection{Simulation and Deployment Boundary}
-The causal catalog has nine load buses and nine lines, with a quiet
-startup. Missing PMUs, unknown families, unrestricted simultaneous
-sources, unseen-source transfer and field records remain untested. The
-generating plant and inference predictors share the F01 equation family
-and PMU map. The three R/X conditions perturb parameters within that
-family; they do not test a different producer, control law or instrument
-installation. Thus the high within-simulator hit rate is not evidence of
-the same rate on RAW0001 or a field network. The
-simulator keeps a provisional BUS5 current terminal and omits BUS39
-current angle. Its noise includes temporal and cross-PMU dependence
-within signal families but omits the archived cross-family factor;
-frequency/ROCOF noise is added after phase-based estimation as separate
-signal families. It is not obtained by differentiating the exported noisy
-angle, and the archived cross-family noise factor is not applied. Hence agreement with
-this simulator does not verify the source producer's CT placement or a
-complete physical PMU installation.
+The continuous catalog contains nine load buses and nine lines and requires
+an intervention-free startup. Missing PMUs, unknown families, source-excluded
+causal transfer and field operation are untested. F01 retains a provisional
+BUS5 current terminal and excludes BUS39 current angle. Agreement with
+this research model does not establish the producer's CT placement or
+exact reproduction of RAW0001. Local predictors, history pruning, covariance
+approximations and fitted startup parameters also limit probability claims.
 
-Out-of-bank R/X preserves most timely source decisions but sharply raises
-unmatched alarms. The parent-cluster intervals describe these simulated
-parents, not all grids or PMU layouts. Context fitting, history pruning
-and shared covariance approximations also prevent a calibrated-posterior
-claim. Report-causal operation has not been timed as a real-time service;
-the implementation is not validated for protection or control.
+F01's noise port applies temporal and cross-PMU structure within each
+signal family. Its archived cross-family factor covariance is not applied,
+and frequency/ROCOF noise is added after phase estimation. The inference
+comparison therefore concerns this declared simulator, not the complete
+dependence structure of a physical PMU installation.
+
+The two ExtraTrees adapters are particular frozen implementations. Their
+load-transfer failure does not rule out learned load diagnosis or establish
+a better official hackathon score. Chen's eligible test concerns persistent
+line openings; its F01 adapter has DC/white-injection assumptions that do
+not capture all instrumental effects. Its mismatches and censored decisions
+remain part of the comparison.
+
+Joint context uncertainty, unrestricted simultaneous sources and calibrated
+posterior probabilities remain unvalidated. Such extensions must preserve
+source-discriminating response directions and account for dependence
+between estimation error and measurement noise.
+
+Finally, processing reports causally is not proof of real-time throughput.
+Observation time, computation and queue delay must be measured separately.
+The present implementations remain research inference services rather
+than validated protection or control systems.

@@ -1,6 +1,6 @@
 # P07: contribution, evidence and limits
 
-Coauthor-review draft | 03 Nov 2026, 00:07 Colombia
+Coauthor-review draft | 02 Nov 2026, 14:00 Colombia
 
 ## Question and actual contribution
 
@@ -8,7 +8,7 @@ How can eight PMUs distinguish the physical cause of a network disturbance? The 
 
 ## Earlier evidence is part of the paper
 
-Separate component tests recover hidden voltages, quantify feature gains and show that mixed-source sensitivities improve local response fit. A direct historical transfer of the submitted ZIP yields 0/96 joint source decisions versus 96/96 for an earlier physical estimator; its confusion matrices are included, with the development/domain advantage explicit. The archived batch Bayesian support test retains its evidence-normalization caveat. None of these tests isolates a tensor/Bayes contribution to final causal accuracy. The frozen continuous comparison uses new causal ExtraTrees comparators, not the original 30-s submission.
+Separate component tests recover hidden voltages, quantify feature gains and show that mixed-source sensitivities improve local response fit. A direct historical transfer of the submitted ZIP yields 0/96 joint source decisions versus 96/96 for an earlier physical estimator; its confusion matrices are included, with the development/domain advantage explicit. The archived batch Bayesian support test retains its evidence-normalization caveat. None of these tests isolates a tensor/Bayes contribution to final causal accuracy. C01 uses new causal ExtraTrees comparators, not the original 30-s submission.
 
 ## Sealed comparison: 171 physical trajectories, 342 observed records
 
@@ -27,6 +27,6 @@ Continuous: the physical bank attributes 322/324 loads and 322/324 lines before 
 
 The sealed study supports timely attribution on the declared nine-load/nine-line simulator catalog, especially loads, while exposing an alarm burden under network mismatch. Replayed conditions and noise share parents; 648 is not 648 independent events. Original tree validation shares two normal groups with fitting; the later grouped 70/30 study is a different model. No official hackathon-score improvement, source-excluded transfer, all-family diagnosis, calibrated probabilities, field operation or real-time throughput is established. Warner trajectory search and IMM/multiple-history methods are acknowledged; no matched numerical advantage over them is claimed.
 
-## Controlled component study and coauthor decision
+## For David and Masoud
 
-Posthoc study on 18 parents/108 events: marginal/carry: 108/108 and 1 extras; profile/carry: 108/108 and 1 extras; marginal/reset: 75/108 and 166 extras; profile/reset: 75/108 and 166 extras. Both carry arms also have one unmatched restoration; both reset arms have 130 and 33/108 events without a timely diagnosis. Median diagnosis delay is 0.267 s with carry and 0.337 s after reset. Normal controls have 0 false alarms in 1,764 s measured exposure (588 s from each of three 600-s records). Paired 18-parent intervals for carry versus reset are +0.306 timely fraction (95% CI 0.241-0.380) and -275 extras per event-record hour (95% CI -325 to -223.333), descriptive and posthoc. The marginal and bounded-profile scores tie on these endpoints. The profile arm retains conditional Bayesian state estimation and fixed priors; reset removes only physical-state carry at inferred closure, not instrumental memory or simulated state. These outcomes do not establish independent confirmation or superiority at matched false-alarm rates. Author declarations remain open.
+Coauthor-review draft. A controlled 24-record factorial study is running with the same five-model bank and publisher: marginal versus profile amplitude scores, and physical-state carry versus reset at inferred closure. No effect is claimed before completion. This is a posthoc study on existing data, not independent confirmation. Scientific packaging, bibliography and author declarations remain pending before submission.

@@ -1,0 +1,267 @@
+{
+  "scope": "Availability and catalog checks only; these are NOT inference performance scores.",
+  "runtime_sha256": "e3ef8411aed153f26f7347a0db1e7a5b487c203ca169689710db644df233aa3c",
+  "missing_after_startup": {
+    "input": "one missing voltage magnitude at t=20s",
+    "outcome": "Unsupported missing data outside initial f/ROCOF warmup"
+  },
+  "admitted_catalog": [
+    {
+      "id": "BUS3",
+      "family": "load",
+      "bus": 3,
+      "i": 3,
+      "j": 3
+    },
+    {
+      "id": "BUS4",
+      "family": "load",
+      "bus": 4,
+      "i": 4,
+      "j": 4,
+      "new_origin": true
+    },
+    {
+      "id": "BUS7",
+      "family": "load",
+      "bus": 7,
+      "i": 7,
+      "j": 7
+    },
+    {
+      "id": "BUS15",
+      "family": "load",
+      "bus": 15,
+      "i": 15,
+      "j": 15,
+      "new_origin": true
+    },
+    {
+      "id": "BUS16",
+      "family": "load",
+      "bus": 16,
+      "i": 16,
+      "j": 16
+    },
+    {
+      "id": "BUS20",
+      "family": "load",
+      "bus": 20,
+      "i": 20,
+      "j": 20
+    },
+    {
+      "id": "BUS24",
+      "family": "load",
+      "bus": 24,
+      "i": 24,
+      "j": 24,
+      "new_origin": true
+    },
+    {
+      "id": "BUS26",
+      "family": "load",
+      "bus": 26,
+      "i": 26,
+      "j": 26
+    },
+    {
+      "id": "BUS31",
+      "family": "load",
+      "bus": 31,
+      "i": 31,
+      "j": 31
+    },
+    {
+      "id": "LINE3-4",
+      "family": "line",
+      "edge": 6,
+      "i": 3,
+      "j": 4,
+      "new_origin": true
+    },
+    {
+      "id": "LINE4-14",
+      "family": "line",
+      "edge": 9,
+      "i": 4,
+      "j": 14
+    },
+    {
+      "id": "LINE9-39",
+      "family": "line",
+      "edge": 17,
+      "i": 9,
+      "j": 39
+    },
+    {
+      "id": "LINE14-15",
+      "family": "line",
+      "edge": 24,
+      "i": 14,
+      "j": 15,
+      "new_origin": true
+    },
+    {
+      "id": "LINE16-17",
+      "family": "line",
+      "edge": 26,
+      "i": 16,
+      "j": 17
+    },
+    {
+      "id": "LINE17-18",
+      "family": "line",
+      "edge": 30,
+      "i": 17,
+      "j": 18,
+      "new_origin": true
+    },
+    {
+      "id": "LINE23-24",
+      "family": "line",
+      "edge": 38,
+      "i": 23,
+      "j": 24
+    },
+    {
+      "id": "LINE26-27",
+      "family": "line",
+      "edge": 42,
+      "i": 26,
+      "j": 27
+    },
+    {
+      "id": "LINE26-29",
+      "family": "line",
+      "edge": 44,
+      "i": 26,
+      "j": 29
+    }
+  ],
+  "raw0001_label_inventory": [
+    {
+      "file": "Bus10_Competition_Data_nanmask.csv",
+      "rows": 161379,
+      "event_counts": {
+        "0": 142444,
+        "3": 9528,
+        "4": 9132,
+        "1": 149,
+        "2": 126
+      },
+      "data_present_counts": {
+        "1": 161379
+      }
+    },
+    {
+      "file": "Bus19_Competition_Data_nanmask.csv",
+      "rows": 161379,
+      "event_counts": {
+        "0": 142444,
+        "3": 9528,
+        "4": 9132,
+        "1": 149,
+        "2": 126
+      },
+      "data_present_counts": {
+        "1": 161379
+      }
+    },
+    {
+      "file": "Bus22_Competition_Data_nanmask.csv",
+      "rows": 161379,
+      "event_counts": {
+        "0": 142444,
+        "3": 9528,
+        "4": 9132,
+        "1": 149,
+        "2": 126
+      },
+      "data_present_counts": {
+        "1": 161379
+      }
+    },
+    {
+      "file": "Bus29_Competition_Data_nanmask.csv",
+      "rows": 161379,
+      "event_counts": {
+        "0": 133798,
+        "4": 9132,
+        "3": 8974,
+        "5": 8646,
+        "6": 554,
+        "1": 149,
+        "2": 126
+      },
+      "data_present_counts": {
+        "1": 152179,
+        "0": 9200
+      }
+    },
+    {
+      "file": "Bus2_Competition_Data_nanmask.csv",
+      "rows": 161379,
+      "event_counts": {
+        "0": 142422,
+        "3": 9528,
+        "4": 9132,
+        "1": 149,
+        "2": 126,
+        "7": 22
+      },
+      "data_present_counts": {
+        "1": 161379
+      }
+    },
+    {
+      "file": "Bus39_Competition_Data_nanmask.csv",
+      "rows": 161379,
+      "event_counts": {
+        "0": 142389,
+        "3": 9528,
+        "4": 9132,
+        "1": 149,
+        "2": 126,
+        "7": 55
+      },
+      "data_present_counts": {
+        "1": 161379
+      }
+    },
+    {
+      "file": "Bus5_Competition_Data_nanmask.csv",
+      "rows": 161379,
+      "event_counts": {
+        "0": 142444,
+        "3": 9528,
+        "4": 9132,
+        "1": 149,
+        "2": 126
+      },
+      "data_present_counts": {
+        "1": 161379
+      }
+    },
+    {
+      "file": "Bus6_Competition_Data_nanmask.csv",
+      "rows": 161379,
+      "event_counts": {
+        "0": 142444,
+        "3": 9528,
+        "4": 9132,
+        "1": 149,
+        "2": 126
+      },
+      "data_present_counts": {
+        "1": 161379
+      }
+    }
+  ],
+  "illustrative_poisson_zero_alarm_upper95_per_hour_for_204s": 52.86586365095278,
+  "poisson_caveat": "Planning illustration assuming independent homogeneous Poisson exposure. H04 repeated conditions and colored noise do not establish this assumption.",
+  "no_model_trained": true,
+  "no_detector_scored_on_raw": true,
+  "c01_partial_results_read": false,
+  "raw0002_read": false
+}

@@ -1,5 +1,0 @@
-method,display_name,intended_event_realizations,timely_attributions,event_extras,associated_restorations_available,early_restorations_gt_one_report,early_restorations_fraction_of_available,events_without_associated_restoration_value,missing_fraction_of_648,minimum_signed_off_delay_s,median_signed_off_delay_s,maximum_signed_off_delay_s
-R11,Physical history bank,648,644,72,644,0,0.0,4,0.006172839506172839,0.1671358821032242,0.1822116035900194,0.3490993398415014
-R11_NOMINAL,Nominal physical bank,648,643,92,643,0,0.0,5,0.007716049382716049,0.1671358821032242,0.1822116035900194,0.3490993398415014
-ET_REFERENCE,Causal ExtraTrees,648,330,29,330,52,0.15757575757575756,318,0.49074074074074076,-4.30986689066442,0.1815996179923047,0.5281590886589314
-ET_CANDIDATE,Short-window ExtraTrees,648,352,16,352,26,0.07386363636363637,296,0.4567901234567901,-2.9858727309633686,0.1847922540810671,0.3042390701454458

@@ -1,0 +1,30 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+We formulated sparse-PMU event attribution through competing physical
+histories. Load/line predictors start from estimated past states and retain
+the cause of the response after restoration. Active mass $M$ and its
+increment $\Delta M$ expose the changing explanation rather than replacing
+the physical dynamics.
+
+The sealed continuous
+evaluation gives \COneMixTimely{}/\COneMixTotal{} timely family/source
+decisions with \COneMixExtras{} extra alarms for the mixture, and
+\COneNomTimely{}/\COneNomTotal{} with \COneNomExtras{} for nominal.
+The frozen ExtraTrees reference gives \COneETTimely{}/\COneETTotal{}
+with \COneETExtras{} extras. Most mixture extras arise under out-of-bank
+R/X, so the gain in timely attribution does not imply uniformly better
+alarm control.
+
+The earlier hackathon pipeline remains a broader nine-label,
+feature-based system. Its 30-s-window validation is a separate result;
+the causal ExtraTrees successor in this paper provides the direct
+same-stream comparison. The physical bank's strongest supported gain is
+timely load-source attribution, while learned features already diagnose
+most lines in this catalog with fewer unmatched alarms.
+
+The gain concerns a specified load/line catalog in one simulator. The
+larger alarm burden under unmodeled R/X and the absence of an isolated
+recovery-memory ablation limit any causal explanation of that gain. The
+method does not yet establish all-family diagnosis, calibrated event
+probabilities, field transfer or real-time deployment.

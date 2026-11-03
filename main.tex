@@ -31,7 +31,29 @@
 }
 
 \begin{abstract}
-Eight PMUs observe only part of an IEEE 39-bus system, so a disturbance can be detected without uniquely identifying its cause. We evaluate a recovery-aware physical hypothesis bank for continuous attribution of load changes and line openings in a fixed simulated catalog. Switched differential-algebraic and oriented PMU-terminal models generate candidate observation paths; a local truncated-Gaussian integral handles unknown load severity, and the finite history bank retains predicted physical and instrumental response after OFF. The full bank remains approximate through plug-in context, shared regime covariances, screening and pruning. Across 18 six-intervention schedules, three network conditions and two noise scales, it assigns the correct family and source before OFF in 644 of 648 event realizations, with 72 unmatched alarms. Two causal ExtraTrees references reach 330/648 with 29 alarms and 352/648 with 16 alarms; both were weak on load attribution during development, so the comparison does not establish general superiority over machine learning. A posthoc audit finds that 0/644 available physical-bank restorations and 0/643 nominal restorations occur more than one report early, versus 52/330 and 26/352 for the learned methods; many learned events have no restoration value. These dependent replays do not isolate the effect of memory. The results support a coverage--alarm tradeoff for this model family and catalog, not calibrated probabilities, field validation or real-time operation.
+Sparse PMU measurements can reveal a disturbance without uniquely
+identifying its cause. We study how network equations and conditional
+Bayesian evidence complement feature-based classification for this task.
+A bank of switched differential-algebraic predictors compares source,
+onset, severity and restoration histories, retaining electrical and
+instrumental memory between interventions. Local severity integration and
+fixed-network model averaging produce separate active-event and
+originating-cause masses. Component experiments examine hidden-voltage
+reconstruction, engineered-feature localization and mixed-source response
+sensitivities; these are distinguished from the final causal estimator.
+In a frozen IEEE 39-bus comparison with eight PMUs, 18 six-event schedules
+are replayed under three network conditions and two noise levels. The
+physical bank makes \COneMixTimely{}/\COneMixTotal{} timely family/source
+decisions with \COneMixExtras{} extra alarms, compared with
+\COneETTimely{}/\COneETTotal{} and \COneETExtras{} for a causal ExtraTrees
+reference. Its strongest gain is load-source attribution; line attribution
+is similar to the short-window learned comparator. Most extra physical
+alarms occur under network changes outside the model bank. A separate
+historical transfer experiment retains the original hackathon submission
+and its confusion matrix. The results identify a useful coverage--alarm
+trade-off within the simulated catalog. Transfer to a different network
+model, calibration of event probabilities and the separate contribution
+of each inference component require further evidence.
 \end{abstract}
 
 \begin{keywords}
@@ -53,7 +75,6 @@ event detection, model uncertainty, phasor measurement units, physics-informed i
 \input{sections/narrative_results}
 % Allow following text to fill the column while the full-width history figure floats.
 \input{sections/08c_c01_confirmatory}
-\input{sections/article_closure_results}
 \input{sections/article_ablation_design}
 \input{sections/article_controlled_ablation}
 \input{sections/article_interpretation}
