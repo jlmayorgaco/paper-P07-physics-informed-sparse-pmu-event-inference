@@ -2,20 +2,29 @@
 \label{sec:conclusion}
 
 A restored electrical intervention can remain the cause of the observed
-response. We formulated load/line attribution through physical histories
-that start from estimated past states and retain that response through
-restoration. Active and originating-cause weights separate the current
-intervention from its continuing physical effect.
+response. We formulated load/line attribution from sparse PMUs as change
+detection and isolation with switched-DAE post-change models, in which
+histories start from estimated past states, keep that state through
+restoration and separate the active intervention from its originating
+cause. Because the histories are linear-Gaussian given their mode paths,
+the network operators also give each candidate's detection and isolation
+information, its minimum detectable change and the cost of forgetting the
+physical state.
 
-The independent simulated comparison gives
-\COneMixTimely{}/\COneMixTotal{} timely family/source decisions and
-\COneMixExtras{} extra alarms for the five-model bank, compared with
-\COneETTimely{}/\COneETTotal{} and \COneETExtras{} for the fixed causal
-ExtraTrees reference. The advantage is concentrated in loads; line
-coverage is similar to the short-window learned comparator. The controlled
-study identifies a strong state-carry effect, while marginal and profiled
-severity scores tie. Together, these results support an executable approach that uses
-electrical dynamics to attribute interventions from remote PMUs, preserves
-the response across restoration, and separates timely coverage from alarm
-burden. Physical-state continuity supplies the consistent reference needed
-to evaluate subsequent interventions during recovery.
+In an independent simulated evaluation the bank attributes
+\COneMixTimely{}/\COneMixTotal{} interventions before restoration and raises
+no alarm in 11.8\,h of normal records; its remaining errors and most of its
+\COneMixExtras{} extra alarms arise from network-model mismatch. The
+information analysis explains this level of performance, separates the
+information-limited part of the alarm delay from its algorithmic part,
+and predicts the cost of resetting the state and the noise level at which
+the smallest load becomes undetectable. \RevConclusionNoise{} The
+single-model bank already runs faster than the PMU reporting rate.
+
+Two directions follow. The detectability analysis can be extended from a
+fixed catalog to placement and catalog design, since it ranks sources by
+information before any data are collected. The same framework accommodates
+other parameter-override events, such as generation changes, and
+measurement-integrity hypotheses that are inconsistent with network
+dynamics; testing them, together with transfer to an independent dynamic
+model, is the next step toward field use.

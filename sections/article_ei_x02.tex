@@ -6,7 +6,7 @@ The stream bank already builds local predictors at estimated operating
 points. A separate experiment tests why changing a reference alone may be
 insufficient. It compares three response approximations with identical
 observations, channels, timing, amplitude prior and inference horizon.
-It is a controlled test of a mixed derivative, not another version of R11.
+It is a controlled test of a mixed derivative, not another version of the stream method.
 
 Let $\eta$ denote a scalar operating change and $a$ the signed load factor.
 Central differences of complete nonlinear DAE trajectories give
@@ -17,7 +17,7 @@ Central differences of complete nonlinear DAE trajectories give
 \end{align}
 The event follows the same ON/OFF schedule in every derivative trajectory.
 The fixed $Q_i^0$ is the coefficient of $a^2$, obtained from the centered
-second difference divided by $2h^2$. After removing the frozen common
+second difference divided by $2h^2$. After removing the fixed common
 angle drift, the three predicted histories are
 \begin{align}
  \mu_i^{\rm N}(a)&=y_0+aD_i^0+a^2Q_i^0,\nonumber\\
@@ -37,7 +37,7 @@ source or severity enters inference.
 \input{figures/ei_x02_architecture}
 
 \subsection{Test Cases and Decision Contract}
-The frozen F01 plant supplies all trajectories. The scalar $\eta$ scales
+The research plant supplies all trajectories. The scalar $\eta$ scales
 PQ operating injections and active PV dispatch; feasible initialization
 can change permitted operating setpoints, but not machine constants,
 line impedances, ZIP fractions or the PMU model. Central event/context
@@ -50,9 +50,9 @@ None belongs to the prescribed voltage-measurement PMU set; the separate
 oriented current-terminal assignments remain fixed.
 
 Each case is one ten-second integration, with ON at 3 s, OFF at 6 s and
-no state reset. The context fit ends at 2.5 s. Three frozen instrumental
+no state reset. The context fit ends at 2.5 s. Three fixed instrumental
 noise seeds produce \EIObserved{} paired records. The nonlinear PMU
-frequency/ROCOF operator runs before its archived instrumental noise is
+frequency/ROCOF operator runs before its stored instrumental noise is
 added. Both corrected methods retain the same measured prefix, so an
 advantage cannot arise from supplying one method a better initial reference.
 
@@ -79,7 +79,7 @@ context step is halved. Halving the event step in the two checked directions
 changes it by at most \EIEventFDHigh{}\%. These are local numerical checks, not a
 global smoothness or identifiability certificate.
 Percentages of event severity refer to the P/Q input factors; actual load
-power also responds to voltage under the frozen impedance law.
+power also responds to voltage under the fixed impedance law.
 
 \begin{figure*}[t]\centering
 \includegraphics[width=.96\textwidth]{figures/generated/ei_x02_comparison.pdf}
@@ -109,6 +109,6 @@ and methods together. The same three noise seeds are reused across cases;
 these intervals describe case variation conditional on those common noise
 realizations, not uncertainty over a noise population or transfer to arbitrary
 sources or plants. The step-halving checks and all
-case outcomes remain in the frozen artifact package. Better fidelity, if
+case outcomes remain in the fixed artifact package. Better fidelity, if
 observed, is not sufficient to establish calibrated source probabilities,
 all-family diagnosis or a benefit in the unchanged causal campaign.

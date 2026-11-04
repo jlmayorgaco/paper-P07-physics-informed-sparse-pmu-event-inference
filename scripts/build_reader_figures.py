@@ -248,7 +248,7 @@ def c01_intervals(intervals: pd.DataFrame) -> None:
     bx.set_xlabel("Extra alarms / monitored event-hour: difference")
     ax.set_title("A. More events attributed in time", loc="left", fontsize=9)
     bx.set_title("B. More unmatched alarms with R/X mismatch", loc="left", fontsize=9)
-    fig.suptitle("Physical bank minus frozen ExtraTrees reference; 95% parent-cluster intervals",
+    fig.suptitle("Physical bank minus ExtraTrees reference; 95% parent-cluster intervals",
                  fontsize=8.5)
     save(fig, "reader_c01_intervals")
 

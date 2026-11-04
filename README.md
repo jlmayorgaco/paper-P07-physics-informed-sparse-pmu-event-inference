@@ -1,5 +1,8 @@
 # P07 — Recovery-Aware Physical Attribution of Load and Line Events From Sparse PMUs
 
+**Revision 4 November 2026.** Repositioned as switched-DAE change detection and isolation, with a new physics-derived detectability section (Willsky--Jones signature information, minimum detectable change, cost of forgetting the state), a noise-stress test with unchanged code (N01) and a measured real-time rate for the nominal bank. See the [verified audit and plan](docs/review_chatgpt_20261104/PLAN_SUBMIT_READY.md) and the [response matrix](docs/review_chatgpt_20261104/RESPONSE_MATRIX.md). Pre-revision sources are kept in `archive/pre_revision_20261104/`.
+
+
 Scientific audit revision (3 November): the article has eight sections and a narrower recovery-consistency claim. See the [audit response, implemented corrections and remaining scientific gaps](docs/SCIENTIFIC_AUDIT_RESPONSE_20261103.md). This is a coauthor-review draft, not a submission-ready manuscript.
 
 The [latest executed review](docs/revision_execution_20261103/RESPONSE_AND_STATUS.md) adds explicit affine/state–amplitude equations, portable numerical checks, verified comparator lineage and a focused supplement containing complete C01/A01 outcomes. The second supplied Gemini attachment duplicates the first; the revision addresses that review and the independent repository audit.

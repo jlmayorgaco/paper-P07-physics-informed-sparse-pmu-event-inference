@@ -20,6 +20,7 @@
 \IfFileExists{generated/submission_s01_raw_macros.tex}{\input{generated/submission_s01_raw_macros}}{}
 \IfFileExists{generated/submission_s01_ml_h04_macros.tex}{\input{generated/submission_s01_ml_h04_macros}}{}
 \IfFileExists{generated/submission_s01_system_macros.tex}{\input{generated/submission_s01_system_macros}}{}
+\input{generated/revision_20261104_macros}
 
 \begin{document}
 \input{metadata}
@@ -27,33 +28,33 @@
   pdftitle={Recovery-Aware Physical Attribution of Load and Line Events From Sparse PMUs},
   pdfauthor={Jorge Luis Mayorga Taborda; Yessica Africano Rodriguez; Masoud Barati; Payman Dehghanian; David Felipe Celeita Rodriguez},
   pdfsubject={Causal physical event attribution, recovery, and source resolution from sparse PMUs},
-  pdfkeywords={dynamic state estimation, functional observability, phasor measurement units, physics-informed inference, source localization}
+  pdfkeywords={change detection and isolation, differential-algebraic equations, event attribution, phasor measurement units, physics-informed inference}
 }
 
 \begin{abstract}
-After a load is restored or a line is reclosed, residual dynamics can
-resemble a new intervention. We study sequential attribution from eight
-PMUs in an IEEE 39-bus model with nine candidate load buses and nine lines.
-A bank of switched differential-algebraic predictors compares intervention
-and recovery histories from estimated past states. Conditional Bayesian
-evidence integrates load severity, while separate active and cause weights
-retain the explanation of a restored intervention. In an independent
-simulation evaluation, 108 interventions are replayed under three network
-conditions and two noise levels. The physical bank produces
-\COneMixTimely{}/\COneMixTotal{} correct family/source decisions before
-restoration with \COneMixExtras{} unmatched alarms, versus
-\COneETTimely{}/\COneETTotal{} with \COneETExtras{} for a fixed causal
-ExtraTrees adapter. The gain concentrates on loads; line coverage matches
-the short-window learned comparator. A controlled posthoc study identifies a state-carry benefit under both
-marginal and profiled severity scoring: retaining the state gives 108/108
-timely decisions and one extra alarm, compared with 75/108 and 166 after
-resetting physical deviations. The results establish recovery-consistent
-prediction as a useful design choice for sparse-PMU attribution and
-quantify its coverage--alarm trade-off under network uncertainty.
+After a load is restored or a line is reclosed, the machines keep moving,
+and the residual response can resemble a new intervention. We formulate
+load/line attribution from eight PMUs in the IEEE 39-bus system as change
+detection and isolation with switched differential-algebraic (DAE)
+post-change models. A bank of linearized DAE predictors compares
+intervention and recovery histories that start from estimated past
+states, integrates load severity in closed form, and keeps a restored
+intervention available as the cause of the continuing response. The same
+operators give Willsky--Jones signatures, from which we compute, before
+any experiment, each source's detection and isolation information, its
+minimum detectable change versus noise, and the spurious evidence created
+by forgetting the physical state at restoration. The analysis predicts
+detection at the first post-onset report and reset evidence at least two
+orders of magnitude above the alarm threshold. In an independent
+simulation evaluation (18 physical parents, 108 interventions, 648 paired
+replays) the bank attributes \COneMixTimely{}/\COneMixTotal{} interventions
+before restoration with no alarm in 11.8\,h of normal records; resetting
+the state lowers timely attribution from 108/108 to 75/108. \RevAbstractNoise{}
+The single-model bank processes reports faster than the 30-report/s input.
 \end{abstract}
 
 \begin{keywords}
-event detection, model uncertainty, phasor measurement units, physics-informed inference, sequential diagnosis, source localization.
+change detection and isolation, differential-algebraic equations, event attribution, phasor measurement units, physics-informed inference, power system dynamics.
 \end{keywords}
 
 \titlepgskip=-21pt
@@ -64,6 +65,7 @@ event detection, model uncertainty, phasor measurement units, physics-informed i
 \input{sections/article_related}
 \input{sections/narrative_problem}
 \input{sections/article_method}
+\input{sections/article_theory}
 \FloatBarrier
 \input{sections/narrative_protocol}
 \section{Results and Controlled Comparisons}\label{sec:narrative-results}
@@ -71,6 +73,7 @@ event detection, model uncertainty, phasor measurement units, physics-informed i
 \input{sections/narrative_results}
 \input{sections/article_ablation_design}
 \input{sections/article_controlled_ablation}
+\input{sections/article_noise_stress}
 \input{sections/article_interpretation}
 \input{sections/article_final_conclusion}
 

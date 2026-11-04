@@ -1,0 +1,83 @@
+% !TeX program = pdflatex
+% Main article only. Build both documents with scripts/build_manuscript_bundle.ps1.
+% ieeeaccess.cls reuses \year as a metadata setter. Preserve the TeX primitive
+% so PGF/TikZ can initialize its deterministic machinery while loading.
+\let\PSevenTeXYear\year
+\documentclass{ieeeaccess}
+
+\input{preamble}
+\usepackage{placeins}
+\input{generated/results_macros}
+\input{generated/continuous_macros}
+\input{generated/narrative_macros}
+\input{generated/c01_macros}
+\input{generated/reader_macros}
+\input{generated/evidence_bridge_macros}
+\input{generated/review_audit_macros}
+\IfFileExists{generated/ei_x02_macros.tex}{\input{generated/ei_x02_macros}}{}
+\IfFileExists{generated/submission_s01_macros.tex}{\input{generated/submission_s01_macros}}{}
+\IfFileExists{generated/submission_s01_learning_macros.tex}{\input{generated/submission_s01_learning_macros}}{}
+\IfFileExists{generated/submission_s01_raw_macros.tex}{\input{generated/submission_s01_raw_macros}}{}
+\IfFileExists{generated/submission_s01_ml_h04_macros.tex}{\input{generated/submission_s01_ml_h04_macros}}{}
+\IfFileExists{generated/submission_s01_system_macros.tex}{\input{generated/submission_s01_system_macros}}{}
+
+\begin{document}
+\input{metadata}
+\hypersetup{
+  pdftitle={Recovery-Aware Physical Attribution of Load and Line Events From Sparse PMUs},
+  pdfauthor={Jorge Luis Mayorga Taborda; Yessica Africano Rodriguez; Masoud Barati; Payman Dehghanian; David Felipe Celeita Rodriguez},
+  pdfsubject={Causal physical event attribution, recovery, and source resolution from sparse PMUs},
+  pdfkeywords={dynamic state estimation, functional observability, phasor measurement units, physics-informed inference, source localization}
+}
+
+\begin{abstract}
+After a load is restored or a line is reclosed, residual dynamics can
+resemble a new intervention. We study sequential attribution from eight
+PMUs in an IEEE 39-bus model with nine candidate load buses and nine lines.
+A bank of switched differential-algebraic predictors compares intervention
+and recovery histories from estimated past states. Conditional Bayesian
+evidence integrates load severity, while separate active and cause weights
+retain the explanation of a restored intervention. In an independent
+simulation evaluation, 108 interventions are replayed under three network
+conditions and two noise levels. The physical bank produces
+\COneMixTimely{}/\COneMixTotal{} correct family/source decisions before
+restoration with \COneMixExtras{} unmatched alarms, versus
+\COneETTimely{}/\COneETTotal{} with \COneETExtras{} for a fixed causal
+ExtraTrees adapter. The gain concentrates on loads; line coverage matches
+the short-window learned comparator. A controlled posthoc study identifies a state-carry benefit under both
+marginal and profiled severity scoring: retaining the state gives 108/108
+timely decisions and one extra alarm, compared with 75/108 and 166 after
+resetting physical deviations. The results establish recovery-consistent
+prediction as a useful design choice for sparse-PMU attribution and
+quantify its coverage--alarm trade-off under network uncertainty.
+\end{abstract}
+
+\begin{keywords}
+event detection, model uncertainty, phasor measurement units, physics-informed inference, sequential diagnosis, source localization.
+\end{keywords}
+
+\titlepgskip=-21pt
+\maketitle
+\raggedbottom
+
+\input{sections/article_intro}
+\input{sections/article_related}
+\input{sections/narrative_problem}
+\input{sections/article_method}
+\FloatBarrier
+\input{sections/narrative_protocol}
+\section{Results and Controlled Comparisons}\label{sec:narrative-results}
+\input{sections/08c_c01_confirmatory}
+\input{sections/narrative_results}
+\input{sections/article_ablation_design}
+\input{sections/article_controlled_ablation}
+\input{sections/article_interpretation}
+\input{sections/article_final_conclusion}
+
+\FloatBarrier
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+\input{author_biographies}
+\EOD
+
+\end{document}
