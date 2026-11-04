@@ -1,0 +1,387 @@
+{
+  "status": "VERIFIED_DOCUMENT_REVISION_EMPIRICAL_VALIDATION_PENDING",
+  "created_utc": "2026-11-03T23:24:50.689593+00:00",
+  "baseline": {
+    "commit": "9aef51e5ea50f2a0a96273f81ad1dd417529e40c",
+    "files": [
+      {
+        "path": "main.tex",
+        "sha256": "84f50b92f9650bc2d9f7d314b6272bcf0a2e9931706fb06190b2b493b605c2da"
+      },
+      {
+        "path": "metadata.tex",
+        "sha256": "92e0ecedc9189febfa28f46858602845b83ad7ff65625aeca29b74afece36e2b"
+      },
+      {
+        "path": "supplement.tex",
+        "sha256": "c883c41078fa6e23dfa0ee3a12ef26cff3481f1e9f11d5151eda0a18de15046a"
+      },
+      {
+        "path": "historical_notes.tex",
+        "sha256": "eaeeb289893588ae86459b614441cebb701f0534f25300946d4e9e66a40ae3c3"
+      },
+      {
+        "path": "sections/article_method.tex",
+        "sha256": "082940c46d7574795b919f0a91199725fe80b3a735663add9b5f4b389fd62bc5"
+      },
+      {
+        "path": "sections/narrative_protocol.tex",
+        "sha256": "ffe1fa103d95d3cb5867b7fe448f851feb0a48a09aeacecf2b1c1bc1b11b7575"
+      },
+      {
+        "path": "sections/article_related.tex",
+        "sha256": "b6519ea93f5de989651d42a5f80fdd8fc1ef579649b146eb61c739e2a9fde36f"
+      },
+      {
+        "path": "sections/article_interpretation.tex",
+        "sha256": "7c71deea06f057c82de779f4a53506c1294d7204a986059fedacb960dde1c4c3"
+      },
+      {
+        "path": "references.bib",
+        "sha256": "1b45fcd7bce9c8071c079c0e50b7d3ff0b3230e6f3808c5b0b37d4a29287a1d5"
+      },
+      {
+        "path": "docs/c01-confirmatory-results.md",
+        "sha256": "d971ab2af5740611cc987166ae745c279713da4eb7ada9727ac3eb28f9093554"
+      },
+      {
+        "path": "scripts/package_coauthor_review.py",
+        "sha256": "a07030f4e92f940e72e86114edeef40763b99009ba65abf93fae6287e9a39760"
+      },
+      {
+        "path": "scripts/package_submission_sources.py",
+        "sha256": "adb82e8c2918e7c608d4c73e2964fcee56f4e12eb8e177c229f5e8fa5d436291"
+      },
+      {
+        "path": "main.pdf",
+        "sha256": "d577f493712e4c70641920f087635d2b293b27c453c97d063bd534b076cfc2c8"
+      },
+      {
+        "path": "supplement.pdf",
+        "sha256": "f0c6f4be7abe449603349b04c40984136e95a8c45310443eb560ef9cfe0b2ac1"
+      },
+      {
+        "path": "historical_notes.pdf",
+        "sha256": "3290048b6b39264814eabc3e69e194ceaa958f4f317a57bbc79b3dc9f4369daa"
+      }
+    ],
+    "attachment_1_and_2_identical_sha256": "80c49f94facbdbec344649f9b67b20803abba19da41106acc5e01c1462f6677f"
+  },
+  "protected_figures": {
+    "protected_hashes_verified": 16,
+    "both_figures_in_active_article_source": true,
+    "article_pages": 16,
+    "event_figure_page": 4,
+    "ieee39_figure_page": 5,
+    "both_figures_in_compiled_pdf": true
+  },
+  "frozen_C01_A01_figure_changes": [],
+  "mathematical_checks": [
+    {
+      "check": "Log evidence: partition",
+      "max_abs_error": 1.7763568394002505e-15,
+      "tolerance": 2e-10
+    },
+    {
+      "check": "Amplitude mean/variance",
+      "max_abs_error": 4.163336342344337e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "check": "Log evidence: quadrature",
+      "max_abs_error": 3.1086244689504383e-15,
+      "tolerance": 2e-10
+    },
+    {
+      "check": "Affine flow: ODE reference",
+      "max_abs_error": 1.1102230246251565e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "Joint mean/covariance",
+      "max_abs_error": 8.326672684688674e-17,
+      "tolerance": 1e-10
+    }
+  ],
+  "math_scope": {
+    "full_bank_executed": false,
+    "nonlinear_plant_executed": false,
+    "campaign_data_read": false,
+    "pruning_executed": false,
+    "calibration_established": false,
+    "new_event_outcomes": 0
+  },
+  "math_portability": {
+    "status": "PASS_PORTABLE_SOURCE_VERIFICATION",
+    "minimal_input_files": [
+      "scripts/verify_history_partition.py",
+      "generated/frozen/revision_math_kernel_20261103/amplitude_parent.py",
+      "generated/frozen/revision_math_kernel_20261103/MANIFEST.json",
+      "generated/frozen/revision_math_kernel_20261103/reference_checks.json"
+    ],
+    "default_requires_research_checkout": false,
+    "default_requires_campaign_data": false,
+    "portable_numerical_fields_identical": [
+      "partition",
+      "affine_flow",
+      "joint_gaussian_reference",
+      "summary"
+    ],
+    "explicit_research_mode_passed": true,
+    "modified_kernel_rejected_before_execution": true,
+    "project_pyc_files_created": false,
+    "table_sha256_unchanged": "dd7f3bff8a46dc410ff23c3f4ada6cc8db5c48b1f8b1abe27ed324a1a5d9e6cb",
+    "python": "C:\\Users\\walla\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+    "isolated_test_directory": "C:\\Users\\walla\\Documents\\Github\\paper-P07-physics-informed-sparse-pmu-event-inference\\tmp\\math_portability_4dd9cbcc8aed43ba92a8fbaf9ce8ee9a"
+  },
+  "comparator_lineage": {
+    "portable_generation_without_research_repository": true,
+    "minimal_snapshot_only": true,
+    "outputs_identical": {
+      "generated/comparator_lineage.json": "8bbc6c2cf96225901d0fdce49feeb80de18c4d7b90dab7e059730be81f5e39ab",
+      "tables/generated/comparator_lineage.tex": "72d6eaf2b57a60db54f21bcd81aefe39dbb462eac936675e5932bf1225c45f1c"
+    },
+    "model_metadata_verified_with_sklearn": "1.7.2",
+    "model_hashes_verified_before_deserialization": true,
+    "inference_or_training_called": false,
+    "performance_outputs_read": false
+  },
+  "source_package_validation": {
+    "status": "PASS",
+    "source_package_sha256": "2fd15bb5d6e9c5bd2f9570770be45d4b6ee962102bc66e9eeb15e14a18f0b33d",
+    "isolated_directory": "C:\\Users\\walla\\Documents\\Github\\paper-P07-physics-informed-sparse-pmu-event-inference\\build\\source-smoke-kh0skyc1",
+    "input_files": 129,
+    "documents": {
+      "main": {
+        "pages": 16,
+        "text_and_pagination_match": true
+      },
+      "supplement": {
+        "pages": 19,
+        "text_and_pagination_match": true
+      }
+    },
+    "system_TeX_dependencies_required": true,
+    "scientific_readiness_certified": false
+  },
+  "pdfs": {
+    "main": {
+      "pages": 16,
+      "sha256": "4a53b1a9ffa2bfcfa0a3e8b238de49e7fc91c7aacd69429632d9ab4e9afa608e",
+      "rendered_pages": 16,
+      "render_sha256": {
+        "main_01.png": "b3e026baee1f76f1cdbe2055049033c03dbdedaa9eb91879f7fce4a9ccab1230",
+        "main_02.png": "067709232bba9f5597d60c1c1d70bcf1468855e5236fd505bd00c2f41d24cd41",
+        "main_03.png": "cf4acea26efccc9a32b5d7c6583e3a7ee4279ea1dc0ad60fa1eb4631eb0724d5",
+        "main_04.png": "7a58c742881f563882a2a36c52ed1d9753b50cd16a8656cdeedc5f5bf9fb8bae",
+        "main_05.png": "3bdb8be32ad8e13454f0d74b4e65124fe20436042aad896c87d4d5cd097d499b",
+        "main_06.png": "fb4c250938272e041e2b00b7584a8d44affa9821f2985182d1b3a2692703af73",
+        "main_07.png": "57402b62f85e99d316ea8a4ba7b73b5ae2f7ddd3724b41b3d4c6b48c098fa075",
+        "main_08.png": "80b28d9ac8c5ca4f3564bbc31c2fea6001001caca9e533a14941b592b69717e9",
+        "main_09.png": "654fbd14972bbe47c630d6ddd3f0d47e9d1d9f6f5958a71c940868de38c03a40",
+        "main_10.png": "0a116ab6f781b2dbef281f749449c2fec1587f3776bc443fdc34a3639b624279",
+        "main_11.png": "726e87e031608dcba86908f0e28a020aff368d4ac14d976d5271a741f4ad7fa1",
+        "main_12.png": "333da4dbe44a44b1c76176b8f10284d65b69472e3a1c8fa8516f5163ec1700ab",
+        "main_13.png": "3b0e43a763a74ff8bd266af8467504c1c639c5febd682b52c0103c1657d29238",
+        "main_14.png": "7375bc736a7ebe663c052b7ee121f0ae9f65957f4f60fab258ef954706e553ad",
+        "main_15.png": "e220fedfb2b56fb948636dc2065eb2c47031c8bbda8929ee352f54e07ba1f335",
+        "main_16.png": "9b3ad503161b6a752d1937f06c5e7e76ff7993fdfcd25eab24590f2385182b89"
+      }
+    },
+    "supplement": {
+      "pages": 19,
+      "sha256": "6f893a6cea5bbb4f4eaf600130be30b5b6fa285b855e1a810f44cc8dd008f9a8",
+      "rendered_pages": 19,
+      "render_sha256": {
+        "supplement_01.png": "c4c46d8dff1d9cc94662d5ccb9a57c5978efc2d1ef4975d3bbdef56502741b47",
+        "supplement_02.png": "73836e9fed6db958057795c8ae41db8967192faafa64b5b5e5f80644be60f4d5",
+        "supplement_03.png": "1ddbec443db4a67db7dbfedb1c70294528ff29e9038f9de91ef35b56fba89d0e",
+        "supplement_04.png": "9cbd5a7477b8bdc8c8e297f3f8267bcf07bbd2d3da2a743d0551057cfb32c1ba",
+        "supplement_05.png": "af9cfb8dff9bf3c24574c89675aa591e54eb6ed536edec1b0b6905b4ab71f2ee",
+        "supplement_06.png": "b1455cd99af8e1aef36868348dd807555fbc0b79b2fd34849e0259f36f4f431e",
+        "supplement_07.png": "68f5213cac937716f998d7da01a55c6e729479aa7b779dcc86c7846872074014",
+        "supplement_08.png": "d9aa9d0faaf2cfa539377722e852c14ae9c0114d709156befb30feba6b20a512",
+        "supplement_09.png": "b25416184f0241853bce8c8d932d607717a0d9143631f62bed54ff73ad7697b2",
+        "supplement_10.png": "6754c94e505088313360fc4c6be4f334093c2ccdd841d571d36a93fb21e0eb32",
+        "supplement_11.png": "8985b440930bbd050c3d567462e215e407618bba07cf1d964f81ad942aab234c",
+        "supplement_12.png": "8df88fcb6cd8d6aac83caf3a048e7d44ffaa40e53dd22c84b1f8c8ee29eefb90",
+        "supplement_13.png": "2d5b396a0d50dc85b2bf944626cc00d7a0f797dfd92871d717ccccf45cb6d5ff",
+        "supplement_14.png": "7fda9d5a07ee9f5129bdabaf3b0c82b5e8c157a2e027a995c93cbc69e80b34dd",
+        "supplement_15.png": "3887d641e7202b633e221f6342f1b92dd42c3702f6e0654d9bda39d4ba6fc13e",
+        "supplement_16.png": "9d92379cf9832604bfb62474f09837dbf817217ba69f264995235b4d7930fac5",
+        "supplement_17.png": "27ee7173092b02242ce8d7c7eba91d49a42c47676e43b9b86da6040d7fefb4b9",
+        "supplement_18.png": "0cda28587d7c276b1d93a217e4be019426a87aace5d1da3f85bb14234bd0290a",
+        "supplement_19.png": "c21806b884f7714299494647d33273ba3f215e516bdf83572c9697165d68b6cf"
+      }
+    },
+    "historical_notes": {
+      "pages": 45,
+      "sha256": "43e5731178c7428bfef940159531f43334fbf7ddd72825f4d7ad4f95ad29f2c9",
+      "rendered_pages": 45,
+      "render_sha256": {
+        "historical_notes_01.png": "fc2a252efb8280a1ad92e040251b54009343bbf66fa4a52e14d9ec60c2a8164b",
+        "historical_notes_02.png": "5b654aabeefe16f02780e57848e5e6869abc40ede137edee5242b81fdf47dfbd",
+        "historical_notes_03.png": "e82f64d44267f8b303d318b26eac48585bb236da761e0c043325e63f060cd69e",
+        "historical_notes_04.png": "e67d36660083065b32dba0ffe219e4ebab4245baaa543c5722d6bf844ee1009b",
+        "historical_notes_05.png": "c016c5b7991c21916a4f2dd76107c09cf87430815f75881499378b2a9dba18aa",
+        "historical_notes_06.png": "0f7ba2b7cf22bf0418c773fc8d249ffc7ff8d2bad00fe7547deebfba9ebd36f5",
+        "historical_notes_07.png": "600737e6d3b61bfcc6fc56cdc107b140b416e54df651b60954a45b230c18c239",
+        "historical_notes_08.png": "aaa4f572129ff4932968b3424480aedae4ae5e65ed0d0baff8effc63c9adef4a",
+        "historical_notes_09.png": "69f499c818cac8b8d72cb5f0c980c98c1600cc942693033eb7431aea182b2dbb",
+        "historical_notes_10.png": "65cb6784aad6d3315b37426d83780d69052b678c36c10b975bcea77430a1f815",
+        "historical_notes_11.png": "da52fe7e942a1c7710532b5b2fad5169e6224a9d6e1ea65445c90d0a7a86b595",
+        "historical_notes_12.png": "8974955764c962e7053e4914a96cff9ed4831ef246588dd630b70ceb8ea833d9",
+        "historical_notes_13.png": "fd5301c92d5b3ba53d5791848dd600ee42949c4abbac59ca4951b4db4108de0d",
+        "historical_notes_14.png": "01a6e74260e45382dabd48eb4aded327250339f3a2fbfae4a9cac79b2a2c10b1",
+        "historical_notes_15.png": "51fb0c309541bd2cdaa4409ddb1a600e58166ba22e45d2ceca8809f2021dce8c",
+        "historical_notes_16.png": "2bb282064bb7e1d041c019a0600e83ae1e552fac1f7cba692ee80b652e5199ac",
+        "historical_notes_17.png": "7d72ad5390dedaf59e88fd5b4b386d8fec9d7803fcae7ce2e695a217daad5f8c",
+        "historical_notes_18.png": "6ef39fadb4f2bce0fa68e677768f4c019bb1e17746db8647dac24762e1331a18",
+        "historical_notes_19.png": "a2b8a3923d2f4af0a89903574ab64f09cbc7e1f517417441c475a5280cc7b83c",
+        "historical_notes_20.png": "062e3df287be8e0b09d99bb5c8f12940f2e25aad6f55d2c92b19f045f34d2900",
+        "historical_notes_21.png": "2a8af3fb129f1398bcb909be23100be63bc02b6485ebd1d2c27d761fe7ee4001",
+        "historical_notes_22.png": "582bb591fe4833f5c4621045cafd3b7afa03ec4d99094a994d11c2a3b920bd28",
+        "historical_notes_23.png": "8f14aabde97a961cf7fbb2fe88079d822b5ead52126c19601886b852f6babbfd",
+        "historical_notes_24.png": "e33f5abb0d434e6a6e3c1c86df58cd0669f6cbb3316edcc68d157b514562bfca",
+        "historical_notes_25.png": "483ac46e811d9cec9bf6de6a76cf3e740ccb2724f04ee0306b51af38dc4bcc07",
+        "historical_notes_26.png": "27b0d00c6b5d552a570550b906e802ad3cb91433216046694870a3905dcb9239",
+        "historical_notes_27.png": "7614f2f557c27dfcc6a9311b4050ca5ec2544dc58b79dc41b8e1ed0c8101aa84",
+        "historical_notes_28.png": "480316d8df356040a63257aa896f2ccf4551acde8829b0c23573930e47ac42d2",
+        "historical_notes_29.png": "508346defe03a71a91148948659c8bb78ac4cf6e38a18dc5e876290fc695b800",
+        "historical_notes_30.png": "b152f0d3ac030ed8256a3330be5a440cc0dcb4e1a0fd32b49dd1817f719e2be0",
+        "historical_notes_31.png": "72fdff46f286b5ac86758108f79b3959d2395de4cccbbadd72c70a361e6bac73",
+        "historical_notes_32.png": "2ad5c7c7bff5ffc2b983761348b3d730fb8a7c51c3057f0a63effc8e21a91fa9",
+        "historical_notes_33.png": "3f6d671f2fe6fe78136ca16d6bcf1d17aa882f20459318ea88580e77a7c278d6",
+        "historical_notes_34.png": "dc1e2b1fffe84ed2f02a91f8b23bb8d258bfd5576eb5668166b35c02e6c15999",
+        "historical_notes_35.png": "6f325f8b6aa61b6d294247cf98a1fcc6fc9b9c357fb290d015d9bd68bcfb7ce0",
+        "historical_notes_36.png": "922c4a9367d26ee5b6d3cb0b33ac1765842e5e41dfaf61c0fd468fa4f62ec2e0",
+        "historical_notes_37.png": "1a54ff78e58217ab1222ed1382087f8cc1b072058e25f744a218dd8d473c6973",
+        "historical_notes_38.png": "602b953de11174542e7430376b3635302c924b21d1d3735409eddf814b2242ef",
+        "historical_notes_39.png": "07dfc1ce000eb06ce208a4c6a9394285cd9c99bdc7ea99316579d990df8996fc",
+        "historical_notes_40.png": "b6282ae82309e8ba47da484aa808ba1809ad62885af3f78a4a8ba5965faea999",
+        "historical_notes_41.png": "d7924d7b453b4796f16a730477d4abda212e2f93f36f5c134417948de03202f1",
+        "historical_notes_42.png": "84249094690c28aa033e64314b78b99becda3f6771d390d0cedad397cd383bd1",
+        "historical_notes_43.png": "b8dcc9f07d6ac82e7086174a873bb97738559af497fc4ec7f4fb03d9509276bc",
+        "historical_notes_44.png": "411eecd64e1e053a3955bfd8f17584e4bdb5326e8db6cc8cfa862c9664bde3cf",
+        "historical_notes_45.png": "17a1ce430308ef96a60208d73e55c30fc1f25579856a4362010e2b74c469c6dd"
+      }
+    }
+  },
+  "visual_review": {
+    "main": "All 16 pages via contacts; protected figures at final page size",
+    "supplement": "All 19 pages via contacts; equations and A01 tables at final page size; body text overflows corrected",
+    "historical": "All pages via contacts, changed equations and final pages at final page size; see HISTORICAL_VISUAL_QA.md",
+    "coauthor_brief": "One page at final size",
+    "class_font_and_header_warnings": "Retained template warnings; not described as a warning-free TeX build"
+  },
+  "campaign_snapshot": {
+    "B01": {
+      "stage": "test_inference",
+      "status": "RUNNING",
+      "started_utc": "2026-11-03T22:21:46.598093+00:00",
+      "command": [
+        "C:\\Users\\walla\\anaconda3\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "protocol/run_experiment.py",
+        "run_test_inference"
+      ]
+    },
+    "C02": {
+      "state": "PIPELINE_IMPLEMENTED_VALIDATED_WAITING_B01_AND_DISK",
+      "physical_started": false,
+      "test_accessed": false,
+      "queue_started": false,
+      "B01_changed": false,
+      "parents": 102,
+      "splits": {
+        "TRAIN": 24,
+        "CAL": 36,
+        "TEST": 42
+      },
+      "unit_tests": "43 passed",
+      "development_parity": "GLR 1050 reports: all six arrays max difference 0; ML stream47/features1457 bitwise equal to S01; future perturbation causal; nominal HISTORY smoke420 reports",
+      "pipeline_entrypoint": "protocol/pipeline.py --stage all",
+      "queue_entrypoint": "protocol/queued_pipeline.py --timeout-hours 24",
+      "preflight_entrypoint": "protocol/preflight.py",
+      "free_disk_GiB_at_preflight": 18.921043395996094,
+      "launch_minimum_GiB": 30,
+      "per_case_minimum_GiB": 16,
+      "TRAIN_minimum_GiB": 18,
+      "remaining_storage_estimate_GiB": [
+        10,
+        15
+      ],
+      "launch_ready": false,
+      "launch_blockers": [
+        "B01 sealed evaluation incomplete",
+        "Free disk below 30 GiB"
+      ],
+      "implemented": [
+        "Isolated F01 physical and export runner with all intended failures retained",
+        "Shared nominal PMU-prefix conditional banks",
+        "TRAIN-only source-complete ExtraTrees and reproducible sklearn seed derivation",
+        "Sequential GLR for every CAL threshold; causal history/ML scores and common publication",
+        "Pooled CAL selection with noise/condition rate diagnostics and complete denominators",
+        "Execution and method seals bind numerical dependencies; exact observation/split/runtime/bank guards",
+        "One-shot TEST evaluation with source-blind temporal matching, exposure, censoring, parent intervals and recorded wall/RSS",
+        "Bounded one-shot queue with readiness/hash/resource guards and no automatic retry"
+      ],
+      "not_executed": [
+        "C02 Julia physical/derivative end-to-end",
+        "C02 TRAIN/CAL/TEST",
+        "Queue launch"
+      ],
+      "next": [
+        "Root reviews and optionally launches local queue",
+        "Wait for B01 closure and 30 GiB free without automatic cleanup",
+        "First real physical and derivative cases remain integration validation"
+      ],
+      "source_hashes": {
+        "protocol/banks.py": "8ae6b6bd64f5914bd327bc619ca200b8ccf82c6bf1a1a8f41ec0bbfc90a8cc32",
+        "protocol/calibration.py": "a41626b3d21972eba863664bfe4460634f0be65f49b8158090e009c8eede8a69",
+        "protocol/common.py": "2f6cf8a26b2fea68d42fa3b6a7b375ead136878eca17e0466c36593ae6d34858",
+        "protocol/design.py": "d232de79157d3e51fc17073989af754902bb52fa93803cf485dd1e4a5270b13e",
+        "protocol/evaluate.py": "f7c564221b4612b6ec08a5b78a4f3027fd5c167f907666892e7931b6cb6c52a6",
+        "protocol/evaluation_contract.py": "1a1b516a7b97744d3505e4757ab13f0b7cd47c5e94f5c36d89bbda810289f3d4",
+        "protocol/frozen_metrics.py": "3d143748709c894377c39e040bf7e3bdecbe08265d537d868de677fe8be4e182",
+        "protocol/inference.py": "861e02b719f00d23072a2666fb76d87bb4e42d973b64965d8638eef9afc8cfdd",
+        "protocol/INTEGRATION_ADDENDUM_20261103.json": "8f557ff86fa58e7bce574d503e7ebc174212e89ea0788215e83614afc077f278",
+        "protocol/INTEGRATION_AMENDMENT_20261103.json": "8c6958c97f23b9d538d063dd901769bfd9af159f844cca0fe38b0aaf22123fb6",
+        "protocol/physical.py": "da9d4ef4b78fad3d605b57a58cc78a6f61a86cd5e5e5c7274d4bc125cb1e90a5",
+        "protocol/pipeline.py": "41f263a1fd5c2dc85a789ece6d1e242c73bc35baa51d2a4c30866498c0dc6c3c",
+        "protocol/PLAN.json": "55625890ec1497480bff2175e198091a995b19b9892aa352ba85c70084c33b67",
+        "protocol/preflight.py": "04d7aa4d38efea9c076b63d5b0e4a13765c3eaca986260124d057e13e54a43c5",
+        "protocol/queued_pipeline.py": "7ce2135640d7775cfa5642e9e6d5f51947863d5ae54b475b0a3af010b0633d40",
+        "protocol/RESOURCE_ADDENDUM_20261103.json": "264ca2f60120ffed5e821a982801f3f013d5f80c42d825adc08b1d4e60f82257",
+        "protocol/SCENARIO_FREEZE.json": "ae255d794371be217c9e494a82558e945ec0d1753b42892ac7948e9d12730783",
+        "protocol/stage.py": "b7d59ada9067ac906bd22d7a618b72825a12d390b0fee4ac8feeaa796c283b9f",
+        "protocol/train.py": "180fab8329e5a0d090a52d070da6aaa776bd28f426a5581f56e2fb40d22a0d4c",
+        "runtime/access.py": "9fd85b96dda67228dcb29a3130865bee792be3b1005fa501927386579c340f24",
+        "runtime/learning.py": "2ea348ae1c2755d4ffd95e994dd4ba9d292790db8ef032a2f5d33b81321d6a4a",
+        "runtime/observations.py": "edb66d55d29c240ccf9d9e6b4e4f8a1192e1a325f58d1f7901c61fb5aa7f2e9a",
+        "runtime/publish.py": "590c9689aef77ddf9bc37ed279ab7773c649bbd3417d681e8fc0baa98c23d5a9",
+        "runtime/run_continuous.py": "b714f3caacecbb387455de152876c5b2ab859c88ddffa701ba200770f31fa493",
+        "runtime/run_scores.py": "3ee5129df367bd89945ea9bc8b102eca75c385f1002f8bee9f8536f0d5cffa46",
+        "runtime/frozen_S01/MANIFEST.json": "37c5a2e645aa44f477657fc5e00dcca85b9f36ec184339f847c641a42fd478dc",
+        "runtime/frozen_S01/publication.py": "e7bf8d86936487f1b914dcd40dab269e45b9750d2fdb55befeb51d35fd92dbfc",
+        "runtime/frozen_S01/single_state.py": "eb9e7f114dd7ac6455a30ec8d1663d5536ab432f0489058e6ebcec3845d96111"
+      },
+      "scenario_sha256": "ae255d794371be217c9e494a82558e945ec0d1753b42892ac7948e9d12730783",
+      "physical_request_sha256": "4539e084962f7d27a7d3f891f3ec6177c21d0b4094c785a33d5c8bba744ecab7"
+    },
+    "queue": {
+      "status": "WAITING",
+      "reason": "B01 must finish its sealed TEST evaluation before C02 execution",
+      "remaining_seconds": 86368.26431775093,
+      "updated_unix": 1793748264.1229513,
+      "execution_freeze_sha256": "c567c921908cbb3416b267053d9636c8ff6fd39b528e9879b5445065cb211b2c"
+    }
+  },
+  "new_empirical_outcomes_in_article": 0,
+  "submission_ready": false,
+  "pushed": false,
+  "coauthor_or_journal_messages_sent": false,
+  "raw0002_opened": false
+}

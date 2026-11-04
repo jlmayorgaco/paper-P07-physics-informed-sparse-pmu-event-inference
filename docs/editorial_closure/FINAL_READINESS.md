@@ -1,30 +1,29 @@
-# P07 — estado tras la auditoría científica, 3 de noviembre de 2026
+# P07 — revisión ejecutada, 3 de noviembre de 2026
 
-**Borrador listo para revisión de coautores; revisión científica mayor antes del envío.**
+**Borrador fortalecido para revisión de coautores; validación científica adicional pendiente antes del envío.**
 
-## Cambios y alcance
+## Cambios comprobados
 
-El artículo tiene ocho secciones y 15 páginas. El suplemento de 42 páginas conserva los estudios auxiliares con sus cohortes y limitaciones; la página para David y Masoud usa exclusivamente resultados completos. La narrativa central separa predicción consistente durante la recuperación, el efecto posthoc de conservar el estado y la comparación independiente con los adaptadores aprendidos. El control continuo de un solo estado/GLR vuelve al texto principal como evidencia de desarrollo.
+El artículo tiene 16 páginas y el suplemento esencial 19. El material auxiliar anterior sigue disponible en Historical Technical Notes. El método explicita los offsets afines por topología, la integración de severidad por intervalos, la dependencia estado–severidad y las aproximaciones de covarianza y compresión. Las pruebas pequeñas reproducen las identidades locales; no certifican el banco no lineal ni sus probabilidades.
 
-Las diferencias e intervalos de alarmas usan ahora tiempo monitorizado: 108 s por cada registro de 120 s. La conversión exacta por 120/108 está documentada; C01/A01, sus predicciones, asociaciones, umbrales y archivos originales permanecen intactos. No se incorporan resultados parciales de B01.
+La genealogía de ambos ExtraTrees identifica el entrenamiento con 32 padres y la validación con ocho, sus 19 clases, 846/1.457 características, 400 árboles, hashes y regla de publicación. El suplemento incluye ahora los resultados completos de A01, incluidos sus resultados nulos, junto con C01. Los denominadores de 120 s completos y 108 s monitorizados se distinguen sin modificar los resultados congelados.
 
-## Verificación de esta revisión
+## Verificación documental
 
-- C01 conserva 171 trayectorias físicas y 342 registros observados; A01 conserva 96/96 salidas y sus resultados favorables y nulos.
-- Dieciséis hashes de figuras protegidas verificados: imagen de eventos byte por byte, visible en p. 4; unifilar de 39 buses y ocho PMU visible en p. 5.
-- Artículo y suplemento compilados sin referencias indefinidas ni etiquetas duplicadas; todas sus páginas renderizadas y revisadas. La página de coautores también se revisó visualmente.
-- ZIP de 133 entradas recompilado aisladamente: texto y paginación coinciden exactamente para ambos documentos. Es una prueba de reproducción documental, no una repetición independiente de las campañas científicas.
-- Paquete de coautores con hashes verificados y sin datos PMU crudos ni archivos privados. El manifiesto actual está en `FINAL_MANIFEST.json`.
+- Artículo y suplemento compilados sin referencias indefinidas ni etiquetas duplicadas; sus 35 páginas fueron renderizadas y revisadas. Se corrigieron los solapamientos de texto detectados en el suplemento.
+- Dieciséis hashes de figuras protegidas comprobados. La imagen de eventos permanece byte por byte en la página 4; el unifilar IEEE-39 con ocho PMU permanece en la página 5.
+- El ZIP de fuentes fue recompilado en un directorio aislado: texto y paginación coinciden exactamente para ambos documentos. El manifiesto de esta ejecución es `../../output/source/SOURCE_PACKAGE_VALIDATION.json`.
+- Las pruebas matemáticas y el generador de genealogía se reproducen desde snapshots mínimos, sin el repositorio científico ni datos de campañas. Las pruebas matemáticas requieren NumPy/SciPy.
+- C01/A01 y sus archivos congelados no se editaron. No se incorporaron resultados parciales de B01 ni resultados inexistentes de C02.
 
-## Pendientes científicos y editoriales
+El registro verificable de esta revisión está en `../revision_execution_20261103/FINAL_VERIFICATION.json`; la respuesta punto por punto está en `../revision_execution_20261103/RESPONSE_AND_STATUS.md`.
 
-1. Validación independiente, con información equiparada, del control continuo/GLR frente al banco de historias para la afirmación fuerte sobre la necesidad de recuperación explícita.
-2. Comparación con umbrales seleccionados previamente en validación y presupuestos de alarmas comparables; no elegirlos con C01/A01.
-3. Transferencia a un modelo/planta independiente y calibración de las masas para afirmaciones más amplias de generalización e incertidumbre.
-4. Revisión científica de coautores, permisos/declaraciones, comprobación bibliográfica final y confirmación del código/dependencias a entregar.
+## Evidencia que aún determina la contribución
 
-La [respuesta completa a la auditoría](../SCIENTIFIC_AUDIT_RESPONSE_20261103.md) distingue correcciones ejecutadas de evidencia aún faltante. No se promete aceptación ni se envía el manuscrito a autores o revista. B01 continúa separado; RAW0002 sigue cerrado.
+1. Terminar B01 y evaluar su calibración independiente sin seleccionar cambios con TEST.
+2. Ejecutar C02: banco nominal, GLR continuo y ExtraTrees nuevo, con selección de umbrales sólo en CAL y un presupuesto de alarmas declarado. La selección usa la población balanceada completa; no certifica cada estrato de ruido por separado.
+3. Evaluar innovaciones pre-update, cobertura y efectos de poda/compresión para sostener afirmaciones de incertidumbre.
+4. Probar un modelo dinámico independiente y un contrato instrumental físicamente realizable si se pretende ampliar la generalización.
+5. Cerrar revisión de autores, declaraciones y permisos antes de una eventual presentación.
 
-## Trabajo activo para fortalecer la contribución
-
-B01 prueba calibración y verosimilitud aprendida desde SIM. C02 prepara una comparación independiente con las 18 fuentes en entrenamiento, un observador físico continuo, banco nominal y calibración previa del presupuesto de alarmas. Ya tiene 102 escenarios sellados y 24 pruebas aprobadas; la implementación completa continúa antes de iniciar simulaciones. El resumen y la conclusión presentan primero las capacidades medidas; las condiciones de validez permanecen en la discusión. Véase `docs/P07_VALIDATION_ACTIONS.md`.
+La implementación y el estado operativo de C02 se documentan en `../P07_VALIDATION_ACTIONS.md` y en su directorio del repositorio científico. Una campaña implementada o en cola todavía no constituye evidencia ejecutada. No se promete una calificación perfecta ni aceptación. RAW0002 permanece cerrado; no se enviaron mensajes a autores ni a la revista.

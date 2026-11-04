@@ -1,4 +1,3 @@
-% !TeX program = pdflatex
 % Supplementary material: detailed derivations, protocols, and secondary results.
 \let\PSevenTeXYear\year
 \documentclass{ieeeaccess}
@@ -8,6 +7,10 @@
 \newtheorem{theorem}{Theorem}
 \input{generated/results_macros}
 \input{generated/continuous_macros}
+\input{generated/narrative_macros}
+\input{generated/evidence_bridge_macros}
+\input{generated/ei_x02_macros}
+\input{generated/submission_s01_macros}
 \IfFileExists{generated/c01_macros.tex}{\input{generated/c01_macros}}{}
 
 \begin{document}
@@ -19,26 +22,23 @@
 \address[2]{Department of Electrical and Computer Engineering, University of Pittsburgh, Pittsburgh, PA, USA}
 \address[3]{Department of Electrical and Computer Engineering, The George Washington University, Washington, DC, USA}
 \address[4]{Faculty of Engineering, Universidad de La Sabana, Ch\'ia, Colombia}
-\markboth{Mayorga Taborda \headeretal, Supplementary Material}{Mayorga Taborda \headeretal, Supplementary Material}
+\markboth{Mayorga Taborda \headeretal, Historical Technical Notes}{Mayorga Taborda \headeretal, Historical Technical Notes}
 \hypersetup{
   pdftitle={Historical Technical Notes for Sparse-PMU Physical Inference},
   pdfauthor={Jorge Luis Mayorga Taborda; Yessica Africano Rodriguez; Masoud Barati; Payman Dehghanian; David Felipe Celeita Rodriguez}
 }
 
 \begin{abstract}
-This separately compiled archive preserves the earlier research contracts and
-corrected theoretical development. It is not required to reproduce the current
-causal method and does not pool the historical studies with its evaluation.
-For continuity, it also explains the causal attribution method step by step,
-derives its local amplitude likelihood and conditional state update, and
-provides worked mathematical examples and a scenario-by-scenario reproduction
-guide. It then preserves the electrical conventions, full diagnosability
-proofs, Fisher-information analysis, earlier estimator studies, frozen
-contracts and secondary results. The implemented causal history bank,
-historical batch estimator $\mathcal E_{\mathrm B}$ and proposed joint
-estimator $\mathcal E_{\mathrm J}$ retain distinct evidence boundaries;
-the latter remains unexecuted. Illustrative calculations are not simulation
-results. No empirical claim or test denominator is changed.
+This archival companion preserves the extended technical development and
+component studies that preceded the focused recovery-aware article.
+It includes electrical conventions, diagnosability proofs, state
+reconstruction, the historical batch estimator and its effective-prior
+qualification, and the proposed joint estimator, which remains unexecuted.
+The former extended supplement is retained here with its original
+cohorts and negative results. Its historical results are not additional
+validation of the causal history bank. The current Supplementary Material
+contains the essential method and evaluation contracts; this archive
+preserves provenance without pooling incompatible experiments.
 \end{abstract}
 \begin{keywords}
 Bayesian inference, Fisher information, functional observability, phasor measurement units, reproducibility, state estimation, event-source inference.
@@ -48,6 +48,17 @@ Bayesian inference, Fisher information, functional observability, phasor measure
 \raggedbottom
 
 \appendices
+
+\section*{Status of the Archived Batch Evidence}
+The single-source evidence in the archived 137-hypothesis load bank has
+an extra factor $1/(2\pi)$ relative to the null and pair hypotheses. Its
+executed cardinality prior is therefore proportional to
+$(0.20,0.50/(2\pi),0.30)$, rather than the originally declared
+$(0.20,0.50,0.30)$. Tables and figures in this archive preserve those
+executed outcomes. A corrected-prior replay is not supplied, and these
+outcomes do not establish calibrated probabilities or performance of the
+separate causal bank. The detailed qualification is retained with the
+batch results in Section~\ref{sec:narrative-information}.
 
 \input{supplement/appendix_causal_walkthrough}
 
@@ -117,7 +128,7 @@ For branch $e=(i,j)$ with complex tap $t_e$, series admittance $y_e$, and termin
 \end{equation}
 The implemented PMU operator selects the actual terminal and orientation. Replacing this current with complete bus-injection current changes the likelihood.
 
-Positive-sequence phasors define the balanced model. Negative- and zero-sequence components remain integrity or unbalance evidence. Ideal continuous-frequency channels satisfy
+The balanced generator represents one fundamental phasor and exports its phase-A coordinates. B/C are deterministic phase rotations; negative- and zero-sequence disturbances are not simulated in this evaluation. Ideal continuous-frequency channels satisfy
 \begin{equation}
  f_i^{\mathrm{phys}}=f_0+\frac{1}{2\pi}\frac{d\angle V_i}{dt},\qquad
  \operatorname{ROCOF}_i^{\mathrm{phys}}=\frac{1}{2\pi}\frac{d^2\angle V_i}{dt^2},
@@ -160,6 +171,8 @@ Load change & Modify the active/reactive withdrawal model & load buses & $\Delta
 \bottomrule
 \end{tabularx}
 \end{table*}
+
+\input{supplement/measurement_contract}
 
 \section{Metrics, Causality, and Evaluation Units}
 
@@ -256,11 +269,21 @@ experiments in the main article.}
 \input{supplement/appendix_f_single_event_pilot}
 
 \FloatBarrier
+\input{sections/article_evidence_bridge}
+\input{supplement/appendix_single_state}
+\input{sections/article_ei_x02}
+\section{Recovery Geometry and Source Separation}
+\input{sections/article_information}
+\input{sections/article_recovery_x04}
+\input{supplement/development_streams}
+\FloatBarrier
 \input{supplement/appendix_narrative_support}
+\clearpage
 \input{supplement/appendix_archived_source_resolution}
 \IfFileExists{supplement/c01_narrative_details.tex}{\input{supplement/c01_narrative_details}}{}
 
 \raggedbottom
+\clearpage
 \bibliographystyle{IEEEtran}
 \bibliography{references}
 \EOD

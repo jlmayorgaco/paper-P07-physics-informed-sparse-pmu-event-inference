@@ -1,0 +1,19 @@
+{
+  "success": true,
+  "parents_train": 32,
+  "parents_validation": 8,
+  "validation_records": 16,
+  "test_access": false,
+  "config_sha256": "821bef1ed79814a6b6d30b2c69f7c506696c7adf27c3b7fc2f0efcc3ba61413b",
+  "models": [
+    {
+      "variant": "BASELINE",
+      "sha256": "8be07d191ec94f734cccc74991642ed288d700bbedf994168b556411b048b65f"
+    },
+    {
+      "variant": "SHORT",
+      "sha256": "e4afa2907d5f79c535a60bc98720802c5481f2eec64795563583f25ae6d5d00c"
+    }
+  ],
+  "scope": "Historical development only; not new physical holdout or independent test of R08"
+}

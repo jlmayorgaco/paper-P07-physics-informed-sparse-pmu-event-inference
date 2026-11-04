@@ -30,12 +30,14 @@ useful in the historical learned route; the physical bank additionally
 computes how each candidate intervention should affect remote PMUs.
 These routes have different access to source responses and training data.
 
-A fairer architecture comparison would give a physical GLR or M3H control
-and a learned baseline the same candidate catalog and permitted development
-records, then select their operating points on validation data before a
-new test. Neither a posthoc threshold sweep on this test nor a new GNN name
-would establish that result. The present comparison preserves the original
-adapters and all their failures.
+A matched architecture comparison requires a physical continuous-state
+control and a history bank with the same operators, together with a learned
+baseline trained on the permitted catalog. Operating points must be chosen
+on separate calibration records before a new test. The present comparison
+preserves the frozen adapters and their failures. The two learned models
+already saw all candidate classes during their earlier training; their
+misses cannot be attributed solely to missing source labels or to an
+unexamined scalar threshold.
 
 \subsection{Model Correspondence and Measurement Scope}
 The nonlinear generator and local predictors share the same research
@@ -48,6 +50,10 @@ catalog, not a representative sample of all 39 buses or all event families.
 
 The eight-PMU terminal map is a research measurement hypothesis. BUS5
 retains the provisional 5--6 assignment, and BUS39 current angle is excluded.
+The synchronized channel grouping includes remote current terminals, so
+it does not certify an installation of eight colocated voltage/current
+PMUs. The observation model retains each terminal's actual location;
+remote voltage--current products are power proxies.
 The generator applies temporal and cross-PMU noise structure within each
 signal family, but does not apply its archived cross-family factor
 covariance. Frequency/ROCOF noise is added after phase estimation.
@@ -59,8 +65,15 @@ reference record. It also assumes an event-free startup and available PMUs.
 History pruning, shared regime covariances, plug-in startup estimates and
 state-mean compression make the bank approximate. Its masses are
 attribution weights under those approximations, not validated confidence
-levels. Discarded mass is recorded by the implementation; a calibrated
-reliability study and a bank-size sensitivity study are still missing.
+levels. The supplementary numerical checks verify the severity integral,
+partition identity and conditional-state algebra under their local models.
+Calibration of the nonlinear stream additionally requires pre-update
+innovation diagnostics, interval coverage and sensitivity to pruning and
+state compression. Existing instrumental whitening and latent AR states
+address distinct components of dependence; their presence alone does not
+establish predictive adequacy. Discarded mass is recorded by the
+implementation, while a calibrated reliability and bank-size study remains
+open.
 Response fidelity and source discrimination also differ: sources may
 remain close after fitting severity and context. The supplementary
 context-signature and recovery-geometry controls preserve their null

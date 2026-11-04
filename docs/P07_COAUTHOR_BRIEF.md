@@ -1,6 +1,6 @@
 # P07: contribution, evidence and limits
 
-Review draft | 03 Nov 2026, 13:18 Colombia
+Review draft | 03 Nov 2026, 18:09 Colombia
 
 ## Contribution
 
@@ -21,7 +21,7 @@ On 18 existing continuous parents, preserving physical-state deviations gives 10
 
 ## Difference from the hackathon and the literature
 
-The gain over the fixed causal ExtraTrees adapters is predominantly timely load coverage; line coverage is similar to the short-window model. This is not an improved official hackathon score. Physical trajectory diagnosis and M3H histories have direct precedents. The useful result is recovery-consistent attribution with explicit operational errors and limitations, rather than novelty of the individual ingredients.
+Both causal ExtraTrees models were retrained for all 18 sources on earlier simulation parents; their weights differ from the original hackathon submission. The physical gain is predominantly timely load coverage; line coverage is similar to the short-window model. Physical trajectory diagnosis and M3H histories have direct precedents. The contribution concerns recovery-consistent attribution and its operational trade-offs.
 
 ## Corrections and remaining submission blockers
 

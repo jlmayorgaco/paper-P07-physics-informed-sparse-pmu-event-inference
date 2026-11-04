@@ -1,0 +1,142 @@
+{
+  "review_date_bogota": "2026-11-03T17:15:03.363371-05:00",
+  "paper_commit": "9aef51e5ea50f2a0a96273f81ad1dd417529e40c",
+  "scope": "Read-only review of manuscript, code and frozen results; only new review documents and illustrative math checks written. No campaign or manuscript changed.",
+  "inputs": [
+    {
+      "path": "C:\\Users\\walla\\Documents\\Github\\paper-P07-physics-informed-sparse-pmu-event-inference\\main.tex",
+      "sha256": "acf99d3f3d978cc24575151d1be453b3de6dbaad372fe36f24968bc693986e4d"
+    },
+    {
+      "path": "C:\\Users\\walla\\Documents\\Github\\paper-P07-physics-informed-sparse-pmu-event-inference\\metadata.tex",
+      "sha256": "094df1980ce18c442f0e8506f7c3042a3d6ee4c37133c27659c7b705691d04ff"
+    },
+    {
+      "path": "C:\\Users\\walla\\Documents\\Github\\paper-P07-physics-informed-sparse-pmu-event-inference\\main.pdf",
+      "sha256": "d577f493712e4c70641920f087635d2b293b27c453c97d063bd534b076cfc2c8"
+    },
+    {
+      "path": "C:\\Users\\walla\\Documents\\Github\\paper-P07-physics-informed-sparse-pmu-event-inference\\supplement.tex",
+      "sha256": "0cc0c84687872e9cde9af0baa127b6b63e5e804ac3fc7b937f7e6b2fd4e891ef"
+    },
+    {
+      "path": "C:\\Users\\walla\\Documents\\Github\\paper-P07-physics-informed-sparse-pmu-event-inference\\supplement.pdf",
+      "sha256": "f0c6f4be7abe449603349b04c40984136e95a8c45310443eb560ef9cfe0b2ac1"
+    },
+    {
+      "path": "C:\\Users\\walla\\Documents\\Github\\paper-P07-physics-informed-sparse-pmu-event-inference\\sections\\article_method.tex",
+      "sha256": "723f575c079272f0c9024a37ed7ac6c3581e17e9ff3bd0848b4da4a0a46d3457"
+    },
+    {
+      "path": "C:\\Users\\walla\\Documents\\Github\\paper-P07-physics-informed-sparse-pmu-event-inference\\sections\\narrative_protocol.tex",
+      "sha256": "eb3a23e6289a5e4cf94a73190c1ae6ba846f86e6b97d95293c6af9570c8f35f2"
+    },
+    {
+      "path": "C:\\Users\\walla\\Documents\\Github\\paper-P07-physics-informed-sparse-pmu-event-inference\\sections\\08c_c01_confirmatory.tex",
+      "sha256": "20c61e583a008de75b9c4fdbd704b693df10cef47ffbd15cbe953171e4e67934"
+    },
+    {
+      "path": "C:\\Users\\walla\\Documents\\Github\\paper-P07-physics-informed-sparse-pmu-event-inference\\sections\\article_ablation_design.tex",
+      "sha256": "6a01afe751841188a6e69510197b5dc4742ebfe980b8cb85eea45d5064fb5976"
+    },
+    {
+      "path": "C:\\Users\\walla\\Documents\\Github\\paper-P07-physics-informed-sparse-pmu-event-inference\\sections\\article_controlled_ablation.tex",
+      "sha256": "29c3b6c18358aa24996dc0fb5e3036c2e3578ebbfc25fae01f9f6ffe176f35f3"
+    },
+    {
+      "path": "C:\\Users\\walla\\Documents\\Github\\paper-P07-physics-informed-sparse-pmu-event-inference\\tables\\generated\\source_catalog.tex",
+      "sha256": "355f939511523601dcc195d8a137e52e70c2534e2733c6da8a38d14a896fe831"
+    },
+    {
+      "path": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_CALIBRATION_B01\\protocol\\PLAN.json",
+      "sha256": "10cc89bf61257f02af4e2ef4a369f30fb571d5209a4ddb308805a5ce6e1dd89f"
+    },
+    {
+      "path": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_CALIBRATION_B01\\run\\PIPELINE_STAGE.json",
+      "sha256": "fa7758b13f8326ff66d5e5a0b22417032fd59462b2ef42d091be3ac566aab390"
+    },
+    {
+      "path": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_RECOVERY_C02\\protocol\\PLAN.json",
+      "sha256": "55625890ec1497480bff2175e198091a995b19b9892aa352ba85c70084c33b67"
+    },
+    {
+      "path": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_RECOVERY_C02\\run\\STATUS.json",
+      "sha256": "adc3fe2bf222c59a770a3df361bf0e1f4254b4f1e090ab16dcacda5bc93dbce5"
+    },
+    {
+      "path": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_RECOVERY_C02\\protocol\\calibration.py",
+      "sha256": "a4891b05ffb387b7c59b6d773b12493654a2f2e938925dbfeb6fe7c3e99e4601"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "AUDITORIA_Y_PLAN.md",
+      "sha256": "e6d932a027197e9c1e228d915943bcbd011841fd57f0ca7c2220796a03a78e91"
+    },
+    {
+      "path": "check_mathematical_claims.py",
+      "sha256": "ce174997c4e144d091d889d4f51c968e2d55aba506d350faa7b473b2d56f0faa"
+    },
+    {
+      "path": "MATHEMATICAL_CHECKS.json",
+      "sha256": "9ae0fdeb198ea6aae64196dbb8b1d0c1583afec287f8ec410ec70836f21cc185"
+    }
+  ],
+  "b01_stage_observed": {
+    "stage": "a2_cal",
+    "status": "RUNNING",
+    "started_utc": "2026-11-03T16:53:10.355233+00:00",
+    "command": [
+      "C:\\Users\\walla\\anaconda3\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "protocol/run_experiment.py",
+      "run_a2_cal"
+    ]
+  },
+  "c02_status_observed": {
+    "state": "SCENARIOS_FROZEN_COMPONENTS_IMPLEMENTED",
+    "physical_started": false,
+    "test_accessed": false,
+    "B01_changed": false,
+    "parents": 102,
+    "splits": {
+      "TRAIN": 24,
+      "CAL": 36,
+      "TEST": 42
+    },
+    "unit_tests": "24 passed",
+    "implemented": [
+      "Independent source-balanced schedule generator and scenario hash seal",
+      "All-source 1457-feature causal ExtraTrees training with TRAIN-only guard and equal-parent weighting",
+      "Continuous-state GLR observation-only entrypoint using the unchanged nominal loader and retained states",
+      "CAL-only operating-point selection with adequate normal exposure and sequential-state-path guard",
+      "TEST method/fit hash gate"
+    ],
+    "next": [
+      "Implement isolated physical/export and nominal-only bank preparation using F01 copies",
+      "Wire history bank and learning inference to the same prediction schema",
+      "Verify real-record parity of the generic GLR entrypoint and observation transform on development only",
+      "Implement full sequential CAL threshold executions, method freeze and one-shot TEST/evaluation",
+      "Launch only after B01 complete and resource/exclusivity checks pass"
+    ],
+    "source_hashes": {
+      "protocol\\PLAN.json": "55625890ec1497480bff2175e198091a995b19b9892aa352ba85c70084c33b67",
+      "protocol\\SCENARIO_FREEZE.json": "ae255d794371be217c9e494a82558e945ec0d1753b42892ac7948e9d12730783",
+      "runtime\\learning.py": "2dc03a700aede2ac9ae3640f68647635b5455731327716244b3c5aa8cae76d3c",
+      "runtime\\run_continuous.py": "8efc7799f0bdbe6bc435053fac1682dfd97cee34f9686b57975abaa679d157f6",
+      "protocol\\calibration.py": "a4891b05ffb387b7c59b6d773b12493654a2f2e938925dbfeb6fe7c3e99e4601"
+    }
+  },
+  "verification": {
+    "mathematical_check_script_passed": true,
+    "existing_R11_or_A01_tests_rerun": false,
+    "scientific_campaigns_run": false,
+    "partial_B01_outcomes_inspected": false,
+    "raw0002_opened": false,
+    "manuscript_edited": false,
+    "full_visual_pdf_audit": false,
+    "commit_or_push": false
+  }
+}

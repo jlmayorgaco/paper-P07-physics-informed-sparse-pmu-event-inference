@@ -4,6 +4,15 @@ The frozen campaign completed on 1 November 2026. Its 171 physical trajectories 
 
 ## Continuous load and line sequence
 
+**Exposure update, 3 November 2026.** The rate examples below preserve the
+original frozen definition using complete 120-s records. The current main
+article uses 108 monitored seconds per event record after startup. Its rate
+differences and interval endpoints are therefore the archived values times
+`120/108`, with all predictions and episode matches unchanged. The generated
+conversion and source hashes are in
+[`monitored_exposure_audit.json`](../generated/monitored_exposure_audit.json)
+and [`paired_monitored_intervals.csv`](../generated/paired_monitored_intervals.csv).
+
 Each method saw the same 18 six-event parents, three R/X conditions, two noise scales, and 12 normal parents. Timely means the correct family and source were issued before physical OFF. An extra is an unmatched event-stream alarm; normal-record alarms are separate.
 
 | Frozen method | Timely / 648 | Extra alarms | Out-of-bank timely / 216 | Out-of-bank extras | Normal alarms / 72 |

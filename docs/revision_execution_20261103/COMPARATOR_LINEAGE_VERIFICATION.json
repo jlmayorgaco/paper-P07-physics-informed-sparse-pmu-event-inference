@@ -1,0 +1,12 @@
+{
+  "portable_generation_without_research_repository": true,
+  "minimal_snapshot_only": true,
+  "outputs_identical": {
+    "generated/comparator_lineage.json": "8bbc6c2cf96225901d0fdce49feeb80de18c4d7b90dab7e059730be81f5e39ab",
+    "tables/generated/comparator_lineage.tex": "72d6eaf2b57a60db54f21bcd81aefe39dbb462eac936675e5932bf1225c45f1c"
+  },
+  "model_metadata_verified_with_sklearn": "1.7.2",
+  "model_hashes_verified_before_deserialization": true,
+  "inference_or_training_called": false,
+  "performance_outputs_read": false
+}

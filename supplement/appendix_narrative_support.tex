@@ -26,8 +26,10 @@ This calculation describes the retained local Gaussian history model used by R11
 \]
 The physical transition/observation operators supply $s$; conditional state and colored-noise propagation supply $S$. Here $\mu,v$ parameterize the underlying untruncated normal density, not its bounded mean and variance. Define
 \[
- g=s^\top S^{-1}s,\quad q=s^\top S^{-1}e,\quad
- v'=\frac{v}{1+vg},\quad \mu'=\mu+v'(q-\mu g),
+ \begin{aligned}
+ g&=s^\top S^{-1}s,& q&=s^\top S^{-1}e,\\
+ v'&=\frac{v}{1+vg},& \mu'&=\mu+v'(q-\mu g).
+ \end{aligned}
 \]
 and $Z(\mu,v)=\Phi((u-\mu)/\sqrt v)-\Phi((l-\mu)/\sqrt v)$.
 Completing the square gives

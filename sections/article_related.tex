@@ -58,11 +58,13 @@ recovery memory from the other admission and publication rules.
 \subsection{Learned Diagnosis and Physical Uncertainty}
 Learned and knowledge-driven representations identify PMU disturbances and
 assets \cite{pandey2020realtime,li2024knowledge,yildiz2024few}. We compare
-two fixed ExtraTrees adapters from the SGSMA project. Their performance
-tests transfer of those implementations, not the limits of all supervised
-learning. A physical catalog and a fixed learned adapter have different
-access to candidate-source responses. This comparison does not equalize
-that information or establish a source-excluded generalization result.
+two ExtraTrees models trained for the same 18-source catalog on earlier
+simulation parents, then frozen with their causal adapters. Their inherited
+feature families and newly fitted weights are distinguished in the
+experimental design. Both represented-source learning and a physical
+dictionary supply source information, through different training and
+modeling routes. The comparison tests transfer at the original operating
+points; source-excluded generalization requires a separate experiment.
 
 Physical stochastic models support latent-state estimation
 \cite{ensaf2023kernel,tartakovsky2023gp}, while joint DAE parameter inference

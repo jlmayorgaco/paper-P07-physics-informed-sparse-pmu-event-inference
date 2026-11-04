@@ -1,5 +1,5 @@
 {
-  "phase": "SCIENTIFIC_AUDIT_REVISION",
+  "phase": "GEMINI_AND_REPOSITORY_AUDIT_REVISION_EXECUTED",
   "status": "COAUTHOR_REVIEW_MAJOR_REVISION_BEFORE_SUBMISSION",
   "last_checked_local_date": "2026-11-03",
   "a01": {
@@ -18,7 +18,7 @@
     "posthoc_existing_data": true,
     "raw0002_opened": false
   },
-  "paper_state": "Eight-section revised manuscript; original C01/A01 outputs preserved, monitored-time rates corrected and preliminary single-state control restored to the main narrative.",
+  "paper_state": "16-page article and 19-page essential supplement; explicit affine and conditional covariance equations, portable local checks, verified comparator lineage, complete unchanged C01/A01 outcomes; prior auxiliary studies preserved in 45-page Historical Technical Notes.",
   "completed_phases": {
     "P0": "baseline and protected-figure contract",
     "P1": "claim/evidence register",
@@ -27,7 +27,8 @@
     "P4": "A01 completion seal, parity, denominator/import checks and allowlist integration",
     "P5": "editorial corrections and source preparation",
     "P6": "retained pre-A01 review outputs",
-    "P7": "post-A01 package, visual review and readiness record"
+    "P7": "post-A01 package, visual review and readiness record",
+    "P8": "External review adjudicated against current code; mathematical checks, lineage and portable source rebuild verified; main/supplement/historical visual QA complete."
   },
   "final_artifacts": {
     "article": "output/pdf/P07_Event_Attribution_Article.pdf",
@@ -44,9 +45,10 @@
     "Independent plant/model transfer and attribution-mass calibration for stronger deployment/uncertainty claims",
     "Scientific coauthor review, author declarations and permissions"
   ],
-  "next_action": "Complete B01 and the authorized C02 implementation; execute C02 after B01 releases resources, using its frozen design and validation-only calibration. Build the central argument around demonstrated capabilities.",
+  "next_action": "Finish independent B01/C02 sealed evaluations; inspect complete outcomes before changing article claims. Retain failures and null results; do not tune against TEST.",
   "active_scientific_work": {
-    "B01": "CAL in progress; no partial results imported",
-    "C02": "102 scenarios designed/sealed; 24 unit tests; causal learning, GLR entrypoint and CAL/TEST guards implemented; full pipeline in progress, no simulation yet"
-  }
+    "B01": "TEST inference active at revision; no partial results imported",
+    "C02": "Full isolated pipeline implemented; exact 1050-report development parity and independent guard review passed. One-shot queue waits for B01 completion and 30 GiB initial free disk; 16 GiB reserve between units. No campaign results in article."
+  },
+  "revision_record": "docs/revision_execution_20261103/RESPONSE_AND_STATUS.md"
 }

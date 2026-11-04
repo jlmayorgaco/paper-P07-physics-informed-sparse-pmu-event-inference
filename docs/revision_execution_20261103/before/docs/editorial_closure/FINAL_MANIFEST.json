@@ -1,0 +1,410 @@
+{
+  "status": "SCIENTIFIC_IMPROVEMENT_ACTIVE_REVIEW_DRAFT",
+  "created_local": "2026-11-03T12:50:27.824419-05:00",
+  "page_counts": {
+    "article": 15,
+    "supplement": 42,
+    "review_bundle": 57,
+    "coauthor_brief": 1,
+    "historical_notes": 37
+  },
+  "checks": {
+    "a01_outputs": "96/96; no new inference in this revision",
+    "c01_counts_and_prediction_seal_changed": false,
+    "monitored_exposure_ratio": "120/108; constant across all 18 event parents per stratum verified",
+    "protected_figure_hashes": 16,
+    "event_types_figure_page": 4,
+    "ieee39_topology_page": 5,
+    "duplicate_labels": 0,
+    "unresolved_reference_markers": 0,
+    "source_package_inputs": 133,
+    "source_package_smoke": "Exact-text isolated package check from preceding scientific revision; current changes are narrative-only, current source package rebuilt",
+    "all_main_and_supplement_pages_rendered": true,
+    "all_main_and_supplement_pages_visually_reviewed": true
+  },
+  "author_declarations_open": true,
+  "scientific_comparison_gaps_open": true,
+  "files": [
+    {
+      "path": "CLAIMS.md",
+      "sha256": "b6c09a0291c870d9deaef1bb3f7e400ed50ecc2f9343387eba9aee656de4ccde",
+      "bytes": 10715
+    },
+    {
+      "path": "README.md",
+      "sha256": "7e1ea78261da311024a8fefb7375ecda9571095c82ddb9e8ada32946c75f9a6f",
+      "bytes": 2826
+    },
+    {
+      "path": "docs/C01_COAUTHOR_STATUS.json",
+      "sha256": "b841c88f13bf0bc3a6585c29493d5c5ef8c9a4f93ab1577cbfeacdb3197c08cc",
+      "bytes": 567
+    },
+    {
+      "path": "docs/CONTROLLED_ABLATION_STATUS.md",
+      "sha256": "25c654342872306390d21c728947aa987102691a368d8ff047f66c429a175341",
+      "bytes": 1617
+    },
+    {
+      "path": "docs/P07_CLOSURE_FOR_COAUTHORS.md",
+      "sha256": "342ec5e00215c33bee39ef5c467061437da7fbbe104163288b59073a3c36a95a",
+      "bytes": 6441
+    },
+    {
+      "path": "docs/P07_COAUTHOR_BRIEF.md",
+      "sha256": "2ccb6f54597ae68b99e675707709ae0b7a53bfb338da596aecef6167dcae649c",
+      "bytes": 2325
+    },
+    {
+      "path": "docs/P07_COAUTHOR_BRIEF_MANIFEST.json",
+      "sha256": "4e88b20008bbe952dbb4a98af0dcd7e8b3a81bb5fa172a5e5d94dfeb4dffa095",
+      "bytes": 586
+    },
+    {
+      "path": "docs/P07_VALIDATION_ACTIONS.md",
+      "sha256": "c8bfd7990fe8fdd8542a59d6d512be9a1d4764631917347a845f61c2292b3ffd",
+      "bytes": 2953
+    },
+    {
+      "path": "docs/SCIENTIFIC_AUDIT_RESPONSE_20261103.md",
+      "sha256": "c3b5df76b3bce92180ec5a8b3cc6a0e88d24d84044601314245687fae5546922",
+      "bytes": 10509
+    },
+    {
+      "path": "docs/editorial_closure/A01_STAGING_APPLIED.json",
+      "sha256": "a943dd9460b0bd28f6d95133c146b01e1da37d54a5a0ac4ea4ac9a5e69349a9c",
+      "bytes": 2998
+    },
+    {
+      "path": "docs/editorial_closure/FINAL_READINESS.md",
+      "sha256": "91cd641b5465bbb5cab0a7493cf221f88b5bf3ec6130eff19ac17a148b7cb240",
+      "bytes": 3407
+    },
+    {
+      "path": "docs/editorial_closure/README.md",
+      "sha256": "05a778911130ecb4d981db3df24834507c6824377cbaf95eb12ba711e1a171e8",
+      "bytes": 1847
+    },
+    {
+      "path": "docs/editorial_closure/STATUS.json",
+      "sha256": "9bf91650dc77d6714fdb585cc77f22f0f9b4a83a1d62f872652ceccea9f7a2ba",
+      "bytes": 2719
+    },
+    {
+      "path": "figures/frozen/PROTECTED_FIGURES.json",
+      "sha256": "c9fdacff439918578c519e47dfe23a16a7885729dedeb9de9e723d5c9fbbff38",
+      "bytes": 2538
+    },
+    {
+      "path": "figures/generated/ablation_a01.pdf",
+      "sha256": "1dd377a6240ff24f2cb305b158cbf7df09ac0469ae228bb38bf3c65f2052e2e4",
+      "bytes": 13588
+    },
+    {
+      "path": "figures/generated/diagnosis_delay_distribution.pdf",
+      "sha256": "0317f817b9efc6a19c01d9ee39626ad61a835d211c2ea6af35e787ec67d4f6d9",
+      "bytes": 14718
+    },
+    {
+      "path": "figures/generated/diagnosis_delay_distribution.png",
+      "sha256": "619108617b7e6d8d1e3f43f0a11f4f2f3ca6a799897b89b132b0015af6b33042",
+      "bytes": 58700
+    },
+    {
+      "path": "figures/generated/reader_c01_intervals.pdf",
+      "sha256": "b81b7e1a4436c10a29fce37ad977e3bb311bf1a09323720a335019baf83e2950",
+      "bytes": 18239
+    },
+    {
+      "path": "figures/generated/reader_c01_intervals.png",
+      "sha256": "3d7f73c900027a5b597d5b4ddc8928d9b9727c8d37a909933e22ee14f48494f6",
+      "bytes": 63464
+    },
+    {
+      "path": "figures/generated/reader_c01_tradeoff.pdf",
+      "sha256": "0d7fc4be5adfe905f13a5064294ef538f64477af0834883b9edbe9ecc8b19f86",
+      "bytes": 16837
+    },
+    {
+      "path": "figures/generated/reader_c01_tradeoff.png",
+      "sha256": "18bb5f0c538d5283d4eb2918a099377e3b88a1424fcb049b8a0dfbe96e210aaa",
+      "bytes": 85654
+    },
+    {
+      "path": "figures/generated/reader_episode_story.pdf",
+      "sha256": "ee44d94d0f7a42b5420b77f0d7608225c2bfd8257ef399733221e2b6bd93147c",
+      "bytes": 17770
+    },
+    {
+      "path": "figures/generated/reader_episode_story.png",
+      "sha256": "879143ecc853bc55a3cd480c9d8cb8ad0dad3ea541c2d394ba6fbf62491d5be8",
+      "bytes": 69624
+    },
+    {
+      "path": "figures/generated/reader_observed_signals.pdf",
+      "sha256": "5ece06ac4b0470c86599731a6a8aad8a8463bfcd0dbeb15a49db462c65e39595",
+      "bytes": 22360
+    },
+    {
+      "path": "figures/generated/reader_observed_signals.png",
+      "sha256": "37cfad954aa49205abbb61b4954181210a29605c9241c424a97dd9d844a1e698",
+      "bytes": 155199
+    },
+    {
+      "path": "generated/frozen/ablation_a01_20261102/EVALUATION_AUDIT.json",
+      "sha256": "8ba64caa68e390f76e8abd1fb05057f3f559ee89697d533fbef14c57ec1477e1",
+      "bytes": 377
+    },
+    {
+      "path": "generated/frozen/ablation_a01_20261102/EVENTS.csv",
+      "sha256": "9de89ff5a395d38053570ee0edff964b7cd261805e5e9b5c13f793bd20b860ca",
+      "bytes": 103203
+    },
+    {
+      "path": "generated/frozen/ablation_a01_20261102/INTERACTION.json",
+      "sha256": "abbae33bfd994ce72c6d3856cc31b9e1576a97a171b5ec81f141b510272f8d7c",
+      "bytes": 146
+    },
+    {
+      "path": "generated/frozen/ablation_a01_20261102/MANIFEST.json",
+      "sha256": "711c9073ff68db9df83255a7d89e1997d896e16a77829359df6c24270655a55c",
+      "bytes": 1712
+    },
+    {
+      "path": "generated/frozen/ablation_a01_20261102/PAIRED_INTERVALS.csv",
+      "sha256": "44a1a2990b8c301a3f0fdcd9ca0201febb2676fd801b7b82ba84d648489ab06e",
+      "bytes": 716
+    },
+    {
+      "path": "generated/frozen/ablation_a01_20261102/PREDICTIONS_SEAL.json",
+      "sha256": "8b80073fd07d7965afae88397a36d9c5c48ca64f3f9ff878296f3ec432475985",
+      "bytes": 12342
+    },
+    {
+      "path": "generated/frozen/ablation_a01_20261102/RECORDS.csv",
+      "sha256": "88fc5a2c3eeac4dbdc9457f92580a5865a9232b048948300ac3876704591ccdb",
+      "bytes": 8099
+    },
+    {
+      "path": "generated/frozen/ablation_a01_20261102/SUMMARY.csv",
+      "sha256": "5697aa3d586a740f92c783cecfeb696cdceaa12da0c1e65eeef8e3b0d5775a2a",
+      "bytes": 1416
+    },
+    {
+      "path": "generated/monitored_exposure_audit.json",
+      "sha256": "2115e066e33331a197d33ff76ec9397dc0cdf924e93337d6c254f20be7278fd8",
+      "bytes": 6352
+    },
+    {
+      "path": "generated/paired_monitored_intervals.csv",
+      "sha256": "5abb222845b2e6f3226cde010aafe93f1949e9ee13e232de9c647562ec2def64",
+      "bytes": 14406
+    },
+    {
+      "path": "generated/scientific_revision_audit.json",
+      "sha256": "0bb807fd87796770e002963cfce88d12df69baa9ed67aa26cd8b497263705358",
+      "bytes": 1817
+    },
+    {
+      "path": "main.tex",
+      "sha256": "acf99d3f3d978cc24575151d1be453b3de6dbaad372fe36f24968bc693986e4d",
+      "bytes": 4040
+    },
+    {
+      "path": "metadata.tex",
+      "sha256": "094df1980ce18c442f0e8506f7c3042a3d6ee4c37133c27659c7b705691d04ff",
+      "bytes": 1042
+    },
+    {
+      "path": "output/P07_Para_David_y_Masoud.zip",
+      "sha256": "aea709e7b64112e8cc88825281ddf35e6985089bb871d966371044b034881db1",
+      "bytes": 22357503
+    },
+    {
+      "path": "output/pdf/P07_Coauthor_Brief_David_Masoud.pdf",
+      "sha256": "e061c91ea98b742de0a9445e70983b9022d2cffb4c3e0ee2104776a0bbdf6dc3",
+      "bytes": 75263
+    },
+    {
+      "path": "output/pdf/P07_Event_Attribution_Article.pdf",
+      "sha256": "d577f493712e4c70641920f087635d2b293b27c453c97d063bd534b076cfc2c8",
+      "bytes": 7166630
+    },
+    {
+      "path": "output/pdf/P07_Event_Attribution_Review_Bundle.pdf",
+      "sha256": "710e860f0741a15dfbd034b2aa87562fac9fc5a63b81c0f704683e78d88f2122",
+      "bytes": 8076891
+    },
+    {
+      "path": "output/pdf/P07_Event_Attribution_Supplement.pdf",
+      "sha256": "f0c6f4be7abe449603349b04c40984136e95a8c45310443eb560ef9cfe0b2ac1",
+      "bytes": 1146846
+    },
+    {
+      "path": "output/pdf/P07_Physics_Informed_State_Reconstruction_Event_Source_Inference.pdf",
+      "sha256": "d577f493712e4c70641920f087635d2b293b27c453c97d063bd534b076cfc2c8",
+      "bytes": 7166630
+    },
+    {
+      "path": "output/pdf/P07_Physics_Informed_State_Reconstruction_Event_Source_Inference_Supplement.pdf",
+      "sha256": "f0c6f4be7abe449603349b04c40984136e95a8c45310443eb560ef9cfe0b2ac1",
+      "bytes": 1146846
+    },
+    {
+      "path": "output/source/P07_Article_Supplement_Source.zip",
+      "sha256": "96a8d00b80671fa8690e81429637401b633a5f448886697aee956814f6ca43b6",
+      "bytes": 7423067
+    },
+    {
+      "path": "output/source/SOURCE_PACKAGE.json",
+      "sha256": "aa58f6ef99a16ad4e01f860877a2f84ae3eb27b574f045383c9eb945fda42b59",
+      "bytes": 310
+    },
+    {
+      "path": "references.bib",
+      "sha256": "4c8aa5d03785abac660d25172f72a4d227c4d2eee7284ee111ee8475bdd4cae4",
+      "bytes": 28347
+    },
+    {
+      "path": "scripts/build_complete_confirmation_tables.py",
+      "sha256": "5e01e3de172eabb0460a62b36b41bd180138c4b974cbec965ac8c4276dd63209",
+      "bytes": 6018
+    },
+    {
+      "path": "scripts/build_manuscript_bundle.ps1",
+      "sha256": "3ce78f0cf516423ecd176fe3fef80d27219c57851fcbc0b16f798ff527acbac9",
+      "bytes": 5552
+    },
+    {
+      "path": "scripts/build_reader_figures.py",
+      "sha256": "7568ff29843d4f5c2cab1fbabe8c36e2f4bb33a89098047079baaacb9626b9bb",
+      "bytes": 15303
+    },
+    {
+      "path": "scripts/build_scientific_revision.py",
+      "sha256": "6d3e697b822428fc63e7333fb8df24a286da728e7cef2d10e7bb6628c7eb8384",
+      "bytes": 4467
+    },
+    {
+      "path": "scripts/monitored_exposure.py",
+      "sha256": "3644771b54454d8a7c8db6e2b1ea4cc5b8bdb726112b55d41140bb3d8750c64a",
+      "bytes": 2839
+    },
+    {
+      "path": "scripts/package_coauthor_review.py",
+      "sha256": "ef42326382331f6d8341045e0cb1edb2e4a7e5e0ed52e44cc1c5f2ef1775dae4",
+      "bytes": 5109
+    },
+    {
+      "path": "scripts/prepare_coauthor_brief.py",
+      "sha256": "67d56ad6408b70299148c3c8e3dd6e6d4535da3d187f8c30738864ad3b60cd8d",
+      "bytes": 6423
+    },
+    {
+      "path": "sections/08c_c01_confirmatory.tex",
+      "sha256": "20c61e583a008de75b9c4fdbd704b693df10cef47ffbd15cbe953171e4e67934",
+      "bytes": 6835
+    },
+    {
+      "path": "sections/article_ablation_design.tex",
+      "sha256": "6a01afe751841188a6e69510197b5dc4742ebfe980b8cb85eea45d5064fb5976",
+      "bytes": 2628
+    },
+    {
+      "path": "sections/article_closure_results.tex",
+      "sha256": "744125543f747e3db5dd766827ddd2b3fa532009728fd87a640b27d6dafbd8a6",
+      "bytes": 2302
+    },
+    {
+      "path": "sections/article_controlled_ablation.tex",
+      "sha256": "29c3b6c18358aa24996dc0fb5e3036c2e3578ebbfc25fae01f9f6ffe176f35f3",
+      "bytes": 1526
+    },
+    {
+      "path": "sections/article_evidence_bridge.tex",
+      "sha256": "235e57138c80c25b4e45d15a7062e295e2a8b15f3d9c56661320084c4b085be2",
+      "bytes": 7335
+    },
+    {
+      "path": "sections/article_final_conclusion.tex",
+      "sha256": "2722299febbc87bda9c55e3bbeebb0605816b0b39d58dee4c84532f8a3298042",
+      "bytes": 1236
+    },
+    {
+      "path": "sections/article_information.tex",
+      "sha256": "3e66dc8e13c48b7f5d4927e0d7a7dc7c3215d37e6b7f643995d0e28999e3cae9",
+      "bytes": 3048
+    },
+    {
+      "path": "sections/article_interpretation.tex",
+      "sha256": "6f50012dff0b34c90586e039b46e31bc103d0e239e5b5c1471cd3fb10da4d39d",
+      "bytes": 4590
+    },
+    {
+      "path": "sections/article_intro.tex",
+      "sha256": "a0bb821e72bf201a33931b2a5ef9a446f8a4e532ff922a16b98d8c9761b7f61e",
+      "bytes": 4080
+    },
+    {
+      "path": "sections/article_method.tex",
+      "sha256": "723f575c079272f0c9024a37ed7ac6c3581e17e9ff3bd0848b4da4a0a46d3457",
+      "bytes": 15961
+    },
+    {
+      "path": "sections/article_related.tex",
+      "sha256": "8840e8a2e7a1ad03a5b1863c8ba31e09bc8df946c358d5e3382e2e61573a6d28",
+      "bytes": 6210
+    },
+    {
+      "path": "sections/narrative_problem.tex",
+      "sha256": "e78b8a6a8b4d7be95abb51da6a2c7b8085b4121ad849cb79ae100ce198aa4c1d",
+      "bytes": 7076
+    },
+    {
+      "path": "sections/narrative_protocol.tex",
+      "sha256": "eb3a23e6289a5e4cf94a73190c1ae6ba846f86e6b97d95293c6af9570c8f35f2",
+      "bytes": 6082
+    },
+    {
+      "path": "sections/narrative_results.tex",
+      "sha256": "60dae4f8e575747b36aa8baa976b049af74f5e6e48e16b722384846997599b7a",
+      "bytes": 2143
+    },
+    {
+      "path": "supplement.tex",
+      "sha256": "0cc0c84687872e9cde9af0baa127b6b63e5e804ac3fc7b937f7e6b2fd4e891ef",
+      "bytes": 19390
+    },
+    {
+      "path": "supplement/ablation_a01.tex",
+      "sha256": "b9754406492d8d621fa5c6a51f57ec20af0f314571bf82433a2e44afacf31ab8",
+      "bytes": 2641
+    },
+    {
+      "path": "supplement/development_streams.tex",
+      "sha256": "a7d7c8c089896f0def61f5800a169471b1bcef86c218f005c8a7aed9246fdace",
+      "bytes": 3672
+    },
+    {
+      "path": "supplement/measurement_contract.tex",
+      "sha256": "03460def405aee704e43f428e01893c32f72bb99cee12c4497cc6e9991a9f666",
+      "bytes": 3193
+    },
+    {
+      "path": "tables/generated/ablation_a01.tex",
+      "sha256": "2ccde7e47862d6edb0c7238777002234f05af7fe7338c695fb54174027feee6e",
+      "bytes": 883
+    },
+    {
+      "path": "tables/generated/review_paired.tex",
+      "sha256": "0ea0cb3583e7536c04055b3c330898bdcaa15c8dc28f66c13d634f4040a75dbf",
+      "bytes": 2841
+    },
+    {
+      "path": "tables/generated/source_catalog.tex",
+      "sha256": "355f939511523601dcc195d8a137e52e70c2534e2733c6da8a38d14a896fe831",
+      "bytes": 501
+    }
+  ],
+  "active_experiments": "B01 in progress; C02 being implemented, no outcomes yet"
+}

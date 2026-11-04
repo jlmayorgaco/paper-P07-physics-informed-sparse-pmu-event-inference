@@ -12,6 +12,12 @@ from zipfile import ZIP_DEFLATED, ZipFile
 ROOT = Path(__file__).resolve().parents[1]
 TARGET = ROOT / "output/P07_Para_David_y_Masoud.zip"
 FILES = [
+    "docs/revision_execution_20261103/RESPONSE_AND_STATUS.md",
+    "generated/revision_math_20261103/checks.json",
+    "generated/revision_math_20261103/PORTABILITY.json",
+    "generated/comparator_lineage.json",
+    "scripts/verify_history_partition.py",
+    "scripts/build_comparator_lineage.py",
     "docs/P07_VALIDATION_ACTIONS.md",
     "docs/SCIENTIFIC_AUDIT_RESPONSE_20261103.md",
     "generated/monitored_exposure_audit.json",
@@ -63,7 +69,7 @@ def main() -> None:
     readme = (
         "P07 coauthor review package — scientific revision, 3 November 2026\n\n"
         "Read the current scientific-audit response, coauthor brief and main article first; older research notes retain their component-study scopes. "
-        "The eight-section article focuses on physical recovery, independent load/line attribution and controlled state-carry evidence. Auxiliary reconstruction, feature, context and simultaneous-source studies remain in the supplement. Read docs/SCIENTIFIC_AUDIT_RESPONSE_20261103.md for corrections and scientific gaps. "
+        "The article focuses on physical recovery, independent load/line attribution and controlled state-carry evidence. The essential supplement contains the implemented-filter derivations and checks, comparator lineage, complete C01/A01 outcomes and separate context/recovery controls. Earlier reconstruction, feature and simultaneous-source studies remain in Historical Technical Notes. Read docs/revision_execution_20261103/RESPONSE_AND_STATUS.md for the latest changes and scientific gaps. "
         "C01 completed 171 physical trajectories and 342 observed records without "
         "method retuning. The source package rebuilds the article. The evidence "
         "concerns the F01 load/line catalog; the out-of-bank R/X alarm burden "
@@ -71,8 +77,10 @@ def main() -> None:
         "No message has been sent to coauthors.\n"
     )
     files = FILES + [str(p.relative_to(ROOT)).replace(chr(92), "/") for p in sorted((ROOT / "generated/frozen/historical_submission_comparison_20261102").glob("*"))]
-    for folder in ('generated/review_diagnostics_20261102', 'generated/frozen/ablation_a01_20261102'):
-        files += [p.relative_to(ROOT).as_posix() for p in sorted((ROOT / folder).glob('*')) if p.is_file() and p.suffix in ('.md', '.json', '.csv')]
+    for folder in ('generated/review_diagnostics_20261102', 'generated/frozen/ablation_a01_20261102',
+                   'generated/frozen/comparator_lineage_20261103',
+                   'generated/frozen/revision_math_kernel_20261103'):
+        files += [p.relative_to(ROOT).as_posix() for p in sorted((ROOT / folder).glob('*')) if p.is_file() and p.suffix in ('.md', '.json', '.csv', '.py')]
     evidence = json.loads((ROOT / "generated/EVIDENCE_BRIDGE_PROVENANCE.json").read_text())
     files += [x["path"].replace(chr(92), "/") for x in evidence["inputs"]]
     files = list(dict.fromkeys(files))

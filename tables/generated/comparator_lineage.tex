@@ -1,0 +1,35 @@
+\begin{table*}[t]\centering\small
+\caption{Identity of the fitted ExtraTrees comparators used in the confirmatory streams. Hashes show the first 12 hexadecimal characters; the frozen provenance JSON retains all 64. These are development-trained artifacts, distinct from the original submitted hackathon models.}
+\label{tab:comparator-lineage}
+\begin{tabular}{@{}llrrl@{}}\toprule
+Comparator & Artifact variant & Features & Trees & Model SHA-256 prefix\\\midrule
+ExtraTrees & BASELINE & 846 & 400 & \texttt{8be07d191ec9}\\
+ExtraTrees short & SHORT & 1457 & 400 & \texttt{e4afa2907d5f}\\
+\bottomrule\end{tabular}
+\end{table*}
+
+Both models were fitted on 32 physical parents from the
+four earlier development campaigns \texttt{SIM0014--SIM0017};
+validation used 8 parents and 16 observed records
+from \texttt{SIM0018}. These identifiers name historical campaigns that
+were already development data for this comparator construction.
+The fitted label set contains normal operation and all 18 catalog
+sources. The training target is the active source; after restoration,
+including physical recovery, its label is normal. This is not a
+source-excluded transfer test.
+
+The confirmatory loader selects the two \texttt{M03\_R09} artifacts
+in Table~\ref{tab:comparator-lineage}, not the original hackathon
+serializations. Each report selects the largest tree vote, and six
+consecutive reports of the same label drive the episode interface.
+The wrapper has no separate probability-trigger threshold to lower.
+Tree votes are uncalibrated; the 300-report prefix and monitoring
+start at zero-based report 360 are frozen.
+
+Full model and source hashes, training metadata and the observed
+class set are recorded in \nolinkurl{generated/comparator_lineage.json}.
+The reproduction snapshot is
+\nolinkurl{generated/frozen/comparator_lineage_20261103/}.
+Running \nolinkurl{scripts/build_comparator_lineage.py} regenerates
+this table from that snapshot without the research checkout, model
+fitting, predictions or campaign outputs.

@@ -1,0 +1,52 @@
+{
+  "phase": "SCIENTIFIC_AUDIT_REVISION",
+  "status": "COAUTHOR_REVIEW_MAJOR_REVISION_BEFORE_SUBMISSION",
+  "last_checked_local_date": "2026-11-03",
+  "a01": {
+    "state": "COMPLETE",
+    "records": 24,
+    "arms": 4,
+    "new_inferences": 72,
+    "intended_outputs": 96,
+    "available_outputs": 96,
+    "failures": 0,
+    "methods_retuned": false,
+    "predictions_sealed_before_evaluation": true,
+    "baseline_parity_reports": 3601,
+    "baseline_parity_max_error": 0.0,
+    "events_identical": true,
+    "posthoc_existing_data": true,
+    "raw0002_opened": false
+  },
+  "paper_state": "Eight-section revised manuscript; original C01/A01 outputs preserved, monitored-time rates corrected and preliminary single-state control restored to the main narrative.",
+  "completed_phases": {
+    "P0": "baseline and protected-figure contract",
+    "P1": "claim/evidence register",
+    "P2": "C01 restoration/runtime/domain derived outputs",
+    "P3": "method, measurement contract and bounded claims",
+    "P4": "A01 completion seal, parity, denominator/import checks and allowlist integration",
+    "P5": "editorial corrections and source preparation",
+    "P6": "retained pre-A01 review outputs",
+    "P7": "post-A01 package, visual review and readiness record"
+  },
+  "final_artifacts": {
+    "article": "output/pdf/P07_Event_Attribution_Article.pdf",
+    "supplement": "output/pdf/P07_Event_Attribution_Supplement.pdf",
+    "review_bundle": "output/pdf/P07_Event_Attribution_Review_Bundle.pdf",
+    "coauthor_brief": "output/pdf/P07_Coauthor_Brief_David_Masoud.pdf",
+    "source_zip": "output/source/P07_Article_Supplement_Source.zip",
+    "coauthor_zip": "output/P07_Para_David_y_Masoud.zip",
+    "manifest": "docs/editorial_closure/FINAL_MANIFEST.json"
+  },
+  "open_blockers": [
+    "Independent information-matched continuous-observer/history-bank comparison for the stronger mechanism claim",
+    "Common validation-selected alarm budget for architecture superiority claims",
+    "Independent plant/model transfer and attribution-mass calibration for stronger deployment/uncertainty claims",
+    "Scientific coauthor review, author declarations and permissions"
+  ],
+  "next_action": "Complete B01 and the authorized C02 implementation; execute C02 after B01 releases resources, using its frozen design and validation-only calibration. Build the central argument around demonstrated capabilities.",
+  "active_scientific_work": {
+    "B01": "CAL in progress; no partial results imported",
+    "C02": "102 scenarios designed/sealed; 24 unit tests; causal learning, GLR entrypoint and CAL/TEST guards implemented; full pipeline in progress, no simulation yet"
+  }
+}

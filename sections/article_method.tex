@@ -27,14 +27,22 @@ A measured terminal current is not a nodal injection. A line opening
 changes its branch primitive and terminal map; a load changes its admitted
 P/Q input direction.
 
-On a regular index-one DAE chart with a fixed angle reference,
+Each network hypothesis is linearized at the operating point
+$(\bar x_\ell,\bar u_\ell)$ determined by its prefix-fitted load and
+dispatch factors. For topology
+$q$, the constructor holds $\bar x_\ell$ fixed and solves
+$g_{\ell,q}(\bar x_\ell,\bar z_{\ell,q},\bar u_\ell)=0$.
+On a regular index-one chart with a fixed angle reference, the derivatives
+at that consistent point give, suppressing $\ell$,
 \begin{align}
  \delta z&=-g_z^{-1}(g_x\delta x+g_u\delta u),\nonumber\\
- \delta\dot x&=A_q^{\rm red}\delta x+B_q^{\rm red}\delta u,\nonumber\\
+ \delta\dot x&=c_q+A_q^{\rm red}\delta x+B_q^{\rm red}\delta u,\nonumber\\
  A_q^{\rm red}&=f_x-f_zg_z^{-1}g_x,\quad
  B_q^{\rm red}=f_u-f_zg_z^{-1}g_u.
  \label{eq:narrative-reduction}
 \end{align}
+Here $c_q=f_q(\bar x,\bar z_q,\bar u)$ can be nonzero after a line
+opening even though the differential state is continuous.
 For the instantaneous electrical observation map $H_q(x,z,u)$, the
 corresponding output operators are
 \begin{equation}
@@ -42,7 +50,11 @@ corresponding output operators are
  D_q^{\rm red}=H_u-H_zg_z^{-1}g_u.
  \label{eq:electrical-output-reduction}
 \end{equation}
-They propagate a perturbation at an unmeasured source to the selected
+The electrical offset is
+$d_q^{\rm el}=H_q(\bar x,\bar z_q,\bar u)-H_0(\bar x,\bar z_0,\bar u)$.
+Thus both the changed algebraic solution and the changed terminal map
+enter the prediction. These operators propagate an unmeasured-source
+perturbation to the selected
 voltage and oriented-current channels. Network connectivity enters through
 the branch stamps in $g_q$ and $H_q$; eliminating unmeasured algebraic
 variables generally produces dense reduced operators. The graph therefore
@@ -52,8 +64,9 @@ through the changed voltage. The implementation discretizes the admitted
 switch modes and adds causal phase-history operators for frequency and
 ROCOF. Inertia, controls and load law remain those of the fixed plant.
 
-After augmenting instrumental memory, a conditional predictor has the
-local form
+Exponential discretization integrates $c_q$ over each mode interval;
+composition handles a switch within a report. After instrumental
+augmentation, the resulting offsets enter $b_{\ell,q}$ and $d_{\ell,q}$ in
 \begin{align}
  \xi_{k+1}&=A_{\ell,q}\xi_k+b_{\ell,q}+B_{\ell,q}a+w_k,\nonumber\\
  r_k&=C_{\ell,q}\xi_k+d_{\ell,q}+D_{\ell,q}a+v_k.
@@ -70,6 +83,8 @@ $v_k$ denotes the remaining innovation. A load has scalar severity within
 its specified P/Q direction. A line uses a switched operator rather than
 a fictitious load-amplitude fit. States from different equilibria are not
 interpreted as an absolute rotor-state mixture.
+The supplementary section ``Implemented Predictor and Conditional
+Uncertainty'' gives the affine construction and its code correspondence.
 
 \subsection{Estimate Context From the Startup Prefix}
 
@@ -134,13 +149,20 @@ covariance $P_\rho$ for the current discrepancy regime $\rho$,
  d_h^+&=T_o d_h+u_o-K_o s.
  \label{eq:implemented-conditional-correction}
 \end{align}
-The amplitude distribution is updated by the same integral above. The
-regime covariances are obtained from nominal-operator Riccati equations;
-The implementation does not propagate an independent exact covariance for every switched
-history. At episode closure, it retains the mixture mean of the augmented
-state and records the omitted between-history spread. Thus state continuity
-and conditional Bayesian amplitude integration are implemented, while a
-fully Bayesian posterior over states, context and all histories is not.
+The amplitude distribution is updated by the same integral. Its truncated
+variance $V_{a,h}$ differs from the Gaussian parameter $v_h$. The affine
+conditional representation retains state--severity dependence:
+\begin{align}
+ \operatorname{Cov}(\xi,a\mid h)&=d_hV_{a,h},\nonumber\\
+ \operatorname{Var}(\xi\mid h)&=P_\rho+d_hV_{a,h}d_h^\top.
+ \label{eq:conditional-amplitude-covariance}
+\end{align}
+Conditioning on past reports is implicit. The shared $P_\rho$ comes from
+nominal-operator Riccati equations, rather than an exact recursion for
+each switched history. At closure, the filter retains the augmented-state
+mixture mean and records the amplitude/mean spread that it discards.
+The supplement separates these approximations from the exact local
+amplitude integral and states the covariance needed for a full mixture.
 
 The rolling screen proposes histories; it is not another independent
 observation. Replaying a suffix replaces its original no-new-event suffix
@@ -230,6 +252,13 @@ Birth mass is split equally between load and line families, then uniformly
 among sources within each family. Load severity has a zero-mean Gaussian
 prior with standard deviation 0.15, truncated to $[-0.2,0.2]$ and integrated
 over four intervals with boundaries $-0.2,-0.1,0,0.1,0.2$.
+Each interval is a separate history with its own weight and truncated
+amplitude distribution; its birth weight is the prior probability of that
+interval. The physical operators are shared across these four histories.
+For a fixed path with all four intervals retained, their weighted evidence
+equals the single-interval integral.
+This partition is a bank representation, not numerical quadrature or a
+piecewise physical approximation.
 After three reports, eligible active histories can produce OFF children
 at either half-report position while inheriting state and severity.
 After likelihood normalization, the beam retains the 96 highest-weight

@@ -21,7 +21,27 @@ The simulator is the IEEE-39 Julia/PowerDynamics research candidate. Each physic
 
 The two development campaigns each contain three event parents with six successive load/line interventions and one normal parent, all 80 s long. Schedules are paired across nominal, in-bank R/X and mixed out-of-bank R/X conditions. Each campaign therefore has 18 unique interventions and 54 event realizations. Both campaigns are now development evidence. No interval or generalization claim treats those 54 realizations as independent events.
 
-The five-model bank and its nominal version are frozen co-references. Both ExtraTrees artifacts and their causal preprocessing/publication adapters are frozen as well; neither is retrained on the development streams or the independent test. They receive the same 30-fps observations. This is a comparison of those operational implementations on the stated contract, not a rerun of the hackathon leaderboard.
+The five-model bank and its nominal version are frozen co-references.
+Both ExtraTrees models were trained specifically for the causal load/line
+catalog, using 32 earlier physical parents for training and eight for
+development validation. Both training sets include normal operation and
+all 18 candidate sources. The reference uses 846 causal features from
+1-, 5- and 10-s windows; the short-window variant adds 611 features from
+3-, 8- and 15-report windows. Each model has 400 trees with the same
+predeclared hyperparameters. They inherit feature families from the SGSMA
+project, but their fitted weights are distinct from the original hackathon
+submission. These models and their adapters were frozen before the present
+independent schedules; no retraining uses the current evaluation records.
+All methods receive the same 30-fps observations. The supplementary
+reproduction table records the training lineage and model hashes.
+
+The learned adapter publishes a change after six consecutive identical
+argmax labels. Its tree votes are uncalibrated scores. A missing timely
+diagnosis can therefore reflect the representation, class competition or
+temporal confirmation; conditional accuracy among emitted diagnoses does
+not identify which mechanism caused an omission. The fixed-adapter
+comparison measures transfer of these configured procedures rather than
+an alarm-budget-matched architecture test.
 
 The published physical comparator is Chen \emph{et al.}'s persistent single-line quickest-change detector \cite{chen2016quickest}. Its reduced-network covariance is marginalized to the observed PMU subset after inversion. Parallel CUSUM statistics stop at the first threshold crossing and select a line. Our declared research-plant adapter uses nonoverlapping angle increments at 15 Hz, a startup-only scale/drift estimate and the fixed nominal line catalog. Its white-injection/DC assumptions do not describe all simulated instrumental effects. We preserve both matched-law implementation checks and model-mismatch failures; no ARL guarantee is transferred to colored noise.
 

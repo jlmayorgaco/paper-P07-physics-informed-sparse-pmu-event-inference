@@ -1,0 +1,66 @@
+{
+  "commit": "9aef51e5ea50f2a0a96273f81ad1dd417529e40c",
+  "files": [
+    {
+      "path": "main.tex",
+      "sha256": "84f50b92f9650bc2d9f7d314b6272bcf0a2e9931706fb06190b2b493b605c2da"
+    },
+    {
+      "path": "metadata.tex",
+      "sha256": "92e0ecedc9189febfa28f46858602845b83ad7ff65625aeca29b74afece36e2b"
+    },
+    {
+      "path": "supplement.tex",
+      "sha256": "c883c41078fa6e23dfa0ee3a12ef26cff3481f1e9f11d5151eda0a18de15046a"
+    },
+    {
+      "path": "historical_notes.tex",
+      "sha256": "eaeeb289893588ae86459b614441cebb701f0534f25300946d4e9e66a40ae3c3"
+    },
+    {
+      "path": "sections/article_method.tex",
+      "sha256": "082940c46d7574795b919f0a91199725fe80b3a735663add9b5f4b389fd62bc5"
+    },
+    {
+      "path": "sections/narrative_protocol.tex",
+      "sha256": "ffe1fa103d95d3cb5867b7fe448f851feb0a48a09aeacecf2b1c1bc1b11b7575"
+    },
+    {
+      "path": "sections/article_related.tex",
+      "sha256": "b6519ea93f5de989651d42a5f80fdd8fc1ef579649b146eb61c739e2a9fde36f"
+    },
+    {
+      "path": "sections/article_interpretation.tex",
+      "sha256": "7c71deea06f057c82de779f4a53506c1294d7204a986059fedacb960dde1c4c3"
+    },
+    {
+      "path": "references.bib",
+      "sha256": "1b45fcd7bce9c8071c079c0e50b7d3ff0b3230e6f3808c5b0b37d4a29287a1d5"
+    },
+    {
+      "path": "docs/c01-confirmatory-results.md",
+      "sha256": "d971ab2af5740611cc987166ae745c279713da4eb7ada9727ac3eb28f9093554"
+    },
+    {
+      "path": "scripts/package_coauthor_review.py",
+      "sha256": "a07030f4e92f940e72e86114edeef40763b99009ba65abf93fae6287e9a39760"
+    },
+    {
+      "path": "scripts/package_submission_sources.py",
+      "sha256": "adb82e8c2918e7c608d4c73e2964fcee56f4e12eb8e177c229f5e8fa5d436291"
+    },
+    {
+      "path": "main.pdf",
+      "sha256": "d577f493712e4c70641920f087635d2b293b27c453c97d063bd534b076cfc2c8"
+    },
+    {
+      "path": "supplement.pdf",
+      "sha256": "f0c6f4be7abe449603349b04c40984136e95a8c45310443eb560ef9cfe0b2ac1"
+    },
+    {
+      "path": "historical_notes.pdf",
+      "sha256": "3290048b6b39264814eabc3e69e194ceaa958f4f317a57bbc79b3dc9f4369daa"
+    }
+  ],
+  "attachment_1_and_2_identical_sha256": "80c49f94facbdbec344649f9b67b20803abba19da41106acc5e01c1462f6677f"
+}

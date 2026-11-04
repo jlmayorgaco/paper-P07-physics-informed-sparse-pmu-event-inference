@@ -1,0 +1,25 @@
+{
+  "scope": "Mathematical identities only; not validation of R11, F01, or empirical calibration.",
+  "truncated_gaussian": {
+    "closed_form": 7.619540478989206,
+    "adaptive_quadrature": 7.619540478989205,
+    "weighted_four_intervals": 7.619540478989208,
+    "relative_error_quadrature": 1.1656587718764233e-16,
+    "relative_error_partition": 2.3313175437528466e-16,
+    "qualification": "Same affine likelihood on all intervals; piecewise operators/pruning can change equivalence."
+  },
+  "taylor_counterexample": {
+    "function": "a+b+a^2+b^2-1.5*a*b",
+    "a": 0.1,
+    "b": 0.1,
+    "absolute_error_linear": 0.0050000000000000044,
+    "absolute_error_diagonal": 0.015000000000000013,
+    "absolute_error_full_quadratic": 0.0,
+    "qualification": "Refutes impossibility claim; does not certify repository derivative tensors."
+  },
+  "zero_alarm_poisson_95_upper_per_hour": {
+    "B01_1_96h": 1.5284348334459137,
+    "C02_3_92h": 0.7642174167229568,
+    "qualification": "Conditional on Poisson/exposure assumptions; not a guarantee after threshold selection or across correlated replicas."
+  }
+}

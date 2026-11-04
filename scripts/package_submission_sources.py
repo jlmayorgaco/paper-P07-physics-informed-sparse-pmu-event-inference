@@ -27,21 +27,32 @@ def main():
                 if not path.is_file():
                     raise FileNotFoundError(path)
                 sources.add(path)
-    for name in ('references.bib', 'IEEEtran.bst'):
+    for name in ('references.bib', 'IEEEtran.bst', 'scripts/build_comparator_lineage.py',
+                 'generated/comparator_lineage.json', 'scripts/verify_history_partition.py',
+                 'generated/revision_math_20261103/checks.json',
+                 'generated/revision_math_20261103/PORTABILITY.json'):
         path = ROOT / name
         if path.exists():
             sources.add(path)
+    for folder in ('comparator_lineage_20261103', 'revision_math_kernel_20261103'):
+        sources.update(p for p in (ROOT / 'generated/frozen' / folder).glob('*') if p.is_file())
     manifest = {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(sources)}
     instructions = '''P07 article and supplement source snapshot
 
 Compile main.tex and supplement.tex separately with pdfLaTeX, BibTeX and two
 further pdfLaTeX passes. IEEEtran.bst may be supplied by your TeX distribution.
 All local files actually read by these builds are included with their paths.
+Comparator provenance is independently regenerated, without models or PMU data,
+with Python: python scripts/build_comparator_lineage.py.
+Local mathematical checks use the bundled verified kernel:
+python scripts/verify_history_partition.py (requires NumPy and SciPy).
+These small checks do not rerun the nonlinear scientific campaigns.
 The PDF copies are supplied separately in output/pdf in the working repository.
 
-This is a review snapshot, not a certificate of submission readiness. The
-independent confirmatory campaign and final author metadata/biographies remain
-subject to the current repository status. No external submission is performed.
+This is a review snapshot, not a certificate of submission readiness. C01 and
+A01 are complete frozen evidence. Additional independent calibration and
+matched-comparator validation, and final author declarations, remain subject
+to the current repository status. No external submission is performed.
 Historical Technical Notes are preserved as a separate repository document.
 '''
     destination = ROOT / 'output/source/P07_Article_Supplement_Source.zip'

@@ -1,0 +1,35 @@
+{
+  "snapshot_id": "revision_math_kernel_20261103",
+  "purpose": "Minimal immutable source required by verify_history_partition.py; no campaign observations or model banks",
+  "kernel": {
+    "file": "amplitude_parent.py",
+    "source_repository": "SGSMA26-Physics-Informed-AD",
+    "source_relative_path": "experiments/PAPER_CONFIRMATORY_C01/run/runtime/amplitude_parent.py",
+    "sha256": "13024f9f6c6ead32f3b9f516abd93f973daefcc8155b6928ba41ebc56c59a3b0",
+    "copied_byte_for_byte": true
+  },
+  "baseline": {
+    "file": "reference_checks.json",
+    "source_relative_path": "generated/revision_math_20261103/checks.json",
+    "sha256": "18aef124e7d5cafb8a625e021ee039e4f38cec16dd4b753e21add9adfe254655",
+    "meaning": "Original pre-portability check report; its kernel digest is checked before import"
+  },
+  "dependencies": {
+    "repository_files": [],
+    "third_party_packages": [
+      "numpy",
+      "scipy"
+    ],
+    "verified_versions": {
+      "python": "3.13.14",
+      "numpy": "2.3.5",
+      "scipy": "1.16.3"
+    }
+  },
+  "excluded": [
+    "Full history-bank execution",
+    "R11/C01/A01/B01 observations",
+    "Pycache files",
+    "Calibrated posterior claims"
+  ]
+}

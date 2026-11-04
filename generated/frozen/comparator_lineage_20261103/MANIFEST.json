@@ -1,0 +1,68 @@
+{
+  "scope": "Training lineage and artifact identity; no performance outcomes or campaign data",
+  "sources": [
+    {
+      "snapshot_file": "COMPLETE.json",
+      "source_path": "experiments/E5_VALIDATION_PAPER/M03_R09_NUISANCE_DEV/ml/COMPLETE.json",
+      "sha256": "a195c6f55d46c6ee5ae20bedc3288db997b8f4b176523ffef83d21e2d27e5087",
+      "checked_against_pre_C01_freeze": false
+    },
+    {
+      "snapshot_file": "PROTOCOL.json",
+      "source_path": "experiments/E5_VALIDATION_PAPER/M03_R09_NUISANCE_DEV/ml/PROTOCOL.json",
+      "sha256": "821bef1ed79814a6b6d30b2c69f7c506696c7adf27c3b7fc2f0efcc3ba61413b",
+      "checked_against_pre_C01_freeze": true
+    },
+    {
+      "snapshot_file": "infer.py",
+      "source_path": "experiments/E5_VALIDATION_PAPER/M03_R09_NUISANCE_DEV/ml/infer.py",
+      "sha256": "39ee18fcace57d5f36bb965337a07873e0c799d03f9d3c0cf91a300b238610c1",
+      "checked_against_pre_C01_freeze": true
+    },
+    {
+      "snapshot_file": "run.py",
+      "source_path": "experiments/E5_VALIDATION_PAPER/M03_R09_NUISANCE_DEV/ml/run.py",
+      "sha256": "abd173e9109a45e2163380360266271c1dd28a660bb8af29ff6446285f72b4db",
+      "checked_against_pre_C01_freeze": true
+    },
+    {
+      "snapshot_file": "causal_ml.py",
+      "source_path": "experiments/E5_VALIDATION_PAPER/M03_R09_NUISANCE_DEV/ml/causal_ml.py",
+      "sha256": "d707d31bf7f75eaa711d0ef25d0adae584d3a9e34714fa9985314f355a0abbdf",
+      "checked_against_pre_C01_freeze": true
+    },
+    {
+      "snapshot_file": "common.py",
+      "source_path": "experiments/PAPER_CONFIRMATORY_C01/execution/common.py",
+      "sha256": "5893843a502c96ada05821de9925bba5057ec4477e2eeb10bba04fa0bf38ee90",
+      "checked_against_pre_C01_freeze": true
+    },
+    {
+      "snapshot_file": "worker.py",
+      "source_path": "experiments/PAPER_CONFIRMATORY_C01/execution/worker.py",
+      "sha256": "2e88aca82c53d7ee4a832240078fd4aa54715a9c88f6e61d4e5ca1cebedf693d",
+      "checked_against_pre_C01_freeze": true
+    }
+  ],
+  "reference_manifests": [
+    {
+      "path": "generated/frozen/continuous_20261029/C01/references/R11_FREEZE.json",
+      "sha256": "6092b66ef8479a96b962a0f2b2c111c9aa9bfe2874cf6989dcf352573a67ad03"
+    },
+    {
+      "path": "generated/frozen/c01_20261029/EXECUTION_FREEZE.json",
+      "sha256": "aabb50a07022855ce21dcb242df36a892ee40ebae254e7e2e940a3501fae4e56"
+    }
+  ],
+  "model_inspection_sha256": "1ed774b292c44c144a2d8d13af627a5c15f89a5ec96b3187999591858a5d0d00",
+  "reference_entries": {
+    "experiments/E5_VALIDATION_PAPER/M03_R09_NUISANCE_DEV/ml/PROTOCOL.json": "821bef1ed79814a6b6d30b2c69f7c506696c7adf27c3b7fc2f0efcc3ba61413b",
+    "experiments/E5_VALIDATION_PAPER/M03_R09_NUISANCE_DEV/ml/infer.py": "39ee18fcace57d5f36bb965337a07873e0c799d03f9d3c0cf91a300b238610c1",
+    "experiments/E5_VALIDATION_PAPER/M03_R09_NUISANCE_DEV/ml/run.py": "abd173e9109a45e2163380360266271c1dd28a660bb8af29ff6446285f72b4db",
+    "experiments/E5_VALIDATION_PAPER/M03_R09_NUISANCE_DEV/ml/causal_ml.py": "d707d31bf7f75eaa711d0ef25d0adae584d3a9e34714fa9985314f355a0abbdf",
+    "experiments/PAPER_CONFIRMATORY_C01/execution/common.py": "5893843a502c96ada05821de9925bba5057ec4477e2eeb10bba04fa0bf38ee90",
+    "experiments/PAPER_CONFIRMATORY_C01/execution/worker.py": "2e88aca82c53d7ee4a832240078fd4aa54715a9c88f6e61d4e5ca1cebedf693d",
+    "experiments/E5_VALIDATION_PAPER/M03_R09_NUISANCE_DEV/ml/models/BASELINE.joblib": "8be07d191ec94f734cccc74991642ed288d700bbedf994168b556411b048b65f",
+    "experiments/E5_VALIDATION_PAPER/M03_R09_NUISANCE_DEV/ml/models/SHORT.joblib": "e4afa2907d5f79c535a60bc98720802c5481f2eec64795563583f25ae6d5d00c"
+  }
+}

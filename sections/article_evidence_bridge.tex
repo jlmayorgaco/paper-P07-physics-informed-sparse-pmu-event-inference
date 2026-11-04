@@ -1,13 +1,12 @@
-\section{What Physical Structure and Learned Features Recover}
+\section{Archived Physical and Learned Component Studies}
 \label{sec:evidence-bridge}
 
-The continuous estimator builds on three distinct questions: what can be
-reconstructed at unmeasured buses, what response distinguishes candidate
-sources, and how evidence should be assigned when several explanations
-fit. The following component experiments answer parts of these questions.
-They use different cohorts and are not ablations of the final continuous
-estimator. Figure~\ref{fig:evidence-bridge} places their measured effects
-side by side without pooling their scores.
+These historical experiments examine unmeasured-bus reconstruction,
+engineered source features and simultaneous-load response approximation.
+They preserve the development record with separate estimators and cohorts.
+None is an ablation or a component-performance guarantee for the current
+causal history bank. Figure~\ref{fig:evidence-bridge} retains their measured
+effects without pooling their scores.
 
 \begin{figure*}[t]\centering
 \includegraphics[width=.99\textwidth]{figures/generated/evidence_bridge.pdf}
@@ -51,14 +50,19 @@ For phase-to-neutral RMS phasors and a declared current orientation,
        =\sum_{\phi\in\{a,b,c\}}V_{i\phi}I_{ij,\phi}^{*}.
  \label{eq:bridge-terminal-power}
 \end{equation}
-This expression requires voltage and current at the same terminal.
+For the balanced positive-sequence model, the three phase terms reduce
+to $3V_{i,a}I_{ij,a}^{*}$ with phase-to-neutral RMS phasors; they do not
+represent three independent measurements. This expression requires
+voltage and current at the same terminal.
 In the frozen map, the bus-2 voltage is paired with a current measured at
 bus 3, and the bus-10 voltage with a current at bus 11. Their raw channel
 products are therefore power proxies, not exact terminal powers. Even a
 co-located terminal power is not the bus's net injection unless all
-relevant terminals are accounted for. Frequency and ROCOF complement the phasors
-but share the instrument's angle processing; the likelihood must account
-for that dependence. Fundamental-frequency phasors also do not determine
+relevant terminals are accounted for. Frequency and ROCOF can share an
+instrument's angle-processing history with its phasor channels. The frozen
+generator adds frequency/ROCOF noise after its phase estimator and does
+not apply the archived cross-family factor covariance; these feature
+results do not validate a complete joint instrument-noise law. Fundamental-frequency phasors also do not determine
 harmonic distortion. Thus adding nominally physical features does not
 by itself supply missing harmonic or nodal-injection measurements.
 
@@ -77,7 +81,11 @@ $Q$ terms include their Taylor scaling. The mixed term represents the
 interaction of two simultaneous load changes. Across 32 archived
 two-source responses, median whitened error is \BridgeDError{} for $D$,
 \BridgeQError{} after self-curvature, and \BridgeMixedError{} after mixed
-terms. This is evidence for response fidelity in that local experiment.
+terms. A partial second-order expansion has no monotonic error guarantee:
+omitted mixed terms can cancel included diagonal terms. The increase
+after adding self-curvature alone therefore does not prove a sign or
+normalization error. The complete response comparison is evidence for
+fidelity in that local experiment.
 It is not a measured classification gain from inserting this second-order
 tensor into the continuous load/line bank, which uses switched local
 predictors instead.
@@ -89,8 +97,8 @@ does not provide an accuracy or computational advantage.
 In the continuous estimator, $M$ is instead a vector of aggregated
 source/family weights at each report, and $\Delta M$ is its temporal
 difference, as defined in the main article.
-That implementation does not require a tensor decomposition or a
-tensor-learning library.
+Its stored source weights and the physical response coefficients serve
+different computational roles.
 
 \subsection{Why Integrate Severity Rather Than Select the Best Fit?}
 An extra source with zero amplitude can reproduce a smaller source set.
@@ -104,7 +112,7 @@ archived load-support estimator, the model-selection quantity is
 Integration accounts for the prior volume of amplitudes consistent with
 the data, rather than rewarding only the best-fitting amplitude. This is
 standard Bayesian model comparison applied to an electrical response
-model, not a new Bayes rule. The archived implementation evaluates the
+model. The archived implementation evaluates the
 null, 16 single-source and 120 pair supports with 31-point Gauss--Hermite
 quadrature per amplitude. Table~\ref{tab:archived-support-bridge} shows
 both its successes and its loss of resolution for weak sources.
@@ -123,6 +131,7 @@ $(0.20,0.50/(2\pi),0.30)$ rather than the declared $(0.20,0.50,0.30)$.
 The table preserves the executed results under that effective prior;
 it does not validate calibrated posterior probabilities or a corrected
 replay. The continuous estimator uses separate, independently checked
-local evidence code. Consequently these component results motivate the
-physical/Bayesian construction, but do not establish that adding Bayes
-or tensor storage alone causes its final accuracy advantage.
+local evidence code. These results preserve the historical construction and its known error.
+A corrected-prior batch evaluation remains separate work; it cannot be
+obtained by relabeling this table or attributed to the unchanged causal
+method.

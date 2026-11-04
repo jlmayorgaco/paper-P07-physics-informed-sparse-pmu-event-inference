@@ -2,11 +2,13 @@
 
 Scientific audit revision (3 November): the article has eight sections and a narrower recovery-consistency claim. See the [audit response, implemented corrections and remaining scientific gaps](docs/SCIENTIFIC_AUDIT_RESPONSE_20261103.md). This is a coauthor-review draft, not a submission-ready manuscript.
 
+The [latest executed review](docs/revision_execution_20261103/RESPONSE_AND_STATUS.md) adds explicit affine/state–amplitude equations, portable numerical checks, verified comparator lineage and a focused supplement containing complete C01/A01 outcomes. The second supplied Gemini attachment duplicates the first; the revision addresses that review and the independent repository audit.
+
 C01 completed without retuning: 171 physical trajectories and all 342 observed records. See the [results and failure ledger](docs/c01-confirmatory-results.md). Scientific coauthor review remains open.
 
 The article preserves the protected event-types image and IEEE-39 single-line diagram. Their hashes and validation procedure are documented in [PROTECTED_FIGURES.md](docs/PROTECTED_FIGURES.md). Project-specific editing constraints are in [AGENTS.md](AGENTS.md).
 
-The active validation work is described in [P07 validation actions](docs/P07_VALIDATION_ACTIONS.md): B01 calibration is running; the independent, all-source C02 comparison is being implemented.
+The active validation work and execution gates are described in [P07 validation actions](docs/P07_VALIDATION_ACTIONS.md). B01 and C02 results are not imported before their complete sealed evaluation.
 
 ## Manuscript and results
 
@@ -43,3 +45,5 @@ powershell -ExecutionPolicy Bypass -File scripts/build_manuscript_bundle.ps1
 ```
 
 The build compiles the article, supplement and historical notes, verifies the protected figures, and creates the combined review bundle. `-RefreshArtifacts` explicitly regenerates deterministic editorial/theory artifacts and should be reviewed separately.
+
+The default build also verifies the local mathematical identities (NumPy/SciPy required) and regenerates comparator lineage from bundled source/metadata snapshots. These checks do not require the research checkout or rerun empirical campaigns. `python scripts/verify_source_package.py` checks an isolated rebuild of the article and supplement source ZIP.
