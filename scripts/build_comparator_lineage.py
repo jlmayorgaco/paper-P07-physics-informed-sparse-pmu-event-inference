@@ -172,39 +172,34 @@ def generate():
                        'pre_C01_manifests': manifest['reference_manifests']},
     }
     write(ROOT / 'generated/comparator_lineage.json', output)
+    # Reader-facing text: no code names, paths, hashes or internal campaign identifiers
+    # (those remain in generated/comparator_lineage.json for the reproduction package).
+    # Reader-facing text: no code names, paths, hashes or internal campaign identifiers
+    # (those remain in generated/comparator_lineage.json for the reproduction package).
     rows = []
     for label, model in zip(('ExtraTrees', 'ExtraTrees short'), models):
-        rows.append(f"{label} & {model['variant']} & {model['features']} & {model['trees']} & "
-                    + r'\texttt{' + model['sha256'][:12] + r'}\\')
-    table = [r'\begin{table*}[t]\centering\small',
-             r'\caption{Identity of the fitted ExtraTrees comparators used in the confirmatory streams. Hashes show the first 12 hexadecimal characters; the frozen provenance JSON retains all 64. These are development-trained artifacts, distinct from the original submitted hackathon models.}',
+        windows = '1, 5, 10 s' if label == 'ExtraTrees' else '1, 5, 10 s; 3, 8, 15 reports'
+        rows.append(f"{label} & {model['features']} & {windows} & {model['trees']}" + '\\\\')
+    table = [r'\begin{table}[t]\centering\small',
+             r'\caption{Fitted ExtraTrees comparators used in the held-out streams. Both were trained for this study and are distinct from the original competition models.}',
              r'\label{tab:comparator-lineage}',
-             r'\begin{tabular}{@{}llrrl@{}}\toprule',
-             r'Comparator & Artifact variant & Features & Trees & Model SHA-256 prefix\\\midrule',
-             *rows, r'\bottomrule\end{tabular}', r'\end{table*}', '',
-             f"Both models were fitted on {complete['parents_train']} physical parents from the",
-             r'four earlier development campaigns \texttt{SIM0014--SIM0017};',
-             f"validation used {complete['parents_validation']} parents and {complete['validation_records']} observed records",
-             r'from \texttt{SIM0018}. These identifiers name historical campaigns that',
-             r'were already development data for this comparator construction.',
-             r'The fitted label set contains normal operation and all 18 catalog',
-             r'sources. The training target is the active source; after restoration,',
-             r'including physical recovery, its label is normal. This is not a',
-             r'source-excluded transfer test.', '',
-             r'The confirmatory loader selects the two \texttt{M03\_R09} artifacts',
-             r'in Table~\ref{tab:comparator-lineage}, not the original hackathon',
-             r'serializations. Each report selects the largest tree vote, and six',
-             r'consecutive reports of the same label drive the episode interface.',
-             r'The wrapper has no separate probability-trigger threshold to lower.',
-             r'Tree votes are uncalibrated; the 300-report prefix and monitoring',
-             r'start at zero-based report 360 are frozen.', '',
-             r'Full model and source hashes, training metadata and the observed',
-             r'class set are recorded in \nolinkurl{generated/comparator_lineage.json}.',
-             r'The reproduction snapshot is',
-             r'\nolinkurl{generated/frozen/comparator_lineage_20261103/}.',
-             r'Running \nolinkurl{scripts/build_comparator_lineage.py} regenerates',
-             r'this table from that snapshot without the research checkout, model',
-             r'fitting, predictions or campaign outputs.', '']
+             r'\begin{tabular}{@{}lrlr@{}}\toprule',
+             r'Comparator & Features & Windows & Trees\\\midrule',
+             *rows, r'\bottomrule\end{tabular}', r'\end{table}', '',
+             f"Both models were fitted on {complete['parents_train']} physical parents from four",
+             'earlier development campaigns; validation used',
+             f"{complete['parents_validation']} parents and {complete['validation_records']} observed records from a fifth campaign.",
+             'All of these were development data for the comparator construction.',
+             'The fitted label set contains normal operation and all 18 catalog',
+             'sources. The training target is the active source; after restoration,',
+             'including physical recovery, its label is normal. This is not a',
+             'source-excluded transfer test.', '',
+             'Each report selects the largest tree vote, and six consecutive',
+             'reports of the same label drive the episode interface; there is no',
+             'separate probability threshold. Tree votes are uncalibrated; the',
+             '300-report prefix and the start of monitoring at report 360 are fixed.',
+             'Model hashes, training metadata and the observed class set are kept',
+             'in the reproducibility package.', '']
     destination = ROOT / 'tables/generated/comparator_lineage.tex'
     destination.parent.mkdir(parents=True, exist_ok=True)
     destination.write_text('\n'.join(table), encoding='utf-8')

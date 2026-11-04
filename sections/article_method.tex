@@ -104,7 +104,7 @@ enter by substitution rather than through a full joint parameter posterior.
 
 \subsection{Compare Unknown-Onset Histories}
 
-The method retains ten seconds of past conditional states. Its frozen
+The method retains ten seconds of past conditional states. Its
 birth screen searches lags of 0--18 reports and proposes selected onsets;
 it does not enumerate every onset in the 300-report history.
 Each history specifies family, asset, onset,
@@ -137,9 +137,11 @@ These standard identities are exact for the stated local conditional
 model. Adaptive proposals, pruning and covariance approximations make the
 complete bank approximate.
 
-The conditional state mean is represented as $m_h+d_h a$. To make the
-filtering approximation explicit, let $T_o,J_o,g_o,u_o,j_o,v_o$ denote the
-archived one-report transition and observation operators for switch $o$.
+As in separate-bias filtering \cite{friedland1969bias}, the conditional
+state mean is represented as $m_h+d_h a$; $d_h$ is the Willsky--Jones
+signature of a unit severity propagated through the filter
+\cite{willsky1976glr}. To make the filtering approximation explicit, let $T_o,J_o,g_o,u_o,j_o,v_o$ denote the
+one-report transition and observation operators for switch $o$.
 The code forms $e=r_k-J_o m_h-j_o$ and $s=J_o d_h+v_o$. With the shared
 covariance $P_\rho$ for the current discrepancy regime $\rho$,
 \begin{align}
@@ -157,9 +159,11 @@ conditional representation retains state--severity dependence:
  \operatorname{Var}(\xi\mid h)&=P_\rho+d_hV_{a,h}d_h^\top.
  \label{eq:conditional-amplitude-covariance}
 \end{align}
-Conditioning on past reports is implicit. The shared $P_\rho$ comes from
-nominal-operator Riccati equations, rather than an exact recursion for
-each switched history. At closure, the filter retains the augmented-state
+Conditioning on past reports is implicit. The shared $P_\rho$ solves the
+nominal-operator Riccati equation of regime $\rho$; $S_o$ and $K_o$ are then
+formed for each switched operator $o$. This is a steady-state
+approximation, not an exact covariance recursion along each switched
+history. At closure, the filter retains the augmented-state
 mixture mean and records the amplitude/mean spread that it discards.
 The supplement separates these approximations from the exact local
 amplitude integral and states the covariance needed for a full mixture.
@@ -178,16 +182,29 @@ rather than repeatedly accumulating overlapping ten-second windows.
 
 The bank contains nominal, global $\pm2\%$, and selected-branch $\pm3\%$
 paired R/X hypotheses. Parameters stay constant within a hypothesis. Its
-outer weight uses a predictive density formed before the current-report
-state update and proposal selection:
+outer weight is updated with the one-step predictive density
 \begin{equation}
  w_{\ell,k}=\frac{w_{\ell,k-1}p_\ell(y_k\mid\mathcal F_{k-1},\widehat b_\ell)}
- {\sum_jw_{j,k-1}p_j(y_k\mid\mathcal F_{k-1},\widehat b_j)}.
+ {\sum_jw_{j,k-1}p_j(y_k\mid\mathcal F_{k-1},\widehat b_j)},
  \label{eq:continuous-weights}
 \end{equation}
-Startup-fitting reports are not scored again as independent model-selection
-evidence. The mixture covers a finite set of network alternatives rather
-than identifying a continuous impedance posterior.
+\begin{equation}
+ p_\ell(y_k\mid\mathcal F_{k-1})=\sum_{h'}\pi_{\ell,h',k-1}
+ \sum_{h\in\mathcal T(h')}p_\ell(h\mid h')\,L_{\ell,h,k}.
+ \label{eq:outer-predictive}
+\end{equation}
+The transition set $\mathcal T(h')$ contains continuation, restoration at
+either half-report phase for an eligible active history, and a birth of
+every catalog cell and severity interval at either phase from the
+no-intervention history; the transition probabilities sum to one, which
+the implementation asserts at every report. The density is evaluated
+before any state is corrected and before retrospective proposals are
+selected. Onsets proposed later for earlier reports change the inner
+history posterior through suffix replay but do not re-weight
+$w_\ell$; this is the one point where the outer and inner recursions
+differ from a single joint posterior. Startup-fitting reports are not
+scored again. The mixture covers a finite set of network alternatives
+rather than a continuous impedance posterior.
 
 \subsection{Keep Recovery as a Competing Physical Explanation}
 
@@ -226,28 +243,34 @@ Writing the conditional active mass as $M_{\ell,c,k}$ yields
  &\quad+\sum_\ell(w_{\ell,k}-w_{\ell,k-1})M_{\ell,c,k-1}.
  \label{eq:continuous-delta}
 \end{align}
-The terms distinguish within-model evolution from model reweighting.
-This identity separates within-model evidence from network-model
-reweighting. The masses are approximate attribution weights;
-probability calibration and globally optimal filtering are not established.
+The first term is within-model evolution and the second network-model
+reweighting. Because of pruning and the steady-state covariances, $M$ and
+$\Gamma$ are approximate attribution weights, not calibrated
+probabilities.
 
 \subsection{Emit Separate Detection, Diagnosis and Restoration Messages}
 
-The fixed publication rules require active mass 0.99 for six reports to
-confirm an alarm, and restoration mass 0.99 for 15 reports to confirm OFF.
-The archived source/line confirmation and episode-replacement rules
-determine the public diagnosis. Every message records emission time and
-the last report used. A diagnosis can be correct eventually but too late
-to precede physical OFF.
+An alarm is published when the active mass $\sum_cM_{c,k}$ exceeds 0.99 for
+six consecutive reports; with a geometric change-time prior this is a
+Shiryaev-type posterior threshold \cite{shiryaev1963optimum}, and the
+six-report confirmation suppresses brief posterior excursions. OFF is
+published when the restoration mass exceeds 0.99 for 15 reports. The
+diagnosis reports the family with the largest cause mass and its
+highest-mass source; episode-replacement rules handle a different source
+that begins before the previous episode closes. Every message records its
+emission time and the last report used, so a diagnosis can be correct but
+too late to precede physical OFF.
 
-The nominal comparator uses the same nominal conditional model with its
-own fixed publication path. Comparing nominal and mixture evaluates two
-complete configured procedures; it does not isolate the outer network bank
-from publication decisions. The admission-rule ablation tests a different publication
-decision; it is not a pure recovery-memory ablation.
+The nominal comparator is the same procedure with only the nominal network
+hypothesis.
 
 The per-report birth and restoration hazards are
-$1-\exp[-(1/60)/30]$ and $1-\exp[-(1/30)/30]$.
+$1-\exp[-(1/60)/30]$ and $1-\exp[-(1/30)/30]$, fixed during method
+development before the independent schedules. They are deliberately
+conservative: test interventions last 2--5\,s and are separated by 3--8\,s,
+much shorter than the prior means of 60 and 30\,s. A low birth hazard raises
+the evidence needed for an alarm by $-\log\pi_c$; Section~\ref{sec:theory}
+shows that this margin is small compared with the available information.
 Birth mass is split equally between load and line families, then uniformly
 among sources within each family. Load severity has a zero-mean Gaussian
 prior with standard deviation 0.15, truncated to $[-0.2,0.2]$ and integrated
@@ -264,10 +287,8 @@ at either half-report position while inheriting state and severity.
 After likelihood normalization, the beam retains the 96 highest-weight
 recent histories, 64 older histories and at least one per occupied source;
 their union is renormalized and discarded mass is recorded.
-The reproducibility archive maps these operations to the frozen
-\texttt{transitions}, \texttt{process}, and
-\texttt{predictive\_log\_density} routines and preserves the complete
-publication configuration.
+The supplement maps each operation to its implementation and lists the
+complete publication configuration.
 
 \subsection{Relation to Multiple-Hypothesis Filtering}
 For a retained history $h$, let $p_\ell(h\mid h')$ contain the admitted
@@ -278,39 +299,34 @@ normalized evidence update has the standard form
        \sum_{h'}p_\ell(h\mid h')\pi_{\ell,h',k-1}.
  \label{eq:history-bayes-update}
 \end{equation}
-IMM filtering approximates mode-conditioned state mixtures; the M3H
-filter retains mode-sequence hypotheses \cite{blom1988imm,boers2005m3h}.
-Equation~\eqref{eq:history-bayes-update} is that established mechanism.
-Here the modes are oriented electrical intervention operators, histories
-include restoration time, and the output separates active intervention
-from its originating cause through \eqref{eq:active-cause-masses}.
-Retrospective births reuse a stored pre-onset state, while closure
-compresses histories into a retained augmented-state mean. This specifies
-an application of history filtering rather than a new general recursion.
-The state-carry experiment tests one operation in this construction;
-the preliminary single-state control below requires independent,
-information-matched validation to identify the incremental benefit of
-explicit recovery hypotheses.
+This is the mode-sequence update of IMM and M3H filtering
+\cite{blom1988imm,boers2005m3h}. Three features are specific to the present
+problem: the modes are oriented electrical intervention operators derived
+from the network DAE, histories carry a restoration time so that a restored
+intervention remains a competing cause, and the output separates active
+intervention from originating cause through \eqref{eq:active-cause-masses}.
+Retrospective births reuse a stored pre-onset state, and confirmed closure
+compresses histories into the retained augmented-state mean.
 
 \subsection{Per-Report Algorithm and Computational Boundary}
 
 \noindent\textbf{Algorithm 1: causal physical-history attribution.}
-The inputs are the nominal model, fixed method configuration and successive
-PMU reports. Reserved event truth never enters these steps.
+The inputs are the nominal model, the fixed method configuration and the
+successive PMU reports; event truth never enters these steps.
 \begin{enumerate}
 \item Estimate operating context, common reference and noise scale from the
 startup prefix. Initialize conditional states and retain the eligible past
 states needed by retrospective proposals.
-\item At report $k$, apply the frozen centering, scaling and instrumental
+\item At report $k$, apply the fixed centering, scaling and instrumental
 transformation. Propagate each retained physical/recovery history and its
 conditional uncertainty to predict this report. Compute and save the outer
 model predictive density before current-report screening and state correction.
-\item Apply the frozen short-lag birth screen using retained past states.
+\item Apply the short-lag birth screen using retained past states.
 A proposed history starts before its selected onset; replay
 replaces the corresponding likelihood suffix rather than adding it twice.
 \item Score candidate histories and replayed suffixes before correcting
 their states with the reports being scored. Integrate the allowed load severity and apply
-the archived switched operator for a line hypothesis.
+the switched operator for a line hypothesis.
 \item Correct the conditional states and severity distributions; update
 network weights and the retained history bank using the fixed rules.
 Preserve dynamic state and originating cause through restoration.
@@ -319,7 +335,5 @@ Apply the fixed alarm, diagnosis and OFF-publication rules. Store emission
 time, estimated onset, family/source and the last report used.
 \end{enumerate}
 The nonlinear simulator constructs observations; this algorithm propagates
-local switched predictors. The input grid is 30 reports/s. Causality
-concerns report availability; acquisition throughput, computation time
-and the electrical history needed for a decision are separate quantities.
-Wall-clock real-time operation has not been established.
+local switched predictors. Decisions use only reports already received.
+Computation time is reported separately in Section~\ref{sec:narrative-results}.

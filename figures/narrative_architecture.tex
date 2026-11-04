@@ -62,7 +62,7 @@
   Estimate operating factors\\
   Keep R/X hypotheses fixed};
 \node[obs] (freeze) at (10.8,7.95) {
-  \textbf{Frozen correction}\\
+  \textbf{Fixed correction}\\
   Fix V/I intercept $\widehat b_\ell$\\
   Center, scale and whiten};
 \node[phys] (initialize) at (15.15,7.95) {
@@ -81,7 +81,7 @@
   47 retained coordinates};
 \node[obs] (transform) at (6.45,5.65) {
   \textbf{2\quad Transform reports}\\
-  Frozen intercept and scale\\
+  Fixed intercept and scale\\
   Whiten instrument noise};
 \node[phys] (predict) at (10.8,5.65) {
   \textbf{3\quad Predict histories}\\
@@ -142,7 +142,7 @@
 \node[draw=black!25,fill=black!3,rounded corners=2pt,text width=16.9cm,
   minimum height=.65cm,align=left,inner sep=4pt,font=\sffamily\fontsize{7}{9}\selectfont]
   (evaluation) at (8.65,-.85) {
-  \textbf{Evaluation only, after sealing predictions:}
+  \textbf{Evaluation only, after all predictions are stored:}
   reserved event truth $\rightarrow$ timely source decisions, extra alarms and episode closure.};
 \draw[flow,dashed] (output.south) -- (14.6,-.32) -- ([xshift=5.95cm]evaluation.north);
 

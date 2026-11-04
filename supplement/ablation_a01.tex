@@ -1,6 +1,6 @@
 \section{Controlled Component Ablation}
 \label{app:a01}
-The frozen protocol and all output tables are supplied in the reproduction archive under \nolinkurl{generated/frozen/ablation_a01_20261102}. Each of four arms accounts for all 24 intended records (18 continuous, three normal and three persistent): the evaluation audit records 96/96 available outputs and zero failures. The trial is posthoc and no score threshold is calibrated to these outcomes. Each normal control is a 600-s record with 588 s of evaluated exposure after startup, for 1,764 s total.
+The fixed protocol and all output tables are part of the reproducibility package. Each of four arms accounts for all 24 intended records (18 continuous, three normal and three persistent): the evaluation audit records 96/96 available outputs and zero failures. The trial is posthoc and no score threshold is calibrated to these outcomes. Each normal control is a 600-s record with 588 s of evaluated exposure after startup, for 1,764 s total.
 \begin{table*}[t]\centering\scriptsize
 \caption{All outcomes, including restoration messages on unmatched episodes and episodes open at the record end.}
 \begin{tabular}{llrrrrrr}
@@ -9,16 +9,16 @@ method & lane & available & events & timely & extras & false restorations & open
 \midrule
 Marginal + carry & continuous & 18 & 108 & 108 & 1 & 1 & 0 \\
 Marginal + carry & normal & 3 & 0 & 0 & 0 & 0 & 0 \\
-Marginal + carry & persistent\_line & 3 & 3 & 3 & 0 & 0 & 3 \\
+Marginal + carry & persistent line & 3 & 3 & 3 & 0 & 0 & 3 \\
 Marginal + reset & continuous & 18 & 108 & 75 & 166 & 130 & 11 \\
 Marginal + reset & normal & 3 & 0 & 0 & 0 & 0 & 0 \\
-Marginal + reset & persistent\_line & 3 & 3 & 3 & 0 & 0 & 3 \\
+Marginal + reset & persistent line & 3 & 3 & 3 & 0 & 0 & 3 \\
 Profile + carry & continuous & 18 & 108 & 108 & 1 & 1 & 0 \\
 Profile + carry & normal & 3 & 0 & 0 & 0 & 0 & 0 \\
-Profile + carry & persistent\_line & 3 & 3 & 3 & 0 & 0 & 3 \\
+Profile + carry & persistent line & 3 & 3 & 3 & 0 & 0 & 3 \\
 Profile + reset & continuous & 18 & 108 & 75 & 166 & 130 & 11 \\
 Profile + reset & normal & 3 & 0 & 0 & 0 & 0 & 0 \\
-Profile + reset & persistent\_line & 3 & 3 & 3 & 0 & 0 & 3 \\
+Profile + reset & persistent line & 3 & 3 & 3 & 0 & 0 & 3 \\
 \bottomrule
 \end{tabular}
 \end{table*}
@@ -28,14 +28,14 @@ Profile + reset & persistent\_line & 3 & 3 & 3 & 0 & 0 & 3 \\
 \toprule
 method & reference & metric & difference & lower95 & upper95 \\
 \midrule
-Marginal + carry & Profile + carry & timely\_fraction & 0.000 & 0.000 & 0.000 \\
-Marginal + carry & Profile + carry & extras\_per\_event\_hour & 0.000 & 0.000 & 0.000 \\
-Marginal + carry & Marginal + reset & timely\_fraction & 0.306 & 0.241 & 0.380 \\
-Marginal + carry & Marginal + reset & extras\_per\_event\_hour & -275.000 & -325.000 & -223.333 \\
-Marginal + reset & Profile + reset & timely\_fraction & 0.000 & 0.000 & 0.000 \\
-Marginal + reset & Profile + reset & extras\_per\_event\_hour & 0.000 & 0.000 & 0.000 \\
-Profile + carry & Profile + reset & timely\_fraction & 0.306 & 0.241 & 0.380 \\
-Profile + carry & Profile + reset & extras\_per\_event\_hour & -275.000 & -325.000 & -223.333 \\
+Marginal + carry & Profile + carry & timely fraction & 0.000 & 0.000 & 0.000 \\
+Marginal + carry & Profile + carry & extras per event-hour & 0.000 & 0.000 & 0.000 \\
+Marginal + carry & Marginal + reset & timely fraction & 0.306 & 0.241 & 0.380 \\
+Marginal + carry & Marginal + reset & extras per event-hour & -275.000 & -325.000 & -223.333 \\
+Marginal + reset & Profile + reset & timely fraction & 0.000 & 0.000 & 0.000 \\
+Marginal + reset & Profile + reset & extras per event-hour & 0.000 & 0.000 & 0.000 \\
+Profile + carry & Profile + reset & timely fraction & 0.306 & 0.241 & 0.380 \\
+Profile + carry & Profile + reset & extras per event-hour & -275.000 & -325.000 & -223.333 \\
 \bottomrule
 \end{tabular}
 \end{table*}

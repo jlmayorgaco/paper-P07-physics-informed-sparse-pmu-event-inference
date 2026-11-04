@@ -17,31 +17,35 @@ Supplementary recovery geometry & 38 trajectories; four recovery histories and 1
 \bottomrule
 \end{tabularx}\end{table*}
 
-The simulator is the IEEE-39 Julia/PowerDynamics research candidate. Each physical parent is integrated continuously, preserving differential states through ON/OFF. Its PMU reporting grid is separate from solver steps: a 120-s record contains 3601 reports per PMU and a 600-s normal record contains 18001, including endpoints. At a switch-aligned report the export uses the post-switch algebraic value. Measurement references, load law and stochastic instrument parameters are fixed across events. RAW0001 supplied retrospective calibration context, not independent test data.
+The plant is an IEEE-39 model in Julia/PowerDynamics with Sauer--Pai machines, IEEE Type~I exciters, TGOV1 governors and constant-impedance ZIP loads. Each physical parent is integrated continuously, preserving differential states through ON/OFF. The PMU reporting grid is separate from solver steps: a 120-s record contains 3601 reports per PMU and a 600-s normal record contains 18001. At a switch-aligned report the export uses the post-switch algebraic value. The bus-31 candidate is the existing 9.2-MW/4.6-Mvar load at the generator bus that serves as slack only in the initial power flow; the dynamic model has no slack bus, so its load change is absorbed by machine dynamics like any other.
+
+Instrument noise follows a stochastic model fitted to normal segments of the competition reference record: per-family vector autoregressions with a strong common factor across PMUs. Voltage-magnitude noise is about 0.4\% of nominal, but the noise of angle \emph{differences} between PMUs is only $10^{-4}$ to $10^{-2}$ degrees, because most angle noise is common to all units. This small differential noise is what makes megawatt-scale changes observable at remote PMUs (Section~\ref{sec:theory}); it is a property of the reference data, smaller than the idiosyncratic error expected from field PMUs \cite{ieee2011c37118}. Section~\ref{sec:noise-stress} therefore tests larger and independent per-PMU noise.
 
 The two development campaigns each contain three event parents with six successive load/line interventions and one normal parent, all 80 s long. Schedules are paired across nominal, in-bank R/X and mixed out-of-bank R/X conditions. Each campaign therefore has 18 unique interventions and 54 event realizations. Both campaigns are now development evidence. No interval or generalization claim treats those 54 realizations as independent events.
 
-The five-model bank and its nominal version are frozen co-references.
-Both ExtraTrees models were trained specifically for the causal load/line
-catalog, using 32 earlier physical parents for training and eight for
-development validation. Both training sets include normal operation and
+The five-model bank and its nominal version were fixed before the
+independent schedules were drawn. Both ExtraTrees models were trained
+specifically for the causal load/line catalog, using 32 earlier physical
+parents for training and eight for development validation. Both training sets include normal operation and
 all 18 candidate sources. The reference uses 846 causal features from
 1-, 5- and 10-s windows; the short-window variant adds 611 features from
 3-, 8- and 15-report windows. Each model has 400 trees with the same
 predeclared hyperparameters. They inherit feature families from the SGSMA
 project, but their fitted weights are distinct from the original hackathon
-submission. These models and their adapters were frozen before the present
+submission. These models and their adapters were fixed before the present
 independent schedules; no retraining uses the current evaluation records.
 All methods receive the same 30-fps observations. The supplementary
 reproduction table records the training lineage and model hashes.
 
 The learned adapter publishes a change after six consecutive identical
-argmax labels. Its tree votes are uncalibrated scores. A missing timely
-diagnosis can therefore reflect the representation, class competition or
-temporal confirmation; conditional accuracy among emitted diagnoses does
-not identify which mechanism caused an omission. The fixed-adapter
-comparison measures transfer of these configured procedures rather than
-an alarm-budget-matched architecture test.
+argmax labels; its tree votes are uncalibrated scores. In its own
+development validation the reference model already attributed no load
+before OFF and the short-window variant four, while lines were attributed
+well; both were nevertheless retained unchanged under a predeclared rule.
+They are therefore reported as fixed adapters at their original operating
+points, not as the best attainable learned baseline. A retrained learner
+with a threshold calibrated to a common alarm budget is the subject of a
+separate study.
 
 The published physical comparator is Chen \emph{et al.}'s persistent single-line quickest-change detector \cite{chen2016quickest}. Its reduced-network covariance is marginalized to the observed PMU subset after inversion. Parallel CUSUM statistics stop at the first threshold crossing and select a line. Our declared research-plant adapter uses nonoverlapping angle increments at 15 Hz, a startup-only scale/drift estimate and the fixed nominal line catalog. Its white-injection/DC assumptions do not describe all simulated instrumental effects. We preserve both matched-law implementation checks and model-mismatch failures; no ARL guarantee is transferred to colored noise.
 

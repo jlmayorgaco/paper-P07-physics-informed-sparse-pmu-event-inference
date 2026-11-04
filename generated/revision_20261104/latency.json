@@ -1,0 +1,43 @@
+{
+  "NomMsReport": "26.4",
+  "NomMsReportMax": "30.0",
+  "NomRecords": "6",
+  "detail": [
+    {
+      "job": "C025__U1",
+      "reports": 3601,
+      "infer_s": 96.55280409997795,
+      "ms_per_report": 26.81277536794722
+    },
+    {
+      "job": "C026__U1",
+      "reports": 18001,
+      "infer_s": 510.3373689999571,
+      "ms_per_report": 28.3505010277183
+    },
+    {
+      "job": "C027__U1",
+      "reports": 3601,
+      "infer_s": 72.4003772001015,
+      "ms_per_report": 20.105630991419467
+    },
+    {
+      "job": "C028__U1",
+      "reports": 18001,
+      "infer_s": 468.37676750007086,
+      "ms_per_report": 26.019486000781672
+    },
+    {
+      "job": "C029__U1",
+      "reports": 3601,
+      "infer_s": 78.8268530999776,
+      "ms_per_report": 21.890267453478923
+    },
+    {
+      "job": "C032__U1",
+      "reports": 3601,
+      "infer_s": 108.15565169998445,
+      "ms_per_report": 30.03489355734086
+    }
+  ]
+}

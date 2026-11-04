@@ -3,22 +3,33 @@
 \input{tables/generated/ablation_a01}
 \begin{figure*}[t]\centering
 \includegraphics[width=.92\textwidth]{figures/generated/ablation_a01.pdf}
-\caption{Amplitude-scoring and physical-state-carry ablation on identical
-observations and five-model banks. The 108 interventions belong to 18
-continuous trajectories. Thresholds are fixed, so the observed alarm rate
-may differ between arms.}\label{fig:a01}\end{figure*}
+\caption{Severity-scoring and state-carry study on identical observations and five-model banks. The 108 interventions belong to 18 continuous trajectories. Thresholds are fixed, so the alarm rate may differ between arms.}\label{fig:a01}\end{figure*}
 Table~\ref{tab:a01} and Fig.~\ref{fig:a01} report coverage and alarm cost
-for the four arms. With carry retained, marginal and bounded-profile
-amplitude scores tie on the reported endpoints. Resetting the first 114
+for the four arms. With the state carried, marginal and bounded-profile
+severity scores tie on every reported endpoint. Resetting the 114
 estimated physical-state deviations at inferred closure reduces timely
-attribution and increases extras under both scores. This reset leaves
-instrumental state, covariance regime, prior weights, thresholds, clocks
-and reporting rules intact; simulated states and observations never reset.
-The profile arm remains a normalized penalized score system and retains
-conditional Bayesian state estimation. Thus this study supports a
-physical-state-carry effect at inferred closure in the tested cohort, not
-the necessity of Bayes or of every form of temporal memory. The supplement
-reports denominators, normal exposure, persistent episodes, censoring and
-all paired parent-cluster intervals. These are posthoc within-simulator
-contrasts at the original thresholds, not a comparison at matched
-false-alarm rates.
+attribution from 108/108 to 75/108 and raises the unmatched alarms from 1
+to 166 under both scores. The reset leaves instrumental state, covariance
+regime, prior weights, thresholds and publication rules intact, and the
+simulated plant never resets.
+
+\begin{figure}[t]\centering
+\includegraphics[width=\columnwidth]{figures/generated/theory_reset_cost.pdf}
+\caption{Predicted spurious evidence after a state reset, \eqref{eq:reset-bias}, for each of the 108 interventions of the controlled study, against the observed outcome of the reset arm. Filled: an extra alarm in the following gap or a lost timely attribution of the next intervention; open: neither. With carry the predicted spurious evidence is zero.}
+\label{fig:theory-reset}\end{figure}
+
+Fig.~\ref{fig:theory-reset} compares this outcome with Prediction~3. The
+spurious evidence exceeds $\lambda^\star$ after every intervention, by at
+least two and up to seven orders of magnitude, and the reset arm is harmed
+after \RevResetHarm{} of the \RevResetEvents{} interventions: an extra alarm
+in the following gap or a lost timely attribution of the next one. Harm
+is almost certain after line events (\RevResetHarmLine), whose openings
+excite larger electromechanical swings, and occurs after
+\RevResetHarmLoad{} load events. The bus-31 events carry the smallest
+spurious evidence and are harmed after three of seven. The analysis therefore
+explains why forgetting the state fails at the population level, while
+the outcome of an individual load event, given evidence far above
+threshold, is decided by the episode and publication rules rather than by
+the size of the evidence. These are within-simulator contrasts at the
+original thresholds; the two scores are compared at equal thresholds, not
+at equal alarm rates.

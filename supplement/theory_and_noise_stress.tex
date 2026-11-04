@@ -1,0 +1,55 @@
+\section{Detectability Computation and Noise-Stress Protocol}
+\label{sec:supp-theory}
+
+\paragraph{Operators.} The information analysis of the main article uses
+the nominal bank built by the evaluated implementation for one held-out
+calibration record of a later campaign whose runtime is byte-identical to
+the independent evaluation runtime. The independent-evaluation banks had
+been evicted by the storage-retention policy; the nominal operators differ
+between records only through the prefix-estimated operating factors, which
+remain within $2\times10^{-5}$ of unity.
+
+\paragraph{Signatures.} For each source $i$, the noise-free switched
+predictor is propagated from a zero pre-event deviation with the ON
+operator at half-phase 0 followed by the stay operator (loads at severity
+0.1). Each candidate filter $j\in\{0,\dots,18\}$ is run on these reports with
+the quiet-regime gains $K_o$ and inverse innovation covariances
+$S_o^{-1}$ of the implementation. The cumulative sums
+$\sum e^\top S^{-1}e$, $\sum s^\top S^{-1}e$ and $\sum s^\top S^{-1}s$ give the
+signature information of the main article with the competitor's severity profiled
+on $[-0.2,0.2]$. As a check, the true-history filter at the true severity
+leaves a residual energy below $10^{-8}$. The detection threshold uses the
+birth hazard $1-\exp[-(1/60)/30]$ shared equally by the 18 cells.
+
+\paragraph{Reset cost.} For every intervention of the controlled study,
+the noise-free truth is propagated through ON, the active interval, OFF and
+the gap until the next onset. At the inferred closure time of the carry
+arm, the first 114 coordinates of the true augmented state are zeroed, and
+the no-intervention and all birth filters are run on the remaining truth
+in the recovery covariance regime. The largest profiled gain of a birth
+over the no-intervention history is compared with the alarm evidence $\lambda^\star$. Harm in
+the reset arm is an unmatched alarm between the OFF of the intervention and
+the next onset, or a lost timely attribution of the next intervention.
+
+\paragraph{Noise stress.} Observations are regenerated from the stored
+deterministic trajectories with the simulator's own noise stream and seed:
+$\varepsilon=c+\alpha(v-c)$ for multiplier $\alpha$, where $v$ is the stream
+and $c$ its normalization center, exactly as the campaign exporter. The
+$\alpha=1$ observations reproduce the original files to $6\times10^{-10}$
+and the inference reproduces all 18 published messages of the parity
+record. The TVE scenarios add independent zero-mean Gaussian phasor noise
+per PMU and report, with relative magnitude and angle (radian) standard
+deviations of $5\times10^{-4}$ or $10^{-3}$; the added voltage-angle noise
+is passed through the simulator's causal 21-report quadratic frequency and
+ROCOF estimator. The nominal bank is rebuilt from the stored derivative
+matrices with the noise scale estimated from the noisy prefix. The
+operating point remains at its $\alpha=1$ estimate because derivatives
+exist only there. Estimated angle noise scales of the TVE scenarios are
+about 48 times the calibrated scale, outside the implemented support
+$[0.1,10]$; for this test only the support was widened to $[0.1,1000]$. Two
+jobs ran concurrently with another campaign on the same desktop CPU, so
+the reported processing rates are conservative.
+
+\paragraph{Reproduction.} Every number and figure of the analysis is
+regenerated from the stored operators and outcomes by the reproducibility
+package, which also contains the noise-stress generator.

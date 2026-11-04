@@ -23,7 +23,7 @@ the approximations made by the implemented bank.
 \subsection{Inputs, Outputs and the Information Boundary}
 
 The inputs are successive reports from eight PMUs, the fixed physical and
-instrumental operators, the admitted load/line catalog and the frozen
+instrumental operators, the admitted load/line catalog and the fixed
 method configuration. The output is a timestamped sequence of detection,
 family/source and restoration messages, together with retained attribution
 masses. True ON/OFF times, true sources and generating severities belong
@@ -37,7 +37,7 @@ the required reports arrive. It does not permit backdating the public alarm.
 \subsection{Execution Order for One Stream}
 
 \begin{enumerate}
-\item \textbf{Load the frozen operators.} Retain voltage reference,
+\item \textbf{Load the fixed operators.} Retain voltage reference,
 oriented terminal currents, load input directions, switch modes and
 instrument memory. A line opening changes the network and observation
 operators. It is not represented by fitting a load amplitude.
@@ -50,7 +50,7 @@ The prefix is not scored again as independent model-selection evidence.
 \item \textbf{Predict the next report.} Propagate the retained histories
 and evaluate each network model's predictive density before correcting
 states or choosing new histories with the current report.
-\item \textbf{Propose candidate onsets.} The frozen screen uses lags
+\item \textbf{Propose candidate onsets.} The fixed screen uses lags
 0--18 reports within a ten-second stored state history. Each proposal
 starts from a stored state before its proposed onset, including any
 recovery already present. The bank does not enumerate every possible
@@ -65,7 +65,7 @@ Record discarded mass. At episode closure retain the augmented-state
 mixture mean; the omitted between-history spread is a documented
 approximation, not an exact posterior covariance.
 \item \textbf{Publish and record.} Aggregate active mass $M$, cause
-mass $\Gamma$ and $\Delta M$. Apply the frozen detection, diagnosis and
+mass $\Gamma$ and $\Delta M$. Apply the fixed detection, diagnosis and
 restoration rules. Save emission time and the last report used, in addition
 to estimated onset and source. Continue propagation through OFF.
 \end{enumerate}
@@ -86,7 +86,7 @@ likelihood. Adding the new suffix without removing the old suffix would
 count the same reports twice. This bookkeeping statement does not make
 adaptive screening or beam pruning exact Bayesian inference.
 
-\subsection{Frozen Numerical Choices}
+\subsection{Fixed Numerical Choices}
 
 The input grid is 30 reports/s. The five network hypotheses are nominal,
 global $\pm2\%$ and selected-branch $\pm3\%$ paired R/X perturbations.
@@ -113,7 +113,7 @@ diagnosed cell's joint cause-and-restoration mass above 0.99. The detailed sourc
 given below.
 These thresholds are implementation settings, not guarantees of
 probability calibration or false-alarm control. Nominal and mixture use
-their frozen publication paths, so their comparison does not isolate
+their fixed publication paths, so their comparison does not isolate
 network averaging alone. The admission-rule ablation changes publication,
 not the recovery dynamics.
 
@@ -170,15 +170,15 @@ Then $g=4$, $q=2$, $v'=0.2$ and $\mu'=0.4$. Substitution in
 $L\simeq0.342688$ and
 $\mathbb E[a\mid e]\simeq0.464941$.
 The different posterior mean follows from truncation.
-The script \nolinkurl{scripts/verify_supplement_examples.py} checks the
+A separate numerical check compares the
 closed form against direct numerical integration, including the posterior
-mean. It checks algebra only and does not modify a frozen experiment.
+mean. It checks algebra only and does not modify a fixed experiment.
 
 \subsection{Conditional State Correction}
 \label{sec:supp-causal-state}
 
 Represent the conditional state mean as $m_h+d_h a$. Let
-$T_o,J_o,g_o,u_o,j_o,v_o$ denote the archived one-report transition and
+$T_o,J_o,g_o,u_o,j_o,v_o$ denote the stored one-report transition and
 observation operators for switch $o$. The code forms
 $e=r_k-J_o m_h-j_o$ and $s=J_o d_h+v_o$. With shared covariance
 $P_\rho$ in discrepancy regime $\rho$,
@@ -242,21 +242,21 @@ mass need not mean that each model found stronger within-model evidence.
 
 \subsection{Plant, Measurement and Provenance}
 
-The active simulator is the frozen research candidate
-\texttt{SIM0001\_JuliaPD\_F01}, not an officially validated equivalent of
-RAW0001. Its contract fixes Julia 1.11.9, PowerDynamics 5.0.0,
+The simulator is a Julia/PowerDynamics research model of the IEEE 39-bus
+system, not an officially validated equivalent of the competition
+reference record. Its contract fixes Julia 1.11.9, PowerDynamics 5.0.0,
 NetworkDynamics 1.3.0 and IEEE39 0.1.0. Initial states, effective parameter
 vectors, terminal map, reporting operator and stochastic model come from
 that snapshot. Nominal inventory files do not replace the effective
-operating point. The load law is the frozen impedance law.
+operating point. The load law is the fixed impedance law.
 
 The voltage buses are $\{2,5,6,10,19,22,29,39\}$. Each current is an
 oriented branch-terminal measurement, not a nodal injection. BUS5 retains
 the provisional historical 5--6 branch, terminal 5, hypothesis; producer
 CT identity is unconfirmed and BUS39 remains partially validated.
 Execution uses full-precision configuration files rather than rounded
-tables. RAW0001 provided retrospective calibration context. RAW0002
-remains outside these studies.
+tables. The competition reference record provided retrospective calibration
+context only.
 
 Each physical parent is integrated continuously through its interventions.
 Differential states remain continuous at switching, while algebraic values
@@ -267,7 +267,7 @@ a switch. The causal instrumental history is preserved through OFF.
 
 \subsection{Continuous Development and Confirmation}
 
-H03 and H04 each contain three 80-s event parents with six interventions
+The two development campaigns each contain three 80-s event parents with six interventions
 and one 80-s normal parent. Crossing the four parents with three R/X
 conditions gives 12 physical trajectories, 18 unique interventions and
 54 event realizations per campaign. Both are development evidence in
@@ -291,13 +291,13 @@ next ON, with the inherited 30-s cap. Timely attribution requires correct
 family and asset emitted before physical OFF. Unmatched alarms, false
 restorations and open episodes are retained. Persistent-line evaluation
 instead scores the first stopping decision, including early stops,
-wrong sources, omissions and censoring. Chen2016 is eligible on that lane;
+wrong sources, omissions and censoring. The detector of Chen \emph{et al.} is evaluated only there;
 it has no load or restoration output. Confidence intervals use 10,000
 paired parent-cluster resamples, not independent PMU samples.
 
 \subsection{Separate Signature and Recovery Controls}
 
-The E\_i/X02 signature study uses a single load at buses
+The context-signature study uses a single load at buses
 $\{3,7,16,24\}$, a 10-s record, known ON at 3 s and OFF at 6 s,
 and one scalar operating-context direction. It contains 57 dictionary/check
 trajectories and 85 test trajectories (80 interventions and five controls),
@@ -307,7 +307,7 @@ and family are supplied. The generating source is used to assess the
 response approximation and severity error. Those conditional metrics do
 not measure unknown-onset causal attribution.
 
-The X04 recovery geometry control uses 38 trajectories. Prior load
+The recovery-geometry control uses 38 trajectories. Prior load
 histories at buses 7 and 24, followed by delays of 0.5 and 2 s,
 give four recovery contexts. Three source-pair comparisons within each
 context give 12 correlated comparisons. The prior input is active from
@@ -319,27 +319,26 @@ unknown onset, event cardinality or operational false alarms.
 \subsection{Reproduction Without Changing the Experiment}
 
 \begin{enumerate}
-\item Read each campaign's frozen plan and manifest. Select the intended
+\item Read each campaign's fixed plan and manifest. Select the intended
 population before interpreting any denominator. Keep current causal,
 signature, recovery-control and historical batch studies separate.
-\item Resolve the F01 state, parameter and measurement files from its
-snapshot. For any new simulation create a new run directory; a new
-hypothesis requires a successor candidate. Do not run historical preparation
-scripts inside a frozen baseline.
+\item Resolve the plant state, parameter and measurement files from the
+versioned snapshot. Every new simulation is a new run, and a new hypothesis
+a new candidate; earlier preparation steps are never rerun inside a fixed
+baseline.
 \item Preserve ON/OFF continuity, report endpoints, noise seeds and the
 boundary between observations and reserved event truth. Run inference
 before releasing truth to the evaluator.
 \item Retain solver/inference failures in intended denominators. Aggregate
 at the declared parent level and preserve the original comparators and
 publication rules. Do not retune from confirmation results.
-\item Rebuild the two documents from the versioned tables and figures with
-\nolinkurl{scripts/build_manuscript_bundle.ps1}. Its default compilation
-does not regenerate scientific artifacts or import new campaign results.
-An explicit artifact refresh is a separate operation.
+\item Rebuild the two documents from the versioned tables and figures.
+The default build does not regenerate scientific artifacts or import new
+campaign results; refreshing artifacts is a separate operation.
 \end{enumerate}
 
-The repository keeps the current walkthrough in this appendix, the frozen
-campaign evidence under \texttt{generated/frozen/}, and the earlier
-mathematical development in the separately compiled Historical Technical Notes. A successful PDF
+The reproducibility package keeps this walkthrough, the campaign evidence
+and the earlier mathematical development, compiled separately as
+Historical Technical Notes. A successful PDF
 build verifies document consistency; it is not a new scientific validation.
 \FloatBarrier

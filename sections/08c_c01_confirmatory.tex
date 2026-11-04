@@ -2,22 +2,21 @@
 \label{sec:c01-results}
 
 The five-model bank makes \COneMixTimely{}/\COneMixTotal{} timely
-family-and-source decisions with \COneMixExtras{} unmatched event-stream
-alarms. Its nominal counterpart makes \COneNomTimely{}/\COneNomTotal{}
-with \COneNomExtras{} extras. The frozen causal ExtraTrees reference makes
-\COneETTimely{}/\COneETTotal{} with \COneETExtras{}; its short-window
-variant makes \ReaderETShortTimely{}/\COneETTotal{}
-with \ReaderETShortExtras{} extras. These are paired
-replays of 108 interventions, not 648 independent events. Figure~\ref{fig:c01-main}
-shows why the totals differ: the physical banks recover nearly all loads,
-while both learned adapters already recover most tested lines. The extra
-alarm burden of the physical banks rises sharply when true R/X changes
-fall outside their five-model bank.
+family-and-source decisions with \COneMixExtras{} unmatched alarms on
+event records, and its nominal counterpart \COneNomTimely{}/\COneNomTotal{}
+with \COneNomExtras{}. These are paired replays of 108 interventions in 18
+physical parents, not 648 independent events. On the 72 normal records
+(42{,}336\,s, 11.8\,h of monitored time per method) neither bank raises an
+alarm, which bounds the normal false-alarm rate below 0.26 per hour at 95\%
+confidence (Poisson). Every matched diagnosis emitted before OFF names the
+correct family and source; the timely misses are late or absent
+diagnoses. Table~\ref{tab:c01-direct} and Fig.~\ref{fig:c01-main} give the
+family split.
 
 \begin{table}[t]\centering\small
-\caption{Sealed continuous-stream decisions. Each family has 324 replayed
-instances from 54 distinct interventions (108 across both families); extras are unmatched alarms on
-event records. The methods retain unequal alarm operating points.}
+\caption{Held-out continuous-stream decisions. Each family has 324 replays
+of 54 distinct interventions; extras are unmatched alarms on event records.
+The ExtraTrees adapters keep their original operating points.}
 \label{tab:c01-direct}
 \begin{tabular}{@{}lrrr@{}}\toprule
 Method & Load & Line & Extras\\\midrule
@@ -29,86 +28,80 @@ ExtraTrees short & \ReaderETShortLoad/324 & \ReaderETShortLine/324 & \ReaderETSh
 
 \begin{figure*}[t]\centering
 \includegraphics[width=.91\textwidth]{figures/generated/reader_c01_tradeoff.pdf}
-\caption{Sealed continuous evaluation. (A) Timely correct family and source
-by event family, with 324 paired realizations per family. (B) Unmatched
-event-stream alarms across the two noise levels within each R/X condition,
-with 216 event realizations per condition. The plots display the gain in load
-attribution and the alarm cost under out-of-bank network error together.
-Each method retains its own frozen publication rule and false-alarm budget.}
+\caption{Held-out continuous evaluation. (A) Timely correct family and source
+by event family, with 324 paired replays per family. (B) Unmatched alarms on
+event records for the two noise levels of each R/X condition (216 event
+replays per condition). Each method keeps its own publication rule.}
 \label{fig:c01-main}\end{figure*}
+
+The extra alarms concentrate where the network model is wrong: 68 of the
+72 occur when the true R/X perturbation lies outside the five-model bank,
+68 alarms in 1.08\,h of out-of-bank monitored event-record time (about 63
+per hour), against four in the other four strata together. Out-of-bank mismatch also produces the only
+four timely misses. Fig.~\ref{fig:c01-ci} gives the paired parent-cluster
+intervals; the physical bank's median alarm delay is about 0.27\,s in the
+matched and in-bank conditions, comparable to the learned adapters
+(0.19--0.30\,s).
+
+These delays test Prediction~1. For the nominal bank on matched networks,
+line alarms arrive after a median \RevObsLineDelay\,s, at the six-report
+confirmation floor of \RevPredAlarmDelay\,s less the sub-report onset
+phase, and doubling the noise leaves them unchanged. Load alarms arrive
+after \RevObsLoadDelay\,s, again unchanged by doubled noise but about
+\RevLoadExcessReports{} reports later than the available information
+requires. Line detection is therefore information-saturated, as
+predicted, while the load delay contains an algorithmic component that the
+information analysis exposes.
 
 \begin{figure*}[t]\centering
 \includegraphics[width=.92\textwidth]{figures/generated/diagnosis_delay_distribution.pdf}
-\caption{Posthoc descriptive distribution of correct diagnosis time, using
-all 324 realizations per true family in each denominator. An incorrect or
-absent diagnosis contributes no cumulative mass. Curves include late
-correct decisions and are therefore distinct from the before-OFF endpoint;
-physical OFF varies between events. The correlated replays are not
-independent observations.}
+\caption{Distribution of correct diagnosis time, using all 324 replays per
+true family in each denominator. An incorrect or absent diagnosis
+contributes no mass, and late correct decisions are included, so the
+curves differ from the before-OFF endpoint.}
 \label{fig:diagnosis-time}\end{figure*}
 
-Figure~\ref{fig:diagnosis-time} separates a fast conditional median from
-coverage: a method can have short delays on its available diagnoses while
-leaving many load events without a timely source decision.
-
-A posthoc audit of the original episode matches further separates
-coverage from classification. Every matched diagnosis emitted before OFF
-has the correct family and source in all four procedures; their errors
-in the timely endpoint are missing or late diagnoses. The load advantage
-therefore concerns timely coverage. It does not demonstrate higher
-conditional classification accuracy among diagnoses already available
-before OFF. The supplement shows the complete confusion view and counts
-unmatched alarms separately.
-
-The paired intervals in Fig.~\ref{fig:c01-ci} confirm a timely-attribution
-advantage over this ExtraTrees reference in each tested stratum. They also
-show a higher rate of unmatched alarms under out-of-bank R/X. Those
-intervals resample physical parents, preserving correlation across noise
-replays and network conditions. They do not establish
-superiority at a common false-alarm operating point. The physical bank's
-stratum median diagnosis delay is about 0.27\,s in matched and in-bank
-conditions; the ExtraTrees medians range from 0.19 to 0.30\,s. There is
-no general latency advantage.
+The two ExtraTrees adapters recover lines (\ReaderETLine{} and
+\ReaderETShortLine{} of 324) but few loads (\ReaderETLoad{} and
+\ReaderETShortLoad{}). Fig.~\ref{fig:diagnosis-time} shows that this is a
+coverage failure: every load diagnosis the adapters do emit before OFF is
+correct, but most load interventions receive none. A per-report audit on
+four further matched records (12 load and 12 line interventions,
+1{,}245 and 1{,}143 in-event reports) locates the failure before any
+publication rule. During every load intervention the reference model's
+per-report argmax is the normal class in all reports, and the median of
+the largest true-class score is 0.09; during line interventions the true
+line wins 96\% of the reports with median peak score 0.93. The short-window
+variant ranks the true load first in only 2 of 12 load interventions. The
+learned representation thus does not separate 3--14\% load changes from
+normal operation, whereas the physical signatures carry hundreds to
+millions of nats per second for the same changes (Fig.~\ref{fig:theory-information}). The same pattern was already present in
+their development validation (Section~\ref{sec:narrative-protocol}), so the
+comparison shows that the physical bank recovers load interventions that
+these particular adapters miss; it is not a test of the best attainable
+learned detector at a common alarm budget.
 
 \begin{figure*}[t]\centering
 \includegraphics[width=.89\textwidth]{figures/generated/reader_c01_intervals.pdf}
-\caption{Physical bank minus frozen ExtraTrees reference in the six paired
-strata. Points and 95\% intervals come from 10,000 physical-parent
+\caption{Physical bank minus the ExtraTrees reference in the six paired
+strata. Points and 95\% intervals come from 10{,}000 physical-parent
 resamples. Left: percentage-point difference in timely attribution; right:
-difference in unmatched alarms per monitored event-record hour, excluding
-the 12-s startup from each 120-s record. The original rate differences
-and interval bounds are rescaled exactly by $120/108$; counts and episode
-matches are unchanged. The orange rows expose the out-of-bank R/X
-failure. The intervals describe this finite simulated population.}
+difference in unmatched alarms per monitored event-record hour (the 12-s
+startup is excluded). Orange rows mark out-of-bank R/X conditions.}
 \label{fig:c01-ci}\end{figure*}
 
-The separate persistent-line test scores the first stop. Both physical
-banks and both ExtraTrees adapters identify the right line first on
-162/162 openings. The declared Chen2016 adapter does so on 74/162;
-66 records stop before the opening and 22 stop afterward on a wrong line.
-A separate descriptive audit of the same persistent records shows
-\PersistETExtras{} and \PersistShortExtras{} later unmatched alarms for
-the two ExtraTrees procedures, versus \PersistPhysicalExtras{} for the
-physical bank. Correct first identification therefore does not imply
-stable maintenance of a sustained event. This audit does not change the
-first-stop comparison or apply a recurrent score to Chen.
-Chen also stops on all 72 paired normal records, whereas the continuous
-methods alarm on none. Chen's normal exposure ends at its first stop
-(2,522\,s); the other methods monitor 42,336\,s each. These unequal
-exposures and the adapter's white-injection assumption prevent a general
-claim against published quickest-change detection. Full stratified tables,
-failure ledgers, restoration outcomes and censoring are in the supplement.
-
-The physical dictionary supplies responses for each catalog source,
-whereas the learned adapters retain their original training and feature
-maps. The comparison therefore measures transfer of those particular
-implementations, rather than an information-matched test of physics
-against supervised learning. It also uses different alarm operating points.
-
-\subsection{Computational Cost}
-\input{tables/generated/closure_compute_cost}
-The recorded median history-inference stage exceeds the record duration;
-its amortized processing rate is below the 30-report/s input cadence.
-The stage ranges show substantial variation. Per-report latency
-percentiles, peak memory and a matched-hardware speed comparison were not
-recorded; causal emission timestamps must not be read as wall-clock latency.
+In the persistent-line test, both banks and both adapters identify the
+correct line first on all 162 openings. The adapter of Chen \emph{et al.}'s
+quickest-change detector identifies 74/162; 66 records stop before the
+opening and 22 afterward on a wrong line, and it stops on all 72 paired
+normal records (first stop after 2{,}522\,s of cumulative normal exposure,
+against 42{,}336\,s monitored without alarm by the other methods). Its
+white-injection, quasi-static model does not describe the colored,
+dynamically filtered measurements of this plant, so its threshold is far
+from its nominal false-alarm rate. We therefore read this result as a test
+of transfer under model mismatch, not as a ranking of quickest-change
+detection. After the first identification, the two learned adapters raise
+\PersistETExtras{} and \PersistShortExtras{} further unmatched alarms on the
+same persistent records, against \PersistPhysicalExtras{} for the
+physical bank. Stratified tables, failure ledgers, restoration outcomes and
+censoring are in the supplement.

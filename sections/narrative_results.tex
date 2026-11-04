@@ -1,34 +1,51 @@
+\subsection{Computational Cost}
+\input{tables/generated/closure_compute_cost}
+Table~\ref{tab:closure-compute-cost} records the stages of the evaluation
+campaign, which ran the five-model bank on one thread. Its history
+inference takes a median 358.7\,s per 120-s record (99.6\,ms per report),
+three times slower than the 30-report/s input, so the five-model bank as
+implemented is an offline causal replay. The cost is dominated by the
+number of network hypotheses. Re-running the unchanged nominal bank alone
+on the same hardware and thread settings (Section~\ref{sec:noise-stress})
+gives \RevNomMsReport\,ms per report (median over \RevNomRecords{}
+records, maximum \RevNomMsReportMax\,ms), below the 33.3-ms report
+interval; the nominal bank attributed \COneNomTimely{}/\COneNomTotal{}
+interventions in the independent evaluation. These are amortized
+processing rates on a desktop CPU; per-report latency percentiles and
+memory were not instrumented, and the 80-s startup bank construction is a
+one-time cost. Decision timestamps elsewhere in the paper are report times,
+not wall-clock latency.
+
 \subsection{A Continuous Sequence and a Delayed Decision}
-A fixed development trajectory illustrates the timing criterion
-(Fig.~\ref{fig:reader-story}). The network continues moving after OFF;
-a later event must be evaluated against that predicted response.
-Under the tested out-of-bank network error, the bus-31 source is recovered
-only after restoration. It is correct eventually and fails timely
-attribution. The full development counts, active-mass trace, $\Delta M$
-decomposition and failed admission control remain in the supplement.
+A development trajectory illustrates the timing criterion
+(Fig.~\ref{fig:reader-story}). The network keeps moving after OFF, and a
+later event is evaluated against that predicted response. Under
+out-of-bank network error, the bus-31 source is identified only after its
+restoration: correct, but not timely. The active-mass trace, the
+$\Delta M$ decomposition and the development counts are in the supplement.
 
 \begin{figure*}[t]\centering
 \includegraphics[width=.94\textwidth]{figures/generated/reader_episode_story.pdf}
-\caption{One continuous development trajectory, shown for interpretation
-rather than selected as an independent test. Top: physical ON--OFF
-intervals and emitted diagnoses under matched and out-of-bank R/X.
-Bottom: bus-31 active mass, with the true intervention shaded. A diagnosis
-after OFF misses the timely endpoint even when it identifies the source.
-True timing enters only this retrospective display.}
+\caption{One continuous development trajectory, shown for interpretation.
+Top: physical ON--OFF intervals and emitted diagnoses under matched and
+out-of-bank R/X. Bottom: bus-31 active mass with the true intervention
+shaded. A diagnosis after OFF misses the timely endpoint even when it
+identifies the source. True timing enters only this retrospective display.}
 \label{fig:reader-story}\end{figure*}
 
 \subsection{A Continuous Single-State Physical Control}
-An existing open-development control retains one committed augmented
-physical state through restoration, rather than resetting to equilibrium.
-It uses the same nominal conditional plant and measurement operators,
-profiles severity over short alternatives lasting at most 19 reports,
-and applies the same six-report publication clock to all three procedures.
-The short GLR achieves \SSSimpleTimely/\SSSimpleTotal{} timely decisions
-with \SSSimpleExtras{} extras, versus \SSNomTimely/\SSNomTotal{} and
-\SSNomExtras{} for the nominal history bank, and
-\SSMixTimely/\SSMixTotal{} and \SSMixExtras{} for the five-model bank.
-These 54 replays share three development parents; they are separate from
-the independent test. Different evidence scores, search and severity
-updates remain, so this is a preliminary continuous-observer comparison,
-not an isolated causal effect of history retention. Its complete
-equations and closure outcomes are in the supplement.
+A development control keeps one committed augmented physical state through
+restoration instead of competing histories. It uses the same nominal plant
+and measurement operators, profiles severity over short alternatives of at
+most 19 reports and applies the same six-report publication clock. On 54
+development replays (three parents, three R/X conditions), this
+single-state generalized likelihood ratio (GLR) detector attains
+\SSSimpleTimely/\SSSimpleTotal{} timely decisions with \SSSimpleExtras{}
+extras, against \SSNomTimely/\SSNomTotal{} and \SSNomExtras{} for the nominal
+history bank and \SSMixTimely/\SSMixTotal{} and \SSMixExtras{} for the
+five-model bank. The development schedules pack six interventions into
+80-s records instead of 120\,s, which likely explains why the nominal bank
+scores lower here than in Table~\ref{tab:c01-direct}. The three procedures also
+differ in onset search and severity scoring, so this comparison indicates,
+but does not isolate, the benefit of explicit recovery histories over a
+single continuous state.

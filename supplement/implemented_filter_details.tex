@@ -2,7 +2,7 @@
 \label{app:implemented-filter}
 
 This section specifies the local operators and conditional distributions
-used by the frozen continuous estimator. It distinguishes identities of
+used by the fixed continuous estimator. It distinguishes identities of
 that local model from approximations introduced by its finite history
 bank. The numerical checks below exercise these identities on controlled
 inputs; they do not recalibrate or rerun the reported evaluation.
@@ -64,7 +64,7 @@ measurement map uses the consistent algebraic right limit. The predictor
 then appends phase history and the deterministic memory of the
 instrumental transformation. Scaling these coordinates and applying the
 same affine augmentation to \eqref{eq:impl-flow-composition} produces the
-archived $T_o,J_o,g_o,u_o,j_o,v_o$ operators. In their report ordering,
+stored $T_o,J_o,g_o,u_o,j_o,v_o$ operators. In their report ordering,
 \begin{align}
  r_k&=J_o\xi_k+j_o+v_oa+\epsilon_k,\nonumber\\
  \xi_{k+1}&=T_o\xi_k+g_o+u_oa+\eta_k.
@@ -74,13 +74,12 @@ The measurement is scored before correcting the state for the next
 report. The constant startup discrepancy is applied to the observations;
 it does not replace the topology-dependent affine terms.
 
-The static builder \nolinkurl{build_static_rx.jl}
-solves \eqref{eq:impl-anchor} and exports
-\texttt{force}, \texttt{pmu}, and their reduced Jacobians;
-\nolinkurl{native_conditional_builder.py} constructs
-\texttt{offset}, \texttt{flow}, and \texttt{operator};
-\texttt{static\_bank.py} verifies that the constructed reference matches
-the prefix-fitted operating point. The reproduction manifest preserves
+The construction has three steps. A static solve of
+\eqref{eq:impl-anchor} exports the network forcing, the PMU reference and
+their reduced Jacobians; the conditional builder forms the topology
+offsets, the mode flows and the one-report operators; and a final check
+verifies that the constructed reference matches the prefix-fitted
+operating point. The reproduction manifest preserves
 these files and their hashes. No event truth is used to select the
 startup operating point.
 
@@ -134,7 +133,7 @@ $\lambda=[\phi(\alpha)-\phi(\beta)]/Z$. Its moments are
                          -\lambda^2\right].
  \label{eq:impl-truncated-moments}
 \end{align}
-The frozen \texttt{trunc} kernel evaluates the normalizer in the log
+The truncated-moment routine evaluates the normalizer in the log
 domain and bounds small numerical excursions of the moments.
 The Gaussian parameters $\mu,v$ are therefore distinct from the
 conditional amplitude mean and variance.
@@ -180,7 +179,7 @@ covariances $R,Q$, is
  \label{eq:impl-reference-riccati}
 \end{align}
 This is a diagnostic reference, not a description of a new executed
-continuous estimator. The frozen implementation solves the Riccati
+continuous estimator. The fixed implementation solves the Riccati
 equation for the nominal operator in each discrepancy regime and uses
 that shared covariance for the admitted switched operators.
 
@@ -196,8 +195,8 @@ algebraic checks below.
 \subsection{Deterministic Verification and Its Boundary}
 \label{app:math-verification}
 
-\texttt{scripts/verify\_history\_partition.py} loads the frozen amplitude
-kernel without running a campaign. It compares sequential one-interval
+A deterministic check loads the implemented amplitude routine without
+running a campaign. It compares sequential one-interval
 and four-interval evidence and moments with direct scalar quadrature,
 including zero information and amplitudes on interval boundaries.
 An independent small switched linear system checks affine-flow

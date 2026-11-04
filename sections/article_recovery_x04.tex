@@ -2,7 +2,7 @@
 \label{sec:recovery-control}
 
 A separate physical control tests this possibility without changing the
-stream method. We solve 38 complete F01 trajectories of 8 s with 241 PMU
+stream method. We solve 38 complete nonlinear trajectories of 8 s with 241 PMU
 reports each. A prior 8\% load change at bus 7 or 24 is applied at 2 s and
 restored at 3 s. A weak 0.06\% load change follows after 0.5 or 2 s.
 The candidate pairs are 18/27, 16/21 and 3/21, and the observation horizon
@@ -14,8 +14,8 @@ instrumental states are retained through restoration.
 This is an oracle component test: the prior trajectory, secondary onset,
 load family and candidate pair are supplied. Finite-amplitude differences
 of nonlinear trajectories provide incremental responses; these are
-secants, not newly derived analytical tangents. The 47-coordinate F01
-measurement operator is followed by its frozen innovations transform.
+secants, not newly derived analytical tangents. The 47-coordinate
+measurement operator is followed by its fixed innovations transform.
 For a geometric control, we profile nonnegative competing amplitudes.
 Adding a rank-one covariance from uncertainty of 0.01 in the previous load
 fraction tests sensitivity to a nuisance direction; it is not a causal
@@ -23,7 +23,7 @@ posterior over the full state.
 
 \begin{figure*}[t]\centering
 \includegraphics[width=0.98\textwidth]{figures/generated/recovery_x04_information.pdf}
-\caption{Full-F01 physical control, not an R11 performance comparison.
+\caption{Full nonlinear physical control, not a performance comparison of the stream method.
 Each cell is the profiled squared separation during recovery divided by
 its equilibrium value. The same source pairs are evaluated with the
 previous trajectory treated as known (left) and with one uncertain
@@ -44,5 +44,5 @@ signed amplitudes, whereas the distance profiles nonnegative amplitudes;
 the distance is not asserted to bound its error. The noise assumption is
 an innovations-domain control, not validation of the complete instrumental
 generator. These correlated, known-onset comparisons establish neither
-an R11 improvement nor general equivalence. They provide no support for
+an improvement of the stream method nor general equivalence. They provide no support for
 claiming that recovery universally creates useful source information.

@@ -4,62 +4,66 @@
 \PARstart{A}{fter} a load is restored or a line is reclosed, the machines
 continue moving. A second intervention may begin before that response has
 decayed. With only eight PMUs in a 39-bus network, a change in a measured
-signal may therefore indicate a new source, recovery from an earlier source,
-or an imperfect physical prediction. The task is to distinguish these
-explanations using only the reports available at the decision time.
+signal may therefore indicate a new source, recovery from an earlier
+source, or an imperfect physical prediction. The task is to distinguish
+these explanations using only the reports available at the decision time.
 
 \begin{figure*}[t]\centering
 \includegraphics[width=\textwidth]{figures/generated/narrative_architecture.pdf}
-\caption{Implemented physical-history attribution, organized into model preparation (A), startup context (B), per-report inference (C), and publication (D). The bank predicts before state correction and saves model evidence before proposal selection. Candidate replay replaces a likelihood suffix, so each report contributes once. The feedback loop retains physical and instrumental memory through restoration. Reserved event truth is used only after predictions are sealed.}
+\caption{Implemented physical-history attribution: model preparation (A), startup context (B), per-report inference (C) and publication (D). The bank predicts each report before correcting any state and stores the network-model evidence before proposals are selected. A replayed candidate replaces a likelihood suffix, so each report contributes once. The feedback loop retains physical and instrumental memory through restoration. Event truth is used only after all predictions are stored.}
 \label{fig:joint-architecture}\end{figure*}
 
 Physical restoration is not electrical recovery. A detector that returns
-immediately to a flat reference can issue another alarm for the remaining
-oscillation. Suppressing alarms throughout recovery can instead hide a real
-intervention. The operating point adds another difficulty: correcting a
-voltage or current offset need not correct how the network responds to a
-later input.
+to a flat reference after OFF can issue another alarm for the remaining
+oscillation, while suppressing alarms during recovery can hide a real
+intervention. In statistical terms, the post-change law of a second
+intervention depends on the history of the first. Classical change
+detection and isolation treats a single change of an otherwise stationary
+law \cite{nikiforov1995generalized,lai2000sequential,tartakovsky2014sequential},
+and the generalized-likelihood approach of Willsky and Jones detects jumps
+in a fixed linear system \cite{willsky1976glr}. Power-system outage
+detectors compare network hypotheses under quasi-static or linearized
+models \cite{tate2008outage,chen2016quickest,rovatsos2017outage}, and
+trajectory libraries diagnose faults from sparse PMUs
+\cite{warner2023highfidelity}. None of these formulations makes a restored
+intervention compete, as a physical cause, with later interventions in a
+switched DAE network.
 
-Existing work provides strong foundations. DAE state estimators infer
-unmeasured electrical states \cite{katanic2024recursive}; physical outage
-detectors compare network hypotheses sequentially
-\cite{chen2016quickest,rovatsos2017outage}; and simulated fault trajectories
-support diagnosis from sparse PMUs \cite{warner2023highfidelity}.
-Physical models, transient histories and unknown-onset searches are thus
-established ingredients. A small state-reconstruction error, however, does
-not by itself identify the intervention that produced the observations.
-
-We compare physical histories rather than isolated signal features. A
-history specifies an intervention, source, onset, severity and restoration.
-DAE-derived predictors start from estimated past states and preserve the
-state left by previous interventions. Conditional evidence integrates load
-severity, accounts for instrumental memory, and updates fixed network-model
-hypotheses. Separate active and cause masses keep a restored intervention
-available as an explanation of the continuing response.
-
-The paper makes three contributions within this restricted problem:
+We address this gap with three contributions.
 \begin{enumerate}
-\item An executable attribution mechanism that makes new load/line
-interventions compete with retained recovery histories. We specify its
-physical predictors, evidence updates and decision rules.
-\item A comparison that separates detection, correct source attribution
-before restoration, extra alarms and episode closure. Nominal and uncertain
-network models are evaluated alongside two fixed ExtraTrees adapters;
-Chen's published detector is compared on eligible persistent line openings.
-\item A controlled severity-score/state-carry study on identical records.
-It quantifies the benefit of preserving physical-state deviations at
-inferred closure under both marginalization and bounded profiling.
-The common observations and operators connect the decision improvement
-to a specific state-retention operation.
+\item \emph{Recovery-aware attribution as switched-DAE change detection and
+isolation.} Candidate histories specify intervention, source, onset,
+severity interval and restoration time. Their predictors are reduced from
+the network DAE, start from estimated past states and keep the state
+through restoration. Severity is integrated in closed form, and separate
+active and cause weights separate the present intervention from the
+originating cause of the continuing response
+(Section~\ref{sec:narrative-method}).
+\item \emph{Physics-derived detectability and the cost of forgetting.}
+Because each history is linear-Gaussian given its mode path, its
+Willsky--Jones signature follows from the network operators. We compute
+the detection and isolation information of all 18 candidate sources,
+the minimum detectable load change as a function of PMU noise, and the
+spurious evidence created by resetting the physical state at restoration.
+These quantities are obtained before any campaign and are then checked
+against measured delays, a controlled state-reset study and a noise-stress
+test with unchanged code (Section~\ref{sec:theory}).
+\item \emph{An independent causal evaluation with explicit failure
+accounting.} On 18 new physical parents (108 interventions, 648 paired
+replays, 11.8\,h of normal records) we separate detection, timely source
+attribution, unmatched alarms, restoration and computation time, and we
+report the published quickest-change detector of Chen \emph{et al.} and two
+learned adapters at their original operating points
+(Section~\ref{sec:narrative-results}).
 \end{enumerate}
 
-The independent comparison gives \COneMixTimely{}/\COneMixTotal{} timely
-attributions with \COneMixExtras{} extra alarms. The advantage over the
-fixed learned adapters concerns load coverage, while network mismatch
-increases alarm burden. This evaluates configured procedures at their
-original thresholds. It motivates recovery-consistent inference without
-establishing superiority at equal false-alarm rates. The supplement
-documents the implemented filter, complete outcomes and separate
-context-signature and recovery controls. Earlier voltage, feature and
-simultaneous-source studies are preserved in the Historical Technical
-Notes with their own cohorts.
+The bank attributes \COneMixTimely{}/\COneMixTotal{} interventions before
+physical restoration and raises no alarm on normal records. The analysis
+explains why: under the noise model calibrated on the reference data, a
+10\% load step or a line opening carries between about 300 and
+$5\times10^{7}$ times the evidence required for an alarm within one
+second. The errors that remain arise from network-model mismatch and from
+the publication rules, not from missing information. The
+same analysis identifies the conditions under which this ceases to hold.
+The supplement documents the implemented filter, the complete outcomes and
+the reproducibility contract.

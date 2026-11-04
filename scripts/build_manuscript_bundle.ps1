@@ -47,6 +47,9 @@ try {
     if (Test-Path -LiteralPath 'tables/generated/ei_x02_results.tex') {
         Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/compact_signature_table.py')
     }
+    # Revision 2026-11-04: theory figures/macros, then strip internal jargon from every reader-facing source.
+    Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_theory_figures.py')
+    Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/clean_reader_vocabulary.py', '--apply')
 
     Write-Host 'Building the preserved historical technical notes...'
     Invoke-CheckedCommand -Command 'pdflatex' -Arguments ($latexArguments + 'historical_notes.tex')
@@ -67,6 +70,8 @@ try {
     Invoke-CheckedCommand -Command 'pdflatex' -Arguments ($latexArguments + 'main.tex')
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/verify_protected_figures.py', '--pdf', 'main.pdf')
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/verify_protected_event_figure.py')
+    # Editorial gate: no code, paths, internal identifiers or archive jargon in the reader PDFs.
+    Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/scan_pdf_text.py', 'main.pdf', 'supplement.pdf')
 
     foreach ($document in @('main', 'supplement', 'historical_notes')) {
         $log = Get-Content -LiteralPath "$document.log" -Raw

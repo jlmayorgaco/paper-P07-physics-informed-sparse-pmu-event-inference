@@ -1,87 +1,68 @@
-\section{Discussion and Limits}
+\section{Discussion}
 \label{sec:discussion}
 
-\subsection{Physical-State Continuity as a Design Choice}
-The strongest controlled result is the state-carry contrast. Physical OFF
-restores an input or branch, while the machines retain their state.
-Removing those estimated deviations at inferred closure substantially
-worsens decisions on the same records. Marginal and bounded-profile
-severity scores tie on the measured endpoints; both retain conditional
-state estimation. This supports recovery-consistent prediction, without
-showing that Bayesian marginalization is necessary for those endpoints.
+\subsection{What the Physics Explains}
+The information analysis turns the headline accuracy from an empirical
+observation into a consequence of the network equations. Under the noise of
+the reference data, every catalog intervention carries hundreds to tens of
+millions of times the evidence needed for an alarm within one second, so
+detection is limited by the publication rule rather than by information.
+Line alarms arrive at the confirmation floor, as predicted. Load alarms
+arrive about \RevLoadExcessReports{} reports later than the information
+allows. This latency is not explained by the information and is therefore
+algorithmic; the likely sources are the onset-proposal screen and the
+competition among severity intervals, which could be changed without new
+measurements. The errors that remain occur under out-of-bank R/X, where the
+predicted signature itself is wrong. The same analysis predicts where
+attribution should stop working, at the bus-31 load once the noise grows by
+a factor of about \RevBusThirtyOneCross, and why forgetting the physical
+state is costly everywhere: the free recovery response projected on the
+PMUs is two to seven orders of magnitude larger than the alarm evidence.
+Physical-state continuity is therefore not a tuning choice but a
+requirement implied by the size of that response.
 
-The history bank gives a concrete way to represent the remaining response
-and compare it with later interventions. Its complete operational behavior
-is measured, but the reset control is deliberately severe. A continuous
-physical observer without explicit recovery-history competition could
-retain the same consistency. The open-development single-state GLR comparison gives preliminary
-evidence against one such alternative, with different search and score
-semantics. Independent validation under matched information and a common
-calibration contract remains the key unresolved mechanism test.
+\subsection{Relation to Learned and Statistical Detectors}
+The learned adapters and the physical bank differ in how they obtain source
+responses: from labeled trajectories, or from the DAE operators. The
+adapters reproduce the line responses but miss most load changes, a
+pattern already present in their development validation. The comparison
+therefore shows that a physically derived dictionary attributes small load
+changes that these adapters do not, at the cost of more alarms when the
+network model is wrong. It does not establish superiority over a learned
+detector calibrated to a common alarm budget. Similarly, the adapter of
+Chen \emph{et al.} fails here because its quasi-static white-noise model
+does not match the plant, not because quickest-change detection is
+unsuitable; an information-matched version of that test would use the
+switched-DAE signatures of Section~\ref{sec:theory}.
 
-\subsection{What Improved Relative to the Learned Reference}
-The improvement concerns timely coverage of load sources under this
-known-catalog simulator contract. Line coverage is comparable to the
-short-window learned adapter. The physical method also issues more extra
-alarms under network mismatch. The result is therefore a coverage--alarm
-trade-off at fixed thresholds, rather than dominance at equal alarm rates
-or a higher official hackathon score. Engineering physical features is
-useful in the historical learned route; the physical bank additionally
-computes how each candidate intervention should affect remote PMUs.
-These routes have different access to source responses and training data.
+\subsection{Limits of the Evidence}
+\emph{Shared model family.} Observations and predictors come from the same
+research plant. Nonlinear switching, noise and out-of-bank R/X challenge
+the linearized inverse model, but transfer to a different dynamic model or
+to field data is untested. The nine load and nine line candidates were
+fixed during method development; they form a declared catalog, not a
+sample of all assets or event families.
 
-A matched architecture comparison requires a physical continuous-state
-control and a history bank with the same operators, together with a learned
-baseline trained on the permitted catalog. Operating points must be chosen
-on separate calibration records before a new test. The present comparison
-preserves the frozen adapters and their failures. The two learned models
-already saw all candidate classes during their earlier training; their
-misses cannot be attributed solely to missing source labels or to an
-unexamined scalar threshold.
+\emph{Measurement realism.} The noise model reproduces the reference data,
+whose differential angle noise is small. Independent per-PMU noise of
+0.05--0.1\% TVE, well inside the standard's limits, suppresses most load
+attributions of the implemented bank even though the angles still carry
+ample information (Section~\ref{sec:noise-stress}). Field use therefore
+requires estimating the cross-PMU noise covariance, not only its scale,
+from the startup prefix; this extension was not tested here. The terminal map
+retains a provisional BUS5 current terminal and excludes the BUS39 current
+angle; it is a research measurement hypothesis, not a verified
+installation. Cross-family noise covariance is not applied.
 
-\subsection{Model Correspondence and Measurement Scope}
-The nonlinear generator and local predictors share the same research
-plant family. Switched dynamics, nonlinear responses, noise and out-of-bank
-R/X challenge the inverse model, but do not remove this shared-model
-advantage. Independent dynamic-model or cross-simulator transfer remains
-untested. All nine load and nine line candidates were inherited from
-method development before the independent draw; they are a declared
-catalog, not a representative sample of all 39 buses or all event families.
+\emph{Approximation.} Pruning, steady-state covariances, plug-in startup
+estimates and mean compression at closure make the bank approximate; its
+masses are attribution weights, not calibrated probabilities. Retrospective
+proposals update the history posterior but not the network-model weights.
+The birth and restoration hazards are conservative relative to the test
+schedules; their effect is bounded by \eqref{eq:alarm-evidence} but was
+not swept.
 
-The eight-PMU terminal map is a research measurement hypothesis. BUS5
-retains the provisional 5--6 assignment, and BUS39 current angle is excluded.
-The synchronized channel grouping includes remote current terminals, so
-it does not certify an installation of eight colocated voltage/current
-PMUs. The observation model retains each terminal's actual location;
-remote voltage--current products are power proxies.
-The generator applies temporal and cross-PMU noise structure within each
-signal family, but does not apply its archived cross-family factor
-covariance. Frequency/ROCOF noise is added after phase estimation.
-The experiment therefore does not validate a complete physical PMU noise
-model, a producer's CT placement or exact reproduction of the historical
-reference record. It also assumes an event-free startup and available PMUs.
-
-\subsection{Approximation and Decision Uncertainty}
-History pruning, shared regime covariances, plug-in startup estimates and
-state-mean compression make the bank approximate. Its masses are
-attribution weights under those approximations, not validated confidence
-levels. The supplementary numerical checks verify the severity integral,
-partition identity and conditional-state algebra under their local models.
-Calibration of the nonlinear stream additionally requires pre-update
-innovation diagnostics, interval coverage and sensitivity to pruning and
-state compression. Existing instrumental whitening and latent AR states
-address distinct components of dependence; their presence alone does not
-establish predictive adequacy. Discarded mass is recorded by the
-implementation, while a calibrated reliability and bank-size study remains
-open.
-Response fidelity and source discrimination also differ: sources may
-remain close after fitting severity and context. The supplementary
-context-signature and recovery-geometry controls preserve their null
-source-decision results and do not supply an online identifiability
-certificate. A useful extension would test whether a causal separation
-margin predicts errors and delays before using it to justify abstention.
-
-The measured research implementation runs below the input cadence.
-Decision timestamps, computation delay and queueing must remain separate.
-These results support further diagnostic development, rather than
-protection or control deployment.
+\emph{Operation.} The startup prefix must be event-free, all PMUs available
+and the noise within the implemented support. The nominal bank runs faster
+than the input on one thread; the five-model bank does not. These results
+support diagnostic development, not protection or control deployment.

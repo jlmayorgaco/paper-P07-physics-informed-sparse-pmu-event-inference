@@ -35,7 +35,7 @@ simulation contracts. It records the complete confirmatory outcomes,
 controlled severity-score/state-carry ablation and continuous single-state
 control. The operating-point signature and recovery-geometry studies keep
 their separate, known-onset contracts and denominators. All empirical
-results reuse the frozen evidence; no new campaign or threshold selection
+results reuse the fixed evidence; no new campaign or threshold selection
 is introduced here. Earlier voltage-reconstruction, simultaneous-source
 and general diagnosability studies are preserved in the separately
 compiled Historical Technical Notes.
@@ -64,19 +64,21 @@ conditional filtering, reproducibility.
 
 \FloatBarrier
 \input{supplement/ablation_a01}
-\paragraph{Exposure convention for the archived ablation rate.}
-The ablation table retains the frozen metric
-\nolinkurl{extras_per_event_hour}, whose denominator is the complete
-120-s event record, including startup. Its continuous exposure is
+\paragraph{Exposure convention for the ablation alarm rate.}
+The ablation table reports extras per event-hour with the complete
+120-s event record, including startup, as denominator. Its continuous exposure is
 $18\times120=2160$ s. The main article's confirmatory alarm-rate figure
 instead uses monitored exposure after the 12-s startup. Under that
 convention the ablation exposure would be $18\times108=1944$ s and each
 reported rate difference and interval bound would be multiplied by
-$120/108$. Counts, event matches and the archived table are unchanged;
+$120/108$. Counts, event matches and the stored table are unchanged;
 these two rate conventions must not be compared without this conversion.
 
 \input{supplement/appendix_single_state}
 \input{supplement/development_streams}
+
+\FloatBarrier
+\input{supplement/theory_and_noise_stress}
 
 \FloatBarrier
 \input{sections/article_ei_x02}

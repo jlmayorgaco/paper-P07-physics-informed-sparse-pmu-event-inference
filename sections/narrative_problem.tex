@@ -9,7 +9,8 @@ the estimated physical onset $\widehat\tau$ separately from the alarm and
 diagnosis emission times.
 
 Figure~\ref{fig:reference-event-types} introduces the broader measurement
-phenomena using the known RAW0001 reference record. Faults, line changes,
+phenomena using the reference record released with the SGSMA 2026
+competition. Faults, line changes,
 generation changes and load changes alter the physical network; missing or
 corrupted reports alter observation integrity. The present causal test
 addresses load changes and line openings with restoration. The other panels
@@ -17,7 +18,7 @@ provide context, not additional validated event classes.
 
 \begin{figure*}[t]\centering
 \includegraphics[width=.98\textwidth]{figures/generated/event_signatures.pdf}
-\caption{Representative signatures from the archived RAW0001 reference simulation: fault, line outage, generation change, load change, missing PMU data and corrupted voltage. Alignment uses retrospective label onset for illustration; inference receives no such alignment. The gray clock in (e) is an illustrative reference, not another measured channel. Only load and line mechanisms enter the causal evaluation below. RAW0001 is known retrospective evidence, not independent field validation.}
+\caption{Representative signatures from the archived RAW0001 reference simulation of the SGSMA 2026 competition: fault, line outage, generation change, load change, missing PMU data and corrupted voltage. Panels are aligned at the labeled onset for illustration only; inference receives no such alignment. The gray clock in (e) is an illustrative reference, not a measured channel. Load and line mechanisms enter the causal evaluation; the other panels show the broader event taxonomy.}
 \label{fig:reference-event-types}\end{figure*}
 
 The network has 39 buses, but the prescribed PMU set is
@@ -66,10 +67,13 @@ The observation thus depends on an augmented state. Bus frequency comes
 from phase evolution, not a machine's rotor speed. Instrumental noise is
 applied according to the declared generator contract.
 
-An intervention history is $h=(e,c,\tau,a,\kappa)$: family, source, onset,
-severity and restoration time, with $\kappa=\infty$ for a sustained event.
-Its duration is $\kappa-\tau$ when restoration occurs. A load changes its
-local P/Q setpoints; a line opening switches its branch primitive. For the
+An intervention history is the discrete tuple
+$h=(e,c,\tau,\kappa,\mathcal I)$: family, source, onset, restoration time
+($\kappa=\infty$ for a sustained event) and, for a load, a severity interval
+$\mathcal I$. The severity $a\in\mathcal I$ is a continuous latent variable
+conditioned on $h$ and integrated in the evidence; a line opening has no
+severity. A load changes its local P/Q setpoints by the common factor
+$1+a$; a line opening switches its branch primitive. For the
 supported impulse-free switches,
 \begin{equation}
  x(\tau^+)=x(\tau^-),\qquad g_{q^+}(x(\tau^-),z(\tau^+),u;\theta)=0.
