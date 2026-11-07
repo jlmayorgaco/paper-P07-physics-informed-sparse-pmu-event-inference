@@ -15,12 +15,17 @@
 \input{generated/evidence_bridge_macros}
 \input{generated/review_audit_macros}
 \IfFileExists{generated/ei_x02_macros.tex}{\input{generated/ei_x02_macros}}{}
+\input{generated/revision_history_macros}
+\input{generated/revision_baselines_macros}
+\input{generated/revision_secondplant_macros}
 \IfFileExists{generated/submission_s01_macros.tex}{\input{generated/submission_s01_macros}}{}
 \IfFileExists{generated/submission_s01_learning_macros.tex}{\input{generated/submission_s01_learning_macros}}{}
 \IfFileExists{generated/submission_s01_raw_macros.tex}{\input{generated/submission_s01_raw_macros}}{}
 \IfFileExists{generated/submission_s01_ml_h04_macros.tex}{\input{generated/submission_s01_ml_h04_macros}}{}
 \IfFileExists{generated/submission_s01_system_macros.tex}{\input{generated/submission_s01_system_macros}}{}
 \input{generated/revision_20261104_macros}
+\input{generated/revision_integrity_macros}
+\input{generated/revision_allevents_macros}
 
 \begin{document}
 \input{metadata}
@@ -28,7 +33,7 @@
   pdftitle={Recovery-Aware Physical Attribution of Load and Line Events From Sparse PMUs},
   pdfauthor={Jorge Luis Mayorga Taborda; Yessica Africano Rodriguez; Masoud Barati; Payman Dehghanian; David Felipe Celeita Rodriguez},
   pdfsubject={Causal physical event attribution, recovery, and source resolution from sparse PMUs},
-  pdfkeywords={change detection and isolation, differential-algebraic equations, event attribution, phasor measurement units, physics-informed inference}
+  pdfkeywords={change detection and isolation, differential-algebraic equations, event attribution, measurement integrity, phasor measurement units, physics-informed inference}
 }
 
 \begin{abstract}
@@ -42,19 +47,26 @@ states, integrates load severity in closed form, and keeps a restored
 intervention available as the cause of the continuing response. The same
 operators give Willsky--Jones signatures, from which we compute, before
 any experiment, each source's detection and isolation information, its
-minimum detectable change versus noise, and the spurious evidence created
-by forgetting the physical state at restoration. The analysis predicts
-detection at the first post-onset report and reset evidence at least two
-orders of magnitude above the alarm threshold. In an independent
-simulation evaluation (18 physical parents, 108 interventions, 648 paired
-replays) the bank attributes \COneMixTimely{}/\COneMixTotal{} interventions
-before restoration with no alarm in 11.8\,h of normal records; resetting
-the state lowers timely attribution from 108/108 to 75/108. \RevAbstractNoise{}
-The single-model bank processes reports faster than the 30-report/s input.
+minimum detectable change, the cost of forgetting the physical state at
+restoration, and the information left when a PMU is
+missing or corrupted. In an independent simulation (18
+physical parents, 108 interventions, 648 paired replays) the bank
+attributes \COneMixTimely{}/\COneMixTotal{} interventions before
+restoration with no alarm in 11.8\,h of normal records; resetting the
+state lowers timely attribution from 108/108 to 75/108. With unchanged
+code it tolerates twentyfold noise, but not independent per-PMU noise of
+0.05\% TVE.
+Sequence-parity and network-coupling relations, which no balanced
+physical event can violate, diagnose every labeled missing and corrupted
+PMU episode of the competition record at its first report, identify the
+corrupted phase and reveal six unlabeled integrity incidents. Without
+training, a network-physics attributor then detects, classifies and
+locates all 12 labeled events of every type on that record; in a stored
+simulated test it misses most short load pulses, which the bank attributes.
 \end{abstract}
 
 \begin{keywords}
-change detection and isolation, differential-algebraic equations, event attribution, phasor measurement units, physics-informed inference, power system dynamics.
+change detection and isolation, differential-algebraic equations, event attribution, measurement integrity, phasor measurement units, physics-informed inference, power system dynamics.
 \end{keywords}
 
 \titlepgskip=-21pt
@@ -74,6 +86,8 @@ change detection and isolation, differential-algebraic equations, event attribut
 \input{sections/article_ablation_design}
 \input{sections/article_controlled_ablation}
 \input{sections/article_noise_stress}
+\input{sections/article_integrity}
+\input{sections/article_allevents}
 \input{sections/article_interpretation}
 \input{sections/article_final_conclusion}
 

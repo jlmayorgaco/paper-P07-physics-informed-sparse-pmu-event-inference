@@ -8,8 +8,9 @@ histories start from estimated past states, keep that state through
 restoration and separate the active intervention from its originating
 cause. Because the histories are linear-Gaussian given their mode paths,
 the network operators also give each candidate's detection and isolation
-information, its minimum detectable change and the cost of forgetting the
-physical state.
+information, its minimum detectable change, the cost of forgetting the
+physical state and the information left when a PMU is missing or
+corrupted.
 
 In an independent simulated evaluation the bank attributes
 \COneMixTimely{}/\COneMixTotal{} interventions before restoration and raises
@@ -18,13 +19,23 @@ no alarm in 11.8\,h of normal records; its remaining errors and most of its
 information analysis explains this level of performance, separates the
 information-limited part of the alarm delay from its algorithmic part,
 and predicts the cost of resetting the state and the noise level at which
-the smallest load becomes undetectable. \RevConclusionNoise{} The
-single-model bank already runs faster than the PMU reporting rate.
+the smallest load becomes undetectable. \RevConclusionNoise{} On the
+competition record, sequence-parity and network-coupling relations
+diagnose every labeled missing and corrupted PMU episode at its first
+report, with no training, and reveal corruptions that the labels miss.
+A training-free attributor built on the same network then attributes all
+12 labeled events of every type on that record. In a stored simulated
+test, however, it locates most line pulses but misses most short load
+pulses, which only the dynamic model attributes.
+The single-model bank already runs faster than the PMU reporting rate.
 
-Two directions follow. The detectability analysis can be extended from a
-fixed catalog to placement and catalog design, since it ranks sources by
-information before any data are collected. The same framework accommodates
-other parameter-override events, such as generation changes, and
-measurement-integrity hypotheses that are inconsistent with network
-dynamics; testing them, together with transfer to an independent dynamic
-model, is the next step toward field use.
+Three directions follow. First, a missing PMU must switch the observation
+operator of every history, as Proposition~\ref{prop:integrity} requires;
+imputing held values defeats the bank even though ample information
+remains. Second, the cross-PMU noise covariance must be estimated from the
+startup prefix, so that the bank can start on field data, including the
+competition record. Third, the detectability analysis can be extended
+from a fixed catalog to placement and catalog design, and the bank to
+faults and generation changes, which the network attributor already
+covers; transfer to an independent dynamic model is the test toward field
+use.

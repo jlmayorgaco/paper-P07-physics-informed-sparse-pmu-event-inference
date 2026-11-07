@@ -43,9 +43,7 @@ development validation the reference model already attributed no load
 before OFF and the short-window variant four, while lines were attributed
 well; both were nevertheless retained unchanged under a predeclared rule.
 They are therefore reported as fixed adapters at their original operating
-points, not as the best attainable learned baseline. A retrained learner
-with a threshold calibrated to a common alarm budget is the subject of a
-separate study.
+points, not as the best attainable learned baseline. Learners retrained on the bank's simulations locate at most \FBBestTop{} of \FBEvents{} held-out events, against \FBBankTop{} for the bank (supplement).
 
 The published physical comparator is Chen \emph{et al.}'s persistent single-line quickest-change detector \cite{chen2016quickest}. Its reduced-network covariance is marginalized to the observed PMU subset after inversion. Parallel CUSUM statistics stop at the first threshold crossing and select a line. Our declared research-plant adapter uses nonoverlapping angle increments at 15 Hz, a startup-only scale/drift estimate and the fixed nominal line catalog. Its white-injection/DC assumptions do not describe all simulated instrumental effects. We preserve both matched-law implementation checks and model-mismatch failures; no ARL guarantee is transferred to colored noise.
 

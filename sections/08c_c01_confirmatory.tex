@@ -38,7 +38,7 @@ The extra alarms concentrate where the network model is wrong: 68 of the
 72 occur when the true R/X perturbation lies outside the five-model bank,
 68 alarms in 1.08\,h of out-of-bank monitored event-record time (about 63
 per hour), against four in the other four strata together. Out-of-bank mismatch also produces the only
-four timely misses. Fig.~\ref{fig:c01-ci} gives the paired parent-cluster
+four timely misses. The supplement gives the paired parent-cluster
 intervals; the physical bank's median alarm delay is about 0.27\,s in the
 matched and in-bank conditions, comparable to the learned adapters
 (0.19--0.30\,s).
@@ -52,18 +52,9 @@ after \RevObsLoadDelay\,s, again unchanged by doubled noise but about
 requires. Line detection is therefore information-saturated, as
 predicted, while the load delay contains an algorithmic component that the
 information analysis exposes.
-
-\begin{figure*}[t]\centering
-\includegraphics[width=.92\textwidth]{figures/generated/diagnosis_delay_distribution.pdf}
-\caption{Distribution of correct diagnosis time, using all 324 replays per
-true family in each denominator. An incorrect or absent diagnosis
-contributes no mass, and late correct decisions are included, so the
-curves differ from the before-OFF endpoint.}
-\label{fig:diagnosis-time}\end{figure*}
-
 The two ExtraTrees adapters recover lines (\ReaderETLine{} and
 \ReaderETShortLine{} of 324) but few loads (\ReaderETLoad{} and
-\ReaderETShortLoad{}). Fig.~\ref{fig:diagnosis-time} shows that this is a
+\ReaderETShortLoad{}). The diagnosis-time distributions in the supplement show that this is a
 coverage failure: every load diagnosis the adapters do emit before OFF is
 correct, but most load interventions receive none. A per-report audit on
 four further matched records (12 load and 12 line interventions,
@@ -80,16 +71,6 @@ their development validation (Section~\ref{sec:narrative-protocol}), so the
 comparison shows that the physical bank recovers load interventions that
 these particular adapters miss; it is not a test of the best attainable
 learned detector at a common alarm budget.
-
-\begin{figure*}[t]\centering
-\includegraphics[width=.89\textwidth]{figures/generated/reader_c01_intervals.pdf}
-\caption{Physical bank minus the ExtraTrees reference in the six paired
-strata. Points and 95\% intervals come from 10{,}000 physical-parent
-resamples. Left: percentage-point difference in timely attribution; right:
-difference in unmatched alarms per monitored event-record hour (the 12-s
-startup is excluded). Orange rows mark out-of-bank R/X conditions.}
-\label{fig:c01-ci}\end{figure*}
-
 In the persistent-line test, both banks and both adapters identify the
 correct line first on all 162 openings. The adapter of Chen \emph{et al.}'s
 quickest-change detector identifies 74/162; 66 records stop before the
@@ -105,3 +86,14 @@ detection. After the first identification, the two learned adapters raise
 same persistent records, against \PersistPhysicalExtras{} for the
 physical bank. Stratified tables, failure ledgers, restoration outcomes and
 censoring are in the supplement.
+
+Table~\ref{tab:competition-metrics} restates the evaluation in the metrics
+prescribed by the competition guide. Per-report detection F1 is 0.91 for
+the bank and 0.58--0.64 for the learned adapters, whose precision is higher
+because they alarm only on the line interventions. None of the methods
+raises an alarm on the normal records. The bank has no trained weights:
+its parameters are the network model, the noise model estimated from normal
+data, and a few prior and publication constants fixed during
+development. The nominal bank processes one
+minute of PMU data in 48\,s on one CPU thread.
+\input{tables/generated/competition_metrics}

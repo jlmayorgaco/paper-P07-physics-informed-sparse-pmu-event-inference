@@ -1,0 +1,12 @@
+\begin{table}[t]\centering\scriptsize\setlength{\tabcolsep}{1.5pt}
+\caption{Transfer to records simulated with a different plant (classical machines, droop governors, no excitation), built from the same 12 event schedules and passed through the same PMU operator and noise. Detected events, events located at the source (Top-1) and alarms matching no event, out of 72 events, for the original cohort and the new plant. The last columns give normal-record alarms and records with all six events located, out of 12. The dynamic bank needs per-record banks built with the original plant solver and was not run on these records. The two ``more noise'' learners were trained on four extra noise draws per training record.}
+\label{tab:second-plant}
+\begin{tabular}{lccccccc}\toprule
+ & \multicolumn{3}{c}{Original cohort} & \multicolumn{3}{c}{Second plant} & \multicolumn{1}{c}{Records} \\
+Method & Det. & Top-1 & Extras & Det. & Top-1 & Extras & (of 12) \\\midrule
+Static physical & 48 & 40 & 25 & 52 & 42 & 48 & 0 \\
+Trees, phasor changes & 61 & 41 & 82 & 60 & 39 & 170 & 0 \\
+Trees, signatures & 58 & 49 & 30 & 68 & 45 & 156 & 0 \\
+Trees, phasor changes, more noise & 63 & 48 & 94 & 66 & 42 & 273 & 0 \\
+Trees, signatures, more noise & 55 & 49 & 21 & 59 & 46 & 75 & 0 \\
+\bottomrule\end{tabular}\end{table}

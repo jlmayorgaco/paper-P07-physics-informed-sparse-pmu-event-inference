@@ -49,6 +49,11 @@ try {
     }
     # Revision 2026-11-04: theory figures/macros, then strip internal jargon from every reader-facing source.
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_theory_figures.py')
+    Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_integrity_figure.py')
+    Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/import_allevents.py')
+    Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/import_history_conditioning.py')
+    Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/import_fair_baselines.py')
+    Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/import_second_plant.py')
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/clean_reader_vocabulary.py', '--apply')
 
     Write-Host 'Building the preserved historical technical notes...'

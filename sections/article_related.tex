@@ -33,7 +33,7 @@ state quantity from identifying the input that produced it
 Phasor-angle hypotheses support outage identification
 \cite{tate2008outage}, Bayesian outage inference with uncertain states
 \cite{zhao2014outages}, and quickest line-outage detection
-\cite{chen2016quickest,rovatsos2017outage}. Anguluri \emph{et al.} recover
+\cite{chen2016quickest,rovatsos2017outage}. Yang \emph{et al.} add a time-varying AC likelihood chart \cite{yang2020control} and particle-filter generator states \cite{yang2021particle} for persistent line outages, without restoration or loads. Anguluri \emph{et al.} recover
 sparse forcing locations and inputs of linear dynamics by group LASSO
 \cite{anguluri2023group}, and sensor placement determines which sources
 are distinguishable \cite{jamei2020limits,conte2023fault,yildiz2025sparse}.
@@ -53,10 +53,27 @@ and assets \cite{pandey2020realtime,li2024knowledge,yildiz2024few}.
 SHRED reconstructs IEEE-39 dynamic states from a few PMUs
 \cite{pomarico2026shred}, and Dey \emph{et al.} localize distribution
 topology changes with hardware-in-the-loop validation
-\cite{dey2026topology}. These methods learn the source map from labeled
-trajectories; the physical bank derives it from the network equations.
-We report two ExtraTrees adapters trained on the same 18-source catalog,
+\cite{dey2026topology}. Graph neural networks encode the grid topology in the
+learned map, for event identification \cite{yuan2023gnn}, physics-informed
+state estimation \cite{ngo2024pignn} and localization after reconstructing
+unmeasured trajectories \cite{rimkus2025gnn}. These methods learn the
+source map from labeled trajectories; the physical bank derives it from
+the network equations, and its detectability analysis states, for any
+learned competitor, the information available in the same reports. We
+report two ExtraTrees adapters trained on the same 18-source catalog,
 whose limitations are discussed with the results.
+
+\subsection{Measurement Integrity}
+Bad-data detection in state estimation tests residuals against the
+redundancy of a network model \cite{abur2004state}; analytical-redundancy
+parity relations generalize this to dynamic systems
+\cite{chow1984analytical}. For synchrophasors, robust estimators separate
+outliers from excursions \cite{chatterjee2020robust}, utility data show
+missing, locked, quantized and time-shifted reports \cite{biswas2025quality},
+and attack identification characterizes which corrupted sensor sets remain
+distinguishable from system behavior \cite{pasqualetti2013attack}. We use
+two parity relations that require no state estimator and connect them to
+the information available for physical attribution when a PMU is lost.
 
 \begin{table*}[t]\centering\small
 \caption{Closest inference formulations. Only the quickest-change detector
@@ -68,6 +85,7 @@ Route & Mechanism & Evaluated target & Role in this study\\\midrule
 Willsky--Jones GLR; Nikiforov/Lai & Filter signatures; detection--isolation statistics & One jump or one change in a fixed system & Information analysis (Section~\ref{sec:theory})\\
 IMM / M3H & Mode-conditioned filters, history pruning and merging & Hybrid switching-state estimation & History-bank mechanism\\
 Chen / Rovatsos & Network likelihoods, sequential tests & Line outages & Chen executed on persistent openings\\
+Yang & Time-varying AC likelihood chart; particle-filter states with EWMA & Persistent line outages, ten PMUs & Closest dynamic precedent, not executed\\
 Warner high-fidelity & Simulated V/I paths, onset search & Short-circuit line candidates & Closest trajectory precedent\\
 DAE / stochastic-state estimation & Physical state and parameter models & States, inputs or parameters & Components\\
 Learned PMU diagnosis & Features or learned representations & Event families and locations & Two ExtraTrees adapters executed\\

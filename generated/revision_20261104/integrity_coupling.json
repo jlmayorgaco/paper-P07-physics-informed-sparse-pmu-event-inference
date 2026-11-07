@@ -1,0 +1,63 @@
+{
+  "per_pmu": {
+    "2": {
+      "coupling": 0.39203970879729194,
+      "worst_fault_bus": 30,
+      "most_coupled_pmu": 29,
+      "dominant_fault_buses": 7
+    },
+    "5": {
+      "coupling": 0.927802106930098,
+      "worst_fault_bus": 5,
+      "most_coupled_pmu": 6,
+      "dominant_fault_buses": 4
+    },
+    "6": {
+      "coupling": 0.9373167520913627,
+      "worst_fault_bus": 6,
+      "most_coupled_pmu": 5,
+      "dominant_fault_buses": 3
+    },
+    "10": {
+      "coupling": 0.71042155743884,
+      "worst_fault_bus": 32,
+      "most_coupled_pmu": 6,
+      "dominant_fault_buses": 6
+    },
+    "19": {
+      "coupling": 0.3192806570840387,
+      "worst_fault_bus": 34,
+      "most_coupled_pmu": 22,
+      "dominant_fault_buses": 7
+    },
+    "22": {
+      "coupling": 0.343309509037483,
+      "worst_fault_bus": 22,
+      "most_coupled_pmu": 19,
+      "dominant_fault_buses": 6
+    },
+    "29": {
+      "coupling": 0.1616032686227404,
+      "worst_fault_bus": 29,
+      "most_coupled_pmu": 2,
+      "dominant_fault_buses": 5
+    },
+    "39": {
+      "coupling": 0.2908230395860518,
+      "worst_fault_bus": 39,
+      "most_coupled_pmu": 5,
+      "dominant_fault_buses": 1
+    }
+  },
+  "predicted_sag_ratio_fault_bus39": {
+    "2": 0.26270202902948575,
+    "5": 0.2908230395860518,
+    "6": 0.28565085194152356,
+    "10": 0.2386532067808313,
+    "19": 0.10225807306099563,
+    "22": 0.09967656729482584,
+    "29": 0.11969947850971571,
+    "39": 1.0
+  },
+  "note": "ratio of voltage change at PMU j to change at the faulted PMU bus for a bolted fault"
+}

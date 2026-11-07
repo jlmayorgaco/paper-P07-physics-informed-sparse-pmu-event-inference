@@ -1,0 +1,73 @@
+\subsection{All Event Types: Network Physics Without Training}
+\label{sec:allevents}
+
+Because the bank cannot start on the competition record
+(Section~\ref{sec:integrity-results}), we built a second attributor from
+the provided network data alone, with no trained parameter, for every
+event type of the guide. The
+network is the admittance matrix of the provided power-flow case, with
+loads as constant impedances and generators as transient reactances
+behind constant voltages~\cite{pai1989energy}. The integrity layer runs
+first; unhealthy PMUs are deleted from the fits
+(Proposition~\ref{prop:integrity}), not imputed. The physical layer uses
+the two time scales of the network equations. \emph{Algebraic jump:}
+the one-report jump of the PMU voltages and branch currents is fitted by
+an injection at each of the 39 buses or the removal of each of the 46
+branches, removed with its full pre-event current at both terminals; a
+sag below 0.8\,pu is a fault, located by the profile $|Z_{jf}/Z_{ff}|$.
+\emph{Quasi-steady state:} an episode that does not return within 15\,s is
+fitted 15--25\,s after onset by the linearized AC power flow, with
+generators sharing the imbalance in proportion to dispatch. This
+separates load changes, generation changes and generator trips, under
+plausibility limits (a load cannot change by more than its base value,
+nor a generator by more than its dispatch). A reversed jump, or a return
+to the pre-episode state, closes an episode. Attributor~I detects
+episodes from the change of the angle differences. Attributor~II detects
+one-report jumps after subtracting the local trend of the neighboring
+report changes, which separates switching from the smooth
+electromechanical response. Decisions are taken 0.5\,s (switching) or
+25\,s (persistent) after onset and written back to it, as in the guide's
+offline scoring; each record takes seconds.
+
+\emph{Protocol.} No label was used to fit a parameter, but the
+competition record was not blind. Attributor~I took \AERawIterOne{}
+logged iterations on it. Attributor~II was designed on the training and
+calibration records of a simulated cohort and checked on the competition
+record in two further iterations. Every iteration is stored with its code hash
+and score; the competition record is thus a validation set.
+The confirmatory test is the stored test split of that cohort, generated
+before either attributor existed. Each attributor was fixed and run
+once, and its predictions were hashed before the schedule was read.
+
+\emph{Results.} On the competition record (Table~\ref{tab:allevents-raw})
+both attributors detect, classify and locate all 12 labeled events of that one record. The
+submitted system located \AERawSubTopone{} of them. The generation event
+is the trip of the machine at bus~30 (fitted scale 1.02, no amplitude
+fit); the load at bus~7 is separated from generation by its
+reactive-to-active ratio. Six of the eight false-alarm episodes of
+Attributor~II are the impossible measurements of
+Section~\ref{sec:integrity-results}, a seventh follows the collapse at
+PMU~29, and the eighth is an unlabeled change at 3580\,s seen at every
+PMU. Labeled boundaries that extend beyond the
+observable change keep macro-F1 at \AERawTwoMacro{}.
+\input{tables/generated/allevents_raw}
+\input{tables/generated/allevents_sim}
+
+The stored cohort has 72 load and line pulses of 2--5\,s, six per record
+with gaps of 3--8\,s (Table~\ref{tab:allevents-sim}). Attributor~I fails
+there: its quasi-steady window opens after the pulses end. Attributor~II
+detects all \AESimLineDet{} line pulses and locates \AESimLineTopone{}
+in an open search over 85 candidates, or \AESimCatLineTopone{} within
+the bank's 18-source catalog. Every remaining line error involves one of
+three branches whose outage, seen from the eight PMUs, is nearly
+collinear with an injection at an adjacent bus. It detects only
+\AESimLoadDet{} of the 36 load pulses, because a change of 3--14\% of one
+load moves the one-report phasors by less than the startup noise. Longer
+windows would recover them, but there the response is no longer
+algebraic. The dynamic bank models that response and attributes all 72
+pulses, at \AEWallBankH\,h of computation against \AEWallTwo\,s. No
+method alarmed in the normal records.
+
+Network physics alone thus attributes every event type that is large
+enough for its algebraic jump or long enough to settle; short, small
+pulses need the dynamic model.

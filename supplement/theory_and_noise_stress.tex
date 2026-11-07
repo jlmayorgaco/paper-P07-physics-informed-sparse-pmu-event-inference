@@ -53,3 +53,21 @@ the reported processing rates are conservative.
 \paragraph{Reproduction.} Every number and figure of the analysis is
 regenerated from the stored operators and outcomes by the reproducibility
 package, which also contains the noise-stress generator.
+
+\begin{figure*}[t]\centering
+\includegraphics[width=.97\textwidth]{figures/generated/noise_stress.pdf}
+\caption{Nominal bank under increased PMU noise, with code, thresholds and rules unchanged. (A) Timely correct family and source by scenario: the calibrated noise scaled by $\times1$--$\times20$ (left of the dotted line) and the original noise plus independent white per-PMU phasor noise of 0.05\% and 0.1\% TVE (right). (B) For each load intervention under added independent noise, the information that a matched filter on cross-PMU-centered voltage and current angles accumulates in 1\,s, against the observed outcome; the dashed line is the evidence required for an alarm.}
+\label{fig:noise-stress}\end{figure*}
+
+\begin{table}[h]\centering\small
+\caption{Noise-stress outcomes of the unchanged nominal bank: timely correct attributions, unmatched alarms on event records, and alarms on the two normal records.}
+\label{tab:noise-stress}
+\begin{tabular}{@{}lrrrr@{}}\toprule
+Scenario & Load & Line & Extras & Normal\\\midrule
+$\times1$ & \RevNoiseOneLoad & \RevNoiseOneLine & \RevNoiseOneExtras & \RevNoiseOneNormalFA\\
+$\times5$ & \RevNoiseFiveLoad & \RevNoiseFiveLine & \RevNoiseFiveExtras & \RevNoiseFiveNormalFA\\
+$\times10$ & \RevNoiseTenLoad & \RevNoiseTenLine & \RevNoiseTenExtras & \RevNoiseTenNormalFA\\
+$\times20$ & \RevNoiseTwentyLoad & \RevNoiseTwentyLine & \RevNoiseTwentyExtras & \RevNoiseTwentyNormalFA\\
++TVE 0.05\% & \RevNoiseTVEaLoad & \RevNoiseTVEaLine & \RevNoiseTVEaExtras & \RevNoiseTVEaNormalFA\\
++TVE 0.1\% & \RevNoiseTVEbLoad & \RevNoiseTVEbLine & \RevNoiseTVEbExtras & \RevNoiseTVEbNormalFA\\\bottomrule
+\end{tabular}\end{table}

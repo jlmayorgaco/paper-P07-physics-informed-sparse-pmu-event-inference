@@ -17,21 +17,12 @@ one-time cost. Decision timestamps elsewhere in the paper are report times,
 not wall-clock latency.
 
 \subsection{A Continuous Sequence and a Delayed Decision}
-A development trajectory illustrates the timing criterion
-(Fig.~\ref{fig:reader-story}). The network keeps moving after OFF, and a
+A development trajectory, shown in the supplement, illustrates the
+timing criterion. The network keeps moving after OFF, and a
 later event is evaluated against that predicted response. Under
 out-of-bank network error, the bus-31 source is identified only after its
 restoration: correct, but not timely. The active-mass trace, the
 $\Delta M$ decomposition and the development counts are in the supplement.
-
-\begin{figure*}[t]\centering
-\includegraphics[width=.94\textwidth]{figures/generated/reader_episode_story.pdf}
-\caption{One continuous development trajectory, shown for interpretation.
-Top: physical ON--OFF intervals and emitted diagnoses under matched and
-out-of-bank R/X. Bottom: bus-31 active mass with the true intervention
-shaded. A diagnosis after OFF misses the timely endpoint even when it
-identifies the source. True timing enters only this retrospective display.}
-\label{fig:reader-story}\end{figure*}
 
 \subsection{A Continuous Single-State Physical Control}
 A development control keeps one committed augmented physical state through

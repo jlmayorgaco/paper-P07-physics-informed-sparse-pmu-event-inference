@@ -49,7 +49,9 @@ whose differential angle noise is small. Independent per-PMU noise of
 attributions of the implemented bank even though the angles still carry
 ample information (Section~\ref{sec:noise-stress}). Field use therefore
 requires estimating the cross-PMU noise covariance, not only its scale,
-from the startup prefix; this extension was not tested here. The terminal map
+from the startup prefix; this extension was not tested here. For the same
+reason the bank does not start on the competition record, whose startup
+contains constant ROCOF channels and a drifting angle reference. The terminal map
 retains a provisional BUS5 current terminal and excludes the BUS39 current
 angle; it is a research measurement hypothesis, not a verified
 installation. Cross-family noise covariance is not applied.
@@ -61,6 +63,23 @@ proposals update the history posterior but not the network-model weights.
 The birth and restoration hazards are conservative relative to the test
 schedules; their effect is bounded by \eqref{eq:alarm-evidence} but was
 not swept.
+In an independent reduced plant (supplement), relinearized, bilinear and severity-marginalized predictors did not improve on the recentered nominal signature in any of \HHCells{} stress cells or in two more extreme ones (supplement); the previous intervention shifts all candidate sources together. The bank was scored only on its own plant family (supplement).
+
+\emph{Integrity.} The parity relations assume a balanced network. Unbalanced
+faults would violate sequence parity at several PMUs at once, a pattern the
+coupling test attributes to physics but that was not evaluated here. Their
+thresholds use a noise scale from the first 3\,s, and the
+variance-inflated operating point was chosen after inspecting the record,
+which contains only three labeled corruptions. The physical bank requires
+every PMU; with held values in place of a missing PMU it loses
+attribution (Section~\ref{sec:integrity-results}).
+
+\emph{Network attributor.} Its competition-record result is a
+validation, not a blind test, and its stored test covers load and line
+pulses of one simulated plant; faults, generation and integrity events
+were tested only on the competition record. It misses most small, short
+load pulses, and three branch outages are nearly indistinguishable from
+adjacent injections without a catalog.
 
 \emph{Operation.} The startup prefix must be event-free, all PMUs available
 and the noise within the implemented support. The nominal bank runs faster

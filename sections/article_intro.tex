@@ -45,9 +45,13 @@ Willsky--Jones signature follows from the network operators. We compute
 the detection and isolation information of all 18 candidate sources,
 the minimum detectable load change as a function of PMU noise, and the
 spurious evidence created by resetting the physical state at restoration.
-These quantities are obtained before any campaign and are then checked
-against measured delays, a controlled state-reset study and a noise-stress
-test with unchanged code (Section~\ref{sec:theory}).
+We extend the analysis to the integrity events of the competition: the
+information left when a PMU is missing or corrupted, and two parity
+relations, sequence balance and network coupling, that no balanced
+physical event can violate. These quantities are obtained before any
+campaign and are then checked against measured delays, a controlled
+state-reset study, noise and integrity stress tests with unchanged code,
+and the labeled competition record (Section~\ref{sec:theory}).
 \item \emph{An independent causal evaluation with explicit failure
 accounting.} On 18 new physical parents (108 interventions, 648 paired
 replays, 11.8\,h of normal records) we separate detection, timely source
@@ -64,6 +68,10 @@ explains why: under the noise model calibrated on the reference data, a
 $5\times10^{7}$ times the evidence required for an alarm within one
 second. The errors that remain arise from network-model mismatch and from
 the publication rules, not from missing information. The
-same analysis identifies the conditions under which this ceases to hold.
+same analysis identifies the conditions under which this ceases to hold:
+independent per-PMU noise that the filter does not model, and a missing
+PMU whose values are imputed instead of deleted. On the labeled competition
+record the parity relations diagnose every missing and corrupted PMU
+episode at its first report and reveal corruptions that the labels miss.
 The supplement documents the implemented filter, the complete outcomes and
 the reproducibility contract.

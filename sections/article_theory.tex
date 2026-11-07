@@ -1,12 +1,13 @@
-\section{Physics-Derived Detectability and the Cost of Forgetting}
+\section{Physics-Derived Detectability, Forgetting and Integrity}
 \label{sec:theory}
 
 Each retained history is linear-Gaussian given its mode path. The
 information that the eight PMUs carry about every candidate intervention
 can therefore be computed from the predictor operators before any
-attribution experiment is run. This section derives three such quantities
-and states what they predict; Sections~\ref{sec:narrative-results}
-and~\ref{sec:noise-stress} test the predictions.
+attribution experiment is run. This section derives these quantities,
+extends them to missing and corrupted PMUs and states what they predict;
+Sections~\ref{sec:narrative-results}, \ref{sec:noise-stress}
+and~\ref{sec:integrity-results} test the predictions.
 
 \subsection{Signatures and Information}
 Let intervention $i$ start at report $0$ with severity $a$ and let the
@@ -73,6 +74,67 @@ $\Gamma^{\rm sp}_j\equiv0$. The bias, and therefore the cost of forgetting,
 grows with the energy of the slow electromechanical modes excited by the
 intervention and with how strongly the PMUs observe them.
 
+\subsection{Measurement Integrity}
+\label{sec:integrity-theory}
+The competition data also contain integrity events: frames that never
+arrive and frames whose values are corrupted. Write the received report of
+PMU $p$ as
+\begin{equation}
+ y_{p,k}=M_{p,k}\big(h_p(x_k)+v_{p,k}+\beta_{p,k}\big),
+ \label{eq:integrity-observation}
+\end{equation}
+where $M_{p,k}\in\{0,1\}$ is availability and $\beta_{p,k}$ a corruption
+that does not enter the network equations. Availability is observed through
+the frame flag, so a missing PMU is identified exactly. What it removes is
+information, and the same quantity governs corruption.
+
+\begin{proposition}[Integrity isolation]\label{prop:integrity}
+Let the noise be Gaussian and independent across PMUs, and let the
+corruption of PMU $p$ be unrestricted over a window. The generalized
+likelihood ratio that separates physical source $i$ from ``no
+intervention, PMU $p$ corrupted'' carries the information
+$\Lambda_{i0}^{(-p)}$, the detection information of $i$ computed without the
+channels of PMU $p$. This is also the information for $i$ when PMU $p$ is
+missing.
+\end{proposition}
+\emph{Proof.} Profiling an unrestricted $\beta_p$ projects the signature onto
+the orthogonal complement of the channels of PMU $p$. With block-diagonal
+noise covariance this projection deletes those channels, and the remaining
+quadratic form is the information of the other PMUs. \hfill$\square$
+
+With cross-PMU noise correlation, deletion is replaced by the Schur
+complement and $\Lambda^{(-p)}$ becomes a conditional information. The
+proposition explains why integrity cannot be recognized from a single PMU
+alone: a corruption becomes distinguishable only through relations that
+every physical event of the network obeys. Two such relations are used.
+\emph{Sequence parity.} For balanced interventions (load, line,
+generation, three-phase fault) the balanced network produces no negative-
+or zero-sequence voltage or current. These sequence components are
+therefore parity relations in the sense of analytical redundancy
+\cite{chow1984analytical}: they are insensitive to every physical
+intervention and sensitive to corruption of a single phase. A step
+$\epsilon$ in one phase magnitude gives $|X_2|=|X_0|=\epsilon|X|/3$. The
+corrupted phase is the one whose phasor is most aligned with $X_0$.
+Under independent per-phase noise, $q_k=(|X_2|^2+|X_0|^2)/\sigma^2$ is
+$\mathrm{Gamma}(2,1)$-distributed, which fixes the threshold for a given
+false-alarm probability. \emph{Network coupling.} A balanced physical
+disturbance that changes the positive-sequence voltage of PMU $p$ by
+$\Delta_p$ changes the other PMUs in proportion to the network impedance
+matrix $Z=Y^{-1}$. Here $Y$ includes constant-impedance loads and generator
+transient reactances \cite{pai1989energy}, and a bolted fault at bus $f$
+gives $\Delta_j/\Delta_p=|Z_{jf}/Z_{pf}|$. Hence
+\begin{equation}
+ \max_{j\neq p}\Delta_j\ \ge\ c_p\,\Delta_p,\qquad
+ c_p=\min_{f\in\mathcal F_p}\max_{j\neq p}\Big|\frac{Z_{jf}}{Z_{pf}}\Big|,
+ \label{eq:coupling-bound}
+\end{equation}
+with $\mathcal F_p$ the buses at which $p$ is the most affected PMU. For the
+IEEE 39-bus network $c_p$ ranges from \IntCouplingMin{} (PMU~29) to
+\IntCouplingMax{}. A balanced excursion that violates
+\eqref{eq:coupling-bound} by a wide margin cannot be produced by the network.
+Both relations are classical bad-data reasoning \cite{abur2004state},
+applied here to report-rate phasors without a state estimator.
+
 \subsection{Predictions}
 We evaluated \eqref{eq:signature-information}--\eqref{eq:reset-bias} with
 the nominal operators built by the evaluated implementation in its
@@ -106,6 +168,14 @@ the \RevResetEvents{} interventions of the controlled study, resetting the
 physical state gives some birth hypothesis at least
 $\RevResetGainMin$ nats of spurious evidence, more than $10^{\RevResetFactorMin}$
 times $\lambda^\star$; with carry the spurious evidence is zero.
+
+\emph{Prediction 4: one missing or corrupted PMU does not remove
+attribution.} Under independent per-PMU noise of 0.05\% TVE, deleting the
+most informative PMU leaves every evaluated intervention at least
+\IntInfoMinFactor{} times $\lambda^\star$ in one second (median
+\IntInfoMedianFraction\% of the full information retained;
+Fig.~\ref{fig:integrity}C). PMU~39 carries the most information about most
+sources.
 
 These predictions are deliberately coarse. They use a single linearization,
 steady-state covariances and the true onset, and they ignore the proposal

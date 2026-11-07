@@ -1,0 +1,4584 @@
+{
+ "results": {
+  "ML": {
+   "name": "ML",
+   "tau": 0.1,
+   "cal": {
+    "events": 72,
+    "detected": 61,
+    "class_ok": 59,
+    "top1": 44,
+    "top3": 49,
+    "fa_per_normal_h": 0.0,
+    "extras_per_event_h": 192.5,
+    "line": {
+     "events": 36,
+     "detected": 30,
+     "class_ok": 30,
+     "top1": 25,
+     "top3": 26,
+     "confusion": {
+      "fault": 0,
+      "line": 30,
+      "generation": 0,
+      "load": 0
+     }
+    },
+    "load": {
+     "events": 36,
+     "detected": 31,
+     "class_ok": 29,
+     "top1": 19,
+     "top3": 23,
+     "confusion": {
+      "fault": 0,
+      "line": 2,
+      "generation": 0,
+      "load": 29
+     }
+    }
+   },
+   "test": {
+    "events": 72,
+    "detected": 61,
+    "class_ok": 56,
+    "top1": 41,
+    "top3": 52,
+    "fa_per_normal_h": 0.0,
+    "extras_per_event_h": 205.0,
+    "line": {
+     "events": 36,
+     "detected": 32,
+     "class_ok": 31,
+     "top1": 25,
+     "top3": 29,
+     "confusion": {
+      "fault": 0,
+      "line": 31,
+      "generation": 0,
+      "load": 1
+     }
+    },
+    "load": {
+     "events": 36,
+     "detected": 29,
+     "class_ok": 25,
+     "top1": 16,
+     "top3": 23,
+     "confusion": {
+      "fault": 0,
+      "line": 4,
+      "generation": 0,
+      "load": 25
+     }
+    },
+    "by_condition_MATCH": {
+     "events": 24,
+     "detected": 20,
+     "class_ok": 19,
+     "top1": 15,
+     "top3": 19,
+     "fa_per_normal_h": 0.0,
+     "extras_per_event_h": 210.0,
+     "line": {
+      "events": 12,
+      "detected": 11,
+      "class_ok": 11,
+      "top1": 10,
+      "top3": 11,
+      "confusion": {
+       "fault": 0,
+       "line": 11,
+       "generation": 0,
+       "load": 0
+      }
+     },
+     "load": {
+      "events": 12,
+      "detected": 9,
+      "class_ok": 8,
+      "top1": 5,
+      "top3": 8,
+      "confusion": {
+       "fault": 0,
+       "line": 1,
+       "generation": 0,
+       "load": 8
+      }
+     }
+    },
+    "by_condition_IN_SUPPORT": {
+     "events": 24,
+     "detected": 19,
+     "class_ok": 17,
+     "top1": 10,
+     "top3": 14,
+     "fa_per_normal_h": 0.0,
+     "extras_per_event_h": 202.5,
+     "line": {
+      "events": 12,
+      "detected": 11,
+      "class_ok": 10,
+      "top1": 6,
+      "top3": 8,
+      "confusion": {
+       "fault": 0,
+       "line": 10,
+       "generation": 0,
+       "load": 1
+      }
+     },
+     "load": {
+      "events": 12,
+      "detected": 8,
+      "class_ok": 7,
+      "top1": 4,
+      "top3": 6,
+      "confusion": {
+       "fault": 0,
+       "line": 1,
+       "generation": 0,
+       "load": 7
+      }
+     }
+    },
+    "by_condition_OUT_SUPPORT": {
+     "events": 24,
+     "detected": 22,
+     "class_ok": 20,
+     "top1": 16,
+     "top3": 19,
+     "fa_per_normal_h": 0.0,
+     "extras_per_event_h": 202.5,
+     "line": {
+      "events": 12,
+      "detected": 10,
+      "class_ok": 10,
+      "top1": 9,
+      "top3": 10,
+      "confusion": {
+       "fault": 0,
+       "line": 10,
+       "generation": 0,
+       "load": 0
+      }
+     },
+     "load": {
+      "events": 12,
+      "detected": 12,
+      "class_ok": 10,
+      "top1": 7,
+      "top3": 9,
+      "confusion": {
+       "fault": 0,
+       "line": 2,
+       "generation": 0,
+       "load": 10
+      }
+     }
+    }
+   },
+   "preds": {
+    "T049": [],
+    "T050": [
+     {
+      "onset_s": 19.4,
+      "detect_s": 19.466666666666665,
+      "cls": 4,
+      "location": "BUS20",
+      "top3": [
+       "BUS20",
+       "BUS4",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 21.266666666666666,
+      "detect_s": 21.33333333333333,
+      "cls": 4,
+      "location": "BUS20",
+      "top3": [
+       "BUS20",
+       "BUS24",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 26.133333333333333,
+      "detect_s": 26.2,
+      "cls": 2,
+      "location": "LINE16-17",
+      "top3": [
+       "LINE16-17",
+       "BUS24",
+       "BUS20"
+      ]
+     },
+     {
+      "onset_s": 37.53333333333333,
+      "detect_s": 37.6,
+      "cls": 2,
+      "location": "LINE26-29",
+      "top3": [
+       "LINE26-29",
+       "LINE26-27",
+       "BUS26"
+      ]
+     },
+     {
+      "onset_s": 43.766666666666666,
+      "detect_s": 43.833333333333336,
+      "cls": 4,
+      "location": "BUS4",
+      "top3": [
+       "BUS4",
+       "BUS24",
+       "BUS16"
+      ]
+     },
+     {
+      "onset_s": 45.43333333333333,
+      "detect_s": 45.5,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "LINE9-39",
+       "BUS20"
+      ]
+     },
+     {
+      "onset_s": 47.333333333333336,
+      "detect_s": 47.4,
+      "cls": 2,
+      "location": "LINE23-24",
+      "top3": [
+       "LINE23-24",
+       "LINE16-17",
+       "LINE17-18"
+      ]
+     },
+     {
+      "onset_s": 53.266666666666666,
+      "detect_s": 53.333333333333336,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS26",
+       "BUS3"
+      ]
+     },
+     {
+      "onset_s": 60.06666666666667,
+      "detect_s": 60.13333333333333,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS15",
+       "LINE4-14"
+      ]
+     },
+     {
+      "onset_s": 63.7,
+      "detect_s": 63.766666666666666,
+      "cls": 4,
+      "location": "BUS3",
+      "top3": [
+       "BUS3",
+       "BUS24",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 66.93333333333334,
+      "detect_s": 67.0,
+      "cls": 4,
+      "location": "BUS26",
+      "top3": [
+       "BUS26",
+       "BUS24",
+       "BUS31"
+      ]
+     }
+    ],
+    "T051": [],
+    "T052": [
+     {
+      "onset_s": 16.366666666666667,
+      "detect_s": 16.433333333333334,
+      "cls": 2,
+      "location": "LINE4-14",
+      "top3": [
+       "LINE4-14",
+       "LINE16-17",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 23.7,
+      "detect_s": 23.766666666666666,
+      "cls": 4,
+      "location": "BUS20",
+      "top3": [
+       "BUS20",
+       "BUS24",
+       "BUS31"
+      ]
+     },
+     {
+      "onset_s": 32.86666666666667,
+      "detect_s": 32.93333333333333,
+      "cls": 4,
+      "location": "BUS3",
+      "top3": [
+       "BUS3",
+       "BUS4",
+       "BUS15"
+      ]
+     },
+     {
+      "onset_s": 36.266666666666666,
+      "detect_s": 36.333333333333336,
+      "cls": 2,
+      "location": "LINE26-29",
+      "top3": [
+       "LINE26-29",
+       "BUS4",
+       "LINE26-27"
+      ]
+     },
+     {
+      "onset_s": 43.333333333333336,
+      "detect_s": 43.4,
+      "cls": 2,
+      "location": "LINE16-17",
+      "top3": [
+       "LINE16-17",
+       "BUS26",
+       "BUS16"
+      ]
+     },
+     {
+      "onset_s": 44.73333333333333,
+      "detect_s": 44.8,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "LINE9-39",
+       "BUS7"
+      ]
+     },
+     {
+      "onset_s": 46.5,
+      "detect_s": 46.56666666666667,
+      "cls": 4,
+      "location": "BUS20",
+      "top3": [
+       "BUS20",
+       "LINE16-17",
+       "BUS3"
+      ]
+     },
+     {
+      "onset_s": 48.8,
+      "detect_s": 48.86666666666667,
+      "cls": 4,
+      "location": "BUS20",
+      "top3": [
+       "BUS20",
+       "BUS24",
+       "LINE16-17"
+      ]
+     },
+     {
+      "onset_s": 56.86666666666667,
+      "detect_s": 56.93333333333333,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS4",
+       "BUS3"
+      ]
+     },
+     {
+      "onset_s": 58.66666666666666,
+      "detect_s": 58.73333333333333,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS20",
+       "LINE16-17"
+      ]
+     },
+     {
+      "onset_s": 63.06666666666667,
+      "detect_s": 63.13333333333333,
+      "cls": 2,
+      "location": "LINE9-39",
+      "top3": [
+       "LINE9-39",
+       "LINE14-15",
+       "BUS15"
+      ]
+     },
+     {
+      "onset_s": 69.6,
+      "detect_s": 69.66666666666667,
+      "cls": 4,
+      "location": "BUS26",
+      "top3": [
+       "BUS26",
+       "BUS24",
+       "BUS4"
+      ]
+     }
+    ],
+    "T053": [],
+    "T054": [],
+    "T055": [
+     {
+      "onset_s": 18.7,
+      "detect_s": 18.766666666666666,
+      "cls": 2,
+      "location": "LINE26-29",
+      "top3": [
+       "LINE26-29",
+       "LINE26-27",
+       "LINE14-15"
+      ]
+     },
+     {
+      "onset_s": 23.433333333333334,
+      "detect_s": 23.5,
+      "cls": 4,
+      "location": "BUS4",
+      "top3": [
+       "BUS4",
+       "BUS20",
+       "BUS15"
+      ]
+     },
+     {
+      "onset_s": 25.33333333333333,
+      "detect_s": 25.4,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "LINE4-14",
+       "LINE16-17"
+      ]
+     },
+     {
+      "onset_s": 26.2,
+      "detect_s": 26.266666666666666,
+      "cls": 2,
+      "location": "LINE16-17",
+      "top3": [
+       "LINE16-17",
+       "BUS24",
+       "BUS26"
+      ]
+     },
+     {
+      "onset_s": 29.33333333333333,
+      "detect_s": 29.4,
+      "cls": 2,
+      "location": "LINE14-15",
+      "top3": [
+       "LINE14-15",
+       "LINE26-27",
+       "LINE23-24"
+      ]
+     },
+     {
+      "onset_s": 31.03333333333333,
+      "detect_s": 31.1,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS16",
+       "BUS20"
+      ]
+     },
+     {
+      "onset_s": 36.96666666666667,
+      "detect_s": 37.03333333333333,
+      "cls": 4,
+      "location": "BUS4",
+      "top3": [
+       "BUS4",
+       "BUS26",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 38.46666666666667,
+      "detect_s": 38.53333333333333,
+      "cls": 4,
+      "location": "BUS26",
+      "top3": [
+       "BUS26",
+       "BUS7",
+       "LINE26-29"
+      ]
+     },
+     {
+      "onset_s": 46.66666666666666,
+      "detect_s": 46.73333333333333,
+      "cls": 2,
+      "location": "LINE9-39",
+      "top3": [
+       "LINE9-39",
+       "LINE14-15",
+       "BUS15"
+      ]
+     },
+     {
+      "onset_s": 54.06666666666667,
+      "detect_s": 54.13333333333333,
+      "cls": 4,
+      "location": "BUS26",
+      "top3": [
+       "BUS26",
+       "BUS24",
+       "BUS3"
+      ]
+     },
+     {
+      "onset_s": 57.03333333333333,
+      "detect_s": 57.1,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS20",
+       "BUS3"
+      ]
+     },
+     {
+      "onset_s": 60.63333333333333,
+      "detect_s": 60.7,
+      "cls": 2,
+      "location": "LINE26-27",
+      "top3": [
+       "LINE26-27",
+       "BUS24",
+       "BUS3"
+      ]
+     },
+     {
+      "onset_s": 67.26666666666667,
+      "detect_s": 67.33333333333333,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS3",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 70.6,
+      "detect_s": 70.66666666666667,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS31",
+       "LINE26-27"
+      ]
+     },
+     {
+      "onset_s": 75.56666666666666,
+      "detect_s": 75.63333333333334,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS15",
+       "BUS7"
+      ]
+     }
+    ],
+    "T056": [
+     {
+      "onset_s": 19.73333333333333,
+      "detect_s": 19.8,
+      "cls": 4,
+      "location": "BUS15",
+      "top3": [
+       "BUS15",
+       "BUS31",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 22.366666666666667,
+      "detect_s": 22.433333333333334,
+      "cls": 4,
+      "location": "BUS26",
+      "top3": [
+       "BUS26",
+       "BUS15",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 26.2,
+      "detect_s": 26.266666666666666,
+      "cls": 2,
+      "location": "LINE16-17",
+      "top3": [
+       "LINE16-17",
+       "LINE17-18",
+       "LINE26-27"
+      ]
+     },
+     {
+      "onset_s": 33.233333333333334,
+      "detect_s": 33.3,
+      "cls": 4,
+      "location": "BUS15",
+      "top3": [
+       "BUS15",
+       "BUS16",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 40.266666666666666,
+      "detect_s": 40.333333333333336,
+      "cls": 4,
+      "location": "BUS3",
+      "top3": [
+       "BUS3",
+       "BUS24",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 52.1,
+      "detect_s": 52.16666666666666,
+      "cls": 2,
+      "location": "LINE16-17",
+      "top3": [
+       "LINE16-17",
+       "LINE4-14",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 60.8,
+      "detect_s": 60.86666666666667,
+      "cls": 2,
+      "location": "LINE14-15",
+      "top3": [
+       "LINE14-15",
+       "BUS24",
+       "BUS31"
+      ]
+     },
+     {
+      "onset_s": 62.73333333333333,
+      "detect_s": 62.8,
+      "cls": 2,
+      "location": "LINE23-24",
+      "top3": [
+       "LINE23-24",
+       "LINE14-15",
+       "LINE9-39"
+      ]
+     },
+     {
+      "onset_s": 69.16666666666667,
+      "detect_s": 69.23333333333333,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS26",
+       "LINE16-17"
+      ]
+     },
+     {
+      "onset_s": 74.8,
+      "detect_s": 74.86666666666666,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "LINE14-15",
+       "BUS20"
+      ]
+     }
+    ],
+    "T057": [],
+    "T058": [
+     {
+      "onset_s": 19.7,
+      "detect_s": 19.766666666666666,
+      "cls": 4,
+      "location": "BUS3",
+      "top3": [
+       "BUS3",
+       "BUS24",
+       "BUS26"
+      ]
+     },
+     {
+      "onset_s": 21.666666666666668,
+      "detect_s": 21.73333333333333,
+      "cls": 4,
+      "location": "BUS3",
+      "top3": [
+       "BUS3",
+       "LINE16-17",
+       "BUS26"
+      ]
+     },
+     {
+      "onset_s": 23.33333333333333,
+      "detect_s": 23.4,
+      "cls": 4,
+      "location": "BUS3",
+      "top3": [
+       "BUS3",
+       "BUS24",
+       "BUS20"
+      ]
+     },
+     {
+      "onset_s": 26.466666666666665,
+      "detect_s": 26.53333333333333,
+      "cls": 2,
+      "location": "LINE26-29",
+      "top3": [
+       "LINE26-29",
+       "LINE26-27",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 30.666666666666668,
+      "detect_s": 30.73333333333333,
+      "cls": 2,
+      "location": "LINE16-17",
+      "top3": [
+       "LINE16-17",
+       "LINE23-24",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 32.13333333333333,
+      "detect_s": 32.2,
+      "cls": 2,
+      "location": "LINE16-17",
+      "top3": [
+       "LINE16-17",
+       "BUS15",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 34.1,
+      "detect_s": 34.166666666666664,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS31",
+       "BUS20"
+      ]
+     },
+     {
+      "onset_s": 35.1,
+      "detect_s": 35.166666666666664,
+      "cls": 2,
+      "location": "LINE14-15",
+      "top3": [
+       "LINE14-15",
+       "LINE26-27",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 40.16666666666666,
+      "detect_s": 40.23333333333333,
+      "cls": 4,
+      "location": "BUS15",
+      "top3": [
+       "BUS15",
+       "BUS4",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 47.43333333333333,
+      "detect_s": 47.5,
+      "cls": 2,
+      "location": "LINE9-39",
+      "top3": [
+       "LINE9-39",
+       "LINE14-15",
+       "LINE4-14"
+      ]
+     },
+     {
+      "onset_s": 51.13333333333333,
+      "detect_s": 51.2,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "LINE16-17",
+       "LINE26-27"
+      ]
+     },
+     {
+      "onset_s": 62.43333333333333,
+      "detect_s": 62.5,
+      "cls": 2,
+      "location": "LINE16-17",
+      "top3": [
+       "LINE16-17",
+       "LINE17-18",
+       "LINE26-27"
+      ]
+     },
+     {
+      "onset_s": 68.6,
+      "detect_s": 68.66666666666667,
+      "cls": 4,
+      "location": "BUS15",
+      "top3": [
+       "BUS15",
+       "BUS16",
+       "BUS24"
+      ]
+     }
+    ],
+    "T059": [
+     {
+      "onset_s": 20.266666666666666,
+      "detect_s": 20.33333333333333,
+      "cls": 4,
+      "location": "BUS15",
+      "top3": [
+       "BUS15",
+       "BUS4",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 23.23333333333333,
+      "detect_s": 23.3,
+      "cls": 2,
+      "location": "LINE14-15",
+      "top3": [
+       "LINE14-15",
+       "BUS3",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 26.03333333333333,
+      "detect_s": 26.1,
+      "cls": 2,
+      "location": "LINE14-15",
+      "top3": [
+       "LINE14-15",
+       "LINE9-39",
+       "BUS26"
+      ]
+     },
+     {
+      "onset_s": 28.366666666666667,
+      "detect_s": 28.433333333333334,
+      "cls": 2,
+      "location": "LINE14-15",
+      "top3": [
+       "LINE14-15",
+       "BUS24",
+       "BUS20"
+      ]
+     },
+     {
+      "onset_s": 34.36666666666667,
+      "detect_s": 34.43333333333333,
+      "cls": 4,
+      "location": "BUS31",
+      "top3": [
+       "BUS31",
+       "LINE14-15",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 35.63333333333333,
+      "detect_s": 35.7,
+      "cls": 4,
+      "location": "BUS7",
+      "top3": [
+       "BUS7",
+       "LINE9-39",
+       "BUS26"
+      ]
+     },
+     {
+      "onset_s": 40.66666666666666,
+      "detect_s": 40.73333333333333,
+      "cls": 4,
+      "location": "BUS7",
+      "top3": [
+       "BUS7",
+       "BUS4",
+       "BUS15"
+      ]
+     },
+     {
+      "onset_s": 43.43333333333333,
+      "detect_s": 43.5,
+      "cls": 4,
+      "location": "BUS7",
+      "top3": [
+       "BUS7",
+       "LINE14-15",
+       "BUS26"
+      ]
+     },
+     {
+      "onset_s": 45.86666666666667,
+      "detect_s": 45.93333333333333,
+      "cls": 4,
+      "location": "BUS4",
+      "top3": [
+       "BUS4",
+       "BUS15",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 48.43333333333333,
+      "detect_s": 48.5,
+      "cls": 4,
+      "location": "BUS4",
+      "top3": [
+       "BUS4",
+       "LINE14-15",
+       "LINE26-27"
+      ]
+     },
+     {
+      "onset_s": 53.8,
+      "detect_s": 53.86666666666667,
+      "cls": 2,
+      "location": "LINE16-17",
+      "top3": [
+       "LINE16-17",
+       "LINE17-18",
+       "LINE26-27"
+      ]
+     },
+     {
+      "onset_s": 59.93333333333333,
+      "detect_s": 60.0,
+      "cls": 4,
+      "location": "BUS15",
+      "top3": [
+       "BUS15",
+       "BUS16",
+       "LINE14-15"
+      ]
+     },
+     {
+      "onset_s": 69.46666666666667,
+      "detect_s": 69.53333333333333,
+      "cls": 2,
+      "location": "LINE14-15",
+      "top3": [
+       "LINE14-15",
+       "BUS24",
+       "BUS3"
+      ]
+     },
+     {
+      "onset_s": 72.3,
+      "detect_s": 72.36666666666666,
+      "cls": 4,
+      "location": "BUS31",
+      "top3": [
+       "BUS31",
+       "BUS20",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 74.3,
+      "detect_s": 74.36666666666666,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS20",
+       "BUS15"
+      ]
+     },
+     {
+      "onset_s": 80.03333333333333,
+      "detect_s": 80.1,
+      "cls": 4,
+      "location": "BUS31",
+      "top3": [
+       "BUS31",
+       "LINE14-15",
+       "BUS15"
+      ]
+     }
+    ],
+    "T060": [
+     {
+      "onset_s": 23.966666666666665,
+      "detect_s": 24.03333333333333,
+      "cls": 2,
+      "location": "LINE23-24",
+      "top3": [
+       "LINE23-24",
+       "BUS4",
+       "LINE16-17"
+      ]
+     },
+     {
+      "onset_s": 29.866666666666667,
+      "detect_s": 29.933333333333334,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS3",
+       "LINE4-14"
+      ]
+     },
+     {
+      "onset_s": 33.0,
+      "detect_s": 33.06666666666667,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "LINE9-39",
+       "LINE26-27"
+      ]
+     },
+     {
+      "onset_s": 35.86666666666667,
+      "detect_s": 35.93333333333333,
+      "cls": 2,
+      "location": "LINE9-39",
+      "top3": [
+       "LINE9-39",
+       "LINE4-14",
+       "LINE14-15"
+      ]
+     },
+     {
+      "onset_s": 39.53333333333333,
+      "detect_s": 39.6,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "LINE16-17",
+       "LINE26-27"
+      ]
+     },
+     {
+      "onset_s": 59.0,
+      "detect_s": 59.06666666666667,
+      "cls": 4,
+      "location": "BUS20",
+      "top3": [
+       "BUS20",
+       "BUS4",
+       "BUS3"
+      ]
+     }
+    ],
+    "T061": [
+     {
+      "onset_s": 17.866666666666667,
+      "detect_s": 17.933333333333334,
+      "cls": 2,
+      "location": "LINE26-27",
+      "top3": [
+       "LINE26-27",
+       "LINE26-29",
+       "BUS3"
+      ]
+     },
+     {
+      "onset_s": 24.6,
+      "detect_s": 24.666666666666668,
+      "cls": 4,
+      "location": "BUS3",
+      "top3": [
+       "BUS3",
+       "BUS24",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 28.966666666666665,
+      "detect_s": 29.03333333333333,
+      "cls": 4,
+      "location": "BUS3",
+      "top3": [
+       "BUS3",
+       "LINE26-27",
+       "BUS26"
+      ]
+     },
+     {
+      "onset_s": 33.03333333333333,
+      "detect_s": 33.1,
+      "cls": 4,
+      "location": "BUS15",
+      "top3": [
+       "BUS15",
+       "BUS4",
+       "BUS3"
+      ]
+     },
+     {
+      "onset_s": 36.7,
+      "detect_s": 36.766666666666666,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS4",
+       "BUS26"
+      ]
+     },
+     {
+      "onset_s": 37.8,
+      "detect_s": 37.86666666666667,
+      "cls": 2,
+      "location": "LINE14-15",
+      "top3": [
+       "LINE14-15",
+       "LINE9-39",
+       "BUS31"
+      ]
+     },
+     {
+      "onset_s": 48.1,
+      "detect_s": 48.16666666666666,
+      "cls": 4,
+      "location": "BUS31",
+      "top3": [
+       "BUS31",
+       "LINE14-15",
+       "LINE4-14"
+      ]
+     },
+     {
+      "onset_s": 48.86666666666667,
+      "detect_s": 48.93333333333333,
+      "cls": 2,
+      "location": "LINE26-29",
+      "top3": [
+       "LINE26-29",
+       "LINE26-27",
+       "LINE14-15"
+      ]
+     },
+     {
+      "onset_s": 54.86666666666667,
+      "detect_s": 54.93333333333333,
+      "cls": 4,
+      "location": "BUS26",
+      "top3": [
+       "BUS26",
+       "BUS4",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 56.73333333333333,
+      "detect_s": 56.8,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS4",
+       "BUS20"
+      ]
+     },
+     {
+      "onset_s": 59.66666666666666,
+      "detect_s": 59.73333333333333,
+      "cls": 4,
+      "location": "BUS4",
+      "top3": [
+       "BUS4",
+       "BUS24",
+       "BUS3"
+      ]
+     }
+    ],
+    "T062": [],
+    "T063": [],
+    "T064": [],
+    "T065": [
+     {
+      "onset_s": 19.6,
+      "detect_s": 19.666666666666668,
+      "cls": 4,
+      "location": "BUS4",
+      "top3": [
+       "BUS4",
+       "BUS3",
+       "LINE26-27"
+      ]
+     },
+     {
+      "onset_s": 22.23333333333333,
+      "detect_s": 22.3,
+      "cls": 4,
+      "location": "BUS4",
+      "top3": [
+       "BUS4",
+       "BUS15",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 26.7,
+      "detect_s": 26.766666666666666,
+      "cls": 4,
+      "location": "BUS7",
+      "top3": [
+       "BUS7",
+       "BUS15",
+       "LINE9-39"
+      ]
+     },
+     {
+      "onset_s": 32.13333333333333,
+      "detect_s": 32.2,
+      "cls": 4,
+      "location": "BUS7",
+      "top3": [
+       "BUS7",
+       "BUS4",
+       "BUS15"
+      ]
+     },
+     {
+      "onset_s": 34.86666666666667,
+      "detect_s": 34.93333333333333,
+      "cls": 2,
+      "location": "LINE26-27",
+      "top3": [
+       "LINE26-27",
+       "LINE26-29",
+       "LINE14-15"
+      ]
+     },
+     {
+      "onset_s": 41.266666666666666,
+      "detect_s": 41.333333333333336,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS4",
+       "LINE4-14"
+      ]
+     },
+     {
+      "onset_s": 51.16666666666666,
+      "detect_s": 51.23333333333333,
+      "cls": 2,
+      "location": "LINE16-17",
+      "top3": [
+       "LINE16-17",
+       "LINE26-27",
+       "LINE17-18"
+      ]
+     },
+     {
+      "onset_s": 56.66666666666666,
+      "detect_s": 56.73333333333333,
+      "cls": 4,
+      "location": "BUS15",
+      "top3": [
+       "BUS15",
+       "BUS24",
+       "BUS16"
+      ]
+     },
+     {
+      "onset_s": 63.1,
+      "detect_s": 63.16666666666666,
+      "cls": 4,
+      "location": "BUS3",
+      "top3": [
+       "BUS3",
+       "BUS24",
+       "BUS4"
+      ]
+     }
+    ],
+    "T066": [
+     {
+      "onset_s": 16.1,
+      "detect_s": 16.166666666666668,
+      "cls": 2,
+      "location": "LINE16-17",
+      "top3": [
+       "LINE16-17",
+       "BUS24",
+       "BUS3"
+      ]
+     },
+     {
+      "onset_s": 21.466666666666665,
+      "detect_s": 21.53333333333333,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS26",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 23.566666666666663,
+      "detect_s": 23.633333333333333,
+      "cls": 4,
+      "location": "BUS31",
+      "top3": [
+       "BUS31",
+       "LINE14-15",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 24.73333333333333,
+      "detect_s": 24.8,
+      "cls": 2,
+      "location": "LINE9-39",
+      "top3": [
+       "LINE9-39",
+       "LINE14-15",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 29.933333333333334,
+      "detect_s": 30.0,
+      "cls": 4,
+      "location": "BUS26",
+      "top3": [
+       "BUS26",
+       "BUS24",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 33.7,
+      "detect_s": 33.766666666666666,
+      "cls": 4,
+      "location": "BUS31",
+      "top3": [
+       "BUS31",
+       "BUS20",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 38.8,
+      "detect_s": 38.86666666666667,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "LINE16-17",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 40.333333333333336,
+      "detect_s": 40.4,
+      "cls": 2,
+      "location": "LINE9-39",
+      "top3": [
+       "LINE9-39",
+       "LINE4-14",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 50.66666666666666,
+      "detect_s": 50.73333333333333,
+      "cls": 2,
+      "location": "LINE23-24",
+      "top3": [
+       "LINE23-24",
+       "LINE9-39",
+       "LINE16-17"
+      ]
+     },
+     {
+      "onset_s": 57.56666666666667,
+      "detect_s": 57.63333333333333,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS4",
+       "LINE4-14"
+      ]
+     },
+     {
+      "onset_s": 59.766666666666666,
+      "detect_s": 59.833333333333336,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS4",
+       "LINE9-39"
+      ]
+     },
+     {
+      "onset_s": 63.4,
+      "detect_s": 63.46666666666667,
+      "cls": 4,
+      "location": "BUS15",
+      "top3": [
+       "BUS15",
+       "BUS4",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 66.8,
+      "detect_s": 66.86666666666666,
+      "cls": 4,
+      "location": "BUS31",
+      "top3": [
+       "BUS31",
+       "BUS15",
+       "BUS24"
+      ]
+     }
+    ],
+    "T067": [],
+    "T068": [
+     {
+      "onset_s": 19.83333333333333,
+      "detect_s": 19.9,
+      "cls": 4,
+      "location": "BUS4",
+      "top3": [
+       "BUS4",
+       "BUS15",
+       "BUS3"
+      ]
+     },
+     {
+      "onset_s": 24.03333333333333,
+      "detect_s": 24.1,
+      "cls": 4,
+      "location": "BUS3",
+      "top3": [
+       "BUS3",
+       "LINE14-15",
+       "BUS31"
+      ]
+     },
+     {
+      "onset_s": 27.433333333333334,
+      "detect_s": 27.5,
+      "cls": 2,
+      "location": "LINE16-17",
+      "top3": [
+       "LINE16-17",
+       "BUS20",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 35.03333333333333,
+      "detect_s": 35.1,
+      "cls": 2,
+      "location": "LINE14-15",
+      "top3": [
+       "LINE14-15",
+       "BUS31",
+       "LINE9-39"
+      ]
+     },
+     {
+      "onset_s": 36.36666666666667,
+      "detect_s": 36.43333333333333,
+      "cls": 4,
+      "location": "BUS31",
+      "top3": [
+       "BUS31",
+       "BUS24",
+       "BUS20"
+      ]
+     },
+     {
+      "onset_s": 38.1,
+      "detect_s": 38.16666666666666,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS20",
+       "LINE14-15"
+      ]
+     },
+     {
+      "onset_s": 43.16666666666666,
+      "detect_s": 43.23333333333333,
+      "cls": 4,
+      "location": "BUS26",
+      "top3": [
+       "BUS26",
+       "BUS3",
+       "LINE16-17"
+      ]
+     },
+     {
+      "onset_s": 46.3,
+      "detect_s": 46.36666666666667,
+      "cls": 2,
+      "location": "LINE14-15",
+      "top3": [
+       "LINE14-15",
+       "BUS31",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 54.4,
+      "detect_s": 54.46666666666667,
+      "cls": 2,
+      "location": "LINE26-29",
+      "top3": [
+       "LINE26-29",
+       "LINE26-27",
+       "LINE16-17"
+      ]
+     },
+     {
+      "onset_s": 58.9,
+      "detect_s": 58.96666666666667,
+      "cls": 2,
+      "location": "LINE26-29",
+      "top3": [
+       "LINE26-29",
+       "BUS24",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 61.36666666666667,
+      "detect_s": 61.43333333333333,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "LINE4-14",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 63.03333333333333,
+      "detect_s": 63.1,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS4",
+       "BUS16"
+      ]
+     },
+     {
+      "onset_s": 63.93333333333333,
+      "detect_s": 64.0,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS31",
+       "LINE9-39"
+      ]
+     },
+     {
+      "onset_s": 65.96666666666667,
+      "detect_s": 66.03333333333333,
+      "cls": 2,
+      "location": "LINE17-18",
+      "top3": [
+       "LINE17-18",
+       "LINE16-17",
+       "LINE4-14"
+      ]
+     },
+     {
+      "onset_s": 72.96666666666667,
+      "detect_s": 73.03333333333333,
+      "cls": 4,
+      "location": "BUS15",
+      "top3": [
+       "BUS15",
+       "BUS16",
+       "LINE14-15"
+      ]
+     }
+    ],
+    "T069": [],
+    "T070": [],
+    "T071": [
+     {
+      "onset_s": 19.933333333333334,
+      "detect_s": 20.0,
+      "cls": 4,
+      "location": "BUS26",
+      "top3": [
+       "BUS26",
+       "BUS3",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 28.933333333333334,
+      "detect_s": 29.0,
+      "cls": 2,
+      "location": "LINE4-14",
+      "top3": [
+       "LINE4-14",
+       "LINE16-17",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 34.233333333333334,
+      "detect_s": 34.3,
+      "cls": 4,
+      "location": "BUS16",
+      "top3": [
+       "BUS16",
+       "LINE14-15",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 35.8,
+      "detect_s": 35.86666666666667,
+      "cls": 4,
+      "location": "BUS20",
+      "top3": [
+       "BUS20",
+       "BUS24",
+       "LINE14-15"
+      ]
+     },
+     {
+      "onset_s": 38.36666666666667,
+      "detect_s": 38.43333333333333,
+      "cls": 4,
+      "location": "BUS20",
+      "top3": [
+       "BUS20",
+       "BUS24",
+       "LINE16-17"
+      ]
+     },
+     {
+      "onset_s": 44.9,
+      "detect_s": 44.96666666666667,
+      "cls": 2,
+      "location": "LINE26-29",
+      "top3": [
+       "LINE26-29",
+       "LINE26-27",
+       "BUS31"
+      ]
+     },
+     {
+      "onset_s": 51.73333333333333,
+      "detect_s": 51.8,
+      "cls": 2,
+      "location": "LINE16-17",
+      "top3": [
+       "LINE16-17",
+       "BUS16",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 53.0,
+      "detect_s": 53.06666666666667,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS31",
+       "LINE9-39"
+      ]
+     },
+     {
+      "onset_s": 54.93333333333333,
+      "detect_s": 55.0,
+      "cls": 4,
+      "location": "BUS31",
+      "top3": [
+       "BUS31",
+       "BUS24",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 56.23333333333333,
+      "detect_s": 56.3,
+      "cls": 4,
+      "location": "BUS3",
+      "top3": [
+       "BUS3",
+       "BUS24",
+       "LINE14-15"
+      ]
+     },
+     {
+      "onset_s": 65.23333333333333,
+      "detect_s": 65.3,
+      "cls": 2,
+      "location": "LINE9-39",
+      "top3": [
+       "LINE9-39",
+       "LINE14-15",
+       "BUS31"
+      ]
+     },
+     {
+      "onset_s": 73.2,
+      "detect_s": 73.26666666666667,
+      "cls": 4,
+      "location": "BUS26",
+      "top3": [
+       "BUS26",
+       "BUS24",
+       "BUS4"
+      ]
+     }
+    ],
+    "T072": []
+   }
+  },
+  "FIS": {
+   "name": "FIS",
+   "tau": 0.25,
+   "cal": {
+    "events": 72,
+    "detected": 60,
+    "class_ok": 57,
+    "top1": 48,
+    "top3": 52,
+    "fa_per_normal_h": 0.0,
+    "extras_per_event_h": 80.0,
+    "line": {
+     "events": 36,
+     "detected": 33,
+     "class_ok": 32,
+     "top1": 26,
+     "top3": 28,
+     "confusion": {
+      "fault": 0,
+      "line": 32,
+      "generation": 0,
+      "load": 1
+     }
+    },
+    "load": {
+     "events": 36,
+     "detected": 27,
+     "class_ok": 25,
+     "top1": 22,
+     "top3": 24,
+     "confusion": {
+      "fault": 0,
+      "line": 2,
+      "generation": 0,
+      "load": 25
+     }
+    }
+   },
+   "test": {
+    "events": 72,
+    "detected": 58,
+    "class_ok": 55,
+    "top1": 49,
+    "top3": 54,
+    "fa_per_normal_h": 0.0,
+    "extras_per_event_h": 75.0,
+    "line": {
+     "events": 36,
+     "detected": 36,
+     "class_ok": 35,
+     "top1": 32,
+     "top3": 34,
+     "confusion": {
+      "fault": 0,
+      "line": 35,
+      "generation": 0,
+      "load": 1
+     }
+    },
+    "load": {
+     "events": 36,
+     "detected": 22,
+     "class_ok": 20,
+     "top1": 17,
+     "top3": 20,
+     "confusion": {
+      "fault": 0,
+      "line": 2,
+      "generation": 0,
+      "load": 20
+     }
+    },
+    "by_condition_MATCH": {
+     "events": 24,
+     "detected": 18,
+     "class_ok": 18,
+     "top1": 16,
+     "top3": 18,
+     "fa_per_normal_h": 0.0,
+     "extras_per_event_h": 90.0,
+     "line": {
+      "events": 12,
+      "detected": 12,
+      "class_ok": 12,
+      "top1": 12,
+      "top3": 12,
+      "confusion": {
+       "fault": 0,
+       "line": 12,
+       "generation": 0,
+       "load": 0
+      }
+     },
+     "load": {
+      "events": 12,
+      "detected": 6,
+      "class_ok": 6,
+      "top1": 4,
+      "top3": 6,
+      "confusion": {
+       "fault": 0,
+       "line": 0,
+       "generation": 0,
+       "load": 6
+      }
+     }
+    },
+    "by_condition_IN_SUPPORT": {
+     "events": 24,
+     "detected": 20,
+     "class_ok": 18,
+     "top1": 15,
+     "top3": 17,
+     "fa_per_normal_h": 0.0,
+     "extras_per_event_h": 67.5,
+     "line": {
+      "events": 12,
+      "detected": 12,
+      "class_ok": 11,
+      "top1": 9,
+      "top3": 10,
+      "confusion": {
+       "fault": 0,
+       "line": 11,
+       "generation": 0,
+       "load": 1
+      }
+     },
+     "load": {
+      "events": 12,
+      "detected": 8,
+      "class_ok": 7,
+      "top1": 6,
+      "top3": 7,
+      "confusion": {
+       "fault": 0,
+       "line": 1,
+       "generation": 0,
+       "load": 7
+      }
+     }
+    },
+    "by_condition_OUT_SUPPORT": {
+     "events": 24,
+     "detected": 20,
+     "class_ok": 19,
+     "top1": 18,
+     "top3": 19,
+     "fa_per_normal_h": 0.0,
+     "extras_per_event_h": 67.5,
+     "line": {
+      "events": 12,
+      "detected": 12,
+      "class_ok": 12,
+      "top1": 11,
+      "top3": 12,
+      "confusion": {
+       "fault": 0,
+       "line": 12,
+       "generation": 0,
+       "load": 0
+      }
+     },
+     "load": {
+      "events": 12,
+      "detected": 8,
+      "class_ok": 7,
+      "top1": 7,
+      "top3": 7,
+      "confusion": {
+       "fault": 0,
+       "line": 1,
+       "generation": 0,
+       "load": 7
+      }
+     }
+    }
+   },
+   "preds": {
+    "T049": [],
+    "T050": [
+     {
+      "onset_s": 19.7,
+      "detect_s": 19.766666666666666,
+      "cls": 4,
+      "location": "BUS20",
+      "top3": [
+       "BUS20",
+       "LINE23-24",
+       "LINE16-17"
+      ]
+     },
+     {
+      "onset_s": 37.56666666666667,
+      "detect_s": 37.63333333333333,
+      "cls": 2,
+      "location": "LINE26-29",
+      "top3": [
+       "LINE26-29",
+       "BUS26",
+       "LINE16-17"
+      ]
+     },
+     {
+      "onset_s": 47.333333333333336,
+      "detect_s": 47.4,
+      "cls": 2,
+      "location": "LINE23-24",
+      "top3": [
+       "LINE23-24",
+       "LINE26-27",
+       "LINE16-17"
+      ]
+     },
+     {
+      "onset_s": 54.86666666666667,
+      "detect_s": 54.93333333333333,
+      "cls": 2,
+      "location": "LINE14-15",
+      "top3": [
+       "LINE14-15",
+       "LINE9-39",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 63.6,
+      "detect_s": 63.66666666666666,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS3",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 66.86666666666666,
+      "detect_s": 66.93333333333334,
+      "cls": 4,
+      "location": "BUS3",
+      "top3": [
+       "BUS3",
+       "BUS4",
+       "BUS24"
+      ]
+     }
+    ],
+    "T051": [],
+    "T052": [
+     {
+      "onset_s": 16.366666666666667,
+      "detect_s": 16.433333333333334,
+      "cls": 2,
+      "location": "LINE4-14",
+      "top3": [
+       "LINE4-14",
+       "LINE16-17",
+       "BUS3"
+      ]
+     },
+     {
+      "onset_s": 36.266666666666666,
+      "detect_s": 36.333333333333336,
+      "cls": 2,
+      "location": "LINE26-29",
+      "top3": [
+       "LINE26-29",
+       "BUS26",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 43.3,
+      "detect_s": 43.36666666666667,
+      "cls": 2,
+      "location": "LINE16-17",
+      "top3": [
+       "LINE16-17",
+       "BUS26",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 46.56666666666667,
+      "detect_s": 46.63333333333333,
+      "cls": 4,
+      "location": "BUS20",
+      "top3": [
+       "BUS20",
+       "LINE16-17",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 48.9,
+      "detect_s": 48.96666666666667,
+      "cls": 4,
+      "location": "BUS20",
+      "top3": [
+       "BUS20",
+       "LINE16-17",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 56.93333333333333,
+      "detect_s": 57.0,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS3",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 59.13333333333333,
+      "detect_s": 59.2,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS20",
+       "BUS15"
+      ]
+     },
+     {
+      "onset_s": 63.13333333333333,
+      "detect_s": 63.2,
+      "cls": 2,
+      "location": "LINE9-39",
+      "top3": [
+       "LINE9-39",
+       "BUS24",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 69.03333333333333,
+      "detect_s": 69.1,
+      "cls": 4,
+      "location": "BUS26",
+      "top3": [
+       "BUS26",
+       "BUS3",
+       "BUS24"
+      ]
+     }
+    ],
+    "T053": [],
+    "T054": [],
+    "T055": [
+     {
+      "onset_s": 18.7,
+      "detect_s": 18.766666666666666,
+      "cls": 2,
+      "location": "LINE26-29",
+      "top3": [
+       "LINE26-29",
+       "BUS26",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 31.1,
+      "detect_s": 31.166666666666668,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS3",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 32.766666666666666,
+      "detect_s": 32.833333333333336,
+      "cls": 4,
+      "location": "BUS15",
+      "top3": [
+       "BUS15",
+       "BUS4",
+       "BUS3"
+      ]
+     },
+     {
+      "onset_s": 36.63333333333333,
+      "detect_s": 36.7,
+      "cls": 4,
+      "location": "BUS26",
+      "top3": [
+       "BUS26",
+       "LINE26-29",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 46.766666666666666,
+      "detect_s": 46.833333333333336,
+      "cls": 2,
+      "location": "LINE9-39",
+      "top3": [
+       "LINE9-39",
+       "BUS24",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 54.5,
+      "detect_s": 54.56666666666667,
+      "cls": 4,
+      "location": "BUS4",
+      "top3": [
+       "BUS4",
+       "BUS3",
+       "LINE26-27"
+      ]
+     },
+     {
+      "onset_s": 57.1,
+      "detect_s": 57.16666666666666,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS3",
+       "LINE9-39"
+      ]
+     },
+     {
+      "onset_s": 60.63333333333333,
+      "detect_s": 60.7,
+      "cls": 2,
+      "location": "LINE26-27",
+      "top3": [
+       "LINE26-27",
+       "BUS3",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 67.56666666666666,
+      "detect_s": 67.63333333333334,
+      "cls": 4,
+      "location": "BUS4",
+      "top3": [
+       "BUS4",
+       "BUS24",
+       "BUS3"
+      ]
+     }
+    ],
+    "T056": [
+     {
+      "onset_s": 22.366666666666667,
+      "detect_s": 22.433333333333334,
+      "cls": 4,
+      "location": "BUS15",
+      "top3": [
+       "BUS15",
+       "BUS26",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 26.2,
+      "detect_s": 26.266666666666666,
+      "cls": 2,
+      "location": "LINE17-18",
+      "top3": [
+       "LINE17-18",
+       "LINE26-27",
+       "LINE16-17"
+      ]
+     },
+     {
+      "onset_s": 33.43333333333333,
+      "detect_s": 33.5,
+      "cls": 4,
+      "location": "BUS15",
+      "top3": [
+       "BUS15",
+       "BUS4",
+       "BUS3"
+      ]
+     },
+     {
+      "onset_s": 52.1,
+      "detect_s": 52.16666666666666,
+      "cls": 2,
+      "location": "LINE16-17",
+      "top3": [
+       "LINE16-17",
+       "LINE4-14",
+       "BUS7"
+      ]
+     },
+     {
+      "onset_s": 62.6,
+      "detect_s": 62.66666666666666,
+      "cls": 2,
+      "location": "LINE23-24",
+      "top3": [
+       "LINE23-24",
+       "LINE26-27",
+       "LINE16-17"
+      ]
+     },
+     {
+      "onset_s": 70.76666666666667,
+      "detect_s": 70.83333333333333,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "LINE4-14",
+       "LINE16-17"
+      ]
+     }
+    ],
+    "T057": [],
+    "T058": [
+     {
+      "onset_s": 19.666666666666668,
+      "detect_s": 19.73333333333333,
+      "cls": 4,
+      "location": "BUS3",
+      "top3": [
+       "BUS3",
+       "BUS4",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 23.066666666666663,
+      "detect_s": 23.133333333333333,
+      "cls": 4,
+      "location": "BUS3",
+      "top3": [
+       "BUS3",
+       "BUS4",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 26.5,
+      "detect_s": 26.566666666666663,
+      "cls": 2,
+      "location": "LINE26-29",
+      "top3": [
+       "LINE26-29",
+       "LINE16-17",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 35.266666666666666,
+      "detect_s": 35.333333333333336,
+      "cls": 2,
+      "location": "LINE23-24",
+      "top3": [
+       "LINE23-24",
+       "LINE26-27",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 40.03333333333333,
+      "detect_s": 40.1,
+      "cls": 4,
+      "location": "BUS15",
+      "top3": [
+       "BUS15",
+       "BUS3",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 47.4,
+      "detect_s": 47.46666666666667,
+      "cls": 4,
+      "location": "BUS15",
+      "top3": [
+       "BUS15",
+       "BUS4",
+       "LINE9-39"
+      ]
+     },
+     {
+      "onset_s": 50.766666666666666,
+      "detect_s": 50.833333333333336,
+      "cls": 2,
+      "location": "LINE26-27",
+      "top3": [
+       "LINE26-27",
+       "LINE17-18",
+       "LINE16-17"
+      ]
+     },
+     {
+      "onset_s": 62.4,
+      "detect_s": 62.46666666666667,
+      "cls": 2,
+      "location": "LINE17-18",
+      "top3": [
+       "LINE17-18",
+       "LINE26-27",
+       "LINE16-17"
+      ]
+     },
+     {
+      "onset_s": 68.8,
+      "detect_s": 68.86666666666666,
+      "cls": 4,
+      "location": "BUS15",
+      "top3": [
+       "BUS15",
+       "BUS24",
+       "BUS3"
+      ]
+     }
+    ],
+    "T059": [
+     {
+      "onset_s": 20.2,
+      "detect_s": 20.266666666666666,
+      "cls": 4,
+      "location": "BUS15",
+      "top3": [
+       "BUS15",
+       "BUS4",
+       "BUS3"
+      ]
+     },
+     {
+      "onset_s": 26.133333333333333,
+      "detect_s": 26.2,
+      "cls": 2,
+      "location": "LINE14-15",
+      "top3": [
+       "LINE14-15",
+       "LINE9-39",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 36.0,
+      "detect_s": 36.06666666666667,
+      "cls": 4,
+      "location": "BUS7",
+      "top3": [
+       "BUS7",
+       "LINE4-14",
+       "LINE16-17"
+      ]
+     },
+     {
+      "onset_s": 45.73333333333333,
+      "detect_s": 45.8,
+      "cls": 4,
+      "location": "BUS4",
+      "top3": [
+       "BUS4",
+       "BUS15",
+       "BUS3"
+      ]
+     },
+     {
+      "onset_s": 48.56666666666667,
+      "detect_s": 48.63333333333333,
+      "cls": 4,
+      "location": "BUS4",
+      "top3": [
+       "BUS4",
+       "BUS3",
+       "LINE26-27"
+      ]
+     },
+     {
+      "onset_s": 53.8,
+      "detect_s": 53.86666666666667,
+      "cls": 2,
+      "location": "LINE26-27",
+      "top3": [
+       "LINE26-27",
+       "LINE17-18",
+       "LINE16-17"
+      ]
+     },
+     {
+      "onset_s": 60.03333333333333,
+      "detect_s": 60.1,
+      "cls": 4,
+      "location": "BUS3",
+      "top3": [
+       "BUS3",
+       "BUS4",
+       "BUS15"
+      ]
+     },
+     {
+      "onset_s": 62.06666666666667,
+      "detect_s": 62.13333333333333,
+      "cls": 2,
+      "location": "LINE16-17",
+      "top3": [
+       "LINE16-17",
+       "LINE4-14",
+       "LINE14-15"
+      ]
+     }
+    ],
+    "T060": [
+     {
+      "onset_s": 23.966666666666665,
+      "detect_s": 24.03333333333333,
+      "cls": 2,
+      "location": "LINE23-24",
+      "top3": [
+       "LINE23-24",
+       "BUS24",
+       "LINE26-29"
+      ]
+     },
+     {
+      "onset_s": 30.566666666666663,
+      "detect_s": 30.633333333333333,
+      "cls": 2,
+      "location": "LINE14-15",
+      "top3": [
+       "LINE14-15",
+       "BUS24",
+       "LINE16-17"
+      ]
+     },
+     {
+      "onset_s": 39.333333333333336,
+      "detect_s": 39.4,
+      "cls": 2,
+      "location": "LINE26-27",
+      "top3": [
+       "LINE26-27",
+       "LINE17-18",
+       "BUS3"
+      ]
+     },
+     {
+      "onset_s": 54.16666666666666,
+      "detect_s": 54.23333333333333,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS4",
+       "BUS3"
+      ]
+     },
+     {
+      "onset_s": 58.43333333333333,
+      "detect_s": 58.5,
+      "cls": 4,
+      "location": "BUS3",
+      "top3": [
+       "BUS3",
+       "BUS24",
+       "BUS4"
+      ]
+     }
+    ],
+    "T061": [
+     {
+      "onset_s": 17.866666666666667,
+      "detect_s": 17.933333333333334,
+      "cls": 2,
+      "location": "LINE26-27",
+      "top3": [
+       "LINE26-27",
+       "LINE17-18",
+       "BUS3"
+      ]
+     },
+     {
+      "onset_s": 25.0,
+      "detect_s": 25.066666666666663,
+      "cls": 4,
+      "location": "BUS3",
+      "top3": [
+       "BUS3",
+       "BUS4",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 33.06666666666667,
+      "detect_s": 33.13333333333333,
+      "cls": 4,
+      "location": "BUS15",
+      "top3": [
+       "BUS15",
+       "BUS3",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 37.833333333333336,
+      "detect_s": 37.9,
+      "cls": 2,
+      "location": "LINE14-15",
+      "top3": [
+       "LINE14-15",
+       "LINE9-39",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 48.86666666666667,
+      "detect_s": 48.93333333333333,
+      "cls": 2,
+      "location": "LINE26-29",
+      "top3": [
+       "LINE26-29",
+       "BUS26",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 56.6,
+      "detect_s": 56.66666666666666,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "LINE9-39",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 60.7,
+      "detect_s": 60.766666666666666,
+      "cls": 4,
+      "location": "BUS4",
+      "top3": [
+       "BUS4",
+       "LINE26-27",
+       "BUS3"
+      ]
+     }
+    ],
+    "T062": [],
+    "T063": [],
+    "T064": [],
+    "T065": [
+     {
+      "onset_s": 19.566666666666663,
+      "detect_s": 19.633333333333333,
+      "cls": 4,
+      "location": "BUS4",
+      "top3": [
+       "BUS4",
+       "BUS3",
+       "LINE26-27"
+      ]
+     },
+     {
+      "onset_s": 22.133333333333333,
+      "detect_s": 22.2,
+      "cls": 4,
+      "location": "BUS4",
+      "top3": [
+       "BUS4",
+       "BUS15",
+       "BUS3"
+      ]
+     },
+     {
+      "onset_s": 34.86666666666667,
+      "detect_s": 34.93333333333333,
+      "cls": 2,
+      "location": "LINE26-27",
+      "top3": [
+       "LINE26-27",
+       "BUS3",
+       "LINE17-18"
+      ]
+     },
+     {
+      "onset_s": 41.8,
+      "detect_s": 41.86666666666667,
+      "cls": 4,
+      "location": "BUS3",
+      "top3": [
+       "BUS3",
+       "BUS4",
+       "BUS26"
+      ]
+     },
+     {
+      "onset_s": 43.53333333333333,
+      "detect_s": 43.6,
+      "cls": 2,
+      "location": "LINE14-15",
+      "top3": [
+       "LINE14-15",
+       "LINE9-39",
+       "LINE16-17"
+      ]
+     },
+     {
+      "onset_s": 51.16666666666666,
+      "detect_s": 51.23333333333333,
+      "cls": 2,
+      "location": "LINE26-27",
+      "top3": [
+       "LINE26-27",
+       "LINE17-18",
+       "LINE16-17"
+      ]
+     }
+    ],
+    "T066": [
+     {
+      "onset_s": 16.1,
+      "detect_s": 16.166666666666668,
+      "cls": 2,
+      "location": "LINE16-17",
+      "top3": [
+       "LINE16-17",
+       "LINE4-14",
+       "LINE17-18"
+      ]
+     },
+     {
+      "onset_s": 24.83333333333333,
+      "detect_s": 24.9,
+      "cls": 2,
+      "location": "LINE9-39",
+      "top3": [
+       "LINE9-39",
+       "BUS4",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 29.866666666666667,
+      "detect_s": 29.933333333333334,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS26",
+       "LINE4-14"
+      ]
+     },
+     {
+      "onset_s": 31.6,
+      "detect_s": 31.666666666666668,
+      "cls": 4,
+      "location": "BUS20",
+      "top3": [
+       "BUS20",
+       "BUS24",
+       "BUS3"
+      ]
+     },
+     {
+      "onset_s": 38.766666666666666,
+      "detect_s": 38.833333333333336,
+      "cls": 4,
+      "location": "BUS20",
+      "top3": [
+       "BUS20",
+       "BUS24",
+       "LINE16-17"
+      ]
+     },
+     {
+      "onset_s": 40.56666666666667,
+      "detect_s": 40.63333333333333,
+      "cls": 2,
+      "location": "LINE9-39",
+      "top3": [
+       "LINE9-39",
+       "LINE4-14",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 50.7,
+      "detect_s": 50.766666666666666,
+      "cls": 2,
+      "location": "LINE23-24",
+      "top3": [
+       "LINE23-24",
+       "BUS24",
+       "LINE26-27"
+      ]
+     },
+     {
+      "onset_s": 57.833333333333336,
+      "detect_s": 57.9,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "LINE4-14",
+       "BUS3"
+      ]
+     },
+     {
+      "onset_s": 63.46666666666667,
+      "detect_s": 63.53333333333333,
+      "cls": 4,
+      "location": "BUS15",
+      "top3": [
+       "BUS15",
+       "BUS4",
+       "BUS24"
+      ]
+     }
+    ],
+    "T067": [],
+    "T068": [
+     {
+      "onset_s": 19.73333333333333,
+      "detect_s": 19.8,
+      "cls": 4,
+      "location": "BUS4",
+      "top3": [
+       "BUS4",
+       "BUS3",
+       "BUS15"
+      ]
+     },
+     {
+      "onset_s": 27.5,
+      "detect_s": 27.566666666666663,
+      "cls": 2,
+      "location": "LINE16-17",
+      "top3": [
+       "LINE16-17",
+       "LINE17-18",
+       "LINE4-14"
+      ]
+     },
+     {
+      "onset_s": 43.4,
+      "detect_s": 43.46666666666667,
+      "cls": 4,
+      "location": "BUS26",
+      "top3": [
+       "BUS26",
+       "BUS24",
+       "LINE26-29"
+      ]
+     },
+     {
+      "onset_s": 54.4,
+      "detect_s": 54.46666666666667,
+      "cls": 2,
+      "location": "LINE26-29",
+      "top3": [
+       "LINE26-29",
+       "BUS26",
+       "LINE16-17"
+      ]
+     },
+     {
+      "onset_s": 63.96666666666667,
+      "detect_s": 64.03333333333333,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS4",
+       "LINE16-17"
+      ]
+     },
+     {
+      "onset_s": 66.33333333333333,
+      "detect_s": 66.4,
+      "cls": 2,
+      "location": "LINE17-18",
+      "top3": [
+       "LINE17-18",
+       "LINE16-17",
+       "LINE26-27"
+      ]
+     }
+    ],
+    "T069": [],
+    "T070": [],
+    "T071": [
+     {
+      "onset_s": 19.866666666666667,
+      "detect_s": 19.933333333333334,
+      "cls": 4,
+      "location": "BUS26",
+      "top3": [
+       "BUS26",
+       "LINE26-29",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 28.933333333333334,
+      "detect_s": 29.0,
+      "cls": 2,
+      "location": "LINE4-14",
+      "top3": [
+       "LINE4-14",
+       "LINE16-17",
+       "LINE9-39"
+      ]
+     },
+     {
+      "onset_s": 34.43333333333333,
+      "detect_s": 34.5,
+      "cls": 4,
+      "location": "BUS16",
+      "top3": [
+       "BUS16",
+       "LINE14-15",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 35.86666666666667,
+      "detect_s": 35.93333333333333,
+      "cls": 4,
+      "location": "BUS20",
+      "top3": [
+       "BUS20",
+       "LINE16-17",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 38.3,
+      "detect_s": 38.36666666666667,
+      "cls": 4,
+      "location": "BUS20",
+      "top3": [
+       "BUS20",
+       "BUS24",
+       "LINE16-17"
+      ]
+     },
+     {
+      "onset_s": 42.63333333333333,
+      "detect_s": 42.7,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "LINE23-24",
+       "LINE26-29"
+      ]
+     },
+     {
+      "onset_s": 45.13333333333333,
+      "detect_s": 45.2,
+      "cls": 2,
+      "location": "LINE26-29",
+      "top3": [
+       "LINE26-29",
+       "LINE16-17",
+       "LINE23-24"
+      ]
+     },
+     {
+      "onset_s": 65.3,
+      "detect_s": 65.36666666666666,
+      "cls": 2,
+      "location": "LINE9-39",
+      "top3": [
+       "LINE9-39",
+       "BUS4",
+       "LINE16-17"
+      ]
+     }
+    ],
+    "T072": []
+   }
+  },
+  "LR": {
+   "name": "LR",
+   "tau": 0.05,
+   "cal": {
+    "events": 72,
+    "detected": 47,
+    "class_ok": 46,
+    "top1": 28,
+    "top3": 36,
+    "fa_per_normal_h": 0.0,
+    "extras_per_event_h": 147.5,
+    "line": {
+     "events": 36,
+     "detected": 31,
+     "class_ok": 31,
+     "top1": 23,
+     "top3": 27,
+     "confusion": {
+      "fault": 0,
+      "line": 31,
+      "generation": 0,
+      "load": 0
+     }
+    },
+    "load": {
+     "events": 36,
+     "detected": 16,
+     "class_ok": 15,
+     "top1": 5,
+     "top3": 9,
+     "confusion": {
+      "fault": 0,
+      "line": 1,
+      "generation": 0,
+      "load": 15
+     }
+    }
+   },
+   "test": {
+    "events": 72,
+    "detected": 55,
+    "class_ok": 48,
+    "top1": 32,
+    "top3": 43,
+    "fa_per_normal_h": 0.0,
+    "extras_per_event_h": 177.5,
+    "line": {
+     "events": 36,
+     "detected": 33,
+     "class_ok": 30,
+     "top1": 27,
+     "top3": 31,
+     "confusion": {
+      "fault": 0,
+      "line": 30,
+      "generation": 0,
+      "load": 3
+     }
+    },
+    "load": {
+     "events": 36,
+     "detected": 22,
+     "class_ok": 18,
+     "top1": 5,
+     "top3": 12,
+     "confusion": {
+      "fault": 0,
+      "line": 4,
+      "generation": 0,
+      "load": 18
+     }
+    },
+    "by_condition_MATCH": {
+     "events": 24,
+     "detected": 17,
+     "class_ok": 16,
+     "top1": 11,
+     "top3": 14,
+     "fa_per_normal_h": 0.0,
+     "extras_per_event_h": 195.0,
+     "line": {
+      "events": 12,
+      "detected": 11,
+      "class_ok": 11,
+      "top1": 9,
+      "top3": 11,
+      "confusion": {
+       "fault": 0,
+       "line": 11,
+       "generation": 0,
+       "load": 0
+      }
+     },
+     "load": {
+      "events": 12,
+      "detected": 6,
+      "class_ok": 5,
+      "top1": 2,
+      "top3": 3,
+      "confusion": {
+       "fault": 0,
+       "line": 1,
+       "generation": 0,
+       "load": 5
+      }
+     }
+    },
+    "by_condition_IN_SUPPORT": {
+     "events": 24,
+     "detected": 19,
+     "class_ok": 16,
+     "top1": 10,
+     "top3": 14,
+     "fa_per_normal_h": 0.0,
+     "extras_per_event_h": 165.0,
+     "line": {
+      "events": 12,
+      "detected": 11,
+      "class_ok": 9,
+      "top1": 8,
+      "top3": 9,
+      "confusion": {
+       "fault": 0,
+       "line": 9,
+       "generation": 0,
+       "load": 2
+      }
+     },
+     "load": {
+      "events": 12,
+      "detected": 8,
+      "class_ok": 7,
+      "top1": 2,
+      "top3": 5,
+      "confusion": {
+       "fault": 0,
+       "line": 1,
+       "generation": 0,
+       "load": 7
+      }
+     }
+    },
+    "by_condition_OUT_SUPPORT": {
+     "events": 24,
+     "detected": 19,
+     "class_ok": 16,
+     "top1": 11,
+     "top3": 15,
+     "fa_per_normal_h": 0.0,
+     "extras_per_event_h": 172.5,
+     "line": {
+      "events": 12,
+      "detected": 11,
+      "class_ok": 10,
+      "top1": 10,
+      "top3": 11,
+      "confusion": {
+       "fault": 0,
+       "line": 10,
+       "generation": 0,
+       "load": 1
+      }
+     },
+     "load": {
+      "events": 12,
+      "detected": 8,
+      "class_ok": 6,
+      "top1": 1,
+      "top3": 4,
+      "confusion": {
+       "fault": 0,
+       "line": 2,
+       "generation": 0,
+       "load": 6
+      }
+     }
+    }
+   },
+   "preds": {
+    "T049": [],
+    "T050": [
+     {
+      "onset_s": 19.53333333333333,
+      "detect_s": 19.6,
+      "cls": 2,
+      "location": "LINE16-17",
+      "top3": [
+       "LINE16-17",
+       "BUS20",
+       "BUS3"
+      ]
+     },
+     {
+      "onset_s": 23.3,
+      "detect_s": 23.366666666666667,
+      "cls": 4,
+      "location": "BUS20",
+      "top3": [
+       "BUS20",
+       "LINE9-39",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 24.666666666666668,
+      "detect_s": 24.73333333333333,
+      "cls": 2,
+      "location": "LINE26-27",
+      "top3": [
+       "LINE26-27",
+       "BUS26",
+       "LINE23-24"
+      ]
+     },
+     {
+      "onset_s": 26.1,
+      "detect_s": 26.166666666666668,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS20",
+       "BUS31"
+      ]
+     },
+     {
+      "onset_s": 37.63333333333333,
+      "detect_s": 37.7,
+      "cls": 2,
+      "location": "LINE26-29",
+      "top3": [
+       "LINE26-29",
+       "BUS26",
+       "LINE14-15"
+      ]
+     },
+     {
+      "onset_s": 39.0,
+      "detect_s": 39.06666666666667,
+      "cls": 4,
+      "location": "BUS26",
+      "top3": [
+       "BUS26",
+       "LINE26-29",
+       "LINE23-24"
+      ]
+     },
+     {
+      "onset_s": 41.13333333333333,
+      "detect_s": 41.2,
+      "cls": 2,
+      "location": "LINE26-27",
+      "top3": [
+       "LINE26-27",
+       "LINE14-15",
+       "LINE9-39"
+      ]
+     },
+     {
+      "onset_s": 42.36666666666667,
+      "detect_s": 42.43333333333333,
+      "cls": 4,
+      "location": "BUS4",
+      "top3": [
+       "BUS4",
+       "BUS24",
+       "BUS20"
+      ]
+     },
+     {
+      "onset_s": 47.36666666666667,
+      "detect_s": 47.43333333333333,
+      "cls": 2,
+      "location": "LINE16-17",
+      "top3": [
+       "LINE16-17",
+       "LINE23-24",
+       "BUS16"
+      ]
+     },
+     {
+      "onset_s": 50.63333333333333,
+      "detect_s": 50.7,
+      "cls": 2,
+      "location": "LINE23-24",
+      "top3": [
+       "LINE23-24",
+       "BUS3",
+       "BUS26"
+      ]
+     },
+     {
+      "onset_s": 63.8,
+      "detect_s": 63.86666666666667,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS4",
+       "BUS31"
+      ]
+     }
+    ],
+    "T051": [],
+    "T052": [
+     {
+      "onset_s": 16.4,
+      "detect_s": 16.466666666666665,
+      "cls": 2,
+      "location": "LINE4-14",
+      "top3": [
+       "LINE4-14",
+       "BUS7",
+       "BUS31"
+      ]
+     },
+     {
+      "onset_s": 20.03333333333333,
+      "detect_s": 20.1,
+      "cls": 2,
+      "location": "LINE4-14",
+      "top3": [
+       "LINE4-14",
+       "BUS24",
+       "LINE14-15"
+      ]
+     },
+     {
+      "onset_s": 36.333333333333336,
+      "detect_s": 36.4,
+      "cls": 2,
+      "location": "LINE26-29",
+      "top3": [
+       "LINE26-29",
+       "BUS26",
+       "LINE9-39"
+      ]
+     },
+     {
+      "onset_s": 38.86666666666667,
+      "detect_s": 38.93333333333333,
+      "cls": 2,
+      "location": "LINE26-29",
+      "top3": [
+       "LINE26-29",
+       "BUS26",
+       "LINE9-39"
+      ]
+     },
+     {
+      "onset_s": 41.6,
+      "detect_s": 41.66666666666666,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS26",
+       "BUS3"
+      ]
+     },
+     {
+      "onset_s": 42.93333333333333,
+      "detect_s": 43.0,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS3",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 46.43333333333333,
+      "detect_s": 46.5,
+      "cls": 4,
+      "location": "BUS20",
+      "top3": [
+       "BUS20",
+       "BUS24",
+       "LINE16-17"
+      ]
+     },
+     {
+      "onset_s": 48.8,
+      "detect_s": 48.86666666666667,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS26",
+       "BUS15"
+      ]
+     },
+     {
+      "onset_s": 57.23333333333333,
+      "detect_s": 57.3,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS4",
+       "BUS3"
+      ]
+     },
+     {
+      "onset_s": 63.2,
+      "detect_s": 63.266666666666666,
+      "cls": 2,
+      "location": "LINE9-39",
+      "top3": [
+       "LINE9-39",
+       "BUS15",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 67.7,
+      "detect_s": 67.76666666666667,
+      "cls": 4,
+      "location": "BUS26",
+      "top3": [
+       "BUS26",
+       "BUS24",
+       "BUS15"
+      ]
+     }
+    ],
+    "T053": [],
+    "T054": [],
+    "T055": [
+     {
+      "onset_s": 18.73333333333333,
+      "detect_s": 18.8,
+      "cls": 2,
+      "location": "LINE26-29",
+      "top3": [
+       "LINE26-29",
+       "BUS26",
+       "LINE14-15"
+      ]
+     },
+     {
+      "onset_s": 20.166666666666668,
+      "detect_s": 20.23333333333333,
+      "cls": 4,
+      "location": "BUS26",
+      "top3": [
+       "BUS26",
+       "LINE23-24",
+       "BUS15"
+      ]
+     },
+     {
+      "onset_s": 23.266666666666666,
+      "detect_s": 23.33333333333333,
+      "cls": 4,
+      "location": "BUS15",
+      "top3": [
+       "BUS15",
+       "BUS24",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 24.866666666666667,
+      "detect_s": 24.933333333333334,
+      "cls": 2,
+      "location": "LINE14-15",
+      "top3": [
+       "LINE14-15",
+       "BUS4",
+       "LINE16-17"
+      ]
+     },
+     {
+      "onset_s": 25.53333333333333,
+      "detect_s": 25.6,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS4",
+       "BUS20"
+      ]
+     },
+     {
+      "onset_s": 30.433333333333334,
+      "detect_s": 30.5,
+      "cls": 4,
+      "location": "BUS4",
+      "top3": [
+       "BUS4",
+       "BUS24",
+       "BUS15"
+      ]
+     },
+     {
+      "onset_s": 46.766666666666666,
+      "detect_s": 46.833333333333336,
+      "cls": 2,
+      "location": "LINE9-39",
+      "top3": [
+       "LINE9-39",
+       "BUS4",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 53.93333333333333,
+      "detect_s": 54.0,
+      "cls": 4,
+      "location": "BUS26",
+      "top3": [
+       "BUS26",
+       "BUS24",
+       "BUS3"
+      ]
+     },
+     {
+      "onset_s": 56.86666666666667,
+      "detect_s": 56.93333333333333,
+      "cls": 4,
+      "location": "BUS4",
+      "top3": [
+       "BUS4",
+       "BUS24",
+       "BUS15"
+      ]
+     },
+     {
+      "onset_s": 60.7,
+      "detect_s": 60.766666666666666,
+      "cls": 2,
+      "location": "LINE26-27",
+      "top3": [
+       "LINE26-27",
+       "BUS15",
+       "BUS20"
+      ]
+     },
+     {
+      "onset_s": 64.3,
+      "detect_s": 64.36666666666666,
+      "cls": 4,
+      "location": "BUS4",
+      "top3": [
+       "BUS4",
+       "LINE23-24",
+       "LINE4-14"
+      ]
+     }
+    ],
+    "T056": [
+     {
+      "onset_s": 26.23333333333333,
+      "detect_s": 26.3,
+      "cls": 2,
+      "location": "LINE17-18",
+      "top3": [
+       "LINE17-18",
+       "LINE16-17",
+       "BUS3"
+      ]
+     },
+     {
+      "onset_s": 31.2,
+      "detect_s": 31.266666666666666,
+      "cls": 4,
+      "location": "BUS20",
+      "top3": [
+       "BUS20",
+       "LINE9-39",
+       "BUS15"
+      ]
+     },
+     {
+      "onset_s": 52.13333333333333,
+      "detect_s": 52.2,
+      "cls": 2,
+      "location": "LINE16-17",
+      "top3": [
+       "LINE16-17",
+       "BUS3",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 57.93333333333333,
+      "detect_s": 58.0,
+      "cls": 4,
+      "location": "BUS16",
+      "top3": [
+       "BUS16",
+       "BUS15",
+       "BUS7"
+      ]
+     },
+     {
+      "onset_s": 58.9,
+      "detect_s": 58.96666666666667,
+      "cls": 4,
+      "location": "BUS16",
+      "top3": [
+       "BUS16",
+       "BUS26",
+       "LINE16-17"
+      ]
+     },
+     {
+      "onset_s": 59.766666666666666,
+      "detect_s": 59.833333333333336,
+      "cls": 4,
+      "location": "BUS16",
+      "top3": [
+       "BUS16",
+       "BUS24",
+       "BUS26"
+      ]
+     },
+     {
+      "onset_s": 61.833333333333336,
+      "detect_s": 61.9,
+      "cls": 4,
+      "location": "BUS31",
+      "top3": [
+       "BUS31",
+       "BUS24",
+       "BUS20"
+      ]
+     },
+     {
+      "onset_s": 62.86666666666667,
+      "detect_s": 62.93333333333333,
+      "cls": 2,
+      "location": "LINE16-17",
+      "top3": [
+       "LINE16-17",
+       "LINE23-24",
+       "BUS16"
+      ]
+     },
+     {
+      "onset_s": 64.13333333333334,
+      "detect_s": 64.2,
+      "cls": 2,
+      "location": "LINE16-17",
+      "top3": [
+       "LINE16-17",
+       "LINE9-39",
+       "BUS20"
+      ]
+     },
+     {
+      "onset_s": 67.76666666666667,
+      "detect_s": 67.83333333333333,
+      "cls": 2,
+      "location": "LINE23-24",
+      "top3": [
+       "LINE23-24",
+       "BUS24",
+       "LINE26-29"
+      ]
+     }
+    ],
+    "T057": [],
+    "T058": [
+     {
+      "onset_s": 23.166666666666668,
+      "detect_s": 23.23333333333333,
+      "cls": 4,
+      "location": "BUS4",
+      "top3": [
+       "BUS4",
+       "BUS15",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 26.6,
+      "detect_s": 26.666666666666668,
+      "cls": 2,
+      "location": "LINE26-29",
+      "top3": [
+       "LINE26-29",
+       "BUS3",
+       "LINE16-17"
+      ]
+     },
+     {
+      "onset_s": 28.4,
+      "detect_s": 28.466666666666665,
+      "cls": 2,
+      "location": "LINE23-24",
+      "top3": [
+       "LINE23-24",
+       "BUS24",
+       "BUS7"
+      ]
+     },
+     {
+      "onset_s": 29.03333333333333,
+      "detect_s": 29.1,
+      "cls": 4,
+      "location": "BUS4",
+      "top3": [
+       "BUS4",
+       "LINE26-27",
+       "LINE14-15"
+      ]
+     },
+     {
+      "onset_s": 31.0,
+      "detect_s": 31.066666666666663,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS15",
+       "LINE4-14"
+      ]
+     },
+     {
+      "onset_s": 35.266666666666666,
+      "detect_s": 35.333333333333336,
+      "cls": 2,
+      "location": "LINE14-15",
+      "top3": [
+       "LINE14-15",
+       "BUS26",
+       "LINE26-27"
+      ]
+     },
+     {
+      "onset_s": 40.13333333333333,
+      "detect_s": 40.2,
+      "cls": 4,
+      "location": "BUS15",
+      "top3": [
+       "BUS15",
+       "BUS4",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 47.46666666666667,
+      "detect_s": 47.53333333333333,
+      "cls": 4,
+      "location": "BUS15",
+      "top3": [
+       "BUS15",
+       "LINE4-14",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 50.96666666666667,
+      "detect_s": 51.03333333333333,
+      "cls": 2,
+      "location": "LINE14-15",
+      "top3": [
+       "LINE14-15",
+       "BUS26",
+       "BUS20"
+      ]
+     },
+     {
+      "onset_s": 62.43333333333333,
+      "detect_s": 62.5,
+      "cls": 2,
+      "location": "LINE17-18",
+      "top3": [
+       "LINE17-18",
+       "LINE16-17",
+       "LINE26-27"
+      ]
+     },
+     {
+      "onset_s": 66.26666666666667,
+      "detect_s": 66.33333333333333,
+      "cls": 4,
+      "location": "BUS15",
+      "top3": [
+       "BUS15",
+       "LINE9-39",
+       "BUS7"
+      ]
+     }
+    ],
+    "T059": [
+     {
+      "onset_s": 20.53333333333333,
+      "detect_s": 20.6,
+      "cls": 4,
+      "location": "BUS15",
+      "top3": [
+       "BUS15",
+       "BUS24",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 26.1,
+      "detect_s": 26.166666666666668,
+      "cls": 2,
+      "location": "LINE14-15",
+      "top3": [
+       "LINE14-15",
+       "BUS26",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 36.06666666666667,
+      "detect_s": 36.13333333333333,
+      "cls": 4,
+      "location": "BUS4",
+      "top3": [
+       "BUS4",
+       "LINE9-39",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 46.0,
+      "detect_s": 46.06666666666667,
+      "cls": 4,
+      "location": "BUS15",
+      "top3": [
+       "BUS15",
+       "BUS4",
+       "BUS20"
+      ]
+     },
+     {
+      "onset_s": 48.16666666666666,
+      "detect_s": 48.23333333333333,
+      "cls": 2,
+      "location": "LINE14-15",
+      "top3": [
+       "LINE14-15",
+       "BUS26",
+       "BUS31"
+      ]
+     },
+     {
+      "onset_s": 53.833333333333336,
+      "detect_s": 53.9,
+      "cls": 2,
+      "location": "LINE26-27",
+      "top3": [
+       "LINE26-27",
+       "LINE17-18",
+       "LINE16-17"
+      ]
+     },
+     {
+      "onset_s": 55.333333333333336,
+      "detect_s": 55.4,
+      "cls": 4,
+      "location": "BUS26",
+      "top3": [
+       "BUS26",
+       "BUS24",
+       "LINE26-29"
+      ]
+     },
+     {
+      "onset_s": 62.06666666666667,
+      "detect_s": 62.13333333333333,
+      "cls": 2,
+      "location": "LINE16-17",
+      "top3": [
+       "LINE16-17",
+       "LINE14-15",
+       "LINE26-29"
+      ]
+     },
+     {
+      "onset_s": 63.56666666666667,
+      "detect_s": 63.63333333333333,
+      "cls": 4,
+      "location": "BUS15",
+      "top3": [
+       "BUS15",
+       "BUS16",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 65.0,
+      "detect_s": 65.06666666666666,
+      "cls": 4,
+      "location": "BUS31",
+      "top3": [
+       "BUS31",
+       "LINE14-15",
+       "BUS26"
+      ]
+     },
+     {
+      "onset_s": 69.26666666666667,
+      "detect_s": 69.33333333333333,
+      "cls": 4,
+      "location": "BUS4",
+      "top3": [
+       "BUS4",
+       "BUS3",
+       "BUS26"
+      ]
+     }
+    ],
+    "T060": [
+     {
+      "onset_s": 24.03333333333333,
+      "detect_s": 24.1,
+      "cls": 2,
+      "location": "LINE23-24",
+      "top3": [
+       "LINE23-24",
+       "LINE26-27",
+       "LINE14-15"
+      ]
+     },
+     {
+      "onset_s": 26.466666666666665,
+      "detect_s": 26.53333333333333,
+      "cls": 4,
+      "location": "BUS4",
+      "top3": [
+       "BUS4",
+       "BUS3",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 27.8,
+      "detect_s": 27.866666666666667,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "LINE23-24",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 28.966666666666665,
+      "detect_s": 29.03333333333333,
+      "cls": 4,
+      "location": "BUS4",
+      "top3": [
+       "BUS4",
+       "LINE14-15",
+       "BUS3"
+      ]
+     },
+     {
+      "onset_s": 35.9,
+      "detect_s": 35.96666666666667,
+      "cls": 4,
+      "location": "BUS15",
+      "top3": [
+       "BUS15",
+       "LINE4-14",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 39.5,
+      "detect_s": 39.56666666666667,
+      "cls": 2,
+      "location": "LINE14-15",
+      "top3": [
+       "LINE14-15",
+       "BUS26",
+       "LINE26-27"
+      ]
+     },
+     {
+      "onset_s": 41.03333333333333,
+      "detect_s": 41.1,
+      "cls": 2,
+      "location": "LINE14-15",
+      "top3": [
+       "LINE14-15",
+       "BUS26",
+       "BUS31"
+      ]
+     },
+     {
+      "onset_s": 58.6,
+      "detect_s": 58.66666666666666,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS4",
+       "BUS3"
+      ]
+     }
+    ],
+    "T061": [
+     {
+      "onset_s": 17.9,
+      "detect_s": 17.966666666666665,
+      "cls": 2,
+      "location": "LINE26-27",
+      "top3": [
+       "LINE26-27",
+       "BUS15",
+       "LINE14-15"
+      ]
+     },
+     {
+      "onset_s": 22.7,
+      "detect_s": 22.766666666666666,
+      "cls": 2,
+      "location": "LINE16-17",
+      "top3": [
+       "LINE16-17",
+       "LINE17-18",
+       "LINE26-27"
+      ]
+     },
+     {
+      "onset_s": 23.933333333333334,
+      "detect_s": 24.0,
+      "cls": 4,
+      "location": "BUS20",
+      "top3": [
+       "BUS20",
+       "LINE16-17",
+       "BUS15"
+      ]
+     },
+     {
+      "onset_s": 33.13333333333333,
+      "detect_s": 33.2,
+      "cls": 4,
+      "location": "BUS15",
+      "top3": [
+       "BUS15",
+       "BUS4",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 37.8,
+      "detect_s": 37.86666666666667,
+      "cls": 2,
+      "location": "LINE14-15",
+      "top3": [
+       "LINE14-15",
+       "BUS26",
+       "BUS31"
+      ]
+     },
+     {
+      "onset_s": 46.06666666666667,
+      "detect_s": 46.13333333333333,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS26",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 48.9,
+      "detect_s": 48.96666666666667,
+      "cls": 2,
+      "location": "LINE26-29",
+      "top3": [
+       "LINE26-29",
+       "LINE9-39",
+       "BUS7"
+      ]
+     },
+     {
+      "onset_s": 53.46666666666667,
+      "detect_s": 53.53333333333333,
+      "cls": 2,
+      "location": "LINE14-15",
+      "top3": [
+       "LINE14-15",
+       "BUS4",
+       "BUS31"
+      ]
+     },
+     {
+      "onset_s": 55.73333333333333,
+      "detect_s": 55.8,
+      "cls": 2,
+      "location": "LINE16-17",
+      "top3": [
+       "LINE16-17",
+       "BUS3",
+       "BUS26"
+      ]
+     },
+     {
+      "onset_s": 57.3,
+      "detect_s": 57.36666666666667,
+      "cls": 4,
+      "location": "BUS15",
+      "top3": [
+       "BUS15",
+       "LINE9-39",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 60.6,
+      "detect_s": 60.66666666666666,
+      "cls": 2,
+      "location": "LINE14-15",
+      "top3": [
+       "LINE14-15",
+       "LINE26-27",
+       "BUS26"
+      ]
+     }
+    ],
+    "T062": [],
+    "T063": [],
+    "T064": [],
+    "T065": [
+     {
+      "onset_s": 19.866666666666667,
+      "detect_s": 19.933333333333334,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS31",
+       "BUS26"
+      ]
+     },
+     {
+      "onset_s": 34.86666666666667,
+      "detect_s": 34.93333333333333,
+      "cls": 4,
+      "location": "BUS16",
+      "top3": [
+       "BUS16",
+       "LINE26-27",
+       "BUS3"
+      ]
+     },
+     {
+      "onset_s": 51.16666666666666,
+      "detect_s": 51.23333333333333,
+      "cls": 2,
+      "location": "LINE17-18",
+      "top3": [
+       "LINE17-18",
+       "LINE26-27",
+       "BUS3"
+      ]
+     },
+     {
+      "onset_s": 52.56666666666667,
+      "detect_s": 52.63333333333333,
+      "cls": 2,
+      "location": "LINE23-24",
+      "top3": [
+       "LINE23-24",
+       "BUS26",
+       "LINE26-29"
+      ]
+     },
+     {
+      "onset_s": 59.9,
+      "detect_s": 59.96666666666667,
+      "cls": 4,
+      "location": "BUS31",
+      "top3": [
+       "BUS31",
+       "LINE14-15",
+       "BUS24"
+      ]
+     }
+    ],
+    "T066": [
+     {
+      "onset_s": 16.133333333333333,
+      "detect_s": 16.2,
+      "cls": 2,
+      "location": "LINE16-17",
+      "top3": [
+       "LINE16-17",
+       "LINE14-15",
+       "BUS26"
+      ]
+     },
+     {
+      "onset_s": 21.4,
+      "detect_s": 21.466666666666665,
+      "cls": 4,
+      "location": "BUS16",
+      "top3": [
+       "BUS16",
+       "BUS3",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 24.8,
+      "detect_s": 24.866666666666667,
+      "cls": 2,
+      "location": "LINE9-39",
+      "top3": [
+       "LINE9-39",
+       "BUS15",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 28.5,
+      "detect_s": 28.566666666666663,
+      "cls": 4,
+      "location": "BUS26",
+      "top3": [
+       "BUS26",
+       "LINE14-15",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 35.9,
+      "detect_s": 35.96666666666667,
+      "cls": 2,
+      "location": "LINE16-17",
+      "top3": [
+       "LINE16-17",
+       "BUS20",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 37.63333333333333,
+      "detect_s": 37.7,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS20",
+       "BUS31"
+      ]
+     },
+     {
+      "onset_s": 40.5,
+      "detect_s": 40.56666666666667,
+      "cls": 2,
+      "location": "LINE9-39",
+      "top3": [
+       "LINE9-39",
+       "BUS4",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 44.56666666666667,
+      "detect_s": 44.63333333333333,
+      "cls": 4,
+      "location": "BUS7",
+      "top3": [
+       "BUS7",
+       "BUS26",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 50.7,
+      "detect_s": 50.766666666666666,
+      "cls": 2,
+      "location": "LINE23-24",
+      "top3": [
+       "LINE23-24",
+       "LINE9-39",
+       "BUS16"
+      ]
+     },
+     {
+      "onset_s": 53.56666666666667,
+      "detect_s": 53.63333333333333,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "LINE16-17",
+       "BUS4"
+      ]
+     },
+     {
+      "onset_s": 54.73333333333333,
+      "detect_s": 54.8,
+      "cls": 2,
+      "location": "LINE23-24",
+      "top3": [
+       "LINE23-24",
+       "BUS4",
+       "BUS3"
+      ]
+     },
+     {
+      "onset_s": 63.63333333333333,
+      "detect_s": 63.7,
+      "cls": 4,
+      "location": "BUS15",
+      "top3": [
+       "BUS15",
+       "BUS24",
+       "BUS4"
+      ]
+     }
+    ],
+    "T067": [],
+    "T068": [
+     {
+      "onset_s": 20.03333333333333,
+      "detect_s": 20.1,
+      "cls": 4,
+      "location": "BUS15",
+      "top3": [
+       "BUS15",
+       "BUS4",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 27.466666666666665,
+      "detect_s": 27.53333333333333,
+      "cls": 2,
+      "location": "LINE16-17",
+      "top3": [
+       "LINE16-17",
+       "LINE14-15",
+       "BUS26"
+      ]
+     },
+     {
+      "onset_s": 30.0,
+      "detect_s": 30.066666666666663,
+      "cls": 2,
+      "location": "LINE14-15",
+      "top3": [
+       "LINE14-15",
+       "BUS4",
+       "LINE9-39"
+      ]
+     },
+     {
+      "onset_s": 31.066666666666663,
+      "detect_s": 31.133333333333333,
+      "cls": 4,
+      "location": "BUS24",
+      "top3": [
+       "BUS24",
+       "BUS26",
+       "BUS20"
+      ]
+     },
+     {
+      "onset_s": 31.766666666666666,
+      "detect_s": 31.83333333333333,
+      "cls": 4,
+      "location": "BUS16",
+      "top3": [
+       "BUS16",
+       "LINE14-15",
+       "LINE16-17"
+      ]
+     },
+     {
+      "onset_s": 34.43333333333333,
+      "detect_s": 34.5,
+      "cls": 4,
+      "location": "BUS16",
+      "top3": [
+       "BUS16",
+       "BUS26",
+       "LINE14-15"
+      ]
+     },
+     {
+      "onset_s": 54.43333333333333,
+      "detect_s": 54.5,
+      "cls": 2,
+      "location": "LINE26-29",
+      "top3": [
+       "LINE26-29",
+       "LINE14-15",
+       "LINE9-39"
+      ]
+     },
+     {
+      "onset_s": 56.6,
+      "detect_s": 56.66666666666666,
+      "cls": 4,
+      "location": "BUS3",
+      "top3": [
+       "BUS3",
+       "BUS20",
+       "LINE14-15"
+      ]
+     },
+     {
+      "onset_s": 58.73333333333333,
+      "detect_s": 58.8,
+      "cls": 2,
+      "location": "LINE14-15",
+      "top3": [
+       "LINE14-15",
+       "BUS4",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 59.56666666666667,
+      "detect_s": 59.63333333333333,
+      "cls": 4,
+      "location": "BUS16",
+      "top3": [
+       "BUS16",
+       "BUS15",
+       "LINE9-39"
+      ]
+     },
+     {
+      "onset_s": 60.6,
+      "detect_s": 60.66666666666666,
+      "cls": 2,
+      "location": "LINE14-15",
+      "top3": [
+       "LINE14-15",
+       "BUS3",
+       "BUS16"
+      ]
+     },
+     {
+      "onset_s": 62.2,
+      "detect_s": 62.266666666666666,
+      "cls": 4,
+      "location": "BUS16",
+      "top3": [
+       "BUS16",
+       "BUS15",
+       "BUS3"
+      ]
+     },
+     {
+      "onset_s": 66.33333333333333,
+      "detect_s": 66.4,
+      "cls": 2,
+      "location": "LINE17-18",
+      "top3": [
+       "LINE17-18",
+       "LINE16-17",
+       "LINE26-27"
+      ]
+     },
+     {
+      "onset_s": 73.1,
+      "detect_s": 73.16666666666667,
+      "cls": 4,
+      "location": "BUS16",
+      "top3": [
+       "BUS16",
+       "BUS26",
+       "BUS3"
+      ]
+     }
+    ],
+    "T069": [],
+    "T070": [],
+    "T071": [
+     {
+      "onset_s": 28.966666666666665,
+      "detect_s": 29.03333333333333,
+      "cls": 2,
+      "location": "LINE4-14",
+      "top3": [
+       "LINE4-14",
+       "LINE16-17",
+       "BUS7"
+      ]
+     },
+     {
+      "onset_s": 31.866666666666667,
+      "detect_s": 31.933333333333334,
+      "cls": 4,
+      "location": "BUS4",
+      "top3": [
+       "BUS4",
+       "LINE14-15",
+       "BUS15"
+      ]
+     },
+     {
+      "onset_s": 38.23333333333333,
+      "detect_s": 38.3,
+      "cls": 4,
+      "location": "BUS16",
+      "top3": [
+       "BUS16",
+       "BUS20",
+       "BUS24"
+      ]
+     },
+     {
+      "onset_s": 39.833333333333336,
+      "detect_s": 39.9,
+      "cls": 4,
+      "location": "BUS20",
+      "top3": [
+       "BUS20",
+       "LINE16-17",
+       "BUS16"
+      ]
+     },
+     {
+      "onset_s": 44.833333333333336,
+      "detect_s": 44.9,
+      "cls": 2,
+      "location": "LINE26-29",
+      "top3": [
+       "LINE26-29",
+       "LINE14-15",
+       "LINE9-39"
+      ]
+     },
+     {
+      "onset_s": 46.8,
+      "detect_s": 46.86666666666667,
+      "cls": 4,
+      "location": "BUS3",
+      "top3": [
+       "BUS3",
+       "LINE14-15",
+       "BUS20"
+      ]
+     },
+     {
+      "onset_s": 49.23333333333333,
+      "detect_s": 49.3,
+      "cls": 2,
+      "location": "LINE16-17",
+      "top3": [
+       "LINE16-17",
+       "LINE14-15",
+       "BUS3"
+      ]
+     },
+     {
+      "onset_s": 49.96666666666667,
+      "detect_s": 50.03333333333333,
+      "cls": 4,
+      "location": "BUS4",
+      "top3": [
+       "BUS4",
+       "BUS3",
+       "LINE9-39"
+      ]
+     },
+     {
+      "onset_s": 51.13333333333333,
+      "detect_s": 51.2,
+      "cls": 4,
+      "location": "BUS16",
+      "top3": [
+       "BUS16",
+       "LINE4-14",
+       "BUS15"
+      ]
+     },
+     {
+      "onset_s": 65.26666666666667,
+      "detect_s": 65.33333333333333,
+      "cls": 2,
+      "location": "LINE9-39",
+      "top3": [
+       "LINE9-39",
+       "BUS16",
+       "BUS15"
+      ]
+     },
+     {
+      "onset_s": 70.33333333333333,
+      "detect_s": 70.4,
+      "cls": 2,
+      "location": "LINE14-15",
+      "top3": [
+       "LINE14-15",
+       "BUS7",
+       "BUS26"
+      ]
+     }
+    ],
+    "T072": []
+   }
+  }
+ },
+ "code_sha256": "0b54706c3d9fe3c1d658225cbdd163d17836474c99a13254b2a37ab45639c81c",
+ "plan_sha256": "aa1fc3f5bd75f51a9e79e27198de3caab768a2d2cea2f5443124a60cd8460da9"
+}

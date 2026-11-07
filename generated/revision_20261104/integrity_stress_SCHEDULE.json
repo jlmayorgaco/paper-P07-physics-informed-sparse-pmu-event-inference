@@ -1,0 +1,348 @@
+[
+  {
+    "record": "C025",
+    "kind": "event",
+    "schedule": {
+      "corruptions": [
+        {
+          "start_s": 75.0,
+          "dur_s": 0.75,
+          "pmu_index": 0,
+          "rel_step": 0.0243
+        },
+        {
+          "start_s": 90.0,
+          "dur_s": 0.75,
+          "pmu_index": 1,
+          "rel_step": -0.026
+        },
+        {
+          "start_s": 105.0,
+          "dur_s": 0.75,
+          "pmu_index": 2,
+          "rel_step": 0.0243
+        },
+        {
+          "start_s": 33.82168447242242,
+          "dur_s": 0.75,
+          "pmu_index": 3,
+          "rel_step": -0.026
+        }
+      ],
+      "dropouts": [
+        {
+          "start_s": 22.103736536484643,
+          "dur_s": 27.0,
+          "pmu_index": 6
+        }
+      ]
+    },
+    "prefix_unchanged": true
+  },
+  {
+    "record": "C027",
+    "kind": "event",
+    "schedule": {
+      "corruptions": [
+        {
+          "start_s": 75.0,
+          "dur_s": 0.75,
+          "pmu_index": 4,
+          "rel_step": 0.0243
+        },
+        {
+          "start_s": 90.0,
+          "dur_s": 0.75,
+          "pmu_index": 5,
+          "rel_step": -0.026
+        },
+        {
+          "start_s": 105.0,
+          "dur_s": 0.75,
+          "pmu_index": 6,
+          "rel_step": 0.0243
+        },
+        {
+          "start_s": 32.80669014349415,
+          "dur_s": 0.75,
+          "pmu_index": 7,
+          "rel_step": -0.026
+        }
+      ],
+      "dropouts": [
+        {
+          "start_s": 22.88507822561522,
+          "dur_s": 27.0,
+          "pmu_index": 1
+        }
+      ]
+    },
+    "prefix_unchanged": true
+  },
+  {
+    "record": "C029",
+    "kind": "event",
+    "schedule": {
+      "corruptions": [
+        {
+          "start_s": 75.0,
+          "dur_s": 0.75,
+          "pmu_index": 0,
+          "rel_step": 0.0243
+        },
+        {
+          "start_s": 90.0,
+          "dur_s": 0.75,
+          "pmu_index": 1,
+          "rel_step": -0.026
+        },
+        {
+          "start_s": 105.0,
+          "dur_s": 0.75,
+          "pmu_index": 2,
+          "rel_step": 0.0243
+        },
+        {
+          "start_s": 41.80674703751354,
+          "dur_s": 0.75,
+          "pmu_index": 3,
+          "rel_step": -0.026
+        }
+      ],
+      "dropouts": [
+        {
+          "start_s": 26.79484380990921,
+          "dur_s": 27.0,
+          "pmu_index": 4
+        }
+      ]
+    },
+    "prefix_unchanged": true
+  },
+  {
+    "record": "C032",
+    "kind": "event",
+    "schedule": {
+      "corruptions": [
+        {
+          "start_s": 75.0,
+          "dur_s": 0.75,
+          "pmu_index": 4,
+          "rel_step": 0.0243
+        },
+        {
+          "start_s": 90.0,
+          "dur_s": 0.75,
+          "pmu_index": 5,
+          "rel_step": -0.026
+        },
+        {
+          "start_s": 105.0,
+          "dur_s": 0.75,
+          "pmu_index": 6,
+          "rel_step": 0.0243
+        },
+        {
+          "start_s": 35.24008333782264,
+          "dur_s": 0.75,
+          "pmu_index": 7,
+          "rel_step": -0.026
+        }
+      ],
+      "dropouts": [
+        {
+          "start_s": 23.69223565733612,
+          "dur_s": 27.0,
+          "pmu_index": 7
+        }
+      ]
+    },
+    "prefix_unchanged": true
+  },
+  {
+    "record": "C026",
+    "kind": "normal",
+    "schedule": {
+      "corruptions": [
+        {
+          "start_s": 30.0,
+          "dur_s": 0.75,
+          "pmu_index": 0,
+          "rel_step": 0.0243
+        },
+        {
+          "start_s": 80.0,
+          "dur_s": 0.75,
+          "pmu_index": 1,
+          "rel_step": -0.026
+        },
+        {
+          "start_s": 130.0,
+          "dur_s": 0.75,
+          "pmu_index": 2,
+          "rel_step": 0.0243
+        },
+        {
+          "start_s": 180.0,
+          "dur_s": 0.75,
+          "pmu_index": 3,
+          "rel_step": -0.026
+        },
+        {
+          "start_s": 230.0,
+          "dur_s": 0.75,
+          "pmu_index": 4,
+          "rel_step": 0.0243
+        },
+        {
+          "start_s": 280.0,
+          "dur_s": 0.75,
+          "pmu_index": 5,
+          "rel_step": -0.026
+        },
+        {
+          "start_s": 330.0,
+          "dur_s": 0.75,
+          "pmu_index": 6,
+          "rel_step": 0.0243
+        },
+        {
+          "start_s": 380.0,
+          "dur_s": 0.75,
+          "pmu_index": 7,
+          "rel_step": -0.026
+        },
+        {
+          "start_s": 430.0,
+          "dur_s": 0.75,
+          "pmu_index": 0,
+          "rel_step": 0.0243
+        },
+        {
+          "start_s": 480.0,
+          "dur_s": 0.75,
+          "pmu_index": 1,
+          "rel_step": -0.026
+        },
+        {
+          "start_s": 530.0,
+          "dur_s": 0.75,
+          "pmu_index": 2,
+          "rel_step": 0.0243
+        },
+        {
+          "start_s": 580.0,
+          "dur_s": 0.75,
+          "pmu_index": 3,
+          "rel_step": -0.026
+        }
+      ],
+      "dropouts": [
+        {
+          "start_s": 100.0,
+          "dur_s": 27.0,
+          "pmu_index": 2
+        },
+        {
+          "start_s": 300.0,
+          "dur_s": 27.0,
+          "pmu_index": 3
+        }
+      ]
+    },
+    "prefix_unchanged": true
+  },
+  {
+    "record": "C028",
+    "kind": "normal",
+    "schedule": {
+      "corruptions": [
+        {
+          "start_s": 30.0,
+          "dur_s": 0.75,
+          "pmu_index": 4,
+          "rel_step": 0.0243
+        },
+        {
+          "start_s": 80.0,
+          "dur_s": 0.75,
+          "pmu_index": 5,
+          "rel_step": -0.026
+        },
+        {
+          "start_s": 130.0,
+          "dur_s": 0.75,
+          "pmu_index": 6,
+          "rel_step": 0.0243
+        },
+        {
+          "start_s": 180.0,
+          "dur_s": 0.75,
+          "pmu_index": 7,
+          "rel_step": -0.026
+        },
+        {
+          "start_s": 230.0,
+          "dur_s": 0.75,
+          "pmu_index": 0,
+          "rel_step": 0.0243
+        },
+        {
+          "start_s": 280.0,
+          "dur_s": 0.75,
+          "pmu_index": 1,
+          "rel_step": -0.026
+        },
+        {
+          "start_s": 330.0,
+          "dur_s": 0.75,
+          "pmu_index": 2,
+          "rel_step": 0.0243
+        },
+        {
+          "start_s": 380.0,
+          "dur_s": 0.75,
+          "pmu_index": 3,
+          "rel_step": -0.026
+        },
+        {
+          "start_s": 430.0,
+          "dur_s": 0.75,
+          "pmu_index": 4,
+          "rel_step": 0.0243
+        },
+        {
+          "start_s": 480.0,
+          "dur_s": 0.75,
+          "pmu_index": 5,
+          "rel_step": -0.026
+        },
+        {
+          "start_s": 530.0,
+          "dur_s": 0.75,
+          "pmu_index": 6,
+          "rel_step": 0.0243
+        },
+        {
+          "start_s": 580.0,
+          "dur_s": 0.75,
+          "pmu_index": 7,
+          "rel_step": -0.026
+        }
+      ],
+      "dropouts": [
+        {
+          "start_s": 100.0,
+          "dur_s": 27.0,
+          "pmu_index": 5
+        },
+        {
+          "start_s": 300.0,
+          "dur_s": 27.0,
+          "pmu_index": 6
+        }
+      ]
+    },
+    "prefix_unchanged": true
+  }
+]

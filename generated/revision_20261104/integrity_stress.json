@@ -1,0 +1,16 @@
+{
+  "IntSimCorr": 40,
+  "IntSimCorrAlarm": "None",
+  "IntSimCorrLoad": 12,
+  "IntSimCorrLine": 12,
+  "IntSimCorrNormalAlarms": 0,
+  "IntSimMissInside": 13,
+  "IntSimMissInsideTimely": 1,
+  "IntSimMissBefore": 4,
+  "IntSimMissBeforeTimely": 4,
+  "IntSimMissAfter": 7,
+  "IntSimMissAfterTimely": 0,
+  "IntSimMissExtras": 10,
+  "IntSimMissNormalAlarms": 2,
+  "IntSimMissText": "Attribution did not recover after the PMU returned: 0 of the 7 later interventions in these records were attributed in time, against 4 of 4 before the dropout. On the completed normal record the two held intervals produced 2 alarms (the second normal record of this scenario was not run). A held value is a measurement that contradicts the network response, not an absent one; the bank therefore needs the deletion of Proposition~\\ref{prop:integrity}, an availability-switched observation operator, rather than imputation."
+}
