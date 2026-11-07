@@ -23,3 +23,6 @@ tmp/
 __pycache__/
 .venv/
 .env
+
+# Regenerable second-plant records (generate.py); large, keep out of the Overleaf-synced repository
+experiments/second_plant/data/
