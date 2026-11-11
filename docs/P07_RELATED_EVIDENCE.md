@@ -1,0 +1,12 @@
+# Comparadores cercanos y evidencia
+
+| Trabajo | Tarea, observación y tratamiento temporal | Qué comparte con P07 | Qué comparación se sostiene |
+|---|---|---|---|
+| [Yang, Chen y Zhai, IEEE TPWRS](https://doi.org/10.1109/TPWRS.2020.3006465) | Detección e identificación de aperturas persistentes con incrementos angulares, Jacobiano AC que varía en el tiempo y GLR causal; 10 PMU en el caso parcial IEEE-39 | Detección secuencial con alternativas físicas | Se comprobaron las ecuaciones 17, 18, 22 y 23 en un ejemplo sintético. No se obtuvo la realización de PMU, inicialización aleatoria y ruido del caso publicado de la línea 10; su demora de referencia no fue reproducida. No hay comparación de desempeño. |
+| [Yang, Chen y Zhai, filtro de partículas](https://arxiv.org/abs/2107.06754) | Aperturas de línea en IEEE-39; combina PMU y estados de generadores parcialmente observados | Estados dinámicos para respaldar el diagnóstico | Antecedente directo de modelar dinámica en el diagnóstico de aperturas; no se puntúa contra P07. |
+| [Warner et al.](https://d197for5662m48.cloudfront.net/documents/publicationstatus/169966/preprint_pdf/fb88c972e89f2492099d5d5e00da2aac.pdf) | Biblioteca de trayectorias de falla de línea y búsqueda temporal con PMU dispersas | Comparación de trayectorias físicas, sensores escasos | Contraste de alcance; no hay resultado sobre los datos P07. |
+| [Dey et al.](https://doi.org/10.1109/TSG.2026.3658595) | Cambios topológicos en distribución con PMU y pruebas HIL | Localización de cambios de red | Evidencia externa de otra tarea, sin comparar porcentajes. |
+| [Alalem Albustami et al.](https://doi.org/10.1016/j.epsr.2026.113688) | Identificación bayesiana de parámetros generador-red con DAE y perturbaciones conocidas | Inferencia a partir de ecuaciones de red | Antecedente de inferencia DAE, no observador de atribución continua con restauración desconocida. |
+| GLR continuo de C02 | Misma planta nominal, catálogo, prefijo y presupuesto CAL; un estado comprometido | Comparador físico directo para sucesiones de carga/línea | Evaluado: la diferencia incluye búsqueda, semántica de score y compromiso; no identifica un componente. |
+
+La novedad en evaluación es mantener una explicación física de la recuperación que compita con un nuevo evento. C02 no demuestra prioridad ni superioridad frente a trabajos no ejecutados. Para puntuar un adaptador de Yang hace falta reproducir primero su caso de referencia, fijar el conjunto de aperturas persistentes y verificar que ambos brazos puedan admitir el mismo contrato angular.

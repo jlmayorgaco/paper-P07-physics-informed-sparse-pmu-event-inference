@@ -47,8 +47,8 @@ dropout of PMU~29. The last is a 2.2-s interval after a reconnection in
 which all three voltage magnitudes of PMU~29 fall to zero, some of them
 negative, while every other PMU changes by less than 1\%. A bolted fault
 at bus~29 would change another PMU by at least $c_{29}=\IntCouplingTwentyNine$
-times the change at PMU~29. These incidents are therefore physically
-impossible, and we report them separately from false alarms.
+times the change at PMU~29. The excursions are inconsistent with the tested single-fault model.
+We report them as unlabelled integrity candidates, separately from false alarms.
 
 \emph{Physical bank under integrity events.} The physical bank cannot run on
 the competition record. Its startup test rejects the first 10\,s of the
@@ -56,7 +56,7 @@ record: the ROCOF channels of two PMUs are constant or quantized, and the
 angle reference drifts by 0.31\,deg/s with respect to the calibrated
 model. We therefore inserted the competition's integrity events into the
 four held-out simulated event records and two normal records of
-Section~\ref{sec:noise-stress}, and ran the bank with its code unchanged.
+the noise-stress study, and ran the bank with its code unchanged.
 \emph{Corruption}: we added \IntSimCorr{} 0.75-s steps of $+2.4\%$ or
 $-2.6\%$ to the positive-sequence voltage magnitude of one PMU, the
 positive-sequence equivalent of the two labeled corruptions. They rotate
@@ -72,8 +72,7 @@ unmatched alarms on the event records. \IntSimMissText{}
 
 Together these results separate the integrity mechanisms from the
 physical ones. Missing data are identified exactly and leave ample
-information for attribution (Prediction~4), but the implemented bank
+nominal signature separation, but the implemented bank
 cannot use it when fed held values; it needs the availability-switched
-operator. Corruption is identified by relations that no balanced physical
-event can violate. It did not mislead the bank in simulation, and on the
+operator. Corruption is flagged by departures from the assumed measurement and network model. It did not mislead the bank in simulation, and on the
 competition record it revealed incidents that the labels miss.

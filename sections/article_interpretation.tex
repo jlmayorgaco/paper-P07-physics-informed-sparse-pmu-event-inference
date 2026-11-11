@@ -1,87 +1,37 @@
 \section{Discussion}
 \label{sec:discussion}
 
-\subsection{What the Physics Explains}
-The information analysis turns the headline accuracy from an empirical
-observation into a consequence of the network equations. Under the noise of
-the reference data, every catalog intervention carries hundreds to tens of
-millions of times the evidence needed for an alarm within one second, so
-detection is limited by the publication rule rather than by information.
-Line alarms arrive at the confirmation floor, as predicted. Load alarms
-arrive about \RevLoadExcessReports{} reports later than the information
-allows. This latency is not explained by the information and is therefore
-algorithmic; the likely sources are the onset-proposal screen and the
-competition among severity intervals, which could be changed without new
-measurements. The errors that remain occur under out-of-bank R/X, where the
-predicted signature itself is wrong. The same analysis predicts where
-attribution should stop working, at the bus-31 load once the noise grows by
-a factor of about \RevBusThirtyOneCross, and why forgetting the physical
-state is costly everywhere: the free recovery response projected on the
-PMUs is two to seven orders of magnitude larger than the alarm evidence.
-Physical-state continuity is therefore not a tuning choice but a
-requirement implied by the size of that response.
+\subsection{What State Continuity Explains}
+A restored operator can leave a nonzero physical state, so returning
+the predictor to equilibrium introduces a residual that another
+candidate can explain. The reset control shows this failure at fixed
+thresholds; bounded profiling and marginalization tie in that control.
+The nominal signature diagnostics help explain short delays under the
+assumed noise model. They do not predict operational error rates.
 
-\subsection{Relation to Learned and Statistical Detectors}
-The learned adapters and the physical bank differ in how they obtain source
-responses: from labeled trajectories, or from the DAE operators. The
-adapters reproduce the line responses but miss most load changes, a
-pattern already present in their development validation. The comparison
-therefore shows that a physically derived dictionary attributes small load
-changes that these adapters do not, at the cost of more alarms when the
-network model is wrong. It does not establish superiority over a learned
-detector calibrated to a common alarm budget. Similarly, the adapter of
-Chen \emph{et al.} fails here because its quasi-static white-noise model
-does not match the plant, not because quickest-change detection is
-unsuitable; an information-matched version of that test would use the
-switched-DAE signatures of Section~\ref{sec:theory}.
+\subsection{Coverage, Alarm Cost and Scope}
+On the held-out comparison, retaining a bank of histories gives higher
+timely coverage and fewer extra alarms than the continuous GLR.
+ExtraTrees emits fewer extra alarms but misses more interventions.
+These are contrasts between complete procedures. A control that
+conserves the state and changes only the retention of recovery histories
+is needed to attribute a gain to that mechanism at comparable operating
+points.
 
-\subsection{Limits of the Evidence}
-\emph{Shared model family.} Observations and predictors come from the same
-research plant. Nonlinear switching, noise and out-of-bank R/X challenge
-the linearized inverse model, but transfer to a different dynamic model or
-to field data is untested. The nine load and nine line candidates were
-fixed during method development; they form a declared catalog, not a
-sample of all assets or event families.
+Observations and predictors use the same simulator family. The catalog
+is fixed, the gaps between interventions are 3--8\,s, and no intervention
+overlaps another. Transfer of the dynamic bank to a distinct plant,
+shorter gaps and unseen sources are untested. The terminal map retains
+the provisional bus-5 current terminal and excludes the bus-39 current
+angle. Under independent per-PMU noise the bank misses most load changes
+at 0.05\% TVE. A dropout with held observations prevents recovery in the
+auxiliary stress test. The bank did not start on the retrospective
+competition record; the integrity checks and separate attributor in the
+supplement do not validate the dynamic bank on that record.
 
-\emph{Measurement realism.} The noise model reproduces the reference data,
-whose differential angle noise is small. Independent per-PMU noise of
-0.05--0.1\% TVE, well inside the standard's limits, suppresses most load
-attributions of the implemented bank even though the angles still carry
-ample information (Section~\ref{sec:noise-stress}). Field use therefore
-requires estimating the cross-PMU noise covariance, not only its scale,
-from the startup prefix; this extension was not tested here. For the same
-reason the bank does not start on the competition record, whose startup
-contains constant ROCOF channels and a drifting angle reference. The terminal map
-retains a provisional BUS5 current terminal and excludes the BUS39 current
-angle; it is a research measurement hypothesis, not a verified
-installation. Cross-family noise covariance is not applied.
-
-\emph{Approximation.} Pruning, steady-state covariances, plug-in startup
-estimates and mean compression at closure make the bank approximate; its
-masses are attribution weights, not calibrated probabilities. Retrospective
-proposals update the history posterior but not the network-model weights.
-The birth and restoration hazards are conservative relative to the test
-schedules; their effect is bounded by \eqref{eq:alarm-evidence} but was
-not swept.
-In an independent reduced plant (supplement), relinearized, bilinear and severity-marginalized predictors did not improve on the recentered nominal signature in any of \HHCells{} stress cells or in two more extreme ones (supplement); the previous intervention shifts all candidate sources together. The bank was scored only on its own plant family (supplement).
-
-\emph{Integrity.} The parity relations assume a balanced network. Unbalanced
-faults would violate sequence parity at several PMUs at once, a pattern the
-coupling test attributes to physics but that was not evaluated here. Their
-thresholds use a noise scale from the first 3\,s, and the
-variance-inflated operating point was chosen after inspecting the record,
-which contains only three labeled corruptions. The physical bank requires
-every PMU; with held values in place of a missing PMU it loses
-attribution (Section~\ref{sec:integrity-results}).
-
-\emph{Network attributor.} Its competition-record result is a
-validation, not a blind test, and its stored test covers load and line
-pulses of one simulated plant; faults, generation and integrity events
-were tested only on the competition record. It misses most small, short
-load pulses, and three branch outages are nearly indistinguishable from
-adjacent injections without a catalog.
-
-\emph{Operation.} The startup prefix must be event-free, all PMUs available
-and the noise within the implemented support. The nominal bank runs faster
-than the input on one thread; the five-model bank does not. These results
-support diagnostic development, not protection or control deployment.
+Pruning, steady-state covariances, startup fitting and compression
+make the attribution weights approximate. Retrospective proposals
+change inner history weights without updating the outer model weights.
+The nominal bank processed reports faster than they arrived in a
+measured replay on one thread; the five-model version did not.
+This timing is specific to the reported hardware and records.

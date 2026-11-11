@@ -1,5 +1,7 @@
 # P07: respuesta a la auditoría adversarial del 4-nov-2026
 
+**Registro historico.** B01 y C02 ya cerraron. Ver el [cierre actual](../P07_CLOSURE_CURRENT.md).
+
 Cada fila enlaza el hallazgo con el cambio realizado y su evidencia. "Abierto"
 significa que el punto no se cerró en esta revisión y aparece declarado en el
 artículo.

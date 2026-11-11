@@ -11,7 +11,7 @@ C01 completed without retuning: 171 physical trajectories and all 342 observed r
 
 The article preserves the protected event-types image and IEEE-39 single-line diagram. Their hashes and validation procedure are documented in [PROTECTED_FIGURES.md](docs/PROTECTED_FIGURES.md). Project-specific editing constraints are in [AGENTS.md](AGENTS.md).
 
-The active validation work and execution gates are described in [P07 validation actions](docs/P07_VALIDATION_ACTIONS.md). B01 and C02 results are not imported before their complete sealed evaluation.
+The [current closure record](docs/P07_CLOSURE_CURRENT.md) supersedes older dated readiness notes. The article includes C02 from its sealed result; the successor mechanism and plant-transfer campaign is separate.
 
 ## Manuscript and results
 

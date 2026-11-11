@@ -15,7 +15,7 @@ generation changes and load changes alter the physical network; missing or
 corrupted reports alter observation integrity. The causal attribution test
 addresses load changes and line openings with restoration; missing and
 corrupted data are diagnosed by the integrity relations of
-Section~\ref{sec:integrity-theory}. Faults and generation changes provide
+the supplementary integrity analysis. Faults and generation changes provide
 context, not additional validated event classes.
 
 \begin{figure*}[t]\centering
@@ -97,7 +97,7 @@ Normal & No intervention & Monitor after startup\\
 Load & Local P/Q factor; optional restoration & Nine candidate buses\\
 Line & Branch open; optional reclose & Nine candidate branches\\
 Fault/generation & Different shunt/input/trip operators & Outside this causal test\\
-Missing/bad data & Measurement-integrity mechanism & Parity diagnosis (Section~\ref{sec:integrity-results})\\
+Missing/bad data & Measurement-integrity mechanism & Parity diagnosis (supplement)\\
 Unknown & Unresolved diagnosis & Not a new physical family\\\bottomrule
 \end{tabularx}\end{table}
 

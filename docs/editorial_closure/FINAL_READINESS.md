@@ -1,5 +1,7 @@
 # P07 — revisión ejecutada, 3 de noviembre de 2026
 
+**Registro historico.** B01 y C02 ya cerraron. Ver el [cierre actual](../P07_CLOSURE_CURRENT.md).
+
 **Borrador fortalecido para revisión de coautores; validación científica adicional pendiente antes del envío.**
 
 ## Cambios comprobados

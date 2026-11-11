@@ -39,39 +39,21 @@ through restoration. Severity is integrated in closed form, and separate
 active and cause weights separate the present intervention from the
 originating cause of the continuing response
 (Section~\ref{sec:narrative-method}).
-\item \emph{Physics-derived detectability and the cost of forgetting.}
-Because each history is linear-Gaussian given its mode path, its
-Willsky--Jones signature follows from the network operators. We compute
-the detection and isolation information of all 18 candidate sources,
-the minimum detectable load change as a function of PMU noise, and the
-spurious evidence created by resetting the physical state at restoration.
-We extend the analysis to the integrity events of the competition: the
-information left when a PMU is missing or corrupted, and two parity
-relations, sequence balance and network coupling, that no balanced
-physical event can violate. These quantities are obtained before any
-campaign and are then checked against measured delays, a controlled
-state-reset study, noise and integrity stress tests with unchanged code,
-and the labeled competition record (Section~\ref{sec:theory}).
-\item \emph{An independent causal evaluation with explicit failure
-accounting.} On 18 new physical parents (108 interventions, 648 paired
-replays, 11.8\,h of normal records) we separate detection, timely source
-attribution, unmatched alarms, restoration and computation time, and we
-report the published quickest-change detector of Chen \emph{et al.} and two
-learned adapters at their original operating points
-(Section~\ref{sec:narrative-results}).
+\item \emph{Nominal separation and the cost of resetting state.}
+We derive signature energy for the 18 candidate sources and an
+innovation bias after a state reset. These diagnostics explain what the
+nominal operators predict at a supplied onset and indicate where the
+assumed noise model limits that interpretation
+(Section~\ref{sec:theory}).
+\item \emph{A common-budget comparison on new trajectories.}
+We compare the nominal bank with a continuous physical GLR observer and
+a refitted ExtraTrees classifier under a shared calibration budget.
+We report timely attribution, unmatched alarms and uncertainty over
+physical parents (Section~\ref{sec:recovery-comparison}).
 \end{enumerate}
 
-The bank attributes \COneMixTimely{}/\COneMixTotal{} interventions before
-physical restoration and raises no alarm on normal records. The analysis
-explains why: under the noise model calibrated on the reference data, a
-10\% load step or a line opening carries between about 300 and
-$5\times10^{7}$ times the evidence required for an alarm within one
-second. The errors that remain arise from network-model mismatch and from
-the publication rules, not from missing information. The
-same analysis identifies the conditions under which this ceases to hold:
-independent per-PMU noise that the filter does not model, and a missing
-PMU whose values are imputed instead of deleted. On the labeled competition
-record the parity relations diagnose every missing and corrupted PMU
-episode at its first report and reveal corruptions that the labels miss.
-The supplement documents the implemented filter, the complete outcomes and
-the reproducibility contract.
+The bank achieves higher timely coverage than either comparator on
+this cohort, with fewer extra alarms than GLR and more than ExtraTrees.
+The tests use a known catalog of sequential load and line interventions.
+The supplement documents the implementation, auxiliary studies and
+reproducibility contract.

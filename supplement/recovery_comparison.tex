@@ -1,0 +1,26 @@
+\section{Held-Out Recovery Comparison Protocol}
+The three arms use one causal reporting clock. The two physical
+arms share the nominal operators and permitted startup prefix. The
+continuous GLR retains one committed state and considers transition
+alternatives over a causal 19-report search; the bank retains
+conditional histories. ExtraTrees uses causal PMU features and was
+trained on a disjoint split with all catalog sources represented.
+
+Selection used CAL only: among thresholds satisfying the normal
+alarm budget, maximize timely joint attribution, then minimize extra
+alarms and delay. The continuous GLR was rerun for each candidate
+threshold because commitment changes its state. TEST was scored once
+after predictions were sealed. Timing associations use alarm time,
+not the true class. Timely attribution requires the right family
+and source before physical restoration; unavailable cases count in
+the intended denominator. Event-record extras and normal-record
+alarms have separate monitored exposures.
+
+\input{sections/article_recovery_comparison}
+
+A separate calibration study found no gain from its chosen
+covariance correction: its selected correction multiplier was
+zero, and all three calibration arms tied on the evaluated
+endpoints. The profile and marginal scores likewise tied in the
+fixed-threshold carry/reset study. Neither finding establishes
+equivalence beyond its own comparison.

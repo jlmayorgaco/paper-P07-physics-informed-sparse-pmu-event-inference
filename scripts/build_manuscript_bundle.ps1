@@ -56,6 +56,8 @@ try {
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/import_second_plant.py')
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/clean_reader_vocabulary.py', '--apply')
 
+    Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_recovery_comparison.py')
+
     Write-Host 'Building the preserved historical technical notes...'
     Invoke-CheckedCommand -Command 'pdflatex' -Arguments ($latexArguments + 'historical_notes.tex')
     Invoke-CheckedCommand -Command 'bibtex' -Arguments @('historical_notes')

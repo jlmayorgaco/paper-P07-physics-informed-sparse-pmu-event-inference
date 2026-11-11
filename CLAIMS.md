@@ -2,7 +2,7 @@
 
 ## Scientific revision, 3 November 2026
 
-The main claim is a specified recovery-consistent physical attribution procedure and its measured load/line coverage--alarm trade-off. The controlled state-carry effect is demonstrated; an incremental marginal-versus-profile benefit is not. A preliminary continuous-state GLR control is now in the main article, but independent information-matched validation remains open. Rates use monitored exposure, excluding startup, through an exact documented unit conversion; original C01/A01 files are unchanged. Auxiliary state, tensor and signature results remain separate. See [the current audit response](docs/SCIENTIFIC_AUDIT_RESPONSE_20261103.md); the older component register below preserves its historical scope.
+The main claim is a specified recovery-consistent physical attribution procedure and its measured load/line coverage--alarm trade-off. The controlled state-carry effect is demonstrated; an incremental marginal-versus-profile benefit is not. A preliminary continuous-state GLR control is now in the main article, but C02 now provides independent comparison at a common calibration budget, while a matched mechanism control and transfer of the bank to another plant remain open. Rates use monitored exposure, excluding startup, through an exact documented unit conversion; original C01/A01 files are unchanged. Auxiliary state, tensor and signature results remain separate. See [the current audit response](docs/SCIENTIFIC_AUDIT_RESPONSE_20261103.md); the older component register below preserves its historical scope.
 
 
 ## Continuous component addendum, 2026-10-29

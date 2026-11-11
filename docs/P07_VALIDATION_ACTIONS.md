@@ -1,5 +1,7 @@
 # P07: trabajo para demostrar la ventaja del método
 
+**Registro historico.** B01 y C02 ya cerraron. Ver el [cierre actual](P07_CLOSURE_CURRENT.md).
+
 La meta científica es atribuir una intervención nueva desde ocho PMU durante la recuperación de una anterior, manteniendo cobertura oportuna y un presupuesto de alarmas declarado. El manuscrito presenta primero las capacidades demostradas; las comparaciones siguientes buscan fortalecer la ventaja operativa.
 
 ## En ejecución: calibración física y aprendizaje desde SIM
