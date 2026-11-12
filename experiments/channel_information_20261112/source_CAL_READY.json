@@ -1,0 +1,16 @@
+{
+  "bank_sha256": "6457dd91e8332044854d7a2745b44b11b4af4b7d50a0acef0d6501b047310cd7",
+  "constant_parameters": true,
+  "nominal_only": true,
+  "observation_sha256": "f69fb2c6ad5afa98b13f9333b6e25c41bc90c009db749196f74b959e727a9cc6",
+  "particle": {
+    "branches": [],
+    "id": "nominal",
+    "prior": 0.2,
+    "relative_change": 0.0,
+    "scope": "all"
+  },
+  "prefix_reports": 300,
+  "prefix_sha256": "647deeba05196945ac9bd578385be503c485d959cf4d8101c582a8c4292743ad",
+  "truth_read": false
+}

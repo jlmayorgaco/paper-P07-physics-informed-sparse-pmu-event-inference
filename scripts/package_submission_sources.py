@@ -30,6 +30,7 @@ def main():
     for name in ('references.bib', 'IEEEtran.bst', 'scripts/build_comparator_lineage.py',
                  'generated/comparator_lineage.json', 'scripts/verify_history_partition.py', 'scripts/build_recovery_comparison.py',
                  'scripts/verify_recovery_distribution.py', 'generated/recovery_distribution_checks.json',
+                 'scripts/build_channel_information_figure.py',
                  'scripts/build_recovery_overview.py', 'scripts/build_physics_measurement_chain.py',
                  'figures/recovery_overview/main.tex', 'figures/physical_report/main.tex',
                  'generated/revision_math_20261103/checks.json',
@@ -39,6 +40,9 @@ def main():
             sources.add(path)
     for folder in ('comparator_lineage_20261103', 'revision_math_kernel_20261103', 'recovery_c02_20261105'):
         sources.update(p for p in (ROOT / 'generated/frozen' / folder).glob('*') if p.is_file())
+    diagnostic = ROOT / 'experiments/channel_information_20261112'
+    sources.update(p for p in diagnostic.glob('*')
+                   if p.is_file() and p.suffix in {'.py', '.json', '.csv', '.md', '.npz'})
     manifest = {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(sources)}
     instructions = '''P07 article and supplement source snapshot
 
@@ -55,6 +59,11 @@ python scripts/verify_history_partition.py (requires NumPy and SciPy).
 Predictive sufficiency, mixture moments and deterministic post-processing have
 small finite-enumeration checks: python scripts/verify_recovery_distribution.py.
 These small checks do not rerun the nonlinear scientific campaigns.
+The deterministic terminal-current diagnostic reproduces from its compact
+operator snapshot, without the scientific repository or campaign files:
+python experiments/channel_information_20261112/run_channel_diagnostic.py
+python scripts/build_channel_information_figure.py
+See that experiment's README for dependencies and the fixed-mean scope.
 The PDF copies are supplied separately in output/pdf in the working repository.
 
 This is a review snapshot, not a certificate of submission readiness. C01 and

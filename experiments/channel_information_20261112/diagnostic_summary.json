@@ -1,0 +1,136 @@
+{
+  "design_frozen_before_calculation": {
+    "horizons_reports": [
+      3,
+      15,
+      30
+    ],
+    "horizons_seconds_at_30_fps": [
+      0.1,
+      0.5,
+      1.0
+    ],
+    "load_amplitude": 0.1,
+    "line_event": "fixed full opening operator",
+    "severity_treatment": "fixed means conditional on these amplitudes/operators; no nuisance profiling",
+    "sources": [
+      "BUS3",
+      "BUS4",
+      "BUS7",
+      "BUS15",
+      "BUS16",
+      "BUS20",
+      "BUS24",
+      "BUS26",
+      "BUS31",
+      "LINE3-4",
+      "LINE4-14",
+      "LINE9-39",
+      "LINE14-15",
+      "LINE16-17",
+      "LINE17-18",
+      "LINE23-24",
+      "LINE26-27",
+      "LINE26-29"
+    ],
+    "directed_pair_count_per_horizon": 306,
+    "channel_contracts": {
+      "V": 16,
+      "VI": 31,
+      "all": 47
+    },
+    "noise": "common quiet/null nominal Gaussian covariance; raw reports; full cross-channel and temporal covariance",
+    "scope": "deterministic mean separation only; no detector score, calibration, or performance claim"
+  },
+  "source": {
+    "candidate": "PAPER_RECOVERY_C03 CAL only; read-only bank copy; no C03 code executed",
+    "observation_id": "C03_a1adb9f9adcf_nominal",
+    "nominal_only": true,
+    "prefix_reports": 300,
+    "truth_read": false,
+    "test_observations_read": false,
+    "bank_sha256": "6457dd91e8332044854d7a2745b44b11b4af4b7d50a0acef0d6501b047310cd7",
+    "snapshot_sha256": "6102a7a39ee22c0080b4ec0820ef4cf50ece9f77910bd551189fbf9b03fc8140",
+    "assets_sha256": "e237d417f12f1fa3e59c62166d980d017c70b5eab3f1b7733b618e3326a9c7f9",
+    "F01_terminal_mapping_sha256": "74c1ba517d22f0c7d8c478c55fff32207d826a816c291187cb86d6c3b91bd9be",
+    "R11_terminal_mapping_sha256": "74c1ba517d22f0c7d8c478c55fff32207d826a816c291187cb86d6c3b91bd9be",
+    "F01_R11_terminal_mapping_byte_identical": true,
+    "source_ready_record_sha256": "7d5cf4e3a61e7336dd2c480c2b41b549d53d6ea8a54d7b8e9cd3199d2f316420",
+    "diagnostic_script_sha256": "016f0a06035ea7967e5c4be920c37edeea67bd6235ea36bf883a758cb04bd43a",
+    "measurement_layout_source_sha256": "87157dc0c6d0dd92b5486643a6211d3c0a9796e112948a26a93337d25d459dba",
+    "snapshot_arrays_sha256": {
+      "J": "1c0d91d4ac65019578d978f3efc926311d743446a3b2fd0c41a24964d82f6fd4",
+      "K0": "fbc892a945d2b09d0f3ef9fb8eccf061c0f79d8b6ba4a9274bcbfe62192f4a55",
+      "S": "5c645f2559ac78d7aa17c29f9d426a7dcb100c7d6d95e443f6db2668b066c80d",
+      "Sinv0": "bed6302226c032b6a686dc699b9ec8a0dee3f677daf87d9d33f08a33e323fd63",
+      "T": "32eaff8fcde1ea4b3dee57de2abb74a845a4df69de9e965c8832fe0dce55fcbe",
+      "g": "1b1982b7440fc2f1d4e4c197765b2f0707830254d3b06be70d19d52fe9187e21",
+      "group": "fd5c06638772c5df5aaea924a4fa51b422e1a11e7cd2a65f6fd86dc4e1821351",
+      "j": "c527005b17cbd50243890b8ac892c71bc7edd87b73928d4e29de4e6bd9e6af3c",
+      "u": "84a3864faf243c343559d0ec42705d08e1f3561ed6476f587dbc40d5b9717612",
+      "v": "146205b71bf59131145e83526c8d974854bbc0067bbd50139f9d10336b2fadcd"
+    }
+  },
+  "layout": {
+    "fields": [
+      {
+        "field": "voltage_magnitude",
+        "start": 0,
+        "stop": 8
+      },
+      {
+        "field": "voltage_angle",
+        "start": 8,
+        "stop": 16
+      },
+      {
+        "field": "current_magnitude",
+        "start": 16,
+        "stop": 24
+      },
+      {
+        "field": "current_angle",
+        "start": 24,
+        "stop": 31
+      },
+      {
+        "field": "frequency",
+        "start": 31,
+        "stop": 39
+      },
+      {
+        "field": "rocof",
+        "start": 39,
+        "stop": 47
+      }
+    ],
+    "terminal_map_bus5": "5-6, terminal 5; provisional historical alternative",
+    "bus5_mapping_row": "5,9,5,6,5,src,1,1.0360925183741434,0.3116049009308191,ARCHIVED_ALTERNATIVE_PRODUCER_CT_UNVERIFIED,F01_BUS5_5-6_T5,10,-1,-1"
+  },
+  "checks": {
+    "S_positive_definite_cholesky": true,
+    "line_operator_profiled_input_max_abs": 0.0,
+    "S_inverse_identity_max_absolute_error": 8.881784197001252e-16,
+    "raw_covariance_min_diagonal": 0.8943793455115953,
+    "raw_covariance_recursion_vs_explicit_innovation_transform_relative_max_error": 5.953941305753414e-16,
+    "raw_vs_full_null_innovation_quadratic_relative_max_error": 3.0646229523499416e-15,
+    "schur_decomposition_max_absolute_error": 1.430511474609375e-06,
+    "schur_decomposition_max_relative_error": 1.3464846527836157e-11,
+    "minimum_conditional_increment": 5.490559588327026,
+    "all_nested_channel_distances_monotone": true,
+    "gates_passed_before_writing_results": {
+      "covariance_recursion": true,
+      "raw_innovation_equivalence": true,
+      "schur_relative_identity": true,
+      "S_inverse_identity": true,
+      "S_positive_definite": true,
+      "line_operator_has_no_continuous_input": true,
+      "conditional_increment_nonnegative": true,
+      "nested_channel_monotonicity": true
+    }
+  },
+  "outputs": {
+    "pairwise_separation.csv": "992480c2c8675f8a34df0be5e1745d1cd9c7355d52e066b566b9f15148eb9ad2",
+    "nearest_competitor.csv": "6d3badce317f61330c4674d614397a70287b8a56e987c530802f326faa803eef"
+  }
+}

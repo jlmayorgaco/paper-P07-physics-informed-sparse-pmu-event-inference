@@ -1,0 +1,96 @@
+{
+  "source_bank_sha256_before_and_after": "6457dd91e8332044854d7a2745b44b11b4af4b7d50a0acef0d6501b047310cd7",
+  "source_READY_bank_sha256": "6457dd91e8332044854d7a2745b44b11b4af4b7d50a0acef0d6501b047310cd7",
+  "source_READY_truth_read": false,
+  "source_READY_prefix_reports": 300,
+  "source_READY_nominal_only": true,
+  "snapshot_sha256": "6102a7a39ee22c0080b4ec0820ef4cf50ece9f77910bd551189fbf9b03fc8140",
+  "snapshot_bytes": 11330109,
+  "included_arrays": {
+    "T": {
+      "shape": [
+        46,
+        376,
+        376
+      ],
+      "dtype": "float64",
+      "sha256": "32eaff8fcde1ea4b3dee57de2abb74a845a4df69de9e965c8832fe0dce55fcbe"
+    },
+    "J": {
+      "shape": [
+        46,
+        47,
+        376
+      ],
+      "dtype": "float64",
+      "sha256": "1c0d91d4ac65019578d978f3efc926311d743446a3b2fd0c41a24964d82f6fd4"
+    },
+    "g": {
+      "shape": [
+        91,
+        376
+      ],
+      "dtype": "float64",
+      "sha256": "1b1982b7440fc2f1d4e4c197765b2f0707830254d3b06be70d19d52fe9187e21"
+    },
+    "u": {
+      "shape": [
+        91,
+        376
+      ],
+      "dtype": "float64",
+      "sha256": "84a3864faf243c343559d0ec42705d08e1f3561ed6476f587dbc40d5b9717612"
+    },
+    "j": {
+      "shape": [
+        91,
+        47
+      ],
+      "dtype": "float64",
+      "sha256": "c527005b17cbd50243890b8ac892c71bc7edd87b73928d4e29de4e6bd9e6af3c"
+    },
+    "v": {
+      "shape": [
+        91,
+        47
+      ],
+      "dtype": "float64",
+      "sha256": "146205b71bf59131145e83526c8d974854bbc0067bbd50139f9d10336b2fadcd"
+    },
+    "group": {
+      "shape": [
+        91
+      ],
+      "dtype": "int64",
+      "sha256": "fd5c06638772c5df5aaea924a4fa51b422e1a11e7cd2a65f6fd86dc4e1821351"
+    },
+    "K0": {
+      "shape": [
+        376,
+        47
+      ],
+      "dtype": "float64",
+      "sha256": "fbc892a945d2b09d0f3ef9fb8eccf061c0f79d8b6ba4a9274bcbfe62192f4a55"
+    },
+    "S": {
+      "shape": [
+        47,
+        47
+      ],
+      "dtype": "float64",
+      "sha256": "5c645f2559ac78d7aa17c29f9d426a7dcb100c7d6d95e443f6db2668b066c80d"
+    },
+    "Sinv0": {
+      "shape": [
+        47,
+        47
+      ],
+      "dtype": "float64",
+      "sha256": "bed6302226c032b6a686dc699b9ec8a0dee3f677daf87d9d33f08a33e323fd63"
+    }
+  },
+  "quiet_null_covariance_identity_relative_max_error": 5.124153150185902e-15,
+  "source_was_read_only": true,
+  "C03_code_executed": false,
+  "TEST_truth_or_observations_read": false
+}

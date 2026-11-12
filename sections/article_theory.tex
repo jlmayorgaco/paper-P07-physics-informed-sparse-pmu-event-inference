@@ -88,7 +88,7 @@ under those conditions.
 
 \begin{figure*}[t]\centering
 \includegraphics[width=.97\textwidth]{figures/generated/theory_information.pdf}
-\caption{Retrospective signature diagnostics using the nominal switched-DAE operators. (A) Profiled signature energy after 1\,s against the no-intervention history (bars) and against the nearest competing source (vertical tick), for a 10\% load step or a line opening; the dashed line marks the idealized score reference $\lambda^\star$. (B) Reference load amplitude at 1\,s, \eqref{eq:reference-amplitude}, versus a uniform multiplier of the calibrated noise; gray lines are the other seven load buses.}
+\caption{Retrospective signature diagnostics using the nominal switched-DAE operators. (a) Profiled signature energy after 1\,s against the no-intervention history (filled circles) and against the nearest competing source (open circles), for a 10\% load step or a line opening; the dashed line marks the idealized score reference $\lambda^\star$. (b) Reference load amplitude at 1\,s, \eqref{eq:reference-amplitude}, versus a uniform multiplier of the calibrated noise; gray lines are the other seven load buses.}
 \label{fig:theory-information}\end{figure*}
 
 For a 10\% load step, the one-second nominal separation from the null
@@ -99,3 +99,11 @@ under uniform noise scaling is highest at bus~31. Neither diagnostic
 accounts for independent per-PMU noise or a shifted plant.
 The reset diagnostic (Section~\ref{sec:controlled-ablation}) evaluates
 the deterministic effect of discarding a previously estimated state.
+
+A separate channel diagnostic holds source amplitudes and a common
+temporal covariance fixed. At 1\,s, adding terminal currents to voltage
+increases the minimum pairwise separation by a median factor of
+$\ChannelGainMedian$ across the 18 sources (range
+$\ChannelGainMin$--$\ChannelGainMax$). The supplement gives the conditional
+current decomposition and its limits. This is a nominal mean-separation
+result, not an improvement in measured attribution accuracy.

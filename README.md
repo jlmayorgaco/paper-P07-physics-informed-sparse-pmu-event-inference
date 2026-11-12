@@ -8,6 +8,17 @@ historical attribution. Its finite examples can be checked with
 `python scripts/verify_recovery_distribution.py`. Earlier dated notes below are
 historical; the [current closure record](docs/P07_CLOSURE_CURRENT.md) takes precedence.
 
+The [terminal-current diagnostic](docs/CHANNEL_INFORMATION_20261112.md) now
+compares voltage and current information with the actual nominal predictor,
+retaining temporal and cross-channel covariance. It is a fixed-mean diagnostic,
+not a detector accuracy claim. The article includes its scoped result and the
+supplement contains its derivation and figure. A separate
+[successor of the external prototype](docs/TERMINAL_SUCCESSOR_20261112.md)
+corrects terminal orientation without changing the frozen measurement map.
+The [unifying research question](docs/P07_UNIFIED_RESEARCH_QUESTION_20261112.md)
+states which interaction between recovery uncertainty and current information
+still needs an independent experiment.
+
 **Revision 4 November 2026.** Repositioned as switched-DAE change detection and isolation, with a new physics-derived detectability section (Willsky--Jones signature information, minimum detectable change, cost of forgetting the state), a noise-stress test with unchanged code (N01) and a measured real-time rate for the nominal bank. See the [verified audit and plan](docs/review_chatgpt_20261104/PLAN_SUBMIT_READY.md) and the [response matrix](docs/review_chatgpt_20261104/RESPONSE_MATRIX.md). Pre-revision sources are kept in `archive/pre_revision_20261104/`.
 
 

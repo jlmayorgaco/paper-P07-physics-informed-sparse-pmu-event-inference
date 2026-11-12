@@ -25,7 +25,7 @@ FAM = {"load": BLUE, "line": ORANGE}
 
 
 def style() -> None:
-    plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 7.6, "axes.spines.top": False,
+    plt.rcParams.update({"font.family": "STIXGeneral", "font.size": 8, "pdf.fonttype": 42, "axes.spines.top": False,
                          "axes.spines.right": False, "axes.edgecolor": "#8a8a8a", "axes.linewidth": .6,
                          "xtick.color": "#444444", "ytick.color": "#444444", "axes.labelcolor": DARK,
                          "xtick.major.width": .5, "ytick.major.width": .5, "legend.frameon": False})
@@ -43,23 +43,28 @@ def information_figure(summary: dict) -> dict:
     one = one.sort_values(["family", "detection_info"], ascending=[False, True])
     need = summary["log_threshold"] - summary["log_prior_cell"]      # nats required at the true onset
     md = pd.read_csv(REV / "minimum_detectable_load.csv")
-    fig, axes = plt.subplots(1, 2, figsize=(7.1, 2.55), gridspec_kw=dict(width_ratios=[1.05, 1]))
+    fig, axes = plt.subplots(1, 2, figsize=(7.1, 2.75), gridspec_kw=dict(width_ratios=[1.05, 1]))
     ax = axes[0]
     y = np.arange(len(one))
-    ax.barh(y, one.detection_info, color=[FAM[f] for f in one.family], height=.62)
-    ax.scatter(one.isolation_info, y, marker="|", s=55, color=DARK, lw=1.3, zorder=3,
-               label="isolation from nearest competitor")
+    for k, row in enumerate(one.itertuples()):
+        color = FAM[row.family]
+        if k % 2 == 0:
+            ax.axhspan(k-.45, k+.45, color="#F4F7F8", zorder=0)
+        ax.plot([row.isolation_info, row.detection_info], [k,k], color=color, lw=1.4, zorder=3)
+        ax.plot(row.isolation_info, k, "o", ms=3.5, mfc="white", mec=color, mew=.9, zorder=4)
+        ax.plot(row.detection_info, k, "o", ms=3.5, color=color, zorder=4)
+    ax.plot([], [], "o", ms=3.5, color=DARK, label="versus null")
+    ax.plot([], [], "o", ms=3.5, mfc="white", mec=DARK, label="nearest competitor")
+    ax.legend(loc="lower right", fontsize=6.6, handletextpad=.4, borderpad=.25)
     ax.axvline(need, color=DARK, lw=.9, ls="--")
-    ax.text(need * 1.4, len(one) - .25, f"alarm needs {need:.0f} nats", fontsize=6.2, color=DARK, va="bottom")
+    ax.text(need * 1.4, len(one) - .25, f"ideal score reference: {need:.0f} nats", fontsize=6.2, color=DARK, va="bottom")
     ax.set_xscale("log")
     ax.set_yticks(y, [s.replace("LINE", "L") for s in one.source], fontsize=6.4)
     ax.set_ylim(-.7, len(one) + .7)
-    ax.set_xlabel("Expected log-likelihood ratio after 1 s (nats)")
-    ax.set_title("(A) Detection information per source", fontsize=7.6, loc="left")
+    ax.set_xlabel("Profiled signature energy after 1 s (nats)")
+    ax.set_title("(a) Nominal source separation", fontsize=8.5, loc="left", fontweight="bold")
     ax.set_axisbelow(True)
     ax.grid(axis="x", color="#ececec", lw=.5)
-    ax.text(.98, .02, "loads: 10% P/Q step\nlines: opening", transform=ax.transAxes, ha="right", va="bottom",
-            fontsize=6.2, color="#444444")
     ax = axes[1]
     loads = md.copy()
     loads["pct"] = 100 * loads.min_fraction_1s
@@ -78,8 +83,8 @@ def information_figure(summary: dict) -> dict:
     ax.set_xticks([1, 2, 5, 10, 20], ["1", "2", "5", "10", "20"])
     ax.set_xlim(.9, 60)
     ax.set_xlabel("Noise standard-deviation multiplier")
-    ax.set_ylabel("Min. detectable change in 1 s (%)")
-    ax.set_title("(B) Predicted detectability limit per load bus", fontsize=7.6, loc="left")
+    ax.set_ylabel("Reference load amplitude in 1 s (%)")
+    ax.set_title("(b) Model-based amplitude reference", fontsize=8.5, loc="left", fontweight="bold")
     ax.grid(color="#ececec", lw=.5)
     fig.tight_layout(w_pad=1.6)
     save(fig, "theory_information")
