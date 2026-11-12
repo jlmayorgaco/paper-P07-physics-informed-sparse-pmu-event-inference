@@ -89,3 +89,10 @@ No se añade un término energético independiente a la likelihood ni se cambia
 el prior del detector. La figura del suplemento compara ahora magnitudes
 fijas y ajustadas sobre los mismos operadores. Esta versión conserva
 19 páginas de artículo y tiene 31 de suplemento. C03 permanece intacto.
+
+La [nueva figura central](PAPER_METHOD_FIGURE_20261112.md), editable en TikZ,
+reúne el problema y el método implementado en aproximadamente media página.
+Es la Figura 1 en la página 2; sustituye el esquema anterior, conservado en
+sus archivos originales. La composición distingue la inferencia en línea
+del diagnóstico nominal de separación. No añade capacidades nuevas al
+estimador ni modifica campañas. Se mantiene la paginación de 19/31 páginas.

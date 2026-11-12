@@ -33,6 +33,7 @@ def main():
                  'scripts/build_channel_information_figure.py',
                  'scripts/build_channel_profile_figure.py',
                  'scripts/build_recovery_overview.py', 'scripts/build_physics_measurement_chain.py',
+                 'scripts/build_paper_method_figure.py', 'figures/paper_method/main.tex',
                  'figures/recovery_overview/main.tex', 'figures/physical_report/main.tex',
                  'generated/revision_math_20261103/checks.json',
                  'generated/revision_math_20261103/PORTABILITY.json'):
@@ -59,6 +60,8 @@ with Python: python scripts/build_comparator_lineage.py.
 The editable overview and physical/report diagrams are TikZ vector figures.
 Regenerate them with python scripts/build_recovery_overview.py and
 python scripts/build_physics_measurement_chain.py (pdfLaTeX and PyMuPDF required).
+The current half-page Figure 1 is built by:
+python scripts/build_paper_method_figure.py
 Local mathematical checks use the bundled verified kernel:
 python scripts/verify_history_partition.py (requires NumPy and SciPy).
 Predictive sufficiency, mixture moments and deterministic post-processing have

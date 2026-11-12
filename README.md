@@ -40,8 +40,10 @@ The article preserves the protected event-types image and IEEE-39 single-line di
 
 The [current closure record](docs/P07_CLOSURE_CURRENT.md) supersedes older dated readiness notes. The article includes C02 from its sealed result; the successor mechanism and plant-transfer campaign is separate.
 
-The overview and physical/report figures are editable TikZ diagrams, built by
-`scripts/build_recovery_overview.py` and `scripts/build_physics_measurement_chain.py`.
+The central half-page method figure and physical/report figure are editable
+TikZ diagrams, built by `scripts/build_paper_method_figure.py` and
+`scripts/build_physics_measurement_chain.py`. The earlier recovery overview
+is preserved with its original builder, `scripts/build_recovery_overview.py`.
 The method includes numbered per-report pseudocode. C03 remains in calibration;
 no C03 test results have been added. See the closure record for the dated status.
 
