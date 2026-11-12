@@ -39,6 +39,7 @@ try {
     }
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_comparator_lineage.py')
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/verify_history_partition.py')
+    Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/verify_recovery_distribution.py')
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_scientific_revision.py')
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_reader_figures.py')
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_evidence_bridge.py')

@@ -1,0 +1,90 @@
+\section{Predictive Sufficiency and Distributional Fusion}
+\label{sec:recovery-distribution}
+
+This note distinguishes a full posterior over an adequate augmented state from
+its mean. Let $S_k$ include physical, instrument and discrepancy memory, the
+predictive mode, uncertain fixed parameters, dwell age, and any other summary
+needed to make the process Markov. Let $H_k$ retain historical cause labels.
+Assume, in particular, that mode transitions and other predictive effects are
+represented in $S_k$, so the next-step kernel is conditionally independent
+of old cause labels given $S_k$:
+\[
+ p(S_{k+1},Y_{k+1}\mid S_{0:k},H_{0:k},Y_{1:k})
+ =p(S_{k+1},Y_{k+1}\mid S_k).
+\]
+Then the marginal filtering distribution $\pi_k(ds)=p(ds\mid Y_{1:k})$
+is predictively sufficient. For a measurable report set $B$, define
+$K_B(s)=p(Y_{k+1}\in B\mid S_k=s)$. Conditional independence and the
+tower rule give
+\begin{align*}
+ p(Y_{k+1}\in B\mid Y_{1:k})
+ &=\mathbb E[K_B(S_k)\mid Y_{1:k}]\\
+ &=\int K_B(s)\,\pi_k(ds).
+\end{align*}
+This is a standard filtering identity, not a new result. Adequacy is substantive:
+omitted memory, mode, dwell age, uncertain parameters, or model mismatch
+invalidate the factorization unless represented in the state/kernel.
+
+The posterior mean alone is generally insufficient. For example, with
+$Y_{k+1}=S_k+\epsilon$, $\epsilon\sim\mathcal N(0,R)$, the predictive
+variance is $\operatorname{Var}(S_k\mid y_{1:k})+R$; a point estimate omits
+the first term. Under linear-Gaussian transitions and observations, a
+Gaussian filtering posterior is specified by its mean and covariance;
+both must be carried for exact prediction. A comparison of historical fusion with mean-only
+fusion therefore changes both distributional spread and, where applicable,
+mode or history uncertainty; it does not isolate lost historical labels.
+
+For a mixture with components $j$, weights $w_j$, conditional means $m_j$
+and covariances $P_j$, the aggregate moments are
+\begin{align*}
+ \bar m&=\sum_jw_jm_j,\\
+ P&=\sum_jw_j\{P_j+(m_j-\bar m)(m_j-\bar m)^\top\}.
+\end{align*}
+If a component also carries scalar severity $A_j$ with mean $\mu_j$,
+variance $V_j$, and conditional state representation
+$Z\mid A_j,j$ having mean $m_j+d_j(A_j-\mu_j)$ and covariance $P_j$,
+then its joint state/severity moments are
+\[
+ \operatorname{Cov}(Z,A)=\sum_jw_j\{d_jV_j+(m_j-\bar m)(\mu_j-\bar\mu)\},
+\]
+\begin{align*}
+ \operatorname{Var}(Z)&=\sum_jw_j(P_j+d_jV_jd_j^\top)\\
+ &\quad+\sum_jw_j(m_j-\bar m)(m_j-\bar m)^\top,\\
+ \operatorname{Var}(A)&=\sum_jw_j\{V_j+(\mu_j-\bar\mu)^2\}.
+\end{align*}
+Here $\bar\mu=\sum_jw_j\mu_j$.
+The joint moments require a common severity coordinate. Components with
+no severity, such as line hypotheses, use the state-only identity.
+Thus within-component severity correlation and between-history spread both
+contribute. These identities describe moment-preserving compression only;
+the resulting Gaussian approximation need not preserve a multimodal
+predictive distribution.
+
+Predictive filtering and retrospective attribution are distinct. A causal
+filter updates history weights using reports available at each time. A later
+proposal for an earlier onset is a smoothing/replay operation: it needs the
+stored pre-onset filtering distribution and must replace, rather than
+duplicate, the replayed suffix likelihood. The current filtering posterior
+alone does not in general recover that earlier distribution. A retrospective
+cause query requires the joint posterior $p(S_k,H_k\mid Y_{1:k})$; the
+marginal state posterior can suffice for prediction while being insufficient
+for historical attribution. This distinction matches the implementation's saved-state replay and its explicitly
+approximate outer model weights.
+
+Finally, if a reconstructed hidden voltage $\widehat V$ is computed solely
+from already observed PMU data $Y$ and fixed model/configuration $\theta$,
+then it is a deterministic statistic $g(Y,\theta)$. Conditional on $Y$ and
+$\theta$, it supplies no additional independent evidence: appending it to
+the likelihood as an independent measurement would double-count data.
+It may still be a useful representation for a computation or diagnostic.
+If its construction uses additional measurements or uncertain parameters,
+those dependencies must instead be modeled jointly. This is the direct
+data-processing consequence of deterministic post-processing, not a claim
+that reconstruction has no computational value.
+
+Finite-state enumerations check prediction before and after marginalizing
+history labels, joint cause queries, the mixture moments and deterministic
+post-processing. A Gaussian-mixture example also shows that moment matching
+can change predictive tails. These checks verify the stated identities and
+counterexamples; they do not validate the power-system estimator or quantify
+the accuracy of its compressed representations.

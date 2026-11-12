@@ -1,5 +1,13 @@
 # P07 — Recovery-Aware Physical Attribution of Load and Line Events From Sparse PMUs
 
+**Current status, 12 November 2026:** scientific review draft; C03 is still in
+F01 calibration. The [autonomous closure plan](docs/P07_AUTONOMOUS_CLOSURE_PLAN.md)
+sets the remaining evidence and submission gates. The new supplementary analysis
+distinguishes predictive state sufficiency, distributional compression and
+historical attribution. Its finite examples can be checked with
+`python scripts/verify_recovery_distribution.py`. Earlier dated notes below are
+historical; the [current closure record](docs/P07_CLOSURE_CURRENT.md) takes precedence.
+
 **Revision 4 November 2026.** Repositioned as switched-DAE change detection and isolation, with a new physics-derived detectability section (Willsky--Jones signature information, minimum detectable change, cost of forgetting the state), a noise-stress test with unchanged code (N01) and a measured real-time rate for the nominal bank. See the [verified audit and plan](docs/review_chatgpt_20261104/PLAN_SUBMIT_READY.md) and the [response matrix](docs/review_chatgpt_20261104/RESPONSE_MATRIX.md). Pre-revision sources are kept in `archive/pre_revision_20261104/`.
 
 

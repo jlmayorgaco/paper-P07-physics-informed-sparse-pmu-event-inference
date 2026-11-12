@@ -9,7 +9,7 @@
 | B01 | Tres brazos empatan en 72/72, con siete extras cada uno | La selección previa eligió alpha = 0; la corrección aprendida fue nula |
 | C02 | Banco 99/108 y 8 extras; GLR 72/108 y 85; ExtraTrees 22/108 y 0 | Presupuesto común en CAL, 18 padres con eventos, 24 normales; contraste de procedimientos |
 | Segunda planta histórica | Exploración con comparadores estáticos | Primer reporte mal etiquetado; el banco dinámico no se ejecutó |
-| C03 | Sucesor con separaciones cortas y dos plantas | El 12 de noviembre a las 16:11 (Bogotá) seguía activa CAL de F01: 53 de 72 registros terminados y el siguiente en proceso. Aún no existen `CAL_SELECTION.json`, `TEST_RESULTS.json` ni `TEST_EVALUATION_LOCK.json`. |
+| C03 | Sucesor con separaciones cortas y dos plantas | El 12 de noviembre a las 16:43 (Bogotá) seguía activa CAL de F01: 53 de 72 registros terminados y el siguiente en proceso. Aún no existen `CAL_SELECTION.json`, `TEST_RESULTS.json` ni `TEST_EVALUATION_LOCK.json`. |
 
 Las cifras C02 se regeneran con **python scripts/build_recovery_comparison.py**, sin acceso a las corridas ni a la verdad de TEST. El agregado, sello y cierre de evaluación están en **generated/frozen/recovery_c02_20261105**. C02 se abrió una vez en el repositorio científico; la importación no evalúa de nuevo.
 
@@ -42,4 +42,26 @@ hipótesis en TikZ, explicita la formación de las medidas y añade el intervalo
 pareado del costo en alarmas. La [inspección visual documentada](FIGURES_1_4_7_POLISH_20261112.md)
 incluye los archivos vectoriales y las páginas finales 2, 7 y 13.
 
-Para el envío siguen pendientes la revisión posterior a C03, confirmación en el proyecto autenticado de Overleaf, aprobación de autores y [declaraciones](SUBMISSION_DECLARATIONS_PENDING.md). Consultar la [matriz de comparadores](P07_RELATED_EVIDENCE.md) para el alcance de la comparación con literatura.
+El [plan autónomo de cierre](P07_AUTONOMOUS_CLOSURE_PLAN.md) reúne decisiones,
+responsables y criterios. La revisión adicional separa suficiencia del estado
+ampliado, compresión de distribuciones y atribución histórica. El suplemento
+incluye las identidades y contraejemplos; `scripts/verify_recovery_distribution.py`
+comprueba ejemplos finitos, sin atribuirles validación empírica del detector.
+El artículo distingue el presupuesto objetivo común de tasas de alarma reales
+iguales, que no han sido demostradas.
+
+La [auditoría de ejecución](C03_EXECUTION_AUDIT_20261112.md) estima unas 14–15 h
+restantes de CAL y unas 19–20 h adicionales de inferencia TEST, más generación
+y bancos, a partir de tiempos observados. Son estimaciones, no una garantía.
+El [importador](C03_IMPORT_CONTRACT.md) rechaza resultados incompletos o sellos
+inconsistentes. No se ha importado evidencia C03. El [protocolo C04 de desarrollo](C04_DISTRIBUTION_CONTROL_PROTOCOL.md)
+delimita un control adicional de covarianza; está diseñado, no implementado ni
+ejecutado, y no sustituye a un TEST independiente.
+
+Para el envío siguen pendientes terminar y auditar C03, resolver las objeciones
+que sus resultados dejen abiertas, aprobación de autores y
+[declaraciones](SUBMISSION_DECLARATIONS_PENDING.md). Por instrucción del autor,
+se trabaja en LaTeX local y Git; Overleaf se actualiza mediante la sincronización
+existente. La reconstrucción local aislada no certifica una compilación remota
+observada. Consultar la [matriz de comparadores](P07_RELATED_EVIDENCE.md) para el
+alcance de la comparación con literatura.

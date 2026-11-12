@@ -4,12 +4,15 @@ We formulated sequential load and line attribution from sparse PMUs as
 a comparison of switched physical histories. The predictor retains
 estimated state at restoration and separates an active intervention
 from a preceding cause of recovery. On a held-out simulation under a
-common calibration budget, the nominal bank attributed
-\RecBankTimely{} events in time, versus \RecGlrTimely{} for a continuous
+common calibration budget, the nominal bank made timely,
+correct family-and-source attributions for \RecBankTimely{}
+interventions, versus \RecGlrTimely{} for a continuous
 physical GLR and \RecTreesTimely{} for ExtraTrees. The respective
 unmatched alarm counts were \RecBankExtras{}, \RecGlrExtras{} and
 \RecTreesExtras{}. A fixed-threshold state-reset control shows the cost
-of discarding the estimated state. The comparison leaves open the
-specific benefit of retaining explicit recovery histories at matched
-alarm budgets, transfer to another dynamic plant and robustness to
-independent PMU errors.
+of discarding the estimated state. The complete-procedure comparison does
+not isolate the benefit of retaining recovery histories from the loss of
+uncertainty under compression. The findings apply to sequential interventions
+from a known catalog in one simulator family. Transfer to another dynamic
+plant, shorter gaps and unseen sources remain untested; independent per-PMU
+noise at 0.05\% TVE severely degrades load attribution.

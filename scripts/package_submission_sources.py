@@ -29,6 +29,7 @@ def main():
                 sources.add(path)
     for name in ('references.bib', 'IEEEtran.bst', 'scripts/build_comparator_lineage.py',
                  'generated/comparator_lineage.json', 'scripts/verify_history_partition.py', 'scripts/build_recovery_comparison.py',
+                 'scripts/verify_recovery_distribution.py', 'generated/recovery_distribution_checks.json',
                  'scripts/build_recovery_overview.py', 'scripts/build_physics_measurement_chain.py',
                  'figures/recovery_overview/main.tex', 'figures/physical_report/main.tex',
                  'generated/revision_math_20261103/checks.json',
@@ -51,6 +52,8 @@ Regenerate them with python scripts/build_recovery_overview.py and
 python scripts/build_physics_measurement_chain.py (pdfLaTeX and PyMuPDF required).
 Local mathematical checks use the bundled verified kernel:
 python scripts/verify_history_partition.py (requires NumPy and SciPy).
+Predictive sufficiency, mixture moments and deterministic post-processing have
+small finite-enumeration checks: python scripts/verify_recovery_distribution.py.
 These small checks do not rerun the nonlinear scientific campaigns.
 The PDF copies are supplied separately in output/pdf in the working repository.
 
