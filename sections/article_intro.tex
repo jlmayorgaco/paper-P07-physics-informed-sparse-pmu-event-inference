@@ -1,23 +1,28 @@
 \section{Introduction}
 \label{sec:introduction}
 
-\PARstart{A}{fter} a load is restored or a line is reclosed, the machines
-continue moving. A second intervention may begin before that response has
-decayed. With only eight PMUs in a 39-bus network, a change in a measured
-signal may therefore indicate a new source, recovery from an earlier
-source, or an imperfect physical prediction. The task is to distinguish
-these explanations using only the reports available at the decision time.
+\PARstart{A}{fter} a load is restored or a line is reclosed, physical state
+continues to evolve. A second intervention may begin before that response
+decays. With eight PMUs, the observed change can combine recovery from the
+earlier event with forcing from a new source
+(Fig.~\ref{fig:problem-method}(a)).
 
 \begin{figure*}[t]\centering
-\includegraphics[width=\textwidth]{figures/generated/narrative_architecture.pdf}
-\caption{Implemented physical-history attribution: model preparation (A), startup context (B), per-report inference (C) and publication (D). The bank predicts each report before correcting any state and stores the network-model evidence before proposals are selected. A replayed candidate replaces a likelihood suffix, so each report contributes once. The feedback loop retains physical and instrumental memory through restoration. Event truth is used only after all predictions are stored.}
-\label{fig:joint-architecture}\end{figure*}
+\includegraphics[width=.485\textwidth]{figures/generated/problem_recovery_timeline.pdf}\hfill
+\includegraphics[width=.485\textwidth]{figures/generated/recovery_method_logic.pdf}
+\caption{Problem and method overview. (a) Event B begins while the response
+to restored event A remains visible in the sparse-PMU trace. Resetting at OFF
+can retrigger an alarm; waiting for settling can hide B. (b) The same report is
+scored under five network models and competing physical histories. The bank
+preserves state through OFF, integrates load severity, switches line models,
+and reports active mass $M_c$ separately from cause mass $\Gamma_c$. Traces
+and times are schematic.}
+\label{fig:problem-method}\end{figure*}
 
-Physical restoration is not electrical recovery. A detector that returns
-to a flat reference after OFF can issue another alarm for the remaining
-oscillation, while suppressing alarms during recovery can hide a real
-intervention. In statistical terms, the post-change law of a second
-intervention depends on the history of the first. Classical change
+Physical restoration is not electrical recovery. Resetting state at OFF can
+make the remaining response look like another event, while waiting for it to
+settle can hide a real intervention. In statistical terms, the post-change
+law of a second intervention depends on the history of the first. Classical change
 detection and isolation treats a single change of an otherwise stationary
 law \cite{nikiforov1995generalized,lai2000sequential,tartakovsky2014sequential},
 and the generalized-likelihood approach of Willsky and Jones detects jumps
@@ -26,7 +31,7 @@ detectors compare network hypotheses under quasi-static or linearized
 models \cite{tate2008outage,chen2016quickest,rovatsos2017outage}, and
 trajectory libraries diagnose faults from sparse PMUs
 \cite{warner2023highfidelity}. None of these formulations makes a restored
-intervention compete, as a physical cause, with later interventions in a
+intervention compete as a physical cause with later interventions in a
 switched DAE network.
 
 We address this gap with three contributions.
@@ -45,15 +50,12 @@ innovation bias after a state reset. These diagnostics explain what the
 nominal operators predict at a supplied onset and indicate where the
 assumed noise model limits that interpretation
 (Section~\ref{sec:theory}).
-\item \emph{A common-budget comparison on new trajectories.}
-We compare the nominal bank with a continuous physical GLR observer and
-a refitted ExtraTrees classifier under a shared calibration budget.
-We report timely attribution, unmatched alarms and uncertainty over
-physical parents (Section~\ref{sec:recovery-comparison}).
+\item \emph{A common-budget evaluation.} We compare the bank with a
+continuous physical GLR and refitted ExtraTrees by timely attribution,
+extra alarms and parent-level uncertainty
+(Section~\ref{sec:recovery-comparison}).
 \end{enumerate}
 
-The bank achieves higher timely coverage than either comparator on
-this cohort, with fewer extra alarms than GLR and more than ExtraTrees.
-The tests use a known catalog of sequential load and line interventions.
-The supplement documents the implementation, auxiliary studies and
-reproducibility contract.
+The evaluation covers a known catalog of sequential load and line
+interventions. The supplement records auxiliary analyses and
+reproducibility details.

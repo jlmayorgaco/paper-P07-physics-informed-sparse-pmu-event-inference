@@ -29,6 +29,7 @@ def main():
                 sources.add(path)
     for name in ('references.bib', 'IEEEtran.bst', 'scripts/build_comparator_lineage.py',
                  'generated/comparator_lineage.json', 'scripts/verify_history_partition.py', 'scripts/build_recovery_comparison.py',
+                 'scripts/build_problem_method_diagrams.py',
                  'generated/revision_math_20261103/checks.json',
                  'generated/revision_math_20261103/PORTABILITY.json'):
         path = ROOT / name
@@ -44,6 +45,8 @@ further pdfLaTeX passes. IEEEtran.bst may be supplied by your TeX distribution.
 All local files actually read by these builds are included with their paths.
 Comparator provenance is independently regenerated, without models or PMU data,
 with Python: python scripts/build_comparator_lineage.py.
+The problem/method overview diagrams are vector figures; regenerate them with
+python scripts/build_problem_method_diagrams.py (Matplotlib and NumPy required).
 Local mathematical checks use the bundled verified kernel:
 python scripts/verify_history_partition.py (requires NumPy and SciPy).
 These small checks do not rerun the nonlinear scientific campaigns.

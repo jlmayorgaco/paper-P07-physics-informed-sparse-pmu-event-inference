@@ -1,11 +1,11 @@
 \section{Recovery-Aware Physical Attribution}
 \label{sec:narrative-method}
 
-Figure~\ref{fig:joint-architecture} describes the implemented computation.
-The inference engine uses a conditional history bank of
-DAE-derived switched state-space predictors. The nonlinear simulator
-generates observations; inference does not solve a new full nonlinear
-simulation for every candidate at every report.
+Figure~\ref{fig:problem-method}(b) summarizes the per-report comparison.
+The inference engine uses a conditional history bank of DAE-derived
+switched state-space predictors. The nonlinear simulator generates
+observations; inference propagates reduced predictors instead of solving a
+new full nonlinear simulation for every candidate at every report.
 
 Physics enters the candidate dynamics, input directions and oriented
 measurement map. Statistical filtering represents uncertain states and
