@@ -300,29 +300,35 @@ compresses histories into the retained augmented-state mean.
 
 \subsection{Per-Report Algorithm and Computational Boundary}
 
-\noindent\textbf{Algorithm 1: causal physical-history attribution}
+\begin{algorithm}[t]
+\caption{Causal physical-history attribution}
+\label{alg:physical-history}
 \begin{algorithmic}[1]
-\Require Models, fixed configuration and PMU stream $y_{0:}$
-\Ensure Detection, diagnosis and restoration messages
-\State Fit context, reference and noise from the prefix
-\State Initialize states, weights and stored state history
-\For{each report $y_k$ after startup}
-  \State Transform $y_k$ to inference coordinates $r_k$
-  \State Propagate histories; retain state through OFF
-  \State Save outer predictive densities before screening
-  \State Propose births from stored pre-onset states
-  \State Replay each proposal, replacing its old suffix
-  \State Score histories before correcting their states
-  \State Integrate load severity; switch line operators
-  \State Correct states; update severity and history weights
-  \State Prune histories and record discarded mass
-  \State Update outer weights from saved densities
-  \State Aggregate active mass $M$ and cause mass $\Gamma$
-  \State Apply alarm, diagnosis and OFF publication rules
-  \State Compress histories after confirmed closure
-  \State Record messages and the last report used
+\Require Fixed plant/catalog, configuration, and PMU reports as they arrive
+\Ensure Time-stamped detection, source diagnosis, and restoration messages
+\State Fit operating context, reference, and noise from the permitted prefix
+\State Initialize model/history states, weights, and pre-onset state store
+\For{each newly received report $y_k$ after startup}
+  \State Map $y_k$ to inference coordinates $r_k$
+  \State Predict each retained history; carry physical state through OFF
+  \State Save outer-model predictive densities before screening
+  \State Propose eligible births from stored pre-onset states
+  \For{each accepted proposal}
+    \State Replay its suffix from the saved state, replacing old suffix scores
+  \EndFor
+  \State Score histories before state correction; integrate load severity
+  \State Apply line operators; correct states and update history weights
+  \State Prune the beam; record discarded probability mass
+  \State Update outer-model weights from the saved predictive densities
+  \State Aggregate active-event mass $M_k$ and cause mass $\Gamma_k$
+  \State Apply consecutive-report alarm, diagnosis, and OFF rules
+  \If{OFF is confirmed}
+    \State Compress closed histories into the retained augmented-state mean
+  \EndIf
+  \State Store current states and emit messages with the last report used
 \EndFor
 \end{algorithmic}
+\end{algorithm}
 No event truth is available to the algorithm. Retrospective replay changes
 the inner history weights but does not re-weight the outer model densities.
 The nonlinear simulator constructs observations; this algorithm propagates
