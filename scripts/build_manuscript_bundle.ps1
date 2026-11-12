@@ -58,6 +58,8 @@ try {
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/clean_reader_vocabulary.py', '--apply')
 
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_recovery_comparison.py')
+    Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_recovery_comparison_figure.py')
+    Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_physics_measurement_chain.py')
 
     Write-Host 'Building the preserved historical technical notes...'
     Invoke-CheckedCommand -Command 'pdflatex' -Arguments ($latexArguments + 'historical_notes.tex')

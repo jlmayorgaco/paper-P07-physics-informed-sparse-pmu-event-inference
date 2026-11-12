@@ -1,7 +1,12 @@
 \section{Experimental Design}
 \label{sec:narrative-protocol}
 
-The primary experiment asks whether the causal bank can attribute successive load/line interventions without confusing recovery with a new event. Development, independent evaluation and an auxiliary source-resolution experiment answer different questions and retain separate denominators.
+The primary comparison measures timely source attribution and extra alarms
+for the history bank, a continuous GLR and ExtraTrees after calibrating each
+to the same normal-alarm budget. A separate evaluation varies network
+parameters and noise, while component controls examine state reset and
+severity scoring. Table~\ref{tab:narrative-evidence} distinguishes these
+populations; repeated conditions of a parent sequence are paired observations.
 
 \input{tables/generated/source_catalog}
 
@@ -9,6 +14,7 @@ The primary experiment asks whether the causal bank can attribute successive loa
 \caption{Experimental populations and their purposes. Conditions and noise realizations repeat a physical parent rather than creating independent trajectories.}\label{tab:narrative-evidence}
 \begin{tabularx}{\textwidth}{@{}lXXX@{}}\toprule
 Population & Configuration & Main outcome & Interpretation\\\midrule
+Common-budget comparison & \RecParents{} event parents, 108 interventions; \RecNormalParents{} normal parents & Timely family/source, extra alarms and paired differences & Complete procedures; thresholds selected on separate calibration data\\
 Continuous development & Three event parents, six interventions each; one normal parent; three network conditions & Timely family/source, extras and restoration & Open development evidence, not independent confirmation\\
 Independent continuous evaluation & 18 event parents, six interventions each; 12 normal parents; three network conditions and two noise scales & Paired attribution, false alarms, delays and failures & Prespecified comparison of unchanged methods\\
 Persistent-line evaluation & Nine lines, three parent repetitions; same network/noise strata & First stopping decision, source and censoring & Eligible comparison with published line-outage QCD\\
@@ -53,4 +59,4 @@ For continuous events, an alarm is associated temporally before predicted family
 
 The independent campaign specifies 18 continuous parents, 27 persistent-line parents and 12 normal parents, with three R/X conditions and instrumental-noise scales of one and two. The 171 intended physical trajectories yield 342 observed records. Conditions represent nominal parameters, perturbations represented in the bank and mixed perturbations outside it. Solver and inference failures remain in the intended denominators. Comparisons use 10,000 paired parent-cluster resamples; repeated conditions/noise do not count as independent parents. Predictions are fixed before the evaluator opens reserved truth.
 
-Logical decision delay is measured on report timestamps. Wall-clock cost is recorded separately with hardware, process concurrency and one-thread BLAS settings; parallel execution of independent records does not make a within-record inference method real-time. \IfFileExists{generated/c01_macros.tex}{The independent results are followed by a development example and the controlled component study.}{The independent evaluation is in progress. The following section reports completed development results only.}
+Logical decision delay is measured on report timestamps. Wall-clock cost is recorded separately with hardware, process concurrency and one-thread BLAS settings; parallel execution of independent records does not make a within-record inference method real-time.

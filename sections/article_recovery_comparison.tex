@@ -13,14 +13,13 @@ and the next onset was 3--8\,s after physical restoration.
 
 \begin{figure*}[t]\centering
 \includegraphics[width=.99\textwidth]{figures/generated/recovery_comparison_c02.pdf}
-\caption{Held-out comparison. CAL selects each method's threshold under
-the one-normal-alarm-per-hour target; rules are fixed before a single TEST
-pass. (a) Timely joint family/source decisions before true OFF (108
-interventions). (b) Unmatched alarms on event records; bars show counts and
-labels give rates per monitored event-hour. Each arm also has zero normal
-alarms in 3.92~h (one-sided 95\% Poisson upper bound: 0.76/h). The 18 event
-parents and 24 normal parents are the independent units; paired coverage
-intervals use 10,000 parent-stratified resamples.}
+\caption{Coverage and alarm cost on held-out sequences. (a) Correct family
+and source reported before OFF, out of 108 interventions. (b) Unmatched alarms
+on event records, with rates per monitored event-hour. (c) History-bank coverage minus each comparator, computed with 10,000 paired resamples of the
+18 event parents. Positive values favor the bank. Thresholds were selected
+on separate calibration data under a target of one normal alarm/h. All three
+methods emitted zero alarms in 3.92 normal hours each; the one-sided 95\%
+Poisson upper bound is 0.76/h.}
 \label{fig:recovery-c02}\end{figure*}
 
 Figure~\ref{fig:recovery-c02} shows a \RecGlrDiff{} percentage

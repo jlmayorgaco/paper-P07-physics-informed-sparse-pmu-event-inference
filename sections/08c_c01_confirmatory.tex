@@ -43,15 +43,14 @@ intervals; the physical bank's median alarm delay is about 0.27\,s in the
 matched and in-bank conditions, comparable to the learned adapters
 (0.19--0.30\,s).
 
-These delays test Prediction~1. For the nominal bank on matched networks,
+We compare these delays retrospectively with Prediction~1. For the nominal bank on matched networks,
 line alarms arrive after a median \RevObsLineDelay\,s, at the six-report
 confirmation floor of \RevPredAlarmDelay\,s less the sub-report onset
 phase, and doubling the noise leaves them unchanged. Load alarms arrive
 after \RevObsLoadDelay\,s, again unchanged by doubled noise but about
-\RevLoadExcessReports{} reports later than the available information
-requires. Line detection is therefore information-saturated, as
-predicted, while the load delay contains an algorithmic component that the
-information analysis exposes.
+\RevLoadExcessReports{} reports after the nominal signature reference crossing. Line delays are
+consistent with the publication floor, while load delays exceed that
+model-based reference.
 The two ExtraTrees adapters recover lines (\ReaderETLine{} and
 \ReaderETShortLine{} of 324) but few loads (\ReaderETLoad{} and
 \ReaderETShortLoad{}). The diagnosis-time distributions in the supplement show that this is a
@@ -65,8 +64,8 @@ the largest true-class score is 0.09; during line interventions the true
 line wins 96\% of the reports with median peak score 0.93. The short-window
 variant ranks the true load first in only 2 of 12 load interventions. The
 learned representation thus does not separate 3--14\% load changes from
-normal operation, whereas the physical signatures carry hundreds to
-millions of nats per second for the same changes (Fig.~\ref{fig:theory-information}). The same pattern was already present in
+normal operation, whereas the nominal physical signatures have large separation energies
+for the same changes (Fig.~\ref{fig:theory-information}). The same pattern was already present in
 their development validation (Section~\ref{sec:narrative-protocol}), so the
 comparison shows that the physical bank recovers load interventions that
 these particular adapters miss; it is not a test of the best attainable

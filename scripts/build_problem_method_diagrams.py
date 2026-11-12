@@ -201,8 +201,8 @@ def draw_problem():
 def draw_method():
     fig, ax = plt.subplots(figsize=(3.55, 2.85))
     fig.subplots_adjust(0, 0, 1, 1)
-    panel_frame(ax, "B", "HOW THE BANK REASONS",
-                "Keep the old cause while testing for a new event.")
+    panel_frame(ax, "B", "PHYSICAL HISTORIES",
+                "Compare recovery with a new intervention.")
 
     # One shared report/model input feeds a small pair of candidate histories.
     chip(ax, 0.92, 5.67, 8.16, 0.49,
@@ -215,7 +215,7 @@ def draw_method():
          accent=C["teal"], face=C["pale_teal"],
          title_size=6.8, body_size=6.0)
     card(ax, 5.22, 4.31, 4.00, 0.78, "TEST B",
-         "A new source during A's recovery.",
+         "New source during recovery.",
          accent=C["orange"], face=C["pale_orange"],
          title_size=6.8, body_size=6.0)
 

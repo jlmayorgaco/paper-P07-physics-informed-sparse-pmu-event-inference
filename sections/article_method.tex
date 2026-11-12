@@ -1,18 +1,13 @@
 \section{Recovery-Aware Physical Attribution}
 \label{sec:narrative-method}
 
-Figure~\ref{fig:problem-method}(b) summarizes the per-report comparison.
-The inference engine uses a conditional history bank of DAE-derived
-switched state-space predictors. The nonlinear simulator generates
-observations; inference propagates reduced predictors instead of solving a
-new full nonlinear simulation for every candidate at every report.
-
-Physics enters the candidate dynamics, input directions and oriented
-measurement map. Statistical filtering represents uncertain states and
-discrepancy around those predictions. Thus the evaluated method is
-model-based inference; it does not train a neural network with a physics
-loss or learn a source-label classifier. A good residual fit alone is
-insufficient: competing histories must also yield a timely source decision.
+At each report, the bank compares predictions from candidate intervention
+histories (Fig.~\ref{fig:problem-method}(b)). Reduced state-space models carry
+the physical and instrumental state forward; their dynamics and measurement
+maps come from the network DAE. This avoids solving a full nonlinear
+simulation for every candidate. Conditional filters account for uncertain
+state and persistent model discrepancy, and the resulting evidence updates
+the weights of the competing histories.
 
 \subsection{Construct the Predictor From the Network}
 
@@ -55,12 +50,10 @@ $d_q^{\rm el}=H_q(\bar x,\bar z_q,\bar u)-H_0(\bar x,\bar z_0,\bar u)$.
 Thus both the changed algebraic solution and the changed terminal map
 enter the prediction. These operators propagate an unmeasured-source
 perturbation to the selected
-voltage and oriented-current channels. Network connectivity enters through
-the branch stamps in $g_q$ and $H_q$; eliminating unmeasured algebraic
-variables generally produces dense reduced operators. The graph therefore
-constrains the prediction without a learned graph embedding. A changed
-terminal operator also contributes directly through $H_q$, not only
-through the changed voltage. The implementation discretizes the admitted
+voltage and oriented-current channels. Branch stamps in $g_q$ and $H_q$ encode network connectivity;
+eliminating unmeasured algebraic variables generally produces dense reduced
+operators. A line switch changes both the voltage response and the terminal
+operator in $H_q$. The implementation discretizes the admitted
 switch modes and adds causal phase-history operators for frequency and
 ROCOF. Inertia, controls and load law remain those of the fixed plant.
 

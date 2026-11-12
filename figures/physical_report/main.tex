@@ -1,0 +1,78 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage{newtxtext,newtxmath}
+\usetikzlibrary{arrows.meta,calc}
+\definecolor{ink}{HTML}{20303D}
+\definecolor{blue}{HTML}{0077A8}
+\definecolor{orange}{HTML}{C96F32}
+\definecolor{teal}{HTML}{087F78}
+\definecolor{gray}{HTML}{687680}
+\definecolor{rule}{HTML}{D6DFE3}
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm,font=\fontsize{8}{10}\selectfont,text=ink,
+ >={Stealth[length=1.5mm]},line cap=round,
+ head/.style={anchor=west,font=\bfseries\fontsize{9}{11}\selectfont},
+ note/.style={font=\fontsize{7}{9}\selectfont,text=gray},
+ guide/.style={draw=rule,line width=.4pt},
+ flow/.style={->,draw=gray,line width=.65pt}]
+\path[use as bounding box] (0,0) rectangle (17.7,6.9);
+\node[head] at (.1,6.6) {(a) Physical intervention};
+\node[head] at (4.5,6.6) {(b) Restoration and recovery};
+\node[head] at (12.3,6.6) {(c) Reported measurements};
+\draw[guide] (4.15,.6)--(4.15,6.25);
+\draw[guide] (11.9,.6)--(11.9,6.25);
+\node[anchor=west,text=orange] at (.15,5.85) {Load setpoint};
+\draw[line width=1.3pt] (.4,5.05)--(3.6,5.05);
+\draw[line width=.7pt] (.7,4.85)--(.7,5.25) (3.3,4.85)--(3.3,5.25);
+\draw[->,orange,line width=1pt] (1.9,5.05)--(1.9,4.3);
+\node at (1.9,3.95) {$(P,Q)\mapsto(1+a)(P,Q)$};
+\node[anchor=west,text=blue] at (.15,3.15) {Line opening};
+\draw[line width=.8pt] (.4,2.55)--(1.55,2.55) (2.35,2.55)--(3.6,2.55);
+\draw[blue,line width=.9pt] (1.55,2.55)--(2.25,2.95);
+\draw[blue,fill=white] (1.55,2.55) circle (.045) (2.35,2.55) circle (.045);
+\node at (1.95,1.95) {$q_0\mapsto q_{\mathrm{open}}$};
+\node[align=center] at (2,.85) {$\dot x=f_q(x,z,u)$\\$0=g_q(x,z,u)$};
+% A pulse response of a damped second-order surrogate. These curves illustrate
+% continuity and algebraic feedthrough; they are not fitted or simulated data.
+\fill[orange!7] (6.5,1.65) rectangle (9.5,5.8);
+\foreach \xx/\lab in {6.5/{ON: $\tau$},9.5/{OFF: $\kappa$}} {
+ \draw[gray,densely dashed,line width=.5pt] (\xx,1.65)--(\xx,5.8);
+ \node[note,above] at (\xx,5.85) {\lab};
+}
+\node[anchor=west,text=orange] at (4.5,5.2) {$u,q$};
+\node[anchor=west,text=teal] at (4.5,3.75) {$x$};
+\node[anchor=west,text=blue] at (4.5,2.3) {$z,I$};
+\foreach \yy in {5,3.5,2} {\draw[guide] (5.35,\yy)--(11.45,\yy);}
+\draw[orange,line width=1pt] (5.35,5)--(6.5,5)--(6.5,5.45)--(9.5,5.45)--(9.5,5)--(11.45,5);
+\pgfmathdeclarefunction{resp}{1}{\pgfmathparse{#1<0 ? 0 : 1-exp(-.8*#1)*(cos(180*#1)+.8/pi*sin(180*#1))}}
+\draw[teal,line width=1.05pt] plot[domain=5.35:11.45,samples=220] (\x,{3.5+.55*(resp(\x-6.5)-resp(\x-9.5))});
+% Algebraic feedthrough is drawn in separate intervals to preserve jumps.
+\draw[blue,line width=1pt] (5.35,2)--(6.5,2)--(6.5,2.4);
+\draw[blue,line width=1pt] plot[domain=6.5:9.5,samples=100] (\x,{2.4+.3*resp(\x-6.5)});
+\draw[blue,line width=1pt] (9.5,{2.4+.3*resp(3)})--(9.5,{2+.3*resp(3)});
+\draw[blue,line width=1pt] plot[domain=9.5:11.45,samples=80] (\x,{2+.3*(resp(\x-6.5)-resp(\x-9.5))});
+\draw[flow] (5.35,1.45)--(11.45,1.45) node[right,note] {$t$};
+\node[align=center] at (8.3,.85) {$x(\kappa^+)=x(\kappa^-)$\quad $g_{q_0}(x(\kappa),z(\kappa^+),u_0)=0$};
+\node[note] at (8.3,.25) {Illustrative response; amplitudes and time are arbitrary.};
+% An eight-site measurement strip, with real PMU identifiers but no topology.
+\foreach \i/\bus in {0/2,1/5,2/6,3/10,4/19,5/22,6/29,7/39} {
+ \pgfmathsetmacro{\xx}{12.55+mod(\i,4)*1.35}
+ \pgfmathsetmacro{\yy}{5.65-floor(\i/4)*.65}
+ \draw[blue,line width=.7pt] (\xx-.17,\yy)--(\xx+.17,\yy);
+ \node[draw=blue,fill=white,circle,inner sep=1.3pt,font=\fontsize{6}{6}\selectfont,text=blue] at (\xx,\yy) {P};
+ \node[note,anchor=west] at (\xx+.2,\yy) {\bus};
+}
+\node[note] at (14.9,4.5) {Voltage sites; current terminals mapped separately};
+\draw[flow] (14.9,4.25)--(14.9,3.9);
+\node[align=center] at (14.9,3.55) {Phasors $h_k=H_q(x_k,z_k,u_k)$\\Phase history $\eta_k=F_M(\eta_{k-1},h_k)$};
+\draw[guide] (12.4,3)--(17.5,3);
+\foreach \yy/\lab/\n/\col in {2.65/{$|V|,\angle V$}/16/blue,2.1/{$|I|,\angle I$}/15/orange,1.55/{$f,\dot f$}/16/teal} {
+ \node[anchor=west] at (12.55,\yy) {\lab};
+ \pgfmathtruncatemacro{\last}{\n-1}
+ \foreach \j in {0,...,\last} {\draw[\col,line width=1pt] ({14.5+.095*\j},\yy-.08)--({14.5+.095*\j},\yy+.08);}
+ \node[anchor=west,text=\col] at (16.25,\yy) {\n};
+}
+\node at (14.9,.85) {$y_k\in\mathbb R^{47}$\quad at $30$ reports/s};
+\node[note] at (14.9,.25) {BUS39 current angle excluded};
+\end{tikzpicture}
+\end{document}

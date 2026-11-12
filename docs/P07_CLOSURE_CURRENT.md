@@ -17,20 +17,16 @@ La versión de revisión separa diagnósticos de firma y probabilidad de detecci
 
 El sucesor se encuentra en **experiments/PAPER_RECOVERY_C03** del repositorio científico. El informe **run/TEST_RESULTS.json** solo se considera evidencia después de **run/TEST_EVALUATION_LOCK.json** con estado **COMPLETE_SINGLE_USE** y el hash de resultado correspondiente. Antes de incorporar resultados, revisar por separado el efecto de la fusión y el reset, el costo en alarmas y las fallas de admisión.
 
-La revisión visual del 12 de noviembre conserva en la Figura~1 el problema,
-el flujo de inferencia y el límite de alcance en una composición de tres
-paneles. La Figura~1(b) se redujo a la entrada común, las dos historias
-competidoras, un predictor compartido y la salida. La Figura~4 ahora separa
-los operadores de carga/línea, las trazas ilustrativas antes y después de OFF,
-y el reporte PMU en tres paneles sin tarjetas: muestra que $x$ y $\eta$
-persisten, que $z$ e $I$ se vuelven a resolver y cómo se componen las 47
-coordenadas. La leyenda distingue el esquema de datos simulados y explicita el
-ángulo de corriente omitido en BUS39.
-Para la composición se revisaron el flujo secuencial SOGI-CDSC y la arquitectura
-de dos niveles de estimación nodal, sin copiar sus figuras ni añadir citas de
-método por motivos estéticos. La Figura~7 visualiza C02 desde el resultado con
-hash verificado. El artículo recompila en 19 páginas; las 16 huellas
-protegidas pasan, y las figuras de eventos y el unifilar IEEE-39 permanecen en
-las páginas 5 y 6. C03 todavía no se incorpora como resultado.
+La revisión visual y narrativa del 12 de noviembre concentra la Figura 1 en
+el problema y las historias competidoras. La Figura 4 se construye ahora en
+TikZ: operadores físicos, continuidad en OFF y composición de los 47 canales.
+Sus curvas son ilustrativas, no resultados de los experimentos. La Figura 7
+añade las diferencias pareadas y sus intervalos desde el mismo resultado C02
+sellado. La tabla de poblaciones incluye ahora C02. Se simplificaron la
+introducción y la entrada al método; el costo computacional cierra los
+resultados y la discusión distingue mecanismo, transferencia, medición y
+aproximaciones. Véase [el registro de revisión](VISUAL_NARRATIVE_REVISION_20261112.md).
+El artículo conserva 19 páginas y las figuras protegidas en las páginas 5 y 6.
+Esta edición no reevalúa C03 ni verifica la compilación autenticada en Overleaf.
 
 Para el envío siguen pendientes la revisión posterior a C03, confirmación en el proyecto autenticado de Overleaf, aprobación de autores y [declaraciones](SUBMISSION_DECLARATIONS_PENDING.md). Consultar la [matriz de comparadores](P07_RELATED_EVIDENCE.md) para el alcance de la comparación con literatura.

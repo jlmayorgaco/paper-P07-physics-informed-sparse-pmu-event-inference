@@ -6,7 +6,6 @@ from pathlib import Path
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-from matplotlib.patches import FancyBboxPatch, FancyArrowPatch, Rectangle
 
 ROOT = Path(__file__).resolve().parents[1]
 SNAPSHOT = ROOT / "generated/frozen/recovery_c02_20261105"
@@ -35,7 +34,7 @@ METHODS = [
 ]
 
 plt.rcParams.update({
-    "font.family": "DejaVu Sans",
+    "font.family": "STIXGeneral",
     "font.size": 6.3,
     "pdf.fonttype": 42,
     "ps.fonttype": 42,
@@ -63,110 +62,51 @@ def read_sealed_result():
     return report
 
 
-def arrow(ax, start, end):
-    ax.add_patch(FancyArrowPatch(
-        start, end, arrowstyle="-|>", mutation_scale=7,
-        linewidth=0.85, color=C["muted"], zorder=4,
-    ))
-
-
-def card(ax, x, y, w, h, title, body, color):
-    ax.add_patch(FancyBboxPatch(
-        (x, y), w, h,
-        boxstyle="round,pad=0.035,rounding_size=0.08",
-        linewidth=0.75, edgecolor=color, facecolor=C["white"], zorder=2,
-    ))
-    ax.text(x + 0.12, y + h - 0.12, title,
-            fontsize=5.55, weight="bold", color=color, va="top", zorder=3)
-    ax.text(x + 0.12, y + 0.10, body,
-            fontsize=5.25, color=C["ink"], va="bottom", zorder=3)
-
-
 def draw(report):
-    fig, ax = plt.subplots(figsize=(7.15, 2.85))
-    fig.subplots_adjust(0, 0, 1, 1)
-    ax.set_xlim(0, 10)
-    ax.set_ylim(0, 4.05)
-    ax.axis("off")
-
-    ax.text(0.18, 3.86, "HELD-OUT COMPARISON AT A FROZEN ALARM BUDGET",
-            fontsize=8.5, weight="bold", color=C["ink"], va="center")
-
-    # Calibration, freezing, and one-time evaluation are separated visually.
-    card(ax, 0.25, 3.04, 2.53, 0.58,
-         "CALIBRATE", "Select each threshold at 1 normal alarm/h", C["blue"])
-    arrow(ax, (2.86, 3.33), (3.14, 3.33))
-    card(ax, 3.22, 3.04, 2.42, 0.58,
-         "FREEZE", "Lock predictors and publication rules", C["teal"])
-    arrow(ax, (5.72, 3.33), (6.00, 3.33))
-    test = report["arms"]["PHYSICAL_HISTORY"]
-    normal_h = test["normal_monitored_s"] / 3600
-    card(ax, 6.08, 3.04, 3.67, 0.58,
-         "TEST ONCE", f"{test['event_parents']} event parents / {test['events']} events  ·  "
-         f"{test['normal_parents']} normal parents / {normal_h:.2f} h", C["green"])
-
-    # Two compact panels use exact values from the sealed evaluation file.
-    panels = [(0.25, 0.70, 4.62, 2.10), (5.13, 0.70, 4.62, 2.10)]
-    for x, y, w, h in panels:
-        ax.add_patch(FancyBboxPatch(
-            (x, y), w, h,
-            boxstyle="round,pad=0.035,rounding_size=0.08",
-            linewidth=0.65, edgecolor=C["rule"], facecolor=C["white"],
-            zorder=1,
-        ))
-
-    ax.text(0.45, 2.60, "TIMELY JOINT FAMILY + SOURCE BEFORE OFF",
-            fontsize=6.25, weight="bold", color=C["ink"], va="center")
-    ax.text(0.45, 2.38, "Correct interventions (%)",
-            fontsize=5.4, color=C["muted"], va="center")
-    left_x0, left_maxw = 1.73, 1.88
-    for tick in (0, 50, 100):
-        x = left_x0 + left_maxw * tick / 100
-        ax.plot([x, x], [1.03, 2.24], color=C["rule"], lw=0.45, zorder=1.4)
-        ax.text(x, 0.88, str(tick), ha="center", va="center",
-                fontsize=5.0, color=C["muted"], zorder=3)
-    y_rows = [2.05, 1.60, 1.15]
-    for (key, label, color), y in zip(METHODS, y_rows):
-        arm = report["arms"][key]
-        pct = 100 * arm["timely_joint"] / arm["events"]
-        ax.text(0.45, y + 0.095, label, fontsize=5.35,
-                color=C["ink"], va="center", zorder=3)
-        ax.add_patch(Rectangle((left_x0, y), left_maxw, 0.19,
-                               facecolor=C["pale_gray"], edgecolor="none", zorder=1.5))
-        ax.add_patch(Rectangle((left_x0, y), left_maxw * pct / 100, 0.19,
-                               facecolor=color, edgecolor="none", zorder=2.2))
-        ax.text(3.72, y + 0.095,
-                f"{pct:.1f}%  ({arm['timely_joint']}/{arm['events']})",
-                fontsize=5.25, color=C["ink"], va="center", zorder=3)
-
-    ax.text(5.33, 2.60, "UNMATCHED ALARMS ON EVENT RECORDS",
-            fontsize=6.25, weight="bold", color=C["ink"], va="center")
-    ax.text(5.33, 2.38, "Count  ·  rate per monitored event-hour",
-            fontsize=5.4, color=C["muted"], va="center")
-    right_x0, right_maxw = 6.70, 1.76
-    max_count = 90.0
-    for tick in (0, 25, 50, 75, 90):
-        x = right_x0 + right_maxw * tick / max_count
-        ax.plot([x, x], [1.03, 2.24], color=C["rule"], lw=0.45, zorder=1.4)
-        ax.text(x, 0.88, str(tick), ha="center", va="center",
-                fontsize=5.0, color=C["muted"], zorder=3)
-    for (key, label, color), y in zip(METHODS, y_rows):
-        arm = report["arms"][key]
-        count = arm["event_extras"]
-        rate = arm["event_extras_per_h"]
-        ax.text(5.33, y + 0.095, label, fontsize=5.35,
-                color=C["ink"], va="center", zorder=3)
-        ax.add_patch(Rectangle((right_x0, y), right_maxw, 0.19,
-                               facecolor=C["pale_gray"], edgecolor="none", zorder=1.5))
-        ax.add_patch(Rectangle((right_x0, y), right_maxw * count / max_count, 0.19,
-                               facecolor=color, edgecolor="none", zorder=2.2))
-        ax.text(8.60, y + 0.095, f"{count}  ({rate:.1f}/h)",
-                fontsize=5.25, color=C["ink"], va="center", zorder=3)
-
-    ax.text(0.30, 0.38,
-            f"Normal records: 0 alarms in {normal_h:.2f} h per arm; one-sided 95% Poisson upper bound "
-            f"{test['normal_Poisson_upper95_per_h']:.2f}/h. Uncertainty uses paired resampling by event parent.",
-            fontsize=5.45, color=C["muted"], va="center")
+    # The panel of paired differences uses archived intervals, never new TEST fits.
+    fig, axes = plt.subplots(1, 3, figsize=(7.15, 2.45),
+                             gridspec_kw={'width_ratios': [1.1, 1.0, 1.45]})
+    fig.subplots_adjust(left=.15, right=.98, top=.86, bottom=.27, wspace=.32)
+    for ax in axes:
+        ax.spines[['top', 'right', 'left']].set_visible(False)
+        ax.spines['bottom'].set_color(C['rule'])
+        ax.tick_params(length=0, labelsize=6.5, colors=C['muted'])
+        ax.set_axisbelow(True)
+        ax.grid(axis='x', color=C['rule'], lw=.45)
+    for idx, (key, name, color) in enumerate(METHODS):
+        arm=report['arms'][key]; y=2-idx
+        pct=100*arm['timely_joint']/arm['events']
+        axes[0].hlines(y, 0, pct, color=color, lw=2)
+        axes[0].plot(pct,y,'o',color=color,ms=4)
+        axes[0].text(pct, y+.22, f"{pct:.1f}% ({arm['timely_joint']}/{arm['events']})",
+                     ha='right', fontsize=6, color=color)
+        count=arm['event_extras']
+        axes[1].hlines(y, 0, count, color=color, lw=2)
+        axes[1].plot(count,y,'o',color=color,ms=4, clip_on=False)
+        axes[1].text(0, y+.22, f"{count} alarms ({arm['event_extras_per_h']:.1f}/h)",
+                     fontsize=6, color=color)
+    axes[0].set_yticks([2,1,0], [x[1] for x in METHODS])
+    axes[0].set_xlim(-2,105); axes[0].set_xticks([0,50,100])
+    axes[1].set_xlim(-2,90); axes[1].set_xticks([0,40,80]); axes[1].set_yticks([])
+    for ax in axes[:2]: ax.set_ylim(-.45,2.65)
+    axes[0].set_title('(a) Timely attribution', loc='left', fontsize=8, pad=13)
+    axes[1].set_title('(b) Extra alarms', loc='left', fontsize=8, pad=13)
+    axes[0].set_xlabel('Correct before OFF (%)', fontsize=6.5)
+    axes[1].set_xlabel('Count on event records', fontsize=6.5)
+    ax=axes[2]
+    ax.set_title('(c) Paired coverage gain',loc='left',fontsize=8,pad=13)
+    for y,(label,key) in zip([1.6,.15],[('Bank minus GLR','PHYSICAL_CONTINUOUS_GLR'),('Bank minus ExtraTrees','EXTRATREES_ALL_SOURCES')]):
+        d=report['paired_intervals']['PHYSICAL_HISTORY-minus-'+key]['coverage_difference']
+        v,lo,hi=[100*d[k] for k in ['point','lower95','upper95']]
+        ax.errorbar(v,y,xerr=[[v-lo],[hi-v]],fmt='o',color=C['teal'],capsize=3,lw=1.3,ms=4)
+        ax.text(2,y+.47,label,fontsize=6.5,color=C['ink'])
+        ax.text(2,y-.40,f'{v:+.1f} pp  [{lo:.2f}, {hi:.2f}]',fontsize=6.2,color=C['muted'])
+    ax.axvline(0, color=C['muted'], lw=.65, ls='--')
+    ax.set_xlim(-5,100); ax.set_ylim(-.55,2.65); ax.set_xticks([0,25,50,75,100]); ax.set_yticks([])
+    ax.set_xlabel('Percentage points (95% interval)',fontsize=6.5)
+    test=report['arms']['PHYSICAL_HISTORY']
+    fig.text(.02,.09, f"Normal records: 0 alarms / {test['normal_monitored_s']/3600:.2f} h per method; Poisson upper 95% limit {test['normal_Poisson_upper95_per_h']:.2f}/h.",fontsize=6.5,color=C['muted'])
+    fig.text(.02,.025,'Paired intervals: 10,000 resamples of 18 event parents. Thresholds selected on separate calibration data.',fontsize=6.5,color=C['muted'])
     return fig
 
 

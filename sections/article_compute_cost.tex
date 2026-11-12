@@ -1,0 +1,17 @@
+\subsection{Computational Cost}
+\input{tables/generated/closure_compute_cost}
+Table~\ref{tab:closure-compute-cost} records the stages of the evaluation
+campaign, which ran the five-model bank on one thread. Its history
+inference takes a median 358.7\,s per 120-s record (99.6\,ms per report),
+three times slower than the 30-report/s input, so the five-model bank as
+implemented is an offline causal replay. The cost is dominated by the
+number of network hypotheses. Re-running the unchanged nominal bank alone
+on the same hardware and thread settings (Section~\ref{sec:noise-stress})
+gives \RevNomMsReport\,ms per report (median over \RevNomRecords{}
+records, maximum \RevNomMsReportMax\,ms), below the 33.3-ms report
+interval; the nominal bank attributed \COneNomTimely{}/\COneNomTotal{}
+interventions in the independent evaluation. These are amortized
+processing rates on a desktop CPU; per-report latency percentiles and
+memory were not instrumented, and the 80-s startup bank construction is a
+one-time cost. Decision timestamps elsewhere in the paper are report times,
+not wall-clock latency.

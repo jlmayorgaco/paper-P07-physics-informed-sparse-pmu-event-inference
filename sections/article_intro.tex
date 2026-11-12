@@ -9,24 +9,18 @@ earlier event with forcing from a new source
 
 \begin{figure*}[t]\centering
 \includegraphics[width=.485\textwidth]{figures/generated/problem_recovery_timeline.pdf}\hfill
-\includegraphics[width=.485\textwidth]{figures/generated/recovery_method_logic.pdf}\\[-1pt]
-\includegraphics[width=.99\textwidth]{figures/generated/problem_scope_strip.pdf}
-\caption{Problem, method and scope overview. (a) Event B begins while the response
-to restored event A remains visible in the sparse-PMU trace. Resetting at OFF
-can retrigger an alarm; waiting for settling can hide B. (b) The same report is
-scored under five network models and competing physical histories. The bank
-preserves state through OFF, integrates load severity, switches line models,
-and reports active mass $M_c$ separately from cause mass $\Gamma_c$. Traces
-and times are schematic. (c) The front-end and state/stability tasks from
-related work are distinct from P07's successive-event attribution. P07 starts
-from reported phasors and does not validate PMU front-end accuracy, an online
-applicability gate, or grid-forming control dynamics.}
+\includegraphics[width=.485\textwidth]{figures/generated/recovery_method_logic.pdf}
+\caption{Attribution during recovery. (a) Event B begins while the response to
+restored event A remains visible. A state reset can trigger a false alarm;
+waiting for settling can delay B. (b) Competing histories predict each incoming
+report. The bank retains state through OFF and distinguishes active mass $M_c$
+from cause mass $\Gamma_c$. Traces and times are schematic.}
 \label{fig:problem-method}\end{figure*}
 
-Physical restoration is not electrical recovery. Resetting state at OFF can
-make the remaining response look like another event, while waiting for it to
-settle can hide a real intervention. In statistical terms, the post-change
-law of a second intervention depends on the history of the first. Classical change
+The inference problem is to decide whether a new source is needed to
+explain the incoming reports. Because the preceding response is still
+evolving, the observation law depends on the earlier intervention.
+Classical change
 detection and isolation treats a single change of an otherwise stationary
 law \cite{nikiforov1995generalized,lai2000sequential,tartakovsky2014sequential},
 and the generalized-likelihood approach of Willsky and Jones detects jumps
@@ -34,31 +28,24 @@ in a fixed linear system \cite{willsky1976glr}. Power-system outage
 detectors compare network hypotheses under quasi-static or linearized
 models \cite{tate2008outage,chen2016quickest,rovatsos2017outage}, and
 trajectory libraries diagnose faults from sparse PMUs
-\cite{warner2023highfidelity}. None of these formulations makes a restored
-intervention compete as a physical cause with later interventions in a
-switched DAE network.
+\cite{warner2023highfidelity}. These precedents motivate retaining a restored intervention as an explicit
+competitor when attributing later observations in a switched DAE network.
 
-We address this gap with three contributions.
-\begin{enumerate}
-\item \emph{Recovery-aware attribution as switched-DAE change detection and
-isolation.} Candidate histories specify intervention, source, onset,
-severity interval and restoration time. Their predictors are reduced from
-the network DAE, start from estimated past states and keep the state
-through restoration. Severity is integrated in closed form, and separate
-active and cause weights separate the present intervention from the
-originating cause of the continuing response
-(Section~\ref{sec:narrative-method}).
-\item \emph{Nominal separation and the cost of resetting state.}
-We derive signature energy for the 18 candidate sources and an
-innovation bias after a state reset. These diagnostics explain what the
-nominal operators predict at a supplied onset and indicate where the
-assumed noise model limits that interpretation
-(Section~\ref{sec:theory}).
-\item \emph{A common-budget evaluation.} We compare the bank with a
-continuous physical GLR and refitted ExtraTrees by timely attribution,
-extra alarms and parent-level uncertainty
-(Section~\ref{sec:recovery-comparison}).
-\end{enumerate}
+We develop a bank of switched-DAE predictors that carries the estimated
+state through restoration. Each history specifies a source, onset and
+restoration time; load severity is integrated analytically. Separate active
+and cause weights allow an intervention to end while its response remains
+an explanation of later reports (Section~\ref{sec:narrative-method}).
+
+We then examine two consequences of this construction. Nominal signature
+energy describes source separation under the assumed plant and noise model,
+and a reset analysis quantifies the innovation bias caused by discarding
+physical state (Section~\ref{sec:theory}). A held-out comparison measures
+timely attribution and extra alarms against a continuous physical GLR and
+ExtraTrees at a common calibration budget
+(Section~\ref{sec:recovery-comparison}). That comparison evaluates complete
+procedures; isolating the benefit of keeping recovery histories requires a
+further state-preserving control.
 
 The evaluation covers a known catalog of sequential load and line
 interventions. The supplement records auxiliary analyses and

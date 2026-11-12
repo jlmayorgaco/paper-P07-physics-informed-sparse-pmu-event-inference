@@ -54,7 +54,7 @@ Le \emph{et al.} recently proposed a physics-informed graph neural
 operator that maps sparse, intermittent PMU windows to unmeasured rotor
 angle and speed trajectories, with swing equations in the decoder and a
 learned correction for model mismatch \cite{le2026sparsegno}. That
-preprint addresses dynamic state reconstruction; P07 instead identifies
+preprint addresses dynamic state reconstruction. Our method identifies
 which intervention explains observations while an earlier response is
 still evolving.
 
@@ -78,12 +78,11 @@ topology changes with hardware-in-the-loop validation
 \cite{dey2026topology}. Graph neural networks encode the grid topology in the
 learned map, for event identification \cite{yuan2023gnn}, physics-informed
 state estimation \cite{ngo2024pignn} and localization after reconstructing
-unmeasured trajectories \cite{rimkus2025gnn}. These methods learn the
-source map from labeled trajectories; the physical bank derives it from
-the network equations, and its detectability analysis states, for any
-learned competitor, the information available in the same reports. We
-report two ExtraTrees adapters trained on the same 18-source catalog,
-whose limitations are discussed with the results.
+unmeasured trajectories \cite{rimkus2025gnn}. These applications span state reconstruction and event diagnosis. In the
+present attribution task, the physical bank derives candidate responses
+from the network equations. Its signature analysis describes separation
+under the assumed plant and noise model. ExtraTrees provides a learned
+comparison on the same 18-source catalog.
 
 \subsection{Measurement Integrity}
 Bad-data detection in state estimation tests residuals against the
@@ -105,16 +104,11 @@ time-correlated instrument-transformer errors together with line-parameter
 uncertainty \cite{dantona2026multisnapshot}; IEC~61850-9-2 co-simulation
 has also been used to assess OpenPMU and virtual-PMU state estimation
 \cite{celeita2023iec61850}. These contributions address measurement
-generation, measurement uncertainty or state estimation. P07 starts from
+generation, measurement uncertainty or state estimation. Our bank starts from
 reported phasor channels and does not validate a PMU estimator or a
 hardware-in-the-loop interface. The two parity relations used in the
 supplement require no state estimator and are connected to the information
 available for physical attribution when a PMU is lost.
-
-The lower band of Fig.~\ref{fig:problem-method} summarizes this boundary:
-P07 consumes reported phasors and evaluates successive-event attribution,
-while measurement-estimator accuracy, online applicability gating and
-grid-forming controller dynamics remain outside its tested scope.
 
 \begin{table*}[t]\centering\small
 \caption{Closest inference formulations. Only the quickest-change detector
