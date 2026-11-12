@@ -13,7 +13,10 @@ The article preserves the protected event-types image and IEEE-39 single-line di
 
 The [current closure record](docs/P07_CLOSURE_CURRENT.md) supersedes older dated readiness notes. The article includes C02 from its sealed result; the successor mechanism and plant-transfer campaign is separate.
 
-The 11 November visual revision replaces the dense overview with two vector diagrams: one explains overlapping recovery and a new event, and one summarizes the inference path. Both panels are built by `scripts/build_problem_method_diagrams.py` and appear in the current article PDF. C03 remains in progress; no C03 test results have been added.
+The overview and physical/report figures are editable TikZ diagrams, built by
+`scripts/build_recovery_overview.py` and `scripts/build_physics_measurement_chain.py`.
+The method includes numbered per-report pseudocode. C03 remains in calibration;
+no C03 test results have been added. See the closure record for the dated status.
 
 ## Manuscript and results
 

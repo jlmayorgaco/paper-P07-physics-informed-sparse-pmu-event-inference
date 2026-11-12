@@ -300,30 +300,31 @@ compresses histories into the retained augmented-state mean.
 
 \subsection{Per-Report Algorithm and Computational Boundary}
 
-\noindent\textbf{Algorithm 1: causal physical-history attribution.}
-The inputs are the nominal model, the fixed method configuration and the
-successive PMU reports; event truth never enters these steps.
-\begin{enumerate}
-\item Estimate operating context, common reference and noise scale from the
-startup prefix. Initialize conditional states and retain the eligible past
-states needed by retrospective proposals.
-\item At report $k$, apply the fixed centering, scaling and instrumental
-transformation. Propagate each retained physical/recovery history and its
-conditional uncertainty to predict this report. Compute and save the outer
-model predictive density before current-report screening and state correction.
-\item Apply the short-lag birth screen using retained past states.
-A proposed history starts before its selected onset; replay
-replaces the corresponding likelihood suffix rather than adding it twice.
-\item Score candidate histories and replayed suffixes before correcting
-their states with the reports being scored. Integrate the allowed load severity and apply
-the switched operator for a line hypothesis.
-\item Correct the conditional states and severity distributions; update
-network weights and the retained history bank using the fixed rules.
-Preserve dynamic state and originating cause through restoration.
-\item Aggregate active mass $M$ and cause mass $\Gamma$.
-Apply the fixed alarm, diagnosis and OFF-publication rules. Store emission
-time, estimated onset, family/source and the last report used.
-\end{enumerate}
+\noindent\textbf{Algorithm 1: causal physical-history attribution}
+\begin{algorithmic}[1]
+\Require Models, fixed configuration and PMU stream $y_{0:}$
+\Ensure Detection, diagnosis and restoration messages
+\State Fit context, reference and noise from the prefix
+\State Initialize states, weights and stored state history
+\For{each report $y_k$ after startup}
+  \State Transform $y_k$ to inference coordinates $r_k$
+  \State Propagate histories; retain state through OFF
+  \State Save outer predictive densities before screening
+  \State Propose births from stored pre-onset states
+  \State Replay each proposal, replacing its old suffix
+  \State Score histories before correcting their states
+  \State Integrate load severity; switch line operators
+  \State Correct states; update severity and history weights
+  \State Prune histories and record discarded mass
+  \State Update outer weights from saved densities
+  \State Aggregate active mass $M$ and cause mass $\Gamma$
+  \State Apply alarm, diagnosis and OFF publication rules
+  \State Compress histories after confirmed closure
+  \State Record messages and the last report used
+\EndFor
+\end{algorithmic}
+No event truth is available to the algorithm. Retrospective replay changes
+the inner history weights but does not re-weight the outer model densities.
 The nonlinear simulator constructs observations; this algorithm propagates
 local switched predictors. Decisions use only reports already received.
 Computation time is reported separately in Section~\ref{sec:narrative-results}.
