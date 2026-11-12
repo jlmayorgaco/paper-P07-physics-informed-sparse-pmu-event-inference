@@ -204,86 +204,50 @@ def draw_method():
     panel_frame(ax, "B", "HOW THE BANK REASONS",
                 "Keep the old cause while testing for a new event.")
 
-    ax.text(0.55, 6.16, "8 PMUs", fontsize=6.6, weight="bold",
-            color=C["blue"], va="center")
-    xs = np.linspace(1.70, 3.45, 8)
-    for px in xs:
-        ax.add_patch(Circle((px, 5.90), 0.095, facecolor=C["blue"],
-                            edgecolor=C["white"], linewidth=0.55, zorder=3))
-        ax.add_patch(Circle((px, 5.90), 0.026, facecolor=C["white"],
-                            edgecolor="none", zorder=4))
-    arrow(ax, (3.70, 5.90), (4.16, 5.90), C["blue"], lw=0.9)
-    chip(ax, 4.20, 5.63, 1.63, 0.54, r"REPORT  $\mathbf{r}_k$",
-         C["blue"], C["pale_blue"], C["blue"], size=6.5)
-    arrow(ax, (5.86, 5.90), (6.34, 5.90), C["blue"], lw=0.9)
-    chip(ax, 6.39, 5.63, 3.02, 0.54, "5 R/X MODELS",
-         C["rule"], C["pale_blue"], C["blue"], size=6.7)
+    # One shared report/model input feeds a small pair of candidate histories.
+    chip(ax, 0.92, 5.67, 8.16, 0.49,
+         r"8 PMUs  $\cdot$  report $\mathbf{r}_k$  $\cdot$  5 R/X models",
+         C["blue"], C["pale_blue"], C["blue"], size=6.6)
+    arrow(ax, (5.0, 5.64), (5.0, 5.25), C["blue"], lw=0.9)
 
-    # A straight branch sends the same report/model bank to both histories.
-    ax.plot([7.90, 7.90], [5.63, 5.18], color=C["rule"], lw=0.95, zorder=2)
-    ax.plot([2.67, 7.90], [5.18, 5.18], color=C["rule"], lw=0.95, zorder=2)
-    ax.add_patch(Circle((7.90, 5.18), 0.055, facecolor=C["blue"],
-                        edgecolor=C["white"], linewidth=0.45, zorder=3))
-    section_label(ax, 0.55, 5.18, "HYPOTHESES", color=C["muted"], size=6.3)
-    arrow(ax, (2.67, 5.18), (2.67, 4.94), C["teal"], lw=0.95)
-    arrow(ax, (7.32, 5.18), (7.32, 4.94), C["orange"], lw=0.95)
-
-    card(ax, 0.55, 4.02, 4.25, 0.86, "CONTINUE A",
-         "Carry state through OFF.",
+    card(ax, 0.78, 4.31, 4.00, 0.78, "CONTINUE A",
+         "Carry its state through OFF.",
          accent=C["teal"], face=C["pale_teal"],
-         title_size=7.0, body_size=6.35)
-    card(ax, 5.20, 4.02, 4.25, 0.86, "TEST NEW B",
-         "Test B during A's recovery.",
+         title_size=6.8, body_size=6.0)
+    card(ax, 5.22, 4.31, 4.00, 0.78, "TEST B",
+         "A new source during A's recovery.",
          accent=C["orange"], face=C["pale_orange"],
-         title_size=7.0, body_size=6.35)
+         title_size=6.8, body_size=6.0)
 
-    # Both candidate histories reach a common scorer through separate vertical
-    # arrows. No connector passes over a label or another connector.
-    score_top, score_bottom = 3.68, 2.82
-    arrow(ax, (2.67, 4.02), (2.67, score_top), C["teal"], lw=0.95)
-    arrow(ax, (7.32, 4.02), (7.32, score_top), C["orange"], lw=0.95)
-    card(ax, 0.80, score_bottom, 8.40, score_top - score_bottom,
-         "SWITCHED-DAE PREDICTION + EVIDENCE",
-         "Integrate load severity  ·  Switch the line model",
+    # The two histories share one physical scorer; the merge is explicit but
+    # occupies only a single clean connector path.
+    for cx in (2.78, 7.22):
+        ax.plot([cx, cx], [4.31, 4.06], color=C["rule"], lw=0.8, zorder=2)
+    ax.plot([2.78, 7.22], [4.06, 4.06], color=C["rule"], lw=0.8, zorder=2)
+    arrow(ax, (5.0, 4.06), (5.0, 3.84), C["ink"], lw=0.9)
+    card(ax, 0.78, 3.02, 8.44, 0.82,
+         "SHARED SWITCHED-DAE SCORE",
+         "Integrate load severity  ·  switch line model  ·  update once/report",
          accent=C["blue"], face=C["white"],
-         title_size=7.2, body_size=6.55, title_color=C["ink"])
+         title_size=6.9, body_size=5.9, title_color=C["ink"])
 
-    # State/weight update and output flow are kept on one clean vertical/horizontal route.
-    update_x, update_y, update_w, update_h = 0.55, 1.72, 5.00, 0.78
-    update_cx = update_x + update_w / 2
-    arrow(ax, (update_cx, score_bottom), (update_cx, update_y + update_h),
-          C["ink"], lw=0.95)
-    card(ax, update_x, update_y, update_w, update_h,
-         "UPDATE STATE + WEIGHTS",
-         "Replay once; keep state through OFF.",
-         accent=C["teal"], face=C["pale_teal"],
-         title_size=6.9, body_size=6.2, title_color=C["teal"])
-
-    # Attribution panel: active intervention and originating cause stay distinct.
-    metric_x, metric_y, metric_w, metric_h = 0.55, 0.50, 5.00, 0.88
-    arrow(ax, (update_cx, update_y), (update_cx, metric_y + metric_h),
-          C["ink"], lw=0.95)
+    arrow(ax, (5.0, 3.00), (5.0, 2.69), C["ink"], lw=0.9)
+    metric_x, metric_y, metric_w, metric_h = 0.78, 1.72, 8.44, 0.92
     ax.add_patch(FancyBboxPatch(
         (metric_x, metric_y), metric_w, metric_h,
         boxstyle="round,pad=0.045,rounding_size=0.12",
-        linewidth=0.9, edgecolor=C["rule"], facecolor=C["white"], zorder=2,
+        linewidth=0.8, edgecolor=C["rule"], facecolor=C["white"], zorder=2,
     ))
-    ax.text(metric_x + metric_w / 2, 1.24, "ATTRIBUTION",
-            ha="center", va="center", fontsize=6.1, weight="bold",
-            color=C["muted"], zorder=3)
-    ax.plot([metric_x + metric_w / 2, metric_x + metric_w / 2],
-            [0.60, 1.10], color=C["rule"], lw=0.7, zorder=3)
-    ax.text(metric_x + 1.25, 0.83, r"$M_c$  ACTIVE", ha="center", va="center",
-            fontsize=6.6, weight="bold", color=C["blue"], zorder=3)
-    ax.text(metric_x + 3.75, 0.83, r"$\Gamma_c$  CAUSE", ha="center",
-            va="center", fontsize=6.6, weight="bold", color=C["teal"], zorder=3)
+    ax.plot([5.0, 5.0], [1.84, 2.52], color=C["rule"], lw=0.7, zorder=3)
+    ax.text(2.88, 2.18, r"$M_c$  ACTIVE", ha="center", va="center",
+            fontsize=6.8, weight="bold", color=C["blue"], zorder=3)
+    ax.text(7.12, 2.18, r"$\Gamma_c$  CAUSE", ha="center", va="center",
+            fontsize=6.8, weight="bold", color=C["teal"], zorder=3)
 
-    pub_x, pub_y, pub_w, pub_h = 6.12, 0.50, 3.30, 0.88
-    arrow(ax, (metric_x + metric_w, 0.94), (pub_x, 0.94), C["green"], lw=1.0)
-    card(ax, pub_x, pub_y, pub_w, pub_h, "PUBLISH",
-         "Source  ·  onset  ·  OFF",
-         accent=C["green"], face=C["pale_green"],
-         title_size=7.0, body_size=6.3, title_color=C["green"])
+    arrow(ax, (5.0, 1.70), (5.0, 1.32), C["green"], lw=0.9)
+    chip(ax, 1.45, 0.54, 7.10, 0.62,
+         "PUBLISH  ·  source  ·  onset  ·  OFF",
+         C["green"], C["pale_green"], C["green"], size=6.5)
     return fig
 
 

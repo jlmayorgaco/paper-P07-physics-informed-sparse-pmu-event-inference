@@ -1,4 +1,4 @@
-"""Build the physical-event to causal-PMU-report figure for P07."""
+"""Build the compact P07 physical-to-report schematic."""
 from pathlib import Path
 
 import matplotlib
@@ -10,223 +10,175 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "figures" / "generated"
 
 C = {
-    "ink": "#1F2D3A",
-    "muted": "#526575",
-    "rule": "#D4DEE4",
-    "orange": "#C96A23",
-    "blue": "#287BA5",
-    "teal": "#087F78",
-    "purple": "#71569C",
-    "green": "#4B7F52",
-    "pale_orange": "#FBF4ED",
+    "ink": "#20303D",
+    "muted": "#637481",
+    "rule": "#D9E1E5",
+    "blue": "#2D7EA4",
+    "teal": "#13857D",
+    "orange": "#C96F32",
+    "purple": "#755F9D",
+    "green": "#4D8058",
     "pale_blue": "#F1F7FA",
     "pale_teal": "#EFF7F5",
+    "pale_orange": "#FBF5EF",
     "pale_purple": "#F5F2F8",
-    "pale_green": "#F1F6F0",
-    "pale_gray": "#F5F7F8",
+    "pale_green": "#F2F7F1",
+    "pale_gray": "#F6F8F8",
     "white": "#FFFFFF",
 }
 
 plt.rcParams.update({
     "font.family": "DejaVu Sans",
-    "font.size": 6.3,
+    "font.size": 6.5,
     "mathtext.fontset": "dejavusans",
     "pdf.fonttype": 42,
     "ps.fonttype": 42,
 })
 
 
-def rounded(ax, xy, width, height, *, edge, face, lw=0.85, radius=1.6,
-            zorder=1):
-    patch = FancyBboxPatch(
-        xy, width, height,
+def box(ax, x, y, w, h, *, edge, face, lw=0.8, radius=1.25, z=1):
+    p = FancyBboxPatch(
+        (x, y), w, h,
         boxstyle=f"round,pad=0.012,rounding_size={radius}",
-        linewidth=lw, edgecolor=edge, facecolor=face, zorder=zorder,
+        edgecolor=edge, facecolor=face, linewidth=lw, zorder=z,
     )
-    ax.add_patch(patch)
-    return patch
+    ax.add_patch(p)
+    return p
 
 
-def arrow(ax, start, end, *, color=None, lw=1.15, scale=8):
+def label(ax, x, y, s, *, size=6.3, color=None, weight=None,
+          ha="left", va="center"):
+    ax.text(x, y, s, fontsize=size, color=color or C["ink"], weight=weight,
+            ha=ha, va=va, zorder=5)
+
+
+def arrow(ax, a, b, color, lw=1.1):
     ax.add_patch(FancyArrowPatch(
-        start, end, arrowstyle="-|>", mutation_scale=scale,
-        linewidth=lw, color=color or C["muted"],
-        shrinkA=0, shrinkB=1.5, zorder=6,
+        a, b, arrowstyle="-|>", mutation_scale=8, linewidth=lw,
+        color=color, shrinkA=0, shrinkB=1.5, zorder=5,
     ))
 
 
-def text(ax, x, y, s, *, size=6.2, color=None, weight=None,
-         ha="left", va="center", **kwargs):
-    ax.text(x, y, s, fontsize=size, color=color or C["ink"], weight=weight,
-            ha=ha, va=va, zorder=5, **kwargs)
-
-
-def pipeline_card(ax, x, title, kicker, color, face, equation, lines,
-                  *, eq_size=7.2):
-    y, w, h = 39.5, 21.5, 27.5
-    rounded(ax, (x, y), w, h, edge=C["rule"], face=C["white"], lw=0.8,
-            radius=1.35)
-    rounded(ax, (x + 1.0, y + h - 5.2), 3.2, 3.2, edge=color, face=face,
-            lw=0, radius=0.9)
-    text(ax, x + 2.6, y + h - 3.6, kicker, size=5.2, color=color,
-         weight="bold", ha="center")
-    text(ax, x + 5.2, y + h - 3.5, title, size=6.3, color=C["ink"],
-         weight="bold")
-    ax.plot([x + 1.0, x + w - 1.0], [y + h - 7.0, y + h - 7.0],
-            color=C["rule"], lw=0.65, zorder=2)
-    text(ax, x + w / 2, y + 15.2, equation, size=eq_size,
-         color=color, weight="medium", ha="center")
-    for j, line in enumerate(lines):
-        text(ax, x + 1.25, y + 9.4 - j * 3.3, line, size=6.0,
-             color=C["muted"])
+def stage(ax, x, title, color, face, eq, detail, extra=None):
+    y, w, h = 38.5, 29.2, 27.5
+    box(ax, x, y, w, h, edge=C["rule"], face=C["white"], lw=0.75)
+    label(ax, x + 1.3, y + h - 3.6, title, size=6.9,
+          color=color, weight="bold")
+    ax.plot([x + 1.3, x + w - 1.3], [y + h - 6.5, y + h - 6.5],
+            color=C["rule"], lw=0.6, zorder=2)
+    if extra:
+        label(ax, x + w / 2, y + 17.3, eq, size=7.3,
+              color=color, weight="medium", ha="center")
+        label(ax, x + w / 2, y + 11.4, extra, size=7.0,
+              color=C["ink"], weight="medium", ha="center")
+        detail_y = y + 4.3
+    elif isinstance(eq, (tuple, list)):
+        label(ax, x + w / 2, y + 17.0, eq[0], size=7.6,
+              color=color, weight="medium", ha="center")
+        label(ax, x + w / 2, y + 13.4, eq[1], size=7.1,
+              color=color, weight="medium", ha="center")
+        detail_y = y + 6.2
+    else:
+        label(ax, x + w / 2, y + 15.2, eq, size=7.3,
+              color=color, weight="medium", ha="center")
+        detail_y = y + 7.2
+    label(ax, x + w / 2, detail_y, detail, size=6.1,
+          color=C["muted"], ha="center")
 
 
 def draw():
-    fig, ax = plt.subplots(figsize=(7.15, 3.28))
+    fig, ax = plt.subplots(figsize=(7.15, 2.82))
     fig.subplots_adjust(0, 0, 1, 1)
     ax.set_xlim(0, 100)
-    ax.set_ylim(8, 100)
+    ax.set_ylim(6, 100)
     ax.axis("off")
 
-    text(ax, 2.2, 96.1, "FROM SWITCHED PHYSICS TO CAUSAL PMU REPORT",
-         size=8.5, color=C["ink"], weight="bold")
-    text(ax, 2.2, 92.2,
-         "A restored input changes the network mode; the physical and measurement states keep evolving.",
-         size=6.2, color=C["muted"])
-    ax.plot([2.2, 97.8], [89.1, 89.1], color=C["rule"], lw=0.7, zorder=1)
+    label(ax, 2.4, 96.0, "FROM EVENT TO CAUSAL PMU REPORT",
+          size=8.4, color=C["ink"], weight="bold")
+    label(ax, 2.4, 91.8,
+          "The intervention ends at OFF; its physical and measurement response continues.",
+          size=6.4, color=C["muted"])
+    ax.plot([2.4, 97.6], [88.6, 88.6], color=C["rule"], lw=0.7, zorder=1)
 
-    # Event schedule. The load-step sign is intentionally unspecified.
-    text(ax, 2.4, 85.8, "EVENT CLOCK · LOAD OR LINE", size=5.3,
-         color=C["muted"],
-         weight="bold")
-    x0, xtau, xkappa, x1 = 23.0, 45.0, 74.0, 97.0
-    text(ax, (x0 + xtau) / 2, 85.8, "PRE-EVENT", size=5.2,
-         color=C["muted"], weight="bold", ha="center")
-    text(ax, (xtau + xkappa) / 2, 85.8, "INTERVENTION ACTIVE",
-         size=5.2, color=C["orange"], weight="bold", ha="center")
-    text(ax, (xkappa + x1) / 2, 85.8, "OPERATOR RESTORED", size=5.2,
-         color=C["teal"], weight="bold", ha="center")
-    rounded(ax, (x0, 70.3), x1 - x0, 12.5, edge=C["rule"],
-            face=C["white"], lw=0.65, radius=1.0)
+    # One shared event clock, with the load and line operators shown as
+    # alternatives rather than simultaneous interventions.
+    label(ax, 2.6, 84.8, "EVENT CLOCK · LOAD OR LINE",
+          size=5.8, color=C["muted"], weight="bold")
+    x0, xtau, xkappa, x1 = 22.0, 45.0, 74.0, 97.0
+    label(ax, (x0 + xtau) / 2, 84.8, "BASE", size=5.5,
+          color=C["muted"], weight="bold", ha="center")
+    label(ax, (xtau + xkappa) / 2, 84.8, "INTERVENTION", size=5.5,
+          color=C["orange"], weight="bold", ha="center")
+    label(ax, (xkappa + x1) / 2, 84.8, "RESTORED", size=5.5,
+          color=C["teal"], weight="bold", ha="center")
+    box(ax, x0, 69.0, x1 - x0, 13.3,
+        edge=C["rule"], face=C["white"], lw=0.65, radius=1.0)
     ax.add_patch(FancyBboxPatch(
-        (xtau, 70.5), xkappa - xtau, 12.1,
-        boxstyle="square,pad=0", linewidth=0, facecolor=C["pale_orange"],
-        zorder=1,
+        (xtau, 69.2), xkappa - xtau, 12.9,
+        boxstyle="square,pad=0", linewidth=0,
+        facecolor=C["pale_orange"], zorder=1,
     ))
-    text(ax, 3.7, 78.9, "LOAD", size=5.5, color=C["orange"], weight="bold")
-    text(ax, 3.7, 73.6, "LINE", size=5.5, color=C["blue"], weight="bold")
-    for y, before, during, after, col in [
-        (78.9, r"$u_0$", r"$u_0+\Delta u$", r"$u_0$", C["orange"]),
-        (73.6, r"$q_0$", r"$q_{\mathrm{open}}$", r"$q_0$", C["blue"]),
+    label(ax, 3.5, 77.0, "LOAD", size=5.8,
+          color=C["orange"], weight="bold")
+    label(ax, 3.5, 72.4, "LINE", size=5.8,
+          color=C["blue"], weight="bold")
+    for y, left, active, right, color in [
+        (77.0, r"$u_0$", r"$u_0+\Delta u$", r"$u_0$", C["orange"]),
+        (72.4, r"$q_0$", r"$q_{\mathrm{open}}$", r"$q_0$", C["blue"]),
     ]:
-        text(ax, (x0 + xtau) / 2, y - 1.7, before, size=5.5,
-             color=C["muted"], ha="center")
-        text(ax, (xtau + xkappa) / 2, y - 1.7, during, size=5.5,
-             color=col, weight="bold", ha="center")
-        text(ax, (xkappa + x1) / 2, y - 1.7, after, size=5.5,
-             color=C["muted"], ha="center")
-    for x, label in [(xtau, r"$\tau$"), (xkappa, r"$\kappa$")]:
-        ax.plot([x, x], [70.8, 83.4], color=C["muted"], lw=0.7,
+        label(ax, (x0 + xtau) / 2, y, left, size=6.0,
+              color=C["muted"], ha="center")
+        label(ax, (xtau + xkappa) / 2, y, active, size=6.0,
+              color=color, weight="bold", ha="center")
+        label(ax, (xkappa + x1) / 2, y, right, size=6.0,
+              color=C["muted"], ha="center")
+    for x in (xtau, xkappa):
+        ax.plot([x, x], [69.6, 81.6], color=C["muted"], lw=0.7,
                 ls=(0, (2.2, 2.2)), zorder=3)
-        text(ax, x, 82.0, label, size=6.0, color=C["ink"],
-             weight="bold", ha="center")
-    arrow(ax, (x0 + 1.0, 70.5), (x1 - 0.4, 70.5),
-          color=C["muted"], lw=0.6, scale=6)
+    label(ax, xtau, 70.2, r"$\tau$", size=5.8,
+          color=C["ink"], weight="bold", ha="center")
+    label(ax, xkappa, 70.2, r"$\kappa$", size=5.8,
+          color=C["ink"], weight="bold", ha="center")
+    arrow(ax, (x0 + 1.0, 68.4), (x1 - 0.4, 68.4), C["muted"], lw=0.65)
 
-    pipeline_card(
-        ax, 2.4, "SWITCHED PLANT", "01", C["teal"], C["pale_teal"],
-        r"$\dot{x}=f_q(x,z,u)$",
-        [r"$0=g_q(x,z,u)$", "load input or branch mode changes",
-         "differential and algebraic states"],
-    )
-    pipeline_card(
-        ax, 26.0, "ELECTRICAL MAP", "02", C["blue"], C["pale_blue"],
-        r"$h_k=H_q(x,z,u)$",
-        ["V phasors at PMU buses", "oriented I at declared ends",
-         "terminal assignment is fixed"],
-    )
-    pipeline_card(
-        ax, 49.6, "CAUSAL FILTER", "03", C["purple"], C["pale_purple"],
-        r"$\eta_k=F_M(\eta_{k-1},h_k)$",
-        ["phase history is carried forward", "phase evolution yields $f$",
-         "filter history yields ROCOF"],
-        eq_size=6.5,
-    )
-    pipeline_card(
-        ax, 73.2, "REPORT TO INFERENCE", "04", C["green"], C["pale_green"],
-        r"$y_k=G_M(\eta_k,h_k)+b+\varepsilon_k$",
-        ["8 PMUs  ·  30 reports/s", "47 causal coordinates"],
-        eq_size=6.0,
-    )
-    for xa, xb, col in [
-        (23.9, 25.8, C["teal"]),
-        (47.5, 49.4, C["blue"]),
-        (71.1, 73.0, C["purple"]),
+    stage(ax, 2.6, "SWITCHED PLANT", C["teal"], C["pale_teal"],
+          (r"$\dot{x}=f_q(x,z,u)$", r"$0=g_q(x,z,u)$"),
+          "differential state and network equations")
+    stage(ax, 35.4, "ELECTRICAL MAP", C["blue"], C["pale_blue"],
+          r"$h_k=H_q(x,z,u)$",
+          "bus-voltage phasors · oriented terminal currents")
+    stage(ax, 68.2, "CAUSAL PMU REPORT", C["purple"], C["pale_purple"],
+          r"$\eta_k=F_M(\eta_{k-1},h_k)$",
+          "phasor, frequency and ROCOF channels",
+          extra=r"$y_k\in\mathbb{R}^{47}$")
+    for xa, xb, color in [
+        (32.0, 35.2, C["teal"]),
+        (64.8, 68.0, C["blue"]),
     ]:
-        arrow(ax, (xa, 52.0), (xb, 52.0), color=col, lw=1.15, scale=8)
+        arrow(ax, (xa, 52.2), (xb, 52.2), color)
 
-    # The groups contain 16 voltage, 15 current, and 16 frequency/ROCOF
-    # coordinates. The bar represents report channels, not sensor counts.
-    bx, by, bw, bh = 74.4, 40.0, 19.0, 3.5
-    groups = [
-        (16, "V · 16", C["blue"]),
-        (15, "I · 15", C["orange"]),
-        (16, "f/R · 16", C["purple"]),
-    ]
-    gap = 0.42
-    usable = bw - 2 * gap
-    widths = [usable * n / 47 for n, _, _ in groups]
-    cursor = bx
-    for i, ((_, label, color), width) in enumerate(zip(groups, widths)):
-        rounded(ax, (cursor, by), width, bh, edge=color, face=color,
-                lw=0, radius=0.8)
-        text(ax, cursor + width / 2, by + bh / 2, label, size=4.6,
-             color=C["white"], weight="bold", ha="center")
-        cursor += width + (gap if i < 2 else 0)
-
-    text(ax, 2.4, 36.0, "AT RESTORATION, THE OPERATOR RESETS; MEMORY DOES NOT",
-         size=6.0, color=C["ink"], weight="bold")
-    state_cards = [
-        (2.4, 22.4, 32.0, 10.8, "DYNAMIC STATE  $x$", C["teal"], C["pale_teal"],
-         r"$x(\kappa^+)=x(\kappa^-)$",
-         "machine and control response continues"),
-        (35.5, 22.4, 32.0, 10.8, "NETWORK STATE  $z$", C["blue"], C["pale_blue"],
-         r"$g_{q_0}(x,z,u_0)=0$ is solved again",
-         "voltages and terminal currents are recomputed"),
-        (68.6, 22.4, 29.0, 10.8, r"FILTER STATE  $\eta$", C["purple"], C["pale_purple"],
-         r"$\eta$ carries phase history forward",
-         "post-restoration reports retain the transient"),
-    ]
-    for x, y, w, h, title, color, face, eq, desc in state_cards:
-        rounded(ax, (x, y), w, h, edge=C["rule"], face=face,
-                lw=0.65, radius=1.0)
-        text(ax, x + 1.0, y + h - 2.5, title, size=6.0,
-             color=color, weight="bold")
-        text(ax, x + 1.0, y + 5.2, eq, size=6.3,
-             color=C["ink"], weight="medium")
-        text(ax, x + 1.0, y + 2.2, desc, size=5.6, color=C["muted"])
-
-    ax.plot([2.4, 97.6], [20.8, 20.8], color=C["rule"], lw=0.65, zorder=1)
-    text(ax, 2.4, 19.0, "INFERENCE INPUT", size=5.6, color=C["green"],
-         weight="bold")
-    text(ax, 16.0, 19.0,
-         r"$y_{1:k}$ only  ·  no true source, switch time, solver state, or raw waveform",
-         size=5.8, color=C["ink"])
-    text(ax, 2.4, 14.2,
-         "47 coordinates: 8 |V| + 8 angle(V) + 8 |I| + 7 angle(I) + 8 f + 8 ROCOF.",
-         size=5.5, color=C["muted"])
-    text(ax, 2.4, 10.5,
-         "Phase-A phasors are exported; B/C phases are reconstructed. Raw waveforms and harmonics are not observed.",
-         size=5.5, color=C["muted"])
+    # A single restoration statement replaces the previous row of explanatory
+    # cards; detailed measurement assumptions remain in the adjacent text.
+    box(ax, 2.6, 15.0, 94.8, 15.0,
+        edge=C["rule"], face=C["pale_gray"], lw=0.65, radius=1.0)
+    label(ax, 4.0, 25.8,
+          "RESTORATION RETURNS THE OPERATOR, NOT THE RESPONSE",
+          size=6.1, color=C["ink"], weight="bold")
+    label(ax, 50.0, 20.0,
+          r"$u,q$ return to base   ·   $x,\eta$ persist   ·   $z$ and terminal $I$ are recomputed",
+          size=7.0, color=C["ink"], weight="medium", ha="center")
+    label(ax, 2.8, 9.1,
+          r"At report $k$, inference receives $y_{1:k}$; event truth and raw waveforms are not inputs.",
+          size=5.8, color=C["muted"])
     return fig
 
 
 if __name__ == "__main__":
     OUT.mkdir(parents=True, exist_ok=True)
     fig = draw()
-    fig.savefig(OUT / "physics_measurement_chain.pdf", bbox_inches="tight",
-                pad_inches=0.03)
+    fig.savefig(OUT / "physics_measurement_chain.pdf",
+                bbox_inches="tight", pad_inches=0.035)
     fig.savefig(OUT / "physics_measurement_chain.png", dpi=300,
-                bbox_inches="tight", pad_inches=0.03, facecolor="white")
+                bbox_inches="tight", pad_inches=0.035, facecolor="white")
     plt.close(fig)
-    print("Built the physical event to causal PMU report figure.")
+    print("Built the compact physical-to-PMU schematic.")

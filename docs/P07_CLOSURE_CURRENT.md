@@ -19,13 +19,15 @@ El sucesor se encuentra en **experiments/PAPER_RECOVERY_C03** del repositorio ci
 
 La revisión visual del 12 de noviembre conserva en la Figura~1 el problema,
 el flujo de inferencia y el límite de alcance en una composición de tres
-paneles. La Figura~4 fue rediseñada para hacer explícitos el reloj alternativo
-de carga/línea, la cadena DAE--phasor--filtro causal--reporte y la persistencia
-de $x$, $z$ y $\eta$ tras la restauración; también delimita las 47 coordenadas
-y la información que recibe la inferencia. La Figura~7 visualiza la
-comparación C02 desde el resultado con hash verificado. El artículo recompila
-en 19 páginas; las 16 huellas protegidas pasan, y las figuras de eventos y el
-unifilar IEEE-39 permanecen en las páginas 5 y 6. C03 todavía no se incorpora
-como resultado.
+paneles. La Figura~1(b) se redujo a la entrada común, las dos historias
+competidoras, un predictor compartido y la salida. La Figura~4 ahora separa
+el reloj de intervención, la cadena física/de medida y una sola nota de
+restauración; muestra las 47 coordenadas y delimita qué recibe la inferencia.
+Para la composición se revisaron el flujo secuencial SOGI-CDSC y la arquitectura
+de dos niveles de estimación nodal, sin copiar sus figuras ni añadir citas de
+método por motivos estéticos. La Figura~7 visualiza C02 desde el resultado con
+hash verificado. El artículo recompila en 19 páginas; las 16 huellas
+protegidas pasan, y las figuras de eventos y el unifilar IEEE-39 permanecen en
+las páginas 5 y 6. C03 todavía no se incorpora como resultado.
 
 Para el envío siguen pendientes la revisión posterior a C03, confirmación en el proyecto autenticado de Overleaf, aprobación de autores y [declaraciones](SUBMISSION_DECLARATIONS_PENDING.md). Consultar la [matriz de comparadores](P07_RELATED_EVIDENCE.md) para el alcance de la comparación con literatura.
