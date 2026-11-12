@@ -1,0 +1,47 @@
+\subsection{Recovery Uncertainty and Apparent Source Information}
+\label{app:recovery-information}
+
+A local Gaussian model explains why preserving a recovery mean alone
+can overstate confidence in a new source. Suppose, conditionally on an
+earlier history,
+\[
+ r=Ox+sa+\epsilon,\qquad
+ x\sim\mathcal N(0,P),\quad\epsilon\sim\mathcal N(0,R),
+\]
+where $x$ and $\epsilon$ are independent and $P,R$ are positive definite.
+Here $R$ excludes the initial-state uncertainty represented by $P$.
+Marginalizing that state gives $\Sigma(P)=R+OPO^\top$.
+For a fixed local source direction $s$, Woodbury's identity gives
+\begin{align}
+ \mathcal J(P)&=s^\top\Sigma(P)^{-1}s\nonumber\\
+ &=s^\top R^{-1}s
+ -b^\top(P^{-1}+O^\top R^{-1}O)^{-1}b.
+\end{align}
+Here $b=O^\top R^{-1}s$. The nonnegative subtracted term measures how much of the apparent
+source information can be explained by uncertain recovery coordinates.
+If $P_2\succeq P_1$, then
+$\mathcal J(P_2)\le\mathcal J(P_1)$ for this fixed direction and noise
+law. This standard Gaussian identity explains a possible confidence
+error; it does not prove that a larger covariance improves attribution.
+Likelihood normalization, competing sources and false alarms still matter.
+
+This decomposition is a separate explanatory model. The preceding channel
+diagnostic already uses a covariance induced by the complete null
+innovation model. Adding the bank's state covariance to it again would
+count the same predictive uncertainty twice. Likewise, an uncertainty
+already marginalized in $\Sigma$ must not also be fitted as a free
+recovery direction without redefining the statistical model. The
+implemented state--severity correlations are specified in
+Section~\ref{app:conditional-moments}; independence is not assumed for
+those stored posterior variables.
+
+Port-Hamiltonian formulations provide a physical interpretation of
+network interconnection and energy balance \cite{fiaz2013port}.
+Their reduced swing-model energy is not automatically an energy function
+for the present lossy DAE with exciters and governors. Similarly, the
+input-change versus topology-change distinction is exact only within
+its stated model: a finite impedance-load change can alter algebraic
+admittance and the local linearization. The implemented load direction
+is an affine approximation of that change. Energy residuals and
+reconstructed hidden voltages are therefore not appended as independent
+likelihood factors to the PMU reports that produced them.

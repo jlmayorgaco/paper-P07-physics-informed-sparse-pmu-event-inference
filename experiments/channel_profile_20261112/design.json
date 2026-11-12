@@ -1,0 +1,16 @@
+{
+  "status": "fixed_before_successor_calculation",
+  "question": "Does the nominal current contribution survive fitting rival load severity?",
+  "source": "../channel_information_20261112/input_snapshot.npz",
+  "snapshot_sha256": "6102a7a39ee22c0080b4ec0820ef4cf50ece9f77910bd551189fbf9b03fc8140",
+  "horizons_reports": [3, 15, 30],
+  "true_load_amplitude": 0.1,
+  "rival_load_interval": [-0.2, 0.2],
+  "line_severity": "fixed full opening, never rescaled",
+  "channels": ["V", "VI", "all"],
+  "covariance": "same common quiet-null temporal covariance as predecessor; no extra state covariance appended",
+  "initial_state": "fixed zero deviation, known onset",
+  "sources": "all 18 nominal catalogue entries, all 17 distinct rivals; no null in source separation",
+  "inference": "deterministic bounded profiling, no amplitude prior/evidence/threshold decisions",
+  "exclusions": "no TEST, no detector outcomes, no recovered-state or plant-transfer claim"
+}

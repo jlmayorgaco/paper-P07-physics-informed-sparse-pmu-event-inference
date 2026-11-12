@@ -64,15 +64,15 @@ nearest competitor to change; the second holds the compared pair fixed.
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=.97\textwidth]{figures/generated/channel_information.pdf}
+\includegraphics[width=.97\textwidth]{figures/generated/channel_profile_information.pdf}
 \caption{Terminal-current information under a common nominal covariance
 at 1\,s. Blue denotes load changes and orange line openings.
 (a) Minimum fixed-amplitude pairwise separation using voltage alone
 (open circles) or voltage and current (filled circles); the minimizing
-competitor may differ. (b) Conditional current fraction
-$100Q_{I\mid V}/Q_{VI}$ for the nearest competitor selected using V+I.
-Onset, initial state and amplitudes are fixed in both panels; these
-values do not measure detector performance.}
+competitor may differ. (b) Rival load amplitudes are fitted over
+$[-0.2,0.2]$, while line openings retain their fixed operators.
+Onset, initial state and true source amplitudes are fixed in both
+panels; these values do not measure detector performance.}
 \label{fig:channel-information}
 \end{figure*}
 
@@ -85,6 +85,41 @@ the conditional decomposition agrees to $1.4\times10^{-11}$.
 All nested-channel distances are nondecreasing. The source package
 contains the compact operator snapshot, channel maps, checksums,
 calculation and figure-generation scripts.
+
+\paragraph{Allowing a rival to fit severity.}
+For a load rival with mean $\mu_j(b)=o_j+s_jb$, set
+$d=\mu_i-o_j$. Under the same common covariance, its best bounded fit is
+\begin{equation}
+ b^*=\operatorname{clip}_{[-0.2,0.2]}
+ \frac{s_j^\top\Sigma^{-1}d}{s_j^\top\Sigma^{-1}s_j},
+ \qquad s_j\ne0.
+\end{equation}
+The profiled separation is
+$\widetilde Q_{i\mid j}=\tfrac12\|d-s_jb^*\|_{\Sigma^{-1}}^2$.
+Line rivals retain their complete opening trajectories, with no fitted
+amplitude. This is deterministic profiling, not integration of the
+truncated severity prior used by the detector.
+
+For each common feasible amplitude $b$, the conditional decomposition
+gives $Q_{VI}(b)=Q_V(b)+Q_{I\mid V}(b)\ge Q_V(b)$. Hence
+$\min_bQ_{VI}(b)\ge\min_bQ_V(b)$. This does not imply that the two
+separately minimized terms add to the joint minimum: both must use the
+same amplitude. The inequality also holds after minimizing over the
+same rival catalog, although the nearest rival may change.
+
+We repeated all source comparisons with bounded rival load severity,
+keeping true load changes at 10\% and the same covariance and horizons.
+Every analytic load fit agreed with an independent scalar numerical
+optimizer to relative error below $10^{-12}$. At 1\,s, the ratio of
+minimum V+I to V separation has median $\ProfileChannelGainMedian$
+and range $\ProfileChannelGainMin$--$\ProfileChannelGainMax$.
+With V+I, \ProfileChannelNearestChanges{} sources change their nearest
+rival after fitting severity. The bus-31 source retains only
+\ProfileChannelBusThirtyOneRetained\% of its fixed-amplitude minimum
+separation: its nearest rival changes from bus~26 to bus~7.
+Thus a large distance between fixed responses can conceal ambiguity
+between source and magnitude. These nominal comparisons do not establish
+how often that ambiguity causes an attribution error.
 
 \paragraph{Interpretation.}
 The reference covariance is fixed across sources; candidate-specific

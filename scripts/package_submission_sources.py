@@ -31,6 +31,7 @@ def main():
                  'generated/comparator_lineage.json', 'scripts/verify_history_partition.py', 'scripts/build_recovery_comparison.py',
                  'scripts/verify_recovery_distribution.py', 'generated/recovery_distribution_checks.json',
                  'scripts/build_channel_information_figure.py',
+                 'scripts/build_channel_profile_figure.py',
                  'scripts/build_recovery_overview.py', 'scripts/build_physics_measurement_chain.py',
                  'figures/recovery_overview/main.tex', 'figures/physical_report/main.tex',
                  'generated/revision_math_20261103/checks.json',
@@ -43,6 +44,10 @@ def main():
     diagnostic = ROOT / 'experiments/channel_information_20261112'
     sources.update(p for p in diagnostic.glob('*')
                    if p.is_file() and p.suffix in {'.py', '.json', '.csv', '.md', '.npz'})
+    for folder in ('channel_profile_20261112', 'hbg_verification_20261112'):
+        sources.update(p for p in (ROOT / 'experiments' / folder).glob('*')
+                       if p.is_file() and p.suffix in {'.py', '.json', '.csv', '.md', '.txt'})
+    sources.add(ROOT / 'docs/HBG_REPRODUCTION_AUDIT_20261112.md')
     manifest = {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(sources)}
     instructions = '''P07 article and supplement source snapshot
 
@@ -63,6 +68,11 @@ The deterministic terminal-current diagnostic reproduces from its compact
 operator snapshot, without the scientific repository or campaign files:
 python experiments/channel_information_20261112/run_channel_diagnostic.py
 python scripts/build_channel_information_figure.py
+The bounded-rival severity successor uses the same nominal snapshot:
+python experiments/channel_profile_20261112/run.py
+python scripts/build_channel_profile_figure.py
+Independent illustrative Gaussian/energy checks (not IEEE-39 outcomes):
+python experiments/hbg_verification_20261112/verify_extended.py
 See that experiment's README for dependencies and the fixed-mean scope.
 The PDF copies are supplied separately in output/pdf in the working repository.
 

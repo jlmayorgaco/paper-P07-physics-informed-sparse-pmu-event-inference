@@ -9,8 +9,9 @@
 | B01 | Tres brazos empatan en 72/72, con siete extras cada uno | La selección previa eligió alpha = 0; la corrección aprendida fue nula |
 | C02 | Banco 99/108 y 8 extras; GLR 72/108 y 85; ExtraTrees 22/108 y 0 | Presupuesto común en CAL, 18 padres con eventos, 24 normales; contraste de procedimientos |
 | Segunda planta histórica | Exploración con comparadores estáticos | Primer reporte mal etiquetado; el banco dinámico no se ejecutó |
-| C03 | Sucesor con separaciones cortas y dos plantas | El 12 de noviembre a las 17:59 (Bogotá) seguía activa CAL de F01: 55 de 72 registros terminados y el siguiente en proceso. Supervisor 32480 y trabajador 28704 activos. Aún no existen `CAL_SELECTION.json`, `TEST_RESULTS.json` ni `TEST_EVALUATION_LOCK.json`. |
+| C03 | Sucesor con separaciones cortas y dos plantas | El 12 de noviembre a las 18:20 (Bogotá) seguía activa CAL de F01: 56 de 72 registros terminados. La campaña continúa; aún no hay evaluación TEST completa para importar. |
 | Diagnóstico de canales | Con el predictor nominal, la separación mínima V+I/V a 1 s tiene mediana 1,35 y rango 1,03–8,41 | Medias y amplitudes fijas, una covarianza nula común; no cobertura, FAR ni ganancia del detector |
+| Sucesor de separación con magnitud rival ajustable | Mediana V+I/V de 1,53; cuatro fuentes cambian de rival más cercano | Perfilado determinista en [-0,2;0,2], líneas sin reescalado; no evidencia marginal ni evaluación del detector |
 
 Las cifras C02 se regeneran con **python scripts/build_recovery_comparison.py**, sin acceso a las corridas ni a la verdad de TEST. El agregado, sello y cierre de evaluación están en **generated/frozen/recovery_c02_20261105**. C02 se abrió una vez en el repositorio científico; la importación no evalúa de nuevo.
 
@@ -79,3 +80,12 @@ ahora diferencia con claridad separación frente al nulo y al competidor.
 Artículo: 19 páginas. Suplemento: 30 páginas. La interacción entre memoria de
 recuperación e información de corrientes sigue siendo una hipótesis para un
 sucesor, no una contribución empírica ya demostrada.
+
+La [integración de las nuevas derivaciones](HBG_INTEGRATION_DECISIONS_20261112.md)
+añade el perfilado de severidad rival y el vínculo teórico con incertidumbre
+de recuperación. El ejemplo hamiltoniano de cuatro buses se reprodujo y
+pasó controles numéricos adicionales; su alcance sigue siendo ilustrativo.
+No se añade un término energético independiente a la likelihood ni se cambia
+el prior del detector. La figura del suplemento compara ahora magnitudes
+fijas y ajustadas sobre los mismos operadores. Esta versión conserva
+19 páginas de artículo y tiene 31 de suplemento. C03 permanece intacto.

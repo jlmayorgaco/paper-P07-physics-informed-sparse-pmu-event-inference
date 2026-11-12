@@ -51,6 +51,7 @@ try {
     # Revision 2026-11-04: theory figures/macros, then strip internal jargon from every reader-facing source.
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_theory_figures.py')
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_channel_information_figure.py')
+    Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_channel_profile_figure.py')
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_recovery_overview.py')
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_integrity_figure.py')
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/import_allevents.py')

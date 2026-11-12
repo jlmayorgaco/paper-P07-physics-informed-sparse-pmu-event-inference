@@ -19,6 +19,14 @@ The [unifying research question](docs/P07_UNIFIED_RESEARCH_QUESTION_20261112.md)
 states which interaction between recovery uncertainty and current information
 still needs an independent experiment.
 
+The [HBG idea audit and integration](docs/HBG_INTEGRATION_DECISIONS_20261112.md)
+adds bounded rival-severity profiling to that diagnostic. Currents retain a
+median 1.53-fold nominal separation gain after the rival load magnitude is
+fitted, while some source ambiguities become much stronger. The supplement
+connects this geometry to recovery uncertainty without adding a second copy
+of the state covariance or claiming a new Hamiltonian detector. The current
+article and supplement have 19 and 31 pages.
+
 **Revision 4 November 2026.** Repositioned as switched-DAE change detection and isolation, with a new physics-derived detectability section (Willsky--Jones signature information, minimum detectable change, cost of forgetting the state), a noise-stress test with unchanged code (N01) and a measured real-time rate for the nominal bank. See the [verified audit and plan](docs/review_chatgpt_20261104/PLAN_SUBMIT_READY.md) and the [response matrix](docs/review_chatgpt_20261104/RESPONSE_MATRIX.md). Pre-revision sources are kept in `archive/pre_revision_20261104/`.
 
 

@@ -1,6 +1,9 @@
 *.pdf -diff
 generated/frozen/recovery_c02_20261105/*.json -text whitespace=cr-at-eol
 experiments/channel_information_20261112/** -text whitespace=cr-at-eol
+experiments/channel_profile_20261112/** -text whitespace=cr-at-eol
+experiments/hbg_verification_20261112/** -text -whitespace
+docs/HBG_REPRODUCTION_AUDIT_20261112.md -text whitespace=cr-at-eol
 experiments/external_physics_terminal_successor_20261112/** -text whitespace=cr-at-eol
 # Preserve supplied source bytes, including original whitespace, for hash audits.
 experiments/external_physics_terminal_successor_20261112/matpower_case39_source.m -whitespace
