@@ -17,6 +17,11 @@ La versión de revisión separa diagnósticos de firma y probabilidad de detecci
 
 El sucesor se encuentra en **experiments/PAPER_RECOVERY_C03** del repositorio científico. El informe **run/TEST_RESULTS.json** solo se considera evidencia después de **run/TEST_EVALUATION_LOCK.json** con estado **COMPLETE_SINGLE_USE** y el hash de resultado correspondiente. Antes de incorporar resultados, revisar por separado el efecto de la fusión y el reset, el costo en alarmas y las fallas de admisión.
 
-La revisión visual del 11 de noviembre incorpora dos diagramas vectoriales en la introducción: la superposición de una recuperación con una nueva intervención y el flujo de inferencia con ocho PMU. La figura de topología IEEE-39 y la figura protegida de familias de eventos siguen presentes y verificadas.
+La revisión visual del 12 de noviembre conserva en la Figura~1 el problema,
+el flujo de inferencia y el límite de alcance en una composición de tres
+paneles. La Figura~4 traza la intervención física hasta las 47 coordenadas
+del reporte PMU; la Figura~7 visualiza la comparación C02 desde el resultado
+con hash verificado. La figura de eventos y el unifilar IEEE-39 siguen
+presentes, protegidos y verificados. C03 todavía no se incorpora como resultado.
 
 Para el envío siguen pendientes la revisión posterior a C03, confirmación en el proyecto autenticado de Overleaf, aprobación de autores y [declaraciones](SUBMISSION_DECLARATIONS_PENDING.md). Consultar la [matriz de comparadores](P07_RELATED_EVIDENCE.md) para el alcance de la comparación con literatura.

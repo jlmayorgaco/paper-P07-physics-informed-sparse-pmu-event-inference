@@ -61,6 +61,18 @@ The physical model is
  \eta_k&=F_M(\eta_{k-1},h_k;\theta_M),\nonumber\\
  y_k&=G_M(\eta_k,h_k;\theta_M)+b+\varepsilon_k.\label{eq:narrative-measurement}
 \end{align}
+Figure~\ref{fig:physical-measurement-chain} maps these physical and
+measurement operations to the report consumed by inference.
+\begin{figure*}[t]\centering
+\includegraphics[width=.99\textwidth]{figures/generated/physics_measurement_chain.pdf}
+\caption{Causal path from a load/line intervention to the 47-coordinate PMU
+report. A load changes its $P/Q$ input; a line event switches the branch
+operator. Differential state $x$ continues across supported switches while
+algebraic state $z$ is solved for the new mode. The phase-history filter
+generates the frequency and ROCOF channels. P07 starts from reported
+phasors; exported B/C phases are reconstructed from phase A, and raw
+waveforms and harmonic distortion are not observed.}
+\label{fig:physical-measurement-chain}\end{figure*}
 Here $x$ contains machine and control dynamics, $z$ the algebraic network
 variables, $q$ the topology/intervention mode, and $\theta_M$ the measurement
 convention. $H_q$ selects electrical phasors; $\eta_k$ retains the causal
