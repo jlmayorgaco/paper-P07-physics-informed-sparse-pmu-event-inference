@@ -14,12 +14,14 @@ and the next onset was 3--8\,s after physical restoration.
 \begin{figure*}[t]\centering
 \includegraphics[width=.99\textwidth]{figures/generated/recovery_comparison_c02.pdf}
 \caption{Coverage and alarm cost on held-out sequences. (a) Correct family
-and source reported before OFF, out of 108 interventions. (b) Unmatched alarms
-on event records, with rates per monitored event-hour. (c) History-bank coverage minus each comparator, computed with 10,000 paired resamples of the
-18 event parents. Positive values favor the bank. Thresholds were selected
-on separate calibration data under a target of one normal alarm/h. All three
-methods emitted zero alarms in 3.92 normal hours each; the one-sided 95\%
-Poisson upper bound is 0.76/h.}
+and source before OFF, out of 108 interventions. (b) Unmatched alarms over
+0.54 monitored event-hours. (c,d) History bank minus each comparator, with
+95\% intervals from 10,000 paired resamples of 18 event parents. Positive
+coverage differences and negative alarm-rate differences favor the bank.
+The bank improves both outcomes over GLR but trades more extras for higher
+coverage than ExtraTrees. Thresholds were selected on separate calibration
+data under a target of one normal alarm/h; normal exposure and its Poisson
+upper bound are shown separately.}
 \label{fig:recovery-c02}\end{figure*}
 
 Figure~\ref{fig:recovery-c02} shows a \RecGlrDiff{} percentage

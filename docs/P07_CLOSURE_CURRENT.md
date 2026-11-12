@@ -29,4 +29,9 @@ aproximaciones. Véase [el registro de revisión](VISUAL_NARRATIVE_REVISION_2026
 El artículo conserva 19 páginas y las figuras protegidas en las páginas 5 y 6.
 Esta edición no reevalúa C03 ni verifica la compilación autenticada en Overleaf.
 
+El acabado posterior de las figuras 1, 4 y 7 unifica el reloj y el flujo de
+hipótesis en TikZ, explicita la formación de las medidas y añade el intervalo
+pareado del costo en alarmas. La [inspección visual documentada](FIGURES_1_4_7_POLISH_20261112.md)
+incluye los archivos vectoriales y las páginas finales 2, 7 y 13.
+
 Para el envío siguen pendientes la revisión posterior a C03, confirmación en el proyecto autenticado de Overleaf, aprobación de autores y [declaraciones](SUBMISSION_DECLARATIONS_PENDING.md). Consultar la [matriz de comparadores](P07_RELATED_EVIDENCE.md) para el alcance de la comparación con literatura.
