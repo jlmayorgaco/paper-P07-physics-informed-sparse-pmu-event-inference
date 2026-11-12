@@ -9,14 +9,18 @@ earlier event with forcing from a new source
 
 \begin{figure*}[t]\centering
 \includegraphics[width=.485\textwidth]{figures/generated/problem_recovery_timeline.pdf}\hfill
-\includegraphics[width=.485\textwidth]{figures/generated/recovery_method_logic.pdf}
-\caption{Problem and method overview. (a) Event B begins while the response
+\includegraphics[width=.485\textwidth]{figures/generated/recovery_method_logic.pdf}\\[-1pt]
+\includegraphics[width=.99\textwidth]{figures/generated/problem_scope_strip.pdf}
+\caption{Problem, method and scope overview. (a) Event B begins while the response
 to restored event A remains visible in the sparse-PMU trace. Resetting at OFF
 can retrigger an alarm; waiting for settling can hide B. (b) The same report is
 scored under five network models and competing physical histories. The bank
 preserves state through OFF, integrates load severity, switches line models,
 and reports active mass $M_c$ separately from cause mass $\Gamma_c$. Traces
-and times are schematic.}
+and times are schematic. (c) The front-end and state/stability tasks from
+related work are distinct from P07's successive-event attribution. P07 starts
+from reported phasors and does not validate PMU front-end accuracy, an online
+applicability gate, or grid-forming control dynamics.}
 \label{fig:problem-method}\end{figure*}
 
 Physical restoration is not electrical recovery. Resetting state at OFF can

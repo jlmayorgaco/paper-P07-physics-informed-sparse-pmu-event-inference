@@ -111,6 +111,11 @@ hardware-in-the-loop interface. The two parity relations used in the
 supplement require no state estimator and are connected to the information
 available for physical attribution when a PMU is lost.
 
+The lower band of Fig.~\ref{fig:problem-method} summarizes this boundary:
+P07 consumes reported phasors and evaluates successive-event attribution,
+while measurement-estimator accuracy, online applicability gating and
+grid-forming controller dynamics remain outside its tested scope.
+
 \begin{table*}[t]\centering\small
 \caption{Closest inference formulations. Only the quickest-change detector
 of Chen \emph{et al.} and the two ExtraTrees adapters were executed on the
