@@ -1,0 +1,45 @@
+{
+  "input_manifest": {
+    "zip_sha256": "c19f7ed78d3b60bf05e50c6319ba6d196a6b1a43f9141c43b0a6188d1288f048",
+    "files": {
+      "run_experiment.py": "8ffb78d321453d86034ad5e8c992549232593f4081bcfd284f48990f9dc33a51",
+      "INFORME_TECNICO_ES.md": "4745105f338d1135de0e527a1cbb371f8e2b4bf8e0bb5d48f366b3e87ddbf66b",
+      "case39_data.py": "e49d31f90bebdc0edcb3afc5061c68ca5be58ba55c31105e8d5dd4985ada2793",
+      "README.md": "1661b1646e4b0cfb85c5f1bbe6cdb21056f755efef1efdb8caa5f536c6402e0f",
+      "graph_dynamics.py": "7d3118ab8bfbc377b5ddf513a53844ddabb696e8bf3a3c835ae15e8fb10497ec",
+      "tests.py": "d9812b3988480fe1c471a5616d8493ab8c9172e4010a7376a55cad97efd8747b",
+      "results/noise_accuracy.csv": "e96ae15b5271ce2be924d7e1038ce4eaa44c2eda0fd4166d5a3732990d0a3ab7",
+      "results/synthetic_temporal_signatures.npz": "a82bfdcf4c52b69bffca3a1c8601bd27fa85caa7af44751265ff3f84a48b328f",
+      "results/temporal_summary.json": "778e4f7664dcc3a63df5a2509ffb14bd7203ccce281ce9105ab19c408c205689",
+      "results/temporal_V_terminal-flow-proxy.png": "8243c62a0760ba0f121a3eb59835f6e827a70ba2ad8e1af29d2e112cc262d126",
+      "results/temporal_V_flow_frequency_ROCOF.png": "ffdfe23f131d1c934f7025fa405a592a29e34e3570a7c6cb2005efeb80962c7f",
+      "results/signature_similarity.png": "ec20c0b9dc26f4a9c11deb358d9647e15d90f8672b54fccbda58b066fdae439e",
+      "results/summary.json": "a58bf3ba9b17d13221d3392bb5c477e4b3bb921c2e94bee7c5945c6f90af1121",
+      "results/nearest_competitors.csv": "254860a2a30dbe50847a1263a5c04ea9dcc5b19409399311a29deb9dc28e8709",
+      "results/recovery_transients.png": "d589ed376a49ae7d998bc4bf30e25414119639535d3883f4c773dd2ef3a94057",
+      "results/temporal_V-angle.png": "e25121e0e794c8af8e04ec672dc65355dff49720235822df58454620c191cd09",
+      "results/catalog_signatures.npz": "da80e6936e822034d30e5596382aecc2953206955b8e177ffc425546ba2457db",
+      "results/hidden_bus_impact.png": "c7087c0c61863f9378c6541de23bf55ed12e523328dd41b36f6f3f04e7bce115"
+    }
+  },
+  "static_rounded_accuracies_identical": true,
+  "static_rank_reproduced": 14,
+  "temporal_summary_max_abs_difference": 4.440892098500626e-16,
+  "packaged_tests_passed": 4,
+  "matpower_checked_url": "https://raw.githubusercontent.com/MATPOWER/matpower/master/data/case39.m",
+  "matpower_download_sha256": "e3e44af0f0112fdd3ebd2c88210b2238698f8215d30ad0c9e628eee9e1fa0c6b",
+  "matpower_branch_max_abs_difference": 0.0,
+  "matpower_selected_bus_max_abs_difference": 0.0,
+  "from_terminal_at_opposite_end_pmus": [
+    2,
+    5,
+    6,
+    19,
+    22,
+    29,
+    39
+  ],
+  "scientific_status": "EXPLORATORY_EXTERNAL_PROTOTYPES_NOT_P07_VALIDATION",
+  "C03_modified": false,
+  "test_truth_read": false
+}

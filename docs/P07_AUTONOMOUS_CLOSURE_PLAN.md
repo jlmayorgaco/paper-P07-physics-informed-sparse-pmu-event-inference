@@ -91,6 +91,12 @@ Los agentes no hacen push, no envían mensajes a coautores ni abren RAW0002.
 
 ## Ampliaciones con presupuesto científico acotado
 
+La [auditoría de los prototipos físicos externos](EXTERNAL_PHYSICS_INTEGRATION_20261112.md)
+prioriza información incremental de corrientes y ambigüedad por pareja como
+diagnóstico sucesor. Sus cifras reproducidas siguen siendo exploratorias:
+se detectó selección del extremo FROM en siete PMU ubicadas en TO. No se
+incorporan a C03 ni al manuscrito como validación del banco.
+
 **Primero:** problema enumerable para comparar distribución exacta, media,
 media/covarianza y reset; distinguir predicción de atribución retrospectiva.
 Si se necesita un nuevo brazo de planta, congelar un sucesor separado. No llamar
