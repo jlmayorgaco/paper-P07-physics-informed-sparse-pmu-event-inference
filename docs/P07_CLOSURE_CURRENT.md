@@ -21,8 +21,11 @@ La revisión visual del 12 de noviembre conserva en la Figura~1 el problema,
 el flujo de inferencia y el límite de alcance en una composición de tres
 paneles. La Figura~1(b) se redujo a la entrada común, las dos historias
 competidoras, un predictor compartido y la salida. La Figura~4 ahora separa
-el reloj de intervención, la cadena física/de medida y una sola nota de
-restauración; muestra las 47 coordenadas y delimita qué recibe la inferencia.
+los operadores de carga/línea, las trazas ilustrativas antes y después de OFF,
+y el reporte PMU en tres paneles sin tarjetas: muestra que $x$ y $\eta$
+persisten, que $z$ e $I$ se vuelven a resolver y cómo se componen las 47
+coordenadas. La leyenda distingue el esquema de datos simulados y explicita el
+ángulo de corriente omitido en BUS39.
 Para la composición se revisaron el flujo secuencial SOGI-CDSC y la arquitectura
 de dos niveles de estimación nodal, sin copiar sus figuras ni añadir citas de
 método por motivos estéticos. La Figura~7 visualiza C02 desde el resultado con

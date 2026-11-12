@@ -65,11 +65,12 @@ Figure~\ref{fig:physical-measurement-chain} maps these physical and
 measurement operations to the report consumed by inference.
 \begin{figure*}[t]\centering
 \includegraphics[width=.99\textwidth]{figures/generated/physics_measurement_chain.pdf}
-\caption{Causal path from an intervention to the 47-coordinate PMU report.
-Loads modify $P/Q$; line events switch a branch. At supported switches, $x$
-persists while $z$ is re-solved; the phase-history filter supplies frequency
-and ROCOF. P07 receives reported phasors, with B/C reconstructed from phase A,
-not raw waveforms or harmonics.}
+\caption{Illustrative chain from load/line intervention to causal PMU report.
+At OFF, the operator returns to baseline while $x$ and phase-history $\eta$
+persist; algebraic voltages and currents are re-solved. Eight PMUs yield 47
+coordinates at 30 reports/s; BUS39 current angle is omitted. Symbols and traces
+are schematic. Phase B/C are reconstructed from A; raw waveforms and harmonics
+are not inference inputs.}
 \label{fig:physical-measurement-chain}\end{figure*}
 Here $x$ contains machine and control dynamics, $z$ the algebraic network
 variables, $q$ the topology/intervention mode, and $\theta_M$ the measurement
