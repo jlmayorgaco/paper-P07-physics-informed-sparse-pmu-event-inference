@@ -1,28 +1,27 @@
 """Physics-based measurement-integrity monitor evaluated on the competition record RAW0001.
 
-Integrity mechanisms of the SGSMA 2026 guide are separated from physical events
-without training, using three relations that every physical event of a
-balanced network must satisfy:
+Integrity mechanisms of the SGSMA 2026 guide are examined without training,
+using three checks with distinct scopes:
 
 1. Availability: the received-frame flag and finite values identify a missing
    PMU exactly (labels 5 and 6).
-2. Sequence parity: a balanced network produces no negative- or zero-sequence
-   voltage or current, whatever the physical intervention.  Per-phase
-   corruption violates this at one PMU.  Statistic: (|X2|^2+|X0|^2)/scale,
-   scale = prefix mean (first 90 reports), approximately Gamma(2,1)/2 under
-   independent per-phase noise; threshold from a per-report false-alarm
-   probability of 1e-9.  The corrupted phase is the phasor most aligned with
-   the zero-sequence residual.
-3. Network coupling: a balanced change of the positive-sequence voltage at PMU
-   p must appear at the other PMUs at least in the ratio c_p computed from the
-   network impedance matrix (scripts/integrity_coupling.py).  A change above
-   10 % at p with less than c_p/4 of it elsewhere is an integrity event.
+2. Sequence parity: ideal balanced phasors have no negative- or zero-sequence
+   voltage or current.  The check is sensitive to per-phase corruption, but
+   the ideal relation does not include report-window transients or estimator
+   imbalance.  Its threshold is a nominal single-statistic tail point; the
+   implemented report statistic takes the maximum of voltage and current.
+3. Network coupling: only the modeled single-bolted-fault set implies the
+   ratio c_p computed from the network impedance matrix
+   (scripts/integrity_coupling.py).  A change above 10 % at p with less than
+   c_p/4 of it elsewhere is flagged as inconsistent with that set, not with
+   all possible physical events.
 
-While the network shows a coupling-consistent disturbance (a fault), sequence
-parity is suspended, because phasor estimation during fast transients is not
-a balanced steady-state quantity.  Labels are used only for evaluation.  The prespecified threshold assumes
-Gaussian per-phase noise; a second, post hoc operating point inflates the
-noise variance by 2 because the record shows heavier tails.
+While the network shows a coupling-consistent disturbance (a modeled fault),
+sequence parity is suspended, because phasor estimation during fast transients
+is not a balanced steady-state quantity.  Labels are used only for evaluation.
+The prespecified threshold assumes Gaussian per-phase noise and known scale;
+the implementation estimates scale from a startup prefix.  A second, post hoc
+operating point doubles the threshold after inspection of the heavier tails.
 """
 from __future__ import annotations
 
@@ -37,7 +36,7 @@ RAW = ROOT.parent / "SGSMA26-Physics-Informed-AD/data/RAW0001"
 OUT = ROOT / "generated/revision_20261104"
 PMUS = [2, 5, 6, 10, 19, 22, 29, 39]
 PREFIX = 90
-PFA = 1e-9
+PFA = 1e-9          # nominal marginal tail probability for one statistic
 A = np.exp(2j * np.pi / 3)
 BIG = 0.10          # balanced excursion considered (fraction of nominal)
 MARGIN = 0.25       # fraction of the network coupling bound
@@ -181,5 +180,5 @@ def main(inflation: float = 1.0, tag: str = "") -> None:
 
 
 if __name__ == "__main__":
-    main()                                  # prespecified: Gaussian per-phase noise, P_FA = 1e-9
+    main()                                  # nominal single-statistic tail, Gaussian per-phase noise
     main(2.0, "_inflated")                  # post hoc: variance inflation 2 for heavier-than-Gaussian tails

@@ -35,9 +35,12 @@ D_{ij}=\tfrac12\big[&
 +\log(|\Sigma_j|/|\Sigma_i|)\big],\nonumber
 \end{align}
 where $d$ is the stacked report dimension. The covariance terms cancel
-when the covariances coincide. Optimizing severity on a deterministic
-signature, profiling it from noisy observations and integrating it
-under a prior are different operations.
+when the covariances coincide. Equation~\eqref{eq:signature-information}
+profiles severity on deterministic signatures using the candidate
+innovation covariance; it is not, in general, the full Gaussian KL
+divergence above. Optimizing a deterministic signature, profiling severity
+from noisy observations and integrating it under a prior are different
+operations.
 
 For an idealized comparison of one onset and source against the null,
 \begin{equation}\lambda^\star=\log99-\log\pi_c.\label{eq:alarm-evidence}\end{equation}
@@ -47,7 +50,7 @@ with $\Lambda_{i0}=a^2G_i/2$ and covariance scaled by $\alpha^2$, the
 corresponding reference amplitude at horizon $T$ is
 \begin{equation}
  a_{\mathrm{ref}}(\alpha,T)=\alpha\sqrt{2\lambda^\star/G_i(T)}.
- \label{eq:minimum-detectable}
+ \label{eq:reference-amplitude}
 \end{equation}
 This does not specify a detection probability or a threshold guarantee
 for the bank: unknown onset, competing paths, marginal likelihoods
@@ -85,7 +88,7 @@ under those conditions.
 
 \begin{figure*}[t]\centering
 \includegraphics[width=.97\textwidth]{figures/generated/theory_information.pdf}
-\caption{Retrospective signature diagnostics using the nominal switched-DAE operators. (A) Profiled signature energy after 1\,s against the no-intervention history (bars) and against the nearest competing source (vertical tick), for a 10\% load step or a line opening; the dashed line marks the idealized score reference $\lambda^\star$. (B) Reference load amplitude at 1\,s, \eqref{eq:minimum-detectable}, versus a uniform multiplier of the calibrated noise; gray lines are the other seven load buses.}
+\caption{Retrospective signature diagnostics using the nominal switched-DAE operators. (A) Profiled signature energy after 1\,s against the no-intervention history (bars) and against the nearest competing source (vertical tick), for a 10\% load step or a line opening; the dashed line marks the idealized score reference $\lambda^\star$. (B) Reference load amplitude at 1\,s, \eqref{eq:reference-amplitude}, versus a uniform multiplier of the calibrated noise; gray lines are the other seven load buses.}
 \label{fig:theory-information}\end{figure*}
 
 For a 10\% load step, the one-second nominal separation from the null

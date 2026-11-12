@@ -236,25 +236,22 @@ After confirmed episode closure, explicit histories are compressed into
 the retained state mean. Cause masses describe the current bank, not a
 permanent ledger of all past interventions.
 
-Writing the conditional active mass as $M_{\ell,c,k}$ yields
-\begin{align}
- \Delta M_{c,k}&=\sum_\ell w_{\ell,k}
-               (M_{\ell,c,k}-M_{\ell,c,k-1})\nonumber\\
- &\quad+\sum_\ell(w_{\ell,k}-w_{\ell,k-1})M_{\ell,c,k-1}.
- \label{eq:continuous-delta}
-\end{align}
-The first term is within-model evolution and the second network-model
-reweighting. Because of pruning and the steady-state covariances, $M$ and
-$\Gamma$ are approximate attribution weights, not calibrated
-probabilities.
+The implementation uses $M$ for active-event publication and $\Gamma$ for
+source diagnosis. Their update weights are approximate because of pruning
+and shared steady-state covariance approximations; they are not calibrated
+posterior probabilities. A descriptive algebraic decomposition of
+$\Delta M$ into within-model evolution and network-model reweighting is
+given in the supplement; it does not enter the estimator's decision rule.
 
 \subsection{Emit Separate Detection, Diagnosis and Restoration Messages}
 
 An alarm is published when the active mass $\sum_cM_{c,k}$ exceeds 0.99 for
-six consecutive reports; with a geometric change-time prior this is a
-Shiryaev-type posterior threshold \cite{shiryaev1963optimum}, and the
-six-report confirmation suppresses brief posterior excursions. OFF is
-published when the restoration mass exceeds 0.99 for 15 reports. The
+six consecutive reports. The rule has the structure of a Shiryaev
+change-time threshold under the geometric prior
+\cite{shiryaev1963optimum}, but pruning and covariance approximations make
+0.99 an operational threshold on approximate mass, not a calibrated
+posterior-probability guarantee. Six-report confirmation suppresses brief
+excursions. OFF is published when the restoration mass exceeds 0.99 for 15 reports. The
 diagnosis reports the family with the largest cause mass and its
 highest-mass source; episode-replacement rules handle a different source
 that begins before the previous episode closes. Every message records its
@@ -330,7 +327,7 @@ the switched operator for a line hypothesis.
 \item Correct the conditional states and severity distributions; update
 network weights and the retained history bank using the fixed rules.
 Preserve dynamic state and originating cause through restoration.
-\item Aggregate active mass $M$, cause mass $\Gamma$ and $\Delta M$.
+\item Aggregate active mass $M$ and cause mass $\Gamma$.
 Apply the fixed alarm, diagnosis and OFF-publication rules. Store emission
 time, estimated onset, family/source and the last report used.
 \end{enumerate}

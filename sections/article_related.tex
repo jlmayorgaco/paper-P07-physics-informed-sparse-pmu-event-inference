@@ -42,14 +42,36 @@ over a moving onset window \cite{warner2023highfidelity} and derive
 error/delay guarantees for an adaptive matrix CuSum
 \cite{warner2024matrix}. Trajectory sensitivities and Gaussian evidence
 have been combined for parameter inference in power-system DAEs
-\cite{nagi2022trajectory,albustami2026dae}. We use the same ingredients,
-DAE linearization, Gaussian evidence and onset search, to compute
-information-theoretic detectability of each catalog source and to test it
-against the attribution outcomes.
+\cite{nagi2022trajectory,albustami2026dae}. PMU-based nodal-inertia
+estimation extends this neighboring line of work to spatially resolved
+dynamic parameters under ambient and transient conditions
+\cite{brahma2026nodal}. These studies estimate states or parameters;
+they do not attribute successive load and line interventions. Here the
+DAE-derived signatures provide a profiled separation diagnostic at a
+supplied onset, which we compare retrospectively with attribution
+outcomes; it is not a general detectability guarantee.
+Le \emph{et al.} recently proposed a physics-informed graph neural
+operator that maps sparse, intermittent PMU windows to unmeasured rotor
+angle and speed trajectories, with swing equations in the decoder and a
+learned correction for model mismatch \cite{le2026sparsegno}. That
+preprint addresses dynamic state reconstruction; P07 instead identifies
+which intervention explains observations while an earlier response is
+still evolving.
 
 \subsection{Learned Diagnosis From Sparse Measurements}
 Learned and knowledge-driven representations identify PMU disturbances
 and assets \cite{pandey2020realtime,li2024knowledge,yildiz2024few}.
+For sparse-PMU transient-stability assessment, Wang \emph{et al.} combine
+dominant-bus selection with a bidirectional recurrent assessor and an
+online check of model applicability under system changes
+\cite{wang2023sparsepmutsa}. This is a useful precedent for monitoring
+whether a learned assessment remains valid, but its output is a stability
+assessment rather than a source attribution for successive physical
+events.
+Barati's gated-recurrent-unit model predicts disruptions from historical
+synchrophasor streams, a forecasting task distinct from assigning an
+observed intervention to a physical source during recovery
+\cite{barati2019faster}.
 SHRED reconstructs IEEE-39 dynamic states from a few PMUs
 \cite{pomarico2026shred}, and Dey \emph{et al.} localize distribution
 topology changes with hardware-in-the-loop validation
@@ -71,9 +93,23 @@ parity relations generalize this to dynamic systems
 outliers from excursions \cite{chatterjee2020robust}, utility data show
 missing, locked, quantized and time-shifted reports \cite{biswas2025quality},
 and attack identification characterizes which corrupted sensor sets remain
-distinguishable from system behavior \cite{pasqualetti2013attack}. We use
-two parity relations that require no state estimator and connect them to
-the information available for physical attribution when a PMU is lost.
+distinguishable from system behavior \cite{pasqualetti2013attack}. Recent
+P-class synchrophasor-estimation work optimizes front-end accuracy and
+latency under IEC/IEEE measurement requirements
+\cite{islam2026sogi,iec2018synchrophasor}; a review of PLL-based
+synchronization also relates front-end phase tracking to PMU applications
+in distributed generation \cite{adetayo2026pllpmu}. End-to-end PMU tests
+under fault transients quantify how estimator errors affect a downstream
+application \cite{becejac2019pmu}. Multisnapshot state estimation models
+time-correlated instrument-transformer errors together with line-parameter
+uncertainty \cite{dantona2026multisnapshot}; IEC~61850-9-2 co-simulation
+has also been used to assess OpenPMU and virtual-PMU state estimation
+\cite{celeita2023iec61850}. These contributions address measurement
+generation, measurement uncertainty or state estimation. P07 starts from
+reported phasor channels and does not validate a PMU estimator or a
+hardware-in-the-loop interface. The two parity relations used in the
+supplement require no state estimator and are connected to the information
+available for physical attribution when a PMU is lost.
 
 \begin{table*}[t]\centering\small
 \caption{Closest inference formulations. Only the quickest-change detector
@@ -88,6 +124,8 @@ Chen / Rovatsos & Network likelihoods, sequential tests & Line outages & Chen ex
 Yang & Time-varying AC likelihood chart; particle-filter states with EWMA & Persistent line outages, ten PMUs & Closest dynamic precedent, not executed\\
 Warner high-fidelity & Simulated V/I paths, onset search & Short-circuit line candidates & Closest trajectory precedent\\
 DAE / stochastic-state estimation & Physical state and parameter models & States, inputs or parameters & Components\\
+Wang et al. sparse-PMU TSA & Bus selection; recurrent assessor; validity check & Stability assessment under grid changes & Adjacent; no source attribution\\
+Le et al. GNO (arXiv 2026) & Graph attention; swing-equation decoder & Machine-state trajectories from sparse windows & Adjacent state estimation; not event attribution\\
 Learned PMU diagnosis & Features or learned representations & Event families and locations & Two ExtraTrees adapters executed\\
 This work & Switched-DAE histories with recovery & Successive catalog load/line events & Attribution, alarms, detectability\\\bottomrule
 \end{tabularx}\end{table*}

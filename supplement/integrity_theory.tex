@@ -13,28 +13,32 @@ the frame flag, so a missing PMU is identified exactly. What it removes is
 information, and the same quantity governs corruption.
 
 \begin{proposition}[Integrity isolation]\label{prop:integrity}
-Let the noise be Gaussian and independent across PMUs, and let the
-corruption of PMU $p$ be unrestricted over a window. The minimum Gaussian divergence from physical source $i$ from ``no
-intervention, PMU $p$ corrupted'' equals
-$\Lambda_{i0}^{(-p)}$, the detection information of $i$ computed without the
-channels of PMU $p$. This is also the information for $i$ when PMU $p$ is
-missing.
+Let the physical-source and no-intervention hypotheses have the same
+Gaussian covariance, block diagonal across PMUs. Let corruption of PMU $p$
+be an unrestricted additive mean shift over the window. The minimum
+Gaussian Kullback--Leibler divergence from physical source $i$ to the
+no-intervention hypothesis with PMU $p$ corrupted is
+$\Lambda_{i0}^{(-p)}$, the mean-separation information for $i$ computed
+without PMU $p$'s channels, using the same fixed covariance and severity
+profile. This is also the information for $i$ when PMU $p$ is missing.
 \end{proposition}
-\emph{Proof.} Minimizing over an unrestricted $\beta_p$ projects the signature onto
-the orthogonal complement of the channels of PMU $p$. With block-diagonal
-noise covariance this projection deletes those channels, and the remaining
-quadratic form is the information of the other PMUs. \hfill$\square$
+\emph{Proof.} With common covariance, the covariance terms in the Gaussian
+KL divergence cancel, leaving one half of the covariance-weighted squared
+mean difference. Minimizing over an unrestricted $\beta_p$ removes the
+component supported on PMU $p$. For block-diagonal covariance, the residual
+quadratic form is exactly the mean-separation information in the remaining
+PMUs. \hfill$\square$
 
 For a common joint Gaussian covariance $\Sigma$ and a free shift on the
 corrupted coordinates, minimizing the quadratic separation over that
-shift gives $r_c^\top\Sigma_{cc}^{-1}r_c$, where $c$ denotes the remaining
-coordinates. This is the marginal covariance of the clean observations.
-Equivalently, it is the Schur complement of the corrupted block in the
-joint \emph{precision} matrix. Conditioning on the corrupted values as
-though they were clean would answer a different question. The
-proposition explains why integrity cannot be recognized from a single PMU
-alone: a corruption becomes distinguishable only through relations that
-every physical event of the network obeys. Two such relations are used.
+shift gives $\tfrac12r_c^\top\Sigma_{cc}^{-1}r_c$, where $c$ denotes the remaining
+coordinates. This uses the marginal covariance of the clean observations;
+equivalently, $\Sigma_{cc}^{-1}$ is the Schur complement of the corrupted
+block in the joint \emph{precision} matrix. Conditioning on corrupted
+values as though they were clean would answer a different question. This
+identity does not provide a general integrity detector: it states what
+information remains under a free additive corruption at one PMU. The two
+monitors below use narrower physical checks.
 \emph{Sequence parity.} For balanced interventions (load, line,
 generation, three-phase fault) the balanced network produces no negative-
 or zero-sequence voltage or current. These sequence components are
@@ -42,9 +46,18 @@ therefore ideal-model parity relations in the sense of analytical redundancy
 \cite{chow1984analytical}: they vanish in this balanced observation model and sensitive to corruption of a single phase. A step
 $\epsilon$ in one phase magnitude gives $|X_2|=|X_0|=\epsilon|X|/3$. The
 corrupted phase is the one whose phasor is most aligned with $X_0$.
-Under independent per-phase noise, $q_k=(|X_2|^2+|X_0|^2)/\sigma^2$ is
-$\mathrm{Gamma}(2,1)$-distributed, which fixes the threshold for a given
-false-alarm probability. \emph{Network coupling.} A modeled single bolted fault that changes the positive-sequence voltage of PMU $p$ by
+With known scale and independent Gaussian per-phase noise,
+$q_k=(|X_2|^2+|X_0|^2)/\sigma^2$ is
+$\mathrm{Gamma}(2,1)$-distributed. In the implementation the scale is
+estimated from a 90-report prefix and the statistic is the maximum of
+voltage and current values, so the resulting threshold is only a nominal
+single-statistic tail reference, not an exact report-level false-alarm
+calibration. In the simulated
+causal cohorts, phases B and C are reconstructed from phase A under the
+balanced-waveform assumption; they do not provide independent sequence
+observations. The sequence-parity evaluation below therefore applies only
+to the separately exported three-phase competition record.
+\emph{Network coupling.} A modeled single bolted fault that changes the positive-sequence voltage of PMU $p$ by
 $\Delta_p$ changes the other PMUs in proportion to the network impedance
 matrix $Z=Y^{-1}$. Here $Y$ includes constant-impedance loads and generator
 transient reactances \cite{pai1989energy}, and a bolted fault at bus $f$

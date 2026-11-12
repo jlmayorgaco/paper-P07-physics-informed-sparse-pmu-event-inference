@@ -3,12 +3,14 @@
 
 \emph{Competition record.} The competition record contains 90\,min of
 reports from the eight PMUs (161{,}379 reports per PMU). Its labels mark four
-dropouts of PMU~29 (\IntMissReports{} reports, the last overlapping a
-generation change at bus~2) and three corrupted-data episodes at PMUs~2
-and~39. We applied the two parity relations of
-Section~\ref{sec:integrity-theory} and the frame flag. The only fitted
-quantity was the noise scale of each PMU, taken from the first 3\,s of the
-record; there was no training and labels were used only for scoring.
+dropout events of PMU~29 (\IntMissReports{} reports) and three
+corrupted-data episodes at PMUs~2 and~39. A separate class~6 label
+composes a missing PMU with the generation event at bus~2 and is counted
+as an additional event by the competition scorer; the integrity monitor
+still sees the same missing frames. We applied the two parity relations of
+Section~\ref{sec:integrity-theory} and the frame flag. Separate voltage
+and current noise scales for each PMU were estimated from the first 3\,s
+of the record; there was no training and labels were used only for scoring.
 Table~\ref{tab:integrity-raw} and Fig.~\ref{fig:integrity} give the
 results. All \IntMissTot{} dropouts and all \IntCorrTot{} corruptions were
 diagnosed at their first report and located at the correct PMU. The
@@ -29,15 +31,22 @@ bound used by the test (Fig.~\ref{fig:integrity}B). The lowest ratio occurs
 at the first report, where the phasor estimation window has reached the
 faulted bus before the others. The fault is therefore recognized as
 physical, and parity is suspended while it lasts.
-With the prespecified threshold ($q>\IntTau$, per-report false-alarm
-probability $10^{-9}$ under Gaussian noise) there are \IntNoiseExceed{}
-isolated single-report exceedances in \IntMinutes\,min over the eight PMUs
-(\IntNoiseRate{} per minute). The per-phase noise of the record therefore
-has heavier tails than Gaussian. Doubling the assumed noise variance
-($q>\IntTauInf$) removes these exceedances and keeps every labeled episode.
-This operating point was chosen after inspection. Two single-report flags
-remain at switching instants: the line opening, and the generation change
-at the bus of PMU~2. This gives \IntSwitchRate{} false alarms per minute.
+The threshold $q>\IntTau$ is the nominal $10^{-9}$ tail point for one
+idealized sequence statistic. The implemented report statistic is the
+maximum of voltage and current, so its ideal marginal tail is at most
+$2\times10^{-9}$ before accounting for scale estimation. Across the eight
+PMUs this record contains about 1.29 million monitored PMU-reports, for an
+ideal-model expectation below 0.0026 exceedances; we observe
+\IntNoiseExceed{} isolated single-report values with
+$\IntTau<q<\IntTauInf$ (about $7.4\times10^3$ times that reference
+expectation). This
+shows that the nominal Gaussian tail model does not calibrate this record.
+Doubling the assumed noise variance ($q>\IntTauInf$) removes these
+exceedances and keeps every labeled episode. This operating point was
+chosen after inspection and is not an independently calibrated FAR.
+Two single-report flags remain at switching instants: the line opening,
+and the generation change at the bus of PMU~2. This gives
+\IntSwitchRate{} false alarms per minute.
 
 The monitor also flags \IntUnlabeled{} incidents that the labels leave as
 normal operation. Four are single-report current spikes: 2{,}485\,A and

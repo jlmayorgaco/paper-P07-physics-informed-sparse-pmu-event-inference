@@ -40,10 +40,18 @@ before either attributor existed. Each attributor was fixed and run
 once, and its predictions were hashed before the schedule was read.
 
 \emph{Results.} On the competition record (Table~\ref{tab:allevents-raw})
-both attributors detect, classify and locate all 12 labeled events of that one record. The
-submitted system located \AERawSubTopone{} of them. The generation event
-is the trip of the machine at bus~30 (fitted scale 1.02, no amplitude
-fit); the load at bus~7 is separated from generation by its
+both attributors detect, classify and locate all 12 guide-defined event
+labels of that one record: three corruptions, four dropouts, one
+three-phase fault, one line outage, one generation change, one load
+change, and one simultaneous missing-PMU/generation event (class~6).
+The composite label is counted separately from the coincident generation
+label, as in the competition scorer. The submitted system located
+\AERawSubTopone{} of them. For the generator case, the guide's event label
+is associated with bus~2. The attributor fits a bus-level effective
+injection at bus~2 (scale 1.022, with no separate amplitude fit); this is
+a guide-level Top-1 localization and does not identify a specific
+generator unit.
+The load at bus~7 is separated from generation by its
 reactive-to-active ratio. Six of the eight false-alarm episodes of
 Attributor~II are the impossible measurements of
 Section~\ref{sec:integrity-results}, a seventh follows the collapse at

@@ -8,6 +8,11 @@ candidate can explain. The reset control shows this failure at fixed
 thresholds; bounded profiling and marginalization tie in that control.
 The nominal signature diagnostics help explain short delays under the
 assumed noise model. They do not predict operational error rates.
+P07 also has no separate online gate that rejects decisions when a plant
+change makes its model bank unreliable. Sparse-PMU transient-stability
+work has reported an explicit self-check for that applicability question
+\cite{wang2023sparsepmutsa}; P07's signature diagnostics are retrospective
+and do not gate publication.
 
 \subsection{Coverage, Alarm Cost and Scope}
 On the held-out comparison, retaining a bank of histories gives higher
@@ -28,6 +33,11 @@ at 0.05\% TVE. A dropout with held observations prevents recovery in the
 auxiliary stress test. The bank did not start on the retrospective
 competition record; the integrity checks and separate attributor in the
 supplement do not validate the dynamic bank on that record.
+The tested IEEE-39 plant also has no grid-forming inverter controller
+dynamics. Applying the method to converter-dominated networks would require
+adding the relevant control and current-limiting states and testing those
+predictors anew; GFMI surveys describe several such modeling choices
+\cite{rathnayake2021gridforming}.
 
 Pruning, steady-state covariances, startup fitting and compression
 make the attribution weights approximate. Retrospective proposals
