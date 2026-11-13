@@ -9,7 +9,7 @@
 | B01 | Tres brazos empatan en 72/72, con siete extras cada uno | La selección previa eligió alpha = 0; la corrección aprendida fue nula |
 | C02 | Banco 99/108 y 8 extras; GLR 72/108 y 85; ExtraTrees 22/108 y 0 | Presupuesto común en CAL, 18 padres con eventos, 24 normales; contraste de procedimientos |
 | Segunda planta histórica | Exploración con comparadores estáticos | Primer reporte mal etiquetado; el banco dinámico no se ejecutó |
-| C03 | Sucesor con separaciones cortas y dos plantas | El 12 de noviembre a las 18:20 (Bogotá) seguía activa CAL de F01: 56 de 72 registros terminados. La campaña continúa; aún no hay evaluación TEST completa para importar. |
+| C03 | Sucesor con separaciones cortas y dos plantas | El 13 de noviembre CAL y sus umbrales quedaron congelados a las 07:21 (Bogotá). TEST de F01 sigue ejecutándose; aún faltan resultados sellados de ambas plantas. Ver C03_PROGRESS_AUDIT_20261113.md. |
 | Diagnóstico de canales | Con el predictor nominal, la separación mínima V+I/V a 1 s tiene mediana 1,35 y rango 1,03–8,41 | Medias y amplitudes fijas, una covarianza nula común; no cobertura, FAR ni ganancia del detector |
 | Sucesor de separación con magnitud rival ajustable | Mediana V+I/V de 1,53; cuatro fuentes cambian de rival más cercano | Perfilado determinista en [-0,2;0,2], líneas sin reescalado; no evidencia marginal ni evaluación del detector |
 
@@ -96,3 +96,10 @@ Es la Figura 1 en la página 2; sustituye el esquema anterior, conservado en
 sus archivos originales. La composición distingue la inferencia en línea
 del diagnóstico nominal de separación. No añade capacidades nuevas al
 estimador ni modifica campañas. Se mantiene la paginación de 19/31 páginas.
+
+La [revisión del 13 de noviembre](P07_REVIEW_20261113.md) corrige la ganancia
+determinista bajo carry, distingue ruido e innovación y elimina referencias
+obsoletas a predicciones. N01 usaba 0,05 % por componente, equivalente a
+aproximadamente 0,071 % RMS TVE añadido; se corrigieron etiquetas y prosa,
+sin modificar resultados ni C03. Las propuestas PNG de las figuras protegidas
+son documentos separados; sus archivos activos y congelados no cambiaron.

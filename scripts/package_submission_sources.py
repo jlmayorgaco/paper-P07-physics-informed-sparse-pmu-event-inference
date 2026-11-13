@@ -32,6 +32,7 @@ def main():
                  'scripts/verify_recovery_distribution.py', 'generated/recovery_distribution_checks.json',
                  'scripts/build_channel_information_figure.py',
                  'scripts/build_channel_profile_figure.py',
+                 'scripts/build_theory_figures.py', 'scripts/build_integrity_figure.py',
                  'scripts/build_recovery_overview.py', 'scripts/build_physics_measurement_chain.py',
                  'scripts/build_paper_method_figure.py', 'figures/paper_method/main.tex',
                  'figures/recovery_overview/main.tex', 'figures/physical_report/main.tex',
@@ -42,6 +43,9 @@ def main():
             sources.add(path)
     for folder in ('comparator_lineage_20261103', 'revision_math_kernel_20261103', 'recovery_c02_20261105'):
         sources.update(p for p in (ROOT / 'generated/frozen' / folder).glob('*') if p.is_file())
+    # Compact inputs regenerate the theory/noise figures without simulation data.
+    sources.update(p for p in (ROOT / 'generated/revision_20261104').glob('*')
+                   if p.is_file() and p.suffix in {'.csv', '.json'})
     diagnostic = ROOT / 'experiments/channel_information_20261112'
     sources.update(p for p in diagnostic.glob('*')
                    if p.is_file() and p.suffix in {'.py', '.json', '.csv', '.md', '.npz'})

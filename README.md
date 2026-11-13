@@ -1,7 +1,10 @@
 # P07 — Recovery-Aware Physical Attribution of Load and Line Events From Sparse PMUs
 
-**Current status, 12 November 2026:** scientific review draft; C03 is still in
-F01 calibration. The [autonomous closure plan](docs/P07_AUTONOMOUS_CLOSURE_PLAN.md)
+**Current status, 13 November 2026:** scientific review draft; C03 has frozen
+its CAL selection and is running F01 TEST. Both-plant results are not yet sealed.
+The [technical/editorial review](docs/P07_REVIEW_20261113.md) corrects reset-gain
+wording and N01 noise units, and records the remaining gates.
+The [autonomous closure plan](docs/P07_AUTONOMOUS_CLOSURE_PLAN.md)
 sets the remaining evidence and submission gates. The new supplementary analysis
 distinguishes predictive state sufficiency, distributional compression and
 historical attribution. Its finite examples can be checked with
@@ -44,7 +47,7 @@ The central half-page method figure and physical/report figure are editable
 TikZ diagrams, built by `scripts/build_paper_method_figure.py` and
 `scripts/build_physics_measurement_chain.py`. The earlier recovery overview
 is preserved with its original builder, `scripts/build_recovery_overview.py`.
-The method includes numbered per-report pseudocode. C03 remains in calibration;
+The method includes numbered per-report pseudocode. C03 is running TEST;
 no C03 test results have been added. See the closure record for the dated status.
 
 ## Manuscript and results
