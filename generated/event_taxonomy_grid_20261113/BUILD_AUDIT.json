@@ -131,10 +131,12 @@
     "normal_trace.csv": "a54f29a9162df9c16a75d63cfaaada3ff0714fd405259b4c3c826bfca8818dcb"
   },
   "protected_hashes_verified": 16,
-  "display_change": "Panel 6: orange available response and Yes level; grey hidden response and blue No level from -15 to +15 s. Illustrative mask; original trace unchanged.",
+  "display_change": "Panel 6 translated by +15 s: illustrative gap 0 to 30 s, physical onset 15 s. Signal values and relative timing unchanged.",
+  "panel6_time_offset_s": 15.0,
   "panel6_availability": {
-    "gap_start_s": -15,
-    "gap_end_s": 15,
+    "gap_start_s": 0,
+    "gap_end_s": 30,
+    "physical_onset_s": 15,
     "within_gap": 0,
     "outside_gap": 1,
     "source": "user-specified illustrative mask on PMU2 response, not recorded availability"
@@ -161,5 +163,5 @@
     5,
     6
   ],
-  "pdf_sha256": "7f29afbe5d7cd897207e8b171807f7a5fa827eb23d960caac50ec41658c56110"
+  "pdf_sha256": "3f06b9d38ad8fdde04d71bba173780bf67a8750a44145f2fc7c57b108dea554e"
 }

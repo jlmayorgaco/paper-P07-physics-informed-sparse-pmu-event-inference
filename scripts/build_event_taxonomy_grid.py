@@ -77,16 +77,18 @@ def main():
     # Observed physical trace with the user's illustrative loss window.
     # Original PMU29 availability stays in composite_trace.csv, unchanged.
     d=pd.read_csv(DATA/'composite_trace.csv');ax=axs.flat[6]
+    time_offset_s=15.0
+    display_time=d.relative_time_s+time_offset_s
     hidden=(d.relative_time_s>=-15)&(d.relative_time_s<15)
-    physical,=ax.plot(d.relative_time_s,d.pmu2_frequency_change_mHz,color='#9b9b9b',lw=.6)
-    available,=ax.plot(d.relative_time_s,np.where(hidden,np.nan,d.pmu2_frequency_change_mHz),color=PALETTE[1],lw=.6)
-    ax.axvline(0,color='.55',ls=':',lw=.7);ax.set_xlim(-45,35);ax.set_xticks([-30,-15,0,15,30]);ax.set_ylim(-255,55);ax.set_yticks([-200,-100,0])
-    ax.set_ylabel(r'$f-f_{\mathrm{pre}}$ (mHz)',labelpad=1.5);ax.set_xlabel(r'Time from generation onset (s)',labelpad=2)
+    physical,=ax.plot(display_time,d.pmu2_frequency_change_mHz,color='#9b9b9b',lw=.6)
+    available,=ax.plot(display_time,np.where(hidden,np.nan,d.pmu2_frequency_change_mHz),color=PALETTE[1],lw=.6)
+    ax.axvline(time_offset_s,color='.55',ls=':',lw=.7);ax.set_xlim(-30,50);ax.set_xticks([-15,0,15,30,45]);ax.set_ylim(-255,55);ax.set_yticks([-200,-100,0])
+    ax.set_ylabel(r'$f-f_{\mathrm{pre}}$ (mHz)',labelpad=1.5);ax.set_xlabel(r'Time from data-loss onset (s)',labelpad=2)
     flag=ax.twinx();flag.set_ylim(-.12,1.15);flag.set_yticks([0,1],['No','Yes']);flag.tick_params(labelsize=6.7,pad=1,length=2)
     flag.set_ylabel('Data available',fontsize=6.7,labelpad=2);flag.spines['right'].set_visible(True)
-    flag.plot([-45,-15],[1,1],color=PALETTE[1],lw=1.2)
-    flag.plot([-15,-15,15,15],[1,0,0,1],color=PALETTE[0],lw=1.2)
-    flag.plot([15,35],[1,1],color=PALETTE[1],lw=1.2)
+    flag.plot([-30,0],[1,1],color=PALETTE[1],lw=1.2)
+    flag.plot([0,0,30,30],[1,0,0,1],color=PALETTE[0],lw=1.2)
+    flag.plot([30,50],[1,1],color=PALETTE[1],lw=1.2)
     for tick,color in zip(flag.get_yticklabels(),[PALETTE[0],PALETTE[1]]):tick.set_color(color)
     ax.legend([available,physical],['Available response','Hidden response (illustrative)'],loc='lower left',bbox_to_anchor=(-.035,1.01),
               ncol=1,frameon=False,fontsize=6.3,handlelength=1.5,borderaxespad=0,labelspacing=.15)
@@ -115,8 +117,9 @@ def main():
     audit={'authorization':'User requested equal 3x3 panels including normal and explicit missing pulse, 2026-11-13',
            'legacy_trace_sha256':sha(LEGACY),'legacy_curves':checked,'panels':list(range(9)),
            'normal_and_composite_files':provenance['files'],'protected_hashes_verified':len(protected),
-           'display_change':'Panel 6: orange available response and Yes level; grey hidden response and blue No level from -15 to +15 s. Illustrative mask; original trace unchanged.',
-           'panel6_availability':{'gap_start_s':-15,'gap_end_s':15,'within_gap':0,'outside_gap':1,'source':'user-specified illustrative mask on PMU2 response, not recorded availability'},
+           'display_change':'Panel 6 translated by +15 s: illustrative gap 0 to 30 s, physical onset 15 s. Signal values and relative timing unchanged.',
+           'panel6_time_offset_s':time_offset_s,
+           'panel6_availability':{'gap_start_s':0,'gap_end_s':30,'physical_onset_s':15,'within_gap':0,'outside_gap':1,'source':'user-specified illustrative mask on PMU2 response, not recorded availability'},
            'clock_levels':clock_levels,
            'illustrative_clock_panels':[5,6],
            'pdf_sha256':sha(pdf)}

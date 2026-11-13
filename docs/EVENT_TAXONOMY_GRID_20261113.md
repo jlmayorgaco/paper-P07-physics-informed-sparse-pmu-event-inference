@@ -16,6 +16,10 @@ La figura presenta nueve etiquetas (0–8), no nueve mecanismos físicos validad
   de disponibilidad de ambos paneles. No representa la cadencia real de informes de 30 Hz.
 - 6: frecuencia original de PMU 2 con una máscara ilustrativa de pérdida
   entre −15 y +15 s respecto al inicio de generación (2976.366 s).
+  Por nueva instrucción, todo el eje del panel 6 se desplaza +15 s:
+  la pérdida aparece de 0 a 30 s y la generación en 15 s. Se conserva
+  la ventana previa completa y todas las posiciones relativas; el eje
+  se identifica como tiempo desde el inicio de pérdida de datos.
   La respuesta y el nivel Yes son naranja cuando hay datos; el nivel No
   es azul durante la pérdida. La respuesta oculta se conserva en gris
   para explicar qué dejaría de observarse, sin atribuirla a una reconstrucción
