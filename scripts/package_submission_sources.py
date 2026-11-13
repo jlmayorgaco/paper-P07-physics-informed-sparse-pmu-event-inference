@@ -42,6 +42,8 @@ def main():
                  'scripts/build_paper_method_figure.py', 'figures/paper_method/main.tex',
                  'scripts/build_layered_architecture.py', 'figures/layered_architecture/main.tex',
                  'scripts/verify_adaptive_extension.py', 'generated/adaptive_extension_checks.json',
+                 'scripts/audit_adaptive_diagnostic.py', 'scripts/build_adaptive_diagnostic_tables.py',
+                 'generated/adaptive_diagnostic_audit.json',
                  'docs/ADAPTIVE_ARCHITECTURE_DECISIONS_20261113.md',
                  'figures/recovery_overview/main.tex', 'figures/physical_report/main.tex',
                  'generated/revision_math_20261103/checks.json',
@@ -61,6 +63,8 @@ def main():
     protected=json.loads((ROOT/'figures/frozen/PROTECTED_FIGURES.json').read_text())
     sources.update(ROOT/p for p in protected['files'])
     diagnostic = ROOT / 'experiments/channel_information_20261112'
+    sources.update(p for p in (ROOT / 'experiments/adaptive_innovation_20261113').rglob('*')
+                   if p.is_file() and p.suffix in {'.py', '.json', '.md', '.npz'})
     sources.update(p for p in diagnostic.glob('*')
                    if p.is_file() and p.suffix in {'.py', '.json', '.csv', '.md', '.npz'})
     for folder in ('channel_profile_20261112', 'hbg_verification_20261112'):
@@ -84,6 +88,10 @@ The prospective layered architecture and small-model checks are rebuilt with:
 python scripts/build_layered_architecture.py
 python scripts/verify_adaptive_extension.py (NumPy and SciPy required).
 These checks do not validate the adaptive extension on IEEE-39.
+The sealed nominal-operator mechanism diagnostics are independently recounted:
+python scripts/build_adaptive_diagnostic_tables.py
+This verifies hashes and saved predictions and regenerates the tables/macros.
+See experiments/adaptive_innovation_20261113/README.md for scope and rerun steps.
 The authorized nine-panel event grid is regenerated from bundled trace values:
 python scripts/build_event_taxonomy_grid.py (NumPy, pandas, Matplotlib required).
 Original protected assets remain byte-identical and are checked by that builder.

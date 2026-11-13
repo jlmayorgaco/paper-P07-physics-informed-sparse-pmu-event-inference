@@ -1,15 +1,22 @@
 # P07: estado de cierre vigente
 
-La integración de adaptación del 13 de noviembre añade una arquitectura
-TikZ con tres zonas: núcleo físico implementado, extensión adaptativa propuesta
-y capa ciber externa. La [decisión científica y plan de controles](ADAPTIVE_ARCHITECTURE_DECISIONS_20261113.md)
-conserva la tesis actual y no anuncia nuevas ganancias empíricas. El suplemento
-explicita la recursión afín con severidad, el ajuste de ruido estructurado,
-sesgo de selección, frontera del replay y tratamiento de datos ausentes.
-Las verificaciones de modelos pequeños pasaron; no implementan ni validan
-el sucesor en IEEE-39. C03 permanece intacto y no se reevalúa en esta edición.
-La compilación de esta revisión conserva 19 páginas de artículo y 33 de
-suplemento; la arquitectura nueva está en el suplemento, Figura 15.
+La revisión del 13 de noviembre ejecuta dos diagnósticos independientes con
+operadores nominales, sin cambiar C03. Con inicio, amplitud y media de recuperación
+conocidos, conservar la covarianza mejora la fuente correcta de 281/360 a 338/360
+(+15,83 pp; IC 95% [11,94; 19,72]). Es una prueba bajo el modelo gaussiano declarado,
+no un resultado del banco completo ni de transferencia. La prueba causal de ruido
+usa 36 normales CAL, 36 normales TEST y 36 padres TEST con dos cargas. Fijo,
+continuo y con bloqueo obtienen 13/72, 15/72 y 13/72; no hay mejora concluyente de
+atribución. El bloqueo admite solo el 8,13% de reportes normales monitorizados.
+No se retocaron parámetros tras TEST. Los hashes, umbrales y publicaciones pasaron
+un recuento independiente. Ver experiments/adaptive_innovation_20261113/README.md.
+
+La arquitectura TikZ se redibujó con red eléctrica, fasores, recuperación,
+trayectorias, matrices, incertidumbre y reloj de publicación. Núcleo implementado,
+desarrollo adaptativo y capa ciber siguen separados. Artículo: 19 páginas;
+suplemento: 34 páginas, Figura 15 en página 32. Las figuras protegidas conservan
+sus hashes. Los nuevos resultados aparecen en el suplemento y sus límites en
+la discusión; no se añaden promesas adaptativas al resumen.
 
 **Estado: borrador para revisión científica.** El manuscrito incorpora la comparación C02 sellada. La prueba de mecanismo a presupuesto común y la transferencia dinámica a una segunda planta pertenecen a C03. Solo se incorporarán después de que terminen y se auditen.
 

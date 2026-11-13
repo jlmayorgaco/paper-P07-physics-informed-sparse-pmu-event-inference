@@ -1,0 +1,6482 @@
+[
+  {
+    "parent": 0,
+    "source": 0,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1044.814780040191
+  },
+  {
+    "parent": 0,
+    "source": 0,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1034.7871667281877
+  },
+  {
+    "parent": 1,
+    "source": 1,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1024.3086090337433
+  },
+  {
+    "parent": 1,
+    "source": 1,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -985.4305024088796
+  },
+  {
+    "parent": 2,
+    "source": 2,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -981.5031757405586
+  },
+  {
+    "parent": 2,
+    "source": 2,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -983.2553397189561
+  },
+  {
+    "parent": 3,
+    "source": 3,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -1005.1779805223815
+  },
+  {
+    "parent": 3,
+    "source": 3,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -982.5722426806519
+  },
+  {
+    "parent": 4,
+    "source": 4,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1073.4406879351723
+  },
+  {
+    "parent": 4,
+    "source": 4,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -991.8145251168155
+  },
+  {
+    "parent": 5,
+    "source": 5,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1004.8128985209618
+  },
+  {
+    "parent": 5,
+    "source": 5,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1007.0341669285585
+  },
+  {
+    "parent": 6,
+    "source": 6,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1008.6262927362968
+  },
+  {
+    "parent": 6,
+    "source": 6,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -998.1506817611082
+  },
+  {
+    "parent": 7,
+    "source": 7,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1023.0927150811859
+  },
+  {
+    "parent": 7,
+    "source": 7,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1022.5001162847134
+  },
+  {
+    "parent": 8,
+    "source": 8,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -999.7618510436528
+  },
+  {
+    "parent": 8,
+    "source": 8,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -998.1955610290429
+  },
+  {
+    "parent": 9,
+    "source": 0,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1511.0244422760961
+  },
+  {
+    "parent": 9,
+    "source": 0,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -987.9427792659737
+  },
+  {
+    "parent": 10,
+    "source": 1,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1047.0950083676937
+  },
+  {
+    "parent": 10,
+    "source": 1,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1029.9882255904358
+  },
+  {
+    "parent": 11,
+    "source": 2,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1016.4408989041543
+  },
+  {
+    "parent": 11,
+    "source": 2,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1009.2462011309158
+  },
+  {
+    "parent": 12,
+    "source": 3,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -986.9398440904527
+  },
+  {
+    "parent": 12,
+    "source": 3,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -988.580121014224
+  },
+  {
+    "parent": 13,
+    "source": 4,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1034.0482865050194
+  },
+  {
+    "parent": 13,
+    "source": 4,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1011.3406826446038
+  },
+  {
+    "parent": 14,
+    "source": 5,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -985.4847203163708
+  },
+  {
+    "parent": 14,
+    "source": 5,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -985.5673461412076
+  },
+  {
+    "parent": 15,
+    "source": 6,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1027.78468449327
+  },
+  {
+    "parent": 15,
+    "source": 6,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1027.896995332132
+  },
+  {
+    "parent": 16,
+    "source": 7,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -974.872793786157
+  },
+  {
+    "parent": 16,
+    "source": 7,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -976.9651533195596
+  },
+  {
+    "parent": 17,
+    "source": 8,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1008.805184217577
+  },
+  {
+    "parent": 17,
+    "source": 8,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1011.5617130082372
+  },
+  {
+    "parent": 18,
+    "source": 0,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -1012.643537699598
+  },
+  {
+    "parent": 18,
+    "source": 0,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -987.9572571308014
+  },
+  {
+    "parent": 19,
+    "source": 1,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -995.9490414799329
+  },
+  {
+    "parent": 19,
+    "source": 1,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -997.3501616820812
+  },
+  {
+    "parent": 20,
+    "source": 2,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1754.873033019362
+  },
+  {
+    "parent": 20,
+    "source": 2,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1012.7243003628552
+  },
+  {
+    "parent": 21,
+    "source": 3,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1047.7108871122823
+  },
+  {
+    "parent": 21,
+    "source": 3,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1049.654032129536
+  },
+  {
+    "parent": 22,
+    "source": 4,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1036.215443320268
+  },
+  {
+    "parent": 22,
+    "source": 4,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1000.7044369833686
+  },
+  {
+    "parent": 23,
+    "source": 5,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1024.4315058852585
+  },
+  {
+    "parent": 23,
+    "source": 5,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1023.6201530396336
+  },
+  {
+    "parent": 24,
+    "source": 6,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1099.052177597263
+  },
+  {
+    "parent": 24,
+    "source": 6,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -988.4607310695937
+  },
+  {
+    "parent": 25,
+    "source": 7,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1035.1731219644912
+  },
+  {
+    "parent": 25,
+    "source": 7,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1029.7822350511487
+  },
+  {
+    "parent": 26,
+    "source": 8,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1004.3446063673211
+  },
+  {
+    "parent": 26,
+    "source": 8,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1006.2168388312278
+  },
+  {
+    "parent": 27,
+    "source": 0,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1039.7416286247533
+  },
+  {
+    "parent": 27,
+    "source": 0,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1025.8495049948888
+  },
+  {
+    "parent": 28,
+    "source": 1,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1160.8125397954418
+  },
+  {
+    "parent": 28,
+    "source": 1,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1011.4906987498389
+  },
+  {
+    "parent": 29,
+    "source": 2,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -986.5221813715184
+  },
+  {
+    "parent": 29,
+    "source": 2,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -986.09343139222
+  },
+  {
+    "parent": 30,
+    "source": 3,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1000.4525358698959
+  },
+  {
+    "parent": 30,
+    "source": 3,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -980.5548415047828
+  },
+  {
+    "parent": 31,
+    "source": 4,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -991.864805875856
+  },
+  {
+    "parent": 31,
+    "source": 4,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -991.6349666366362
+  },
+  {
+    "parent": 32,
+    "source": 5,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1028.8181656311601
+  },
+  {
+    "parent": 32,
+    "source": 5,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -990.3579152765647
+  },
+  {
+    "parent": 33,
+    "source": 6,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1033.775783712816
+  },
+  {
+    "parent": 33,
+    "source": 6,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1036.5794482366543
+  },
+  {
+    "parent": 34,
+    "source": 7,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1132.7081528710296
+  },
+  {
+    "parent": 34,
+    "source": 7,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -998.7270443608489
+  },
+  {
+    "parent": 35,
+    "source": 8,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1020.133919287199
+  },
+  {
+    "parent": 35,
+    "source": 8,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -994.1574625385954
+  },
+  {
+    "parent": 36,
+    "source": 0,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -987.1870210375872
+  },
+  {
+    "parent": 36,
+    "source": 0,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -985.7197878503414
+  },
+  {
+    "parent": 37,
+    "source": 1,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1075.1673477042343
+  },
+  {
+    "parent": 37,
+    "source": 1,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -976.3620257059993
+  },
+  {
+    "parent": 38,
+    "source": 2,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1030.8315268193078
+  },
+  {
+    "parent": 38,
+    "source": 2,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1028.8325550784987
+  },
+  {
+    "parent": 39,
+    "source": 3,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1019.1802688749679
+  },
+  {
+    "parent": 39,
+    "source": 3,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1019.0257906757847
+  },
+  {
+    "parent": 40,
+    "source": 4,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1106.3870243161548
+  },
+  {
+    "parent": 40,
+    "source": 4,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1027.3949714356377
+  },
+  {
+    "parent": 41,
+    "source": 5,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1025.9755845869468
+  },
+  {
+    "parent": 41,
+    "source": 5,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -991.8149068575007
+  },
+  {
+    "parent": 42,
+    "source": 6,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -1014.3965330096535
+  },
+  {
+    "parent": 42,
+    "source": 6,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -990.5638018231336
+  },
+  {
+    "parent": 43,
+    "source": 7,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -989.2657857593454
+  },
+  {
+    "parent": 43,
+    "source": 7,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -989.982516629824
+  },
+  {
+    "parent": 44,
+    "source": 8,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1063.522315591493
+  },
+  {
+    "parent": 44,
+    "source": 8,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -977.9860127266131
+  },
+  {
+    "parent": 45,
+    "source": 0,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1303.499991208785
+  },
+  {
+    "parent": 45,
+    "source": 0,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1007.852427261618
+  },
+  {
+    "parent": 46,
+    "source": 1,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -982.0246129913404
+  },
+  {
+    "parent": 46,
+    "source": 1,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -983.097306538515
+  },
+  {
+    "parent": 47,
+    "source": 2,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -995.1028507508629
+  },
+  {
+    "parent": 47,
+    "source": 2,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -994.6847064419809
+  },
+  {
+    "parent": 48,
+    "source": 3,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1019.6837019418019
+  },
+  {
+    "parent": 48,
+    "source": 3,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -999.1389192236529
+  },
+  {
+    "parent": 49,
+    "source": 4,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1007.1063717506421
+  },
+  {
+    "parent": 49,
+    "source": 4,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1008.6036466220332
+  },
+  {
+    "parent": 50,
+    "source": 5,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -969.0749949252158
+  },
+  {
+    "parent": 50,
+    "source": 5,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -968.541744762465
+  },
+  {
+    "parent": 51,
+    "source": 6,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1083.1558346648924
+  },
+  {
+    "parent": 51,
+    "source": 6,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -996.6208801116791
+  },
+  {
+    "parent": 52,
+    "source": 7,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1001.8141045882004
+  },
+  {
+    "parent": 52,
+    "source": 7,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1002.374863055523
+  },
+  {
+    "parent": 53,
+    "source": 8,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1544.7436656576156
+  },
+  {
+    "parent": 53,
+    "source": 8,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1045.2179051535659
+  },
+  {
+    "parent": 54,
+    "source": 0,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -1023.0848010503174
+  },
+  {
+    "parent": 54,
+    "source": 0,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -1020.3946440069913
+  },
+  {
+    "parent": 55,
+    "source": 1,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -997.1332104520834
+  },
+  {
+    "parent": 55,
+    "source": 1,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -997.2058811588314
+  },
+  {
+    "parent": 56,
+    "source": 2,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1023.322605671525
+  },
+  {
+    "parent": 56,
+    "source": 2,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -992.4948612209399
+  },
+  {
+    "parent": 57,
+    "source": 3,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1050.3670580784653
+  },
+  {
+    "parent": 57,
+    "source": 3,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -969.63985176444
+  },
+  {
+    "parent": 58,
+    "source": 4,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -986.4550527612057
+  },
+  {
+    "parent": 58,
+    "source": 4,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -988.3569971373438
+  },
+  {
+    "parent": 59,
+    "source": 5,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1041.2892910155351
+  },
+  {
+    "parent": 59,
+    "source": 5,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1030.8282761696512
+  },
+  {
+    "parent": 60,
+    "source": 6,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1012.8596740949953
+  },
+  {
+    "parent": 60,
+    "source": 6,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -994.475181031159
+  },
+  {
+    "parent": 61,
+    "source": 7,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1606.2266588912153
+  },
+  {
+    "parent": 61,
+    "source": 7,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -992.0275951209525
+  },
+  {
+    "parent": 62,
+    "source": 8,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -956.9242266462157
+  },
+  {
+    "parent": 62,
+    "source": 8,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -958.5447151177901
+  },
+  {
+    "parent": 63,
+    "source": 0,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -983.9181577463735
+  },
+  {
+    "parent": 63,
+    "source": 0,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -984.1467510798489
+  },
+  {
+    "parent": 64,
+    "source": 1,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -999.4318253294388
+  },
+  {
+    "parent": 64,
+    "source": 1,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1000.3644601031228
+  },
+  {
+    "parent": 65,
+    "source": 2,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1073.8648931871492
+  },
+  {
+    "parent": 65,
+    "source": 2,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1000.4662125426571
+  },
+  {
+    "parent": 66,
+    "source": 3,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1117.1511345480972
+  },
+  {
+    "parent": 66,
+    "source": 3,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -993.9089603650355
+  },
+  {
+    "parent": 67,
+    "source": 4,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -990.9207557291759
+  },
+  {
+    "parent": 67,
+    "source": 4,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -992.4306706989096
+  },
+  {
+    "parent": 68,
+    "source": 5,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1052.3145424810473
+  },
+  {
+    "parent": 68,
+    "source": 5,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -989.5881570117572
+  },
+  {
+    "parent": 69,
+    "source": 6,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1732.812761204742
+  },
+  {
+    "parent": 69,
+    "source": 6,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -988.9062462312467
+  },
+  {
+    "parent": 70,
+    "source": 7,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -995.9923795434302
+  },
+  {
+    "parent": 70,
+    "source": 7,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -997.2026474149668
+  },
+  {
+    "parent": 71,
+    "source": 8,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1003.0083263071414
+  },
+  {
+    "parent": 71,
+    "source": 8,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1000.0796623010214
+  },
+  {
+    "parent": 72,
+    "source": 0,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -1024.2543788422
+  },
+  {
+    "parent": 72,
+    "source": 0,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -1009.4257264284699
+  },
+  {
+    "parent": 73,
+    "source": 1,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -977.284193178391
+  },
+  {
+    "parent": 73,
+    "source": 1,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -972.4514724530686
+  },
+  {
+    "parent": 74,
+    "source": 2,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1002.0440939489267
+  },
+  {
+    "parent": 74,
+    "source": 2,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -999.6704326933486
+  },
+  {
+    "parent": 75,
+    "source": 3,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1021.8087945446612
+  },
+  {
+    "parent": 75,
+    "source": 3,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1021.699568377096
+  },
+  {
+    "parent": 76,
+    "source": 4,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1061.6666716033737
+  },
+  {
+    "parent": 76,
+    "source": 4,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -987.933312400567
+  },
+  {
+    "parent": 77,
+    "source": 5,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1004.4023712851006
+  },
+  {
+    "parent": 77,
+    "source": 5,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -990.6834982107152
+  },
+  {
+    "parent": 78,
+    "source": 6,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -982.4774092540843
+  },
+  {
+    "parent": 78,
+    "source": 6,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -969.0695292855665
+  },
+  {
+    "parent": 79,
+    "source": 7,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1013.834300957852
+  },
+  {
+    "parent": 79,
+    "source": 7,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1014.0450005655323
+  },
+  {
+    "parent": 80,
+    "source": 8,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1075.5148284763368
+  },
+  {
+    "parent": 80,
+    "source": 8,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -1016.2948730173896
+  },
+  {
+    "parent": 81,
+    "source": 0,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1018.0416743036576
+  },
+  {
+    "parent": 81,
+    "source": 0,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1012.2295889316683
+  },
+  {
+    "parent": 82,
+    "source": 1,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1001.081184786197
+  },
+  {
+    "parent": 82,
+    "source": 1,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1000.7196012251702
+  },
+  {
+    "parent": 83,
+    "source": 2,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -969.4147914814046
+  },
+  {
+    "parent": 83,
+    "source": 2,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -968.9746472535568
+  },
+  {
+    "parent": 84,
+    "source": 3,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1214.5313523492018
+  },
+  {
+    "parent": 84,
+    "source": 3,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1030.4241242437283
+  },
+  {
+    "parent": 85,
+    "source": 4,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1007.5289613425723
+  },
+  {
+    "parent": 85,
+    "source": 4,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1009.7533899590096
+  },
+  {
+    "parent": 86,
+    "source": 5,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -993.8252265876735
+  },
+  {
+    "parent": 86,
+    "source": 5,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -994.9030881277741
+  },
+  {
+    "parent": 87,
+    "source": 6,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -999.4197512216208
+  },
+  {
+    "parent": 87,
+    "source": 6,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -998.500320522461
+  },
+  {
+    "parent": 88,
+    "source": 7,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1042.9103550799514
+  },
+  {
+    "parent": 88,
+    "source": 7,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1007.0245016173311
+  },
+  {
+    "parent": 89,
+    "source": 8,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1003.2468899568694
+  },
+  {
+    "parent": 89,
+    "source": 8,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -966.9270895084359
+  },
+  {
+    "parent": 90,
+    "source": 0,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1010.4478399321929
+  },
+  {
+    "parent": 90,
+    "source": 0,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -986.6609996441525
+  },
+  {
+    "parent": 91,
+    "source": 1,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1071.7278358256635
+  },
+  {
+    "parent": 91,
+    "source": 1,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1000.3093961705886
+  },
+  {
+    "parent": 92,
+    "source": 2,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1022.5016471821642
+  },
+  {
+    "parent": 92,
+    "source": 2,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1021.6081761883881
+  },
+  {
+    "parent": 93,
+    "source": 3,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1017.0554867222261
+  },
+  {
+    "parent": 93,
+    "source": 3,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1013.8427660462114
+  },
+  {
+    "parent": 94,
+    "source": 4,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1002.4270016266274
+  },
+  {
+    "parent": 94,
+    "source": 4,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1002.6548526710158
+  },
+  {
+    "parent": 95,
+    "source": 5,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1005.7501082225145
+  },
+  {
+    "parent": 95,
+    "source": 5,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1005.9660829869275
+  },
+  {
+    "parent": 96,
+    "source": 6,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1063.9458781175217
+  },
+  {
+    "parent": 96,
+    "source": 6,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1036.9904270774705
+  },
+  {
+    "parent": 97,
+    "source": 7,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1083.8536452996682
+  },
+  {
+    "parent": 97,
+    "source": 7,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1032.0737863938787
+  },
+  {
+    "parent": 98,
+    "source": 8,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1534.1035286551032
+  },
+  {
+    "parent": 98,
+    "source": 8,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1000.7560022637464
+  },
+  {
+    "parent": 99,
+    "source": 0,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1004.9428907785783
+  },
+  {
+    "parent": 99,
+    "source": 0,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -992.2060968551892
+  },
+  {
+    "parent": 100,
+    "source": 1,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -2221.8097581552224
+  },
+  {
+    "parent": 100,
+    "source": 1,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -976.1874543411152
+  },
+  {
+    "parent": 101,
+    "source": 2,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1097.3446354175576
+  },
+  {
+    "parent": 101,
+    "source": 2,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -984.8933267055497
+  },
+  {
+    "parent": 102,
+    "source": 3,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -984.2505867330632
+  },
+  {
+    "parent": 102,
+    "source": 3,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -980.2973288569037
+  },
+  {
+    "parent": 103,
+    "source": 4,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1019.2498092943024
+  },
+  {
+    "parent": 103,
+    "source": 4,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1019.3647741119887
+  },
+  {
+    "parent": 104,
+    "source": 5,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -996.2612814707777
+  },
+  {
+    "parent": 104,
+    "source": 5,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -991.6001380702077
+  },
+  {
+    "parent": 105,
+    "source": 6,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1012.6968071799545
+  },
+  {
+    "parent": 105,
+    "source": 6,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1015.3040039425542
+  },
+  {
+    "parent": 106,
+    "source": 7,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1035.3640204912472
+  },
+  {
+    "parent": 106,
+    "source": 7,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -973.6776807496533
+  },
+  {
+    "parent": 107,
+    "source": 8,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1081.4037933654797
+  },
+  {
+    "parent": 107,
+    "source": 8,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1025.2528895395592
+  },
+  {
+    "parent": 108,
+    "source": 0,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1065.8056675719906
+  },
+  {
+    "parent": 108,
+    "source": 0,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -988.9529049760788
+  },
+  {
+    "parent": 109,
+    "source": 1,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1054.0808820623545
+  },
+  {
+    "parent": 109,
+    "source": 1,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1001.2175672470813
+  },
+  {
+    "parent": 110,
+    "source": 2,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -971.5250027469278
+  },
+  {
+    "parent": 110,
+    "source": 2,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -972.2315069291303
+  },
+  {
+    "parent": 111,
+    "source": 3,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -958.2769411424034
+  },
+  {
+    "parent": 111,
+    "source": 3,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -958.2067483017828
+  },
+  {
+    "parent": 112,
+    "source": 4,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -967.2167950111539
+  },
+  {
+    "parent": 112,
+    "source": 4,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -969.3217139330627
+  },
+  {
+    "parent": 113,
+    "source": 5,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1058.6979725341394
+  },
+  {
+    "parent": 113,
+    "source": 5,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1033.6412048177008
+  },
+  {
+    "parent": 114,
+    "source": 6,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1066.7000628755063
+  },
+  {
+    "parent": 114,
+    "source": 6,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1029.4702861849921
+  },
+  {
+    "parent": 115,
+    "source": 7,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -997.2923938532138
+  },
+  {
+    "parent": 115,
+    "source": 7,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -981.442535319743
+  },
+  {
+    "parent": 116,
+    "source": 8,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -981.5541454895007
+  },
+  {
+    "parent": 116,
+    "source": 8,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -982.9837186082577
+  },
+  {
+    "parent": 117,
+    "source": 0,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1011.544474192609
+  },
+  {
+    "parent": 117,
+    "source": 0,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -996.2457389506342
+  },
+  {
+    "parent": 118,
+    "source": 1,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1037.8343803342964
+  },
+  {
+    "parent": 118,
+    "source": 1,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1038.3717287967117
+  },
+  {
+    "parent": 119,
+    "source": 2,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1008.8759856568017
+  },
+  {
+    "parent": 119,
+    "source": 2,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1009.106569249499
+  },
+  {
+    "parent": 120,
+    "source": 3,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1035.4031041846124
+  },
+  {
+    "parent": 120,
+    "source": 3,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1034.5579573162995
+  },
+  {
+    "parent": 121,
+    "source": 4,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1019.6681700797609
+  },
+  {
+    "parent": 121,
+    "source": 4,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1018.4288262874152
+  },
+  {
+    "parent": 122,
+    "source": 5,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1079.3298785307313
+  },
+  {
+    "parent": 122,
+    "source": 5,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -978.7085339624622
+  },
+  {
+    "parent": 123,
+    "source": 6,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1047.5264586053117
+  },
+  {
+    "parent": 123,
+    "source": 6,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1006.9806536236517
+  },
+  {
+    "parent": 124,
+    "source": 7,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1012.6022677674455
+  },
+  {
+    "parent": 124,
+    "source": 7,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1012.557487595504
+  },
+  {
+    "parent": 125,
+    "source": 8,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1372.3553409588712
+  },
+  {
+    "parent": 125,
+    "source": 8,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -995.4493959804881
+  },
+  {
+    "parent": 126,
+    "source": 0,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1005.9502341495761
+  },
+  {
+    "parent": 126,
+    "source": 0,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -992.7868646914667
+  },
+  {
+    "parent": 127,
+    "source": 1,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -976.8524617367576
+  },
+  {
+    "parent": 127,
+    "source": 1,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -977.0887178465254
+  },
+  {
+    "parent": 128,
+    "source": 2,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1096.094787243577
+  },
+  {
+    "parent": 128,
+    "source": 2,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -992.8804191863869
+  },
+  {
+    "parent": 129,
+    "source": 3,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1030.4252729729374
+  },
+  {
+    "parent": 129,
+    "source": 3,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1006.0617674938736
+  },
+  {
+    "parent": 130,
+    "source": 4,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -1017.7975230818884
+  },
+  {
+    "parent": 130,
+    "source": 4,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -983.9175371051333
+  },
+  {
+    "parent": 131,
+    "source": 5,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -980.1864170688626
+  },
+  {
+    "parent": 131,
+    "source": 5,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -982.0376120700554
+  },
+  {
+    "parent": 132,
+    "source": 6,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -1016.8475582691364
+  },
+  {
+    "parent": 132,
+    "source": 6,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -995.0715449617205
+  },
+  {
+    "parent": 133,
+    "source": 7,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1321.1702440272093
+  },
+  {
+    "parent": 133,
+    "source": 7,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1015.0910603878624
+  },
+  {
+    "parent": 134,
+    "source": 8,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -1026.2582624016852
+  },
+  {
+    "parent": 134,
+    "source": 8,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -978.7320030897125
+  },
+  {
+    "parent": 135,
+    "source": 0,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -983.1709011968758
+  },
+  {
+    "parent": 135,
+    "source": 0,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -983.0341751278515
+  },
+  {
+    "parent": 136,
+    "source": 1,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1019.9863667467791
+  },
+  {
+    "parent": 136,
+    "source": 1,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1001.1792731090665
+  },
+  {
+    "parent": 137,
+    "source": 2,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -992.2947919982605
+  },
+  {
+    "parent": 137,
+    "source": 2,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -990.1191382044146
+  },
+  {
+    "parent": 138,
+    "source": 3,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -998.9372597168726
+  },
+  {
+    "parent": 138,
+    "source": 3,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1001.4398593788947
+  },
+  {
+    "parent": 139,
+    "source": 4,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1009.0426153742185
+  },
+  {
+    "parent": 139,
+    "source": 4,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1010.916961471268
+  },
+  {
+    "parent": 140,
+    "source": 5,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -986.3325183398873
+  },
+  {
+    "parent": 140,
+    "source": 5,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -984.6322895213232
+  },
+  {
+    "parent": 141,
+    "source": 6,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1070.807622489111
+  },
+  {
+    "parent": 141,
+    "source": 6,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -997.557886383571
+  },
+  {
+    "parent": 142,
+    "source": 7,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1145.2133818413413
+  },
+  {
+    "parent": 142,
+    "source": 7,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -973.0662031799982
+  },
+  {
+    "parent": 143,
+    "source": 8,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -1016.9557227631939
+  },
+  {
+    "parent": 143,
+    "source": 8,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -999.6363683432932
+  },
+  {
+    "parent": 144,
+    "source": 0,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -998.4818757969659
+  },
+  {
+    "parent": 144,
+    "source": 0,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -984.4694562521099
+  },
+  {
+    "parent": 145,
+    "source": 1,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1071.92702319911
+  },
+  {
+    "parent": 145,
+    "source": 1,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1028.8350682067214
+  },
+  {
+    "parent": 146,
+    "source": 2,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1076.65206449258
+  },
+  {
+    "parent": 146,
+    "source": 2,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1025.6306394135738
+  },
+  {
+    "parent": 147,
+    "source": 3,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1000.1872192842967
+  },
+  {
+    "parent": 147,
+    "source": 3,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -997.9984796302346
+  },
+  {
+    "parent": 148,
+    "source": 4,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1088.7573528274092
+  },
+  {
+    "parent": 148,
+    "source": 4,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1013.5348539388846
+  },
+  {
+    "parent": 149,
+    "source": 5,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1034.3316842797392
+  },
+  {
+    "parent": 149,
+    "source": 5,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -986.9304480713721
+  },
+  {
+    "parent": 150,
+    "source": 6,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1022.912695433991
+  },
+  {
+    "parent": 150,
+    "source": 6,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1022.903548160753
+  },
+  {
+    "parent": 151,
+    "source": 7,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -990.0215345456394
+  },
+  {
+    "parent": 151,
+    "source": 7,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -989.9885439775328
+  },
+  {
+    "parent": 152,
+    "source": 8,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1173.8670268824467
+  },
+  {
+    "parent": 152,
+    "source": 8,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -1014.7483808075922
+  },
+  {
+    "parent": 153,
+    "source": 0,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1022.8074293879977
+  },
+  {
+    "parent": 153,
+    "source": 0,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -994.121308316803
+  },
+  {
+    "parent": 154,
+    "source": 1,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1053.124830441176
+  },
+  {
+    "parent": 154,
+    "source": 1,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1000.4760681335963
+  },
+  {
+    "parent": 155,
+    "source": 2,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1144.3727718692326
+  },
+  {
+    "parent": 155,
+    "source": 2,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1036.6121087683644
+  },
+  {
+    "parent": 156,
+    "source": 3,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1108.5769789204878
+  },
+  {
+    "parent": 156,
+    "source": 3,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -976.732495773405
+  },
+  {
+    "parent": 157,
+    "source": 4,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1017.0310971305917
+  },
+  {
+    "parent": 157,
+    "source": 4,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1019.1962733605748
+  },
+  {
+    "parent": 158,
+    "source": 5,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1008.8214917054136
+  },
+  {
+    "parent": 158,
+    "source": 5,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1009.3267852601323
+  },
+  {
+    "parent": 159,
+    "source": 6,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1015.1887278101415
+  },
+  {
+    "parent": 159,
+    "source": 6,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1015.4143183067438
+  },
+  {
+    "parent": 160,
+    "source": 7,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1025.2064415969971
+  },
+  {
+    "parent": 160,
+    "source": 7,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1005.8924669625419
+  },
+  {
+    "parent": 161,
+    "source": 8,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1026.75190775087
+  },
+  {
+    "parent": 161,
+    "source": 8,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1006.76825463635
+  },
+  {
+    "parent": 162,
+    "source": 0,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1027.4182016975656
+  },
+  {
+    "parent": 162,
+    "source": 0,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1011.3240891034958
+  },
+  {
+    "parent": 163,
+    "source": 1,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1026.7294461971514
+  },
+  {
+    "parent": 163,
+    "source": 1,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1018.0148252286824
+  },
+  {
+    "parent": 164,
+    "source": 2,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -984.8741570313059
+  },
+  {
+    "parent": 164,
+    "source": 2,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -988.1006098215992
+  },
+  {
+    "parent": 165,
+    "source": 3,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1052.2619636151521
+  },
+  {
+    "parent": 165,
+    "source": 3,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -975.3336702402788
+  },
+  {
+    "parent": 166,
+    "source": 4,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1042.5552671967002
+  },
+  {
+    "parent": 166,
+    "source": 4,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1020.3900913239747
+  },
+  {
+    "parent": 167,
+    "source": 5,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1009.222010016471
+  },
+  {
+    "parent": 167,
+    "source": 5,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1009.3802512558194
+  },
+  {
+    "parent": 168,
+    "source": 6,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1002.7508496825977
+  },
+  {
+    "parent": 168,
+    "source": 6,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1004.6640781796543
+  },
+  {
+    "parent": 169,
+    "source": 7,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1047.0566498474066
+  },
+  {
+    "parent": 169,
+    "source": 7,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1037.7559811450212
+  },
+  {
+    "parent": 170,
+    "source": 8,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1084.5981631828
+  },
+  {
+    "parent": 170,
+    "source": 8,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -1012.936024679531
+  },
+  {
+    "parent": 171,
+    "source": 0,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1025.6351916083654
+  },
+  {
+    "parent": 171,
+    "source": 0,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1016.4052709243338
+  },
+  {
+    "parent": 172,
+    "source": 1,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -2620.2660433685596
+  },
+  {
+    "parent": 172,
+    "source": 1,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -997.4785092876393
+  },
+  {
+    "parent": 173,
+    "source": 2,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -981.3286045516052
+  },
+  {
+    "parent": 173,
+    "source": 2,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -975.4760437968359
+  },
+  {
+    "parent": 174,
+    "source": 3,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1008.4657560471192
+  },
+  {
+    "parent": 174,
+    "source": 3,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1009.188032833189
+  },
+  {
+    "parent": 175,
+    "source": 4,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1002.3230612823659
+  },
+  {
+    "parent": 175,
+    "source": 4,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1002.5221537921584
+  },
+  {
+    "parent": 176,
+    "source": 5,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -985.1787675791184
+  },
+  {
+    "parent": 176,
+    "source": 5,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -973.3549960282958
+  },
+  {
+    "parent": 177,
+    "source": 6,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1007.2863921672088
+  },
+  {
+    "parent": 177,
+    "source": 6,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -974.5177385186474
+  },
+  {
+    "parent": 178,
+    "source": 7,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1003.531601416681
+  },
+  {
+    "parent": 178,
+    "source": 7,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1006.0314169383103
+  },
+  {
+    "parent": 179,
+    "source": 8,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1039.0453243198044
+  },
+  {
+    "parent": 179,
+    "source": 8,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -993.0753693621512
+  },
+  {
+    "parent": 180,
+    "source": 0,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1008.6087291095109
+  },
+  {
+    "parent": 180,
+    "source": 0,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1006.4518867470317
+  },
+  {
+    "parent": 181,
+    "source": 1,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1047.432787518008
+  },
+  {
+    "parent": 181,
+    "source": 1,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1016.0705904540552
+  },
+  {
+    "parent": 182,
+    "source": 2,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1024.1586701997353
+  },
+  {
+    "parent": 182,
+    "source": 2,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1024.398516373202
+  },
+  {
+    "parent": 183,
+    "source": 3,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1019.5226321715062
+  },
+  {
+    "parent": 183,
+    "source": 3,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1018.8926060449471
+  },
+  {
+    "parent": 184,
+    "source": 4,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1168.9767015551888
+  },
+  {
+    "parent": 184,
+    "source": 4,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1022.8010711124163
+  },
+  {
+    "parent": 185,
+    "source": 5,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1022.6561718428078
+  },
+  {
+    "parent": 185,
+    "source": 5,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -982.3292296871838
+  },
+  {
+    "parent": 186,
+    "source": 6,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1011.5642329157615
+  },
+  {
+    "parent": 186,
+    "source": 6,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1014.1021605088447
+  },
+  {
+    "parent": 187,
+    "source": 7,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -980.6984134366667
+  },
+  {
+    "parent": 187,
+    "source": 7,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -978.8526297586174
+  },
+  {
+    "parent": 188,
+    "source": 8,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -973.6870509912794
+  },
+  {
+    "parent": 188,
+    "source": 8,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -972.9471599169048
+  },
+  {
+    "parent": 189,
+    "source": 0,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1175.51015433426
+  },
+  {
+    "parent": 189,
+    "source": 0,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1036.1898243797389
+  },
+  {
+    "parent": 190,
+    "source": 1,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1007.7144130866449
+  },
+  {
+    "parent": 190,
+    "source": 1,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1009.0252018621268
+  },
+  {
+    "parent": 191,
+    "source": 2,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1016.3352824952149
+  },
+  {
+    "parent": 191,
+    "source": 2,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1016.147005808501
+  },
+  {
+    "parent": 192,
+    "source": 3,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1046.0453128879085
+  },
+  {
+    "parent": 192,
+    "source": 3,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -993.977902906146
+  },
+  {
+    "parent": 193,
+    "source": 4,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1194.9282899320715
+  },
+  {
+    "parent": 193,
+    "source": 4,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -997.07119714971
+  },
+  {
+    "parent": 194,
+    "source": 5,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1056.1998568454126
+  },
+  {
+    "parent": 194,
+    "source": 5,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -997.5122198081642
+  },
+  {
+    "parent": 195,
+    "source": 6,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1195.2922159283166
+  },
+  {
+    "parent": 195,
+    "source": 6,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1004.7092495029294
+  },
+  {
+    "parent": 196,
+    "source": 7,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -979.3858290899993
+  },
+  {
+    "parent": 196,
+    "source": 7,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -981.0153166721981
+  },
+  {
+    "parent": 197,
+    "source": 8,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1075.8876793286408
+  },
+  {
+    "parent": 197,
+    "source": 8,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1012.1290057678016
+  },
+  {
+    "parent": 198,
+    "source": 0,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -992.1582484749617
+  },
+  {
+    "parent": 198,
+    "source": 0,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -989.6552940442255
+  },
+  {
+    "parent": 199,
+    "source": 1,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1021.4755150170149
+  },
+  {
+    "parent": 199,
+    "source": 1,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1021.571007112492
+  },
+  {
+    "parent": 200,
+    "source": 2,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -977.456605389033
+  },
+  {
+    "parent": 200,
+    "source": 2,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -977.7616841495999
+  },
+  {
+    "parent": 201,
+    "source": 3,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1042.380540498328
+  },
+  {
+    "parent": 201,
+    "source": 3,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -1024.6795126104053
+  },
+  {
+    "parent": 202,
+    "source": 4,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1033.0093006667357
+  },
+  {
+    "parent": 202,
+    "source": 4,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1031.9954424354448
+  },
+  {
+    "parent": 203,
+    "source": 5,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1003.7380300754595
+  },
+  {
+    "parent": 203,
+    "source": 5,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1005.0731845855855
+  },
+  {
+    "parent": 204,
+    "source": 6,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1025.303180682991
+  },
+  {
+    "parent": 204,
+    "source": 6,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1011.9786098428262
+  },
+  {
+    "parent": 205,
+    "source": 7,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1291.3496844450406
+  },
+  {
+    "parent": 205,
+    "source": 7,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -976.8079766664673
+  },
+  {
+    "parent": 206,
+    "source": 8,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -1024.7947895578832
+  },
+  {
+    "parent": 206,
+    "source": 8,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -977.9280587854887
+  },
+  {
+    "parent": 207,
+    "source": 0,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -985.0417821601184
+  },
+  {
+    "parent": 207,
+    "source": 0,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -985.275084818573
+  },
+  {
+    "parent": 208,
+    "source": 1,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1003.2585507350569
+  },
+  {
+    "parent": 208,
+    "source": 1,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1005.054079931015
+  },
+  {
+    "parent": 209,
+    "source": 2,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1347.1214283597374
+  },
+  {
+    "parent": 209,
+    "source": 2,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1019.6905178848976
+  },
+  {
+    "parent": 210,
+    "source": 3,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1031.629760433189
+  },
+  {
+    "parent": 210,
+    "source": 3,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1003.1602909925405
+  },
+  {
+    "parent": 211,
+    "source": 4,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1008.5989587560553
+  },
+  {
+    "parent": 211,
+    "source": 4,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -995.2266646598869
+  },
+  {
+    "parent": 212,
+    "source": 5,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -992.1303610244418
+  },
+  {
+    "parent": 212,
+    "source": 5,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -992.6877658507581
+  },
+  {
+    "parent": 213,
+    "source": 6,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1726.6469820807524
+  },
+  {
+    "parent": 213,
+    "source": 6,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1008.3474413273086
+  },
+  {
+    "parent": 214,
+    "source": 7,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1075.734650771681
+  },
+  {
+    "parent": 214,
+    "source": 7,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1017.8968048676766
+  },
+  {
+    "parent": 215,
+    "source": 8,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1054.538869781506
+  },
+  {
+    "parent": 215,
+    "source": 8,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1049.9561146057092
+  },
+  {
+    "parent": 216,
+    "source": 0,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1066.6064736270605
+  },
+  {
+    "parent": 216,
+    "source": 0,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -958.9666291918727
+  },
+  {
+    "parent": 217,
+    "source": 1,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1007.5362821187787
+  },
+  {
+    "parent": 217,
+    "source": 1,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -994.5453372373561
+  },
+  {
+    "parent": 218,
+    "source": 2,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1040.7355161150194
+  },
+  {
+    "parent": 218,
+    "source": 2,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -984.6885566943042
+  },
+  {
+    "parent": 219,
+    "source": 3,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -976.1179994350011
+  },
+  {
+    "parent": 219,
+    "source": 3,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -977.2098526312413
+  },
+  {
+    "parent": 220,
+    "source": 4,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1339.4863202722286
+  },
+  {
+    "parent": 220,
+    "source": 4,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -995.1078692395697
+  },
+  {
+    "parent": 221,
+    "source": 5,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1003.1532314891365
+  },
+  {
+    "parent": 221,
+    "source": 5,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1003.5196997501116
+  },
+  {
+    "parent": 222,
+    "source": 6,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -980.4368421425122
+  },
+  {
+    "parent": 222,
+    "source": 6,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -980.9349940602151
+  },
+  {
+    "parent": 223,
+    "source": 7,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1006.0014397803052
+  },
+  {
+    "parent": 223,
+    "source": 7,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1006.1961988896612
+  },
+  {
+    "parent": 224,
+    "source": 8,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1062.3961206810632
+  },
+  {
+    "parent": 224,
+    "source": 8,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1018.3555269132426
+  },
+  {
+    "parent": 225,
+    "source": 0,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1219.1873250438543
+  },
+  {
+    "parent": 225,
+    "source": 0,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1029.5339835578313
+  },
+  {
+    "parent": 226,
+    "source": 1,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1032.7438343058316
+  },
+  {
+    "parent": 226,
+    "source": 1,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1019.2042676048193
+  },
+  {
+    "parent": 227,
+    "source": 2,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1103.8198514519374
+  },
+  {
+    "parent": 227,
+    "source": 2,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1002.916184011593
+  },
+  {
+    "parent": 228,
+    "source": 3,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1009.4238447964683
+  },
+  {
+    "parent": 228,
+    "source": 3,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -998.1950077682231
+  },
+  {
+    "parent": 229,
+    "source": 4,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1046.7145250448052
+  },
+  {
+    "parent": 229,
+    "source": 4,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1032.6692799827817
+  },
+  {
+    "parent": 230,
+    "source": 5,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1001.14304060134
+  },
+  {
+    "parent": 230,
+    "source": 5,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -988.608297758976
+  },
+  {
+    "parent": 231,
+    "source": 6,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -973.1335758327921
+  },
+  {
+    "parent": 231,
+    "source": 6,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -973.336030660464
+  },
+  {
+    "parent": 232,
+    "source": 7,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1029.2451560295794
+  },
+  {
+    "parent": 232,
+    "source": 7,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1006.6303418202017
+  },
+  {
+    "parent": 233,
+    "source": 8,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -999.857776310891
+  },
+  {
+    "parent": 233,
+    "source": 8,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1001.6849440859228
+  },
+  {
+    "parent": 234,
+    "source": 0,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -970.4734578393304
+  },
+  {
+    "parent": 234,
+    "source": 0,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -968.2542599602417
+  },
+  {
+    "parent": 235,
+    "source": 1,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -996.9263912130552
+  },
+  {
+    "parent": 235,
+    "source": 1,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -987.9432350501227
+  },
+  {
+    "parent": 236,
+    "source": 2,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -2553.733494557146
+  },
+  {
+    "parent": 236,
+    "source": 2,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1033.531174752688
+  },
+  {
+    "parent": 237,
+    "source": 3,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -998.643120230751
+  },
+  {
+    "parent": 237,
+    "source": 3,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -997.838184285448
+  },
+  {
+    "parent": 238,
+    "source": 4,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -988.9810397007118
+  },
+  {
+    "parent": 238,
+    "source": 4,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -980.910978440009
+  },
+  {
+    "parent": 239,
+    "source": 5,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -981.5684004034418
+  },
+  {
+    "parent": 239,
+    "source": 5,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -981.2357939072991
+  },
+  {
+    "parent": 240,
+    "source": 6,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1040.9389873799805
+  },
+  {
+    "parent": 240,
+    "source": 6,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1010.6790617781596
+  },
+  {
+    "parent": 241,
+    "source": 7,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1059.0181452582924
+  },
+  {
+    "parent": 241,
+    "source": 7,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1058.6231504690907
+  },
+  {
+    "parent": 242,
+    "source": 8,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -1020.8337358322289
+  },
+  {
+    "parent": 242,
+    "source": 8,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1005.6574519800579
+  },
+  {
+    "parent": 243,
+    "source": 0,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1033.2049973669225
+  },
+  {
+    "parent": 243,
+    "source": 0,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -991.9661272921246
+  },
+  {
+    "parent": 244,
+    "source": 1,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1726.750731966652
+  },
+  {
+    "parent": 244,
+    "source": 1,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1037.944717703933
+  },
+  {
+    "parent": 245,
+    "source": 2,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1124.5374851071965
+  },
+  {
+    "parent": 245,
+    "source": 2,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1007.8508092863242
+  },
+  {
+    "parent": 246,
+    "source": 3,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1010.1823067916407
+  },
+  {
+    "parent": 246,
+    "source": 3,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -999.3662585824518
+  },
+  {
+    "parent": 247,
+    "source": 4,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -979.3415211433132
+  },
+  {
+    "parent": 247,
+    "source": 4,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -979.5689779322538
+  },
+  {
+    "parent": 248,
+    "source": 5,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -972.5151357171131
+  },
+  {
+    "parent": 248,
+    "source": 5,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -968.5051373272946
+  },
+  {
+    "parent": 249,
+    "source": 6,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1013.21574010773
+  },
+  {
+    "parent": 249,
+    "source": 6,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -994.9897041337503
+  },
+  {
+    "parent": 250,
+    "source": 7,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1103.0626877343652
+  },
+  {
+    "parent": 250,
+    "source": 7,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1038.6223032082014
+  },
+  {
+    "parent": 251,
+    "source": 8,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1054.9477211603048
+  },
+  {
+    "parent": 251,
+    "source": 8,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1033.7917699649142
+  },
+  {
+    "parent": 252,
+    "source": 0,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -2769.5058171775936
+  },
+  {
+    "parent": 252,
+    "source": 0,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1067.897167312279
+  },
+  {
+    "parent": 253,
+    "source": 1,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1018.541909940025
+  },
+  {
+    "parent": 253,
+    "source": 1,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1019.9138287961689
+  },
+  {
+    "parent": 254,
+    "source": 2,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1009.2802401996812
+  },
+  {
+    "parent": 254,
+    "source": 2,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1000.0750978355957
+  },
+  {
+    "parent": 255,
+    "source": 3,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -994.5292901526947
+  },
+  {
+    "parent": 255,
+    "source": 3,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -994.1514129379375
+  },
+  {
+    "parent": 256,
+    "source": 4,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -996.3432521155278
+  },
+  {
+    "parent": 256,
+    "source": 4,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -998.2627373783105
+  },
+  {
+    "parent": 257,
+    "source": 5,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1116.9379258217612
+  },
+  {
+    "parent": 257,
+    "source": 5,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1015.9810438909547
+  },
+  {
+    "parent": 258,
+    "source": 6,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -1023.7627209709998
+  },
+  {
+    "parent": 258,
+    "source": 6,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1011.1341540101746
+  },
+  {
+    "parent": 259,
+    "source": 7,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -1002.4038552679214
+  },
+  {
+    "parent": 259,
+    "source": 7,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -986.6484502061728
+  },
+  {
+    "parent": 260,
+    "source": 8,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -979.5953149584941
+  },
+  {
+    "parent": 260,
+    "source": 8,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -957.6096984256901
+  },
+  {
+    "parent": 261,
+    "source": 0,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1083.4674320156628
+  },
+  {
+    "parent": 261,
+    "source": 0,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1011.8610376741017
+  },
+  {
+    "parent": 262,
+    "source": 1,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1024.0764562887043
+  },
+  {
+    "parent": 262,
+    "source": 1,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1022.9152092910988
+  },
+  {
+    "parent": 263,
+    "source": 2,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1003.6984880420624
+  },
+  {
+    "parent": 263,
+    "source": 2,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1003.8952024277987
+  },
+  {
+    "parent": 264,
+    "source": 3,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1074.3846508201282
+  },
+  {
+    "parent": 264,
+    "source": 3,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1045.6896153841772
+  },
+  {
+    "parent": 265,
+    "source": 4,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1043.9082060614246
+  },
+  {
+    "parent": 265,
+    "source": 4,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1018.6538775313949
+  },
+  {
+    "parent": 266,
+    "source": 5,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1208.1244037699967
+  },
+  {
+    "parent": 266,
+    "source": 5,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1010.9222432355244
+  },
+  {
+    "parent": 267,
+    "source": 6,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1043.7977658415352
+  },
+  {
+    "parent": 267,
+    "source": 6,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1015.7498624477244
+  },
+  {
+    "parent": 268,
+    "source": 7,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1010.8999672389338
+  },
+  {
+    "parent": 268,
+    "source": 7,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1002.8956887198681
+  },
+  {
+    "parent": 269,
+    "source": 8,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -3399.295874848303
+  },
+  {
+    "parent": 269,
+    "source": 8,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1027.1727699170476
+  },
+  {
+    "parent": 270,
+    "source": 0,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1016.4426695518883
+  },
+  {
+    "parent": 270,
+    "source": 0,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1016.5927201704387
+  },
+  {
+    "parent": 271,
+    "source": 1,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1005.5698551152601
+  },
+  {
+    "parent": 271,
+    "source": 1,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1005.7504779390988
+  },
+  {
+    "parent": 272,
+    "source": 2,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1047.9390458631387
+  },
+  {
+    "parent": 272,
+    "source": 2,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1049.4985477108867
+  },
+  {
+    "parent": 273,
+    "source": 3,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1025.1774047333095
+  },
+  {
+    "parent": 273,
+    "source": 3,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1022.0704091896563
+  },
+  {
+    "parent": 274,
+    "source": 4,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1026.0305334408145
+  },
+  {
+    "parent": 274,
+    "source": 4,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1000.6532930656888
+  },
+  {
+    "parent": 275,
+    "source": 5,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -998.6835185875942
+  },
+  {
+    "parent": 275,
+    "source": 5,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -979.4401098338641
+  },
+  {
+    "parent": 276,
+    "source": 6,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1036.3424274268777
+  },
+  {
+    "parent": 276,
+    "source": 6,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1030.613919653776
+  },
+  {
+    "parent": 277,
+    "source": 7,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -2028.1201922146865
+  },
+  {
+    "parent": 277,
+    "source": 7,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -976.4359259642558
+  },
+  {
+    "parent": 278,
+    "source": 8,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -968.9062598416174
+  },
+  {
+    "parent": 278,
+    "source": 8,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -970.7786669494935
+  },
+  {
+    "parent": 279,
+    "source": 0,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1006.9571833673515
+  },
+  {
+    "parent": 279,
+    "source": 0,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1007.0930549350282
+  },
+  {
+    "parent": 280,
+    "source": 1,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1024.2235650699618
+  },
+  {
+    "parent": 280,
+    "source": 1,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1024.869189779361
+  },
+  {
+    "parent": 281,
+    "source": 2,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1166.5148941697905
+  },
+  {
+    "parent": 281,
+    "source": 2,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1002.632941150259
+  },
+  {
+    "parent": 282,
+    "source": 3,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1118.698316234415
+  },
+  {
+    "parent": 282,
+    "source": 3,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1016.2254314695093
+  },
+  {
+    "parent": 283,
+    "source": 4,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1017.4906220531739
+  },
+  {
+    "parent": 283,
+    "source": 4,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -996.7847794504934
+  },
+  {
+    "parent": 284,
+    "source": 5,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1003.8390580984499
+  },
+  {
+    "parent": 284,
+    "source": 5,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -984.6287720095531
+  },
+  {
+    "parent": 285,
+    "source": 6,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1321.2092526923493
+  },
+  {
+    "parent": 285,
+    "source": 6,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -982.7642647070171
+  },
+  {
+    "parent": 286,
+    "source": 7,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1004.1570888803581
+  },
+  {
+    "parent": 286,
+    "source": 7,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -988.6800857106875
+  },
+  {
+    "parent": 287,
+    "source": 8,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1025.97116894539
+  },
+  {
+    "parent": 287,
+    "source": 8,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1026.3984795362667
+  },
+  {
+    "parent": 288,
+    "source": 0,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1057.2021577719222
+  },
+  {
+    "parent": 288,
+    "source": 0,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -989.9188356472081
+  },
+  {
+    "parent": 289,
+    "source": 1,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1140.4785677169805
+  },
+  {
+    "parent": 289,
+    "source": 1,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -992.4971707667844
+  },
+  {
+    "parent": 290,
+    "source": 2,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1003.0675705525267
+  },
+  {
+    "parent": 290,
+    "source": 2,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -996.7393841421155
+  },
+  {
+    "parent": 291,
+    "source": 3,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -978.692451393131
+  },
+  {
+    "parent": 291,
+    "source": 3,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -977.3780707678407
+  },
+  {
+    "parent": 292,
+    "source": 4,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -2674.133785277702
+  },
+  {
+    "parent": 292,
+    "source": 4,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -998.8497041466146
+  },
+  {
+    "parent": 293,
+    "source": 5,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -952.0403801998671
+  },
+  {
+    "parent": 293,
+    "source": 5,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -945.720904509031
+  },
+  {
+    "parent": 294,
+    "source": 6,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -1028.257414891645
+  },
+  {
+    "parent": 294,
+    "source": 6,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -990.0711579461597
+  },
+  {
+    "parent": 295,
+    "source": 7,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1022.361950081423
+  },
+  {
+    "parent": 295,
+    "source": 7,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1022.5955179940324
+  },
+  {
+    "parent": 296,
+    "source": 8,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1055.7750107226238
+  },
+  {
+    "parent": 296,
+    "source": 8,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -971.7858273706914
+  },
+  {
+    "parent": 297,
+    "source": 0,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -981.7885387434239
+  },
+  {
+    "parent": 297,
+    "source": 0,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -984.0596511137965
+  },
+  {
+    "parent": 298,
+    "source": 1,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1005.2620567957783
+  },
+  {
+    "parent": 298,
+    "source": 1,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1003.8461575740182
+  },
+  {
+    "parent": 299,
+    "source": 2,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1030.2904983785652
+  },
+  {
+    "parent": 299,
+    "source": 2,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1032.2108528035174
+  },
+  {
+    "parent": 300,
+    "source": 3,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -2348.3130592716147
+  },
+  {
+    "parent": 300,
+    "source": 3,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -999.5519856960352
+  },
+  {
+    "parent": 301,
+    "source": 4,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -999.8417824013948
+  },
+  {
+    "parent": 301,
+    "source": 4,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1001.4507685744854
+  },
+  {
+    "parent": 302,
+    "source": 5,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -982.0277094196609
+  },
+  {
+    "parent": 302,
+    "source": 5,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -982.9231225940558
+  },
+  {
+    "parent": 303,
+    "source": 6,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1032.9315910336759
+  },
+  {
+    "parent": 303,
+    "source": 6,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1033.1455995548095
+  },
+  {
+    "parent": 304,
+    "source": 7,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1109.6914317622295
+  },
+  {
+    "parent": 304,
+    "source": 7,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1036.4596685565084
+  },
+  {
+    "parent": 305,
+    "source": 8,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1248.0586674695596
+  },
+  {
+    "parent": 305,
+    "source": 8,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -987.6953082898708
+  },
+  {
+    "parent": 306,
+    "source": 0,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1019.9052976424389
+  },
+  {
+    "parent": 306,
+    "source": 0,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1021.8424026059068
+  },
+  {
+    "parent": 307,
+    "source": 1,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -993.8143086291515
+  },
+  {
+    "parent": 307,
+    "source": 1,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -988.4321780387976
+  },
+  {
+    "parent": 308,
+    "source": 2,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1062.260188994671
+  },
+  {
+    "parent": 308,
+    "source": 2,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1004.6149303219108
+  },
+  {
+    "parent": 309,
+    "source": 3,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1012.565387431642
+  },
+  {
+    "parent": 309,
+    "source": 3,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1014.6337153955375
+  },
+  {
+    "parent": 310,
+    "source": 4,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1041.106846093663
+  },
+  {
+    "parent": 310,
+    "source": 4,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1034.2958270811487
+  },
+  {
+    "parent": 311,
+    "source": 5,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1005.3250411920087
+  },
+  {
+    "parent": 311,
+    "source": 5,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1005.2425724766324
+  },
+  {
+    "parent": 312,
+    "source": 6,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1009.0292014048296
+  },
+  {
+    "parent": 312,
+    "source": 6,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -982.5780928226827
+  },
+  {
+    "parent": 313,
+    "source": 7,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -1030.2417418571813
+  },
+  {
+    "parent": 313,
+    "source": 7,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1007.6817459470205
+  },
+  {
+    "parent": 314,
+    "source": 8,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -1016.6381098676276
+  },
+  {
+    "parent": 314,
+    "source": 8,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -997.3666774176029
+  },
+  {
+    "parent": 315,
+    "source": 0,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -995.6998626579951
+  },
+  {
+    "parent": 315,
+    "source": 0,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -996.1112994668057
+  },
+  {
+    "parent": 316,
+    "source": 1,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1703.6303036785098
+  },
+  {
+    "parent": 316,
+    "source": 1,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -966.830137014023
+  },
+  {
+    "parent": 317,
+    "source": 2,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1022.8188613345167
+  },
+  {
+    "parent": 317,
+    "source": 2,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1014.5404632257145
+  },
+  {
+    "parent": 318,
+    "source": 3,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -970.0897974804543
+  },
+  {
+    "parent": 318,
+    "source": 3,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -970.1238045122568
+  },
+  {
+    "parent": 319,
+    "source": 4,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -989.4756701947164
+  },
+  {
+    "parent": 319,
+    "source": 4,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -989.7027521887132
+  },
+  {
+    "parent": 320,
+    "source": 5,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1033.6709084119657
+  },
+  {
+    "parent": 320,
+    "source": 5,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1020.7645019356628
+  },
+  {
+    "parent": 321,
+    "source": 6,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1193.7721717557315
+  },
+  {
+    "parent": 321,
+    "source": 6,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1012.6339180824431
+  },
+  {
+    "parent": 322,
+    "source": 7,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -995.8255485907233
+  },
+  {
+    "parent": 322,
+    "source": 7,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -998.0154338173736
+  },
+  {
+    "parent": 323,
+    "source": 8,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1090.464923216105
+  },
+  {
+    "parent": 323,
+    "source": 8,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1012.1220484158235
+  },
+  {
+    "parent": 324,
+    "source": 0,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1060.2411150103158
+  },
+  {
+    "parent": 324,
+    "source": 0,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1032.3216620635537
+  },
+  {
+    "parent": 325,
+    "source": 1,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1013.930596280971
+  },
+  {
+    "parent": 325,
+    "source": 1,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -997.4289787803821
+  },
+  {
+    "parent": 326,
+    "source": 2,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1014.7574321613234
+  },
+  {
+    "parent": 326,
+    "source": 2,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1012.7663162802044
+  },
+  {
+    "parent": 327,
+    "source": 3,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1009.6239535507042
+  },
+  {
+    "parent": 327,
+    "source": 3,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1009.2807069435739
+  },
+  {
+    "parent": 328,
+    "source": 4,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1056.6846169914825
+  },
+  {
+    "parent": 328,
+    "source": 4,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -985.9755502810142
+  },
+  {
+    "parent": 329,
+    "source": 5,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1021.9408895196591
+  },
+  {
+    "parent": 329,
+    "source": 5,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1013.2277251233432
+  },
+  {
+    "parent": 330,
+    "source": 6,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1000.1657977491408
+  },
+  {
+    "parent": 330,
+    "source": 6,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1001.2087867552718
+  },
+  {
+    "parent": 331,
+    "source": 7,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1032.3178835090364
+  },
+  {
+    "parent": 331,
+    "source": 7,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -985.3647120907849
+  },
+  {
+    "parent": 332,
+    "source": 8,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -987.0435110893881
+  },
+  {
+    "parent": 332,
+    "source": 8,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -976.5193283470782
+  },
+  {
+    "parent": 333,
+    "source": 0,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1018.0278240189728
+  },
+  {
+    "parent": 333,
+    "source": 0,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1018.9824047040513
+  },
+  {
+    "parent": 334,
+    "source": 1,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1026.5384243105289
+  },
+  {
+    "parent": 334,
+    "source": 1,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1021.0797258318999
+  },
+  {
+    "parent": 335,
+    "source": 2,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -993.8651521313038
+  },
+  {
+    "parent": 335,
+    "source": 2,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -994.0234696977714
+  },
+  {
+    "parent": 336,
+    "source": 3,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -992.7685433968418
+  },
+  {
+    "parent": 336,
+    "source": 3,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -990.412498026021
+  },
+  {
+    "parent": 337,
+    "source": 4,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1438.3099661231363
+  },
+  {
+    "parent": 337,
+    "source": 4,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -993.6566522911842
+  },
+  {
+    "parent": 338,
+    "source": 5,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1014.891546590067
+  },
+  {
+    "parent": 338,
+    "source": 5,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -981.8694775535578
+  },
+  {
+    "parent": 339,
+    "source": 6,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1038.1064488409343
+  },
+  {
+    "parent": 339,
+    "source": 6,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1006.8226016534113
+  },
+  {
+    "parent": 340,
+    "source": 7,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -967.1985739710497
+  },
+  {
+    "parent": 340,
+    "source": 7,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -966.4869368406346
+  },
+  {
+    "parent": 341,
+    "source": 8,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1224.0767468088102
+  },
+  {
+    "parent": 341,
+    "source": 8,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -992.2443830074476
+  },
+  {
+    "parent": 342,
+    "source": 0,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1032.6250324856233
+  },
+  {
+    "parent": 342,
+    "source": 0,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1033.899070151886
+  },
+  {
+    "parent": 343,
+    "source": 1,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1039.066319695301
+  },
+  {
+    "parent": 343,
+    "source": 1,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1039.2935546851113
+  },
+  {
+    "parent": 344,
+    "source": 2,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -1031.1315288211727
+  },
+  {
+    "parent": 344,
+    "source": 2,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -998.5722267387707
+  },
+  {
+    "parent": 345,
+    "source": 3,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1022.144757933186
+  },
+  {
+    "parent": 345,
+    "source": 3,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1018.120639397067
+  },
+  {
+    "parent": 346,
+    "source": 4,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 0,
+    "true_source_log_density": -1089.4792531507255
+  },
+  {
+    "parent": 346,
+    "source": 4,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -1028.5468501148057
+  },
+  {
+    "parent": 347,
+    "source": 5,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -985.1320823815632
+  },
+  {
+    "parent": 347,
+    "source": 5,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -968.1434300815549
+  },
+  {
+    "parent": 348,
+    "source": 6,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -995.2521054792088
+  },
+  {
+    "parent": 348,
+    "source": 6,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -997.1587486883429
+  },
+  {
+    "parent": 349,
+    "source": 7,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1014.7428417004903
+  },
+  {
+    "parent": 349,
+    "source": 7,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1002.9813940531301
+  },
+  {
+    "parent": 350,
+    "source": 8,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -1031.7228213940002
+  },
+  {
+    "parent": 350,
+    "source": 8,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 0,
+    "nis_covered": 1,
+    "true_source_log_density": -975.3128419516759
+  },
+  {
+    "parent": 351,
+    "source": 0,
+    "prior_source": 8,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1045.4350358435445
+  },
+  {
+    "parent": 351,
+    "source": 0,
+    "prior_source": 8,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1045.2567399630175
+  },
+  {
+    "parent": 352,
+    "source": 1,
+    "prior_source": 0,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1032.1665604251957
+  },
+  {
+    "parent": 352,
+    "source": 1,
+    "prior_source": 0,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1006.3419820715247
+  },
+  {
+    "parent": 353,
+    "source": 2,
+    "prior_source": 1,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1029.31631900525
+  },
+  {
+    "parent": 353,
+    "source": 2,
+    "prior_source": 1,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -988.6656735551983
+  },
+  {
+    "parent": 354,
+    "source": 3,
+    "prior_source": 2,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -987.6678001891728
+  },
+  {
+    "parent": 354,
+    "source": 3,
+    "prior_source": 2,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -986.3412619649112
+  },
+  {
+    "parent": 355,
+    "source": 4,
+    "prior_source": 3,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -987.3346307625447
+  },
+  {
+    "parent": 355,
+    "source": 4,
+    "prior_source": 3,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -976.9931786566037
+  },
+  {
+    "parent": 356,
+    "source": 5,
+    "prior_source": 4,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -992.9389730850862
+  },
+  {
+    "parent": 356,
+    "source": 5,
+    "prior_source": 4,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -994.6804704154405
+  },
+  {
+    "parent": 357,
+    "source": 6,
+    "prior_source": 5,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -985.5895864805682
+  },
+  {
+    "parent": 357,
+    "source": 6,
+    "prior_source": 5,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -988.956995285417
+  },
+  {
+    "parent": 358,
+    "source": 7,
+    "prior_source": 6,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 0,
+    "true_source_log_density": -1107.6711953081856
+  },
+  {
+    "parent": 358,
+    "source": 7,
+    "prior_source": 6,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1004.0621213726859
+  },
+  {
+    "parent": 359,
+    "source": 8,
+    "prior_source": 7,
+    "arm": "mean_only",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1004.5593328939934
+  },
+  {
+    "parent": 359,
+    "source": 8,
+    "prior_source": 7,
+    "arm": "mean_covariance",
+    "correct": 1,
+    "nis_covered": 1,
+    "true_source_log_density": -1003.8641920164005
+  }
+]

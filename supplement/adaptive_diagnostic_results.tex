@@ -1,0 +1,86 @@
+\input{generated/adaptive_diagnostic_macros}
+\subsection{Nominal-Operator Mechanism Diagnostics}
+Two independent diagnostics use the fixed nominal IEEE-39 load operators
+with nine load sources and 47 observation coordinates. They do not use
+observations from the mechanism/transfer campaign. The code, noise seeds,
+threshold grid and endpoints were fixed before generating the cohorts.
+The deterministic null-innovation recursion reproduces explicit physical
+state and null-filter propagation through ON and OFF to maximum absolute
+error $2.8\times10^{-10}$. Noise is generated in innovation coordinates;
+neither a nonlinear second plant nor independent per-PMU TVE is simulated.
+
+\paragraph{Inherited uncertainty at a fixed recovery mean.}
+The first diagnostic holds the onset, current-event amplitude and recovery
+mean known. Over 15 reports, let $\mu_c$ be the nominal signature of source
+$c$ and let $u$ be the preceding load's recovery signature scaled by its
+severity standard deviation, 0.002. In whitened coordinates the fixture is
+\begin{equation}
+ y=\mu_c+u\zeta+\epsilon,\qquad
+ \zeta\sim\mathcal N(0,1),\quad\epsilon\sim\mathcal N(0,I),
+ \label{eq:cov-fixture}
+\end{equation}
+with independent $\zeta,\epsilon$ and dimension $15\times47=705$.
+The preceding load is restored 0.5\,s before the observation window.
+The two source selectors use the same means and respectively covariance
+$I$ or $I+uu^\top$. The latter evaluates
+\begin{align}
+ d_c&=\|y-\mu_c\|^2-
+ \frac{[u^\top(y-\mu_c)]^2}{1+u^\top u},\nonumber\\
+ \log\det(I+uu^\top)&=\log(1+u^\top u).
+\end{align}
+The covariance is common across candidate sources for each draw, so its
+log determinant cancels in the source ranking, but remains in the density.
+Across 360 independent noise/severity draws, correct source identification
+increased from \CovMeanHits{}/360 to \CovCarryHits{}/360:
+$+\CovDelta{}$ percentage points, paired 95\% bootstrap interval
+$[\CovLow{},\CovHigh{}]$ from 10,000 resamples of the draws.
+Coverage of the nominal 95\% true-source innovation ellipsoid increased
+from \CovNisMean{}\% to \CovNisCarry{}\%.
+This demonstrates the cost of discarding a known covariance component under
+the declared Gaussian model. It neither compares explicit histories with
+an equivalent fused distribution nor establishes detector performance with
+unknown onset and amplitude.
+
+\paragraph{Causal noise learning with an unchanged observation center.}
+The second diagnostic adds covariance $\alpha_k\operatorname{diag}(S_0)$
+to nominal innovation covariance $S_0$. Normal records contain stationary,
+step-changing or ramping noise. Each event record contains two nonoverlapping
+loads, active at 30--70\,s and 80--90\,s, with magnitudes 0.0005 or 0.002
+and both signs. A per-report source/age mixture compares nine sources and
+eight fixed ages with a Gaussian severity prior of standard deviation 0.01.
+It is a local likelihood scan, not a temporal history posterior, and uses
+an untruncated severity prior. No event-type or restoration estimator is run.
+
+The arms hold $\alpha=0$, learn continuously after startup, or learn only
+after 15 quiet reports and a 60-report cooldown. Quiet means nominal
+posterior mass at least 0.99 under normal prior mass 0.99. The noise moment
+estimate uses a learning rate $1/900$ and projects $\alpha$ onto $[0,8]$.
+Each report is scored before learning; the current report can affect the
+guard only for later reports. All arms share the same likelihood scan,
+six-report publication confirmation and five-second refractory interval.
+The lowest feasible threshold on the fixed grid is selected using only
+36 normal calibration records, each 600\,s with 12\,s startup. Thresholds
+are fixed before generating 36 new normal and 36 event TEST records.
+Publication does not modify inference in this diagnostic.
+
+\input{tables/generated/adaptive_diagnostic}
+Table~\ref{tab:adaptive-diagnostic} gives the held-out outcomes.
+Continuous versus fixed adaptation changes timely source coverage by
+$+\AdaptDelta{}$ percentage points, with a paired 95\% interval
+$[\AdaptLow{},\AdaptHigh{}]$ from 10,000 resamples of the 36 event records.
+The guarded and fixed arms identify the same number in every record.
+Thus, no attribution gain is established. Normal-record noise-coefficient
+RMSE is \FixedNoiseRmse{}, \ContNoiseRmse{} and \GuardNoiseRmse{} for fixed,
+continuous and guarded learning. The guard admits only \GateFraction{}\%
+of monitored normal reports: causal timing alone does not prevent a gate
+from obstructing adaptation to noise changes. These settings were not
+retuned after TEST. The exact Poisson limits in the table are conditional
+on that count model; the heterogeneous noise schedule and refractory rule
+do not establish a homogeneous Poisson process.
+
+The deterministic prefix check passes for all inference arrays. An
+independent recount verifies the saved prediction streams, calibration
+selection, event matches, normal exposure and saved-file integrity. These
+diagnostics support preserving inherited uncertainty and revisiting the
+adaptation guard on new development data. They do not support adding an
+adaptive-performance claim to the article abstract.

@@ -1,0 +1,15 @@
+\begin{table}[t]\centering
+\caption{Nominal innovation diagnostic: independent calibration at one normal alarm per hour. All TEST arms use 5.88 normal hours and 72 load interventions in 36 paired records.}
+\label{tab:adaptive-diagnostic}
+\footnotesize\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{lrrrr}
+\toprule
+Noise rule & $h$ & Correct/72 & Extras & FAR (upper)\\
+\midrule
+Fixed & 4 & 13 & 33 & 0.17 (0.81)\\
+Continuous & 1 & 15 & 32 & 0.00 (0.51)\\
+Guarded & 4 & 13 & 33 & 0.00 (0.51)\\
+\bottomrule
+\end{tabular}
+\par\smallskip\parbox{\columnwidth}{\footnotesize FAR and its one-sided 95\% Poisson upper bound are in h$^{-1}$. Extras include repeated or incorrect publications, over 1.08 monitored event hours. Correct means source identified during its true ON interval; this diagnostic estimates neither event family nor OFF.}
+\end{table}

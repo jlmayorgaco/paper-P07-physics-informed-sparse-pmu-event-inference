@@ -58,11 +58,12 @@ This timing is specific to the reported hardware and records.
 
 \subsection{Adaptation Without Absorbing an Intervention}
 Adaptive noise estimation has already been studied on IEEE-39
-\cite{wang2019adaptiveh}; it is not a new contribution here. A useful
-successor would test whether history-based adaptation can track changing
-instrument uncertainty without suppressing weak interventions. This requires
-propagating conditional covariance, scoring each report before updating
-noise, and checking selection bias in the adaptation gate. The supplement's
-architecture diagram and derivation specify these changes as unvalidated
-extensions. Cyber analysis belongs to a separate layer with its own alerts;
-neither missing reports nor physical residuals alone identify an attack.
+\cite{wang2019adaptiveh}. Supplementary nominal-operator diagnostics support
+retaining recovery covariance when onset and amplitude are known. However,
+continuous noise adaptation did not yield a conclusive attribution gain,
+and a quiet-history gate rarely admitted updates. These tests use a local
+likelihood scan, not the reported history bank; they motivate covariance
+propagation but do not validate adaptive event inference. The supplement
+specifies that extension and separates it from cyber analysis, which needs
+its own alerts and validation. Missing reports or physical residuals alone
+do not identify an attack.

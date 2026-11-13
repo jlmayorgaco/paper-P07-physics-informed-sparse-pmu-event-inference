@@ -1,0 +1,74 @@
+{
+  "scope": "F01 linear-operator per-report diagnostic, not R11, nonlinear transfer or TVE-calibrated PMU simulation",
+  "arms": {
+    "fixed": {
+      "threshold": 4.0,
+      "normal_alarms": 1,
+      "normal_hours": 5.88,
+      "normal_far": 0.17006802721088435,
+      "poisson_upper95_per_hour": 0.8067796799983975,
+      "timely_joint_hits": 13,
+      "events": 72,
+      "extra_alarms": 33,
+      "event_hours": 1.08,
+      "normal_noise_rmse": 0.8747973117825205,
+      "normal_mean_log_predictive": -82.98808648781524,
+      "normal_admission_fraction": 0.0
+    },
+    "adaptive": {
+      "threshold": 1.0,
+      "normal_alarms": 0,
+      "normal_hours": 5.88,
+      "normal_far": 0.0,
+      "poisson_upper95_per_hour": 0.5094782778153043,
+      "timely_joint_hits": 15,
+      "events": 72,
+      "extra_alarms": 32,
+      "event_hours": 1.08,
+      "normal_noise_rmse": 0.23213553888517005,
+      "normal_mean_log_predictive": -76.90489894300501,
+      "normal_admission_fraction": 1.0
+    },
+    "guarded": {
+      "threshold": 4.0,
+      "normal_alarms": 0,
+      "normal_hours": 5.88,
+      "normal_far": 0.0,
+      "poisson_upper95_per_hour": 0.5094782778153043,
+      "timely_joint_hits": 13,
+      "events": 72,
+      "extra_alarms": 33,
+      "event_hours": 1.08,
+      "normal_noise_rmse": 0.8731174497912406,
+      "normal_mean_log_predictive": -82.89468955918284,
+      "normal_admission_fraction": 0.08134133282942807
+    }
+  },
+  "paired_timely_contrasts": {
+    "adaptive-fixed": {
+      "difference": 0.027777777777777776,
+      "ci95": [
+        -0.027777777777777776,
+        0.08333333333333333
+      ],
+      "parents": 36
+    },
+    "guarded-fixed": {
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "parents": 36
+    },
+    "guarded-adaptive": {
+      "difference": -0.027777777777777776,
+      "ci95": [
+        -0.08333333333333333,
+        0.027777777777777776
+      ],
+      "parents": 36
+    }
+  },
+  "prefix_invariance": true
+}

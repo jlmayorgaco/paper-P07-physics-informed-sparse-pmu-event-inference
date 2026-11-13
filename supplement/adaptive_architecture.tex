@@ -1,8 +1,9 @@
 \section{Architecture and a Testable Adaptive Extension}
 \label{sec:adaptive-extension}
 
-This section specifies a successor, not an additional capability of the
-evaluated bank. Figure~\ref{fig:layered-architecture} separates the implemented
+This section specifies a successor and evaluates two of its mechanisms in
+nominal-operator diagnostics, not in the full history bank.
+Figure~\ref{fig:layered-architecture} separates the implemented
 physical estimator, proposed adaptation, and an external cyber layer.
 Adaptive covariance estimation already appears in power-system dynamic
 state estimation, including an IEEE-39 study \cite{wang2019adaptiveh}.
@@ -12,9 +13,12 @@ without explaining away a load or line intervention during recovery.
 \begin{figure*}[t]\centering
 \includegraphics[width=.98\textwidth]{figures/generated/layered_architecture.pdf}
 \caption{System architecture and implementation boundary. The solid upper path
-is the reported physical bank. Dashed modules specify an unvalidated successor:
+is the reported physical bank. Dashed modules specify proposed integration of
 history-specific uncertainty, guarded noise adaptation and bounded-window
-smoothing. The lower layer hosts separate cyber methods and outputs; neither
+smoothing. The drawings are schematic; $p_h(a)$ denotes the severity density
+conditional on the history and past observations. Mechanism diagnostics below
+do not validate these modules within the bank.
+The lower layer hosts separate cyber methods and outputs; neither
 cyber scores nor nominal source-separation diagnostics are extra physical
 likelihood factors. An availability interface requires a separately validated
 measurement model.}
@@ -153,7 +157,9 @@ suffix replacement on a small adaptive Gaussian model. It also verifies
 the two counterexamples above. These are numerical checks of the proposed
 building blocks, not load-attribution or false-alarm results.
 
-A fresh campaign should first compare fixed shared covariance with
+\input{supplement/adaptive_diagnostic_results}
+
+A fresh full-bank campaign should first compare fixed shared covariance with
 history-specific covariance, then add structured noise adaptation with
 and without the history gate. Test smoothing and memory compression
 separately. Each arm needs independent calibration to the same normal-alarm

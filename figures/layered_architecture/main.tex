@@ -1,95 +1,174 @@
 \documentclass[tikz,border=3pt]{standalone}
 \usepackage[T1]{fontenc}
 \usepackage{newtxtext,newtxmath}
-\usetikzlibrary{arrows.meta,calc}
+\usetikzlibrary{arrows.meta,calc,patterns}
 \definecolor{ink}{HTML}{23343F}
 \definecolor{blue}{HTML}{2276A0}
 \definecolor{teal}{HTML}{087F78}
 \definecolor{orange}{HTML}{C46B2C}
 \definecolor{muted}{HTML}{4C5D67}
-\definecolor{rule}{HTML}{D6DFE3}
+\definecolor{rule}{HTML}{CFDADF}
 \begin{document}
-\begin{tikzpicture}[font=\fontsize{8.5}{10.5}\selectfont,text=ink,
- >={Stealth[length=1.5mm]},line cap=round,
- card/.style={draw=rule,rounded corners=2pt,fill=white,line width=.6pt},
+\begin{tikzpicture}[font=\fontsize{8.3}{10}\selectfont,text=ink,line cap=round,
+ >={Stealth[length=1.45mm,width=1mm]},
  head/.style={font=\bfseries\fontsize{9}{11}\selectfont,anchor=west},
- note/.style={font=\fontsize{8}{10}\selectfont,text=muted},
- flow/.style={->,draw=teal,line width=.8pt},
- proposed/.style={->,draw=orange,dashed,line width=.8pt}]
-\path[use as bounding box] (0,0) rectangle (18,11);
-\node[head,text=teal] at (.05,10.73) {A\quad Physical attribution: implemented core};
-\node[note,anchor=east] at (17.95,10.73) {Solid arrows: current information flow};
-\foreach \a/\b in {0/3.3,3.9/8.1,8.7/13.1,13.7/18}{
- \path[card] (\a,6.7) rectangle (\b,10.35);
- \fill[teal!6] (\a,9.65) rectangle (\b,10.35);
-}
-\node[head] at (.18,10.0) {PMU reports};
-\node[head] at (4.08,10.0) {Network predictors};
-\node[head] at (8.88,10.0) {Conditional histories};
-\node[head] at (13.88,10.0) {Physical decisions};
-% Input icon and measurement contract.
-\draw[rule] (.65,9.05) circle (.28);
-\draw[blue,->] (.65,9.05)--(.84,9.25);
-\draw[orange,->] (.65,9.05)--(.89,8.9);
-\node[anchor=west] at (1.08,9.05) {8 PMUs; 30 Hz};
-\node[align=center] at (1.65,8.40) {$|V|,\angle V,|I|,\angle I$\\$f,\dot f$; 47 coordinates};
-\node[note,align=center] at (1.65,7.65) {Mapped terminals\\Causal instrument memory};
-\node[note,align=center] at (1.65,7.0) {Prefix: fit context\\Reports: update evidence};
-% Physical rather than learned graph: small branch motif.
-\foreach \x in {4.5,5.6,6.7,7.6}{\draw[ink,line width=1.2pt] (\x,8.9)--(\x,9.3);}
-\draw[ink] (4.5,9.1)--(5.6,9.1)--(6.0,9.1) (6.3,9.1)--(7.6,9.1);
-\draw[orange,line width=1pt] (6.0,9.1)--(6.3,9.3);
-\draw[blue,->] (5.6,9.1)--(5.6,8.65);
-\node at (6.0,8.43) {$\dot x=f_q(x,z,u)$};
-\node at (6.0,8.03) {$0=g_q(x,z,u)$};
-\node at (6.0,7.60) {$I_{\rm term}=Y_{{\rm term},q}V$};
-\node[note,align=center] at (6.0,7.04) {Local switched operators\\Fixed network alternatives};
-\node[align=center] at (10.9,9.17) {No new event / active / recovery};
-\node at (10.9,8.62) {$\xi\mid a,h\sim\mathcal N(m_h+d_ha,P_\rho)$};
-\node at (10.9,8.04) {$L_{h,k}=\int p(r_k\mid h,a)\,p_h(a)\,da$};
-\node[note,align=center] at (10.9,7.22) {Correct states; weight histories\\Replay replaces a suffix\\Shared covariance approximation};
-\node[align=center] at (15.85,9.05) {$M_c$: active intervention\\$\Gamma_c$: originating cause};
-\node[note,align=center] at (15.85,8.17) {Threshold selected on CAL\\Temporal confirmation};
-\node[align=center,text=teal] at (15.85,7.32) {Type and source\\Onset / restoration\\Emission time};
-\draw[flow] (3.32,8.4)--(3.87,8.4);
-\draw[flow] (8.12,8.4)--(8.67,8.4);
-\draw[flow] (13.12,8.4)--(13.67,8.4);
-\draw[flow] (12.7,6.7)--(12.7,6.28)--(9.1,6.28)--(9.1,6.7);
-\node[note,text=teal,fill=white,inner sep=1pt] at (10.9,6.28) {Retain state through OFF};
-\node[note,anchor=west] at (.15,6.22) {Current runs: no online noise or impedance adaptation.};
+ note/.style={font=\fontsize{7.8}{9.4}\selectfont,text=muted},
+ small/.style={font=\fontsize{7.2}{8.5}\selectfont,text=muted},
+ card/.style={draw=rule,rounded corners=2pt,fill=white,line width=.6pt},
+ flow/.style={->,draw=teal,line width=.85pt},
+ future/.style={->,draw=orange,dashed,line width=.75pt},
+ bus/.style={draw=ink,line width=1.4pt}]
+\path[use as bounding box] (0,0) rectangle (18,12.1);
+\node[head,text=teal] at (.05,11.87) {PHYSICAL ATTRIBUTION};
+\node[note,anchor=east] at (17.95,11.87) {Network physics $\rightarrow$ competing histories $\rightarrow$ time-stamped decisions};
 
-\node[head,text=orange] at (.05,5.63) {B\quad Proposed extension: not enabled in reported experiments};
-\foreach \a/\b in {0/5.5,6.15/11.85,12.5/18}{
- \path[card,draw=orange,dashed,fill=orange!2] (\a,2.47) rectangle (\b,5.25);
-}
-\node[head] at (.18,4.91) {Propagate uncertainty};
-\node at (2.75,4.35) {$P^-_{h,k}=F_hP^+_{h,k-1}F_h^\top+Q_h$};
-\node[note,align=center] at (2.75,3.67) {Preserve state--severity dependence\\and covariance at history fusion};
-\node[note,align=center] at (2.75,2.94) {Verify against small exact models\\before adapting noise};
-\node[head] at (6.33,4.91) {Adapt noise with safeguards};
-\node at (9.0,4.35) {$R_k=U\Lambda_kU^\top+D_k$};
-\node[note,align=center] at (9.0,3.67) {Quiet-history eligibility + quality flags\\Bounded, slow covariance update};
-\node[note,align=center] at (9.0,2.94) {Score with $R_k$ first; learn $R_{k+1}$\\Freeze $Q$, physical parameters and center};
-\node[head] at (12.68,4.91) {Revisit a bounded window};
-\node at (15.25,4.35) {$p(h,x_{k-L:k}\mid y_{1:k})$};
-\node[note,align=center] at (15.25,3.67) {Saved boundary distribution\\Stored covariance versions};
-\node[note,align=center] at (15.25,2.94) {Replace evidence; never add twice\\Report revised onset at current time};
-\draw[proposed] (5.52,3.93)--(6.12,3.93);
-\draw[proposed] (11.87,3.93)--(12.47,3.93);
-\draw[proposed] (15.25,5.25)--(15.25,6.02)--(13.4,6.02)--(13.4,7.05)--(13.1,7.05);
-\node[note,text=orange,anchor=west,fill=white,inner sep=1pt] at (15.4,6.02) {Next report only};
+% Context band: real electrical primitives, a common event clock, PMU phasors.
+\path[card,fill=blue!2] (0,9.12) rectangle (5.55,11.54);
+\path[card,fill=teal!2] (6.0,9.12) rectangle (11.7,11.54);
+\path[card,fill=blue!2] (12.15,9.12) rectangle (18,11.54);
+\node[head] at (.18,11.25) {Network and physical interventions};
+\foreach \x/\y in {1.1/10.45,2.35/10.45,4.5/10.45,2.35/9.7,4.5/9.7}{
+ \draw[bus] (\x,{\y-.17})--(\x,{\y+.17});}
+\draw[ink] (.77,10.45)--(1.1,10.45)--(2.35,10.45)--(3.15,10.45)
+ (3.6,10.45)--(4.5,10.45)--(4.5,9.7)--(2.35,9.7)--(2.35,10.45);
+\draw[blue] (.53,10.45) circle (.24);
+\draw[blue] (.35,10.45) .. controls (.43,10.68) and (.57,10.22) .. (.7,10.45);
+\draw[orange,line width=1pt] (3.15,10.45)--(3.57,10.70);
+\draw[orange,fill=white] (3.15,10.45) circle (.03) (3.6,10.45) circle (.03);
+\draw[orange,->,line width=.8pt] (2.35,9.7)--(2.35,9.32);
+\node[small,anchor=west,text=orange] at (2.5,9.40) {$\Delta P,\Delta Q$};
+\node[small,text=orange] at (3.39,10.98) {line switch};
+\foreach \x/\y in {1.1/10.45,4.5/9.7}{
+ \node[draw=blue,fill=blue!8,rounded corners=1pt,inner sep=1.5pt,font=\fontsize{6.8}{8}\selectfont] at ({\x+.42},\y) {P};}
+\node[small,anchor=west] at (.2,9.40) {$Y_q$, $Y_{{\rm term},q}$};
+\node[head] at (6.18,11.25) {Restoration leaves a physical response};
+\node[small] at (6.38,10.61) {A};\node[small] at (6.38,10.12) {B};
+\draw[rule] (6.7,10.61)--(11.4,10.61) (6.7,10.12)--(11.4,10.12);
+\fill[teal] (7.0,10.51) rectangle (8.40,10.71);
+\fill[orange] (9.85,10.02) rectangle (11.0,10.22);
+\draw[teal,dashed,line width=.8pt] (8.4,10.61) .. controls (8.6,11.02) and (8.8,10.23) .. (9.04,10.61)
+ .. controls (9.28,10.85) and (9.46,10.39) .. (9.7,10.61) .. controls (9.95,10.73) and (10.2,10.5) .. (10.5,10.61)--(11.4,10.61);
+\node[small,above] at (7.0,10.74) {ON};\node[small,above] at (8.4,10.74) {OFF};
+\node[small,anchor=east,text=orange] at (9.7,10.12) {new ON};
+\node[note] at (8.85,9.52) {$x(\kappa^+)=x(\kappa^-)$; instrument memory also persists};
+\node[head] at (12.33,11.25) {Sparse PMU observations};
+\draw[rule] (12.90,10.32) circle (.42);
+\draw[rule] (12.35,10.32)--(13.45,10.32) (12.9,9.79)--(12.9,10.85);
+\draw[blue,->,line width=.9pt] (12.9,10.32)--(13.13,10.65);
+\draw[orange,->,line width=.9pt] (12.9,10.32)--(13.25,10.15);
+\node[anchor=west] at (13.65,10.63) {$|V|,\angle V,|I|,\angle I,f,\dot f$};
+\node[note,anchor=west] at (13.65,10.13) {8 PMUs; 47 coordinates; 30 reports/s};
+\node[note] at (15.05,9.52) {Oriented terminals + causal instrument model};
 
-% Separate service boundary: no attack score is a physical likelihood.
-\draw[rule,dashed] (0,2.15)--(18,2.15);
-\node[head,text=muted] at (.05,1.82) {C\quad Cyber analysis: separate layer, outside this physical study};
-\path[card,fill=black!2] (0,.43) rectangle (5.5,1.47);
-\path[card,fill=black!2] (6.15,.43) rectangle (11.85,1.47);
-\path[card,fill=black!2] (12.5,.43) rectangle (18,1.47);
-\node[note,align=center] at (2.75,.95) {Network telemetry + report metadata\\External integrity / cyber methods};
-\node[note,align=center] at (9,.95) {Interface: timestamp + quality / availability\\Any mask requires a declared likelihood};
-\node[note,align=center] at (15.25,.95) {Separate cyber alerts and validation\\No cyber score added to event evidence};
-\draw[->,muted] (5.52,.95)--(6.12,.95);
-\draw[->,muted] (11.87,.95)--(12.47,.95);
-\node[note,anchor=west] at (.05,.12) {Solid, dashed and gray regions distinguish implementation, research proposals and an external service boundary.};
+% Separate measurement route goes directly to the scoring card.
+\draw[flow] (2.70,9.12)--(2.70,8.55);
+\draw[flow] (15.1,9.12)--(15.1,8.83)--(11.2,8.83)--(11.2,8.55);
+\node[small,anchor=west,fill=white,inner sep=1pt] at (15.3,8.83) {new report $r_k$};
+\node[note,anchor=west,text=teal] at (.05,8.78) {Implemented core};
+
+% Four processing cards: equations paired with a distinct visual mechanism.
+\foreach \a/\b/\num in {0/4.05/1,4.65/8.7/2,9.3/13.35/3,13.95/18/4}{
+ \path[card] (\a,4.72) rectangle (\b,8.55);
+ \fill[teal!7] (\a,7.88) rectangle (\b,8.55);
+ \node[circle,fill=teal,text=white,inner sep=0pt,minimum size=.34cm,font=\bfseries\fontsize{8}{9}\selectfont] at ({\a+.31},8.22) {\num};
+}
+\node[head] at (.57,8.22) {Physical operators};
+\node[head] at (5.22,8.22) {History bank};
+\node[head] at (9.87,8.22) {Evidence update};
+\node[head] at (14.52,8.22) {Publish separately};
+\node at (2.03,7.55) {$\dot x=f_q(x,z,u)$};
+\node at (2.03,7.17) {$0=g_q(x,z,u)$};
+% Sparse stamp -> reduced operator glyph (not an IEEE-39 graph).
+\foreach \i in {0,1,2,3}{\foreach \j in {0,1,2,3}{
+ \draw[rule,fill=white] ({.55+.22*\i},{6.12+.22*\j}) rectangle ++(.20,.20);}}
+\foreach \i/\j in {0/0,1/1,2/2,3/3,1/0,0/1,3/2,2/3}{
+ \fill[blue!60] ({.55+.22*\i},{6.12+.22*\j}) rectangle ++(.20,.20);}
+\draw[->,muted] (1.57,6.54)--(2.16,6.54);
+\foreach \i in {0,1,2,3}{\foreach \j in {0,1,2,3}{
+ \fill[teal!35] ({2.34+.22*\i},{6.12+.22*\j}) rectangle ++(.20,.20);}}
+\node[small] at (.98,5.94) {branch stamps};\node[small] at (2.78,5.94) {reduced maps};
+\node at (2.03,5.53) {$T_o,J_o,g_o,u_o,j_o,v_o$};
+\node[note,align=center] at (2.03,5.02) {Prefix-fit context\\Fixed network alternatives};
+
+% Three histories and their schematic predictive spread.
+\foreach \y/\txt/\cc in {7.43/{No new event}/muted,6.75/{Recovery}/teal,6.07/{New load or line}/orange}{
+ \fill[\cc!5,rounded corners=1pt] (4.88,{\y-.25}) rectangle (8.46,{\y+.25});
+ \node[small,text=\cc,anchor=west] at (5.0,\y) {\txt};}
+\draw[muted,line width=.65pt] (7.3,7.43)--(8.26,7.43);
+\fill[teal!15] (7.3,6.75) .. controls (7.6,7.20) and (7.74,6.35) .. (8.26,6.80)
+ --(8.26,6.68) .. controls (7.74,6.22) and (7.6,6.98) .. (7.3,6.75);
+\draw[teal,line width=.75pt] (7.3,6.75) .. controls (7.6,7.08) and (7.74,6.30) .. (8.26,6.74);
+\draw[orange,line width=.8pt] (7.3,6.07)--(7.5,6.07)--(7.5,6.23) .. controls (7.7,6.50) and (7.95,5.83) .. (8.26,6.07);
+\node at (6.68,5.55) {$(m_h,d_h,\mu_h,v_h,\pi_h)$};
+\node[note] at (6.68,5.07) {State--severity dependence};
+
+% Innovation geometry icon; the scoring equation remains central.
+\draw[rule,->] (9.7,6.75)--(10.95,6.75);\draw[rule,->] (9.7,6.75)--(9.7,7.64);
+\draw[blue,rotate around={25:(10.25,7.16)},fill=blue!5] (10.25,7.16) ellipse (.46 and .20);
+\fill[orange] (10.57,7.45) circle (.045);
+\draw[orange,->] (10.25,7.16)--(10.57,7.45);
+\node[small,anchor=west] at (11.25,7.35) {$e_h=r_k-\widehat r_{h,k}$};
+\node[small,anchor=west] at (11.25,6.94) {Joint covariance};
+\node[font=\fontsize{7.4}{8.5}\selectfont] at (11.33,6.19) {$L_{h,k}=\int p(r_k\mid h,a)\,p_h(a)\,da$};
+\node at (11.33,5.65) {$\pi_{h,k}\propto L_{h,k}\,\pi_{h,k}^{\rm prior}$};
+\node[note] at (11.33,5.07) {Normalize; prune; retain state};
+
+% Decision timeline: emission is explicitly distinct from inferred onset.
+\draw[rule,->] (14.4,7.20)--(17.55,7.20);
+\draw[orange,line width=.7pt] (14.90,7.07)--(14.90,7.34);
+\draw[teal,line width=.7pt] (16.64,7.07)--(16.64,7.34);
+\node[small,above] at (14.90,7.4) {$\widehat\tau$};\node[small,above] at (16.64,7.4) {$t_{\rm emit}$};
+\node[small,below] at (14.90,7.0) {estimated ON};\node[small,below] at (16.64,7.0) {decision};
+\node at (15.98,6.28) {$M_c$: active \quad $\Gamma_c$: cause};
+\node[note,align=center] at (15.98,5.68) {CAL threshold + confirmation\\Type / source / restoration};
+\node[note,text=teal] at (15.98,5.07) {No reset at physical OFF};
+\foreach \x in {4.05,8.7,13.35}{\draw[flow] ({\x+.02},6.3)--({\x+.57},6.3);}
+\draw[flow] (12.95,4.72)--(12.95,4.32)--(6.68,4.32)--(6.68,4.72);
+\node[small,text=teal,fill=white,inner sep=1pt] at (9.8,4.32) {Next report: state and history weights};
+\node[small,anchor=west] at (.12,4.35) {Shared covariance; prefix-fitted noise};
+
+% Development lane: mechanism drawings rather than another wall of prose.
+\node[head,text=orange] at (.05,3.91) {ADAPTIVE DEVELOPMENT};
+\node[note,anchor=east] at (17.95,3.91) {Mechanism diagnostics; integration into the history bank remains pending};
+\foreach \a/\b in {0/5.65,6.18/11.83,12.36/18}{
+ \path[card,draw=orange,dashed,fill=orange!2] (\a,1.14) rectangle (\b,3.60);}
+\node[head] at (.18,3.29) {Preserve recovery uncertainty};
+\draw[rule,->] (.45,1.96)--(2.0,1.96);\draw[rule,->] (.45,1.96)--(.45,2.93);
+\draw[blue,rotate around={25:(1.17,2.46)},fill=blue!7] (1.17,2.46) ellipse (.60 and .27);
+\draw[teal,rotate around={25:(1.17,2.46)}] (1.17,2.46) ellipse (.32 and .15);
+\fill[ink] (1.17,2.46) circle (.045);
+\node[small,anchor=west] at (2.25,2.67) {Same mean};
+\node[small,anchor=west] at (2.25,2.25) {Different predictive spread};
+\node at (2.83,1.62) {$P_{\rm mix}=\sum_h\pi_h[P_h+(\mu_h-\bar\mu)(\mu_h-\bar\mu)^\top]$};
+\node[head] at (6.36,3.29) {Adapt noise without hiding events};
+% A covariance factor and a gate are separate visual objects.
+\foreach \i in {0,1,2}{\foreach \j in {0,1,2}{\fill[blue!20] ({6.55+.22*\i},{2.03+.22*\j}) rectangle ++(.20,.20);}}
+\foreach \i in {0,1,2}{\fill[orange!65] ({6.55+.22*\i},{2.03+.22*\i}) rectangle ++(.20,.20);}
+\node[small] at (6.88,2.89) {$R_k$};
+\draw[future] (7.42,2.37)--(7.92,2.37);
+\draw[orange,fill=white] (8.40,2.83)--(8.88,2.37)--(8.40,1.91)--(7.92,2.37)--cycle;
+\node[small,text=orange,align=center] at (8.40,2.37) {quiet?};
+\draw[future] (8.88,2.37)--(9.42,2.37);
+\node[small,anchor=west] at (9.52,2.59) {learn $R_{k+1}$};
+\node[small,anchor=west] at (9.52,2.18) {or keep $R_k$};
+\node[note] at (9.0,1.55) {Score first; update after. Keep center fixed.};
+\node[head] at (12.54,3.29) {Revise a bounded history window};
+\foreach \i in {0,1,2,3,4,5}{
+ \draw[rule,fill=teal!8] ({12.80+.72*\i},2.05) rectangle ++(.56,.48);}
+\draw[blue,line width=1.0pt] (12.7,1.97)--(12.7,2.64);
+\draw[orange,line width=1.0pt] (17.1,1.97)--(17.1,2.64);
+\node[small,above] at (12.8,2.68) {$k-L$};\node[small,above] at (17.1,2.68) {$k$};
+\draw[future] (16.94,1.88)--(13.05,1.88);
+\node[note] at (15.18,1.47) {Saved boundary; replace suffix evidence};
+
+% Deliberately detached external service: no attack-to-event score arrow.
+\draw[rule,dashed] (0,.88)--(18,.88);
+\node[head,text=muted] at (.10,.47) {CYBER LAYER};
+\node[note,anchor=west] at (3.0,.47) {External methods + telemetry};
+\draw[->,muted] (7.1,.47)--(7.65,.47);
+\node[note,anchor=west] at (7.82,.47) {Quality / availability interface};
+\draw[->,muted] (12.38,.47)--(12.93,.47);
+\node[note,anchor=west] at (13.10,.47) {Separate alerts and validation};
+\node[small,anchor=west] at (.10,.10) {Drawings are schematic. Cyber scores are not extra physical evidence. Dashed modules are not enabled in the reported history-bank runs.};
 \end{tikzpicture}
 \end{document}

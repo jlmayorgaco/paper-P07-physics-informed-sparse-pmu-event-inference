@@ -11,6 +11,15 @@ historical attribution. Its finite examples can be checked with
 `python scripts/verify_recovery_distribution.py`. Earlier dated notes below are
 historical; the [current closure record](docs/P07_CLOSURE_CURRENT.md) takes precedence.
 
+The [completed covariance and noise-learning diagnostics](experiments/adaptive_innovation_20261113/README.md)
+use independent nominal-operator sequences, without modifying C03. Retaining
+inherited covariance improves known-onset source ranking; noise adaptation does
+not establish a timely-attribution gain. The quiet-history gate rarely learns.
+The supplement reports both outcomes and includes the redrawn TikZ architecture.
+Recount saved predictions and regenerate the new tables with
+`python scripts/build_adaptive_diagnostic_tables.py`. Current PDFs: 19 article
+pages and 34 supplementary pages; the package compiles in isolation.
+
 The [terminal-current diagnostic](docs/CHANNEL_INFORMATION_20261112.md) now
 compares voltage and current information with the actual nominal predictor,
 retaining temporal and cross-channel covariance. It is a fixed-mean diagnostic,
@@ -28,7 +37,7 @@ median 1.53-fold nominal separation gain after the rival load magnitude is
 fitted, while some source ambiguities become much stronger. The supplement
 connects this geometry to recovery uncertainty without adding a second copy
 of the state covariance or claiming a new Hamiltonian detector. The current
-article and supplement have 19 and 31 pages.
+article and supplement at that revision had 19 and 31 pages.
 
 **Revision 4 November 2026.** Repositioned as switched-DAE change detection and isolation, with a new physics-derived detectability section (Willsky--Jones signature information, minimum detectable change, cost of forgetting the state), a noise-stress test with unchanged code (N01) and a measured real-time rate for the nominal bank. See the [verified audit and plan](docs/review_chatgpt_20261104/PLAN_SUBMIT_READY.md) and the [response matrix](docs/review_chatgpt_20261104/RESPONSE_MATRIX.md). Pre-revision sources are kept in `archive/pre_revision_20261104/`.
 

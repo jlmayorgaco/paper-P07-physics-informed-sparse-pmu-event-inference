@@ -154,3 +154,16 @@ Registro de afirmaciones: covarianza afín y contraejemplos = teoría local;
 verificaciones numéricas = comprobación de implementación pequeña;
 mejor atribución, robustez adaptativa y latencia viable = hipótesis sin
 evidencia de campaña. No hay una nueva cifra empírica principal.
+
+## Diagnósticos ejecutados después del diseño
+
+Se ejecutó `experiments/adaptive_innovation_20261113`, con protocolo/código
+sellados antes de generar datos y selección CAL sellada antes de TEST. El
+README de esa carpeta conserva resultados, límites y reproducción. El control
+rank-one respalda preservar covarianza a media fija, bajo el modelo correcto.
+La adaptación continua mejora seguimiento de ruido pero no demuestra mejora
+de atribución; el guardado por historia quieta casi impide aprender. Por tanto,
+no se integra ese guardado en el banco ni se anuncia una nueva capacidad.
+El siguiente desarrollo requiere datos nuevos y un control de covarianza en el
+banco completo. Se mantiene el diagnóstico negativo sin ajuste tras TEST.
+No se ejecutó ni modificó el protocolo C04 dependiente del cierre C03.
