@@ -33,6 +33,7 @@ def main():
                  'scripts/build_channel_information_figure.py',
                  'scripts/build_channel_profile_figure.py',
                  'scripts/build_theory_figures.py', 'scripts/build_integrity_figure.py',
+                 'scripts/build_event_taxonomy_extension.py',
                  'scripts/build_recovery_overview.py', 'scripts/build_physics_measurement_chain.py',
                  'scripts/build_paper_method_figure.py', 'figures/paper_method/main.tex',
                  'figures/recovery_overview/main.tex', 'figures/physical_report/main.tex',
@@ -45,6 +46,8 @@ def main():
         sources.update(p for p in (ROOT / 'generated/frozen' / folder).glob('*') if p.is_file())
     # Compact inputs regenerate the theory/noise figures without simulation data.
     sources.update(p for p in (ROOT / 'generated/revision_20261104').glob('*')
+                   if p.is_file() and p.suffix in {'.csv', '.json'})
+    sources.update(p for p in (ROOT / 'generated/event_taxonomy_extension_20261113').glob('*')
                    if p.is_file() and p.suffix in {'.csv', '.json'})
     diagnostic = ROOT / 'experiments/channel_information_20261112'
     sources.update(p for p in diagnostic.glob('*')

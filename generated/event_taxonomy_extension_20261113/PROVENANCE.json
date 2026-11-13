@@ -1,0 +1,14 @@
+{
+  "scope": "Retrospective RAW0001 illustration; not new inference evidence",
+  "source_files_sha256": {
+    "Bus2_Competition_Data_nanmask.csv": "73526f6cc99c1340377ae7cb3d35deb45e9c35cc557c5cd741f43686c08544a9",
+    "Bus29_Competition_Data_nanmask.csv": "e7150a641e27654991c8c553b4a2b833d28dfc233221123e5f570e706e6f2534",
+    "Bus39_Competition_Data_nanmask.csv": "80925b189f1715fb332bf58a4a9ffb06012b11f0db1bb021a4f4030d52debb21"
+  },
+  "onset_s": 2976.3659999999945,
+  "last_class6_s": 2994.800000000003,
+  "centering": "mean frequency on [onset-3s,onset), separately per PMU",
+  "timestamp_alignment_tolerance_s": 1e-09,
+  "class8": "Guide definition only; no empirical trace or detector output",
+  "trace_sha256": "ea226dcea7b1893f802cc07149ca93764f568a1c7f21a5b6a1db4443f9029af3"
+}
