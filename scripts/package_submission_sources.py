@@ -34,6 +34,10 @@ def main():
                  'scripts/build_channel_profile_figure.py',
                  'scripts/build_theory_figures.py', 'scripts/build_integrity_figure.py',
                  'scripts/build_event_taxonomy_extension.py',
+                 'scripts/build_event_taxonomy_grid.py',
+                 'generated/frozen/legacy_raw_event_figure_values.csv',
+                 'generated/frozen/legacy_figure_trace_manifest.json',
+                 'figures/frozen/PROTECTED_FIGURES.json',
                  'scripts/build_recovery_overview.py', 'scripts/build_physics_measurement_chain.py',
                  'scripts/build_paper_method_figure.py', 'figures/paper_method/main.tex',
                  'figures/recovery_overview/main.tex', 'figures/physical_report/main.tex',
@@ -49,6 +53,10 @@ def main():
                    if p.is_file() and p.suffix in {'.csv', '.json'})
     sources.update(p for p in (ROOT / 'generated/event_taxonomy_extension_20261113').glob('*')
                    if p.is_file() and p.suffix in {'.csv', '.json'})
+    sources.update(p for p in (ROOT / 'generated/event_taxonomy_grid_20261113').glob('*')
+                   if p.is_file() and p.suffix in {'.csv', '.json'})
+    protected=json.loads((ROOT/'figures/frozen/PROTECTED_FIGURES.json').read_text())
+    sources.update(ROOT/p for p in protected['files'])
     diagnostic = ROOT / 'experiments/channel_information_20261112'
     sources.update(p for p in diagnostic.glob('*')
                    if p.is_file() and p.suffix in {'.py', '.json', '.csv', '.md', '.npz'})
@@ -69,6 +77,9 @@ Regenerate them with python scripts/build_recovery_overview.py and
 python scripts/build_physics_measurement_chain.py (pdfLaTeX and PyMuPDF required).
 The current half-page Figure 1 is built by:
 python scripts/build_paper_method_figure.py
+The authorized nine-panel event grid is regenerated from bundled trace values:
+python scripts/build_event_taxonomy_grid.py (NumPy, pandas, Matplotlib required).
+Original protected assets remain byte-identical and are checked by that builder.
 Local mathematical checks use the bundled verified kernel:
 python scripts/verify_history_partition.py (requires NumPy and SciPy).
 Predictive sufficiency, mixture moments and deterministic post-processing have

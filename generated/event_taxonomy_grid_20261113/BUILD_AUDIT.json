@@ -1,0 +1,136 @@
+{
+  "authorization": "User requested equal 3x3 panels including normal and explicit missing pulse, 2026-11-13",
+  "legacy_trace_sha256": "64f936063fadeaba3be45d31df555928d4c00b11c937918098bb628bcb8628eb",
+  "legacy_curves": [
+    {
+      "event": 1,
+      "bus": 39,
+      "channel": "BUS39_VA_MAG",
+      "points": 53,
+      "plotted_values_unchanged": true
+    },
+    {
+      "event": 1,
+      "bus": 5,
+      "channel": "BUS5_VA_MAG",
+      "points": 53,
+      "plotted_values_unchanged": true
+    },
+    {
+      "event": 1,
+      "bus": 19,
+      "channel": "BUS19_VA_MAG",
+      "points": 53,
+      "plotted_values_unchanged": true
+    },
+    {
+      "event": 2,
+      "bus": 22,
+      "channel": "BUS22_IA_MAG",
+      "points": 211,
+      "plotted_values_unchanged": true
+    },
+    {
+      "event": 2,
+      "bus": 39,
+      "channel": "BUS39_IA_MAG",
+      "points": 211,
+      "plotted_values_unchanged": true
+    },
+    {
+      "event": 2,
+      "bus": 2,
+      "channel": "BUS2_IA_MAG",
+      "points": 211,
+      "plotted_values_unchanged": true
+    },
+    {
+      "event": 3,
+      "bus": 2,
+      "channel": "BUS2_Freq",
+      "points": 1141,
+      "plotted_values_unchanged": true
+    },
+    {
+      "event": 3,
+      "bus": 39,
+      "channel": "BUS39_Freq",
+      "points": 1141,
+      "plotted_values_unchanged": true
+    },
+    {
+      "event": 4,
+      "bus": 6,
+      "channel": "BUS6_IA_MAG",
+      "points": 1291,
+      "plotted_values_unchanged": true
+    },
+    {
+      "event": 4,
+      "bus": 10,
+      "channel": "BUS10_IA_MAG",
+      "points": 1291,
+      "plotted_values_unchanged": true
+    },
+    {
+      "event": 4,
+      "bus": 5,
+      "channel": "BUS5_IA_MAG",
+      "points": 1291,
+      "plotted_values_unchanged": true
+    },
+    {
+      "event": 5,
+      "bus": 29,
+      "channel": "DATA_PRESENT",
+      "points": 1081,
+      "plotted_values_unchanged": true
+    },
+    {
+      "event": 5,
+      "bus": 22,
+      "channel": "DATA_PRESENT",
+      "points": 1081,
+      "plotted_values_unchanged": true
+    },
+    {
+      "event": 7,
+      "bus": 2,
+      "channel": "BUS2_VC_MAG",
+      "points": 76,
+      "plotted_values_unchanged": true
+    },
+    {
+      "event": 7,
+      "bus": 2,
+      "channel": "BUS2_VA_MAG",
+      "points": 76,
+      "plotted_values_unchanged": true
+    },
+    {
+      "event": 7,
+      "bus": 2,
+      "channel": "BUS2_VB_MAG",
+      "points": 76,
+      "plotted_values_unchanged": true
+    }
+  ],
+  "panels": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "normal_and_composite_files": {
+    "composite_trace.csv": "9953f499738fe0ac7f015dd6b3336cbf15df8e6628c17c769754fb38a57c7add",
+    "normal_trace.csv": "a54f29a9162df9c16a75d63cfaaada3ff0714fd405259b4c3c826bfca8818dcb"
+  },
+  "protected_hashes_verified": 16,
+  "display_change": "Original data retained; illustrative fake clock omitted in this successor; observed missing pulse emphasized.",
+  "pdf_sha256": "4637cef9ff63531e24211f76bf7011132a391b51ce6c394e52d5abc2f7d5af91"
+}

@@ -1,5 +1,18 @@
 # Figuras que deben permanecer en P07
 
+## Sucesor autorizado el 13 de noviembre de 2026
+
+La nueva orden del usuario pide una cuadrícula 3×3, incluyendo normal, y una
+respuesta física gris con el pulso real de datos ausentes en el caso combinado.
+Por esa autorización, la Figura 2 activa usa ahora
+`figures/generated/event_taxonomy_grid.pdf`. Los seis paneles originales
+conservan las 16 curvas y todos sus valores; cambia su distribución y tipografía.
+Se omite el reloj ilustrativo. Los PDF/PNG originales y todas las copias
+congeladas conservan sus hashes, sin cambios en `PROTECTED_FIGURES.json`.
+El verificador exige además los nueve paneles y la procedencia del sucesor.
+Véase `EVENT_TAXONOMY_GRID_20261113.md`. Las reglas históricas siguientes
+siguen protegiendo los originales; la nueva orden permite esta copia sucesora.
+
 Por orden expresa del usuario del 31 de octubre de 2026, **la Figura 2 de eventos
 y el unifilar IEEE-39 con las ocho PMU no se borran ni se quitan del artículo**.
 La protección incluye su presencia en el PDF, no solo conservar un archivo sin usar.

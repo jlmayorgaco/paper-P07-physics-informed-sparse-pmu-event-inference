@@ -1,4 +1,5 @@
 *.pdf -diff
+generated/event_taxonomy_grid_20261113/** -text whitespace=cr-at-eol
 generated/frozen/recovery_c02_20261105/*.json -text whitespace=cr-at-eol
 experiments/channel_information_20261112/** -text whitespace=cr-at-eol
 experiments/channel_profile_20261112/** -text whitespace=cr-at-eol

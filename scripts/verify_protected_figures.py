@@ -4,7 +4,7 @@ import argparse, hashlib, json, re
 ROOT=Path(__file__).resolve().parents[1]
 MANIFEST=ROOT/'figures/frozen/PROTECTED_FIGURES.json'
 REQUIRED={
-    'fig:reference-event-types':'figures/generated/event_signatures.pdf',
+    'fig:reference-event-types':'figures/generated/event_taxonomy_grid.pdf',
     'fig:narrative-topology':'figures/generated/narrative_topology.pdf',
 }
 
@@ -29,6 +29,18 @@ def verify(pdf_path=None):
         if not path.is_file():raise RuntimeError('Protected recovery file missing: '+name)
         if hashlib.sha256(path.read_bytes()).hexdigest()!=expected:
             raise RuntimeError('Protected file changed; restore it, do not reset the hash: '+name)
+    # Explicit 2026-11-13 user authorization: equal 3x3 successor, original
+    # assets remain immutable. Verify the successor's inputs and build record.
+    data=ROOT/'generated/event_taxonomy_grid_20261113'
+    audit=json.loads((data/'BUILD_AUDIT.json').read_text())
+    provenance=json.loads((data/'PROVENANCE.json').read_text())
+    sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+    assert sha(ROOT/'generated/frozen/legacy_raw_event_figure_values.csv')==audit['legacy_trace_sha256']
+    assert audit['panels']==list(range(9))
+    assert len(audit['legacy_curves'])==16 and all(c['plotted_values_unchanged'] for c in audit['legacy_curves'])
+    assert audit['normal_and_composite_files']==provenance['files']
+    assert all(sha(data/p)==h for p,h in provenance['files'].items())
+    assert sha(ROOT/REQUIRED['fig:reference-event-types'])==audit['pdf_sha256']
     source=active_source(ROOT/'main.tex')
     floats=re.findall(r'\\begin\{figure\*?\}.*?\\end\{figure\*?\}',source,re.S)
     for label,asset in REQUIRED.items():
@@ -40,7 +52,8 @@ def verify(pdf_path=None):
     if not (ROOT/'figures/ieee39_single_line.tex').is_file():
         raise RuntimeError('Editable IEEE-39 TikZ must remain available')
     result={'protected_hashes_verified':len(contract['files']),
-            'both_figures_in_active_article_source':True}
+            'both_figures_in_active_article_source':True,
+            'authorized_event_grid_panels':9,'legacy_curves_retained':16}
     if pdf_path:
         import pymupdf
         pdf_path=Path(pdf_path)
@@ -51,6 +64,7 @@ def verify(pdf_path=None):
             topology=[i for i,t in enumerate(text) if 'IEEE 39-bus single-line diagram' in t]
             assert len(events)==len(topology)==1,'Protected figure caption absent from compiled article'
             assert 'FIGURE 2.' in text[events[0]],'The protected event figure must remain Figure 2'
+            assert all(s in text[events[0]] for s in ['Normal operation','Unknown event','Missing-data pulse']), 'Authorized grid content absent'
             assert all(s in text[topology[0]] for s in ['PMU voltage bus','Transformer','Candidate line opening']),\
                 'IEEE-39 drawing content absent from compiled page'
             assert len(pdf[topology[0]].get_drawings())>=100,'IEEE-39 vector content absent'

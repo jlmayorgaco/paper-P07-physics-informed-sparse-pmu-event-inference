@@ -19,10 +19,8 @@ the supplementary integrity analysis. Faults and generation changes provide
 context, not additional validated event classes.
 
 \begin{figure*}[t]\centering
-\includegraphics[width=.98\textwidth]{figures/generated/event_signatures.pdf}
-\par\vspace{1mm}
-\includegraphics[width=.98\textwidth]{figures/generated/event_taxonomy_extension.pdf}
-\caption{Representative signatures from the archived RAW0001 reference simulation of the SGSMA 2026 competition. Original panels (a)--(f): fault, line outage, generation change, load change, missing PMU data and corrupted voltage (classes 1--5 and 7). Added panel (g): generation change at bus 2 while PMU 29 is unavailable; shading marks the class-6 interval and the lower strip shows measured availability. Panel (h) defines the unknown class 8 schematically; it is not an observed trace or a validated bank output. Signals are aligned to labels for illustration only. The gray clock in (e) is illustrative. Only load and line mechanisms enter the main causal evaluation.}
+\includegraphics[width=.98\textwidth]{figures/generated/event_taxonomy_grid.pdf}
+\caption{Representative signatures from the archived RAW0001 reference simulation of the SGSMA 2026 competition, arranged by label 0--8. Class 0 shows a normal interval; classes 1--5 and 7 retain the original trace values. In class 6, the gray PMU 2 frequency response accompanies a generation change, while the orange pulse marks missing PMU 29 reports (1: missing; 0: present), including loss and reconnection. Class 8 is a definition schematic, not an observed trace or a validated bank output. Event traces are aligned to source labels for illustration only. Only load and line mechanisms enter the main causal evaluation.}
 \label{fig:reference-event-types}\end{figure*}
 
 The network has 39 buses, but the prescribed PMU set is
