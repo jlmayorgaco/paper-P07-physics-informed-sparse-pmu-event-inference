@@ -10,8 +10,9 @@ La figura presenta nueve etiquetas (0–8), no nueve mecanismos físicos validad
 - 1–5 y 7: las 16 curvas originales se reconstruyen desde los valores congelados,
   comprobando identidad de tiempos y ordenadas. Se conserva el significado
   de los ejes. Por corrección expresa del usuario se conserva el tren de reloj
-  ilustrativo (periodo 2 s) en los paneles 5 y 6, en una franja separada de
-  las señales medidas. No representa la cadencia real de informes de 30 Hz.
+  ilustrativo (periodo 2 s) en los paneles 5 y 6. Por la siguiente corrección
+  del usuario, los pulsos recorren exactamente No/Yes (0/1) sobre el eje
+  de disponibilidad del panel 5 y de datos ausentes del panel 6. No representa la cadencia real de informes de 30 Hz.
 - 6: frecuencia observada en PMU 2 en gris; pulso naranja igual a
   `1-DATA_PRESENT` de PMU 29, sin interpolación. La ventana −45 a +35 s
   respecto al inicio de generación (2976.366 s) muestra tanto pérdida como

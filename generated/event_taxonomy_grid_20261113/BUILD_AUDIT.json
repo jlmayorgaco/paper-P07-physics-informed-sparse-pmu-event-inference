@@ -131,11 +131,25 @@
     "normal_trace.csv": "a54f29a9162df9c16a75d63cfaaada3ff0714fd405259b4c3c826bfca8818dcb"
   },
   "protected_hashes_verified": 16,
-  "display_change": "Original data retained; illustrative clock train restored in panels 5 and 6, separate from measured missing pulse.",
+  "display_change": "Illustrative clock train spans exact No/Yes levels in panels 5 and 6; measured signals unchanged.",
+  "clock_levels": [
+    {
+      "panel": 5,
+      "low": 0,
+      "high": 1,
+      "axis": "availability"
+    },
+    {
+      "panel": 6,
+      "low": 0,
+      "high": 1,
+      "axis": "missing"
+    }
+  ],
   "illustrative_clock_panels": [
     5,
     6
   ],
   "illustrative_clock_period_s": 2.0,
-  "pdf_sha256": "bdbbe7ec2935ee941f0bfc7b189b6b2e65e2064cfdc7d6909a3cbb23f42495fd"
+  "pdf_sha256": "2077a5697c8c047d83ccd26a52e12bff049603571af7f968bc641c36112c65e9"
 }
