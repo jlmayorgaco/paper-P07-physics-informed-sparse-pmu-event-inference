@@ -1,0 +1,127 @@
+{
+  "scope": "Mathematical implementation checks and native-operator audit; no attribution experiment",
+  "passed": true,
+  "gates": {
+    "gaussian_score_bound": true,
+    "mass_and_quadrature": true,
+    "fail_closed": true,
+    "sensor_permutation_counterexample": true,
+    "pi_branch_rank": true,
+    "singular_recovery_information": true,
+    "native_not_undirected_laplacian": true
+  },
+  "results": {
+    "gaussian": {
+      "trials": 2000,
+      "violations": 0,
+      "max_error_bound_ratio": 0.9941636295744003,
+      "fixed_covariance_identity_error": 0.0,
+      "interval_winner_certificates": 918,
+      "wrong_certificates": 0
+    },
+    "mass_and_quadrature": {
+      "mass_interval": [
+        0.6597167403329974,
+        0.8661196868952561
+      ],
+      "corner_extrema": [
+        0.6597167403329974,
+        0.8661196868952561
+      ],
+      "quadrature_interval": [
+        -0.2837114613596595,
+        0.16541613508243902
+      ]
+    },
+    "covariance_counterexample": {
+      "mean_error": 0.0,
+      "abs_log_score_error": 0.6931471805599454
+    },
+    "labelled_sensor_symmetry": {
+      "signature_source_0": [
+        0.6666666666666665,
+        -0.3333333333333331
+      ],
+      "signature_source_2": [
+        -0.33333333333333315,
+        0.6666666666666665
+      ],
+      "difference_norm": 1.4142135623730945
+    },
+    "pi_branch": {
+      "complex_stamp_rank": 2,
+      "series_only_rank": 1
+    },
+    "constant_bias": {
+      "K": [
+        1,
+        2,
+        10,
+        100
+      ],
+      "expected_log_ratio": [
+        0.020000000000000004,
+        0.04000000000000001,
+        0.20000000000000004,
+        2.0000000000000004
+      ],
+      "scaling": "linear in K for independent constant-bias observations, not K squared"
+    },
+    "clock": {
+      "single_clock_phase_deg": 21.6,
+      "independent_pair_variance_rad2": 0.2842446067513734,
+      "identical_common_pair_variance_rad2": 0.0
+    },
+    "singular_recovery_information": {
+      "known_state": 0.5026178010471204,
+      "uncertain_state": 0.3898181818181818,
+      "loss": 0.11279961922893858,
+      "identity_error": 5.551115123125783e-17
+    },
+    "native_F01": {
+      "normal": {
+        "A_shape": [
+          114,
+          114
+        ],
+        "C_shape": [
+          78,
+          114
+        ],
+        "relative_asymmetry": 1.4105135524700054,
+        "max_eigenvalue_real": 3.970364814876219e-13,
+        "minimum_eigenvalue_modulus": 3.970364814876219e-13,
+        "near_zero_eigenvalues_1e_minus_7": 1,
+        "near_zero_mode_voltage_output_norm": 2.024610707887692,
+        "strict_decay_certified": false
+      },
+      "line": {
+        "A_shape": [
+          114,
+          114
+        ],
+        "C_shape": [
+          78,
+          114
+        ],
+        "relative_asymmetry": 1.4105284400923557,
+        "max_eigenvalue_real": -2.7426124137635545e-13,
+        "minimum_eigenvalue_modulus": 2.7426124137635545e-13,
+        "near_zero_eigenvalues_1e_minus_7": 1,
+        "near_zero_mode_voltage_output_norm": 2.0166312465827345,
+        "strict_decay_certified": false
+      }
+    }
+  },
+  "environment": {
+    "python": "3.13.14",
+    "numpy": "2.3.5",
+    "scipy": "1.16.3"
+  },
+  "limits": [
+    "No F01 detection evaluation",
+    "No construction of a cheap valid DAE error bound",
+    "No global decay certificate from a near-zero eigenvalue",
+    "No C03 access"
+  ]
+}

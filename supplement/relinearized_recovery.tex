@@ -93,4 +93,46 @@ recursive DAE state estimators already have relevant antecedents
 \cite{katanic2024recursive}. Iterations must retain the same prior and
 assimilate each report once, and a fitted residual alone is not marginal
 evidence. The reported history bank and its existing campaigns remain
-unchanged by this predictor-level result.\EOD
+unchanged by this predictor-level result.
+
+\subsection{Conditions for Selective Refinement}
+A smaller trajectory error need not preserve attribution. Consider a
+reference Gaussian prediction $(\mu,\Sigma)$ and an approximation
+$(\widetilde\mu,\widetilde\Sigma)$ of dimension $d$, both with positive
+definite covariance. Choose $W\widetilde\Sigma W^\top=I$, and suppose
+valid bounds satisfy
+\begin{align}
+ \|W(\mu-\widetilde\mu)\|&\leq\epsilon,\nonumber\\
+ \|W\Sigma W^\top-I\|_2&\leq\eta<1.
+\end{align}
+Writing $r=\|W(y-\widetilde\mu)\|$, the log-density error obeys
+\begin{equation}
+ |\ell-\widetilde\ell|\leq
+ B=\frac12\left[-d\log(1-\eta)
+ +\frac{\eta r^2+2r\epsilon+\epsilon^2}{1-\eta}\right].
+ \label{eq:prediction-score-bound}
+\end{equation}
+Indeed, the whitened covariance has eigenvalues in
+$[1-\eta,1+\eta]$. Bound its log determinant and inverse, then expand
+the quadratic residual. For unchanged covariance this reduces to
+$B=r\epsilon+\epsilon^2/2$; a mean-only bound is insufficient when
+covariance changes.
+
+For a fixed candidate set and the same priors, bounds $B_h$ preserve
+the approximate score winner $i$ if
+\begin{equation}
+ \widetilde S_i-B_i>
+ \max_{j\ne i}(\widetilde S_j+B_j).
+\end{equation}
+This condition does not preserve a publication threshold on normalized
+event mass. For an event group, sum the exponentials of the lower and upper
+score bounds to obtain $L_A,U_A$; let $L_B,U_B$ describe its complement.
+Its mass lies in $[L_A/(L_A+U_B),U_A/(U_A+L_B)]$. Omitted candidates
+and temporal confirmation require separate treatment.
+
+These conditional bounds are mathematical checks, not an enabled selection
+rule. They require inexpensive valid prediction-error bounds, which the
+trajectory experiment does not provide. Neither measured RMSE nor a
+coarse--fine discrepancy is such a certificate. Positive-weight quadrature
+propagates score intervals for the same quadrature nodes, but integration
+error still needs its own bound.\EOD

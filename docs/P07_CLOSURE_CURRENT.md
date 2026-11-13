@@ -1,5 +1,19 @@
 # P07: estado de cierre vigente
 
+**Última actualización: 13-nov-2026, 17:00 Bogotá.** Se revisaron los once
+adjuntos nuevos, siete textos distintos. Véase
+[la auditoría de la segunda ola](IDEAS_SECOND_WAVE_AUDIT_20261113.md).
+Apéndice U incorpora una cota condicional de error de score con media y
+covarianza y distingue ganador de masa de publicación. La implementación
+se comprobó en 2.000 perturbaciones gaussianas, sin violaciones observadas;
+no es una prueba de atribución. Las A nativas no son Laplacianas y tienen
+un modo numéricamente cercano a cero: no se certifica una regla de olvido
+por decaimiento global. El refinamiento selectivo no está habilitado en
+el banco. Artículo 19 páginas; suplemento 39. C03 intacto: 60/72 registros
+F01 TEST completados, proceso 32480 activo y sin archivos finales de
+resultado/bloqueo. La revisión fue solo operativa, sin métricas de TEST.
+Los bloques fechados siguientes son historial de avances anteriores.
+
 **Actualización vigente: 13-nov-2026, 16:36 Bogotá.** El sucesor
 `experiments/relinearized_recovery_20261113` reduce el RMSE de fase en la
 recuperación de la línea de referencia de 3,191 a 0,139 grados (95,7%).

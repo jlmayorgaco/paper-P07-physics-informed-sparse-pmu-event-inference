@@ -1,0 +1,11 @@
+{
+  "scope": "Mathematical implementation checks and native-operator audit; no attribution experiment",
+  "seed": 20261113,
+  "gaussian_trials": 2000,
+  "gaussian_dimensions": [1, 2, 5, 12],
+  "covariance_relative_error_max": 0.8,
+  "tolerance": 1e-9,
+  "inputs": ["../descriptor_bridge_20261113/run_v2/operators/normal/A.csv", "../descriptor_bridge_20261113/run_v2/operators/normal/C.csv", "../descriptor_bridge_20261113/run_v2/operators/line/A.csv", "../descriptor_bridge_20261113/run_v2/operators/line/C.csv"],
+  "checks": ["mean_and_covariance_score_bound", "fixed_covariance_reduction", "winner_intervals", "event_mass_corners", "positive_quadrature_intervals", "missing_covariance_counterexample", "sensor_permutation_counterexample", "branch_shunt_rank", "constant_bias_information_scaling", "clock_correlation", "singular_recovery_information", "native_operator_structure"],
+  "exclusions": ["C03 files", "new plant simulations", "FAR", "empirical attribution gain", "guaranteed DAE approximation error", "automatic memory deletion", "new theorem or novelty claim"]
+}

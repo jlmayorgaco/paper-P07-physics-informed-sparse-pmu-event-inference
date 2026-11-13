@@ -1,5 +1,14 @@
 # P07 — Recovery-Aware Physical Attribution of Load and Line Events From Sparse PMUs
 
+The [second-wave idea audit](docs/IDEAS_SECOND_WAVE_AUDIT_20261113.md)
+reviews all eleven new attachments (seven distinct texts). It corrects the
+proposed graph, covariance and memory guarantees. Appendix U now gives a
+conditional score-error bound including mean and covariance, with a separate
+normalized event-mass check. The [executable checks](experiments/decision_bounds_20261113/README.md)
+pass; no selective-refinement policy is enabled in the detector. Current
+article/supplement: **19/39 pages**. At 17:00 Bogotá on 13 November, C03
+had completed 60/72 F01 TEST records and still had no final evaluation seal.
+
 The [periodic relinearization study](experiments/relinearized_recovery_20261113/README.md)
 reduces the reference line-recovery phase RMSE from 3.191 to 0.139 degrees
 (95.7%) by refreshing local dynamics every 0.1 s. All four line cases and
@@ -7,7 +16,7 @@ three controls pass the predefined gates. Events and initial states are
 known; this validates a conditional predictor, not an attribution gain.
 Appendix U and Figure 18 report the comparison; Figure 15 distinguishes
 this development module from the reported bank. Current PDFs: 19-page
-article and 38-page supplement. The [shared-ideas audit](docs/SHARED_IDEAS_AUDIT_20261113.md)
+article and 38-page supplement at that revision. The [shared-ideas audit](docs/SHARED_IDEAS_AUDIT_20261113.md)
 records useful extensions and rejects unsupported guarantees with explicit
 counterexamples. C03 remains untouched; at 16:36 Bogotá on 13 November,
 58/72 F01 TEST records were complete and final evaluation files were absent.

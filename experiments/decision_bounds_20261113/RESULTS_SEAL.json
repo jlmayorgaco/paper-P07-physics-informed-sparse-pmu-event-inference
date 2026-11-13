@@ -1,0 +1,17 @@
+{
+  "files": {
+    "bounds.py": "4856ed7512ec4f9ab29586161a69455e377c032692dbf04bb9d58f2109baee99",
+    "check.py": "582d98192cfdbbda6ca7ccb14f292747a3a21c1f59680c521cb4e090ad15eb37",
+    "check_v2.py": "c05da6bd5d3c6aaac18ee5180692e324c4203fc0692f9c9c8e7ecc4872b6db14",
+    "protocol.json": "e35649087b004fed15673d1766201fe05e626b158aecbf18ab8778b782a373c5",
+    "EXECUTION_FREEZE.json": "7c7b652dc671dc3cf1432c3c234a98dbbe8c7d70b0d18225995ca523d6d843d7",
+    "EXECUTION_FREEZE_V2.json": "54acd157039f97b685599952835a75261622daf9b75270a1176e720f28f90dbb",
+    "INPUT_PROVENANCE.json": "150b4688d31181ff454ab59718a5bf651558ab04d79c57705419dbf10be7d20d",
+    "RESULTS.json": "80361f756a8b627344bd0ea3ae0543579ced65e5634f083be2d54d76a1c2c9f0",
+    "../descriptor_bridge_20261113/run_v2/operators/normal/A.csv": "846c0d541299c8e81a009191a8ed1f3db579af8fffecda6631d62bb1b943687f",
+    "../descriptor_bridge_20261113/run_v2/operators/normal/C.csv": "661424ce402e6809078073dec8352c2861127f2a8698f5429a3a10ef7ed602be",
+    "../descriptor_bridge_20261113/run_v2/operators/line/A.csv": "58bf8f725b98f978525f6e6d519fd61554788ed71189031bf376eb1935528078",
+    "../descriptor_bridge_20261113/run_v2/operators/line/C.csv": "bfea958e2f5641aa8b16ba76cf67d8da7a568970678d76fe037bccc72ae10d9b"
+  },
+  "scope": "Numerical implementation checks; no empirical detection gain"
+}
