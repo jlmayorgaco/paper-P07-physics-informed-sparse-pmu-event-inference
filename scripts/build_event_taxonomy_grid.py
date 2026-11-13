@@ -77,25 +77,31 @@ def main():
     # Observed physical trace with the user's illustrative loss window.
     # Original PMU29 availability stays in composite_trace.csv, unchanged.
     d=pd.read_csv(DATA/'composite_trace.csv');ax=axs.flat[6]
-    physical,=ax.plot(d.relative_time_s,d.pmu2_frequency_change_mHz,color='#9b9b9b',lw=.6,label='PMU 2: frequency')
+    hidden=(d.relative_time_s>=-15)&(d.relative_time_s<15)
+    physical,=ax.plot(d.relative_time_s,d.pmu2_frequency_change_mHz,color='#9b9b9b',lw=.6)
+    available,=ax.plot(d.relative_time_s,np.where(hidden,np.nan,d.pmu2_frequency_change_mHz),color=PALETTE[1],lw=.6)
     ax.axvline(0,color='.55',ls=':',lw=.7);ax.set_xlim(-45,35);ax.set_xticks([-30,-15,0,15,30]);ax.set_ylim(-255,55);ax.set_yticks([-200,-100,0])
     ax.set_ylabel(r'$f-f_{\mathrm{pre}}$ (mHz)',labelpad=1.5);ax.set_xlabel(r'Time from generation onset (s)',labelpad=2)
     flag=ax.twinx();flag.set_ylim(-.12,1.15);flag.set_yticks([0,1],['No','Yes']);flag.tick_params(labelsize=6.7,pad=1,length=2)
-    flag.set_ylabel('Missing PMU 29',fontsize=6.7,labelpad=2,color=PALETTE[1]);flag.spines['right'].set_visible(True);flag.spines['right'].set_color(PALETTE[1])
-    pulse,=flag.step([-45,-15,15,35],[0,1,0,0],where='post',color=PALETTE[1],lw=1.2,label='Illustrative loss window')
-    ax.legend([physical,pulse],['Physical response','Missing-data pulse (illustrative)'],loc='lower left',bbox_to_anchor=(-.035,1.01),
+    flag.set_ylabel('Data available',fontsize=6.7,labelpad=2);flag.spines['right'].set_visible(True)
+    flag.plot([-45,-15],[1,1],color=PALETTE[1],lw=1.2)
+    flag.plot([-15,-15,15,15],[1,0,0,1],color=PALETTE[0],lw=1.2)
+    flag.plot([15,35],[1,1],color=PALETTE[1],lw=1.2)
+    for tick,color in zip(flag.get_yticklabels(),[PALETTE[0],PALETTE[1]]):tick.set_color(color)
+    ax.legend([available,physical],['Available response','Hidden response (illustrative)'],loc='lower left',bbox_to_anchor=(-.035,1.01),
               ncol=1,frameon=False,fontsize=6.3,handlelength=1.5,borderaxespad=0,labelspacing=.15)
     # User correction: clock low/high must coincide with No/Yes (0/1),
-    # on availability in panel 5 and missing-data indicator in panel 6.
+    # on the availability axes in both panels.
     clock_levels=[]
     for event in (5,6):
         ax=axs.flat[event];lo,hi=ax.get_xlim()
         clock=ax if event==5 else flag
         t=np.arange(lo,hi+1/30,1/30)
-        levels=np.where(np.mod(t-lo,2.0)<1.0,1.0,0.0)
+        period=2.0 if event==5 else 4.0
+        levels=np.where(np.mod(t-lo,period)<period/2,1.0,0.0)
         line,=clock.step(t,levels,where='post',color='#9AA1A9',lw=.65,alpha=.5,zorder=.8)
         assert set(line.get_ydata())=={0.,1.}
-        clock_levels.append({'panel':event,'low':0,'high':1,'axis':'availability' if event==5 else 'missing'})
+        clock_levels.append({'panel':event,'low':0,'high':1,'axis':'availability','period_s':period,'pulse_width_s':period/2})
         ax.text(.02,.96,'Clock (illustrative)',transform=ax.transAxes,fontsize=6.0,color='#6B7280')
     # Taxonomy definition, never represented as measured data or a tested output.
     ax=axs.flat[8];ax.set_xlim(0,1);ax.set_ylim(0,1);ax.axis('off')
@@ -109,10 +115,10 @@ def main():
     audit={'authorization':'User requested equal 3x3 panels including normal and explicit missing pulse, 2026-11-13',
            'legacy_trace_sha256':sha(LEGACY),'legacy_curves':checked,'panels':list(range(9)),
            'normal_and_composite_files':provenance['files'],'protected_hashes_verified':len(protected),
-           'display_change':'Panel 6 overlays an explicitly illustrative missing pulse from -15 to +15 s; raw traces and clock No/Yes levels preserved.',
-           'panel6_missing_pulse':{'start_s':-15,'end_s':15,'source':'user-specified illustration, not measured PMU29 availability'},
+           'display_change':'Panel 6: orange available response and Yes level; grey hidden response and blue No level from -15 to +15 s. Illustrative mask; original trace unchanged.',
+           'panel6_availability':{'gap_start_s':-15,'gap_end_s':15,'within_gap':0,'outside_gap':1,'source':'user-specified illustrative mask on PMU2 response, not recorded availability'},
            'clock_levels':clock_levels,
-           'illustrative_clock_panels':[5,6], 'illustrative_clock_period_s':2.0,
+           'illustrative_clock_panels':[5,6],
            'pdf_sha256':sha(pdf)}
     (DATA/'BUILD_AUDIT.json').write_text(json.dumps(audit,indent=2)+'\n')
     print(f'Built equal 3x3 grid; {len(checked)} legacy curves unchanged; all protected hashes preserved.')

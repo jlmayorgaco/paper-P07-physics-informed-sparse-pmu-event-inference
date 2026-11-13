@@ -10,13 +10,17 @@ La figura presenta nueve etiquetas (0–8), no nueve mecanismos físicos validad
 - 1–5 y 7: las 16 curvas originales se reconstruyen desde los valores congelados,
   comprobando identidad de tiempos y ordenadas. Se conserva el significado
   de los ejes. Por corrección expresa del usuario se conserva el tren de reloj
-  ilustrativo (periodo 2 s) en los paneles 5 y 6. Por la siguiente corrección
+  ilustrativo en los paneles 5 y 6 (periodos 2 y 4 s, respectivamente;
+  el ancho de cada pulso del panel 6 se duplicó a 2 s). Por la siguiente corrección
   del usuario, los pulsos recorren exactamente No/Yes (0/1) sobre el eje
-  de disponibilidad del panel 5 y de datos ausentes del panel 6. No representa la cadencia real de informes de 30 Hz.
-- 6: frecuencia observada en PMU 2 en gris. Por nueva instrucción expresa,
-  el pulso naranja muestra una ventana ilustrativa de −15 a +15 s respecto
-  al inicio de generación (2976.366 s). Leyenda y pie distinguen esta
-  superposición de la disponibilidad real de PMU 29. El extracto original
+  de disponibilidad de ambos paneles. No representa la cadencia real de informes de 30 Hz.
+- 6: frecuencia original de PMU 2 con una máscara ilustrativa de pérdida
+  entre −15 y +15 s respecto al inicio de generación (2976.366 s).
+  La respuesta y el nivel Yes son naranja cuando hay datos; el nivel No
+  es azul durante la pérdida. La respuesta oculta se conserva en gris
+  para explicar qué dejaría de observarse, sin atribuirla a una reconstrucción
+  del detector. Leyenda y pie explican que la máscara es ilustrativa,
+  no la disponibilidad registrada. El extracto original
   `composite_trace.csv`, incluida `pmu29_missing`, permanece intacto.
 - 8: esquema de la clase desconocida, explícitamente sin traza medida ni
   afirmación de validación del detector.

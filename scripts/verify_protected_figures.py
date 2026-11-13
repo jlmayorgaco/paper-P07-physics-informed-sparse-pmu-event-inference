@@ -64,7 +64,7 @@ def verify(pdf_path=None):
             topology=[i for i,t in enumerate(text) if 'IEEE 39-bus single-line diagram' in t]
             assert len(events)==len(topology)==1,'Protected figure caption absent from compiled article'
             assert 'FIGURE 2.' in text[events[0]],'The protected event figure must remain Figure 2'
-            assert all(s in text[events[0]] for s in ['Normal operation','Unknown event','Missing-data pulse']), 'Authorized grid content absent'
+            assert all(s in text[events[0]] for s in ['Normal operation','Unknown event','Hidden response (illustrative)']), 'Authorized grid content absent'
             assert all(s in text[topology[0]] for s in ['PMU voltage bus','Transformer','Candidate line opening']),\
                 'IEEE-39 drawing content absent from compiled page'
             assert len(pdf[topology[0]].get_drawings())>=100,'IEEE-39 vector content absent'

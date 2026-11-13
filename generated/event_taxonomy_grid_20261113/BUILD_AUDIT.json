@@ -131,30 +131,35 @@
     "normal_trace.csv": "a54f29a9162df9c16a75d63cfaaada3ff0714fd405259b4c3c826bfca8818dcb"
   },
   "protected_hashes_verified": 16,
-  "display_change": "Panel 6 overlays an explicitly illustrative missing pulse from -15 to +15 s; raw traces and clock No/Yes levels preserved.",
-  "panel6_missing_pulse": {
-    "start_s": -15,
-    "end_s": 15,
-    "source": "user-specified illustration, not measured PMU29 availability"
+  "display_change": "Panel 6: orange available response and Yes level; grey hidden response and blue No level from -15 to +15 s. Illustrative mask; original trace unchanged.",
+  "panel6_availability": {
+    "gap_start_s": -15,
+    "gap_end_s": 15,
+    "within_gap": 0,
+    "outside_gap": 1,
+    "source": "user-specified illustrative mask on PMU2 response, not recorded availability"
   },
   "clock_levels": [
     {
       "panel": 5,
       "low": 0,
       "high": 1,
-      "axis": "availability"
+      "axis": "availability",
+      "period_s": 2.0,
+      "pulse_width_s": 1.0
     },
     {
       "panel": 6,
       "low": 0,
       "high": 1,
-      "axis": "missing"
+      "axis": "availability",
+      "period_s": 4.0,
+      "pulse_width_s": 2.0
     }
   ],
   "illustrative_clock_panels": [
     5,
     6
   ],
-  "illustrative_clock_period_s": 2.0,
-  "pdf_sha256": "98aa1a3ec57d6476ea823a961a4954538cb5d29051b7c583e8375bf44dcfed49"
+  "pdf_sha256": "7f29afbe5d7cd897207e8b171807f7a5fa827eb23d960caac50ec41658c56110"
 }
