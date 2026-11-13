@@ -1,0 +1,13 @@
+{
+  "utc": "2026-11-13T21:28:07.265049+00:00",
+  "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.3.5",
+  "scipy": "1.16.3",
+  "pandas": "2.3.3",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "processor": "Intel64 Family 6 Model 170 Stepping 4, GenuineIntel",
+  "julia_threads": 1,
+  "blas_threads": 1,
+  "priority": "BelowNormal for Julia runs",
+  "julia_environment": "../hamiltonian_f01_20261113/reproduction/environment"
+}

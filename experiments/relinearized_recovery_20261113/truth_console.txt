@@ -1,0 +1,17 @@
+BUILD_FROZEN_PLANT
+INITIAL_STATE_VERIFIED
+SOLVE normal
+{"algebraic_residual":1.605715560515364e-12,"case":"normal","dynamic_jump":0.0,"retcode":"Success","samples":1441,"seconds":14.9099529}
+SOLVE load_up
+{"algebraic_residual":7.56087414899298e-11,"case":"load_up","dynamic_jump":0.0,"retcode":"Success","samples":1441,"seconds":7.693736}
+SOLVE load_down
+{"algebraic_residual":1.6351919818191618e-12,"case":"load_down","dynamic_jump":0.0,"retcode":"Success","samples":1441,"seconds":9.8450446}
+SOLVE line_ref
+{"algebraic_residual":8.756739777737721e-11,"case":"line_ref","dynamic_jump":0.0,"retcode":"Success","samples":1441,"seconds":6.2648222}
+SOLVE line_short
+{"algebraic_residual":8.756739777737721e-11,"case":"line_short","dynamic_jump":0.0,"retcode":"Success","samples":1441,"seconds":6.1767063}
+SOLVE line_long
+{"algebraic_residual":8.756739777737721e-11,"case":"line_long","dynamic_jump":0.0,"retcode":"Success","samples":1441,"seconds":6.1401718}
+SOLVE line_other
+{"algebraic_residual":7.363332166221426e-12,"case":"line_other","dynamic_jump":0.0,"retcode":"Success","samples":1441,"seconds":6.2221582}
+PHYSICS_COMPLETE

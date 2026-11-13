@@ -1,5 +1,31 @@
 # P07: estado de cierre vigente
 
+**Actualización vigente: 13-nov-2026, 16:36 Bogotá.** El sucesor
+`experiments/relinearized_recovery_20261113` reduce el RMSE de fase en la
+recuperación de la línea de referencia de 3,191 a 0,139 grados (95,7%).
+Actualizar la dinámica local cada 0,1 s mejora los cuatro casos de línea;
+el control que cambia solo la observación no resuelve el error. Pasan los
+11 criterios predefinidos en siete trayectorias. Se conocen evento, tiempos
+y estado inicial: no es una mejora demostrada de detección. Para integrar
+en el banco faltan propagación de covarianza compatible, integración de
+severidad y una comparación con eventos desconocidos bajo nuevo CAL/TEST.
+Apéndice U, Tabla 29 y Figura 18; arquitectura actualizada en Figura 15.
+Artículo: 19 páginas; suplemento: 38. Los párrafos siguientes conservan
+resultados y tamaños de revisiones anteriores.
+
+C03: proceso principal 32480 activo; el último registro de campaña muestra
+58/72 registros F01 TEST completados. No existen `TEST_RESULTS.json` ni
+`TEST_EVALUATION_LOCK.json`; no se leyeron resultados parciales. La campaña,
+sus entradas y sus umbrales no se modificaron. No se puede cerrar todavía
+el contraste de mecanismo ni la transferencia a la segunda planta.
+
+Las ideas del chat compartido y los adjuntos se clasifican en
+[SHARED_IDEAS_AUDIT_20261113.md](SHARED_IDEAS_AUDIT_20261113.md).
+Los contraejemplos impiden incorporar las garantías propuestas de
+submodularidad, KL de compresión, consistencia y poda futura. El criterio
+de envío permanece abierto: evidencia C03 sellada, auditoría de ambas
+plantas, coherencia final de afirmaciones y aprobación de coautores.
+
 La derivación suministrada se comprobó en su ejemplo de tres barras y se
 conectó con el punto de operación real de F01. El nuevo estudio
 `experiments/descriptor_bridge_20261113` extrae 192 variables nativas

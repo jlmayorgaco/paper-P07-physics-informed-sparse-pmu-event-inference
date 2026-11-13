@@ -1,0 +1,16 @@
+BUILD_FROZEN_PLANT
+INITIAL_STATE_VERIFIED
+PREDICT normal
+{"case":"normal","fixed_observation_algebraic_residual":1.8496315590255108e-13,"relinearized_1":{"algebraic_residual":1.8496315590255108e-13,"elapsed_s":1.0976441000000003,"recenter_state_jump":0.0,"refreshes":361},"relinearized_3":{"algebraic_residual":1.8496315590255108e-13,"elapsed_s":0.5577251000000002,"recenter_state_jump":0.0,"refreshes":121},"status":"SUCCESS"}
+PREDICT load_up
+{"case":"load_up","fixed_observation_algebraic_residual":1.8696155734687636e-13,"relinearized_1":{"algebraic_residual":1.8496315590255108e-13,"elapsed_s":1.0095354,"recenter_state_jump":0.0,"refreshes":361},"relinearized_3":{"algebraic_residual":1.8496315590255108e-13,"elapsed_s":0.5896181999999999,"recenter_state_jump":0.0,"refreshes":121},"status":"SUCCESS"}
+PREDICT load_down
+{"case":"load_down","fixed_observation_algebraic_residual":2.4424906541753444e-13,"relinearized_1":{"algebraic_residual":2.0805579481475434e-13,"elapsed_s":1.2506618,"recenter_state_jump":0.0,"refreshes":361},"relinearized_3":{"algebraic_residual":2.107203300738547e-13,"elapsed_s":0.4360565,"recenter_state_jump":0.0,"refreshes":121},"status":"SUCCESS"}
+PREDICT line_ref
+{"case":"line_ref","fixed_observation_algebraic_residual":2.084998840246044e-13,"relinearized_1":{"algebraic_residual":2.382538610845586e-13,"elapsed_s":1.3745871,"recenter_state_jump":0.0,"refreshes":361},"relinearized_3":{"algebraic_residual":2.1249668691325496e-13,"elapsed_s":0.5309921999999999,"recenter_state_jump":0.0,"refreshes":121},"status":"SUCCESS"}
+PREDICT line_short
+{"case":"line_short","fixed_observation_algebraic_residual":2.3225865675158275e-13,"relinearized_1":{"algebraic_residual":2.2493118478905672e-13,"elapsed_s":0.9085506999999999,"recenter_state_jump":0.0,"refreshes":361},"relinearized_3":{"algebraic_residual":2.2493118478905672e-13,"elapsed_s":0.5153759000000001,"recenter_state_jump":0.0,"refreshes":121},"status":"SUCCESS"}
+PREDICT line_long
+{"case":"line_long","fixed_observation_algebraic_residual":2.433608869978343e-13,"relinearized_1":{"algebraic_residual":2.113864638886298e-13,"elapsed_s":0.9120170999999998,"recenter_state_jump":0.0,"refreshes":361},"relinearized_3":{"algebraic_residual":2.2370993946196904e-13,"elapsed_s":0.39512569999999997,"recenter_state_jump":0.0,"refreshes":121},"status":"SUCCESS"}
+PREDICT line_other
+{"case":"line_other","fixed_observation_algebraic_residual":2.4913404672588513e-13,"relinearized_1":{"algebraic_residual":2.2226664952995634e-13,"elapsed_s":0.9062648999999999,"recenter_state_jump":0.0,"refreshes":361},"relinearized_3":{"algebraic_residual":2.1083135237631723e-13,"elapsed_s":0.3941872,"recenter_state_jump":0.0,"refreshes":121},"status":"SUCCESS"}

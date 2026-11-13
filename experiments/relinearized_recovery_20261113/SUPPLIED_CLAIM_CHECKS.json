@@ -1,0 +1,33 @@
+{
+  "profiled_sensor_separation": [
+    0.0,
+    0.0,
+    0.0,
+    2.0
+  ],
+  "submodularity_violation": true,
+  "moment_matched_mixture_kl": 0.0001502934723686325,
+  "quadrature_error": 7.678742877440705e-13,
+  "invalid_proposed_lower_bound": 0.008839221603022682,
+  "latent_between_covariance": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0
+    ]
+  ],
+  "observable_between_covariance": [
+    [
+      0.0
+    ]
+  ],
+  "decaying_gaussian_signature_total_information": 2.6315789473684217,
+  "pruning_one_step_mass": 0.001,
+  "posterior_mass_after_new_evidence": 0.999001997004992,
+  "six_report_span_seconds": 0.16666666666666666,
+  "interpretation": "Counterexamples invalidate universal statements, not the scoped Gaussian identities. No IEEE39 detector result.",
+  "passed": true
+}

@@ -1,0 +1,17 @@
+\begin{table}[t]\centering\small
+\caption{Recovery voltage-phase RMSE (degrees). All methods receive the same known event and initial state. The 30-Hz refresh is a convergence check, not a replacement selected after evaluation.}
+\label{tab:relinearized-recovery}
+\setlength{\tabcolsep}{3.1pt}
+\begin{tabular}{lrrrr}
+\toprule
+&Fixed&Nonlinear&\multicolumn{2}{c}{Relinearize}\\
+Event&polar&output only&10 Hz&30 Hz\\
+\midrule
+23--24, 1 s&$3.191$&$3.191$&$0.139$&$0.0155$\\
+23--24, 0.5 s&$2.542$&$2.541$&$0.246$&$0.0279$\\
+23--24, 1.5 s&$3.390$&$3.390$&$0.181$&$0.0203$\\
+26--28, 1 s&$3.211$&$3.212$&$0.150$&$0.0169$\\
+Bus 7, $+10\%$&$0.119$&$0.119$&$6.6\times10^{-5}$&$7.5\times10^{-6}$\\
+Bus 7, $-10\%$&$0.119$&$0.119$&$6.6\times10^{-5}$&$7.5\times10^{-6}$\\
+\bottomrule\end{tabular}
+\end{table}

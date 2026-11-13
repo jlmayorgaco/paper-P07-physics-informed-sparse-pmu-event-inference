@@ -1,5 +1,17 @@
 # P07 — Recovery-Aware Physical Attribution of Load and Line Events From Sparse PMUs
 
+The [periodic relinearization study](experiments/relinearized_recovery_20261113/README.md)
+reduces the reference line-recovery phase RMSE from 3.191 to 0.139 degrees
+(95.7%) by refreshing local dynamics every 0.1 s. All four line cases and
+three controls pass the predefined gates. Events and initial states are
+known; this validates a conditional predictor, not an attribution gain.
+Appendix U and Figure 18 report the comparison; Figure 15 distinguishes
+this development module from the reported bank. Current PDFs: 19-page
+article and 38-page supplement. The [shared-ideas audit](docs/SHARED_IDEAS_AUDIT_20261113.md)
+records useful extensions and rejects unsupported guarantees with explicit
+counterexamples. C03 remains untouched; at 16:36 Bogotá on 13 November,
+58/72 F01 TEST records were complete and final evaluation files were absent.
+
 **Current status, 13 November 2026:** scientific review draft; C03 has frozen
 its CAL selection and is running F01 TEST. Both-plant results are not yet sealed.
 The [technical/editorial review](docs/P07_REVIEW_20261113.md) corrects reset-gain
@@ -33,7 +45,7 @@ polar observations avoid spurious magnitude changes from tangent complex
 voltages, but line recovery retains about 3.19 degrees of phase RMSE. This is
 a development model check, not a detector gain. Appendix T includes the full
 comparison and Figure 17; the article remains 19 pages and the supplement is
-37 pages. C03 was neither read nor modified for this diagnostic.
+37 pages at that revision. C03 was neither read nor modified for this diagnostic.
 
 Overleaf sync excludes `output/source/*.zip`: the source delivery archive
 exceeded its 50 MB per-file limit. It is still generated and retained locally.

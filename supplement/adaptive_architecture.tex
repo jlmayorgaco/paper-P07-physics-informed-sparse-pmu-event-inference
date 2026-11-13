@@ -4,7 +4,7 @@
 This section specifies a successor and evaluates two of its mechanisms in
 nominal-operator diagnostics, not in the full history bank.
 Figure~\ref{fig:layered-architecture} separates the implemented
-physical estimator, proposed adaptation, and an external cyber layer.
+physical estimator, refinement candidates, and an external cyber layer.
 Adaptive covariance estimation already appears in power-system dynamic
 state estimation, including an IEEE-39 study \cite{wang2019adaptiveh}.
 The question here is whether adaptation can follow instrumental changes
@@ -14,10 +14,11 @@ without explaining away a load or line intervention during recovery.
 \includegraphics[width=.98\textwidth]{figures/generated/layered_architecture.pdf}
 \caption{System architecture and implementation boundary. The solid upper path
 is the reported physical bank. Dashed modules specify proposed integration of
-history-specific uncertainty, guarded noise adaptation and bounded-window
-smoothing. The drawings are schematic; $p_h(a)$ denotes the severity density
+history-specific uncertainty, guarded noise adaptation and local dynamic
+refinement. The drawings are schematic; $p_h(a)$ denotes the severity density
 conditional on the history and past observations. Mechanism diagnostics below
-do not validate these modules within the bank.
+do not validate these modules within the bank. The separate known-event
+relinearization test appears in Section~\ref{app:relinearized-recovery}.
 The rotor-energy panel describes a verified mechanical subsystem of the
 nonlinear plant (Section~\ref{app:hamiltonian-graph}); it contributes no
 additional likelihood factor. Graph connectivity enters through the

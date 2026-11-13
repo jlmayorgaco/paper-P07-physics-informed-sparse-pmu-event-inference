@@ -1,0 +1,88 @@
+{
+  "scope": "Development prediction comparison; known events; no filtering or C03 data",
+  "duration_s": 12,
+  "sample_hz": 120,
+  "dtmax_s": 0.004166666666666667,
+  "abstol": 1e-10,
+  "reltol": 1e-10,
+  "refresh_reports": 3,
+  "convergence_refresh_reports": 1,
+  "report_hz": 30,
+  "cases": [
+    {
+      "id": "normal",
+      "kind": "load",
+      "bus": 7,
+      "factor": 1.0,
+      "on": 2.0,
+      "off": 6.0
+    },
+    {
+      "id": "load_up",
+      "kind": "load",
+      "bus": 7,
+      "factor": 1.1,
+      "on": 2.0,
+      "off": 6.0
+    },
+    {
+      "id": "load_down",
+      "kind": "load",
+      "bus": 7,
+      "factor": 0.9,
+      "on": 2.0,
+      "off": 6.0
+    },
+    {
+      "id": "line_ref",
+      "kind": "line",
+      "edge": 38,
+      "on": 2.0,
+      "off": 3.0
+    },
+    {
+      "id": "line_short",
+      "kind": "line",
+      "edge": 38,
+      "on": 2.0,
+      "off": 2.5
+    },
+    {
+      "id": "line_long",
+      "kind": "line",
+      "edge": 38,
+      "on": 2.0,
+      "off": 3.5
+    },
+    {
+      "id": "line_other",
+      "kind": "line",
+      "edge": 43,
+      "on": 2.0,
+      "off": 3.0
+    }
+  ],
+  "arms": [
+    "fixed_polar",
+    "fixed_dynamics_nonlinear_observation",
+    "relinearized_3_reports",
+    "relinearized_1_report_convergence_only"
+  ],
+  "primary_metric": "Voltage phase RMSE in degrees over 8 PMUs, OFF through 12 s",
+  "secondary_metrics": [
+    "all 47 channels by family and units",
+    "active-window error",
+    "complex voltage error",
+    "elapsed report mean, p95, max, excludes initialization",
+    "normal drift",
+    "algebraic residuals and switch continuity"
+  ],
+  "decision_rule": {
+    "recovery_phase_reduction_each_line_at_least_fraction": 0.5,
+    "load_voltage_phase_rmse_max_ratio": 1.1,
+    "normal_voltage_complex_max_pu": 1e-08,
+    "algebraic_residual_max": 1e-08,
+    "reference_baseline_rmse_abs_tolerance_deg": 1e-06
+  },
+  "interpretation": "No attribution or false-alarm gain. line_ref and loads are known development replications. Three new line schedules/assets are prospective numerical checks, not independent random parents. Finer refresh is convergence diagnostic only and cannot replace primary arm."
+}

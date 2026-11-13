@@ -132,7 +132,7 @@
 \node[small,anchor=west] at (.12,4.35) {Shared covariance; prefix-fitted noise};
 
 % Development lane: mechanism drawings rather than another wall of prose.
-\node[head,text=orange] at (.05,3.91) {ADAPTIVE DEVELOPMENT};
+\node[head,text=orange] at (.05,3.91) {REFINEMENT DEVELOPMENT};
 \node[note,anchor=east] at (17.95,3.91) {Mechanism diagnostics; integration into the history bank remains pending};
 \foreach \a/\b in {0/5.65,6.18/11.83,12.36/18}{
  \path[card,draw=orange,dashed,fill=orange!2] (\a,1.14) rectangle (\b,3.60);}
@@ -156,14 +156,20 @@
 \node[small,anchor=west] at (9.52,2.59) {learn $R_{k+1}$};
 \node[small,anchor=west] at (9.52,2.18) {or keep $R_k$};
 \node[note] at (9.0,1.55) {Score first; update after. Keep center fixed.};
-\node[head] at (12.54,3.29) {Revise a bounded history window};
-\foreach \i in {0,1,2,3,4,5}{
- \draw[rule,fill=teal!8] ({12.80+.72*\i},2.05) rectangle ++(.56,.48);}
-\draw[blue,line width=1.0pt] (12.7,1.97)--(12.7,2.64);
-\draw[orange,line width=1.0pt] (17.1,1.97)--(17.1,2.64);
-\node[small,above] at (12.8,2.68) {$k-L$};\node[small,above] at (17.1,2.68) {$k$};
-\draw[future] (16.94,1.88)--(13.05,1.88);
-\node[note] at (15.18,1.47) {Saved boundary; replace suffix evidence};
+\node[head] at (12.54,3.29) {Refresh physical predictions};
+\node[small] at (13.22,2.91) {predicted state};
+\node[small] at (14.85,2.91) {constraints};
+\node[small] at (16.85,2.91) {local dynamics};
+\draw[blue,fill=blue!5] (13.22,2.43) circle (.31);
+\node at (13.22,2.43) {$\hat x_j$};
+\path[card,draw=teal] (14.12,2.13) rectangle (15.58,2.73);
+\node at (14.85,2.43) {$g_q=0$};
+\path[card,draw=orange] (16.10,2.13) rectangle (17.60,2.73);
+\node at (16.85,2.43) {$A_j,f_j$};
+\draw[future] (13.56,2.43)--(14.10,2.43);
+\draw[future] (15.60,2.43)--(16.08,2.43);
+\draw[future] (16.85,2.10)--(16.85,1.87)--(13.22,1.87)--(13.22,2.10);
+\node[note] at (15.18,1.47) {Retain state; recompute local derivatives};
 
 % Deliberately detached external service: no attack-to-event score arrow.
 \draw[rule,dashed] (0,.88)--(18,.88);

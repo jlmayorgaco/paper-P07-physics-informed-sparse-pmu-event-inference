@@ -45,6 +45,7 @@ def main():
                  'scripts/audit_adaptive_diagnostic.py', 'scripts/build_adaptive_diagnostic_tables.py',
                  'generated/adaptive_diagnostic_audit.json',
                  'scripts/build_hamiltonian_results.py', 'scripts/build_descriptor_bridge.py',
+                 'scripts/build_relinearized_recovery.py', 'docs/SHARED_IDEAS_AUDIT_20261113.md',
                  'docs/ADAPTIVE_ARCHITECTURE_DECISIONS_20261113.md',
                  'figures/recovery_overview/main.tex', 'figures/physical_report/main.tex',
                  'generated/revision_math_20261103/checks.json',
@@ -66,7 +67,7 @@ def main():
     diagnostic = ROOT / 'experiments/channel_information_20261112'
     sources.update(p for p in (ROOT / 'experiments/adaptive_innovation_20261113').rglob('*')
                    if p.is_file() and p.suffix in {'.py', '.json', '.md', '.npz'})
-    for folder in ('adaptive_innovation_20261113_corrected','hamiltonian_f01_20261113','descriptor_bridge_20261113'):
+    for folder in ('adaptive_innovation_20261113_corrected','hamiltonian_f01_20261113','descriptor_bridge_20261113','relinearized_recovery_20261113'):
         sources.update(p for p in (ROOT / 'experiments' / folder).rglob('*')
                        if p.is_file() and p.suffix in {'.py','.json','.md','.npz','.csv','.jl','.toml','.txt'})
     sources.update(p for p in diagnostic.glob('*')
@@ -105,6 +106,10 @@ and the coordinate comparison's recorded absolute-tolerance limitation.
 The native-descriptor, nonlinear-trajectory and observation-coordinate check is
 rebuilt from sealed data with python scripts/build_descriptor_bridge.py.
 See experiments/descriptor_bridge_20261113/README.md for full reproduction.
+The separately tested relinearized predictor is regenerated with:
+python scripts/build_relinearized_recovery.py
+See experiments/relinearized_recovery_20261113/README.md; this is a known-event
+physical prediction check, not a replacement for the frozen history bank.
 The authorized nine-panel event grid is regenerated from bundled trace values:
 python scripts/build_event_taxonomy_grid.py (NumPy, pandas, Matplotlib required).
 Original protected assets remain byte-identical and are checked by that builder.

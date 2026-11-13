@@ -56,8 +56,8 @@ operators. A line switch changes both the voltage response and the terminal
 operator in $H_q$. The implementation discretizes the admitted
 switch modes and adds causal phase-history operators for frequency and
 ROCOF. Inertia, controls and load law remain those of the fixed plant.
-The supplement checks the native derivatives, mass normalization and
-open-loop prediction errors against six nonlinear plant trajectories.
+The supplement checks these derivatives against nonlinear trajectories and
+tests a relinearized physical predictor separately from the history bank.
 
 Exponential discretization integrates $c_q$ over each mode interval;
 composition handles a switch within a report. After instrumental
