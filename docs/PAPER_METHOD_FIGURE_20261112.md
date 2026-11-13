@@ -48,3 +48,24 @@ paginación; el barrido editorial registra cero hallazgos. Persisten las
 advertencias conocidas de la plantilla. La entrega se publica mediante Git
 para la sincronización habitual con Overleaf; no se certifica una compilación
 remota observada.
+
+## Segunda pasada: legibilidad en la página final
+
+Se aumentó la tipografía principal de 8 a 8,5 pt en la fuente, las notas de
+7,2 a 8 pt y las etiquetas pequeñas de 6,8 a 7,7 pt. En el PDF del artículo,
+las notas comprobadas miden 7,82 pt, las etiquetas pequeñas 7,53 pt y los
+encabezados 8,99 pt; subíndices matemáticos conservan su escala propia.
+Los títulos ahora son instrucciones cortas y los cuatro pasos usan números
+en círculos visibles. Los textos de startup y realimentación se separaron
+de sus conectores, que permanecen continuos. La innovación y su respuesta
+de severidad se muestran en dos líneas para evitar comprimir la ecuación.
+
+Se incorporó la observación pertinente de la auditoría V7: la figura y su
+leyenda distinguen restauración física de compresión al confirmar cierre.
+No sugieren retención indefinida de causas históricas. El ZIP V7 contiene
+propuestas de método y experimentos; no se ejecutaron ni se incorporaron
+como resultados durante esta revisión visual.
+
+Se revisó la página 2 a 72 dpi (escala PDF 1:1) y ampliada para comprobar
+intersecciones. El artículo conserva 19 páginas. La revisión se limita a
+la figura, su leyenda y la entrega; C03 y el estimador permanecen intactos.
