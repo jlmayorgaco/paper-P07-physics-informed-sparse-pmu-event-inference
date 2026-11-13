@@ -1,0 +1,10 @@
+{
+  "utc": "2026-11-13T20:42:59.539840+00:00",
+  "reason": "Correct Julia closure-local variables in new extraction runner; input FD check caught captured pp overwrite. Original failed attempt retained. No physical trajectory was run, no protocol changes.",
+  "files": {
+    "extract_operators_v2.jl": "e5fa25ede94659d5e25342d3a27ab1c10859260273596d9582cbc6d51b0e5539",
+    "run_study_v2.jl": "691bb9a943c557cc48206c929bd8386ad2b428a252e6d05b7ecaaa98fb9f6ff4",
+    "protocol.json": "403ef55842cb034268b6fce617f4050d60364e146c9984dfbb6540569f2642a9",
+    "initialize_frozen.jl": "4f02fe521f9c0ab92b9c6e999e0900d9cfebc25f3e63e9f14a6cbbdddfd81829"
+  }
+}

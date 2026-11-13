@@ -23,7 +23,17 @@ subsystem derivation and an equivalence comparison using 18 nominal sources.
 Energy coordinates do not add information; the absolute numerical likelihood
 gate remains failed and no detector improvement is claimed. The architecture
 now shows graph structure, rotor storage and Bayesian evidence. Article: 19
-pages; supplement: 35 pages. C03 remains unchanged.
+pages; supplement at that revision: 35 pages. C03 remains unchanged.
+
+The [descriptor construction and trajectory check](experiments/descriptor_bridge_20261113/README.md)
+now verifies the supplied three-bus example and extracts the actual F01
+operators from 192 native variables. Six new nonlinear trajectories check
+local derivatives, terminal maps and finite-event prediction error. First-order
+polar observations avoid spurious magnitude changes from tangent complex
+voltages, but line recovery retains about 3.19 degrees of phase RMSE. This is
+a development model check, not a detector gain. Appendix T includes the full
+comparison and Figure 17; the article remains 19 pages and the supplement is
+37 pages. C03 was neither read nor modified for this diagnostic.
 
 Overleaf sync excludes `output/source/*.zip`: the source delivery archive
 exceeded its 50 MB per-file limit. It is still generated and retained locally.

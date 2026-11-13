@@ -1,5 +1,20 @@
 # P07: estado de cierre vigente
 
+La derivación suministrada se comprobó en su ejemplo de tres barras y se
+conectó con el punto de operación real de F01. El nuevo estudio
+`experiments/descriptor_bridge_20261113` extrae 192 variables nativas
+(114 diferenciales, 78 algebraicas), verifica A/B/C/D y ejecuta seis
+trayectorias no lineales. Las derivadas y los terminales pasan; eso no implica
+precisión global. En recuperación, el error de voltaje complejo es ~1,48%
+para cargas de 1%, ~14,8% para cargas de 10% y 30,7% para la línea. La
+observación polar de primer orden evita el cambio artificial de magnitud
+inducido por convertir exactamente un fasor tangente, pero conserva ~3,19
+grados de RMSE de fase en la recuperación de línea. No es una evaluación del
+banco completo ni una mejora de atribución. Se añade el Apéndice T y Figura
+17: artículo 19 páginas, suplemento 37. C03 no se leyó ni se modificó en
+este diagnóstico. Sus estados fechados abajo son la última revisión previa,
+no una nueva comprobación de progreso.
+
 La revisión hamiltoniana añade cuatro trayectorias nuevas F01: normal,
 aumento/reducción de carga y apertura/restauración de línea. Se verifican
 balance cinético y potencias terminales con el modelo no lineal completo.

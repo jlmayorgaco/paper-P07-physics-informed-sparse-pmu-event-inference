@@ -1,0 +1,25 @@
+[
+  {
+    "A_direction_error": 9.37902677370244e-10,
+    "B_direction_error": 2.9574291670713392e-8,
+    "C_direction_error": 8.488380660899271e-10,
+    "D_direction_error": 2.394383077128921e-9,
+    "Gz_condition": 2109.3939888736018,
+    "algebraic_residual": 1.8496315590255108e-13,
+    "descriptor_jacobian_relative_error": 0.0,
+    "fixed_dynamic_state_error": 0.0,
+    "mode": "normal",
+    "native_direction_error": 9.915438914521938e-10
+  },
+  {
+    "A_direction_error": 9.282891565761979e-10,
+    "B_direction_error": 3.914294900725159e-8,
+    "C_direction_error": 8.696988262534859e-10,
+    "D_direction_error": 2.3768447327095877e-9,
+    "Gz_condition": 2112.4079134910958,
+    "algebraic_residual": 5.240252676230739e-14,
+    "fixed_dynamic_state_error": 0.0,
+    "mode": "line",
+    "native_direction_error": 9.787368077622673e-10
+  }
+]
