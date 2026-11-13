@@ -13,11 +13,11 @@ La figura presenta nueve etiquetas (0–8), no nueve mecanismos físicos validad
   ilustrativo (periodo 2 s) en los paneles 5 y 6. Por la siguiente corrección
   del usuario, los pulsos recorren exactamente No/Yes (0/1) sobre el eje
   de disponibilidad del panel 5 y de datos ausentes del panel 6. No representa la cadencia real de informes de 30 Hz.
-- 6: frecuencia observada en PMU 2 en gris; pulso naranja igual a
-  `1-DATA_PRESENT` de PMU 29, sin interpolación. La ventana −45 a +35 s
-  respecto al inicio de generación (2976.366 s) muestra tanto pérdida como
-  reconexión. La pérdida comienza antes del fenómeno físico; no se desplaza
-  artificialmente el pulso para hacer coincidir los inicios.
+- 6: frecuencia observada en PMU 2 en gris. Por nueva instrucción expresa,
+  el pulso naranja muestra una ventana ilustrativa de −15 a +15 s respecto
+  al inicio de generación (2976.366 s). Leyenda y pie distinguen esta
+  superposición de la disponibilidad real de PMU 29. El extracto original
+  `composite_trace.csv`, incluida `pmu29_missing`, permanece intacto.
 - 8: esquema de la clase desconocida, explícitamente sin traza medida ni
   afirmación de validación del detector.
 

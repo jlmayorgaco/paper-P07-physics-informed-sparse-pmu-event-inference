@@ -74,15 +74,16 @@ def main():
     for k,b in enumerate([2,39]):ax.plot(d.time_s,d[f'pmu{b}_voltage_ratio'],color=PALETTE[k],lw=.6,label=f'PMU {b}')
     ax.set_xlim(0,10);ax.set_ylim(.98,1.02);ax.set_yticks([.98,1,1.02]);ax.set_ylabel(r'$|V_A|/\mathrm{median}(|V_A|)$',labelpad=1.5)
     ax.set_xlabel('Time in normal interval (s)',labelpad=2);legend(ax,2)
-    # Full observed loss pulse: grey physical trace, orange binary missing flag.
+    # Observed physical trace with the user's illustrative loss window.
+    # Original PMU29 availability stays in composite_trace.csv, unchanged.
     d=pd.read_csv(DATA/'composite_trace.csv');ax=axs.flat[6]
     physical,=ax.plot(d.relative_time_s,d.pmu2_frequency_change_mHz,color='#9b9b9b',lw=.6,label='PMU 2: frequency')
-    ax.axvline(0,color='.55',ls=':',lw=.7);ax.set_xlim(-45,35);ax.set_xticks([-40,0,30]);ax.set_ylim(-255,55);ax.set_yticks([-200,-100,0])
+    ax.axvline(0,color='.55',ls=':',lw=.7);ax.set_xlim(-45,35);ax.set_xticks([-30,-15,0,15,30]);ax.set_ylim(-255,55);ax.set_yticks([-200,-100,0])
     ax.set_ylabel(r'$f-f_{\mathrm{pre}}$ (mHz)',labelpad=1.5);ax.set_xlabel(r'Time from generation onset (s)',labelpad=2)
     flag=ax.twinx();flag.set_ylim(-.12,1.15);flag.set_yticks([0,1],['No','Yes']);flag.tick_params(labelsize=6.7,pad=1,length=2)
     flag.set_ylabel('Missing PMU 29',fontsize=6.7,labelpad=2,color=PALETTE[1]);flag.spines['right'].set_visible(True);flag.spines['right'].set_color(PALETTE[1])
-    pulse,=flag.step(d.relative_time_s,d.pmu29_missing,where='post',color=PALETTE[1],lw=1.2,label='Missing: 1 / present: 0')
-    ax.legend([physical,pulse],['Physical response','Missing-data pulse'],loc='lower left',bbox_to_anchor=(-.035,1.01),
+    pulse,=flag.step([-45,-15,15,35],[0,1,0,0],where='post',color=PALETTE[1],lw=1.2,label='Illustrative loss window')
+    ax.legend([physical,pulse],['Physical response','Missing-data pulse (illustrative)'],loc='lower left',bbox_to_anchor=(-.035,1.01),
               ncol=1,frameon=False,fontsize=6.3,handlelength=1.5,borderaxespad=0,labelspacing=.15)
     # User correction: clock low/high must coincide with No/Yes (0/1),
     # on availability in panel 5 and missing-data indicator in panel 6.
@@ -108,7 +109,8 @@ def main():
     audit={'authorization':'User requested equal 3x3 panels including normal and explicit missing pulse, 2026-11-13',
            'legacy_trace_sha256':sha(LEGACY),'legacy_curves':checked,'panels':list(range(9)),
            'normal_and_composite_files':provenance['files'],'protected_hashes_verified':len(protected),
-           'display_change':'Illustrative clock train spans exact No/Yes levels in panels 5 and 6; measured signals unchanged.',
+           'display_change':'Panel 6 overlays an explicitly illustrative missing pulse from -15 to +15 s; raw traces and clock No/Yes levels preserved.',
+           'panel6_missing_pulse':{'start_s':-15,'end_s':15,'source':'user-specified illustration, not measured PMU29 availability'},
            'clock_levels':clock_levels,
            'illustrative_clock_panels':[5,6], 'illustrative_clock_period_s':2.0,
            'pdf_sha256':sha(pdf)}
