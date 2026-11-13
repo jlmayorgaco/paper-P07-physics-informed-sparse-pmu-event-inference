@@ -40,6 +40,9 @@ def main():
                  'figures/frozen/PROTECTED_FIGURES.json',
                  'scripts/build_recovery_overview.py', 'scripts/build_physics_measurement_chain.py',
                  'scripts/build_paper_method_figure.py', 'figures/paper_method/main.tex',
+                 'scripts/build_layered_architecture.py', 'figures/layered_architecture/main.tex',
+                 'scripts/verify_adaptive_extension.py', 'generated/adaptive_extension_checks.json',
+                 'docs/ADAPTIVE_ARCHITECTURE_DECISIONS_20261113.md',
                  'figures/recovery_overview/main.tex', 'figures/physical_report/main.tex',
                  'generated/revision_math_20261103/checks.json',
                  'generated/revision_math_20261103/PORTABILITY.json'):
@@ -77,6 +80,10 @@ Regenerate them with python scripts/build_recovery_overview.py and
 python scripts/build_physics_measurement_chain.py (pdfLaTeX and PyMuPDF required).
 The current half-page Figure 1 is built by:
 python scripts/build_paper_method_figure.py
+The prospective layered architecture and small-model checks are rebuilt with:
+python scripts/build_layered_architecture.py
+python scripts/verify_adaptive_extension.py (NumPy and SciPy required).
+These checks do not validate the adaptive extension on IEEE-39.
 The authorized nine-panel event grid is regenerated from bundled trace values:
 python scripts/build_event_taxonomy_grid.py (NumPy, pandas, Matplotlib required).
 Original protected assets remain byte-identical and are checked by that builder.

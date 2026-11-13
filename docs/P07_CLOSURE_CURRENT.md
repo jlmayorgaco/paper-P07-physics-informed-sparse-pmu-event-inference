@@ -1,5 +1,16 @@
 # P07: estado de cierre vigente
 
+La integración de adaptación del 13 de noviembre añade una arquitectura
+TikZ con tres zonas: núcleo físico implementado, extensión adaptativa propuesta
+y capa ciber externa. La [decisión científica y plan de controles](ADAPTIVE_ARCHITECTURE_DECISIONS_20261113.md)
+conserva la tesis actual y no anuncia nuevas ganancias empíricas. El suplemento
+explicita la recursión afín con severidad, el ajuste de ruido estructurado,
+sesgo de selección, frontera del replay y tratamiento de datos ausentes.
+Las verificaciones de modelos pequeños pasaron; no implementan ni validan
+el sucesor en IEEE-39. C03 permanece intacto y no se reevalúa en esta edición.
+La compilación de esta revisión conserva 19 páginas de artículo y 33 de
+suplemento; la arquitectura nueva está en el suplemento, Figura 15.
+
 **Estado: borrador para revisión científica.** El manuscrito incorpora la comparación C02 sellada. La prueba de mecanismo a presupuesto común y la transferencia dinámica a una segunda planta pertenecen a C03. Solo se incorporarán después de que terminen y se auditen.
 
 | Evidencia | Qué respalda | Límite |

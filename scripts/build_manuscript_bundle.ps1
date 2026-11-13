@@ -54,6 +54,8 @@ try {
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_channel_profile_figure.py')
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_recovery_overview.py')
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_paper_method_figure.py')
+    Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/verify_adaptive_extension.py')
+    Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_layered_architecture.py')
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_event_taxonomy_grid.py')
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_integrity_figure.py')
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/import_allevents.py')

@@ -55,3 +55,14 @@ change inner history weights without updating the outer model weights.
 The nominal bank processed reports faster than they arrived in a
 measured replay on one thread; the five-model version did not.
 This timing is specific to the reported hardware and records.
+
+\subsection{Adaptation Without Absorbing an Intervention}
+Adaptive noise estimation has already been studied on IEEE-39
+\cite{wang2019adaptiveh}; it is not a new contribution here. A useful
+successor would test whether history-based adaptation can track changing
+instrument uncertainty without suppressing weak interventions. This requires
+propagating conditional covariance, scoring each report before updating
+noise, and checking selection bias in the adaptation gate. The supplement's
+architecture diagram and derivation specify these changes as unvalidated
+extensions. Cyber analysis belongs to a separate layer with its own alerts;
+neither missing reports nor physical residuals alone identify an attack.
