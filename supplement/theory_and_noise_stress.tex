@@ -18,7 +18,7 @@ $S_o^{-1}$ of the implementation. The cumulative sums
 $\sum e^\top S^{-1}e$, $\sum s^\top S^{-1}e$ and $\sum s^\top S^{-1}s$ give the
 signature information of the main article with the competitor's severity profiled
 on $[-0.2,0.2]$. As a check, the true-history filter at the true severity
-leaves a residual energy below $10^{-8}$. The detection threshold uses the
+leaves a residual energy below $10^{-8}$. The idealized score reference uses the
 birth hazard $1-\exp[-(1/60)/30]$ shared equally by the 18 cells.
 
 \paragraph{Reset cost.} For every intervention of the controlled study,
@@ -27,7 +27,8 @@ the gap until the next onset. At the inferred closure time of the carry
 arm, the first 114 coordinates of the true augmented state are zeroed, and
 the no-intervention and all birth filters are run on the remaining truth
 in the recovery covariance regime. The largest profiled gain of a birth
-over the no-intervention history is compared with the alarm evidence $\lambda^\star$. Harm in
+over the no-intervention history is compared with the idealized score
+reference $\lambda^\star$, not a publication guarantee. Harm in
 the reset arm is an unmatched alarm between the OFF of the intervention and
 the next onset, or a lost timely attribution of the next intervention.
 
@@ -37,14 +38,24 @@ $\varepsilon=c+\alpha(v-c)$ for multiplier $\alpha$, where $v$ is the stream
 and $c$ its normalization center, exactly as the campaign exporter. The
 $\alpha=1$ observations reproduce the original files to $6\times10^{-10}$
 and the inference reproduces all 18 published messages of the parity
-record. The TVE scenarios add independent zero-mean Gaussian phasor noise
+record. The independent-noise scenarios add zero-mean Gaussian perturbations
 per PMU and report, with relative magnitude and angle (radian) standard
 deviations of $5\times10^{-4}$ or $10^{-3}$; the added voltage-angle noise
 is passed through the simulator's causal 21-report quadratic frequency and
-ROCOF estimator. The nominal bank is rebuilt from the stored derivative
+ROCOF estimator. For a reference phasor $z$, this perturbation gives
+$\widetilde z/z=(1+\epsilon_m)e^{\mathrm{i}\epsilon_\theta}$, with
+independent $\epsilon_m,\epsilon_\theta\sim\mathcal N(0,\sigma^2)$.
+Consequently, the RMS TVE of the added perturbation is
+\begin{equation*}
+ \sqrt{\mathbb E|\widetilde z/z-1|^2}
+ =\sqrt{\sigma^2+2(1-e^{-\sigma^2/2})}\simeq\sqrt2\,\sigma.
+\end{equation*}
+The two settings therefore add approximately \RevNoiseAddedRmsLow{}\% and \RevNoiseAddedRmsHigh{}\% RMS
+TVE; these are neither per-report bounds nor the total error including
+the original noise. The nominal bank is rebuilt from the stored derivative
 matrices with the noise scale estimated from the noisy prefix. The
 operating point remains at its $\alpha=1$ estimate because derivatives
-exist only there. Estimated angle noise scales of the TVE scenarios are
+exist only there. Estimated angle noise scales of these scenarios are
 about 48 times the calibrated scale, outside the implemented support
 $[0.1,10]$; for this test only the support was widened to $[0.1,1000]$. Two
 jobs ran concurrently with another campaign on the same desktop CPU, so
@@ -56,11 +67,11 @@ package, which also contains the noise-stress generator.
 
 \begin{figure*}[t]\centering
 \includegraphics[width=.97\textwidth]{figures/generated/noise_stress.pdf}
-\caption{Nominal bank under increased PMU noise, with code, thresholds and rules unchanged. (A) Timely correct family and source by scenario: the calibrated noise scaled by $\times1$--$\times20$ (left of the dotted line) and the original noise plus independent white per-PMU phasor noise of 0.05\% and 0.1\% TVE (right). (B) For each load intervention under added independent noise, the information that a matched filter on cross-PMU-centered voltage and current angles accumulates in 1\,s, against the observed outcome; the dashed line is the evidence required for an alarm.}
+\caption{Nominal bank under increased PMU noise, with fixed publication rules and widened startup noise-scale support. (A) Timely attribution under uniform noise scaling and added independent noise, with component standard deviation $\sigma$ (relative magnitude and radian angle). (B) One-second matched-signature energy using only the added independent angle noise, against the observed outcome. The dashed line is an idealized score reference, not the bank's publication threshold.}
 \label{fig:noise-stress}\end{figure*}
 
 \begin{table}[h]\centering\small
-\caption{Noise-stress outcomes of the unchanged nominal bank: timely correct attributions, unmatched alarms on event records, and alarms on the two normal records.}
+\caption{Noise-stress outcomes with fixed publication thresholds and widened startup noise-scale support. $\sigma$ is the standard deviation of each added relative-magnitude and radian-angle component.}
 \label{tab:noise-stress}
 \begin{tabular}{@{}lrrrr@{}}\toprule
 Scenario & Load & Line & Extras & Normal\\\midrule
@@ -68,6 +79,6 @@ $\times1$ & \RevNoiseOneLoad & \RevNoiseOneLine & \RevNoiseOneExtras & \RevNoise
 $\times5$ & \RevNoiseFiveLoad & \RevNoiseFiveLine & \RevNoiseFiveExtras & \RevNoiseFiveNormalFA\\
 $\times10$ & \RevNoiseTenLoad & \RevNoiseTenLine & \RevNoiseTenExtras & \RevNoiseTenNormalFA\\
 $\times20$ & \RevNoiseTwentyLoad & \RevNoiseTwentyLine & \RevNoiseTwentyExtras & \RevNoiseTwentyNormalFA\\
-+TVE 0.05\% & \RevNoiseTVEaLoad & \RevNoiseTVEaLine & \RevNoiseTVEaExtras & \RevNoiseTVEaNormalFA\\
-+TVE 0.1\% & \RevNoiseTVEbLoad & \RevNoiseTVEbLine & \RevNoiseTVEbExtras & \RevNoiseTVEbNormalFA\\\bottomrule
+$\sigma=0.0005$ & \RevNoiseTVEaLoad & \RevNoiseTVEaLine & \RevNoiseTVEaExtras & \RevNoiseTVEaNormalFA\\
+$\sigma=0.001$ & \RevNoiseTVEbLoad & \RevNoiseTVEbLine & \RevNoiseTVEbExtras & \RevNoiseTVEbNormalFA\\\bottomrule
 \end{tabular}\end{table}

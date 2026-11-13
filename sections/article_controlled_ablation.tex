@@ -15,21 +15,19 @@ simulated plant never resets.
 
 \begin{figure}[t]\centering
 \includegraphics[width=\columnwidth]{figures/generated/theory_reset_cost.pdf}
-\caption{Predicted spurious evidence after a state reset, \eqref{eq:reset-bias}, for each of the 108 interventions of the controlled study, against the observed outcome of the reset arm. Filled: an extra alarm in the following gap or a lost timely attribution of the next intervention; open: neither. With carry the predicted spurious evidence is zero.}
+\caption{Retrospective profiled energy gain after a state reset, \eqref{eq:reset-bias}, for the 108 interventions of the controlled study. Filled: an extra alarm in the following gap or a lost timely attribution of the next intervention; open: neither. The dashed line is the idealized score reference, not the publication threshold. Under matched noise-free continuation, carrying the state gives no positive gain over the null.}
 \label{fig:theory-reset}\end{figure}
 
 Fig.~\ref{fig:theory-reset} compares this outcome with the retrospective reset diagnostic. The
-spurious evidence exceeds $\lambda^\star$ after every intervention, by at
+profiled energy gain exceeds $\lambda^\star$ after every intervention, by at
 least two and up to seven orders of magnitude, and the reset arm is harmed
 after \RevResetHarm{} of the \RevResetEvents{} interventions: an extra alarm
 in the following gap or a lost timely attribution of the next one. Harm
-is almost certain after line events (\RevResetHarmLine), whose openings
-excite larger electromechanical swings, and occurs after
+occurs after \RevResetHarmLine{} line events and
 \RevResetHarmLoad{} load events. The bus-31 events carry the smallest
-spurious evidence and are harmed after three of seven. The analysis therefore
-explains why forgetting the state fails at the population level, while
-the outcome of an individual load event, given evidence far above
-threshold, is decided by the episode and publication rules rather than by
-the size of the evidence. These are within-simulator contrasts at the
+profiled gain and are harmed after three of seven. The diagnostic shows
+that reset leaves a residual that event candidates can explain. Its
+magnitude alone does not determine the observed outcome: episode handling
+and publication rules also matter. These are within-simulator contrasts at the
 original thresholds; the two scores are compared at equal thresholds, not
 at equal alarm rates.

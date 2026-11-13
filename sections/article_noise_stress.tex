@@ -2,14 +2,17 @@
 \label{sec:noise-stress}
 
 To examine sensitivity beyond the calibrated noise, we reran the
-nominal bank without any change to its equations, thresholds or rules on
+nominal bank with the same equations and publication thresholds on
 four held-out calibration event records (\RevNoiseLoadEvents{} load and
 \RevNoiseLineEvents{} line interventions, matched network) and two 600-s
 normal records (\RevNoiseNormalHours\,h). Six noise scenarios were
 generated with the simulator's own noise stream: the original realization
 scaled by $\times1$, $\times5$, $\times10$ and $\times20$, and the original
-plus independent white per-PMU phasor noise with TVE-equivalent standard
-deviation 0.05\% and 0.1\%, propagated to frequency and ROCOF by the
+plus independent per-PMU relative-magnitude and angle noise, each with
+standard deviation $\sigma=0.0005$ or $0.001$ (angles in radians).
+The added perturbation has approximately \RevNoiseAddedRmsLow{}\% or \RevNoiseAddedRmsHigh{}\% RMS total
+vector error (TVE), respectively, before combination with the original
+noise. Voltage-angle noise is propagated to frequency and ROCOF by the
 simulator's 21-report estimator. The $\times1$ scenario reproduces the
 original predictions message for message. The bank re-estimates its noise
 scale and observation discrepancy from the noisy 300-report prefix; the

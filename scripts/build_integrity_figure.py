@@ -91,7 +91,7 @@ def figure() -> None:
             m = (info.family == fam).to_numpy()
             ax.scatter(i + jit[m], v[m], s=6, color=col, lw=0, label=fam if i == 0 else None)
     ax.axhline(1, color=DARK, lw=.8, ls="--")
-    ax.text(7.4, 1.4, "alarm evidence", ha="right", fontsize=6, color=DARK)
+    ax.text(7.4, 1.4, "score reference", ha="right", fontsize=6, color=DARK)
     ax.set_yscale("log")
     ax.set_xticks(range(8), [str(b) for b in PMUS], fontsize=6.4)
     ax.set_xlabel("Missing or corrupted PMU (bus)")

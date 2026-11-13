@@ -72,7 +72,8 @@ filters whiten measurements; their corresponding predictor memory is
 deterministic. Additional latent AR states represent persistent discrepancy,
 with preset quiet/load/line/recovery covariance and drift regimes. This
 statistical discrepancy model is distinct from the plant equations.
-$v_k$ denotes the remaining innovation. A load has scalar severity within
+$v_k$ denotes the remaining observation noise after instrument whitening.
+A load has scalar severity within
 its specified P/Q direction. A line uses a switched operator rather than
 a fictitious load-amplitude fit. States from different equilibria are not
 interpreted as an absolute rotor-state mixture.
@@ -157,7 +158,8 @@ nominal-operator Riccati equation of regime $\rho$; $S_o$ and $K_o$ are then
 formed for each switched operator $o$. This is a steady-state
 approximation, not an exact covariance recursion along each switched
 history. At closure, the filter retains the augmented-state
-mixture mean and records the amplitude/mean spread that it discards.
+mixture mean and records the trace of the discarded amplitude and
+between-history covariance; it does not propagate that covariance.
 The supplement separates these approximations from the exact local
 amplitude integral and states the covariance needed for a full mixture.
 
@@ -251,6 +253,9 @@ that begins before the previous episode closes. Every message records its
 emission time and the last report used, so a diagnosis can be correct but
 too late to precede physical OFF.
 
+These are the development publication settings. The common-budget
+comparison in Section~\ref{sec:recovery-comparison} selects thresholds
+separately on calibration records.
 The nominal comparator is the same procedure with only the nominal network
 hypothesis.
 
@@ -260,7 +265,7 @@ development before the independent schedules. They are deliberately
 conservative: test interventions last 2--5\,s and are separated by 3--8\,s,
 much shorter than the prior means of 60 and 30\,s. A low birth hazard raises
 the evidence needed for an alarm by $-\log\pi_c$; Section~\ref{sec:theory}
-shows that this margin is small compared with the available information.
+compares this margin with nominal signature energy.
 Birth mass is split equally between load and line families, then uniformly
 among sources within each family. Load severity has a zero-mean Gaussian
 prior with standard deviation 0.15, truncated to $[-0.2,0.2]$ and integrated

@@ -43,7 +43,7 @@ def information_figure(summary: dict) -> dict:
     one = one.sort_values(["family", "detection_info"], ascending=[False, True])
     need = summary["log_threshold"] - summary["log_prior_cell"]      # nats required at the true onset
     md = pd.read_csv(REV / "minimum_detectable_load.csv")
-    fig, axes = plt.subplots(1, 2, figsize=(7.1, 2.75), gridspec_kw=dict(width_ratios=[1.05, 1]))
+    fig, axes = plt.subplots(1, 2, figsize=(7.1, 3.05), gridspec_kw=dict(width_ratios=[1.05, 1]))
     ax = axes[0]
     y = np.arange(len(one))
     for k, row in enumerate(one.itertuples()):
@@ -55,14 +55,14 @@ def information_figure(summary: dict) -> dict:
         ax.plot(row.detection_info, k, "o", ms=3.5, color=color, zorder=4)
     ax.plot([], [], "o", ms=3.5, color=DARK, label="versus null")
     ax.plot([], [], "o", ms=3.5, mfc="white", mec=DARK, label="nearest competitor")
-    ax.legend(loc="lower right", fontsize=6.6, handletextpad=.4, borderpad=.25)
+    ax.legend(loc="lower right", fontsize=7.3, handletextpad=.4, borderpad=.25)
     ax.axvline(need, color=DARK, lw=.9, ls="--")
-    ax.text(need * 1.4, len(one) - .25, f"ideal score reference: {need:.0f} nats", fontsize=6.2, color=DARK, va="bottom")
+    ax.text(need * 1.4, len(one) - .25, f"Score reference: {need:.0f} nats", fontsize=7.3, color=DARK, va="bottom")
     ax.set_xscale("log")
-    ax.set_yticks(y, [s.replace("LINE", "L") for s in one.source], fontsize=6.4)
+    ax.set_yticks(y, [s.replace("LINE", "L") for s in one.source], fontsize=7.4)
     ax.set_ylim(-.7, len(one) + .7)
     ax.set_xlabel("Profiled signature energy after 1 s (nats)")
-    ax.set_title("(a) Nominal source separation", fontsize=8.5, loc="left", fontweight="bold")
+    ax.set_title("(a) Nominal source separation", fontsize=9, loc="left", fontweight="bold", pad=9)
     ax.set_axisbelow(True)
     ax.grid(axis="x", color="#ececec", lw=.5)
     ax = axes[1]
@@ -71,25 +71,26 @@ def information_figure(summary: dict) -> dict:
     for src, g in loads.groupby("source"):
         hot = src in ("BUS31", "BUS26")
         ax.plot(g.noise_multiplier, g.pct, color=BLUE if hot else LIGHT, lw=2 if hot else 1.1, marker="o",
-                ms=3.2 if hot else 2.2, zorder=3 if hot else 2)
+                ms=3.2 if hot else 2.2, zorder=3 if hot else 2,
+                linestyle="--" if src == "BUS26" else "-")
         last = g.iloc[-1]
         if hot or src in ("BUS20",):
-            ax.text(last.noise_multiplier * 1.08, last.pct, f"{src} ({last.load_MW:.0f} MW)", fontsize=6.2,
+            ax.text(last.noise_multiplier * 1.08, last.pct, src, fontsize=7.4,
                     va="center", color=DARK)
     ax.axhline(3, color=ORANGE, lw=.9, ls="--")
-    ax.text(1.05, 3.4, "smallest tested change (3%)", fontsize=6.2, color=DARK)
+    ax.text(1.05, 3.4, "Smallest tested change: 3%", fontsize=7.3, color=DARK)
     ax.set_xscale("log")
     ax.set_yscale("log")
     ax.set_xticks([1, 2, 5, 10, 20], ["1", "2", "5", "10", "20"])
-    ax.set_xlim(.9, 60)
+    ax.set_xlim(.9, 48)
     ax.set_xlabel("Noise standard-deviation multiplier")
     ax.set_ylabel("Reference load amplitude in 1 s (%)")
-    ax.set_title("(b) Model-based amplitude reference", fontsize=8.5, loc="left", fontweight="bold")
+    ax.set_title("(b) Reference amplitude", fontsize=9, loc="left", fontweight="bold", pad=9)
     ax.grid(color="#ececec", lw=.5)
     fig.tight_layout(w_pad=1.6)
     save(fig, "theory_information")
     b31 = loads[loads.source == "BUS31"].set_index("noise_multiplier")
-    # multiplier at which BUS31 3% becomes undetectable within 1 s (interpolate: pct ~ multiplier)
+    # Noise multiplier where the model-based reference reaches 3%; not a detection guarantee.
     b31_cross = 3.0 / float(b31.pct.loc[1])
     others = loads[loads.source != "BUS31"]
     return dict(InfoNeed=f"{need:.0f}", InfoLoadMin=f"{one[one.family == 'load'].detection_info.min():.0f}",
@@ -105,7 +106,7 @@ def reset_figure() -> dict:
     r["harm"] = (r.observed_extras_after > 0) | (r.next_event_timely_reset == False)  # noqa: E712
     s = json.loads((REV / "reset_cost_summary.json").read_text())
     need = s["log_threshold"] - s["log_prior_cell"]
-    fig, ax = plt.subplots(figsize=(3.45, 2.15))
+    fig, ax = plt.subplots(figsize=(3.45, 2.5))
     rng = np.random.default_rng(7)
     for k, fam in enumerate(["load", "line"]):
         g = r[r.family == fam]
@@ -113,21 +114,21 @@ def reset_figure() -> dict:
         ax.scatter(x[g.harm.to_numpy()], g.max_spurious_gain[g.harm], s=13, color=FAM[fam], lw=0, zorder=3)
         ax.scatter(x[~g.harm.to_numpy()], g.max_spurious_gain[~g.harm], s=13, facecolors="white",
                    edgecolors=FAM[fam], lw=.8, zorder=3)
-        ax.text(k, g.max_spurious_gain.max() * 4, f"harm {g.harm.sum()}/{len(g)}", ha="center", fontsize=6.6,
+        ax.text(k, g.max_spurious_gain.max() * 4, f"Adverse: {g.harm.sum()}/{len(g)}", ha="center", fontsize=7.5,
                 color=DARK)
     ax.axhline(need, color=DARK, lw=.9, ls="--")
-    ax.text(1.45, need * 1.6, "alarm\nthreshold", fontsize=6.2, color=DARK, ha="right")
-    ax.text(-.45, need * 1.6, "carry: gain = 0 (not on log axis)", fontsize=6.2, color=DARK)
+    ax.text(-.43, need * 1.9, "Idealized score reference", fontsize=7.3, color=DARK)
     ax.set_yscale("log")
     ax.set_ylim(need / 3, r.max_spurious_gain.max() * 30)
     ax.set_xticks([0, 1], ["Load events", "Line events"])
     ax.set_xlim(-.5, 1.5)
-    ax.set_ylabel("Spurious evidence after reset (nats)")
+    ax.set_ylabel("Profiled energy gain after reset (nats)")
     ax.grid(axis="y", color="#ececec", lw=.5)
-    ax.scatter([], [], s=13, color=GRAY, label="extra alarm or next event lost")
-    ax.scatter([], [], s=13, facecolors="white", edgecolors=GRAY, label="no observed harm")
-    ax.legend(loc="lower center", bbox_to_anchor=(.5, 1.0), ncol=2, fontsize=6.2, handletextpad=.2)
-    fig.tight_layout()
+    ax.scatter([], [], s=13, color=GRAY, label="Extra alarm or next attribution lost")
+    ax.scatter([], [], s=13, facecolors="white", edgecolors=GRAY, label="Neither outcome")
+    ax.legend(loc="lower left", bbox_to_anchor=(-.03, 1.02), ncol=1,
+              fontsize=7.3, handletextpad=.5, borderaxespad=0)
+    fig.tight_layout(pad=.4)
     save(fig, "theory_reset_cost")
     return dict(ResetEvents=str(len(r)), ResetHarm=str(int(r.harm.sum())),
                 ResetHarmLoad=f"{int(r[r.family == 'load'].harm.sum())}/{int((r.family == 'load').sum())}",
@@ -153,7 +154,7 @@ def noise_figure() -> dict:
     ex = pd.read_csv(REV / "noise_stress_extras.csv")
     md = pd.read_csv(REV / "minimum_detectable_load.csv")
     order = ["U1", "U5", "U10", "U20", "P05", "P10"]
-    labels = ["×1", "×5", "×10", "×20", "+TVE\n0.05%", "+TVE\n0.1%"]
+    labels = ["×1", "×5", "×10", "×20", r"$\sigma$=0.0005", r"$\sigma$=0.001"]
     fig, axes = plt.subplots(1, 2, figsize=(7.1, 2.45), gridspec_kw=dict(width_ratios=[1.3, 1]))
     ax = axes[0]
     x = np.arange(len(order))
@@ -165,7 +166,7 @@ def noise_figure() -> dict:
     ax.set_xticks(x, labels, fontsize=6.6)
     ax.set_ylim(0, 100)
     ax.set_ylabel("Timely correct source (%)")
-    ax.set_title("(A) Unchanged nominal bank", fontsize=7.6, loc="left")
+    ax.set_title("(a) Fixed publication thresholds", fontsize=7.6, loc="left")
     ax.legend(loc="upper center", bbox_to_anchor=(.5, -.22), fontsize=6.4, ncol=2, handlelength=1.2)
     ax.set_axisbelow(True)
     ax.grid(axis="y", color="#ececec", lw=.5)
@@ -185,13 +186,13 @@ def noise_figure() -> dict:
         ax.scatter(xx[~ok], g.oracle_info_angles[~ok], s=16, facecolors="white", edgecolors="#c1372c", lw=.9,
                    zorder=3)
     ax.axhline(15, color=DARK, lw=.9, ls="--")
-    ax.text(1.45, 15 * 1.5, "alarm evidence", ha="right", fontsize=6.2, color=DARK)
+    ax.text(1.45, 15 * 1.5, "Idealized score reference", ha="right", fontsize=7.2, color=DARK)
     ax.set_yscale("log")
     ax.set_ylim(5, 1e6)
     ax.set_xlim(-.5, 1.5)
-    ax.set_xticks([0, 1], ["+TVE 0.05%", "+TVE 0.1%"], fontsize=6.6)
-    ax.set_ylabel("Angle information in 1 s (nats)")
-    ax.set_title("(B) Load interventions: information vs outcome", fontsize=7.6, loc="left")
+    ax.set_xticks([0, 1], [r"$\sigma$=0.0005", r"$\sigma$=0.001"], fontsize=6.6)
+    ax.set_ylabel("Angle signature energy in 1 s (nats)")
+    ax.set_title("(b) Matched-signature diagnostic", fontsize=7.6, loc="left")
     ax.scatter([], [], s=16, color=TEAL, label="timely correct")
     ax.scatter([], [], s=16, facecolors="white", edgecolors="#c1372c", label="missed")
     ax.legend(loc="upper center", bbox_to_anchor=(.5, -.14), fontsize=6.4, ncol=2, handletextpad=.2)
@@ -207,6 +208,10 @@ def noise_figure() -> dict:
     agree = float((predicted_ok == loads_u.timely.to_numpy()).mean())
     out = dict(NoiseAgree=f"{100 * agree:.0f}", NoiseLoadEvents=str(len(ev[(ev.scenario == 'U1') & (ev.family == 'load')])),
                NoiseLineEvents=str(len(ev[(ev.scenario == 'U1') & (ev.family == 'line')])))
+    # N01's legacy `tve` field is the SD of each polar component, not RMS TVE.
+    # E| (1+dm) exp(i da) - 1 |^2 = sigma^2 + 2(1-exp(-sigma^2/2)).
+    for key, sigma in [('NoiseAddedRmsLow', .0005), ('NoiseAddedRmsHigh', .001)]:
+        out[key] = f"{100*np.sqrt(sigma*sigma-2*np.expm1(-sigma*sigma/2)):.3f}"
     for s in order:
         tag = {"U1": "One", "U5": "Five", "U10": "Ten", "U20": "Twenty", "P05": "TVEa", "P10": "TVEb"}[s]
         for fam in ["load", "line"]:

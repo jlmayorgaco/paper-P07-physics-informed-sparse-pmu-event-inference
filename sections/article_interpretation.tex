@@ -15,8 +15,8 @@ work has reported an explicit self-check for that applicability question
 not suppress alarms.
 
 \subsection{Coverage, Alarm Cost and Scope}
-On the held-out comparison, retaining a bank of histories gives higher
-timely coverage and fewer extra alarms than the continuous GLR.
+In the held-out comparison, the history-bank procedure had higher
+timely coverage and fewer event-record extra alarms than the continuous GLR.
 ExtraTrees emits fewer extra alarms but misses more interventions.
 These are contrasts between complete procedures calibrated to a common
 normal-alarm target; zero observed normal alarms give upper bounds, not
@@ -34,7 +34,7 @@ Observations and predictors use the same simulator family. The catalog
 is fixed, the gaps between interventions are 3--8\,s, and no intervention
 overlaps another. Transfer of the dynamic bank to a distinct plant,
 shorter gaps and unseen sources are untested. Under independent per-PMU
-noise at 0.05\% TVE, the bank misses most load changes. This limits transfer
+noise at \RevNoiseAddedRmsLow{}\% added RMS TVE, the bank misses most load changes. This limits transfer
 beyond the calibrated measurement model. The terminal map retains the provisional bus-5 current
 terminal and excludes the bus-39 current angle. A dropout with held
 observations prevents recovery in the

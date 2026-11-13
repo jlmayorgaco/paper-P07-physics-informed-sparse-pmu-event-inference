@@ -12,8 +12,8 @@ Numerically, for each held-out calibration event (12 load, 12 line), the
 deterministic PMU trajectory gives the change of voltage/current magnitudes
 (relative) and angles in the first second after onset, relative to the
 pre-onset mean.  Angles are centered across the available PMUs (common-mode
-error removed).  With independent white per-PMU phasor noise of TVE-equivalent
-standard deviation sigma, the matched-filter information is
+error removed).  With independent white per-PMU noise of standard deviation sigma
+per relative-magnitude and radian-angle component, the matched-filter information is
     I = 1/2 * sum (change / sigma)^2,
 computed with all PMUs and with each PMU deleted.  Output:
 generated/revision_20261104/integrity_information.csv

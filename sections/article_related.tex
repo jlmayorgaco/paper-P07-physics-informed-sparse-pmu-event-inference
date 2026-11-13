@@ -45,8 +45,8 @@ have been combined for parameter inference in power-system DAEs
 \cite{nagi2022trajectory,albustami2026dae}. PMU-based nodal-inertia
 estimation extends this neighboring line of work to spatially resolved
 dynamic parameters under ambient and transient conditions
-\cite{brahma2026nodal}. These studies estimate states or parameters;
-they do not attribute successive load and line interventions. Here the
+\cite{brahma2026nodal}. State and parameter estimates do not by themselves
+identify the intervention that produced them. Here the
 DAE-derived signatures provide a profiled separation diagnostic at a
 supplied onset, which we compare retrospectively with attribution
 outcomes; it is not a general detectability guarantee.
@@ -126,5 +126,5 @@ DAE / stochastic-state estimation & Physical state and parameter models & States
 Wang et al. sparse-PMU TSA & Bus selection; recurrent assessor; validity check & Stability assessment under grid changes & Adjacent; no source attribution\\
 Le et al. GNO (arXiv 2026) & Graph attention; swing-equation decoder & Machine-state trajectories from sparse windows & Adjacent state estimation; not event attribution\\
 Learned PMU diagnosis & Features or learned representations & Event families and locations & Two ExtraTrees adapters executed\\
-This work & Switched-DAE histories with recovery & Successive catalog load/line events & Attribution, alarms, detectability\\\bottomrule
+This work & Switched-DAE histories with recovery & Successive catalog load/line events & Attribution, alarm cost, nominal separation\\\bottomrule
 \end{tabularx}\end{table*}

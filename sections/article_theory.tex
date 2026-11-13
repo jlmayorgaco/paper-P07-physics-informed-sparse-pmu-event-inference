@@ -57,9 +57,10 @@ for the bank: unknown onset, competing paths, marginal likelihoods
 and consecutive-report confirmation all affect publication.
 
 \subsection{The Cost of Forgetting the Physical State}
-Suppose the conditional mean tracks the augmented state until an inferred
-closure at report $k_c$. If the state is carried, the innovations after
-$k_c$ keep zero mean. If the physical coordinates are set to zero while
+Consider a noise-free, matched-model continuation with no new intervention
+after an inferred closure at report $k_c$. Suppose the conditional mean
+at closure equals the augmented state. Carrying this state gives zero
+deterministic innovation. If the physical coordinates are set to zero while
 the instrument and discrepancy states are kept, the no-intervention filter
 receives the deterministic bias
 \begin{equation}
@@ -72,13 +73,15 @@ $\Phi_0(k,r)=T_0^{\,k-r}$ and $C_0=J_0$ are the no-intervention operators of
 \eqref{eq:implemented-conditional-correction}, and $K_0$ is its gain. This
 is the free recovery response \eqref{eq:recovery-response} seen through a
 filter that tries to absorb it. Any birth hypothesis $j$ that explains part
-of this bias gains
-$\Gamma^{\rm sp}_j(k)=\Lambda^{\rm reset}_{0}(k)-\Lambda^{\rm reset}_{j}(k)$
-over the no-intervention history, and a spurious alarm becomes possible
-when $\max_{j,k}\Gamma^{\rm sp}_j(k)\ge\lambda^\star$. With carry,
-$\Gamma^{\rm sp}_j\equiv0$. The bias, and therefore the cost of forgetting,
-grows with the energy of the slow electromechanical modes excited by the
-intervention and with how strongly the PMUs observe them.
+of this bias has a profiled energy gain
+$\Gamma^{\rm sp}_j(k)=\Lambda^{\rm reset}_{0}(k)-\Lambda^{\rm reset}_{j}(k)$,
+where both energies use the same reports from $k_c$ to $k$.
+A gain above $\lambda^\star$ crosses the idealized score reference;
+it does not guarantee a published alarm. Under the same construction
+with carry, the null energy is zero, so every alternative has gain
+$\Gamma^{\rm sp,carry}_j(k)\le0$. The positive part of the best gain is
+therefore zero. Reset bias depends on the excited modes, their decay,
+and their projection onto the observed channels.
 
 \subsection{Retrospective Diagnostics}
 We evaluated the signature and reset diagnostics in the nominal quiet
