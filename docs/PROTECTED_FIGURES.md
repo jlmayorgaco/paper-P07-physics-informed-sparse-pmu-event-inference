@@ -7,7 +7,7 @@ respuesta física gris con el pulso real de datos ausentes en el caso combinado.
 Por esa autorización, la Figura 2 activa usa ahora
 `figures/generated/event_taxonomy_grid.pdf`. Los seis paneles originales
 conservan las 16 curvas y todos sus valores; cambia su distribución y tipografía.
-Se omite el reloj ilustrativo. Los PDF/PNG originales y todas las copias
+Por corrección expresa del usuario, se conserva el tren de reloj ilustrativo en los paneles 5 y 6. Los PDF/PNG originales y todas las copias
 congeladas conservan sus hashes, sin cambios en `PROTECTED_FIGURES.json`.
 El verificador exige además los nueve paneles y la procedencia del sucesor.
 Véase `EVENT_TAXONOMY_GRID_20261113.md`. Las reglas históricas siguientes

@@ -64,7 +64,7 @@ def main():
     ax=axs.flat[2];ax.set_ylim(.65,1.84);ax.set_yticks([.7,1,1.4,1.8]);ax.set_xticks([0,2,4,6])
     ax=axs.flat[3];ax.set_ylim(-255,55);ax.set_yticks([-200,-100,0]);ax.set_xticks([0,10,20,30])
     ax=axs.flat[4];ax.set_ylim(.94,1.175);ax.set_yticks([.95,1,1.1,1.15]);ax.set_xticks([0,10,20,30,40])
-    ax=axs.flat[5];ax.set_ylim(-.12,1.15);ax.set_yticks([0,1],['No','Yes']);ax.set_xticks([0,10,20,30])
+    ax=axs.flat[5];ax.set_ylim(-.12,1.5);ax.set_yticks([0,1],['No','Yes']);ax.set_xticks([0,10,20,30])
     count=next(r['missing_frames'] for r in manifest if int(r['event'])==5)
     ax.text(.5,.35,f'{count} frames absent',transform=ax.transAxes,ha='center',fontsize=6.5)
     ax=axs.flat[7];ax.set_ylim(.98,1.13);ax.set_yticks([1,1.05,1.1]);ax.set_xticks([0,.5,1,1.5,2]);ax.text(.55,.8,'Phase C only',transform=ax.transAxes,fontsize=6.5)
@@ -76,13 +76,22 @@ def main():
     # Full observed loss pulse: grey physical trace, orange binary missing flag.
     d=pd.read_csv(DATA/'composite_trace.csv');ax=axs.flat[6]
     physical,=ax.plot(d.relative_time_s,d.pmu2_frequency_change_mHz,color='#9b9b9b',lw=.6,label='PMU 2: frequency')
-    ax.axvline(0,color='.55',ls=':',lw=.7);ax.set_xlim(-45,35);ax.set_xticks([-40,0,30]);ax.set_ylim(-255,55);ax.set_yticks([-200,-100,0])
+    ax.axvline(0,color='.55',ls=':',lw=.7);ax.set_xlim(-45,35);ax.set_xticks([-40,0,30]);ax.set_ylim(-255,120);ax.set_yticks([-200,-100,0])
     ax.set_ylabel(r'$f-f_{\mathrm{pre}}$ (mHz)',labelpad=1.5);ax.set_xlabel(r'Time from generation onset (s)',labelpad=2)
-    flag=ax.twinx();flag.set_ylim(-.15,1.15);flag.set_yticks([0,1],['0','1']);flag.tick_params(labelsize=6.7,pad=1,length=2)
+    flag=ax.twinx();flag.set_ylim(-.15,1.5);flag.set_yticks([0,1],['0','1']);flag.tick_params(labelsize=6.7,pad=1,length=2)
     flag.set_ylabel('Missing PMU 29',fontsize=6.7,labelpad=2,color=PALETTE[1]);flag.spines['right'].set_visible(True);flag.spines['right'].set_color(PALETTE[1])
     pulse,=flag.step(d.relative_time_s,d.pmu29_missing,where='post',color=PALETTE[1],lw=1.2,label='Missing: 1 / present: 0')
     ax.legend([physical,pulse],['Physical response','Missing-data pulse'],loc='lower left',bbox_to_anchor=(-.035,1.01),
               ncol=1,frameon=False,fontsize=6.3,handlelength=1.5,borderaxespad=0,labelspacing=.15)
+    # Restore the user's clock train in both integrity panels. A reserved
+    # strip separates this illustrative timing aid from measured signals.
+    for event in (5,6):
+        ax=axs.flat[event];lo,hi=ax.get_xlim()
+        clock=ax.inset_axes([0,.87,1,.10]);clock.set_zorder(5)
+        t=np.arange(lo,hi+1/30,1/30)
+        clock.step(t,np.where(np.mod(t-lo,2.0)<1.0,1.0,0.0),where='post',color='#9AA1A9',lw=.65)
+        clock.set_xlim(lo,hi);clock.set_ylim(-.15,1.15);clock.axis('off')
+        ax.text(.02,.79,'Clock (illustrative)',transform=ax.transAxes,fontsize=6.0,color='#6B7280')
     # Taxonomy definition, never represented as measured data or a tested output.
     ax=axs.flat[8];ax.set_xlim(0,1);ax.set_ylim(0,1);ax.axis('off')
     for y,h,label,fc in [(.69,.24,'Abnormal observation','#f0f5f7'),(.16,.3,'No clear match\nto classes 1–7','#faf3ec')]:
@@ -95,7 +104,8 @@ def main():
     audit={'authorization':'User requested equal 3x3 panels including normal and explicit missing pulse, 2026-11-13',
            'legacy_trace_sha256':sha(LEGACY),'legacy_curves':checked,'panels':list(range(9)),
            'normal_and_composite_files':provenance['files'],'protected_hashes_verified':len(protected),
-           'display_change':'Original data retained; illustrative fake clock omitted in this successor; observed missing pulse emphasized.',
+           'display_change':'Original data retained; illustrative clock train restored in panels 5 and 6, separate from measured missing pulse.',
+           'illustrative_clock_panels':[5,6], 'illustrative_clock_period_s':2.0,
            'pdf_sha256':sha(pdf)}
     (DATA/'BUILD_AUDIT.json').write_text(json.dumps(audit,indent=2)+'\n')
     print(f'Built equal 3x3 grid; {len(checked)} legacy curves unchanged; all protected hashes preserved.')
