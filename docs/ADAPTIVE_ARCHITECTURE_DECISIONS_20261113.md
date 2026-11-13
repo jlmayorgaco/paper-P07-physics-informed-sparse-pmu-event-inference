@@ -155,7 +155,7 @@ verificaciones numéricas = comprobación de implementación pequeña;
 mejor atribución, robustez adaptativa y latencia viable = hipótesis sin
 evidencia de campaña. No hay una nueva cifra empírica principal.
 
-## Diagnósticos ejecutados después del diseño
+## Diagnósticos iniciales: retirados por error de OFF
 
 Se ejecutó `experiments/adaptive_innovation_20261113`, con protocolo/código
 sellados antes de generar datos y selección CAL sellada antes de TEST. El
@@ -167,3 +167,13 @@ no se integra ese guardado en el banco ni se anuncia una nueva capacidad.
 El siguiente desarrollo requiere datos nuevos y un control de covarianza en el
 banco completo. Se mantiene el diagnóstico negativo sin ajuste tras TEST.
 No se ejecutó ni modificó el protocolo C04 dependiente del cierre C03.
+
+## Corrección posterior
+
+El diagnóstico inicial usó OFF=4+5*celda, que era ON a medio reporte.
+Su comprobación repetía el error. Se retiran esos resultados y se conservan
+sellos y archivos originales. El sucesor `_corrected` usa OFF=3+5*celda,
+comprobación independiente del orden del builder y nuevas semillas. Los
+resultados vigentes están en su README. No cambian C01, C02 ni C03. La
+adaptación no aporta cobertura y dos brazos superan la FAR objetivo en
+TEST; no se retocaron umbrales tras observarlo.

@@ -1,22 +1,28 @@
 # P07: estado de cierre vigente
 
-La revisión del 13 de noviembre ejecuta dos diagnósticos independientes con
-operadores nominales, sin cambiar C03. Con inicio, amplitud y media de recuperación
-conocidos, conservar la covarianza mejora la fuente correcta de 281/360 a 338/360
-(+15,83 pp; IC 95% [11,94; 19,72]). Es una prueba bajo el modelo gaussiano declarado,
-no un resultado del banco completo ni de transferencia. La prueba causal de ruido
-usa 36 normales CAL, 36 normales TEST y 36 padres TEST con dos cargas. Fijo,
-continuo y con bloqueo obtienen 13/72, 15/72 y 13/72; no hay mejora concluyente de
-atribución. El bloqueo admite solo el 8,13% de reportes normales monitorizados.
-No se retocaron parámetros tras TEST. Los hashes, umbrales y publicaciones pasaron
-un recuento independiente. Ver experiments/adaptive_innovation_20261113/README.md.
+La revisión hamiltoniana añade cuatro trayectorias nuevas F01: normal,
+aumento/reducción de carga y apertura/restauración de línea. Se verifican
+balance cinético y potencias terminales con el modelo no lineal completo.
+Se deriva un subsistema mecánico hamiltoniano, no una energía total de la DAE.
+El cambio de coordenadas conserva predicciones y decisiones de fuente, sin
+mostrar ganancia de inferencia. La tolerancia absoluta de log-likelihood de
+1e-6 falla (máximo 1,907e-6); se informa sin relajar el criterio. No se ha
+probado un prior energético ni una mejora del banco completo.
 
-La arquitectura TikZ se redibujó con red eléctrica, fasores, recuperación,
-trayectorias, matrices, incertidumbre y reloj de publicación. Núcleo implementado,
-desarrollo adaptativo y capa ciber siguen separados. Artículo: 19 páginas;
-suplemento: 34 páginas, Figura 15 en página 32. Las figuras protegidas conservan
-sus hashes. Los nuevos resultados aparecen en el suplemento y sus límites en
-la discusión; no se añaden promesas adaptativas al resumen.
+La auditoría detectó un OFF erróneo en el diagnóstico auxiliar anterior.
+Se conservaron sus archivos y se retiraron sus conclusiones. El sucesor
+corregido usa semillas nuevas y ningún otro ajuste: covarianza 279/360 frente
+a 343/360 (+17,78 pp; IC 95% [13,89; 21,94]). Los tres brazos adaptativos
+obtienen 20/72; fijo y continuo incumplen el presupuesto normal en TEST.
+No se declara ventaja adaptativa. Véanse los README de
+experiments/hamiltonian_f01_20261113 y
+experiments/adaptive_innovation_20261113_corrected.
+
+Artículo: 19 páginas; suplemento: 35. Arquitectura en Figura 15; el balance
+físico añade Figura 16. Figuras protegidas intactas. El ZIP de fuentes se
+conserva localmente pero ya no se versiona: superaba 50 MB y bloqueaba la
+sincronización de Overleaf. Ningún archivo vigente de Git supera ese límite.
+C03 no se modificó ni se reejecutó en estos estudios.
 
 **Estado: borrador para revisión científica.** El manuscrito incorpora la comparación C02 sellada. La prueba de mecanismo a presupuesto común y la transferencia dinámica a una segunda planta pertenecen a C03. Solo se incorporarán después de que terminen y se auditen.
 

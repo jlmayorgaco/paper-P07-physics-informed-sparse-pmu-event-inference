@@ -20,13 +20,13 @@
  bus/.style={draw=ink,line width=1.4pt}]
 \path[use as bounding box] (0,0) rectangle (18,12.1);
 \node[head,text=teal] at (.05,11.87) {PHYSICAL ATTRIBUTION};
-\node[note,anchor=east] at (17.95,11.87) {Network physics $\rightarrow$ competing histories $\rightarrow$ time-stamped decisions};
+\node[note,anchor=east] at (17.95,11.87) {Graph structure $\rightarrow$ dynamic histories $\rightarrow$ Bayesian attribution};
 
 % Context band: real electrical primitives, a common event clock, PMU phasors.
 \path[card,fill=blue!2] (0,9.12) rectangle (5.55,11.54);
 \path[card,fill=teal!2] (6.0,9.12) rectangle (11.7,11.54);
 \path[card,fill=blue!2] (12.15,9.12) rectangle (18,11.54);
-\node[head] at (.18,11.25) {Network and physical interventions};
+\node[head] at (.18,11.25) {Graph: electrical interconnection};
 \foreach \x/\y in {1.1/10.45,2.35/10.45,4.5/10.45,2.35/9.7,4.5/9.7}{
  \draw[bus] (\x,{\y-.17})--(\x,{\y+.17});}
 \draw[ink] (.77,10.45)--(1.1,10.45)--(2.35,10.45)--(3.15,10.45)
@@ -41,16 +41,18 @@
 \foreach \x/\y in {1.1/10.45,4.5/9.7}{
  \node[draw=blue,fill=blue!8,rounded corners=1pt,inner sep=1.5pt,font=\fontsize{6.8}{8}\selectfont] at ({\x+.42},\y) {P};}
 \node[small,anchor=west] at (.2,9.40) {$Y_q$, $Y_{{\rm term},q}$};
-\node[head] at (6.18,11.25) {Restoration leaves a physical response};
-\node[small] at (6.38,10.61) {A};\node[small] at (6.38,10.12) {B};
-\draw[rule] (6.7,10.61)--(11.4,10.61) (6.7,10.12)--(11.4,10.12);
-\fill[teal] (7.0,10.51) rectangle (8.40,10.71);
-\fill[orange] (9.85,10.02) rectangle (11.0,10.22);
-\draw[teal,dashed,line width=.8pt] (8.4,10.61) .. controls (8.6,11.02) and (8.8,10.23) .. (9.04,10.61)
- .. controls (9.28,10.85) and (9.46,10.39) .. (9.7,10.61) .. controls (9.95,10.73) and (10.2,10.5) .. (10.5,10.61)--(11.4,10.61);
-\node[small,above] at (7.0,10.74) {ON};\node[small,above] at (8.4,10.74) {OFF};
-\node[small,anchor=east,text=orange] at (9.7,10.12) {new ON};
-\node[note] at (8.85,9.52) {$x(\kappa^+)=x(\kappa^-)$; instrument memory also persists};
+\node[head] at (6.18,11.25) {Hamiltonian: rotor storage};
+\draw[blue,line width=.9pt,fill=blue!4] (6.92,10.35) circle (.40);
+\draw[blue,line width=.65pt] (6.92,10.35) circle (.12);
+\foreach \a in {0,60,...,300}{\draw[blue!65] (6.92,10.35) ++(\a:.12)--++(\a:.28);}
+\draw[orange,->,line width=.8pt] (6.15,10.35)--(6.50,10.35);
+\draw[teal,->,line width=.8pt] (7.34,10.35)--(7.69,10.35);
+\node[small,text=orange] at (6.38,10.76) {$\tau_m$};
+\node[small,text=teal] at (7.53,10.76) {$\tau_e$};
+\node at (9.64,10.61) {$K=\sum_g S_gH_g\omega_g^2$};
+\node[small] at (9.64,10.11) {Torque-driven rotor subsystem};
+\node[font=\fontsize{7.2}{8.5}\selectfont] at (8.85,9.48)
+ {$\dot K=\sum_g S_g\omega_g[\tau_{m,g}-\tau_{e,g}-D_g(\omega_g-1)]$};
 \node[head] at (12.33,11.25) {Sparse PMU observations};
 \draw[rule] (12.90,10.32) circle (.42);
 \draw[rule] (12.35,10.32)--(13.45,10.32) (12.9,9.79)--(12.9,10.85);
@@ -62,6 +64,8 @@
 
 % Separate measurement route goes directly to the scoring card.
 \draw[flow] (2.70,9.12)--(2.70,8.55);
+\draw[flow] (6.68,9.12)--(6.68,8.55);
+\node[small,anchor=west,fill=white,inner sep=1pt] at (6.83,8.83) {Same physical state};
 \draw[flow] (15.1,9.12)--(15.1,8.83)--(11.2,8.83)--(11.2,8.55);
 \node[small,anchor=west,fill=white,inner sep=1pt] at (15.3,8.83) {new report $r_k$};
 \node[note,anchor=west,text=teal] at (.05,8.78) {Implemented core};
@@ -74,7 +78,7 @@
 }
 \node[head] at (.57,8.22) {Physical operators};
 \node[head] at (5.22,8.22) {History bank};
-\node[head] at (9.87,8.22) {Evidence update};
+\node[head] at (9.87,8.22) {Bayesian update};
 \node[head] at (14.52,8.22) {Publish separately};
 \node at (2.03,7.55) {$\dot x=f_q(x,z,u)$};
 \node at (2.03,7.17) {$0=g_q(x,z,u)$};

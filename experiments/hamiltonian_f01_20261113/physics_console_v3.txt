@@ -1,0 +1,11 @@
+BUILD_FROZEN_PLANT
+INITIAL_STATE_VERIFIED
+SOLVE normal
+{"algebraic_residual":1.605715560515364e-12,"case":"normal","dynamic_jump":0.0,"retcode":"Success","samples":1441,"seconds":18.8753476}
+SOLVE load_up
+{"algebraic_residual":7.56087414899298e-11,"case":"load_up","dynamic_jump":0.0,"retcode":"Success","samples":1441,"seconds":10.6295265}
+SOLVE load_down
+{"algebraic_residual":1.6351919818191618e-12,"case":"load_down","dynamic_jump":0.0,"retcode":"Success","samples":1441,"seconds":12.5720935}
+SOLVE line
+{"algebraic_residual":8.756739777737721e-11,"case":"line","dynamic_jump":0.0,"retcode":"Success","samples":1441,"seconds":8.5751178}
+PHYSICS_COMPLETE

@@ -10,3 +10,7 @@ experiments/external_physics_terminal_successor_20261112/** -text whitespace=cr-
 # Preserve supplied source bytes, including original whitespace, for hash audits.
 experiments/external_physics_terminal_successor_20261112/matpower_case39_source.m -whitespace
 experiments/external_physics_terminal_successor_20261112/run_original.py -whitespace
+
+experiments/adaptive_innovation_20261113_corrected/** -text whitespace=cr-at-eol
+# Keep frozen third-party/model bytes (including original whitespace) for hashes.
+experiments/hamiltonian_f01_20261113/** -text -whitespace

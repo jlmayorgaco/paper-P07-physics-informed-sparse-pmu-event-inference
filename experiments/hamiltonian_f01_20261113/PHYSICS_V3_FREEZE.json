@@ -1,0 +1,9 @@
+{
+  "utc": "2026-11-13T20:18:17.117707+00:00",
+  "files": {
+    "run_physics_v3.jl": "ed388b5a613e3463654f85c514a132fc5c429d620fe34ec9637c5262efbd0f5d",
+    "protocol.json": "7ce837e8e90b6071fabd1ba8e28595c8f937fb313aa04a639f259c9a0329bb5d",
+    "initialize_frozen.jl": "590ba6c3ecdebe5d08bae3e1c780b2bd223c7f54572c642c84c3319308acae77"
+  },
+  "reason": "Correct ambiguous Julia 0.=> syntax. Previous attempt failed before trajectories; protocol unchanged."
+}

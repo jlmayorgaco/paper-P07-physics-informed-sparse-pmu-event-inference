@@ -1,0 +1,53 @@
+{
+  "scope": "new full F01 nonlinear trajectories; kinetic subsystem and graph power identities, no global DAE Hamiltonian claim",
+  "duration_s": 12,
+  "sample_hz": 120,
+  "dtmax_s": 0.004166666666666667,
+  "abstol": 1e-10,
+  "reltol": 1e-10,
+  "cases": [
+    {
+      "id": "normal",
+      "kind": "load",
+      "bus": 7,
+      "factor": 1.0,
+      "on": 2.0,
+      "off": 6.0
+    },
+    {
+      "id": "load_up",
+      "kind": "load",
+      "bus": 7,
+      "factor": 1.1,
+      "on": 2.0,
+      "off": 6.0
+    },
+    {
+      "id": "load_down",
+      "kind": "load",
+      "bus": 7,
+      "factor": 0.9,
+      "on": 2.0,
+      "off": 6.0
+    },
+    {
+      "id": "line",
+      "kind": "line",
+      "edge": 38,
+      "on": 2.0,
+      "off": 3.0
+    }
+  ],
+  "gates": {
+    "torque_balance": 1e-08,
+    "kinetic_integral_absolute_MJ": 0.02,
+    "algebraic_residual": 1e-06,
+    "state_jump": 1e-08,
+    "coordinate_observation_relative": 1e-09,
+    "coordinate_logbf_absolute": 1e-06
+  },
+  "seeds": {
+    "inference": 13118001
+  },
+  "interpretation": "Native versus invertible kinetic-coordinate predictor has identical model; this control cannot create information or validate an energy prior."
+}

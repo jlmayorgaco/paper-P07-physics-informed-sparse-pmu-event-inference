@@ -1,0 +1,15 @@
+BUILD_FROZEN_PLANT
+INITIAL_STATE_VERIFIED
+ERROR: LoadError: AssertionError: !(isnothing(i))
+Stacktrace:
+ [1] param(g::Int64, s::Symbol)
+   @ Main C:\Users\walla\Documents\Github\paper-P07-physics-informed-sparse-pmu-event-inference\experiments\hamiltonian_f01_20261113\run_physics.jl:10
+ [2] #3
+   @ .\none:0 [inlined]
+ [3] iterate
+   @ .\generator.jl:48 [inlined]
+ [4] collect(itr::Base.Generator{Vector{Int64}, var"#3#4"})
+   @ Base .\array.jl:791
+ [5] top-level scope
+   @ C:\Users\walla\Documents\Github\paper-P07-physics-informed-sparse-pmu-event-inference\experiments\hamiltonian_f01_20261113\run_physics.jl:13
+in expression starting at C:\Users\walla\Documents\Github\paper-P07-physics-informed-sparse-pmu-event-inference\experiments\hamiltonian_f01_20261113\run_physics.jl:13

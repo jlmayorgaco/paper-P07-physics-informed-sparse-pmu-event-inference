@@ -1,0 +1,68 @@
+{
+  "version": "JULIAPD_PMU_REFERENCE_V2",
+  "status": "NORMAL_INTERVAL_CANDIDATE",
+  "operating_point": "joint_magnitudes_r5c2",
+  "duration_s": 120,
+  "fps": 30,
+  "calibration_window_s": [
+    10,
+    60
+  ],
+  "validation_window_s": [
+    60,
+    120
+  ],
+  "pmus": [
+    2,
+    5,
+    6,
+    10,
+    19,
+    22,
+    29,
+    39
+  ],
+  "historical_angle_recovery": "paired circular RAW-SIM differential to BUS2 before pooling event windows",
+  "relative_voltage_bias_deg": [
+    0.0,
+    0.30605921023072824,
+    0.3341782036991674,
+    0.3593498989115176,
+    0.6600430997769706,
+    0.7373846709137126,
+    -0.24106847366846296,
+    -1.1632841599802646
+  ],
+  "common_reference": "two new commissioning parameters: common phase intercept and constant phase slope, estimated ONLY on 10<=t<60",
+  "common_reference_interpretation": "observational alignment; true common frequency versus clock bias remains confounded",
+  "local_drift_deg_s": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "current_gain_or_phase_refit": false,
+  "voltage_gain_policy": "unit gain: operating point already fitted to native positive-sequence magnitude; do not reapply historical sqrt(3) conversion",
+  "frequency": "60 + derivative of REPORTED unwrapped voltage angle / 360; no extra fixed bias",
+  "rocof": "2*quadratic coefficient /360, causal 21-frame magnitude-weighted robust fit",
+  "stochastic": false,
+  "raw0002_opened": false,
+  "physical_parameter_changes": false,
+  "limitations": [
+    "terminal hypotheses not original CT inventory",
+    "BUS39 phase partial",
+    "normal regime only; no event or stochastic validation",
+    "RAW0001 retrospective calibration"
+  ],
+  "common_phase_intercept_deg": -61.83043431784341,
+  "common_phase_slope_deg_s": -11.32267922483655,
+  "implied_reported_frequency_hz": 59.96854811326434,
+  "fit_reports": 1500,
+  "fit_start_s": 10.0,
+  "fit_last_s": 59.96666666666667,
+  "calibration_residual_rmse_deg": 1.8102073852867682
+}

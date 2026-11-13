@@ -1,0 +1,25 @@
+{
+  "scope": "known onset, amplitude and recovery mean; Gaussian inherited severity uncertainty; correct nominal linear model",
+  "arms": {
+    "mean_only": {
+      "correct": 279,
+      "parents": 360,
+      "nis95_coverage": 0.6222222222222222,
+      "mean_true_source_log_density": -1096.430811106385
+    },
+    "mean_covariance": {
+      "correct": 343,
+      "parents": 360,
+      "nis95_coverage": 0.9611111111111111,
+      "mean_true_source_log_density": -1001.8252384225854
+    }
+  },
+  "paired_correctness": {
+    "difference": 0.17777777777777778,
+    "ci95": [
+      0.1388888888888889,
+      0.21944444444444444
+    ],
+    "parents": 360
+  }
+}

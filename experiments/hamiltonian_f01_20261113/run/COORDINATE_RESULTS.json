@@ -1,0 +1,14 @@
+{
+  "scope": "Actual nominal operator equivalence; known-signature Gaussian source likelihood, not a rerun of the full history bank",
+  "sources": 18,
+  "reports_per_source": 180,
+  "noise_draws": 180,
+  "rotor_coordinates": 10,
+  "max_relative_prediction_difference": 1.5296620522045972e-14,
+  "max_absolute_state_difference": 4.3655745685100555e-11,
+  "max_absolute_loglik_difference": 1.9073486328125e-06,
+  "max_posterior_difference": 5.3800025448434455e-34,
+  "different_source_decisions": 0,
+  "physical_on_off_index_check": true,
+  "passed": false
+}

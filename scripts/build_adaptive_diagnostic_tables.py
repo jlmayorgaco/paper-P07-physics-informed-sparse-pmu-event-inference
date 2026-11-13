@@ -5,7 +5,7 @@ from audit_adaptive_diagnostic import main as audit
 ROOT=Path(__file__).resolve().parents[1]
 def main():
     audit()
-    run=ROOT/'experiments/adaptive_innovation_20261113/run'
+    run=ROOT/'experiments/adaptive_innovation_20261113_corrected/run'
     s=json.loads((run/'STREAM_RESULTS.json').read_text());c=json.loads((run/'COVARIANCE_RESULTS.json').read_text())
     lines=[r'\begin{table}[t]\centering',r'\caption{Nominal innovation diagnostic: independent calibration at one normal alarm per hour. All TEST arms use 5.88 normal hours and 72 load interventions in 36 paired records.}',r'\label{tab:adaptive-diagnostic}',r'\footnotesize\setlength{\tabcolsep}{3.5pt}',r'\begin{tabular}{lrrrr}',r'\toprule',r'Noise rule & $h$ & Correct/72 & Extras & FAR (upper)\\',r'\midrule']
     for key,name in [('fixed','Fixed'),('adaptive','Continuous'),('guarded','Guarded')]:

@@ -1,3 +1,17 @@
+# WITHDRAWN: incorrect OFF operator in the auxiliary diagnostic
+
+The source indexed OFF as `4+5*cell`, which is the half-report ON operator.
+The archived builder orders stay, ON-end, OFF-end, ON-mid, OFF-mid; the
+correct full-report OFF index is `3+5*cell`. The prior internal recurrence
+check repeated the same wrong index and did not catch this semantic error.
+All previous numerical findings below are historical and withdrawn.
+The original code, protocol and sealed run remain unchanged for audit.
+The corrected successor is `../adaptive_innovation_20261113_corrected`, with
+fresh CAL/TEST/noise seeds and no other methodological tuning. This correction
+concerns only this auxiliary diagnostic, not C01, C02 or C03.
+
+---
+
 # Nominal load-operator mechanism diagnostics, 13 November 2026
 
 These completed diagnostics are independent of C03, which was neither changed

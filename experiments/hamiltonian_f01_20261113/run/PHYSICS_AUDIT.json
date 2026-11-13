@@ -1,0 +1,59 @@
+{
+  "scope": "Full frozen F01 nonlinear DAE; kinetic subsystem balance and electrical terminal powers only",
+  "cases": [
+    {
+      "case": "normal",
+      "samples": 1441,
+      "max_torque_equation_error": 8.326672684688832e-17,
+      "max_airgap_power_error_machine_pu": 0.0,
+      "max_kinetic_work_residual_MJ": 1.9445949480297953e-11,
+      "max_deviation_work_residual_MJ": 0.0,
+      "max_terminal_current_error_pu": 3.372465768623957e-13,
+      "max_graph_power_error_system_pu": 1.865174681370263e-13,
+      "max_generation_load_loss_error_system_pu": 9.014455848443959e-13,
+      "minimum_branch_loss_system_pu": 0.4342676434812255
+    },
+    {
+      "case": "load_up",
+      "samples": 1441,
+      "max_torque_equation_error": 8.975025583835006e-16,
+      "max_airgap_power_error_machine_pu": 3.3306690738754696e-16,
+      "max_kinetic_work_residual_MJ": 0.00037819584835396824,
+      "max_deviation_work_residual_MJ": 8.895384658209882e-08,
+      "max_terminal_current_error_pu": 3.7570183370237514e-13,
+      "max_graph_power_error_system_pu": 2.982614155655483e-13,
+      "max_generation_load_loss_error_system_pu": 1.5136225606227072e-11,
+      "minimum_branch_loss_system_pu": 0.4341931627955101
+    },
+    {
+      "case": "load_down",
+      "samples": 1441,
+      "max_torque_equation_error": 8.949004731695354e-16,
+      "max_airgap_power_error_machine_pu": 4.440892098500626e-16,
+      "max_kinetic_work_residual_MJ": 0.0003698640010760812,
+      "max_deviation_work_residual_MJ": 8.927542133655396e-08,
+      "max_terminal_current_error_pu": 3.818340902839182e-13,
+      "max_graph_power_error_system_pu": 1.811328864675943e-13,
+      "max_generation_load_loss_error_system_pu": 1.5130674491103946e-12,
+      "minimum_branch_loss_system_pu": 0.42913569249798605
+    },
+    {
+      "case": "line",
+      "samples": 1441,
+      "max_torque_equation_error": 1.0096090630185017e-15,
+      "max_airgap_power_error_machine_pu": 4.440892098500626e-16,
+      "max_kinetic_work_residual_MJ": 0.01059388443059106,
+      "max_deviation_work_residual_MJ": 2.068081434074276e-05,
+      "max_terminal_current_error_pu": 4.5115901250342707e-13,
+      "max_graph_power_error_system_pu": 1.7247314687551807e-13,
+      "max_generation_load_loss_error_system_pu": 4.128508646061846e-11,
+      "minimum_branch_loss_system_pu": 0.3732555346854591
+    }
+  ],
+  "all_solvers_successful": true,
+  "max_algebraic_residual": 8.756739777737721e-11,
+  "max_dynamic_jump": 0.0,
+  "quadrature": "120 Hz composite trapezoid separately on smooth segments; intervals ending at jumps excluded",
+  "direct_shaft_damping_all_zero": true,
+  "passed": true
+}

@@ -1,0 +1,11 @@
+BUILD_FROZEN_PLANT
+INITIAL_STATE_VERIFIED
+ERROR: LoadError: ParseError:
+# Error @ C:\Users\walla\Documents\Github\paper-P07-physics-informed-sparse-pmu-event-inference\experiments\hamiltonian_f01_20261113\run_physics_v2.jl:24:65
+for case in cfg["cases"]
+    id=case["id"];u0=copy(uflat(s0));p0=copy(pflat(s0));ph=Dict(0.=>copy(p0));left=Dict{Float64,Vector{Float64}}()
+#                                                               └┘ ── ambiguous `.` syntax; add whitespace to clarify (eg `1.+2` might be `1.0+2` or `1 .+ 2`)
+Stacktrace:
+ [1] top-level scope
+   @ C:\Users\walla\Documents\Github\paper-P07-physics-informed-sparse-pmu-event-inference\experiments\hamiltonian_f01_20261113\run_physics_v2.jl:24
+in expression starting at C:\Users\walla\Documents\Github\paper-P07-physics-informed-sparse-pmu-event-inference\experiments\hamiltonian_f01_20261113\run_physics_v2.jl:24

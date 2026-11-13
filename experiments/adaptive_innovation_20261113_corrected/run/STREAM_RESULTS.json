@@ -1,0 +1,74 @@
+{
+  "scope": "F01 linear-operator per-report diagnostic, not R11, nonlinear transfer or TVE-calibrated PMU simulation",
+  "arms": {
+    "fixed": {
+      "threshold": 3.0,
+      "normal_alarms": 6,
+      "normal_hours": 5.88,
+      "normal_far": 1.0204081632653061,
+      "poisson_upper95_per_hour": 2.014012866057872,
+      "timely_joint_hits": 20,
+      "events": 72,
+      "extra_alarms": 44,
+      "event_hours": 1.08,
+      "normal_noise_rmse": 0.8747973117825205,
+      "normal_mean_log_predictive": -83.01174410003478,
+      "normal_admission_fraction": 0.0
+    },
+    "adaptive": {
+      "threshold": 0.0,
+      "normal_alarms": 8,
+      "normal_hours": 5.88,
+      "normal_far": 1.3605442176870748,
+      "poisson_upper95_per_hour": 2.4548724005435902,
+      "timely_joint_hits": 20,
+      "events": 72,
+      "extra_alarms": 50,
+      "event_hours": 1.08,
+      "normal_noise_rmse": 0.232050421349116,
+      "normal_mean_log_predictive": -76.9176069404953,
+      "normal_admission_fraction": 1.0
+    },
+    "guarded": {
+      "threshold": 3.0,
+      "normal_alarms": 5,
+      "normal_hours": 5.88,
+      "normal_far": 0.8503401360544218,
+      "poisson_upper95_per_hour": 1.7879311069288324,
+      "timely_joint_hits": 20,
+      "events": 72,
+      "extra_alarms": 44,
+      "event_hours": 1.08,
+      "normal_noise_rmse": 0.872333282811525,
+      "normal_mean_log_predictive": -82.89420963913544,
+      "normal_admission_fraction": 0.08341836734693878
+    }
+  },
+  "paired_timely_contrasts": {
+    "adaptive-fixed": {
+      "difference": 0.0,
+      "ci95": [
+        -0.08333333333333333,
+        0.06944444444444445
+      ],
+      "parents": 36
+    },
+    "guarded-fixed": {
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "parents": 36
+    },
+    "guarded-adaptive": {
+      "difference": 0.0,
+      "ci95": [
+        -0.06944444444444445,
+        0.08333333333333333
+      ],
+      "parents": 36
+    }
+  },
+  "prefix_invariance": true
+}

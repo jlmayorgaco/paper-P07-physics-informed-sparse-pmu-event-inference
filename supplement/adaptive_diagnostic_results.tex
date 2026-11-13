@@ -4,6 +4,10 @@ Two independent diagnostics use the fixed nominal IEEE-39 load operators
 with nine load sources and 47 observation coordinates. They do not use
 observations from the mechanism/transfer campaign. The code, noise seeds,
 threshold grid and endpoints were fixed before generating the cohorts.
+This corrected study replaces a withdrawn diagnostic that used a mid-report
+ON operator at restoration. The corrected OFF index is checked independently
+against the operator-builder ordering; all noise seeds are new and no other
+method settings were tuned.
 The deterministic null-innovation recursion reproduces explicit physical
 state and null-filter propagation through ON and OFF to maximum absolute
 error $2.8\times10^{-10}$. Noise is generated in innovation coordinates;
@@ -66,10 +70,13 @@ Publication does not modify inference in this diagnostic.
 \input{tables/generated/adaptive_diagnostic}
 Table~\ref{tab:adaptive-diagnostic} gives the held-out outcomes.
 Continuous versus fixed adaptation changes timely source coverage by
-$+\AdaptDelta{}$ percentage points, with a paired 95\% interval
+$\AdaptDelta{}$ percentage points, with a paired 95\% interval
 $[\AdaptLow{},\AdaptHigh{}]$ from 10,000 resamples of the 36 event records.
 The guarded and fixed arms identify the same number in every record.
-Thus, no attribution gain is established. Normal-record noise-coefficient
+Thus, no attribution gain is established. Fixed and continuous learning
+also exceed the one-alarm-per-hour target on TEST; meeting that target in
+calibration did not ensure it on new records. These outcomes are not a
+comparison at equal achieved false-alarm rates. Normal-record noise-coefficient
 RMSE is \FixedNoiseRmse{}, \ContNoiseRmse{} and \GuardNoiseRmse{} for fixed,
 continuous and guarded learning. The guard admits only \GateFraction{}\%
 of monitored normal reports: causal timing alone does not prevent a gate

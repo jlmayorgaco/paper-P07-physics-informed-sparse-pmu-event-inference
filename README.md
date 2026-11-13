@@ -11,14 +11,23 @@ historical attribution. Its finite examples can be checked with
 `python scripts/verify_recovery_distribution.py`. Earlier dated notes below are
 historical; the [current closure record](docs/P07_CLOSURE_CURRENT.md) takes precedence.
 
-The [completed covariance and noise-learning diagnostics](experiments/adaptive_innovation_20261113/README.md)
-use independent nominal-operator sequences, without modifying C03. Retaining
-inherited covariance improves known-onset source ranking; noise adaptation does
-not establish a timely-attribution gain. The quiet-history gate rarely learns.
-The supplement reports both outcomes and includes the redrawn TikZ architecture.
-Recount saved predictions and regenerate the new tables with
-`python scripts/build_adaptive_diagnostic_tables.py`. Current PDFs: 19 article
-pages and 34 supplementary pages; the package compiles in isolation.
+The [corrected covariance/noise diagnostics](experiments/adaptive_innovation_20261113_corrected/README.md)
+replace the earlier auxiliary study, which used the wrong OFF operator. The
+old run remains archived and marked withdrawn. Corrected covariance ranking
+is 279/360 versus 343/360; noise learning yields 20/72 in all arms and two arms
+exceed the TEST alarm target. No adaptive attribution gain is established.
+
+The [rotor-energy and graph-port study](experiments/hamiltonian_f01_20261113/README.md)
+adds four new nonlinear F01 consistency trajectories, an exact mechanical
+subsystem derivation and an equivalence comparison using 18 nominal sources.
+Energy coordinates do not add information; the absolute numerical likelihood
+gate remains failed and no detector improvement is claimed. The architecture
+now shows graph structure, rotor storage and Bayesian evidence. Article: 19
+pages; supplement: 35 pages. C03 remains unchanged.
+
+Overleaf sync excludes `output/source/*.zip`: the source delivery archive
+exceeded its 50 MB per-file limit. It is still generated and retained locally.
+Check tracked sizes before push with `python scripts/check_overleaf_file_sizes.py`.
 
 The [terminal-current diagnostic](docs/CHANNEL_INFORMATION_20261112.md) now
 compares voltage and current information with the actual nominal predictor,

@@ -1,0 +1,53 @@
+{
+  "scope": "independent nominal linear-operator diagnostic, no C03 observations or runtime writes",
+  "snapshot_sha256": "6102a7a39ee22c0080b4ec0820ef4cf50ece9f77910bd551189fbf9b03fc8140",
+  "parents_per_kind": 36,
+  "covariance_parents": 360,
+  "seeds": {
+    "CAL": 13123000,
+    "TEST": 13124000,
+    "bootstrap": 13125000,
+    "covariance": 13126000
+  },
+  "prototype_ages_reports": [
+    0,
+    2,
+    14,
+    29,
+    59,
+    119,
+    299,
+    899
+  ],
+  "severity_prior_sd": 0.01,
+  "startup_reports": 360,
+  "learning_rate": 0.0011111111111111111,
+  "alpha_upper": 8.0,
+  "quiet_reports": 15,
+  "quiet_mass": 0.99,
+  "cooldown_reports": 60,
+  "prior_log_odds": -4.59511985013459,
+  "confirmation_reports": 6,
+  "refractory_reports": 150,
+  "threshold_grid": [
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0,
+    6.0,
+    8.0,
+    10.0,
+    12.0,
+    16.0,
+    24.0,
+    32.0,
+    48.0,
+    64.0
+  ],
+  "far_budget_per_hour": 1.0,
+  "recovery_amplitude_sd": 0.002,
+  "noise_contract": "nominal innovations plus alpha times diagonal innovation covariance; not physical independent PMU TVE",
+  "endpoint": "timely correct load source under per-report likelihood scan; no family or OFF estimator"
+}

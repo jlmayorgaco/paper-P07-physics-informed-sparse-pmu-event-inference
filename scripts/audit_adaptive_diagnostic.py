@@ -1,11 +1,12 @@
 """Independent recount of the sealed nominal diagnostic; no inference rerun."""
 from pathlib import Path
 import hashlib,json
+import importlib.util
 import numpy as np
 from scipy.stats import chi2
 
 ROOT=Path(__file__).resolve().parents[1]
-D=ROOT/'experiments/adaptive_innovation_20261113'
+D=ROOT/'experiments/adaptive_innovation_20261113_corrected'
 R=D/'run'
 def read(p):return json.loads(p.read_text())
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
@@ -27,6 +28,20 @@ def main():
     assert frozen['code_sha256']==sha(D/'study.py')
     assert frozen['protocol_sha256']==sha(D/'protocol.json')
     assert p['snapshot_sha256']==sha(D.parent/'channel_information_20261112/input_snapshot.npz')
+    # Semantic ON/OFF check independently follows the archived builder order:
+    # stay, ON at report end, OFF at report end, ON mid-report, OFF mid-report.
+    spec=importlib.util.spec_from_file_location('corrected_diagnostic',D/'study.py')
+    module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+    with np.load(D.parent/'channel_information_20261112/input_snapshot.npz') as z:
+        b={k:z[k] for k in z.files}
+    reference=[];physical=np.zeros((376,9));observer=physical.copy()
+    from scipy.sparse import csr_matrix
+    T=csr_matrix(b['T'][0]);J=b['J'][0]
+    for k in range(90):
+        op=np.arange(9)*5+(2 if k==0 else 1 if k<30 else 3) if k<=30 else np.zeros(9,int)
+        y=J@physical+b['v'][op].T;e=y-J@observer;reference.append(e.T)
+        physical=T@physical+b['u'][op].T;observer=T@observer+b['K0']@e
+    assert np.max(abs(np.array(reference)-module.unit_response(b,90,30)))<1e-7
     assert read(R/'TEST_STARTED.json')['cal_selection_sha256']==sha(R/'CAL_SELECTION.json')
     selection=read(R/'CAL_SELECTION.json');counts=np.zeros((3,len(p['threshold_grid'])),int)
     files=list(R.glob('CAL_normal_[0-9][0-9][0-9].npz'));assert len(files)==36
