@@ -33,3 +33,12 @@ se justifican por una ablación de costo o decisión. El cierre del artículo
 actual depende de C03, de una exposición explícita del límite instrumental
 y de la revisión de coautores. Las extensiones que requieren una nueva
 inferencia tienen su propio contrato de evidencia.
+
+## Paquete editorial comprobado
+
+`python -B scripts/package_ieee_editorial_sources.py` genera el ZIP de
+LaTeX usado para revisión editorial. La versión actual contiene 174
+entradas y ocupa 7.774.180 bytes. Una extracción aislada compiló el
+artículo de 19 páginas y el suplemento de 40 con texto y paginación
+idénticos. Quedan por verificar el mismo paquete en Overleaf y las
+declaraciones finales con los coautores.
