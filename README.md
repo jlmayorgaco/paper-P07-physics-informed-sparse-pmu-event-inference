@@ -1,5 +1,9 @@
 # P07 — Recovery-Aware Physical Attribution of Load and Line Events From Sparse PMUs
 
+**C04 covariance successor (14 November 2026):** implemented and running development
+checks and fresh CAL physics export. See the [execution status](docs/C04_EXECUTION_STATUS_20261114.md).
+No C04 performance advantage has been established or added to the manuscript.
+
 **14 November 2026.** The completed two-plant comparison supports history
 retention over mean merging in F01. Its coverage advantage does not
 transfer conclusively to P2. State carry improves over reset on both
