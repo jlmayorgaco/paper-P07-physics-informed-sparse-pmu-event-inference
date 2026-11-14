@@ -1,5 +1,13 @@
 # P07: estado de cierre vigente
 
+**13-nov-2026, 21:30 Bogotá.** C03 selló las predicciones de F01 y
+está exportando TEST de P2 (38 registros exportados en el último corte).
+El cierre combinado aún está pendiente. La corrida de covarianza R11
+lleva 23/48 replays CAL y pasa automáticamente a TEST tras fijar los
+umbrales. La evidencia de esta versión incluye la validación numérica
+del modelo de ruido añadido. Las conclusiones de atribución requieren
+terminar TEST y auditar su exposición normal.
+
 **13-nov-2026, 21:00 Bogotá.** C03 completó 72/72 registros nominales
 de TEST de F01 y sigue en las pruebas de estrés F01. La evaluación
 sellada de ambas plantas sigue pendiente. El contraste retrospectivo de
