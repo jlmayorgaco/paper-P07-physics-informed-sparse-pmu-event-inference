@@ -1,0 +1,15 @@
+{
+  "sigma_percent": [0.05, 0.1],
+  "arms": ["family", "shrinkage", "structured", "oracle"],
+  "seed": 26111381,
+  "prefix_reports": 300,
+  "warmup_s": 12,
+  "budget_per_hour": 1,
+  "thresholds": [2.1972245773362196, 2.9444389791664403, 3.8918202981106265, 4.59511985013459, 5.293304824724492, 6.906754778648554, 9.21024036697585, 13.815509557935018, 20, 30, 35],
+  "split": {
+    "CAL": {"event": ["C025", "C027", "C029", "C032"], "normal": ["C026", "C028"]},
+    "TEST": {"event": ["T050", "T052", "T055", "T056"], "normal": ["T049", "T051"]}
+  },
+  "bootstrap_seed": 26111382,
+  "bootstrap_repetitions": 10000
+}

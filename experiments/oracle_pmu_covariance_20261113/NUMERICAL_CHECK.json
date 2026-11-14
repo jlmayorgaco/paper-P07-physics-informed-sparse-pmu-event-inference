@@ -1,0 +1,15 @@
+{
+  "record": "C025",
+  "arm": "oracle",
+  "sigma_percent": 0.05,
+  "reports": 3601,
+  "riccati_residual": 3.824144440312725e-13,
+  "bank_sha256": "5021e8a754c1e19c0316324f109a6a4800f0954b725adac73e07d16a8e0e6063",
+  "observation_sha256": "14877356fdc6704a68e4ad859312fc596dbbcd64501494fb7a5c835fdb8e9499",
+  "fit_sha256": "a6fc210fef0054fd2487e8aa428c91a30fba04c1c9b9e1e074c96b66f62e4cb5",
+  "added_noise_check": {
+    "reports": 80,
+    "max_whitened_error": 4.547473508864641e-13
+  },
+  "scope": "Numerical smoke on one archived CAL trajectory; no attribution or calibration inference"
+}

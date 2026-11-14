@@ -1,5 +1,13 @@
 # P07: estado de cierre vigente
 
+**13-nov-2026, 21:00 Bogotá.** C03 completó 72/72 registros nominales
+de TEST de F01 y sigue en las pruebas de estrés F01. La evaluación
+sellada de ambas plantas sigue pendiente. El contraste retrospectivo de
+covarianza con B01 está en ejecución. Pasaron la comprobación del modelo
+del ruido añadido y un replay oráculo del banco. El
+[plan de cierre](P07_JOURNAL_CLOSURE_20261113.md) fija la secuencia
+para usar los resultados y preparar el envío.
+
 **13-nov-2026, 19:34 Bogotá.** C03 terminó los 72 registros nominales
 TEST de F01. Sigue pendiente el cierre sellado de ambas plantas.
 El suplemento incorpora la reproducción de la ablación controlada de
