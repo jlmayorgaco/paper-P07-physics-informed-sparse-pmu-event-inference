@@ -1,0 +1,54 @@
+\section{Memory Compression and Startup Covariance}
+\input{generated/memory_covariance_macros}
+
+\subsection{Four Matched Representations of Recovery}
+An external controlled example uses three swing nodes, a grounded
+reference, two possible recovery components and three measured coordinates.
+It compares a state mean, a moment-matched Gaussian, the full state
+mixture and the same mixture with historical cause labels. All arms use
+the same linear dynamics and class priors. The next load can occur at
+either of two sources at a known onset. Each arm uses 3,000 independent
+normal windows to set a 5\% window false-positive target. Each scenario
+then evaluates 3,800 new windows. This target concerns fixed windows,
+whereas the article calibrates alarms per hour of continuous monitoring.
+
+In the nominal colored-noise scenario, the mean, Gaussian and mixture
+correctly detect and locate \MemMean{}\%, \MemMoments{}\% and
+\MemMixture{}\% of event windows, respectively. Across the four
+scenarios, the mixture and labeled histories have identical new-source
+posteriors. This equality follows from the shared likelihoods and
+transition law after summing over component labels. Labels support
+queries about the previous cause. The recursive Gaussian calculation
+agrees with the batch calculation on every prefix of the checked
+trajectory. These results support the distinction in the predictive
+sufficiency analysis. The numerical gains refer to the small network and
+its prescribed recovery distribution.
+
+\subsection{Accuracy of a Startup Covariance}
+For true and estimated positive definite covariances $\Sigma$ and
+$\widehat\Sigma$, let $\eta=\|\Sigma^{-1/2}\widehat\Sigma
+\Sigma^{-1/2}-I\|_2$. When $\eta<1$, every fixed signature $d$ satisfies
+\begin{equation}
+\frac{d^\top\Sigma^{-1}d}{1+\eta}
+\le d^\top\widehat\Sigma^{-1}d
+\le\frac{d^\top\Sigma^{-1}d}{1-\eta}.
+\end{equation}
+This follows by inverting the eigenvalue bounds in whitened coordinates.
+The inequality controls a fixed quadratic. A data-driven alarm rule also
+depends on log determinants, selection and the normal predictive law.
+The observed TVE is on a signal scale, whereas $\eta$ measures relative
+covariance error.
+
+We generated 128 Gaussian prefixes per setting in 47 coordinates, using
+the nominal innovation correlation as the reference. The shifted
+condition adds unit diagonal variance in standardized coordinates.
+At 300 reports in that condition, median excess marginal log loss in
+nats per vector is \CovIIDScale{}, \CovIIDSample{} and \CovIIDShrink{}
+for a scaled nominal covariance, a sample covariance and Ledoit--Wolf
+shrinkage, respectively, with independent draws. For an AR(1) coefficient
+of 0.9 the corresponding losses are \CovARScale{}, \CovARSample{} and
+\CovARShrink{}. Shrinkage improves on the unstructured sample estimate
+in these settings. The nominal correlation remains a useful prior in
+this construction. Recovering load attribution at physical independent
+PMU TVE requires testing the covariance in the full bank with independent
+calibration and evaluation.\EOD

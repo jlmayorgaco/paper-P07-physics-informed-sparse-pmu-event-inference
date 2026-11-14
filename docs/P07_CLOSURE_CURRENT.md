@@ -1,5 +1,11 @@
 # P07: estado de cierre vigente
 
+**13-nov-2026, 19:34 Bogotá.** C03 terminó los 72 registros nominales
+TEST de F01. Sigue pendiente el cierre sellado de ambas plantas.
+El suplemento incorpora la reproducción de la ablación controlada de
+memoria y un piloto de estimación de covarianza con verdad conocida.
+Véase [la auditoría](MEMORY_COVARIANCE_AUDIT_20261113.md).
+
 **Revisión de las 18:58 Bogotá, 13-nov-2026.** El artículo conecta la
 comparación de procedimientos con la geometría de recuperación y conserva
 19 páginas. El suplemento de 40 páginas añade tres diagnósticos reproducibles:

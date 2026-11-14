@@ -1,0 +1,31 @@
+{
+  "experiment": "toy_memory_ablation",
+  "seed": 20261113,
+  "test_scenarios": 4,
+  "per_scenario_test_sequences": 3800,
+  "per_scenario_calibration_null_sequences": 3000,
+  "bootstrap_resamples": 1500,
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "matplotlib": "3.10.8"
+  },
+  "sha256": {
+    "experiment.py": "c8cc4016a1119e47b6457ab9cad56394a17b5243bc4d49b35c57f5328c797331",
+    "run_study.py": "22db1c85e6efe5317c08ef716d22da8a479e25b3c8133eb2afac7240719b6459",
+    "recursive_filter.py": "69d1620f6ecb3d9090bd66b8d2d632b434b1cd5727024d9e92d3b4de6bb4ea9f",
+    "plot_stream.py": "9eec5a837c2fccadc59e26bfff0725190a99eed8c6fa30926b0e3e7b09150211",
+    "test_experiment.py": "cfdcf509773ee977302b401535338076e0495861e3593cd3df96c35fb8eaa154",
+    "README_ES.md": "f179b427f173c4c097b05bfb97ab10c95fe43bca3045dad03428f405abedb0ed",
+    "GUIA_INTEGRACION_P07_ES.md": "fcadba498291b34c78085655c9f5ec58b994b2bd52c0314d9e4ba61a0c0bbccc",
+    "requirements.txt": "48061e7fa7686b876b0221aaf663c6576c4aacc7227c1bb192d6250c5d037494",
+    "run_all.sh": "2f85db380378b2802e95a0e73d88a1b402538d80ba493716e45e5c74cef3991e",
+    "results/summary.json": "25ef254a1882524ac24298794816004ea5eeb9a226432d77286139e87f4689ca",
+    "results/metrics.csv": "4d187f02c9eada373a920a1d6e7556a81d8a9c8aab931e73eebc7f792750292c",
+    "results/sample_200_trials.npz": "3148b943e2c9569692f6ac3dc5fc5a9c482b4876db8d331c7d3e000942a18a13",
+    "results/coverage_same_fpr.png": "60b03bd5e647e2045ce659f4bb1e811500ae14423657ff5dd12869f0db8e0652",
+    "results/mixture_vs_moment_density.png": "245e8b178d682b22e99f919e1b43fa9fbbe9a013d88e1896412393c292ec1876",
+    "results/stream_posterior_example.png": "c0b1a9915d5816da305d7c96ca86ffced7f5d34724832f92a32e79cb12a6fc20"
+  }
+}

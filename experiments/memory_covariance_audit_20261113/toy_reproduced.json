@@ -1,0 +1,339 @@
+{
+  "status": "success",
+  "experiment": "toy_swing_histories_exact_bayes",
+  "scope": [
+    "3 swing nodes + 1 grounded reference",
+    "known new event onset",
+    "single new Gaussian-amplitude event or null",
+    "previous event restored before window",
+    "identical physical model/likelihood/prior across arms",
+    "Gaussian state priors with two history components",
+    "time-correlated Gaussian noise modeled exactly",
+    "no IEEE39 validation",
+    "old cause inference available only when mapping preserved"
+  ],
+  "calibration": "independent normal-only data, 5% false positive target per evaluation window",
+  "results": [
+    {
+      "scenario": "nominal_colored",
+      "assumptions": {
+        "horizon_s": 0.65,
+        "noise_scale": 1.0,
+        "spread": 1.0,
+        "temporal_rho": 0.9,
+        "history_kind": "two_sources"
+      },
+      "n_test": 3800,
+      "n_cal": 3000,
+      "alpha": 0.05,
+      "methods": {
+        "mean_only": {
+          "threshold_log_odds": 7.050141948624671,
+          "FPR_test": 0.055912596401028275,
+          "TPR_event": 0.2736185383244207,
+          "event_source_coverage": 0.25044563279857396,
+          "source_accuracy_if_forced": 0.7807486631016043,
+          "overall_threeway_accuracy": 0.5989473684210527,
+          "class_log_loss": 1.5108868990419475,
+          "predictive_NLL": -194.93326175342858,
+          "brier": 0.6343702786882058
+        },
+        "moment_gaussian": {
+          "threshold_log_odds": 1.6153029875733353,
+          "FPR_test": 0.04434447300771208,
+          "TPR_event": 0.4523172905525847,
+          "event_source_coverage": 0.43493761140819964,
+          "source_accuracy_if_forced": 0.8850267379679144,
+          "overall_threeway_accuracy": 0.7213157894736842,
+          "class_log_loss": 0.6447114815221728,
+          "predictive_NLL": -206.49664585027838,
+          "brier": 0.38224682967587276
+        },
+        "unlabeled_mixture": {
+          "threshold_log_odds": 1.5989993565078207,
+          "FPR_test": 0.05012853470437018,
+          "TPR_event": 0.46657754010695185,
+          "event_source_coverage": 0.45098039215686275,
+          "source_accuracy_if_forced": 0.8877005347593583,
+          "overall_threeway_accuracy": 0.7260526315789474,
+          "class_log_loss": 0.6323791956138592,
+          "predictive_NLL": -206.78086490232545,
+          "brier": 0.3749054561999874
+        },
+        "labeled_histories": {
+          "threshold_log_odds": 1.5989993565078207,
+          "FPR_test": 0.05012853470437018,
+          "TPR_event": 0.46657754010695185,
+          "event_source_coverage": 0.45098039215686275,
+          "source_accuracy_if_forced": 0.8877005347593583,
+          "overall_threeway_accuracy": 0.7260526315789474,
+          "class_log_loss": 0.6323791956138592,
+          "predictive_NLL": -206.78086490232545,
+          "brier": 0.3749054561999874,
+          "historical_cause_accuracy": 0.9923684210526316,
+          "historical_cause_log_loss": 0.021387138781117532
+        }
+      },
+      "C_D_max_diff": 0.0,
+      "old_cause_acc": 0.9923684210526316,
+      "mixture_minus_gaussian": {
+        "point": 0.016042780748663103,
+        "paired_bootstrap_95": [
+          0.0071301247771836,
+          0.02540106951871658
+        ]
+      },
+      "mixture_minus_mean": {
+        "point": 0.20053475935828877,
+        "paired_bootstrap_95": [
+          0.18137254901960784,
+          0.22192513368983957
+        ]
+      }
+    },
+    {
+      "scenario": "short_evidence",
+      "assumptions": {
+        "horizon_s": 0.35,
+        "noise_scale": 1.0,
+        "spread": 1.0,
+        "temporal_rho": 0.9,
+        "history_kind": "two_sources"
+      },
+      "n_test": 3800,
+      "n_cal": 3000,
+      "alpha": 0.05,
+      "methods": {
+        "mean_only": {
+          "threshold_log_odds": 2.101414938051452,
+          "FPR_test": 0.04642166344294004,
+          "TPR_event": 0.08581591818586039,
+          "event_source_coverage": 0.06313917296576256,
+          "source_accuracy_if_forced": 0.6562916851934193,
+          "overall_threeway_accuracy": 0.4523684210526316,
+          "class_log_loss": 1.1045800024988712,
+          "predictive_NLL": -118.10917053944297,
+          "brier": 0.6623438324749034
+        },
+        "moment_gaussian": {
+          "threshold_log_odds": 1.0623490850517314,
+          "FPR_test": 0.04384268214055448,
+          "TPR_event": 0.1200533570475767,
+          "event_source_coverage": 0.08626056024899956,
+          "source_accuracy_if_forced": 0.6758559359715429,
+          "overall_threeway_accuracy": 0.4892105263157895,
+          "class_log_loss": 1.002160164128387,
+          "predictive_NLL": -128.3132003497661,
+          "brier": 0.6056009628836649
+        },
+        "unlabeled_mixture": {
+          "threshold_log_odds": 1.0443540548494894,
+          "FPR_test": 0.04577691811734365,
+          "TPR_event": 0.12538906180524678,
+          "event_source_coverage": 0.09115162294353046,
+          "source_accuracy_if_forced": 0.6789684304135171,
+          "overall_threeway_accuracy": 0.4936842105263158,
+          "class_log_loss": 1.0009694496507648,
+          "predictive_NLL": -128.5969168352215,
+          "brier": 0.6049437745032351
+        },
+        "labeled_histories": {
+          "threshold_log_odds": 1.0443540548494894,
+          "FPR_test": 0.04577691811734365,
+          "TPR_event": 0.12538906180524678,
+          "event_source_coverage": 0.09115162294353046,
+          "source_accuracy_if_forced": 0.6789684304135171,
+          "overall_threeway_accuracy": 0.4936842105263158,
+          "class_log_loss": 1.0009694496507648,
+          "predictive_NLL": -128.5969168352215,
+          "brier": 0.6049437745032351,
+          "historical_cause_accuracy": 0.9928947368421053,
+          "historical_cause_log_loss": 0.021351257599924525
+        }
+      },
+      "C_D_max_diff": 0.0,
+      "old_cause_acc": 0.9928947368421053,
+      "mixture_minus_gaussian": {
+        "point": 0.004891062694530902,
+        "paired_bootstrap_95": [
+          0.0017785682525566918,
+          0.008003557136505114
+        ]
+      },
+      "mixture_minus_mean": {
+        "point": 0.028012449977767896,
+        "paired_bootstrap_95": [
+          0.017785682525566917,
+          0.03868385949310805
+        ]
+      }
+    },
+    {
+      "scenario": "noisy_colored",
+      "assumptions": {
+        "horizon_s": 0.65,
+        "noise_scale": 1.4,
+        "spread": 0.8,
+        "temporal_rho": 0.97,
+        "history_kind": "two_sources"
+      },
+      "n_test": 3800,
+      "n_cal": 3000,
+      "alpha": 0.05,
+      "methods": {
+        "mean_only": {
+          "threshold_log_odds": 6.050333457093938,
+          "FPR_test": 0.051181102362204724,
+          "TPR_event": 0.24121265377855888,
+          "event_source_coverage": 0.21968365553602812,
+          "source_accuracy_if_forced": 0.7157293497363796,
+          "overall_threeway_accuracy": 0.5673684210526316,
+          "class_log_loss": 1.5002580356558188,
+          "predictive_NLL": -221.7776805745108,
+          "brier": 0.6641976406684683
+        },
+        "moment_gaussian": {
+          "threshold_log_odds": 1.6324331907321719,
+          "FPR_test": 0.04199475065616798,
+          "TPR_event": 0.4130052724077329,
+          "event_source_coverage": 0.3945518453427065,
+          "source_accuracy_if_forced": 0.8769771528998243,
+          "overall_threeway_accuracy": 0.7213157894736842,
+          "class_log_loss": 0.6596120745665071,
+          "predictive_NLL": -226.02508544589062,
+          "brier": 0.3879944433865975
+        },
+        "unlabeled_mixture": {
+          "threshold_log_odds": 1.6043431829997286,
+          "FPR_test": 0.046587926509186355,
+          "TPR_event": 0.4288224956063269,
+          "event_source_coverage": 0.4134446397188049,
+          "source_accuracy_if_forced": 0.8844463971880492,
+          "overall_threeway_accuracy": 0.7328947368421053,
+          "class_log_loss": 0.6435378122290869,
+          "predictive_NLL": -226.12259970803174,
+          "brier": 0.37842257656020223
+        },
+        "labeled_histories": {
+          "threshold_log_odds": 1.6043431829997286,
+          "FPR_test": 0.046587926509186355,
+          "TPR_event": 0.4288224956063269,
+          "event_source_coverage": 0.4134446397188049,
+          "source_accuracy_if_forced": 0.8844463971880492,
+          "overall_threeway_accuracy": 0.7328947368421053,
+          "class_log_loss": 0.6435378122290869,
+          "predictive_NLL": -226.12259970803174,
+          "brier": 0.37842257656020223,
+          "historical_cause_accuracy": 0.95,
+          "historical_cause_log_loss": 0.1258189885370574
+        }
+      },
+      "C_D_max_diff": 0.0,
+      "old_cause_acc": 0.95,
+      "mixture_minus_gaussian": {
+        "point": 0.018892794376098417,
+        "paired_bootstrap_95": [
+          0.009435413005272408,
+          0.028789543057996424
+        ]
+      },
+      "mixture_minus_mean": {
+        "point": 0.1937609841827768,
+        "paired_bootstrap_95": [
+          0.17442882249560632,
+          0.21353251318101935
+        ]
+      }
+    },
+    {
+      "scenario": "signed_recovery",
+      "assumptions": {
+        "horizon_s": 0.65,
+        "noise_scale": 1.0,
+        "spread": 1.0,
+        "temporal_rho": 0.95,
+        "history_kind": "signed_load"
+      },
+      "n_test": 3800,
+      "n_cal": 3000,
+      "alpha": 0.05,
+      "methods": {
+        "mean_only": {
+          "threshold_log_odds": 12.482842502777425,
+          "FPR_test": 0.04758713136729222,
+          "TPR_event": 0.25996533795493937,
+          "event_source_coverage": 0.23613518197573657,
+          "source_accuracy_if_forced": 0.5862218370883883,
+          "overall_threeway_accuracy": 0.42526315789473684,
+          "class_log_loss": 3.720846907848694,
+          "predictive_NLL": -197.94022692351353,
+          "brier": 1.0271996009024067
+        },
+        "moment_gaussian": {
+          "threshold_log_odds": 1.5940442408806699,
+          "FPR_test": 0.04155495978552279,
+          "TPR_event": 0.5268630849220104,
+          "event_source_coverage": 0.5155979202772963,
+          "source_accuracy_if_forced": 0.92894280762565,
+          "overall_threeway_accuracy": 0.7728947368421053,
+          "class_log_loss": 0.5334130242710382,
+          "predictive_NLL": -231.7921438442817,
+          "brier": 0.31351134764973304
+        },
+        "unlabeled_mixture": {
+          "threshold_log_odds": 1.6317667372422113,
+          "FPR_test": 0.0435656836461126,
+          "TPR_event": 0.5376949740034662,
+          "event_source_coverage": 0.5272963604852686,
+          "source_accuracy_if_forced": 0.9324090121317158,
+          "overall_threeway_accuracy": 0.7728947368421053,
+          "class_log_loss": 0.5256979042471064,
+          "predictive_NLL": -232.59712344162907,
+          "brier": 0.30911761369320945
+        },
+        "labeled_histories": {
+          "threshold_log_odds": 1.6317667372422113,
+          "FPR_test": 0.0435656836461126,
+          "TPR_event": 0.5376949740034662,
+          "event_source_coverage": 0.5272963604852686,
+          "source_accuracy_if_forced": 0.9324090121317158,
+          "overall_threeway_accuracy": 0.7728947368421053,
+          "class_log_loss": 0.5256979042471064,
+          "predictive_NLL": -232.59712344162907,
+          "brier": 0.30911761369320945,
+          "historical_cause_accuracy": 1.0,
+          "historical_cause_log_loss": 3.310814641454415e-07
+        }
+      },
+      "C_D_max_diff": 0.0,
+      "old_cause_acc": 1.0,
+      "mixture_minus_gaussian": {
+        "point": 0.01169844020797227,
+        "paired_bootstrap_95": [
+          0.0025996533795493936,
+          0.020363951473136917
+        ]
+      },
+      "mixture_minus_mean": {
+        "point": 0.29116117850953205,
+        "paired_bootstrap_95": [
+          0.2690641247833622,
+          0.31152512998266896
+        ]
+      }
+    }
+  ],
+  "scalar_counterexample": {
+    "means": [
+      -1.0,
+      1.0
+    ],
+    "weight": [
+      0.5,
+      0.5
+    ],
+    "within_var": 0.0625,
+    "mix_density_zero": 0.0005353209030595415,
+    "gaussian_density_zero": 0.38703086132232595
+  }
+}
