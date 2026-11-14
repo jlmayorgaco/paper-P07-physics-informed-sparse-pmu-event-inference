@@ -78,3 +78,8 @@ observation filters against the augmented state equations over 80
 reports. One full 120-s oracle replay checks the Riccati solution and
 the recurrent inference path. Quantitative attribution comparisons
 require the final CAL lock and TEST summary.
+
+The 0.05% stratum completed its own calibration and TEST replay before
+the 0.10% stratum. Its locked selection and all 48 job hashes are available
+in `RESULTS_LOW.json`. The publication table uses that completed stratum
+until the full result is exported.

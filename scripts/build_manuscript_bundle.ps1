@@ -62,6 +62,7 @@ try {
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_relinearized_recovery.py')
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'experiments/recovery_nuisance_20261113/present.py')
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'experiments/memory_covariance_audit_20261113/present.py')
+    Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'experiments/oracle_pmu_covariance_20261113/present.py')
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_event_taxonomy_grid.py')
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_integrity_figure.py')
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/import_allevents.py')

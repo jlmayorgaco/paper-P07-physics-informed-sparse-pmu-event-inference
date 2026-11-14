@@ -1,5 +1,12 @@
 # P07: estado de cierre vigente
 
+**13-nov-2026, 22:21 Bogotá.** El apéndice X integra el contraste
+retrospectivo R11 al 0,05% por componente. Familia, estructura y oráculo
+obtuvieron 11/12 cargas oportunas. Ledoit–Wolf obtuvo 10/12. Los cuatro
+registraron cero alarmas normales en 0,3267 h por brazo. El resultado
+del 0,10% permanece en ejecución. C03 tenía 68 registros P2 exportados
+y el sello F01. La evaluación conjunta de C03 sigue pendiente.
+
 **13-nov-2026, 21:30 Bogotá.** C03 selló las predicciones de F01 y
 está exportando TEST de P2 (38 registros exportados en el último corte).
 El cierre combinado aún está pendiente. La corrida de covarianza R11
