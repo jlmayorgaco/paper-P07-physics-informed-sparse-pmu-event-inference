@@ -1,5 +1,11 @@
 # P07: estado de cierre vigente
 
+**14-nov-2026.** Se completó el contraste retrospectivo de covarianza al
+0,05% y 0,10%. Ningún oráculo superó al estimador por familia y la exposición
+normal fue de 0,3267 h por brazo. Se reprodujo una ablación sintética con
+inicio desconocido y se ejecutó una segunda semilla. C03 no tiene todavía
+el sello conjunto. Véase el [criterio de envío vigente](P07_SUBMISSION_GATE_20261114.md).
+
 **13-nov-2026, 22:21 Bogotá.** El apéndice X integra el contraste
 retrospectivo R11 al 0,05% por componente. Familia, estructura y oráculo
 obtuvieron 11/12 cargas oportunas. Ledoit–Wolf obtuvo 10/12. Los cuatro

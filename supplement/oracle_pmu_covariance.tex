@@ -41,8 +41,10 @@ in $0.3267$ monitored hours for each arm.}
 Even zero normal alarms in this test exposure give a one-sided 95\%
 Poisson upper bound of approximately $9.17$ alarms per hour. This
 replay measures sensitivity to covariance under a controlled added-noise
-law. At the evaluated 0.05\% scale, the oracle and the two best
-prefix arms tie on timely load attribution. The oracle has one fewer
-timely line attribution and one more extra alarm than the family-scale
-arm. The reported counts describe these test parents and motivate
-evaluation on new physical records.\EOD
+law. The family-scale estimator has the highest combined timely count at
+both scales (tied with the structured estimator at the lower scale and
+shrinkage at the higher scale). Supplying the true added-noise scales
+did not improve on the family-scale arm in either replay. This comparison
+does not supply the true background covariance or remove predictor error,
+and the measured normal exposure cannot establish the calibration target
+in test.

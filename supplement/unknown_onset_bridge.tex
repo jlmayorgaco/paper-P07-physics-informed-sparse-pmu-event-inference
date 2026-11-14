@@ -1,0 +1,24 @@
+\section{Recovery Uncertainty With Unknown Onset}
+\label{app:unknown-onset-bridge}
+\input{generated/unknown_onset_bridge_macros}
+We compared three representations of a two-component recovery distribution
+on a linear swing model: a Gaussian with the shared within-component
+covariance, a Gaussian matching both moments, and the full mixture.
+A mean-only control omits state uncertainty altogether.
+The likelihood integrates a bounded Gaussian severity and marginalizes
+over a finite onset grid. A separate set of normal windows calibrates each
+arm to a 5\% false alarm probability per window. The observation model
+uses two angles and an approximate branch flow.
+
+In the base setting, adding between-component dispersion increased
+joint detection and source coverage by \BridgeMomentOne{} percentage
+points (exploratory paired 95\% interval \BridgeMomentOneCI{}).
+The change was \BridgeMomentTwo{} points (\BridgeMomentTwoCI{}) on
+a second seed. Retaining the full mixture rather than matching its
+moments changed coverage by \BridgeMixtureOne{} and \BridgeMixtureTwo{}
+points (intervals \BridgeMixtureOneCI{} and \BridgeMixtureTwoCI{}). Normal false alarm rates in test differed by arm.
+These simulations use a specified initial recovery law, evaluate complete
+windows rather than continuous alarms and have no topology changes.
+They motivate a control that preserves the second moment in a future
+bank. They do not isolate the effect of mixture retention in the
+IEEE 39-bus system.\EOD

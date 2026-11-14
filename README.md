@@ -1,5 +1,11 @@
 # P07 — Recovery-Aware Physical Attribution of Load and Line Events From Sparse PMUs
 
+**Current review draft (14 November 2026).** The [submission gate](docs/P07_SUBMISSION_GATE_20261114.md)
+records the remaining scientific and author checks. The supplement includes
+the completed two-scale covariance replay and the synthetic unknown-onset
+ablation. The main conclusions continue to rely on the sealed evidence;
+the joint C03 evaluation has not yet closed.
+
 The [manuscript reorganization and experiment record](docs/REORGANIZATION_AND_EXPERIMENTS_20261113.md)
 documents three new development checks. The article connects nominal
 separation with uncertainty in the preceding load. The supplement gives

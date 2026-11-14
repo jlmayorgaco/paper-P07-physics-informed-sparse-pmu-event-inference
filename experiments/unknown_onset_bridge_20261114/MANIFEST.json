@@ -1,0 +1,89 @@
+{
+  "date": "2026-11-13/14",
+  "root": "/mnt/data/pmu_unknown_onset_bridge",
+  "files": [
+    {
+      "name": "unknown_onset.py",
+      "size": 13942,
+      "sha256": "f9237e3f4e8564d88b5f18199bd72160bcac63297b3e0261c1a27561b7455000"
+    },
+    {
+      "name": "p07_moments.py",
+      "size": 3445,
+      "sha256": "b9022842d55e665fe6efe578674397422cdaa8df8a8aba497323df2fdb5c7b7a"
+    },
+    {
+      "name": "P07MemoryClosure.jl",
+      "size": 3136,
+      "sha256": "c20bbfb0431962c100aca76022671000fdf9f3bc96a46d78217219913da9b82b"
+    },
+    {
+      "name": "test_bridge.py",
+      "size": 5300,
+      "sha256": "64113e2a1c740f09874eaf9f19f5eb7c4293817f93cf0d4303a4c2c35762fce5"
+    },
+    {
+      "name": "test_switch_covariance.py",
+      "size": 1556,
+      "sha256": "c8000f19bf8f625ca031e6873df87c08be5a0f84078e18d9bb822bd2e1ee27f6"
+    },
+    {
+      "name": "test_timeline.py",
+      "size": 789,
+      "sha256": "b781fb0fc9f36ec893e4c9a69893971301b296d6ffde5771f7fe534ee93e8f7e"
+    },
+    {
+      "name": "audit_p07_timeline.py",
+      "size": 2889,
+      "sha256": "059f5ff522dc517e1c8c28fb5957ee666b484b31543877ad2e7a5a882c8e903a"
+    },
+    {
+      "name": "plot_results.py",
+      "size": 2175,
+      "sha256": "04b8127da5453bf23c1171cc6e1b39a0e8d9cee4e7862b657547dbd21a50510d"
+    },
+    {
+      "name": "stream_demo.py",
+      "size": 1677,
+      "sha256": "34d81c55ac75817df2204a95aa8b9cfa5b8fbaf97df81ab348f1273d143aaafa"
+    },
+    {
+      "name": "README_ES.md",
+      "size": 8969,
+      "sha256": "c02088ae95f81c1be47e53e87e9cd0a2d25362d4967a194b51e2c12330a22f6a"
+    },
+    {
+      "name": "CONTRATO_IEEE39_P07_ES.md",
+      "size": 5820,
+      "sha256": "dccad8d1c6e3748c1dcc1e9a9ce1f3c23d081b986802b66f0c5c4cf1378d3abc"
+    },
+    {
+      "name": "results/summary.json",
+      "size": 14224,
+      "sha256": "4a3f1e85d8699e0f7ff72451feb4fc6c5e0c8b438153b00459a611b3458dbdc1"
+    },
+    {
+      "name": "results/sample_200.npz",
+      "size": 176024,
+      "sha256": "9463d1faeaf35e749daf9d75ccf18cecbea4e424862653f428f330789d53b360"
+    },
+    {
+      "name": "results/unknown_onset_comparison.png",
+      "size": 87830,
+      "sha256": "2fcc4440f62066511ba414540457a739f0a396e23151211ed0bf2cb12165e2bf"
+    },
+    {
+      "name": "results/unknown_onset_fpr_logloss.png",
+      "size": 188161,
+      "sha256": "da131dd9b18a34dd800db01e456882efcdef5c759edbf5f38056997527be5150"
+    },
+    {
+      "name": "results/causal_prefix_example.png",
+      "size": 93852,
+      "sha256": "e3dec8a6e8a6562bb13fc503a031c7386e582932fadf82213525ac78255bb06c"
+    }
+  ],
+  "engine": "Python 3 + NumPy SciPy pandas matplotlib",
+  "julia_code_executed": false,
+  "ieee39_p07_new_experiments_executed": false
+}

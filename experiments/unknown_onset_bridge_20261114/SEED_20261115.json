@@ -1,0 +1,412 @@
+{
+  "model": "synthetic linear swing graph, NOT PowerDynamics P07",
+  "mechanism": "unknown event onset; exact truncated Gaussian amplitude; same observations and independent null calibration",
+  "prior": "TN[-0.2,0.2](mean=0, var=0.15^2), input direction times 5.5",
+  "seed": 20261115,
+  "per_scenario": {
+    "base_unknown_onset": {
+      "configuration": {
+        "T": 34,
+        "onsets": [
+          5,
+          10,
+          15,
+          20
+        ],
+        "rho": 0.42,
+        "noise": 1.0,
+        "history_sign": false
+      },
+      "metrics": {
+        "mean_only": {
+          "threshold_log_event_odds": 43.98924807933027,
+          "ncal": 1300,
+          "ntest": 2300,
+          "normal_fpr_test": 0.05319148936170213,
+          "coverage_new_event_correct_source": 0.0838235294117647,
+          "source_acc_conditional_on_event": 0.5632352941176471,
+          "onset_mae_sec_on_correct": 0.11988304093567251,
+          "logloss": 8.743412765384267,
+          "brier": 1.167834046530413,
+          "number_true_events": 1360,
+          "number_true_normal": 940,
+          "number_correct_event_source": 114,
+          "n_onset_candidates": 4
+        },
+        "shared_covariance": {
+          "threshold_log_event_odds": 1.5908934428614998,
+          "ncal": 1300,
+          "ntest": 2300,
+          "normal_fpr_test": 0.043617021276595745,
+          "coverage_new_event_correct_source": 0.24485294117647058,
+          "source_acc_conditional_on_event": 0.6919117647058823,
+          "onset_mae_sec_on_correct": 0.12812812812812813,
+          "logloss": 0.94340210639662,
+          "brier": 0.5649286022654987,
+          "number_true_events": 1360,
+          "number_true_normal": 940,
+          "number_correct_event_source": 333,
+          "n_onset_candidates": 4
+        },
+        "moment_gaussian": {
+          "threshold_log_event_odds": 1.0386714580356795,
+          "ncal": 1300,
+          "ntest": 2300,
+          "normal_fpr_test": 0.052127659574468084,
+          "coverage_new_event_correct_source": 0.2786764705882353,
+          "source_acc_conditional_on_event": 0.7183823529411765,
+          "onset_mae_sec_on_correct": 0.12225153913808266,
+          "logloss": 0.897109761355878,
+          "brier": 0.534235296041267,
+          "number_true_events": 1360,
+          "number_true_normal": 940,
+          "number_correct_event_source": 379,
+          "n_onset_candidates": 4
+        },
+        "mixture": {
+          "threshold_log_event_odds": 1.0342238477212788,
+          "ncal": 1300,
+          "ntest": 2300,
+          "normal_fpr_test": 0.052127659574468084,
+          "coverage_new_event_correct_source": 0.28823529411764703,
+          "source_acc_conditional_on_event": 0.7183823529411765,
+          "onset_mae_sec_on_correct": 0.12372448979591837,
+          "logloss": 0.892033301373199,
+          "brier": 0.5309581925817101,
+          "number_true_events": 1360,
+          "number_true_normal": 940,
+          "number_correct_event_source": 392,
+          "n_onset_candidates": 4
+        },
+        "paired_bootstrap": {
+          "shared_covariance_minus_mean_only": {
+            "delta_percentage_points": 16.103,
+            "bootstrap_95_pp": [
+              13.969,
+              18.382
+            ]
+          },
+          "moment_gaussian_minus_shared_covariance": {
+            "delta_percentage_points": 3.382,
+            "bootstrap_95_pp": [
+              1.91,
+              4.926
+            ]
+          },
+          "mixture_minus_moment_gaussian": {
+            "delta_percentage_points": 0.956,
+            "bootstrap_95_pp": [
+              0.072,
+              1.912
+            ]
+          }
+        }
+      }
+    },
+    "stronger_independent_noise": {
+      "configuration": {
+        "T": 34,
+        "onsets": [
+          5,
+          10,
+          15,
+          20
+        ],
+        "rho": 0.0,
+        "noise": 1.75,
+        "history_sign": false
+      },
+      "metrics": {
+        "mean_only": {
+          "threshold_log_event_odds": 34.16168248415671,
+          "ncal": 1300,
+          "ntest": 2300,
+          "normal_fpr_test": 0.03986332574031891,
+          "coverage_new_event_correct_source": 0.06821378340365682,
+          "source_acc_conditional_on_event": 0.5864978902953587,
+          "onset_mae_sec_on_correct": 0.10996563573883161,
+          "logloss": 6.3812893771990185,
+          "brier": 1.0834485646342127,
+          "number_true_events": 1422,
+          "number_true_normal": 878,
+          "number_correct_event_source": 97,
+          "n_onset_candidates": 4
+        },
+        "shared_covariance": {
+          "threshold_log_event_odds": 1.603569102862636,
+          "ncal": 1300,
+          "ntest": 2300,
+          "normal_fpr_test": 0.06492027334851937,
+          "coverage_new_event_correct_source": 0.1990154711673699,
+          "source_acc_conditional_on_event": 0.6631504922644164,
+          "onset_mae_sec_on_correct": 0.1260306242638398,
+          "logloss": 1.0143799465142198,
+          "brier": 0.6056229946741933,
+          "number_true_events": 1422,
+          "number_true_normal": 878,
+          "number_correct_event_source": 283,
+          "n_onset_candidates": 4
+        },
+        "moment_gaussian": {
+          "threshold_log_event_odds": 1.0474693623646942,
+          "ncal": 1300,
+          "ntest": 2300,
+          "normal_fpr_test": 0.05922551252847381,
+          "coverage_new_event_correct_source": 0.20464135021097046,
+          "source_acc_conditional_on_event": 0.6779184247538678,
+          "onset_mae_sec_on_correct": 0.11168384879725086,
+          "logloss": 0.9683665150204781,
+          "brier": 0.5789991212267817,
+          "number_true_events": 1422,
+          "number_true_normal": 878,
+          "number_correct_event_source": 291,
+          "n_onset_candidates": 4
+        },
+        "mixture": {
+          "threshold_log_event_odds": 1.0302097347449433,
+          "ncal": 1300,
+          "ntest": 2300,
+          "normal_fpr_test": 0.05922551252847381,
+          "coverage_new_event_correct_source": 0.2180028129395218,
+          "source_acc_conditional_on_event": 0.6828410689170182,
+          "onset_mae_sec_on_correct": 0.10591397849462364,
+          "logloss": 0.9615403918636168,
+          "brier": 0.5745455538560463,
+          "number_true_events": 1422,
+          "number_true_normal": 878,
+          "number_correct_event_source": 310,
+          "n_onset_candidates": 4
+        },
+        "paired_bootstrap": {
+          "shared_covariance_minus_mean_only": {
+            "delta_percentage_points": 13.08,
+            "bootstrap_95_pp": [
+              11.041,
+              15.121
+            ]
+          },
+          "moment_gaussian_minus_shared_covariance": {
+            "delta_percentage_points": 0.563,
+            "bootstrap_95_pp": [
+              -1.195,
+              2.321
+            ]
+          },
+          "mixture_minus_moment_gaussian": {
+            "delta_percentage_points": 1.336,
+            "bootstrap_95_pp": [
+              0.281,
+              2.321
+            ]
+          }
+        }
+      }
+    },
+    "signed_recovery": {
+      "configuration": {
+        "T": 34,
+        "onsets": [
+          5,
+          10,
+          15,
+          20
+        ],
+        "rho": 0.42,
+        "noise": 1.0,
+        "history_sign": true
+      },
+      "metrics": {
+        "mean_only": {
+          "threshold_log_event_odds": 105.24782897009125,
+          "ncal": 1300,
+          "ntest": 2300,
+          "normal_fpr_test": 0.04025423728813559,
+          "coverage_new_event_correct_source": 0.049410029498525077,
+          "source_acc_conditional_on_event": 0.5154867256637168,
+          "onset_mae_sec_on_correct": 0.23134328358208955,
+          "logloss": 30.616526584046596,
+          "brier": 1.3607150043765048,
+          "number_true_events": 1356,
+          "number_true_normal": 944,
+          "number_correct_event_source": 67,
+          "n_onset_candidates": 4
+        },
+        "shared_covariance": {
+          "threshold_log_event_odds": 1.5809540387510594,
+          "ncal": 1300,
+          "ntest": 2300,
+          "normal_fpr_test": 0.03919491525423729,
+          "coverage_new_event_correct_source": 0.24188790560471976,
+          "source_acc_conditional_on_event": 0.6828908554572272,
+          "onset_mae_sec_on_correct": 0.1402439024390244,
+          "logloss": 0.9337416020482555,
+          "brier": 0.5565677629152821,
+          "number_true_events": 1356,
+          "number_true_normal": 944,
+          "number_correct_event_source": 328,
+          "n_onset_candidates": 4
+        },
+        "moment_gaussian": {
+          "threshold_log_event_odds": 1.079686374613999,
+          "ncal": 1300,
+          "ntest": 2300,
+          "normal_fpr_test": 0.048728813559322036,
+          "coverage_new_event_correct_source": 0.29867256637168144,
+          "source_acc_conditional_on_event": 0.7271386430678466,
+          "onset_mae_sec_on_correct": 0.11893004115226337,
+          "logloss": 0.8833949214022118,
+          "brier": 0.5232687476342899,
+          "number_true_events": 1356,
+          "number_true_normal": 944,
+          "number_correct_event_source": 405,
+          "n_onset_candidates": 4
+        },
+        "mixture": {
+          "threshold_log_event_odds": 1.0798382914322815,
+          "ncal": 1300,
+          "ntest": 2300,
+          "normal_fpr_test": 0.04766949152542373,
+          "coverage_new_event_correct_source": 0.2971976401179941,
+          "source_acc_conditional_on_event": 0.7330383480825958,
+          "onset_mae_sec_on_correct": 0.11455748552522746,
+          "logloss": 0.8807038609851353,
+          "brier": 0.5216700467193436,
+          "number_true_events": 1356,
+          "number_true_normal": 944,
+          "number_correct_event_source": 403,
+          "n_onset_candidates": 4
+        },
+        "paired_bootstrap": {
+          "shared_covariance_minus_mean_only": {
+            "delta_percentage_points": 19.248,
+            "bootstrap_95_pp": [
+              16.962,
+              21.681
+            ]
+          },
+          "moment_gaussian_minus_shared_covariance": {
+            "delta_percentage_points": 5.678,
+            "bootstrap_95_pp": [
+              3.907,
+              7.448
+            ]
+          },
+          "mixture_minus_moment_gaussian": {
+            "delta_percentage_points": -0.147,
+            "bootstrap_95_pp": [
+              -0.885,
+              0.59
+            ]
+          }
+        }
+      }
+    },
+    "short_window": {
+      "configuration": {
+        "T": 22,
+        "onsets": [
+          4,
+          7,
+          10,
+          13
+        ],
+        "rho": 0.42,
+        "noise": 1.0,
+        "history_sign": false
+      },
+      "metrics": {
+        "mean_only": {
+          "threshold_log_event_odds": 17.43491626437067,
+          "ncal": 1300,
+          "ntest": 2300,
+          "normal_fpr_test": 0.06777777777777778,
+          "coverage_new_event_correct_source": 0.04857142857142857,
+          "source_acc_conditional_on_event": 0.5357142857142857,
+          "onset_mae_sec_on_correct": 0.11911764705882352,
+          "logloss": 3.729355518949859,
+          "brier": 1.048533689400352,
+          "number_true_events": 1400,
+          "number_true_normal": 900,
+          "number_correct_event_source": 68,
+          "n_onset_candidates": 4
+        },
+        "shared_covariance": {
+          "threshold_log_event_odds": 0.8662106747424048,
+          "ncal": 1300,
+          "ntest": 2300,
+          "normal_fpr_test": 0.05333333333333334,
+          "coverage_new_event_correct_source": 0.06428571428571428,
+          "source_acc_conditional_on_event": 0.5592857142857143,
+          "onset_mae_sec_on_correct": 0.07999999999999999,
+          "logloss": 1.075542340353171,
+          "brier": 0.6510761881550859,
+          "number_true_events": 1400,
+          "number_true_normal": 900,
+          "number_correct_event_source": 90,
+          "n_onset_candidates": 4
+        },
+        "moment_gaussian": {
+          "threshold_log_event_odds": 0.7067286165610227,
+          "ncal": 1300,
+          "ntest": 2300,
+          "normal_fpr_test": 0.05555555555555555,
+          "coverage_new_event_correct_source": 0.07357142857142857,
+          "source_acc_conditional_on_event": 0.5842857142857143,
+          "onset_mae_sec_on_correct": 0.08155339805825243,
+          "logloss": 1.0694349529129576,
+          "brier": 0.6469203956127088,
+          "number_true_events": 1400,
+          "number_true_normal": 900,
+          "number_correct_event_source": 103,
+          "n_onset_candidates": 4
+        },
+        "mixture": {
+          "threshold_log_event_odds": 0.7070275351339035,
+          "ncal": 1300,
+          "ntest": 2300,
+          "normal_fpr_test": 0.06111111111111111,
+          "coverage_new_event_correct_source": 0.075,
+          "source_acc_conditional_on_event": 0.5842857142857143,
+          "onset_mae_sec_on_correct": 0.08761904761904761,
+          "logloss": 1.0692450961257447,
+          "brier": 0.6468182822065159,
+          "number_true_events": 1400,
+          "number_true_normal": 900,
+          "number_correct_event_source": 105,
+          "n_onset_candidates": 4
+        },
+        "paired_bootstrap": {
+          "shared_covariance_minus_mean_only": {
+            "delta_percentage_points": 1.571,
+            "bootstrap_95_pp": [
+              0.071,
+              3.0
+            ]
+          },
+          "moment_gaussian_minus_shared_covariance": {
+            "delta_percentage_points": 0.929,
+            "bootstrap_95_pp": [
+              -0.002,
+              1.929
+            ]
+          },
+          "mixture_minus_moment_gaussian": {
+            "delta_percentage_points": 0.143,
+            "bootstrap_95_pp": [
+              -0.571,
+              0.857
+            ]
+          }
+        }
+      }
+    }
+  },
+  "limitations": [
+    "known previous mixture prior, not learned from PMU prefix",
+    "no real P07 47-channel exporter or Sauer-Pai dynamics",
+    "no line opening, no simultaneous events",
+    "simulation/noise matches inference assumptions",
+    "calibration controls per-window false alarms, not per-hour sequential alarms",
+    "exploratory scenario selection; no confirmatory IEEE-39 claim"
+  ]
+}
