@@ -8,11 +8,11 @@ candidate can explain. The reset control shows this failure at fixed
 thresholds; bounded profiling and marginalization tie in that control.
 The nominal signature diagnostics help explain short delays under the
 assumed noise model. They do not predict operational error rates.
-The bank has no online applicability gate to reject decisions after a plant
-change invalidates its models. Sparse-PMU transient-stability
-work has reported an explicit self-check for that applicability question
-\cite{wang2023sparsepmutsa}. The present signature diagnostics were evaluated retrospectively and do
-not suppress alarms.
+An online applicability check would need to detect when the plant or
+measurement law departs from the model. Sparse-PMU transient-stability
+work reports a self-check for its own prediction task
+\cite{wang2023sparsepmutsa}. Here the signature diagnostics describe the
+calibrated model, and publication uses the thresholds in the method.
 
 \subsection{Coverage, Alarm Cost and Scope}
 In the held-out comparison, the history-bank procedure had higher
@@ -57,14 +57,12 @@ measured replay on one thread; the five-model version did not.
 This timing is specific to the reported hardware and records.
 
 \subsection{Adaptation Without Absorbing an Intervention}
-Adaptive noise estimation has already been studied on IEEE-39
-\cite{wang2019adaptiveh}. Supplementary nominal-operator diagnostics support
-retaining recovery covariance when onset and amplitude are known. However,
-continuous noise adaptation did not yield a conclusive attribution gain,
-and a quiet-history gate rarely admitted updates. Two arms exceeded the
-normal-alarm target on new records. These tests use a local
-likelihood scan, not the reported history bank; they motivate covariance
-propagation but do not validate adaptive event inference. The supplement
-specifies that extension and separates it from cyber analysis, which needs
-its own alerts and validation. Missing reports or physical residuals alone
-do not identify an attack.
+Adaptive noise estimation has been studied on IEEE-39
+\cite{wang2019adaptiveh}. In our supplementary local likelihood scan,
+the adaptation arms had the same timely attribution count, two exceeded
+the normal-alarm target, and the quiet-history gate rarely admitted
+updates. A second diagnostic shows that uncertainty along the preceding
+load response can shrink nominal separation while preserving the nearest
+rival. Together these results identify two distinct checks for a successor:
+whether its covariance improves predictive likelihood, and whether
+updates preserve attribution and alarm performance on new records.

@@ -1,0 +1,185 @@
+{
+  "geometry": {
+    "groups": [
+      {
+        "gap_reports": 1,
+        "previous_sd": 0.002,
+        "count": 162,
+        "median": 0.9939170564629842,
+        "minimum": 0.9169147199095591,
+        "p10": 0.966296761696735,
+        "changed": 0
+      },
+      {
+        "gap_reports": 1,
+        "previous_sd": 0.01,
+        "count": 162,
+        "median": 0.9937084839671103,
+        "minimum": 0.915645667554075,
+        "p10": 0.962555029817285,
+        "changed": 0
+      },
+      {
+        "gap_reports": 15,
+        "previous_sd": 0.002,
+        "count": 162,
+        "median": 0.9979052944135998,
+        "minimum": 0.9476786638603065,
+        "p10": 0.9818832492906421,
+        "changed": 0
+      },
+      {
+        "gap_reports": 15,
+        "previous_sd": 0.01,
+        "count": 162,
+        "median": 0.9976233281514862,
+        "minimum": 0.9472378467139577,
+        "p10": 0.9816598822870742,
+        "changed": 0
+      },
+      {
+        "gap_reports": 60,
+        "previous_sd": 0.002,
+        "count": 162,
+        "median": 0.998624857278226,
+        "minimum": 0.9771534764846098,
+        "p10": 0.9883206727488538,
+        "changed": 0
+      },
+      {
+        "gap_reports": 60,
+        "previous_sd": 0.01,
+        "count": 162,
+        "median": 0.998574130280802,
+        "minimum": 0.9771287610304629,
+        "p10": 0.988274287228739,
+        "changed": 0
+      },
+      {
+        "gap_reports": 180,
+        "previous_sd": 0.002,
+        "count": 162,
+        "median": 0.9866628991836612,
+        "minimum": 0.9329270457883391,
+        "p10": 0.9359769256882045,
+        "changed": 0
+      },
+      {
+        "gap_reports": 180,
+        "previous_sd": 0.01,
+        "count": 162,
+        "median": 0.986449232328229,
+        "minimum": 0.9328542368534233,
+        "p10": 0.9356105948418358,
+        "changed": 0
+      }
+    ],
+    "rows": 1296,
+    "max_identity_error": 2.9337764365895444e-15,
+    "worst": {
+      "gap_reports": 1,
+      "previous": "BUS15",
+      "source": "BUS15",
+      "severity": -0.002,
+      "previous_sd": 0.01,
+      "null_retention": 0.999675632743482,
+      "separation_known": 247.17778771068876,
+      "separation_uncertain": 226.32727043289304,
+      "retention": 0.915645667554075,
+      "rival_known": "BUS16",
+      "rival_uncertain": "BUS16"
+    }
+  },
+  "switching": [
+    {
+      "true_s": [
+        2.006666666666667,
+        3.0283333333333333
+      ],
+      "estimated_s": [
+        2.006666666666185,
+        3.0283333333315783
+      ],
+      "midpoint_max_ms": 11.666666666666714,
+      "fitted_max_ms": 1.7550405573274475e-09,
+      "finite_difference_errors": [
+        2.0739573529451558e-08,
+        1.1057719535653593e-07
+      ],
+      "success": true
+    },
+    {
+      "true_s": [
+        2.013333333333333,
+        3.0233333333333334
+      ],
+      "estimated_s": [
+        2.0133333333332817,
+        3.0233333333332926
+      ],
+      "midpoint_max_ms": 6.666666666666821,
+      "fitted_max_ms": 5.1514348342607263e-11,
+      "finite_difference_errors": [
+        1.558083174892837e-08,
+        4.346138199381778e-08
+      ],
+      "success": true
+    },
+    {
+      "true_s": [
+        2.0233333333333334,
+        3.013333333333333
+      ],
+      "estimated_s": [
+        2.0233333333333823,
+        3.0133333333331525
+      ],
+      "midpoint_max_ms": 6.666666666666821,
+      "fitted_max_ms": 1.8074430840897548e-10,
+      "finite_difference_errors": [
+        1.554024465842927e-08,
+        6.097377096607063e-08
+      ],
+      "success": true
+    },
+    {
+      "true_s": [
+        2.0283333333333333,
+        3.006666666666667
+      ],
+      "estimated_s": [
+        2.028333333331792,
+        3.0066666666655086
+      ],
+      "midpoint_max_ms": 11.666666666666714,
+      "fitted_max_ms": 1.5414336473895673e-09,
+      "finite_difference_errors": [
+        1.8261984525289755e-08,
+        2.280059991466217e-08
+      ],
+      "success": true
+    }
+  ],
+  "sequential": [
+    {
+      "actual_null_mean": 0.0,
+      "crossings": 715,
+      "records": 20000,
+      "fraction": 0.03575,
+      "exact_95_interval": [
+        0.03321952319343073,
+        0.03841655832196519
+      ]
+    },
+    {
+      "actual_null_mean": 0.35,
+      "crossings": 17131,
+      "records": 20000,
+      "fraction": 0.85655,
+      "exact_95_interval": [
+        0.8516151637601861,
+        0.8613809443683494
+      ]
+    }
+  ]
+}

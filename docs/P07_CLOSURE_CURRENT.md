@@ -1,5 +1,16 @@
 # P07: estado de cierre vigente
 
+**Revisión de las 18:58 Bogotá, 13-nov-2026.** El artículo conecta la
+comparación de procedimientos con la geometría de recuperación y conserva
+19 páginas. El suplemento de 40 páginas añade tres diagnósticos reproducibles:
+separación bajo incertidumbre en la carga anterior, derivadas de conmutación
+y cruces secuenciales bajo desajuste del modelo normal. Los resultados
+respaldan afirmaciones de desarrollo en sus respectivos contratos.
+La [revisión de los adjuntos](REORGANIZATION_AND_EXPERIMENTS_20261113.md)
+documenta las decisiones y el protocolo. C03 lleva 69/72 registros de TEST
+de F01 y queda pendiente la evaluación sellada de ambas plantas. Los
+estados fechados a continuación corresponden a revisiones previas.
+
 **Última actualización: 13-nov-2026, 17:00 Bogotá.** Se revisaron los once
 adjuntos nuevos, siete textos distintos. Véase
 [la auditoría de la segunda ola](IDEAS_SECOND_WAVE_AUDIT_20261113.md).

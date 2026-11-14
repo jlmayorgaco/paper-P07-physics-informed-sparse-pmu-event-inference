@@ -47,6 +47,7 @@ def main():
                  'scripts/build_hamiltonian_results.py', 'scripts/build_descriptor_bridge.py',
                  'scripts/build_relinearized_recovery.py', 'docs/SHARED_IDEAS_AUDIT_20261113.md',
                  'docs/IDEAS_SECOND_WAVE_AUDIT_20261113.md',
+                 'docs/REORGANIZATION_AND_EXPERIMENTS_20261113.md',
                  'docs/ADAPTIVE_ARCHITECTURE_DECISIONS_20261113.md',
                  'figures/recovery_overview/main.tex', 'figures/physical_report/main.tex',
                  'generated/revision_math_20261103/checks.json',
@@ -68,7 +69,7 @@ def main():
     diagnostic = ROOT / 'experiments/channel_information_20261112'
     sources.update(p for p in (ROOT / 'experiments/adaptive_innovation_20261113').rglob('*')
                    if p.is_file() and p.suffix in {'.py', '.json', '.md', '.npz'})
-    for folder in ('adaptive_innovation_20261113_corrected','hamiltonian_f01_20261113','descriptor_bridge_20261113','relinearized_recovery_20261113','decision_bounds_20261113'):
+    for folder in ('adaptive_innovation_20261113_corrected','hamiltonian_f01_20261113','descriptor_bridge_20261113','relinearized_recovery_20261113','decision_bounds_20261113','recovery_nuisance_20261113'):
         sources.update(p for p in (ROOT / 'experiments' / folder).rglob('*')
                        if p.is_file() and p.suffix in {'.py','.json','.md','.npz','.csv','.jl','.toml','.txt'})
     sources.update(p for p in diagnostic.glob('*')

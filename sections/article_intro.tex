@@ -12,19 +12,17 @@ earlier event with forcing from a new source
 \caption{Recovery-aware event attribution from sparse PMUs. (a) A new intervention can begin while an earlier response persists. (b) Network-derived predictors compare recovery and new-event histories using the same report; integrated severity evidence updates their weights before detection, source diagnosis and restoration are published. The state continues through physical restoration; confirmed episode closure compresses histories to the retained state mean. (c) A separate nominal diagnostic measures source ambiguity; it does not gate publication. The electrical motif and traces are schematic.}
 \label{fig:problem-method}\end{figure*}
 
-The inference problem is to decide whether a new source is needed to
-explain the incoming reports. Because the preceding response is still
-evolving, the observation law depends on the earlier intervention.
-Classical change
-detection and isolation treats a single change of an otherwise stationary
-law \cite{nikiforov1995generalized,lai2000sequential,tartakovsky2014sequential},
-and the generalized-likelihood approach of Willsky and Jones detects jumps
-in a fixed linear system \cite{willsky1976glr}. Power-system outage
+The attribution problem is to determine whether the incoming reports
+require a new source and, if so, which asset changed. Classical sequential
+change detection provides tools for identifying changes in observation laws
+\cite{nikiforov1995generalized,lai2000sequential,tartakovsky2014sequential}.
+Willsky and Jones use the time evolution of innovations to detect jumps
+in a linear system \cite{willsky1976glr}. Power-system outage
 detectors compare network hypotheses under quasi-static or linearized
 models \cite{tate2008outage,chen2016quickest,rovatsos2017outage}, and
 trajectory libraries diagnose faults from sparse PMUs
-\cite{warner2023highfidelity}. These precedents motivate retaining a restored intervention as an explicit
-competitor when attributing later observations in a switched DAE network.
+\cite{warner2023highfidelity}. Here the observation law depends on the
+earlier intervention because its electrical response persists after restoration.
 
 We develop a bank of switched-DAE predictors that carries the estimated
 state through restoration. Each history specifies a source, onset and
@@ -32,17 +30,13 @@ restoration time; load severity is integrated analytically. Separate active
 and cause weights allow an intervention to end while its response remains
 an explanation of later reports (Section~\ref{sec:narrative-method}).
 
-We then examine two consequences of this construction. Nominal signature
-energy describes source separation under the assumed plant and noise model,
-and a reset analysis quantifies the innovation bias caused by discarding
-physical state (Section~\ref{sec:theory}). A held-out comparison measures
-timely attribution and extra alarms against a continuous physical GLR and
-ExtraTrees after calibrating each procedure to the same normal-alarm target
-(one normal alarm/h; Section~\ref{sec:recovery-comparison}). This comparison evaluates complete
-procedures. Isolating the benefit of explicit recovery histories requires
-controls that distinguish state continuity from the uncertainty lost when
-histories are compressed.
-
-The evaluation covers a known catalog of sequential load and line
-interventions. The supplement records auxiliary analyses and
-reproducibility details.
+Two comparisons connect this formulation to the evidence. The first
+uses nominal signatures and a fixed-threshold reset control to examine
+source separation and the innovation bias caused by discarding the
+physical state (Section~\ref{sec:theory}). The second measures timely
+attribution and extra alarms against a continuous physical GLR and
+ExtraTrees on held-out sequences from the known load and line catalog
+(Section~\ref{sec:recovery-comparison}). Each procedure is calibrated to
+a target of one normal alarm per hour. The comparison evaluates complete
+procedures, so it leaves open how much of the difference comes from
+representing recovery as separate histories.

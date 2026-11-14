@@ -1,0 +1,15 @@
+{
+  "horizon_reports": 30,
+  "previous_load_duration_reports": 30,
+  "recovery_gaps_reports": [1, 15, 60, 180],
+  "new_load_amplitudes": [-0.002, 0.002],
+  "previous_amplitude_sd": [0.002, 0.01],
+  "rival_amplitude_limits": [-0.2, 0.2],
+  "switch_reports": [60, 90],
+  "timing_fractions": [0.2, 0.4, 0.7, 0.85],
+  "timing_fd_seconds": [0.00001, 0.000001],
+  "sequential_seed": 521306,
+  "sequential_records": 20000,
+  "sequential_reports": 120,
+  "sequential_alpha": 0.05
+}

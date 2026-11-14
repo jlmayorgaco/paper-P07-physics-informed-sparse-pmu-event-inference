@@ -1,5 +1,12 @@
 # P07 — Recovery-Aware Physical Attribution of Load and Line Events From Sparse PMUs
 
+The [manuscript reorganization and experiment record](docs/REORGANIZATION_AND_EXPERIMENTS_20261113.md)
+documents three new development checks. The article connects nominal
+separation with uncertainty in the preceding load. The supplement gives
+the timing derivative checks and the sensitivity of sequential alarm
+control to an incorrect null. At 18:58 Bogotá, C03 had processed 69/72
+F01 TEST records.
+
 The [second-wave idea audit](docs/IDEAS_SECOND_WAVE_AUDIT_20261113.md)
 reviews all eleven new attachments (seven distinct texts). It corrects the
 proposed graph, covariance and memory guarantees. Appendix U now gives a

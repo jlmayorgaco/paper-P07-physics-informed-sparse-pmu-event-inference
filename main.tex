@@ -14,6 +14,7 @@
 \input{generated/recovery_comparison_macros}
 \input{generated/channel_information_macros}
 \input{generated/channel_profile_macros}
+\input{generated/recovery_nuisance_macros}
 \input{generated/reader_macros}
 \input{generated/evidence_bridge_macros}
 \input{generated/review_audit_macros}
@@ -44,10 +45,9 @@ When a load is restored or a line is reclosed, the electrical
 response can persist and resemble a new intervention. We formulate
 source attribution from eight phasor measurement units (PMUs) in the
 IEEE 39-bus system using switched differential-algebraic predictors.
-The bank carries the estimated state through restoration and retains
-the preceding intervention as a candidate explanation of the remaining
-response. Nominal signatures describe separation under the assumed
-plant and noise model. With thresholds calibrated separately to a target
+The bank carries the estimated state through restoration and compares
+the remaining response with predictions for new events.
+With thresholds calibrated separately to a target
 of one normal alarm per hour, the bank correctly attributed the family and source of
 \RecBankTimely{} interventions before physical restoration,
 compared with \RecGlrTimely{} for a continuous
@@ -60,9 +60,9 @@ No method emitted a normal alarm in \RecNormalHours{} monitored hours.
 At fixed thresholds in a separate control, resetting the estimated
 physical state reduced timely attribution from 108/108 to 75/108.
 Independent per-PMU noise at \RevNoiseAddedRmsLow{}\% added RMS total vector error degraded load
-attribution. The bank--comparator contrast does not isolate history retention.
-The results describe sequential, nonoverlapping
-interventions in a known catalog on one simulator family.
+attribution. The comparison measures differences between complete
+procedures for sequential, nonoverlapping interventions from a known
+catalog on one simulator family.
 \end{abstract}
 
 \begin{keywords}
