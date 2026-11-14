@@ -1,15 +1,12 @@
-\subsection{Comparison at a Common Calibration Budget}
+\subsection{Timely Attribution at a Common Calibration Budget}
 \label{sec:recovery-comparison}
-On a separate cohort, the nominal bank and the continuous
-generalized likelihood ratio (GLR) observer used the same nominal
-operators, eight PMUs, source catalog and permitted startup prefix. The
-GLR carries one committed state through restoration. ExtraTrees was
-refitted on disjoint simulated parents covering the same catalog.
-A common publication clock and calibration procedure selected a
-threshold for each arm under a normal-alarm budget of one per hour.
-The fixed methods were then scored once on \RecParents{} event parents
-and \RecNormalParents{} normal parents. Interventions did not overlap,
-and the next onset was 3--8\,s after physical restoration.
+The history bank correctly attributed \RecBankTimely{} interventions
+before OFF, compared with \RecGlrTimely{} for the continuous GLR and
+\RecTreesTimely{} for ExtraTrees. The three procedures emitted
+\RecBankExtras{}, \RecGlrExtras{} and \RecTreesExtras{} unmatched alarms,
+respectively, during event records. The bank and GLR associated alarms
+with a similar number of interventions. The main difference was how often
+their diagnosis named the correct source before OFF.
 
 \begin{figure*}[t]\centering
 \includegraphics[width=.99\textwidth]{figures/generated/recovery_comparison_c02.pdf}
@@ -32,6 +29,5 @@ physical parents within the network/noise strata; events within a
 parent do not count as independent samples. All three methods had zero
 normal alarms in \RecNormalHours{} monitored hours per method (one-sided
 95\% Poisson upper bound: \RecNormalUpper{}/h). The result is conditional
-on the count model and the aggregate exposure. The two physical methods
-differ in candidate search, score semantics and commitment, so the
-comparison does not isolate the effect of explicit recovery histories.
+on the count model and the aggregate exposure. Candidate search, scoring and state commitment all contribute to
+the observed difference between the two physical procedures.

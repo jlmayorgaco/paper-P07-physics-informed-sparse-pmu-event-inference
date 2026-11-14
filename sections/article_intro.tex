@@ -12,31 +12,33 @@ earlier event with forcing from a new source
 \caption{Recovery-aware event attribution from sparse PMUs. (a) A new intervention can begin while an earlier response persists. (b) Network-derived predictors compare recovery and new-event histories using the same report; integrated severity evidence updates their weights before detection, source diagnosis and restoration are published. The state continues through physical restoration; confirmed episode closure compresses histories to the retained state mean. (c) A separate nominal diagnostic measures source ambiguity; it does not gate publication. The electrical motif and traces are schematic.}
 \label{fig:problem-method}\end{figure*}
 
-The attribution problem is to determine whether the incoming reports
-require a new source and, if so, which asset changed. Classical sequential
-change detection provides tools for identifying changes in observation laws
-\cite{nikiforov1995generalized,lai2000sequential,tartakovsky2014sequential}.
-Willsky and Jones use the time evolution of innovations to detect jumps
-in a linear system \cite{willsky1976glr}. Power-system outage
-detectors compare network hypotheses under quasi-static or linearized
-models \cite{tate2008outage,chen2016quickest,rovatsos2017outage}, and
-trajectory libraries diagnose faults from sparse PMUs
-\cite{warner2023highfidelity}. Here the observation law depends on the
-earlier intervention because its electrical response persists after restoration.
+A detector may register this change without identifying its cause. We ask
+whether a monitor can name the new load or line before it is restored,
+and how many unmatched alarms it generates in doing so. Sequential
+detectors test for changes in the law of the observations
+\cite{willsky1976glr,nikiforov1995generalized,lai2000sequential,tartakovsky2014sequential}.
+Existing grid methods compare outage hypotheses or match transient
+trajectories to candidate faults
+\cite{tate2008outage,chen2016quickest,rovatsos2017outage,warner2023highfidelity}.
+Successive interventions create a further ambiguity because a restored
+asset can still account for part of the next measured transient.
 
-We develop a bank of switched-DAE predictors that carries the estimated
-state through restoration. Each history specifies a source, onset and
-restoration time; load severity is integrated analytically. Separate active
-and cause weights allow an intervention to end while its response remains
-an explanation of later reports (Section~\ref{sec:narrative-method}).
+We use switched differential-algebraic equation (DAE) models to predict
+each candidate response from the state inferred before its proposed onset.
+A restored history stops contributing to the weight assigned to an
+active intervention, but its predicted response can still explain incoming
+reports until the bank compresses it. The same update therefore supports
+three distinct outputs: an alarm, a source diagnosis and a restoration
+message (Section~\ref{sec:narrative-method}).
 
-Two comparisons connect this formulation to the evidence. The first
-uses nominal signatures and a fixed-threshold reset control to examine
-source separation and the innovation bias caused by discarding the
-physical state (Section~\ref{sec:theory}). The second measures timely
-attribution and extra alarms against a continuous physical GLR and
-ExtraTrees on held-out sequences from the known load and line catalog
-(Section~\ref{sec:recovery-comparison}). Each procedure is calibrated to
-a target of one normal alarm per hour. The comparison evaluates complete
-procedures, so it leaves open how much of the difference comes from
-representing recovery as separate histories.
+We evaluate the bank against a continuous generalized likelihood ratio
+(GLR) observer and an ExtraTrees classifier on held-out sequences with a
+known catalog. The GLR tracks one continuous state, and ExtraTrees scores
+sources from recent PMU features. Each procedure selects its threshold
+on calibration data
+under a target of one normal alarm per hour
+(Section~\ref{sec:narrative-protocol}). A separate reset experiment changes
+the estimated physical state within the bank and tests whether continuity
+matters. To establish where the result applies, we examine errors under
+network mismatch and independent per-PMU noise
+(Section~\ref{sec:narrative-results}).

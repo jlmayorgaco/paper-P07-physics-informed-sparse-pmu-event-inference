@@ -3,8 +3,10 @@
 **Current review draft (14 November 2026).** The [submission gate](docs/P07_SUBMISSION_GATE_20261114.md)
 records the remaining scientific and author checks. The supplement includes
 the completed two-scale covariance replay and the synthetic unknown-onset
-ablation. The main conclusions continue to rely on the sealed evidence;
-the joint C03 evaluation has not yet closed.
+ablation. The article now defines the three comparison procedures and their scoring
+contract before presenting the primary results. The supplement gives the
+detailed comparison at original operating points and the severity-score
+ablation. The joint C03 evaluation remains pending.
 
 The [manuscript reorganization and experiment record](docs/REORGANIZATION_AND_EXPERIMENTS_20261113.md)
 documents three new development checks. The article connects nominal

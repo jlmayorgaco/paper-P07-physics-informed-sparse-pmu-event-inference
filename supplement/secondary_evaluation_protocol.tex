@@ -1,0 +1,32 @@
+\subsection{Development and Independent Evaluation Protocol}
+The two development campaigns each contain three event parents with six successive load/line interventions and one normal parent, all 80 s long. Schedules are paired across nominal, in-bank R/X and mixed out-of-bank R/X conditions. Each campaign therefore has 18 unique interventions and 54 event realizations. Both campaigns are now development evidence. No interval or generalization claim treats those 54 realizations as independent events.
+
+The five-model bank and its nominal version were fixed before the
+independent schedules were drawn. Both ExtraTrees models were trained
+specifically for the causal load/line catalog, using 32 earlier physical
+parents for training and eight for development validation. Both training sets include normal operation and
+all 18 candidate sources. The reference uses 846 causal features from
+1-, 5- and 10-s windows; the short-window variant adds 611 features from
+3-, 8- and 15-report windows. Each model has 400 trees with the same
+predeclared hyperparameters. They inherit feature families from the SGSMA
+project, but their fitted weights are distinct from the original hackathon
+submission. These models and their adapters were fixed before the present
+independent schedules; no retraining uses the current evaluation records.
+All methods receive the same 30-fps observations. The supplementary
+reproduction table records the training lineage and model hashes.
+
+The learned adapter publishes a change after six consecutive identical
+argmax labels; its tree votes are uncalibrated scores. In its own
+development validation the reference model already attributed no load
+before OFF and the short-window variant four, while lines were attributed
+well; both were nevertheless retained unchanged under a predeclared rule.
+They are therefore reported as fixed adapters at their original operating
+points, not as the best attainable learned baseline. Learners retrained on the bank's simulations locate at most \FBBestTop{} of \FBEvents{} held-out events, against \FBBankTop{} for the bank (supplement).
+
+The published physical comparator is Chen \emph{et al.}'s persistent single-line quickest-change detector \cite{chen2016quickest}. Its reduced-network covariance is marginalized to the observed PMU subset after inversion. Parallel CUSUM statistics stop at the first threshold crossing and select a line. Our declared research-plant adapter uses nonoverlapping angle increments at 15 Hz, a startup-only scale/drift estimate and the fixed nominal line catalog. Its white-injection/DC assumptions do not describe all simulated instrumental effects. We preserve both matched-law implementation checks and model-mismatch failures; no ARL guarantee is transferred to colored noise.
+
+The eligible common test for Chen is one persistent line opening or a normal record. Its output has no load family or restoration operator. The independent campaign therefore separates continuous load/line episodes from persistent-line first-stop decisions. Early stops, wrong sources, omissions and horizon censoring remain visible.
+
+The independent campaign specifies 18 continuous parents, 27 persistent-line parents and 12 normal parents, with three R/X conditions and instrumental-noise scales of one and two. The 171 intended physical trajectories yield 342 observed records. Conditions represent nominal parameters, perturbations represented in the bank and mixed perturbations outside it. Solver and inference failures remain in the intended denominators. Comparisons use 10,000 paired parent-cluster resamples; repeated conditions/noise do not count as independent parents. Predictions are fixed before the evaluator opens reserved truth.
+
+Logical decision delay is measured on report timestamps. Wall-clock cost is recorded separately with hardware, process concurrency and one-thread BLAS settings; parallel execution of independent records does not make a within-record inference method real-time.

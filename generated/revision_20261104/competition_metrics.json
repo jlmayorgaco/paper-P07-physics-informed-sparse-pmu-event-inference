@@ -29,7 +29,7 @@
   },
   {
     "method":"ET_REFERENCE",
-    "name":"Submitted ExtraTrees",
+    "name":"ExtraTrees reference adapter",
     "precision":0.9378016603,
     "recall":0.4236438165,
     "f1":0.5836353806,
@@ -43,7 +43,7 @@
   },
   {
     "method":"ET_CANDIDATE",
-    "name":"Retrained short-window ExtraTrees",
+    "name":"ExtraTrees short-window adapter",
     "precision":0.9441951607,
     "recall":0.4832693761,
     "f1":0.6393162064,

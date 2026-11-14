@@ -1,15 +1,17 @@
 \section{Recovery-Aware Physical Attribution}
 \label{sec:narrative-method}
 
-At each report, the bank compares predictions from candidate intervention
-histories (Fig.~\ref{fig:problem-method}(b)). Reduced state-space models carry
-the physical and instrumental state forward; their dynamics and measurement
-maps come from the network DAE. This avoids solving a full nonlinear
-simulation for every candidate. Conditional filters account for uncertain
-state and persistent model discrepancy, and the resulting evidence updates
-the weights of the competing histories.
+The bank receives a stream of PMU reports and a catalog of load and line
+operators. Its first 300 reports establish a reference and initialize the
+filters. At each subsequent report, the bank propagates existing histories,
+proposes plausible recent onsets and updates each history's weight using the
+observed prediction error. A history records which asset changed and when
+its operators switched. A no-new-event history can carry the transient left
+by an earlier intervention. This prediction is the reference against
+which the bank evaluates a candidate new event
+(Fig.~\ref{fig:problem-method}(b) and Algorithm~\ref{alg:physical-history}).
 
-\subsection{Construct the Predictor From the Network}
+\subsection{Network and Measurement Operators}
 
 Kirchhoff constraints and complex power connect sources to remote PMUs:
 \begin{equation}
@@ -89,7 +91,7 @@ electrical graph ports. An invertible energy-coordinate representation
 preserves the physical predictions; energy reconstructed from the same
 PMU history is not scored as independent evidence.
 
-\subsection{Estimate Context From the Startup Prefix}
+\subsection{Startup Estimation}
 
 Each network hypothesis uses the same 300 startup reports to estimate
 operating factors, reference phase and noise scale. Voltage/current
@@ -105,7 +107,7 @@ cannot track a later load step and subtract its signature. This estimates
 an observation discrepancy, not the true impedances. Prefix estimates
 enter by substitution rather than through a full joint parameter posterior.
 
-\subsection{Compare Unknown-Onset Histories}
+\subsection{Onset Search and History Weights}
 
 The method retains ten seconds of past conditional states. Its
 birth screen searches lags of 0--18 reports and proposes selected onsets;
@@ -182,7 +184,7 @@ rather than repeatedly accumulating overlapping ten-second windows.
 \caption{Simulated observations supplied to inference. One fixed development parent provides a load and a line example at all eight PMUs. Shading marks physical ON--OFF for evaluation only. Magnitude changes use the local pre-event center; frequency is centered for display while its exported channel remains absolute Hz. Source, severity and operating context affect the curves, so they are not universal class templates.}
 \label{fig:narrative-signals}\end{figure*}
 
-\subsection{Represent Fixed Network Uncertainty}
+\subsection{Network Model Variants}
 
 The bank contains nominal, global $\pm2\%$, and selected-branch $\pm3\%$
 paired R/X hypotheses. Parameters stay constant within a hypothesis. Its
@@ -210,7 +212,7 @@ differ from a single joint posterior. Startup-fitting reports are not
 scored again. The mixture covers a finite set of network alternatives
 rather than a continuous impedance posterior.
 
-\subsection{Keep Recovery as a Competing Physical Explanation}
+\subsection{State and History After Restoration}
 
 Restoring an input or topology at $\kappa$ does not restore the pre-event
 state: $x(\kappa^+)=x(\kappa^-)$. On a regular local post-restoration chart,
@@ -247,7 +249,7 @@ posterior probabilities. A descriptive algebraic decomposition of
 $\Delta M$ into within-model evolution and network-model reweighting is
 given in the supplement; it does not enter the estimator's decision rule.
 
-\subsection{Emit Separate Detection, Diagnosis and Restoration Messages}
+\subsection{Detection, Diagnosis and Restoration Rules}
 
 An alarm is published when the active mass $\sum_cM_{c,k}$ exceeds 0.99 for
 six consecutive reports. The rule has the structure of a Shiryaev
@@ -265,8 +267,7 @@ too late to precede physical OFF.
 These are the development publication settings. The common-budget
 comparison in Section~\ref{sec:recovery-comparison} selects thresholds
 separately on calibration records.
-The nominal comparator is the same procedure with only the nominal network
-hypothesis.
+The nominal bank uses only the nominal network hypothesis.
 
 The per-report birth and restoration hazards are
 $1-\exp[-(1/60)/30]$ and $1-\exp[-(1/30)/30]$, fixed during method

@@ -1,5 +1,13 @@
 # P07: estado de cierre vigente
 
+**Revisión de narrativa, 14-nov-2026.** El artículo plantea la
+atribución antes de la restauración, presenta los tres procedimientos y
+explica la calibración antes de mostrar sus resultados. Separa la
+comparación principal, el control de continuidad y las pruebas de
+sensibilidad. El suplemento conserva los detalles de las evaluaciones
+secundarias. Artículo de 16 páginas y suplemento de 43. C03 sigue
+pendiente de cierre, con 38/72 registros nominales de P2 en la consulta.
+
 **14-nov-2026.** Se completó el contraste retrospectivo de covarianza al
 0,05% y 0,10%. Ningún oráculo superó al estimador por familia y la exposición
 normal fue de 0,3267 h por brazo. Se reprodujo una ablación sintética con

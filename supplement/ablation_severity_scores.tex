@@ -1,0 +1,25 @@
+\subsection{Matched Severity Scores}
+For one load history and amplitude interval $[l,u]$, write its accumulated
+conditional log likelihood as
+\begin{equation}
+ \ell_k(a)=c_k+b_k a-\tfrac12 G_k a^2.
+ \label{eq:ablation-quadratic}
+\end{equation}
+The original score uses $B_k=\log\int_l^u
+\exp(\ell_k(a)-c_k)p(a)\,da$ with the existing truncated Gaussian prior.
+The alternative uses
+\begin{equation}
+ \widehat a_k=\operatorname{clip}_{[l,u]}(b_k/G_k),\qquad
+ Q_k=b_k\widehat a_k-\tfrac12G_k\widehat a_k^2,
+ \label{eq:ablation-profile}
+\end{equation}
+with the constant-likelihood case treated separately. Each report adds
+$B_k-B_{k-1}$ or $Q_k-Q_{k-1}$, so a rolling replay does not repeatedly
+add the same suffix evidence. The conditional Gaussian amplitude/state
+updates remain unchanged. Profile weights are normalized scores, not
+posterior probabilities. This intervention tests the amplitude-scoring
+choice, rather than removing every Bayesian calculation.
+The existing Gaussian sufficient statistics supply
+$G_k=v_k^{-1}-v_0^{-1}$ and $b_k=\mu_k/v_k$, removing the computational
+prior precision before profiling. Fixed line-opening amplitudes and the
+prior weights of amplitude intervals are unchanged.

@@ -1,33 +1,25 @@
 \section{Discussion}
 \label{sec:discussion}
 
-\subsection{What State Continuity Explains}
-A restored operator can leave a nonzero physical state, so returning
-the predictor to equilibrium introduces a residual that another
-candidate can explain. The reset control shows this failure at fixed
-thresholds; bounded profiling and marginalization tie in that control.
-The nominal signature diagnostics help explain short delays under the
-assumed noise model. They do not predict operational error rates.
-An online applicability check would need to detect when the plant or
-measurement law departs from the model. Sparse-PMU transient-stability
-work reports a self-check for its own prediction task
-\cite{wang2023sparsepmutsa}. Here the signature diagnostics describe the
-calibrated model, and publication uses the thresholds in the method.
+\subsection{What the Comparisons Establish}
 
-\subsection{Coverage, Alarm Cost and Scope}
-In the held-out comparison, the history-bank procedure had higher
-timely coverage and fewer event-record extra alarms than the continuous GLR.
-ExtraTrees emits fewer extra alarms but misses more interventions.
-These are contrasts between complete procedures calibrated to a common
-normal-alarm target; zero observed normal alarms give upper bounds, not
-equality of the underlying rates. Under an adequate Markov model, the full
-augmented-state distribution is sufficient for prediction. Compressing
-histories to their mean can discard covariance and distinct state
-alternatives. A history-bank advantage over that compression would therefore
-concern a practical representation of uncertainty, rather than information
-unavailable to every state observer. The supplementary distributional
-analysis separates predictive sufficiency from historical cause attribution.
-The present comparison does not isolate these effects.
+The reset experiment shows that discarding recovery state can turn genuine
+system motion into an apparent new event. The nominal signature analysis
+explains the mechanism: a reset leaves an innovation that a new-event
+candidate can fit. The size of this innovation alone does not fix the
+probability of an unmatched alarm because the bank still applies its
+proposal and publication rules.
+
+The common-budget comparison asks a different question. The history bank
+reports more correct diagnoses before OFF than either comparator. Its
+unmatched alarm count falls between the GLR and ExtraTrees counts. The GLR
+retains a continuous state but also differs in onset search, score and
+commitment. The comparison thus measures the effect of the entire
+procedure. If the augmented state and transition model are sufficient for
+prediction, the full conditional state distribution captures the effects
+of prior histories. A mean alone can lose covariance and distinct
+alternatives. A controlled comparison that preserves the mean is needed
+to separate state carry from the benefit of retaining alternatives.
 
 \subsection{Transfer and Measurement Limits}
 Observations and predictors use the same simulator family. The catalog
@@ -55,14 +47,3 @@ change inner history weights without updating the outer model weights.
 The nominal bank processed reports faster than they arrived in a
 measured replay on one thread; the five-model version did not.
 This timing is specific to the reported hardware and records.
-
-\subsection{Adaptation Without Absorbing an Intervention}
-Adaptive noise estimation has been studied on IEEE-39
-\cite{wang2019adaptiveh}. In our supplementary local likelihood scan,
-the adaptation arms had the same timely attribution count, two exceeded
-the normal-alarm target, and the quiet-history gate rarely admitted
-updates. A second diagnostic shows that uncertainty along the preceding
-load response can shrink nominal separation while preserving the nearest
-rival. Together these results identify two distinct checks for a successor:
-whether its covariance improves predictive likelihood, and whether
-updates preserve attribution and alarm performance on new records.

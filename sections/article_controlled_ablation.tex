@@ -1,17 +1,16 @@
-\subsubsection{Component Outcomes}
+\subsection{Effect of Preserving the Physical State}
 \label{sec:controlled-ablation}
 \input{tables/generated/ablation_a01}
 \begin{figure*}[t]\centering
 \includegraphics[width=.92\textwidth]{figures/generated/ablation_a01.pdf}
 \caption{Severity-scoring and state-carry study on identical observations and five-model banks. The 108 interventions belong to 18 continuous trajectories. Thresholds are fixed, so the alarm rate may differ between arms.}\label{fig:a01}\end{figure*}
-Table~\ref{tab:a01} and Fig.~\ref{fig:a01} report coverage and alarm cost
-for the four arms. With the state carried, marginal and bounded-profile
-severity scores tie on every reported endpoint. Resetting the 114
-estimated physical-state deviations at inferred closure reduces timely
-attribution from 108/108 to 75/108 and raises the unmatched alarms from 1
-to 166 under both scores. The reset leaves instrumental state, covariance
-regime, prior weights, thresholds and publication rules intact, and the
-simulated plant never resets.
+The nominal bank and the continuous GLR both carry physical state.
+Their primary comparison therefore cannot identify the effect of resetting
+it. In the fixed-threshold component study, resetting only the physical
+coordinates reduced timely attribution from 108/108 to 75/108 and increased
+unmatched alarms from 1 to 166 (Table~\ref{tab:a01} and Fig.~\ref{fig:a01}).
+Marginal and profile severity scores gave the same outcomes within each
+state treatment. The simulation itself evolves continuously in all arms.
 
 \begin{figure}[t]\centering
 \includegraphics[width=\columnwidth]{figures/generated/theory_reset_cost.pdf}

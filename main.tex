@@ -41,28 +41,24 @@
 }
 
 \begin{abstract}
-When a load is restored or a line is reclosed, the electrical
-response can persist and resemble a new intervention. We formulate
-source attribution from eight phasor measurement units (PMUs) in the
-IEEE 39-bus system using switched differential-algebraic predictors.
-The bank carries the estimated state through restoration and compares
-the remaining response with predictions for new events.
-With thresholds calibrated separately to a target
-of one normal alarm per hour, the bank correctly attributed the family and source of
-\RecBankTimely{} interventions before physical restoration,
-compared with \RecGlrTimely{} for a continuous
-generalized likelihood ratio observer and \RecTreesTimely{} for
-ExtraTrees. The bank gained \RecGlrDiff{} percentage points over the
-continuous observer (95\% interval \RecGlrCI{} across \RecParents{}
-physical parents) and emitted \RecBankExtras{} unmatched alarms,
-compared with \RecGlrExtras{} and \RecTreesExtras{}, respectively.
-No method emitted a normal alarm in \RecNormalHours{} monitored hours.
-At fixed thresholds in a separate control, resetting the estimated
-physical state reduced timely attribution from 108/108 to 75/108.
-Independent per-PMU noise at \RevNoiseAddedRmsLow{}\% added RMS total vector error degraded load
-attribution. The comparison measures differences between complete
-procedures for sequential, nonoverlapping interventions from a known
-catalog on one simulator family.
+After a load is restored or a line is reclosed, the remaining transient
+can resemble a new intervention. We use eight phasor measurement units
+(PMUs) and switched differential-algebraic predictors of the IEEE 39-bus
+system to compare a new event against the predicted recovery. A correct
+attribution names the event family and source before restoration.
+At a calibration target of one normal alarm per hour, the bank correctly
+attributed \RecBankTimely{} interventions, compared with \RecGlrTimely{}
+for a continuous generalized likelihood ratio observer and
+\RecTreesTimely{} for ExtraTrees. The paired gain over the continuous
+observer was \RecGlrDiff{} percentage points (95\% interval \RecGlrCI{}
+across \RecParents{} physical parents). The three procedures emitted
+\RecBankExtras{}, \RecGlrExtras{} and \RecTreesExtras{} unmatched alarms
+during event records, respectively. None emitted a normal alarm in
+\RecNormalHours{} monitored hours per method. In a separate fixed-threshold
+control, resetting the estimated physical state reduced timely attribution
+from 108/108 to 75/108. These results quantify the coverage and alarm
+trade-off for sequential, nonoverlapping interventions from a known catalog
+in one simulator family. Independent per-PMU noise reduced load coverage.
 \end{abstract}
 
 \begin{keywords}
@@ -80,12 +76,10 @@ change detection and isolation, differential-algebraic equations, event attribut
 \input{sections/article_theory}
 \FloatBarrier
 \input{sections/narrative_protocol}
-\section{Results and Controlled Comparisons}\label{sec:narrative-results}
+\section{Results}\label{sec:narrative-results}
 \input{sections/article_recovery_comparison}
-\input{sections/08c_c01_confirmatory}
-\input{sections/narrative_results}
-\input{sections/article_ablation_design}
 \input{sections/article_controlled_ablation}
+\input{sections/article_network_stress}
 \input{sections/article_noise_stress}
 \input{sections/article_compute_cost}
 \input{sections/article_interpretation}

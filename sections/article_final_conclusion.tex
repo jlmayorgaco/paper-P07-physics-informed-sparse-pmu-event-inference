@@ -1,18 +1,19 @@
 \section{Conclusion}
 \label{sec:conclusion}
-We formulated sequential load and line attribution from sparse PMUs as
-a comparison of switched physical histories. The predictor retains
-estimated state at restoration and separates an active intervention
-from a preceding cause of recovery. On a held-out simulation under a
-common calibration budget, the nominal bank made timely,
-correct family-and-source attributions for \RecBankTimely{}
-interventions, versus \RecGlrTimely{} for a continuous
-physical GLR and \RecTreesTimely{} for ExtraTrees. The respective
-unmatched alarm counts were \RecBankExtras{}, \RecGlrExtras{} and
-\RecTreesExtras{}. A fixed-threshold state-reset control shows the cost
-of discarding the estimated state. The complete-procedure comparison does
-not isolate the benefit of retaining recovery histories from the loss of
-uncertainty under compression. The findings apply to sequential interventions
-from a known catalog in one simulator family. Transfer to another dynamic
-plant, shorter gaps and unseen sources remain untested; independent per-PMU
-noise at \RevNoiseAddedRmsLow{}\% added RMS TVE severely degrades load attribution.
+
+A restored load or line can leave a transient that resembles a new
+intervention. The proposed bank predicts that transient from the carried
+state and evaluates new source hypotheses against it. At a common
+calibration target, the bank correctly attributed \RecBankTimely{}
+interventions before restoration, compared with \RecGlrTimely{} for a
+continuous GLR and \RecTreesTimely{} for ExtraTrees. During event records,
+the three procedures emitted \RecBankExtras{}, \RecGlrExtras{} and
+\RecTreesExtras{} unmatched alarms, respectively.
+
+Resetting the physical state at inferred closure reduced coverage at fixed
+thresholds. The difference between the complete procedures leaves open
+how much explicit history retention adds beyond carrying state.
+The evidence covers nonoverlapping load and line events from a fixed
+catalog in one simulator family. Most unmatched alarms in the separate network-mismatch test occurred
+under perturbations outside the five-model set. Independent per-PMU noise
+reduced load attribution.

@@ -18,7 +18,7 @@ RES = ROOT.parent / "SGSMA26-Physics-Informed-AD/experiments/PAPER_CONFIRMATORY_
 OUT_T = ROOT / "tables/generated/competition_metrics.tex"
 OUT_J = ROOT / "generated/revision_20261104/competition_metrics.json"
 METHODS = [("R11", "Physical bank, five R/X models"), ("R11_NOMINAL", "Physical bank, nominal model"),
-           ("ET_REFERENCE", "Submitted ExtraTrees"), ("ET_CANDIDATE", "Retrained short-window ExtraTrees")]
+           ("ET_REFERENCE", "ExtraTrees reference adapter"), ("ET_CANDIDATE", "ExtraTrees short-window adapter")]
 
 
 def main() -> None:
@@ -40,7 +40,7 @@ def main() -> None:
     df = pd.DataFrame(rows)
     rt = {"R11": 99.6 * 1.8, "R11_NOMINAL": float(lat["NomMsReport"]) * 1.8}
     lines = [r"\begin{table*}[t]\centering\small",
-             r"\caption{Independent evaluation in the metric vocabulary of the competition guide (648 interventions, "
+             r"\caption{Independent evaluation in the metric vocabulary of the competition guide (648 replays of 108 interventions, "
              r"%.0f\,min of normal records, three R/X conditions pooled). Detection is scored per report; "
              r"Top-$k$ requires the correct family and source among the first $k$ candidates. Run time is per minute of "
              r"PMU data on one CPU thread.}" % df.normal_min.iloc[0],
