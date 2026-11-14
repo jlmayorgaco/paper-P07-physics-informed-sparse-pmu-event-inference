@@ -14,6 +14,9 @@ TRANSIENT = {'.aux', '.out', '.toc', '.lof', '.lot', '.fls', '.log', '.blg', '.f
 
 def main():
     sources = set()
+    # Include the complete local template font family for a cold TeX build.
+    sources.update(ROOT.glob('t1-formata*'))
+    sources.add(ROOT / 't1formata.fd')
     for document in ('main', 'supplement'):
         recorder = ROOT / (document + '.fls')
         if not recorder.exists():
@@ -28,7 +31,7 @@ def main():
                     raise FileNotFoundError(path)
                 sources.add(path)
     for name in ('references.bib', 'IEEEtran.bst', 'scripts/build_comparator_lineage.py',
-                 'generated/comparator_lineage.json', 'scripts/verify_history_partition.py', 'scripts/build_recovery_comparison.py',
+                 'generated/comparator_lineage.json', 'scripts/verify_history_partition.py', 'scripts/build_recovery_comparison.py', 'scripts/build_c03_figures.py', 'scripts/import_c03_results.py',
                  'scripts/verify_recovery_distribution.py', 'generated/recovery_distribution_checks.json',
                  'scripts/build_channel_information_figure.py',
                  'scripts/build_channel_profile_figure.py',
@@ -57,7 +60,7 @@ def main():
         path = ROOT / name
         if path.exists():
             sources.add(path)
-    for folder in ('comparator_lineage_20261103', 'revision_math_kernel_20261103', 'recovery_c02_20261105'):
+    for folder in ('comparator_lineage_20261103', 'revision_math_kernel_20261103', 'recovery_c02_20261105', 'recovery_c03'):
         sources.update(p for p in (ROOT / 'generated/frozen' / folder).glob('*') if p.is_file())
     # Compact inputs regenerate the theory/noise figures without simulation data.
     sources.update(p for p in (ROOT / 'generated/revision_20261104').glob('*')
@@ -71,7 +74,7 @@ def main():
     diagnostic = ROOT / 'experiments/channel_information_20261112'
     sources.update(p for p in (ROOT / 'experiments/adaptive_innovation_20261113').rglob('*')
                    if p.is_file() and p.suffix in {'.py', '.json', '.md', '.npz'})
-    for folder in ('adaptive_innovation_20261113_corrected','hamiltonian_f01_20261113','descriptor_bridge_20261113','relinearized_recovery_20261113','decision_bounds_20261113','recovery_nuisance_20261113','memory_covariance_audit_20261113','oracle_pmu_covariance_20261113','unknown_onset_bridge_20261114'):
+    for folder in ('theorem_audit_20261114','adaptive_innovation_20261113_corrected','hamiltonian_f01_20261113','descriptor_bridge_20261113','relinearized_recovery_20261113','decision_bounds_20261113','recovery_nuisance_20261113','memory_covariance_audit_20261113','oracle_pmu_covariance_20261113','unknown_onset_bridge_20261114'):
         sources.update(p for p in (ROOT / 'experiments' / folder).rglob('*')
                        if p.is_file() and p.suffix in {'.py','.json','.md','.npz','.csv','.jl','.toml','.txt'})
     sources.update(p for p in diagnostic.glob('*')

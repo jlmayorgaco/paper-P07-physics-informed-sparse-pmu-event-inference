@@ -18,14 +18,19 @@ commitment. The comparison thus measures the effect of the entire
 procedure. If the augmented state and transition model are sufficient for
 prediction, the full conditional state distribution captures the effects
 of prior histories. A mean alone can lose covariance and distinct
-alternatives. A controlled comparison that preserves the mean is needed
-to separate state carry from the benefit of retaining alternatives.
+alternatives. The controlled comparison preserves the mean when it merges retired
+histories. Retaining histories improves coverage in F01, while the
+second-plant interval includes zero. Preserving the mean outperforms
+reset on both plants. Because merging retains the nominal covariance,
+its loss can include discarded between-history and severity uncertainty.
 
 \subsection{Transfer and Measurement Limits}
-Observations and predictors use the same simulator family. The catalog
-is fixed, the gaps between interventions are 3--8\,s, and no intervention
-overlaps another. Transfer of the dynamic bank to a distinct plant,
-shorter gaps and unseen sources are untested. Under independent per-PMU
+The controlled study applies the F01 predictor to a reduced second plant
+with different dynamics and some passive parameters. Its settings are
+calibrated on F01 and applied to both plants. The coverage gain from
+retaining histories meets the prespecified criterion only on F01.
+The catalog remains fixed and interventions do not overlap. Sources
+outside the catalog remain an open transfer question. Under independent per-PMU
 noise at \RevNoiseAddedRmsLow{}\% added RMS TVE, the bank misses most load changes. This limits transfer
 beyond the calibrated measurement model. The terminal map retains the provisional bus-5 current
 terminal and excludes the bus-39 current angle. A dropout with held

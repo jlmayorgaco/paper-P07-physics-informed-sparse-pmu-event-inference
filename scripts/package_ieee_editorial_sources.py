@@ -11,6 +11,9 @@ LIMIT = 40_000_000
 
 def main():
     sources = {ROOT/"references.bib", ROOT/"IEEEtran.bst"}
+    # Clean builds may request font variants absent from a warm recorder run.
+    sources.update(ROOT.glob("t1-formata*"))
+    sources.add(ROOT / "t1formata.fd")
     for name in ("main", "supplement"):
         recorder = ROOT/(name+".fls")
         for line in recorder.read_text(encoding="utf-8", errors="replace").splitlines():

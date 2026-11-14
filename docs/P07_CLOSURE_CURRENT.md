@@ -1,5 +1,13 @@
 # P07: estado de cierre vigente
 
+**14-nov-2026. C03 completo.** Verificadas 528 predicciones y los sellos de ambas plantas. Historias mejora frente a fusion de medias en F01; diferencia no concluyente en P2. Conservar estado supera al reset en ambas. Los 48 padres del estres de ruido fallaron en el ajuste del prefijo: no hay una medida de robustez para ese estres.
+
+El articulo integra resultados, errores de restauracion, reglas de publicacion, mapa de terminales y suficiencia predictiva/covarianza. Articulo: 19 paginas; suplemento: 44. Estado: borrador para revision de autores; [criterio de envio](P07_SUBMISSION_GATE_20261114.md).
+
+## Registro historico (superado por el estado anterior)
+
+# P07: estado de cierre vigente
+
 **Revisión de narrativa, 14-nov-2026.** El artículo plantea la
 atribución antes de la restauración, presenta los tres procedimientos y
 explica la calibración antes de mostrar sus resultados. Separa la

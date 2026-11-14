@@ -1,0 +1,48 @@
+\section{Predictive Sufficiency and History-Moment Fusion}
+\label{sec:recovery-moments}
+
+Let $S_k$ contain the physical and instrumental state, predictive mode,
+and any parameter or dwell-time memory needed to make the dynamics Markov.
+Let $H_k$ denote historical cause labels. If
+\[
+ p(S_{k+1},Y_{k+1}\mid S_{0:k},H_{0:k},Y_{1:k})
+ =p(S_{k+1},Y_{k+1}\mid S_k),
+\]
+then the filtering law $p(S_k\mid Y_{1:k})$ is sufficient for prediction:
+for every measurable report set $B$,
+\[
+ p(Y_{k+1}\in B\mid Y_{1:k})
+ =\int p(Y_{k+1}\in B\mid S_k=s)\,p(ds\mid Y_{1:k}).
+\]
+This is the standard filtering identity. Its condition is substantive: omitted
+mode, dwell age, uncertain parameters or instrument memory can make cause
+labels predictive even after conditioning on an incomplete state summary.
+The marginal state law suffices for forecasting under this factorization;
+retrospective cause attribution still requires a joint posterior retaining
+$H_k$.
+
+For a finite history mixture with weights $w_j$, let $X$ be a common retained
+state vector and $A$ a common scalar severity coordinate. Write
+$m_j=E[X\mid j]$, $P_j=\operatorname{Cov}(X\mid j)$,
+$\mu_j=E[A\mid j]$, $V_j=\operatorname{Var}(A\mid j)$ and
+$C_j=\operatorname{Cov}(X,A\mid j)$. The law of total covariance gives
+\begin{align}
+ \bar m&=\sum_j w_jm_j, & \bar\mu&=\sum_jw_j\mu_j,\\
+ \operatorname{Cov}(X)&=\sum_jw_jP_j+
+ \sum_jw_j(m_j-\bar m)(m_j-\bar m)^T,\\
+ \operatorname{Cov}(X,A)&=\sum_jw_jC_j+
+ \sum_jw_j(m_j-\bar m)(\mu_j-\bar\mu),\\
+ \operatorname{Var}(A)&=\sum_jw_jV_j+
+ \sum_jw_j(\mu_j-\bar\mu)^2.
+\end{align}
+Thus a moment-matched Gaussian can retain within-history severity uncertainty
+and between-history dispersion without retaining a multimodal mixture. These
+identities do not establish that moment matching improves event attribution.
+
+In the controlled study, mean merging preserves the estimated physical mean while using the nominal
+conditional covariance; it does not propagate the discarded between-history
+and severity covariance. The history-versus-carry contrast therefore cannot
+be interpreted as a causal effect of labels alone: it also changes which
+recovery alternatives and uncertainty are represented. The study supports its
+reported procedure-level comparison, conditional on the tested plants and
+protocol.

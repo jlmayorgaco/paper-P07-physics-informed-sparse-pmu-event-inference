@@ -37,8 +37,16 @@ known catalog. The GLR tracks one continuous state, and ExtraTrees scores
 sources from recent PMU features. Each procedure selects its threshold
 on calibration data
 under a target of one normal alarm per hour
-(Section~\ref{sec:narrative-protocol}). A separate reset experiment changes
-the estimated physical state within the bank and tests whether continuity
-matters. To establish where the result applies, we examine errors under
-network mismatch and independent per-PMU noise
-(Section~\ref{sec:narrative-results}).
+(Section~\ref{sec:narrative-protocol}). We then compare three versions of
+the bank: retaining recovery histories, merging restored histories into
+their estimated state mean, and additionally resetting the physical state.
+The first contrast measures the benefit of retaining recovery alternatives;
+the second measures state continuity within the merging control.
+The control retains nominal conditional covariance, not the full
+uncertainty of the mixture (Section~\ref{sec:recovery-moments}).
+
+The same calibrated procedures are evaluated on the original plant and
+a second simulated plant without recalibration. Results first compare
+complete procedures, then separate recovery representation from continuity,
+and finally examine failures under missing measurements, independent noise
+and model mismatch (Section~\ref{sec:narrative-results}).

@@ -68,3 +68,30 @@ also includes the first-stop detector of Chen \emph{et al.}
 \cite{chen2016quickest}. The supplement records that lane and the
 comparator lineage. The independent per-PMU noise replay in
 Section~\ref{sec:noise-stress} changes the measurement law directly.
+
+\subsection{Controlled Recovery Comparison Across Two Plants}
+The subsequent study compares the history bank, mean merging and reset
+on new paired schedules. After a public OFF, mean merging places retired
+histories into the no-new-event state, retaining its augmented mean and
+the nominal conditional covariance. Active histories remain in the bank.
+The reset arm additionally sets the 114 physical deviations to zero.
+All arms share proposals, physical operators and the publication clock.
+
+Calibration uses 36 event and 36 normal parents from the original plant (F01). The same
+feasibility and selection rule is applied to each arm, with separate
+inference when publication changes the state. The resulting thresholds
+are fixed for both test plants. Each plant has 36 new event and 36 normal
+parents. Six interventions per event sequence give four prespecified
+events following gaps of 0.5--less than 3 seconds and one following a
+3--8-second gap, in randomized order. The primary endpoint uses the four
+short-gap events, excluding the first intervention. Sources, schedules
+and noise seeds are paired between plants.
+
+The second plant (P2) uses classical machines and droop governors, with the
+same measurement terminals and catalog. Its dynamics and some passive
+parameters differ from F01. The predictor always uses the F01 model.
+Validation checks sample timing, switch alignment, dynamic continuity,
+Kirchhoff residuals and terminal currents. The comparison resamples the
+36 parent sequences in pairs 10,000 times. A history-retention coverage
+advantage requires at least five observed percentage points, a positive
+95\% interval and the normal-alarm budget in each plant.

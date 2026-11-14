@@ -1,0 +1,30 @@
+{
+  "T19_woodbury_abs_error": 1.7763568394002505e-15,
+  "T19_alignment_loss_fraction": 0.8,
+  "T23_counterexample": {
+    "eta": 0.0,
+    "dSigmaInvd": 0.25,
+    "dShatInvd": 1.0,
+    "claimed_upper": 0.25
+  },
+  "T23_logdet_counterexample": {
+    "eta": 0.1,
+    "exact_logdet_difference": -0.31608154697347884,
+    "claimed_lower": -0.2859305394129748,
+    "violates_claimed_lower": true,
+    "correct_interval": [
+      -0.31608154697347884,
+      0.2859305394129748
+    ]
+  },
+  "T21_drift_example": {
+    "claimed_KL_Pprime_to_p0": 0.06124999999999999,
+    "actual_E_log_q_over_p0_under_Pprime": 0.04999999999999999,
+    "note": "drift is KL(Pprime||p0)-KL(Pprime||q), not KL(Pprime||p0), in general"
+  },
+  "T10_counts": {
+    "18_choose_2_plus_18": 171,
+    "catalog_log_ratio": 1.7788935082334043,
+    "linear_score_ratio_if_every_hypothesis_scored": 9.5
+  }
+}

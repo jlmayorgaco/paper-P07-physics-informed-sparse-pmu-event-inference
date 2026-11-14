@@ -30,6 +30,8 @@ The network has 39 buses, but the prescribed PMU set is
 \end{equation}
 Voltage is measured at each PMU bus. Current is measured at a specified branch terminal, which can differ from that bus. The causal implementation uses 47 coordinates: eight voltage magnitudes, eight voltage angles, eight current magnitudes, seven current angles, eight absolute frequencies and eight ROCOFs, at 30 reports/s. BUS39 current angle is excluded because its interpretation remains partially validated. The BUS5 current terminal retains the provisional historical 5--6 assignment. These are declared measurement assumptions, not identities inferred from classification accuracy.
 
+\input{tables/generated/main_terminal_map}
+
 The exported magnitudes are in V and A, angles in degrees, frequency in Hz
 and ROCOF in Hz/s. Internal centered coordinates do not replace the
 definition of absolute frequency. These are reporting-rate phasor measurements;

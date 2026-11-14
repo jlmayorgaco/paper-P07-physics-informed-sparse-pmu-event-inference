@@ -251,18 +251,41 @@ given in the supplement; it does not enter the estimator's decision rule.
 
 \subsection{Detection, Diagnosis and Restoration Rules}
 
-An alarm is published when the active mass $\sum_cM_{c,k}$ exceeds 0.99 for
-six consecutive reports. The rule has the structure of a Shiryaev
-change-time threshold under the geometric prior
-\cite{shiryaev1963optimum}, but pruning and covariance approximations make
-0.99 an operational threshold on approximate mass, not a calibrated
-posterior-probability guarantee. Six-report confirmation suppresses brief
-excursions. OFF is published when the restoration mass exceeds 0.99 for 15 reports. The
-diagnosis reports the family with the largest cause mass and its
-highest-mass source; episode-replacement rules handle a different source
-that begins before the previous episode closes. Every message records its
-emission time and the last report used, so a diagnosis can be correct but
-too late to precede physical OFF.
+The inference masses are not published directly. The fixed publisher applies
+a source-qualification screen to a rolling
+30-report (one-second) conditional-innovation vector $v$ (47 coordinates per
+report). For each prepared source response $s_j$ and lag from 0 to 25 reports,
+it computes
+\begin{align}
+ g_j&=s_j^\top s_j,\quad u_j=s_j^\top v,\quad R=v^\top v,\nonumber\\
+ \widehat a_j&=\operatorname{clip}\!\left(\frac{u_j}{\max(g_j,10^{-30})},-0.2,0.2\right),\nonumber\\
+ G_j&=2\widehat a_j u_j-\widehat a_j^2g_j,\qquad
+ F_j=\frac{\max(G_j,0)}{\max\{(R-G_j)/1409,1\}}.
+ \label{eq:public-source-screen}
+\end{align}
+The maximum score over a source's columns is its $F_c$. Lines are always
+qualified ($b_c=1$); loads require
+$b_c=\mathbf1\{F_c>24.0115\}$, the fixed
+$(1-0.001/936)$ quantile of $F_{1,1409}$. This one-second screen is a
+publication gate, not part of the Bayesian history likelihood, and does not
+extend the separate 0--18-report birth proposal search. Its threshold is a
+fixed implementation setting, not a calibrated global false-alarm guarantee.
+
+The internal mixture opens a pending episode after active-event mass is above
+0.99 for six consecutive reports. The public alarm additionally requires
+that pending episode and either six pending reports with
+$\sum_c M_{c,k}b_c\ge0.99$ or a six-report line-active confirmation already
+accumulated. Diagnosis is emitted once the highest cause-mass cell remains
+above 0.99 for six reports, or at the 15-report deadline after the public
+alarm; the family maximizes summed cause mass and sources are ranked within
+that family. Public OFF requires six consecutive reports with the diagnosed
+cell's joint cause-and-restoration mass above 0.99. Thus the internal
+mixture's 15-report retirement clock is not the public OFF rule. A new
+episode may replace an existing one under the separate internal
+later-onset rule; unconfirmed pending episodes can be rejected. These
+publication counters do not rescale $M$ or reset physical state. Every
+message records its emission time and the last report used, so a diagnosis
+can be correct but too late to precede physical OFF.
 
 These are the development publication settings. The common-budget
 comparison in Section~\ref{sec:recovery-comparison} selects thresholds
@@ -336,7 +359,10 @@ compresses histories into the retained augmented-state mean.
   \State Prune the beam; record discarded probability mass
   \State Update outer-model weights from the saved predictive densities
   \State Aggregate active-event mass $M_k$ and cause mass $\Gamma_k$
-  \State Apply consecutive-report alarm, diagnosis, and OFF rules
+  \State Compute rolling 30-report source qualification $b_c$; do not add it to likelihood
+  \State Update internal pending lifecycle and source-qualified public alarm counters
+  \State Publish diagnosis after six qualifying cause-mass reports or the 15-report deadline
+  \State Publish OFF after six reports of diagnosed-cell joint cause-and-restoration mass
   \If{OFF is confirmed}
     \State Compress closed histories into the retained augmented-state mean
   \EndIf

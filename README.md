@@ -1,12 +1,21 @@
 # P07 — Recovery-Aware Physical Attribution of Load and Line Events From Sparse PMUs
 
+**14 November 2026.** The completed two-plant comparison supports history
+retention over mean merging in F01. Its coverage advantage does not
+transfer conclusively to P2. State carry improves over reset on both
+plants. Independent-noise stress records fail the prefix admission bound.
+The main article includes these results and the public source-qualification
+and restoration rules. Author review and final submission declarations
+remain open.
+
+
 **Current review draft (14 November 2026).** The [submission gate](docs/P07_SUBMISSION_GATE_20261114.md)
 records the remaining scientific and author checks. The supplement includes
 the completed two-scale covariance replay and the synthetic unknown-onset
 ablation. The article now defines the three comparison procedures and their scoring
 contract before presenting the primary results. The supplement gives the
 detailed comparison at original operating points and the severity-score
-ablation. The joint C03 evaluation remains pending.
+ablation. The joint C03 evaluation is complete; its results and limitations are included.
 
 The [manuscript reorganization and experiment record](docs/REORGANIZATION_AND_EXPERIMENTS_20261113.md)
 documents three new development checks. The article connects nominal

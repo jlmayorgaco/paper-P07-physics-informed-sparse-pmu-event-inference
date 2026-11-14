@@ -11,13 +11,13 @@ no debe atribuir un contraste positivo a etiquetas de historia por sí solas.
 
 | Puerta | Estado y acción concreta |
 |---|---|
-| C03, ambas plantas | F01 sellada; P2 procesaba TEST nominal (29/72 al revisar). No hay sello final. Esperar la finalización del proceso activo y ejecutar `python -B scripts/import_c03_results.py --check`. Importar solo tras verificar ambos sellos, presupuesto y denominadores; revisar incertidumbre por padre, extras, latencias, restauraciones, estrés y fallos. |
-| Tesis y alcance | Aplicar el criterio fijado de C03 a cada planta. Si solo pasa F01, afirmar el límite de transferencia. Si solo se sostiene fusión frente a reset, centrar la contribución en continuidad. Si ambos contrastes fallan, no sostener la tesis original con C02 ni con simulaciones auxiliares. |
+| C03, ambas plantas | COMPLETO. Importacion verificada: 528 predicciones y 16 archivos compactos. F01: 144/144 frente a 90/144; P2: 67/144 frente a 65/144. Incluye estres, fallos y restauraciones. |
+| Tesis y alcance | Ventaja de historias frente a fusion de medias solo demostrada en F01; continuidad frente a reset en ambas plantas. No se afirma superioridad sobre fusion con toda la covarianza ni transferencia general. |
 | Ruido independiente | Cerrado como replay secundario: a las dos escalas el oráculo no superó a la estimación por familia. La cota normal de 9,17/h en TEST no verifica 1/h. |
 | Posterior con inicio desconocido | Reproducción del ejemplo swing y una semilla nueva; la ganancia pequeña por la mezcla cambia de signo. No cambia las conclusiones del caso IEEE-39. |
 | Comparador Yang | La comprobación de su recursión fue sintética. Conservarlo como antecedente y explicitar la ausencia de reproducción del caso publicado; no reportar una comparación cuantitativa inexistente. |
-| Fuente y PDF | Compilar el manuscrito posterior a C03 y ambos documentos desde el ZIP exacto. Verificar las dos figuras protegidas y repasar el PDF. Publicar por Git. Confirmar el build remoto de ese mismo commit cuando exista evidencia de Overleaf. |
-| Revisión y declaraciones | Tras C03, repetir la lectura técnica, la reconstrucción independiente y la revisión editorial. Coautores confirman versión, afiliaciones, orden, financiación, conflictos, ORCID del remitente, permisos de datos/código, exclusividad y divulgación de IA según su uso real. |
+| Fuente y PDF | PASS local: 19 paginas de articulo y 44 de suplemento. ZIP editorial y reproducible compilados aisladamente, con texto/paginacion iguales. Figuras protegidas: 16 hashes verificados y ambas visibles. Falta evidencia del build remoto de Overleaf; publicar por Git no demuestra que el servidor haya compilado. |
+| Revisión y declaraciones | Con C03 integrado, completar la lectura técnica, la reconstrucción independiente y la revisión editorial. Coautores confirman versión, afiliaciones, orden, financiación, conflictos, ORCID del remitente, permisos de datos/código, exclusividad y divulgación de IA según su uso real. |
 
 ## Experimento sucesor, solo si cambia la conclusión de C03
 

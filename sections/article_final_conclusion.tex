@@ -10,10 +10,13 @@ continuous GLR and \RecTreesTimely{} for ExtraTrees. During event records,
 the three procedures emitted \RecBankExtras{}, \RecGlrExtras{} and
 \RecTreesExtras{} unmatched alarms, respectively.
 
-Resetting the physical state at inferred closure reduced coverage at fixed
-thresholds. The difference between the complete procedures leaves open
-how much explicit history retention adds beyond carrying state.
-The evidence covers nonoverlapping load and line events from a fixed
-catalog in one simulator family. Most unmatched alarms in the separate network-mismatch test occurred
-under perturbations outside the five-model set. Independent per-PMU noise
-reduced load attribution.
+The controlled two-plant study distinguishes retaining the physical mean
+from retaining alternative recovery histories. Mean preservation improves
+on reset in both plants. History retention adds
+\CThreeFOneHistoryCarryDifferencePP{} percentage points over mean merging
+on F01, but its difference on the second plant has an interval containing
+zero. These outcomes support state continuity across the tested plants and
+bound the attribution advantage of explicit histories to the original
+plant. The experiments cover nonoverlapping load and line interventions
+from a fixed catalog. Independent per-PMU noise and model mismatch
+remain important sources of attribution error.
