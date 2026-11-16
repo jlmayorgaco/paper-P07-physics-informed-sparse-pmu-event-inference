@@ -30,8 +30,12 @@ with different dynamics and some passive parameters. Its settings are
 calibrated on F01 and applied to both plants. The coverage gain from
 retaining histories meets the prespecified criterion only on F01.
 The catalog remains fixed and interventions do not overlap. Sources
-outside the catalog remain an open transfer question. Under independent per-PMU
-noise at \RevNoiseAddedRmsLow{}\% added RMS TVE, the bank misses most load changes. This limits transfer
+outside the catalog remain an open transfer question. In the secondary replay
+of Section~\ref{sec:noise-stress}, independent per-PMU
+noise at \RevNoiseAddedRmsLow{}\% added RMS TVE causes the bank to miss most load changes.
+That replay widens the prefix noise-scale support; the controlled two-plant
+noise cohort retains the frozen support and fails at startup. These distinct
+outcomes limit transfer
 beyond the calibrated measurement model. The terminal map retains the provisional bus-5 current
 terminal and excludes the bus-39 current angle. A dropout with held
 observations prevents recovery in the

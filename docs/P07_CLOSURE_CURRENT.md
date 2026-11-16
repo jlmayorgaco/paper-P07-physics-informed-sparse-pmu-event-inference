@@ -1,5 +1,11 @@
 # P07: estado de cierre vigente
 
+**15-nov-2026. Cierre coordinado con tres agentes Luna.** C03 permanece cerrado e intacto. Los dos pilotos completos de C04 terminaron; pasaron los controles de desarrollo, prefijo causal y comparadores legados. Se reparó la preparación CAL conservando las 72 observaciones originales (36 padres de eventos y 36 normales), y se reforzaron sus sellos de procedencia. El resultado de C04 aún no está disponible: no se incorpora una ventaja de covarianza al artículo. El estado operativo vivo está en `experiments/PAPER_RECOVERY_C04/run/SUPERVISOR.json` del repositorio científico.
+
+El artículo distingue ahora el alcance de los intervalos entre eventos, la procedencia del costo computacional y las cohortes de ruido. Compilación local: 19 páginas; suplemento sin cambios: 44. Se revisaron visualmente las páginas afectadas y las dos figuras protegidas; 16 hashes verificados. El plan vigente es [P07_CLOSURE_EXECUTION_20261115.md](P07_CLOSURE_EXECUTION_20261115.md). Faltan la evidencia C04, su integración y revisión final, la confirmación remota de compilación y las aprobaciones/declaraciones de autores.
+
+## Estado anterior
+
 **14-nov-2026. C03 completo.** Verificadas 528 predicciones y los sellos de ambas plantas. Historias mejora frente a fusion de medias en F01; diferencia no concluyente en P2. Conservar estado supera al reset en ambas. Los 48 padres del estres de ruido fallaron en el ajuste del prefijo: no hay una medida de robustez para ese estres.
 
 El articulo integra resultados, errores de restauracion, reglas de publicacion, mapa de terminales y suficiencia predictiva/covarianza. Articulo: 19 paginas; suplemento: 44. Estado: borrador para revision de autores; [criterio de envio](P07_SUBMISSION_GATE_20261114.md).

@@ -1,7 +1,8 @@
 \subsection{Computational Cost}
 \input{tables/generated/closure_compute_cost}
-Table~\ref{tab:closure-compute-cost} records the stages of the evaluation
-campaign, which ran the five-model bank on one thread. Its history
+Table~\ref{tab:closure-compute-cost} records the stages of the secondary
+continuous evaluation with the five-model bank on one thread. These timings
+do not measure the three-arm controlled comparison. Its history
 inference takes a median 358.7\,s per 120-s record (99.6\,ms per report),
 three times slower than the 30-report/s input, so the five-model bank as
 implemented is an offline causal replay. The cost is dominated by the
