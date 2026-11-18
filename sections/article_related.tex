@@ -1,115 +1,34 @@
-\section{Related Work}
+\subsection{Relation to Prior Work}
 \label{sec:narrative-related}
 
-\subsection{Change Detection and Isolation in Dynamic Systems}
-Sequential detection with a prior on the change time leads to the
-Shiryaev statistic, whose posterior-probability threshold is optimal for
-a geometric change-time prior \cite{shiryaev1963optimum}. Detection
-\emph{and isolation} among several post-change laws was formalized by
-Nikiforov \cite{nikiforov1995generalized} and Lai
-\cite{lai2000sequential}; asymptotically, the delay for a given error
-level is inversely proportional to the Kullback--Leibler information
-separating the true post-change law from its competitors
-\cite{tartakovsky2014sequential}. For linear state-space systems, Willsky
-and Jones introduced signatures of jumps propagated through a Kalman
-filter and estimated their magnitude by generalized likelihood ratios
-\cite{willsky1976glr}. Separating a constant bias from the state, as
-Friedland did for recursive filtering \cite{friedland1969bias}, gives the
-affine state--severity representation used in our load histories.
-Interacting and multiple-hypothesis filters propagate mode-conditioned
-states and mode-sequence histories with pruning and merging
-\cite{blom1988imm,boers2005m3h}. Our method inherits these mechanisms. Its
-post-change models, however, are switched DAE operators of a power
-network, and a restored intervention remains a competing cause of later
-observations.
+Willsky and Jones used the innovations of a linear filter to detect a jump
+and estimate its time and magnitude. After a detection, compensating the
+state estimate allows the search for another jump to continue
+\cite{willsky1976glr}. Sequential detection and isolation extends the
+decision to several competing causes \cite{nikiforov1995generalized,lai2000sequential}.
+The interacting multiple-model filter mixes estimates conditioned on the
+current mode \cite{blom1988imm}. Multiple-hypothesis filters retain
+alternative mode sequences \cite{boers2005m3h}. We use these established
+filtering operations because two switch histories can leave the network
+in the same topology with different rotor states.
 
-\subsection{Physical Inference of Grid Events}
-Unknown-input and DAE estimators recover electrical states despite
-incomplete models or exogenous inputs
-\cite{gillijns2007input,nugroho2022dae,katanic2024recursive}. Functional
-observability and descriptor-model diagnosability distinguish recovering a
-state quantity from identifying the input that produced it
-\cite{fernando2010functional,montanari2022functional,eriksson2013diagnosability,scharf1994matched}.
-Phasor-angle hypotheses support outage identification
-\cite{tate2008outage}, Bayesian outage inference with uncertain states
-\cite{zhao2014outages}, and quickest line-outage detection
-\cite{chen2016quickest,rovatsos2017outage}. Yang \emph{et al.} add a time-varying AC likelihood chart \cite{yang2020control} and particle-filter generator states \cite{yang2021particle} for persistent line outages, without restoration or loads. Anguluri \emph{et al.} recover
-sparse forcing locations and inputs of linear dynamics by group LASSO
-\cite{anguluri2023group}, and sensor placement determines which sources
-are distinguishable \cite{jamei2020limits,conte2023fault,yildiz2025sparse}.
-Warner \emph{et al.} compare simulated voltage/current fault trajectories
-over a moving onset window \cite{warner2023highfidelity} and derive
-error/delay guarantees for an adaptive matrix CuSum
-\cite{warner2024matrix}. Trajectory sensitivities and Gaussian evidence
-have been combined for parameter inference in power-system DAEs
-\cite{nagi2022trajectory,albustami2026dae}. PMU-based nodal-inertia
-estimation extends this neighboring line of work to spatially resolved
-dynamic parameters under ambient and transient conditions
-\cite{brahma2026nodal}. State and parameter estimates do not by themselves
-identify the intervention that produced them. Here the
-DAE-derived signatures provide a profiled separation diagnostic at a
-supplied onset, which we compare retrospectively with attribution
-outcomes; it is not a general detectability guarantee.
-Le \emph{et al.} recently proposed a physics-informed graph neural
-operator that maps sparse, intermittent PMU windows to unmeasured rotor
-angle and speed trajectories, with swing equations in the decoder and a
-learned correction for model mismatch \cite{le2026sparsegno}. That
-preprint addresses dynamic state reconstruction. Our method identifies
-which intervention explains observations while an earlier response is
-still evolving.
+Grid outage methods relate observed phasor angles to candidate line
+openings \cite{tate2008outage,chen2016quickest}. Subsequent work accounts
+for transient dynamics in the observations \cite{rovatsos2017outage} and
+uses a time-varying AC model or particle-filtered generator states to detect
+an outage \cite{yang2020control,yang2021particle}. For short-circuit
+faults, Warner \emph{et al.} compare voltage and current trajectories
+predicted for candidate lines and onset times \cite{warner2023highfidelity}.
+Here the competing trajectories include recovery after the line has
+reclosed or the load has returned to its original setting.
 
-\subsection{Learned Diagnosis From Sparse Measurements}
-Learned and knowledge-driven representations identify PMU disturbances
-and assets \cite{pandey2020realtime,li2024knowledge,yildiz2024few}.
-For sparse-PMU transient-stability assessment, Wang \emph{et al.} combine
-dominant-bus selection with a bidirectional recurrent assessor and an
-online check of model applicability under system changes
-\cite{wang2023sparsepmutsa}. This is a useful precedent for monitoring
-whether a learned assessment remains valid, but its output is a stability
-assessment rather than a source attribution for successive physical
-events.
-Barati's gated-recurrent-unit model predicts disruptions from historical
-synchrophasor streams, a forecasting task distinct from assigning an
-observed intervention to a physical source during recovery
-\cite{barati2019faster}.
-SHRED reconstructs IEEE-39 dynamic states from a few PMUs
-\cite{pomarico2026shred}, and Dey \emph{et al.} localize distribution
-topology changes with hardware-in-the-loop validation
-\cite{dey2026topology}. Graph neural networks encode the grid topology in the
-learned map, for event identification \cite{yuan2023gnn}, physics-informed
-state estimation \cite{ngo2024pignn} and localization after reconstructing
-unmeasured trajectories \cite{rimkus2025gnn}. These applications span state reconstruction and event diagnosis. In the
-present attribution task, the physical bank derives candidate responses
-from the network equations. Its signature analysis describes separation
-under the assumed plant and noise model. ExtraTrees provides a learned
-comparison on the same 18-source catalog.
-
-\subsection{PMU Measurements}
-The bank takes phasor reports as inputs. Synchrophasor estimation
-\cite{islam2026sogi,adetayo2026pllpmu}, transient measurement tests
-\cite{becejac2019pmu}, and PMU co-simulation for state estimation
-\cite{celeita2023iec61850} address how those inputs are produced or
-validated. Multisnapshot state estimation relates instrument errors to
-uncertain line parameters \cite{dantona2026multisnapshot}. For event
-attribution, the practical question is whether measurement errors hide or
-mimic a source response. We test independent per-PMU noise in the article
-and describe integrity checks in the supplement.
-
-\begin{table*}[t]\centering\small
-\caption{Closest inference formulations and their relation to this study.
-The primary comparison uses a continuous GLR and ExtraTrees.
-Chen \emph{et al.}'s detector is evaluated on persistent openings.}
-\label{tab:literature-capability}
-\begin{tabularx}{\textwidth}{@{}lXXX@{}}\toprule
-Route & Mechanism & Evaluated target & Role in this study\\\midrule
-Willsky--Jones GLR; Nikiforov/Lai & Filter signatures; detection--isolation statistics & One jump or one change in a fixed system & Information analysis (Section~\ref{sec:theory})\\
-IMM / M3H & Mode-conditioned filters, history pruning and merging & Hybrid switching-state estimation & History-bank mechanism\\
-Chen / Rovatsos & Network likelihoods, sequential tests & Line outages & Chen executed on persistent openings\\
-Yang & Time-varying AC likelihood chart; particle-filter states with EWMA & Persistent line outages, ten PMUs & Closest dynamic precedent, not executed\\
-Warner high-fidelity & Simulated V/I paths, onset search & Short-circuit line candidates & Closest trajectory precedent\\
-DAE / stochastic-state estimation & Physical state and parameter models & States, inputs or parameters & Components\\
-Wang et al. sparse-PMU TSA & Bus selection; recurrent assessor; validity check & Stability assessment under grid changes & Adjacent; no source attribution\\
-Le et al. GNO (arXiv 2026) & Graph attention; swing-equation decoder & Machine-state trajectories from sparse windows & Adjacent state estimation; not event attribution\\
-Learned PMU diagnosis & Features or learned representations & Event families and locations & Two ExtraTrees adapters executed\\
-This work & Switched-DAE histories with recovery & Successive catalog load/line events & Attribution, alarm cost, nominal separation\\\bottomrule
-\end{tabularx}\end{table*}
+Recursive DAE estimators recover differential and algebraic states from
+partial measurements \cite{katanic2024recursive}. Trajectory sensitivities
+also relate uncertain physical parameters to measured responses
+\cite{nagi2022trajectory}. Here the unknowns include which asset switched.
+PMU classifiers can identify disturbances and their locations from
+the observed features \cite{pandey2020realtime,li2024knowledge,yildiz2024few}.
+Our comparisons ask what the switched predictors add when the classifier
+has training examples for every candidate asset and when a physical
+observer already carries a continuous state through restoration. We
+evaluate both comparators on the same PMU reports and intervention catalog.

@@ -1,5 +1,14 @@
 # P07: estado de cierre vigente
 
+**18 de noviembre de 2026.** La revisión técnica reorganizó el artículo en
+11 páginas y el suplemento en 44. El texto deriva el estimador local y el
+costo predictivo de borrar el estado físico, corrige la amplitud de referencia
+y precisa qué compara cada brazo al cierre. El dictamen recoge las correcciones
+y las limitaciones que siguen afectando la interpretación.
+[Revisión de revisor 2](REVISION_REVISOR_2_20261118.md)
+
+## Estado al 15 de noviembre
+
 **15-nov-2026. Cierre coordinado con tres agentes Luna.** C03 permanece cerrado e intacto. Los dos pilotos completos de C04 terminaron; pasaron los controles de desarrollo, prefijo causal y comparadores legados. Se reparó la preparación CAL conservando las 72 observaciones originales (36 padres de eventos y 36 normales), y se reforzaron sus sellos de procedencia. El resultado de C04 aún no está disponible: no se incorpora una ventaja de covarianza al artículo. El estado operativo vivo está en `experiments/PAPER_RECOVERY_C04/run/SUPERVISOR.json` del repositorio científico.
 
 El artículo distingue ahora el alcance de los intervalos entre eventos, la procedencia del costo computacional y las cohortes de ruido. Compilación local: 19 páginas; suplemento sin cambios: 44. Se revisaron visualmente las páginas afectadas y las dos figuras protegidas; 16 hashes verificados. El plan vigente es [P07_CLOSURE_EXECUTION_20261115.md](P07_CLOSURE_EXECUTION_20261115.md). Faltan la evidencia C04, su integración y revisión final, la confirmación remota de compilación y las aprobaciones/declaraciones de autores.

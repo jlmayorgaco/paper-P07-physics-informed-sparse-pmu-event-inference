@@ -17,6 +17,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
+from theory_isolability import reference_amplitudes
+
 ROOT = Path(__file__).resolve().parents[1]
 REV = ROOT / "generated/revision_20261104"
 OUT = ROOT / "figures/generated"
@@ -37,12 +39,11 @@ def save(fig, stem: str) -> None:
     plt.close(fig)
 
 
-def information_figure(summary: dict) -> dict:
+def information_figure(summary: dict, references: pd.DataFrame) -> dict:
     sig = pd.read_csv(REV / "isolability_signatures.csv")
     one = sig[sig.reports == 30].copy()
     one = one.sort_values(["family", "detection_info"], ascending=[False, True])
     need = summary["log_threshold"] - summary["log_prior_cell"]      # nats required at the true onset
-    md = pd.read_csv(REV / "minimum_detectable_load.csv")
     fig, axes = plt.subplots(1, 2, figsize=(7.1, 3.05), gridspec_kw=dict(width_ratios=[1.05, 1]))
     ax = axes[0]
     y = np.arange(len(one))
@@ -57,7 +58,7 @@ def information_figure(summary: dict) -> dict:
     ax.plot([], [], "o", ms=3.5, mfc="white", mec=DARK, label="nearest competitor")
     ax.legend(loc="lower right", fontsize=7.3, handletextpad=.4, borderpad=.25)
     ax.axvline(need, color=DARK, lw=.9, ls="--")
-    ax.text(need * 1.4, len(one) - .25, f"Score reference: {need:.0f} nats", fontsize=7.3, color=DARK, va="bottom")
+    ax.text(need * 1.4, len(one) - .25, f"Score reference ({need:.0f} nats)", fontsize=7.3, color=DARK, va="bottom")
     ax.set_xscale("log")
     ax.set_yticks(y, [s.replace("LINE", "L") for s in one.source], fontsize=7.4)
     ax.set_ylim(-.7, len(one) + .7)
@@ -66,8 +67,8 @@ def information_figure(summary: dict) -> dict:
     ax.set_axisbelow(True)
     ax.grid(axis="x", color="#ececec", lw=.5)
     ax = axes[1]
-    loads = md.copy()
-    loads["pct"] = 100 * loads.min_fraction_1s
+    loads = references.copy()
+    loads["pct"] = 100 * loads.reference_fraction_1s
     for src, g in loads.groupby("source"):
         hot = src in ("BUS31", "BUS26")
         ax.plot(g.noise_multiplier, g.pct, color=BLUE if hot else LIGHT, lw=2 if hot else 1.1, marker="o",
@@ -75,10 +76,11 @@ def information_figure(summary: dict) -> dict:
                 linestyle="--" if src == "BUS26" else "-")
         last = g.iloc[-1]
         if hot or src in ("BUS20",):
-            ax.text(last.noise_multiplier * 1.08, last.pct, src, fontsize=7.4,
+            label_height = last.pct * .85 if src == "BUS26" else last.pct
+            ax.text(last.noise_multiplier * 1.08, label_height, src, fontsize=7.4,
                     va="center", color=DARK)
     ax.axhline(3, color=ORANGE, lw=.9, ls="--")
-    ax.text(1.05, 3.4, "Smallest tested change: 3%", fontsize=7.3, color=DARK)
+    ax.text(1.05, 3.4, "Smallest tested change (3%)", fontsize=7.3, color=DARK)
     ax.set_xscale("log")
     ax.set_yscale("log")
     ax.set_xticks([1, 2, 5, 10, 20], ["1", "2", "5", "10", "20"])
@@ -88,7 +90,7 @@ def information_figure(summary: dict) -> dict:
     ax.set_title("(b) Reference amplitude", fontsize=9, loc="left", fontweight="bold", pad=9)
     ax.grid(color="#ececec", lw=.5)
     fig.tight_layout(w_pad=1.6)
-    save(fig, "theory_information")
+    save(fig, "theory_information_normalized")
     b31 = loads[loads.source == "BUS31"].set_index("noise_multiplier")
     # Noise multiplier where the model-based reference reaches 3%; not a detection guarantee.
     b31_cross = 3.0 / float(b31.pct.loc[1])
@@ -138,21 +140,19 @@ def reset_figure() -> dict:
 
 
 def delay_macros() -> dict:
-    d = pd.read_csv(REV / "predicted_vs_observed_delay.csv")
+    d = pd.read_csv(REV / "predicted_vs_observed_delay.csv",
+                    usecols=["family", "observed_alarm_delay_s"])
     g = d.groupby("family").observed_alarm_delay_s.median()
-    return dict(PredAlarmDelay=f"{d.predicted_alarm_delay_s.median():.2f}", ObsLineDelay=f"{g['line']:.2f}",
-                ObsLoadDelay=f"{g['load']:.2f}",
-                LoadExcessReports=f"{round((g['load'] - d.predicted_alarm_delay_s.median()) * 30):.0f}")
+    return dict(ObsLineDelay=f"{g['line']:.2f}", ObsLoadDelay=f"{g['load']:.2f}")
 
 
-def noise_figure() -> dict:
+def noise_figure(references: pd.DataFrame) -> dict:
     path = REV / "noise_stress_events.csv"
     if not path.exists():
         return {}
     ev = pd.read_csv(path)
     nm = pd.read_csv(REV / "noise_stress_normals.csv")
     ex = pd.read_csv(REV / "noise_stress_extras.csv")
-    md = pd.read_csv(REV / "minimum_detectable_load.csv")
     order = ["U1", "U5", "U10", "U20", "P05", "P10"]
     labels = ["×1", "×5", "×10", "×20", r"$\sigma$=0.0005", r"$\sigma$=0.001"]
     fig, axes = plt.subplots(1, 2, figsize=(7.1, 2.45), gridspec_kw=dict(width_ratios=[1.3, 1]))
@@ -202,7 +202,7 @@ def noise_figure() -> dict:
     save(fig, "noise_stress")
     loads_u = ev[(ev.family == "load") & ev.scenario.isin(["U1", "U5", "U10", "U20"])].copy()
     loads_u["alpha"] = loads_u.scenario.str[1:].astype(int)
-    lim = md.set_index(["source", "noise_multiplier"]).min_fraction_1s
+    lim = references.set_index(["source", "noise_multiplier"]).reference_fraction_1s
     predicted_ok = np.array([abs(a) >= lim.loc[(s, al)] for s, a, al in
                              zip(loads_u.source, loads_u.amplitude, loads_u.alpha)])
     agree = float((predicted_ok == loads_u.timely.to_numpy()).mean())
@@ -227,11 +227,17 @@ def main() -> None:
     style()
     OUT.mkdir(parents=True, exist_ok=True)
     summary = json.loads((REV / "isolability_summary.json").read_text())
+    signatures = pd.read_csv(REV / "isolability_signatures.csv")
+    loads = pd.read_csv(ROOT / "experiments/hamiltonian_f01_20261113/reproduction/reference/data/load.csv")
+    load_mw = {f"BUS{row.bus}": -100 * row.Pset for row in loads.itertuples()}
+    references = reference_amplitudes(signatures, load_mw,
+                                      summary["log_threshold"] - summary["log_prior_cell"])
+    references.to_csv(REV / "reference_load_amplitudes_1s.csv", index=False)
     macros = {}
-    macros.update(information_figure(summary))
+    macros.update(information_figure(summary, references))
     macros.update(reset_figure())
     macros.update(delay_macros())
-    macros.update(noise_figure())
+    macros.update(noise_figure(references))
     lat = REV / "latency.json"
     if lat.exists():
         macros.update({k: v for k, v in json.loads(lat.read_text()).items() if isinstance(v, str)})

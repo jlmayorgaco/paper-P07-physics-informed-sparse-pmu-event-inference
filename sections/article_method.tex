@@ -1,379 +1,200 @@
-\section{Recovery-Aware Physical Attribution}
+\section{Attribution Against a Recovering State}
 \label{sec:narrative-method}
 
-The bank receives a stream of PMU reports and a catalog of load and line
-operators. Its first 300 reports establish a reference and initialize the
-filters. At each subsequent report, the bank propagates existing histories,
-proposes plausible recent onsets and updates each history's weight using the
-observed prediction error. A history records which asset changed and when
-its operators switched. A no-new-event history can carry the transient left
-by an earlier intervention. This prediction is the reference against
-which the bank evaluates a candidate new event
-(Fig.~\ref{fig:problem-method}(b) and Algorithm~\ref{alg:physical-history}).
-
-\subsection{Network and Measurement Operators}
-
-Kirchhoff constraints and complex power connect sources to remote PMUs:
+Suppose a line recloses at time $\kappa$. From that instant the intact
+network governs the machine dynamics again, but its initial condition is
+the state reached during the outage. Compare this trajectory with the one
+from the same operating condition in which the line stayed closed. Let
+$\delta x(\kappa)$ be their state difference at reclosure. To first order,
+the difference between their electrical outputs at time $t>\kappa$ is
 \begin{equation}
- I_{\rm bus}=Y_{\rm bus}V,\quad
- I_{{\rm term},r}=Y_{{\rm term},r}V,\quad S_i=V_i I_{{\rm bus},i}^{*}.
- \label{eq:narrative-electrical}
+ \delta y^{\rm el}(t)\simeq C_0\Phi_0(t,\kappa)\,\delta x(\kappa),
+ \label{eq:recovery-response}
 \end{equation}
-Terminal rows retain orientation, line charging and transformer ratios.
-A measured terminal current is not a nodal injection. A line opening
-changes its branch primitive and terminal map; a load changes its admitted
-P/Q input direction.
+where $\Phi_0$ propagates the intact dynamics and $C_0$ maps the state
+to the measured phasors. A restored load leaves the same kind of initial
+condition. The monitor must infer $\delta x(\kappa)$ from earlier reports.
+At the next suspected onset it compares two continuations of that inferred
+state. One leaves the network alone. The other applies a candidate load
+change or line opening. Their predictions can differ even at PMUs remote
+from the candidate asset.
 
-Each network hypothesis is linearized at the operating point
-$(\bar x_\ell,\bar u_\ell)$ determined by its prefix-fitted load and
-dispatch factors. For topology
-$q$, the constructor holds $\bar x_\ell$ fixed and solves
-$g_{\ell,q}(\bar x_\ell,\bar z_{\ell,q},\bar u_\ell)=0$.
-On a regular index-one chart with a fixed angle reference, the derivatives
-at that consistent point give, suppressing $\ell$,
-\begin{align}
- \delta z&=-g_z^{-1}(g_x\delta x+g_u\delta u),\nonumber\\
- \delta\dot x&=c_q+A_q^{\rm red}\delta x+B_q^{\rm red}\delta u,\nonumber\\
- A_q^{\rm red}&=f_x-f_zg_z^{-1}g_x,\quad
- B_q^{\rm red}=f_u-f_zg_z^{-1}g_u.
+\subsection{From a Network Intervention to a PMU Prediction}
+
+For each topology $q$, hold the prefix-fitted operating point
+$(\bar x,\bar u)$ fixed and solve the algebraic constraints
+$g_q(\bar x,\bar z_q,\bar u)=0$. Let $H_q$ return bus voltages and
+oriented terminal currents. With a fixed angle reference and nonsingular
+$g_z$, implicit differentiation gives the state and output sensitivities
+by eliminating the algebraic deviations,
+\begin{equation}
+ \begin{bmatrix} A_q & B_q \\ C_q & D_q \end{bmatrix}
+ =
+ \begin{bmatrix} f_x & f_u \\ H_x & H_u \end{bmatrix}
+ -\begin{bmatrix}f_z\\H_z\end{bmatrix}
+    g_z^{-1}\begin{bmatrix}g_x & g_u\end{bmatrix}.
  \label{eq:narrative-reduction}
-\end{align}
-Here $c_q=f_q(\bar x,\bar z_q,\bar u)$ can be nonzero after a line
-opening even though the differential state is continuous.
-For the instantaneous electrical observation map $H_q(x,z,u)$, the
-corresponding output operators are
-\begin{equation}
- C_q^{\rm red}=H_x-H_zg_z^{-1}g_x,\qquad
- D_q^{\rm red}=H_u-H_zg_z^{-1}g_u.
- \label{eq:electrical-output-reduction}
 \end{equation}
-The electrical offset is
-$d_q^{\rm el}=H_q(\bar x,\bar z_q,\bar u)-H_0(\bar x,\bar z_0,\bar u)$.
-Thus both the changed algebraic solution and the changed terminal map
-enter the prediction. These operators propagate an unmeasured-source
-perturbation to the selected
-voltage and oriented-current channels. Branch stamps in $g_q$ and $H_q$ encode network connectivity;
-eliminating unmeasured algebraic variables generally produces dense reduced
-operators. A line switch changes both the voltage response and the terminal
-operator in $H_q$. The implementation discretizes the admitted
-switch modes and adds causal phase-history operators for frequency and
-ROCOF. Inertia, controls and load law remain those of the fixed plant.
-The supplement checks these derivatives against nonlinear trajectories and
-tests a relinearized physical predictor separately from the history bank.
+All derivatives use the consistent point for $q$. A load change scales
+one bus's active and reactive setpoints together. A line opening removes
+its branch contribution from the network admittance matrix. None of the
+nine candidate lines carries a measured terminal current, so an opening
+changes the eight measured currents through the network voltages. The
+affine predictor includes both the post-switch drift
+$f_q(\bar x,\bar z_q,\bar u)$ and the change of electrical reference
+$H_q(\bar x,\bar z_q,\bar u)-H_0(\bar x,\bar z_0,\bar u)$.
 
-Exponential discretization integrates $c_q$ over each mode interval;
-composition handles a switch within a report. After instrumental
-augmentation, the resulting offsets enter $b_{\ell,q}$ and $d_{\ell,q}$ in
+The first 300 reports set the operating factors, reference and noise scale.
+We fix the resulting offsets during monitoring so a sustained load
+change remains visible. Integrating the affine dynamics across a report
+interval, including any switch within it, and appending the causal
+instrument model gives the one-report equations
 \begin{align}
- \xi_{k+1}&=A_{\ell,q}\xi_k+b_{\ell,q}+B_{\ell,q}a+w_k,\nonumber\\
- r_k&=C_{\ell,q}\xi_k+d_{\ell,q}+D_{\ell,q}a+v_k.
+ r_k &= J\xi_k+j+v a+\epsilon_k,\nonumber\\
+ \xi_{k+1} &= T\xi_k+g+u a+w_k .
  \label{eq:implemented-predictor}
 \end{align}
-Here $r_k$ contains reference-corrected, scaled and instrument-whitened PMU coordinates, $\ell$ is a fixed
-network hypothesis, and $\xi_k$ contains physical deviation states, phase
-history and predicted measurement-filter memory. Observed colored-instrument
-filters whiten measurements; their corresponding predictor memory is
-deterministic. Additional latent AR states represent persistent discrepancy,
-with preset quiet/load/line/recovery covariance and drift regimes. This
-statistical discrepancy model is distinct from the plant equations.
-$v_k$ denotes the remaining observation noise after instrument whitening.
-A load has scalar severity within
-its specified P/Q direction. A line uses a switched operator rather than
-a fictitious load-amplitude fit. States from different equilibria are not
-interpreted as an absolute rotor-state mixture.
-The supplementary section ``Implemented Predictor and Conditional
-Uncertainty'' gives the affine construction and its code correspondence.
-The network enters through these electrical operators, not a learned graph
-embedding. Updating conditional states and history weights does not adapt
-the physical parameters or measurement-noise model online.
-The supplement verifies a rotor-energy balance and its coupling through
-electrical graph ports. An invertible energy-coordinate representation
-preserves the physical predictions; energy reconstructed from the same
-PMU history is not scored as independent evidence.
+Here $r_k$ is the centered, scaled and instrument-whitened report.
+The augmented state $\xi_k$ contains the physical deviations, phase
+and filter memory, and an autoregressive discrepancy term. The
+operators $(T,J,g,u,j,v)$ depend on the proposed switch and its
+position within the report. The local Gaussian model takes the residual
+observation noise $\epsilon_k$ and process noise $w_k$ to be zero-mean,
+independent of one another and of the preceding state. The scalar $a$ is
+a load's fractional change. A line uses the open or closed branch operator.
 
-\subsection{Startup Estimation}
+\subsection{One Update for Severity, State and History}
 
-Each network hypothesis uses the same 300 startup reports to estimate
-operating factors, reference phase and noise scale. Voltage/current
-coordinates receive a constant discrepancy correction,
+For a load history $h$ with severity interval $I$, condition on its
+asset, switch times and the reports
+preceding $r_k$. For a fixed severity $a$, the local filter represents
+the state by a Gaussian with mean $m_h+d_h a$ and covariance $P_\rho$.
+Here $\rho$ selects a quiet, load, line or recovery discrepancy regime.
+The bank uses a nominal steady-state covariance within each regime.
+This approximation permits different histories to share a gain for the
+same report operator. With observation noise covariance $R$, the
+innovation for severity $a$ is $e-sa$, where
+\begin{align}
+ e&=r_k-Jm_h-j, & s&=Jd_h+v,\nonumber\\
+ S&=JP_\rho J^\top+R, & K&=TP_\rho J^\top S^{-1}.
+ \label{eq:innovation}
+\end{align}
+The vector $s$ is the predicted change in this report per unit severity,
+after conditioning on the previous reports
+\cite{friedland1969bias,willsky1976glr}.
+
+Write the prior density of $a$ as a Gaussian of center $\mu$ and
+variance parameter $v_a$, truncated to $I$. Completing the square in
+$\mathcal N(e;sa,S)\mathcal N(a;\mu,v_a)$ gives
+\begin{align}
+ v_a'&=(v_a^{-1}+s^\top S^{-1}s)^{-1},\nonumber\\
+ \mu'&=v_a'(\mu/v_a+s^\top S^{-1}e).
+ \label{eq:severity-update}
+\end{align}
+Let $Z_I(\mu,v_a)$ be the probability that an untruncated draw lies in
+$I$. Integrating the product over $I$ yields the evidence assigned to
+this history by one report,
 \begin{equation}
- \widehat b_\ell=\overline y_{0:299}-y_\ell^{\rm ref},
- \qquad b_{\ell,k}=\widehat b_\ell\quad(k\ge300).
- \label{eq:continuous-intercept}
-\end{equation}
-Angular differences respect wrapping and the common reference. Frequency
-and ROCOF use empirical prefix centers. The correction remains fixed so it
-cannot track a later load step and subtract its signature. This estimates
-an observation discrepancy, not the true impedances. Prefix estimates
-enter by substitution rather than through a full joint parameter posterior.
-
-\subsection{Onset Search and History Weights}
-
-The method retains ten seconds of past conditional states. Its
-birth screen searches lags of 0--18 reports and proposes selected onsets;
-it does not enumerate every onset in the 300-report history.
-Each history specifies family, asset, onset,
-restoration mode and severity. It starts from the stored conditional state
-before its proposed onset. That state already contains any ongoing
-recovery; an alarm does not reset the predictor to equilibrium.
-
-For a retained load history, conditional Gaussian filtering yields a
-residual $e$, severity response $s$ and covariance $S$. Unknown severity
-has a truncated-Gaussian distribution inherited from previous reports:
-\begin{equation}
- L_{h,k}=\int_l^u \mathcal N(e;sa,S)
-             \operatorname{TN}_{[l,u]}(a;\mu,v)\,da.
+ L_{h,k}=\mathcal N(e;s\mu,S+v_a ss^\top)
+           \frac{Z_I(\mu',v_a')}{Z_I(\mu,v_a)}.
  \label{eq:narrative-evidence}
 \end{equation}
-With $\Phi$ denoting the standard normal CDF, define
-\begin{align}
- v'&=(v^{-1}+s^\top S^{-1}s)^{-1},\nonumber\\
- \mu'&=v'(\mu/v+s^\top S^{-1}e),\nonumber\\
- Z(\mu,v)&=\Phi((u-\mu)/\sqrt v)-\Phi((l-\mu)/\sqrt v).
-\end{align}
-The implemented local integral follows by completing the square:
-\begin{align}
- \log L_{h,k}&=\log\mathcal N(e;0,S)+\tfrac12\log(v'/v)\nonumber\\
- &\quad+\tfrac12(\mu'^2/v'-\mu^2/v)
-       +\log\frac{Z(\mu',v')}{Z(\mu,v)}.
- \label{eq:amplitude-evidence-main}
-\end{align}
-These standard identities are exact for the stated local conditional
-model. Adaptive proposals, pruning and covariance approximations make the
-complete bank approximate.
+The first factor is the ordinary Gaussian predictive density. The ratio
+accounts for the admitted load range. The posterior severity law is the
+Gaussian with parameters $(\mu',v_a')$ truncated to $I$. Its mean
+$\bar a_h$ minimizes conditional squared error in severity. For a line
+the evidence reduces to $\mathcal N(e;0,S)$.
 
-As in separate-bias filtering \cite{friedland1969bias}, the conditional
-state mean is represented as $m_h+d_h a$; $d_h$ is the Willsky--Jones
-signature of a unit severity propagated through the filter
-\cite{willsky1976glr}. To make the filtering approximation explicit, let $T_o,J_o,g_o,u_o,j_o,v_o$ denote the
-one-report transition and observation operators for switch $o$.
-The code forms $e=r_k-J_o m_h-j_o$ and $s=J_o d_h+v_o$. With the shared
-covariance $P_\rho$ for the current discrepancy regime $\rho$,
+Applying the gain to $e-sa$ and collecting the constant and linear
+terms in $a$ gives the next conditional state,
 \begin{align}
- S_o&=R+J_oP_\rho J_o^\top,&
- K_o&=T_oP_\rho J_o^\top S_o^{-1},\nonumber\\
- m_h^+&=T_o m_h+g_o+K_o e,&
- d_h^+&=T_o d_h+u_o-K_o s.
+ m_h^+ &= Tm_h+g+Ke,\nonumber\\
+ d_h^+ &= Td_h+u-Ks,\qquad
+ \widehat{\xi}_{h,k+1}=m_h^++d_h^+\bar a_h .
  \label{eq:implemented-conditional-correction}
 \end{align}
-The amplitude distribution is updated by the same integral. Its truncated
-variance $V_{a,h}$ differs from the Gaussian parameter $v_h$. The affine
-conditional representation retains state--severity dependence:
-\begin{align}
- \operatorname{Cov}(\xi,a\mid h)&=d_hV_{a,h},\nonumber\\
- \operatorname{Var}(\xi\mid h)&=P_\rho+d_hV_{a,h}d_h^\top.
- \label{eq:conditional-amplitude-covariance}
-\end{align}
-Conditioning on past reports is implicit. The shared $P_\rho$ solves the
-nominal-operator Riccati equation of regime $\rho$; $S_o$ and $K_o$ are then
-formed for each switched operator $o$. This is a steady-state
-approximation, not an exact covariance recursion along each switched
-history. At closure, the filter retains the augmented-state
-mixture mean and records the trace of the discarded amplitude and
-between-history covariance; it does not propagate that covariance.
-The supplement separates these approximations from the exact local
-amplitude integral and states the covariance needed for a full mixture.
+The last expression averages the conditional state over the updated
+severity. It is the minimum mean-square estimate of the next state for
+this history under the local model. A load's birth prior has standard
+deviation 0.15 before truncation to $[-0.2,0.2]$. The bank partitions
+that interval into four histories weighted by their prior masses. Their
+evidence sums to the full bounded-prior evidence for a given path while
+all four remain in the bank.
 
-The rolling screen proposes histories; it is not another independent
-observation. Replaying a suffix replaces its original no-new-event suffix
-likelihood. The sequential update therefore counts each report once,
-rather than repeatedly accumulating overlapping ten-second windows.
+\subsection{Which Histories Compete at the Next Report?}
 
-\begin{figure*}[t]\centering
-\includegraphics[width=.96\textwidth]{figures/generated/narrative_signals.pdf}
-\caption{Simulated observations supplied to inference. One fixed development parent provides a load and a line example at all eight PMUs. Shading marks physical ON--OFF for evaluation only. Magnitude changes use the local pre-event center; frequency is centered for display while its exported channel remains absolute Hz. Source, severity and operating context affect the curves, so they are not universal class templates.}
-\label{fig:narrative-signals}\end{figure*}
-
-\subsection{Network Model Variants}
-
-The bank contains nominal, global $\pm2\%$, and selected-branch $\pm3\%$
-paired R/X hypotheses. Parameters stay constant within a hypothesis. Its
-outer weight is updated with the one-step predictive density
+At each report the bank can continue an existing history, restore an
+eligible intervention or start a new one from the no-intervention
+reference. Let $p(h\mid h')$ be the transition weight from parent $h'$.
+Before pruning, the one-step update for admitted paths is
 \begin{equation}
- w_{\ell,k}=\frac{w_{\ell,k-1}p_\ell(y_k\mid\mathcal F_{k-1},\widehat b_\ell)}
- {\sum_jw_{j,k-1}p_j(y_k\mid\mathcal F_{k-1},\widehat b_j)},
- \label{eq:continuous-weights}
-\end{equation}
-\begin{equation}
- p_\ell(y_k\mid\mathcal F_{k-1})=\sum_{h'}\pi_{\ell,h',k-1}
- \sum_{h\in\mathcal T(h')}p_\ell(h\mid h')\,L_{\ell,h,k}.
- \label{eq:outer-predictive}
-\end{equation}
-The transition set $\mathcal T(h')$ contains continuation, restoration at
-either half-report phase for an eligible active history, and a birth of
-every catalog cell and severity interval at either phase from the
-no-intervention history; the transition probabilities sum to one, which
-the implementation asserts at every report. The density is evaluated
-before any state is corrected and before retrospective proposals are
-selected. Onsets proposed later for earlier reports change the inner
-history posterior through suffix replay but do not re-weight
-$w_\ell$; this is the one point where the outer and inner recursions
-differ from a single joint posterior. Startup-fitting reports are not
-scored again. The mixture covers a finite set of network alternatives
-rather than a continuous impedance posterior.
-
-\subsection{State and History After Restoration}
-
-Restoring an input or topology at $\kappa$ does not restore the pre-event
-state: $x(\kappa^+)=x(\kappa^-)$. On a regular local post-restoration chart,
-the difference from a same-context no-new-intervention trajectory obeys
-\begin{align}
- \delta x_h(t)&\simeq\Phi_0(t,\kappa)\delta x_h(\kappa),\nonumber\\
- \delta y_h^{\rm net}(t)&\simeq C_0(t)\Phi_0(t,\kappa)\delta x_h(\kappa),
- \quad t>\kappa.
- \label{eq:recovery-response}
-\end{align}
-Here $y^{\rm net}$ denotes voltage/current coordinates before the instrument map.
-Instrumental memory is retained as well. This local interpretation of known
-dynamics explains why the reference after OFF is a predicted trajectory.
-
-For conditional history mass $\pi_{\ell,h,k}$, define active and
-originating-cause masses for an admissible family/source cell $c$:
-\begin{align}
- M_{c,k}&=\sum_\ell w_{\ell,k}\sum_{h:c(h)=c}
-       \pi_{\ell,h,k}\,\mathbf1\{h\text{ active at }k\},\nonumber\\
- \Gamma_{c,k}&=\sum_\ell w_{\ell,k}\sum_{h:c(h)=c}\pi_{\ell,h,k}.
- \label{eq:active-cause-masses}
-\end{align}
-A retained history can stop being active while its cause still explains
-recovery. Later interventions compete with those histories. The
-implementation stores 18 admissible cells, not every family at every bus.
-After confirmed episode closure, explicit histories are compressed into
-the retained state mean. Cause masses describe the current bank, not a
-permanent ledger of all past interventions.
-
-The implementation uses $M$ for active-event publication and $\Gamma$ for
-source diagnosis. Their update weights are approximate because of pruning
-and shared steady-state covariance approximations; they are not calibrated
-posterior probabilities. A descriptive algebraic decomposition of
-$\Delta M$ into within-model evolution and network-model reweighting is
-given in the supplement; it does not enter the estimator's decision rule.
-
-\subsection{Detection, Diagnosis and Restoration Rules}
-
-The inference masses are not published directly. The fixed publisher applies
-a source-qualification screen to a rolling
-30-report (one-second) conditional-innovation vector $v$ (47 coordinates per
-report). For each prepared source response $s_j$ and lag from 0 to 25 reports,
-it computes
-\begin{align}
- g_j&=s_j^\top s_j,\quad u_j=s_j^\top v,\quad R=v^\top v,\nonumber\\
- \widehat a_j&=\operatorname{clip}\!\left(\frac{u_j}{\max(g_j,10^{-30})},-0.2,0.2\right),\nonumber\\
- G_j&=2\widehat a_j u_j-\widehat a_j^2g_j,\qquad
- F_j=\frac{\max(G_j,0)}{\max\{(R-G_j)/1409,1\}}.
- \label{eq:public-source-screen}
-\end{align}
-The maximum score over a source's columns is its $F_c$. Lines are always
-qualified ($b_c=1$); loads require
-$b_c=\mathbf1\{F_c>24.0115\}$, the fixed
-$(1-0.001/936)$ quantile of $F_{1,1409}$. This one-second screen is a
-publication gate, not part of the Bayesian history likelihood, and does not
-extend the separate 0--18-report birth proposal search. Its threshold is a
-fixed implementation setting, not a calibrated global false-alarm guarantee.
-
-The internal mixture opens a pending episode after active-event mass is above
-0.99 for six consecutive reports. The public alarm additionally requires
-that pending episode and either six pending reports with
-$\sum_c M_{c,k}b_c\ge0.99$ or a six-report line-active confirmation already
-accumulated. Diagnosis is emitted once the highest cause-mass cell remains
-above 0.99 for six reports, or at the 15-report deadline after the public
-alarm; the family maximizes summed cause mass and sources are ranked within
-that family. Public OFF requires six consecutive reports with the diagnosed
-cell's joint cause-and-restoration mass above 0.99. Thus the internal
-mixture's 15-report retirement clock is not the public OFF rule. A new
-episode may replace an existing one under the separate internal
-later-onset rule; unconfirmed pending episodes can be rejected. These
-publication counters do not rescale $M$ or reset physical state. Every
-message records its emission time and the last report used, so a diagnosis
-can be correct but too late to precede physical OFF.
-
-These are the development publication settings. The common-budget
-comparison in Section~\ref{sec:recovery-comparison} selects thresholds
-separately on calibration records.
-The nominal bank uses only the nominal network hypothesis.
-
-The per-report birth and restoration hazards are
-$1-\exp[-(1/60)/30]$ and $1-\exp[-(1/30)/30]$, fixed during method
-development before the independent schedules. In the common-budget
-comparison, interventions last 2--5\,s and are separated by 3--8\,s;
-the controlled two-plant study also includes shorter gaps
-(Section~\ref{sec:narrative-protocol}). These durations and gaps are much
-shorter than the prior means of 60 and 30\,s. A low birth hazard raises
-the evidence needed for an alarm by $-\log\pi_c$; Section~\ref{sec:theory}
-compares this margin with nominal signature energy.
-Birth mass is split equally between load and line families, then uniformly
-among sources within each family. Load severity has a zero-mean Gaussian
-prior with standard deviation 0.15, truncated to $[-0.2,0.2]$ and integrated
-over four intervals with boundaries $-0.2,-0.1,0,0.1,0.2$.
-Each interval is a separate history with its own weight and truncated
-amplitude distribution; its birth weight is the prior probability of that
-interval. The physical operators are shared across these four histories.
-For a fixed path with all four intervals retained, their weighted evidence
-equals the single-interval integral.
-This partition is a bank representation, not numerical quadrature or a
-piecewise physical approximation.
-After three reports, eligible active histories can produce OFF children
-at either half-report position while inheriting state and severity.
-After likelihood normalization, the beam retains the 96 highest-weight
-recent histories, 64 older histories and at least one per occupied source;
-their union is renormalized and discarded mass is recorded.
-The supplement maps each operation to its implementation and lists the
-complete publication configuration.
-
-\subsection{Relation to Multiple-Hypothesis Filtering}
-For a retained history $h$, let $p_\ell(h\mid h')$ contain the admitted
-birth, continuation and restoration transitions. Before pruning, its
-normalized evidence update has the standard form
-\begin{equation}
- \pi_{\ell,h,k}\ \propto\ L_{\ell,h,k}
-       \sum_{h'}p_\ell(h\mid h')\pi_{\ell,h',k-1}.
+ \pi_{h,k}\ \propto\ L_{h,k}
+      \sum_{h'}p(h\mid h')\,\pi_{h',k-1}.
  \label{eq:history-bayes-update}
 \end{equation}
-This is the mode-sequence update of IMM and M3H filtering
-\cite{blom1988imm,boers2005m3h}. Three features are specific to the present
-problem: the modes are oriented electrical intervention operators derived
-from the network DAE, histories carry a restoration time so that a restored
-intervention remains a competing cause, and the output separates active
-intervention from originating cause through \eqref{eq:active-cause-masses}.
-Retrospective births reuse a stored pre-onset state, and confirmed closure
-compresses histories into the retained augmented-state mean.
+A restored path propagates its state with the intact operator. It can
+still explain the current report. To propose a recent onset, the bank
+screens the last 0--18 report lags, retrieves the stored state preceding
+the candidate switch and replays the intervening reports. Its score
+replaces the old suffix likelihood. The same reports therefore contribute
+once to each path. The bank prunes low-weight histories and renormalizes
+the survivors. The supplement gives the transition hazards, half-report
+switch phases, storage limits and pruning rule.
 
-\subsection{Per-Report Algorithm and Computational Boundary}
+For source $c$, the two relevant sums of history weights are
+\begin{align}
+ M_{c,k}&=\sum_{h:c(h)=c}\pi_{h,k}\,\mathbf 1\{h\text{ active}\},\nonumber\\
+ \Gamma_{c,k}&=\sum_{h:c(h)=c}\pi_{h,k}.
+ \label{eq:active-cause-masses}
+\end{align}
+Thus $\Gamma_{c,k}-M_{c,k}$ is the support assigned to restored paths
+of source $c$. A load can have little active support and still account
+for ongoing recovery. These sums describe the histories retained at
+report $k$.
+
+The primary comparisons use one nominal network. A secondary version
+runs this recursion for five fixed resistance/reactance hypotheses
+(nominal, global $\pm2\%$, and selected branches $\pm3\%$). Its outer
+weights multiply the previous network weight by the one-step predictive
+density summed over forward transitions. It averages the source masses
+over networks after normalization. Retrospective onset proposals revise
+only the within-network weights. Linearization, shared covariances,
+screening and pruning make the resulting masses approximate.
+
+\subsection{From Source Evidence to an Alarm}
+
+The two primary comparisons apply a common publication clock to each
+procedure's source scores. The bank supplies the log odds of active
+source mass for onset and of restored source mass for closure. The same source must lead above threshold for six consecutive monitored
+reports before the clock emits its alarm and diagnosis together. Six
+qualifying reports of restoration for that source close the episode. Thresholds are selected on independent calibration sequences
+(Section~\ref{sec:narrative-protocol}). The estimated switch time may
+precede the alarm. Timely attribution is scored at the instant the
+monitor publishes the decision.
 
 \begin{algorithm}[t]
-\caption{Causal physical-history attribution}
+\caption{Attributing an intervention as reports arrive}
 \label{alg:physical-history}
 \begin{algorithmic}[1]
-\Require Fixed plant/catalog, configuration, and PMU reports as they arrive
-\Ensure Time-stamped detection, source diagnosis, and restoration messages
-\State Fit operating context, reference, and noise from the permitted prefix
-\State Initialize model/history states, weights, and pre-onset state store
-\For{each newly received report $y_k$ after startup}
-  \State Map $y_k$ to inference coordinates $r_k$
-  \State Predict each retained history; carry physical state through OFF
-  \State Save outer-model predictive densities before screening
-  \State Propose eligible births from stored pre-onset states
-  \For{each accepted proposal}
-    \State Replay its suffix from the saved state, replacing old suffix scores
-  \EndFor
-  \State Score histories before state correction; integrate load severity
-  \State Apply line operators; correct states and update history weights
-  \State Prune the beam; record discarded probability mass
-  \State Update outer-model weights from the saved predictive densities
-  \State Aggregate active-event mass $M_k$ and cause mass $\Gamma_k$
-  \State Compute rolling 30-report source qualification $b_c$; do not add it to likelihood
-  \State Update internal pending lifecycle and source-qualified public alarm counters
-  \State Publish diagnosis after six qualifying cause-mass reports or the 15-report deadline
-  \State Publish OFF after six reports of diagnosed-cell joint cause-and-restoration mass
-  \If{OFF is confirmed}
-    \State Compress closed histories into the retained augmented-state mean
-  \EndIf
-  \State Store current states and emit messages with the last report used
+\Require PMU reports, network operators and catalog of admissible sources
+\State Fit the reference and noise scale on the event-free prefix.
+\For{each subsequent report}
+ \State Extend paths by continuation or an admissible switch.
+ \State Score the report by \eqref{eq:narrative-evidence} or its line likelihood.
+ \State Correct each conditional state using \eqref{eq:implemented-conditional-correction}.
+ \State Replay selected recent onsets from their stored pre-switch states, replacing their earlier suffix scores.
+ \State Normalize the weights, prune and sum the source masses.
+ \State Apply the publication clock to onset and restoration scores.
+ \If{the clock publishes a restoration}
+   \State Apply the recovery rule for the procedure under test.
+ \EndIf
 \EndFor
 \end{algorithmic}
 \end{algorithm}
-No event truth is available to the algorithm. Retrospective replay changes
-the inner history weights but does not re-weight the outer model densities.
-The nonlinear simulator constructs observations; this algorithm propagates
-local switched predictors. Decisions use only reports already received.
-Computation time is reported separately in Section~\ref{sec:narrative-results}.
+
+A published closure prompts a choice about what to keep for the next
+prediction. The two-plant experiment makes that choice explicit. The
+history arm keeps its paths and onset-search memory. The other arms
+combine the restored paths with the no-intervention path. The earlier
+five-model studies used a separate publisher with a load-qualification
+screen and a separate diagnosis clock, described in the supplement.

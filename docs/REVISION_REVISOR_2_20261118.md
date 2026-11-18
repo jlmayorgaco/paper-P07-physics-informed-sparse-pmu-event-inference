@@ -1,0 +1,24 @@
+# Revisión técnica del manuscrito P07
+
+18 de noviembre de 2026. La pregunta que justifica el artículo es si ocho PMU permiten identificar una segunda intervención mientras el sistema todavía responde a la primera. La versión anterior repartía la respuesta entre el modelo, dos secciones de teoría y varios estudios con reglas de decisión diferentes. El artículo revisado abre con un caso de la barra 16 y la línea 16–17 y sigue la misma decisión desde las ecuaciones de red hasta la evaluación en dos plantas.
+
+## Observaciones que exigieron cambios
+
+| Objeción del revisor | Resolución en el artículo |
+|---|---|
+| El lector podía interpretar la restauración de la topología como un retorno al equilibrio. | Las secciones II y III especifican qué estado es continuo, qué variables algebraicas se recalculan y contra qué trayectoria de recuperación se compara una nueva fuente. Ninguna de las nueve líneas candidatas coincide con las ocho ramas cuyos terminales suministran corriente. |
+| La descripción mezclaba el estimador con los contadores de publicación de un estudio anterior. | El método deriva primero la evidencia y las masas por fuente. El reloj común exige seis informes consecutivos, emite juntos alarma y diagnóstico y usa la masa restaurada de esa fuente para el cierre. El suplemento documenta aparte el publicador anterior. |
+| El algoritmo sugería que todos los brazos fusionaban historias cuando emitían el cierre. | En el estudio de dos plantas el brazo de historias mantiene las trayectorias y la memoria de búsqueda. Los dos controles fusionan las retiradas con la hipótesis sin intervención, conservan las activas y reinician la búsqueda. El control de reinicio pone además a cero 114 desviaciones físicas. |
+| «Óptimo» carecía de un objeto y una pérdida definidos. | La sección III deriva la media de severidad y estado que minimiza el error cuadrático condicional. A continuación demuestra cuál es la mejor predicción gaussiana de un informe PMU bajo pérdida logarítmica. La pérdida adicional al borrar un estado depende de su proyección sobre las PMU. La demostración supone el mismo operador de continuación, una red y un régimen de covarianza. |
+| La amplitud teórica dibujada no concordaba con la energía de la ecuación. | El cálculo anterior contaba dos veces el factor que convierte la norma cuadrática en energía. La figura sucesora se obtuvo de las energías guardadas para nueve cargas y cinco escalas. A un segundo y ruido nominal, la referencia de la barra 31 pasa de 0,4034 % a 0,5705 %. El suplemento conserva las demoras observadas de línea y carga, 0,18 s y 0,35 s. Se retiró la comparación con un tiempo de cruce teórico cuyos operadores por informe faltan en la copia local. |
+| Las conclusiones confundían la precisión del diagnóstico, las alarmas durante eventos y las alarmas en operación normal. | La comparación principal reporta 99, 72 y 22 diagnósticos oportunos sobre 108, con 8, 85 y 0 alarmas sin correspondencia en 0,54 h de registros con eventos. Los tres métodos emitieron cero alarmas en 3,92 h normales por método. Los intervalos pareados respetan la trayectoria como unidad de remuestreo. |
+
+## Qué afirmación puede defenderse
+
+Conservar la media física dio más diagnósticos oportunos que reiniciarla en las dos plantas. En el subconjunto preespecificado de intervalos cortos, conservar además las historias dio 144/144 aciertos frente a 90/144 en la planta original, una diferencia de 37,5 puntos porcentuales con intervalo pareado del 95 % de [25,0, 49,3]. En la segunda planta fueron 67/144 frente a 65/144, una diferencia de 1,4 puntos con intervalo [−12,5, 16,0]. Allí sí descendieron las alarmas sin correspondencia, de 132 a 87 en 1,08 h de registros con eventos.
+
+La comparación entre historias y fusión cambia tanto la distribución predictiva como la información disponible para reconsiderar inicios. La contribución de cada mecanismo sigue abierta. La pérdida logarítmica de un informe y la atribución antes de una restauración miden objetos distintos. La demostración matemática tampoco resuelve el fallo de admisión observado en las 24 trayectorias con ruido independiente de cada planta. Una afirmación de aplicabilidad a instrumentos reales requeriría evidencia adicional.
+
+## Verificación
+
+La evidencia local de severidad se contrastó por cuadratura. La proyección tras el cierre se comprobó con una dirección observable y otra invisible a las mediciones. Los 45 puntos de la curva corregida reproducen la energía de referencia al sustituir sus amplitudes en la ecuación. Se conservaron los resultados experimentales de ambos estudios. El PDF principal tiene 11 páginas. La Figura 2 está en la página 3 y el unifilar en la página 4. El verificador de figuras protegidas confirmó sus 16 hashes de integridad y la presencia de ambas figuras en el PDF.

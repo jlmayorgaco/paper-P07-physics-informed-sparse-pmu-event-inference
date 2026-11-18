@@ -1,97 +1,91 @@
 \section{Experimental Design}
 \label{sec:narrative-protocol}
 
-\subsection{Primary Comparison}
-\label{sec:comparison-design}
-All three procedures see the same 30-report/s PMU stream and the same
-18-source load and line catalog. The two physical procedures also share the
-nominal network and measurement operators and the allowed startup prefix.
+\subsection{Plant, Measurements and Scoring}
+The original IEEE 39-bus simulator (F01), built in Julia with
+PowerDynamics \cite{plietzsch2022powerdynamics}, uses Sauer--Pai machines,
+IEEE Type~I exciters, TGOV1 governors and the constant-impedance
+component of ZIP loads. Each 120-s event record follows one uninterrupted
+trajectory through six load or line interventions. Each normal record
+lasts 600\,s. At 30 reports/s these records contain 3,601 and 18,001
+reports per PMU, including both endpoints. A switch-aligned report uses
+the post-switch algebraic solution. The candidate at bus~31 is the
+9.2-MW/4.6-Mvar load colocated with the generator that serves as slack
+in the initial power flow. Machine dynamics balance the subsequent load change.
 
-\begin{table}[t]
-\centering\small
-\caption{Procedures in the primary comparison. Each issues alarms and
-diagnoses through the common publication clock.}
-\label{tab:narrative-evidence}
-\begin{tabularx}{\columnwidth}{@{}p{.26\columnwidth}X@{}}
-\toprule
-Procedure & Evidence for a new source \\\midrule
-History bank & Compare candidate intervention and recovery paths using
-their conditional states and integrated load severity.
-\\
-Continuous GLR & Keep one committed augmented state through restoration.
-Compare candidate transitions over a 19-report search using a bounded
-profile fit for load severity.
-\\
-ExtraTrees & Score sources from causal PMU features. Fit on disjoint
-simulation parents that cover the same catalog.
-\\\bottomrule
-\end{tabularx}
-\end{table}
-
-We select each threshold using 12 event and 24 normal calibration records.
-A setting is feasible if it completes all records and its one-sided 95\%
-Poisson upper bound is at most one normal alarm per monitored hour.
-Selection favors higher timely attribution, then fewer extra alarms,
-shorter diagnosis delay and a higher threshold, in that order.
-The GLR is rerun for each candidate threshold because publication changes its
-committed state. The held-out test has \RecParents{} event sequences with
-six interventions each and \RecNormalParents{} normal records. The next
-intervention begins 3--8\,s after OFF. We finalize the predictions before
-scoring them against reserved labels.
-
-For continuous events, an alarm is associated temporally before predicted family/source is inspected. The first unmatched alarm after ON is eligible up to the next ON, with the inherited 30-s cap. A timely joint decision requires the correct family and asset emitted before true OFF. Unmatched alarms are extras; false restorations and open episodes are reported separately. These definitions prevent an eventual correct answer from hiding a late diagnosis.
-
-We report unmatched alarms during event records separately from alarms during
-normal operation. The uncertainty analysis resamples whole physical parents
-in pairs (10,000 draws). Report timestamps measure decision delay. Wall-clock processing time
-measures computational cost.
-
-\subsection{Plant and Secondary Tests}
 \input{tables/generated/source_catalog}
 
-The plant is an IEEE-39 model in Julia/PowerDynamics with Sauer--Pai machines, IEEE Type~I exciters, TGOV1 governors and constant-impedance ZIP loads. Each physical parent is integrated continuously, preserving differential states through ON/OFF. The PMU reporting grid is separate from solver steps: a 120-s record contains 3601 reports per PMU and a 600-s normal record contains 18001. At a switch-aligned report the export uses the post-switch algebraic value. The bus-31 candidate is the existing 9.2-MW/4.6-Mvar load at the generator bus that serves as slack only in the initial power flow; the dynamic model has no slack bus, so its load change is absorbed by machine dynamics like any other.
+The simulator adds instrument noise fitted to normal segments of the
+competition reference record. Vector autoregressions for each signal
+family include a strong component shared across PMUs. Voltage-magnitude
+noise is about 0.4\% of nominal, while noise in inter-PMU angle
+differences ranges from $10^{-4}$ to $10^{-2}$ degrees. Independent
+errors at the instrument terminals can obscure the small differences on
+which remote load attribution relies (Section~\ref{sec:noise-stress}).
 
-Instrument noise follows a stochastic model fitted to normal segments of the competition reference record: per-family vector autoregressions with a strong common factor across PMUs. Voltage-magnitude noise is about 0.4\% of nominal, but the noise of angle \emph{differences} between PMUs is only $10^{-4}$ to $10^{-2}$ degrees, because most angle noise is common to all units. This small differential noise is what makes megawatt-scale changes observable at remote PMUs (Section~\ref{sec:theory}); it is a property of the reference data, smaller than the idiosyncratic error expected from field PMUs \cite{iec2018synchrophasor}. Section~\ref{sec:noise-stress} therefore tests larger and independent per-PMU noise.
+The first 12\,s of each record are reserved for startup. For each true
+intervention, the evaluator associates the first unassigned alarm after
+onset, up to the next onset or a 30-s cap, using timestamps alone. A
+\emph{timely attribution} requires the diagnosis attached to that alarm
+to name both the correct family and the correct asset before true
+restoration. An unmatched alarm on an event record counts as an extra.
+Alarms on normal records have their own exposure. Intervals for method
+differences use 10,000 paired bootstrap resamples of complete trajectories.
+Predictions were fixed before scoring against the reserved event labels.
 
-The component study tests state continuity with the same observations,
-predictor and original thresholds in all arms. At inferred closure, one
-pair keeps the augmented state and the other zeros only the 114 physical
-state deviations. Within each pair, the load score either marginalizes or
-profiles severity. This is a retrospective comparison on previously examined
-records. It isolates the selected estimator changes at fixed thresholds.
+\subsection{Comparison With a Continuous GLR and ExtraTrees}
+\label{sec:comparison-design}
+Each procedure receives the same 47 PMU coordinates and covers the same
+18 sources. The history bank and continuous GLR (generalized likelihood
+ratio) observer share the nominal network, measurement operators and
+startup data. The GLR commits to one state, carries it through
+restoration and fits load severity over a bounded interval while searching
+19 possible onset reports. ExtraTrees, an ensemble of randomized trees
+\cite{geurts2006extremely}, scores sources from causal PMU features. Its
+separate training set covers all catalog sources.
 
-An independent continuous evaluation varies network resistance and
-reactance (R/X) and instrumental noise across 18 event and 12 normal
-parents. It uses the original operating points of the five-model bank, the
-nominal bank and two earlier ExtraTrees adapters. Its persistent-line lane
-also includes the first-stop detector of Chen \emph{et al.}
-\cite{chen2016quickest}. The supplement records that lane and the
-comparator lineage. The independent per-PMU noise replay in
-Section~\ref{sec:noise-stress} changes the measurement law directly.
+For each procedure, threshold selection used 12 event and 24 normal
+calibration trajectories. Eligible thresholds completed every record
+and gave a one-sided 95\% Poisson upper bound of at most one alarm per
+monitored normal hour. Among eligible settings, we maximized timely
+attribution, breaking ties by fewer extras, shorter diagnosis delay and
+then higher threshold. Each GLR threshold required a separate run because
+a published decision changes the state used for the next prediction.
+The selected score thresholds were 6.9068 for the bank and GLR and 2.1972
+for ExtraTrees. Each threshold applies on its procedure's own score scale.
+The test comprised \RecParents{} event and \RecNormalParents{} normal
+trajectories. Interventions lasted 2--5\,s, with 3--8\,s between one
+restoration and the next onset. The paired bootstrap preserved the network
+and noise strata.
 
-\subsection{Controlled Recovery Comparison Across Two Plants}
-The subsequent study compares the history bank, mean merging and reset
-on new paired schedules. After a public OFF, mean merging places retired
-histories into the no-new-event state, retaining its augmented mean and
-the nominal conditional covariance. Active histories remain in the bank.
-The reset arm additionally sets the 114 physical deviations to zero.
-All arms share proposals, physical operators and the publication clock.
+\subsection{Controlled Comparison of Recovery Representations}
+All three arms use the nominal F01 predictor, the same severity model,
+proposal rules and publication clock. The \emph{history} arm keeps the
+retained paths and proposal memory when it publishes a restoration.
+The \emph{mean} arm (carry in Fig.~\ref{fig:c03}) merges the no-event
+path and the restored paths into their weighted augmented-state mean,
+keeps active paths, and uses the shared conditional covariance. It clears
+stored pre-onset states and restarts the proposal windows from the
+merged state. The \emph{reset} arm performs the same merge and
+additionally sets the 114 physical-state deviations to zero.
+Instrumental coordinates remain in the merged state. History versus mean
+therefore compares two ways to continue inference after a published
+restoration. Mean versus reset tests whether the physical component
+of the merged state should be carried forward.
 
-Calibration uses 36 event and 36 normal parents from the original plant (F01). The same
-feasibility and selection rule is applied to each arm, with separate
-inference when publication changes the state. The resulting thresholds
-are fixed for both test plants. Each plant has 36 new event and 36 normal
-parents. Six interventions per event sequence give four prespecified
-events following gaps of 0.5--less than 3 seconds and one following a
-3--8-second gap, in randomized order. The primary endpoint uses the four
-short-gap events, excluding the first intervention. Sources, schedules
-and noise seeds are paired between plants.
+On F01, 36 event and 36 normal calibration trajectories determined one
+threshold per arm under the same normal-alarm budget. We applied those
+thresholds to two test plants. F01 uses the original dynamics. P2
+retains the same topology, terminals and catalog but uses classical
+machines, droop governors and different passive parameters. The F01
+predictor was applied to P2 without refitting the plant model. Each test
+plant contributed 36 new event and 36 normal trajectories, with event
+schedules, sources and noise seeds paired across plants.
 
-The second plant (P2) uses classical machines and droop governors, with the
-same measurement terminals and catalog. Its dynamics and some passive
-parameters differ from F01. The predictor always uses the F01 model.
-Validation checks sample timing, switch alignment, dynamic continuity,
-Kirchhoff residuals and terminal currents. The comparison resamples the
-36 parent sequences in pairs 10,000 times. A history-retention coverage
-advantage requires at least five observed percentage points, a positive
-95\% interval and the normal-alarm budget in each plant.
+Each test sequence contains four interventions after short recovery gaps
+(at least 0.5 and less than 3\,s) and one after a
+3--8-s gap, in randomized order. The first intervention has no preceding
+gap. The prespecified endpoint thus includes 144 short-gap interventions
+out of 216 per plant. A coverage advantage required a difference of at
+least five percentage points, a paired 95\% interval above zero and
+compliance by both compared arms with the normal-alarm budget on that plant.

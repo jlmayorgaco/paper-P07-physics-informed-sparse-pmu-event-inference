@@ -1,36 +1,64 @@
-\section{Detectability Computation and Noise-Stress Protocol}
+\section{Nominal Source Separation, Reset and Instrument Noise}
 \label{sec:supp-theory}
 
-\paragraph{Operators.} The information analysis of the main article uses
-the nominal bank built by the evaluated implementation for one held-out
-calibration record of a later campaign whose runtime is byte-identical to
-the independent evaluation runtime. The independent-evaluation banks had
-been evicted by the storage-retention policy; the nominal operators differ
-between records only through the prefix-estimated operating factors, which
-remain within $2\times10^{-5}$ of unity.
+\paragraph{Source signatures.}
+We propagated the nominal predictor from zero pre-event deviation. The
+first operator switches at half-phase 0, and subsequent operators hold
+the intervention active. Loads have reference severity $a_0=0.1$.
+The operators come from one calibration record using the same inference
+runtime as the independent evaluation. For each of the 18 sources we ran
+the quiet-regime filters of the no-intervention path and all candidate
+sources on the same noise-free reports. At fixed onset, profiling a rival
+load's severity over $[-0.2,0.2]$ gives its residual energy. The energy of
+the generating path at its true severity was below $10^{-8}$.
 
-\paragraph{Signatures.} For each source $i$, the noise-free switched
-predictor is propagated from a zero pre-event deviation with the ON
-operator at half-phase 0 followed by the stay operator (loads at severity
-0.1). Each candidate filter $j\in\{0,\dots,18\}$ is run on these reports with
-the quiet-regime gains $K_o$ and inverse innovation covariances
-$S_o^{-1}$ of the implementation. The cumulative sums
-$\sum e^\top S^{-1}e$, $\sum s^\top S^{-1}e$ and $\sum s^\top S^{-1}s$ give the
-signature information of the main article with the competitor's severity profiled
-on $[-0.2,0.2]$. As a check, the true-history filter at the true severity
-leaves a residual energy below $10^{-8}$. The idealized score reference uses the
-birth hazard $1-\exp[-(1/60)/30]$ shared equally by the 18 cells.
+For a load tested against the intact network, the nominal response is
+linear in severity. Define $E_i(T)$ as the accumulated squared whitened
+residual at $a_0$, and let $\Lambda_{i0}(T)=E_i(T)/2$ denote its energy.
+At fixed signatures, scaling the noise covariance by $\alpha^2$ gives
+energy $a^2 E_i(T)/(2\alpha^2 a_0^2)$. Equating this to the score
+reference $\lambda^\star$ yields
+\begin{equation}
+ a_{\rm ref}(\alpha,T)=\alpha a_0
+          \sqrt{\lambda^\star/\Lambda_{i0}(T)} .
+ \label{eq:reference-amplitude}
+\end{equation}
+Here $\lambda^\star=\log 99-\log\pi_c$ uses the approximate
+single-source birth odds $\pi_c=(1-\exp[-1/(60\cdot30)])/18$.
+This is a known-onset reference for Fig.~\ref{fig:theory-information}.
+The online procedure integrates over severity, searches over unknown
+onsets and waits for consecutive reports.
 
-\paragraph{Reset cost.} For every intervention of the controlled study,
-the noise-free truth is propagated through ON, the active interval, OFF and
-the gap until the next onset. At the inferred closure time of the carry
-arm, the first 114 coordinates of the true augmented state are zeroed, and
-the no-intervention and all birth filters are run on the remaining truth
-in the recovery covariance regime. The largest profiled gain of a birth
-over the no-intervention history is compared with the idealized score
-reference $\lambda^\star$, not a publication guarantee. Harm in
-the reset arm is an unmatched alarm between the OFF of the intervention and
-the next onset, or a lost timely attribution of the next intervention.
+\begin{figure*}[t]\centering
+\includegraphics[width=.97\textwidth]{figures/generated/theory_information_normalized.pdf}
+\caption{Nominal separation with the onset supplied. (a) One-second
+profiled energy against the intact network and the nearest competing
+source, for a 10\% load change or a line opening. (b) Load amplitude at
+which the one-second energy reaches the dashed score reference in (a),
+as the assumed noise standard deviation is scaled uniformly.}
+\label{fig:theory-information}\end{figure*}
+
+\paragraph{Recovery after a physical reset.}
+For each intervention in the fixed-threshold component study we
+propagated a noise-free local trajectory through onset and restoration.
+At the carry arm's inferred closure we retained the instrument and
+discrepancy states and set the first 114 physical deviations to zero.
+The intact filter and each candidate birth filter then processed the
+same continuation in the \emph{recovery} covariance regime. A positive
+difference between the intact filter's residual energy and that of a
+birth means the birth explains part of the reset error. The largest
+gain over sources and elapsed times crossed $\lambda^\star$ after all
+108 interventions. The reset procedure issued an unmatched alarm in
+the following gap or lost timely attribution of the next source after
+\RevResetHarm{} of the 108. The discrepancy between these counts shows
+why a deterministic energy crossing cannot predict each published alarm.
+
+\begin{figure}[t]\centering
+\includegraphics[width=\columnwidth]{figures/generated/theory_reset_cost.pdf}
+\caption{Largest gain in profiled energy after a reset. Filled symbols
+mark interventions followed by an unmatched alarm or loss of the next
+timely diagnosis. Open symbols mark the remaining interventions.}
+\label{fig:theory-reset}\end{figure}
 
 \paragraph{Noise stress.} Observations are regenerated from the stored
 deterministic trajectories with the simulator's own noise stream and seed:
@@ -57,13 +85,7 @@ matrices with the noise scale estimated from the noisy prefix. The
 operating point remains at its $\alpha=1$ estimate because derivatives
 exist only there. Estimated angle noise scales of these scenarios are
 about 48 times the calibrated scale, outside the implemented support
-$[0.1,10]$; for this test only the support was widened to $[0.1,1000]$. Two
-jobs ran concurrently with another campaign on the same desktop CPU, so
-the reported processing rates are conservative.
-
-\paragraph{Reproduction.} Every number and figure of the analysis is
-regenerated from the stored operators and outcomes by the reproducibility
-package, which also contains the noise-stress generator.
+$[0.1,10]$; for this test only the support was widened to $[0.1,1000]$. Two jobs ran concurrently with another campaign on the same desktop CPU.
 
 \begin{figure*}[t]\centering
 \includegraphics[width=.97\textwidth]{figures/generated/noise_stress.pdf}

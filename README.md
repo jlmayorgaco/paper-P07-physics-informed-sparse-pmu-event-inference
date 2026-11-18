@@ -1,5 +1,12 @@
 # P07 — Recovery-Aware Physical Attribution of Load and Line Events From Sparse PMUs
 
+**18 November 2026.** The revised [article](output/pdf/P07_Event_Attribution_Article.pdf)
+derives the bounded-severity update and the one-report cost of resetting the
+physical state. The [supplement](output/pdf/P07_Event_Attribution_Supplement.pdf)
+documents the publication rules, controlled comparisons and corrected nominal
+amplitude reference. The [technical review](docs/REVISION_REVISOR_2_20261118.md)
+records the objections, revisions and limits of the two-plant result.
+
 **C04 covariance successor (14 November 2026):** implemented and running development
 checks and fresh CAL physics export. See the [execution status](docs/C04_EXECUTION_STATUS_20261114.md).
 No C04 performance advantage has been established or added to the manuscript.

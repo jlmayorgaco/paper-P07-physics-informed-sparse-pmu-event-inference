@@ -1,52 +1,42 @@
 \section{Introduction}
 \label{sec:introduction}
 
-\PARstart{A}{fter} a load is restored or a line is reclosed, physical state
-continues to evolve. A second intervention may begin before that response
-decays. With eight PMUs, the observed change can combine recovery from the
-earlier event with forcing from a new source
-(Fig.~\ref{fig:problem-method}(a)).
+\PARstart{S}{uppose} a load at bus~16 returns to its original setting.
+While the generators are still swinging, a phasor measurement unit (PMU)
+on a neighboring branch records another change in current. The change may
+follow from the load recovery alone. It may also reflect the opening of
+line 16--17 during that recovery. Can a monitor with eight PMUs distinguish
+these cases and, if the line opened, identify it before it recloses?
 
 \begin{figure*}[t]\centering
 \includegraphics[width=.99\textwidth]{figures/generated/paper_method.pdf}
-\caption{Recovery-aware event attribution from sparse PMUs. (a) A new intervention can begin while an earlier response persists. (b) Network-derived predictors compare recovery and new-event histories using the same report; integrated severity evidence updates their weights before detection, source diagnosis and restoration are published. The state continues through physical restoration; confirmed episode closure compresses histories to the retained state mean. (c) A separate nominal diagnostic measures source ambiguity; it does not gate publication. The electrical motif and traces are schematic.}
+\caption{Recovery-aware attribution. (a) The response to intervention A
+persists when B begins. (b) Each candidate predicts the next PMU report
+from the estimated state at its proposed onset. Load histories integrate
+over the size of the change. A line history specifies an open or closed
+branch. (c) Active histories support a new alarm and its source diagnosis.
+Restored histories support a restoration report for that source. The source-separation calculation
+at left uses a supplied onset and serves as a retrospective diagnostic.}
 \label{fig:problem-method}\end{figure*}
 
-A detector may register this change without identifying its cause. We ask
-whether a monitor can name the new load or line before it is restored,
-and how many unmatched alarms it generates in doing so. Sequential
-detectors test for changes in the law of the observations
-\cite{willsky1976glr,nikiforov1995generalized,lai2000sequential,tartakovsky2014sequential}.
-Existing grid methods compare outage hypotheses or match transient
-trajectories to candidate faults
-\cite{tate2008outage,chen2016quickest,rovatsos2017outage,warner2023highfidelity}.
-Successive interventions create a further ambiguity because a restored
-asset can still account for part of the next measured transient.
+We treat recovery as a competing explanation for each new report.
+A bank of switched differential-algebraic equation (DAE) models predicts
+how voltages and currents would evolve if recovery continued and how they
+would change if a particular load or line switched. The bank assigns each
+history a weight based on its prediction errors. Two sums of these weights
+answer different questions. A load already restored contributes no weight
+to the hypothesis that it is still active, but its history can still
+explain which load produced the measured transient
+(Fig.~\ref{fig:problem-method}).
 
-We use switched differential-algebraic equation (DAE) models to predict
-each candidate response from the state inferred before its proposed onset.
-A restored history stops contributing to the weight assigned to an
-active intervention, but its predicted response can still explain incoming
-reports until the bank compresses it. The same update therefore supports
-three distinct outputs: an alarm, a source diagnosis and a restoration
-message (Section~\ref{sec:narrative-method}).
-
-We evaluate the bank against a continuous generalized likelihood ratio
-(GLR) observer and an ExtraTrees classifier on held-out sequences with a
-known catalog. The GLR tracks one continuous state, and ExtraTrees scores
-sources from recent PMU features. Each procedure selects its threshold
-on calibration data
-under a target of one normal alarm per hour
-(Section~\ref{sec:narrative-protocol}). We then compare three versions of
-the bank: retaining recovery histories, merging restored histories into
-their estimated state mean, and additionally resetting the physical state.
-The first contrast measures the benefit of retaining recovery alternatives;
-the second measures state continuity within the merging control.
-The control retains nominal conditional covariance, not the full
-uncertainty of the mixture (Section~\ref{sec:recovery-moments}).
-
-The same calibrated procedures are evaluated on the original plant and
-a second simulated plant without recalibration. Results first compare
-complete procedures, then separate recovery representation from continuity,
-and finally examine failures under missing measurements, independent noise
-and model mismatch (Section~\ref{sec:narrative-results}).
+We test this distinction on successive, nonoverlapping interventions from
+a fixed catalog of nine load buses and nine lines. We first compare the bank
+with a continuous generalized likelihood ratio (GLR) observer and an
+ExtraTrees classifier at a common calibration target for alarms in normal
+operation. We then ask what information a monitor needs to keep after it
+reports restoration. On paired sequences from two simulated plants, we
+compare retaining recovery histories, merging them into a single state
+mean, and resetting the physical part of that mean. We count an intervention
+as correctly attributed when the monitor names its family and asset before
+the intervention ends. We also count alarms that cannot be matched to an
+intervention.

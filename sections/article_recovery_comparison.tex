@@ -1,33 +1,28 @@
 \subsection{Timely Attribution at a Common Calibration Budget}
 \label{sec:recovery-comparison}
 The history bank correctly attributed \RecBankTimely{} interventions
-before OFF, compared with \RecGlrTimely{} for the continuous GLR and
-\RecTreesTimely{} for ExtraTrees. The three procedures emitted
-\RecBankExtras{}, \RecGlrExtras{} and \RecTreesExtras{} unmatched alarms,
-respectively, during event records. The bank and GLR associated alarms
-with a similar number of interventions. The main difference was how often
-their diagnosis named the correct source before OFF.
+before restoration. The continuous GLR attributed \RecGlrTimely{}
+and ExtraTrees \RecTreesTimely{} (Fig.~\ref{fig:recovery-c02}).
+The paired gain over the GLR was \RecGlrDiff{} percentage points
+(95\% interval \RecGlrCI). All nine bank misses occurred in the mixed
+branch-parameter perturbation condition, where the bank attributed 27
+of 36 interventions. It attributed all 36 in each of the other two
+conditions.
 
 \begin{figure*}[t]\centering
 \includegraphics[width=.99\textwidth]{figures/generated/recovery_comparison_c02.pdf}
-\caption{Coverage and alarm cost on held-out sequences. (a) Correct family
-and source before OFF, out of 108 interventions. (b) Unmatched alarms over
-0.54 monitored event-hours. (c,d) History bank minus each comparator, with
-95\% intervals from 10,000 paired resamples of 18 event parents. Positive
-coverage differences and negative alarm-rate differences favor the bank.
-The bank improves both outcomes over GLR but trades more extras for higher
-coverage than ExtraTrees. Thresholds were selected on separate calibration
-data under a target of one normal alarm/h; normal exposure and its Poisson
-upper bound are shown separately.}
+\caption{History bank, continuous GLR and ExtraTrees on the same held-out
+trajectories. (a) Correct family and source before restoration out of
+108 interventions. (b) Unmatched alarms over 0.54 monitored event-hours.
+(c,d) Bank minus comparator, with 95\% intervals from paired resampling
+of the 18 event trajectories within network and noise strata.}
 \label{fig:recovery-c02}\end{figure*}
 
-Figure~\ref{fig:recovery-c02} shows a \RecGlrDiff{} percentage
-point gain over GLR (paired 95\% CI \RecGlrCI), with fewer extra alarms.
-The gain over ExtraTrees is \RecTreesDiff{} points (95\% CI
-\RecTreesCI), with more extra alarms. The intervals resample entire
-physical parents within the network/noise strata; events within a
-parent do not count as independent samples. All three methods had zero
-normal alarms in \RecNormalHours{} monitored hours per method (one-sided
-95\% Poisson upper bound: \RecNormalUpper{}/h). The result is conditional
-on the count model and the aggregate exposure. Candidate search, scoring and state commitment all contribute to
-the observed difference between the two physical procedures.
+During 0.54 monitored event-hours, the bank emitted \RecBankExtras{}
+extra alarms, the GLR \RecGlrExtras{} and ExtraTrees \RecTreesExtras{}.
+All three emitted zero alarms over \RecNormalHours{} normal hours per
+method (one-sided 95\% Poisson upper bound \RecNormalUpper{}/h).
+Thus the bank gained timely coverage over ExtraTrees at the cost of
+eight extra alarms. Against the GLR it improved both coverage and extra
+alarm count. That comparison changes onset search, severity scoring
+and state commitment together.

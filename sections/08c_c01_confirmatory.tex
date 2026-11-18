@@ -43,15 +43,12 @@ intervals; the physical bank's median alarm delay is about 0.27\,s in the
 matched and in-bank conditions, comparable to the learned adapters
 (0.19--0.30\,s).
 
-We compare these delays retrospectively with the nominal signature crossing.
-For the nominal bank on matched networks,
-line alarms arrive after a median \RevObsLineDelay\,s, at the six-report
-confirmation floor of \RevPredAlarmDelay\,s less the sub-report onset
-phase, and doubling the noise leaves them unchanged. Load alarms arrive
-after \RevObsLoadDelay\,s, again unchanged by doubled noise but about
-\RevLoadExcessReports{} reports after the nominal signature reference crossing. Line delays are
-consistent with the publication floor, while load delays exceed that
-model-based reference.
+For the nominal bank on matched networks, the median alarm delay was
+\RevObsLineDelay\,s for lines and \RevObsLoadDelay\,s for loads. Doubling
+the calibrated noise left both medians unchanged. Six consecutive reports
+at 30\,Hz span $5/30$\,s from the first qualifying report to the sixth.
+The observed delay also includes the time between physical onset and the
+first qualifying report.
 The two ExtraTrees adapters recover lines (\ReaderETLine{} and
 \ReaderETShortLine{} of 324) but few loads (\ReaderETLoad{} and
 \ReaderETShortLoad{}). The diagnosis-time distributions in the supplement show that this is a

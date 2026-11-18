@@ -1,54 +1,64 @@
-\section{Problem and Measurement Model}
+\section{Interventions and PMU Observations}
 \label{sec:narrative-problem}
 
-At report $k$, inference uses measurements through $t_k=k/30$ to decide
-whether a physical intervention occurred. Detection concerns its presence;
-classification selects a physical operator; localization selects a bus or
-branch. These outputs can become reliable at different times. We record
-the estimated physical onset $\widehat\tau$ separately from the alarm and
-diagnosis emission times.
+The monitor receives one report at $t_k=k/30$ seconds. It must detect a
+new intervention, identify its family and asset, and recognize restoration.
+Physical onset, alarm time and diagnosis time are distinct. The source and
+switch times are available only for scoring. The monitor estimates the
+initial operating point and noise scale from the first 300 reports, which
+are assumed to precede any intervention. Monitoring begins at 12~s.
 
-Figure~\ref{fig:reference-event-types} introduces the broader measurement
-phenomena using the reference record released with the SGSMA 2026
-competition. Faults, line changes,
-generation changes and load changes alter the physical network; missing or
-corrupted reports alter observation integrity. The causal attribution test
-addresses load changes and line openings with restoration; missing and
-corrupted data are diagnosed by the integrity relations of
-the supplementary integrity analysis. Faults and generation changes provide
-context, not additional validated event classes.
+Figure~\ref{fig:reference-event-types} places the two tested families in
+the wider range of events that a PMU can record. The evaluation considers
+load changes and line openings. The supplement examines missing and
+corrupted observations separately.
 
 \begin{figure*}[t]\centering
 \includegraphics[width=.98\textwidth]{figures/generated/event_taxonomy_grid.pdf}
-\caption{Representative signatures from the archived RAW0001 reference simulation of the SGSMA 2026 competition, arranged by label 0--8. Class 0 shows a normal interval; classes 1--5 and 7 retain the original trace values. Class 6 applies an illustrative data-loss mask from 0 to 30 s to the PMU 2 frequency trace (generation onset at 15 s): orange shows the available response and Yes level; blue marks No, while gray shows the response hidden during the gap, not a detector reconstruction. The mask is not the recorded outage interval. The gray clock trains in panels 5 and 6 are illustrative, not measured report timing. Class 8 is a definition schematic, not an observed trace or a validated bank output. Event traces are aligned to source labels for illustration only. Only load and line mechanisms enter the main causal evaluation.}
+\caption{Representative signatures from the archived RAW0001 reference simulation
+of the SGSMA 2026 competition. Class 0 shows normal operation. Classes
+1--5 and 7 show recorded traces aligned to the event labels. In class 6
+an illustrative 0--30~s mask hides the response at PMU~2 to a generation
+event at 15~s. Orange shows available frequency or the Yes level, blue
+indicates No, and gray shows the underlying simulated frequency. The
+mask and the clock trains in panels 5 and 6 are illustrative. Class 8
+depicts the definition of an unknown event.}
 \label{fig:reference-event-types}\end{figure*}
 
-The network has 39 buses, but the prescribed PMU set is
+\subsection{Switched Network Model}
+
+A load intervention scales its active and reactive setpoints by $1+a$,
+with unknown fractional change $a$. Opening a line removes its branch
+primitive from the network equations. The catalog in
+Table~\ref{tab:source-catalog} excludes islanding openings.
+An intervention history $h=(e,c,\tau,\kappa,\mathcal I)$ records the
+family $e$, asset $c$, onset $\tau$ and restoration $\kappa$, with
+$\kappa=\infty$ for a sustained event. A load history also specifies the
+interval $\mathcal I$ containing $a$. A line history has no severity
+parameter.
+
+For network mode $q$, differential states $x$ include the machines and
+their controls, algebraic variables $z$ include the bus voltages, $u$
+contains the load inputs, and $\theta$ denotes the plant parameters. They
+satisfy
 \begin{equation}
- \mathcal P=\{2,5,6,10,19,22,29,39\}.
- \label{eq:narrative-pmus}
+ \dot x=f_q(x,z,u;\theta),\qquad 0=g_q(x,z,u;\theta).
+ \label{eq:narrative-dae}
 \end{equation}
-Voltage is measured at each PMU bus. Current is measured at a specified branch terminal, which can differ from that bus. The causal implementation uses 47 coordinates: eight voltage magnitudes, eight voltage angles, eight current magnitudes, seven current angles, eight absolute frequencies and eight ROCOFs, at 30 reports/s. BUS39 current angle is excluded because its interpretation remains partially validated. The BUS5 current terminal retains the provisional historical 5--6 assignment. These are declared measurement assumptions, not identities inferred from classification accuracy.
+At an admitted switch time $s\in\{\tau,\kappa\}$, the differential state
+is continuous and the post-switch network determines $z(s^+)$,
+\begin{equation}
+ x(s^+)=x(s^-),\quad
+ g_{q^+}\big(x(s^-),z(s^+),u(s^+);\theta\big)=0.
+ \label{eq:narrative-switch}
+\end{equation}
+We fix the angle reference and work on local solutions with nonsingular
+algebraic Jacobian. A report at $s$ uses the post-switch solution.
+Reclosing a branch restores its admittance. The machine angles and speeds
+take their values from the immediately preceding instant, so the same
+admittance can produce a different terminal current after reclosure.
 
-\input{tables/generated/main_terminal_map}
-
-The exported magnitudes are in V and A, angles in degrees, frequency in Hz
-and ROCOF in Hz/s. Internal centered coordinates do not replace the
-definition of absolute frequency. These are reporting-rate phasor measurements;
-waveform harmonics or THD are not measured by these channels.
-
-The causal stream is exported from one balanced complex phasor per PMU:
-phase A supplies the voltage and current magnitudes and angles. The CSV
-exporter constructs B and C by equal magnitudes and angle offsets of
-$-120^\circ$ and $+120^\circ$. Retaining A therefore loses no independent
-phase information in these synthetic records; it is not measured
-positive-sequence extraction or a model of unbalanced faults. The vector is
-$y_k=(|V_A|_{\mathcal P},\angle V_A{}_{\mathcal P},
-|I_A|_{\mathcal P},\angle I_A{}_{\mathcal P\setminus\{39\}},
-f_{\mathcal P},\dot f_{\mathcal P})_k$.
-The supplementary measurement table gives all eight current-terminal
-assignments, polarities, gains and phase offsets. Products of voltage and
-current measured at different terminals are power proxies.
+\subsection{Measurement Model}
 
 % PROTECTED FIGURE: retain this single-column IEEE-39 diagram. See AGENTS.md.
 \begin{figure}[t]\centering
@@ -56,62 +66,37 @@ current measured at different terminals are power proxies.
 \caption{IEEE 39-bus single-line diagram: 46 branches, 12 transformers and 10 generators. Blue bars and P marks locate the eight voltage PMUs. Orange branches and load arrows identify the nine line and nine load candidates; gray arrows denote other loads. Current terminals follow the separate measurement contract.}
 \label{fig:narrative-topology}\end{figure}
 
-The physical model is
-\begin{align}
- \dot x&=f_q(x,z,u;\theta),&0&=g_q(x,z,u;\theta),\label{eq:narrative-dae}\\
- h_k&=H_q(x_k,z_k,u_k),\nonumber\\
- \eta_k&=F_M(\eta_{k-1},h_k;\theta_M),\nonumber\\
- y_k&=G_M(\eta_k,h_k;\theta_M)+b+\varepsilon_k.\label{eq:narrative-measurement}
-\end{align}
-Figure~\ref{fig:physical-measurement-chain} maps these physical and
-measurement operations to the report consumed by inference.
-\begin{figure*}[t]\centering
-\includegraphics[width=.99\textwidth]{figures/generated/physics_measurement_chain.pdf}
-\caption{Illustrative chain from load/line intervention to causal PMU report.
-At OFF, the operator returns to baseline while $x$ and phase-history $\eta$
-persist; algebraic voltages and currents are re-solved. Eight PMUs yield 47
-coordinates at 30 reports/s; BUS39 current angle is omitted. Symbols and traces
-are schematic. Phase B/C are reconstructed from A; raw waveforms and harmonics
-are not inference inputs.}
-\label{fig:physical-measurement-chain}\end{figure*}
-Here $x$ contains machine and control dynamics, $z$ the algebraic network
-variables, $q$ the topology/intervention mode, and $\theta_M$ the measurement
-convention. $H_q$ selects electrical phasors; $\eta_k$ retains the causal
-phase history used for frequency/ROCOF and the measurement-filter state.
-The observation thus depends on an augmented state. Bus frequency comes
-from phase evolution, not a machine's rotor speed. Instrumental noise is
-generated by the noise model described in Section~\ref{sec:narrative-protocol}.
-
-An intervention history is the discrete tuple
-$h=(e,c,\tau,\kappa,\mathcal I)$: family, source, onset, restoration time
-($\kappa=\infty$ for a sustained event) and, for a load, a severity interval
-$\mathcal I$. The severity $a\in\mathcal I$ is a continuous latent variable
-conditioned on $h$ and integrated in the evidence; a line opening has no
-severity. A load changes its local P/Q setpoints by the common factor
-$1+a$; a line opening switches its branch primitive. For the
-supported impulse-free switches,
+The eight PMUs measure voltage at the buses marked in
+Fig.~\ref{fig:narrative-topology},
 \begin{equation}
- x(\tau^+)=x(\tau^-),\qquad g_{q^+}(x(\tau^-),z(\tau^+),u;\theta)=0.
- \label{eq:narrative-switch}
+ \mathcal P=\{2,5,6,10,19,22,29,39\}.
+ \label{eq:narrative-pmus}
 \end{equation}
-The algebraic voltage/current response may jump even though dynamic states remain continuous. Physical restoration reverses the intervention operator. It does not return the machines to their pre-event state, so electrical recovery can continue after OFF.
+Current refers to a specific branch terminal. For example, the voltage
+at bus~2 is paired with current at the bus~3 end of line~2--3
+(Table~\ref{tab:main-terminal-map}). The bus~5 current retains the
+provisional assignment to line~5--6. At bus~39 the current angle is
+excluded because its phase convention is only partially verified.
 
-Switch-aligned reports use the consistent post-switch algebraic solution.
-The local reduction requires an invertible algebraic Jacobian after fixing
-the angle reference; the catalog excludes islanding line alternatives.
-Successful solves and local residual checks validate the admitted cases,
-not global regularity for arbitrary switching topologies.
+\input{tables/generated/main_terminal_map}
 
-\begin{table}[t]\centering\small
-\caption{Scope of the executed causal component. The source is an intervention asset; it is not necessarily a measured PMU bus.}\label{tab:narrative-scope}
-\begin{tabularx}{\columnwidth}{@{}lXX@{}}\toprule
-Case & Physical operator & Executed claim\\\midrule
-Normal & No intervention & Monitor after startup\\
-Load & Local P/Q factor; optional restoration & Nine candidate buses\\
-Line & Branch open; optional reclose & Nine candidate branches\\
-Fault/generation & Different shunt/input/trip operators & Outside this causal test\\
-Missing/bad data & Measurement-integrity mechanism & Parity diagnosis (supplement)\\
-Unknown & Unresolved diagnosis & Not a new physical family\\\bottomrule
-\end{tabularx}\end{table}
-
-The generator stores event schedules and true states separately from the PMU stream. Inference receives the nominal network, permitted calibration and reports through the current time. It receives no source, switch time, true R/X realization or solver state. Initial operating context and noise scale are estimated from 300 startup reports; monitoring begins after a 12-s warmup. This startup estimate assumes an intervention-free prefix.
+Let $\zeta_k=H_q(x_k,z_k,u_k)$ collect the selected electrical phasors.
+Phase history and instrument-filter memory $\eta_k$ enter each report
+through
+\begin{align}
+ \eta_k&=F_M(\eta_{k-1},\zeta_k;\theta_M),\nonumber\\
+ y_k&=G_M(\eta_k,\zeta_k;\theta_M)+b+\varepsilon_k ,
+ \label{eq:narrative-measurement}
+\end{align}
+where $\theta_M$ specifies the measurement convention, $b$ is the
+observation offset and $\varepsilon_k$ is instrument noise. Bus frequency
+and its rate of change are derived from the voltage phase history.
+The resulting vector has 47 coordinates per report,
+\[
+ y_k=\big(|V_A|_{\mathcal P},\angle V_A{}_{\mathcal P},
+ |I_A|_{\mathcal P},\angle I_A{}_{\mathcal P\setminus\{39\}},
+ f_{\mathcal P},\dot f_{\mathcal P}\big)_k .
+\]
+The simulator exports balanced phase-A phasors and constructs the other
+two phases by fixed angle shifts. Phase A therefore supplies all the
+independent phasor information in these records.

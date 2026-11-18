@@ -2,12 +2,58 @@
 import json
 from collections import defaultdict
 from hashlib import sha256
+from itertools import product
 from pathlib import Path
 import math
 
 
 def normal_pdf(x, mean, variance):
     return math.exp(-0.5*(x-mean)**2/variance) / math.sqrt(2*math.pi*variance)
+
+
+def verify_recovery_log_score():
+    # One physical coordinate and a fixed instrument offset. Symmetric atoms
+    # integrate the Gaussian log loss exactly since it is quadratic in r.
+    # Each history holds (mass, intercept, severity slope, mean, half-width).
+    histories = [(.25, .4, 2., -.05, .1), (.75, 2., -1., .03, .08)]
+    state_mean = sum(w*(m+d*a) for w, m, d, a, _ in histories)
+    omitted = sum(w*((m+d*a-state_mean)**2+(d*width)**2)
+                  for w, m, d, a, width in histories)
+    atoms = []
+    for w, m, d, a, width in histories:
+        for sign_a, sign_x, sign_r in product((-1, 1), repeat=3):
+            x = m+d*(a+sign_a*width)+sign_x*.2
+            atoms.append((w/8, x, sign_r*.3))
+    # Reset zeros only the physical coordinate. Verify squared-error
+    # optimality of the carried state by scoring all atoms directly.
+    state_excess = sum(w*(x**2-(x-state_mean)**2) for w, x, _ in atoms)
+    assert math.isclose(state_excess, state_mean**2, abs_tol=1e-12)
+
+    checks = {}
+    for name, gain in (("visible", 1.5), ("unobservable", 0.)):
+        offset = .4
+        mean = gain*state_mean+offset
+        nominal_var = gain**2*.2**2+.3**2
+        full_var = nominal_var+gain**2*omitted
+        reports = [(w, gain*x+offset+noise) for w, x, noise in atoms]
+        enumerated_var = sum(w*(r-mean)**2 for w, r in reports)
+        assert math.isclose(enumerated_var, full_var, abs_tol=1e-12)
+
+        def expected_loss(center, variance):
+            return -sum(w*math.log(normal_pdf(r, center, variance)) for w, r in reports)
+
+        reset_cost = expected_loss(offset, nominal_var)-expected_loss(mean, nominal_var)
+        spread_cost = expected_loss(mean, nominal_var)-expected_loss(mean, full_var)
+        ratio = full_var/nominal_var
+        assert math.isclose(reset_cost, .5*(mean-offset)**2/nominal_var, abs_tol=1e-12)
+        assert math.isclose(spread_cost, .5*(ratio-1-math.log(ratio)), abs_tol=1e-12)
+        if gain:
+            assert reset_cost > 0 and spread_cost > 0
+        else:
+            assert reset_cost == spread_cost == 0
+        checks[name] = {"reset_mean_cost_nats": reset_cost,
+                        "omitted_spread_cost_nats": spread_cost}
+    return checks
 
 
 def main():
@@ -120,7 +166,8 @@ def main():
                    "moment_matched_gaussian_can_change_mixture_tail_density",
                    "equal_means_can_produce_different_predictive_densities",
                    "enumerated_deterministic_statistic_preserves_cause_posterior",
-                   "independent_duplicate_likelihood_changes_posterior"],
+                   "independent_duplicate_likelihood_changes_posterior",
+                   "recovery_log_score_cost_and_state_mean_match_atom_enumeration"],
         "predictive_probability_next_report_one": predict_joint,
         "cause_zero_given_state_minus1": [cause0_given_minus1(coupling_a), cause0_given_minus1(coupling_b)],
         "enumerated_moments": {"state_mean": zbar, "state_variance": zvar_enum,
@@ -128,6 +175,7 @@ def main():
                                "state_severity_covariance": cov_enum},
         "deterministic_statistic_posterior": post_yz,
         "duplicate_likelihood_posterior": duplicated,
+        "recovery_log_score": verify_recovery_log_score(),
         "script_sha256": sha256(Path(__file__).read_bytes()).hexdigest(),
         "scope": "finite exact enumerations of toy models; no estimator or campaign validation"
     }

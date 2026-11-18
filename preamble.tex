@@ -22,6 +22,17 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{etoolbox}
 
+% The class prints the DOI label even when a preprint has no assigned DOI.
+\makeatletter
+\newcommand{\PSevenMakePreprintTitle}{%
+  \ifx\@doi\@empty
+    \patchcmd{\@maketitle}
+      {{\vss\doifont Digital Object Identifier\space\@doi\vss}\vspace*{7.4mm}\par}
+      {}{}{}%
+  \fi
+  \maketitle}
+\makeatother
+
 % ieeeaccess.cls adds an unnumbered REFERENCES entry to the PDF outline after
 % creating the heading. Supply its hyperlink destination without altering the
 % official class or its visual bibliography formatting.

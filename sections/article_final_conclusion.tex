@@ -1,22 +1,13 @@
 \section{Conclusion}
 \label{sec:conclusion}
 
-A restored load or line can leave a transient that resembles a new
-intervention. The proposed bank predicts that transient from the carried
-state and evaluates new source hypotheses against it. At a common
-calibration target, the bank correctly attributed \RecBankTimely{}
-interventions before restoration, compared with \RecGlrTimely{} for a
-continuous GLR and \RecTreesTimely{} for ExtraTrees. During event records,
-the three procedures emitted \RecBankExtras{}, \RecGlrExtras{} and
-\RecTreesExtras{} unmatched alarms, respectively.
-
-The controlled two-plant study distinguishes retaining the physical mean
-from retaining alternative recovery histories. Mean preservation improves
-on reset in both plants. History retention adds
-\CThreeFOneHistoryCarryDifferencePP{} percentage points over mean merging
-on F01, but its difference on the second plant has an interval containing
-zero. These outcomes support state continuity across the tested plants and
-bound the attribution advantage of explicit histories to the original
-plant. The experiments cover nonoverlapping load and line interventions
-from a fixed catalog. Independent per-PMU noise and model mismatch
-remain important sources of attribution error.
+After a load returns or a line recloses, the pre-restoration estimate
+supplies a physical prediction for what the PMUs should see next.
+Comparing new interventions against that prediction gave the history
+bank more correct source diagnoses before restoration than either
+comparator. It also issued more unmatched alarms than ExtraTrees and
+fewer than the continuous GLR. On both simulated plants, keeping the
+estimated physical state at closure produced more timely diagnoses
+than resetting it. Keeping multiple recovery histories further improved
+short-gap attribution on the original plant. On the second plant its
+measurable advantage was fewer unmatched alarms during event records.

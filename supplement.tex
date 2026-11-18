@@ -41,26 +41,22 @@
 }
 
 \begin{abstract}
-This supplement documents the implemented recovery-aware history bank:
-its local filtering calculations, measurement map, publication rules and
-simulation contracts. It records the complete confirmatory outcomes,
-controlled severity-score/state-carry ablation and continuous single-state
-control. The operating-point signature and recovery-geometry studies keep
-their separate, known-onset contracts and denominators. All empirical
-results retain their original campaign and threshold contracts. Separate
-development diagnostics check covariance, physical construction and
-nonlinear prediction refinement. Earlier voltage-reconstruction, simultaneous-source
-and general diagnosability studies are preserved in the separately
-compiled Historical Technical Notes.
-An explicitly prospective section specifies an adaptive extension and
-its separate cyber interface; its small-model checks are not campaign results.
+This supplement gives the switched predictor, bounded load-severity
+update and PMU terminal map used for recovery-aware attribution. It
+specifies the common reporting clock used in the two primary studies and
+the source screen used in the earlier development tests. The tables report
+attribution, restoration errors, unmatched alarms and exposure in normal
+operation for each study. Further analyses examine source separation at a
+supplied onset, the effect of discarding recovery uncertainty, and
+sensitivity to the measurement model. A prospective section describes
+an adaptive extension. Its numerical checks use a separate small model.
 \end{abstract}
 \begin{keywords}
 phasor measurement units, sequential diagnosis, physical state continuity,
 conditional filtering, reproducibility.
 \end{keywords}
 \titlepgskip=-21pt
-\maketitle
+\PSevenMakePreprintTitle
 \raggedbottom
 \appendices
 
@@ -75,14 +71,13 @@ conditional filtering, reproducibility.
 \label{app:comparator-lineage}
 \input{tables/generated/comparator_lineage}
 
+\input{supplement/recovery_comparison}
+\input{supplement/c03_results}
+
 \FloatBarrier
 \input{supplement/c01_narrative_details}
 \input{supplement/secondary_evaluation_protocol}
 \input{supplement/secondary_evaluation_results}
-
-\FloatBarrier
-\input{supplement/recovery_comparison}
-\input{supplement/c03_results}
 
 \input{supplement/ablation_a01}
 \input{supplement/ablation_severity_scores}
@@ -101,8 +96,6 @@ these two rate conventions must not be compared without this conversion.
 
 \FloatBarrier
 \input{supplement/theory_and_noise_stress}
-
-\FloatBarrier
 \input{supplement/channel_information}
 \input{supplement/recovery_information_geometry}
 

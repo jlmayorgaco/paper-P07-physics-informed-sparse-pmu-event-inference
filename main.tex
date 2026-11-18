@@ -7,31 +7,11 @@
 
 \input{preamble}
 \usepackage{placeins}
-\input{generated/results_macros}
-\input{generated/continuous_macros}
-\input{generated/narrative_macros}
 \input{generated/c01_macros}
 \input{generated/recovery_comparison_macros}
 \input{generated/recovery_c03_macros}
 \input{generated/c03_extended_macros}
-\input{generated/channel_information_macros}
-\input{generated/channel_profile_macros}
-\input{generated/recovery_nuisance_macros}
-\input{generated/reader_macros}
-\input{generated/evidence_bridge_macros}
-\input{generated/review_audit_macros}
-\IfFileExists{generated/ei_x02_macros.tex}{\input{generated/ei_x02_macros}}{}
-\input{generated/revision_history_macros}
-\input{generated/revision_baselines_macros}
-\input{generated/revision_secondplant_macros}
-\IfFileExists{generated/submission_s01_macros.tex}{\input{generated/submission_s01_macros}}{}
-\IfFileExists{generated/submission_s01_learning_macros.tex}{\input{generated/submission_s01_learning_macros}}{}
-\IfFileExists{generated/submission_s01_raw_macros.tex}{\input{generated/submission_s01_raw_macros}}{}
-\IfFileExists{generated/submission_s01_ml_h04_macros.tex}{\input{generated/submission_s01_ml_h04_macros}}{}
-\IfFileExists{generated/submission_s01_system_macros.tex}{\input{generated/submission_s01_system_macros}}{}
 \input{generated/revision_20261104_macros}
-\input{generated/revision_integrity_macros}
-\input{generated/revision_allevents_macros}
 
 \begin{document}
 \input{metadata}
@@ -39,51 +19,51 @@
   pdftitle={Recovery-Aware Physical Attribution of Load and Line Events From Sparse PMUs},
   pdfauthor={Jorge Luis Mayorga Taborda; Yessica Africano Rodriguez; Masoud Barati; Payman Dehghanian; David Felipe Celeita Rodriguez},
   pdfsubject={Causal physical event attribution, recovery, and source resolution from sparse PMUs},
-  pdfkeywords={change detection and isolation, differential-algebraic equations, event attribution, measurement integrity, phasor measurement units, physics-informed inference}
+  pdfkeywords={change detection and isolation, differential-algebraic equations, event attribution, phasor measurement units, physics-informed inference}
 }
 
 \begin{abstract}
-After a load is restored or a line is reclosed, the remaining transient
-can resemble a new intervention. We use eight phasor measurement units
-(PMUs) and switched differential-algebraic predictors of the IEEE 39-bus
-system to compare a new event against the predicted recovery. A correct
-attribution names the event family and source before restoration.
-At a calibration target of one normal alarm per hour, the bank correctly
-attributed \RecBankTimely{} interventions, compared with \RecGlrTimely{}
-for a continuous generalized likelihood ratio observer and
-\RecTreesTimely{} for ExtraTrees. The paired gain over the continuous
-observer was \RecGlrDiff{} percentage points (95\% interval \RecGlrCI{}
-across \RecParents{} physical parents). The three procedures emitted
+A load can return to its original setpoint, or a line can reclose, while
+the generators are still responding to the first switch. We estimate
+whether the next phasor measurements follow that recovery or identify a
+new intervention. A bank of switched differential-algebraic predictors
+carries the state through restoration and integrates over the unknown
+size of each candidate load change. We derive the minimum mean-square
+state estimate under each local model and the one-report prediction cost
+of resetting its physical coordinates. On the IEEE 39-bus system with
+eight phasor measurement units, the bank named the correct family and
+asset before restoration for \RecBankTimely{} simulated interventions.
+A continuous generalized likelihood ratio observer attributed
+\RecGlrTimely{} and ExtraTrees attributed \RecTreesTimely{}. With thresholds
+calibrated to the same normal-alarm budget, the three procedures issued
 \RecBankExtras{}, \RecGlrExtras{} and \RecTreesExtras{} unmatched alarms
-during event records, respectively. None emitted a normal alarm in
-\RecNormalHours{} monitored hours per method. A subsequent controlled comparison retained histories, merged restored
-histories into their state mean, or reset the physical coordinates.
-For interventions following short gaps, retained histories improved timely
-attribution over mean merging by \CThreeFOneHistoryCarryDifferencePP{}
-percentage points on the original plant (95\% interval
-[\CThreeFOneHistoryCarryLowerPP{}, \CThreeFOneHistoryCarryUpperPP{}]).
-On a second plant the difference was
-\CThreePTwoHistoryCarryDifferencePP{} points
-[\CThreePTwoHistoryCarryLowerPP{}, \CThreePTwoHistoryCarryUpperPP{}].
-Preserving state outperformed reset on both plants. Explicit history
-retention therefore helps under the original model; a coverage benefit
-is not established on the second plant.
+during event records. A second study tested what to retain at closure.
+After short gaps, retaining recovery histories, carrying their mean and
+resetting the physical state yielded \CThreeFOneHistoryShortTimely{},
+\CThreeFOneCarryShortTimely{} and \CThreeFOneResetShortTimely{} timely
+attributions out of 144 on the original plant. On a plant with different
+dynamics the counts were \CThreePTwoHistoryShortTimely{},
+\CThreePTwoCarryShortTimely{} and \CThreePTwoResetShortTimely{}. Keeping
+the physical state improved attribution on both plants. The additional
+coverage from retaining histories was \CThreePTwoHistoryCarryDifferencePP{}
+percentage points on the second plant (paired 95\% interval
+$[\CThreePTwoHistoryCarryLowerPP,\CThreePTwoHistoryCarryUpperPP]$).
 \end{abstract}
 
 \begin{keywords}
-change detection and isolation, differential-algebraic equations, event attribution, measurement integrity, phasor measurement units, physics-informed inference, power system dynamics.
+change detection and isolation, differential-algebraic equations, event attribution, phasor measurement units, physics-informed inference, power system dynamics.
 \end{keywords}
 
 \titlepgskip=-21pt
-\maketitle
+\PSevenMakePreprintTitle
 \raggedbottom
 
 \input{sections/article_intro}
 \input{sections/article_related}
 \input{sections/narrative_problem}
 \input{sections/article_method}
-\input{sections/article_theory}
 \input{sections/article_recovery_moments}
+\input{sections/article_theory}
 \FloatBarrier
 \input{sections/narrative_protocol}
 \section{Results}\label{sec:narrative-results}

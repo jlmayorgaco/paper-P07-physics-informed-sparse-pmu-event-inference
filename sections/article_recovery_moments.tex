@@ -1,48 +1,59 @@
-\section{Predictive Sufficiency and History-Moment Fusion}
+\subsection{What to Carry After Restoration}
 \label{sec:recovery-moments}
 
-Let $S_k$ contain the physical and instrumental state, predictive mode,
-and any parameter or dwell-time memory needed to make the dynamics Markov.
-Let $H_k$ denote historical cause labels. If
-\[
- p(S_{k+1},Y_{k+1}\mid S_{0:k},H_{0:k},Y_{1:k})
- =p(S_{k+1},Y_{k+1}\mid S_k),
-\]
-then the filtering law $p(S_k\mid Y_{1:k})$ is sufficient for prediction:
-for every measurable report set $B$,
-\[
- p(Y_{k+1}\in B\mid Y_{1:k})
- =\int p(Y_{k+1}\in B\mid S_k=s)\,p(ds\mid Y_{1:k}).
-\]
-This is the standard filtering identity. Its condition is substantive: omitted
-mode, dwell age, uncertain parameters or instrument memory can make cause
-labels predictive even after conditioning on an incomplete state summary.
-The marginal state law suffices for forecasting under this factorization;
-retrospective cause attribution still requires a joint posterior retaining
-$H_k$.
+Consider the no-intervention path and the retired paths eligible for
+fusion, all using the same no-intervention operator. Fix one network hypothesis and condition
+on the reports already seen and on continuation without a new switch. In a
+common recovery regime the next report is $r=J\xi+j+\epsilon$, where
+$\epsilon$ is independent of $\xi$ and has zero mean and covariance $R$.
+Let $\omega_h$ be the normalized weights of these histories and
+$\bar\xi_h$ the conditional state mean. For a load, write $\bar a_h$ and
+$V_{a,h}$ for the mean and variance of its updated bounded severity.
+Then $\bar\xi_h=m_h+d_h\bar a_h$. For a line or the no-intervention path set $d_h=0$ and $V_{a,h}=0$.
 
-For a finite history mixture with weights $w_j$, let $X$ be a common retained
-state vector and $A$ a common scalar severity coordinate. Write
-$m_j=E[X\mid j]$, $P_j=\operatorname{Cov}(X\mid j)$,
-$\mu_j=E[A\mid j]$, $V_j=\operatorname{Var}(A\mid j)$ and
-$C_j=\operatorname{Cov}(X,A\mid j)$. The law of total covariance gives
+The state estimate minimizing expected squared error in these common
+coordinates is $\bar\xi=\sum_h\omega_h\bar\xi_h$. The next report has
+mean $m=J\bar\xi+j$. Let $S=JP_\rho J^\top+R\succ0$ be the covariance
+used when the bank carries this mean. With
+$b_h=J(\bar\xi_h-\bar\xi)$ and $t_h=Jd_h$, total covariance gives the
+predictive covariance of the local mixture,
+\begin{equation}
+ V=S+\sum_h\omega_h\bigl(b_hb_h^\top+
+                    V_{a,h}\,t_ht_h^\top\bigr).
+ \label{eq:recovery-report-variance}
+\end{equation}
+The first term in the sum measures disagreement among the predicted PMU
+responses. The second propagates the remaining severity uncertainty for
+each load. Only state variation visible through $J$ enters either term.
+
+To compare Gaussian summaries of this mixture, score a forecast
+$\mathcal N(z,U)$ by its expected negative log density $\mathcal L(z,U)$
+under the local predictive law. With $\|b\|_W^2=b^\top Wb$, expansion gives
+\begin{equation}
+ 2\mathcal L(z,U)=\log|U|+\operatorname{tr}(U^{-1}V)
+                      +\|z-m\|_{U^{-1}}^2+\mathrm{const}.
+ \label{eq:recovery-log-loss}
+\end{equation}
+For $U\succ0$, let $\lambda_i$ be the eigenvalues of
+$U^{-1/2}VU^{-1/2}$. Subtracting the loss at $(m,V)$ yields
 \begin{align}
- \bar m&=\sum_j w_jm_j, & \bar\mu&=\sum_jw_j\mu_j,\\
- \operatorname{Cov}(X)&=\sum_jw_jP_j+
- \sum_jw_j(m_j-\bar m)(m_j-\bar m)^T,\\
- \operatorname{Cov}(X,A)&=\sum_jw_jC_j+
- \sum_jw_j(m_j-\bar m)(\mu_j-\bar\mu),\\
- \operatorname{Var}(A)&=\sum_jw_jV_j+
- \sum_jw_j(\mu_j-\bar\mu)^2.
+ 2\{\mathcal L(z,U)-\mathcal L(m,V)\}
+ &=\|z-m\|_{U^{-1}}^2 \nonumber\\
+ &\quad+\sum_i(\lambda_i-1-\log\lambda_i).
+ \label{eq:recovery-log-projection}
 \end{align}
-Thus a moment-matched Gaussian can retain within-history severity uncertainty
-and between-history dispersion without retaining a multimodal mixture. These
-identities do not establish that moment matching improves event attribution.
+Each summand is nonnegative and vanishes only at $\lambda_i=1$. Thus the
+best single Gaussian is $\mathcal N(m,V)$, and $m$ remains the best
+forecast mean when the covariance is fixed at $S$.
 
-In the controlled study, mean merging preserves the estimated physical mean while using the nominal
-conditional covariance; it does not propagate the discarded between-history
-and severity covariance. The history-versus-carry contrast therefore cannot
-be interpreted as a causal effect of labels alone: it also changes which
-recovery alternatives and uncertainty are represented. The study supports its
-reported procedure-level comparison, conditional on the tested plants and
-protocol.
+Let $\Pi_{\rm phys}$ project onto the physical coordinates. A reset removes
+$\Pi_{\rm phys}\bar\xi$ from the carried state and preserves instrument
+and discrepancy memory.
+At fixed $S$ this costs an additional
+$\tfrac12\|J\Pi_{\rm phys}\bar\xi\|_{S^{-1}}^2$ in expected log loss
+on the next report. A recovery displacement invisible to the PMUs at
+that instant has zero immediate cost and can become visible later. The
+moment-matched Gaussian is an analytical reference. The controlled
+experiment compares retained histories, mean carry and physical reset
+using sequential alarms and timely source diagnoses. Its coverage
+differences include the effects of later reports and publication rules.

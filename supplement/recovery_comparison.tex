@@ -1,26 +1,34 @@
-\section{Held-Out Recovery Comparison Protocol}
-The three arms use one causal reporting clock. The two physical
-arms share the nominal operators and permitted startup prefix. The
-continuous GLR retains one committed state and considers transition
-alternatives over a causal 19-report search; the bank retains
-conditional histories. ExtraTrees uses causal PMU features and was
-trained on a disjoint split with all catalog sources represented.
+\section{Common Reporting Clock and Held-Out Episode Outcomes}
+\label{app:heldout-recovery-protocol}
+For source $c$ the bank supplies the onset and restoration scores
+\[
+ s_c^{\rm on}=\operatorname{logit}(M_c),\qquad
+ s_c^{\rm off}=\operatorname{logit}(\Gamma_c-M_c).
+\]
+When the same source wins and exceeds threshold for six consecutive
+monitored reports, the clock emits an alarm and names that source.
+Six qualifying restoration scores for the named source close the episode.
+The GLR and ExtraTrees supply their own scores to the same clock.
 
-Selection used CAL only: among thresholds satisfying the normal
-alarm budget, maximize timely joint attribution, then minimize extra
-alarms and delay. The continuous GLR was rerun for each candidate
-threshold because commitment changes its state. TEST was evaluated once,
-after all predictions had been fixed. Timing associations use alarm time,
-not the true class. Timely attribution requires the right family
-and source before physical restoration; unavailable cases count in
-the intended denominator. Event-record extras and normal-record
-alarms have separate monitored exposures.
+In the comparison with the GLR and ExtraTrees, each procedure completed
+18 event and 24 normal test records, with 108 interventions in total.
+Table~\ref{tab:closure-outcomes} gives the episode outcomes. A restoration
+message can close an alarm that never matched a true intervention. Such
+messages count separately from episodes still open when the record ends.
 
-\input{sections/article_recovery_comparison}
+\begin{table}[t]\centering\small
+\caption{Held-out event records at the selected thresholds. An orphan
+restoration closes an unmatched episode. Open episodes are counted at
+the end of the record.}
+\label{tab:closure-outcomes}
+\begin{tabular}{@{}lrrrr@{}}\toprule
+Method & Timely & Extras & Orphan OFF & Open\\\midrule
+History bank & \RecBankTimely & \RecBankExtras & \RecBankOrphanOff & \RecBankOpenEnd\\
+Continuous GLR & \RecGlrTimely & \RecGlrExtras & \RecGlrOrphanOff & \RecGlrOpenEnd\\
+ExtraTrees & \RecTreesTimely & \RecTreesExtras & \RecTreesOrphanOff & \RecTreesOpenEnd\\\bottomrule
+\end{tabular}
+\end{table}
 
-A separate calibration study found no gain from its chosen
-covariance correction: its selected correction multiplier was
-zero, and all three calibration arms tied on the evaluated
-endpoints. The profile and marginal scores likewise tied in the
-fixed-threshold carry/reset study. Neither finding establishes
-equivalence beyond its own comparison.
+All three procedures had zero alarms in \RecNormalHours{} monitored
+normal hours. The one-sided 95\% Poisson rate bound was \RecNormalUpper{}
+alarms/h for each.

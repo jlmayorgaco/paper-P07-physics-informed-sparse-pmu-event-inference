@@ -1,25 +1,32 @@
-\subsection{Sensitivity to Independent PMU Noise}
+\subsection{Independent PMU Noise and Missing Reports}
 \label{sec:noise-stress}
+The two-plant stress test exposed an admission failure. Under independent
+PMU noise the estimated voltage-angle noise scale lay outside the
+permitted startup range for all \CThreeAuditFZeroOneNoiseParents{}
+records per plant. The bank accumulated zero monitored hours under this
+condition. With held observations during dropout, it ran on every record
+but attributed only \CThreeAuditFZeroOneDropoutShortTimely{}/48 short-gap
+interventions on F01 and \CThreeAuditPTwoDropoutShortTimely{}/48 on P2.
+On each plant it issued \CThreeAuditFZeroOneDropoutNormalAlarms{} alarms
+during \CThreeAuditFZeroOneDropoutNormalHours{} normal hours (one-sided
+95\% Poisson upper bound \CThreeAuditFZeroOneDropoutNormalUpper{}/h)
+with the thresholds selected on complete reports.
 
-To examine sensitivity beyond the calibrated noise, we reran the
-nominal bank with the same equations and publication thresholds on
-four held-out calibration event records (\RevNoiseLoadEvents{} load and
-\RevNoiseLineEvents{} line interventions, matched network) and two 600-s
-normal records (\RevNoiseNormalHours\,h). Six noise scenarios were
-generated with the simulator's own noise stream: the original realization
-scaled by $\times1$, $\times5$, $\times10$ and $\times20$, and the original
-plus independent per-PMU relative-magnitude and angle noise, each with
-standard deviation $\sigma=0.0005$ or $0.001$ (angles in radians).
-The added perturbation has approximately \RevNoiseAddedRmsLow{}\% or \RevNoiseAddedRmsHigh{}\% RMS total
-vector error (TVE), respectively, before combination with the original
-noise. Voltage-angle noise is propagated to frequency and ROCOF by the
-simulator's 21-report estimator. The $\times1$ scenario reproduces the
-original predictions message for message. The bank re-estimates its noise
-scale and observation discrepancy from the noisy 300-report prefix; the
-operating point is kept at its nominal-noise estimate because derivative
-matrices exist only there. The implementation refuses to start when the
-estimated noise scale leaves its calibrated support of $[0.1,10]$; for this
-test only, that bound was widened, and every other line of code is
-unchanged.
+To measure attribution once independent noise is admitted, a separate
+replay widened the startup noise-scale range from $[0.1,10]$ to
+$[0.1,1000]$. Four matched-network calibration trajectories contained
+12 load and 12 line interventions. We kept the nominal operating point
+and publication thresholds fixed and re-estimated the noise scale from
+each noisy prefix. Multiplying the original correlated noise by 5, 10
+or 20 yielded 11, 11 and 12 timely load attributions, respectively, and
+12 timely line attributions at every scale.
 
-\RevNoiseDiscussion{}
+Adding independent relative-magnitude and angle errors at each PMU had
+a different effect. At \RevNoiseAddedRmsLow{}\% added RMS total vector
+error, the bank attributed \RevNoiseTVEaLoad{} load and
+\RevNoiseTVEaLine{} line interventions. At \RevNoiseAddedRmsHigh{}\%
+it attributed \RevNoiseTVEbLoad{} and \RevNoiseTVEbLine{}, respectively.
+Each of the six scenarios, including the original noise, had zero extras
+and zero alarms in \RevNoiseNormalHours{} monitored normal hours. In these trajectories the load diagnoses were more sensitive to the
+independent component than to a twentyfold increase in the original
+correlated noise.
