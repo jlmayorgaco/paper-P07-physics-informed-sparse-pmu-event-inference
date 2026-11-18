@@ -28,7 +28,10 @@ also relate uncertain physical parameters to measured responses
 \cite{nagi2022trajectory}. Here the unknowns include which asset switched.
 PMU classifiers can identify disturbances and their locations from
 the observed features \cite{pandey2020realtime,li2024knowledge,yildiz2024few}.
-Our comparisons ask what the switched predictors add when the classifier
-has training examples for every candidate asset and when a physical
-observer already carries a continuous state through restoration. We
-evaluate both comparators on the same PMU reports and intervention catalog.
+Our original competition entry used ExtraTrees on 30-s windows. When
+replayed unchanged on 96 simulated load and line event windows from 36
+development trajectories, it detected 32 events, identified the family
+in 23 and identified the exact family and source in none. That replay
+tested transfer to a different catalog. For the continuous comparison
+here, the ExtraTrees comparator has training examples for all 18 sources
+and uses only reports available at the time of its decision.

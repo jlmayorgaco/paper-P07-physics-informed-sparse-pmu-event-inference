@@ -113,9 +113,16 @@ terms in $a$ gives the next conditional state,
  \widehat{\xi}_{h,k+1}=m_h^++d_h^+\bar a_h .
  \label{eq:implemented-conditional-correction}
 \end{align}
-The last expression averages the conditional state over the updated
-severity. It is the minimum mean-square estimate of the next state for
-this history under the local model. A load's birth prior has standard
+To see which error this estimate minimizes, condition on $h$ and all
+reports through $k$ under the local Gaussian model with its assigned
+$P_\rho$. Write $E_h$ for that expectation and $X=\xi_{k+1}$.
+Equation~\eqref{eq:implemented-conditional-correction} gives
+$\widehat{\xi}_{h,k+1}=E_h X$ by averaging first at fixed severity.
+For any candidate estimate $z$, the centered error has zero mean, so
+\[
+ E_h\|X-z\|^2=E_h\|X-E_hX\|^2+\|z-E_hX\|^2 .
+\]
+The second term is the excess risk of choosing $z$. A load's birth prior has standard
 deviation 0.15 before truncation to $[-0.2,0.2]$. The bank partitions
 that interval into four histories weighted by their prior masses. Their
 evidence sums to the full bounded-prior evidence for a given path while
@@ -132,8 +139,14 @@ Before pruning, the one-step update for admitted paths is
       \sum_{h'}p(h\mid h')\,\pi_{h',k-1}.
  \label{eq:history-bayes-update}
 \end{equation}
-A restored path propagates its state with the intact operator. It can
-still explain the current report. To propose a recent onset, the bank
+Equation~\eqref{eq:history-bayes-update} is the usual multiple-hypothesis
+weight update \cite{boers2005m3h}. The application-specific choice is the
+pair of predictions it compares after a switch has been reversed. A
+restored path predicts the PMU report with the intact network driven by
+the surviving machine and instrument states. A rival applies a candidate
+asset switch during that recovery. The PMU likelihood scores both
+continuations, even when the original asset is already back in service.
+To propose a recent onset, the bank
 screens the last 0--18 report lags, retrieves the stored state preceding
 the candidate switch and replays the intervening reports. Its score
 replaces the old suffix likelihood. The same reports therefore contribute
