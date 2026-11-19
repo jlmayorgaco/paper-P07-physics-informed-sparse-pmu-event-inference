@@ -99,7 +99,7 @@ def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def score(root):
+def score(root, methods=METHODS):
     path = root/"predictions.json"
     assert digest(path) == json.loads((root/"seal.json").read_text())
     pred = json.loads(path.read_text())
@@ -110,7 +110,7 @@ def score(root):
     positives = [k for k,r in truth.items() if r["code"]]
     normals = [*quiet, *(k for k,r in truth.items() if not r["code"])]
     results = {}
-    for method in METHODS:
+    for method in methods:
         y = [r["code"] for r in truth.values()]
         called = [pred[k][method][0] for k in truth]
         results[method] = dict(macro_f1=f1_score(y,called,average="macro",labels=range(9),zero_division=0),
