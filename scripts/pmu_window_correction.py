@@ -65,7 +65,10 @@ def spatial_estimate(volts, family, dictionary, length):
         smooth = (
             pd.DataFrame(volts[1800:]).rolling(3, min_periods=3).median().to_numpy()
         )
-        k = np.nanargmin(np.nanmedian(smooth, axis=1))
+        available = np.flatnonzero(np.isfinite(smooth).any(axis=1))
+        if not len(available):
+            return None
+        k = available[np.argmin(np.nanmedian(smooth[available], axis=1))]
         displacement = -smooth[k]
     else:
         displacement = np.abs(np.nanmedian(volts[-300:], axis=0))

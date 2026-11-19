@@ -298,3 +298,108 @@ In that experiment, history and carry detected 144 and 93 short-gap
 interventions on the reference plant and 77 and 80 on the second plant
 (144 per plant). Median delay among detections was 0.18~s for each
 method on each plant at the native reporting cadence.
+
+\subsection{Phase balance and persistent frequency shifts}
+Two generation changes in the preceding replay received load labels
+after a fault. The revised fallback reexamines generation and load calls
+using the median frequency in the last 10~s relative to the first 30~s.
+A drop exceeding 0.015~Hz at five PMUs supports generation; a change
+smaller than 0.008~Hz in magnitude at five PMUs supports load. These
+empirical cutoffs reflect the sustained response in the M9 templates.
+For a normal, fault or bad-data call, a separate test compares the
+three interphase voltage angles with their quiet values at each PMU.
+The peak 12-report mean deviation, scaled by the quiet standard
+deviation, must exceed or equal 1.8 and be at least 1.5 times the
+next-largest PMU score to assign bad data to that instrument.
+
+For fault location, a second candidate dictionary predicts the sag
+at each PMU as an exponential function of shortest-path branch
+impedance magnitude from the candidate bus. We fit a common offset
+and nonnegative strength at the measured sag nadir. On three
+development cohorts, only faults benefited from this alternative
+under equal weighting of assets; the selected decay length was
+0.05~p.u. The other families retained the circuit dictionary.
+
+For the new test we generated 54 pairs and rotated the pure
+instrument events across six PMUs. Physical targets were absent
+from the earlier site catalogs. Only one unused generator and one
+unused load met that exclusion, so the six repetitions in those
+families share a site. All four procedures saw the same buffers.
+
+\begin{table}[!ht]\centering\small
+\caption{New eight-PMU replay. Each condition has 54 family decisions,
+48 events and 36 events with a physical source. Source counts require
+an exact site; sensitivity counts any positive event decision.}
+\label{tab:m9-successor}
+\setlength{\tabcolsep}{3pt}
+\input{experiments/paired_m9_successor/table.tex}
+\end{table}
+
+After a preceding fault, the revised hybrid correctly assigned two
+bad-data events to their PMUs; the earlier hybrid had labeled them
+as faults. A load change remained undetected. The paired macro-F1
+gain was 0.038 (exploratory 95\% bootstrap interval 0.000 to 0.083,
+resampling six pairs within each class). The improvement in exact
+location came entirely from the two instrument events. Both hybrids
+found four of the 36 physical sources after a fault. In 66 windows
+without a new onset (33 minutes), the submission and both hybrids
+issued zero alarms and Attributor II issued 30. The dynamic bank
+rejected all 216 buffers at startup.
+
+\subsection{Localizing a load change with an AC operating-point model}
+For a load that changes at fixed power factor, the active and reactive
+increments share a real multiplier. We used this constraint to test
+whether a steady-state voltage change at eight PMUs can identify its bus.
+Let $F(x)$ contain the active injections at all nonslack buses and the
+reactive injections at PQ buses. The state $x$ contains the corresponding
+angles and PQ log-voltage magnitudes. At the nominal operating point
+$x_0$, let $J=\partial F/\partial x$. For a positive load increment
+at bus $k$, let $d_k$ collect the nominal load powers in these equations.
+Then $J\,\delta x=-a d_k$, where $a$ is the signed fractional change.
+If $H$ maps a state increment to the eight relative complex voltage
+increments, the candidate signature is $s_k=-HJ^{-1}d_k$.
+
+Suppose the measured change is $y=a s_k+c\mathbf{1}+\epsilon$, with
+an unknown common complex offset $c$ and equal independent circular
+Gaussian errors. Subtracting the sensor means gives $y_c$ and $s_{kc}$.
+The least-squares amplitude and maximum-likelihood site for this linear
+model, with unrestricted real $a$, are
+\begin{equation}
+ \widehat a_k=\frac{\mathrm{Re}(s_{kc}^{H}y_c)}{\|s_{kc}\|^2},
+ \qquad
+ \widehat k=\arg\max_k
+ \frac{[\mathrm{Re}(s_{kc}^{H}y_c)]^2}{\|s_{kc}\|^2}.
+\end{equation}
+Allowing a complex amplitude replaces the squared real part with
+the squared modulus. This gives a direct control for the power-factor
+constraint with the same candidate dictionary.
+
+We tested all 18 positive-load buses at 16 perturbed operating points.
+Each record has a 5--20\% load increase or decrease at one bus. We solved
+the full nonlinear power flow before and after the change, holding the PV
+voltage setpoints and the slack phasor fixed. The candidate dictionaries
+used the nominal operating point throughout. With noise-free voltage
+changes, the impedance dictionary identified 48 of 288 sites and the
+two AC fits identified all 288. With the same circular Gaussian noise
+draw for each method (0.0005 RMS in relative voltage), the respective
+counts were 43, 238, and 252 for the impedance, complex-amplitude AC,
+and real-amplitude AC fits. The family and the two steady-state periods
+were supplied. These counts characterize load location under the specified
+network, regulation and noise assumptions.
+
+On a fresh set of 288 load steps we also observed six branch-terminal
+current changes, using the terminal map in the measurement contract and
+omitting the BUS5 and BUS39 current channels. For terminal row $T_j$,
+the fractional-current sensitivity is
+$T_j\,\delta V/(T_j V_0)$. We centered the voltage and current changes
+separately, divided each by its noise scale, and applied the same
+real-amplitude projection to the stacked measurements. At relative RMS
+errors of 0.0005 for voltage and 0.005 for current, voltage alone gave
+254/288 exact locations and the joint fit gave 272/288 (94.4\%).
+The current measurements corrected 23 voltage-only decisions and
+changed five correct decisions to an incorrect site. This comparison
+assumes the six terminal assignments are known.
+We also applied the AC voltage readout to predicted M9 load windows.
+It located four of six isolated loads and three of six loads after a
+fault, the same counts as the revised fallback. Adding the six current
+channels in an exploratory replay left those counts unchanged.

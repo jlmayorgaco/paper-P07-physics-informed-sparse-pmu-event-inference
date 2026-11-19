@@ -80,7 +80,7 @@ class PowerFlow:
             raise ArithmeticError(f"nonconverged equilibrium, mismatch {error}")
         return sol.x, error
 
-    def dictionary(self):
+    def dictionary(self, *, full=False):
         h = 1e-5
         eye = np.eye(len(self.x0)) * h
         jac = np.column_stack(
@@ -101,7 +101,7 @@ class PowerFlow:
             state, _ = self.solve(d * h, self.x0)
             exact = (self.voltage(state) / self.v0 - 1) / h
             assert np.max(abs(slope - exact)) < 2e-4
-            columns.append(slope[OBS])
+            columns.append(slope if full else slope[OBS])
         return np.array(columns)
 
 

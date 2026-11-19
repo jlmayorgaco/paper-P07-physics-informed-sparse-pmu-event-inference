@@ -4,36 +4,57 @@ import argparse
 from hashlib import sha256
 import json
 from pathlib import Path
-from run import PowerFlow, estimate
+from run import OBS, PowerFlow, estimate
+from joint_current import terminal_matrix, whiten
 import numpy as np
 from competition_response_bank import frames_from
 
 
-def predict(root, data, out):
+def displacement(frame, bus, quantity):
+    angles = frame[[f"BUS{bus}_{quantity}{p}_ANG" for p in "ABC"]].to_numpy()
+    magnitude = frame[[f"BUS{bus}_{quantity}{p}_MAG" for p in "ABC"]].to_numpy()
+    v = magnitude * np.exp(1j * np.deg2rad(angles))
+    v[frame.DATA_PRESENT.to_numpy() != 1] = np.nan
+    return np.nanmean(np.nanmean(v[-300:], axis=0) / np.nanmean(v[:1800], axis=0) - 1)
+
+
+def predict(root, data, out, with_current=False):
     raw = (root / "predictions.json").read_bytes()
     assert sha256(raw).hexdigest() == json.loads((root / "seal.json").read_text())
     plant = PowerFlow(data)
-    columns = plant.dictionary()
+    full = plant.dictionary(full=True)
+    columns = full[:, OBS]
+    if with_current:
+        terminal = terminal_matrix(data)
+        current_columns = ((full * plant.v0) @ terminal.T) / (terminal @ plant.v0)
     rows = {}
     for key, record in json.loads(raw).items():
         family, site = record["successor"]
         if family == 4:
             frames = frames_from(root / "observations" / key)
-            ratios = []
-            for bus, frame in frames.items():
-                angles = frame[[f"BUS{bus}_V{p}_ANG" for p in "ABC"]].to_numpy()
-                magnitude = frame[[f"BUS{bus}_V{p}_MAG" for p in "ABC"]].to_numpy()
-                v = magnitude * np.exp(1j * np.deg2rad(angles))
-                v[frame.DATA_PRESENT.to_numpy() != 1] = np.nan
-                ratios.append(
-                    np.nanmean(
-                        np.nanmean(v[-300:], axis=0) / np.nanmean(v[:1800], axis=0) - 1
-                    )
-                )
-            y = np.array(ratios)
+            y = np.array([displacement(frames[k + 1], k + 1, "V") for k in OBS])
             mask = np.isfinite(y)
             if mask.sum() >= 5:
-                site = f"BUS{estimate(y[mask],columns[:,mask],plant.sites,True)}"
+                samples, atoms = y[mask], columns[:, mask]
+                if with_current:
+                    i = np.array(
+                        [
+                            displacement(frames[b], b, "I")
+                            for b in (2, 6, 10, 19, 22, 29)
+                        ]
+                    )
+                    valid = np.isfinite(i)
+                    if valid.sum() >= 2:
+                        samples = np.r_[
+                            whiten(samples, 0.0005), whiten(i[valid], 0.005)
+                        ]
+                        atoms = np.column_stack(
+                            [
+                                whiten(atoms, 0.0005),
+                                whiten(current_columns[:, valid], 0.005),
+                            ]
+                        )
+                site = f"BUS{estimate(samples,atoms,plant.sites,True)}"
         rows[key] = [family, site]
     out.mkdir(parents=True, exist_ok=True)
     path = out / "ac_m9_predictions.json"
@@ -47,5 +68,6 @@ if __name__ == "__main__":
     p = argparse.ArgumentParser(description=__doc__)
     for name in ("root", "data", "out"):
         p.add_argument(name, type=Path)
+    p.add_argument("--with-current", action="store_true")
     a = p.parse_args()
-    predict(a.root, a.data, a.out)
+    predict(a.root, a.data, a.out, a.with_current)
