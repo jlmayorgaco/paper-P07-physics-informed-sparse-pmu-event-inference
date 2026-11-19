@@ -129,9 +129,36 @@ def score(root):
     print(json.dumps(results))
 
 
+def check_dynamic_startup(root, archive):
+    """Apply the main paper's frozen admission test to the same initial PMU reports."""
+    import numpy as np
+    import pandas as pd
+    deps = archive / "experiments/PAPER_RECOVERY_C03/run/dependencies"
+    sys.path.insert(0, str(deps / "frozen_R11/physics"))
+    from conditional_prefix import prefix_statistics
+    times = np.arange(300) / 30
+    buses = (2, 5, 6, 10, 19, 22, 29, 39)
+    fields = dict(voltage_magnitude="VA_MAG", voltage_angle="VA_ANG",
+                  current_magnitude="IA_MAG", current_angle="IA_ANG",
+                  frequency="Freq", rocof="ROCOF")
+    admission = {}
+    for folder in sorted((root / "observations").iterdir()):
+        frames = [pd.read_csv(folder / f"Bus{b}_Competition_Data_nanmask.csv", nrows=300)
+                  for b in buses]
+        assert all(np.allclose(f.TIMESTAMP, times, atol=.00051) for f in frames)
+        data = {k: np.column_stack([f[f"BUS{b}_{v}"].where(f.DATA_PRESENT == 1)
+                                    for b, f in zip(buses, frames)]) for k, v in fields.items()}
+        try:
+            prefix_statistics(deps / "runtime", times, data)
+            admission[folder.name] = "admitted"
+        except ValueError as exc:
+            admission[folder.name] = str(exc)
+    save(root / "dynamic_admission.json", admission)
+
+
 if __name__ == "__main__":
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("stage", choices=["prepare","predict","score"])
+    p.add_argument("stage", choices=["prepare","predict","score","startup"])
     p.add_argument("directory", type=Path)
     p.add_argument("archive", type=Path)
     p.add_argument("submitted", type=Path)
@@ -140,5 +167,7 @@ if __name__ == "__main__":
         prepare(a.directory, a.archive.resolve())
     elif a.stage == "predict":
         predict(a.directory, a.archive.resolve(), a.submitted.resolve())
+    elif a.stage == "startup":
+        check_dynamic_startup(a.directory, a.archive.resolve())
     else:
         score(a.directory)
