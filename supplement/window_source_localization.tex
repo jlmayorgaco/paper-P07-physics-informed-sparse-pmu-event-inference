@@ -1,0 +1,97 @@
+\subsection{Source Attribution at the Close of a 30-s Window}
+\label{sec:window-source-localization}
+Can the monitor still assign a source when the dynamic bank rejects the
+startup noise model? We tested a window-level fallback in a separate
+IEEE 39-bus simulator that superimposes prescribed disturbances on normal
+phasor trajectories. Each record begins with 60\,s of quiet measurements.
+Both procedures see the same eight PMUs and report once, at the end of
+the next 30\,s. This deadline permits use of the entire transient,
+including post-event measurements. The timely-attribution experiment in
+the main article requires a diagnosis before restoration.
+
+The comparator starts with the competition classifier and checks for
+missing reports and phase imbalance. When the dynamic bank rejects the
+angular noise scale, the comparator scores ten-second response templates
+for candidate assets. It standardizes voltage and frequency channels
+against the quiet prefix, omits missing observations and fits a positive
+response amplitude at each candidate onset. Its calibration threshold
+exceeds the largest score on development windows containing only normal
+operation or isolated instrument disturbances. System-wide frequency
+helps identify the event family, but a frequency change shared by all
+PMUs contributes little information about which bus switched.
+
+The revised procedure estimates the source within the predicted family
+using the voltage and current magnitudes and angles across PMUs. For a
+persistent generation or load change, the observed displacement $z$ is
+the mean over the last ten seconds relative to the quiet prefix. For
+each candidate $c$, let $s_c$ be its mean displacement in development
+records and $W$ the inverse pooled within-family covariance after
+standardization and shrinkage. All quantities are restricted to
+observed coordinates before covariance inversion. The source estimate is
+\[
+   \widehat c=\arg\min_c\ \min_{0.4\leq a\leq2}
+         (z-a s_c)^\top W(z-a s_c).
+\]
+The amplitude interval is relative to the development signature. This
+fit allows an intervention to differ in size while preserving the
+spatial pattern that distinguishes two candidates.
+
+The ninth template pairs a weak physical pulse with a current gain
+change at one PMU and a simultaneous change of angle encoding at
+another. Adding a full turn leaves the electrical phasor unchanged.
+The monitor uses the encoding change as an instrument flag and uses
+wrapped angles for the source estimate. It requires a three-phase
+median current-magnitude excursion above 12\% and a voltage-angle
+excursion more than $90^\circ$ beyond the prefix range on at least two
+phases of the other PMU. Each flag must last at least 12 reports, with
+at least nine reports of overlap. To localize the physical pulse, it
+fits the quiet oscillations outside the affected interval using the two
+dominant low-frequency components of startup voltage magnitude. It
+subtracts this baseline over the pulse and omits the contaminated
+current magnitude. Neither affected PMU is supplied as the physical
+source. This rule recognizes a known composite template.
+
+We fixed the source signatures and decision rules before testing.
+Development comprised 216 balanced records and 150 additional composite
+records. The primary test included 24 new records per class. Each
+physical family had three candidate locations. We shuffled their order
+and varied noise, onset, severity and duration. Instrument faults
+rotated across PMUs. The 24 normal windows and 48 further normal records
+provide 0.6 monitored hours for the false-alarm comparison. Source
+accuracy uses all 192 nonnormal windows, including missed events.
+In this simulator the response attenuates with distance in bus
+numbering. The resulting source discrimination is specific to its
+prescribed spatial signatures.
+
+\begin{table}[t]\centering\small
+\caption{Paired nine-class window decisions on independently generated
+records. The last row counts normal windows containing an alarm.}
+\label{tab:window-source-comparison}
+\begin{tabular}{lrr}\toprule
+Measure & Response bank & Revised procedure\\\midrule
+Macro-F1 & 0.845 & 0.991\\
+Correct family & 190/216 & 214/216\\
+Exact source & 166/192 & 188/192\\
+Alarms on normal windows & 0/72 & 0/72\\\bottomrule
+\end{tabular}
+\end{table}
+
+All 264 records failed the original dynamic-bank angle-noise check.
+The revised fallback recognized all 24 composite windows and located
+the physical source in 22. Both procedures identified the source in
+every line, generation and load window in this test. The revised
+procedure's two family errors were isolated instrument corruptions
+classified as normal. Stratified bootstrap resampling of whole test
+records within class (4,000 draws) gave 95\% intervals of
+$[0.977,1.000]$ for macro-F1, $[0.977,1.000]$ for correct family and
+$[0.958,0.995]$ for exact source. Zero alarms in 72 independent normal
+windows gives a one-sided 95\% upper bound of 4.1\% per window under
+the tested conditions.
+
+We also evaluated the composite flag after mapping all voltage angles
+to $[-180^\circ,180^\circ)$. This transformation preserves every
+electrical phasor. The flag fired on 24 of 24 composite records with
+the original encoding and on none after conversion. This diagnostic
+isolates the flag; it does not rescore the full classifier. The
+window-level macro-F1 therefore depends on an instrument convention
+in these records.
