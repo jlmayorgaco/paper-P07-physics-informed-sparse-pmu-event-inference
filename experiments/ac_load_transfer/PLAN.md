@@ -3,3 +3,7 @@ Before scoring, freeze seed 694031, all 18 positive-load candidates and the eigh
 ## Secondary cross-model check
 
 Before the M9 prediction seal was produced or scored, fix one additional diagnostic. On each window whose revised family is load, replace only its site by the real-scaled AC Jacobian estimate using the late-minus-prefix complex voltage change. Score this separately from the frozen primary arm. Include a failure to transfer. The AC experiment and M9 share a topology but use different voltage response laws.
+
+## Independent voltage/current extension
+
+Use a fresh seed (879221) and the same counts, load and operating-point perturbations. Fix 0.0005 relative RMS noise for the voltage change and 0.005 for the current change. Compare the real-amplitude AC voltage estimator with a joint voltage and current estimator on the identical draws. Use six oriented terminal currents from the manuscript measurement table, omitting the provisional BUS5 channel and the partial BUS39 channel. Form fractional current changes so static sensor gains and orientation cancel. Remove a separate common complex offset within each signal family and weight by the prespecified inverse noise variances. Include all 288 load steps. Report the result under known terminal mapping; no claim about instrument behavior or nine-class accuracy in M9 follows from this diagnostic.
