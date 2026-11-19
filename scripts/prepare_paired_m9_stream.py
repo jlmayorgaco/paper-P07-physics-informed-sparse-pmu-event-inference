@@ -13,7 +13,9 @@ from prepare_electrical_sites import NEW, CATALOG, SITES
 SITES_TEST = {1: "BUS22", 2: "BUS4-BUS5", 3: "BUS36", 4: "BUS3", 6: "BUS36", 8: "BUS8"}
 
 
-def prepare(root, archive):
+def prepare(
+    root, archive, *, seed=208153, repetitions=3, sites=None, instrument_sites=None
+):
     sys.path.insert(0, str(archive / "V5"))
     from src.simulation.m9.generator import (
         apply_cyber_events,
@@ -30,8 +32,13 @@ def prepare(root, archive):
         for group in catalog.values()
         for site in group
     }
-    assert known.isdisjoint(SITES_TEST.values())
-    rng = random.Random(208153)
+    if sites is None:
+        sites = {code: [site] for code, site in SITES_TEST.items()}
+    else:
+        known.update(SITES_TEST.values())
+        known.add("BUS4")
+    assert all(known.isdisjoint(group) for group in sites.values())
+    rng = random.Random(seed)
     meta = archive / "data/metadata"
     raw = meta / "IEEE_39_Bus_Power_System.raw"
     stats = extract_reference_statistics(archive / "data/RAW0001")
@@ -39,18 +46,36 @@ def prepare(root, archive):
     names = sorted(n for n in list_templates() if n.startswith("TEMPLATE_EVENT"))
     assert len(names) == 9
     for code, name in enumerate(names):
-        for repetition in range(3):
+        for repetition in range(repetitions):
             seed, onset = rng.randrange(1, 2**31), rng.uniform(91, 95)
             for condition in ("isolated", "consecutive"):
                 spec = get_template(name)
                 physical, quality = spec["physical_events"], spec["cyber_events"]
                 source = "none"
                 if physical:
-                    site = SITES_TEST[code]
+                    site = sites[code][repetition % len(sites[code])]
                     field = "target_line" if code == 2 else "target_bus"
                     physical[0][field] = site
-                    source = "LINE4-5" if code == 2 else site
+                    source = (
+                        (
+                            "LINE"
+                            + "-".join(
+                                str(b)
+                                for b in sorted(
+                                    int(bus.removeprefix("BUS"))
+                                    for bus in site.split("-")
+                                )
+                            )
+                        )
+                        if code == 2
+                        else site
+                    )
                 elif quality:
+                    if instrument_sites:
+                        for event in quality:
+                            event["target_pmus"] = [
+                                instrument_sites[repetition % len(instrument_sites)]
+                            ]
                     source = quality[0]["target_pmus"][0].replace("BUS", "PMU")
                 for event in physical + quality:
                     event["start_time_s"] += onset - 4
