@@ -1,18 +1,19 @@
 \subsection{Attribution After Short Recovery Gaps}
 \label{sec:c03}
-On the original plant, retaining the recovery paths yielded
-\CThreeFOneHistoryShortTimely{}/144 timely diagnoses after short gaps,
-compared with \CThreeFOneCarryShortTimely{}/144 after merging them into
-one state mean. The paired coverage gain was
-\CThreeFOneHistoryCarryDifferencePP{} percentage points
-(95\% interval [\CThreeFOneHistoryCarryLowerPP{},
-\CThreeFOneHistoryCarryUpperPP{}]). On the second plant the corresponding counts were
-\CThreePTwoHistoryShortTimely{}/144 and \CThreePTwoCarryShortTimely{}/144,
-a difference of \CThreePTwoHistoryCarryDifferencePP{} points
-[\CThreePTwoHistoryCarryLowerPP{}, \CThreePTwoHistoryCarryUpperPP{}].
-Across all 216 interventions on the second plant the history and mean arms attributed
-\CThreeAuditPTwoHistoryAll{} and \CThreeAuditPTwoCarryAll{}, respectively.
-Only the reference plant met the prespecified criterion for a short-gap coverage gain.
+\input{experiments/recovery_discordance_20261119/macros}
+On the reference plant, history attributed \CThreeFOneHistoryShortTimely{}/144
+short-gap interventions in time and carry attributed
+\CThreeFOneCarryShortTimely{}/144. History gained \FOneHistoryGained{}
+timely diagnoses and lost none (paired difference
+\CThreeFOneHistoryCarryDifferencePP{} points, 95\% interval
+[\CThreeFOneHistoryCarryLowerPP{}, \CThreeFOneHistoryCarryUpperPP{}]).
+On the second plant, their totals were \CThreePTwoHistoryShortTimely{}/144
+and \CThreePTwoCarryShortTimely{}/144. History gained \PTwoHistoryGained{}
+diagnoses and lost \PTwoHistoryLost{} (\CThreePTwoHistoryCarryDifferencePP{}
+points [\CThreePTwoHistoryCarryLowerPP{}, \CThreePTwoHistoryCarryUpperPP{}]).
+Only the reference plant met the prespecified coverage criterion.
+Across all 216 interventions on the second plant, history and carry
+attributed \CThreeAuditPTwoHistoryAll{} and \CThreeAuditPTwoCarryAll{}.
 
 \begin{figure*}[t]\centering
 \includegraphics[width=.98\textwidth]{figures/generated/recovery_c03.pdf}

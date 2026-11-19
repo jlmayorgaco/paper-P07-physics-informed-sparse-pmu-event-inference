@@ -8,9 +8,8 @@ Each arm selects its threshold on calibration records at a common
 target of one normal alarm per hour.
 
 The replay adds independent polar-coordinate Gaussian innovations to
-the original observations. The scales in the table are standard
-deviations of relative magnitude and angle in radians, expressed as
-percent. Magnitude scales use a fixed startup reference. The voltage
+the original observations. A tabulated scale of 0.1\% means a relative-magnitude standard
+deviation of 0.001 and an angle standard deviation of 0.001 rad. Magnitude scales use a fixed startup reference. The voltage
 angle perturbations also enter frequency and ROCOF through the causal
 21-report quadratic derivative. The resulting noise is correlated
 across these channels and across successive reports.
@@ -41,7 +40,7 @@ in $0.3267$ monitored hours for each arm.}
 Even zero normal alarms in this test exposure give a one-sided 95\%
 Poisson upper bound of approximately $9.17$ alarms per hour. This
 replay measures sensitivity to covariance under a controlled added-noise
-law. The family-scale estimator has the highest combined timely count at
+law. The family-scale estimator has the highest total number of timely load and line diagnoses at
 both scales (tied with the structured estimator at the lower scale and
 shrinkage at the higher scale). Supplying the true added-noise scales
 did not improve on the family-scale arm in either replay. This comparison

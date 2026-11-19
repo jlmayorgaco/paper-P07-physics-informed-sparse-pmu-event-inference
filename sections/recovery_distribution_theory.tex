@@ -61,10 +61,9 @@ the resulting Gaussian approximation need not preserve a multimodal
 predictive distribution.
 
 Predictive filtering and retrospective attribution are distinct. A causal
-filter updates history weights using reports available at each time. A later
-proposal for an earlier onset is a smoothing/replay operation: it needs the
-stored pre-onset filtering distribution and must replace, rather than
-duplicate, the replayed suffix likelihood. The current filtering posterior
+filter updates history weights using reports available at each time. When the monitor proposes an earlier onset, it retrieves the filtering
+distribution saved before that onset and replaces the likelihood of the
+intervening reports. The current filtering posterior
 alone does not in general recover that earlier distribution. A retrospective
 cause query requires the joint posterior $p(S_k,H_k\mid Y_{1:k})$; the
 marginal state posterior can suffice for prediction while being insufficient

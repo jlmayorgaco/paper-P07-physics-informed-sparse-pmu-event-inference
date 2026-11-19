@@ -103,7 +103,9 @@ were applied at sites outside their respective development catalogs.
 The physical components of the two mixed classes also moved. The
 instrument-only classes reused the installed PMUs. Each of the nine
 classes contributed 12 new records, with 48 additional normal records
-reserved for counting false alarms. We compared the submitted competition
+reserved for counting false alarms. Thus family scoring used 108 windows,
+location used the 96 events in classes 1--8, and false alarms used
+the 12 class-0 windows plus 48 additional normal windows. We compared the submitted competition
 classifier, the spatial procedure above, and a version that replaces the
 whole-turn flag and maps angles to their signed principal range.
 
@@ -165,8 +167,8 @@ outages, the ten generator terminals for generation changes, and the
 18 buses with positive active load for load changes. For the mixed
 generation and missing-report class we search the generator terminals.
 
-A third cohort used 12 records per class and 48 additional normal
-windows. Its physical targets were absent from both earlier site
+A third cohort used the same denominators (108 family decisions, 96
+event locations and 60 normal windows) with fresh records. Its physical targets were absent from both earlier site
 lists. All three methods saw the same measurements, and their
 predictions were sealed before scoring. The simulator imposes spatial
 attenuation by numerical bus-label proximity, whereas the electrical
@@ -200,3 +202,33 @@ With unknown complex strength, each such pair gives the same
 noise-free fit. This ambiguity persists even with an exact network
 model; the test does not separate its contribution to the observed
 errors from simulator mismatch.
+
+\paragraph{How many sources do the voltage signatures distinguish?}
+\input{experiments/electrical_dictionary_resolution/macros}
+To separate ambiguity in the electrical dictionary from mismatch with
+the simulator, we generated observations directly from each source
+signature, with the family given. For each candidate we removed a common
+complex offset and fitted a complex amplitude. Sources with proportional
+centered signatures have identical fits. With sources equally likely and
+ties shared equally, the noiseless fraction correct is the number of
+distinct directions divided by the number of candidates.
+
+With all eight PMUs the noiseless fractions were \ResolutionBus{} for
+bus faults, \ResolutionBranch{} for branch openings, \ResolutionGen{}
+for generation changes and \ResolutionLoad{} for load changes.
+These are limits for this static voltage-only score, with uniform weights
+and unrestricted complex strength. They do not bound a monitor that
+also observes current or transient timing.
+
+\begin{figure*}[t]\centering
+\includegraphics[width=.97\textwidth]{experiments/electrical_dictionary_resolution/resolution.pdf}
+\caption{Exact source resolution when the electrical dictionary also
+generates the data. Each source has 256 random event phases and complex
+white-noise draws. SNR is the ratio of centered signal energy to expected
+centered noise energy across the eight PMUs. The seven-PMU cases reuse
+the same draws and amplitudes, so their effective SNR can change. Orange spans the results of omitting each
+PMU in turn; green spans the noiseless ceilings over the full and reduced
+arrays. Mixed generation uses the generator dictionary; the composite
+uses the bus dictionary. The family is supplied throughout.}
+\label{fig:matched-electrical-resolution}
+\end{figure*}

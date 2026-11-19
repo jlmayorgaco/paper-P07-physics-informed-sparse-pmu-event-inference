@@ -57,16 +57,16 @@ def build(report: dict):
             extra = s["extras"]
             ax_cov.barh(y, cov, color=COLORS[arm], height=.54)
             label_x = max(1, cov - 2) if cov >= 85 else cov + 1.4
-            ax_cov.text(label_x, y, f"{cov:.1f}%  ({s['short_timely']}/{s['short_events']})", ha="right" if cov >= 85 else "left", va="center", fontsize=7)
+            ax_cov.text(label_x, y, f"{s['short_timely']}/{s['short_events']}", ha="right" if cov >= 85 else "left", va="center", fontsize=8)
             ax_extra.barh(y, extra, color=COLORS[arm], height=.54)
-            ax_extra.text(extra + 12, y, str(extra), va="center", fontsize=7)
+            ax_extra.text(extra + 12, y, str(extra), va="center", fontsize=8)
         for ax in (ax_cov, ax_extra):
             ax.set_yticks(ys, [LABELS[a] for a in ("history", "carry", "reset")])
             ax.spines[["top", "right", "left"]].set_visible(False)
             ax.spines["bottom"].set_color("#CBD3D7")
             ax.grid(axis="x", color="#DDE3E5", lw=.5)
             ax.set_axisbelow(True)
-            ax.tick_params(length=0, labelsize=7)
+            ax.tick_params(length=0, labelsize=8)
         ax_extra.set_yticklabels([])
         ax_cov.set_xlim(0, 120)
         ax_cov.set_xlabel("Short-gap timely attribution (%)")
@@ -84,7 +84,7 @@ def build(report: dict):
         ax_delta.errorbar(diff, 0, xerr=[[diff-low], [high-diff]], fmt="o",
                           color=COLORS["history"], capsize=3, lw=1.4)
         ax_delta.text(.5, .82, f"{diff:+.1f} pp\n[{low:+.1f}, {high:+.1f}]",
-                      transform=ax_delta.transAxes, ha="center", va="center", fontsize=7)
+                      transform=ax_delta.transAxes, ha="center", va="center", fontsize=8)
         ax_delta.set_yticks([])
         ax_delta.set_xlim(-20, 55)
         ax_delta.set_ylim(-.5, .5)
@@ -94,12 +94,12 @@ def build(report: dict):
         ax_delta.spines["bottom"].set_color("#CBD3D7")
         ax_delta.grid(axis="x", color="#DDE3E5", lw=.5)
         ax_delta.set_axisbelow(True)
-        ax_delta.tick_params(length=0, labelsize=7)
+        ax_delta.tick_params(length=0, labelsize=8)
     fig.suptitle("Attribution after short recovery gaps", x=.02,
                  ha="left", fontsize=10, fontweight="bold")
     fig.text(.02, .035,
              "Each plant contributes 144 short-gap interventions. "
-             "Extra alarms are unmatched alarms on event records.", fontsize=7, color="#4C5D67")
+             "Extra alarms are unmatched alarms on event records.", fontsize=8, color="#4C5D67")
     return fig
 
 
