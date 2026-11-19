@@ -22,7 +22,8 @@ def save(path, obj):
         json.dump(obj, out, indent=2)
 
 
-def prepare(root, archive, *, seed=202611190731, repetitions=3, move_integrity=False):
+def prepare(root, archive, *, seed=202611190731, repetitions=3, move_integrity=False,
+            asset_catalog=None, normal_only=False, vary_physical=False):
     sys.path.insert(0, str(archive / "V5"))
     from src.simulation.m9.generator import (get_template, list_templates,
         extract_reference_statistics, generate_physical_truth, build_observed_pmu_frames,
@@ -34,6 +35,12 @@ def prepare(root, archive, *, seed=202611190731, repetitions=3, move_integrity=F
     truth = {}
     for template in sorted(n for n in list_templates() if n.startswith("TEMPLATE_EVENT")):
         code = int(re.search(r"EVENT(\d)", template)[1])
+        if normal_only and code != 0:
+            continue
+        assets = list(asset_catalog.get(code, ())) if asset_catalog else []
+        schedule = [assets[i % len(assets)] for i in range(repetitions)] if assets else []
+        if vary_physical:
+            rng.shuffle(schedule)
         for repetition in range(repetitions):
             spec = get_template(template)
             delay = rng.uniform(60.1, 66)
@@ -42,15 +49,31 @@ def prepare(root, archive, *, seed=202611190731, repetitions=3, move_integrity=F
             folder = root / "observations" / case
             folder.mkdir(parents=True)
             physical, quality = spec["physical_events"], spec["cyber_events"]
+            if asset_catalog and physical and code in asset_catalog:
+                event = physical[0]
+                target = schedule[repetition]
+                if event.get("target_line"):
+                    event["target_line"] = target
+                else:
+                    event["target_bus"] = target
             if move_integrity and code in (5, 6, 7):
                 original = quality[0]["target_pmus"][0]
                 # Rotate through sites excluded from this template in development.
                 candidates = [f"BUS{b}" for b in (2,5,6,10,19,22,29,39) if f"BUS{b}" != original]
                 for event in quality:
                     event["target_pmus"] = [candidates[repetition % len(candidates)]]
+            if move_integrity and asset_catalog and code == 8:
+                sites = ("BUS2","BUS5","BUS6","BUS10","BUS19","BUS22","BUS29","BUS39")
+                for j,event in enumerate(quality):
+                    event["target_pmus"] = [sites[(repetition + 3*j) % len(sites)]]
             for event in physical + quality:
                 event["start_time_s"] += delay
                 event["end_time_s"] += delay
+            if vary_physical:
+                for event in physical:
+                    event["severity"] *= rng.uniform(.8, 1.2)
+                    event["duration_s"] *= rng.uniform(.85, 1.15)
+                    event["end_time_s"] = event["start_time_s"] + event["duration_s"]
             state = generate_physical_truth(network, meta / "PMUbus_ Location.txt",
                                             spec, seed=seed, duration_s=90)
             pmus = build_observed_pmu_frames(state, network, stats, seed=seed)
@@ -69,6 +92,8 @@ def prepare(root, archive, *, seed=202611190731, repetitions=3, move_integrity=F
             elif quality:
                 source = quality[0]["target_pmus"][0].replace("BUS", "PMU")
             truth[case] = dict(code=code, source=source, seed=seed)
+            if asset_catalog and physical:
+                truth[case]["onset_s"] = physical[0]["start_time_s"]
     save(root / "truth.json", truth)
 
 
