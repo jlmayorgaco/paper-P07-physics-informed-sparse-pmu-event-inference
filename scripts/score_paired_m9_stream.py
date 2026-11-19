@@ -50,19 +50,28 @@ def summarize(keys, truth, preds, method):
     )
 
 
-def score(root, out):
+def score(root, out, *, methods=METHODS, repetitions=3):
     raw = (root / "predictions.json").read_bytes()
     assert sha256(raw).hexdigest() == json.loads((root / "seal.json").read_text())
     preds, truth = json.loads(raw), json.loads((root / "truth.json").read_text())
-    assert preds.keys() == truth.keys() and len(truth) == 108
+    assert preds.keys() == truth.keys() and len(truth) == 36 * repetitions
     assert all(
-        len(rows) == 3 and rows.keys() == METHODS.keys() for rows in preds.values()
+        len(rows) == len(methods) and rows.keys() == methods.keys()
+        for rows in preds.values()
     )
     assert set(Counter((v["pair"], v["end"]) for v in truth.values()).values()) == {2}
-    assert len({(v["pair"], v["end"], v["condition"]) for v in truth.values()}) == 108
+    assert (
+        len({(v["pair"], v["end"], v["condition"]) for v in truth.values()})
+        == 36 * repetitions
+    )
     metrics = {}
     fig, axes = plt.subplots(
-        2, 3, figsize=(7.1, 4.65), layout="constrained", sharex=True, sharey=True
+        2,
+        len(methods),
+        figsize=(7.1, 4.65),
+        layout="constrained",
+        sharex=True,
+        sharey=True,
     )
     for i, condition in enumerate(("isolated", "consecutive")):
         keys = [
@@ -71,15 +80,15 @@ def score(root, out):
             if t["condition"] == condition and t["end"] == 120
         ]
         assert Counter(truth[k]["code"] for k in keys) == Counter(
-            {c: 3 for c in range(9)}
+            {c: repetitions for c in range(9)}
         )
         metrics[condition] = {}
-        for j, (method, title) in enumerate(METHODS.items()):
+        for j, (method, title) in enumerate(methods.items()):
             result = summarize(keys, truth, preds, method)
             metrics[condition][method] = result
             matrix = np.array(result["confusion"])
             ax = axes[i, j]
-            ax.imshow(matrix, cmap="Blues", norm=Normalize(0, 3))
+            ax.imshow(matrix, cmap="Blues", norm=Normalize(0, repetitions))
             for (r, c), value in np.ndenumerate(matrix):
                 if value:
                     ax.text(
@@ -89,7 +98,7 @@ def score(root, out):
                         ha="center",
                         va="center",
                         fontsize=7,
-                        color="white" if value >= 2 else "black",
+                        color="white" if value > repetitions / 2 else "black",
                     )
             ax.set_xticks(range(9))
             ax.set_yticks(range(9))
@@ -102,18 +111,18 @@ def score(root, out):
                 ax.set_ylabel(condition.capitalize() + "\nTrue class", fontsize=8)
     for label, end in (("first_window", 90), ("all_windows", None)):
         keys = [k for k, t in truth.items() if end is None or t["end"] == end]
-        metrics[label] = {m: summarize(keys, truth, preds, m) for m in METHODS}
+        metrics[label] = {m: summarize(keys, truth, preds, m) for m in methods}
     quiet_keys = [
         k for k, t in truth.items() if t["code"] == 0 and t["condition"] == "isolated"
     ]
-    assert len(quiet_keys) == 30
-    metrics["quiet_only"] = {m: summarize(quiet_keys, truth, preds, m) for m in METHODS}
+    assert len(quiet_keys) == 10 * repetitions
+    metrics["quiet_only"] = {m: summarize(quiet_keys, truth, preds, m) for m in methods}
     pairs = {}
     for key, target in truth.items():
         if target["end"] == 120:
             pairs.setdefault(target["pair"], {})[target["condition"]] = key
     metrics["paired_family_changes"] = {}
-    for method in METHODS:
+    for method in methods:
         counts = Counter()
         for pair in pairs.values():
             first, second = pair["isolated"], pair["consecutive"]
