@@ -22,19 +22,19 @@ def save(path, obj):
         json.dump(obj, out, indent=2)
 
 
-def prepare(root, archive):
+def prepare(root, archive, *, seed=202611190731, repetitions=3, move_integrity=False):
     sys.path.insert(0, str(archive / "V5"))
     from src.simulation.m9.generator import (get_template, list_templates,
         extract_reference_statistics, generate_physical_truth, build_observed_pmu_frames,
         apply_cyber_events)
-    rng = random.Random(202611190731)
+    rng = random.Random(seed)
     meta = archive / "data/metadata"
     network = meta / "IEEE_39_Bus_Power_System.raw"
     stats = extract_reference_statistics(archive / "data/RAW0001")
     truth = {}
     for template in sorted(n for n in list_templates() if n.startswith("TEMPLATE_EVENT")):
         code = int(re.search(r"EVENT(\d)", template)[1])
-        for _ in range(3):
+        for repetition in range(repetitions):
             spec = get_template(template)
             delay = rng.uniform(60.1, 66)
             case = f"{rng.getrandbits(64):016x}"
@@ -42,6 +42,12 @@ def prepare(root, archive):
             folder = root / "observations" / case
             folder.mkdir(parents=True)
             physical, quality = spec["physical_events"], spec["cyber_events"]
+            if move_integrity and code in (5, 6, 7):
+                original = quality[0]["target_pmus"][0]
+                # Rotate through sites excluded from this template in development.
+                candidates = [f"BUS{b}" for b in (2,5,6,10,19,22,29,39) if f"BUS{b}" != original]
+                for event in quality:
+                    event["target_pmus"] = [candidates[repetition % len(candidates)]]
             for event in physical + quality:
                 event["start_time_s"] += delay
                 event["end_time_s"] += delay
