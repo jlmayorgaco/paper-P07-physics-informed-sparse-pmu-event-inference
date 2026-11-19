@@ -17,7 +17,7 @@ native = bank.baseline
 METHODS = ("submitted", "spatial", "residual")
 
 
-def canonical(frames):
+def canonical(frames, turns=0):
     normalized = {}
     for bus, original in frames.items():
         d = original.copy()
@@ -25,9 +25,7 @@ def canonical(frames):
         angles = d[cols].to_numpy()
         # Quantize below the precision of the input to remove modulo roundoff.
         wrap = lambda a: np.round((a + 180) % 360 - 180, 8)
-        values = wrap(angles)
-        assert np.array_equal(values, wrap(angles + 360), equal_nan=True)
-        d[cols] = values
+        d[cols] = wrap(angles + 360 * turns)
         normalized[bus] = d
     return normalized
 
@@ -92,7 +90,9 @@ def infer(folder):
     admission = bank.startup[folder.name]
     original, prior = pipeline(frames, admission, spatial.pulse_bounds)
     _, revised = pipeline(canonical(frames), admission, residual_pulse)
-    return folder.name, dict(submitted=original, spatial=prior, residual=revised)
+    _, shifted = pipeline(canonical(frames, turns=1), admission, residual_pulse)
+    return folder.name, dict(submitted=original, spatial=prior, residual=revised,
+                             residual_shifted=shifted)
 
 
 def digest(path):
