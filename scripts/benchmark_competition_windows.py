@@ -23,7 +23,7 @@ def save(path, obj):
 
 
 def prepare(root, archive, *, seed=202611190731, repetitions=3, move_integrity=False,
-            asset_catalog=None, normal_only=False, vary_physical=False):
+            asset_catalog=None, normal_only=False, vary_physical=False, classes=None):
     sys.path.insert(0, str(archive / "V5"))
     from src.simulation.m9.generator import (get_template, list_templates,
         extract_reference_statistics, generate_physical_truth, build_observed_pmu_frames,
@@ -35,7 +35,7 @@ def prepare(root, archive, *, seed=202611190731, repetitions=3, move_integrity=F
     truth = {}
     for template in sorted(n for n in list_templates() if n.startswith("TEMPLATE_EVENT")):
         code = int(re.search(r"EVENT(\d)", template)[1])
-        if normal_only and code != 0:
+        if (normal_only and code != 0) or (classes is not None and code not in classes):
             continue
         assets = list(asset_catalog.get(code, ())) if asset_catalog else []
         schedule = [assets[i % len(assets)] for i in range(repetitions)] if assets else []

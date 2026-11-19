@@ -111,7 +111,7 @@ def infer(folder):
     return case, dict(current=old["successor"], response=result, route=which)
 
 
-def score(root):
+def score(root, *, per_class=12):
     from sklearn.metrics import confusion_matrix, f1_score
     raw = (root/"predictions.json").read_bytes()
     assert hashlib.sha256(raw).hexdigest() == json.loads((root/"seal.json").read_text())
@@ -122,7 +122,7 @@ def score(root):
     assert not truth.keys() & normals.keys() and pred.keys() == truth.keys() | normals.keys()
     ids = sorted(truth)
     codes = [truth[i]["code"] for i in ids]
-    assert np.array_equal(np.bincount(codes),np.full(9,12))
+    assert np.array_equal(np.bincount(codes),np.full(9,per_class))
     assert len(normals)==48 and all(v["code"]==0 for v in normals.values())
     all_quiet = list(normals) + [i for i in ids if truth[i]["code"]==0]
     for method in ("current","response"):
