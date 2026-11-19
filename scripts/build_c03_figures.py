@@ -48,6 +48,7 @@ def build(report: dict):
     plants = ("F01", "P2")
     for row, plant in enumerate(plants):
         summary = report["results"][plant]["nominal"]
+        name = ("Reference", "Second plant")[row]
         ax_cov, ax_extra, ax_delta = axes[row]
         ys = [2, 1, 0]
         for arm, y in zip(("history", "carry", "reset"), ys):
@@ -69,10 +70,10 @@ def build(report: dict):
         ax_extra.set_yticklabels([])
         ax_cov.set_xlim(0, 120)
         ax_cov.set_xlabel("Short-gap timely attribution (%)")
-        ax_cov.set_title(f"({chr(97+3*row)}) {plant}: coverage", loc="left", fontweight="bold")
+        ax_cov.set_title(f"({chr(97+3*row)}) {name}: coverage", loc="left", fontweight="bold")
         ax_extra.set_xlim(0, max(1000, max(summary[a]["summary"]["extras"] for a in summary) * 1.2))
         ax_extra.set_xlabel("Unmatched event-record alarms (count)")
-        ax_extra.set_title(f"({chr(98+3*row)}) {plant}: extra alarms", loc="left", fontweight="bold")
+        ax_extra.set_title(f"({chr(98+3*row)}) Extra alarms", loc="left", fontweight="bold")
         pair = report["contrasts"][plant]["history_vs_carry"]["coverage"]
         diff, low, high = [100 * pair[k] for k in ("difference", "lower95", "upper95")]
         expected = 100 * (summary["history"]["summary"]["short_timely"]
@@ -88,17 +89,17 @@ def build(report: dict):
         ax_delta.set_xlim(-20, 55)
         ax_delta.set_ylim(-.5, .5)
         ax_delta.set_xlabel("History − carry (pp)")
-        ax_delta.set_title(f"({chr(99+3*row)}) {plant}: coverage gain", loc="left", fontweight="bold")
+        ax_delta.set_title(f"({chr(99+3*row)}) Coverage gain", loc="left", fontweight="bold")
         ax_delta.spines[["top", "right", "left"]].set_visible(False)
         ax_delta.spines["bottom"].set_color("#CBD3D7")
         ax_delta.grid(axis="x", color="#DDE3E5", lw=.5)
         ax_delta.set_axisbelow(True)
         ax_delta.tick_params(length=0, labelsize=7)
-    fig.suptitle("Recovery histories: coverage gain on F01, inconclusive on P2", x=.02,
+    fig.suptitle("Attribution after short recovery gaps", x=.02,
                  ha="left", fontsize=10, fontweight="bold")
     fig.text(.02, .035,
-             "Primary denominator: 144 short-gap interventions per arm and plant. "
-             "Extras are event-record alarms, distinct from normal false alarms.", fontsize=7, color="#4C5D67")
+             "Each plant contributes 144 short-gap interventions. "
+             "Extra alarms are unmatched alarms on event records.", fontsize=7, color="#4C5D67")
     return fig
 
 

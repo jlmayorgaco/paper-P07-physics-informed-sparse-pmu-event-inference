@@ -1,7 +1,7 @@
 \section{Introduction}
 \label{sec:introduction}
 
-\PARstart{S}{uppose} a load at bus~16 returns to its original setting.
+\PARstart{A}{} load at bus~16 returns to its original setting.
 While the generators are still swinging, a phasor measurement unit (PMU)
 on a neighboring branch records another change in current. The change may
 follow from the load recovery alone. It may also reflect the opening of
@@ -19,7 +19,9 @@ Restored histories support a restoration report for that source. The source-sepa
 at left uses a supplied onset and serves as a retrospective diagnostic.}
 \label{fig:problem-method}\end{figure*}
 
-We treat recovery as a competing explanation for each new report.
+A line opening changes the network admittance immediately. Reclosure restores
+that admittance, but the rotor angles and speeds still reflect the outage.
+We therefore treat recovery as a competing explanation for each new report.
 A bank of switched differential-algebraic equation (DAE) models predicts
 how voltages and currents would evolve if recovery continued and how they
 would change if a particular load or line switched. The bank assigns each

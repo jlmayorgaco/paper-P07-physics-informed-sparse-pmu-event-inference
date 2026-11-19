@@ -15,7 +15,4 @@ confirm reuse rights before journal submission.
 | Payman Dehghanian | [George Washington University media page](https://mediarelations.gwu.edu/media-tip-sheet-electric-grid-resiliency-during-extreme-heat-waves), [image](https://mediarelations.gwu.edu/sites/g/files/zaxdzs5306/files/2023-02/payman_dehghanian.jpeg) | `source/payman_dehghanian.jpg` | `payman_dehghanian_bw.png` |
 | David Felipe Celeita Rodríguez | [Universidad de La Sabana research profile](https://pure.unisabana.edu.co/es/persons/david-felipe-celeita-rodr%C3%ADguez/), [image](https://pure.unisabana.edu.co/files-asset/30937496/FotoDC2025.jpg/) | `source/david_celeita.jpg` | `david_celeita_bw.png` |
 
-No sufficiently attributable public portrait was found for Jorge Luis
-Mayorga Taborda or Yessica Africano Rodriguez. Their biographies remain
-without a photograph pending author-supplied files. No image was inferred
-from a namesake or generated from a textual description.
+Jorge Luis Mayorga Taborda supplied his waterfront portrait directly. The built-in image editor produced the square grayscale profile image in `jorge_mayorga_bw.png` with a closer crop and gently lifted facial shadows. Yessica Africano Rodriguez uses a text-only biography.

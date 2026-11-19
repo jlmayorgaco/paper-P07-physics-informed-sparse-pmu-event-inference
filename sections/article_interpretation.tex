@@ -1,7 +1,7 @@
 \section{Discussion}
 \label{sec:discussion}
 
-\subsection{What the Controls Identify}
+\subsection{Why State Continuity Affects Attribution}
 
 The continuous GLR already propagates a physical state through
 restoration. Its lower rate of timely attribution therefore cannot be
@@ -21,7 +21,7 @@ the reset prediction even if the system simply continues to recover.
 A new load or line candidate can explain part of that displacement.
 The size of the one-report penalty depends on what the PMUs can see.
 An alarm also depends on later observations, competing sources and the
-publication clock.
+six-report decision rule.
 
 The comparison between retained histories and their merged mean has a
 different interpretation. Both preserve the physical mean at the point
@@ -34,15 +34,15 @@ histories reduces unmatched alarms. Determining which part of fusion
 matters would require controlling the prediction covariance and the
 stored onset-search information separately.
 
-\subsection{Where the Evidence Ends}
+\subsection{Sensitivity to Plant and Instrument Models}
 
 The second plant changes machine dynamics and some passive parameters
 while keeping the network layout, measurement terminals and candidate
 assets. Transfer here concerns those changes. Both test plants assume a
 balanced network, a quiet startup and nonoverlapping interventions from
 the 18-source catalog. The results give no measured accuracy for unknown
-sources, overlapping switches or unbalanced faults. On the archived
-competition record the dynamic bank failed its startup check.
+sources, overlapping switches or unbalanced faults. On the SGSMA competition record, the bank failed its startup check and therefore
+produced no diagnosis.
 
 Relative angles across PMUs are unusually quiet under the simulated
 common instrument noise. In the auxiliary replay, adding independent

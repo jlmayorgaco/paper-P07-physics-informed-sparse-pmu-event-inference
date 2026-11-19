@@ -2,7 +2,7 @@
 \label{sec:narrative-protocol}
 
 \subsection{Plant, Measurements and Scoring}
-The original IEEE 39-bus simulator (F01), built in Julia with
+The reference IEEE 39-bus simulator, built in Julia with
 PowerDynamics \cite{plietzsch2022powerdynamics}, uses Sauer--Pai machines,
 IEEE Type~I exciters, TGOV1 governors and the constant-impedance
 component of ZIP loads. Each 120-s event record follows one uninterrupted
@@ -59,8 +59,9 @@ restoration and the next onset. The paired bootstrap preserved the network
 and noise strata.
 
 \subsection{Controlled Comparison of Recovery Representations}
-All three arms use the nominal F01 predictor, the same severity model,
-proposal rules and publication clock. The \emph{history} arm keeps the
+We compare three ways of predicting the next report after restoration.
+All use the reference network model, load severity prior, onset search and
+six-report decision rule. The \emph{history} arm keeps the
 retained paths and proposal memory when it publishes a restoration.
 The \emph{mean} arm (carry in Fig.~\ref{fig:c03}) merges the no-event
 path and the restored paths into their weighted augmented-state mean,
@@ -73,12 +74,12 @@ therefore compares two ways to continue inference after a published
 restoration. Mean versus reset tests whether the physical component
 of the merged state should be carried forward.
 
-On F01, 36 event and 36 normal calibration trajectories determined one
-threshold per arm under the same normal-alarm budget. We applied those
-thresholds to two test plants. F01 uses the original dynamics. P2
-retains the same topology, terminals and catalog but uses classical
-machines, droop governors and different passive parameters. The F01
-predictor was applied to P2 without refitting the plant model. Each test
+We selected one threshold per method using 36 event and 36 normal
+trajectories from the reference plant and the same normal-alarm criterion.
+We then applied each method to the reference plant and to a second plant
+with classical machines, droop governors and different passive parameters.
+The two plants share the network topology, PMU terminals and event catalog.
+We used the reference predictor on both. Each test
 plant contributed 36 new event and 36 normal trajectories, with event
 schedules, sources and noise seeds paired across plants.
 

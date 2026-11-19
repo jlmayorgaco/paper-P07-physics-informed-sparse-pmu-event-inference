@@ -23,31 +23,28 @@
 }
 
 \begin{abstract}
-A load can return to its original setpoint, or a line can reclose, while
-the generators are still responding to the first switch. We estimate
-whether the next phasor measurements follow that recovery or identify a
-new intervention. A bank of switched differential-algebraic predictors
-carries the state through restoration and integrates over the unknown
-size of each candidate load change. We derive the minimum mean-square
-state estimate under each local model and the one-report prediction cost
-of resetting its physical coordinates. On the IEEE 39-bus system with
-eight phasor measurement units, the bank named the correct family and
-asset before restoration for \RecBankTimely{} simulated interventions.
-A continuous generalized likelihood ratio observer attributed
-\RecGlrTimely{} and ExtraTrees attributed \RecTreesTimely{}. With thresholds
-calibrated to the same normal-alarm budget, the three procedures issued
-\RecBankExtras{}, \RecGlrExtras{} and \RecTreesExtras{} unmatched alarms
-during event records. A second study tested what to retain at closure.
-After short gaps, retaining recovery histories, carrying their mean and
-resetting the physical state yielded \CThreeFOneHistoryShortTimely{},
-\CThreeFOneCarryShortTimely{} and \CThreeFOneResetShortTimely{} timely
-attributions out of 144 on the original plant. On a plant with different
-dynamics the counts were \CThreePTwoHistoryShortTimely{},
-\CThreePTwoCarryShortTimely{} and \CThreePTwoResetShortTimely{}. Keeping
-the physical state improved attribution on both plants. The additional
-coverage from retaining histories was \CThreePTwoHistoryCarryDifferencePP{}
-percentage points on the second plant (paired 95\% interval
-$[\CThreePTwoHistoryCarryLowerPP,\CThreePTwoHistoryCarryUpperPP]$).
+A line can reclose while generators are still responding to its opening.
+A monitor that observes another change in current must distinguish a new
+intervention from the continuing response to the first. We address this
+problem with a bank of switched network models. Each model predicts the
+next phasor measurement unit (PMU) report from the state reached before
+the switch. For a load change, the model averages over its unknown size.
+We derive the conditional minimum mean-square state estimate for each
+history and quantify the one-report increase in expected log loss caused by a
+physical-state reset. On the simulated IEEE 39-bus system with eight
+PMUs, the bank identified the correct event family and asset before
+restoration in \RecBankTimely{} cases. A continuous generalized
+likelihood ratio observer achieved \RecGlrTimely{} and an ExtraTrees
+classifier achieved \RecTreesTimely{}. Over 0.54 monitored event-hours
+the bank, observer and classifier issued \RecBankExtras{}, \RecGlrExtras{} and \RecTreesExtras{}
+unmatched alarms, respectively. We also tested successive interventions
+separated by less than three seconds. Carrying the mean physical state
+through restoration improved attribution over a reset on both test plants.
+Retaining separate histories improved on the mean by
+\CThreeFOneHistoryCarryDifferencePP{} percentage points on the plant
+used to construct the predictor. With different generator dynamics,
+the gain was \CThreePTwoHistoryCarryDifferencePP{} points (paired 95\%
+interval $[\CThreePTwoHistoryCarryLowerPP,\CThreePTwoHistoryCarryUpperPP]$).
 \end{abstract}
 
 \begin{keywords}

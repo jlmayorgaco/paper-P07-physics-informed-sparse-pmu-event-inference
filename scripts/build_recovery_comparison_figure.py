@@ -94,7 +94,7 @@ def draw(report):
     for ax in axes[:2]:
         ax.set_ylim(-.45,2.65); ax.set_xlim(-2,102); ax.set_xticks([0,25,50,75,100])
     bank=report['arms']['PHYSICAL_HISTORY']
-    axes[0].set_xlabel('Correct family and source before OFF (%)',fontsize=7.5,labelpad=5)
+    axes[0].set_xlabel('Correct family and source before restoration (%)',fontsize=7.5,labelpad=5)
     axes[1].set_xlabel(f"Unmatched alarms over {bank['event_monitored_s']/3600:.2f} event-hours",fontsize=7.5,labelpad=5)
     for i,(key,_,color) in enumerate(METHODS[1:]):
         y=1-i; arm=report['arms'][key]
@@ -128,7 +128,7 @@ def draw(report):
              f"Normal records: 0 alarms in {bank['normal_monitored_s']/3600:.2f} h per method; one-sided 95% Poisson upper bound {bank['normal_Poisson_upper95_per_h']:.2f}/h.",
              fontsize=7.5,color=C['muted'])
     fig.text(.02,.012,
-             'Paired 95% intervals: 10,000 resamples of 18 event parents. Each method meets the calibration alarm budget.',
+             'Paired 95% intervals from 10,000 resamples of the 18 event trajectories.',
              fontsize=7.5,color=C['muted'])
     return fig
 

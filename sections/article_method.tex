@@ -176,14 +176,14 @@ screening and pruning make the resulting masses approximate.
 
 \subsection{From Source Evidence to an Alarm}
 
-The two primary comparisons apply a common publication clock to each
-procedure's source scores. The bank supplies the log odds of active
-source mass for onset and of restored source mass for closure. The same source must lead above threshold for six consecutive monitored
-reports before the clock emits its alarm and diagnosis together. Six
-qualifying reports of restoration for that source close the episode. Thresholds are selected on independent calibration sequences
-(Section~\ref{sec:narrative-protocol}). The estimated switch time may
-precede the alarm. Timely attribution is scored at the instant the
-monitor publishes the decision.
+All methods in the two primary comparisons use the same alarm rule.
+The bank scores onset using the log odds of active source mass and
+restoration using the log odds of restored source mass. It raises an
+alarm and names the asset once the same source leads above threshold
+for six consecutive reports. Six qualifying restoration reports for that
+source close the episode. We calibrate thresholds on separate sequences
+(Section~\ref{sec:narrative-protocol}). When scoring timeliness, we use
+the time the monitor names the asset, even if it estimates an earlier onset.
 
 \begin{algorithm}[t]
 \caption{Attributing an intervention as reports arrive}
@@ -197,17 +197,16 @@ monitor publishes the decision.
  \State Correct each conditional state using \eqref{eq:implemented-conditional-correction}.
  \State Replay selected recent onsets from their stored pre-switch states, replacing their earlier suffix scores.
  \State Normalize the weights, prune and sum the source masses.
- \State Apply the publication clock to onset and restoration scores.
- \If{the clock publishes a restoration}
-   \State Apply the recovery rule for the procedure under test.
+ \State Check onset and restoration scores against the six-report rule.
+ \If{the monitor declares restoration}
+   \State Keep the recovery paths (or merge them in the comparison procedures).
  \EndIf
 \EndFor
 \end{algorithmic}
 \end{algorithm}
 
-A published closure prompts a choice about what to keep for the next
-prediction. The two-plant experiment makes that choice explicit. The
-history arm keeps its paths and onset-search memory. The other arms
-combine the restored paths with the no-intervention path. The earlier
-five-model studies used a separate publisher with a load-qualification
-screen and a separate diagnosis clock, described in the supplement.
+After declaring restoration, the history bank retains the paths and the
+states saved for the onset search. We compare this rule with two ways of merging paths
+in Section~\ref{sec:narrative-protocol}. The five-network sensitivity
+study uses a different alarm rule with an additional check for load events
+and a separate time for reporting the diagnosis (see the supplement).

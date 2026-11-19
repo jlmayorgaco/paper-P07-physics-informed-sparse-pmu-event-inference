@@ -28,10 +28,10 @@ also relate uncertain physical parameters to measured responses
 \cite{nagi2022trajectory}. Here the unknowns include which asset switched.
 PMU classifiers can identify disturbances and their locations from
 the observed features \cite{pandey2020realtime,li2024knowledge,yildiz2024few}.
-Our original competition entry used ExtraTrees on 30-s windows. When
-replayed unchanged on 96 simulated load and line event windows from 36
-development trajectories, it detected 32 events, identified the family
-in 23 and identified the exact family and source in none. That replay
-tested transfer to a different catalog. For the continuous comparison
-here, the ExtraTrees comparator has training examples for all 18 sources
-and uses only reports available at the time of its decision.
+A window-based ExtraTrees classifier from the SGSMA competition illustrates
+the difficulty of transferring source labels between catalogs. Applied
+unchanged to 96 load and line event windows from 36 simulated development
+trajectories, it detected 32 events and identified the family in 23.
+None of its diagnoses matched both family and asset. In our comparison
+we train ExtraTrees on all 18 candidate sources and compute its features
+using only reports available by the time of diagnosis.
