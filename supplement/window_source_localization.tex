@@ -95,3 +95,55 @@ the original encoding and on none after conversion. This diagnostic
 isolates the flag; it does not rescore the full classifier. The
 window-level macro-F1 therefore depends on an instrument convention
 in these records.
+
+\paragraph{Transfer to held-out physical sites.}
+A second test reserved three new physical assets per family and kept the
+same eight PMUs. Faults, outages, generation changes and load changes
+were applied at sites outside their respective development catalogs.
+The physical components of the two mixed classes also moved. The
+instrument-only classes reused the installed PMUs. Each of the nine
+classes contributed 12 new records, with 48 additional normal records
+reserved for counting false alarms. We compared the submitted competition
+classifier, the spatial procedure above, and a version that replaces the
+whole-turn flag and maps angles to their signed principal range.
+
+For each phase at each PMU, we fit a local equivalent admittance on
+the valid quiet samples $Q$ and measured the subsequent current mismatch,
+\begin{equation}
+ \widehat Y=\frac{\sum_{t\in Q}\overline{V_t} I_t}
+                         {\sum_{t\in Q}|V_t|^2},\qquad
+ e_t=\frac{|I_t-\widehat Y V_t|}{\operatorname{median}_{u\in Q}|I_u|}.
+\end{equation}
+We take the median mismatch across phases at each PMU and subtract the
+contemporaneous median across available PMUs. The detector requires a
+local excess lasting 12 to 150 reports above both 0.12 and three times
+its quiet 99.5th percentile. This residual measures departure from the
+local quiet voltage--current relation. A current gain change alone can
+produce such a departure, so the residual by itself cannot identify a
+simultaneous physical disturbance. Both hybrids use the same source
+templates. We sealed the three methods' predictions before scoring.
+
+\begin{table}[!ht]
+\centering\small
+\caption{Paired window decisions at held-out physical sites. The source
+denominator includes all nonnormal windows, including missed events.}
+\label{tab:window-held-locations}
+\begin{tabular}{lrrr}\toprule
+Measure & Submitted & Spatial & Residual\\\midrule
+Macro-F1 & 0.193 & 0.991 & 0.991\\
+Correct family & 32/108 & 107/108 & 107/108\\
+Exact source & 0/96 & 23/96 & 23/96\\
+Normal alarms & 0/60 & 0/60 & 0/60\\\bottomrule
+\end{tabular}
+\end{table}
+
+All 156 records failed the dynamic bank's startup angle-noise check.
+Both window hybrids identified the family in all 72 records with a
+physical intervention and located none of those sources. Their 23
+source hits came from the 24 instrument-only events. The residual
+hybrid gave the same family and source on all 156 windows when one
+turn was added to every reported angle and the window pipeline was
+rerun with the same startup decision. The 60 normal windows represent
+30 minutes of observation. These results concern synthetic site
+transfer within this simulator; the competition's hidden test records
+were unavailable.
