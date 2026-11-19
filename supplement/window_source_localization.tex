@@ -147,3 +147,56 @@ rerun with the same startup decision. The 60 normal windows represent
 30 minutes of observation. These results concern synthetic site
 transfer within this simulator; the competition's hidden test records
 were unavailable.
+
+\paragraph{Electrical source signatures at previously unused assets.}
+We froze the residual classifier and changed only its source ranking.
+For a network admittance $Y$ augmented by generator Norton equivalents
+with assumed transient reactance 0.2 pu, a current change at bus $k$
+produces a voltage signature proportional to $Y^{-1}e_k$.
+Opening branch $b$, with admittance stamp $Y_b$, instead gives
+$(Y-Y_b)\Delta V=Y_b V_0$ at the archived operating phasor $V_0$.
+We restrict each signature to the eight PMUs and divide each voltage
+change by its operating phasor. For each candidate, weighted least
+squares fits an unknown complex strength and a common complex offset
+to the observed fractional voltage changes. The quiet prefix supplies
+the inverse-variance weights. The source search includes all 39 buses
+for faults and weak composite disturbances, all 46 branches for
+outages, the ten generator terminals for generation changes, and the
+18 buses with positive active load for load changes. For the mixed
+generation and missing-report class we search the generator terminals.
+
+A third cohort used 12 records per class and 48 additional normal
+windows. Its physical targets were absent from both earlier site
+lists. All three methods saw the same measurements, and their
+predictions were sealed before scoring. The simulator imposes spatial
+attenuation by numerical bus-label proximity, whereas the electrical
+localizer predicts attenuation and phase from network admittance.
+This comparison measures transfer across that model discrepancy.
+
+\begin{table}[!ht]
+\centering\small
+\caption{Nine-class site transfer with a network-derived source dictionary.
+All normal-alarm counts cover the same 30 minutes.}
+\label{tab:window-electrical-sites}
+\begin{tabular}{lrrr}\toprule
+Measure & Submitted & Residual & Electrical\\\midrule
+Macro-F1 & 0.193 & 0.981 & 0.981\\
+Correct family & 32/108 & 106/108 & 106/108\\
+Exact source, all events & 0/96 & 22/96 & 24/96\\
+Exact physical source & 0/72 & 0/72 & 2/72\\
+Normal alarms & 0/60 & 0/60 & 0/60\\\bottomrule
+\end{tabular}
+\end{table}
+
+All three true assets per physical family were eligible candidates.
+Both hybrids classified all 72 physical interventions correctly.
+Electrical ranking recovered one line outage and one load change.
+The remaining 22 source hits were instrument-only events. All 156
+records failed dynamic-bank startup. The static voltage dictionary
+also has intrinsic ambiguities: after fitting the common offset,
+13 pairs among the 39 bus signatures are proportional at the observed
+PMUs (absolute normalized inner product within $10^{-10}$ of unity).
+With unknown complex strength, each such pair gives the same
+noise-free fit. This ambiguity persists even with an exact network
+model; the test does not separate its contribution to the observed
+errors from simulator mismatch.
