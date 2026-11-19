@@ -54,24 +54,14 @@ admission of the records and source accuracy at their measured noise
 correlations. The one-thread timing results likewise establish average
 processing throughput only. They leave worst-case delay per report open.
 
-A separate nine-class simulation tested a fallback when the dynamic bank
-rejected the startup angular noise. At the close of a 30-s window, the
-fallback compared spatial patterns in voltage and current and checked
-for coincident instrument anomalies. It identified the family in
-214 of 216 windows (macro-F1 0.991) and the source in 188 of 192 event
-windows. The gain in family accuracy came entirely from a known
-composite with a distinctive angle encoding. Expressing the same
-phasors in the usual signed angle range removed the flag in all 24
-composite cases. On a second cohort with physical sites outside the
-training catalog, a local voltage--current residual replaced the
-encoding check. It matched the previous fallback on every decision:
-107 of 108 correct families (macro-F1 0.991), but only 23 of 96
-correct sources. All 23 were instrument sites. Neither fallback
-located any of the 72 physical sources at held-out assets.
-A third cohort tested whether network-derived voltage signatures could
-locate new assets absent from the training catalog. The electrical
-localizer ranked all eligible assets and recovered two of 72 physical
-sources (one line and one load), compared with zero for the residual
-hybrid on the same records. Both obtained macro-F1 0.981. High family
-accuracy thus coexisted with poor transfer of source location across
-these simulated sites.
+In a separate nine-class simulation, every record failed the dynamic
+bank's startup check. A fallback classifier instead used the full 30-s
+window. With known candidate sites, it located 188 of 192 event sources;
+its composite-event flag depended on the angle encoding. With held-out
+sites and a voltage--current residual, it located 23 of 96 sources, all
+instrument sites. On a further cohort, electrical signatures let the
+fallback score every eligible physical asset. It classified all 72
+physical interventions correctly and located two, one line and one load.
+The prior hybrid located none on the same records. The simulator imposes
+spatial attenuation using numerical bus labels, whereas the localizer
+uses admittance. The supplement gives the three paired comparisons.

@@ -1,6 +1,18 @@
 \section{Interventions and PMU Observations}
 \label{sec:narrative-problem}
 
+\begin{figure*}[t]\centering
+\includegraphics[width=.98\textwidth]{figures/generated/event_taxonomy_grid.pdf}
+\caption{Representative signatures from the archived RAW0001 reference simulation
+of the SGSMA 2026 competition. Class 0 shows normal operation. Classes
+1--5 and 7 show recorded traces aligned to the event labels. In class 6
+an illustrative 0--30~s mask hides the response at PMU~2 to a generation
+event at 15~s. Orange shows available frequency or the Yes level, blue
+indicates No, and gray shows the underlying simulated frequency. The
+mask and the clock trains in panels 5 and 6 are illustrative. Class 8
+depicts the definition of an unknown event.}
+\label{fig:reference-event-types}\end{figure*}
+
 The monitor receives one report at $t_k=k/30$ seconds. It must detect a
 new intervention, identify its family and asset, and recognize restoration.
 Physical onset, alarm time and diagnosis time are distinct. The source and
@@ -13,17 +25,7 @@ the wider range of events that a PMU can record. The evaluation considers
 load changes and line openings. The supplement examines missing and
 corrupted observations separately.
 
-\begin{figure*}[t]\centering
-\includegraphics[width=.98\textwidth]{figures/generated/event_taxonomy_grid.pdf}
-\caption{Representative signatures from the archived RAW0001 reference simulation
-of the SGSMA 2026 competition. Class 0 shows normal operation. Classes
-1--5 and 7 show recorded traces aligned to the event labels. In class 6
-an illustrative 0--30~s mask hides the response at PMU~2 to a generation
-event at 15~s. Orange shows available frequency or the Yes level, blue
-indicates No, and gray shows the underlying simulated frequency. The
-mask and the clock trains in panels 5 and 6 are illustrative. Class 8
-depicts the definition of an unknown event.}
-\label{fig:reference-event-types}\end{figure*}
+
 
 \subsection{Switched Network Model}
 

@@ -67,7 +67,7 @@
 \node[head] at (12.94,7.42) {Compare with PMU reports};
 \node[note,anchor=west] at (.27,6.78) {Network, machines, loads and instruments};
 \node[note,anchor=west] at (6.35,6.78) {9 loads and 9 lines, unknown onset};
-\node[note,anchor=west] at (12.43,6.78) {Innovations with joint covariance $S_o$};
+\node[note,anchor=west] at (12.43,6.78) {Compare the next report with each path};
 
 % Generic electrical motif: buses, generator, load, line breaker, mapped PMU.
 \draw[bus] (.85,5.78)--(.85,6.33) (2.1,5.78)--(2.1,6.33)
@@ -85,10 +85,10 @@
 \draw[blue] (4.65,5.79)--(4.65,5.95);
 \node[tiny] at (3.4,5.57) {$q$: line mode};
 \node[align=center] at (2.76,4.91) {$\dot x=f_q(x,z,u),\qquad 0=g_q(x,z,u)$};
-\node at (2.76,4.43) {$I_{\rm bus}=Y_qV,\quad I_{\rm term}=Y_{{\rm term},q}V$};
+\node[note] at (2.76,4.43) {Switch the load or the branch admittance.};
 \draw[rule] (.36,4.1)--(5.17,4.1);
 \node[note] at (2.76,3.81) {Local reduction + instrument model};
-\node at (2.76,3.42) {$T_o,J_o,g_o,u_o,j_o,v_o$};
+\node at (2.76,3.42) {Predict bus voltages and terminal currents.};
 \draw[flow] (5.53,5.45)--(6.08,5.45);
 
 % Hypothesis stack: waveform icons are schematic, not measured traces.
@@ -108,14 +108,13 @@
 \draw[flow] (11.61,5.45)--(12.16,5.45);
 
 % Scoring, marginalization, model weighting and causality contract.
-\node at (14.93,6.35) {$e_h=r_k-J_om_h-j_o$};
-\node at (14.93,5.95) {$s_h=J_od_h+v_o$};
-\node at (14.93,5.35) {$L_{h,k}=\displaystyle\int_l^u\!\mathcal N(e_h;s_ha,S_o)\,p_h(a)\,da$};
+\node at (14.93,6.19) {Innovation at load size $a$: $e-sa$};
+\node at (14.93,5.35) {$L_{h,k}=\displaystyle\int_I\!\mathcal N(e;sa,S)\,p_h(a)\,da$};
 \node[note] at (14.93,4.86) {Integrate load size. Switch topology for lines.};
 \draw[rule] (12.51,4.62)--(17.34,4.62);
 \node at (14.93,4.30) {$\pi_{h,k}\propto L_{h,k}\,\pi_{h,k}^{\rm prior}$};
 \node[note] at (14.93,3.90) {Normalize weights and prune histories};
-\node[note] at (14.93,3.55) {Use the nominal network in the main tests};
+
 \node[tiny] at (14.93,3.20) {Replay replaces prior suffix evidence};
 % Posterior feedback and a distinct output route; no crossing of card content.
 \draw[->,teal,line width=.65pt] (14.0,2.98)--(14.0,2.62)--(8.85,2.62)--(8.85,2.98);
@@ -134,7 +133,7 @@
 \draw[rule] (.55,.93)--(2.05,.93) (.55,.93)--(.55,1.66);
 \draw[blue,->,line width=.85pt] (.55,.93)--(1.82,1.54);
 \draw[orange,->,line width=.85pt] (.55,.93)--(1.92,1.28);
-\node at (5.13,1.45) {$\widetilde Q_{i\mid j}=\min_b\,\tfrac12\|\mu_i-\mu_j(b)\|_{\Sigma^{-1}}^2$};
+\node at (5.13,1.45) {Best rival fit over $n$ reports: $\Lambda_{ij}(n)$};
 \node[note] at (4.29,.77) {Voltage alone or voltage and current};
 \node[head] at (9.83,2.02) {Publish event decisions};
 \node at (11.22,1.52) {Active mass $M_c$};

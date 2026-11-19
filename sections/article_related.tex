@@ -19,8 +19,13 @@ uses a time-varying AC model or particle-filtered generator states to detect
 an outage \cite{yang2020control,yang2021particle}. For short-circuit
 faults, Warner \emph{et al.} compare voltage and current trajectories
 predicted for candidate lines and onset times \cite{warner2023highfidelity}.
-Here the competing trajectories include recovery after the line has
-reclosed or the load has returned to its original setting.
+Noori \emph{et al.} use the admittance matrix and sparse voltage changes
+to identify a faulted section or a search region on a radial feeder
+\cite{noori2026circuit}. Xing \emph{et al.} test how sensor placement
+affects exact fault-bus identification under varying physical conditions
+\cite{xing2026placement}. Our question arises after the first asset
+returns to service: can its residual motion explain the next transient
+without invoking a second switch?
 
 Recursive DAE estimators recover differential and algebraic states from
 partial measurements \cite{katanic2024recursive}. Trajectory sensitivities
@@ -28,10 +33,16 @@ also relate uncertain physical parameters to measured responses
 \cite{nagi2022trajectory}. Here the unknowns include which asset switched.
 PMU classifiers can identify disturbances and their locations from
 the observed features \cite{pandey2020realtime,li2024knowledge,yildiz2024few}.
-A window-based ExtraTrees classifier from the SGSMA competition illustrates
-the difficulty of transferring source labels between catalogs. Applied
-unchanged to 96 load and line event windows from 36 simulated development
-trajectories, it detected 32 events and identified the family in 23.
-None of its diagnoses matched both family and asset. In our comparison
-we train ExtraTrees on all 18 candidate sources and compute its features
-using only reports available by the time of diagnosis.
+Barati uses recurrent PMU features to forecast grid disruptions
+\cite{barati2019faster}. PMU hardware also affects the downstream diagnosis. Celeita \emph{et al.} combine real-time co-simulation,
+virtual PMUs and OpenPMU for state estimation \cite{celeita2023iec61850}.
+Becejac and Dehghanian trace PMU estimation errors through a fault-location
+application in hardware-in-the-loop tests \cite{becejac2019pmu}.
+Our simulated reporting chain makes the corresponding noise sensitivity
+measurable but leaves hardware performance open.
+
+The submitted SGSMA ExtraTrees classifier detected 32 of 96 load
+and line windows from 36 development trajectories, identified the family
+in 23 and matched both family and asset in none. For the continuous
+comparison we train ExtraTrees on all 18 catalog sources and restrict
+its features to the reports available at diagnosis.

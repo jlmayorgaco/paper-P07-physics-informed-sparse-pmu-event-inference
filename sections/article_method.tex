@@ -1,6 +1,8 @@
 \section{Attribution Against a Recovering State}
 \label{sec:narrative-method}
 
+The method is a multiple-hypothesis filter. Its design choice is which
+state and switch history to carry when an asset returns to service.
 Suppose a line recloses at time $\kappa$. From that instant the intact
 network governs the machine dynamics again, but its initial condition is
 the state reached during the outage. Compare this trajectory with the one
@@ -79,7 +81,9 @@ innovation for severity $a$ is $e-sa$, where
  S&=JP_\rho J^\top+R, & K&=TP_\rho J^\top S^{-1}.
  \label{eq:innovation}
 \end{align}
-The vector $s$ is the predicted change in this report per unit severity,
+The factor $T$ in $K$ appears because the target is the next state:
+at fixed $a$, its cross-covariance with the present report is
+$TP_\rho J^\top$. The vector $s$ is the predicted change in this report per unit severity,
 after conditioning on the previous reports
 \cite{friedland1969bias,willsky1976glr}.
 
@@ -102,7 +106,10 @@ this history by one report,
 The first factor is the ordinary Gaussian predictive density. The ratio
 accounts for the admitted load range. The posterior severity law is the
 Gaussian with parameters $(\mu',v_a')$ truncated to $I$. Its mean
-$\bar a_h$ minimizes conditional squared error in severity. For a line
+$\bar a_h$ minimizes conditional squared error in severity.
+In particular, $\bar a_h=\mu'+v_a'\,\partial_{\mu'}\log Z_I(\mu',v_a')$:
+differentiating the interval probability accounts for the displacement
+of the mean near either bound. For a line
 the evidence reduces to $\mathcal N(e;0,S)$.
 
 Applying the gain to $e-sa$ and collecting the constant and linear

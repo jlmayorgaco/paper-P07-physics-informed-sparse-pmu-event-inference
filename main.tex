@@ -76,7 +76,11 @@ change detection and isolation, differential-algebraic equations, event attribut
 \FloatBarrier
 \bibliographystyle{IEEEtran}
 \bibliography{references}
+% Keep the author entries together at the end of the reference list.
+\begingroup
+\makeatletter\def\@IEEEBIOskipN{.75\baselineskip}\makeatother
 \input{author_biographies}
+\endgroup
 \EOD
 
 \end{document}

@@ -36,7 +36,8 @@ Predictions were fixed before scoring against the reserved event labels.
 \subsection{Comparison With a Continuous GLR and ExtraTrees}
 \label{sec:comparison-design}
 Each procedure receives the same 47 PMU coordinates and covers the same
-18 sources. The history bank and continuous GLR (generalized likelihood
+18 sources. Across all test-plant perturbations the predictor retains its nominal
+network parameters. The history bank and continuous GLR (generalized likelihood
 ratio) observer share the nominal network, measurement operators and
 startup data. The GLR commits to one state, carries it through
 restoration and fits load severity over a bounded interval while searching
