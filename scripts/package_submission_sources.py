@@ -84,6 +84,15 @@ def main():
         sources.update(p for p in (ROOT / 'experiments' / folder).glob('*')
                        if p.is_file() and p.suffix in {'.py', '.json', '.csv', '.md', '.txt'})
     sources.add(ROOT / 'docs/HBG_REPRODUCTION_AUDIT_20261112.md')
+    sources.update(p for p in (ROOT / 'experiments/paired_m9_stream').glob('*') if p.is_file())
+    for name in ('audit_c03_context', 'score_paired_m9_stream', 'prepare_paired_m9_stream',
+                 'predict_paired_m9_stream', 'benchmark_competition_windows', 'prepare_electrical_sites',
+                 'prepare_held_locations', 'replay_competition_router', 'competition_electrical_localizer',
+                 'competition_held_locations', 'competition_response_bank', 'competition_integrity_successor',
+                 'competition_spatial_contrast', 'competition_metrics'):
+        sources.add(ROOT / 'scripts' / (name + '.py'))
+    for name in ('competition_response_156/bank.json', 'competition_spatial_264/spatial.json'):
+        sources.add(ROOT / 'experiments' / name)
     manifest = {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(sources)}
     instructions = '''P07 article and supplement source snapshot
 

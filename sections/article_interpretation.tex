@@ -54,14 +54,11 @@ admission of the records and source accuracy at their measured noise
 correlations. The one-thread timing results likewise establish average
 processing throughput only. They leave worst-case delay per report open.
 
-In a separate synthetic nine-class test outside the competition, every record failed the dynamic
-bank's startup check. A fallback classifier instead used the full 30-s
-window. With known candidate sites, it located 188 of 192 event sources;
-its composite-event flag depended on the angle encoding. With held-out
-sites and a voltage--current residual, it located 23 of 96 sources, all
-instrument sites. On a further cohort, electrical signatures let the
-fallback score every eligible physical asset. It classified all 72
-physical interventions correctly and located two, one line and one load.
-The prior hybrid located none on the same records. The simulator imposes
-spatial attenuation using numerical bus labels, whereas the localizer
-uses admittance. The supplement gives the three paired comparisons.
+In the synthetic nine-class replay, every record failed the dynamic
+bank's startup check. The 30-s fallback located 188/192 sources at
+familiar sites. With held-out sites and a voltage--current residual,
+all 23/96 exact hits were instrument sites. On another cohort the
+electrical hybrid classified all 72 physical events and located two;
+the prior hybrid located none. The simulator imposes spatial attenuation
+by bus label, while the localizer uses admittance. In the paired replay
+(supplement), a preceding fault reduced hybrid macro-F1 from 0.962 to 0.879.

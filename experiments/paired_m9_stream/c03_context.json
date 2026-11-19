@@ -1,0 +1,64 @@
+{
+  "F01": {
+    "first": {
+      "history": {
+        "timely": 36,
+        "detected": 36,
+        "median_reported_delay_s": 0.17499999999999893
+      },
+      "carry": {
+        "timely": 36,
+        "detected": 36,
+        "median_reported_delay_s": 0.17499999999999893
+      }
+    },
+    "short_gap": {
+      "history": {
+        "timely": 144,
+        "detected": 144,
+        "median_reported_delay_s": 0.18333333333333002
+      },
+      "carry": {
+        "timely": 90,
+        "detected": 93,
+        "median_reported_delay_s": 0.18333333333333002
+      }
+    },
+    "gain_short_minus_first_pp": 37.5,
+    "paired_percentile_interval_pp": [
+      25.694444444444443,
+      49.30555555555556
+    ]
+  },
+  "P2": {
+    "first": {
+      "history": {
+        "timely": 36,
+        "detected": 36,
+        "median_reported_delay_s": 0.17499999999999893
+      },
+      "carry": {
+        "timely": 36,
+        "detected": 36,
+        "median_reported_delay_s": 0.17499999999999893
+      }
+    },
+    "short_gap": {
+      "history": {
+        "timely": 67,
+        "detected": 77,
+        "median_reported_delay_s": 0.18333333333333002
+      },
+      "carry": {
+        "timely": 65,
+        "detected": 80,
+        "median_reported_delay_s": 0.18333333333333002
+      }
+    },
+    "gain_short_minus_first_pp": 1.3888888888888888,
+    "paired_percentile_interval_pp": [
+      -12.5,
+      15.972222222222221
+    ]
+  }
+}

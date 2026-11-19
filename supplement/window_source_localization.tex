@@ -232,3 +232,69 @@ arrays. Mixed generation uses the generator dictionary; the composite
 uses the bus dictionary. The family is supplied throughout.}
 \label{fig:matched-electrical-resolution}
 \end{figure*}
+
+\subsection{A preceding fault changes the classification of a second event}
+We generated 27 pairs of continuous 120-s M9 records. Each pair shares
+its target, onset and noise seed. One member also has a BUS4 fault that
+clears at 89.5~s. The target starts between 91 and 95~s. Each condition
+has three realizations per target class, including three records with
+no new event. Physical target sites were absent from our three earlier
+M9 catalogs. The original submission's training sites are unknown.
+All three procedures issued decisions at 90 and 120~s using the preceding
+90~s of measurements. Each decision refers to the last 30~s of that
+buffer. Predictions were sealed before comparison with the target labels.
+
+\begin{table}[!ht]
+\centering\small
+\caption{Final-window decisions on paired records. Each condition has
+27 windows, including 24 events. Delay is the median time from onset to
+publication among detections.}
+\label{tab:m9-paired-stream}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrrrrr}
+\hline
+Procedure & Macro-F1 & Family & Detected & Source & Delay (s)\\
+\hline
+\multicolumn{6}{l}{\emph{Isolated target}}\\
+Submission & 0.225 & 9 & 8 & 0 & 26.2\\
+Attributor II & 0.126 & 6 & 13 & 4 & 26.7\\
+Electrical hybrid & 0.962 & 26 & 23 & 8 & 26.4\\
+\multicolumn{6}{l}{\emph{Target after a fault}}\\
+Submission & 0.214 & 9 & 11 & 0 & 26.1\\
+Attributor II & 0.126 & 6 & 13 & 4 & 26.7\\
+Electrical hybrid & 0.879 & 24 & 24 & 8 & 26.6\\
+\hline
+\end{tabular}
+\end{table}
+
+Across both decision times, 33 windows (0.275~h) contained no new onset,
+including three during recovery. The submission and electrical hybrid
+each raised zero alarms in these windows. Attributor II raised 16
+(58.2/h), including 14 in 30 quiet windows.
+Only the submission and hybrid achieved the same observed false alarm
+rate. With one physical target per family and three realizations per
+class, the window counts give little precision for transfer to other sites.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=.86\textwidth]{experiments/paired_m9_stream/confusion.pdf}
+\caption{Nine-class decisions on the final window. Within a column,
+the target and noise seed match across rows. Each matrix row contains
+three observations; blank cells have zero count. Classes 0 through 8
+denote normal, fault, line, generation, load, missing reports, mixed
+generation and missing reports, bad data, and composite events.}
+\label{fig:m9-paired-stream}
+\end{figure*}
+
+The preceding fault changed four hybrid decisions. The hybrid correctly
+identified one previously missed bad-data event, labeled another as a
+fault and changed two correct generation decisions to load.
+Exact location held at eight of 24 in each condition, including
+three load events and five instrument events. All 108 buffers failed
+the dynamic bank's startup check. This experiment measures the electrical
+fallback and the two window comparators; the assessment of recovery
+memory uses the separate continuous two-plant experiment in the article.
+In that experiment, history and carry detected 144 and 93 short-gap
+interventions on the reference plant and 77 and 80 on the second plant
+(144 per plant). Median delay among detections was 0.18~s for each
+method on each plant at the native reporting cadence.
