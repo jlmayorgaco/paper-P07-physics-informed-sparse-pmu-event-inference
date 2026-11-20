@@ -20,6 +20,8 @@ CODE = ("study.py", "estimator.py", "physical.py", "evaluate.py", "PROTOCOL.md",
 
 
 def digest(path):
+    if path.suffix in {".py", ".md"}:
+        return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
     with path.open("rb") as stream:
         return hashlib.file_digest(stream, "sha256").hexdigest()
 

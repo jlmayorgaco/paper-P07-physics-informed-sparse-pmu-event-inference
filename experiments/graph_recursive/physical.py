@@ -10,20 +10,23 @@ sys.path.insert(0, str(ROOT / "experiments/supervised_stream"))
 from plant import FS, Generator
 
 
-def measurements(frames):
+def measurements(frames, polar=False):
     """Real/imaginary relative voltage, real/imaginary terminal current and terminal 39 magnitude."""
     frames = np.asarray(frames, dtype=float)
     if frames.shape[-2:] != (8, 5) or not np.isfinite(frames).all() or not (frames[..., 4] == 1).all():
         raise ValueError("Expected eight available, finite PMU reports with five fields each")
+    if polar:
+        return np.concatenate((frames[..., 0], frames[..., 1], frames[..., 2],
+                               np.deg2rad(frames[..., :7, 3])), axis=-1)
     voltage = np.exp(frames[..., 0] + 1j * frames[..., 1])
     current = frames[..., 2] * np.exp(1j * np.deg2rad(frames[..., 3]))
     return np.concatenate((voltage.real, voltage.imag, current.real[..., :7],
                            current.imag[..., :7], frames[..., 7:8, 2]), axis=-1)
 
 
-def fit_instrument(records):
+def fit_instrument(records, polar=False):
     # The archived generator guarantees at least 60 quiet reports. No labels are read.
-    quiet = measurements(records[:256, :55])
+    quiet = measurements(records[:256, :55], polar)
     mean = quiet.mean(axis=(0, 1))
     scale = quiet.std(axis=(0, 1))
     if np.any(scale <= 0):
@@ -106,7 +109,7 @@ def mode_operators(sim, code, source, strength, nonlinear=False):
     return (*result, np.vstack((v_map, i_map)), power, base_power, dp)
 
 
-def build_plant(sim, scale):
+def build_plant(sim, scale, polar=False):
     nodes, weights = np.polynomial.legendre.leggauss(3)
     modes = [(0, "", 1.0, 1.0)]
     for code in range(1, 5):
@@ -117,8 +120,18 @@ def build_plant(sim, scale):
                 modes.append((code, source, float(strength), float(weight / (4 * len(sites)))))
     operators = [mode_operators(sim, *mode[:3], nonlinear=True) for mode in modes]
     transition, drift, torque, output, center, field, power, p0, dp = map(np.stack, zip(*operators))
+    if polar:
+        phasors = field.sum(axis=2)
+        voltage, current = phasors[:, :8], phasors[:, 8:]
+        amplitude = np.maximum(0., abs(current) + sim.exp.mag.center)
+        center = np.column_stack((np.log(abs(voltage)), np.angle(voltage), amplitude, np.angle(current[:, :7])))
+        dv = 1j * field[:, :8] / voltage[..., None]
+        di = np.divide(1j * field[:, 8:], current[..., None], out=np.zeros_like(field[:, 8:]),
+                       where=abs(current[..., None]) > 0.)
+        output[:, :, :10] = np.concatenate((dv.real, dv.imag, (amplitude > 0)[..., None]
+                           * abs(current)[..., None] * di.real, di[:, :7].imag), axis=1)
     return dict(transition=transition, drift=drift, torque=torque, output=output / scale[None, :, None],
                 center=(center - center[0]) / scale, code=np.array([m[0] for m in modes]),
                 site=np.array([m[1] for m in modes]), strength=np.array([m[2] for m in modes]),
                 birth_weight=np.array([m[3] for m in modes]), field=field, power=power, p0=p0, dp=dp,
-                bias=sim.exp.mag.center, base=center[0])
+                bias=sim.exp.mag.center, base=center[0], polar=polar)

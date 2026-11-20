@@ -5,7 +5,7 @@ from numba import njit
 from scipy.optimize import minimize_scalar
 from scipy.special import gammaln
 
-from estimator import Monitor, mechanical_prediction, physics_arrays, publish, terminal_prediction
+from estimator import Monitor, mechanical_prediction, physics_arrays, principal, publish, terminal_prediction
 from physical import measurements
 from study import (FREEZE, HERE, STORE, digest, evaluate, labels, read, sequences, verify_freeze,
                    write_json)
@@ -37,10 +37,10 @@ def advance_student(y, a, b, h, c, white, gain, penalty, ar, group, log_birth, l
             ws, wb = np.exp(stay - prior), np.exp(born - prior)
             x, noise = ws * state[j] + wb * quiet_x, ws * error[j] + wb * quiet_noise
         forecast = mechanical_prediction(j, x, a, b, physics)
-        residual = y - terminal_prediction(j, forecast, physics) - ar @ noise
+        residual = principal(y - terminal_prediction(j, forecast, physics) - ar @ noise, physics)
         innovation = white[j] @ residual
         state[j] = forecast + gain[j] @ innovation
-        error[j] = y - terminal_prediction(j, state[j], physics)
+        error[j] = principal(y - terminal_prediction(j, state[j], physics), physics)
         log_mass[j] = prior - penalty[j] - .5 * (degrees + len(y)) * np.log1p(
             (innovation @ innovation) / (degrees * variance))
     peak = np.max(log_mass)
@@ -69,14 +69,14 @@ class StudentMonitor(Monitor):
 
 def trace_student(model, record):
     monitor = StudentMonitor(model)
-    return [monitor.step_coordinates(y) for y in measurements(record)]
+    return [monitor.step_coordinates(y) for y in measurements(record, monitor.physics[-1])]
 
 
 def calibration_innovations(model, plant, observations, truth):
     physics = physics_arrays(model)
-    energy, lag_voltage = [], []
+    energy, lag_voltage, logdet = [], [], []
     for record, events in zip(observations, truth):
-        y = (measurements(record) - model["mean"]) / model["scale"]
+        y = (measurements(record, physics[-1]) - model["mean"]) / model["scale"]
         y -= y[:30].mean(axis=0)
         path = np.zeros(len(y), int)
         for e in events:
@@ -87,17 +87,18 @@ def calibration_innovations(model, plant, observations, truth):
         for k in range(30, len(y)):
             j = path[k]
             pred = mechanical_prediction(j, x, model["a"], model["b"], physics)
-            e = model["white"][j] @ (y[k]-terminal_prediction(j, pred, physics)-model["ar"] @ noise)
+            e = model["white"][j] @ principal(y[k]-terminal_prediction(j, pred, physics)-model["ar"] @ noise, physics)
             x = pred + model["gain"][j] @ e
-            noise = y[k] - terminal_prediction(j, x, physics)
+            noise = principal(y[k] - terminal_prediction(j, x, physics), physics)
             energy.append(e @ e)
             lag_voltage.append(previous)
+            logdet.append(model["penalty"][j])
             v = y[k, :16] * model["scale"][:16]
             previous = v @ v / 8
-    return np.array(energy), np.array(lag_voltage)
+    return np.array(energy), np.array(lag_voltage), float(np.mean(logdet))
 
 
-def fit_student(energy, lag_voltage):
+def fit_student(energy, lag_voltage, logdet=0.):
     dimension = 31
     options = []
     for nu in (3., 5., 10., 30.):
@@ -109,7 +110,7 @@ def fit_student(energy, lag_voltage):
         upper = np.log1p(1e12)
         fit = minimize_scalar(loss, bounds=(0., upper), method="bounded")
         best = min((0., fit.x, upper), key=loss)
-        options.append((float(loss(best)), nu, float(np.expm1(best))))
+        options.append((float(loss(best) + logdet), nu, float(np.expm1(best))))
     return min(options)
 
 

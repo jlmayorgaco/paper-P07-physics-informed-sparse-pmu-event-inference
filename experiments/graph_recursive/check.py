@@ -66,7 +66,7 @@ def check_plant():
         np.testing.assert_allclose(predicted[:16], observed[:16], atol=4e-4, rtol=.01)
         np.testing.assert_allclose(predicted[16:], observed[16:], atol=1.5, rtol=.02)
         physics = (field[None], power[None], p0[None], dp[None], torque[None], sim.exp.mag.center,
-                   base, np.ones(31))
+                   base, np.ones(31), False)
         state = np.zeros(30)
         single_a, single_b = a[None], drift[None]
         for frame in range(60, 66):

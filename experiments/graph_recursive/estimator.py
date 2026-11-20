@@ -40,17 +40,17 @@ def prepare(plant, instrument, sigma_torque, onset_rate, end_rate):
                 code=np.array([int(c) for c, _ in labels]), site=np.array([s for _, s in labels]),
                 birth=onset_rate * plant["birth_weight"][1:], end=end_rate[plant["code"][1:]],
                 field=plant["field"], power=plant["power"], p0=plant["p0"], dp=plant["dp"],
-                torque=plant["torque"], bias=plant["bias"], base=plant["base"], gamma=0.)
+                torque=plant["torque"], bias=plant["bias"], base=plant["base"], gamma=0., polar=plant["polar"])
 
 
 def physics_arrays(model):
     return tuple(np.ascontiguousarray(model[key]) for key in
-                 ("field", "power", "p0", "dp", "torque", "bias", "base", "scale"))
+                 ("field", "power", "p0", "dp", "torque", "bias", "base", "scale")) + (bool(model.get("polar", False)),)
 
 
 @njit
 def mechanical_prediction(i, x, a, b, physics):
-    _, power, p0, dp, torque, _, _, _ = physics
+    _, power, p0, dp, torque, _, _, _, _ = physics
     rotation = np.exp(1j * x[:10])
     electric = (rotation * (power[i] @ np.conj(rotation))).real
     correction = p0[i] + dp[i] @ x[:10] - electric
@@ -59,10 +59,17 @@ def mechanical_prediction(i, x, a, b, physics):
 
 @njit
 def terminal_prediction(i, x, physics):
-    field, _, _, _, _, bias, base, scale = physics
+    field, _, _, _, _, bias, base, scale, polar = physics
     phasors = field[i] @ np.exp(1j * x[:10])
     out = np.empty(31)
     for j in range(8):
+        if polar:
+            out[j] = np.log(abs(phasors[j]))
+            out[8+j] = np.angle(phasors[j])
+            out[16+j] = max(0., abs(phasors[8+j]) + bias[j])
+            if j < 7:
+                out[24+j] = np.angle(phasors[8+j])
+            continue
         out[j] = phasors[j].real
         out[8+j] = phasors[j].imag
         raw = phasors[8+j]
@@ -75,6 +82,17 @@ def terminal_prediction(i, x, physics):
         else:
             out[30] = measured
     return (out - base) / scale
+
+
+@njit
+def principal(residual, physics):
+    if physics[-1]:
+        scale = physics[7]
+        for j in range(8, 31):
+            if j < 16 or j >= 24:
+                angle = residual[j] * scale[j]
+                residual[j] = ((angle + np.pi) % (2*np.pi) - np.pi) / scale[j]
+    return residual
 
 
 @njit
@@ -112,12 +130,14 @@ def advance(y, a, b, h, c, white, gain, penalty, ar, group, log_birth, log_end,
             forecast = mechanical_prediction(i, mixed_state[i], a, b, physics)
             predicted = terminal_prediction(i, forecast, physics)
         residual = y - predicted - ar @ mixed_noise[i]
+        if physics is not None:
+            residual = principal(residual, physics)
         z = white[i] @ residual
         state[i] = forecast + gain[i] @ z
         if physics is None:
             error[i] = y - c[i] - h[i] @ state[i]
         else:
-            error[i] = y - terminal_prediction(i, state[i], physics)
+            error[i] = principal(y - terminal_prediction(i, state[i], physics), physics)
         log_mass[i] = log_prior[i] - penalty[i] - 0.5 * (z @ z) / variance
     maximum = np.max(log_mass)
     log_mass -= maximum + np.log(np.exp(log_mass - maximum).sum())
@@ -148,7 +168,7 @@ class Monitor:
                             np.log1p(-model["end"]), np.log1p(-model["birth"].sum()))
 
     def step(self, frame):
-        return self.step_coordinates(measurements(frame))
+        return self.step_coordinates(measurements(frame, self.physics[-1]))
 
     def step_coordinates(self, y):
         y = (y - self.model["mean"]) / self.model["scale"]
@@ -171,7 +191,7 @@ class Monitor:
 
 def trace(model, record):
     monitor = Monitor(model)
-    return np.asarray([monitor.step_coordinates(y) for y in measurements(record)])
+    return np.asarray([monitor.step_coordinates(y) for y in measurements(record, monitor.physics[-1])])
 
 
 class EpisodeDecision:
