@@ -14,7 +14,15 @@ SITES_TEST = {1: "BUS22", 2: "BUS4-BUS5", 3: "BUS36", 4: "BUS3", 6: "BUS36", 8: 
 
 
 def prepare(
-    root, archive, *, seed=208153, repetitions=3, sites=None, instrument_sites=None
+    root,
+    archive,
+    *,
+    seed=208153,
+    repetitions=3,
+    sites=None,
+    instrument_sites=None,
+    registered_sites=False,
+    vary_target=False,
 ):
     sys.path.insert(0, str(archive / "V5"))
     from src.simulation.m9.generator import (
@@ -37,7 +45,8 @@ def prepare(
     else:
         known.update(SITES_TEST.values())
         known.add("BUS4")
-    assert all(known.isdisjoint(group) for group in sites.values())
+    if not registered_sites:
+        assert all(known.isdisjoint(group) for group in sites.values())
     rng = random.Random(seed)
     meta = archive / "data/metadata"
     raw = meta / "IEEE_39_Bus_Power_System.raw"
@@ -48,6 +57,8 @@ def prepare(
     for code, name in enumerate(names):
         for repetition in range(repetitions):
             seed, onset = rng.randrange(1, 2**31), rng.uniform(91, 95)
+            strength = rng.uniform(0.8, 1.2) if vary_target else 1
+            duration = rng.uniform(0.85, 1.15) if vary_target else 1
             for condition in ("isolated", "consecutive"):
                 spec = get_template(name)
                 physical, quality = spec["physical_events"], spec["cyber_events"]
@@ -56,6 +67,12 @@ def prepare(
                     site = sites[code][repetition % len(sites[code])]
                     field = "target_line" if code == 2 else "target_bus"
                     physical[0][field] = site
+                    if vary_target:
+                        physical[0]["severity"] *= strength
+                        physical[0]["duration_s"] *= duration
+                        physical[0]["end_time_s"] = (
+                            physical[0]["start_time_s"] + physical[0]["duration_s"]
+                        )
                     source = (
                         (
                             "LINE"
