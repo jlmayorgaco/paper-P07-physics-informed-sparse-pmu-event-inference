@@ -346,6 +346,58 @@ without a new onset (33 minutes), the submission and both hybrids
 issued zero alarms and Attributor II issued 30. The dynamic bank
 rejected all 216 buffers at startup.
 
+\subsection{Holding the alarm and family fixed during localization}
+We kept the preceding classifier and changed only the source readout.
+For each eligible physical site $k$, we ran M9 twice with the same
+ambient realization, once with the intervention and once without it.
+The ratio of the resulting voltages at the eight PMUs gives a
+site-specific trace of magnitude and angle changes. All candidate
+sites have such a registered trace. No labeled test record enters
+this calibration. Because M9 imposes spatial attenuation by bus label,
+this experiment tests transfer to new measurements from a known
+simulator and catalog.
+
+Given a predicted family, let $h_{k,u}$ denote the registered trace
+for site $k$ shifted to trial onset $u$. We fit the quiet voltage
+oscillations on the first 48~s of the buffer and subtract the recovery
+of a preceding sag if the pre-window reports show one. For the residual
+$y$, let $W$ be diagonal inverse quiet-noise variance on available
+channels, with zero weight for missing reports. For each $(k,u)$ the
+least-squares relative severity is
+\begin{equation}
+ a_{k,u}=\operatorname{clip}_{[0,2]}
+ \frac{h_{k,u}^{\mathsf T}Wy}{h_{k,u}^{\mathsf T}Wh_{k,u}} .
+\end{equation}
+We maximize $2a_{k,u}h_{k,u}^{\mathsf T}Wy-
+a_{k,u}^2 h_{k,u}^{\mathsf T}Wh_{k,u}$ over the candidate sites and
+onsets with nonzero template energy. A composite integrity pulse,
+when available, restricts the onset interval. Its instrument identity
+does not select the physical site. Quiet and instrument-only decisions
+retain their original outputs.
+
+On a fresh cohort we drew eight sites per physical family and varied
+the strength and duration of the physical target. The previous hybrid
+located 22/64 isolated targets and 23/64 targets after a fault. The
+registered responses located 56/64 in each condition, with no previously
+correct source lost. Physical-source accuracy rose from 6/48 and 7/48,
+respectively, to 40/48 in both. Both methods missed the physical site
+in every weak composite record (Fig.~\ref{fig:registered-m9-source}).
+All 288 class decisions agreed. Both methods classified all 72 final
+windows per condition correctly, detected all 64 events per condition,
+and issued zero alarms in 88 windows without a new onset (44 minutes).
+Median time from target onset to the scheduled decision was 26.9~s.
+With frames already loaded, the additional source computation took a
+median 19~ms and a 95th percentile of 38~ms on 48 earlier physical-family
+windows. These are processing times on the test machine.
+
+\begin{figure*}[t]\centering
+\includegraphics[width=.83\textwidth]{experiments/pmu_source_readout/locations.pdf}
+\caption{Exact source hits by true class with the same fixed alarm
+and family decisions. Each panel has eight events per row. Both readouts
+see the same measurements. The calibrated readout searches the full
+registered catalog for the predicted family.}
+\label{fig:registered-m9-source}\end{figure*}
+
 \subsection{Localizing a load change with an AC operating-point model}
 For a load that changes at fixed power factor, the active and reactive
 increments share a real multiplier. We used this constraint to test
@@ -403,3 +455,17 @@ We also applied the AC voltage readout to predicted M9 load windows.
 It located four of six isolated loads and three of six loads after a
 fault, the same counts as the revised fallback. Adding the six current
 channels in an exploratory replay left those counts unchanged.
+
+In a separate 432-case AC experiment, we used the pre-event phasors
+to update the operating point. A regularized fit of nominal voltage
+and current sensitivities to the eight measured voltages and six
+currents estimates the pre-event load deviations. Two AC solves per
+candidate, at signed 10\% load changes about the fitted point, define
+a quadratic response in severity. All estimators then receive the same
+noisy change. The nominal linear projection located 409/432 loads.
+The updated response located 417/432 when severity was profiled and
+422/432 when likelihood was integrated over signed 2--30\% changes
+with equal site priors. The marginal estimator gained 13 correct sites
+and lost none. These 24 operating points included reactive-to-active
+increment ratios perturbed by up to 10\%. The experiment supplies the
+load family and the two steady-state windows.
