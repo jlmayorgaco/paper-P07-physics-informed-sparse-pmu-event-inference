@@ -1,0 +1,42 @@
+{
+  "seed": 91872601,
+  "sites": {
+    "1": [
+      "BUS17",
+      "BUS20",
+      "BUS23",
+      "BUS25",
+      "BUS3",
+      "BUS33",
+      "BUS36",
+      "BUS39",
+      "BUS9"
+    ],
+    "2": [
+      "LINE10-13",
+      "LINE12-13",
+      "LINE17-18",
+      "LINE2-3",
+      "LINE23-24",
+      "LINE26-28",
+      "LINE3-18",
+      "LINE4-5"
+    ],
+    "3": [
+      "BUS33",
+      "BUS36",
+      "BUS39"
+    ],
+    "4": [
+      "BUS20",
+      "BUS23",
+      "BUS25",
+      "BUS3",
+      "BUS39"
+    ]
+  },
+  "records": 416,
+  "events": 480,
+  "observations": "e41f3e5bf4ffddd3866ca27d84695d88f75e78cb02e85ac0cb021578fb493b39",
+  "truth": "a5f5122bbfa8dc0273db0ccef961fb060d2ab627d70d73d0648cecf6b470b2e6"
+}
