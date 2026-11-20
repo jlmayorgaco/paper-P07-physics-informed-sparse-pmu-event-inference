@@ -73,13 +73,10 @@ def correlations(x, h):
     return fftconvolve(x, h[::-1, None], axes=0, mode="full")[len(h) - 1 :]
 
 
-def localize(frames, decision, bank):
-    family, previous = decision
-    if f"sites{family}" not in bank:
-        return previous
+def sufficient_statistics(frames, family, bank):
     observed = voltage_residuals(frames, bank["freq"])
     if observed is None:
-        return previous
+        return None
     planes, sigma = observed
     subtract_recovery(planes, bank["wave1"])
     wave, weight = bank[f"wave{family}"], bank[f"weight{family}"]
@@ -103,6 +100,10 @@ def localize(frames, decision, bank):
                     * correlations(mask, h * wave[q, k])
                     @ (scaled[k] * scaled[r]).T
                 )
+    return inner, energy
+
+
+def profile_scores(frames, family, inner, energy):
     # Positive severity is a nuisance shared across all PMUs. Extreme fits
     # from a single noisy report cannot use an unbounded severity.
     amplitude = np.clip(inner / np.maximum(energy, 1e-12), 0, 2)
@@ -114,7 +115,18 @@ def localize(frames, decision, bank):
             last = min(900, pulse[0] - 1800)
             if first < last:
                 gain = gain[first:last]
-    per_site = gain.max(axis=0)
+    return gain.max(axis=0)
+
+
+def localize(frames, decision, bank):
+    family, previous = decision
+    if f"sites{family}" not in bank:
+        return previous
+    stats = sufficient_statistics(frames, family, bank)
+    if stats is None:
+        return previous
+    per_site = profile_scores(frames, family, *stats)
+    sites = bank[f"sites{family}"]
     if not np.all(np.isfinite(per_site)) or per_site.max() <= 0:
         return previous
     tied = np.flatnonzero(np.isclose(per_site, per_site.max(), rtol=1e-10, atol=1e-10))

@@ -23,6 +23,7 @@ def prepare(
     instrument_sites=None,
     registered_sites=False,
     vary_target=False,
+    composite_instruments=None,
 ):
     sys.path.insert(0, str(archive / "V5"))
     from src.simulation.m9.generator import (
@@ -62,6 +63,11 @@ def prepare(
             for condition in ("isolated", "consecutive"):
                 spec = get_template(name)
                 physical, quality = spec["physical_events"], spec["cyber_events"]
+                if code == 8 and composite_instruments is not None:
+                    for event, sensor in zip(
+                        quality, composite_instruments[repetition], strict=True
+                    ):
+                        event["target_pmus"] = [sensor]
                 source = "none"
                 if physical:
                     site = sites[code][repetition % len(sites[code])]

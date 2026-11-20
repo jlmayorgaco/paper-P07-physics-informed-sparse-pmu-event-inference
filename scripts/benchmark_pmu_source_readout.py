@@ -16,8 +16,8 @@ from pmu_window_correction import corrected, distance_signatures, electrical
 DIR = Path("experiments/pmu_source_readout")
 
 
-def test_sites(data):
-    rng = random.Random(992181)
+def test_sites(data, seed=992181):
+    rng = random.Random(seed)
     sites = {}
     for family, candidates in sorted(electrical.network_signatures(data).items()):
         selected = rng.sample(sorted(candidates), 8)
