@@ -13,3 +13,5 @@
 Los identificadores nombran implementaciones evaluadas. El catálogo y el criterio de cada resultado son parte de su definición experimental. C01 compara directamente el banco físico y sus comparadores causales. El estudio 70/30 y el prototipo de partículas se ejecutaron en poblaciones distintas.
 
 Fuentes: [traza histórica y C01](HACKATHON_TO_C01_METHOD_TRACE.md), [M9](../experiments/composite_identifiability/README.md), [corrientes de rama](../experiments/branch_current_trial/README.md), [partículas](../experiments/bayesian_event_stream/README.md) y [monitor supervisado](../experiments/supervised_stream/README.md).
+
+La extensión propuesta para las cuatro familias físicas se llama [MET_BAYES_GRAFO](MET_BAYES_GRAFO.md). Tiene una derivación y una comprobación de la proyección sobre firmas de carga y línea. Su validación conjunta en las cuatro familias sigue pendiente.
