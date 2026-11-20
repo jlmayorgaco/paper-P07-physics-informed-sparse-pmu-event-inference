@@ -1,0 +1,49 @@
+\subsection{Classifying a Second Load or Line Event}
+\label{sec:second-family-results}
+
+\begin{table}[t]
+\centering
+\caption{Timely second-event family diagnoses on the second plant.
+Each column includes every scheduled second event of that family. All
+rows use the same alarm times and the same publication report.}
+\label{tab:second-family}
+\footnotesize
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Decision rule & Load & Line & Total \\
+\midrule
+\SecondFamilyRows
+\bottomrule
+\end{tabular}
+\end{table}
+
+The common detector matched \SecondMatched{} of 36 second events
+and issued \SecondExtras{} unmatched alarms in the two-event records.
+The original decision at its native publication time was correct for
+\SecondNative{}/36. Table~\ref{tab:second-family} compares families
+at the common publication report. The same alarm stream gave
+\SecondCal{} normal alarms on calibration and \SecondNormal{} over
+\SecondQuietHours{} normal test hours (one-sided 95\% upper bound
+\SecondUpper{}/h). Thus differences in the table arise downstream of
+the trigger. As a separate implementation check, the authors' released
+CNN-F weights classified \SecondUpSP{}/\SecondUpN{} examples with
+subtraction and \SecondUpNS{}/\SecondUpN{} without it on their public
+IEEE 68-bus data at one-second separation.
+
+All \SecondPdfWins{} discordances between the original family decision and
+CNN-F favored the bank and concerned true loads classified as lines by
+CNN-F. The paired difference was \SecondPdfEffect{} percentage points
+(stratified bootstrap 95\% interval $[\SecondPdfLo{},\SecondPdfHi{}]$).
+With only \SecondPdfWins{} discordant trajectories, the two-sided exact
+paired test gave $p=\SecondPdfP{}$. The fixed-lag estimator and the
+original decision identified the same families on every matched second
+event. The common trigger missed the remaining \SecondMissed{}.
+
+Carrying the physical mean through restoration gained \SecondStateWins{}
+timely family diagnoses and lost \SecondStateLosses{} relative to
+resetting it. The net gain was \SecondStateEffect{} points
+($[\SecondStateLo{},\SecondStateHi{}]$, exact paired $p=\SecondStateP{}$).
+With the same decision times and observations, the reset more often left
+no retained history supporting an intervention at the alarm. This
+comparison isolates the state treatment within the merged bank. The
+bank-to-CNN comparison also changes the features and decision rule.

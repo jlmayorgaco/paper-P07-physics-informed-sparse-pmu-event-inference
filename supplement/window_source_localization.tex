@@ -123,7 +123,7 @@ its quiet 99.5th percentile. This residual measures departure from the
 local quiet voltage--current relation. A current gain change alone can
 produce such a departure, so the residual by itself cannot identify a
 simultaneous physical disturbance. Both hybrids use the same source
-templates. We sealed the three methods' predictions before scoring.
+templates. We recorded all three predictions before reading the labels.
 
 \begin{table}[!ht]
 \centering\small
@@ -156,7 +156,7 @@ For a network admittance $Y$ augmented by generator Norton equivalents
 with assumed transient reactance 0.2 pu, a current change at bus $k$
 produces a voltage signature proportional to $Y^{-1}e_k$.
 Opening branch $b$, with admittance stamp $Y_b$, instead gives
-$(Y-Y_b)\Delta V=Y_b V_0$ at the archived operating phasor $V_0$.
+$(Y-Y_b)\Delta V=Y_b V_0$ at the pre-event operating phasor $V_0$.
 We restrict each signature to the eight PMUs and divide each voltage
 change by its operating phasor. For each candidate, weighted least
 squares fits an unknown complex strength and a common complex offset
@@ -169,8 +169,8 @@ generation and missing-report class we search the generator terminals.
 
 A third cohort used the same denominators (108 family decisions, 96
 event locations and 60 normal windows) with fresh records. Its physical targets were absent from both earlier site
-lists. All three methods saw the same measurements, and their
-predictions were sealed before scoring. The simulator imposes spatial
+lists. All three methods saw the same measurements and submitted
+their predictions before scoring. The simulator imposes spatial
 attenuation by numerical bus-label proximity, whereas the electrical
 localizer predicts attenuation and phase from network admittance.
 This comparison measures transfer across that model discrepancy.
@@ -242,7 +242,7 @@ no new event. Physical target sites were absent from our three earlier
 M9 catalogs. The original submission's training sites are unknown.
 All three procedures issued decisions at 90 and 120~s using the preceding
 90~s of measurements. Each decision refers to the last 30~s of that
-buffer. Predictions were sealed before comparison with the target labels.
+buffer. We recorded the predictions before examining the target labels.
 
 \begin{table}[!ht]
 \centering\small
@@ -454,7 +454,7 @@ on $a\in[0.5,1.5]$. Selecting the largest marginal posterior minimizes
 the probability of a wrong bus under this model and zero--one site
 loss. Its voltage likelihood assumes diagonal noise and its current
 marker informs the physical site only through onset. The published
-class and alarm time remain those of the frozen hybrid.
+class and alarm time come from the original hybrid.
 
 We also tested whether current phase contributes site information
 beyond its voltage counterpart. For a two-second trial pulse, let

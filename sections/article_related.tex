@@ -25,7 +25,13 @@ to identify a faulted section or a search region on a radial feeder
 affects exact fault-bus identification under varying physical conditions
 \cite{xing2026placement}. Our question arises after the first asset
 returns to service: can its residual motion explain the next transient
-without invoking a second switch?
+without invoking a second switch? Li and Wang already predict and subtract
+the first disturbance from PMU measurements. They estimate oscillatory
+modes from the residual and classify the second event with a shallow
+convolutional network \cite{liwang2019successive}. Their classifier assumes
+an event trigger. We use that interface to compare spectral classification
+with two ways of inferring the family from network histories, all at the
+same alarm times.
 
 Recursive DAE estimators recover differential and algebraic states from
 partial measurements \cite{katanic2024recursive}. Trajectory sensitivities

@@ -159,7 +159,8 @@ def emit_supplement() -> None:
 Each arm completed all 36 event trajectories and 36 normal trajectories
 on each plant. The event trajectories contain six interventions each,
 four after short recovery gaps. Normal monitoring totaled 5.88\,h per arm
-and plant.
+and plant. Tables identify the reference plant as 1 and the plant with
+different generator dynamics as 2.
 
 \begin{table*}[t]\centering\small
 \caption{Held-out attribution and alarm counts. Extras/h counts unmatched
@@ -169,47 +170,48 @@ $U_{95}$ is the one-sided 95\% Poisson upper bound on the normal alarm rate.}
 \label{tab:c03-nominal}
 \begin{tabular}{llrrrrrrrr}
 Plant & Arm & Short timely & All timely & Extras & Extras/h & Early OFF & Orphan OFF & Normal alarms & $U_{95}$/h\\\hline
-F01 & History & \CThreeAuditFZeroOneHistoryShort/\CThreeAuditFZeroOneHistoryShortN & \CThreeAuditFZeroOneHistoryAll/\CThreeAuditFZeroOneHistoryEvents & \CThreeAuditFZeroOneHistoryExtras & \CThreeAuditFZeroOneHistoryExtrasPerHour & \CThreeAuditFZeroOneHistoryEarlyOFF & \CThreeAuditFZeroOneHistoryOrphanOFF & \CThreeAuditFZeroOneHistoryNormalAlarms & \CThreeAuditFZeroOneHistoryNormalUpper\\
-F01 & Carry & \CThreeAuditFZeroOneCarryShort/\CThreeAuditFZeroOneCarryShortN & \CThreeAuditFZeroOneCarryAll/\CThreeAuditFZeroOneCarryEvents & \CThreeAuditFZeroOneCarryExtras & \CThreeAuditFZeroOneCarryExtrasPerHour & \CThreeAuditFZeroOneCarryEarlyOFF & \CThreeAuditFZeroOneCarryOrphanOFF & \CThreeAuditFZeroOneCarryNormalAlarms & \CThreeAuditFZeroOneCarryNormalUpper\\
-F01 & Reset & \CThreeAuditFZeroOneResetShort/\CThreeAuditFZeroOneResetShortN & \CThreeAuditFZeroOneResetAll/\CThreeAuditFZeroOneResetEvents & \CThreeAuditFZeroOneResetExtras & \CThreeAuditFZeroOneResetExtrasPerHour & \CThreeAuditFZeroOneResetEarlyOFF & \CThreeAuditFZeroOneResetOrphanOFF & \CThreeAuditFZeroOneResetNormalAlarms & \CThreeAuditFZeroOneResetNormalUpper\\
-P2 & History & \CThreeAuditPTwoHistoryShort/\CThreeAuditPTwoHistoryShortN & \CThreeAuditPTwoHistoryAll/\CThreeAuditPTwoHistoryEvents & \CThreeAuditPTwoHistoryExtras & \CThreeAuditPTwoHistoryExtrasPerHour & \CThreeAuditPTwoHistoryEarlyOFF & \CThreeAuditPTwoHistoryOrphanOFF & \CThreeAuditPTwoHistoryNormalAlarms & \CThreeAuditPTwoHistoryNormalUpper\\
-P2 & Carry & \CThreeAuditPTwoCarryShort/\CThreeAuditPTwoCarryShortN & \CThreeAuditPTwoCarryAll/\CThreeAuditPTwoCarryEvents & \CThreeAuditPTwoCarryExtras & \CThreeAuditPTwoCarryExtrasPerHour & \CThreeAuditPTwoCarryEarlyOFF & \CThreeAuditPTwoCarryOrphanOFF & \CThreeAuditPTwoCarryNormalAlarms & \CThreeAuditPTwoCarryNormalUpper\\
-P2 & Reset & \CThreeAuditPTwoResetShort/\CThreeAuditPTwoResetShortN & \CThreeAuditPTwoResetAll/\CThreeAuditPTwoResetEvents & \CThreeAuditPTwoResetExtras & \CThreeAuditPTwoResetExtrasPerHour & \CThreeAuditPTwoResetEarlyOFF & \CThreeAuditPTwoResetOrphanOFF & \CThreeAuditPTwoResetNormalAlarms & \CThreeAuditPTwoResetNormalUpper\\\hline
+1 & History & \CThreeAuditFZeroOneHistoryShort/\CThreeAuditFZeroOneHistoryShortN & \CThreeAuditFZeroOneHistoryAll/\CThreeAuditFZeroOneHistoryEvents & \CThreeAuditFZeroOneHistoryExtras & \CThreeAuditFZeroOneHistoryExtrasPerHour & \CThreeAuditFZeroOneHistoryEarlyOFF & \CThreeAuditFZeroOneHistoryOrphanOFF & \CThreeAuditFZeroOneHistoryNormalAlarms & \CThreeAuditFZeroOneHistoryNormalUpper\\
+1 & Carry & \CThreeAuditFZeroOneCarryShort/\CThreeAuditFZeroOneCarryShortN & \CThreeAuditFZeroOneCarryAll/\CThreeAuditFZeroOneCarryEvents & \CThreeAuditFZeroOneCarryExtras & \CThreeAuditFZeroOneCarryExtrasPerHour & \CThreeAuditFZeroOneCarryEarlyOFF & \CThreeAuditFZeroOneCarryOrphanOFF & \CThreeAuditFZeroOneCarryNormalAlarms & \CThreeAuditFZeroOneCarryNormalUpper\\
+1 & Reset & \CThreeAuditFZeroOneResetShort/\CThreeAuditFZeroOneResetShortN & \CThreeAuditFZeroOneResetAll/\CThreeAuditFZeroOneResetEvents & \CThreeAuditFZeroOneResetExtras & \CThreeAuditFZeroOneResetExtrasPerHour & \CThreeAuditFZeroOneResetEarlyOFF & \CThreeAuditFZeroOneResetOrphanOFF & \CThreeAuditFZeroOneResetNormalAlarms & \CThreeAuditFZeroOneResetNormalUpper\\
+2 & History & \CThreeAuditPTwoHistoryShort/\CThreeAuditPTwoHistoryShortN & \CThreeAuditPTwoHistoryAll/\CThreeAuditPTwoHistoryEvents & \CThreeAuditPTwoHistoryExtras & \CThreeAuditPTwoHistoryExtrasPerHour & \CThreeAuditPTwoHistoryEarlyOFF & \CThreeAuditPTwoHistoryOrphanOFF & \CThreeAuditPTwoHistoryNormalAlarms & \CThreeAuditPTwoHistoryNormalUpper\\
+2 & Carry & \CThreeAuditPTwoCarryShort/\CThreeAuditPTwoCarryShortN & \CThreeAuditPTwoCarryAll/\CThreeAuditPTwoCarryEvents & \CThreeAuditPTwoCarryExtras & \CThreeAuditPTwoCarryExtrasPerHour & \CThreeAuditPTwoCarryEarlyOFF & \CThreeAuditPTwoCarryOrphanOFF & \CThreeAuditPTwoCarryNormalAlarms & \CThreeAuditPTwoCarryNormalUpper\\
+2 & Reset & \CThreeAuditPTwoResetShort/\CThreeAuditPTwoResetShortN & \CThreeAuditPTwoResetAll/\CThreeAuditPTwoResetEvents & \CThreeAuditPTwoResetExtras & \CThreeAuditPTwoResetExtrasPerHour & \CThreeAuditPTwoResetEarlyOFF & \CThreeAuditPTwoResetOrphanOFF & \CThreeAuditPTwoResetNormalAlarms & \CThreeAuditPTwoResetNormalUpper\\\hline
 \end{tabular}\end{table*}
 
 Retaining histories improved short-gap coverage over mean carry by
-\CThreeFOneHistoryCarryDifferencePP{} percentage points on F01
+\CThreeFOneHistoryCarryDifferencePP{} percentage points on the reference plant
 (95\% interval [\CThreeFOneHistoryCarryLowerPP{},
-\CThreeFOneHistoryCarryUpperPP{}]). The P2 difference was
+\CThreeFOneHistoryCarryUpperPP{}]). The second-plant difference was
 \CThreePTwoHistoryCarryDifferencePP{} points
 [\CThreePTwoHistoryCarryLowerPP{}, \CThreePTwoHistoryCarryUpperPP{}].
-Only F01 met the prespecified coverage criterion. Mean carry improved on
-reset by \CThreeFOneCarryResetDifferencePP{} points on F01 and
-\CThreePTwoCarryResetDifferencePP{} on P2. The intervals resample whole
+Only the reference plant met the prespecified coverage criterion. Mean carry improved on
+reset by \CThreeFOneCarryResetDifferencePP{} points on the reference plant and
+\CThreePTwoCarryResetDifferencePP{} on the second plant. The intervals resample whole
 event trajectories, paired across procedures.
 
 \begin{table*}[t]\centering\small
+\setlength{\tabcolsep}{2.5pt}
 \caption{History bank under dropout or independent PMU noise at the
 threshold selected on the original plant. Available counts admitted
 records. Dashes indicate that monitoring never began.}
 \label{tab:c03-stress}
 \begin{tabular}{llrrrrrrrr}
 Plant & Stress & Available & Short timely & Planned events & Extras & Alarms / normal hours & $U_{95}$/h & Early OFF & Orphan OFF\\\hline
-F01 & Dropout & \CThreeAuditFZeroOneDropoutAvailable/\CThreeAuditFZeroOneDropoutParents & \CThreeAuditFZeroOneDropoutShortTimely/\CThreeAuditFZeroOneDropoutShortN & \CThreeAuditFZeroOneDropoutEvents & \CThreeAuditFZeroOneDropoutExtras & \CThreeAuditFZeroOneDropoutNormalAlarms/\CThreeAuditFZeroOneDropoutNormalHours & \CThreeAuditFZeroOneDropoutNormalUpper & \CThreeAuditFZeroOneDropoutEarlyOFF & \CThreeAuditFZeroOneDropoutOrphanOFF\\
-P2 & Dropout & \CThreeAuditPTwoDropoutAvailable/\CThreeAuditPTwoDropoutParents & \CThreeAuditPTwoDropoutShortTimely/\CThreeAuditPTwoDropoutShortN & \CThreeAuditPTwoDropoutEvents & \CThreeAuditPTwoDropoutExtras & \CThreeAuditPTwoDropoutNormalAlarms/\CThreeAuditPTwoDropoutNormalHours & \CThreeAuditPTwoDropoutNormalUpper & \CThreeAuditPTwoDropoutEarlyOFF & \CThreeAuditPTwoDropoutOrphanOFF\\
-F01 & Independent noise & \CThreeAuditFZeroOneNoiseAvailable/\CThreeAuditFZeroOneNoiseParents & -- (planned N=\CThreeAuditFZeroOneNoiseShortN) & \CThreeAuditFZeroOneNoiseEvents & -- & -- & -- & -- & --\\
-P2 & Independent noise & \CThreeAuditPTwoNoiseAvailable/\CThreeAuditPTwoNoiseParents & -- (planned N=\CThreeAuditPTwoNoiseShortN) & \CThreeAuditPTwoNoiseEvents & -- & -- & -- & -- & --\\\hline
+1 & Dropout & \CThreeAuditFZeroOneDropoutAvailable/\CThreeAuditFZeroOneDropoutParents & \CThreeAuditFZeroOneDropoutShortTimely/\CThreeAuditFZeroOneDropoutShortN & \CThreeAuditFZeroOneDropoutEvents & \CThreeAuditFZeroOneDropoutExtras & \CThreeAuditFZeroOneDropoutNormalAlarms/\CThreeAuditFZeroOneDropoutNormalHours & \CThreeAuditFZeroOneDropoutNormalUpper & \CThreeAuditFZeroOneDropoutEarlyOFF & \CThreeAuditFZeroOneDropoutOrphanOFF\\
+2 & Dropout & \CThreeAuditPTwoDropoutAvailable/\CThreeAuditPTwoDropoutParents & \CThreeAuditPTwoDropoutShortTimely/\CThreeAuditPTwoDropoutShortN & \CThreeAuditPTwoDropoutEvents & \CThreeAuditPTwoDropoutExtras & \CThreeAuditPTwoDropoutNormalAlarms/\CThreeAuditPTwoDropoutNormalHours & \CThreeAuditPTwoDropoutNormalUpper & \CThreeAuditPTwoDropoutEarlyOFF & \CThreeAuditPTwoDropoutOrphanOFF\\
+1 & Independent noise & \CThreeAuditFZeroOneNoiseAvailable/\CThreeAuditFZeroOneNoiseParents & -- (planned N=\CThreeAuditFZeroOneNoiseShortN) & \CThreeAuditFZeroOneNoiseEvents & -- & -- & -- & -- & --\\
+2 & Independent noise & \CThreeAuditPTwoNoiseAvailable/\CThreeAuditPTwoNoiseParents & -- (planned N=\CThreeAuditPTwoNoiseShortN) & \CThreeAuditPTwoNoiseEvents & -- & -- & -- & -- & --\\\hline
 \end{tabular}\end{table*}
 
 With held observations during dropout, the short-gap coverage difference
 relative to the same trajectories with complete reports was
-\CThreeAuditFZeroOneDropoutCoverageDiff{} percentage points on F01
+\CThreeAuditFZeroOneDropoutCoverageDiff{} percentage points on the reference plant
 (95\% interval [\CThreeAuditFZeroOneDropoutCoverageLower{},
 \CThreeAuditFZeroOneDropoutCoverageUpper{}]) and
-\CThreeAuditPTwoDropoutCoverageDiff{} points on P2
+\CThreeAuditPTwoDropoutCoverageDiff{} points on the second plant
 [\CThreeAuditPTwoDropoutCoverageLower{}, \CThreeAuditPTwoDropoutCoverageUpper{}].
 Extra alarms per event-hour changed by \CThreeAuditFZeroOneDropoutExtrasDiff{}
-on F01 and \CThreeAuditPTwoDropoutExtrasDiff{} on P2. P2 emitted fewer
+on the reference plant and \CThreeAuditPTwoDropoutExtrasDiff{} on the second plant. The second plant emitted fewer
 unmatched alarms while also attributing fewer true interventions.
 
 At 0.05\% total vector error from independent PMU noise, the estimated
