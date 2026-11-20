@@ -1,0 +1,159 @@
+{
+  "seed": 41572081,
+  "conditions": [
+    {
+      "name": "reference",
+      "load": 1.0,
+      "outages": 0,
+      "timing": "reference"
+    },
+    {
+      "name": "topo1",
+      "load": 1.0,
+      "outages": 1,
+      "timing": "reference"
+    },
+    {
+      "name": "topo2",
+      "load": 1.0,
+      "outages": 2,
+      "timing": "reference"
+    },
+    {
+      "name": "load99p5",
+      "load": 0.995,
+      "outages": 0,
+      "timing": "reference"
+    },
+    {
+      "name": "load99",
+      "load": 0.99,
+      "outages": 0,
+      "timing": "reference"
+    },
+    {
+      "name": "load98",
+      "load": 0.98,
+      "outages": 0,
+      "timing": "reference"
+    },
+    {
+      "name": "load95",
+      "load": 0.95,
+      "outages": 0,
+      "timing": "reference"
+    },
+    {
+      "name": "load90",
+      "load": 0.9,
+      "outages": 0,
+      "timing": "reference"
+    },
+    {
+      "name": "load80",
+      "load": 0.8,
+      "outages": 0,
+      "timing": "reference"
+    },
+    {
+      "name": "load100p5",
+      "load": 1.005,
+      "outages": 0,
+      "timing": "reference"
+    },
+    {
+      "name": "load101",
+      "load": 1.01,
+      "outages": 0,
+      "timing": "reference"
+    },
+    {
+      "name": "load102",
+      "load": 1.02,
+      "outages": 0,
+      "timing": "reference"
+    },
+    {
+      "name": "load105",
+      "load": 1.05,
+      "outages": 0,
+      "timing": "reference"
+    },
+    {
+      "name": "load110",
+      "load": 1.1,
+      "outages": 0,
+      "timing": "reference"
+    },
+    {
+      "name": "load115",
+      "load": 1.15,
+      "outages": 0,
+      "timing": "reference"
+    },
+    {
+      "name": "gap30",
+      "load": 1.0,
+      "outages": 0,
+      "timing": "gap30"
+    },
+    {
+      "name": "gap15",
+      "load": 1.0,
+      "outages": 0,
+      "timing": "gap15"
+    },
+    {
+      "name": "gap6",
+      "load": 1.0,
+      "outages": 0,
+      "timing": "gap6"
+    },
+    {
+      "name": "gap0",
+      "load": 1.0,
+      "outages": 0,
+      "timing": "gap0"
+    },
+    {
+      "name": "over10",
+      "load": 1.0,
+      "outages": 0,
+      "timing": "over10"
+    },
+    {
+      "name": "over25",
+      "load": 1.0,
+      "outages": 0,
+      "timing": "over25"
+    },
+    {
+      "name": "over50",
+      "load": 1.0,
+      "outages": 0,
+      "timing": "over50"
+    },
+    {
+      "name": "synchronous",
+      "load": 1.0,
+      "outages": 0,
+      "timing": "synchronous"
+    },
+    {
+      "name": "combined",
+      "load": 1.1,
+      "outages": 1,
+      "timing": "over25"
+    }
+  ],
+  "files": {
+    "experiments/frozen_stress/design_stress.py": "875e9bb57df6cc70101a068058e89cd297361a8df0516eac77e13c7077164601",
+    "experiments/frozen_stress/run_stress.py": "5b29965b6e8b3ef9c49913e43c72eb226bb2a59cdd8e25f3e6b2eca178b5b21d",
+    "experiments/frozen_stress/score_stress.py": "da147cc5bd7a07e986954b8c6377a56795340bb2d0fc237b542a7d2ae0d6249d",
+    "experiments/frozen_stress/stress_plant.py": "53c6a1c5e448d7ac919ec9a5947c93e1410102d34abdab1d0861651327366ce3",
+    "experiments/frozen_stress/PROTOCOL.md": "1f99d045a10bfba7a4704caf35427ed879145dfff3f2659deda03b72b10b8a49",
+    "experiments/joint_pmu/results/freeze.json": "816cdb52e99648e3ce27bfc14689e5443574ea316fbc1140f73baa0228d7c298",
+    "experiments/joint_pmu/trees_refit.joblib": "b857b1ada08269806fa2ab08a83bae2df14696f8bceb6f51e210ccfe6e9e53b1",
+    "experiments/supervised_stream/successor/model.joblib": "53553f9f61496e38def8fadcf771ec623b238b372746097d92e5f54d077b6156"
+  }
+}
