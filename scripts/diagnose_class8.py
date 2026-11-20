@@ -25,7 +25,7 @@ def measurement_view(pmus):
     return frames
 
 
-def evaluate(archive, out):
+def evaluate(archive, out, *, noise_control=False):
     sys.path.insert(0, str(archive / "V5"))
     from src.simulation.m9.generator import (
         get_template,
@@ -44,6 +44,7 @@ def evaluate(archive, out):
     cases = [(s, c) for s in sites for c in ("isolated", "consecutive")]
     rng.shuffle(cases)
     rows = []
+    noise_rows = []
     for i, (site, context) in enumerate(cases):
         seed = int(rng.integers(1, 2**30))
         u = int(rng.integers(32, 152))
@@ -79,6 +80,41 @@ def evaluate(archive, out):
             return inner, energy, strength * inner[u] - 0.5 * strength**2 * energy[u]
 
         _, _, s1 = known(clean)
+        if noise_control:
+            from src.simulation.m9.calibration import channel_stat
+
+            for multiplier in (1.0, 0.5, 0.25, 0.1, 0.0):
+                scaled = {}
+                for b, frame in clean.items():
+                    df = frame.copy()
+                    bus = f"BUS{b}"
+                    z = state.voltage_complex_pu[: len(df), state.bus_order.index(bus)]
+                    for phase, shift in zip("ABC", (0, 120, -120)):
+                        mag, ang = f"V{phase}_MAG", f"V{phase}_ANG"
+                        base_mag = channel_stat(ref, bus, mag, "mean", 200000.0)
+                        base_deg = np.degrees(np.angle(z[0]))
+                        base_ang = channel_stat(
+                            ref, bus, ang, "mean", base_deg + shift - 60
+                        )
+                        ideal_mag = base_mag * abs(z / z[0])
+                        ideal_ang = base_ang + np.degrees(np.angle(z / z[0]))
+                        df[f"{bus}_{mag}"] = ideal_mag + multiplier * (
+                            df[f"{bus}_{mag}"] - ideal_mag
+                        )
+                        residual = (df[f"{bus}_{ang}"] - ideal_ang + 180) % 360 - 180
+                        df[f"{bus}_{ang}"] = (
+                            ideal_ang + multiplier * residual + 180
+                        ) % 360 - 180
+                    scaled[b] = df
+                s = known(scaled)[2]
+                if multiplier == 1:
+                    np.testing.assert_allclose(s, s1, atol=1e-8)
+                rank = 1 + int(np.sum(s > s[np.flatnonzero(sites == site).item()]))
+                noise_rows.append(
+                    dict(
+                        case=i, context=context, truth=site, scale=multiplier, rank=rank
+                    )
+                )
         inner, energy, s2 = known(composite)
         a = np.clip(inner[u] / np.maximum(energy[u], 1e-12), 0, 2)
         scores = (
@@ -110,6 +146,8 @@ def evaluate(archive, out):
             )
     df = pd.DataFrame(rows)
     out.mkdir(parents=True, exist_ok=True)
+    if noise_control:
+        pd.DataFrame(noise_rows).to_csv(out / "noise_control.csv", index=False)
     df.to_csv(out / "diagnostic.csv", index=False)
     summary = {}
     prev = None
@@ -138,5 +176,6 @@ if __name__ == "__main__":
     p = argparse.ArgumentParser(description=__doc__)
     for k in ("archive", "out"):
         p.add_argument(k, type=Path)
+    p.add_argument("--noise-control", action="store_true")
     a = p.parse_args()
-    evaluate(a.archive.resolve(), a.out)
+    evaluate(a.archive.resolve(), a.out, noise_control=a.noise_control)

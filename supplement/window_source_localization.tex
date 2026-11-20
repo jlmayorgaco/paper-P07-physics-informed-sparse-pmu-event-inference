@@ -398,6 +398,93 @@ see the same measurements. The calibrated readout searches the full
 registered catalog for the predicted family.}
 \label{fig:registered-m9-source}\end{figure*}
 
+\subsection{Where the weak composite loses its physical site}
+We generated 78 new class-8 trajectories, two at each of 39 buses.
+One event per bus followed a fault. Each clean physical trajectory
+and its noisy PMU reports also supplied the input to the composite
+measurement overlay, so each pair has the same source, onset, strength
+and noise draw. The pulse lasted two seconds. The four readouts in
+Table~\ref{tab:composite-paired} use the same voltage-response dictionary.
+
+\begin{table}[!ht]\centering\small
+\caption{Physical-site rank on the same 78 class-8 cases. The second
+column lists the supplied onset $u$ and relative strength $a$.
+An exact hit ranks the true bus first among 39.}
+\label{tab:composite-paired}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{llrrr}\toprule
+Input & Given & Exact & Top three & Median rank\\
+\midrule
+Clean & $u,a$ & 10 & 21 & 8\\
+Composite & $u,a$ & 10 & 21 & 8\\
+Composite & $u$ & 7 & 19 & 9\\
+Composite & Neither & 7 & 16 & 9\\
+\bottomrule\end{tabular}\end{table}
+
+With onset and strength supplied, the clean and composite log scores
+agreed to $10^{-13}$ on all candidates. The M9 overlay adds a whole
+turn to a voltage angle and changes current magnitude at a different
+PMU; the principal-angle voltage representation is invariant to both
+operations. Profiling strength then gained two sites and lost five.
+Estimating onset gained one and lost one. In an exploratory control we
+scaled only the exported voltage measurement errors around their
+noise-free values, keeping the physical trajectory, ambient fluctuations,
+onset and strength fixed. At noise scales 1, 0.5, 0.25, 0.1 and 0, the
+same clean readout located 10, 21, 37, 57 and 78 sites, respectively.
+
+\subsubsection{Marginal site decision}
+The instrument marker carries timing information even though the
+voltage overlay leaves the source contrast unchanged. Let $v$ and $i$
+denote the observed voltage residuals and current magnitudes, $u$ the
+physical onset, $a$ its relative strength, and $j$ the PMU with a
+current-gain excursion. For a uniform prior on source $k$, the site
+posterior in our working model is
+\begin{equation}
+ p(k\mid v,i)\ \propto\
+ \sum_u p(u\mid i)\int
+    \exp\!\left(a h_{k,u}^{\mathsf T}Wv-
+    \tfrac12 a^2 h_{k,u}^{\mathsf T}Wh_{k,u}\right)p(a)\, da .
+\end{equation}
+Here $p(u\mid i)$ sums the current-marker likelihood over eight PMUs
+and lags of 0--24 reports with uniform priors. Each marker is a 54-report
+step with a positive half-normal gain prior (scale 0.25). We inflate the
+quiet current-noise variance threefold to reduce the weight of serially
+correlated reports. The voltage integral uses 48 midpoint evaluations
+on $a\in[0.5,1.5]$. Selecting the largest marginal posterior minimizes
+the probability of a wrong bus under this model and zero--one site
+loss. Its voltage likelihood assumes diagonal noise and its current
+marker informs the physical site only through onset. The published
+class and alarm time remain those of the frozen hybrid.
+
+We also tested whether current phase contributes site information
+beyond its voltage counterpart. For a two-second trial pulse, let
+$z_V$ contain the voltage contrasts and $z_I$ the current-angle
+contrasts. The earlier independent pulse calibration supplies a
+site mean $\mu_k$ and pooled covariance $\Sigma$. For
+$B=\Sigma_{IV}\Sigma_{VV}^{-1}$, the conditional Gaussian term
+compares $z_I-Bz_V$ to $a(\mu_{I,k}-B\mu_{V,k})$ with covariance
+$\Sigma_{II}-B\Sigma_{VI}$. Adding this term before summing over
+strength and onset gives a secondary readout that can use
+site-dependent current phase. It assumes the voltage contrasts
+capture the relevant dependence between the current and voltage
+errors. Both readouts use the same previously registered sites.
+
+We froze the primary posterior before generating a separate nine-class
+cohort with eight sites per physical family, fresh seeds, variable
+pulse durations and new assignments of the affected PMUs. With the
+same classifier, the released and marginal readouts located 53 and
+54 of 64 isolated sources, and 52 and 53 of 64 sources after a fault.
+The marginal readout recovered BUS1 in both members of the same
+matched pair and lost no previously correct site. Class-8 location
+rose from 1/8 to 2/8 in each context. The secondary current-phase
+readout, fixed before blind scoring, returned to 1/8. All three
+methods classified 72/72 and 71/72 windows correctly (macro-F1
+1.000 and 0.986), detected 64/64 and 63/64 events and raised zero
+alarms in 88 no-onset windows. Even perfect class-8 location would
+have yielded only 60/64 and 59/64 exact sites with the other decisions
+fixed: generation and load sources also contributed errors on this
+cohort.
+
 \subsection{Localizing a load change with an AC operating-point model}
 For a load that changes at fixed power factor, the active and reactive
 increments share a real multiplier. We used this constraint to test

@@ -84,7 +84,7 @@ def main():
         sources.update(p for p in (ROOT / 'experiments' / folder).glob('*')
                        if p.is_file() and p.suffix in {'.py', '.json', '.csv', '.md', '.txt'})
     sources.add(ROOT / 'docs/HBG_REPRODUCTION_AUDIT_20261112.md')
-    for folder in ('paired_m9_stream', 'paired_m9_successor', 'ac_load_transfer', 'pmu_source_readout'):
+    for folder in ('paired_m9_stream', 'paired_m9_successor', 'ac_load_transfer', 'pmu_source_readout', 'composite_identifiability'):
         sources.update(p for p in (ROOT / 'experiments' / folder).glob('*') if p.is_file())
     sources.update((ROOT / 'experiments/ac_load_transfer/current_m9').glob('*.json'))
     for name in ('audit_c03_context', 'score_paired_m9_stream', 'prepare_paired_m9_stream',
@@ -94,7 +94,8 @@ def main():
                  'competition_spatial_contrast', 'competition_metrics', 'paired_m9_successor',
                  'score_m9_successor', 'fit_pmu_window_correction', 'pmu_window_correction',
                  'benchmark_pmu_source_readout', 'score_pmu_source_readout', 'build_pmu_source_readout',
-                 'pmu_source_readout', 'pmu_source_pulse', 'time_pmu_source_readout'):
+                 'pmu_source_readout', 'pmu_source_pulse', 'time_pmu_source_readout',
+                 'diagnose_class8', 'blind_class8', 'joint_class8', 'score_blind_class8', 'class8_physical_current'):
         sources.add(ROOT / 'scripts' / (name + '.py'))
     for name in ('competition_response_156/bank.json', 'competition_spatial_264/spatial.json'):
         sources.add(ROOT / 'experiments' / name)
