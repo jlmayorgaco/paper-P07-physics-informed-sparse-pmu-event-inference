@@ -1,5 +1,9 @@
 # MET_BAYES_GRAFO
 
+## Implementación y resultado del 20 de noviembre
+
+El observador de cuatro familias ya se puede ejecutar reporte a reporte. La ganancia sale de un problema local de mínimo error cuadrático con ruido de PMU correlacionado en el tiempo. Una distribución de Student integra una escala de error desconocida al actualizar las probabilidades de los modos físicos. Se congeló la variante en magnitud y fase antes de generar 96 trayectorias nuevas. Logró 93/104 diagnósticos conjuntos en 1,5 s y 66 avisos extra. El comparador supervisado logró 89/104 y un aviso extra. La propuesta original de este documento cubre también mecanismos que requieren validación separada, entre ellos el disparo de máquina, la inyección PQ y los canales ausentes. [Derivación ejecutada, modelo y prueba](../experiments/graph_recursive/README.md)
+
 ## Pregunta y alcance
 
 ¿Qué cambio en la red explica las tensiones y corrientes que acaban de llegar, dada la trayectoria que seguía el sistema antes del cambio? Se propone extender el banco de recuperación de P07 a cuatro familias. En cada episodio interesa la hora a la que se detecta el evento y la hora a la que se identifica el activo. Ambas son horas de publicación. La estimación retrospectiva del inicio se informa aparte. El alcance inicial admite sucesos consecutivos, con recuperación aún visible cuando llega el siguiente.

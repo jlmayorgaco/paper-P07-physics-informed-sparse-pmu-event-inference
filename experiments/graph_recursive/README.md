@@ -8,7 +8,7 @@ El estado de 30 coordenadas reúne ángulos, velocidades y potencias mecánicas 
 
 La predicción discreta parte de la exponencial del sistema afín a un paso. Se corrige el par con la diferencia entre potencia no lineal y tangente al principio del intervalo. Así se evalúa la lectura terminal no lineal al final de cada paso. La aproximación conserva esa corrección de par durante 1/30 s. El generador de prueba, por su parte, integra la dinámica no lineal con cuatro pasos RK4 por reporte y varía inercia y amortiguamiento. Ambos comparten el modelo de red nominal y la familia de máquinas.
 
-El catálogo de 237 modos incluye normalidad. Una apertura tiene intensidad fija. Los otros tres tipos integran la intensidad mediante tres nodos de Gauss–Legendre para una distribución uniforme en [0,7, 1,3] veces la perturbación nominal. Un cambio de intensidad continuo se aproxima por esta cuadratura. Las probabilidades iniciales se reparten primero por familia y luego por activo y peso de cuadratura. En el grafo de transiciones se puede continuar, iniciar desde normalidad o restaurar. El estado físico al restaurar conserva información de la intervención anterior.
+El catálogo de 237 modos incluye normalidad. Una apertura tiene intensidad fija. Los otros tres tipos integran la intensidad mediante tres nodos de Gauss–Legendre para una distribución uniforme entre 0,7 y 1,3 veces la perturbación nominal. Un cambio de intensidad continuo se aproxima por esta cuadratura. Las probabilidades iniciales se reparten primero por familia y luego por activo y peso de cuadratura. En el grafo de transiciones se puede continuar, iniciar desde normalidad o restaurar. El estado físico al restaurar conserva información de la intervención anterior.
 
 ## De la pérdida cuadrática a la ganancia
 
@@ -50,3 +50,46 @@ Se suman las masas por activo para integrar intensidad, y se suman los activos p
 Los primeros 55 reportes tranquilos de 256 trayectorias históricas de entrenamiento aportan el centrado, las escalas, la regresión instrumental $F$ y la covarianza residual $R$. En desarrollo se estiman por conteo las tasas de inicio y restauración. Se elige la escala del ruido de par por verosimilitud predictiva sobre trayectorias etiquetadas, usando el nodo de intensidad más cercano para ese ajuste. En la variante de Student se ajusta además $\nu$ en una cuadrícula y $\gamma$ mediante optimización escalar. Los costes de publicación se eligen en desarrollo con el criterio del protocolo. Durante la prueba se desconoce el inicio, la familia, la intensidad, el activo y la duración de cada evento.
 
 La derivación de la ganancia y la integral de escala son exactas en sus modelos locales. El monitor fusiona historias en sus medias, conserva covarianzas estacionarias por modo y usa la ganancia tangente al corregir la predicción no lineal. Después de una conmutación, la mezcla completa tendría otra distribución y otra covarianza. También se aproxima la integral de intensidad. El resultado es un filtro de modelos interactuantes con estas aproximaciones. Los umbrales se calibran para el fin operativo. La optimalidad del tiempo de parada, de la recuperación de la fuente y del macro-F1 queda abierta. La mezcla de modelos y el filtro de Kalman tienen antecedentes establecidos. [Blom y Bar-Shalom](https://doi.org/10.1109/9.1299) · [Yang et al.](https://arxiv.org/abs/2107.06754)
+
+## Uso y comprobación
+
+Desde la raíz del repositorio, se puede procesar un registro sin acceso al NAS. El entorno usado incluye NumPy, SciPy, Numba, pandas y NetworkX. El ejecutable carga el modelo seleccionado y comprueba su huella.
+
+~~~powershell
+$env:OPENBLAS_NUM_THREADS = '1'
+python experiments/graph_recursive/monitor.py experiments/supervised_stream/successor/controls/two_fault_locations.npy
+~~~
+
+Cada reporte es una matriz de ocho filas en el orden 2, 5, 6, 10, 19, 22, 29 y 39. Las cinco columnas contienen log-magnitud de tensión relativa al punto de operación, fase relativa de tensión en radianes, magnitud de corriente de terminal en amperios, fase relativa de corriente en grados y presencia. El modelo requiere los ocho canales disponibles y un prefijo tranquilo de 30 reportes. Para otro registro se crea otra instancia de PhysicalMonitor. El método step devuelve los avisos emitidos al llegar ese reporte. Si llegan detección y diagnóstico a la vez, ambos comparten el campo detected. Una identificación posterior actualiza la misma alarma.
+
+La auditoría compacta usa las predicciones y calendarios adjuntos y solo requiere NumPy. El chequeo de los cuatro operadores usa además el simulador científico, el entorno de la planta supervisada y la variable P07_SCIENCE_ARCHIVE apuntando al repositorio SGSMA.
+
+~~~powershell
+python experiments/graph_recursive/audit.py
+$env:P07_SCIENCE_ARCHIVE = 'U:/academic/SGSMA26-Physics-Informed-AD'
+python experiments/graph_recursive/check.py
+~~~
+
+Los modelos y umbrales se seleccionaron en 24 registros de desarrollo. La variante gaussiana rectangular produjo 12 aciertos conjuntos y 23 avisos extra. La distribución de Student en esas coordenadas produjo 19 aciertos y 111 extras. En las coordenadas nativas de magnitud y fase, Student produjo 21 aciertos y 23 extras. El criterio previamente especificado seleccionó esta última antes de generar la prueba. En desarrollo pasó de 0 a 6/6 diagnósticos conjuntos de generación frente al gaussiano rectangular. El cambio abarca coordenadas, covarianzas ajustadas y ley de evidencia. [Selección congelada](phasor_freeze.json)
+
+## Prueba reservada
+
+La revisión 443f4ca fijó la selección, los modelos y sus umbrales antes de generar las 96 trayectorias de prueba. Los 104 eventos comprenden 26 de cada familia. Se reservaron fuentes por familia para el nuevo observador. Entrenamiento y prueba del monitor supervisado histórico pueden compartir esas fuentes. El comparador es MET_PMU_FIRMAS_ETREE, el monitor causal publicado en el repositorio. La entrega de junio por ventanas de 30 s tiene otro plazo de decisión.
+
+| Método | Detectados en 1,5 s | Familia en 1,5 s | Familia y activo en 1,5 s | Macro-F1 de 4 familias | Extras en registros con eventos |
+|---|---:|---:|---:|---:|---:|
+| Kalman con evidencia gaussiana rectangular | 54/104 | 49/104 | 46/104 | 0,3622 | 116 |
+| Kalman con Student rectangular | 88/104 | 82/104 | 79/104 | 0,4333 | 441 |
+| **MET_BAYES_GRAFO seleccionado, Student polar** | **97/104** | **94/104** | **93/104** | **0,7284** | **66** |
+| MET_PMU_FIRMAS_ETREE | 93/104 | 93/104 | 89/104 | 0,9351 | 1 |
+
+Ningún método emitió avisos en los 24 registros completamente normales. Estos aportan 9,2 minutos después del prefijo. Para el acierto conjunto del método seleccionado el intervalo bootstrap del 95 % por trayectoria es 83,49–94,87 %. La diferencia pareada frente al supervisado es +3,85 puntos porcentuales, con intervalo de −4,04 a +11,76. Su mayor número de aciertos vino acompañado de una precisión de detección de 97/163, frente a 93/94 del comparador. Los 0 s de latencia mediana del método físico significan que al menos la mitad de sus detecciones emparejadas se emitieron al primer reporte etiquetado. El simulador integra hasta ese reporte. El tiempo de cómputo y transporte queda fuera de esa latencia. [Resultados del método seleccionado](phasor_scores.json) · [Comparador y control gaussiano](scores.json) · [Control Student rectangular](robust_scores.json)
+
+| Familia | Aciertos conjuntos del filtro seleccionado | Aciertos conjuntos del supervisado |
+|---|---:|---:|
+| Falla | 25/26 | 24/26 |
+| Línea | 22/26 | 25/26 |
+| Generación | 21/26 | 16/26 |
+| Carga | 25/26 | 24/26 |
+
+De los 66 avisos extra, 3 ocurrieron durante una intervención y 63 después de una restauración, antes del siguiente inicio o del final del registro. De esos 63, 36 siguieron al recierre de una línea y 27 al despeje de una falla. Esta clasificación temporal usa las etiquetas solo después de sellar predicciones. Identifica dónde falla el monitor. Para atribuirlo a la fusión de historias o a la covarianza estacionaria habría que variar esos dos componentes por separado con las mismas trayectorias y medir también las detecciones perdidas durante la recuperación. La tasa conjunta de 89,4 %, la precisión y el macro-F1 descartan presentar este prototipo como superior al supervisado o como una solución al objetivo operativo del 96 %. [Recuento pareado reproducible](audit.py)

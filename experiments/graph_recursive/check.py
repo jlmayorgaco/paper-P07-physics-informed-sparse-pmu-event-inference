@@ -3,6 +3,8 @@ import itertools
 
 import numpy as np
 from scipy.linalg import block_diag, solve_discrete_are
+from scipy.special import logsumexp
+from scipy.stats import multivariate_t
 
 from estimator import advance, mechanical_prediction, stationary_gain, terminal_prediction
 from evaluate import evaluate
@@ -90,9 +92,40 @@ def check_score():
     assert (result["detected"], result["joint"], result["quiet_extras"]) == (2, 1, 1)
 
 
+def check_selected():
+    from estimator import physics_arrays, principal
+    from phasors import MODEL
+    from robust import StudentMonitor
+    with np.load(MODEL) as archive:
+        m = dict(archive)
+    physics = physics_arrays(m)
+    for j in (0, 1, len(m["a"])//2, len(m["a"])-1):
+        eye = 1e-6*np.eye(30)
+        numerical = np.column_stack([principal(terminal_prediction(j, d, physics)
+                      - terminal_prediction(j, -d, physics), physics) / 2e-6 for d in eye])
+        np.testing.assert_allclose(numerical, m["h"][j], rtol=2e-6, atol=1e-4)
+    # Check the entire first posterior against normalized Student densities,
+    # with the scale matrix in the measurement coordinates passed directly to SciPy.
+    monitor = StudentMonitor(m)
+    for _ in range(30):
+        monitor.step_coordinates(m["mean"])
+    y = np.linspace(-.9, .9, 31)
+    monitor.step_coordinates(m["mean"] + m["scale"]*y)
+    prior = np.r_[1-m["birth"].sum(), m["birth"]]
+    direct = []
+    for j, w in enumerate(prior):
+        pred = mechanical_prediction(j, np.zeros(30), m["a"], m["b"], physics)
+        e = principal(y-terminal_prediction(j, pred, physics), physics)
+        root = np.linalg.inv(m["white"][j])
+        direct.append(np.log(w) + multivariate_t.logpdf(e, shape=root @ root.T, df=float(m["degrees"])))
+    direct = np.array(direct) - logsumexp(direct)
+    np.testing.assert_allclose(monitor.log_mass, direct, atol=1e-7, rtol=5e-10)
+
+
 if __name__ == "__main__":
     check_conditioning()
     check_modes()
     check_plant()
     check_score()
-    print("Gaussian conditioning, discrete path enumeration, four physical operators and deadline scoring passed.")
+    check_selected()
+    print("Gaussian conditioning, enumerated modes, four nonlinear operators, deadline scoring, polar Jacobians and Student posterior passed.")
