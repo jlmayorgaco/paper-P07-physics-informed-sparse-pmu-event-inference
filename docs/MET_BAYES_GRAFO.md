@@ -1,5 +1,9 @@
 # MET_BAYES_GRAFO
 
+## Estimación conjunta a partir de PMU, congelada en 555057c
+
+El monitor estima cada nueva perturbación desde el estado físico dejado por las anteriores. En una prueba ciega con 416 trayectorias independientes y 17 activos reservados, detectó, clasificó y ubicó los 480 episodios dentro de 1,5 s. El macro-F1 fue 1,0000, con cero extras frente a 4 de los árboles históricos y 3 de su réplica. Identificó los 32 segundos eventos objetivo de generación y carga y los 64 terceros eventos. El alcance es la IEEE-39 simulada con topología conocida, ocho PMU disponibles e intervenciones sucesivas. [Resultados, alcance y reproducción](../experiments/joint_pmu/README.md)
+
 ## Recuperación dinámica, congelada en d5b8f88
 
 Tras una falla o apertura, el monitor estima la trayectoria de recuperación con las PMU y busca una segunda intervención en el residuo. En la nueva prueba ciega acertó los 32 segundos eventos de generación y carga posteriores a fallas o aperturas, frente a 18 del grafo anterior sobre las mismas señales. En la cohorte completa obtuvo 0,9663 de macro-F1, 410/416 familias y 403/416 ubicaciones, con 23 alarmas extra frente a 3 y 0 de los dos árboles. Contando cada primer evento compartido una sola vez, el macro-F1 fue 0,9520 y la ubicación 275/288 (95,49 %). [Prueba pareada, errores y reproducción](../experiments/recovery_state/README.md)
