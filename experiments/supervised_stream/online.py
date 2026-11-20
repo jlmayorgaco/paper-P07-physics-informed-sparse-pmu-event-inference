@@ -89,3 +89,14 @@ class Monitor:
         f=ranking(z,local,code,self.model)
         ix=np.argmax(self.model["rankers"][code].predict_proba(f)[:,1])
         return dict(onset_est=start,published=self.tick,code=code,source=self.model["catalog"][code][ix])
+
+if __name__=="__main__":
+    import argparse
+    parser=argparse.ArgumentParser(description="Monitor a synchronized (frames,8,5) NumPy PMU stream at 30 Hz.")
+    parser.add_argument("measurements")
+    args=parser.parse_args()
+    instance=Monitor(load_model())
+    for report in np.load(args.measurements,mmap_mode="r",allow_pickle=False):
+        alarm=instance.step(report)
+        if alarm:
+            print(json.dumps(dict(alarm,time_s=alarm["published"]/30)))

@@ -1,0 +1,79 @@
+{
+  "normal": {
+    "truth": [],
+    "alarms": []
+  },
+  "one_fault": {
+    "truth": [
+      {
+        "time_s": 4.8,
+        "code": 1,
+        "source": "BUS2"
+      }
+    ],
+    "alarms": [
+      {
+        "frame": 178,
+        "time_s": 5.933,
+        "code": 1,
+        "source": "BUS2"
+      }
+    ]
+  },
+  "same_fault_twice": {
+    "truth": [
+      {
+        "time_s": 4.8,
+        "code": 1,
+        "source": "BUS2"
+      },
+      {
+        "time_s": 13.9,
+        "code": 1,
+        "source": "BUS2"
+      }
+    ],
+    "alarms": [
+      {
+        "frame": 178,
+        "time_s": 5.933,
+        "code": 1,
+        "source": "BUS2"
+      },
+      {
+        "frame": 448,
+        "time_s": 14.933,
+        "code": 1,
+        "source": "BUS37"
+      }
+    ]
+  },
+  "two_fault_locations": {
+    "truth": [
+      {
+        "time_s": 4.8,
+        "code": 1,
+        "source": "BUS2"
+      },
+      {
+        "time_s": 13.9,
+        "code": 1,
+        "source": "BUS10"
+      }
+    ],
+    "alarms": [
+      {
+        "frame": 178,
+        "time_s": 5.933,
+        "code": 1,
+        "source": "BUS2"
+      },
+      {
+        "frame": 451,
+        "time_s": 15.033,
+        "code": 1,
+        "source": "BUS10"
+      }
+    ]
+  }
+}

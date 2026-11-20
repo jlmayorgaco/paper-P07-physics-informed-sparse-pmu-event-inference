@@ -6,6 +6,27 @@ from larger import OUT, STORE
 from plant import FS
 
 
+
+def confusion_plot(matrix):
+    import matplotlib.pyplot as plt
+    labels=["Normal","Falla","Línea","Generación","Carga","Datos ausentes",
+            "Generación + ausencia","Datos sesgados","Pulso compuesto"]
+    ratios=matrix/matrix.sum(axis=1,keepdims=True)
+    fig,ax=plt.subplots(figsize=(8.5,6.3),layout="constrained")
+    show=ax.imshow(ratios,vmin=0,vmax=1,cmap="Blues")
+    ax.set_xticks(range(9),labels,rotation=40,ha="right")
+    ax.set_yticks(range(9),labels)
+    ax.set_xlabel("Clase anunciada")
+    ax.set_ylabel("Clase verdadera")
+    ax.set_title("Prueba ciega de 900 trayectorias")
+    for i,j in np.ndindex(matrix.shape):
+        if matrix[i,j]:
+            ax.text(j,i,str(matrix[i,j]),ha="center",va="center",
+                    color="white" if ratios[i,j]>.55 else "black")
+    fig.colorbar(show,ax=ax,shrink=.8,label="Fracción de cada fila")
+    fig.savefig(OUT/"confusion.png",dpi=160)
+    plt.close(fig)
+
 def main():
     ledger=pd.read_csv(OUT/"event_ledger.csv")
     truth=json.loads((OUT/"test_truth.json").read_text())
@@ -19,6 +40,7 @@ def main():
         counts[i,0,0]=24-len(occupied)
     score=json.loads((OUT/"scores.json").read_text())
     assert np.array_equal(counts.sum(axis=0),score["confusion"])
+    confusion_plot(counts.sum(axis=0))
     rng=np.random.default_rng(41197)
     weights=rng.multinomial(len(truth),np.full(len(truth),1/len(truth)),size=3000)
     cm=(weights@counts.reshape(len(truth),-1)).reshape(-1,9,9)

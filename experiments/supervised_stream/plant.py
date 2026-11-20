@@ -12,11 +12,11 @@ from numba import njit
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0,str(HERE.parent/"branch_current_trial"))
-from run import ARCHIVE, Experiment, dyn
+
 
 FS = 30
 FRAMES = 24*FS
-PMUS = list(dyn.PMU)
+PMUS = [2,5,6,10,19,22,29,39]
 DATA = HERE.parents[1]/"tmp/supervised_stream"
 SEEDS = {"train":710993, "test":845219}
 
@@ -61,6 +61,9 @@ def noise(model,rng):
 
 class Generator:
     def __init__(self):
+        from run import ARCHIVE, Experiment, dyn
+        self.dynamics=dyn
+        assert list(dyn.PMU)==PMUS
         self.exp=Experiment()
         self.plant=self.exp.plant
         br=pd.read_csv(ARCHIVE/"data/topology/ieee39/branches_physical.csv")
@@ -96,6 +99,7 @@ class Generator:
         return events
 
     def simulate(self,events,rng,nominal=False):
+        dyn=self.dynamics
         exp,p=self.exp,self.plant
         h=dyn.H*rng.uniform(.8,1.2)
         damping=dyn.D*rng.uniform(.8,1.2)

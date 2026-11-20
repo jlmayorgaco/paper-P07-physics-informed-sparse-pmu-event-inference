@@ -35,6 +35,9 @@ def main():
     report={}
     for i,(name,events) in enumerate(cases.items()):
         obs=plant.simulate(events,np.random.default_rng(718831+i))
+        controls=OUT/"controls"
+        controls.mkdir(exist_ok=True)
+        np.save(controls/f"{name}.npy",obs)
         alerts=monitor(obs,model)
         report[name]=dict(truth=[dict(time_s=e["onset"]/30,code=e["code"],source=e["source"]) for e in events],
                           alarms=alerts)
