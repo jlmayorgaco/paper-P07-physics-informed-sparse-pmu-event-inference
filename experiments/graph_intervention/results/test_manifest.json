@@ -1,0 +1,44 @@
+{
+  "records": 336,
+  "seed": 9148053,
+  "events": 208,
+  "sites": {
+    "1": [
+      "BUS14",
+      "BUS16",
+      "BUS21",
+      "BUS24",
+      "BUS27",
+      "BUS32",
+      "BUS35",
+      "BUS38",
+      "BUS6"
+    ],
+    "2": [
+      "LINE1-39",
+      "LINE10-11",
+      "LINE11-12",
+      "LINE16-24",
+      "LINE21-22",
+      "LINE26-29",
+      "LINE5-6",
+      "LINE7-8"
+    ],
+    "3": [
+      "BUS32",
+      "BUS35",
+      "BUS38"
+    ],
+    "4": [
+      "BUS16",
+      "BUS21",
+      "BUS24",
+      "BUS27"
+    ]
+  },
+  "quiet": 192,
+  "singles": 80,
+  "doubles": 64,
+  "observations": "094b6d0a097529549e853147bec984bde269ee80365839333f7584308ca62c22",
+  "truth": "1efdd26ca4fe37a67fd0aece50e5372b356e7b3730d0353a9da15195c576326d"
+}

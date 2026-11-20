@@ -1,6 +1,10 @@
 # MET_BAYES_GRAFO
 
-## Implementación y resultado del 20 de noviembre
+## Versión de evidencia de intervención, congelada en 243a98c
+
+Esta versión compara directamente un inicio nuevo con la continuación o recuperación. En una prueba ciega de 336 trayectorias y 208 eventos físicos obtuvo 0,9608 de macro-F1, 195/208 ubicaciones exactas y dos avisos extra. En idénticas señales MET_PMU_FIRMAS_ETREE histórico obtuvo 0,9386, 174/208 y dos extras. Al reentrenar los árboles excluyendo las mismas nueve barras y ocho ramas reservadas se obtuvo 0,9024, 166/208 y cero extras. Los valores corresponden al punto principal fijado antes de simular la prueba. [Resultados, intervalos, ejecutable y auditoría](../experiments/graph_intervention/README.md)
+
+## Observador multihipótesis anterior
 
 El observador de cuatro familias ya se puede ejecutar reporte a reporte. La ganancia sale de un problema local de mínimo error cuadrático con ruido de PMU correlacionado en el tiempo. Una distribución de Student integra una escala de error desconocida al actualizar las probabilidades de los modos físicos. Se congeló la variante en magnitud y fase antes de generar 96 trayectorias nuevas. Logró 93/104 diagnósticos conjuntos en 1,5 s y 66 avisos extra. El comparador supervisado logró 89/104 y un aviso extra. La propuesta original de este documento cubre también mecanismos que requieren validación separada, entre ellos el disparo de máquina, la inyección PQ y los canales ausentes. [Derivación ejecutada, modelo y prueba](../experiments/graph_recursive/README.md)
 
