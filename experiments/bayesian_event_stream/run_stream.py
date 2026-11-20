@@ -72,10 +72,10 @@ def continuous_noise(model, rng):
     return np.clip(states[199:] @ model.loading,-8,8)*model.scale
 
 
-def generate():
+def generate(seed=476209, folder=HERE, scratch=SCRATCH):
     exp = Experiment()
     sites = catalog(exp)
-    rng = np.random.default_rng(476209)
+    rng = np.random.default_rng(seed)
     schedules = list(itertools.product(MODES, repeat=2))*8
     rng.shuffle(schedules)
     truth, records = [], []
@@ -95,9 +95,9 @@ def generate():
         y[:,16:24] = np.maximum(0,base+y[:,16:24]+continuous_noise(exp.mag,rng))-base
         y[:,24:] = (y[:,24:]+continuous_noise(exp.ang,rng)+180)%360-180
         records.append(y)
-    SCRATCH.mkdir(parents=True,exist_ok=True)
-    np.save(SCRATCH/"observations.npy",records)
-    pd.DataFrame(truth).to_csv(HERE/"truth.csv",index=False)
+    scratch.mkdir(parents=True,exist_ok=True)
+    np.save(scratch/"observations.npy",records)
+    pd.DataFrame(truth).to_csv(folder/"truth.csv",index=False)
 
 
 def log_interval(lo, hi):
@@ -199,10 +199,10 @@ def predict():
     (HERE/"seal.sha256").write_text(hashlib.sha256(path.read_bytes()).hexdigest())
 
 
-def score():
-    path = HERE/"predictions.csv"
-    assert hashlib.sha256(path.read_bytes()).hexdigest()==(HERE/"seal.sha256").read_text()
-    truth = pd.read_csv(HERE/"truth.csv")
+def score(folder=HERE):
+    path = folder/"predictions.csv"
+    assert hashlib.sha256(path.read_bytes()).hexdigest()==(folder/"seal.sha256").read_text()
+    truth = pd.read_csv(folder/"truth.csv")
     truth["previous"] = truth.groupby("record")["mode"].shift().fillna("quiet")
     joined = pd.read_csv(path).merge(truth,validate="many_to_one")
     report = []
@@ -219,7 +219,7 @@ def score():
                 false_alarms=int((~event&alarm).sum()),
                 macro_f1=f1_score(group["mode"],group.pred,labels=MODES,average="macro"),
                 confusion=confusion_matrix(group["mode"],group.pred,labels=MODES).tolist()))
-    (HERE/"scores.json").write_text(json.dumps(report,indent=2))
+    (folder/"scores.json").write_text(json.dumps(report,indent=2))
     for row in report:
         if row["context"]=="all": print(row)
 
