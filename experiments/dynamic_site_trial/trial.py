@@ -17,7 +17,7 @@ ONSETS = np.arange(3, 13)
 SIGMA = .001
 
 
-def simulate(plant, family, bus, strength, onset):
+def simulate(plant, family, bus, strength, onset, measurement=None):
     """Integrate the nonlinear plant, measuring relative phasors at eight PMUs."""
     z0 = plant.zg(())
     z1 = z0
@@ -31,10 +31,13 @@ def simulate(plant, family, bus, strength, onset):
         z1 = np.linalg.inv(y)[:, plant.gi]
     x = plant.init_state()
     baseline = (z0 @ (plant.yg * plant.E0))[plant.pm]
-    response = np.zeros((N, 16))
+    width = 16 if measurement is None else len(measurement(z0 @ (plant.yg * plant.E0)))
+    response = np.zeros((N, width))
     direct = np.zeros_like(response)
 
     def observe(v):
+        if measurement is not None:
+            return measurement(v)
         ratio = v[plant.pm] / baseline
         return np.r_[np.log(abs(ratio)), np.angle(ratio)]
 
