@@ -1,0 +1,92 @@
+{
+  "degrees": 3.0,
+  "gamma": 7487.557339823724,
+  "conditional_loss_without_fixed_logdet": 97.71488770967213,
+  "gate": 0.999,
+  "identify": 0.95,
+  "dev": {
+    "events": 24,
+    "detected": 21,
+    "family": 19,
+    "joint": 19,
+    "macro_f1": 0.4120441432859428,
+    "extras": 111,
+    "quiet_extras": 0,
+    "quiet_hours": 0.051111111111111114,
+    "fa_normal_per_hour": 0.0,
+    "event_record_extras": 111,
+    "median_detection_s": 0.0,
+    "median_diagnosis_s": 0.0,
+    "confusion": [
+      [
+        23,
+        11,
+        30,
+        0,
+        47,
+        0
+      ],
+      [
+        1,
+        5,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        5,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        4,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        5,
+        0
+      ]
+    ],
+    "by_family": [
+      [
+        1,
+        0,
+        0,
+        5
+      ],
+      [
+        0,
+        1,
+        0,
+        5
+      ],
+      [
+        1,
+        1,
+        0,
+        4
+      ],
+      [
+        1,
+        0,
+        0,
+        5
+      ]
+    ]
+  },
+  "primary": "graph",
+  "source": "87ea8d349c1b2243958c5d6cff2292fa20dd4c740b140fbced278ba5b78b1029",
+  "gaussian": "e54c1070bbda88383fd72648b315350b007e586512786f5bf28e2db9246f532b"
+}

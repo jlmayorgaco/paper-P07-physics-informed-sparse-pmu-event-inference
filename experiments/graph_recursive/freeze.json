@@ -1,0 +1,130 @@
+{
+  "sigma": 0.02,
+  "gamma": 36342029.71857623,
+  "onset": 0.0015281757402101242,
+  "ending": [
+    0.0,
+    0.10714285714285714,
+    0.02727272727272727,
+    0.020761245674740483,
+    0.020689655172413793
+  ],
+  "gate": 0.999,
+  "identify": 0.95,
+  "labeled_dev_nll_without_constant": {
+    "0.02": [
+      148.43553691682678,
+      36342029.71857623
+    ],
+    "0.1": [
+      176.99371633150685,
+      136163496.8500029
+    ],
+    "0.5": [
+      210.71066615234153,
+      603712331.3864866
+    ],
+    "2.0": [
+      218.851832263037,
+      516247498.92018116
+    ]
+  },
+  "dev": {
+    "events": 24,
+    "detected": 13,
+    "family": 12,
+    "joint": 12,
+    "macro_f1": 0.4205128205128205,
+    "extras": 23,
+    "quiet_extras": 0,
+    "quiet_hours": 0.051111111111111114,
+    "fa_normal_per_hour": 0.0,
+    "event_record_extras": 23,
+    "median_detection_s": 0.0,
+    "median_diagnosis_s": 0.0,
+    "confusion": [
+      [
+        0,
+        3,
+        20,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        4,
+        0,
+        0,
+        0
+      ],
+      [
+        6,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        4,
+        0
+      ]
+    ],
+    "by_family": [
+      [
+        2,
+        0,
+        0,
+        4
+      ],
+      [
+        1,
+        1,
+        0,
+        4
+      ],
+      [
+        6,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        4
+      ]
+    ]
+  },
+  "codes": {
+    "study.py": "f3adbb1a8847c1d8a158d00207c0de87c68b2f65f0216d3b51b9bdb6748f0e46",
+    "estimator.py": "cb01aee774d626fcedc1163e3ebbe75488aa8cefb0cf4e85b639453cebb48d80",
+    "physical.py": "a9128d12ac9a28181a0be1a180286219666ae0651a4a2ea3afc01c904b378781",
+    "evaluate.py": "685434084bf7e2f500017a811001344847390fec6c89773285115eeef189e4c6",
+    "PROTOCOL.md": "620daef06c258ce3945c55e39a7bc3edbbb627e73b834fcc5c5e2b1db583e687",
+    "../supervised_stream/plant.py": "9817e56243e739e6dccf47ebc1d4c83a1e145dd4e00bf1b11a3ce221273c3e65",
+    "../supervised_stream/larger.py": "4a4b81669703846b2fcc56c1fb0ff1292b900513268667658fac353dcee4b881",
+    "../supervised_stream/learner.py": "ba670a4d1e0574b0954ca5d54f2d4e32c51cc99d587a9b5cc296738df5fde3e9",
+    "../branch_current_trial/run.py": "e30aef5b80bae5597e6653c3ea3cdf38cf027a071bef457e44d52e347e17a086",
+    "../history_conditioning/dynamics.py": "d5433b8b0383d2ba53cab34715ff5098adb9b8eb28f9f55516ac97f2fc49f175"
+  },
+  "dev_manifest": "9484775f1536e3a584a10c7bcca27fb447558574774715c25558cd31ef812c44",
+  "model": "d0eb3c973f8c9f9077a6319e7dc09e655c9857057addd1f7dea9616b150c12f6",
+  "training_observations": "5ce55b3939e209fc6fe457c0b8a9622038559b021d5486bf581918d2720e66ec",
+  "trees": "53553f9f61496e38def8fadcf771ec623b238b372746097d92e5f54d077b6156"
+}
