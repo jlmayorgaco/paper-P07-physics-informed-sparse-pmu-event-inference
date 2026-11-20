@@ -1,0 +1,37 @@
+{
+  "project": {
+    "experiments/second_family/classifier.py": "803462b1b7f3b73d7bd15e99317849cf75cca395081584df7182169b55c94ef2",
+    "experiments/second_family/freeze.py": "e3e4cceeba9e59ddf93d87e0cb81fdb19013d1dce58c036327026ab1102b5973",
+    "experiments/second_family/predict.py": "b03c5583ceef4c440c3d2defba539e74ed039ee703173d51230918c1b2ee4f04",
+    "experiments/second_family/score.py": "6f299dedae6dccfd72d631d6d12a362b8cf816dd91b5520d4fd97df1e484ca55",
+    "experiments/second_family/shared.py": "866a3335ac13457806efa2bdee271afcd556dd10345a0609972a1d948f7c67fa",
+    "experiments/second_family/simulate_pairs.py": "1985d5c68d42135cc721dac6ad63f69b0f94894d7664d045b3222c862fbbac42",
+    "experiments/second_family/spectral.py": "ac301084e2421500eacb2ad5edf57179300772abd36b2aef197f47915068132f",
+    "experiments/second_family/PROTOCOL.md": "3d484a4f1d0dec400b73782320fb630182ae66c60f4e71f519f705cb124d24bd",
+    "experiments/second_family/cnn.pt": "eaad70212d0f89d97f068c6410033073ead63be719ed009cc74531bc3c0faf13",
+    "experiments/second_family/results/training.json": "fc9f9dd906db9eff911e03d9c67be816786cf57d1d7cebc94d30cc6022e0dec8",
+    "experiments/history_conditioning/dynamics.py": "a19a43625695b164fe382967fc10760d7d5038a3ff24b880592ff75eab35af3e"
+  },
+  "science": {
+    "experiments/PAPER_RECOVERY_C03/common.py": "2f58fe3c68004695211d35e49816cb0e1d764f340c53dcbec59de96124cd6a11",
+    "experiments/PAPER_RECOVERY_C03/worker.py": "787a43b6a2e6fcf53cb29b07491d1b72eb57c5c161b013ae76a6673f14f1d7c2",
+    "experiments/PAPER_RECOVERY_C03/simulate.py": "4df29271b08a4aad670fe9b44b5aee3b764ce9cf2b8278204c32196eecf9032b",
+    "experiments/PAPER_RECOVERY_C03/plant2.py": "5a7bbf7802e8dceb70c713e22a3ee3dbfede82fd2df85ff6879b3790e63343d0",
+    "experiments/PAPER_RECOVERY_C03/design.py": "786084bd73fcab06c8541a2218e4d726654ff28cf432c38572928ed4d78063e9",
+    "experiments/PAPER_RECOVERY_C03/run/METHOD_FREEZE.json": "0769e417f0192d9d27ee7d31505b08ef260d8f59fc3e6e9ea0f66c2430bcc450",
+    "experiments/PAPER_RECOVERY_C03/run/DEPENDENCIES.json": "396a2c5180e9c95f9b52a7233b0f7b83625f814b9313f8f207a20a6f3e9b5826",
+    "experiments/PAPER_RECOVERY_C03/run/EXECUTION_FREEZE.json": "0bd52eaf262b9c946787c4c705f8e65e2f5ed21c1acb00fe3f3e240d6bb5837c",
+    "experiments/PAPER_RECOVERY_C03/run/CAL_SELECTION.json": "879cf5c20d6882daa50b1d25d2ae2a2222d95eaf2de36559a106522bf878fca3",
+    "experiments/PAPER_RECOVERY_C03/run/TEST_P2_SEAL.json": "9434b915f9da0223ae42cc63b1573dd38d2c7a8873e0ffd0df315a3754006ccc",
+    "experiments/PAPER_RECOVERY_C03/run/CAL_PREDICTIONS_SEAL.json": "4fb603c1f2916eb0741415422f4153dbe532d8f6c557fa8619728c37d82250de",
+    "experiments/PAPER_RECOVERY_C03/run/OBSERVATIONS_P2_TEST.json": "41e71749e3f8072b369e8b42475a3092aa95039e3925451560160bc769368ae4",
+    "experiments/PAPER_RECOVERY_C03/run/OBSERVATIONS_F01_CAL.json": "1b2bede4b58666b5a8fb611f761ae85b67b931b99bf0850b7e2529f6644df0d3",
+    "SIM0001_JuliaPD_F01/runtime/reference/noise.py": "df164abc812db9066f22fac72e646a5993173c6500782bd59c51264c36a37584",
+    "SIM0001_JuliaPD_F01/runtime/reference/pmu_operator.py": "e9311c63dad492120e5ba422e90471b808e5527118778cde9323a9d0f2c5a5ff",
+    "SIM0001_JuliaPD_F01/runtime/reference/terminal_mapping.csv": "74c1ba517d22f0c7d8c478c55fff32207d826a816c291187cb86d6c3b91bd9be",
+    "SIM0001_JuliaPD_F01/runtime/reference/reporting_config.json": "2f9759a0f1f062dd76a16e0b873ced9eed3f3b8402a3a1a9cdd60872148f9d01",
+    "SIM0001_JuliaPD_F01/runtime/reference/stochastic_model.json": "f873cfcd4267f499f719c9003f5a005fdafb019dfdd5b35ac1d62129e870da29",
+    "data/topology/ieee39/branches_physical.csv": "1c754c666fa543a8d506dadf82d57f67835e7bd717e97b32b623b069607c162c",
+    "experiments/PAPER_ALLEVENTS_V1/physics/network.py": "a3536c55230d2cc7cbf0d9f89ed791242a2e34b2da77f2130a055022ece2af11"
+  }
+}
