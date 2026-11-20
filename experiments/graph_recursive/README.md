@@ -1,5 +1,7 @@
 # Estimador recursivo de intervenciones físicas en la IEEE‑39
 
+Una segunda prueba sobre trayectorias emparejadas evaluó la confirmación de nuevos episodios. La variante orientada a macro-F1 pasó de 159 a 9 avisos extra y de 0,610 a 0,888 de macro-F1 en esas mismas trayectorias. El supervisado obtuvo 0,938 y un aviso extra. [Prueba de confirmación y resultados por segundo evento](episode_confirmation/README.md)
+
 MET_BAYES_GRAFO recibe un reporte de ocho PMU cada 1/30 s. Devuelve evidencia de intervención, el par familia–activo mejor respaldado y la masa de ese par condicionada a que haya una intervención. Un aviso tiene dos marcas de tiempo, detección e identificación. Se implementaron normalidad, falla trifásica en barra, apertura de rama, escalón positivo de par de generador y aumento de carga de impedancia constante. La primera prueba usa los ocho instrumentos disponibles. El disparo de máquina y la inyección de generación en una barra PQ requieren operadores adicionales.
 
 ## Qué predice la física
