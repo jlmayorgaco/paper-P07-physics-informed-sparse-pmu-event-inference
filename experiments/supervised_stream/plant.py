@@ -163,12 +163,14 @@ class Generator:
         return obs.astype("float32")
 
 
-def generate(split):
-    folder=DATA/split
+def generate(split, count=None, seed=None, data=DATA, output=HERE):
+    folder=data/split
     folder.mkdir(parents=True,exist_ok=True)
     simulator=Generator()
-    count=700 if split=="train" else 300
-    seeds=np.random.SeedSequence(SEEDS[split]).spawn(count)
+    if count is None:
+        count=700 if split=="train" else 300
+    seed=SEEDS[split] if seed is None else seed
+    seeds=np.random.SeedSequence(seed).spawn(count)
     truth=[]
     array=np.lib.format.open_memmap(folder/"observations.npy",mode="w+",dtype="float32",
                                     shape=(count,FRAMES,8,5))
@@ -179,9 +181,9 @@ def generate(split):
         truth.append(events)
     array.flush()
     (folder/"truth.json").write_text(json.dumps(truth))
-    summary={"seed":SEEDS[split],"records":count,"events":sum(map(len,truth)),
+    summary={"seed":seed,"records":count,"events":sum(map(len,truth)),
              "normal_records":sum(not seq for seq in truth),
              "sha256_observations":hashlib.file_digest(open(folder/"observations.npy","rb"),"sha256").hexdigest(),
              "sha256_truth":hashlib.sha256((folder/"truth.json").read_bytes()).hexdigest()}
-    (HERE/f"{split}_manifest.json").write_text(json.dumps(summary,indent=2))
+    (output/f"{split}_manifest.json").write_text(json.dumps(summary,indent=2))
     print(summary,flush=True)
