@@ -174,8 +174,8 @@ def generate(split, count=None, seed=None, data=DATA, output=HERE):
     truth=[]
     array=np.lib.format.open_memmap(folder/"observations.npy",mode="w+",dtype="float32",
                                     shape=(count,FRAMES,8,5))
-    for i,seed in enumerate(seeds):
-        rng=np.random.default_rng(seed)
+    for i,child_seed in enumerate(seeds):
+        rng=np.random.default_rng(child_seed)
         events=simulator.schedule(rng)
         array[i]=simulator.simulate(events,rng)
         truth.append(events)
