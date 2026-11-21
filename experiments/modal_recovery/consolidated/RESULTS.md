@@ -4,6 +4,8 @@ MET_BAYES_GRAFO_ADAPTATIVO estimates whether a second load or line intervention 
 
 On the nominal nine-second catalog the estimator localized 239/240 events with one alarm on controls. Moderate angular and timing errors reduced exact location to 228/240, with two control alarms. All twelve misses were at BUS31. Extending the nominal decision window to 30 seconds increased alarms to 44/48 controls. The archived recovery dictionary ends 271 reports after clearance and the implementation holds its last value thereafter. This limits the early estimator’s supported monitoring horizon.
 
+The successor extends these curves to 30 s and was tested on new early and late switches. [Successor and independent results](long_horizon/RESULTS.md)
+
 ## Fresh paired P2 test
 
 The catalog includes 240 second events and 240 matched recoveries without a second event. Each efficacy denominator includes all 240 events. The known first clearance initializes the recovery model. The alarm must fall inside the second event, and its family and source decision must arrive before the event clears. Both members of each pair share the first event and the noise history. Four conditions repeat the same records.
