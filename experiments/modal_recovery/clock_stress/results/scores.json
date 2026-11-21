@@ -1,0 +1,5945 @@
+{
+  "prediction_seal": "597f8622d1ccbfd611061e364f5df600934403726d52450092a196bd9aef5241",
+  "points": [
+    {
+      "setting": {
+        "name": "nominal",
+        "angle": 0,
+        "jitter": 0,
+        "offset": 0,
+        "drift": 0,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 480,
+          "family": 480,
+          "exact": 480,
+          "early": 0,
+          "control_alarm": 1
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 1,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 33,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9937783263633752,
+            1.0
+          ],
+          "family": [
+            0.9937783263633752,
+            1.0
+          ],
+          "exact": [
+            0.9937783263633752,
+            1.0
+          ],
+          "early": [
+            0.0,
+            0.0062216736366248445
+          ],
+          "control_alarm": [
+            0.00010685532053757395,
+            0.00984459214689148
+          ]
+        },
+        "excess_false_upper95": 0.00984459214689148
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 120,
+          "family": 120,
+          "exact": 120,
+          "early": 0,
+          "control_alarm": 2
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 2,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 120,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9753445989443437,
+            1.0
+          ],
+          "family": [
+            0.9753445989443437,
+            1.0
+          ],
+          "exact": [
+            0.9753445989443437,
+            1.0
+          ],
+          "early": [
+            0.0,
+            0.024655401055656376
+          ],
+          "control_alarm": [
+            0.002969348343917377,
+            0.05153371368637796
+          ]
+        },
+        "excess_false_upper95": 0.05153371368637796
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 0,
+        "angular_records": 0,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "angle",
+        "angle": 0.0001,
+        "jitter": 0,
+        "offset": 0,
+        "drift": 0,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 480,
+          "family": 480,
+          "exact": 480,
+          "early": 0,
+          "control_alarm": 1
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 1,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 33,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9937783263633752,
+            1.0
+          ],
+          "family": [
+            0.9937783263633752,
+            1.0
+          ],
+          "exact": [
+            0.9937783263633752,
+            1.0
+          ],
+          "early": [
+            0.0,
+            0.0062216736366248445
+          ],
+          "control_alarm": [
+            0.00010685532053757395,
+            0.00984459214689148
+          ]
+        },
+        "excess_false_upper95": 0.00984459214689148
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 120,
+          "family": 119,
+          "exact": 119,
+          "early": 0,
+          "control_alarm": 2
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 2,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 120,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9753445989443437,
+            1.0
+          ],
+          "family": [
+            0.9610791531398315,
+            0.9995726472213267
+          ],
+          "exact": [
+            0.9610791531398315,
+            0.9995726472213267
+          ],
+          "early": [
+            0.0,
+            0.024655401055656376
+          ],
+          "control_alarm": [
+            0.002969348343917377,
+            0.05153371368637796
+          ]
+        },
+        "excess_false_upper95": 0.05153371368637796
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 0,
+        "angular_records": 0,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "angle",
+        "angle": 0.00025,
+        "jitter": 0,
+        "offset": 0,
+        "drift": 0,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 480,
+          "family": 480,
+          "exact": 480,
+          "early": 0,
+          "control_alarm": 1
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 1,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 33,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9937783263633752,
+            1.0
+          ],
+          "family": [
+            0.9937783263633752,
+            1.0
+          ],
+          "exact": [
+            0.9937783263633752,
+            1.0
+          ],
+          "early": [
+            0.0,
+            0.0062216736366248445
+          ],
+          "control_alarm": [
+            0.00010685532053757395,
+            0.00984459214689148
+          ]
+        },
+        "excess_false_upper95": 0.00984459214689148
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 120,
+          "family": 119,
+          "exact": 119,
+          "early": 0,
+          "control_alarm": 2
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 2,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 120,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9753445989443437,
+            1.0
+          ],
+          "family": [
+            0.9610791531398315,
+            0.9995726472213267
+          ],
+          "exact": [
+            0.9610791531398315,
+            0.9995726472213267
+          ],
+          "early": [
+            0.0,
+            0.024655401055656376
+          ],
+          "control_alarm": [
+            0.002969348343917377,
+            0.05153371368637796
+          ]
+        },
+        "excess_false_upper95": 0.05153371368637796
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 0,
+        "angular_records": 0,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "angle",
+        "angle": 0.0005,
+        "jitter": 0,
+        "offset": 0,
+        "drift": 0,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 479,
+          "family": 479,
+          "exact": 479,
+          "early": 1,
+          "control_alarm": 3
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 3,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 33,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9901554078531085,
+            0.9998931446794624
+          ],
+          "family": [
+            0.9901554078531085,
+            0.9998931446794624
+          ],
+          "exact": [
+            0.9901554078531085,
+            0.9998931446794624
+          ],
+          "early": [
+            0.00010685532053757395,
+            0.00984459214689148
+          ],
+          "control_alarm": [
+            0.0017056270146670227,
+            0.016073619903362455
+          ]
+        },
+        "excess_false_upper95": 0.016073619903362455
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 120,
+          "family": 119,
+          "exact": 119,
+          "early": 0,
+          "control_alarm": 2
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 2,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 120,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9753445989443437,
+            1.0
+          ],
+          "family": [
+            0.9610791531398315,
+            0.9995726472213267
+          ],
+          "exact": [
+            0.9610791531398315,
+            0.9995726472213267
+          ],
+          "early": [
+            0.0,
+            0.024655401055656376
+          ],
+          "control_alarm": [
+            0.002969348343917377,
+            0.05153371368637796
+          ]
+        },
+        "excess_false_upper95": 0.05153371368637796
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 0,
+        "angular_records": 0,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "angle",
+        "angle": 0.001,
+        "jitter": 0,
+        "offset": 0,
+        "drift": 0,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 478,
+          "family": 478,
+          "exact": 478,
+          "early": 2,
+          "control_alarm": 7
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 7,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 33,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9869423324060282,
+            0.9992591656341325
+          ],
+          "family": [
+            0.9869423324060282,
+            0.9992591656341325
+          ],
+          "exact": [
+            0.9869423324060282,
+            0.9992591656341325
+          ],
+          "early": [
+            0.0007408343658674893,
+            0.013057667593971799
+          ],
+          "control_alarm": [
+            0.006863874946569266,
+            0.027216654957655063
+          ]
+        },
+        "excess_false_upper95": 0.027216654957655063
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 119,
+          "family": 119,
+          "exact": 119,
+          "early": 0,
+          "control_alarm": 2
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 2,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 119,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9610791531398315,
+            0.9995726472213267
+          ],
+          "family": [
+            0.9610791531398315,
+            0.9995726472213267
+          ],
+          "exact": [
+            0.9610791531398315,
+            0.9995726472213267
+          ],
+          "early": [
+            0.0,
+            0.024655401055656376
+          ],
+          "control_alarm": [
+            0.002969348343917377,
+            0.05153371368637796
+          ]
+        },
+        "excess_false_upper95": 0.05153371368637796
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 4,
+        "angular_records": 3,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "angle",
+        "angle": 0.002,
+        "jitter": 0,
+        "offset": 0,
+        "drift": 0,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 388,
+          "family": 388,
+          "exact": 388,
+          "early": 92,
+          "control_alarm": 356
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 356,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 26,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.7763524900450902,
+            0.8374542599392638
+          ],
+          "family": [
+            0.7763524900450902,
+            0.8374542599392638
+          ],
+          "exact": [
+            0.7763524900450902,
+            0.8374542599392638
+          ],
+          "early": [
+            0.16254574006073616,
+            0.2236475099549097
+          ],
+          "control_alarm": [
+            0.7067035451409615,
+            0.7743976743196815
+          ]
+        },
+        "excess_false_upper95": 0.7743976743196815
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 100,
+          "family": 100,
+          "exact": 100,
+          "early": 20,
+          "control_alarm": 86
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 86,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 100,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.7671024598874594,
+            0.8867261112602834
+          ],
+          "family": [
+            0.7671024598874594,
+            0.8867261112602834
+          ],
+          "exact": [
+            0.7671024598874594,
+            0.8867261112602834
+          ],
+          "early": [
+            0.11327388873971657,
+            0.23289754011254063
+          ],
+          "control_alarm": [
+            0.6412520202546214,
+            0.7838542494475071
+          ]
+        },
+        "excess_false_upper95": 0.7838542494475071
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 6570,
+        "angular_records": 36,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "angle",
+        "angle": 0.003,
+        "jitter": 0,
+        "offset": 0,
+        "drift": 0,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 231,
+          "family": 231,
+          "exact": 231,
+          "early": 249,
+          "control_alarm": 480
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 480,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 12,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.4428593509749423,
+            0.5198130175678166
+          ],
+          "family": [
+            0.4428593509749423,
+            0.5198130175678166
+          ],
+          "exact": [
+            0.4428593509749423,
+            0.5198130175678166
+          ],
+          "early": [
+            0.4801869824321833,
+            0.5571406490250577
+          ],
+          "control_alarm": [
+            0.9937783263633752,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 48,
+          "family": 48,
+          "exact": 48,
+          "early": 72,
+          "control_alarm": 119
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 119,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 48,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.32478765467163073,
+            0.4789884225276073
+          ],
+          "family": [
+            0.32478765467163073,
+            0.4789884225276073
+          ],
+          "exact": [
+            0.32478765467163073,
+            0.4789884225276073
+          ],
+          "early": [
+            0.5210115774723927,
+            0.6752123453283693
+          ],
+          "control_alarm": [
+            0.9610791531398315,
+            0.9995726472213267
+          ]
+        },
+        "excess_false_upper95": 0.9995726472213267
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 19906,
+        "angular_records": 36,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "angle",
+        "angle": 0.004,
+        "jitter": 0,
+        "offset": 0,
+        "drift": 0,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 162,
+          "family": 162,
+          "exact": 162,
+          "early": 318,
+          "control_alarm": 480
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 480,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 6,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.3017745556578034,
+            0.37472212816167827
+          ],
+          "family": [
+            0.3017745556578034,
+            0.37472212816167827
+          ],
+          "exact": [
+            0.3017745556578034,
+            0.37472212816167827
+          ],
+          "early": [
+            0.6252778718383217,
+            0.6982254443421966
+          ],
+          "control_alarm": [
+            0.9937783263633752,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 42,
+          "family": 42,
+          "exact": 42,
+          "early": 78,
+          "control_alarm": 120
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 120,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 42,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.2776457703959208,
+            0.42802817077253646
+          ],
+          "family": [
+            0.2776457703959208,
+            0.42802817077253646
+          ],
+          "exact": [
+            0.2776457703959208,
+            0.42802817077253646
+          ],
+          "early": [
+            0.5719718292274636,
+            0.7223542296040791
+          ],
+          "control_alarm": [
+            0.9753445989443437,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 24930,
+        "angular_records": 36,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "angle",
+        "angle": 0.005,
+        "jitter": 0,
+        "offset": 0,
+        "drift": 0,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 145,
+          "family": 145,
+          "exact": 145,
+          "early": 335,
+          "control_alarm": 480
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 480,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 6,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.26754580713537573,
+            0.3384456546313403
+          ],
+          "family": [
+            0.26754580713537573,
+            0.3384456546313403
+          ],
+          "exact": [
+            0.26754580713537573,
+            0.3384456546313403
+          ],
+          "early": [
+            0.6615543453686596,
+            0.7324541928646242
+          ],
+          "control_alarm": [
+            0.9937783263633752,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 38,
+          "family": 38,
+          "exact": 38,
+          "early": 82,
+          "control_alarm": 120
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 120,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 38,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.24668979801383406,
+            0.39358987128247347
+          ],
+          "family": [
+            0.24668979801383406,
+            0.39358987128247347
+          ],
+          "exact": [
+            0.24668979801383406,
+            0.39358987128247347
+          ],
+          "early": [
+            0.6064101287175265,
+            0.7533102019861659
+          ],
+          "control_alarm": [
+            0.9753445989443437,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 23093,
+        "angular_records": 36,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "angle",
+        "angle": 0.008,
+        "jitter": 0,
+        "offset": 0,
+        "drift": 0,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 138,
+          "family": 138,
+          "exact": 138,
+          "early": 342,
+          "control_alarm": 480
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 480,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 5,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.25352093409861537,
+            0.32343934652581496
+          ],
+          "family": [
+            0.25352093409861537,
+            0.32343934652581496
+          ],
+          "exact": [
+            0.25352093409861537,
+            0.32343934652581496
+          ],
+          "early": [
+            0.676560653474185,
+            0.7464790659013847
+          ],
+          "control_alarm": [
+            0.9937783263633752,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 37,
+          "family": 37,
+          "exact": 37,
+          "early": 83,
+          "control_alarm": 120
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 120,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 37,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.23901374739042605,
+            0.3849185496885372
+          ],
+          "family": [
+            0.23901374739042605,
+            0.3849185496885372
+          ],
+          "exact": [
+            0.23901374739042605,
+            0.3849185496885372
+          ],
+          "early": [
+            0.6150814503114628,
+            0.760986252609574
+          ],
+          "control_alarm": [
+            0.9753445989443437,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 10738,
+        "angular_records": 36,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "angle",
+        "angle": 0.01,
+        "jitter": 0,
+        "offset": 0,
+        "drift": 0,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 138,
+          "family": 138,
+          "exact": 138,
+          "early": 342,
+          "control_alarm": 480
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 480,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 5,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.25352093409861537,
+            0.32343934652581496
+          ],
+          "family": [
+            0.25352093409861537,
+            0.32343934652581496
+          ],
+          "exact": [
+            0.25352093409861537,
+            0.32343934652581496
+          ],
+          "early": [
+            0.676560653474185,
+            0.7464790659013847
+          ],
+          "control_alarm": [
+            0.9937783263633752,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 37,
+          "family": 37,
+          "exact": 36,
+          "early": 83,
+          "control_alarm": 120
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 120,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 37,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.23901374739042605,
+            0.3849185496885372
+          ],
+          "family": [
+            0.23901374739042605,
+            0.3849185496885372
+          ],
+          "exact": [
+            0.23136396329437708,
+            0.37622152128893194
+          ],
+          "early": [
+            0.6150814503114628,
+            0.760986252609574
+          ],
+          "control_alarm": [
+            0.9753445989443437,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 5789,
+        "angular_records": 36,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "angle",
+        "angle": 0.02,
+        "jitter": 0,
+        "offset": 0,
+        "drift": 0,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 138,
+          "family": 138,
+          "exact": 137,
+          "early": 342,
+          "control_alarm": 480
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 480,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 5,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.25352093409861537,
+            0.32343934652581496
+          ],
+          "family": [
+            0.25352093409861537,
+            0.32343934652581496
+          ],
+          "exact": [
+            0.2515208456971728,
+            0.32129214471249856
+          ],
+          "early": [
+            0.676560653474185,
+            0.7464790659013847
+          ],
+          "control_alarm": [
+            0.9937783263633752,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 37,
+          "family": 37,
+          "exact": 26,
+          "early": 83,
+          "control_alarm": 120
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 120,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 37,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.23901374739042605,
+            0.3849185496885372
+          ],
+          "family": [
+            0.23901374739042605,
+            0.3849185496885372
+          ],
+          "exact": [
+            0.15647939696490004,
+            0.28768171167869755
+          ],
+          "early": [
+            0.6150814503114628,
+            0.760986252609574
+          ],
+          "control_alarm": [
+            0.9753445989443437,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 285,
+        "angular_records": 36,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "jitter",
+        "angle": 0,
+        "jitter": 0.005,
+        "offset": 0,
+        "drift": 0,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 480,
+          "family": 480,
+          "exact": 480,
+          "early": 0,
+          "control_alarm": 1
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 1,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 33,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9937783263633752,
+            1.0
+          ],
+          "family": [
+            0.9937783263633752,
+            1.0
+          ],
+          "exact": [
+            0.9937783263633752,
+            1.0
+          ],
+          "early": [
+            0.0,
+            0.0062216736366248445
+          ],
+          "control_alarm": [
+            0.00010685532053757395,
+            0.00984459214689148
+          ]
+        },
+        "excess_false_upper95": 0.00984459214689148
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 119,
+          "family": 119,
+          "exact": 119,
+          "early": 0,
+          "control_alarm": 2
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 2,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 119,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9610791531398315,
+            0.9995726472213267
+          ],
+          "family": [
+            0.9610791531398315,
+            0.9995726472213267
+          ],
+          "exact": [
+            0.9610791531398315,
+            0.9995726472213267
+          ],
+          "early": [
+            0.0,
+            0.024655401055656376
+          ],
+          "control_alarm": [
+            0.002969348343917377,
+            0.05153371368637796
+          ]
+        },
+        "excess_false_upper95": 0.05153371368637796
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 0,
+        "angular_records": 0,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "jitter",
+        "angle": 0,
+        "jitter": 0.01,
+        "offset": 0,
+        "drift": 0,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 479,
+          "family": 479,
+          "exact": 479,
+          "early": 1,
+          "control_alarm": 2
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 2,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 33,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9901554078531085,
+            0.9998931446794624
+          ],
+          "family": [
+            0.9901554078531085,
+            0.9998931446794624
+          ],
+          "exact": [
+            0.9901554078531085,
+            0.9998931446794624
+          ],
+          "early": [
+            0.00010685532053757395,
+            0.00984459214689148
+          ],
+          "control_alarm": [
+            0.0007408343658674893,
+            0.013057667593971799
+          ]
+        },
+        "excess_false_upper95": 0.013057667593971799
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 119,
+          "family": 119,
+          "exact": 119,
+          "early": 0,
+          "control_alarm": 2
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 2,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 119,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9610791531398315,
+            0.9995726472213267
+          ],
+          "family": [
+            0.9610791531398315,
+            0.9995726472213267
+          ],
+          "exact": [
+            0.9610791531398315,
+            0.9995726472213267
+          ],
+          "early": [
+            0.0,
+            0.024655401055656376
+          ],
+          "control_alarm": [
+            0.002969348343917377,
+            0.05153371368637796
+          ]
+        },
+        "excess_false_upper95": 0.05153371368637796
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 0,
+        "angular_records": 0,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "jitter",
+        "angle": 0,
+        "jitter": 0.025,
+        "offset": 0,
+        "drift": 0,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 476,
+          "family": 476,
+          "exact": 476,
+          "early": 2,
+          "control_alarm": 4
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 4,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 31,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9810323601381492,
+            0.9971486430906892
+          ],
+          "family": [
+            0.9810323601381492,
+            0.9971486430906892
+          ],
+          "exact": [
+            0.9810323601381492,
+            0.9971486430906892
+          ],
+          "early": [
+            0.0007408343658674893,
+            0.013057667593971799
+          ],
+          "control_alarm": [
+            0.0028513569093108412,
+            0.018967639861850783
+          ]
+        },
+        "excess_false_upper95": 0.018967639861850783
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 117,
+          "family": 117,
+          "exact": 117,
+          "early": 0,
+          "control_alarm": 2
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 2,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 117,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9366560589981412,
+            0.9931520036090219
+          ],
+          "family": [
+            0.9366560589981412,
+            0.9931520036090219
+          ],
+          "exact": [
+            0.9366560589981412,
+            0.9931520036090219
+          ],
+          "early": [
+            0.0,
+            0.024655401055656376
+          ],
+          "control_alarm": [
+            0.002969348343917377,
+            0.05153371368637796
+          ]
+        },
+        "excess_false_upper95": 0.05153371368637796
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 8,
+        "angular_records": 3,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "jitter",
+        "angle": 0,
+        "jitter": 0.05,
+        "offset": 0,
+        "drift": 0,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 436,
+          "family": 435,
+          "exact": 435,
+          "early": 42,
+          "control_alarm": 172
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 172,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 27,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.8837050330717887,
+            0.9291169218964559
+          ],
+          "family": [
+            0.8814142776167516,
+            0.9272627570971456
+          ],
+          "exact": [
+            0.8814142776167516,
+            0.9272627570971456
+          ],
+          "early": [
+            0.06718507201383495,
+            0.11170343582426699
+          ],
+          "control_alarm": [
+            0.3220141877980215,
+            0.3959566435105621
+          ]
+        },
+        "excess_false_upper95": 0.3959566435105621
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 104,
+          "family": 104,
+          "exact": 104,
+          "early": 12,
+          "control_alarm": 46
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 46,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 104,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.8045561538017076,
+            0.9145456359389338
+          ],
+          "family": [
+            0.8045561538017076,
+            0.9145456359389338
+          ],
+          "exact": [
+            0.8045561538017076,
+            0.9145456359389338
+          ],
+          "early": [
+            0.05872096267462788,
+            0.1569835139281603
+          ],
+          "control_alarm": [
+            0.30898310859385686,
+            0.4620911279693046
+          ]
+        },
+        "excess_false_upper95": 0.4620911279693046
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 1414,
+        "angular_records": 36,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "jitter",
+        "angle": 0,
+        "jitter": 0.075,
+        "offset": 0,
+        "drift": 0,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 342,
+          "family": 342,
+          "exact": 342,
+          "early": 135,
+          "control_alarm": 386
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 386,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 20,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.676560653474185,
+            0.7464790659013847
+          ],
+          "family": [
+            0.676560653474185,
+            0.7464790659013847
+          ],
+          "exact": [
+            0.676560653474185,
+            0.7464790659013847
+          ],
+          "early": [
+            0.24752332384195389,
+            0.3169951032945483
+          ],
+          "control_alarm": [
+            0.7719643792920751,
+            0.8335486432111927
+          ]
+        },
+        "excess_false_upper95": 0.8335486432111927
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 81,
+          "family": 81,
+          "exact": 81,
+          "early": 36,
+          "control_alarm": 103
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 103,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 81,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.5977639797980758,
+            0.7456084620494436
+          ],
+          "family": [
+            0.5977639797980758,
+            0.7456084620494436
+          ],
+          "exact": [
+            0.5977639797980758,
+            0.7456084620494436
+          ],
+          "early": [
+            0.23136396329437708,
+            0.37622152128893194
+          ],
+          "control_alarm": [
+            0.7951098655045514,
+            0.9076792882682413
+          ]
+        },
+        "excess_false_upper95": 0.9076792882682413
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 4164,
+        "angular_records": 36,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "jitter",
+        "angle": 0,
+        "jitter": 0.1,
+        "offset": 0,
+        "drift": 0,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 266,
+          "family": 266,
+          "exact": 266,
+          "early": 212,
+          "control_alarm": 466
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 466,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 14,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.51563453977655,
+            0.5922007533653963
+          ],
+          "family": [
+            0.51563453977655,
+            0.5922007533653963
+          ],
+          "exact": [
+            0.51563453977655,
+            0.5922007533653963
+          ],
+          "early": [
+            0.4036870158564097,
+            0.48018268554085125
+          ],
+          "control_alarm": [
+            0.9547782045817771,
+            0.9822825553282565
+          ]
+        },
+        "excess_false_upper95": 0.9822825553282565
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 65,
+          "family": 64,
+          "exact": 64,
+          "early": 53,
+          "control_alarm": 117
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 117,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 65,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.46254521970265017,
+            0.6192164402900895
+          ],
+          "family": [
+            0.4542765180413354,
+            0.6111329096353613
+          ],
+          "exact": [
+            0.4542765180413354,
+            0.6111329096353613
+          ],
+          "early": [
+            0.36467892299155075,
+            0.5208552213811258
+          ],
+          "control_alarm": [
+            0.9366560589981412,
+            0.9931520036090219
+          ]
+        },
+        "excess_false_upper95": 0.9931520036090219
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 6491,
+        "angular_records": 36,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "jitter",
+        "angle": 0,
+        "jitter": 0.15,
+        "offset": 0,
+        "drift": 0,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 187,
+          "family": 187,
+          "exact": 187,
+          "early": 293,
+          "control_alarm": 480
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 480,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 14,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.35251109678849124,
+            0.42767146196440936
+          ],
+          "family": [
+            0.35251109678849124,
+            0.42767146196440936
+          ],
+          "exact": [
+            0.35251109678849124,
+            0.42767146196440936
+          ],
+          "early": [
+            0.5723285380355906,
+            0.6474889032115088
+          ],
+          "control_alarm": [
+            0.9937783263633752,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 49,
+          "family": 49,
+          "exact": 49,
+          "early": 70,
+          "control_alarm": 120
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 120,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 49,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.3327229190047792,
+            0.4874044176545961
+          ],
+          "family": [
+            0.3327229190047792,
+            0.4874044176545961
+          ],
+          "exact": [
+            0.3327229190047792,
+            0.4874044176545961
+          ],
+          "early": [
+            0.5042010768771671,
+            0.6593201298518301
+          ],
+          "control_alarm": [
+            0.9753445989443437,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 8605,
+        "angular_records": 36,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "jitter",
+        "angle": 0,
+        "jitter": 0.25,
+        "offset": 0,
+        "drift": 0,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 146,
+          "family": 146,
+          "exact": 146,
+          "early": 334,
+          "control_alarm": 480
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 480,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 7,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.26955276147515383,
+            0.3405860319935761
+          ],
+          "family": [
+            0.26955276147515383,
+            0.3405860319935761
+          ],
+          "exact": [
+            0.26955276147515383,
+            0.3405860319935761
+          ],
+          "early": [
+            0.6594139680064239,
+            0.7304472385248462
+          ],
+          "control_alarm": [
+            0.9937783263633752,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 41,
+          "family": 41,
+          "exact": 40,
+          "early": 79,
+          "control_alarm": 120
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 120,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 41,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.2698699965260587,
+            0.4194547330984538
+          ],
+          "family": [
+            0.2698699965260587,
+            0.4194547330984538
+          ],
+          "exact": [
+            0.26211843460038725,
+            0.41085748927437193
+          ],
+          "early": [
+            0.5805452669015462,
+            0.7301300034739413
+          ],
+          "control_alarm": [
+            0.9753445989443437,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 7532,
+        "angular_records": 36,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "jitter",
+        "angle": 0,
+        "jitter": 0.5,
+        "offset": 0,
+        "drift": 0,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 139,
+          "family": 139,
+          "exact": 139,
+          "early": 341,
+          "control_alarm": 480
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 480,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 5,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.255521899747313,
+            0.3255856766556742
+          ],
+          "family": [
+            0.255521899747313,
+            0.3255856766556742
+          ],
+          "exact": [
+            0.255521899747313,
+            0.3255856766556742
+          ],
+          "early": [
+            0.6744143233443258,
+            0.744478100252687
+          ],
+          "control_alarm": [
+            0.9937783263633752,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 38,
+          "family": 38,
+          "exact": 31,
+          "early": 82,
+          "control_alarm": 120
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 120,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 38,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.24668979801383406,
+            0.39358987128247347
+          ],
+          "family": [
+            0.24668979801383406,
+            0.39358987128247347
+          ],
+          "exact": [
+            0.19353290506212537,
+            0.33232871298945155
+          ],
+          "early": [
+            0.6064101287175265,
+            0.7533102019861659
+          ],
+          "control_alarm": [
+            0.9753445989443437,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 2528,
+        "angular_records": 36,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "jitter",
+        "angle": 0,
+        "jitter": 1,
+        "offset": 0,
+        "drift": 0,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 138,
+          "family": 138,
+          "exact": 135,
+          "early": 342,
+          "control_alarm": 480
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 480,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 5,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.25352093409861537,
+            0.32343934652581496
+          ],
+          "family": [
+            0.25352093409861537,
+            0.32343934652581496
+          ],
+          "exact": [
+            0.24752332384195389,
+            0.3169951032945483
+          ],
+          "early": [
+            0.676560653474185,
+            0.7464790659013847
+          ],
+          "control_alarm": [
+            0.9937783263633752,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 37,
+          "family": 37,
+          "exact": 17,
+          "early": 83,
+          "control_alarm": 120
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 120,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 37,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.23901374739042605,
+            0.3849185496885372
+          ],
+          "family": [
+            0.23901374739042605,
+            0.3849185496885372
+          ],
+          "exact": [
+            0.09232071173175871,
+            0.2048901344954486
+          ],
+          "early": [
+            0.6150814503114628,
+            0.760986252609574
+          ],
+          "control_alarm": [
+            0.9753445989443437,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 317,
+        "angular_records": 36,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "jitter",
+        "angle": 0,
+        "jitter": 2.5,
+        "offset": 0,
+        "drift": 0,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 138,
+          "family": 138,
+          "exact": 115,
+          "early": 342,
+          "control_alarm": 480
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 480,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 5,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.25352093409861537,
+            0.32343934652581496
+          ],
+          "family": [
+            0.25352093409861537,
+            0.32343934652581496
+          ],
+          "exact": [
+            0.20775394433089003,
+            0.27382033650905935
+          ],
+          "early": [
+            0.676560653474185,
+            0.7464790659013847
+          ],
+          "control_alarm": [
+            0.9937783263633752,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 37,
+          "family": 37,
+          "exact": 1,
+          "early": 83,
+          "control_alarm": 120
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 120,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 37,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.23901374739042605,
+            0.3849185496885372
+          ],
+          "family": [
+            0.23901374739042605,
+            0.3849185496885372
+          ],
+          "exact": [
+            0.00042735277867332394,
+            0.038920846860168494
+          ],
+          "early": [
+            0.6150814503114628,
+            0.760986252609574
+          ],
+          "control_alarm": [
+            0.9753445989443437,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 38,
+        "angular_records": 36,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "offset",
+        "angle": 0,
+        "jitter": 0,
+        "offset": 1,
+        "drift": 0,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 480,
+          "family": 480,
+          "exact": 480,
+          "early": 0,
+          "control_alarm": 1
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 1,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 33,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9937783263633752,
+            1.0
+          ],
+          "family": [
+            0.9937783263633752,
+            1.0
+          ],
+          "exact": [
+            0.9937783263633752,
+            1.0
+          ],
+          "early": [
+            0.0,
+            0.0062216736366248445
+          ],
+          "control_alarm": [
+            0.00010685532053757395,
+            0.00984459214689148
+          ]
+        },
+        "excess_false_upper95": 0.00984459214689148
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 120,
+          "family": 120,
+          "exact": 120,
+          "early": 0,
+          "control_alarm": 2
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 2,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 120,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9753445989443437,
+            1.0
+          ],
+          "family": [
+            0.9753445989443437,
+            1.0
+          ],
+          "exact": [
+            0.9753445989443437,
+            1.0
+          ],
+          "early": [
+            0.0,
+            0.024655401055656376
+          ],
+          "control_alarm": [
+            0.002969348343917377,
+            0.05153371368637796
+          ]
+        },
+        "excess_false_upper95": 0.05153371368637796
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 0,
+        "angular_records": 0,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "offset",
+        "angle": 0,
+        "jitter": 0,
+        "offset": 26.5,
+        "drift": 0,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 480,
+          "family": 480,
+          "exact": 480,
+          "early": 0,
+          "control_alarm": 1
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 1,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 33,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9937783263633752,
+            1.0
+          ],
+          "family": [
+            0.9937783263633752,
+            1.0
+          ],
+          "exact": [
+            0.9937783263633752,
+            1.0
+          ],
+          "early": [
+            0.0,
+            0.0062216736366248445
+          ],
+          "control_alarm": [
+            0.00010685532053757395,
+            0.00984459214689148
+          ]
+        },
+        "excess_false_upper95": 0.00984459214689148
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 120,
+          "family": 120,
+          "exact": 120,
+          "early": 0,
+          "control_alarm": 2
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 2,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 120,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9753445989443437,
+            1.0
+          ],
+          "family": [
+            0.9753445989443437,
+            1.0
+          ],
+          "exact": [
+            0.9753445989443437,
+            1.0
+          ],
+          "early": [
+            0.0,
+            0.024655401055656376
+          ],
+          "control_alarm": [
+            0.002969348343917377,
+            0.05153371368637796
+          ]
+        },
+        "excess_false_upper95": 0.05153371368637796
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 0,
+        "angular_records": 0,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "drift",
+        "angle": 0,
+        "jitter": 0,
+        "offset": 0,
+        "drift": 0.005,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 480,
+          "family": 480,
+          "exact": 480,
+          "early": 0,
+          "control_alarm": 1
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 1,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 33,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9937783263633752,
+            1.0
+          ],
+          "family": [
+            0.9937783263633752,
+            1.0
+          ],
+          "exact": [
+            0.9937783263633752,
+            1.0
+          ],
+          "early": [
+            0.0,
+            0.0062216736366248445
+          ],
+          "control_alarm": [
+            0.00010685532053757395,
+            0.00984459214689148
+          ]
+        },
+        "excess_false_upper95": 0.00984459214689148
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 120,
+          "family": 120,
+          "exact": 120,
+          "early": 0,
+          "control_alarm": 3
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 3,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 120,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9753445989443437,
+            1.0
+          ],
+          "family": [
+            0.9753445989443437,
+            1.0
+          ],
+          "exact": [
+            0.9753445989443437,
+            1.0
+          ],
+          "early": [
+            0.0,
+            0.024655401055656376
+          ],
+          "control_alarm": [
+            0.0068479963909780575,
+            0.06334394100185879
+          ]
+        },
+        "excess_false_upper95": 0.06334394100185879
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 0,
+        "angular_records": 0,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "drift",
+        "angle": 0,
+        "jitter": 0,
+        "offset": 0,
+        "drift": 0.01,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 480,
+          "family": 480,
+          "exact": 480,
+          "early": 0,
+          "control_alarm": 1
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 1,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 33,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9937783263633752,
+            1.0
+          ],
+          "family": [
+            0.9937783263633752,
+            1.0
+          ],
+          "exact": [
+            0.9937783263633752,
+            1.0
+          ],
+          "early": [
+            0.0,
+            0.0062216736366248445
+          ],
+          "control_alarm": [
+            0.00010685532053757395,
+            0.00984459214689148
+          ]
+        },
+        "excess_false_upper95": 0.00984459214689148
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 120,
+          "family": 120,
+          "exact": 120,
+          "early": 0,
+          "control_alarm": 3
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 3,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 120,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9753445989443437,
+            1.0
+          ],
+          "family": [
+            0.9753445989443437,
+            1.0
+          ],
+          "exact": [
+            0.9753445989443437,
+            1.0
+          ],
+          "early": [
+            0.0,
+            0.024655401055656376
+          ],
+          "control_alarm": [
+            0.0068479963909780575,
+            0.06334394100185879
+          ]
+        },
+        "excess_false_upper95": 0.06334394100185879
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 0,
+        "angular_records": 0,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "drift",
+        "angle": 0,
+        "jitter": 0,
+        "offset": 0,
+        "drift": 0.025,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 479,
+          "family": 479,
+          "exact": 479,
+          "early": 0,
+          "control_alarm": 47
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 47,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 32,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9901554078531085,
+            0.9998931446794624
+          ],
+          "family": [
+            0.9901554078531085,
+            0.9998931446794624
+          ],
+          "exact": [
+            0.9901554078531085,
+            0.9998931446794624
+          ],
+          "early": [
+            0.0,
+            0.0062216736366248445
+          ],
+          "control_alarm": [
+            0.07645538514492696,
+            0.1231576974383517
+          ]
+        },
+        "excess_false_upper95": 0.1231576974383517
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 116,
+          "family": 116,
+          "exact": 116,
+          "early": 1,
+          "control_alarm": 18
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 18,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 116,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9253471918334457,
+            0.9885354579565093
+          ],
+          "family": [
+            0.9253471918334457,
+            0.9885354579565093
+          ],
+          "exact": [
+            0.9253471918334457,
+            0.9885354579565093
+          ],
+          "early": [
+            0.00042735277867332394,
+            0.038920846860168494
+          ],
+          "control_alarm": [
+            0.09924885952591432,
+            0.2142787420152243
+          ]
+        },
+        "excess_false_upper95": 0.2142787420152243
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 10,
+        "angular_records": 6,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "drift",
+        "angle": 0,
+        "jitter": 0,
+        "offset": 0,
+        "drift": 0.05,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 462,
+          "family": 462,
+          "exact": 462,
+          "early": 15,
+          "control_alarm": 165
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 165,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 29,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9448969798748093,
+            0.9756245021402238
+          ],
+          "family": [
+            0.9448969798748093,
+            0.9756245021402238
+          ],
+          "exact": [
+            0.9448969798748093,
+            0.9756245021402238
+          ],
+          "early": [
+            0.019359701011937715,
+            0.04771250809822229
+          ],
+          "control_alarm": [
+            0.30783852460305067,
+            0.38110037053998413
+          ]
+        },
+        "excess_false_upper95": 0.38110037053998413
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 111,
+          "family": 110,
+          "exact": 110,
+          "early": 4,
+          "control_alarm": 53
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 53,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 111,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.8727744636727051,
+            0.9603179567657146
+          ],
+          "family": [
+            0.8627482443425809,
+            0.9540922468085113
+          ],
+          "exact": [
+            0.8627482443425809,
+            0.9540922468085113
+          ],
+          "early": [
+            0.011464542043490634,
+            0.0746528081665543
+          ],
+          "control_alarm": [
+            0.36467892299155075,
+            0.5208552213811258
+          ]
+        },
+        "excess_false_upper95": 0.5208552213811258
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 17,
+        "angular_records": 13,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "drift",
+        "angle": 0,
+        "jitter": 0,
+        "offset": 0,
+        "drift": 0.07,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 446,
+          "family": 445,
+          "exact": 445,
+          "early": 32,
+          "control_alarm": 165
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 165,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 30,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9068135153313424,
+            0.9474510562861882
+          ],
+          "family": [
+            0.904484262920375,
+            0.9456367083786732
+          ],
+          "exact": [
+            0.904484262920375,
+            0.9456367083786732
+          ],
+          "early": [
+            0.048935023595805885,
+            0.08851377638779231
+          ],
+          "control_alarm": [
+            0.30783852460305067,
+            0.38110037053998413
+          ]
+        },
+        "excess_false_upper95": 0.38110037053998413
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 104,
+          "family": 103,
+          "exact": 103,
+          "early": 10,
+          "control_alarm": 53
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 53,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 104,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.8045561538017076,
+            0.9145456359389338
+          ],
+          "family": [
+            0.7951098655045514,
+            0.9076792882682413
+          ],
+          "exact": [
+            0.7951098655045514,
+            0.9076792882682413
+          ],
+          "early": [
+            0.04590775319148862,
+            0.13725175565741904
+          ],
+          "control_alarm": [
+            0.36467892299155075,
+            0.5208552213811258
+          ]
+        },
+        "excess_false_upper95": 0.5208552213811258
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 13,
+        "angular_records": 13,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "drift",
+        "angle": 0,
+        "jitter": 0,
+        "offset": 0,
+        "drift": 0.1,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 404,
+          "family": 404,
+          "exact": 404,
+          "early": 74,
+          "control_alarm": 165
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 165,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 25,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.8116596975798386,
+            0.8684942005475899
+          ],
+          "family": [
+            0.8116596975798386,
+            0.8684942005475899
+          ],
+          "exact": [
+            0.8116596975798386,
+            0.8684942005475899
+          ],
+          "early": [
+            0.12765397435312553,
+            0.18389914127686494
+          ],
+          "control_alarm": [
+            0.30783852460305067,
+            0.38110037053998413
+          ]
+        },
+        "excess_false_upper95": 0.38110037053998413
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 98,
+          "family": 98,
+          "exact": 98,
+          "early": 20,
+          "control_alarm": 53
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 53,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 98,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.7486747687134532,
+            0.8724988212256872
+          ],
+          "family": [
+            0.7486747687134532,
+            0.8724988212256872
+          ],
+          "exact": [
+            0.7486747687134532,
+            0.8724988212256872
+          ],
+          "early": [
+            0.11327388873971657,
+            0.23289754011254063
+          ],
+          "control_alarm": [
+            0.36467892299155075,
+            0.5208552213811258
+          ]
+        },
+        "excess_false_upper95": 0.5208552213811258
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 14,
+        "angular_records": 13,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "drift",
+        "angle": 0,
+        "jitter": 0,
+        "offset": 0,
+        "drift": 0.25,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 355,
+          "family": 355,
+          "exact": 355,
+          "early": 125,
+          "control_alarm": 228
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 228,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 22,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.7045444508819129,
+            0.7724095623070966
+          ],
+          "family": [
+            0.7045444508819129,
+            0.7724095623070966
+          ],
+          "exact": [
+            0.7045444508819129,
+            0.7724095623070966
+          ],
+          "early": [
+            0.22759043769290346,
+            0.29545554911808714
+          ],
+          "control_alarm": [
+            0.43665854590924996,
+            0.5135712830183936
+          ]
+        },
+        "excess_false_upper95": 0.5135712830183936
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 84,
+          "family": 84,
+          "exact": 84,
+          "early": 36,
+          "control_alarm": 69
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 69,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 84,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.6237784787110681,
+            0.7686360367056229
+          ],
+          "family": [
+            0.6237784787110681,
+            0.7686360367056229
+          ],
+          "exact": [
+            0.6237784787110681,
+            0.7686360367056229
+          ],
+          "early": [
+            0.23136396329437708,
+            0.37622152128893194
+          ],
+          "control_alarm": [
+            0.49582787897197994,
+            0.6513416945442332
+          ]
+        },
+        "excess_false_upper95": 0.6513416945442332
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 515,
+        "angular_records": 20,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "drift",
+        "angle": 0,
+        "jitter": 0,
+        "offset": 0,
+        "drift": 0.5,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 328,
+          "family": 328,
+          "exact": 327,
+          "early": 152,
+          "control_alarm": 391
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 391,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 21,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.6465889800693527,
+            0.7183881402008107
+          ],
+          "family": [
+            0.6465889800693527,
+            0.7183881402008107
+          ],
+          "exact": [
+            0.6444543196563778,
+            0.716375437732878
+          ],
+          "early": [
+            0.28161185979918935,
+            0.3534110199306472
+          ],
+          "control_alarm": [
+            0.7829445963247936,
+            0.8433026227122472
+          ]
+        },
+        "excess_false_upper95": 0.8433026227122472
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 76,
+          "family": 76,
+          "exact": 71,
+          "early": 44,
+          "control_alarm": 108
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 108,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 76,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.5548948591556535,
+            0.7067316848092446
+          ],
+          "family": [
+            0.5548948591556535,
+            0.7067316848092446
+          ],
+          "exact": [
+            0.5125955823454038,
+            0.6672770809952209
+          ],
+          "early": [
+            0.2932683151907553,
+            0.4451051408443465
+          ],
+          "control_alarm": [
+            0.8430164860718397,
+            0.9412790373253721
+          ]
+        },
+        "excess_false_upper95": 0.9412790373253721
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 1983,
+        "angular_records": 33,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "drift",
+        "angle": 0,
+        "jitter": 0,
+        "offset": 0,
+        "drift": 1,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 255,
+          "family": 255,
+          "exact": 253,
+          "early": 225,
+          "control_alarm": 480
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 480,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 14,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.492676313249551,
+            0.5695363938218966
+          ],
+          "family": [
+            0.492676313249551,
+            0.5695363938218966
+          ],
+          "exact": [
+            0.48851059723687196,
+            0.5654070862821917
+          ],
+          "early": [
+            0.4304636061781034,
+            0.5073236867504489
+          ],
+          "control_alarm": [
+            0.9937783263633752,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 59,
+          "family": 59,
+          "exact": 52,
+          "early": 61,
+          "control_alarm": 120
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 120,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 59,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.41324155166367665,
+            0.5704060500868411
+          ],
+          "family": [
+            0.41324155166367665,
+            0.5704060500868411
+          ],
+          "exact": [
+            0.3566580434483644,
+            0.5125241730914265
+          ],
+          "early": [
+            0.42959394991315886,
+            0.5867584483363233
+          ],
+          "control_alarm": [
+            0.9753445989443437,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 39,
+        "angular_records": 36,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "drift",
+        "angle": 0,
+        "jitter": 0,
+        "offset": 0,
+        "drift": 10,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 138,
+          "family": 138,
+          "exact": 102,
+          "early": 342,
+          "control_alarm": 480
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 480,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 5,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.25352093409861537,
+            0.32343934652581496
+          ],
+          "family": [
+            0.25352093409861537,
+            0.32343934652581496
+          ],
+          "exact": [
+            0.18212476437340896,
+            0.24553770401492533
+          ],
+          "early": [
+            0.676560653474185,
+            0.7464790659013847
+          ],
+          "control_alarm": [
+            0.9937783263633752,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 37,
+          "family": 37,
+          "exact": 0,
+          "early": 83,
+          "control_alarm": 120
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 120,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 37,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.23901374739042605,
+            0.3849185496885372
+          ],
+          "family": [
+            0.23901374739042605,
+            0.3849185496885372
+          ],
+          "exact": [
+            0.0,
+            0.024655401055656376
+          ],
+          "early": [
+            0.6150814503114628,
+            0.760986252609574
+          ],
+          "control_alarm": [
+            0.9753445989443437,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 36,
+        "angular_records": 36,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "step",
+        "angle": 0,
+        "jitter": 0,
+        "offset": 0,
+        "drift": 0,
+        "step": 0.025
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 480,
+          "family": 480,
+          "exact": 480,
+          "early": 0,
+          "control_alarm": 1
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 1,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 33,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9937783263633752,
+            1.0
+          ],
+          "family": [
+            0.9937783263633752,
+            1.0
+          ],
+          "exact": [
+            0.9937783263633752,
+            1.0
+          ],
+          "early": [
+            0.0,
+            0.0062216736366248445
+          ],
+          "control_alarm": [
+            0.00010685532053757395,
+            0.00984459214689148
+          ]
+        },
+        "excess_false_upper95": 0.00984459214689148
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 120,
+          "family": 120,
+          "exact": 120,
+          "early": 0,
+          "control_alarm": 2
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 2,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 120,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9753445989443437,
+            1.0
+          ],
+          "family": [
+            0.9753445989443437,
+            1.0
+          ],
+          "exact": [
+            0.9753445989443437,
+            1.0
+          ],
+          "early": [
+            0.0,
+            0.024655401055656376
+          ],
+          "control_alarm": [
+            0.002969348343917377,
+            0.05153371368637796
+          ]
+        },
+        "excess_false_upper95": 0.05153371368637796
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 0,
+        "angular_records": 0,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "step",
+        "angle": 0,
+        "jitter": 0,
+        "offset": 0,
+        "drift": 0,
+        "step": 0.05
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 479,
+          "family": 479,
+          "exact": 479,
+          "early": 0,
+          "control_alarm": 1
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 1,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 32,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9901554078531085,
+            0.9998931446794624
+          ],
+          "family": [
+            0.9901554078531085,
+            0.9998931446794624
+          ],
+          "exact": [
+            0.9901554078531085,
+            0.9998931446794624
+          ],
+          "early": [
+            0.0,
+            0.0062216736366248445
+          ],
+          "control_alarm": [
+            0.00010685532053757395,
+            0.00984459214689148
+          ]
+        },
+        "excess_false_upper95": 0.00984459214689148
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 120,
+          "family": 120,
+          "exact": 120,
+          "early": 0,
+          "control_alarm": 2
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 2,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 120,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9753445989443437,
+            1.0
+          ],
+          "family": [
+            0.9753445989443437,
+            1.0
+          ],
+          "exact": [
+            0.9753445989443437,
+            1.0
+          ],
+          "early": [
+            0.0,
+            0.024655401055656376
+          ],
+          "control_alarm": [
+            0.002969348343917377,
+            0.05153371368637796
+          ]
+        },
+        "excess_false_upper95": 0.05153371368637796
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 0,
+        "angular_records": 0,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "step",
+        "angle": 0,
+        "jitter": 0,
+        "offset": 0,
+        "drift": 0,
+        "step": 0.1
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 478,
+          "family": 478,
+          "exact": 478,
+          "early": 0,
+          "control_alarm": 5
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 5,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 31,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9869423324060282,
+            0.9992591656341325
+          ],
+          "family": [
+            0.9869423324060282,
+            0.9992591656341325
+          ],
+          "exact": [
+            0.9869423324060282,
+            0.9992591656341325
+          ],
+          "early": [
+            0.0,
+            0.0062216736366248445
+          ],
+          "control_alarm": [
+            0.004113193331072112,
+            0.02177657034115554
+          ]
+        },
+        "excess_false_upper95": 0.02177657034115554
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 116,
+          "family": 116,
+          "exact": 116,
+          "early": 1,
+          "control_alarm": 5
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 5,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 116,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9253471918334457,
+            0.9885354579565093
+          ],
+          "family": [
+            0.9253471918334457,
+            0.9885354579565093
+          ],
+          "exact": [
+            0.9253471918334457,
+            0.9885354579565093
+          ],
+          "early": [
+            0.00042735277867332394,
+            0.038920846860168494
+          ],
+          "control_alarm": [
+            0.01655914074576171,
+            0.08560834440147946
+          ]
+        },
+        "excess_false_upper95": 0.08560834440147946
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 0,
+        "angular_records": 0,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "step",
+        "angle": 0,
+        "jitter": 0,
+        "offset": 0,
+        "drift": 0,
+        "step": 0.25
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 445,
+          "family": 445,
+          "exact": 445,
+          "early": 34,
+          "control_alarm": 149
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 149,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 30,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.904484262920375,
+            0.9456367083786732
+          ],
+          "family": [
+            0.904484262920375,
+            0.9456367083786732
+          ],
+          "exact": [
+            0.904484262920375,
+            0.9456367083786732
+          ],
+          "early": [
+            0.05254894371381184,
+            0.09318648466865768
+          ],
+          "control_alarm": [
+            0.27557861596550104,
+            0.34700220060141573
+          ]
+        },
+        "excess_false_upper95": 0.34700220060141573
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 110,
+          "family": 110,
+          "exact": 110,
+          "early": 8,
+          "control_alarm": 50
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 50,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 110,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.8627482443425809,
+            0.9540922468085113
+          ],
+          "family": [
+            0.8627482443425809,
+            0.9540922468085113
+          ],
+          "exact": [
+            0.8627482443425809,
+            0.9540922468085113
+          ],
+          "early": [
+            0.03360216280330427,
+            0.11707236157829988
+          ],
+          "control_alarm": [
+            0.3406798701481699,
+            0.4957989231228329
+          ]
+        },
+        "excess_false_upper95": 0.4957989231228329
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 2271,
+        "angular_records": 13,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "step",
+        "angle": 0,
+        "jitter": 0,
+        "offset": 0,
+        "drift": 0,
+        "step": 0.5
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 427,
+          "family": 426,
+          "exact": 426,
+          "early": 53,
+          "control_alarm": 165
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 165,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 27,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.8631966179797416,
+            0.9123180458887404
+          ],
+          "family": [
+            0.8609318024888484,
+            0.9104372467039066
+          ],
+          "exact": [
+            0.8609318024888484,
+            0.9104372467039066
+          ],
+          "early": [
+            0.08768195411125958,
+            0.1368033820202584
+          ],
+          "control_alarm": [
+            0.30783852460305067,
+            0.38110037053998413
+          ]
+        },
+        "excess_false_upper95": 0.38110037053998413
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 106,
+          "family": 106,
+          "exact": 106,
+          "early": 14,
+          "control_alarm": 53
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 53,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 106,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.8236398433309815,
+            0.9280721066700375
+          ],
+          "family": [
+            0.8236398433309815,
+            0.9280721066700375
+          ],
+          "exact": [
+            0.8236398433309815,
+            0.9280721066700375
+          ],
+          "early": [
+            0.07192789332996252,
+            0.17636015666901855
+          ],
+          "control_alarm": [
+            0.36467892299155075,
+            0.5208552213811258
+          ]
+        },
+        "excess_false_upper95": 0.5208552213811258
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 13,
+        "angular_records": 13,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "step",
+        "angle": 0,
+        "jitter": 0,
+        "offset": 0,
+        "drift": 0,
+        "step": 1
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 411,
+          "family": 411,
+          "exact": 411,
+          "early": 69,
+          "control_alarm": 227
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 227,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 25,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.8272340962552629,
+            0.8819447510363871
+          ],
+          "family": [
+            0.8272340962552629,
+            0.8819447510363871
+          ],
+          "exact": [
+            0.8272340962552629,
+            0.8819447510363871
+          ],
+          "early": [
+            0.1180552489636129,
+            0.17276590374473716
+          ],
+          "control_alarm": [
+            0.4345929137178083,
+            0.511489402763128
+          ]
+        },
+        "excess_false_upper95": 0.511489402763128
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 101,
+          "family": 101,
+          "exact": 101,
+          "early": 19,
+          "control_alarm": 69
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 69,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 101,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.776386557166521,
+            0.8937654997541761
+          ],
+          "family": [
+            0.776386557166521,
+            0.8937654997541761
+          ],
+          "exact": [
+            0.776386557166521,
+            0.8937654997541761
+          ],
+          "early": [
+            0.10623450024582383,
+            0.2236134428334789
+          ],
+          "control_alarm": [
+            0.49582787897197994,
+            0.6513416945442332
+          ]
+        },
+        "excess_false_upper95": 0.6513416945442332
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 20,
+        "angular_records": 20,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "step",
+        "angle": 0,
+        "jitter": 0,
+        "offset": 0,
+        "drift": 0,
+        "step": 2.5
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 377,
+          "family": 377,
+          "exact": 377,
+          "early": 103,
+          "control_alarm": 347
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 347,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 23,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.752279970601605,
+            0.8159105652281262
+          ],
+          "family": [
+            0.752279970601605,
+            0.8159105652281262
+          ],
+          "exact": [
+            0.752279970601605,
+            0.8159105652281262
+          ],
+          "early": [
+            0.18408943477187378,
+            0.24772002939839502
+          ],
+          "control_alarm": [
+            0.6873054942748458,
+            0.7564706181838003
+          ]
+        },
+        "excess_false_upper95": 0.7564706181838003
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 94,
+          "family": 94,
+          "exact": 91,
+          "early": 26,
+          "control_alarm": 92
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 92,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 94,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.7123182883213024,
+            0.8435206030350999
+          ],
+          "family": [
+            0.7123182883213024,
+            0.8435206030350999
+          ],
+          "exact": [
+            0.6854328490854895,
+            0.8213891324147677
+          ],
+          "early": [
+            0.15647939696490004,
+            0.28768171167869755
+          ],
+          "control_alarm": [
+            0.6943611110946843,
+            0.8288010765905003
+          ]
+        },
+        "excess_false_upper95": 0.8288010765905003
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 733,
+        "angular_records": 25,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "step",
+        "angle": 0,
+        "jitter": 0,
+        "offset": 0,
+        "drift": 0,
+        "step": 5
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 328,
+          "family": 328,
+          "exact": 324,
+          "early": 152,
+          "control_alarm": 480
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 480,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 21,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.6465889800693527,
+            0.7183881402008107
+          ],
+          "family": [
+            0.6465889800693527,
+            0.7183881402008107
+          ],
+          "exact": [
+            0.6380551181030969,
+            0.7103325263325542
+          ],
+          "early": [
+            0.28161185979918935,
+            0.3534110199306472
+          ],
+          "control_alarm": [
+            0.9937783263633752,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 80,
+          "family": 80,
+          "exact": 64,
+          "early": 40,
+          "control_alarm": 120
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 120,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 80,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.5891425107256281,
+            0.7378815653996128
+          ],
+          "family": [
+            0.5891425107256281,
+            0.7378815653996128
+          ],
+          "exact": [
+            0.4542765180413354,
+            0.6111329096353613
+          ],
+          "early": [
+            0.26211843460038725,
+            0.41085748927437193
+          ],
+          "control_alarm": [
+            0.9753445989443437,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 2107,
+        "angular_records": 36,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "step",
+        "angle": 0,
+        "jitter": 0,
+        "offset": 0,
+        "drift": 0,
+        "step": 10
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 327,
+          "family": 327,
+          "exact": 314,
+          "early": 153,
+          "control_alarm": 480
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 480,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 21,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.6444543196563778,
+            0.716375437732878
+          ],
+          "family": [
+            0.6444543196563778,
+            0.716375437732878
+          ],
+          "exact": [
+            0.6167750637208966,
+            0.6901386308319659
+          ],
+          "early": [
+            0.28362456226712196,
+            0.3555456803436222
+          ],
+          "control_alarm": [
+            0.9937783263633752,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 80,
+          "family": 80,
+          "exact": 48,
+          "early": 40,
+          "control_alarm": 120
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 120,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 80,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.5891425107256281,
+            0.7378815653996128
+          ],
+          "family": [
+            0.5891425107256281,
+            0.7378815653996128
+          ],
+          "exact": [
+            0.32478765467163073,
+            0.4789884225276073
+          ],
+          "early": [
+            0.26211843460038725,
+            0.41085748927437193
+          ],
+          "control_alarm": [
+            0.9753445989443437,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 36,
+        "angular_records": 36,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "step",
+        "angle": 0,
+        "jitter": 0,
+        "offset": 0,
+        "drift": 0,
+        "step": 26.5
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 326,
+          "family": 326,
+          "exact": 298,
+          "early": 154,
+          "control_alarm": 480
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 480,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 21,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.6423204585691578,
+            0.7143619318330987
+          ],
+          "family": [
+            0.6423204585691578,
+            0.7143619318330987
+          ],
+          "exact": [
+            0.5828823151092347,
+            0.6576724268512306
+          ],
+          "early": [
+            0.2856380681669012,
+            0.3576795414308422
+          ],
+          "control_alarm": [
+            0.9937783263633752,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 80,
+          "family": 80,
+          "exact": 41,
+          "early": 40,
+          "control_alarm": 120
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 120,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 80,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.5891425107256281,
+            0.7378815653996128
+          ],
+          "family": [
+            0.5891425107256281,
+            0.7378815653996128
+          ],
+          "exact": [
+            0.2698699965260587,
+            0.4194547330984538
+          ],
+          "early": [
+            0.26211843460038725,
+            0.41085748927437193
+          ],
+          "control_alarm": [
+            0.9753445989443437,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 36,
+        "angular_records": 36,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "joint",
+        "angle": 0.0001,
+        "jitter": 0.005,
+        "offset": 0,
+        "drift": 0,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 480,
+          "family": 480,
+          "exact": 480,
+          "early": 0,
+          "control_alarm": 1
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 1,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 33,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9937783263633752,
+            1.0
+          ],
+          "family": [
+            0.9937783263633752,
+            1.0
+          ],
+          "exact": [
+            0.9937783263633752,
+            1.0
+          ],
+          "early": [
+            0.0,
+            0.0062216736366248445
+          ],
+          "control_alarm": [
+            0.00010685532053757395,
+            0.00984459214689148
+          ]
+        },
+        "excess_false_upper95": 0.00984459214689148
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 119,
+          "family": 119,
+          "exact": 119,
+          "early": 0,
+          "control_alarm": 2
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 2,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 119,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9610791531398315,
+            0.9995726472213267
+          ],
+          "family": [
+            0.9610791531398315,
+            0.9995726472213267
+          ],
+          "exact": [
+            0.9610791531398315,
+            0.9995726472213267
+          ],
+          "early": [
+            0.0,
+            0.024655401055656376
+          ],
+          "control_alarm": [
+            0.002969348343917377,
+            0.05153371368637796
+          ]
+        },
+        "excess_false_upper95": 0.05153371368637796
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 0,
+        "angular_records": 0,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "joint",
+        "angle": 0.00025,
+        "jitter": 0.01,
+        "offset": 0,
+        "drift": 0,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 479,
+          "family": 479,
+          "exact": 479,
+          "early": 1,
+          "control_alarm": 3
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 3,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 33,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9901554078531085,
+            0.9998931446794624
+          ],
+          "family": [
+            0.9901554078531085,
+            0.9998931446794624
+          ],
+          "exact": [
+            0.9901554078531085,
+            0.9998931446794624
+          ],
+          "early": [
+            0.00010685532053757395,
+            0.00984459214689148
+          ],
+          "control_alarm": [
+            0.0017056270146670227,
+            0.016073619903362455
+          ]
+        },
+        "excess_false_upper95": 0.016073619903362455
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 119,
+          "family": 119,
+          "exact": 119,
+          "early": 0,
+          "control_alarm": 2
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 2,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 119,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9610791531398315,
+            0.9995726472213267
+          ],
+          "family": [
+            0.9610791531398315,
+            0.9995726472213267
+          ],
+          "exact": [
+            0.9610791531398315,
+            0.9995726472213267
+          ],
+          "early": [
+            0.0,
+            0.024655401055656376
+          ],
+          "control_alarm": [
+            0.002969348343917377,
+            0.05153371368637796
+          ]
+        },
+        "excess_false_upper95": 0.05153371368637796
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 0,
+        "angular_records": 0,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "joint",
+        "angle": 0.0005,
+        "jitter": 0.025,
+        "offset": 0,
+        "drift": 0,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 475,
+          "family": 475,
+          "exact": 475,
+          "early": 4,
+          "control_alarm": 12
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 12,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 32,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9782234296588445,
+            0.9958868066689279
+          ],
+          "family": [
+            0.9782234296588445,
+            0.9958868066689279
+          ],
+          "exact": [
+            0.9782234296588445,
+            0.9958868066689279
+          ],
+          "early": [
+            0.0028513569093108412,
+            0.018967639861850783
+          ],
+          "control_alarm": [
+            0.014487276827551155,
+            0.040191152817679605
+          ]
+        },
+        "excess_false_upper95": 0.040191152817679605
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 117,
+          "family": 117,
+          "exact": 117,
+          "early": 0,
+          "control_alarm": 2
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 2,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 117,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.9366560589981412,
+            0.9931520036090219
+          ],
+          "family": [
+            0.9366560589981412,
+            0.9931520036090219
+          ],
+          "exact": [
+            0.9366560589981412,
+            0.9931520036090219
+          ],
+          "early": [
+            0.0,
+            0.024655401055656376
+          ],
+          "control_alarm": [
+            0.002969348343917377,
+            0.05153371368637796
+          ]
+        },
+        "excess_false_upper95": 0.05153371368637796
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 36,
+        "angular_records": 7,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "joint",
+        "angle": 0.001,
+        "jitter": 0.05,
+        "offset": 0,
+        "drift": 0,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 400,
+          "family": 400,
+          "exact": 400,
+          "early": 78,
+          "control_alarm": 270
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 270,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 22,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.8027969761449616,
+            0.8607706443015078
+          ],
+          "family": [
+            0.8027969761449616,
+            0.8607706443015078
+          ],
+          "exact": [
+            0.8027969761449616,
+            0.8607706443015078
+          ],
+          "early": [
+            0.13536432953980385,
+            0.1927748624640627
+          ],
+          "control_alarm": [
+            0.524002737230334,
+            0.6004225629778974
+          ]
+        },
+        "excess_false_upper95": 0.6004225629778974
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 99,
+          "family": 99,
+          "exact": 99,
+          "early": 19,
+          "control_alarm": 68
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 68,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 99,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.7578660564077622,
+            0.8796362548392258
+          ],
+          "family": [
+            0.7578660564077622,
+            0.8796362548392258
+          ],
+          "exact": [
+            0.7578660564077622,
+            0.8796362548392258
+          ],
+          "early": [
+            0.10623450024582383,
+            0.2236134428334789
+          ],
+          "control_alarm": [
+            0.4874758269085735,
+            0.6433419565516356
+          ]
+        },
+        "excess_false_upper95": 0.6433419565516356
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 2948,
+        "angular_records": 36,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "joint",
+        "angle": 0.0015,
+        "jitter": 0.075,
+        "offset": 0,
+        "drift": 0,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 284,
+          "family": 283,
+          "exact": 283,
+          "early": 196,
+          "control_alarm": 461
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 461,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 17,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.5533755899789685,
+            0.6291145880051532
+          ],
+          "family": [
+            0.5512731410620383,
+            0.6270695546778173
+          ],
+          "exact": [
+            0.5512731410620383,
+            0.6270695546778173
+          ],
+          "early": [
+            0.37088541199484687,
+            0.4466244100210315
+          ],
+          "control_alarm": [
+            0.942457121264177,
+            0.9739269946749893
+          ]
+        },
+        "excess_false_upper95": 0.9739269946749893
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 67,
+          "family": 67,
+          "exact": 67,
+          "early": 53,
+          "control_alarm": 116
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 116,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 67,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.47914477861887417,
+            0.6353210770084492
+          ],
+          "family": [
+            0.47914477861887417,
+            0.6353210770084492
+          ],
+          "exact": [
+            0.47914477861887417,
+            0.6353210770084492
+          ],
+          "early": [
+            0.36467892299155075,
+            0.5208552213811258
+          ],
+          "control_alarm": [
+            0.9253471918334457,
+            0.9885354579565093
+          ]
+        },
+        "excess_false_upper95": 0.9885354579565093
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 8035,
+        "angular_records": 36,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "joint",
+        "angle": 0.002,
+        "jitter": 0.1,
+        "offset": 0,
+        "drift": 0,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 212,
+          "family": 212,
+          "exact": 212,
+          "early": 268,
+          "control_alarm": 479
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 479,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 12,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.4036870158564097,
+            0.48018268554085125
+          ],
+          "family": [
+            0.4036870158564097,
+            0.48018268554085125
+          ],
+          "exact": [
+            0.4036870158564097,
+            0.48018268554085125
+          ],
+          "early": [
+            0.5198173144591487,
+            0.5963129841435904
+          ],
+          "control_alarm": [
+            0.9901554078531085,
+            0.9998931446794624
+          ]
+        },
+        "excess_false_upper95": 0.9998931446794624
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 52,
+          "family": 52,
+          "exact": 52,
+          "early": 68,
+          "control_alarm": 120
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 120,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 52,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.3566580434483644,
+            0.5125241730914265
+          ],
+          "family": [
+            0.3566580434483644,
+            0.5125241730914265
+          ],
+          "exact": [
+            0.3566580434483644,
+            0.5125241730914265
+          ],
+          "early": [
+            0.4874758269085735,
+            0.6433419565516356
+          ],
+          "control_alarm": [
+            0.9753445989443437,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 12319,
+        "angular_records": 36,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "joint",
+        "angle": 0.003,
+        "jitter": 0.15,
+        "offset": 0,
+        "drift": 0,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 155,
+          "family": 155,
+          "exact": 155,
+          "early": 325,
+          "control_alarm": 480
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 480,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 6,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.2876523733290768,
+            0.35981260727994074
+          ],
+          "family": [
+            0.2876523733290768,
+            0.35981260727994074
+          ],
+          "exact": [
+            0.2876523733290768,
+            0.35981260727994074
+          ],
+          "early": [
+            0.6401873927200592,
+            0.7123476266709232
+          ],
+          "control_alarm": [
+            0.9937783263633752,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 38,
+          "family": 38,
+          "exact": 38,
+          "early": 82,
+          "control_alarm": 120
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 120,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 38,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.24668979801383406,
+            0.39358987128247347
+          ],
+          "family": [
+            0.24668979801383406,
+            0.39358987128247347
+          ],
+          "exact": [
+            0.24668979801383406,
+            0.39358987128247347
+          ],
+          "early": [
+            0.6064101287175265,
+            0.7533102019861659
+          ],
+          "control_alarm": [
+            0.9753445989443437,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 14528,
+        "angular_records": 36,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "joint",
+        "angle": 0.005,
+        "jitter": 0.25,
+        "offset": 0,
+        "drift": 0,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 141,
+          "family": 141,
+          "exact": 141,
+          "early": 339,
+          "control_alarm": 480
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 480,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 5,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.25952644028700417,
+            0.3298757439154521
+          ],
+          "family": [
+            0.25952644028700417,
+            0.3298757439154521
+          ],
+          "exact": [
+            0.25952644028700417,
+            0.3298757439154521
+          ],
+          "early": [
+            0.670124256084548,
+            0.7404735597129958
+          ],
+          "control_alarm": [
+            0.9937783263633752,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 37,
+          "family": 37,
+          "exact": 36,
+          "early": 83,
+          "control_alarm": 120
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 120,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 37,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.23901374739042605,
+            0.3849185496885372
+          ],
+          "family": [
+            0.23901374739042605,
+            0.3849185496885372
+          ],
+          "exact": [
+            0.23136396329437708,
+            0.37622152128893194
+          ],
+          "early": [
+            0.6150814503114628,
+            0.760986252609574
+          ],
+          "control_alarm": [
+            0.9753445989443437,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 8754,
+        "angular_records": 36,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "joint",
+        "angle": 0.008,
+        "jitter": 0.5,
+        "offset": 0,
+        "drift": 0,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 138,
+          "family": 138,
+          "exact": 138,
+          "early": 342,
+          "control_alarm": 480
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 480,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 5,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.25352093409861537,
+            0.32343934652581496
+          ],
+          "family": [
+            0.25352093409861537,
+            0.32343934652581496
+          ],
+          "exact": [
+            0.25352093409861537,
+            0.32343934652581496
+          ],
+          "early": [
+            0.676560653474185,
+            0.7464790659013847
+          ],
+          "control_alarm": [
+            0.9937783263633752,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 37,
+          "family": 37,
+          "exact": 27,
+          "early": 83,
+          "control_alarm": 120
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 120,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 37,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.23901374739042605,
+            0.3849185496885372
+          ],
+          "family": [
+            0.23901374739042605,
+            0.3849185496885372
+          ],
+          "exact": [
+            0.16382131260884147,
+            0.29667749076502126
+          ],
+          "early": [
+            0.6150814503114628,
+            0.760986252609574
+          ],
+          "control_alarm": [
+            0.9753445989443437,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 1731,
+        "angular_records": 36,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    },
+    {
+      "setting": {
+        "name": "joint",
+        "angle": 0.01,
+        "jitter": 1,
+        "offset": 0,
+        "drift": 0,
+        "step": 0
+      },
+      "catalog": {
+        "n": 480,
+        "angular": {
+          "detection": 138,
+          "family": 138,
+          "exact": 134,
+          "early": 342,
+          "control_alarm": 480
+        },
+        "magnitude": {
+          "detection": 443,
+          "family": 442,
+          "exact": 438,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 480,
+        "removed_false": 0,
+        "n31": 33,
+        "detected31": 5,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.25352093409861537,
+            0.32343934652581496
+          ],
+          "family": [
+            0.25352093409861537,
+            0.32343934652581496
+          ],
+          "exact": [
+            0.2455259022953402,
+            0.314845252022173
+          ],
+          "early": [
+            0.676560653474185,
+            0.7464790659013847
+          ],
+          "control_alarm": [
+            0.9937783263633752,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "bus31": {
+        "n": 120,
+        "angular": {
+          "detection": 37,
+          "family": 37,
+          "exact": 16,
+          "early": 83,
+          "control_alarm": 120
+        },
+        "magnitude": {
+          "detection": 0,
+          "family": 0,
+          "exact": 0,
+          "early": 0,
+          "control_alarm": 0
+        },
+        "new_false": 120,
+        "removed_false": 0,
+        "n31": 120,
+        "detected31": 37,
+        "baseline31": 0,
+        "bounds": {
+          "detection": [
+            0.23901374739042605,
+            0.3849185496885372
+          ],
+          "family": [
+            0.23901374739042605,
+            0.3849185496885372
+          ],
+          "exact": [
+            0.08545436406106621,
+            0.1954438461982923
+          ],
+          "early": [
+            0.6150814503114628,
+            0.760986252609574
+          ],
+          "control_alarm": [
+            0.9753445989443437,
+            1.0
+          ]
+        },
+        "excess_false_upper95": 1.0
+      },
+      "quiet": {
+        "hours": 5.860666666666667,
+        "angular_episodes": 177,
+        "angular_records": 36,
+        "magnitude_episodes": 0
+      },
+      "primary_pass": false,
+      "including_quiet_pass": false
+    }
+  ]
+}
