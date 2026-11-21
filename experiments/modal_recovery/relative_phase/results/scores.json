@@ -1,0 +1,267 @@
+{
+  "parents": 240,
+  "totals": {
+    "detection": {
+      "magnitudes": 226,
+      "angles": 239
+    },
+    "family": {
+      "magnitudes": 225,
+      "angles": 239
+    },
+    "exact": {
+      "magnitudes": 224,
+      "angles": 239
+    },
+    "control_alarm": {
+      "magnitudes": 1,
+      "angles": 1
+    },
+    "early": {
+      "magnitudes": 1,
+      "angles": 1
+    }
+  },
+  "discordances": {
+    "detection": {
+      "added": 14,
+      "removed": 1,
+      "paired_p": 0.0009765625
+    },
+    "family": {
+      "added": 15,
+      "removed": 1,
+      "paired_p": 0.000518798828125
+    },
+    "exact": {
+      "added": 16,
+      "removed": 1,
+      "paired_p": 0.000274658203125
+    },
+    "control_alarm": {
+      "added": 1,
+      "removed": 1,
+      "paired_p": 1.0
+    },
+    "early": {
+      "added": 1,
+      "removed": 1,
+      "paired_p": 1.0
+    }
+  },
+  "one_sided_95_bounds": {
+    "detection": [
+      0.9803874003712977,
+      0.9997863007769844
+    ],
+    "family": [
+      0.9803874003712977,
+      0.9997863007769844
+    ],
+    "exact": [
+      0.9803874003712977,
+      0.9997863007769844
+    ],
+    "control_alarm": [
+      0.0002136992230156207,
+      0.019612599628702362
+    ],
+    "early": [
+      0.0002136992230156207,
+      0.019612599628702362
+    ]
+  },
+  "sources": {
+    "BUS16": {
+      "n": 20,
+      "magnitudes_detection": 20,
+      "angles_detection": 20,
+      "magnitudes_family": 20,
+      "angles_family": 20,
+      "magnitudes_exact": 19,
+      "angles_exact": 20
+    },
+    "BUS15": {
+      "n": 11,
+      "magnitudes_detection": 11,
+      "angles_detection": 11,
+      "magnitudes_family": 11,
+      "angles_family": 11,
+      "magnitudes_exact": 11,
+      "angles_exact": 11
+    },
+    "LINE16-17": {
+      "n": 13,
+      "magnitudes_detection": 13,
+      "angles_detection": 13,
+      "magnitudes_family": 13,
+      "angles_family": 13,
+      "magnitudes_exact": 13,
+      "angles_exact": 13
+    },
+    "LINE9-39": {
+      "n": 20,
+      "magnitudes_detection": 20,
+      "angles_detection": 20,
+      "magnitudes_family": 20,
+      "angles_family": 20,
+      "magnitudes_exact": 20,
+      "angles_exact": 20
+    },
+    "BUS3": {
+      "n": 13,
+      "magnitudes_detection": 13,
+      "angles_detection": 13,
+      "magnitudes_family": 13,
+      "angles_family": 13,
+      "magnitudes_exact": 13,
+      "angles_exact": 13
+    },
+    "BUS26": {
+      "n": 8,
+      "magnitudes_detection": 8,
+      "angles_detection": 8,
+      "magnitudes_family": 8,
+      "angles_family": 8,
+      "magnitudes_exact": 8,
+      "angles_exact": 8
+    },
+    "LINE14-15": {
+      "n": 13,
+      "magnitudes_detection": 13,
+      "angles_detection": 13,
+      "magnitudes_family": 12,
+      "angles_family": 13,
+      "magnitudes_exact": 12,
+      "angles_exact": 13
+    },
+    "LINE26-29": {
+      "n": 15,
+      "magnitudes_detection": 15,
+      "angles_detection": 15,
+      "magnitudes_family": 15,
+      "angles_family": 15,
+      "magnitudes_exact": 15,
+      "angles_exact": 15
+    },
+    "BUS31": {
+      "n": 13,
+      "magnitudes_detection": 0,
+      "angles_detection": 13,
+      "magnitudes_family": 0,
+      "angles_family": 13,
+      "magnitudes_exact": 0,
+      "angles_exact": 13
+    },
+    "BUS20": {
+      "n": 15,
+      "magnitudes_detection": 15,
+      "angles_detection": 15,
+      "magnitudes_family": 15,
+      "angles_family": 15,
+      "magnitudes_exact": 15,
+      "angles_exact": 15
+    },
+    "LINE4-14": {
+      "n": 11,
+      "magnitudes_detection": 11,
+      "angles_detection": 11,
+      "magnitudes_family": 11,
+      "angles_family": 11,
+      "magnitudes_exact": 11,
+      "angles_exact": 11
+    },
+    "LINE3-4": {
+      "n": 14,
+      "magnitudes_detection": 14,
+      "angles_detection": 14,
+      "magnitudes_family": 14,
+      "angles_family": 14,
+      "magnitudes_exact": 14,
+      "angles_exact": 14
+    },
+    "LINE17-18": {
+      "n": 12,
+      "magnitudes_detection": 12,
+      "angles_detection": 12,
+      "magnitudes_family": 12,
+      "angles_family": 12,
+      "magnitudes_exact": 12,
+      "angles_exact": 12
+    },
+    "BUS4": {
+      "n": 12,
+      "magnitudes_detection": 11,
+      "angles_detection": 12,
+      "magnitudes_family": 11,
+      "angles_family": 12,
+      "magnitudes_exact": 11,
+      "angles_exact": 12
+    },
+    "BUS7": {
+      "n": 9,
+      "magnitudes_detection": 9,
+      "angles_detection": 9,
+      "magnitudes_family": 9,
+      "angles_family": 9,
+      "magnitudes_exact": 9,
+      "angles_exact": 9
+    },
+    "LINE23-24": {
+      "n": 17,
+      "magnitudes_detection": 17,
+      "angles_detection": 16,
+      "magnitudes_family": 17,
+      "angles_family": 16,
+      "magnitudes_exact": 17,
+      "angles_exact": 16
+    },
+    "BUS24": {
+      "n": 19,
+      "magnitudes_detection": 19,
+      "angles_detection": 19,
+      "magnitudes_family": 19,
+      "angles_family": 19,
+      "magnitudes_exact": 19,
+      "angles_exact": 19
+    },
+    "LINE26-27": {
+      "n": 5,
+      "magnitudes_detection": 5,
+      "angles_detection": 5,
+      "magnitudes_family": 5,
+      "angles_family": 5,
+      "magnitudes_exact": 5,
+      "angles_exact": 5
+    }
+  },
+  "strata": {
+    "load/load": 60,
+    "line/load": 60,
+    "load/line": 60,
+    "line/line": 60
+  },
+  "angle_failures": [
+    {
+      "id": "b4d1ccbed5fc192ba0495a27",
+      "asset": "LINE23-24",
+      "early": true,
+      "detected": false,
+      "family": false,
+      "alarm": 231,
+      "label": [
+        "load",
+        "BUS24"
+      ]
+    }
+  ],
+  "upper95_extra_control_risk": 0.019612599628702362,
+  "meets_point_targets": true,
+  "predictions_sha": "5050b83437aa90b97aad3161841ff425b14c405fae556eb15c902d4e7e834c5b",
+  "targets_sha": "f6175f78ebc86665590b1b5f3b2f135ceb823eba49be12f4b671b5a1b8ce3521",
+  "quiet": {
+    "hours": 5.860666666666667,
+    "angles": 0,
+    "magnitudes": 0
+  }
+}

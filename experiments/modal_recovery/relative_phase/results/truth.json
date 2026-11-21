@@ -1,0 +1,4322 @@
+{
+  "81c12794eaf4828817f113a6": {
+    "parent": 0,
+    "first": "BUS26",
+    "clearance": 153,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "cacdca59380ceb6dc80d0495": {
+    "parent": 0,
+    "first": "BUS26",
+    "clearance": 153,
+    "family": "load",
+    "source": "BUS16",
+    "on": 6.5,
+    "off": 9.65
+  },
+  "bb452f7e21e4f0e43f497b37": {
+    "parent": 1,
+    "first": "LINE4-14",
+    "clearance": 180,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "fcb5765baed8c86d05e4f724": {
+    "parent": 1,
+    "first": "LINE4-14",
+    "clearance": 180,
+    "family": "load",
+    "source": "BUS15",
+    "on": 7.483333333333333,
+    "off": 10.833333333333334
+  },
+  "b2f14c1fa35dd49b0c57d2a9": {
+    "parent": 2,
+    "first": "BUS20",
+    "clearance": 182,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "ad494c5f086a363e4b1322eb": {
+    "parent": 2,
+    "first": "BUS20",
+    "clearance": 182,
+    "family": "line",
+    "source": "LINE16-17",
+    "on": 8.416666666666666,
+    "off": 12.416666666666666
+  },
+  "f5d39ed91c88b8928bc50fbc": {
+    "parent": 3,
+    "first": "LINE3-4",
+    "clearance": 146,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "a196b2bf6fa1906b33ea52ec": {
+    "parent": 3,
+    "first": "LINE3-4",
+    "clearance": 146,
+    "family": "line",
+    "source": "LINE9-39",
+    "on": 8.666666666666666,
+    "off": 12.35
+  },
+  "b5922b1ee1697e3f60867c25": {
+    "parent": 4,
+    "first": "BUS31",
+    "clearance": 174,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "61e48124bb73452e118041ad": {
+    "parent": 4,
+    "first": "BUS31",
+    "clearance": 174,
+    "family": "load",
+    "source": "BUS3",
+    "on": 8.75,
+    "off": 11.6
+  },
+  "18031d9549355cb2c5471e32": {
+    "parent": 5,
+    "first": "LINE4-14",
+    "clearance": 145,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "127d8ef2fd19dd0f7e0717a3": {
+    "parent": 5,
+    "first": "LINE4-14",
+    "clearance": 145,
+    "family": "load",
+    "source": "BUS26",
+    "on": 8.583333333333334,
+    "off": 11.1
+  },
+  "2c2253bc594000c15ec6b6ff": {
+    "parent": 6,
+    "first": "BUS15",
+    "clearance": 159,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "944aa81c5dd5ccce70f3ded3": {
+    "parent": 6,
+    "first": "BUS15",
+    "clearance": 159,
+    "family": "line",
+    "source": "LINE14-15",
+    "on": 7.1,
+    "off": 9.166666666666666
+  },
+  "55216d2cc186ec9718df61da": {
+    "parent": 7,
+    "first": "LINE9-39",
+    "clearance": 150,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "61a68977ffd07f545dca6620": {
+    "parent": 7,
+    "first": "LINE9-39",
+    "clearance": 150,
+    "family": "line",
+    "source": "LINE26-29",
+    "on": 6.716666666666667,
+    "off": 10.566666666666666
+  },
+  "cccaffb3d5ea4ec065188924": {
+    "parent": 8,
+    "first": "BUS15",
+    "clearance": 170,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "77d709f16552d239797c6582": {
+    "parent": 8,
+    "first": "BUS15",
+    "clearance": 170,
+    "family": "load",
+    "source": "BUS31",
+    "on": 8.866666666666667,
+    "off": 11.1
+  },
+  "84ef2f24cb255959134a8652": {
+    "parent": 9,
+    "first": "LINE17-18",
+    "clearance": 173,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "a6605ef7a50b1960c5946884": {
+    "parent": 9,
+    "first": "LINE17-18",
+    "clearance": 173,
+    "family": "load",
+    "source": "BUS20",
+    "on": 8.166666666666666,
+    "off": 11.35
+  },
+  "e29a5843f83be7baf8134ccf": {
+    "parent": 10,
+    "first": "BUS15",
+    "clearance": 147,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "c4fe6911607af0492482da85": {
+    "parent": 10,
+    "first": "BUS15",
+    "clearance": 147,
+    "family": "line",
+    "source": "LINE16-17",
+    "on": 8.5,
+    "off": 11.05
+  },
+  "019011e83ddca7d93ebe1123": {
+    "parent": 11,
+    "first": "LINE26-29",
+    "clearance": 127,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "33d711fae62b7530df721126": {
+    "parent": 11,
+    "first": "LINE26-29",
+    "clearance": 127,
+    "family": "line",
+    "source": "LINE4-14",
+    "on": 7.116666666666666,
+    "off": 10.166666666666666
+  },
+  "b801eb7557225fd338229675": {
+    "parent": 12,
+    "first": "BUS7",
+    "clearance": 146,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "33356dcbed09ee5c48a920da": {
+    "parent": 12,
+    "first": "BUS7",
+    "clearance": 146,
+    "family": "load",
+    "source": "BUS16",
+    "on": 6.616666666666666,
+    "off": 10.1
+  },
+  "818508857d31128fc52280fe": {
+    "parent": 13,
+    "first": "LINE17-18",
+    "clearance": 161,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "c3546da166f49218509190c9": {
+    "parent": 13,
+    "first": "LINE17-18",
+    "clearance": 161,
+    "family": "load",
+    "source": "BUS20",
+    "on": 7.65,
+    "off": 11.5
+  },
+  "91260aa9fbfe2c21cc591ebe": {
+    "parent": 14,
+    "first": "BUS24",
+    "clearance": 150,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "44d63ffbd8c71b6edf65ca21": {
+    "parent": 14,
+    "first": "BUS24",
+    "clearance": 150,
+    "family": "line",
+    "source": "LINE3-4",
+    "on": 7.216666666666667,
+    "off": 10.783333333333333
+  },
+  "37c72e62cd7ef73af943892c": {
+    "parent": 15,
+    "first": "LINE17-18",
+    "clearance": 160,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "5d78b77ddbd692577f6258f0": {
+    "parent": 15,
+    "first": "LINE17-18",
+    "clearance": 160,
+    "family": "line",
+    "source": "LINE4-14",
+    "on": 6.816666666666666,
+    "off": 10.7
+  },
+  "11552fb32b796906b45179d9": {
+    "parent": 16,
+    "first": "BUS24",
+    "clearance": 168,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "9527ac4faf8f032dcedcfefb": {
+    "parent": 16,
+    "first": "BUS24",
+    "clearance": 168,
+    "family": "load",
+    "source": "BUS16",
+    "on": 8.816666666666666,
+    "off": 11.383333333333333
+  },
+  "c272eb98992eb0b952c7622b": {
+    "parent": 17,
+    "first": "LINE17-18",
+    "clearance": 183,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "9ed226e4816e29091890e3af": {
+    "parent": 17,
+    "first": "LINE17-18",
+    "clearance": 183,
+    "family": "load",
+    "source": "BUS16",
+    "on": 8.316666666666666,
+    "off": 11.233333333333333
+  },
+  "75677582353c7182f502a154": {
+    "parent": 18,
+    "first": "BUS15",
+    "clearance": 120,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "ee5170da621a2fb57c70d638": {
+    "parent": 18,
+    "first": "BUS15",
+    "clearance": 120,
+    "family": "line",
+    "source": "LINE26-29",
+    "on": 6.05,
+    "off": 9.3
+  },
+  "e4e1d26cdcb031f93ac08dec": {
+    "parent": 19,
+    "first": "LINE26-27",
+    "clearance": 166,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "070fb95d8113da8578404cc1": {
+    "parent": 19,
+    "first": "LINE26-27",
+    "clearance": 166,
+    "family": "line",
+    "source": "LINE17-18",
+    "on": 7.133333333333334,
+    "off": 10.533333333333333
+  },
+  "85594f6957d637cbdfc15414": {
+    "parent": 20,
+    "first": "BUS16",
+    "clearance": 171,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "22255d17029bce4bf8db4826": {
+    "parent": 20,
+    "first": "BUS16",
+    "clearance": 171,
+    "family": "load",
+    "source": "BUS4",
+    "on": 7.95,
+    "off": 11.833333333333334
+  },
+  "e257df9acee39414a5c604e6": {
+    "parent": 21,
+    "first": "LINE23-24",
+    "clearance": 147,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "e60c6ae84c0720c4727843cb": {
+    "parent": 21,
+    "first": "LINE23-24",
+    "clearance": 147,
+    "family": "load",
+    "source": "BUS4",
+    "on": 6.75,
+    "off": 9.8
+  },
+  "8f6ecfc905516440f2c3d20b": {
+    "parent": 22,
+    "first": "BUS16",
+    "clearance": 144,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "1855374afb6e7efa5577ae09": {
+    "parent": 22,
+    "first": "BUS16",
+    "clearance": 144,
+    "family": "line",
+    "source": "LINE16-17",
+    "on": 7.95,
+    "off": 11.45
+  },
+  "81df96d43dff7516e509b861": {
+    "parent": 23,
+    "first": "LINE16-17",
+    "clearance": 144,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "efaa40c5c97cfacf8403a3ce": {
+    "parent": 23,
+    "first": "LINE16-17",
+    "clearance": 144,
+    "family": "line",
+    "source": "LINE9-39",
+    "on": 7.266666666666667,
+    "off": 10.2
+  },
+  "927824d891e3abf8eb2f7c7e": {
+    "parent": 24,
+    "first": "BUS20",
+    "clearance": 162,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "da213b47c3ca53670397eb85": {
+    "parent": 24,
+    "first": "BUS20",
+    "clearance": 162,
+    "family": "load",
+    "source": "BUS3",
+    "on": 6.833333333333333,
+    "off": 8.933333333333334
+  },
+  "da0f085578dd2a43abbd05ab": {
+    "parent": 25,
+    "first": "LINE3-4",
+    "clearance": 172,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "ed666acdfbf5f31bf68f33b8": {
+    "parent": 25,
+    "first": "LINE3-4",
+    "clearance": 172,
+    "family": "load",
+    "source": "BUS3",
+    "on": 7.6,
+    "off": 11.533333333333333
+  },
+  "8177454f0197a271b3910490": {
+    "parent": 26,
+    "first": "BUS16",
+    "clearance": 177,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "285795ff9d08ed7c6dda5cae": {
+    "parent": 26,
+    "first": "BUS16",
+    "clearance": 177,
+    "family": "line",
+    "source": "LINE9-39",
+    "on": 8.85,
+    "off": 11.233333333333333
+  },
+  "419a8620acbf5068736f44ac": {
+    "parent": 27,
+    "first": "LINE23-24",
+    "clearance": 166,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "982a34c9f16b97e891570b9f": {
+    "parent": 27,
+    "first": "LINE23-24",
+    "clearance": 166,
+    "family": "line",
+    "source": "LINE14-15",
+    "on": 6.85,
+    "off": 10.766666666666667
+  },
+  "64f128ff97b3a65daa050b70": {
+    "parent": 28,
+    "first": "BUS26",
+    "clearance": 134,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "3e93df7eab4438fc3134de5a": {
+    "parent": 28,
+    "first": "BUS26",
+    "clearance": 134,
+    "family": "load",
+    "source": "BUS16",
+    "on": 6.683333333333334,
+    "off": 10.483333333333333
+  },
+  "322f998ea3ab6e297d4147ea": {
+    "parent": 29,
+    "first": "LINE14-15",
+    "clearance": 115,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "24b84a990f32ec7cc475bf6a": {
+    "parent": 29,
+    "first": "LINE14-15",
+    "clearance": 115,
+    "family": "load",
+    "source": "BUS15",
+    "on": 7.45,
+    "off": 9.45
+  },
+  "18be4164d1478ca76580ca65": {
+    "parent": 30,
+    "first": "BUS15",
+    "clearance": 172,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "3c7dce2ffffbe5b763352ef4": {
+    "parent": 30,
+    "first": "BUS15",
+    "clearance": 172,
+    "family": "line",
+    "source": "LINE14-15",
+    "on": 8.716666666666667,
+    "off": 11.35
+  },
+  "594a1bb93672e5967d73ac52": {
+    "parent": 31,
+    "first": "LINE14-15",
+    "clearance": 113,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "34c454ec76ba23fefb3fc07d": {
+    "parent": 31,
+    "first": "LINE14-15",
+    "clearance": 113,
+    "family": "line",
+    "source": "LINE26-29",
+    "on": 7.0,
+    "off": 10.683333333333334
+  },
+  "1f656c0b028d6809123b94cf": {
+    "parent": 32,
+    "first": "BUS15",
+    "clearance": 171,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "c6b14ec8b7991547c4ba0d51": {
+    "parent": 32,
+    "first": "BUS15",
+    "clearance": 171,
+    "family": "load",
+    "source": "BUS20",
+    "on": 9.233333333333333,
+    "off": 11.466666666666667
+  },
+  "089259d41c3a78d2b37ae86f": {
+    "parent": 33,
+    "first": "LINE3-4",
+    "clearance": 127,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "e78fa39eb92b3baa3ab107a4": {
+    "parent": 33,
+    "first": "LINE3-4",
+    "clearance": 127,
+    "family": "load",
+    "source": "BUS7",
+    "on": 5.816666666666666,
+    "off": 9.233333333333333
+  },
+  "b1199645f8b7ce9ebfb39adf": {
+    "parent": 34,
+    "first": "BUS3",
+    "clearance": 135,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "fbe03ca07e687b7701719f21": {
+    "parent": 34,
+    "first": "BUS3",
+    "clearance": 135,
+    "family": "line",
+    "source": "LINE16-17",
+    "on": 8.333333333333334,
+    "off": 11.7
+  },
+  "42d273baa03f1aff1bd18347": {
+    "parent": 35,
+    "first": "LINE26-27",
+    "clearance": 161,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "0aefbeeb72773be953a55a2b": {
+    "parent": 35,
+    "first": "LINE26-27",
+    "clearance": 161,
+    "family": "line",
+    "source": "LINE4-14",
+    "on": 6.7,
+    "off": 8.7
+  },
+  "269e84071e8f2bc00b1c887e": {
+    "parent": 36,
+    "first": "BUS31",
+    "clearance": 148,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "8b3483a6ac92d12586681480": {
+    "parent": 36,
+    "first": "BUS31",
+    "clearance": 148,
+    "family": "load",
+    "source": "BUS26",
+    "on": 7.583333333333333,
+    "off": 11.433333333333334
+  },
+  "bbde13f6f47834b59d56c1f5": {
+    "parent": 37,
+    "first": "LINE3-4",
+    "clearance": 128,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "5cc276e13120ac3e16937128": {
+    "parent": 37,
+    "first": "LINE3-4",
+    "clearance": 128,
+    "family": "load",
+    "source": "BUS7",
+    "on": 6.9,
+    "off": 9.083333333333334
+  },
+  "28d8d511c832869a87dca8bf": {
+    "parent": 38,
+    "first": "BUS4",
+    "clearance": 122,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "e8d59f00227f59fff8935d90": {
+    "parent": 38,
+    "first": "BUS4",
+    "clearance": 122,
+    "family": "line",
+    "source": "LINE9-39",
+    "on": 5.966666666666667,
+    "off": 9.233333333333333
+  },
+  "7b3934c3d2dd9521f88c0a3d": {
+    "parent": 39,
+    "first": "LINE23-24",
+    "clearance": 156,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "510f215c32ebb828859e8e72": {
+    "parent": 39,
+    "first": "LINE23-24",
+    "clearance": 156,
+    "family": "line",
+    "source": "LINE9-39",
+    "on": 7.816666666666666,
+    "off": 11.65
+  },
+  "29f3a43ba953a87b61dfa705": {
+    "parent": 40,
+    "first": "BUS24",
+    "clearance": 139,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "acf5278457e22edc3300a75f": {
+    "parent": 40,
+    "first": "BUS24",
+    "clearance": 139,
+    "family": "load",
+    "source": "BUS16",
+    "on": 6.55,
+    "off": 9.1
+  },
+  "b40e1e65e2f6bcc7fa4e075d": {
+    "parent": 41,
+    "first": "LINE9-39",
+    "clearance": 167,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "506e93f00329cd3dbffdbfb9": {
+    "parent": 41,
+    "first": "LINE9-39",
+    "clearance": 167,
+    "family": "load",
+    "source": "BUS4",
+    "on": 8.733333333333333,
+    "off": 11.183333333333334
+  },
+  "f53ea07a1a9f136ba76ed0d4": {
+    "parent": 42,
+    "first": "BUS7",
+    "clearance": 148,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "511303d0424e499501570bf6": {
+    "parent": 42,
+    "first": "BUS7",
+    "clearance": 148,
+    "family": "line",
+    "source": "LINE26-29",
+    "on": 6.783333333333333,
+    "off": 9.95
+  },
+  "5dd81167bbc0500d1f935601": {
+    "parent": 43,
+    "first": "LINE9-39",
+    "clearance": 154,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "17110fad4f6fed5fca125864": {
+    "parent": 43,
+    "first": "LINE9-39",
+    "clearance": 154,
+    "family": "line",
+    "source": "LINE23-24",
+    "on": 7.05,
+    "off": 11.033333333333333
+  },
+  "e1d1e008e5f3d1140b6bd2f2": {
+    "parent": 44,
+    "first": "BUS24",
+    "clearance": 163,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "792155fd240267234c087376": {
+    "parent": 44,
+    "first": "BUS24",
+    "clearance": 163,
+    "family": "load",
+    "source": "BUS3",
+    "on": 7.683333333333334,
+    "off": 10.783333333333333
+  },
+  "99c8035bd928b6f6fc65878d": {
+    "parent": 45,
+    "first": "LINE23-24",
+    "clearance": 161,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "b3fedc9bd8baa8e3a4656b46": {
+    "parent": 45,
+    "first": "LINE23-24",
+    "clearance": 161,
+    "family": "load",
+    "source": "BUS15",
+    "on": 7.616666666666666,
+    "off": 11.616666666666667
+  },
+  "b91524f0f7f98c08b5fb9051": {
+    "parent": 46,
+    "first": "BUS16",
+    "clearance": 161,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "0bd6c1ee12f738105b0ae0ad": {
+    "parent": 46,
+    "first": "BUS16",
+    "clearance": 161,
+    "family": "line",
+    "source": "LINE9-39",
+    "on": 9.25,
+    "off": 12.2
+  },
+  "ddd8b6433909612a50b5db13": {
+    "parent": 47,
+    "first": "LINE3-4",
+    "clearance": 120,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "74f48e1e4593e2207b7905fe": {
+    "parent": 47,
+    "first": "LINE3-4",
+    "clearance": 120,
+    "family": "line",
+    "source": "LINE17-18",
+    "on": 6.516666666666667,
+    "off": 9.35
+  },
+  "39f7248e2f73a4ed33f8c15c": {
+    "parent": 48,
+    "first": "BUS16",
+    "clearance": 185,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "df8d1bb0125abad96f897d06": {
+    "parent": 48,
+    "first": "BUS16",
+    "clearance": 185,
+    "family": "load",
+    "source": "BUS15",
+    "on": 8.25,
+    "off": 11.583333333333334
+  },
+  "6208e05719a50e6c34761518": {
+    "parent": 49,
+    "first": "LINE14-15",
+    "clearance": 170,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "83886b390c7b07751b677397": {
+    "parent": 49,
+    "first": "LINE14-15",
+    "clearance": 170,
+    "family": "load",
+    "source": "BUS24",
+    "on": 9.533333333333333,
+    "off": 11.983333333333333
+  },
+  "9d9c0dc7d6332e9c0344651c": {
+    "parent": 50,
+    "first": "BUS7",
+    "clearance": 156,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "0ce313ac749e53975a35ea32": {
+    "parent": 50,
+    "first": "BUS7",
+    "clearance": 156,
+    "family": "line",
+    "source": "LINE4-14",
+    "on": 6.583333333333333,
+    "off": 9.016666666666667
+  },
+  "7f354aaf5fd225ab69dded95": {
+    "parent": 51,
+    "first": "LINE23-24",
+    "clearance": 122,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "eb6a3106c94e5c00b626cfdd": {
+    "parent": 51,
+    "first": "LINE23-24",
+    "clearance": 122,
+    "family": "line",
+    "source": "LINE3-4",
+    "on": 5.666666666666667,
+    "off": 8.166666666666666
+  },
+  "4b0e4f7104483764de7981b6": {
+    "parent": 52,
+    "first": "BUS26",
+    "clearance": 119,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "3544f085adbee879d4c84040": {
+    "parent": 52,
+    "first": "BUS26",
+    "clearance": 119,
+    "family": "load",
+    "source": "BUS15",
+    "on": 7.616666666666666,
+    "off": 11.066666666666666
+  },
+  "966dc3af547e5b923cd22a3a": {
+    "parent": 53,
+    "first": "LINE14-15",
+    "clearance": 180,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "d731b2534d32a6944bd23ea7": {
+    "parent": 53,
+    "first": "LINE14-15",
+    "clearance": 180,
+    "family": "load",
+    "source": "BUS16",
+    "on": 8.166666666666666,
+    "off": 10.45
+  },
+  "db50b9d5f5a5ecb7f3171699": {
+    "parent": 54,
+    "first": "BUS4",
+    "clearance": 140,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "95bb3b16450752f00425f0b0": {
+    "parent": 54,
+    "first": "BUS4",
+    "clearance": 140,
+    "family": "line",
+    "source": "LINE9-39",
+    "on": 7.3,
+    "off": 10.516666666666667
+  },
+  "745c2fb2eddb323443f3b067": {
+    "parent": 55,
+    "first": "LINE23-24",
+    "clearance": 172,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "3875e5415f7aa7d93b3133f5": {
+    "parent": 55,
+    "first": "LINE23-24",
+    "clearance": 172,
+    "family": "line",
+    "source": "LINE17-18",
+    "on": 7.3,
+    "off": 10.333333333333334
+  },
+  "ba3b0650cd3d90e7e43693fa": {
+    "parent": 56,
+    "first": "BUS7",
+    "clearance": 143,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "e04f59bafc6d4dfe7417c63d": {
+    "parent": 56,
+    "first": "BUS7",
+    "clearance": 143,
+    "family": "load",
+    "source": "BUS20",
+    "on": 6.65,
+    "off": 8.7
+  },
+  "c9ea736a6523346145a4d77f": {
+    "parent": 57,
+    "first": "LINE16-17",
+    "clearance": 133,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "276e153f0b2421915363f26b": {
+    "parent": 57,
+    "first": "LINE16-17",
+    "clearance": 133,
+    "family": "load",
+    "source": "BUS16",
+    "on": 7.316666666666666,
+    "off": 10.533333333333333
+  },
+  "557759cd69633ff6e2e3e14e": {
+    "parent": 58,
+    "first": "BUS7",
+    "clearance": 136,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "e860eb18d1eaf80d71848e3c": {
+    "parent": 58,
+    "first": "BUS7",
+    "clearance": 136,
+    "family": "line",
+    "source": "LINE17-18",
+    "on": 7.633333333333334,
+    "off": 11.233333333333333
+  },
+  "8d97f4e0525a5fb38b59018e": {
+    "parent": 59,
+    "first": "LINE23-24",
+    "clearance": 157,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "b4739f0ab1a13cf4b2b36f6d": {
+    "parent": 59,
+    "first": "LINE23-24",
+    "clearance": 157,
+    "family": "line",
+    "source": "LINE9-39",
+    "on": 7.75,
+    "off": 11.433333333333334
+  },
+  "e50636a9101f7d9ff0233213": {
+    "parent": 60,
+    "first": "BUS24",
+    "clearance": 148,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "ce30498dc82c13a8402d25bd": {
+    "parent": 60,
+    "first": "BUS24",
+    "clearance": 148,
+    "family": "load",
+    "source": "BUS26",
+    "on": 6.516666666666667,
+    "off": 8.583333333333334
+  },
+  "2bc76bc0bb22d90cf011bbdd": {
+    "parent": 61,
+    "first": "LINE9-39",
+    "clearance": 136,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "19f7f74580a999b5bceb27f1": {
+    "parent": 61,
+    "first": "LINE9-39",
+    "clearance": 136,
+    "family": "load",
+    "source": "BUS4",
+    "on": 6.95,
+    "off": 9.75
+  },
+  "08a56057b393aed7272c77d0": {
+    "parent": 62,
+    "first": "BUS4",
+    "clearance": 175,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "8fdb20cfe1f67b7dabbb7e99": {
+    "parent": 62,
+    "first": "BUS4",
+    "clearance": 175,
+    "family": "line",
+    "source": "LINE3-4",
+    "on": 9.75,
+    "off": 13.6
+  },
+  "5114072d81f8a44d28d43cfb": {
+    "parent": 63,
+    "first": "LINE3-4",
+    "clearance": 155,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "c12642cdb1b128d6812dabd3": {
+    "parent": 63,
+    "first": "LINE3-4",
+    "clearance": 155,
+    "family": "line",
+    "source": "LINE17-18",
+    "on": 8.216666666666667,
+    "off": 10.616666666666667
+  },
+  "88fab778565d7b8a1fa17d97": {
+    "parent": 64,
+    "first": "BUS3",
+    "clearance": 184,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "f9348e001700dd2a109af52b": {
+    "parent": 64,
+    "first": "BUS3",
+    "clearance": 184,
+    "family": "load",
+    "source": "BUS15",
+    "on": 7.416666666666667,
+    "off": 11.116666666666667
+  },
+  "8e57d3c8a23ca6efbcfab94a": {
+    "parent": 65,
+    "first": "LINE4-14",
+    "clearance": 175,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "46ab60f46ffa2e741b89f25b": {
+    "parent": 65,
+    "first": "LINE4-14",
+    "clearance": 175,
+    "family": "load",
+    "source": "BUS20",
+    "on": 8.35,
+    "off": 11.783333333333333
+  },
+  "e319f2b460f0181a5136b594": {
+    "parent": 66,
+    "first": "BUS7",
+    "clearance": 128,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "f4a3b7a82a07f01ce94b6f5e": {
+    "parent": 66,
+    "first": "BUS7",
+    "clearance": 128,
+    "family": "line",
+    "source": "LINE23-24",
+    "on": 7.633333333333334,
+    "off": 11.25
+  },
+  "fbf32b4fea65f745b8698f2f": {
+    "parent": 67,
+    "first": "LINE9-39",
+    "clearance": 131,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "dc2632b9890d5d255c62ffac": {
+    "parent": 67,
+    "first": "LINE9-39",
+    "clearance": 131,
+    "family": "line",
+    "source": "LINE4-14",
+    "on": 5.716666666666667,
+    "off": 7.883333333333334
+  },
+  "2e0d007fec10d81665ca8bba": {
+    "parent": 68,
+    "first": "BUS31",
+    "clearance": 166,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "de7c78fa6e8ae5dc139fe0a0": {
+    "parent": 68,
+    "first": "BUS31",
+    "clearance": 166,
+    "family": "load",
+    "source": "BUS26",
+    "on": 8.833333333333334,
+    "off": 11.05
+  },
+  "a2370cbbafb20dbcf516dcfd": {
+    "parent": 69,
+    "first": "LINE17-18",
+    "clearance": 151,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "ad95759885d6122de54bdf8a": {
+    "parent": 69,
+    "first": "LINE17-18",
+    "clearance": 151,
+    "family": "load",
+    "source": "BUS3",
+    "on": 6.533333333333333,
+    "off": 9.183333333333334
+  },
+  "19a46b59a02ae54107779a08": {
+    "parent": 70,
+    "first": "BUS26",
+    "clearance": 183,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "853a0f1e86c8756ace0a6b6c": {
+    "parent": 70,
+    "first": "BUS26",
+    "clearance": 183,
+    "family": "line",
+    "source": "LINE23-24",
+    "on": 9.333333333333334,
+    "off": 12.716666666666667
+  },
+  "2775e6fd094f7c2df77f407f": {
+    "parent": 71,
+    "first": "LINE23-24",
+    "clearance": 125,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "cfebcec885fe4da5f135ae38": {
+    "parent": 71,
+    "first": "LINE23-24",
+    "clearance": 125,
+    "family": "line",
+    "source": "LINE26-29",
+    "on": 6.433333333333334,
+    "off": 10.083333333333334
+  },
+  "91b13dd41c467e983daf6de7": {
+    "parent": 72,
+    "first": "BUS31",
+    "clearance": 161,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "1e69a21aabaf1882d33ef1ff": {
+    "parent": 72,
+    "first": "BUS31",
+    "clearance": 161,
+    "family": "load",
+    "source": "BUS24",
+    "on": 8.216666666666667,
+    "off": 10.766666666666667
+  },
+  "3ee11a2876368c6e19a47581": {
+    "parent": 73,
+    "first": "LINE23-24",
+    "clearance": 175,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "360b3c8cf1e4ccfe62473f82": {
+    "parent": 73,
+    "first": "LINE23-24",
+    "clearance": 175,
+    "family": "load",
+    "source": "BUS31",
+    "on": 8.45,
+    "off": 10.65
+  },
+  "5da29f90e2d9e24e4a2c01b5": {
+    "parent": 74,
+    "first": "BUS24",
+    "clearance": 151,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "71ef17b86d44b44521bae560": {
+    "parent": 74,
+    "first": "BUS24",
+    "clearance": 151,
+    "family": "line",
+    "source": "LINE3-4",
+    "on": 8.883333333333333,
+    "off": 11.783333333333333
+  },
+  "134108a4d35bcfd493a52147": {
+    "parent": 75,
+    "first": "LINE14-15",
+    "clearance": 134,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "ca73fe3e42029b3becdfba90": {
+    "parent": 75,
+    "first": "LINE14-15",
+    "clearance": 134,
+    "family": "line",
+    "source": "LINE23-24",
+    "on": 8.35,
+    "off": 10.933333333333334
+  },
+  "ad0a9ee93c05a44b82e61ca3": {
+    "parent": 76,
+    "first": "BUS7",
+    "clearance": 138,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "f6be951201245d10f2f993f6": {
+    "parent": 76,
+    "first": "BUS7",
+    "clearance": 138,
+    "family": "load",
+    "source": "BUS3",
+    "on": 7.15,
+    "off": 9.35
+  },
+  "65ddaec0a003ae976c835779": {
+    "parent": 77,
+    "first": "LINE14-15",
+    "clearance": 158,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "3af2437f884a6e544940ff58": {
+    "parent": 77,
+    "first": "LINE14-15",
+    "clearance": 158,
+    "family": "load",
+    "source": "BUS20",
+    "on": 6.516666666666667,
+    "off": 8.733333333333333
+  },
+  "7e1ed786e1ebf259c8875696": {
+    "parent": 78,
+    "first": "BUS20",
+    "clearance": 139,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "73dc57a2794c30297b08ae25": {
+    "parent": 78,
+    "first": "BUS20",
+    "clearance": 139,
+    "family": "line",
+    "source": "LINE3-4",
+    "on": 6.216666666666667,
+    "off": 8.95
+  },
+  "c0ec77fe2c855c878bf47e49": {
+    "parent": 79,
+    "first": "LINE9-39",
+    "clearance": 157,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "29deb30bb99e60741853865f": {
+    "parent": 79,
+    "first": "LINE9-39",
+    "clearance": 157,
+    "family": "line",
+    "source": "LINE14-15",
+    "on": 7.233333333333333,
+    "off": 11.183333333333334
+  },
+  "0eda6d479a5be41a12e7503c": {
+    "parent": 80,
+    "first": "BUS3",
+    "clearance": 161,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "510dfc2c6d4e543fe86e801a": {
+    "parent": 80,
+    "first": "BUS3",
+    "clearance": 161,
+    "family": "load",
+    "source": "BUS7",
+    "on": 7.95,
+    "off": 10.85
+  },
+  "c31f4a23a422c35d0e849e6b": {
+    "parent": 81,
+    "first": "LINE26-27",
+    "clearance": 134,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "cca5b85423ab418c17ecbd50": {
+    "parent": 81,
+    "first": "LINE26-27",
+    "clearance": 134,
+    "family": "load",
+    "source": "BUS16",
+    "on": 7.983333333333333,
+    "off": 10.183333333333334
+  },
+  "2bae4582396fae6a1effc5e9": {
+    "parent": 82,
+    "first": "BUS24",
+    "clearance": 161,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "3744de28507f374e62bc559e": {
+    "parent": 82,
+    "first": "BUS24",
+    "clearance": 161,
+    "family": "line",
+    "source": "LINE9-39",
+    "on": 9.25,
+    "off": 12.4
+  },
+  "4428b63d3fc40c92cb8cf5b1": {
+    "parent": 83,
+    "first": "LINE23-24",
+    "clearance": 152,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "da02dd88d3eebe1f69f8e93e": {
+    "parent": 83,
+    "first": "LINE23-24",
+    "clearance": 152,
+    "family": "line",
+    "source": "LINE26-29",
+    "on": 6.316666666666666,
+    "off": 9.433333333333334
+  },
+  "73931c399290151360fab347": {
+    "parent": 84,
+    "first": "BUS7",
+    "clearance": 171,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "5f9c39824538b2e0d34b72b4": {
+    "parent": 84,
+    "first": "BUS7",
+    "clearance": 171,
+    "family": "load",
+    "source": "BUS26",
+    "on": 7.533333333333333,
+    "off": 10.1
+  },
+  "558b2a64045ca5da657e8c56": {
+    "parent": 85,
+    "first": "LINE4-14",
+    "clearance": 171,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "7e685ab7410d1e6ed6b9bb06": {
+    "parent": 85,
+    "first": "LINE4-14",
+    "clearance": 171,
+    "family": "load",
+    "source": "BUS7",
+    "on": 9.683333333333334,
+    "off": 12.366666666666667
+  },
+  "8486402f6b0e902fd002ab1a": {
+    "parent": 86,
+    "first": "BUS4",
+    "clearance": 137,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "d3c77444c39492cccb051fc2": {
+    "parent": 86,
+    "first": "BUS4",
+    "clearance": 137,
+    "family": "line",
+    "source": "LINE3-4",
+    "on": 6.833333333333333,
+    "off": 8.933333333333334
+  },
+  "02666cd2dda65f0b74b30c48": {
+    "parent": 87,
+    "first": "LINE9-39",
+    "clearance": 141,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "0836db2f8b8a113aa5b0521a": {
+    "parent": 87,
+    "first": "LINE9-39",
+    "clearance": 141,
+    "family": "line",
+    "source": "LINE17-18",
+    "on": 5.95,
+    "off": 9.816666666666666
+  },
+  "f98e757695db49a6f54cfc2e": {
+    "parent": 88,
+    "first": "BUS7",
+    "clearance": 171,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "5c23fc7713c6b3484cbb754c": {
+    "parent": 88,
+    "first": "BUS7",
+    "clearance": 171,
+    "family": "load",
+    "source": "BUS31",
+    "on": 7.283333333333333,
+    "off": 10.783333333333333
+  },
+  "8cf2990ab62e0e608f16e512": {
+    "parent": 89,
+    "first": "LINE9-39",
+    "clearance": 163,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "ebbb7ac3cfb33b89075a88ec": {
+    "parent": 89,
+    "first": "LINE9-39",
+    "clearance": 163,
+    "family": "load",
+    "source": "BUS24",
+    "on": 7.75,
+    "off": 10.266666666666667
+  },
+  "1bdb88b0908e8e61b3f0e817": {
+    "parent": 90,
+    "first": "BUS26",
+    "clearance": 116,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "c8fff1399edc377eed887c01": {
+    "parent": 90,
+    "first": "BUS26",
+    "clearance": 116,
+    "family": "line",
+    "source": "LINE26-29",
+    "on": 5.433333333333334,
+    "off": 9.366666666666667
+  },
+  "9b3587279873f9f00753be46": {
+    "parent": 91,
+    "first": "LINE16-17",
+    "clearance": 153,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "3cf42585ba8c6e3d353a0549": {
+    "parent": 91,
+    "first": "LINE16-17",
+    "clearance": 153,
+    "family": "line",
+    "source": "LINE23-24",
+    "on": 8.083333333333334,
+    "off": 12.083333333333334
+  },
+  "ca15204ef58e2151565bfd1c": {
+    "parent": 92,
+    "first": "BUS4",
+    "clearance": 153,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "30a9ada55e9dfdcc18877779": {
+    "parent": 92,
+    "first": "BUS4",
+    "clearance": 153,
+    "family": "load",
+    "source": "BUS24",
+    "on": 6.4,
+    "off": 8.633333333333333
+  },
+  "84ece6242f81c0517dcc1ffd": {
+    "parent": 93,
+    "first": "LINE14-15",
+    "clearance": 137,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "f7879b1d7d307ecee8c728ba": {
+    "parent": 93,
+    "first": "LINE14-15",
+    "clearance": 137,
+    "family": "load",
+    "source": "BUS24",
+    "on": 6.033333333333333,
+    "off": 9.583333333333334
+  },
+  "4864fd693d493db9c48c50bf": {
+    "parent": 94,
+    "first": "BUS26",
+    "clearance": 145,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "0e016df07dafb8ed613e1bdd": {
+    "parent": 94,
+    "first": "BUS26",
+    "clearance": 145,
+    "family": "line",
+    "source": "LINE26-27",
+    "on": 8.366666666666667,
+    "off": 10.75
+  },
+  "b781df7a3102ee0a9658f2cb": {
+    "parent": 95,
+    "first": "LINE9-39",
+    "clearance": 170,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "716103c0aa9c3f3bf69572ba": {
+    "parent": 95,
+    "first": "LINE9-39",
+    "clearance": 170,
+    "family": "line",
+    "source": "LINE26-29",
+    "on": 7.483333333333333,
+    "off": 9.533333333333333
+  },
+  "3a8118ddf5edccc0401d8e32": {
+    "parent": 96,
+    "first": "BUS3",
+    "clearance": 138,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "657f202a919491aab406fddf": {
+    "parent": 96,
+    "first": "BUS3",
+    "clearance": 138,
+    "family": "load",
+    "source": "BUS24",
+    "on": 6.9,
+    "off": 10.35
+  },
+  "03c5067ab2f62191dc4dfcae": {
+    "parent": 97,
+    "first": "LINE17-18",
+    "clearance": 125,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "bcbe32e052a808b87c1c6657": {
+    "parent": 97,
+    "first": "LINE17-18",
+    "clearance": 125,
+    "family": "load",
+    "source": "BUS31",
+    "on": 7.433333333333334,
+    "off": 9.866666666666667
+  },
+  "d4d60143f062fa37aad546b5": {
+    "parent": 98,
+    "first": "BUS20",
+    "clearance": 124,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "2e2f3ba36e225a69a1c0fa5a": {
+    "parent": 98,
+    "first": "BUS20",
+    "clearance": 124,
+    "family": "line",
+    "source": "LINE14-15",
+    "on": 6.366666666666666,
+    "off": 8.85
+  },
+  "46781d08dd7769de58c1e5ee": {
+    "parent": 99,
+    "first": "LINE3-4",
+    "clearance": 164,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "36c4e43f64ae12336c8a81e0": {
+    "parent": 99,
+    "first": "LINE3-4",
+    "clearance": 164,
+    "family": "line",
+    "source": "LINE26-29",
+    "on": 9.116666666666667,
+    "off": 12.733333333333333
+  },
+  "91b28f255b91f796ea511ccd": {
+    "parent": 100,
+    "first": "BUS24",
+    "clearance": 146,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "abefb9ec6bbf2344a5afdf89": {
+    "parent": 100,
+    "first": "BUS24",
+    "clearance": 146,
+    "family": "load",
+    "source": "BUS16",
+    "on": 8.25,
+    "off": 10.966666666666667
+  },
+  "83269e7c79ffadea5c1b9bce": {
+    "parent": 101,
+    "first": "LINE26-29",
+    "clearance": 141,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "5a0270dcc702cd14c53550ca": {
+    "parent": 101,
+    "first": "LINE26-29",
+    "clearance": 141,
+    "family": "load",
+    "source": "BUS31",
+    "on": 7.933333333333334,
+    "off": 10.933333333333334
+  },
+  "a972d49c5e6eb1b230ce248d": {
+    "parent": 102,
+    "first": "BUS24",
+    "clearance": 185,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "1a61793a7906903aa25e1c11": {
+    "parent": 102,
+    "first": "BUS24",
+    "clearance": 185,
+    "family": "line",
+    "source": "LINE16-17",
+    "on": 7.85,
+    "off": 10.9
+  },
+  "cfc24420522b5faf3bf98e47": {
+    "parent": 103,
+    "first": "LINE14-15",
+    "clearance": 131,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "5d35f9c60ef5dd6b8e64e554": {
+    "parent": 103,
+    "first": "LINE14-15",
+    "clearance": 131,
+    "family": "line",
+    "source": "LINE16-17",
+    "on": 6.116666666666666,
+    "off": 10.0
+  },
+  "a1f18dad3120968b8d121cd7": {
+    "parent": 104,
+    "first": "BUS7",
+    "clearance": 170,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "efdff69946dd487411f7d9fb": {
+    "parent": 104,
+    "first": "BUS7",
+    "clearance": 170,
+    "family": "load",
+    "source": "BUS15",
+    "on": 7.316666666666666,
+    "off": 10.65
+  },
+  "c4d22d08fdee1471f402c3b9": {
+    "parent": 105,
+    "first": "LINE4-14",
+    "clearance": 167,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "9f1f895edd254f80a59f72a2": {
+    "parent": 105,
+    "first": "LINE4-14",
+    "clearance": 167,
+    "family": "load",
+    "source": "BUS4",
+    "on": 8.35,
+    "off": 11.35
+  },
+  "ac335b85a3df6c01573bde5d": {
+    "parent": 106,
+    "first": "BUS31",
+    "clearance": 148,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "4d4678728fc7312bfb1122d7": {
+    "parent": 106,
+    "first": "BUS31",
+    "clearance": 148,
+    "family": "line",
+    "source": "LINE14-15",
+    "on": 8.05,
+    "off": 10.683333333333334
+  },
+  "88235ec4a3635e280d73a0d9": {
+    "parent": 107,
+    "first": "LINE26-29",
+    "clearance": 162,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "814653147c1de3113624e2fd": {
+    "parent": 107,
+    "first": "LINE26-29",
+    "clearance": 162,
+    "family": "line",
+    "source": "LINE14-15",
+    "on": 6.65,
+    "off": 10.166666666666666
+  },
+  "a8151a4308d5acb1ea420d19": {
+    "parent": 108,
+    "first": "BUS31",
+    "clearance": 181,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "8c0ffac693460733391f3316": {
+    "parent": 108,
+    "first": "BUS31",
+    "clearance": 181,
+    "family": "load",
+    "source": "BUS20",
+    "on": 9.716666666666667,
+    "off": 12.683333333333334
+  },
+  "ed49572336f291a9928778b4": {
+    "parent": 109,
+    "first": "LINE26-29",
+    "clearance": 158,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "faab5fb539b6a13e6d0a9d90": {
+    "parent": 109,
+    "first": "LINE26-29",
+    "clearance": 158,
+    "family": "load",
+    "source": "BUS16",
+    "on": 7.116666666666666,
+    "off": 9.683333333333334
+  },
+  "906be2d8f4c6b09f4e7768f4": {
+    "parent": 110,
+    "first": "BUS20",
+    "clearance": 141,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "4c6d90e6fe14837fc5d13c9f": {
+    "parent": 110,
+    "first": "BUS20",
+    "clearance": 141,
+    "family": "line",
+    "source": "LINE26-27",
+    "on": 7.983333333333333,
+    "off": 10.25
+  },
+  "346d6c7e9f02c94d5d6afd9d": {
+    "parent": 111,
+    "first": "LINE16-17",
+    "clearance": 181,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "a26c6ecb3afeef625082a937": {
+    "parent": 111,
+    "first": "LINE16-17",
+    "clearance": 181,
+    "family": "line",
+    "source": "LINE26-29",
+    "on": 9.083333333333334,
+    "off": 11.65
+  },
+  "7c4d015105b4e5f55dbc33ae": {
+    "parent": 112,
+    "first": "BUS26",
+    "clearance": 159,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "11682587f97ee0d238ba604d": {
+    "parent": 112,
+    "first": "BUS26",
+    "clearance": 159,
+    "family": "load",
+    "source": "BUS7",
+    "on": 9.166666666666666,
+    "off": 12.383333333333333
+  },
+  "954f5fea3be4663aadb3f0a2": {
+    "parent": 113,
+    "first": "LINE9-39",
+    "clearance": 173,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "2b55da7dcd3f77a5fa27e3fd": {
+    "parent": 113,
+    "first": "LINE9-39",
+    "clearance": 173,
+    "family": "load",
+    "source": "BUS20",
+    "on": 9.116666666666667,
+    "off": 11.583333333333334
+  },
+  "f36ddbd57678afeaf2225771": {
+    "parent": 114,
+    "first": "BUS4",
+    "clearance": 120,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "4cc0b944d7fb05b1d141e877": {
+    "parent": 114,
+    "first": "BUS4",
+    "clearance": 120,
+    "family": "line",
+    "source": "LINE9-39",
+    "on": 5.866666666666666,
+    "off": 8.666666666666666
+  },
+  "3f70224877306c8d43bdd58a": {
+    "parent": 115,
+    "first": "LINE26-29",
+    "clearance": 146,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "316944f8b026dbe0f8d2a894": {
+    "parent": 115,
+    "first": "LINE26-29",
+    "clearance": 146,
+    "family": "line",
+    "source": "LINE14-15",
+    "on": 6.183333333333334,
+    "off": 10.166666666666666
+  },
+  "a4573c59cc6d2e417322a31f": {
+    "parent": 116,
+    "first": "BUS4",
+    "clearance": 120,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "fd3856217d727975c854c522": {
+    "parent": 116,
+    "first": "BUS4",
+    "clearance": 120,
+    "family": "load",
+    "source": "BUS3",
+    "on": 5.85,
+    "off": 7.866666666666666
+  },
+  "efb3d68d18576f0350f1c22d": {
+    "parent": 117,
+    "first": "LINE4-14",
+    "clearance": 146,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "6c273d7d81e776bd477170c7": {
+    "parent": 117,
+    "first": "LINE4-14",
+    "clearance": 146,
+    "family": "load",
+    "source": "BUS26",
+    "on": 6.883333333333334,
+    "off": 9.8
+  },
+  "8c25ff1d539ea0d7fa72823e": {
+    "parent": 118,
+    "first": "BUS24",
+    "clearance": 148,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "e062e58e5e05b92c6c82ca02": {
+    "parent": 118,
+    "first": "BUS24",
+    "clearance": 148,
+    "family": "line",
+    "source": "LINE16-17",
+    "on": 8.733333333333333,
+    "off": 12.066666666666666
+  },
+  "997cdbcd555a481554ce411c": {
+    "parent": 119,
+    "first": "LINE16-17",
+    "clearance": 135,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "0898a7cf96f7e82755410655": {
+    "parent": 119,
+    "first": "LINE16-17",
+    "clearance": 135,
+    "family": "line",
+    "source": "LINE3-4",
+    "on": 6.1,
+    "off": 9.4
+  },
+  "5c7cd07890fde01d9be522b6": {
+    "parent": 120,
+    "first": "BUS24",
+    "clearance": 160,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "12c9a1bbfdfd6e49663a38d5": {
+    "parent": 120,
+    "first": "BUS24",
+    "clearance": 160,
+    "family": "load",
+    "source": "BUS15",
+    "on": 8.15,
+    "off": 10.8
+  },
+  "31724b475026c7a28b61b1e0": {
+    "parent": 121,
+    "first": "LINE14-15",
+    "clearance": 171,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "87b0ec2905ffb9b99127400e": {
+    "parent": 121,
+    "first": "LINE14-15",
+    "clearance": 171,
+    "family": "load",
+    "source": "BUS3",
+    "on": 7.4,
+    "off": 11.3
+  },
+  "5a12c7180d73b0c855f58c3e": {
+    "parent": 122,
+    "first": "BUS3",
+    "clearance": 132,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "21733d1d8f95490d20834412": {
+    "parent": 122,
+    "first": "BUS3",
+    "clearance": 132,
+    "family": "line",
+    "source": "LINE23-24",
+    "on": 7.083333333333333,
+    "off": 9.95
+  },
+  "50ce496220ed903edfb305e2": {
+    "parent": 123,
+    "first": "LINE3-4",
+    "clearance": 146,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "f51a72dcd9891c2ec5843325": {
+    "parent": 123,
+    "first": "LINE3-4",
+    "clearance": 146,
+    "family": "line",
+    "source": "LINE16-17",
+    "on": 7.916666666666667,
+    "off": 11.45
+  },
+  "1369d393711862fc7a205426": {
+    "parent": 124,
+    "first": "BUS26",
+    "clearance": 124,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "191d5cd87caf78e0d306eb57": {
+    "parent": 124,
+    "first": "BUS26",
+    "clearance": 124,
+    "family": "load",
+    "source": "BUS24",
+    "on": 7.616666666666666,
+    "off": 10.216666666666667
+  },
+  "c4a3d2511e23866448fbca41": {
+    "parent": 125,
+    "first": "LINE23-24",
+    "clearance": 161,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "7e5c0f8adfd3121eaf8d147a": {
+    "parent": 125,
+    "first": "LINE23-24",
+    "clearance": 161,
+    "family": "load",
+    "source": "BUS16",
+    "on": 6.65,
+    "off": 9.75
+  },
+  "e5fe1ec6f0136eb579ed4742": {
+    "parent": 126,
+    "first": "BUS4",
+    "clearance": 131,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "4587d55dedbfa1edbb43dad5": {
+    "parent": 126,
+    "first": "BUS4",
+    "clearance": 131,
+    "family": "line",
+    "source": "LINE9-39",
+    "on": 8.133333333333333,
+    "off": 11.95
+  },
+  "03b0637c56d0795855a5cd20": {
+    "parent": 127,
+    "first": "LINE16-17",
+    "clearance": 137,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "b4d1ccbed5fc192ba0495a27": {
+    "parent": 127,
+    "first": "LINE16-17",
+    "clearance": 137,
+    "family": "line",
+    "source": "LINE23-24",
+    "on": 8.3,
+    "off": 11.883333333333333
+  },
+  "9048e77db48c5eba0c0d8085": {
+    "parent": 128,
+    "first": "BUS4",
+    "clearance": 159,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "ee3fecf1ae7b3827ba629835": {
+    "parent": 128,
+    "first": "BUS4",
+    "clearance": 159,
+    "family": "load",
+    "source": "BUS26",
+    "on": 9.2,
+    "off": 12.033333333333333
+  },
+  "83fe48f9b1d316d0c8ce6c5c": {
+    "parent": 129,
+    "first": "LINE3-4",
+    "clearance": 136,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "b8a2eddf8592a10054460452": {
+    "parent": 129,
+    "first": "LINE3-4",
+    "clearance": 136,
+    "family": "load",
+    "source": "BUS15",
+    "on": 7.283333333333333,
+    "off": 11.0
+  },
+  "0014e4d8f30e2daebf4f71c0": {
+    "parent": 130,
+    "first": "BUS20",
+    "clearance": 177,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "13574f1a8b2aa7eaf533ec2f": {
+    "parent": 130,
+    "first": "BUS20",
+    "clearance": 177,
+    "family": "line",
+    "source": "LINE16-17",
+    "on": 8.833333333333334,
+    "off": 12.116666666666667
+  },
+  "6f9b7138dcfa481b6d8b7653": {
+    "parent": 131,
+    "first": "LINE3-4",
+    "clearance": 152,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "2cf23e98842215a909f8c636": {
+    "parent": 131,
+    "first": "LINE3-4",
+    "clearance": 152,
+    "family": "line",
+    "source": "LINE17-18",
+    "on": 8.883333333333333,
+    "off": 12.75
+  },
+  "cee7258c659fe1693d75e3a2": {
+    "parent": 132,
+    "first": "BUS26",
+    "clearance": 117,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "bd733f4a7fcc7eaa93f60877": {
+    "parent": 132,
+    "first": "BUS26",
+    "clearance": 117,
+    "family": "load",
+    "source": "BUS3",
+    "on": 6.7,
+    "off": 9.133333333333333
+  },
+  "0dd45fba50deb085e8c877e9": {
+    "parent": 133,
+    "first": "LINE26-27",
+    "clearance": 126,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "373ca959899401ca3f0fc584": {
+    "parent": 133,
+    "first": "LINE26-27",
+    "clearance": 126,
+    "family": "load",
+    "source": "BUS24",
+    "on": 7.716666666666667,
+    "off": 9.966666666666667
+  },
+  "7c618eb3a82c094b9ae932f9": {
+    "parent": 134,
+    "first": "BUS31",
+    "clearance": 167,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "1590d862173f0e354530f788": {
+    "parent": 134,
+    "first": "BUS31",
+    "clearance": 167,
+    "family": "line",
+    "source": "LINE3-4",
+    "on": 8.533333333333333,
+    "off": 10.7
+  },
+  "7365d5c1732d672d687e3319": {
+    "parent": 135,
+    "first": "LINE3-4",
+    "clearance": 166,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "6ec6b7354e75d3529fdf6571": {
+    "parent": 135,
+    "first": "LINE3-4",
+    "clearance": 166,
+    "family": "line",
+    "source": "LINE26-27",
+    "on": 8.866666666666667,
+    "off": 11.85
+  },
+  "1b653223478548dce6d60dbf": {
+    "parent": 136,
+    "first": "BUS7",
+    "clearance": 175,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "62b824e62e3f2b177cc7e7b8": {
+    "parent": 136,
+    "first": "BUS7",
+    "clearance": 175,
+    "family": "load",
+    "source": "BUS16",
+    "on": 7.15,
+    "off": 10.383333333333333
+  },
+  "e2dd590d6c939859cd361745": {
+    "parent": 137,
+    "first": "LINE14-15",
+    "clearance": 151,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "9cd6029067926e915e956d2d": {
+    "parent": 137,
+    "first": "LINE14-15",
+    "clearance": 151,
+    "family": "load",
+    "source": "BUS31",
+    "on": 7.766666666666667,
+    "off": 10.85
+  },
+  "5c5c207ac1b355925b271477": {
+    "parent": 138,
+    "first": "BUS15",
+    "clearance": 124,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "0c81c3eb318a875d58abd183": {
+    "parent": 138,
+    "first": "BUS15",
+    "clearance": 124,
+    "family": "line",
+    "source": "LINE23-24",
+    "on": 6.616666666666666,
+    "off": 9.6
+  },
+  "515108ef0899e1038060cb0a": {
+    "parent": 139,
+    "first": "LINE16-17",
+    "clearance": 124,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "904a688bc1ba1a41cd5efece": {
+    "parent": 139,
+    "first": "LINE16-17",
+    "clearance": 124,
+    "family": "line",
+    "source": "LINE3-4",
+    "on": 6.333333333333333,
+    "off": 10.15
+  },
+  "6a895466884990fcf731687f": {
+    "parent": 140,
+    "first": "BUS3",
+    "clearance": 153,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "cb37a1fd78d0f6c091949cef": {
+    "parent": 140,
+    "first": "BUS3",
+    "clearance": 153,
+    "family": "load",
+    "source": "BUS31",
+    "on": 7.516666666666667,
+    "off": 10.35
+  },
+  "3d9d3dc23caec7c5c741d97f": {
+    "parent": 141,
+    "first": "LINE4-14",
+    "clearance": 153,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "7f38fd022956812af8ae35d8": {
+    "parent": 141,
+    "first": "LINE4-14",
+    "clearance": 153,
+    "family": "load",
+    "source": "BUS15",
+    "on": 7.583333333333333,
+    "off": 9.75
+  },
+  "352ad1cff57bf00c71b3f65b": {
+    "parent": 142,
+    "first": "BUS20",
+    "clearance": 141,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "39eb708e18a241a29459e108": {
+    "parent": 142,
+    "first": "BUS20",
+    "clearance": 141,
+    "family": "line",
+    "source": "LINE4-14",
+    "on": 6.483333333333333,
+    "off": 8.966666666666667
+  },
+  "d94535606ea16662c9ad517d": {
+    "parent": 143,
+    "first": "LINE17-18",
+    "clearance": 145,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "ceeece559007a5c89c558db8": {
+    "parent": 143,
+    "first": "LINE17-18",
+    "clearance": 145,
+    "family": "line",
+    "source": "LINE9-39",
+    "on": 8.35,
+    "off": 11.083333333333334
+  },
+  "781616438013d75c49857493": {
+    "parent": 144,
+    "first": "BUS4",
+    "clearance": 154,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "6fe5c5909e0d365a92246163": {
+    "parent": 144,
+    "first": "BUS4",
+    "clearance": 154,
+    "family": "load",
+    "source": "BUS3",
+    "on": 8.316666666666666,
+    "off": 11.8
+  },
+  "6b960d6923490e4d8f170956": {
+    "parent": 145,
+    "first": "LINE16-17",
+    "clearance": 130,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "8bf528a00b1033e652243eb8": {
+    "parent": 145,
+    "first": "LINE16-17",
+    "clearance": 130,
+    "family": "load",
+    "source": "BUS3",
+    "on": 6.333333333333333,
+    "off": 8.816666666666666
+  },
+  "e8f3fa1be25c87cd1b2133b1": {
+    "parent": 146,
+    "first": "BUS24",
+    "clearance": 129,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "2f3a00cf66bd0a9363c0d303": {
+    "parent": 146,
+    "first": "BUS24",
+    "clearance": 129,
+    "family": "line",
+    "source": "LINE26-29",
+    "on": 7.9,
+    "off": 10.883333333333333
+  },
+  "64e4edd0202ebfd81dfd660a": {
+    "parent": 147,
+    "first": "LINE17-18",
+    "clearance": 119,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "0bbf57052bd76eac3efe34a4": {
+    "parent": 147,
+    "first": "LINE17-18",
+    "clearance": 119,
+    "family": "line",
+    "source": "LINE23-24",
+    "on": 7.333333333333333,
+    "off": 10.716666666666667
+  },
+  "493a71b96496049f73fb10cc": {
+    "parent": 148,
+    "first": "BUS24",
+    "clearance": 166,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "50760c84d8f42b9546de556c": {
+    "parent": 148,
+    "first": "BUS24",
+    "clearance": 166,
+    "family": "load",
+    "source": "BUS31",
+    "on": 7.35,
+    "off": 9.35
+  },
+  "db061a3ed8694101caea6194": {
+    "parent": 149,
+    "first": "LINE4-14",
+    "clearance": 168,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "9a202935bb19c1eca4e653b9": {
+    "parent": 149,
+    "first": "LINE4-14",
+    "clearance": 168,
+    "family": "load",
+    "source": "BUS3",
+    "on": 8.283333333333333,
+    "off": 11.4
+  },
+  "49321c8817196ab869dd5f6f": {
+    "parent": 150,
+    "first": "BUS7",
+    "clearance": 123,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "284d1b8c46ebef996de898fc": {
+    "parent": 150,
+    "first": "BUS7",
+    "clearance": 123,
+    "family": "line",
+    "source": "LINE16-17",
+    "on": 7.566666666666666,
+    "off": 9.666666666666666
+  },
+  "4100ca57a4a0b321763af8ee": {
+    "parent": 151,
+    "first": "LINE9-39",
+    "clearance": 146,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "6d32b5c56615c88e21d6f55d": {
+    "parent": 151,
+    "first": "LINE9-39",
+    "clearance": 146,
+    "family": "line",
+    "source": "LINE16-17",
+    "on": 6.316666666666666,
+    "off": 9.316666666666666
+  },
+  "263d676d63e94441ed6c2bed": {
+    "parent": 152,
+    "first": "BUS4",
+    "clearance": 181,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "eefb1b25fe7bd0564b7183e0": {
+    "parent": 152,
+    "first": "BUS4",
+    "clearance": 181,
+    "family": "load",
+    "source": "BUS7",
+    "on": 8.35,
+    "off": 11.7
+  },
+  "38da60d63a4648fca28cf08b": {
+    "parent": 153,
+    "first": "LINE17-18",
+    "clearance": 129,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "b1c69848940349a50af3bad9": {
+    "parent": 153,
+    "first": "LINE17-18",
+    "clearance": 129,
+    "family": "load",
+    "source": "BUS4",
+    "on": 5.683333333333334,
+    "off": 8.683333333333334
+  },
+  "55a79626de73b2237856d552": {
+    "parent": 154,
+    "first": "BUS7",
+    "clearance": 143,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "0cf03c56a14aa5a2743cd74b": {
+    "parent": 154,
+    "first": "BUS7",
+    "clearance": 143,
+    "family": "line",
+    "source": "LINE4-14",
+    "on": 6.966666666666667,
+    "off": 9.916666666666666
+  },
+  "5852897ad8f5e0f0cd8c5583": {
+    "parent": 155,
+    "first": "LINE3-4",
+    "clearance": 169,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "b824e826cf17edc796ac736f": {
+    "parent": 155,
+    "first": "LINE3-4",
+    "clearance": 169,
+    "family": "line",
+    "source": "LINE23-24",
+    "on": 8.983333333333333,
+    "off": 12.916666666666666
+  },
+  "26ad34fef55f6c68de522413": {
+    "parent": 156,
+    "first": "BUS16",
+    "clearance": 133,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "6374899d6362bb423bcde0ff": {
+    "parent": 156,
+    "first": "BUS16",
+    "clearance": 133,
+    "family": "load",
+    "source": "BUS20",
+    "on": 8.166666666666666,
+    "off": 11.8
+  },
+  "51b19766e25b8ec67c512d9b": {
+    "parent": 157,
+    "first": "LINE9-39",
+    "clearance": 147,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "93bd3250dcfa05d48ce1c447": {
+    "parent": 157,
+    "first": "LINE9-39",
+    "clearance": 147,
+    "family": "load",
+    "source": "BUS4",
+    "on": 7.483333333333333,
+    "off": 10.933333333333334
+  },
+  "c92d2c54252111f452ff0276": {
+    "parent": 158,
+    "first": "BUS15",
+    "clearance": 178,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "89d81c59d7df9c2618fad282": {
+    "parent": 158,
+    "first": "BUS15",
+    "clearance": 178,
+    "family": "line",
+    "source": "LINE9-39",
+    "on": 9.616666666666667,
+    "off": 13.0
+  },
+  "c31764288cb043899b456ba4": {
+    "parent": 159,
+    "first": "LINE26-29",
+    "clearance": 151,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "9a4fc83b5b7cfe370a550fb9": {
+    "parent": 159,
+    "first": "LINE26-29",
+    "clearance": 151,
+    "family": "line",
+    "source": "LINE4-14",
+    "on": 7.233333333333333,
+    "off": 9.916666666666666
+  },
+  "c78a2f5b2c9116d8b2b205c4": {
+    "parent": 160,
+    "first": "BUS15",
+    "clearance": 163,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "887ef7353c5f0136dc7cc7fb": {
+    "parent": 160,
+    "first": "BUS15",
+    "clearance": 163,
+    "family": "load",
+    "source": "BUS31",
+    "on": 9.35,
+    "off": 11.9
+  },
+  "748a5ddc5b463f21ce605a87": {
+    "parent": 161,
+    "first": "LINE26-27",
+    "clearance": 165,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "a7cf0f8c97d2bf01911632b7": {
+    "parent": 161,
+    "first": "LINE26-27",
+    "clearance": 165,
+    "family": "load",
+    "source": "BUS4",
+    "on": 8.65,
+    "off": 11.466666666666667
+  },
+  "10701afa3dc63e3aed5951e2": {
+    "parent": 162,
+    "first": "BUS7",
+    "clearance": 168,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "be05356434cff1bb5de0e9db": {
+    "parent": 162,
+    "first": "BUS7",
+    "clearance": 168,
+    "family": "line",
+    "source": "LINE14-15",
+    "on": 9.033333333333333,
+    "off": 12.8
+  },
+  "2821f95044ad4fd1ba406fd8": {
+    "parent": 163,
+    "first": "LINE3-4",
+    "clearance": 151,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "7f112fbd331f9b0b4fd9d8c8": {
+    "parent": 163,
+    "first": "LINE3-4",
+    "clearance": 151,
+    "family": "line",
+    "source": "LINE26-27",
+    "on": 8.083333333333334,
+    "off": 11.65
+  },
+  "d9e6b375728f504e9b752982": {
+    "parent": 164,
+    "first": "BUS16",
+    "clearance": 149,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "48692b55d1af348e20422dd9": {
+    "parent": 164,
+    "first": "BUS16",
+    "clearance": 149,
+    "family": "load",
+    "source": "BUS4",
+    "on": 6.433333333333334,
+    "off": 9.333333333333334
+  },
+  "bbc6b1ab1844b23903028d5d": {
+    "parent": 165,
+    "first": "LINE3-4",
+    "clearance": 179,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "bf01b0517ea0e9c34ba26934": {
+    "parent": 165,
+    "first": "LINE3-4",
+    "clearance": 179,
+    "family": "load",
+    "source": "BUS15",
+    "on": 8.55,
+    "off": 12.283333333333333
+  },
+  "9cc69eb3b516326539e43ee3": {
+    "parent": 166,
+    "first": "BUS15",
+    "clearance": 132,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "88a7107b3430335ef190babd": {
+    "parent": 166,
+    "first": "BUS15",
+    "clearance": 132,
+    "family": "line",
+    "source": "LINE23-24",
+    "on": 6.966666666666667,
+    "off": 9.65
+  },
+  "e6298912ebfad9e843646b8e": {
+    "parent": 167,
+    "first": "LINE4-14",
+    "clearance": 123,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "2c5de6371dee53e5063f5169": {
+    "parent": 167,
+    "first": "LINE4-14",
+    "clearance": 123,
+    "family": "line",
+    "source": "LINE16-17",
+    "on": 7.783333333333333,
+    "off": 11.616666666666667
+  },
+  "4effabff07bbd5babff86f48": {
+    "parent": 168,
+    "first": "BUS24",
+    "clearance": 162,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "1ca7f59b49fa70c9a40d554f": {
+    "parent": 168,
+    "first": "BUS24",
+    "clearance": 162,
+    "family": "load",
+    "source": "BUS7",
+    "on": 8.383333333333333,
+    "off": 11.033333333333333
+  },
+  "34096cd53771bb02c45e03b2": {
+    "parent": 169,
+    "first": "LINE14-15",
+    "clearance": 147,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "03bfec624e1e29e5fcc29547": {
+    "parent": 169,
+    "first": "LINE14-15",
+    "clearance": 147,
+    "family": "load",
+    "source": "BUS4",
+    "on": 7.6,
+    "off": 10.333333333333334
+  },
+  "48bc9b894f1cfdc5e0b3aa64": {
+    "parent": 170,
+    "first": "BUS26",
+    "clearance": 134,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "0da8016ffb5e50a285a385f2": {
+    "parent": 170,
+    "first": "BUS26",
+    "clearance": 134,
+    "family": "line",
+    "source": "LINE14-15",
+    "on": 8.433333333333334,
+    "off": 11.2
+  },
+  "402b252f9549d7cd72b0be7f": {
+    "parent": 171,
+    "first": "LINE4-14",
+    "clearance": 166,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "3bd01d16901020b3f8f5b936": {
+    "parent": 171,
+    "first": "LINE4-14",
+    "clearance": 166,
+    "family": "line",
+    "source": "LINE17-18",
+    "on": 7.866666666666666,
+    "off": 10.866666666666667
+  },
+  "bd2692ce19e1432e060317a7": {
+    "parent": 172,
+    "first": "BUS7",
+    "clearance": 153,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "de113873e8803758d2c41c6e": {
+    "parent": 172,
+    "first": "BUS7",
+    "clearance": 153,
+    "family": "load",
+    "source": "BUS20",
+    "on": 8.366666666666667,
+    "off": 10.916666666666666
+  },
+  "afc368dc3a1f5ec7b110bc9a": {
+    "parent": 173,
+    "first": "LINE26-27",
+    "clearance": 171,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "75a22f9cefa516b9d48d2399": {
+    "parent": 173,
+    "first": "LINE26-27",
+    "clearance": 171,
+    "family": "load",
+    "source": "BUS31",
+    "on": 7.3,
+    "off": 10.533333333333333
+  },
+  "1bd968c63a20f52f5f265a3f": {
+    "parent": 174,
+    "first": "BUS15",
+    "clearance": 170,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "e11e8a7ee86233b402bbf3d6": {
+    "parent": 174,
+    "first": "BUS15",
+    "clearance": 170,
+    "family": "line",
+    "source": "LINE9-39",
+    "on": 8.766666666666667,
+    "off": 11.983333333333333
+  },
+  "b0c3a9ad512490e961332be4": {
+    "parent": 175,
+    "first": "LINE17-18",
+    "clearance": 151,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "2e1d8e0b939f4da5ff7fcb2d": {
+    "parent": 175,
+    "first": "LINE17-18",
+    "clearance": 151,
+    "family": "line",
+    "source": "LINE4-14",
+    "on": 7.916666666666667,
+    "off": 11.05
+  },
+  "0b4848d4c78308b57e82554c": {
+    "parent": 176,
+    "first": "BUS16",
+    "clearance": 125,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "49cf9486035d775d4e947b69": {
+    "parent": 176,
+    "first": "BUS16",
+    "clearance": 125,
+    "family": "load",
+    "source": "BUS26",
+    "on": 5.433333333333334,
+    "off": 8.05
+  },
+  "4b6d861e865d5e8434053767": {
+    "parent": 177,
+    "first": "LINE26-29",
+    "clearance": 167,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "2a55fec9c443d64e5a06cb11": {
+    "parent": 177,
+    "first": "LINE26-29",
+    "clearance": 167,
+    "family": "load",
+    "source": "BUS31",
+    "on": 7.75,
+    "off": 10.533333333333333
+  },
+  "ee905aabbd4fbfa86fe8096a": {
+    "parent": 178,
+    "first": "BUS24",
+    "clearance": 171,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "e1896bde4d72c1cd75302406": {
+    "parent": 178,
+    "first": "BUS24",
+    "clearance": 171,
+    "family": "line",
+    "source": "LINE4-14",
+    "on": 9.683333333333334,
+    "off": 11.733333333333333
+  },
+  "3571c18d9a9021be4b23d58d": {
+    "parent": 179,
+    "first": "LINE26-27",
+    "clearance": 171,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "d47ead77dce1fb09503d1087": {
+    "parent": 179,
+    "first": "LINE26-27",
+    "clearance": 171,
+    "family": "line",
+    "source": "LINE3-4",
+    "on": 9.316666666666666,
+    "off": 13.183333333333334
+  },
+  "f900e46d59d84ac1cdeaf086": {
+    "parent": 180,
+    "first": "BUS3",
+    "clearance": 173,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "9d6b08d804e63d2346124f66": {
+    "parent": 180,
+    "first": "BUS3",
+    "clearance": 173,
+    "family": "load",
+    "source": "BUS7",
+    "on": 7.7,
+    "off": 10.833333333333334
+  },
+  "ecc60000dca70d5c2020c5ec": {
+    "parent": 181,
+    "first": "LINE3-4",
+    "clearance": 174,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "9894a1515cca650ad05982e7": {
+    "parent": 181,
+    "first": "LINE3-4",
+    "clearance": 174,
+    "family": "load",
+    "source": "BUS24",
+    "on": 7.15,
+    "off": 10.183333333333334
+  },
+  "0b51b80241160d1106b36690": {
+    "parent": 182,
+    "first": "BUS20",
+    "clearance": 148,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "cf40d333f4e6029fc23d019b": {
+    "parent": 182,
+    "first": "BUS20",
+    "clearance": 148,
+    "family": "line",
+    "source": "LINE16-17",
+    "on": 6.9,
+    "off": 9.583333333333334
+  },
+  "02e48f6353146f5128654f6a": {
+    "parent": 183,
+    "first": "LINE14-15",
+    "clearance": 126,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "8a23147a1342aae9968e33f4": {
+    "parent": 183,
+    "first": "LINE14-15",
+    "clearance": 126,
+    "family": "line",
+    "source": "LINE23-24",
+    "on": 6.85,
+    "off": 8.966666666666667
+  },
+  "0cbdbab27c81bae4a59917cc": {
+    "parent": 184,
+    "first": "BUS4",
+    "clearance": 145,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "19fb3c12fe58c0e58a921385": {
+    "parent": 184,
+    "first": "BUS4",
+    "clearance": 145,
+    "family": "load",
+    "source": "BUS20",
+    "on": 7.566666666666666,
+    "off": 11.083333333333334
+  },
+  "484a73274809179f16569f73": {
+    "parent": 185,
+    "first": "LINE14-15",
+    "clearance": 176,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "6b93c7dfb94c6681f266aa73": {
+    "parent": 185,
+    "first": "LINE14-15",
+    "clearance": 176,
+    "family": "load",
+    "source": "BUS24",
+    "on": 9.0,
+    "off": 12.366666666666667
+  },
+  "c995b87dfa1d7e4b1c26b9f8": {
+    "parent": 186,
+    "first": "BUS26",
+    "clearance": 171,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "94b261042e73e2d875edf498": {
+    "parent": 186,
+    "first": "BUS26",
+    "clearance": 171,
+    "family": "line",
+    "source": "LINE23-24",
+    "on": 9.216666666666667,
+    "off": 13.05
+  },
+  "e1e0035be7aa92c44ee46ae7": {
+    "parent": 187,
+    "first": "LINE16-17",
+    "clearance": 186,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "320d27d57f73f16e62b002a3": {
+    "parent": 187,
+    "first": "LINE16-17",
+    "clearance": 186,
+    "family": "line",
+    "source": "LINE14-15",
+    "on": 8.416666666666666,
+    "off": 10.716666666666667
+  },
+  "750e01b79543fb16eebdf53d": {
+    "parent": 188,
+    "first": "BUS16",
+    "clearance": 140,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "daa69e8ee80f7baeba3a0065": {
+    "parent": 188,
+    "first": "BUS16",
+    "clearance": 140,
+    "family": "load",
+    "source": "BUS4",
+    "on": 8.466666666666667,
+    "off": 12.0
+  },
+  "ff82b9d5a35139c7a9104fb9": {
+    "parent": 189,
+    "first": "LINE26-27",
+    "clearance": 158,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "598b6f549da2e77c55f112e5": {
+    "parent": 189,
+    "first": "LINE26-27",
+    "clearance": 158,
+    "family": "load",
+    "source": "BUS16",
+    "on": 8.033333333333333,
+    "off": 11.883333333333333
+  },
+  "0ec06a49fc2e511b7faec9a6": {
+    "parent": 190,
+    "first": "BUS7",
+    "clearance": 175,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "5a63901dc7181d8e380026dd": {
+    "parent": 190,
+    "first": "BUS7",
+    "clearance": 175,
+    "family": "line",
+    "source": "LINE26-29",
+    "on": 9.166666666666666,
+    "off": 11.2
+  },
+  "150f32f59282e94e68e3b5c3": {
+    "parent": 191,
+    "first": "LINE4-14",
+    "clearance": 181,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "7ab76dccc421c5131bcff6e0": {
+    "parent": 191,
+    "first": "LINE4-14",
+    "clearance": 181,
+    "family": "line",
+    "source": "LINE17-18",
+    "on": 8.633333333333333,
+    "off": 11.733333333333333
+  },
+  "3eabafffc0ac9db8f78227c6": {
+    "parent": 192,
+    "first": "BUS4",
+    "clearance": 179,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "ffe5cc451408327e9ac41990": {
+    "parent": 192,
+    "first": "BUS4",
+    "clearance": 179,
+    "family": "load",
+    "source": "BUS24",
+    "on": 9.1,
+    "off": 11.183333333333334
+  },
+  "c9b3b1cb6352a606c37c1931": {
+    "parent": 193,
+    "first": "LINE14-15",
+    "clearance": 139,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "998bdf9784d96b7de76dc845": {
+    "parent": 193,
+    "first": "LINE14-15",
+    "clearance": 139,
+    "family": "load",
+    "source": "BUS31",
+    "on": 8.083333333333334,
+    "off": 11.916666666666666
+  },
+  "d78abdfcf8f2c04753b7c1a5": {
+    "parent": 194,
+    "first": "BUS4",
+    "clearance": 165,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "d6126f1b4fe523895c4344a0": {
+    "parent": 194,
+    "first": "BUS4",
+    "clearance": 165,
+    "family": "line",
+    "source": "LINE3-4",
+    "on": 7.9,
+    "off": 10.2
+  },
+  "d2c8cbd7db92eae2f851fc14": {
+    "parent": 195,
+    "first": "LINE16-17",
+    "clearance": 172,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "05ae25def06d4164137438fd": {
+    "parent": 195,
+    "first": "LINE16-17",
+    "clearance": 172,
+    "family": "line",
+    "source": "LINE17-18",
+    "on": 9.033333333333333,
+    "off": 11.983333333333333
+  },
+  "866d5e3c2af7c1f6b82bc438": {
+    "parent": 196,
+    "first": "BUS15",
+    "clearance": 141,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "2560514ba45c3627c973babd": {
+    "parent": 196,
+    "first": "BUS15",
+    "clearance": 141,
+    "family": "load",
+    "source": "BUS3",
+    "on": 6.6,
+    "off": 9.083333333333334
+  },
+  "f436316ab13b03c17de698cb": {
+    "parent": 197,
+    "first": "LINE23-24",
+    "clearance": 165,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "13e27fcf2b7b3f4d09441b12": {
+    "parent": 197,
+    "first": "LINE23-24",
+    "clearance": 165,
+    "family": "load",
+    "source": "BUS7",
+    "on": 7.35,
+    "off": 9.383333333333333
+  },
+  "7d4d0668311fae453a8f7e88": {
+    "parent": 198,
+    "first": "BUS26",
+    "clearance": 166,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "c0081ab9bb433b1594f06907": {
+    "parent": 198,
+    "first": "BUS26",
+    "clearance": 166,
+    "family": "line",
+    "source": "LINE9-39",
+    "on": 7.45,
+    "off": 9.85
+  },
+  "8a64f8fc5f40c8d437811525": {
+    "parent": 199,
+    "first": "LINE4-14",
+    "clearance": 136,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "6aa658befe3385895f8c6261": {
+    "parent": 199,
+    "first": "LINE4-14",
+    "clearance": 136,
+    "family": "line",
+    "source": "LINE26-29",
+    "on": 8.35,
+    "off": 12.033333333333333
+  },
+  "f5d3240c6928cb6b9e9a0bb3": {
+    "parent": 200,
+    "first": "BUS31",
+    "clearance": 158,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "97414b02240084873e0eb11e": {
+    "parent": 200,
+    "first": "BUS31",
+    "clearance": 158,
+    "family": "load",
+    "source": "BUS20",
+    "on": 8.216666666666667,
+    "off": 11.366666666666667
+  },
+  "99cb69d3167c4e62b81e2936": {
+    "parent": 201,
+    "first": "LINE17-18",
+    "clearance": 146,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "b074f1f7d0f608bb8f91c9e8": {
+    "parent": 201,
+    "first": "LINE17-18",
+    "clearance": 146,
+    "family": "load",
+    "source": "BUS31",
+    "on": 6.633333333333334,
+    "off": 10.35
+  },
+  "891982d68fccad5a9b106a6f": {
+    "parent": 202,
+    "first": "BUS20",
+    "clearance": 113,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "e629b9a58a993abf3de6b14c": {
+    "parent": 202,
+    "first": "BUS20",
+    "clearance": 113,
+    "family": "line",
+    "source": "LINE9-39",
+    "on": 6.566666666666666,
+    "off": 9.25
+  },
+  "f8949e537fe99889bb9fdd24": {
+    "parent": 203,
+    "first": "LINE14-15",
+    "clearance": 137,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "f3ebb41d6093c5704e46a032": {
+    "parent": 203,
+    "first": "LINE14-15",
+    "clearance": 137,
+    "family": "line",
+    "source": "LINE9-39",
+    "on": 6.933333333333334,
+    "off": 9.55
+  },
+  "2fc5519276074f4071bd50a3": {
+    "parent": 204,
+    "first": "BUS15",
+    "clearance": 139,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "6bd0cace2891bacc1b73ab89": {
+    "parent": 204,
+    "first": "BUS15",
+    "clearance": 139,
+    "family": "load",
+    "source": "BUS16",
+    "on": 7.133333333333334,
+    "off": 10.366666666666667
+  },
+  "d0fb97b9690551dd4c325f4e": {
+    "parent": 205,
+    "first": "LINE9-39",
+    "clearance": 140,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "662aeaa4ff9afaa34a580fe7": {
+    "parent": 205,
+    "first": "LINE9-39",
+    "clearance": 140,
+    "family": "load",
+    "source": "BUS24",
+    "on": 6.483333333333333,
+    "off": 10.05
+  },
+  "d7be61842a709dca70c12b96": {
+    "parent": 206,
+    "first": "BUS20",
+    "clearance": 168,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "75357d146bc9cd34f00dbe1d": {
+    "parent": 206,
+    "first": "BUS20",
+    "clearance": 168,
+    "family": "line",
+    "source": "LINE17-18",
+    "on": 8.583333333333334,
+    "off": 12.45
+  },
+  "1e49c2336a66c292fba6ffb5": {
+    "parent": 207,
+    "first": "LINE26-29",
+    "clearance": 137,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "ee1e17f96ccee18de8f81fd6": {
+    "parent": 207,
+    "first": "LINE26-29",
+    "clearance": 137,
+    "family": "line",
+    "source": "LINE14-15",
+    "on": 6.75,
+    "off": 9.333333333333334
+  },
+  "31b1f2e9c484781137aa3729": {
+    "parent": 208,
+    "first": "BUS20",
+    "clearance": 160,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "27ff40db299619993ee93c35": {
+    "parent": 208,
+    "first": "BUS20",
+    "clearance": 160,
+    "family": "load",
+    "source": "BUS24",
+    "on": 7.183333333333334,
+    "off": 9.95
+  },
+  "1f725117ec35d64894ee27c4": {
+    "parent": 209,
+    "first": "LINE3-4",
+    "clearance": 156,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "11a8ae68e5461c787de98d7e": {
+    "parent": 209,
+    "first": "LINE3-4",
+    "clearance": 156,
+    "family": "load",
+    "source": "BUS20",
+    "on": 7.266666666666667,
+    "off": 10.3
+  },
+  "7f48f213582a8d8fdef1ddc5": {
+    "parent": 210,
+    "first": "BUS26",
+    "clearance": 181,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "3fe0e00f23f391d53079029f": {
+    "parent": 210,
+    "first": "BUS26",
+    "clearance": 181,
+    "family": "line",
+    "source": "LINE9-39",
+    "on": 8.766666666666667,
+    "off": 12.766666666666667
+  },
+  "826991bf0c2a3c8b3bd8ade1": {
+    "parent": 211,
+    "first": "LINE16-17",
+    "clearance": 138,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "44657d16be28a4a39cd55880": {
+    "parent": 211,
+    "first": "LINE16-17",
+    "clearance": 138,
+    "family": "line",
+    "source": "LINE14-15",
+    "on": 8.016666666666667,
+    "off": 10.05
+  },
+  "f7c1abbc1c6976851caac401": {
+    "parent": 212,
+    "first": "BUS4",
+    "clearance": 157,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "782a67df1976d68665e6b543": {
+    "parent": 212,
+    "first": "BUS4",
+    "clearance": 157,
+    "family": "load",
+    "source": "BUS16",
+    "on": 7.5,
+    "off": 11.316666666666666
+  },
+  "5ce492664931b3012580f506": {
+    "parent": 213,
+    "first": "LINE4-14",
+    "clearance": 169,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "bd8447e88933b33f2144abb7": {
+    "parent": 213,
+    "first": "LINE4-14",
+    "clearance": 169,
+    "family": "load",
+    "source": "BUS24",
+    "on": 8.366666666666667,
+    "off": 12.3
+  },
+  "33239aa447629d5925948c6c": {
+    "parent": 214,
+    "first": "BUS26",
+    "clearance": 153,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "8eba9ea9bab96087ccdf4cf1": {
+    "parent": 214,
+    "first": "BUS26",
+    "clearance": 153,
+    "family": "line",
+    "source": "LINE23-24",
+    "on": 8.433333333333334,
+    "off": 10.533333333333333
+  },
+  "db6deab7faf55f6179296b1c": {
+    "parent": 215,
+    "first": "LINE14-15",
+    "clearance": 177,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "aefcb4aee98ea0ca4549e132": {
+    "parent": 215,
+    "first": "LINE14-15",
+    "clearance": 177,
+    "family": "line",
+    "source": "LINE9-39",
+    "on": 8.783333333333333,
+    "off": 12.483333333333333
+  },
+  "07f598640c483ddac22429b5": {
+    "parent": 216,
+    "first": "BUS26",
+    "clearance": 153,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "5e87fdc915b8398309c857b1": {
+    "parent": 216,
+    "first": "BUS26",
+    "clearance": 153,
+    "family": "load",
+    "source": "BUS24",
+    "on": 8.016666666666667,
+    "off": 11.866666666666667
+  },
+  "ede95b90c5bc34de6bfc3bc0": {
+    "parent": 217,
+    "first": "LINE14-15",
+    "clearance": 140,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "4ed08087bf10d74e27435d9a": {
+    "parent": 217,
+    "first": "LINE14-15",
+    "clearance": 140,
+    "family": "load",
+    "source": "BUS24",
+    "on": 6.6,
+    "off": 9.383333333333333
+  },
+  "a769fb2bbe43274c3c51e740": {
+    "parent": 218,
+    "first": "BUS26",
+    "clearance": 150,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "750d95a765c3359a423e377d": {
+    "parent": 218,
+    "first": "BUS26",
+    "clearance": 150,
+    "family": "line",
+    "source": "LINE9-39",
+    "on": 6.483333333333333,
+    "off": 10.083333333333334
+  },
+  "b765251ff5a7a6739c0e214e": {
+    "parent": 219,
+    "first": "LINE26-29",
+    "clearance": 154,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "1eb748c7d34afb6cf46d4378": {
+    "parent": 219,
+    "first": "LINE26-29",
+    "clearance": 154,
+    "family": "line",
+    "source": "LINE3-4",
+    "on": 8.95,
+    "off": 11.5
+  },
+  "51c3cc5bea974489ced0b7df": {
+    "parent": 220,
+    "first": "BUS20",
+    "clearance": 129,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "1e318a9b11c0bbd680bff303": {
+    "parent": 220,
+    "first": "BUS20",
+    "clearance": 129,
+    "family": "load",
+    "source": "BUS24",
+    "on": 7.816666666666666,
+    "off": 10.9
+  },
+  "fb2c4da5251728ae0122c348": {
+    "parent": 221,
+    "first": "LINE16-17",
+    "clearance": 186,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "a2b4d62cd25f461ebdca3c88": {
+    "parent": 221,
+    "first": "LINE16-17",
+    "clearance": 186,
+    "family": "load",
+    "source": "BUS16",
+    "on": 9.05,
+    "off": 11.9
+  },
+  "3095ffe1662c35b7c0c401ef": {
+    "parent": 222,
+    "first": "BUS16",
+    "clearance": 135,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "c5f260c79753e0b7b0e021a4": {
+    "parent": 222,
+    "first": "BUS16",
+    "clearance": 135,
+    "family": "line",
+    "source": "LINE3-4",
+    "on": 7.1,
+    "off": 9.183333333333334
+  },
+  "f92c4dcba93fe9e270347d25": {
+    "parent": 223,
+    "first": "LINE9-39",
+    "clearance": 157,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "9753034704de011d004feab0": {
+    "parent": 223,
+    "first": "LINE9-39",
+    "clearance": 157,
+    "family": "line",
+    "source": "LINE23-24",
+    "on": 7.95,
+    "off": 10.616666666666667
+  },
+  "a617674a5cdd95d94c4152a2": {
+    "parent": 224,
+    "first": "BUS26",
+    "clearance": 137,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "1cfd3f887070c03540079eea": {
+    "parent": 224,
+    "first": "BUS26",
+    "clearance": 137,
+    "family": "load",
+    "source": "BUS16",
+    "on": 6.466666666666667,
+    "off": 9.283333333333333
+  },
+  "f4cc9d51b5f991e580667912": {
+    "parent": 225,
+    "first": "LINE9-39",
+    "clearance": 134,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "9d7f1bc7ebea054b234a54d4": {
+    "parent": 225,
+    "first": "LINE9-39",
+    "clearance": 134,
+    "family": "load",
+    "source": "BUS4",
+    "on": 6.233333333333333,
+    "off": 9.5
+  },
+  "fb588c039a41cc024e019ff2": {
+    "parent": 226,
+    "first": "BUS7",
+    "clearance": 181,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "756a2698410b4953cd8f2b35": {
+    "parent": 226,
+    "first": "BUS7",
+    "clearance": 181,
+    "family": "line",
+    "source": "LINE17-18",
+    "on": 8.983333333333333,
+    "off": 12.416666666666666
+  },
+  "d80b49aef88f2a2713d01d47": {
+    "parent": 227,
+    "first": "LINE14-15",
+    "clearance": 163,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "b3b12241e9729319d4d5c400": {
+    "parent": 227,
+    "first": "LINE14-15",
+    "clearance": 163,
+    "family": "line",
+    "source": "LINE26-29",
+    "on": 8.516666666666667,
+    "off": 10.666666666666666
+  },
+  "5b5eb6fba758df2ca0af5bef": {
+    "parent": 228,
+    "first": "BUS7",
+    "clearance": 135,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "937e9c22792c5a46692fa17b": {
+    "parent": 228,
+    "first": "BUS7",
+    "clearance": 135,
+    "family": "load",
+    "source": "BUS24",
+    "on": 7.533333333333333,
+    "off": 10.833333333333334
+  },
+  "99e701c2328c284acf739b6b": {
+    "parent": 229,
+    "first": "LINE23-24",
+    "clearance": 157,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "c2b0fd8ad71f4a003f9800ca": {
+    "parent": 229,
+    "first": "LINE23-24",
+    "clearance": 157,
+    "family": "load",
+    "source": "BUS20",
+    "on": 7.2,
+    "off": 9.316666666666666
+  },
+  "6270dffc7b7c2baf5cb5c3d6": {
+    "parent": 230,
+    "first": "BUS31",
+    "clearance": 128,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "13424ac3f39c0ee74dcccb80": {
+    "parent": 230,
+    "first": "BUS31",
+    "clearance": 128,
+    "family": "line",
+    "source": "LINE26-27",
+    "on": 7.5,
+    "off": 9.916666666666666
+  },
+  "86cdf9ea04562c6da2cc9bcd": {
+    "parent": 231,
+    "first": "LINE4-14",
+    "clearance": 150,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "0320b780f1d3e1474be82d2c": {
+    "parent": 231,
+    "first": "LINE4-14",
+    "clearance": 150,
+    "family": "line",
+    "source": "LINE3-4",
+    "on": 8.75,
+    "off": 10.85
+  },
+  "65c0b0996393266b70aaca25": {
+    "parent": 232,
+    "first": "BUS15",
+    "clearance": 173,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "7c026d86ba5b6f2670211ad2": {
+    "parent": 232,
+    "first": "BUS15",
+    "clearance": 173,
+    "family": "load",
+    "source": "BUS24",
+    "on": 7.666666666666667,
+    "off": 9.716666666666667
+  },
+  "d93415f037816e9e4548197b": {
+    "parent": 233,
+    "first": "LINE9-39",
+    "clearance": 123,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "fc571afea2742c9fe4bf1a04": {
+    "parent": 233,
+    "first": "LINE9-39",
+    "clearance": 123,
+    "family": "load",
+    "source": "BUS16",
+    "on": 6.25,
+    "off": 8.633333333333333
+  },
+  "07c2bbbdc99ebee141447e89": {
+    "parent": 234,
+    "first": "BUS24",
+    "clearance": 145,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "899a302bb553c0cc0119f7ee": {
+    "parent": 234,
+    "first": "BUS24",
+    "clearance": 145,
+    "family": "line",
+    "source": "LINE26-29",
+    "on": 7.283333333333333,
+    "off": 10.683333333333334
+  },
+  "c4eae27f8765afa588bcbde1": {
+    "parent": 235,
+    "first": "LINE26-27",
+    "clearance": 153,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "c8511346a3cfa965d3855380": {
+    "parent": 235,
+    "first": "LINE26-27",
+    "clearance": 153,
+    "family": "line",
+    "source": "LINE23-24",
+    "on": 7.2,
+    "off": 9.433333333333334
+  },
+  "5281e1088d954b39c9191b1b": {
+    "parent": 236,
+    "first": "BUS15",
+    "clearance": 131,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "7e6f12d9ca4b23861e68aa8b": {
+    "parent": 236,
+    "first": "BUS15",
+    "clearance": 131,
+    "family": "load",
+    "source": "BUS16",
+    "on": 6.566666666666666,
+    "off": 10.25
+  },
+  "32b871befea05a4d2a42cdae": {
+    "parent": 237,
+    "first": "LINE14-15",
+    "clearance": 168,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "b2da11bbbf4ef1acd93d0fa3": {
+    "parent": 237,
+    "first": "LINE14-15",
+    "clearance": 168,
+    "family": "load",
+    "source": "BUS20",
+    "on": 8.516666666666667,
+    "off": 12.416666666666666
+  },
+  "ae65efa58431dfaa35726b3e": {
+    "parent": 238,
+    "first": "BUS31",
+    "clearance": 128,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "745f9b1f66f9715090a210c7": {
+    "parent": 238,
+    "first": "BUS31",
+    "clearance": 128,
+    "family": "line",
+    "source": "LINE4-14",
+    "on": 5.633333333333334,
+    "off": 8.333333333333334
+  },
+  "fd5b3944fa0835be7114e6f9": {
+    "parent": 239,
+    "first": "LINE3-4",
+    "clearance": 137,
+    "family": "none",
+    "source": null,
+    "on": null,
+    "off": null
+  },
+  "48e235460aeee96e46ae8286": {
+    "parent": 239,
+    "first": "LINE3-4",
+    "clearance": 137,
+    "family": "line",
+    "source": "LINE23-24",
+    "on": 6.016666666666667,
+    "off": 9.133333333333333
+  }
+}
