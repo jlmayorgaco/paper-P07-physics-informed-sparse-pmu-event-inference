@@ -1,0 +1,28 @@
+{
+  "catalog": {
+    "native": {
+      "LINE4-14": 1
+    },
+    "joint": {
+      "BUS31": 12
+    },
+    "severe": {
+      "BUS31": 15
+    },
+    "holdover": {
+      "BUS31": 11
+    }
+  },
+  "bus31": {
+    "native": {},
+    "joint": {
+      "BUS31": 51
+    },
+    "severe": {
+      "BUS31": 56
+    },
+    "holdover": {
+      "BUS31": 45
+    }
+  }
+}

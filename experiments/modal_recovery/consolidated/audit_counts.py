@@ -44,7 +44,7 @@ def audit():
                         if not correct:
                             failures[t["source"]]+=1
                     pred.append(prediction)
-                assert abs(f1_score(target,pred,labels=[0,2,4],average="macro")-expected["macro_f1"])<1e-12
+                assert abs(f1_score(target,pred,labels=[0,2,4],average="macro",zero_division=0)-expected["macro_f1"])<1e-12
                 assert (false,detected,family,early)==tuple(expected[k] for k in ("control_alarm","detection","family","early"))
                 if arm!="li_wang":
                     assert exact==expected["exact"]

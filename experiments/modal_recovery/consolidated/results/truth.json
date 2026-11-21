@@ -1,0 +1,6002 @@
+{
+  "3f8f39c1bbb11aebe8a24a27": {
+    "panel": "catalog",
+    "parent": 0,
+    "first": "BUS3",
+    "clearance": 118,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "c7d7538b5a411abb5a8a43a0": {
+    "panel": "catalog",
+    "parent": 0,
+    "first": "BUS3",
+    "clearance": 118,
+    "on": 5.266666666666667,
+    "off": 8.433333333333334,
+    "family": "load",
+    "source": "BUS26"
+  },
+  "fcd053532b9bbc1b3554794d": {
+    "panel": "catalog",
+    "parent": 1,
+    "first": "LINE17-18",
+    "clearance": 167,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "418dfe5adf2ebbf949c7cb9a": {
+    "panel": "catalog",
+    "parent": 1,
+    "first": "LINE17-18",
+    "clearance": 167,
+    "on": 9.2,
+    "off": 13.083333333333334,
+    "family": "load",
+    "source": "BUS20"
+  },
+  "1c458d06af8187f3cae67755": {
+    "panel": "catalog",
+    "parent": 2,
+    "first": "BUS26",
+    "clearance": 161,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "e7c4d1aa77244fa0b2def85b": {
+    "panel": "catalog",
+    "parent": 2,
+    "first": "BUS26",
+    "clearance": 161,
+    "on": 6.716666666666667,
+    "off": 10.716666666666667,
+    "family": "line",
+    "source": "LINE4-14"
+  },
+  "060d8dd6c066557d055d61cf": {
+    "panel": "catalog",
+    "parent": 3,
+    "first": "LINE3-4",
+    "clearance": 119,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "5b001874ae2cf4897af81975": {
+    "panel": "catalog",
+    "parent": 3,
+    "first": "LINE3-4",
+    "clearance": 119,
+    "on": 7.466666666666667,
+    "off": 11.0,
+    "family": "line",
+    "source": "LINE4-14"
+  },
+  "9af1f0f8317302833dd994b0": {
+    "panel": "catalog",
+    "parent": 4,
+    "first": "BUS7",
+    "clearance": 142,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "c970aec77c0a389201d801d4": {
+    "panel": "catalog",
+    "parent": 4,
+    "first": "BUS7",
+    "clearance": 142,
+    "on": 8.0,
+    "off": 11.516666666666667,
+    "family": "load",
+    "source": "BUS4"
+  },
+  "d2a4a90dd8e83f91a69381ac": {
+    "panel": "catalog",
+    "parent": 5,
+    "first": "LINE26-29",
+    "clearance": 153,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "705ab076095c96967d9a3fc4": {
+    "panel": "catalog",
+    "parent": 5,
+    "first": "LINE26-29",
+    "clearance": 153,
+    "on": 9.033333333333333,
+    "off": 12.5,
+    "family": "load",
+    "source": "BUS4"
+  },
+  "690cb42309cfc29ebe6150f5": {
+    "panel": "catalog",
+    "parent": 6,
+    "first": "BUS26",
+    "clearance": 150,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "5aba27e04ed196d12ae449af": {
+    "panel": "catalog",
+    "parent": 6,
+    "first": "BUS26",
+    "clearance": 150,
+    "on": 8.016666666666667,
+    "off": 10.05,
+    "family": "line",
+    "source": "LINE9-39"
+  },
+  "87503a962281f03a1ddaeed1": {
+    "panel": "catalog",
+    "parent": 7,
+    "first": "LINE26-27",
+    "clearance": 163,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "351b689b095a78fd2bc674ab": {
+    "panel": "catalog",
+    "parent": 7,
+    "first": "LINE26-27",
+    "clearance": 163,
+    "on": 7.866666666666666,
+    "off": 9.866666666666667,
+    "family": "line",
+    "source": "LINE17-18"
+  },
+  "ef160e75e3452a1787c79a19": {
+    "panel": "catalog",
+    "parent": 8,
+    "first": "BUS31",
+    "clearance": 158,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "503ba29f7ae637bf58ddaf77": {
+    "panel": "catalog",
+    "parent": 8,
+    "first": "BUS31",
+    "clearance": 158,
+    "on": 9.25,
+    "off": 12.8,
+    "family": "load",
+    "source": "BUS3"
+  },
+  "723760dfe2f79939ee6dd28a": {
+    "panel": "catalog",
+    "parent": 9,
+    "first": "LINE23-24",
+    "clearance": 120,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "14c07df1dead83f93c4128bc": {
+    "panel": "catalog",
+    "parent": 9,
+    "first": "LINE23-24",
+    "clearance": 120,
+    "on": 6.083333333333333,
+    "off": 8.4,
+    "family": "load",
+    "source": "BUS26"
+  },
+  "e0586a00977fa91adf3bf86c": {
+    "panel": "catalog",
+    "parent": 10,
+    "first": "BUS24",
+    "clearance": 140,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "51ff39735cd427f4041f5491": {
+    "panel": "catalog",
+    "parent": 10,
+    "first": "BUS24",
+    "clearance": 140,
+    "on": 6.916666666666667,
+    "off": 9.733333333333333,
+    "family": "line",
+    "source": "LINE26-29"
+  },
+  "682d48660dc7caab625de083": {
+    "panel": "catalog",
+    "parent": 11,
+    "first": "LINE14-15",
+    "clearance": 178,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "ef7cee265103e3c15292949d": {
+    "panel": "catalog",
+    "parent": 11,
+    "first": "LINE14-15",
+    "clearance": 178,
+    "on": 8.783333333333333,
+    "off": 12.383333333333333,
+    "family": "line",
+    "source": "LINE23-24"
+  },
+  "3ffc9c5c7d91a3c4e3ed8d4e": {
+    "panel": "catalog",
+    "parent": 12,
+    "first": "BUS24",
+    "clearance": 160,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "bfb43e2159acf9ba18a66807": {
+    "panel": "catalog",
+    "parent": 12,
+    "first": "BUS24",
+    "clearance": 160,
+    "on": 7.5,
+    "off": 10.8,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "503f15b49f9116549f25a363": {
+    "panel": "catalog",
+    "parent": 13,
+    "first": "LINE3-4",
+    "clearance": 126,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "53c77881ce3a0d9f2a8b2dd4": {
+    "panel": "catalog",
+    "parent": 13,
+    "first": "LINE3-4",
+    "clearance": 126,
+    "on": 6.033333333333333,
+    "off": 8.133333333333333,
+    "family": "load",
+    "source": "BUS4"
+  },
+  "e0433eef48f9ecb790a87319": {
+    "panel": "catalog",
+    "parent": 14,
+    "first": "BUS24",
+    "clearance": 170,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "da749462adf0d612e75693e5": {
+    "panel": "catalog",
+    "parent": 14,
+    "first": "BUS24",
+    "clearance": 170,
+    "on": 6.933333333333334,
+    "off": 9.383333333333333,
+    "family": "line",
+    "source": "LINE16-17"
+  },
+  "01134afd862f8d3c6f4f4bd6": {
+    "panel": "catalog",
+    "parent": 15,
+    "first": "LINE26-27",
+    "clearance": 142,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "db3046a0516a36d5429aad6e": {
+    "panel": "catalog",
+    "parent": 15,
+    "first": "LINE26-27",
+    "clearance": 142,
+    "on": 7.65,
+    "off": 9.9,
+    "family": "line",
+    "source": "LINE17-18"
+  },
+  "7c5570e7804514f802841943": {
+    "panel": "catalog",
+    "parent": 16,
+    "first": "BUS20",
+    "clearance": 133,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "c02c16762e2c73e7c1feca28": {
+    "panel": "catalog",
+    "parent": 16,
+    "first": "BUS20",
+    "clearance": 133,
+    "on": 8.083333333333334,
+    "off": 11.433333333333334,
+    "family": "load",
+    "source": "BUS24"
+  },
+  "da957f7d414f916859a00399": {
+    "panel": "catalog",
+    "parent": 17,
+    "first": "LINE23-24",
+    "clearance": 133,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "84f19344c6c96651e0c3b46e": {
+    "panel": "catalog",
+    "parent": 17,
+    "first": "LINE23-24",
+    "clearance": 133,
+    "on": 7.4,
+    "off": 11.25,
+    "family": "load",
+    "source": "BUS7"
+  },
+  "00bd88ba8ca482e37eec8efe": {
+    "panel": "catalog",
+    "parent": 18,
+    "first": "BUS15",
+    "clearance": 159,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "96bb796e2220df355469f302": {
+    "panel": "catalog",
+    "parent": 18,
+    "first": "BUS15",
+    "clearance": 159,
+    "on": 8.466666666666667,
+    "off": 11.666666666666666,
+    "family": "line",
+    "source": "LINE9-39"
+  },
+  "ed1f6bb5bb510f8d272b8bc6": {
+    "panel": "catalog",
+    "parent": 19,
+    "first": "LINE23-24",
+    "clearance": 125,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "2bec70d103b20da32ff92a91": {
+    "panel": "catalog",
+    "parent": 19,
+    "first": "LINE23-24",
+    "clearance": 125,
+    "on": 7.033333333333333,
+    "off": 10.083333333333334,
+    "family": "line",
+    "source": "LINE9-39"
+  },
+  "da5dbb6572c10e135ee56a6d": {
+    "panel": "catalog",
+    "parent": 20,
+    "first": "BUS3",
+    "clearance": 161,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "95115d42cb7448eff4241bdb": {
+    "panel": "catalog",
+    "parent": 20,
+    "first": "BUS3",
+    "clearance": 161,
+    "on": 8.766666666666667,
+    "off": 11.233333333333333,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "a72f944d6f1119577338d71f": {
+    "panel": "catalog",
+    "parent": 21,
+    "first": "LINE16-17",
+    "clearance": 162,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "86e97354cc5c62f9c6e4c7ea": {
+    "panel": "catalog",
+    "parent": 21,
+    "first": "LINE16-17",
+    "clearance": 162,
+    "on": 8.116666666666667,
+    "off": 11.9,
+    "family": "load",
+    "source": "BUS26"
+  },
+  "d369d94bfc250e90e54927e2": {
+    "panel": "catalog",
+    "parent": 22,
+    "first": "BUS26",
+    "clearance": 142,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "62fac0db3fd155ebda1f60cf": {
+    "panel": "catalog",
+    "parent": 22,
+    "first": "BUS26",
+    "clearance": 142,
+    "on": 6.533333333333333,
+    "off": 9.6,
+    "family": "line",
+    "source": "LINE4-14"
+  },
+  "59e84c83d30c2c72c8943eed": {
+    "panel": "catalog",
+    "parent": 23,
+    "first": "LINE23-24",
+    "clearance": 129,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "bcd13509713a6cc2b71fbbeb": {
+    "panel": "catalog",
+    "parent": 23,
+    "first": "LINE23-24",
+    "clearance": 129,
+    "on": 6.283333333333333,
+    "off": 9.3,
+    "family": "line",
+    "source": "LINE4-14"
+  },
+  "a18aec3f2b1d7379f4379aff": {
+    "panel": "catalog",
+    "parent": 24,
+    "first": "BUS7",
+    "clearance": 139,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "ea6bc1d698cf10228f9315ab": {
+    "panel": "catalog",
+    "parent": 24,
+    "first": "BUS7",
+    "clearance": 139,
+    "on": 7.316666666666666,
+    "off": 11.166666666666666,
+    "family": "load",
+    "source": "BUS3"
+  },
+  "6c477f294c37a6350e591f4a": {
+    "panel": "catalog",
+    "parent": 25,
+    "first": "LINE26-29",
+    "clearance": 125,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "42e114e9985c5080eab65637": {
+    "panel": "catalog",
+    "parent": 25,
+    "first": "LINE26-29",
+    "clearance": 125,
+    "on": 7.966666666666667,
+    "off": 11.2,
+    "family": "load",
+    "source": "BUS7"
+  },
+  "eb5dc63404cf6d3dd25611dc": {
+    "panel": "catalog",
+    "parent": 26,
+    "first": "BUS7",
+    "clearance": 130,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "c48bc7413406f69c4b0eaa24": {
+    "panel": "catalog",
+    "parent": 26,
+    "first": "BUS7",
+    "clearance": 130,
+    "on": 6.833333333333333,
+    "off": 9.066666666666666,
+    "family": "line",
+    "source": "LINE3-4"
+  },
+  "239e9a6b65ce2b7bac2419b5": {
+    "panel": "catalog",
+    "parent": 27,
+    "first": "LINE3-4",
+    "clearance": 161,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "b53489d8f97d3b4e99779a59": {
+    "panel": "catalog",
+    "parent": 27,
+    "first": "LINE3-4",
+    "clearance": 161,
+    "on": 7.616666666666666,
+    "off": 10.083333333333334,
+    "family": "line",
+    "source": "LINE9-39"
+  },
+  "93ed59d53522ce328e1eeaa3": {
+    "panel": "catalog",
+    "parent": 28,
+    "first": "BUS24",
+    "clearance": 176,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "04421f65afa1f1b148530bdf": {
+    "panel": "catalog",
+    "parent": 28,
+    "first": "BUS24",
+    "clearance": 176,
+    "on": 9.25,
+    "off": 12.233333333333333,
+    "family": "load",
+    "source": "BUS4"
+  },
+  "54f309b9044063daae22ec72": {
+    "panel": "catalog",
+    "parent": 29,
+    "first": "LINE3-4",
+    "clearance": 143,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "04300fa005e8d4ec168d4e37": {
+    "panel": "catalog",
+    "parent": 29,
+    "first": "LINE3-4",
+    "clearance": 143,
+    "on": 6.483333333333333,
+    "off": 9.9,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "be3821c0e4f573d426444d43": {
+    "panel": "catalog",
+    "parent": 30,
+    "first": "BUS31",
+    "clearance": 172,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "b1d3d31fa792174580337dc9": {
+    "panel": "catalog",
+    "parent": 30,
+    "first": "BUS31",
+    "clearance": 172,
+    "on": 8.25,
+    "off": 10.8,
+    "family": "line",
+    "source": "LINE26-27"
+  },
+  "0c5f6909e6881efc3c2fb222": {
+    "panel": "catalog",
+    "parent": 31,
+    "first": "LINE26-29",
+    "clearance": 155,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "23bb36df21f2bbd325e2befe": {
+    "panel": "catalog",
+    "parent": 31,
+    "first": "LINE26-29",
+    "clearance": 155,
+    "on": 8.166666666666666,
+    "off": 10.2,
+    "family": "line",
+    "source": "LINE17-18"
+  },
+  "41f123dfef8b37efe10ddd50": {
+    "panel": "catalog",
+    "parent": 32,
+    "first": "BUS31",
+    "clearance": 146,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "a19b5b18270f35d4ab107fde": {
+    "panel": "catalog",
+    "parent": 32,
+    "first": "BUS31",
+    "clearance": 146,
+    "on": 8.05,
+    "off": 10.533333333333333,
+    "family": "load",
+    "source": "BUS24"
+  },
+  "dce86b3379feb456cf434662": {
+    "panel": "catalog",
+    "parent": 33,
+    "first": "LINE3-4",
+    "clearance": 174,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "b3ec67ccc0d6d1f6b20c1c29": {
+    "panel": "catalog",
+    "parent": 33,
+    "first": "LINE3-4",
+    "clearance": 174,
+    "on": 7.466666666666667,
+    "off": 10.766666666666667,
+    "family": "load",
+    "source": "BUS24"
+  },
+  "e1830721aa38a149edc9b6a8": {
+    "panel": "catalog",
+    "parent": 34,
+    "first": "BUS15",
+    "clearance": 141,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "c2c88e744fb6b45b93ae41bf": {
+    "panel": "catalog",
+    "parent": 34,
+    "first": "BUS15",
+    "clearance": 141,
+    "on": 7.05,
+    "off": 10.6,
+    "family": "line",
+    "source": "LINE23-24"
+  },
+  "2451b40867c4520c0a4e1438": {
+    "panel": "catalog",
+    "parent": 35,
+    "first": "LINE26-27",
+    "clearance": 124,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "46452fdeb6d8b022e49a1b3c": {
+    "panel": "catalog",
+    "parent": 35,
+    "first": "LINE26-27",
+    "clearance": 124,
+    "on": 7.766666666666667,
+    "off": 11.383333333333333,
+    "family": "line",
+    "source": "LINE3-4"
+  },
+  "8d05b71d7d3f8f41afabbd16": {
+    "panel": "catalog",
+    "parent": 36,
+    "first": "BUS4",
+    "clearance": 161,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "b77c9c1a1b30403b97427c73": {
+    "panel": "catalog",
+    "parent": 36,
+    "first": "BUS4",
+    "clearance": 161,
+    "on": 7.083333333333333,
+    "off": 9.65,
+    "family": "load",
+    "source": "BUS7"
+  },
+  "aa5f8e1f282b7f4d3324d11f": {
+    "panel": "catalog",
+    "parent": 37,
+    "first": "LINE4-14",
+    "clearance": 143,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "9345e5a7e9c9fff0c59d3bc1": {
+    "panel": "catalog",
+    "parent": 37,
+    "first": "LINE4-14",
+    "clearance": 143,
+    "on": 6.566666666666666,
+    "off": 10.566666666666666,
+    "family": "load",
+    "source": "BUS24"
+  },
+  "d112115fd12e03d808bceb15": {
+    "panel": "catalog",
+    "parent": 38,
+    "first": "BUS7",
+    "clearance": 156,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "68752bb00158e244ff55ac74": {
+    "panel": "catalog",
+    "parent": 38,
+    "first": "BUS7",
+    "clearance": 156,
+    "on": 8.166666666666666,
+    "off": 10.316666666666666,
+    "family": "line",
+    "source": "LINE23-24"
+  },
+  "c89ecc7747780f2387ed55fc": {
+    "panel": "catalog",
+    "parent": 39,
+    "first": "LINE17-18",
+    "clearance": 142,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "ac49f6a3b25fb94198127606": {
+    "panel": "catalog",
+    "parent": 39,
+    "first": "LINE17-18",
+    "clearance": 142,
+    "on": 8.1,
+    "off": 10.766666666666667,
+    "family": "line",
+    "source": "LINE23-24"
+  },
+  "50369ff346fa7df721d0fd26": {
+    "panel": "catalog",
+    "parent": 40,
+    "first": "BUS3",
+    "clearance": 159,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "645160526bd0115b8b3be3d8": {
+    "panel": "catalog",
+    "parent": 40,
+    "first": "BUS3",
+    "clearance": 159,
+    "on": 8.55,
+    "off": 10.766666666666667,
+    "family": "load",
+    "source": "BUS15"
+  },
+  "e1b80e720c97f521e883c3f3": {
+    "panel": "catalog",
+    "parent": 41,
+    "first": "LINE26-29",
+    "clearance": 171,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "0914d011ba43db3246d0c796": {
+    "panel": "catalog",
+    "parent": 41,
+    "first": "LINE26-29",
+    "clearance": 171,
+    "on": 7.133333333333334,
+    "off": 9.983333333333333,
+    "family": "load",
+    "source": "BUS4"
+  },
+  "6618357bd1720240d306061f": {
+    "panel": "catalog",
+    "parent": 42,
+    "first": "BUS31",
+    "clearance": 143,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "09dbe0d75dfdef03bcec5d20": {
+    "panel": "catalog",
+    "parent": 42,
+    "first": "BUS31",
+    "clearance": 143,
+    "on": 7.45,
+    "off": 9.716666666666667,
+    "family": "line",
+    "source": "LINE17-18"
+  },
+  "888fe04df19de7b482e21a4f": {
+    "panel": "catalog",
+    "parent": 43,
+    "first": "LINE17-18",
+    "clearance": 126,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "3282cad507322e83783a72e1": {
+    "panel": "catalog",
+    "parent": 43,
+    "first": "LINE17-18",
+    "clearance": 126,
+    "on": 7.916666666666667,
+    "off": 10.733333333333333,
+    "family": "line",
+    "source": "LINE3-4"
+  },
+  "c31fb6f0b92b7e521ae4eaf0": {
+    "panel": "catalog",
+    "parent": 44,
+    "first": "BUS7",
+    "clearance": 136,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "39308313ea535b29566a274c": {
+    "panel": "catalog",
+    "parent": 44,
+    "first": "BUS7",
+    "clearance": 136,
+    "on": 8.133333333333333,
+    "off": 11.483333333333333,
+    "family": "load",
+    "source": "BUS16"
+  },
+  "e0fb7cd73a4b0f88526157ae": {
+    "panel": "catalog",
+    "parent": 45,
+    "first": "LINE9-39",
+    "clearance": 155,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "35a0a2dc1f2f132849684fd3": {
+    "panel": "catalog",
+    "parent": 45,
+    "first": "LINE9-39",
+    "clearance": 155,
+    "on": 8.95,
+    "off": 12.316666666666666,
+    "family": "load",
+    "source": "BUS4"
+  },
+  "3af5e2b2364a0f0999647fbf": {
+    "panel": "catalog",
+    "parent": 46,
+    "first": "BUS3",
+    "clearance": 126,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "b1b5ee755cf9c0bf81e58301": {
+    "panel": "catalog",
+    "parent": 46,
+    "first": "BUS3",
+    "clearance": 126,
+    "on": 7.3,
+    "off": 10.466666666666667,
+    "family": "line",
+    "source": "LINE26-27"
+  },
+  "e2c66bd6e050b1e454fcac97": {
+    "panel": "catalog",
+    "parent": 47,
+    "first": "LINE14-15",
+    "clearance": 177,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "c76698b513bab5c27c0668d4": {
+    "panel": "catalog",
+    "parent": 47,
+    "first": "LINE14-15",
+    "clearance": 177,
+    "on": 8.916666666666666,
+    "off": 11.866666666666667,
+    "family": "line",
+    "source": "LINE17-18"
+  },
+  "24ead3ae14014cb51e7a5d11": {
+    "panel": "catalog",
+    "parent": 48,
+    "first": "BUS4",
+    "clearance": 180,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "1669232f707e0333c4757c11": {
+    "panel": "catalog",
+    "parent": 48,
+    "first": "BUS4",
+    "clearance": 180,
+    "on": 9.433333333333334,
+    "off": 12.333333333333334,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "8fb9d4334e3ae494d2d1a834": {
+    "panel": "catalog",
+    "parent": 49,
+    "first": "LINE26-27",
+    "clearance": 150,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "fcb83192e93d6fd723165776": {
+    "panel": "catalog",
+    "parent": 49,
+    "first": "LINE26-27",
+    "clearance": 150,
+    "on": 7.983333333333333,
+    "off": 11.1,
+    "family": "load",
+    "source": "BUS20"
+  },
+  "29b83cf2674f9d0025812d2c": {
+    "panel": "catalog",
+    "parent": 50,
+    "first": "BUS16",
+    "clearance": 133,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "8c78e8c46701e23a32c7ed4f": {
+    "panel": "catalog",
+    "parent": 50,
+    "first": "BUS16",
+    "clearance": 133,
+    "on": 8.433333333333334,
+    "off": 11.116666666666667,
+    "family": "line",
+    "source": "LINE17-18"
+  },
+  "07ca4a27b1d6f1e20ab8c9fd": {
+    "panel": "catalog",
+    "parent": 51,
+    "first": "LINE3-4",
+    "clearance": 142,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "9dbcd489fc85f7139126cea8": {
+    "panel": "catalog",
+    "parent": 51,
+    "first": "LINE3-4",
+    "clearance": 142,
+    "on": 6.016666666666667,
+    "off": 9.783333333333333,
+    "family": "line",
+    "source": "LINE26-29"
+  },
+  "24de0ada034551eee3a66d35": {
+    "panel": "catalog",
+    "parent": 52,
+    "first": "BUS15",
+    "clearance": 148,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "c741a8c71a147256e5314ca7": {
+    "panel": "catalog",
+    "parent": 52,
+    "first": "BUS15",
+    "clearance": 148,
+    "on": 6.3,
+    "off": 8.466666666666667,
+    "family": "load",
+    "source": "BUS3"
+  },
+  "577a5b1567159c779e04bffe": {
+    "panel": "catalog",
+    "parent": 53,
+    "first": "LINE26-29",
+    "clearance": 141,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "3f7e29321e3077833876018b": {
+    "panel": "catalog",
+    "parent": 53,
+    "first": "LINE26-29",
+    "clearance": 141,
+    "on": 7.416666666666667,
+    "off": 9.816666666666666,
+    "family": "load",
+    "source": "BUS20"
+  },
+  "5280d52fcec2abf2de6425e4": {
+    "panel": "catalog",
+    "parent": 54,
+    "first": "BUS16",
+    "clearance": 146,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "939fe12c5efb9f8006099111": {
+    "panel": "catalog",
+    "parent": 54,
+    "first": "BUS16",
+    "clearance": 146,
+    "on": 6.966666666666667,
+    "off": 9.466666666666667,
+    "family": "line",
+    "source": "LINE17-18"
+  },
+  "8ac88db0d6db19f444e2aa30": {
+    "panel": "catalog",
+    "parent": 55,
+    "first": "LINE26-27",
+    "clearance": 165,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "9ba791611a3abf28214a2f80": {
+    "panel": "catalog",
+    "parent": 55,
+    "first": "LINE26-27",
+    "clearance": 165,
+    "on": 6.95,
+    "off": 9.8,
+    "family": "line",
+    "source": "LINE23-24"
+  },
+  "163ab4f4df7815ba0a247485": {
+    "panel": "catalog",
+    "parent": 56,
+    "first": "BUS20",
+    "clearance": 149,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "a905d070bf7b0ad282b93a7c": {
+    "panel": "catalog",
+    "parent": 56,
+    "first": "BUS20",
+    "clearance": 149,
+    "on": 7.616666666666666,
+    "off": 11.066666666666666,
+    "family": "load",
+    "source": "BUS26"
+  },
+  "6aec039e6355a08d3f905f86": {
+    "panel": "catalog",
+    "parent": 57,
+    "first": "LINE3-4",
+    "clearance": 168,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "3251f076529b759def972a1f": {
+    "panel": "catalog",
+    "parent": 57,
+    "first": "LINE3-4",
+    "clearance": 168,
+    "on": 8.216666666666667,
+    "off": 10.833333333333334,
+    "family": "load",
+    "source": "BUS15"
+  },
+  "a3a0a91e8ee96e44cda5dbcb": {
+    "panel": "catalog",
+    "parent": 58,
+    "first": "BUS7",
+    "clearance": 128,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "b02095c2b6d2d4310b57d9d9": {
+    "panel": "catalog",
+    "parent": 58,
+    "first": "BUS7",
+    "clearance": 128,
+    "on": 8.266666666666667,
+    "off": 11.766666666666667,
+    "family": "line",
+    "source": "LINE4-14"
+  },
+  "946ccbb0df3c67c79a5271a6": {
+    "panel": "catalog",
+    "parent": 59,
+    "first": "LINE16-17",
+    "clearance": 186,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "863fc8167af85fac6a1164dd": {
+    "panel": "catalog",
+    "parent": 59,
+    "first": "LINE16-17",
+    "clearance": 186,
+    "on": 9.3,
+    "off": 12.466666666666667,
+    "family": "line",
+    "source": "LINE26-27"
+  },
+  "5ddf1e0f6158ec3e7a523158": {
+    "panel": "catalog",
+    "parent": 60,
+    "first": "BUS7",
+    "clearance": 152,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "969a5e103547d40843a6e52c": {
+    "panel": "catalog",
+    "parent": 60,
+    "first": "BUS7",
+    "clearance": 152,
+    "on": 8.433333333333334,
+    "off": 12.266666666666667,
+    "family": "load",
+    "source": "BUS4"
+  },
+  "a17cd402d68bf31c875a4463": {
+    "panel": "catalog",
+    "parent": 61,
+    "first": "LINE4-14",
+    "clearance": 122,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "83c71b79144b8597950c964c": {
+    "panel": "catalog",
+    "parent": 61,
+    "first": "LINE4-14",
+    "clearance": 122,
+    "on": 7.766666666666667,
+    "off": 10.983333333333333,
+    "family": "load",
+    "source": "BUS16"
+  },
+  "aa732e9a8e6e442e10a9369e": {
+    "panel": "catalog",
+    "parent": 62,
+    "first": "BUS31",
+    "clearance": 176,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "49fc32699730c29993ec3cdd": {
+    "panel": "catalog",
+    "parent": 62,
+    "first": "BUS31",
+    "clearance": 176,
+    "on": 7.716666666666667,
+    "off": 10.65,
+    "family": "line",
+    "source": "LINE14-15"
+  },
+  "f3203fe1bbb4d419f3c037bc": {
+    "panel": "catalog",
+    "parent": 63,
+    "first": "LINE4-14",
+    "clearance": 156,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "1c61ab7e59b78747f9ae6680": {
+    "panel": "catalog",
+    "parent": 63,
+    "first": "LINE4-14",
+    "clearance": 156,
+    "on": 7.516666666666667,
+    "off": 11.15,
+    "family": "line",
+    "source": "LINE23-24"
+  },
+  "d17f812d3ce3b9d04173d66c": {
+    "panel": "catalog",
+    "parent": 64,
+    "first": "BUS31",
+    "clearance": 156,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "bdf2521d4c2e9d1b229d4027": {
+    "panel": "catalog",
+    "parent": 64,
+    "first": "BUS31",
+    "clearance": 156,
+    "on": 7.7,
+    "off": 10.583333333333334,
+    "family": "load",
+    "source": "BUS3"
+  },
+  "05460d7467144af97d39b54e": {
+    "panel": "catalog",
+    "parent": 65,
+    "first": "LINE4-14",
+    "clearance": 162,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "316eaf5f7deefdf03f29e915": {
+    "panel": "catalog",
+    "parent": 65,
+    "first": "LINE4-14",
+    "clearance": 162,
+    "on": 7.95,
+    "off": 11.533333333333333,
+    "family": "load",
+    "source": "BUS15"
+  },
+  "ad6842d265dcc2f140fea5a7": {
+    "panel": "catalog",
+    "parent": 66,
+    "first": "BUS7",
+    "clearance": 131,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "c98e9e5dcc97e8e75e1974b7": {
+    "panel": "catalog",
+    "parent": 66,
+    "first": "BUS7",
+    "clearance": 131,
+    "on": 5.733333333333333,
+    "off": 8.666666666666666,
+    "family": "line",
+    "source": "LINE23-24"
+  },
+  "9118c659f86df3249b7ed78c": {
+    "panel": "catalog",
+    "parent": 67,
+    "first": "LINE3-4",
+    "clearance": 178,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "5fcdeaf7445f2774106741e9": {
+    "panel": "catalog",
+    "parent": 67,
+    "first": "LINE3-4",
+    "clearance": 178,
+    "on": 8.25,
+    "off": 10.633333333333333,
+    "family": "line",
+    "source": "LINE23-24"
+  },
+  "86b45834b75507bd19739f45": {
+    "panel": "catalog",
+    "parent": 68,
+    "first": "BUS26",
+    "clearance": 131,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "449c2c7372e66299742f8dd6": {
+    "panel": "catalog",
+    "parent": 68,
+    "first": "BUS26",
+    "clearance": 131,
+    "on": 5.85,
+    "off": 8.516666666666667,
+    "family": "load",
+    "source": "BUS20"
+  },
+  "1882811d98ec011890cab3a4": {
+    "panel": "catalog",
+    "parent": 69,
+    "first": "LINE4-14",
+    "clearance": 125,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "e54eb4eb458cede45fdc7fab": {
+    "panel": "catalog",
+    "parent": 69,
+    "first": "LINE4-14",
+    "clearance": 125,
+    "on": 6.033333333333333,
+    "off": 8.216666666666667,
+    "family": "load",
+    "source": "BUS26"
+  },
+  "c22b3bb7fdaeeb6cccdea78e": {
+    "panel": "catalog",
+    "parent": 70,
+    "first": "BUS20",
+    "clearance": 143,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "a66f322afb8137fd56426752": {
+    "panel": "catalog",
+    "parent": 70,
+    "first": "BUS20",
+    "clearance": 143,
+    "on": 6.633333333333334,
+    "off": 9.383333333333333,
+    "family": "line",
+    "source": "LINE26-27"
+  },
+  "8a8abcc999d53c118d29b0b2": {
+    "panel": "catalog",
+    "parent": 71,
+    "first": "LINE23-24",
+    "clearance": 148,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "5f2258edab258759e20efad0": {
+    "panel": "catalog",
+    "parent": 71,
+    "first": "LINE23-24",
+    "clearance": 148,
+    "on": 7.416666666666667,
+    "off": 10.766666666666667,
+    "family": "line",
+    "source": "LINE16-17"
+  },
+  "450bb4376145681b3e0e82f2": {
+    "panel": "catalog",
+    "parent": 72,
+    "first": "BUS20",
+    "clearance": 153,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "d4c653d0b609878b60158ad2": {
+    "panel": "catalog",
+    "parent": 72,
+    "first": "BUS20",
+    "clearance": 153,
+    "on": 7.066666666666666,
+    "off": 10.7,
+    "family": "load",
+    "source": "BUS16"
+  },
+  "a6fe3c0082ce9665384f7c27": {
+    "panel": "catalog",
+    "parent": 73,
+    "first": "LINE17-18",
+    "clearance": 139,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "d895e4d5891141fc6c573f0c": {
+    "panel": "catalog",
+    "parent": 73,
+    "first": "LINE17-18",
+    "clearance": 139,
+    "on": 8.2,
+    "off": 10.55,
+    "family": "load",
+    "source": "BUS24"
+  },
+  "1e703f937f06b2363e6cff3f": {
+    "panel": "catalog",
+    "parent": 74,
+    "first": "BUS24",
+    "clearance": 173,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "339f57d4f10e0310d4678d2a": {
+    "panel": "catalog",
+    "parent": 74,
+    "first": "BUS24",
+    "clearance": 173,
+    "on": 9.35,
+    "off": 11.666666666666666,
+    "family": "line",
+    "source": "LINE26-29"
+  },
+  "a36fb531c01c3e91dcbcafe8": {
+    "panel": "catalog",
+    "parent": 75,
+    "first": "LINE23-24",
+    "clearance": 181,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "08ddf54533907e2885c8a250": {
+    "panel": "catalog",
+    "parent": 75,
+    "first": "LINE23-24",
+    "clearance": 181,
+    "on": 9.666666666666666,
+    "off": 12.25,
+    "family": "line",
+    "source": "LINE26-29"
+  },
+  "dc69589563b9805ef17eb9d9": {
+    "panel": "catalog",
+    "parent": 76,
+    "first": "BUS20",
+    "clearance": 172,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "20903506d4f5eccc91f15628": {
+    "panel": "catalog",
+    "parent": 76,
+    "first": "BUS20",
+    "clearance": 172,
+    "on": 7.95,
+    "off": 10.883333333333333,
+    "family": "load",
+    "source": "BUS3"
+  },
+  "0a43f2107f01d9a4eaa0176b": {
+    "panel": "catalog",
+    "parent": 77,
+    "first": "LINE14-15",
+    "clearance": 122,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "36f3be2f83601dca9496424d": {
+    "panel": "catalog",
+    "parent": 77,
+    "first": "LINE14-15",
+    "clearance": 122,
+    "on": 6.0,
+    "off": 8.266666666666667,
+    "family": "load",
+    "source": "BUS4"
+  },
+  "a169681e5c90a858a8b30434": {
+    "panel": "catalog",
+    "parent": 78,
+    "first": "BUS7",
+    "clearance": 178,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "774154e8d7cf1355390dff66": {
+    "panel": "catalog",
+    "parent": 78,
+    "first": "BUS7",
+    "clearance": 178,
+    "on": 9.2,
+    "off": 11.2,
+    "family": "line",
+    "source": "LINE23-24"
+  },
+  "40d3c1c8f0670d611eaa7bdc": {
+    "panel": "catalog",
+    "parent": 79,
+    "first": "LINE9-39",
+    "clearance": 172,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "cf940c5065c45de8c0a3c3ab": {
+    "panel": "catalog",
+    "parent": 79,
+    "first": "LINE9-39",
+    "clearance": 172,
+    "on": 7.916666666666667,
+    "off": 11.833333333333334,
+    "family": "line",
+    "source": "LINE26-27"
+  },
+  "b2d8cfee26c240cc195cc1a0": {
+    "panel": "catalog",
+    "parent": 80,
+    "first": "BUS31",
+    "clearance": 142,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "9da60fb44538e0cbb64e22c4": {
+    "panel": "catalog",
+    "parent": 80,
+    "first": "BUS31",
+    "clearance": 142,
+    "on": 8.266666666666667,
+    "off": 12.15,
+    "family": "load",
+    "source": "BUS15"
+  },
+  "a1a42e9d3f6527174df2d14f": {
+    "panel": "catalog",
+    "parent": 81,
+    "first": "LINE26-27",
+    "clearance": 176,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "f8546f71c880b6d429484653": {
+    "panel": "catalog",
+    "parent": 81,
+    "first": "LINE26-27",
+    "clearance": 176,
+    "on": 9.766666666666667,
+    "off": 13.716666666666667,
+    "family": "load",
+    "source": "BUS7"
+  },
+  "817a3aba04023b04dd9896ec": {
+    "panel": "catalog",
+    "parent": 82,
+    "first": "BUS3",
+    "clearance": 177,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "51125736036e98708265f966": {
+    "panel": "catalog",
+    "parent": 82,
+    "first": "BUS3",
+    "clearance": 177,
+    "on": 7.35,
+    "off": 9.65,
+    "family": "line",
+    "source": "LINE3-4"
+  },
+  "3c87717ad9b4b46e64ab6bb9": {
+    "panel": "catalog",
+    "parent": 83,
+    "first": "LINE3-4",
+    "clearance": 142,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "0c695f2f3e0c2ee5c647fa7e": {
+    "panel": "catalog",
+    "parent": 83,
+    "first": "LINE3-4",
+    "clearance": 142,
+    "on": 7.883333333333334,
+    "off": 10.133333333333333,
+    "family": "line",
+    "source": "LINE23-24"
+  },
+  "eae1b7a643a8045cd5d0c815": {
+    "panel": "catalog",
+    "parent": 84,
+    "first": "BUS16",
+    "clearance": 148,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "5963545906b218780a3d00dc": {
+    "panel": "catalog",
+    "parent": 84,
+    "first": "BUS16",
+    "clearance": 148,
+    "on": 8.7,
+    "off": 11.05,
+    "family": "load",
+    "source": "BUS15"
+  },
+  "d87cb364ca4e78e99c53c78b": {
+    "panel": "catalog",
+    "parent": 85,
+    "first": "LINE14-15",
+    "clearance": 158,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "29a3a3aafe3348dae026ba66": {
+    "panel": "catalog",
+    "parent": 85,
+    "first": "LINE14-15",
+    "clearance": 158,
+    "on": 8.333333333333334,
+    "off": 11.416666666666666,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "1760ba1fe6334e47693f54ff": {
+    "panel": "catalog",
+    "parent": 86,
+    "first": "BUS3",
+    "clearance": 154,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "f12a9321154301300a28c91c": {
+    "panel": "catalog",
+    "parent": 86,
+    "first": "BUS3",
+    "clearance": 154,
+    "on": 6.466666666666667,
+    "off": 8.833333333333334,
+    "family": "line",
+    "source": "LINE23-24"
+  },
+  "4b52aa6fd02020051929e4a9": {
+    "panel": "catalog",
+    "parent": 87,
+    "first": "LINE26-29",
+    "clearance": 162,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "d408701a8952ff0c1ce21126": {
+    "panel": "catalog",
+    "parent": 87,
+    "first": "LINE26-29",
+    "clearance": 162,
+    "on": 8.316666666666666,
+    "off": 11.533333333333333,
+    "family": "line",
+    "source": "LINE26-27"
+  },
+  "b12d4804a4ccb826b97b4dc0": {
+    "panel": "catalog",
+    "parent": 88,
+    "first": "BUS7",
+    "clearance": 148,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "a1181a4582ab7724a2171dda": {
+    "panel": "catalog",
+    "parent": 88,
+    "first": "BUS7",
+    "clearance": 148,
+    "on": 6.383333333333334,
+    "off": 10.083333333333334,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "1b2588f4c46220e62dee28b3": {
+    "panel": "catalog",
+    "parent": 89,
+    "first": "LINE26-29",
+    "clearance": 136,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "a63bf84f1ce791620058b70f": {
+    "panel": "catalog",
+    "parent": 89,
+    "first": "LINE26-29",
+    "clearance": 136,
+    "on": 6.416666666666667,
+    "off": 10.216666666666667,
+    "family": "load",
+    "source": "BUS4"
+  },
+  "3d7100ee045a3b1d6073bf61": {
+    "panel": "catalog",
+    "parent": 90,
+    "first": "BUS20",
+    "clearance": 172,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "234dd06b153b336d74e9ecf4": {
+    "panel": "catalog",
+    "parent": 90,
+    "first": "BUS20",
+    "clearance": 172,
+    "on": 8.916666666666666,
+    "off": 12.2,
+    "family": "line",
+    "source": "LINE4-14"
+  },
+  "0ca27b7203415c27b9ef2ae0": {
+    "panel": "catalog",
+    "parent": 91,
+    "first": "LINE14-15",
+    "clearance": 134,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "095d21f10b27e476bf99e8d8": {
+    "panel": "catalog",
+    "parent": 91,
+    "first": "LINE14-15",
+    "clearance": 134,
+    "on": 8.366666666666667,
+    "off": 11.666666666666666,
+    "family": "line",
+    "source": "LINE9-39"
+  },
+  "ffac81558f22bf22821c7b62": {
+    "panel": "catalog",
+    "parent": 92,
+    "first": "BUS31",
+    "clearance": 173,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "219820b900e1f0e12ce94f98": {
+    "panel": "catalog",
+    "parent": 92,
+    "first": "BUS31",
+    "clearance": 173,
+    "on": 9.266666666666667,
+    "off": 12.7,
+    "family": "load",
+    "source": "BUS20"
+  },
+  "73271ece715e3522817770be": {
+    "panel": "catalog",
+    "parent": 93,
+    "first": "LINE9-39",
+    "clearance": 180,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "d860e71bf82f676e8b7ab9d1": {
+    "panel": "catalog",
+    "parent": 93,
+    "first": "LINE9-39",
+    "clearance": 180,
+    "on": 8.6,
+    "off": 11.066666666666666,
+    "family": "load",
+    "source": "BUS15"
+  },
+  "6c671353c6671614b690fc83": {
+    "panel": "catalog",
+    "parent": 94,
+    "first": "BUS4",
+    "clearance": 174,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "76e3e77f816a052bfe8fa63e": {
+    "panel": "catalog",
+    "parent": 94,
+    "first": "BUS4",
+    "clearance": 174,
+    "on": 9.016666666666667,
+    "off": 11.133333333333333,
+    "family": "line",
+    "source": "LINE16-17"
+  },
+  "adfce4fde16a25ccd05c0017": {
+    "panel": "catalog",
+    "parent": 95,
+    "first": "LINE4-14",
+    "clearance": 164,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "b940f61fc9d9bda439517f50": {
+    "panel": "catalog",
+    "parent": 95,
+    "first": "LINE4-14",
+    "clearance": 164,
+    "on": 7.366666666666666,
+    "off": 11.183333333333334,
+    "family": "line",
+    "source": "LINE14-15"
+  },
+  "d23e410886e1c93db68df015": {
+    "panel": "catalog",
+    "parent": 96,
+    "first": "BUS3",
+    "clearance": 173,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "97d823ecab6f9bcfdfee40ca": {
+    "panel": "catalog",
+    "parent": 96,
+    "first": "BUS3",
+    "clearance": 173,
+    "on": 8.916666666666666,
+    "off": 12.3,
+    "family": "load",
+    "source": "BUS20"
+  },
+  "20d64a70bdb6919efed18500": {
+    "panel": "catalog",
+    "parent": 97,
+    "first": "LINE9-39",
+    "clearance": 159,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "7397b930046b0a9e07899bd5": {
+    "panel": "catalog",
+    "parent": 97,
+    "first": "LINE9-39",
+    "clearance": 159,
+    "on": 7.683333333333334,
+    "off": 10.066666666666666,
+    "family": "load",
+    "source": "BUS15"
+  },
+  "a9f0da0410e0188c8381799c": {
+    "panel": "catalog",
+    "parent": 98,
+    "first": "BUS20",
+    "clearance": 123,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "bb006ef3148ec422882aa0dd": {
+    "panel": "catalog",
+    "parent": 98,
+    "first": "BUS20",
+    "clearance": 123,
+    "on": 6.4,
+    "off": 10.15,
+    "family": "line",
+    "source": "LINE26-27"
+  },
+  "6ff203b8e8f314b9b24c73bd": {
+    "panel": "catalog",
+    "parent": 99,
+    "first": "LINE26-29",
+    "clearance": 178,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "1f2fcb0fabb34e4b437d4cfd": {
+    "panel": "catalog",
+    "parent": 99,
+    "first": "LINE26-29",
+    "clearance": 178,
+    "on": 9.566666666666666,
+    "off": 12.116666666666667,
+    "family": "line",
+    "source": "LINE4-14"
+  },
+  "55dec293eeb928d57bbfeffe": {
+    "panel": "catalog",
+    "parent": 100,
+    "first": "BUS16",
+    "clearance": 146,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "92135a65a06701ee4d647c46": {
+    "panel": "catalog",
+    "parent": 100,
+    "first": "BUS16",
+    "clearance": 146,
+    "on": 6.416666666666667,
+    "off": 9.7,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "459e22877e8071b75450c7e5": {
+    "panel": "catalog",
+    "parent": 101,
+    "first": "LINE3-4",
+    "clearance": 122,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "5c02d8a2c9e653a45f27d741": {
+    "panel": "catalog",
+    "parent": 101,
+    "first": "LINE3-4",
+    "clearance": 122,
+    "on": 6.083333333333333,
+    "off": 8.816666666666666,
+    "family": "load",
+    "source": "BUS15"
+  },
+  "bd02291e671ca285341973e5": {
+    "panel": "catalog",
+    "parent": 102,
+    "first": "BUS15",
+    "clearance": 141,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "517fdefa55c50b3cde262547": {
+    "panel": "catalog",
+    "parent": 102,
+    "first": "BUS15",
+    "clearance": 141,
+    "on": 8.683333333333334,
+    "off": 11.983333333333333,
+    "family": "line",
+    "source": "LINE23-24"
+  },
+  "445198cefd17b1d0cb0ef46a": {
+    "panel": "catalog",
+    "parent": 103,
+    "first": "LINE3-4",
+    "clearance": 135,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "a27e7dcdf0175e57b07f475a": {
+    "panel": "catalog",
+    "parent": 103,
+    "first": "LINE3-4",
+    "clearance": 135,
+    "on": 6.966666666666667,
+    "off": 10.116666666666667,
+    "family": "line",
+    "source": "LINE17-18"
+  },
+  "457c22eab3cea3e2185bedb2": {
+    "panel": "catalog",
+    "parent": 104,
+    "first": "BUS7",
+    "clearance": 145,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "fea586d15e305573ec0f711d": {
+    "panel": "catalog",
+    "parent": 104,
+    "first": "BUS7",
+    "clearance": 145,
+    "on": 7.0,
+    "off": 10.65,
+    "family": "load",
+    "source": "BUS4"
+  },
+  "23c8ff4d25c1cfec6630ed26": {
+    "panel": "catalog",
+    "parent": 105,
+    "first": "LINE14-15",
+    "clearance": 180,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "8a9d454d37801d1b141adc54": {
+    "panel": "catalog",
+    "parent": 105,
+    "first": "LINE14-15",
+    "clearance": 180,
+    "on": 8.95,
+    "off": 12.416666666666666,
+    "family": "load",
+    "source": "BUS7"
+  },
+  "956b0018b56d94092bacb831": {
+    "panel": "catalog",
+    "parent": 106,
+    "first": "BUS26",
+    "clearance": 164,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "36709690d454a5b410105a8d": {
+    "panel": "catalog",
+    "parent": 106,
+    "first": "BUS26",
+    "clearance": 164,
+    "on": 8.75,
+    "off": 12.2,
+    "family": "line",
+    "source": "LINE3-4"
+  },
+  "f9767693c42417da73ea33c8": {
+    "panel": "catalog",
+    "parent": 107,
+    "first": "LINE9-39",
+    "clearance": 152,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "932f33fd421a35f5bd54a70f": {
+    "panel": "catalog",
+    "parent": 107,
+    "first": "LINE9-39",
+    "clearance": 152,
+    "on": 7.583333333333333,
+    "off": 11.383333333333333,
+    "family": "line",
+    "source": "LINE26-27"
+  },
+  "d8bc3f7294ab7c55bad41c5e": {
+    "panel": "catalog",
+    "parent": 108,
+    "first": "BUS26",
+    "clearance": 145,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "ce436ff1b6443df055cf7852": {
+    "panel": "catalog",
+    "parent": 108,
+    "first": "BUS26",
+    "clearance": 145,
+    "on": 7.966666666666667,
+    "off": 11.833333333333334,
+    "family": "load",
+    "source": "BUS15"
+  },
+  "bcce1cefa0f1460b84d241a8": {
+    "panel": "catalog",
+    "parent": 109,
+    "first": "LINE4-14",
+    "clearance": 130,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "0b7f2113b00d9cb55cf566ed": {
+    "panel": "catalog",
+    "parent": 109,
+    "first": "LINE4-14",
+    "clearance": 130,
+    "on": 5.866666666666666,
+    "off": 8.35,
+    "family": "load",
+    "source": "BUS3"
+  },
+  "cd3d85c3f9950438560f886c": {
+    "panel": "catalog",
+    "parent": 110,
+    "first": "BUS20",
+    "clearance": 121,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "927e6c1dfdd403407dd33d61": {
+    "panel": "catalog",
+    "parent": 110,
+    "first": "BUS20",
+    "clearance": 121,
+    "on": 6.5,
+    "off": 9.8,
+    "family": "line",
+    "source": "LINE14-15"
+  },
+  "7bc80a4b8557033dc872bd05": {
+    "panel": "catalog",
+    "parent": 111,
+    "first": "LINE23-24",
+    "clearance": 135,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "0ed528fe0cbb40309b4236ca": {
+    "panel": "catalog",
+    "parent": 111,
+    "first": "LINE23-24",
+    "clearance": 135,
+    "on": 6.716666666666667,
+    "off": 9.3,
+    "family": "line",
+    "source": "LINE16-17"
+  },
+  "59e17a24d076762ac6e51116": {
+    "panel": "catalog",
+    "parent": 112,
+    "first": "BUS16",
+    "clearance": 160,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "614cbedf61c94027c43c8a13": {
+    "panel": "catalog",
+    "parent": 112,
+    "first": "BUS16",
+    "clearance": 160,
+    "on": 9.2,
+    "off": 12.516666666666667,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "d21d2079766ded55fa7a8510": {
+    "panel": "catalog",
+    "parent": 113,
+    "first": "LINE26-29",
+    "clearance": 144,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "17ef5cf09d65e2547329b5b6": {
+    "panel": "catalog",
+    "parent": 113,
+    "first": "LINE26-29",
+    "clearance": 144,
+    "on": 6.583333333333333,
+    "off": 8.65,
+    "family": "load",
+    "source": "BUS4"
+  },
+  "90dcae6a54c05d6d78655200": {
+    "panel": "catalog",
+    "parent": 114,
+    "first": "BUS31",
+    "clearance": 145,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "c0b8ff24cbc2fabe8a4ca560": {
+    "panel": "catalog",
+    "parent": 114,
+    "first": "BUS31",
+    "clearance": 145,
+    "on": 6.35,
+    "off": 9.4,
+    "family": "line",
+    "source": "LINE14-15"
+  },
+  "57c75124b0ab568b1570f67b": {
+    "panel": "catalog",
+    "parent": 115,
+    "first": "LINE26-27",
+    "clearance": 129,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "f18361f9eb1f78c9042b3a41": {
+    "panel": "catalog",
+    "parent": 115,
+    "first": "LINE26-27",
+    "clearance": 129,
+    "on": 7.533333333333333,
+    "off": 9.55,
+    "family": "line",
+    "source": "LINE17-18"
+  },
+  "7ccf664cb8157a9c45f5eda3": {
+    "panel": "catalog",
+    "parent": 116,
+    "first": "BUS15",
+    "clearance": 142,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "63ae9a1217dd639ba542585a": {
+    "panel": "catalog",
+    "parent": 116,
+    "first": "BUS15",
+    "clearance": 142,
+    "on": 8.033333333333333,
+    "off": 10.3,
+    "family": "load",
+    "source": "BUS16"
+  },
+  "06f53589d90cbdaa3218a08f": {
+    "panel": "catalog",
+    "parent": 117,
+    "first": "LINE3-4",
+    "clearance": 161,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "1c9da55269e7f85de8e7cd52": {
+    "panel": "catalog",
+    "parent": 117,
+    "first": "LINE3-4",
+    "clearance": 161,
+    "on": 8.516666666666667,
+    "off": 11.0,
+    "family": "load",
+    "source": "BUS24"
+  },
+  "402312a9352c1ebc03b55702": {
+    "panel": "catalog",
+    "parent": 118,
+    "first": "BUS3",
+    "clearance": 123,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "39f1243549d0f4df682becaa": {
+    "panel": "catalog",
+    "parent": 118,
+    "first": "BUS3",
+    "clearance": 123,
+    "on": 5.35,
+    "off": 7.566666666666666,
+    "family": "line",
+    "source": "LINE16-17"
+  },
+  "c8c53cb1d0e6bef048898c29": {
+    "panel": "catalog",
+    "parent": 119,
+    "first": "LINE9-39",
+    "clearance": 128,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "a0c2f9f398934a2bd047c812": {
+    "panel": "catalog",
+    "parent": 119,
+    "first": "LINE9-39",
+    "clearance": 128,
+    "on": 6.133333333333334,
+    "off": 8.85,
+    "family": "line",
+    "source": "LINE26-29"
+  },
+  "7f3b6940f9680113d643a7ab": {
+    "panel": "catalog",
+    "parent": 120,
+    "first": "BUS20",
+    "clearance": 163,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "aa32d7f856d281b120c89e9e": {
+    "panel": "catalog",
+    "parent": 120,
+    "first": "BUS20",
+    "clearance": 163,
+    "on": 8.866666666666667,
+    "off": 11.05,
+    "family": "load",
+    "source": "BUS7"
+  },
+  "c4e3977173f210728196904e": {
+    "panel": "catalog",
+    "parent": 121,
+    "first": "LINE3-4",
+    "clearance": 134,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "2fa717ed0f7d9febc9c6268f": {
+    "panel": "catalog",
+    "parent": 121,
+    "first": "LINE3-4",
+    "clearance": 134,
+    "on": 5.783333333333333,
+    "off": 8.116666666666667,
+    "family": "load",
+    "source": "BUS4"
+  },
+  "d0b5051ef1bb60c3f29b0199": {
+    "panel": "catalog",
+    "parent": 122,
+    "first": "BUS4",
+    "clearance": 144,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "765b633b6261a3c2f155fb7c": {
+    "panel": "catalog",
+    "parent": 122,
+    "first": "BUS4",
+    "clearance": 144,
+    "on": 6.916666666666667,
+    "off": 9.216666666666667,
+    "family": "line",
+    "source": "LINE16-17"
+  },
+  "1bba481dfecbe8bf6bc4deeb": {
+    "panel": "catalog",
+    "parent": 123,
+    "first": "LINE23-24",
+    "clearance": 164,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "1b8fc5dad865447f991e75ed": {
+    "panel": "catalog",
+    "parent": 123,
+    "first": "LINE23-24",
+    "clearance": 164,
+    "on": 8.916666666666666,
+    "off": 12.333333333333334,
+    "family": "line",
+    "source": "LINE17-18"
+  },
+  "f45ae57751860bc5a3e9a8bf": {
+    "panel": "catalog",
+    "parent": 124,
+    "first": "BUS31",
+    "clearance": 146,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "8475b0d341f22d4384e9cfd1": {
+    "panel": "catalog",
+    "parent": 124,
+    "first": "BUS31",
+    "clearance": 146,
+    "on": 8.6,
+    "off": 12.25,
+    "family": "load",
+    "source": "BUS15"
+  },
+  "da0d0685c78e3eebc6146ef6": {
+    "panel": "catalog",
+    "parent": 125,
+    "first": "LINE16-17",
+    "clearance": 133,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "4e268d2a772ce88b123bc03a": {
+    "panel": "catalog",
+    "parent": 125,
+    "first": "LINE16-17",
+    "clearance": 133,
+    "on": 7.8,
+    "off": 11.133333333333333,
+    "family": "load",
+    "source": "BUS16"
+  },
+  "8be3fe7042b390e6f4eec1bd": {
+    "panel": "catalog",
+    "parent": 126,
+    "first": "BUS26",
+    "clearance": 140,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "1adf128270190401abf406ab": {
+    "panel": "catalog",
+    "parent": 126,
+    "first": "BUS26",
+    "clearance": 140,
+    "on": 6.95,
+    "off": 10.083333333333334,
+    "family": "line",
+    "source": "LINE16-17"
+  },
+  "b89456076ec3540234babb2a": {
+    "panel": "catalog",
+    "parent": 127,
+    "first": "LINE9-39",
+    "clearance": 139,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "bf1445a4ff0be0834e1c73d8": {
+    "panel": "catalog",
+    "parent": 127,
+    "first": "LINE9-39",
+    "clearance": 139,
+    "on": 6.6,
+    "off": 9.95,
+    "family": "line",
+    "source": "LINE3-4"
+  },
+  "8a36864f505b2328379eedab": {
+    "panel": "catalog",
+    "parent": 128,
+    "first": "BUS31",
+    "clearance": 145,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "f4f4f193a8a5053826df3430": {
+    "panel": "catalog",
+    "parent": 128,
+    "first": "BUS31",
+    "clearance": 145,
+    "on": 6.966666666666667,
+    "off": 10.1,
+    "family": "load",
+    "source": "BUS24"
+  },
+  "f0853caf74bf1d66f513d4c2": {
+    "panel": "catalog",
+    "parent": 129,
+    "first": "LINE26-27",
+    "clearance": 173,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "c697e7c0c89b85ea11e70016": {
+    "panel": "catalog",
+    "parent": 129,
+    "first": "LINE26-27",
+    "clearance": 173,
+    "on": 8.05,
+    "off": 10.733333333333333,
+    "family": "load",
+    "source": "BUS26"
+  },
+  "7507419c096914744b58605e": {
+    "panel": "catalog",
+    "parent": 130,
+    "first": "BUS4",
+    "clearance": 155,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "6c0864fbe187789cc6e3cb29": {
+    "panel": "catalog",
+    "parent": 130,
+    "first": "BUS4",
+    "clearance": 155,
+    "on": 8.866666666666667,
+    "off": 11.7,
+    "family": "line",
+    "source": "LINE4-14"
+  },
+  "e7b88103c4a2296c9868f38a": {
+    "panel": "catalog",
+    "parent": 131,
+    "first": "LINE17-18",
+    "clearance": 170,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "00088cf0afbe3f18b57e14e5": {
+    "panel": "catalog",
+    "parent": 131,
+    "first": "LINE17-18",
+    "clearance": 170,
+    "on": 7.966666666666667,
+    "off": 10.283333333333333,
+    "family": "line",
+    "source": "LINE14-15"
+  },
+  "e18d8e24f8ff406a73a18bc4": {
+    "panel": "catalog",
+    "parent": 132,
+    "first": "BUS26",
+    "clearance": 135,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "47a66b1c2f11ba468cb24324": {
+    "panel": "catalog",
+    "parent": 132,
+    "first": "BUS26",
+    "clearance": 135,
+    "on": 7.5,
+    "off": 11.316666666666666,
+    "family": "load",
+    "source": "BUS16"
+  },
+  "5e094c2179b6ba81c1a17d79": {
+    "panel": "catalog",
+    "parent": 133,
+    "first": "LINE4-14",
+    "clearance": 120,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "7e7196c61264d4cd4b0374a5": {
+    "panel": "catalog",
+    "parent": 133,
+    "first": "LINE4-14",
+    "clearance": 120,
+    "on": 7.516666666666667,
+    "off": 9.816666666666666,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "e8f40048b3df99dabc1a06ee": {
+    "panel": "catalog",
+    "parent": 134,
+    "first": "BUS3",
+    "clearance": 130,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "969fe414d987e3d2c261983f": {
+    "panel": "catalog",
+    "parent": 134,
+    "first": "BUS3",
+    "clearance": 130,
+    "on": 8.1,
+    "off": 10.216666666666667,
+    "family": "line",
+    "source": "LINE16-17"
+  },
+  "74d716ed18af15571fe55ae6": {
+    "panel": "catalog",
+    "parent": 135,
+    "first": "LINE17-18",
+    "clearance": 142,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "8aa4492cf65546a12aa54560": {
+    "panel": "catalog",
+    "parent": 135,
+    "first": "LINE17-18",
+    "clearance": 142,
+    "on": 8.583333333333334,
+    "off": 12.183333333333334,
+    "family": "line",
+    "source": "LINE26-29"
+  },
+  "6152c1f969bf110194f76d1e": {
+    "panel": "catalog",
+    "parent": 136,
+    "first": "BUS15",
+    "clearance": 134,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "dd419f806efee34f49b86477": {
+    "panel": "catalog",
+    "parent": 136,
+    "first": "BUS15",
+    "clearance": 134,
+    "on": 7.083333333333333,
+    "off": 10.916666666666666,
+    "family": "load",
+    "source": "BUS24"
+  },
+  "7f90e23a7b9fac1b987bff5f": {
+    "panel": "catalog",
+    "parent": 137,
+    "first": "LINE4-14",
+    "clearance": 142,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "8c970d11bfbf0b8eeed2e277": {
+    "panel": "catalog",
+    "parent": 137,
+    "first": "LINE4-14",
+    "clearance": 142,
+    "on": 7.7,
+    "off": 9.95,
+    "family": "load",
+    "source": "BUS4"
+  },
+  "aa9a913890477a4837c5e871": {
+    "panel": "catalog",
+    "parent": 138,
+    "first": "BUS20",
+    "clearance": 166,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "5382399373092338a4110775": {
+    "panel": "catalog",
+    "parent": 138,
+    "first": "BUS20",
+    "clearance": 166,
+    "on": 7.233333333333333,
+    "off": 10.1,
+    "family": "line",
+    "source": "LINE14-15"
+  },
+  "4b77bc48fba32f456eed72c0": {
+    "panel": "catalog",
+    "parent": 139,
+    "first": "LINE16-17",
+    "clearance": 173,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "ab4d95cd0d8e2231269019ec": {
+    "panel": "catalog",
+    "parent": 139,
+    "first": "LINE16-17",
+    "clearance": 173,
+    "on": 9.666666666666666,
+    "off": 12.166666666666666,
+    "family": "line",
+    "source": "LINE9-39"
+  },
+  "796976e1be4960730294ee3d": {
+    "panel": "catalog",
+    "parent": 140,
+    "first": "BUS3",
+    "clearance": 147,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "84044c7e7a1cf2a12ad10a74": {
+    "panel": "catalog",
+    "parent": 140,
+    "first": "BUS3",
+    "clearance": 147,
+    "on": 8.216666666666667,
+    "off": 10.316666666666666,
+    "family": "load",
+    "source": "BUS26"
+  },
+  "f84e8afec0c1150ded140141": {
+    "panel": "catalog",
+    "parent": 141,
+    "first": "LINE9-39",
+    "clearance": 168,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "4ff8192d91799694807773d6": {
+    "panel": "catalog",
+    "parent": 141,
+    "first": "LINE9-39",
+    "clearance": 168,
+    "on": 8.4,
+    "off": 10.766666666666667,
+    "family": "load",
+    "source": "BUS20"
+  },
+  "d3660f642b2b520ad9e5ad61": {
+    "panel": "catalog",
+    "parent": 142,
+    "first": "BUS24",
+    "clearance": 135,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "0602b5cb40253c9b5d110e54": {
+    "panel": "catalog",
+    "parent": 142,
+    "first": "BUS24",
+    "clearance": 135,
+    "on": 8.3,
+    "off": 12.05,
+    "family": "line",
+    "source": "LINE17-18"
+  },
+  "00fbfa809719f89d7a630755": {
+    "panel": "catalog",
+    "parent": 143,
+    "first": "LINE26-29",
+    "clearance": 145,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "7ea972c041458bc9304538e3": {
+    "panel": "catalog",
+    "parent": 143,
+    "first": "LINE26-29",
+    "clearance": 145,
+    "on": 6.416666666666667,
+    "off": 9.533333333333333,
+    "family": "line",
+    "source": "LINE9-39"
+  },
+  "5f796072119007ebeb3a65d9": {
+    "panel": "catalog",
+    "parent": 144,
+    "first": "BUS16",
+    "clearance": 170,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "00bc6adb9cbf04a2eb18cbcd": {
+    "panel": "catalog",
+    "parent": 144,
+    "first": "BUS16",
+    "clearance": 170,
+    "on": 9.0,
+    "off": 11.05,
+    "family": "load",
+    "source": "BUS24"
+  },
+  "13e05d3b522710d4dedd41b6": {
+    "panel": "catalog",
+    "parent": 145,
+    "first": "LINE26-29",
+    "clearance": 151,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "84ad8622aea07ddae85e76a5": {
+    "panel": "catalog",
+    "parent": 145,
+    "first": "LINE26-29",
+    "clearance": 151,
+    "on": 8.016666666666667,
+    "off": 11.9,
+    "family": "load",
+    "source": "BUS26"
+  },
+  "37c89b633a36de1faa37611c": {
+    "panel": "catalog",
+    "parent": 146,
+    "first": "BUS15",
+    "clearance": 144,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "d17b22b37797f2778f2b8fb5": {
+    "panel": "catalog",
+    "parent": 146,
+    "first": "BUS15",
+    "clearance": 144,
+    "on": 6.716666666666667,
+    "off": 10.033333333333333,
+    "family": "line",
+    "source": "LINE4-14"
+  },
+  "69cb869629610151e6a44699": {
+    "panel": "catalog",
+    "parent": 147,
+    "first": "LINE16-17",
+    "clearance": 133,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "a36ec2a69e6e3f2d3db19398": {
+    "panel": "catalog",
+    "parent": 147,
+    "first": "LINE16-17",
+    "clearance": 133,
+    "on": 5.8,
+    "off": 8.25,
+    "family": "line",
+    "source": "LINE23-24"
+  },
+  "4b0e44adce49ae76e31da206": {
+    "panel": "catalog",
+    "parent": 148,
+    "first": "BUS16",
+    "clearance": 163,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "0a9d77ebfc3c6b398b4d121c": {
+    "panel": "catalog",
+    "parent": 148,
+    "first": "BUS16",
+    "clearance": 163,
+    "on": 8.616666666666667,
+    "off": 12.366666666666667,
+    "family": "load",
+    "source": "BUS24"
+  },
+  "3bd18af301769bd170155008": {
+    "panel": "catalog",
+    "parent": 149,
+    "first": "LINE16-17",
+    "clearance": 164,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "d295aead35f6adf801cba1e6": {
+    "panel": "catalog",
+    "parent": 149,
+    "first": "LINE16-17",
+    "clearance": 164,
+    "on": 9.083333333333334,
+    "off": 13.066666666666666,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "112786fe841f84de50891633": {
+    "panel": "catalog",
+    "parent": 150,
+    "first": "BUS26",
+    "clearance": 176,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "f05d10a9cd384e07ac6bcc18": {
+    "panel": "catalog",
+    "parent": 150,
+    "first": "BUS26",
+    "clearance": 176,
+    "on": 8.816666666666666,
+    "off": 12.066666666666666,
+    "family": "line",
+    "source": "LINE14-15"
+  },
+  "fe07afc3c95cd9e511bab863": {
+    "panel": "catalog",
+    "parent": 151,
+    "first": "LINE3-4",
+    "clearance": 162,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "f5e330e73ce5b368ce598fc2": {
+    "panel": "catalog",
+    "parent": 151,
+    "first": "LINE3-4",
+    "clearance": 162,
+    "on": 7.383333333333334,
+    "off": 10.2,
+    "family": "line",
+    "source": "LINE4-14"
+  },
+  "c3c745361e100092bfbb6425": {
+    "panel": "catalog",
+    "parent": 152,
+    "first": "BUS3",
+    "clearance": 182,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "7597ac24302b1b4eec5dfe69": {
+    "panel": "catalog",
+    "parent": 152,
+    "first": "BUS3",
+    "clearance": 182,
+    "on": 8.966666666666667,
+    "off": 12.05,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "c891f8955537b0d8aefcd1b5": {
+    "panel": "catalog",
+    "parent": 153,
+    "first": "LINE26-29",
+    "clearance": 177,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "a9055f3b15306fae616c8151": {
+    "panel": "catalog",
+    "parent": 153,
+    "first": "LINE26-29",
+    "clearance": 177,
+    "on": 8.433333333333334,
+    "off": 12.383333333333333,
+    "family": "load",
+    "source": "BUS7"
+  },
+  "93c6001949e54a89ef34e550": {
+    "panel": "catalog",
+    "parent": 154,
+    "first": "BUS7",
+    "clearance": 162,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "bbc6f9098206d2a657fbbac1": {
+    "panel": "catalog",
+    "parent": 154,
+    "first": "BUS7",
+    "clearance": 162,
+    "on": 7.45,
+    "off": 10.716666666666667,
+    "family": "line",
+    "source": "LINE9-39"
+  },
+  "2ccafccb4872a4c5af2892f6": {
+    "panel": "catalog",
+    "parent": 155,
+    "first": "LINE23-24",
+    "clearance": 150,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "0c47520a527f9cc668a166e4": {
+    "panel": "catalog",
+    "parent": 155,
+    "first": "LINE23-24",
+    "clearance": 150,
+    "on": 6.283333333333333,
+    "off": 9.316666666666666,
+    "family": "line",
+    "source": "LINE16-17"
+  },
+  "d3500cfaa21f53de17061018": {
+    "panel": "catalog",
+    "parent": 156,
+    "first": "BUS26",
+    "clearance": 176,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "b3fd1ce408cbf36ef818233b": {
+    "panel": "catalog",
+    "parent": 156,
+    "first": "BUS26",
+    "clearance": 176,
+    "on": 7.183333333333334,
+    "off": 10.9,
+    "family": "load",
+    "source": "BUS16"
+  },
+  "a8f5d0dcafabe5689bfc5699": {
+    "panel": "catalog",
+    "parent": 157,
+    "first": "LINE26-27",
+    "clearance": 168,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "43a3c5038080a648f0705e79": {
+    "panel": "catalog",
+    "parent": 157,
+    "first": "LINE26-27",
+    "clearance": 168,
+    "on": 6.916666666666667,
+    "off": 10.533333333333333,
+    "family": "load",
+    "source": "BUS15"
+  },
+  "9d2afc8da870437a3869c896": {
+    "panel": "catalog",
+    "parent": 158,
+    "first": "BUS7",
+    "clearance": 118,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "a3a781e195ac6ddde99e584d": {
+    "panel": "catalog",
+    "parent": 158,
+    "first": "BUS7",
+    "clearance": 118,
+    "on": 6.416666666666667,
+    "off": 9.883333333333333,
+    "family": "line",
+    "source": "LINE17-18"
+  },
+  "52c58f79f94cfde4cfaa8e45": {
+    "panel": "catalog",
+    "parent": 159,
+    "first": "LINE14-15",
+    "clearance": 166,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "47006c42f3a91bf5aad8e4e5": {
+    "panel": "catalog",
+    "parent": 159,
+    "first": "LINE14-15",
+    "clearance": 166,
+    "on": 8.866666666666667,
+    "off": 12.266666666666667,
+    "family": "line",
+    "source": "LINE26-27"
+  },
+  "31e942bf6fb2518624a701dd": {
+    "panel": "catalog",
+    "parent": 160,
+    "first": "BUS15",
+    "clearance": 147,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "b34696cb39142042701bc133": {
+    "panel": "catalog",
+    "parent": 160,
+    "first": "BUS15",
+    "clearance": 147,
+    "on": 7.133333333333334,
+    "off": 9.633333333333333,
+    "family": "load",
+    "source": "BUS3"
+  },
+  "4cde6b6355ed21161e4d843e": {
+    "panel": "catalog",
+    "parent": 161,
+    "first": "LINE3-4",
+    "clearance": 152,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "571d336968d32faf1a14e9d0": {
+    "panel": "catalog",
+    "parent": 161,
+    "first": "LINE3-4",
+    "clearance": 152,
+    "on": 7.916666666666667,
+    "off": 10.35,
+    "family": "load",
+    "source": "BUS15"
+  },
+  "5025d24bcf541e999f0efe54": {
+    "panel": "catalog",
+    "parent": 162,
+    "first": "BUS4",
+    "clearance": 185,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "c3e49a35f6ecbfd50ab54e68": {
+    "panel": "catalog",
+    "parent": 162,
+    "first": "BUS4",
+    "clearance": 185,
+    "on": 9.133333333333333,
+    "off": 13.016666666666667,
+    "family": "line",
+    "source": "LINE26-29"
+  },
+  "8f787e991a2422776d88abc5": {
+    "panel": "catalog",
+    "parent": 163,
+    "first": "LINE16-17",
+    "clearance": 134,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "fd16486c5494c2a3c38d6695": {
+    "panel": "catalog",
+    "parent": 163,
+    "first": "LINE16-17",
+    "clearance": 134,
+    "on": 8.183333333333334,
+    "off": 10.2,
+    "family": "line",
+    "source": "LINE3-4"
+  },
+  "99ba688f49840ae749f95bfe": {
+    "panel": "catalog",
+    "parent": 164,
+    "first": "BUS20",
+    "clearance": 174,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "800235379bed0bef0228c6df": {
+    "panel": "catalog",
+    "parent": 164,
+    "first": "BUS20",
+    "clearance": 174,
+    "on": 8.733333333333333,
+    "off": 11.483333333333333,
+    "family": "load",
+    "source": "BUS3"
+  },
+  "48ebfe520abfcef3a2275984": {
+    "panel": "catalog",
+    "parent": 165,
+    "first": "LINE16-17",
+    "clearance": 120,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "23474983cd25969f9651f1e4": {
+    "panel": "catalog",
+    "parent": 165,
+    "first": "LINE16-17",
+    "clearance": 120,
+    "on": 6.216666666666667,
+    "off": 8.8,
+    "family": "load",
+    "source": "BUS16"
+  },
+  "da8cdfe7f77c5a5a225ad4cd": {
+    "panel": "catalog",
+    "parent": 166,
+    "first": "BUS4",
+    "clearance": 177,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "d93f8c8149aacfee280f4afd": {
+    "panel": "catalog",
+    "parent": 166,
+    "first": "BUS4",
+    "clearance": 177,
+    "on": 9.15,
+    "off": 12.1,
+    "family": "line",
+    "source": "LINE14-15"
+  },
+  "43dddddd59048cb3e1c637a5": {
+    "panel": "catalog",
+    "parent": 167,
+    "first": "LINE16-17",
+    "clearance": 127,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "117a5d86fdd025e2c6339ab5": {
+    "panel": "catalog",
+    "parent": 167,
+    "first": "LINE16-17",
+    "clearance": 127,
+    "on": 5.583333333333333,
+    "off": 8.6,
+    "family": "line",
+    "source": "LINE14-15"
+  },
+  "6f0daa7a9a10bce36202edd2": {
+    "panel": "catalog",
+    "parent": 168,
+    "first": "BUS3",
+    "clearance": 132,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "0688cf43df7307c3a54019c5": {
+    "panel": "catalog",
+    "parent": 168,
+    "first": "BUS3",
+    "clearance": 132,
+    "on": 7.2,
+    "off": 9.483333333333333,
+    "family": "load",
+    "source": "BUS24"
+  },
+  "23e9fd94b1cded07a5cb12f9": {
+    "panel": "catalog",
+    "parent": 169,
+    "first": "LINE23-24",
+    "clearance": 122,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "d213a9b252e789ac5502c31b": {
+    "panel": "catalog",
+    "parent": 169,
+    "first": "LINE23-24",
+    "clearance": 122,
+    "on": 7.883333333333334,
+    "off": 9.966666666666667,
+    "family": "load",
+    "source": "BUS20"
+  },
+  "aa5c6202cd5e2d7b4cceead8": {
+    "panel": "catalog",
+    "parent": 170,
+    "first": "BUS31",
+    "clearance": 146,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "64fea4cfc61993b218fc0807": {
+    "panel": "catalog",
+    "parent": 170,
+    "first": "BUS31",
+    "clearance": 146,
+    "on": 8.15,
+    "off": 10.8,
+    "family": "line",
+    "source": "LINE17-18"
+  },
+  "c629c7d1d8dd954ec782a88f": {
+    "panel": "catalog",
+    "parent": 171,
+    "first": "LINE9-39",
+    "clearance": 171,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "d7fb7c4429ff9f9171e08f7e": {
+    "panel": "catalog",
+    "parent": 171,
+    "first": "LINE9-39",
+    "clearance": 171,
+    "on": 7.5,
+    "off": 9.866666666666667,
+    "family": "line",
+    "source": "LINE16-17"
+  },
+  "53b5c3afb30b27d24ad628b2": {
+    "panel": "catalog",
+    "parent": 172,
+    "first": "BUS31",
+    "clearance": 159,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "245fd9060a56733d74ec48ca": {
+    "panel": "catalog",
+    "parent": 172,
+    "first": "BUS31",
+    "clearance": 159,
+    "on": 7.2,
+    "off": 10.083333333333334,
+    "family": "load",
+    "source": "BUS15"
+  },
+  "5918842f002d431c90d2e0f3": {
+    "panel": "catalog",
+    "parent": 173,
+    "first": "LINE16-17",
+    "clearance": 147,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "850b1d3a2f6b2f944fc5b8da": {
+    "panel": "catalog",
+    "parent": 173,
+    "first": "LINE16-17",
+    "clearance": 147,
+    "on": 8.35,
+    "off": 12.0,
+    "family": "load",
+    "source": "BUS24"
+  },
+  "14d576254a2313d5d6400831": {
+    "panel": "catalog",
+    "parent": 174,
+    "first": "BUS20",
+    "clearance": 185,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "c774e38aecfa68e2f50d330b": {
+    "panel": "catalog",
+    "parent": 174,
+    "first": "BUS20",
+    "clearance": 185,
+    "on": 9.566666666666666,
+    "off": 11.683333333333334,
+    "family": "line",
+    "source": "LINE14-15"
+  },
+  "d847d206010c173494b52b16": {
+    "panel": "catalog",
+    "parent": 175,
+    "first": "LINE3-4",
+    "clearance": 167,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "9cf04cbfb21650c4e5494721": {
+    "panel": "catalog",
+    "parent": 175,
+    "first": "LINE3-4",
+    "clearance": 167,
+    "on": 7.05,
+    "off": 9.133333333333333,
+    "family": "line",
+    "source": "LINE14-15"
+  },
+  "596253c2fd6d501410667a93": {
+    "panel": "catalog",
+    "parent": 176,
+    "first": "BUS20",
+    "clearance": 141,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "75ba195bf8dadf355a19e3fd": {
+    "panel": "catalog",
+    "parent": 176,
+    "first": "BUS20",
+    "clearance": 141,
+    "on": 8.116666666666667,
+    "off": 11.85,
+    "family": "load",
+    "source": "BUS7"
+  },
+  "06fdcc592fce15b4eaa157ec": {
+    "panel": "catalog",
+    "parent": 177,
+    "first": "LINE9-39",
+    "clearance": 151,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "733a83fe5e6bb9b8f4a86b21": {
+    "panel": "catalog",
+    "parent": 177,
+    "first": "LINE9-39",
+    "clearance": 151,
+    "on": 8.233333333333333,
+    "off": 12.183333333333334,
+    "family": "load",
+    "source": "BUS4"
+  },
+  "7d94ae42ae6a4bf71a7ca597": {
+    "panel": "catalog",
+    "parent": 178,
+    "first": "BUS15",
+    "clearance": 181,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "916a47cc65d40c638b622a31": {
+    "panel": "catalog",
+    "parent": 178,
+    "first": "BUS15",
+    "clearance": 181,
+    "on": 10.033333333333333,
+    "off": 12.216666666666667,
+    "family": "line",
+    "source": "LINE9-39"
+  },
+  "deb2d28880fe77d055b4a94a": {
+    "panel": "catalog",
+    "parent": 179,
+    "first": "LINE14-15",
+    "clearance": 138,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "60416294d26c8f9af0995824": {
+    "panel": "catalog",
+    "parent": 179,
+    "first": "LINE14-15",
+    "clearance": 138,
+    "on": 7.7,
+    "off": 11.35,
+    "family": "line",
+    "source": "LINE3-4"
+  },
+  "32ba03f3c30cb2ebc652f1f9": {
+    "panel": "catalog",
+    "parent": 180,
+    "first": "BUS15",
+    "clearance": 149,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "c0bd8f483ee388a5acdefb3e": {
+    "panel": "catalog",
+    "parent": 180,
+    "first": "BUS15",
+    "clearance": 149,
+    "on": 8.833333333333334,
+    "off": 11.8,
+    "family": "load",
+    "source": "BUS3"
+  },
+  "60d2e83c70f8eca2307d50f7": {
+    "panel": "catalog",
+    "parent": 181,
+    "first": "LINE14-15",
+    "clearance": 138,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "e4cac2f16e7c7b5e52181188": {
+    "panel": "catalog",
+    "parent": 181,
+    "first": "LINE14-15",
+    "clearance": 138,
+    "on": 7.25,
+    "off": 11.0,
+    "family": "load",
+    "source": "BUS16"
+  },
+  "62e3267045c5d0b43d85a016": {
+    "panel": "catalog",
+    "parent": 182,
+    "first": "BUS16",
+    "clearance": 150,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "d4c41106e1bc1b505e9de91e": {
+    "panel": "catalog",
+    "parent": 182,
+    "first": "BUS16",
+    "clearance": 150,
+    "on": 7.966666666666667,
+    "off": 10.15,
+    "family": "line",
+    "source": "LINE23-24"
+  },
+  "30073513374628f2c360b4f1": {
+    "panel": "catalog",
+    "parent": 183,
+    "first": "LINE23-24",
+    "clearance": 148,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "9409e64465e237ed11ddb344": {
+    "panel": "catalog",
+    "parent": 183,
+    "first": "LINE23-24",
+    "clearance": 148,
+    "on": 6.95,
+    "off": 9.0,
+    "family": "line",
+    "source": "LINE9-39"
+  },
+  "70876077fab90f287027377f": {
+    "panel": "catalog",
+    "parent": 184,
+    "first": "BUS16",
+    "clearance": 153,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "a23784a3bebb02f93f8c1eb6": {
+    "panel": "catalog",
+    "parent": 184,
+    "first": "BUS16",
+    "clearance": 153,
+    "on": 6.75,
+    "off": 8.783333333333333,
+    "family": "load",
+    "source": "BUS15"
+  },
+  "ae3ebbf784827e9fbc81ff0d": {
+    "panel": "catalog",
+    "parent": 185,
+    "first": "LINE16-17",
+    "clearance": 164,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "27d9012cc5640dd1f694e337": {
+    "panel": "catalog",
+    "parent": 185,
+    "first": "LINE16-17",
+    "clearance": 164,
+    "on": 8.133333333333333,
+    "off": 11.116666666666667,
+    "family": "load",
+    "source": "BUS26"
+  },
+  "8c3d582f72688c1702a30613": {
+    "panel": "catalog",
+    "parent": 186,
+    "first": "BUS26",
+    "clearance": 146,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "ab00e8d1074bb15c8fff1269": {
+    "panel": "catalog",
+    "parent": 186,
+    "first": "BUS26",
+    "clearance": 146,
+    "on": 7.683333333333334,
+    "off": 9.983333333333333,
+    "family": "line",
+    "source": "LINE4-14"
+  },
+  "89b210be29d44b328fd7b06b": {
+    "panel": "catalog",
+    "parent": 187,
+    "first": "LINE23-24",
+    "clearance": 181,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "32f739b21f2beea07a82c592": {
+    "panel": "catalog",
+    "parent": 187,
+    "first": "LINE23-24",
+    "clearance": 181,
+    "on": 9.55,
+    "off": 13.033333333333333,
+    "family": "line",
+    "source": "LINE17-18"
+  },
+  "f24f2f21d000a45c2ead86df": {
+    "panel": "catalog",
+    "parent": 188,
+    "first": "BUS26",
+    "clearance": 171,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "a31a6dbdab0d749796b94a91": {
+    "panel": "catalog",
+    "parent": 188,
+    "first": "BUS26",
+    "clearance": 171,
+    "on": 9.616666666666667,
+    "off": 12.333333333333334,
+    "family": "load",
+    "source": "BUS15"
+  },
+  "c946e0c5e0d789bfab9692c9": {
+    "panel": "catalog",
+    "parent": 189,
+    "first": "LINE9-39",
+    "clearance": 152,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "27371790de1fc47d883ae14a": {
+    "panel": "catalog",
+    "parent": 189,
+    "first": "LINE9-39",
+    "clearance": 152,
+    "on": 8.866666666666667,
+    "off": 11.433333333333334,
+    "family": "load",
+    "source": "BUS20"
+  },
+  "821e4f487890ebd29ba23198": {
+    "panel": "catalog",
+    "parent": 190,
+    "first": "BUS3",
+    "clearance": 132,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "3ef9904df987fe819c47d25e": {
+    "panel": "catalog",
+    "parent": 190,
+    "first": "BUS3",
+    "clearance": 132,
+    "on": 5.65,
+    "off": 9.6,
+    "family": "line",
+    "source": "LINE4-14"
+  },
+  "46d4b49429e18b3799007446": {
+    "panel": "catalog",
+    "parent": 191,
+    "first": "LINE4-14",
+    "clearance": 159,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "fa245a937f0d8f0cf1ad4374": {
+    "panel": "catalog",
+    "parent": 191,
+    "first": "LINE4-14",
+    "clearance": 159,
+    "on": 6.633333333333334,
+    "off": 8.7,
+    "family": "line",
+    "source": "LINE3-4"
+  },
+  "a4d176b243fba1cf4476ad25": {
+    "panel": "catalog",
+    "parent": 192,
+    "first": "BUS3",
+    "clearance": 168,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "95cb5fca11bf919e80a604d4": {
+    "panel": "catalog",
+    "parent": 192,
+    "first": "BUS3",
+    "clearance": 168,
+    "on": 8.316666666666666,
+    "off": 11.35,
+    "family": "load",
+    "source": "BUS15"
+  },
+  "92fdaabf9e83fc14c661f7ef": {
+    "panel": "catalog",
+    "parent": 193,
+    "first": "LINE26-29",
+    "clearance": 165,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "4534d5315bbe6645c66f55eb": {
+    "panel": "catalog",
+    "parent": 193,
+    "first": "LINE26-29",
+    "clearance": 165,
+    "on": 8.133333333333333,
+    "off": 11.366666666666667,
+    "family": "load",
+    "source": "BUS15"
+  },
+  "bff70ae82b3598c8611e11e5": {
+    "panel": "catalog",
+    "parent": 194,
+    "first": "BUS31",
+    "clearance": 122,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "0cb2ef46e25210a57139641a": {
+    "panel": "catalog",
+    "parent": 194,
+    "first": "BUS31",
+    "clearance": 122,
+    "on": 6.266666666666667,
+    "off": 8.683333333333334,
+    "family": "line",
+    "source": "LINE26-29"
+  },
+  "c8bf98713192a5480d7a3e86": {
+    "panel": "catalog",
+    "parent": 195,
+    "first": "LINE26-27",
+    "clearance": 163,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "9d2e30a40d1a99748988080f": {
+    "panel": "catalog",
+    "parent": 195,
+    "first": "LINE26-27",
+    "clearance": 163,
+    "on": 9.083333333333334,
+    "off": 13.0,
+    "family": "line",
+    "source": "LINE16-17"
+  },
+  "0aa3b149c7081d1db5b2e677": {
+    "panel": "catalog",
+    "parent": 196,
+    "first": "BUS20",
+    "clearance": 168,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "ea4e63ac7ab7b3d242d92bbe": {
+    "panel": "catalog",
+    "parent": 196,
+    "first": "BUS20",
+    "clearance": 168,
+    "on": 7.283333333333333,
+    "off": 11.1,
+    "family": "load",
+    "source": "BUS26"
+  },
+  "2ccdaa355668e9d693e1badc": {
+    "panel": "catalog",
+    "parent": 197,
+    "first": "LINE14-15",
+    "clearance": 158,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "cae1750c6c2ee8a016ef77fb": {
+    "panel": "catalog",
+    "parent": 197,
+    "first": "LINE14-15",
+    "clearance": 158,
+    "on": 6.716666666666667,
+    "off": 9.016666666666667,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "365e83e86dac26bcd6098f53": {
+    "panel": "catalog",
+    "parent": 198,
+    "first": "BUS7",
+    "clearance": 169,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "8eacea7934f4e9ab212602a9": {
+    "panel": "catalog",
+    "parent": 198,
+    "first": "BUS7",
+    "clearance": 169,
+    "on": 9.383333333333333,
+    "off": 12.566666666666666,
+    "family": "line",
+    "source": "LINE9-39"
+  },
+  "d72d3e3708e21527fb3ab32a": {
+    "panel": "catalog",
+    "parent": 199,
+    "first": "LINE9-39",
+    "clearance": 158,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "36913d33bba6efbc8394e816": {
+    "panel": "catalog",
+    "parent": 199,
+    "first": "LINE9-39",
+    "clearance": 158,
+    "on": 7.65,
+    "off": 10.566666666666666,
+    "family": "line",
+    "source": "LINE3-4"
+  },
+  "05bebba6748bee2ba0713ce0": {
+    "panel": "catalog",
+    "parent": 200,
+    "first": "BUS20",
+    "clearance": 137,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "a0f16e6ca4ea84feb5485e60": {
+    "panel": "catalog",
+    "parent": 200,
+    "first": "BUS20",
+    "clearance": 137,
+    "on": 6.65,
+    "off": 10.6,
+    "family": "load",
+    "source": "BUS3"
+  },
+  "938154aa44e8dfc9d86e72b1": {
+    "panel": "catalog",
+    "parent": 201,
+    "first": "LINE4-14",
+    "clearance": 124,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "e250522510d79cc257855140": {
+    "panel": "catalog",
+    "parent": 201,
+    "first": "LINE4-14",
+    "clearance": 124,
+    "on": 7.516666666666667,
+    "off": 11.366666666666667,
+    "family": "load",
+    "source": "BUS24"
+  },
+  "a88ad522f7a6d89974e298d3": {
+    "panel": "catalog",
+    "parent": 202,
+    "first": "BUS3",
+    "clearance": 128,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "182b4df20ec0cb7ad0d12990": {
+    "panel": "catalog",
+    "parent": 202,
+    "first": "BUS3",
+    "clearance": 128,
+    "on": 7.15,
+    "off": 9.933333333333334,
+    "family": "line",
+    "source": "LINE17-18"
+  },
+  "464d6ebc9973759acb854656": {
+    "panel": "catalog",
+    "parent": 203,
+    "first": "LINE23-24",
+    "clearance": 126,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "63345ba3f08cb77088ecc5e8": {
+    "panel": "catalog",
+    "parent": 203,
+    "first": "LINE23-24",
+    "clearance": 126,
+    "on": 7.183333333333334,
+    "off": 11.033333333333333,
+    "family": "line",
+    "source": "LINE9-39"
+  },
+  "28540b9ddd591a090752d106": {
+    "panel": "catalog",
+    "parent": 204,
+    "first": "BUS26",
+    "clearance": 174,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "7024cf1dde273f1ae891a2cd": {
+    "panel": "catalog",
+    "parent": 204,
+    "first": "BUS26",
+    "clearance": 174,
+    "on": 8.833333333333334,
+    "off": 12.533333333333333,
+    "family": "load",
+    "source": "BUS4"
+  },
+  "7e511315f9e8765b7a5de156": {
+    "panel": "catalog",
+    "parent": 205,
+    "first": "LINE16-17",
+    "clearance": 177,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "a034d9ed5db404fcfed4f691": {
+    "panel": "catalog",
+    "parent": 205,
+    "first": "LINE16-17",
+    "clearance": 177,
+    "on": 7.983333333333333,
+    "off": 10.25,
+    "family": "load",
+    "source": "BUS24"
+  },
+  "6c12f551080c1bcd49a22a19": {
+    "panel": "catalog",
+    "parent": 206,
+    "first": "BUS16",
+    "clearance": 130,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "76fac90d456d2467b836599a": {
+    "panel": "catalog",
+    "parent": 206,
+    "first": "BUS16",
+    "clearance": 130,
+    "on": 6.433333333333334,
+    "off": 9.516666666666667,
+    "family": "line",
+    "source": "LINE3-4"
+  },
+  "1bc00afeef151f92f913c5fb": {
+    "panel": "catalog",
+    "parent": 207,
+    "first": "LINE23-24",
+    "clearance": 170,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "42249e77898c206f05b55dd4": {
+    "panel": "catalog",
+    "parent": 207,
+    "first": "LINE23-24",
+    "clearance": 170,
+    "on": 7.883333333333334,
+    "off": 10.633333333333333,
+    "family": "line",
+    "source": "LINE14-15"
+  },
+  "c01960a3225de5b43e6d4929": {
+    "panel": "catalog",
+    "parent": 208,
+    "first": "BUS26",
+    "clearance": 172,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "7e0e4c14f431f1d1f91bf69d": {
+    "panel": "catalog",
+    "parent": 208,
+    "first": "BUS26",
+    "clearance": 172,
+    "on": 8.833333333333334,
+    "off": 12.283333333333333,
+    "family": "load",
+    "source": "BUS15"
+  },
+  "62bc97826afaeb7a0df6a8d6": {
+    "panel": "catalog",
+    "parent": 209,
+    "first": "LINE23-24",
+    "clearance": 175,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "db91f431c6c3f603d0b59862": {
+    "panel": "catalog",
+    "parent": 209,
+    "first": "LINE23-24",
+    "clearance": 175,
+    "on": 7.333333333333333,
+    "off": 10.6,
+    "family": "load",
+    "source": "BUS24"
+  },
+  "39c40b9a65ff8e8d420f341b": {
+    "panel": "catalog",
+    "parent": 210,
+    "first": "BUS7",
+    "clearance": 145,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "646168de17288f5af7c90e24": {
+    "panel": "catalog",
+    "parent": 210,
+    "first": "BUS7",
+    "clearance": 145,
+    "on": 8.15,
+    "off": 12.083333333333334,
+    "family": "line",
+    "source": "LINE23-24"
+  },
+  "0e5fb10bf56da28decb20b5c": {
+    "panel": "catalog",
+    "parent": 211,
+    "first": "LINE4-14",
+    "clearance": 137,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "3addc00902f5105bab61969b": {
+    "panel": "catalog",
+    "parent": 211,
+    "first": "LINE4-14",
+    "clearance": 137,
+    "on": 6.616666666666666,
+    "off": 9.05,
+    "family": "line",
+    "source": "LINE16-17"
+  },
+  "dffc730e5c6ab7c07b487831": {
+    "panel": "catalog",
+    "parent": 212,
+    "first": "BUS4",
+    "clearance": 165,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "52c17d9c3cd1b10d1579e285": {
+    "panel": "catalog",
+    "parent": 212,
+    "first": "BUS4",
+    "clearance": 165,
+    "on": 7.833333333333333,
+    "off": 11.516666666666667,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "d3f14902e4bc378586aa6f8a": {
+    "panel": "catalog",
+    "parent": 213,
+    "first": "LINE14-15",
+    "clearance": 138,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "46baa128d70f6491455cfeba": {
+    "panel": "catalog",
+    "parent": 213,
+    "first": "LINE14-15",
+    "clearance": 138,
+    "on": 8.216666666666667,
+    "off": 11.5,
+    "family": "load",
+    "source": "BUS24"
+  },
+  "88f3166d751e99e00a570275": {
+    "panel": "catalog",
+    "parent": 214,
+    "first": "BUS26",
+    "clearance": 137,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "4c8195996222bcf300c39236": {
+    "panel": "catalog",
+    "parent": 214,
+    "first": "BUS26",
+    "clearance": 137,
+    "on": 8.066666666666666,
+    "off": 11.666666666666666,
+    "family": "line",
+    "source": "LINE26-29"
+  },
+  "f7376d42b368af29a928a6a0": {
+    "panel": "catalog",
+    "parent": 215,
+    "first": "LINE4-14",
+    "clearance": 180,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "c73bb4abee0bc5772ac6dd24": {
+    "panel": "catalog",
+    "parent": 215,
+    "first": "LINE4-14",
+    "clearance": 180,
+    "on": 8.65,
+    "off": 11.616666666666667,
+    "family": "line",
+    "source": "LINE9-39"
+  },
+  "e566f242f597970a7153d6e6": {
+    "panel": "catalog",
+    "parent": 216,
+    "first": "BUS3",
+    "clearance": 130,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "a315621955e046964a6afe01": {
+    "panel": "catalog",
+    "parent": 216,
+    "first": "BUS3",
+    "clearance": 130,
+    "on": 7.683333333333334,
+    "off": 10.783333333333333,
+    "family": "load",
+    "source": "BUS20"
+  },
+  "52517b904a484b44d6d32e04": {
+    "panel": "catalog",
+    "parent": 217,
+    "first": "LINE3-4",
+    "clearance": 123,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "73f35e63ed5b5c24a64595c3": {
+    "panel": "catalog",
+    "parent": 217,
+    "first": "LINE3-4",
+    "clearance": 123,
+    "on": 7.95,
+    "off": 11.766666666666667,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "e3fedd75016b04c621108f11": {
+    "panel": "catalog",
+    "parent": 218,
+    "first": "BUS26",
+    "clearance": 138,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "68b96d52f38f490d1ef83a38": {
+    "panel": "catalog",
+    "parent": 218,
+    "first": "BUS26",
+    "clearance": 138,
+    "on": 6.883333333333334,
+    "off": 9.833333333333334,
+    "family": "line",
+    "source": "LINE23-24"
+  },
+  "b2f54cf28da2539aa13052ca": {
+    "panel": "catalog",
+    "parent": 219,
+    "first": "LINE3-4",
+    "clearance": 160,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "777e481f787b647f35246dd0": {
+    "panel": "catalog",
+    "parent": 219,
+    "first": "LINE3-4",
+    "clearance": 160,
+    "on": 6.633333333333334,
+    "off": 10.466666666666667,
+    "family": "line",
+    "source": "LINE26-29"
+  },
+  "d51d31564d59ddfa8976a355": {
+    "panel": "catalog",
+    "parent": 220,
+    "first": "BUS15",
+    "clearance": 170,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "de90d40a3731c445c9353c06": {
+    "panel": "catalog",
+    "parent": 220,
+    "first": "BUS15",
+    "clearance": 170,
+    "on": 8.0,
+    "off": 10.6,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "7c1b48ec4e525228e0d41823": {
+    "panel": "catalog",
+    "parent": 221,
+    "first": "LINE9-39",
+    "clearance": 177,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "dbd8238ff55a274e15ef6729": {
+    "panel": "catalog",
+    "parent": 221,
+    "first": "LINE9-39",
+    "clearance": 177,
+    "on": 9.433333333333334,
+    "off": 11.583333333333334,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "a1323fab13cb1a7534846ed9": {
+    "panel": "catalog",
+    "parent": 222,
+    "first": "BUS24",
+    "clearance": 136,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "fcbb86da6ffeb3e59a1a7f1c": {
+    "panel": "catalog",
+    "parent": 222,
+    "first": "BUS24",
+    "clearance": 136,
+    "on": 7.85,
+    "off": 11.233333333333333,
+    "family": "line",
+    "source": "LINE4-14"
+  },
+  "43b7c47afae03942dcb0b9e3": {
+    "panel": "catalog",
+    "parent": 223,
+    "first": "LINE26-27",
+    "clearance": 129,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "785bde96ac176c577f087d19": {
+    "panel": "catalog",
+    "parent": 223,
+    "first": "LINE26-27",
+    "clearance": 129,
+    "on": 6.466666666666667,
+    "off": 9.95,
+    "family": "line",
+    "source": "LINE9-39"
+  },
+  "f081a6719318dbac8443c879": {
+    "panel": "catalog",
+    "parent": 224,
+    "first": "BUS15",
+    "clearance": 122,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "c341f310a75f662df0e3af0e": {
+    "panel": "catalog",
+    "parent": 224,
+    "first": "BUS15",
+    "clearance": 122,
+    "on": 7.666666666666667,
+    "off": 10.2,
+    "family": "load",
+    "source": "BUS24"
+  },
+  "927557cd479e8934192366ad": {
+    "panel": "catalog",
+    "parent": 225,
+    "first": "LINE26-27",
+    "clearance": 167,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "f3679ff707dc79e3b1ff69bf": {
+    "panel": "catalog",
+    "parent": 225,
+    "first": "LINE26-27",
+    "clearance": 167,
+    "on": 7.55,
+    "off": 9.916666666666666,
+    "family": "load",
+    "source": "BUS20"
+  },
+  "541cb62c6c7edd58b84b094a": {
+    "panel": "catalog",
+    "parent": 226,
+    "first": "BUS4",
+    "clearance": 153,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "043d7a590698eace768b419d": {
+    "panel": "catalog",
+    "parent": 226,
+    "first": "BUS4",
+    "clearance": 153,
+    "on": 6.816666666666666,
+    "off": 10.366666666666667,
+    "family": "line",
+    "source": "LINE26-29"
+  },
+  "49a2cbf94bd4b1cc9428344a": {
+    "panel": "catalog",
+    "parent": 227,
+    "first": "LINE14-15",
+    "clearance": 138,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "f42324a7191d6c811e220e88": {
+    "panel": "catalog",
+    "parent": 227,
+    "first": "LINE14-15",
+    "clearance": 138,
+    "on": 6.65,
+    "off": 9.2,
+    "family": "line",
+    "source": "LINE26-29"
+  },
+  "7719cd3cdb086fdfbcaf7ded": {
+    "panel": "catalog",
+    "parent": 228,
+    "first": "BUS7",
+    "clearance": 169,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "b8d1a7037572468a8431c5eb": {
+    "panel": "catalog",
+    "parent": 228,
+    "first": "BUS7",
+    "clearance": 169,
+    "on": 9.45,
+    "off": 12.783333333333333,
+    "family": "load",
+    "source": "BUS20"
+  },
+  "2a47470b5268569385bb41d4": {
+    "panel": "catalog",
+    "parent": 229,
+    "first": "LINE9-39",
+    "clearance": 169,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "d33b8837e17515c1b047b0d0": {
+    "panel": "catalog",
+    "parent": 229,
+    "first": "LINE9-39",
+    "clearance": 169,
+    "on": 8.25,
+    "off": 11.55,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "055dd65706956e47e01e64e1": {
+    "panel": "catalog",
+    "parent": 230,
+    "first": "BUS24",
+    "clearance": 164,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "c07ec1d1e566e8772b4f1462": {
+    "panel": "catalog",
+    "parent": 230,
+    "first": "BUS24",
+    "clearance": 164,
+    "on": 7.016666666666667,
+    "off": 10.9,
+    "family": "line",
+    "source": "LINE23-24"
+  },
+  "9758397e937dd6687919caa8": {
+    "panel": "catalog",
+    "parent": 231,
+    "first": "LINE26-27",
+    "clearance": 167,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "f67afa7b4596ad3bab83843f": {
+    "panel": "catalog",
+    "parent": 231,
+    "first": "LINE26-27",
+    "clearance": 167,
+    "on": 7.433333333333334,
+    "off": 10.266666666666667,
+    "family": "line",
+    "source": "LINE23-24"
+  },
+  "2ce1d31d7c9b155240ee1f86": {
+    "panel": "catalog",
+    "parent": 232,
+    "first": "BUS20",
+    "clearance": 166,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "90cd99d6deea356012fcfad4": {
+    "panel": "catalog",
+    "parent": 232,
+    "first": "BUS20",
+    "clearance": 166,
+    "on": 8.1,
+    "off": 11.0,
+    "family": "load",
+    "source": "BUS4"
+  },
+  "f17d738a9a6f926ab93ffd78": {
+    "panel": "catalog",
+    "parent": 233,
+    "first": "LINE17-18",
+    "clearance": 150,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "80bdaf70f952aead3c03cf43": {
+    "panel": "catalog",
+    "parent": 233,
+    "first": "LINE17-18",
+    "clearance": 150,
+    "on": 7.133333333333334,
+    "off": 10.05,
+    "family": "load",
+    "source": "BUS24"
+  },
+  "74f79254c1c8583948280b6e": {
+    "panel": "catalog",
+    "parent": 234,
+    "first": "BUS20",
+    "clearance": 164,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "8c85ac38470b38deb5bd6189": {
+    "panel": "catalog",
+    "parent": 234,
+    "first": "BUS20",
+    "clearance": 164,
+    "on": 6.9,
+    "off": 9.883333333333333,
+    "family": "line",
+    "source": "LINE17-18"
+  },
+  "a120d9720f83789898eb5c5f": {
+    "panel": "catalog",
+    "parent": 235,
+    "first": "LINE9-39",
+    "clearance": 182,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "28e6ad763d1433573bc7e714": {
+    "panel": "catalog",
+    "parent": 235,
+    "first": "LINE9-39",
+    "clearance": 182,
+    "on": 8.733333333333333,
+    "off": 12.4,
+    "family": "line",
+    "source": "LINE16-17"
+  },
+  "2f7fbc4f5d2ea6efed1104ee": {
+    "panel": "catalog",
+    "parent": 236,
+    "first": "BUS3",
+    "clearance": 165,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "bc8a5b341879f04fbb209f61": {
+    "panel": "catalog",
+    "parent": 236,
+    "first": "BUS3",
+    "clearance": 165,
+    "on": 7.25,
+    "off": 10.833333333333334,
+    "family": "load",
+    "source": "BUS20"
+  },
+  "76b4c07bb3d2ba31080f03f7": {
+    "panel": "catalog",
+    "parent": 237,
+    "first": "LINE9-39",
+    "clearance": 161,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "f6a50d06ce8d851b8956553a": {
+    "panel": "catalog",
+    "parent": 237,
+    "first": "LINE9-39",
+    "clearance": 161,
+    "on": 7.733333333333333,
+    "off": 9.733333333333333,
+    "family": "load",
+    "source": "BUS15"
+  },
+  "3a3814319c5649ece6e047be": {
+    "panel": "catalog",
+    "parent": 238,
+    "first": "BUS24",
+    "clearance": 172,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "eae42be9906df6ad9c0d6995": {
+    "panel": "catalog",
+    "parent": 238,
+    "first": "BUS24",
+    "clearance": 172,
+    "on": 7.416666666666667,
+    "off": 11.016666666666667,
+    "family": "line",
+    "source": "LINE3-4"
+  },
+  "a8d8e10e336db92e701f54c6": {
+    "panel": "catalog",
+    "parent": 239,
+    "first": "LINE9-39",
+    "clearance": 152,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "ceb269bfed9a6c1ffac79efd": {
+    "panel": "catalog",
+    "parent": 239,
+    "first": "LINE9-39",
+    "clearance": 152,
+    "on": 7.8,
+    "off": 10.516666666666667,
+    "family": "line",
+    "source": "LINE16-17"
+  },
+  "5096ce8787916f7eb8da4229": {
+    "panel": "bus31",
+    "parent": 0,
+    "first": "BUS3",
+    "clearance": 141,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "df733fe654ef9164062942a4": {
+    "panel": "bus31",
+    "parent": 0,
+    "first": "BUS3",
+    "clearance": 141,
+    "on": 7.983333333333333,
+    "off": 10.9,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "317cf00f8a7d4e3e5f7701de": {
+    "panel": "bus31",
+    "parent": 1,
+    "first": "LINE14-15",
+    "clearance": 151,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "f8226782fbc54025c18f7b99": {
+    "panel": "bus31",
+    "parent": 1,
+    "first": "LINE14-15",
+    "clearance": 151,
+    "on": 6.866666666666666,
+    "off": 9.016666666666667,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "c3cf87d77839d073be6afaa2": {
+    "panel": "bus31",
+    "parent": 2,
+    "first": "BUS7",
+    "clearance": 156,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "cb49d8ec89e4adc9b1f3487a": {
+    "panel": "bus31",
+    "parent": 2,
+    "first": "BUS7",
+    "clearance": 156,
+    "on": 7.5,
+    "off": 10.75,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "095def3b3023f68dfdcf5141": {
+    "panel": "bus31",
+    "parent": 3,
+    "first": "LINE26-27",
+    "clearance": 136,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "0307809f81280c40a76631b3": {
+    "panel": "bus31",
+    "parent": 3,
+    "first": "LINE26-27",
+    "clearance": 136,
+    "on": 8.45,
+    "off": 12.216666666666667,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "a675009117cf6ea421952a2a": {
+    "panel": "bus31",
+    "parent": 4,
+    "first": "BUS3",
+    "clearance": 179,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "2348bb0d396c32e310b75e0b": {
+    "panel": "bus31",
+    "parent": 4,
+    "first": "BUS3",
+    "clearance": 179,
+    "on": 7.566666666666666,
+    "off": 11.166666666666666,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "caf58734735c093eea87a893": {
+    "panel": "bus31",
+    "parent": 5,
+    "first": "LINE14-15",
+    "clearance": 141,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "baa5b6a84cd19a6d413dc0ed": {
+    "panel": "bus31",
+    "parent": 5,
+    "first": "LINE14-15",
+    "clearance": 141,
+    "on": 7.183333333333334,
+    "off": 10.133333333333333,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "e7ca9d6e0e28cb4190676ec7": {
+    "panel": "bus31",
+    "parent": 6,
+    "first": "BUS7",
+    "clearance": 174,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "6bb96c5dd0282bfce7ad6a97": {
+    "panel": "bus31",
+    "parent": 6,
+    "first": "BUS7",
+    "clearance": 174,
+    "on": 7.266666666666667,
+    "off": 10.933333333333334,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "644f379e4a378acaffade561": {
+    "panel": "bus31",
+    "parent": 7,
+    "first": "LINE16-17",
+    "clearance": 169,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "fa404dd7e594386255f7980d": {
+    "panel": "bus31",
+    "parent": 7,
+    "first": "LINE16-17",
+    "clearance": 169,
+    "on": 7.516666666666667,
+    "off": 11.033333333333333,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "1c6fc50db4d38324e7408c1e": {
+    "panel": "bus31",
+    "parent": 8,
+    "first": "BUS16",
+    "clearance": 176,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "c3c95f5e706ee6418f50b1d1": {
+    "panel": "bus31",
+    "parent": 8,
+    "first": "BUS16",
+    "clearance": 176,
+    "on": 7.766666666666667,
+    "off": 11.7,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "f295e4a63a8129fe9514444b": {
+    "panel": "bus31",
+    "parent": 9,
+    "first": "LINE17-18",
+    "clearance": 164,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "f0ba5fd2d03e4d41cb01cd85": {
+    "panel": "bus31",
+    "parent": 9,
+    "first": "LINE17-18",
+    "clearance": 164,
+    "on": 7.866666666666666,
+    "off": 10.65,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "9a111070d28e83b9280b28ed": {
+    "panel": "bus31",
+    "parent": 10,
+    "first": "BUS7",
+    "clearance": 134,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "eea3df307b3917eaf7bc9aa3": {
+    "panel": "bus31",
+    "parent": 10,
+    "first": "BUS7",
+    "clearance": 134,
+    "on": 7.366666666666666,
+    "off": 9.95,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "4d89010b02b5bdc2e10a2aed": {
+    "panel": "bus31",
+    "parent": 11,
+    "first": "LINE26-27",
+    "clearance": 138,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "e1bc962b659e6fa868382290": {
+    "panel": "bus31",
+    "parent": 11,
+    "first": "LINE26-27",
+    "clearance": 138,
+    "on": 7.683333333333334,
+    "off": 11.316666666666666,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "9e000db66b143417076878a8": {
+    "panel": "bus31",
+    "parent": 12,
+    "first": "BUS15",
+    "clearance": 144,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "376ff310986a553b3d3737ff": {
+    "panel": "bus31",
+    "parent": 12,
+    "first": "BUS15",
+    "clearance": 144,
+    "on": 6.916666666666667,
+    "off": 10.016666666666667,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "d986e305719ef88d7a5f842d": {
+    "panel": "bus31",
+    "parent": 13,
+    "first": "LINE16-17",
+    "clearance": 162,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "8bcb571b2b22750bcb41f013": {
+    "panel": "bus31",
+    "parent": 13,
+    "first": "LINE16-17",
+    "clearance": 162,
+    "on": 6.966666666666667,
+    "off": 9.8,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "11e5fb511f98d7df2ec534e4": {
+    "panel": "bus31",
+    "parent": 14,
+    "first": "BUS3",
+    "clearance": 132,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "ae201490a42bd4ba6e2038aa": {
+    "panel": "bus31",
+    "parent": 14,
+    "first": "BUS3",
+    "clearance": 132,
+    "on": 5.7,
+    "off": 7.766666666666667,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "c797e92da7d164de93e75c25": {
+    "panel": "bus31",
+    "parent": 15,
+    "first": "LINE14-15",
+    "clearance": 153,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "fd979be8fd12705263d94b3a": {
+    "panel": "bus31",
+    "parent": 15,
+    "first": "LINE14-15",
+    "clearance": 153,
+    "on": 6.983333333333333,
+    "off": 10.183333333333334,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "bcc36fcf5b333ee992b66057": {
+    "panel": "bus31",
+    "parent": 16,
+    "first": "BUS16",
+    "clearance": 156,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "e3fc76f7ec8957a08715c3f6": {
+    "panel": "bus31",
+    "parent": 16,
+    "first": "BUS16",
+    "clearance": 156,
+    "on": 7.883333333333334,
+    "off": 10.283333333333333,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "a4d4658180ceab0bf766a2b4": {
+    "panel": "bus31",
+    "parent": 17,
+    "first": "LINE3-4",
+    "clearance": 134,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "3be2ecf20ab9da0c545ec307": {
+    "panel": "bus31",
+    "parent": 17,
+    "first": "LINE3-4",
+    "clearance": 134,
+    "on": 7.183333333333334,
+    "off": 10.216666666666667,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "f43a2368d5ecf370d7e962e7": {
+    "panel": "bus31",
+    "parent": 18,
+    "first": "BUS24",
+    "clearance": 163,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "c17a6c8e2cea49f2bf3b35c5": {
+    "panel": "bus31",
+    "parent": 18,
+    "first": "BUS24",
+    "clearance": 163,
+    "on": 8.9,
+    "off": 12.183333333333334,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "0d607acd467ad4a910b041ea": {
+    "panel": "bus31",
+    "parent": 19,
+    "first": "LINE3-4",
+    "clearance": 169,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "b311f2c9973882f019917533": {
+    "panel": "bus31",
+    "parent": 19,
+    "first": "LINE3-4",
+    "clearance": 169,
+    "on": 8.95,
+    "off": 12.166666666666666,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "7e20661c4a4a5a0748b12db5": {
+    "panel": "bus31",
+    "parent": 20,
+    "first": "BUS26",
+    "clearance": 113,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "5a1cae82e671559149056302": {
+    "panel": "bus31",
+    "parent": 20,
+    "first": "BUS26",
+    "clearance": 113,
+    "on": 6.016666666666667,
+    "off": 9.683333333333334,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "8f4c61781a22d1b79d6d8dad": {
+    "panel": "bus31",
+    "parent": 21,
+    "first": "LINE26-27",
+    "clearance": 169,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "fc2e363d35697146d89e1728": {
+    "panel": "bus31",
+    "parent": 21,
+    "first": "LINE26-27",
+    "clearance": 169,
+    "on": 7.866666666666666,
+    "off": 11.4,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "59796bc3a936a51e98007ce8": {
+    "panel": "bus31",
+    "parent": 22,
+    "first": "BUS7",
+    "clearance": 123,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "d6d549c7bbf4bdb397d1d14d": {
+    "panel": "bus31",
+    "parent": 22,
+    "first": "BUS7",
+    "clearance": 123,
+    "on": 5.416666666666667,
+    "off": 7.85,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "528f9b8539fc8271f119487d": {
+    "panel": "bus31",
+    "parent": 23,
+    "first": "LINE9-39",
+    "clearance": 115,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "906a41c5b0b200b246497717": {
+    "panel": "bus31",
+    "parent": 23,
+    "first": "LINE9-39",
+    "clearance": 115,
+    "on": 6.083333333333333,
+    "off": 8.8,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "84a02514d2ccfdafd3a69ccc": {
+    "panel": "bus31",
+    "parent": 24,
+    "first": "BUS4",
+    "clearance": 153,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "ada35b801c68e0cb3f891135": {
+    "panel": "bus31",
+    "parent": 24,
+    "first": "BUS4",
+    "clearance": 153,
+    "on": 7.433333333333334,
+    "off": 9.7,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "8b85c6f466ef1aa8af8f6de0": {
+    "panel": "bus31",
+    "parent": 25,
+    "first": "LINE4-14",
+    "clearance": 144,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "f2afeff554ddfb295df2f68f": {
+    "panel": "bus31",
+    "parent": 25,
+    "first": "LINE4-14",
+    "clearance": 144,
+    "on": 7.633333333333334,
+    "off": 10.283333333333333,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "6558457c2bc36b16498358f2": {
+    "panel": "bus31",
+    "parent": 26,
+    "first": "BUS16",
+    "clearance": 118,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "d42c61bc54adc5c86ecb5158": {
+    "panel": "bus31",
+    "parent": 26,
+    "first": "BUS16",
+    "clearance": 118,
+    "on": 5.416666666666667,
+    "off": 9.35,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "cfd67b663a30e380af498422": {
+    "panel": "bus31",
+    "parent": 27,
+    "first": "LINE4-14",
+    "clearance": 123,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "a00946c83a8c297daa5fc609": {
+    "panel": "bus31",
+    "parent": 27,
+    "first": "LINE4-14",
+    "clearance": 123,
+    "on": 5.5,
+    "off": 7.7,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "bb89f5ee68c568048aa34a2d": {
+    "panel": "bus31",
+    "parent": 28,
+    "first": "BUS16",
+    "clearance": 170,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "97dca17fc6cdf8578d1ace6c": {
+    "panel": "bus31",
+    "parent": 28,
+    "first": "BUS16",
+    "clearance": 170,
+    "on": 7.966666666666667,
+    "off": 11.816666666666666,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "eb21201b4b3fec93875ec796": {
+    "panel": "bus31",
+    "parent": 29,
+    "first": "LINE26-27",
+    "clearance": 173,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "f517048c6a8223b05d5569f0": {
+    "panel": "bus31",
+    "parent": 29,
+    "first": "LINE26-27",
+    "clearance": 173,
+    "on": 9.133333333333333,
+    "off": 12.816666666666666,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "a32112f3bb577443a2c17198": {
+    "panel": "bus31",
+    "parent": 30,
+    "first": "BUS16",
+    "clearance": 175,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "9d612121d18df873a057d390": {
+    "panel": "bus31",
+    "parent": 30,
+    "first": "BUS16",
+    "clearance": 175,
+    "on": 7.75,
+    "off": 10.283333333333333,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "bd479fb41067c5ffe10c680f": {
+    "panel": "bus31",
+    "parent": 31,
+    "first": "LINE16-17",
+    "clearance": 142,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "5ca1be238da19adca9bc3ec4": {
+    "panel": "bus31",
+    "parent": 31,
+    "first": "LINE16-17",
+    "clearance": 142,
+    "on": 6.666666666666667,
+    "off": 9.7,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "8aa41d6f79ddeff1fc8bf40f": {
+    "panel": "bus31",
+    "parent": 32,
+    "first": "BUS16",
+    "clearance": 131,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "6dfaf2db42cdb4d6421a950f": {
+    "panel": "bus31",
+    "parent": 32,
+    "first": "BUS16",
+    "clearance": 131,
+    "on": 7.483333333333333,
+    "off": 11.466666666666667,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "70d19b9c312730c6da8bed16": {
+    "panel": "bus31",
+    "parent": 33,
+    "first": "LINE14-15",
+    "clearance": 155,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "35721b6e96d38f612d0d8f28": {
+    "panel": "bus31",
+    "parent": 33,
+    "first": "LINE14-15",
+    "clearance": 155,
+    "on": 8.866666666666667,
+    "off": 10.966666666666667,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "3924b3367aea9a25df1c02cd": {
+    "panel": "bus31",
+    "parent": 34,
+    "first": "BUS20",
+    "clearance": 158,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "ab8c3f0ae1a70e231bc9cf63": {
+    "panel": "bus31",
+    "parent": 34,
+    "first": "BUS20",
+    "clearance": 158,
+    "on": 6.966666666666667,
+    "off": 9.383333333333333,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "c02a2ca46b7789584c156cda": {
+    "panel": "bus31",
+    "parent": 35,
+    "first": "LINE14-15",
+    "clearance": 153,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "62b19b3be294609eee485a0e": {
+    "panel": "bus31",
+    "parent": 35,
+    "first": "LINE14-15",
+    "clearance": 153,
+    "on": 8.3,
+    "off": 11.766666666666667,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "78ae67f3c80c5d4a9f61256b": {
+    "panel": "bus31",
+    "parent": 36,
+    "first": "BUS16",
+    "clearance": 133,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "5b7a1b9b722e0c6895d70efb": {
+    "panel": "bus31",
+    "parent": 36,
+    "first": "BUS16",
+    "clearance": 133,
+    "on": 6.9,
+    "off": 10.016666666666667,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "cb34c9733c703a346ef03cdc": {
+    "panel": "bus31",
+    "parent": 37,
+    "first": "LINE3-4",
+    "clearance": 129,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "58642aea7bd685d572413fcb": {
+    "panel": "bus31",
+    "parent": 37,
+    "first": "LINE3-4",
+    "clearance": 129,
+    "on": 8.033333333333333,
+    "off": 11.75,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "9357f92050b5526ce48cbe83": {
+    "panel": "bus31",
+    "parent": 38,
+    "first": "BUS15",
+    "clearance": 142,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "eae2b10cd15015c8c1729718": {
+    "panel": "bus31",
+    "parent": 38,
+    "first": "BUS15",
+    "clearance": 142,
+    "on": 8.266666666666667,
+    "off": 11.833333333333334,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "a6743e249d436e88baee22bf": {
+    "panel": "bus31",
+    "parent": 39,
+    "first": "LINE17-18",
+    "clearance": 163,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "2f5661a24a8b63b965780bd1": {
+    "panel": "bus31",
+    "parent": 39,
+    "first": "LINE17-18",
+    "clearance": 163,
+    "on": 6.783333333333333,
+    "off": 9.85,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "b8d5f1c2ae385af2391ad1fa": {
+    "panel": "bus31",
+    "parent": 40,
+    "first": "BUS16",
+    "clearance": 126,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "6cb010929f27526f43a6fc86": {
+    "panel": "bus31",
+    "parent": 40,
+    "first": "BUS16",
+    "clearance": 126,
+    "on": 6.1,
+    "off": 9.7,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "1862df0994775b7b0efcec26": {
+    "panel": "bus31",
+    "parent": 41,
+    "first": "LINE9-39",
+    "clearance": 137,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "996b9f40b44552ca24bcd0d9": {
+    "panel": "bus31",
+    "parent": 41,
+    "first": "LINE9-39",
+    "clearance": 137,
+    "on": 7.283333333333333,
+    "off": 11.016666666666667,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "5a95356951c167212fc6ccfd": {
+    "panel": "bus31",
+    "parent": 42,
+    "first": "BUS15",
+    "clearance": 124,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "3eb58dbeaa240a7636d406a3": {
+    "panel": "bus31",
+    "parent": 42,
+    "first": "BUS15",
+    "clearance": 124,
+    "on": 7.2,
+    "off": 10.483333333333333,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "05c060f537e1c615d62edfa0": {
+    "panel": "bus31",
+    "parent": 43,
+    "first": "LINE14-15",
+    "clearance": 179,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "17dfd254422501095ef4e556": {
+    "panel": "bus31",
+    "parent": 43,
+    "first": "LINE14-15",
+    "clearance": 179,
+    "on": 8.6,
+    "off": 12.283333333333333,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "8a7c70122b53e5ef50902c11": {
+    "panel": "bus31",
+    "parent": 44,
+    "first": "BUS4",
+    "clearance": 123,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "9e0d7c1ccaac071bb3a6936b": {
+    "panel": "bus31",
+    "parent": 44,
+    "first": "BUS4",
+    "clearance": 123,
+    "on": 5.483333333333333,
+    "off": 7.566666666666666,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "b5311d3dc75239dd755c686b": {
+    "panel": "bus31",
+    "parent": 45,
+    "first": "LINE9-39",
+    "clearance": 149,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "ed26d4a1ee473be1d062b289": {
+    "panel": "bus31",
+    "parent": 45,
+    "first": "LINE9-39",
+    "clearance": 149,
+    "on": 8.583333333333334,
+    "off": 11.916666666666666,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "7f901b254247d2e011fb4046": {
+    "panel": "bus31",
+    "parent": 46,
+    "first": "BUS7",
+    "clearance": 149,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "2002f37ac9ee86f6c86f5567": {
+    "panel": "bus31",
+    "parent": 46,
+    "first": "BUS7",
+    "clearance": 149,
+    "on": 8.366666666666667,
+    "off": 11.783333333333333,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "b4c356fe4dc398cdf25cc286": {
+    "panel": "bus31",
+    "parent": 47,
+    "first": "LINE17-18",
+    "clearance": 164,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "d059ec809ee44bac94c4cedf": {
+    "panel": "bus31",
+    "parent": 47,
+    "first": "LINE17-18",
+    "clearance": 164,
+    "on": 7.833333333333333,
+    "off": 10.183333333333334,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "7ff9a167b07073982530950b": {
+    "panel": "bus31",
+    "parent": 48,
+    "first": "BUS16",
+    "clearance": 157,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "c89364f91b0408568620ba3b": {
+    "panel": "bus31",
+    "parent": 48,
+    "first": "BUS16",
+    "clearance": 157,
+    "on": 8.883333333333333,
+    "off": 10.983333333333333,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "28b87440123543e7d3265cdd": {
+    "panel": "bus31",
+    "parent": 49,
+    "first": "LINE3-4",
+    "clearance": 169,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "3dfeebfc2a3759d7d53d3d7a": {
+    "panel": "bus31",
+    "parent": 49,
+    "first": "LINE3-4",
+    "clearance": 169,
+    "on": 7.65,
+    "off": 11.116666666666667,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "4e88bb2b6c10c06d38a99e41": {
+    "panel": "bus31",
+    "parent": 50,
+    "first": "BUS20",
+    "clearance": 154,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "037feee9f1dea6a26b47180d": {
+    "panel": "bus31",
+    "parent": 50,
+    "first": "BUS20",
+    "clearance": 154,
+    "on": 9.016666666666667,
+    "off": 11.75,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "1613efab13b56a2163d4c34a": {
+    "panel": "bus31",
+    "parent": 51,
+    "first": "LINE16-17",
+    "clearance": 127,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "0c15d2946f1bd470ee227ebc": {
+    "panel": "bus31",
+    "parent": 51,
+    "first": "LINE16-17",
+    "clearance": 127,
+    "on": 6.716666666666667,
+    "off": 8.733333333333333,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "0f63038b9fa6bac86c9318fb": {
+    "panel": "bus31",
+    "parent": 52,
+    "first": "BUS16",
+    "clearance": 155,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "f11889c2b445d5f32848206c": {
+    "panel": "bus31",
+    "parent": 52,
+    "first": "BUS16",
+    "clearance": 155,
+    "on": 7.65,
+    "off": 10.933333333333334,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "8ed556e26ba0713a303fe4b7": {
+    "panel": "bus31",
+    "parent": 53,
+    "first": "LINE17-18",
+    "clearance": 165,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "3d96e87c20722b814ad4d526": {
+    "panel": "bus31",
+    "parent": 53,
+    "first": "LINE17-18",
+    "clearance": 165,
+    "on": 7.916666666666667,
+    "off": 11.05,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "4289170334d220bfbc1b5d15": {
+    "panel": "bus31",
+    "parent": 54,
+    "first": "BUS4",
+    "clearance": 155,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "f35763897de4df7d47637b2e": {
+    "panel": "bus31",
+    "parent": 54,
+    "first": "BUS4",
+    "clearance": 155,
+    "on": 7.266666666666667,
+    "off": 9.966666666666667,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "4ef2f2c43d2d9c8bd48c5452": {
+    "panel": "bus31",
+    "parent": 55,
+    "first": "LINE26-27",
+    "clearance": 172,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "aabe9544b10d594175daad84": {
+    "panel": "bus31",
+    "parent": 55,
+    "first": "LINE26-27",
+    "clearance": 172,
+    "on": 8.983333333333333,
+    "off": 12.066666666666666,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "ff66dd6e2382b87f9972435c": {
+    "panel": "bus31",
+    "parent": 56,
+    "first": "BUS26",
+    "clearance": 119,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "6578e64389771df9b65ecd26": {
+    "panel": "bus31",
+    "parent": 56,
+    "first": "BUS26",
+    "clearance": 119,
+    "on": 6.433333333333334,
+    "off": 9.2,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "913907727a7cae38fc4b54c2": {
+    "panel": "bus31",
+    "parent": 57,
+    "first": "LINE26-29",
+    "clearance": 173,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "fe755ecd086910f3acb75c87": {
+    "panel": "bus31",
+    "parent": 57,
+    "first": "LINE26-29",
+    "clearance": 173,
+    "on": 9.4,
+    "off": 11.65,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "01cc09633bcc9fc5fbfd34f8": {
+    "panel": "bus31",
+    "parent": 58,
+    "first": "BUS24",
+    "clearance": 163,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "70c6b1dd4bce230dfd2c1c54": {
+    "panel": "bus31",
+    "parent": 58,
+    "first": "BUS24",
+    "clearance": 163,
+    "on": 7.25,
+    "off": 11.05,
+    "family": "load",
+    "source": "BUS31"
+  },
+  "a4789a55d2f3ab5f0e53fa6f": {
+    "panel": "bus31",
+    "parent": 59,
+    "first": "LINE23-24",
+    "clearance": 126,
+    "on": null,
+    "off": null,
+    "family": "none",
+    "source": null
+  },
+  "a2905818263ed6ba8937b336": {
+    "panel": "bus31",
+    "parent": 59,
+    "first": "LINE23-24",
+    "clearance": 126,
+    "on": 5.566666666666666,
+    "off": 7.933333333333334,
+    "family": "load",
+    "source": "BUS31"
+  }
+}
