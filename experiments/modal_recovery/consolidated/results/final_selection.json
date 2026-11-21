@@ -1,0 +1,775 @@
+{
+  "candidates": [
+    {
+      "name": "local",
+      "tau": 25.933405118954955,
+      "scenarios": {
+        "native": {
+          "detection": 217,
+          "family": 217,
+          "exact": 217,
+          "false": 9,
+          "bus31": 0
+        },
+        "joint": {
+          "detection": 216,
+          "family": 216,
+          "exact": 216,
+          "false": 10,
+          "bus31": 0
+        },
+        "severe": {
+          "detection": 218,
+          "family": 218,
+          "exact": 218,
+          "false": 9,
+          "bus31": 1
+        },
+        "holdover": {
+          "detection": 216,
+          "family": 216,
+          "exact": 216,
+          "false": 10,
+          "bus31": 0
+        }
+      }
+    },
+    {
+      "name": "local",
+      "tau": 39.262932410737896,
+      "scenarios": {
+        "native": {
+          "detection": 218,
+          "family": 218,
+          "exact": 218,
+          "false": 6,
+          "bus31": 0
+        },
+        "joint": {
+          "detection": 218,
+          "family": 218,
+          "exact": 218,
+          "false": 6,
+          "bus31": 0
+        },
+        "severe": {
+          "detection": 218,
+          "family": 218,
+          "exact": 218,
+          "false": 7,
+          "bus31": 0
+        },
+        "holdover": {
+          "detection": 218,
+          "family": 218,
+          "exact": 218,
+          "false": 6,
+          "bus31": 0
+        }
+      }
+    },
+    {
+      "name": "local",
+      "tau": 140.13061259880214,
+      "scenarios": {
+        "native": {
+          "detection": 221,
+          "family": 221,
+          "exact": 221,
+          "false": 0,
+          "bus31": 0
+        },
+        "joint": {
+          "detection": 221,
+          "family": 221,
+          "exact": 221,
+          "false": 0,
+          "bus31": 0
+        },
+        "severe": {
+          "detection": 221,
+          "family": 221,
+          "exact": 221,
+          "false": 0,
+          "bus31": 0
+        },
+        "holdover": {
+          "detection": 221,
+          "family": 221,
+          "exact": 221,
+          "false": 0,
+          "bus31": 0
+        }
+      }
+    },
+    {
+      "name": "joint",
+      "tau": 13.240168457674367,
+      "scenarios": {
+        "native": {
+          "detection": 221,
+          "family": 221,
+          "exact": 221,
+          "false": 8,
+          "bus31": 5
+        },
+        "joint": {
+          "detection": 221,
+          "family": 221,
+          "exact": 221,
+          "false": 10,
+          "bus31": 5
+        },
+        "severe": {
+          "detection": 222,
+          "family": 222,
+          "exact": 222,
+          "false": 12,
+          "bus31": 6
+        },
+        "holdover": {
+          "detection": 221,
+          "family": 221,
+          "exact": 221,
+          "false": 9,
+          "bus31": 5
+        }
+      }
+    },
+    {
+      "name": "joint",
+      "tau": 27.19790123048685,
+      "scenarios": {
+        "native": {
+          "detection": 219,
+          "family": 219,
+          "exact": 219,
+          "false": 4,
+          "bus31": 0
+        },
+        "joint": {
+          "detection": 219,
+          "family": 219,
+          "exact": 219,
+          "false": 6,
+          "bus31": 1
+        },
+        "severe": {
+          "detection": 221,
+          "family": 221,
+          "exact": 221,
+          "false": 6,
+          "bus31": 3
+        },
+        "holdover": {
+          "detection": 218,
+          "family": 218,
+          "exact": 218,
+          "false": 6,
+          "bus31": 0
+        }
+      }
+    },
+    {
+      "name": "joint",
+      "tau": 34.44426362824225,
+      "scenarios": {
+        "native": {
+          "detection": 219,
+          "family": 219,
+          "exact": 219,
+          "false": 4,
+          "bus31": 0
+        },
+        "joint": {
+          "detection": 219,
+          "family": 219,
+          "exact": 219,
+          "false": 4,
+          "bus31": 0
+        },
+        "severe": {
+          "detection": 219,
+          "family": 219,
+          "exact": 219,
+          "false": 4,
+          "bus31": 0
+        },
+        "holdover": {
+          "detection": 219,
+          "family": 219,
+          "exact": 219,
+          "false": 4,
+          "bus31": 0
+        }
+      }
+    },
+    {
+      "name": "history_local",
+      "tau": 29.315405118882033,
+      "scenarios": {
+        "native": {
+          "detection": 217,
+          "family": 217,
+          "exact": 217,
+          "false": 8,
+          "bus31": 0
+        },
+        "joint": {
+          "detection": 215,
+          "family": 215,
+          "exact": 215,
+          "false": 10,
+          "bus31": 0
+        },
+        "severe": {
+          "detection": 216,
+          "family": 216,
+          "exact": 216,
+          "false": 12,
+          "bus31": 1
+        },
+        "holdover": {
+          "detection": 215,
+          "family": 215,
+          "exact": 215,
+          "false": 10,
+          "bus31": 0
+        }
+      }
+    },
+    {
+      "name": "history_local",
+      "tau": 44.71096918433936,
+      "scenarios": {
+        "native": {
+          "detection": 218,
+          "family": 218,
+          "exact": 218,
+          "false": 5,
+          "bus31": 0
+        },
+        "joint": {
+          "detection": 218,
+          "family": 218,
+          "exact": 218,
+          "false": 5,
+          "bus31": 0
+        },
+        "severe": {
+          "detection": 218,
+          "family": 218,
+          "exact": 218,
+          "false": 6,
+          "bus31": 0
+        },
+        "holdover": {
+          "detection": 218,
+          "family": 218,
+          "exact": 218,
+          "false": 5,
+          "bus31": 0
+        }
+      }
+    },
+    {
+      "name": "history_local",
+      "tau": 63.03120342937253,
+      "scenarios": {
+        "native": {
+          "detection": 219,
+          "family": 219,
+          "exact": 219,
+          "false": 3,
+          "bus31": 0
+        },
+        "joint": {
+          "detection": 220,
+          "family": 220,
+          "exact": 220,
+          "false": 2,
+          "bus31": 0
+        },
+        "severe": {
+          "detection": 220,
+          "family": 220,
+          "exact": 220,
+          "false": 2,
+          "bus31": 0
+        },
+        "holdover": {
+          "detection": 220,
+          "family": 220,
+          "exact": 220,
+          "false": 2,
+          "bus31": 0
+        }
+      }
+    },
+    {
+      "name": "history_joint",
+      "tau": 13.09712188862432,
+      "scenarios": {
+        "native": {
+          "detection": 220,
+          "family": 220,
+          "exact": 220,
+          "false": 10,
+          "bus31": 5
+        },
+        "joint": {
+          "detection": 222,
+          "family": 222,
+          "exact": 222,
+          "false": 10,
+          "bus31": 6
+        },
+        "severe": {
+          "detection": 222,
+          "family": 222,
+          "exact": 222,
+          "false": 12,
+          "bus31": 6
+        },
+        "holdover": {
+          "detection": 222,
+          "family": 222,
+          "exact": 222,
+          "false": 10,
+          "bus31": 6
+        }
+      }
+    },
+    {
+      "name": "history_joint",
+      "tau": 33.33550795216407,
+      "scenarios": {
+        "native": {
+          "detection": 218,
+          "family": 218,
+          "exact": 218,
+          "false": 4,
+          "bus31": 0
+        },
+        "joint": {
+          "detection": 218,
+          "family": 218,
+          "exact": 218,
+          "false": 4,
+          "bus31": 0
+        },
+        "severe": {
+          "detection": 220,
+          "family": 219,
+          "exact": 219,
+          "false": 5,
+          "bus31": 2
+        },
+        "holdover": {
+          "detection": 218,
+          "family": 218,
+          "exact": 218,
+          "false": 4,
+          "bus31": 0
+        }
+      }
+    },
+    {
+      "name": "history_joint",
+      "tau": 58.87143344486792,
+      "scenarios": {
+        "native": {
+          "detection": 220,
+          "family": 220,
+          "exact": 220,
+          "false": 2,
+          "bus31": 0
+        },
+        "joint": {
+          "detection": 219,
+          "family": 219,
+          "exact": 219,
+          "false": 3,
+          "bus31": 0
+        },
+        "severe": {
+          "detection": 219,
+          "family": 219,
+          "exact": 219,
+          "false": 3,
+          "bus31": 0
+        },
+        "holdover": {
+          "detection": 220,
+          "family": 220,
+          "exact": 220,
+          "false": 2,
+          "bus31": 0
+        }
+      }
+    },
+    {
+      "name": "adaptive",
+      "tau": 11.537379998204004,
+      "strong_tau": 140.13061259880214,
+      "quality": [
+        [
+          -7.779817440264924,
+          0.11838727632762233
+        ],
+        [
+          -5.358969561342465,
+          0.2931251178090018
+        ]
+      ],
+      "scenarios": {
+        "native": {
+          "detection": 240,
+          "family": 240,
+          "exact": 240,
+          "false": 0,
+          "bus31": 19
+        },
+        "joint": {
+          "detection": 222,
+          "family": 222,
+          "exact": 222,
+          "false": 7,
+          "bus31": 6
+        },
+        "severe": {
+          "detection": 223,
+          "family": 223,
+          "exact": 223,
+          "false": 10,
+          "bus31": 7
+        },
+        "holdover": {
+          "detection": 221,
+          "family": 221,
+          "exact": 221,
+          "false": 8,
+          "bus31": 6
+        }
+      }
+    },
+    {
+      "name": "adaptive",
+      "tau": 13.09712053758423,
+      "strong_tau": 140.13061259880214,
+      "quality": [
+        [
+          -7.779817440264924,
+          0.11838727632762233
+        ],
+        [
+          -5.358969561342465,
+          0.2931251178090018
+        ]
+      ],
+      "scenarios": {
+        "native": {
+          "detection": 240,
+          "family": 240,
+          "exact": 240,
+          "false": 0,
+          "bus31": 19
+        },
+        "joint": {
+          "detection": 222,
+          "family": 222,
+          "exact": 222,
+          "false": 7,
+          "bus31": 6
+        },
+        "severe": {
+          "detection": 222,
+          "family": 222,
+          "exact": 222,
+          "false": 9,
+          "bus31": 6
+        },
+        "holdover": {
+          "detection": 222,
+          "family": 222,
+          "exact": 222,
+          "false": 7,
+          "bus31": 6
+        }
+      }
+    },
+    {
+      "name": "adaptive",
+      "tau": 58.87143344486792,
+      "strong_tau": 140.13061259880214,
+      "quality": [
+        [
+          -7.779817440264924,
+          0.11838727632762233
+        ],
+        [
+          -5.358969561342465,
+          0.2931251178090018
+        ]
+      ],
+      "scenarios": {
+        "native": {
+          "detection": 240,
+          "family": 240,
+          "exact": 240,
+          "false": 0,
+          "bus31": 19
+        },
+        "joint": {
+          "detection": 220,
+          "family": 220,
+          "exact": 220,
+          "false": 2,
+          "bus31": 0
+        },
+        "severe": {
+          "detection": 220,
+          "family": 220,
+          "exact": 220,
+          "false": 2,
+          "bus31": 0
+        },
+        "holdover": {
+          "detection": 220,
+          "family": 220,
+          "exact": 220,
+          "false": 2,
+          "bus31": 0
+        }
+      }
+    },
+    {
+      "name": "adaptive",
+      "tau": 1000058.8714334449,
+      "strong_tau": 140.13061259880214,
+      "quality": [
+        [
+          -7.779817440264924,
+          0.11838727632762233
+        ],
+        [
+          -5.358969561342465,
+          0.2931251178090018
+        ]
+      ],
+      "scenarios": {
+        "native": {
+          "detection": 240,
+          "family": 240,
+          "exact": 240,
+          "false": 0,
+          "bus31": 19
+        },
+        "joint": {
+          "detection": 221,
+          "family": 221,
+          "exact": 221,
+          "false": 0,
+          "bus31": 0
+        },
+        "severe": {
+          "detection": 221,
+          "family": 221,
+          "exact": 221,
+          "false": 0,
+          "bus31": 0
+        },
+        "holdover": {
+          "detection": 221,
+          "family": 221,
+          "exact": 221,
+          "false": 0,
+          "bus31": 0
+        }
+      }
+    },
+    {
+      "name": "odds",
+      "tau": 2.5092173903259742,
+      "strong_tau": 140.13061259880214,
+      "quality": [
+        [
+          -7.779817440264924,
+          0.11838727632762233
+        ],
+        [
+          -5.358969561342465,
+          0.2931251178090018
+        ]
+      ],
+      "scenarios": {
+        "native": {
+          "detection": 240,
+          "family": 240,
+          "exact": 240,
+          "false": 0,
+          "bus31": 19
+        },
+        "joint": {
+          "detection": 226,
+          "family": 226,
+          "exact": 226,
+          "false": 3,
+          "bus31": 6
+        },
+        "severe": {
+          "detection": 225,
+          "family": 224,
+          "exact": 224,
+          "false": 6,
+          "bus31": 5
+        },
+        "holdover": {
+          "detection": 227,
+          "family": 227,
+          "exact": 227,
+          "false": 1,
+          "bus31": 7
+        }
+      }
+    },
+    {
+      "name": "odds",
+      "tau": 2.9163878858977625,
+      "strong_tau": 140.13061259880214,
+      "quality": [
+        [
+          -7.779817440264924,
+          0.11838727632762233
+        ],
+        [
+          -5.358969561342465,
+          0.2931251178090018
+        ]
+      ],
+      "scenarios": {
+        "native": {
+          "detection": 240,
+          "family": 240,
+          "exact": 240,
+          "false": 0,
+          "bus31": 19
+        },
+        "joint": {
+          "detection": 226,
+          "family": 226,
+          "exact": 226,
+          "false": 1,
+          "bus31": 6
+        },
+        "severe": {
+          "detection": 223,
+          "family": 222,
+          "exact": 222,
+          "false": 2,
+          "bus31": 3
+        },
+        "holdover": {
+          "detection": 226,
+          "family": 226,
+          "exact": 226,
+          "false": 1,
+          "bus31": 6
+        }
+      }
+    },
+    {
+      "name": "odds",
+      "tau": 3.2603384440118797,
+      "strong_tau": 140.13061259880214,
+      "quality": [
+        [
+          -7.779817440264924,
+          0.11838727632762233
+        ],
+        [
+          -5.358969561342465,
+          0.2931251178090018
+        ]
+      ],
+      "scenarios": {
+        "native": {
+          "detection": 240,
+          "family": 240,
+          "exact": 240,
+          "false": 0,
+          "bus31": 19
+        },
+        "joint": {
+          "detection": 227,
+          "family": 226,
+          "exact": 226,
+          "false": 0,
+          "bus31": 6
+        },
+        "severe": {
+          "detection": 223,
+          "family": 222,
+          "exact": 222,
+          "false": 1,
+          "bus31": 2
+        },
+        "holdover": {
+          "detection": 226,
+          "family": 226,
+          "exact": 226,
+          "false": 1,
+          "bus31": 6
+        }
+      }
+    }
+  ],
+  "winner": {
+    "name": "odds",
+    "tau": 3.2603384440118797,
+    "strong_tau": 140.13061259880214,
+    "quality": [
+      [
+        -7.779817440264924,
+        0.11838727632762233
+      ],
+      [
+        -5.358969561342465,
+        0.2931251178090018
+      ]
+    ],
+    "scenarios": {
+      "native": {
+        "detection": 240,
+        "family": 240,
+        "exact": 240,
+        "false": 0,
+        "bus31": 19
+      },
+      "joint": {
+        "detection": 227,
+        "family": 226,
+        "exact": 226,
+        "false": 0,
+        "bus31": 6
+      },
+      "severe": {
+        "detection": 223,
+        "family": 222,
+        "exact": 222,
+        "false": 1,
+        "bus31": 2
+      },
+      "holdover": {
+        "detection": 226,
+        "family": 226,
+        "exact": 226,
+        "false": 1,
+        "bus31": 6
+      }
+    }
+  },
+  "positives": 240,
+  "controls": 240,
+  "bus31": 19
+}

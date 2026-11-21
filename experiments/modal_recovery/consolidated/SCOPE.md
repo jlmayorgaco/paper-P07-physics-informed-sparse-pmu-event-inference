@@ -1,0 +1,25 @@
+# Scope: SGSMA comparison evidence for modal recovery
+
+This is an evidence map, not a new score. The cited comparisons use different cohorts and must not be pooled or described as official hidden-set results.
+
+## Best existing full nine-class comparison
+
+The strongest complete nine-class M9 comparison in this repository is `experiments/competition_spatial_264/`: 216 primary windows (24/class), including 192 positive windows, plus 48 added quiet records (72 negative windows total). After a 60-s quiet prefix, each method makes one 30-s decision. The response-bank successor scored macro-F1 **0.9907**, family **214/216**, exact source **188/192**, and **0/72** quiet alarms; its paired predecessor scored **0.8450**, **190/216**, **166/192**, and **0/72**. Exact-source denominators retain every positive, including misses. This is the best registered complete nine-class M9 result found here, not an official SGSMA score.
+
+Difficulty and limits: new noise seeds, variable onset/duration/severity, and multiple registered assets make this harder than replaying the internal validation set; however, training and test share the M9 generator, templates, instrument conventions, and source catalog. Class 8 is a configured composite proxy, not open-set recognition; M9 spatial attenuation follows numeric bus-label proximity. Thus the result does not establish new-grid or official-record transfer. See `experiments/competition_spatial_264/README.md`, `results.json`, `paired_audit.json`, and `seal.json`.
+
+For the original submitted model on nine-class M9 cohorts, the most demanding direct checks found macro-F1 **0.1933**, **32/108** correct classes, **0/96** exact sources, and **0/60** normal-window alarms in `experiments/competition_held_locations_156/results.json` and `experiments/competition_electrical_sites_156/results.json`. Those records use held or newly varied simulated sites, but the submission's own training-site disjointness is unverified. A smaller 27-window pilot (`experiments/competition_nine_class_pilot/`) gives macro-F1 0.2169 and 4/24 exact sources. These are distinct cohorts, not replicates to combine.
+
+The original submission's reported internal SIM validation is detector accuracy **0.9693**, nine-class macro-F1 **0.9598**, and exact localization **0.8524** (`models/final_metrics.json` in the archived submission). Its denominator and split difficulty are not stated in the local comparison trace; do not compare those values numerically with the M9 replays as if paired.
+
+## Physical-family comparison and scope gap
+
+No executed four-physical-family SGSMA comparison is evidenced in the available registries. The closest archived paired comparison is `generated/frozen/historical_submission_comparison_20261102/`: **124 shared 30-s windows** (96 event, 28 normal), but only two event families—load E4 and line E2—plus normal E0. It reports macro-F1 E0/E2/E4 of **0.4071** for the submitted ExtraTrees and **1.0000** for M02 V3.1; exact family+source was **0/96** versus **96/96**. There were 0/28 normal-window alarms for either. These 96 realizations are repeated seeds over 36 event and 6 normal physical trajectories, not independent scenarios. The M02 cohort is now a known development/regression set, the candidate knows its plant/catalog, and this is not full nine-class or four-family evidence. See `REPORT.md`, `PROTOCOL.json`, `SUMMARY.csv`, `CHECKS.json`, and `MANIFEST.json` in that registry, plus `docs/HACKATHON_TO_C01_METHOD_TRACE.md`.
+
+## Original code, metrics, and citations
+
+The audited original package is `sgsma_2026_final_submission.zip` (SHA-256 `E0BFC17E4C5EE9B595FA51FD94D736145C2F48755696C8D2EADCFF00CB23A243`). The recorded original code path is `C:\Users\walla\Documents\Github\SGSMA26-Physics-Informed-AD\experiments\E4_OTHER_FAMILIES\M02_V31_VS_HACKATHON_C01\submitted\src\models\hybrid_submission.py`; the original metrics are at the same directory's `models\final_metrics.json`. These source paths and results are recorded in `docs/HACKATHON_TO_C01_METHOD_TRACE.md`; the audit in `docs/legacy-sgsma-evidence-audit.md` records the ZIP hash and identifies the challenge policy, `SGSMA_2026_Competition_Day_Policy (1).pdf`, and `guidelines.pdf` by SHA-256. This study reopened the archived ZIP from the SGSMA NAS mirror, verified its SHA-256 and checked the original feature and model code against the extracted files. The locally preserved paired metrics are `generated/frozen/historical_submission_comparison_20261102/` and the M9 `experiments/competition_*/results.json` files cited above.
+
+## Official hidden labels
+
+The local evidence does not show official hidden labels or an official hidden-set score. The nine-class pilot explicitly says the official hidden competition score is unmeasured; the held-location and spatial reports explicitly say they do not evaluate hidden competition records. This establishes only what is evidenced in the accessible registries; it does not establish whether organizers retain labels privately. No blind inputs, hidden-label files, or model artifacts were opened for this check.
