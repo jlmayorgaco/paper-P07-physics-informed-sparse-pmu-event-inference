@@ -1,0 +1,8955 @@
+{
+  "freeze_sha": "028a5f732d1f9be9f805e32bcbc2d91518f4aad59da4b43049663d8614dcb507",
+  "manifest_sha": "bf09dcf5edea9bf9019dfe0d6dccc62a89c77b6b10c34e224f36e2599b29587d",
+  "targets_sha": "3fb0e8dcbf97c7d0d16c65fa641197daf96a4853848ae2d114458a2fc0ffedd0",
+  "calls": {
+    "0059d67b2e827badf478ceaa": {
+      "current": {
+        "alarm": 202,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 200,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "adjusted": {
+        "alarm": 200,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      }
+    },
+    "00832e8bf3aacdbe7b08472d": {
+      "current": {
+        "alarm": 247,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 240,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "adjusted": {
+        "alarm": 240,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "00c64aede17f09a979bea5d9": {
+      "current": {
+        "alarm": 231,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "02225597f9394ddff6615713": {
+      "current": {
+        "alarm": 212,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "023a5033a9cb37d03bc9d544": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "02e85dc8e9e067e55cedc906": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "03117a5ede89d6680d21c830": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "036a34b0c86b52070faf7a64": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "048119aeee8cfbcf55965b6f": {
+      "current": {
+        "alarm": 247,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 235,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "adjusted": {
+        "alarm": 235,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      }
+    },
+    "049d96cf8845dd4dbd5beb5c": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "04c4cf259d50f31ba78c4c6b": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "0511cb2348dd284b3dab92dc": {
+      "current": {
+        "alarm": 222,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 220,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      },
+      "adjusted": {
+        "alarm": 220,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      }
+    },
+    "05323cd234aaf893e84d6b3c": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "054b24531a777e2794abde69": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "05ad37f1817feccebb793db4": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "05f800e866805cd695e43207": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "0625aa8998d12fbe1c9a7ac5": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "0636c7c187d0ea152d004fa5": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "07aa75e3ca5b5ff84854bbde": {
+      "current": {
+        "alarm": 200,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 200,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "adjusted": {
+        "alarm": 200,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      }
+    },
+    "0841c52bb8bd9a782a9179ea": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "09023f76a57a571b9634cb59": {
+      "current": {
+        "alarm": 275,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 263,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "adjusted": {
+        "alarm": 263,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      }
+    },
+    "09247123c8ec775825c66b86": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "092e6a032407e107ef8abedd": {
+      "current": {
+        "alarm": 184,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 208,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      },
+      "adjusted": {
+        "alarm": 208,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      }
+    },
+    "094ccff1daa3060573593152": {
+      "current": {
+        "alarm": 253,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 244,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted": {
+        "alarm": 244,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      }
+    },
+    "09d7ade754cd7cdeaf177b2e": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "0a026dae47feacf6eb0db555": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "0aafc1cb255a29bc42f1e118": {
+      "current": {
+        "alarm": 289,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 275,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      },
+      "adjusted": {
+        "alarm": 275,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      }
+    },
+    "0b0bcaefda44c135da595b77": {
+      "current": {
+        "alarm": 208,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 208,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      },
+      "adjusted": {
+        "alarm": 208,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      }
+    },
+    "0ba2a72ad0364b0501311b59": {
+      "current": {
+        "alarm": 191,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "0bac9ce090382bed7353fae6": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "0c6cb950d98f26932333d1df": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": 230,
+        "label": [
+          "load",
+          "BUS31"
+        ]
+      },
+      "adjusted": {
+        "alarm": 230,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      }
+    },
+    "0dbacb29857926f2297d7765": {
+      "current": {
+        "alarm": 185,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 185,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "adjusted": {
+        "alarm": 185,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      }
+    },
+    "0decce244c95c6bd39005178": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "0e22c2b6a79dc4d976047f44": {
+      "current": {
+        "alarm": 230,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 227,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      },
+      "adjusted": {
+        "alarm": 227,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      }
+    },
+    "0ea08bc5bb2793340ceb335e": {
+      "current": {
+        "alarm": 283,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 276,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "adjusted": {
+        "alarm": 276,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "0ec5955d1dcb7a584eab7b1f": {
+      "current": {
+        "alarm": 256,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 255,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "adjusted": {
+        "alarm": 255,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      }
+    },
+    "0edf6ef1e9c82b3a7930da91": {
+      "current": {
+        "alarm": 244,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 237,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      },
+      "adjusted": {
+        "alarm": 237,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      }
+    },
+    "0f702d268e8cf3f95fa6ab55": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "0fbfc0a1d9e3f1d9b887b14f": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "104759b2aa33c00a37f1f428": {
+      "current": {
+        "alarm": 254,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 244,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      },
+      "adjusted": {
+        "alarm": 244,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      }
+    },
+    "105285625afcf96b625aa544": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "10f6c1f42dd5b3cf21ce12f0": {
+      "current": {
+        "alarm": 282,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 276,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "adjusted": {
+        "alarm": 276,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      }
+    },
+    "135a025e8d06827879b0e8a6": {
+      "current": {
+        "alarm": 232,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 222,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      },
+      "adjusted": {
+        "alarm": 222,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      }
+    },
+    "138c20062fa4da276e2477df": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "1472210e6336278ad0737018": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "15d47d6ff512ae297875430a": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "16946a58a5aaab934248c394": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "16d27d29321d66ec5c447f04": {
+      "current": {
+        "alarm": 237,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 237,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "adjusted": {
+        "alarm": 237,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      }
+    },
+    "1733f1676ba80fa3597fd33c": {
+      "current": {
+        "alarm": 252,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 252,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "adjusted": {
+        "alarm": 252,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      }
+    },
+    "185e42cf717914e04cd85878": {
+      "current": {
+        "alarm": 279,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 278,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "adjusted": {
+        "alarm": 278,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      }
+    },
+    "186a7e72b7b19c4a5161ef78": {
+      "current": {
+        "alarm": 222,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 221,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "adjusted": {
+        "alarm": 221,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      }
+    },
+    "19640ea705c696ef0d56510c": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "19c27542e5d953d88c9aae00": {
+      "current": {
+        "alarm": 216,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "19fcd111223dd8732b7239ed": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "1aebe626fcb4c17469d3cd22": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "1b1a34a96f41136cc4c47fd4": {
+      "current": {
+        "alarm": 186,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 180,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "adjusted": {
+        "alarm": 180,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      }
+    },
+    "1b84370b55bab9bdce342b9f": {
+      "current": {
+        "alarm": 171,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 171,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "adjusted": {
+        "alarm": 171,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "1bef5d08bf749e3647766b1f": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "1db3d56f2c2c7a08ee0701f0": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "1e3ba495f345493221fc7541": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "1eb1b81ffe4f117ecb98bc96": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "1ee3c81ed3cf873dd8ef63d5": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "1ef9eef078684ac8f56d70ee": {
+      "current": {
+        "alarm": 231,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 227,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      },
+      "adjusted": {
+        "alarm": 227,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      }
+    },
+    "214a5db210262c449a091ab6": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "2196399e29f70df38eb327cf": {
+      "current": {
+        "alarm": 269,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 257,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "adjusted": {
+        "alarm": 257,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      }
+    },
+    "21c04dd86f74ab4fb8dabe2e": {
+      "current": {
+        "alarm": 207,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 201,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      },
+      "adjusted": {
+        "alarm": 201,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      }
+    },
+    "21ceb17c17f16e51fb89e7de": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "22044fd9432b4490fdf5031f": {
+      "current": {
+        "alarm": 216,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 216,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "adjusted": {
+        "alarm": 216,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      }
+    },
+    "23cbbd87c94aa8563f5a65cf": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "2414ce17d81e6f5e0add72d6": {
+      "current": {
+        "alarm": 299,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 290,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "adjusted": {
+        "alarm": 290,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      }
+    },
+    "2464f332c59320d809b9c3eb": {
+      "current": {
+        "alarm": 260,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 260,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "adjusted": {
+        "alarm": 260,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      }
+    },
+    "25e7658adf6676a6c88c857e": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "25f411ff1381ce74c94cae43": {
+      "current": {
+        "alarm": 239,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 234,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "adjusted": {
+        "alarm": 234,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      }
+    },
+    "26096b09c2baffb706eec5da": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "27f0a9216664d719ecb4af27": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "27f1aba16bdc4b7c94cfbed0": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "2890d39b19c45c2f13922592": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "299182692a3bedb547f84032": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "2a856e28e6b6dfd41ebd50d9": {
+      "current": {
+        "alarm": 187,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 187,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "adjusted": {
+        "alarm": 187,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      }
+    },
+    "2af41180365f575a257868d9": {
+      "current": {
+        "alarm": 184,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 184,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "adjusted": {
+        "alarm": 184,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "2b5b6a3ac6be2508f2273872": {
+      "current": {
+        "alarm": 198,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 197,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "adjusted": {
+        "alarm": 197,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      }
+    },
+    "2b8f77ef4d5687d1b2134705": {
+      "current": {
+        "alarm": 300,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 287,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      },
+      "adjusted": {
+        "alarm": 287,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      }
+    },
+    "2bb959df10aec0b4f9b70773": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "2d4fbf27cf0c3388bb90c846": {
+      "current": {
+        "alarm": 244,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 237,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "adjusted": {
+        "alarm": 237,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      }
+    },
+    "2dac875022fce10547648536": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "2dcb79e4b5832b03bb21fc25": {
+      "current": {
+        "alarm": 211,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 206,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "adjusted": {
+        "alarm": 206,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      }
+    },
+    "2e5ade927386abc434b02465": {
+      "current": {
+        "alarm": 203,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 203,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      },
+      "adjusted": {
+        "alarm": 203,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      }
+    },
+    "2f04e9a5d76e45318335560a": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "3031baf3cf833e4af02ef23f": {
+      "current": {
+        "alarm": 292,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 291,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "adjusted": {
+        "alarm": 291,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      }
+    },
+    "31323d52a80f3e29b00bdf32": {
+      "current": {
+        "alarm": 209,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 208,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "adjusted": {
+        "alarm": 208,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      }
+    },
+    "32427b1ab21e1e9b98d5f0ed": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "32787ff73a98593e49615d78": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "32d6af56abf267ffc99c7456": {
+      "current": {
+        "alarm": 271,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 268,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      },
+      "adjusted": {
+        "alarm": 268,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      }
+    },
+    "32f7468c96f160a11b8cafd4": {
+      "current": {
+        "alarm": 280,
+        "label": [
+          "load",
+          "BUS31"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 268,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      },
+      "adjusted": {
+        "alarm": 268,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      }
+    },
+    "335255d859ec0d32cf5f2c8e": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "3393fe39b383197d5ab6e324": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "34150c86a98ca8a4148abf67": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "342e11d4b9f1c225b579540c": {
+      "current": {
+        "alarm": 283,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 271,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "adjusted": {
+        "alarm": 271,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      }
+    },
+    "3437b1275bf0d7afb31f115b": {
+      "current": {
+        "alarm": 234,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 233,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "adjusted": {
+        "alarm": 233,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      }
+    },
+    "343cc0e86b078d9e61d566de": {
+      "current": {
+        "alarm": 260,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 260,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "adjusted": {
+        "alarm": 260,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      }
+    },
+    "344bc1592a635f676827f41c": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "34a672d26e15635ad40122d8": {
+      "current": {
+        "alarm": 189,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 189,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      },
+      "adjusted": {
+        "alarm": 189,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      }
+    },
+    "34cc4e76ef82023287abeda6": {
+      "current": {
+        "alarm": 231,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 227,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      },
+      "adjusted": {
+        "alarm": 227,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      }
+    },
+    "356df257813a7bef7bc5ba12": {
+      "current": {
+        "alarm": 219,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 219,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "adjusted": {
+        "alarm": 219,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "3574b7bbc80693f3bf94f9f4": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "357573b41c80fb3d7016c437": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "3576fb1dde20624b35a8d943": {
+      "current": {
+        "alarm": 281,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 280,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "adjusted": {
+        "alarm": 280,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      }
+    },
+    "35fac051da4a3dbe9308f70b": {
+      "current": {
+        "alarm": 223,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 216,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "adjusted": {
+        "alarm": 216,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      }
+    },
+    "362359575120d264b9184ef9": {
+      "current": {
+        "alarm": 234,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 231,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      },
+      "adjusted": {
+        "alarm": 231,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      }
+    },
+    "363a6c401611399a9c7cc859": {
+      "current": {
+        "alarm": 217,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 216,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "adjusted": {
+        "alarm": 216,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      }
+    },
+    "3744b01f9be598a1acbd8858": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "3783cb341b7fc53db9a9a856": {
+      "current": {
+        "alarm": 279,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 279,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "adjusted": {
+        "alarm": 279,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      }
+    },
+    "379ec04d40a0a172ed96e7a7": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "38335efaff22b2faa99b4713": {
+      "current": {
+        "alarm": 202,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 202,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted": {
+        "alarm": 202,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      }
+    },
+    "3976c1ac7158134e160f7924": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "3b10f041611739ce42208537": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "3bbf3d695dcbf8e2e4737328": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "3bfa7681a81072e7194953cd": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "3c69e67acfdcb504479f622f": {
+      "current": {
+        "alarm": 263,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 257,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "adjusted": {
+        "alarm": 257,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      }
+    },
+    "3c7d714f2cf668c3fd56c99d": {
+      "current": {
+        "alarm": 290,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 289,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "adjusted": {
+        "alarm": 289,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      }
+    },
+    "3daf810445d46678b70ef39e": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "3f24befb2faa844d03da846d": {
+      "current": {
+        "alarm": 225,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 219,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "adjusted": {
+        "alarm": 219,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "4004f90c3569a4185a0dd09b": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "407178c8f3283d35271ae238": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "40caafe33835814967f6b86a": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "40ce528a16156a0faff01f55": {
+      "current": {
+        "alarm": 262,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 249,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "adjusted": {
+        "alarm": 249,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      }
+    },
+    "40f0bff9cd25089c91a1ebe6": {
+      "current": {
+        "alarm": 228,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 228,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "adjusted": {
+        "alarm": 228,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      }
+    },
+    "4105079527ed7a797fa1ad4e": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "416acc8efaa8a46fa8ac895b": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": 205,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      },
+      "adjusted": {
+        "alarm": 205,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      }
+    },
+    "41febad56e8c1e3a8b8f2adf": {
+      "current": {
+        "alarm": 257,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 250,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "adjusted": {
+        "alarm": 250,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "4231a213d3b12aa711fd60c7": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "4416ca31bb6f9f7165afdf08": {
+      "current": {
+        "alarm": 208,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 208,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "adjusted": {
+        "alarm": 208,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "4476237c5405cf2f04081cc8": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "44da334869067ba53085cf1b": {
+      "current": {
+        "alarm": 229,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 228,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      },
+      "adjusted": {
+        "alarm": 228,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      }
+    },
+    "45d59922f273010310f6d28f": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "4629fb12deb840a1bcf4489e": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "4667379a9ecee762c4224a0f": {
+      "current": {
+        "alarm": 210,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 210,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "adjusted": {
+        "alarm": 210,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      }
+    },
+    "46b86a571cf8da12f2abf5ec": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "46c50f48f8ece4591123fc2a": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "46c78c7f318f91b4eb0350f0": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "471207c5a8d538c307d46a93": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "47572acc5fc62748fb416647": {
+      "current": {
+        "alarm": 297,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 288,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted": {
+        "alarm": 288,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      }
+    },
+    "47caa5fa2f22e07dc32c6e67": {
+      "current": {
+        "alarm": 220,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 220,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "adjusted": {
+        "alarm": 220,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      }
+    },
+    "48bb3865ead1a8efe91bcb62": {
+      "current": {
+        "alarm": 270,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 261,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      },
+      "adjusted": {
+        "alarm": 261,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      }
+    },
+    "48f06dd01d0d49cf55dbae48": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "495fbc441e7a7db73ddca1ef": {
+      "current": {
+        "alarm": 257,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 243,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "adjusted": {
+        "alarm": 243,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      }
+    },
+    "49ff138ee1d13bed0cb88884": {
+      "current": {
+        "alarm": 257,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 257,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "adjusted": {
+        "alarm": 257,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      }
+    },
+    "4a8671a4561bd9a8038f6577": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "4ac1f70a9fac2e7485df51f4": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "4b2c517c100aba3b954a44e5": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "4b8f62f90731ad5273e7f0ee": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "4bfe75991fcd2fc55242b1c6": {
+      "current": {
+        "alarm": 202,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 197,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      },
+      "adjusted": {
+        "alarm": 197,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      }
+    },
+    "4c44c9e1a39caa958a7ff0fe": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "4c454c72411751e23e1adf9d": {
+      "current": {
+        "alarm": 236,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 236,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "adjusted": {
+        "alarm": 236,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      }
+    },
+    "4c626d8a153f48a1e5c85500": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "4c843f77f3f51cc824bf465b": {
+      "current": {
+        "alarm": 218,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 218,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      },
+      "adjusted": {
+        "alarm": 218,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      }
+    },
+    "4d19b528cb1c20710c247e72": {
+      "current": {
+        "alarm": 187,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "4d4848bd0de8ac60cc37255a": {
+      "current": {
+        "alarm": 211,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 211,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      },
+      "adjusted": {
+        "alarm": 211,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      }
+    },
+    "4f3719e9b4e91320d42f28a1": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "504f5bd0774082a30c4c3f63": {
+      "current": {
+        "alarm": 186,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 186,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "adjusted": {
+        "alarm": 186,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      }
+    },
+    "5105d890ee3071720a5dd45c": {
+      "current": {
+        "alarm": 198,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 194,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      },
+      "adjusted": {
+        "alarm": 194,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      }
+    },
+    "51158b3b2568c265ba921444": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "51704fd43d4f036131682828": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "51bf1b0afbc271a93674fbf6": {
+      "current": {
+        "alarm": 186,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "51cae4fe17859cf137daa360": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "52a6a387d40b947303a2ea35": {
+      "current": {
+        "alarm": 232,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 231,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "adjusted": {
+        "alarm": 231,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      }
+    },
+    "53a0c32b9a97c44c156e2d44": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "53a6c199d7436d5789c6f683": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "540cdcf009057d4ea84ac3bc": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "54256e53b775e5339e10bf85": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "5486564003ec2b71f976d722": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "54ab2424fa6cab7490e6dd79": {
+      "current": {
+        "alarm": 210,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 210,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      },
+      "adjusted": {
+        "alarm": 210,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      }
+    },
+    "5559cd487a31af526ddf0611": {
+      "current": {
+        "alarm": 215,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 215,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "adjusted": {
+        "alarm": 215,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      }
+    },
+    "5597686562097eaee8e48334": {
+      "current": {
+        "alarm": 212,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 212,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "adjusted": {
+        "alarm": 212,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      }
+    },
+    "55ec413ec6e1a7b8b71e4390": {
+      "current": {
+        "alarm": 203,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 203,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      },
+      "adjusted": {
+        "alarm": 203,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      }
+    },
+    "5607e5afbd4ef92872cbbd53": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "563d7e156fee21267453b45d": {
+      "current": {
+        "alarm": 266,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 257,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted": {
+        "alarm": 257,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      }
+    },
+    "5782b0d18ba76d48b8d94461": {
+      "current": {
+        "alarm": 242,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 235,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      },
+      "adjusted": {
+        "alarm": 235,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      }
+    },
+    "597cddcadaa318f61c8e453e": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "5a3857277b752a2008fb526b": {
+      "current": {
+        "alarm": 293,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 283,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "adjusted": {
+        "alarm": 283,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      }
+    },
+    "5b01c8d7b6460dc960b90147": {
+      "current": {
+        "alarm": 275,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 275,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "adjusted": {
+        "alarm": 275,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      }
+    },
+    "5b34ab241b6f93254317acfb": {
+      "current": {
+        "alarm": 236,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 236,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "adjusted": {
+        "alarm": 236,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      }
+    },
+    "5bcc074fdcf45d7c988072ef": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "5d30526a5ca0c892a100e29f": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "5dcdab56c03aef60b2085c11": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "5e26fb23aae298e8e69661b9": {
+      "current": {
+        "alarm": 273,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 264,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted": {
+        "alarm": 264,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      }
+    },
+    "5e5674ca03847dc76b584af6": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": 238,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      },
+      "adjusted": {
+        "alarm": 238,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      }
+    },
+    "608bfcffeae51af035f47c37": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "60bc44137c8c3f4ae2108077": {
+      "current": {
+        "alarm": 191,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "60e4df8622249d1546280149": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "60f33c5c9dc513c58d8a9d89": {
+      "current": {
+        "alarm": 220,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 212,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "adjusted": {
+        "alarm": 212,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "6107478023cfc6815fbf8abe": {
+      "current": {
+        "alarm": 203,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 203,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      },
+      "adjusted": {
+        "alarm": 203,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      }
+    },
+    "6193a9c0a83d751dc54517ea": {
+      "current": {
+        "alarm": 242,
+        "label": [
+          "load",
+          "BUS31"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 224,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      },
+      "adjusted": {
+        "alarm": 224,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      }
+    },
+    "61f25b6101f9bafc8d87172e": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "62651b1899b17d7061ae2481": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "62b10d2c9bbb14c7a3326475": {
+      "current": {
+        "alarm": 260,
+        "label": [
+          "load",
+          "BUS31"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 248,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      },
+      "adjusted": {
+        "alarm": 248,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      }
+    },
+    "635666b6fc6b37010b5a2dbf": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "636a84de643809070dd088b2": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "636a94a8212c4ff6b6794a74": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "63831ffb1a75c3c2af0ff952": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "640291e4a0a73d99baf32c93": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "647f71e39f8763e865813153": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "64c466582a53779609054092": {
+      "current": {
+        "alarm": 212,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 212,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "adjusted": {
+        "alarm": 212,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      }
+    },
+    "65bc9dc301f9c5bdc12c30ad": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "6730e5ddbceb4897319547f9": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "6739f07e71713d8a7d1f6ef2": {
+      "current": {
+        "alarm": 225,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 225,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "adjusted": {
+        "alarm": 225,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      }
+    },
+    "67879983e53519fd455415d4": {
+      "current": {
+        "alarm": 240,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "67a5968cc3f750abe3d2f32e": {
+      "current": {
+        "alarm": 252,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 251,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "adjusted": {
+        "alarm": 251,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      }
+    },
+    "67be7439fc6cde1dfee62ad7": {
+      "current": {
+        "alarm": 268,
+        "label": [
+          "load",
+          "BUS31"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 254,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      },
+      "adjusted": {
+        "alarm": 254,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      }
+    },
+    "682e8e9ca77735ed98b546c9": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "68780ddc34309b5d7b278891": {
+      "current": {
+        "alarm": 294,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 283,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "adjusted": {
+        "alarm": 283,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      }
+    },
+    "688690634f4b93c796c76120": {
+      "current": {
+        "alarm": 230,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 224,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      },
+      "adjusted": {
+        "alarm": 224,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      }
+    },
+    "693cbfefd478abc89068de72": {
+      "current": {
+        "alarm": 212,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 212,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "adjusted": {
+        "alarm": 212,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      }
+    },
+    "694dd2f658a7ed497ef324bd": {
+      "current": {
+        "alarm": 293,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 290,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      },
+      "adjusted": {
+        "alarm": 290,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      }
+    },
+    "6980f5a201f17b9ab7ebad61": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "69cdf6899cfb0a1b52a19b48": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "6c99060975791ea0d222768b": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "6d281f8732d2861ff885b12d": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "6db95ca1f42d9c5a5438c6f2": {
+      "current": {
+        "alarm": 191,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 191,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      },
+      "adjusted": {
+        "alarm": 191,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      }
+    },
+    "6dc5f2a38e502d417b2d19cd": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "6e6a31bcda7ed3d574a18280": {
+      "current": {
+        "alarm": 194,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 193,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "adjusted": {
+        "alarm": 193,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      }
+    },
+    "70f261ff91e709bcaced61f1": {
+      "current": {
+        "alarm": 193,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 209,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "adjusted": {
+        "alarm": 209,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      }
+    },
+    "711bcb2b79ed0ac118fed6a3": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "722595f18a2d6698ec8dd559": {
+      "current": {
+        "alarm": 206,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 203,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      },
+      "adjusted": {
+        "alarm": 203,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      }
+    },
+    "7238b3e3a6728ed6f1883306": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "729e29ad7f0f96ddceedb342": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "72acf77705f4cf8d1dd52356": {
+      "current": {
+        "alarm": 245,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 236,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted": {
+        "alarm": 236,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      }
+    },
+    "73cb026055c072540f6b81b0": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "74cb06d7e311b2305ef22417": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "74e26133720e8960cd1ab010": {
+      "current": {
+        "alarm": 261,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 257,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "adjusted": {
+        "alarm": 257,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      }
+    },
+    "755c868c949a4e6c8ed93f4e": {
+      "current": {
+        "alarm": 240,
+        "label": [
+          "load",
+          "BUS31"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 227,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      },
+      "adjusted": {
+        "alarm": 227,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      }
+    },
+    "767cf6dc43c2309ed0f68b57": {
+      "current": {
+        "alarm": 237,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 228,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "adjusted": {
+        "alarm": 228,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      }
+    },
+    "77ab6d372ca968aa12180b42": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "784d4c6ef699d0a2e0bc7da2": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "78b286ed3c8e20d39a67c47e": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "796300ac8a685ea12534cab3": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "79e48f0e78df593f7398cbbd": {
+      "current": {
+        "alarm": 214,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 212,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      },
+      "adjusted": {
+        "alarm": 212,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      }
+    },
+    "7b21aa6c6315363cf8e9be1b": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "7be9123410974892c971ce59": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "7d397ecd59bef5690a5dd7fb": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "7efffd645baea68dfc732b63": {
+      "current": {
+        "alarm": 211,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 211,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "adjusted": {
+        "alarm": 211,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      }
+    },
+    "7f4ab853fb713e8dc591505b": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "7fdda80f7d61ac0c2812c445": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "8069fbd0725110c228c07357": {
+      "current": {
+        "alarm": 194,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 194,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      },
+      "adjusted": {
+        "alarm": 194,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      }
+    },
+    "80710497b0fe056ddf388e5e": {
+      "current": {
+        "alarm": 276,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 275,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "adjusted": {
+        "alarm": 275,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      }
+    },
+    "81f5e3c589f7fecf2a9c32eb": {
+      "current": {
+        "alarm": 279,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 273,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      },
+      "adjusted": {
+        "alarm": 273,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      }
+    },
+    "827dd1f2b0e1419598493213": {
+      "current": {
+        "alarm": 285,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 275,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      },
+      "adjusted": {
+        "alarm": 275,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      }
+    },
+    "831f26e07bb522398cc08edc": {
+      "current": {
+        "alarm": 212,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 248,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      },
+      "adjusted": {
+        "alarm": 248,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      }
+    },
+    "832861e739eef97d3aa1b776": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "83961843656fb7cda3bfc963": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "83cbe39ba894a28032dd38bf": {
+      "current": {
+        "alarm": 229,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 229,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted": {
+        "alarm": 229,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      }
+    },
+    "83efaa1c8dc61ff8c7dce865": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "83f25a6168ec6c2bebc66cdb": {
+      "current": {
+        "alarm": 298,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 294,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted": {
+        "alarm": 294,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      }
+    },
+    "8501e531d6e5d729b4159f72": {
+      "current": {
+        "alarm": 191,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 191,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      },
+      "adjusted": {
+        "alarm": 191,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      }
+    },
+    "852c3b129a77f286ed2391cc": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "856f4cb846b8c715c6c171d6": {
+      "current": {
+        "alarm": 232,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 229,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted": {
+        "alarm": 229,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      }
+    },
+    "85a87e36ea6dc1bcb05da1ae": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "8711271b1a9793c3f31eb35a": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "87ebeb47609ebc4119b613d6": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "87fd71a19c3ed42a24406dde": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "8837fc6ecc290ad2b8a25028": {
+      "current": {
+        "alarm": 252,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 251,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "adjusted": {
+        "alarm": 251,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      }
+    },
+    "893aa9a5748c2f509e36e8d6": {
+      "current": {
+        "alarm": 205,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 205,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "adjusted": {
+        "alarm": 205,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      }
+    },
+    "894bcf74760d8e4a48200cda": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "89917a4cee7c371548ea6f02": {
+      "current": {
+        "alarm": 199,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 199,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "adjusted": {
+        "alarm": 199,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      }
+    },
+    "89f92445708534bb69340311": {
+      "current": {
+        "alarm": 207,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 202,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "adjusted": {
+        "alarm": 202,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "8a0149649217bc172578d6b6": {
+      "current": {
+        "alarm": 267,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 258,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "adjusted": {
+        "alarm": 258,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      }
+    },
+    "8ac8834c7b0a8282e2827401": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "8c01c269134072e30f24a650": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "8c2ca0d5f6c33aa8bd30ab25": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "8ca5d93a40e87418de082092": {
+      "current": {
+        "alarm": 238,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 237,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "adjusted": {
+        "alarm": 237,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      }
+    },
+    "8d132de28e184cf780a7dae3": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "8d2c9049b1f39233d5e1c5b2": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "8d30d900348a6b5e68a712df": {
+      "current": {
+        "alarm": 239,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 220,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "adjusted": {
+        "alarm": 220,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      }
+    },
+    "8d6db771660a61cdab1b8609": {
+      "current": {
+        "alarm": 277,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 268,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "adjusted": {
+        "alarm": 268,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "8df7e70b2702b2618c76ad36": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "8eb2dd27bfdf59c1945c1402": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "8ec39721467320a3827052f6": {
+      "current": {
+        "alarm": 226,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 226,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      },
+      "adjusted": {
+        "alarm": 226,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      }
+    },
+    "8fabf1df419a705bbc9c7c2c": {
+      "current": {
+        "alarm": 259,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 259,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "adjusted": {
+        "alarm": 259,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      }
+    },
+    "8fb553ed9139abef15bf36e0": {
+      "current": {
+        "alarm": 221,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 212,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "adjusted": {
+        "alarm": 212,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      }
+    },
+    "9234f35bb2a9dbd6f80089b3": {
+      "current": {
+        "alarm": 175,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 175,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      },
+      "adjusted": {
+        "alarm": 175,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      }
+    },
+    "9287c996a91e45c3127a88b2": {
+      "current": {
+        "alarm": 178,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "929aa250f26a87662178a872": {
+      "current": {
+        "alarm": 254,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 246,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "adjusted": {
+        "alarm": 246,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      }
+    },
+    "934a7a4229527f34baec7572": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "935d002072c98b05acdfdbe1": {
+      "current": {
+        "alarm": 265,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 248,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted": {
+        "alarm": 248,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      }
+    },
+    "944e1ae172c97abb30759b6c": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "95b113da771a289900c0ff81": {
+      "current": {
+        "alarm": 263,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 263,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "adjusted": {
+        "alarm": 263,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      }
+    },
+    "95bfc8726de548cf07cdf81d": {
+      "current": {
+        "alarm": 212,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 211,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "adjusted": {
+        "alarm": 211,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      }
+    },
+    "96461da5f6f4dfa631ae3b30": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "98a2026fbbce3dabbe8d3c31": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "98a9d20435dee186aa171f8a": {
+      "current": {
+        "alarm": 187,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 186,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      },
+      "adjusted": {
+        "alarm": 186,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      }
+    },
+    "98cd25c7af337ffddfd111fd": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "98fc27d6821347f264f7d8ae": {
+      "current": {
+        "alarm": 239,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 234,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted": {
+        "alarm": 234,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      }
+    },
+    "995b93a3713fcbaf68015f2a": {
+      "current": {
+        "alarm": 275,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 273,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      },
+      "adjusted": {
+        "alarm": 273,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      }
+    },
+    "99b3438316a310b09b66ced9": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "9a6ef3330d88357401282ea5": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "9ac304e2e6fb8f744761abe5": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "9d1d08041ab8849a9d9b1b03": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "9d45f6520033202f05486760": {
+      "current": {
+        "alarm": 225,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 213,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted": {
+        "alarm": 213,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      }
+    },
+    "9db3b471bb8d1744f2392c31": {
+      "current": {
+        "alarm": 207,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 207,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "adjusted": {
+        "alarm": 207,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      }
+    },
+    "9e2746f3426b3e16030017fb": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "9e74e8d2bd6e9de9dbd70c72": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "9ec84b1afdbbacf623c88dcb": {
+      "current": {
+        "alarm": 217,
+        "label": [
+          "load",
+          "BUS31"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 203,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      },
+      "adjusted": {
+        "alarm": 203,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      }
+    },
+    "9ee7601a9bcc06e1c4fbc4c6": {
+      "current": {
+        "alarm": 221,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 221,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      },
+      "adjusted": {
+        "alarm": 221,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      }
+    },
+    "9f2a074918dd32a242a3914c": {
+      "current": {
+        "alarm": 231,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 231,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "adjusted": {
+        "alarm": 231,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      }
+    },
+    "9f94fb4c3fb021e47f60ec19": {
+      "current": {
+        "alarm": 253,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 247,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "adjusted": {
+        "alarm": 247,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "a06ce3c60a589cfc0443eba0": {
+      "current": {
+        "alarm": 206,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 205,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      },
+      "adjusted": {
+        "alarm": 205,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      }
+    },
+    "a0d5727c0079d4d466354f27": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "a0e1b4af47e7bd94e8807d79": {
+      "current": {
+        "alarm": 286,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 285,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "adjusted": {
+        "alarm": 285,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      }
+    },
+    "a10517db654ad8cf076bac27": {
+      "current": {
+        "alarm": 203,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 203,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      },
+      "adjusted": {
+        "alarm": 203,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      }
+    },
+    "a205f638cb64d58c8b0dad76": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "a22b791619d2ccb5aa7fde35": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": 300,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      },
+      "adjusted": {
+        "alarm": 300,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      }
+    },
+    "a23b78e90f86fe1dfed2e4f8": {
+      "current": {
+        "alarm": 198,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "a25070d6012e1a56ccbdd33c": {
+      "current": {
+        "alarm": 255,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 250,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      },
+      "adjusted": {
+        "alarm": 250,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      }
+    },
+    "a25f60e08e8be35c8196e06b": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "a30899ada79ca845e44d79ad": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "a34493a84a08da23af0dca24": {
+      "current": {
+        "alarm": 241,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 237,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "adjusted": {
+        "alarm": 237,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      }
+    },
+    "a357c2e9298c80bedf17fa72": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "a3a613ba9ddce86df0f6ceb8": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "a40588502a80d4a810129c69": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "a532303f0063714861f1c400": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "a54729cd0145a656c63be0cd": {
+      "current": {
+        "alarm": 290,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 277,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      },
+      "adjusted": {
+        "alarm": 277,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      }
+    },
+    "a5c1064e1df387d27215c433": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "a5f6b3ac5f891208da7841aa": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "a7320d490fc03b9832ead8fd": {
+      "current": {
+        "alarm": 267,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 266,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      },
+      "adjusted": {
+        "alarm": 266,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      }
+    },
+    "a759d0e1d51ba5ed36335aa2": {
+      "current": {
+        "alarm": 249,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 247,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      },
+      "adjusted": {
+        "alarm": 247,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      }
+    },
+    "a7ba972e320030ee8430eb01": {
+      "current": {
+        "alarm": 233,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 233,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted": {
+        "alarm": 233,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      }
+    },
+    "a8021f5caa58db986329b55d": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "a8b66ef37453a57f7d55bba7": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "a8e06e4ffa192b5b175ca7a2": {
+      "current": {
+        "alarm": 279,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 275,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      },
+      "adjusted": {
+        "alarm": 275,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      }
+    },
+    "a93c6b802aeff61f3e5fce0e": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "a9bba8c1878aa38b910a085e": {
+      "current": {
+        "alarm": 263,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 263,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "adjusted": {
+        "alarm": 263,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      }
+    },
+    "ab1706a183175a6f70ae3264": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "abfcd9cddc40e775ba02ea55": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "ac98ca6fc07a4c04eb100738": {
+      "current": {
+        "alarm": 211,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 203,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      },
+      "adjusted": {
+        "alarm": 203,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      }
+    },
+    "acb69894c34318440684cab4": {
+      "current": {
+        "alarm": 198,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "acd69692851cd07239fcdec0": {
+      "current": {
+        "alarm": 193,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 193,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      },
+      "adjusted": {
+        "alarm": 193,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      }
+    },
+    "ad88155803d90888ba501391": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "ae1083d44bacf5dde42a687f": {
+      "current": {
+        "alarm": 183,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 183,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "adjusted": {
+        "alarm": 183,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "ae1a5b7fca93e49d846fc08c": {
+      "current": {
+        "alarm": 207,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 207,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "adjusted": {
+        "alarm": 207,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      }
+    },
+    "ae2af08124a075e38a8327f0": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "ae65268e3d2ae0aee66526b7": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "ae76396668543bcd1d816a0d": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "af79d6c0c91c937b952898c5": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "afa2061c6745cfa170ee1f8f": {
+      "current": {
+        "alarm": 217,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 217,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "adjusted": {
+        "alarm": 217,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      }
+    },
+    "affb2641b5f6b811ed48d474": {
+      "current": {
+        "alarm": 233,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 227,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      },
+      "adjusted": {
+        "alarm": 227,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      }
+    },
+    "b00b33f7e41455abfe08d18a": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "b087f945efb1cd5bb0f4ac49": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "b0d37cbd2663536c90dc6ae9": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "b2ea35f3126a5ac3d6303118": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "b350b9aed42ca8ce6f9fad6c": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "b3a2661044529dfaab0f8789": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "b4e10881d64ff3e2c68b0bb1": {
+      "current": {
+        "alarm": 186,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 186,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "adjusted": {
+        "alarm": 186,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      }
+    },
+    "b50cbbe587f65b2489914a53": {
+      "current": {
+        "alarm": 229,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 220,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "adjusted": {
+        "alarm": 220,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      }
+    },
+    "b57a4738d701be8e93c83389": {
+      "current": {
+        "alarm": 296,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 289,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      },
+      "adjusted": {
+        "alarm": 289,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      }
+    },
+    "b6236e23dab2092ca73e5435": {
+      "current": {
+        "alarm": 188,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 187,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "adjusted": {
+        "alarm": 187,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      }
+    },
+    "b6d8c8b34a31a98cb15b53a7": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "b7a8f64f4dfac69632ce190d": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "b7c50924fb2a1474d98c0071": {
+      "current": {
+        "alarm": 202,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 201,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      },
+      "adjusted": {
+        "alarm": 201,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      }
+    },
+    "b8b58d6d924b127e4706d592": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "b8bc284e7d0d4ef77d7c53dd": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "b9397811a9c5485830ae014e": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "b9f1379c23c4a965fd943e35": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "badc3616c28506f987bfcccf": {
+      "current": {
+        "alarm": 222,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 222,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      },
+      "adjusted": {
+        "alarm": 222,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      }
+    },
+    "bb53cac6414e86c93671c14f": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "bc88375f828e6dc9218d2901": {
+      "current": {
+        "alarm": 189,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 182,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "adjusted": {
+        "alarm": 182,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "bd50906f5b18c54c9f3eec5b": {
+      "current": {
+        "alarm": 235,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 224,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted": {
+        "alarm": 224,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      }
+    },
+    "be1d8a84c579bdfab2737172": {
+      "current": {
+        "alarm": 299,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 285,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      },
+      "adjusted": {
+        "alarm": 285,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      }
+    },
+    "be321c3ade0ed1460507afa5": {
+      "current": {
+        "alarm": 272,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 230,
+        "label": [
+          "load",
+          "BUS31"
+        ]
+      },
+      "adjusted": {
+        "alarm": 230,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      }
+    },
+    "bf3915b46a998e50cd896690": {
+      "current": {
+        "alarm": 213,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 213,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "adjusted": {
+        "alarm": 213,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      }
+    },
+    "bf5527de6bd04966b05a01ab": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "bf714c8a3a8dbcaa482c4f83": {
+      "current": {
+        "alarm": 181,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 181,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "adjusted": {
+        "alarm": 181,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      }
+    },
+    "c0dde940c4992ec50564814d": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "c0f470f300e276eb0e948ecf": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "c12b31b37d06129f0acafe2c": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": 216,
+        "label": [
+          "load",
+          "BUS31"
+        ]
+      },
+      "adjusted": {
+        "alarm": 216,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      }
+    },
+    "c1629ff49da9c72bb5d4c647": {
+      "current": {
+        "alarm": 248,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 238,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      },
+      "adjusted": {
+        "alarm": 238,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      }
+    },
+    "c51498affe622b9f159aa29c": {
+      "current": {
+        "alarm": 243,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 242,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "adjusted": {
+        "alarm": 242,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      }
+    },
+    "c5352ab9534713ae31d70142": {
+      "current": {
+        "alarm": 226,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 222,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      },
+      "adjusted": {
+        "alarm": 222,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      }
+    },
+    "c5be1e19457407eeb0aa1fa3": {
+      "current": {
+        "alarm": 211,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 211,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "adjusted": {
+        "alarm": 211,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      }
+    },
+    "c5cb10e476567ce67fb0b5af": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "c6a778842a507e6cad3a2989": {
+      "current": {
+        "alarm": 224,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 224,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "adjusted": {
+        "alarm": 224,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      }
+    },
+    "c70592c6099e95d98f199995": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "c7954dc5be6ac4d249ed0f1f": {
+      "current": {
+        "alarm": 178,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 178,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "adjusted": {
+        "alarm": 178,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      }
+    },
+    "c9a30ee1ca72ca9eaaff372e": {
+      "current": {
+        "alarm": 255,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 249,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      },
+      "adjusted": {
+        "alarm": 249,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      }
+    },
+    "cb940f145c28207de33d349c": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "cd3909b7d3b5638a8beffd5c": {
+      "current": {
+        "alarm": 272,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 263,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "adjusted": {
+        "alarm": 263,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      }
+    },
+    "ce29f4df3429e6aecb7bc736": {
+      "current": {
+        "alarm": 212,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 211,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      },
+      "adjusted": {
+        "alarm": 211,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      }
+    },
+    "cebe0bb3f597230dbc7f6b2a": {
+      "current": {
+        "alarm": 247,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 246,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      },
+      "adjusted": {
+        "alarm": 246,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      }
+    },
+    "cedfbec8ce81789076c91ce3": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "cee94214ee08b193ea56e5b8": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "cfab77d6bf3073eef4598341": {
+      "current": {
+        "alarm": 276,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 270,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "adjusted": {
+        "alarm": 270,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      }
+    },
+    "d05beeaff717a8d5e63c1ee4": {
+      "current": {
+        "alarm": 227,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 216,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      },
+      "adjusted": {
+        "alarm": 216,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      }
+    },
+    "d17cd3d4d09be178c54ab377": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "d18ddb011de0e563f65bd397": {
+      "current": {
+        "alarm": 219,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "d1e5c57357a47eed52ba4ec4": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "d24171094a5c563749e69185": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "d2db4e7eba156666d6649619": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "d3959da8025d82051488b8b6": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "d42bdf942b025de86a972e7e": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "d45a1f3996c0e39de2fd4991": {
+      "current": {
+        "alarm": 184,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "d4cce0693d631a6f8241707b": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "d4e8854e7e9abdffbce132b1": {
+      "current": {
+        "alarm": 249,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 242,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted": {
+        "alarm": 242,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      }
+    },
+    "d63aa41178b4f71ccfcfbb0a": {
+      "current": {
+        "alarm": 236,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 235,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "adjusted": {
+        "alarm": 235,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      }
+    },
+    "d6fdda98bd301efbfb393af7": {
+      "current": {
+        "alarm": 233,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 225,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      },
+      "adjusted": {
+        "alarm": 225,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      }
+    },
+    "d7a8eefcea38c28ed655b00c": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "d7ac190ceaf50669f20ad9da": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "d88f3d1bccf20386da16e258": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "d90a9a0589541cd95d0999a1": {
+      "current": {
+        "alarm": 212,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 205,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "adjusted": {
+        "alarm": 205,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "d914d3ef6af29b15fcb24f94": {
+      "current": {
+        "alarm": 275,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 274,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      },
+      "adjusted": {
+        "alarm": 274,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      }
+    },
+    "d95c951fba07cb945574c6a7": {
+      "current": {
+        "alarm": 225,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 225,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "adjusted": {
+        "alarm": 225,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      }
+    },
+    "d99bcddb81b931fb75754d65": {
+      "current": {
+        "alarm": 233,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 233,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "adjusted": {
+        "alarm": 233,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      }
+    },
+    "da098727c618b2dc8c2f307f": {
+      "current": {
+        "alarm": 231,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 223,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted": {
+        "alarm": 223,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      }
+    },
+    "da2002a66b1f4c79f721de4c": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "daa2739d0e93a1fa01b77b7b": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "dad310d932cfce0494cf44bc": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "dbf840ac6462ec44e9436828": {
+      "current": {
+        "alarm": 296,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 288,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "adjusted": {
+        "alarm": 288,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "dca3851d94abdbe1e2ce450d": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "dcce2854115000cca261318e": {
+      "current": {
+        "alarm": 279,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 272,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "adjusted": {
+        "alarm": 272,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      }
+    },
+    "dd07c821bca111c1baddc4ec": {
+      "current": {
+        "alarm": 261,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 252,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "adjusted": {
+        "alarm": 252,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "dd213ff941de3ff53a7d3e08": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "dd398991a61c48b32418a730": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "dd58456650e9d113a737682b": {
+      "current": {
+        "alarm": 298,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 298,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "adjusted": {
+        "alarm": 298,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      }
+    },
+    "df07148b8a7e57849c829ce8": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "dfbab1e8c5e276b6bccfc90c": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "e1b5a002fb0159a6eb349098": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "e1e478d304ca3f72d01f1b83": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "e217ff082a36c5447bdc4aca": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "e22bec02b70b7e79e52c88a6": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "e2e471335c8671af98b50b19": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "e2f7dee717c1fa3f123f10df": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "e429450b3c390d502b44dce6": {
+      "current": {
+        "alarm": 188,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 184,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      },
+      "adjusted": {
+        "alarm": 184,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      }
+    },
+    "e4453442a91c32421fca6282": {
+      "current": {
+        "alarm": 223,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 220,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "adjusted": {
+        "alarm": 220,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      }
+    },
+    "e4c00903661164fbe79d3804": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "e536d3a640739419fcb50e90": {
+      "current": {
+        "alarm": 271,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 270,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "adjusted": {
+        "alarm": 270,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      }
+    },
+    "e550d7cd01939eb2689d8fd7": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "e5718979d066d4a8891dcd5c": {
+      "current": {
+        "alarm": 270,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 269,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      },
+      "adjusted": {
+        "alarm": 269,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      }
+    },
+    "e58f19b9a8f3e132c2bf6c56": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "e5da83876df94ecd233424a2": {
+      "current": {
+        "alarm": 271,
+        "label": [
+          "load",
+          "BUS31"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 261,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "adjusted": {
+        "alarm": 261,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      }
+    },
+    "e73e0513b07f6125f9d90951": {
+      "current": {
+        "alarm": 208,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 208,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "adjusted": {
+        "alarm": 208,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      }
+    },
+    "e7d67eda0b969cd0ee36cb29": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "e8405ae3275f5a721e0dfdea": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "e8f2aadd99d41e62fe4d6449": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "ea7a39e8c50449b63297ce57": {
+      "current": {
+        "alarm": 270,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 260,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      },
+      "adjusted": {
+        "alarm": 260,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      }
+    },
+    "eae730ff821b329176380dbc": {
+      "current": {
+        "alarm": 216,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 264,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted": {
+        "alarm": 264,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      }
+    },
+    "ec50f2e3509b1cdda0ce5181": {
+      "current": {
+        "alarm": 285,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 281,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      },
+      "adjusted": {
+        "alarm": 281,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      }
+    },
+    "ec65bbe6ee6b77352e4a0c4b": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "ec702ce9ba8b9fa8d846adb3": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "ec9afc8ee61181458d520310": {
+      "current": {
+        "alarm": 215,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 206,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "adjusted": {
+        "alarm": 206,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "ed649fb5b55dc457c8b371b7": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "edbefbe92f8d0766485b1304": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "ee0433d0fa3966e05109f95e": {
+      "current": {
+        "alarm": 242,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 242,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "adjusted": {
+        "alarm": 242,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      }
+    },
+    "ee5c1b76ca82910e0636dfcd": {
+      "current": {
+        "alarm": 244,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 238,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted": {
+        "alarm": 238,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      }
+    },
+    "f0450715189b3d9983c65574": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "f119829e4bba8bd29c7d4278": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "f24cf7ebb7a9134a91afd408": {
+      "current": {
+        "alarm": 257,
+        "label": [
+          "load",
+          "BUS31"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 245,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "adjusted": {
+        "alarm": 245,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      }
+    },
+    "f2c85341323d4c46e2fe8b68": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "f331f35cdb0eafc89868a2b4": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "f33f8ce1ce57b2c0f912f762": {
+      "current": {
+        "alarm": 236,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 235,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      },
+      "adjusted": {
+        "alarm": 235,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      }
+    },
+    "f3b77336cd558acf31aa239f": {
+      "current": {
+        "alarm": 231,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "f40684987b51840f93e23dde": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "f567315d2a5d3524aa235657": {
+      "current": {
+        "alarm": 178,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 214,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "adjusted": {
+        "alarm": 214,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      }
+    },
+    "f6f800c7bb0ee1162fe1ad1e": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "f7033578507bf559bb5bba66": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "f79398344df52c6256b2fb7c": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "f793c1a4cba0188633e6d335": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "f7c334daedb498d8eb626194": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "f846e80486ac8b32608cd9b4": {
+      "current": {
+        "alarm": 193,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "f847c17c50f53bbea050e00b": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "f85a40815ebc000b692d515a": {
+      "current": {
+        "alarm": 239,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 228,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "adjusted": {
+        "alarm": 228,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      }
+    },
+    "f86eecaff028c99f80a9a2a2": {
+      "current": {
+        "alarm": 299,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 286,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "adjusted": {
+        "alarm": 286,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      }
+    },
+    "f8e103285b5f626ad9636adb": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "f954d584d007c29cb4e0e51d": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "fbe10bc504bd7cd1341e7575": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "fc04c1bb7b3d52ba7d60650c": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "fc0e4949d0357989bc3339fc": {
+      "current": {
+        "alarm": 260,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 250,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      },
+      "adjusted": {
+        "alarm": 250,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      }
+    },
+    "fc5894b3f774892dcf01f02e": {
+      "current": {
+        "alarm": 241,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 240,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "adjusted": {
+        "alarm": 240,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      }
+    },
+    "fc5d4feb14f45ac330c153cf": {
+      "current": {
+        "alarm": 258,
+        "label": [
+          "load",
+          "BUS31"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 246,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "adjusted": {
+        "alarm": 246,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      }
+    },
+    "fd7b525b044bb6cb4eaad205": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "fdcca27b5bc7ccf82f9990da": {
+      "current": {
+        "alarm": 272,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "adjusted_gate": {
+        "alarm": 271,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "adjusted": {
+        "alarm": 271,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      }
+    },
+    "fe18908fe9835c607dca67d6": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "fea2dfb34d81eea4221fa5c5": {
+      "current": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted_gate": {
+        "alarm": null,
+        "label": null
+      },
+      "adjusted": {
+        "alarm": null,
+        "label": null
+      }
+    }
+  },
+  "quiet": {
+    "C03_312ac261468a": {
+      "max": 3.080626409945974,
+      "scored_reports": 17582,
+      "episodes": 0,
+      "current_episodes": 0
+    },
+    "C03_4289bc65cccb": {
+      "max": 2.6404511582279904,
+      "scored_reports": 17582,
+      "episodes": 0,
+      "current_episodes": 0
+    },
+    "C03_55e6529bb5ad": {
+      "max": 6.200319142356336,
+      "scored_reports": 17582,
+      "episodes": 0,
+      "current_episodes": 0
+    },
+    "C03_3bf8245f801e": {
+      "max": 2.0014848455894243,
+      "scored_reports": 17582,
+      "episodes": 0,
+      "current_episodes": 0
+    },
+    "C03_0233eef139de": {
+      "max": 2.7916895645977315,
+      "scored_reports": 17582,
+      "episodes": 0,
+      "current_episodes": 0
+    },
+    "C03_540058640aad": {
+      "max": 2.7759211150340684,
+      "scored_reports": 17582,
+      "episodes": 0,
+      "current_episodes": 0
+    },
+    "C03_aea0071f4228": {
+      "max": 3.2638379132520328,
+      "scored_reports": 17582,
+      "episodes": 0,
+      "current_episodes": 0
+    },
+    "C03_097f3bf2506b": {
+      "max": 2.9499686898344386,
+      "scored_reports": 17582,
+      "episodes": 0,
+      "current_episodes": 0
+    },
+    "C03_3e887f78c2da": {
+      "max": 2.893746381044462,
+      "scored_reports": 17582,
+      "episodes": 0,
+      "current_episodes": 0
+    },
+    "C03_b5ebc2698707": {
+      "max": 4.307824659363311,
+      "scored_reports": 17582,
+      "episodes": 0,
+      "current_episodes": 0
+    },
+    "C03_3dffa0fe0e80": {
+      "max": 3.1465911872996633,
+      "scored_reports": 17582,
+      "episodes": 0,
+      "current_episodes": 0
+    },
+    "C03_89d4365dbf5e": {
+      "max": 2.485432478500238,
+      "scored_reports": 17582,
+      "episodes": 0,
+      "current_episodes": 0
+    },
+    "C03_a68983bd14c2": {
+      "max": 1.7946989533986,
+      "scored_reports": 17582,
+      "episodes": 0,
+      "current_episodes": 0
+    },
+    "C03_8a79ecf55143": {
+      "max": 5.060604181626786,
+      "scored_reports": 17582,
+      "episodes": 0,
+      "current_episodes": 0
+    },
+    "C03_6beff9f2285b": {
+      "max": 2.7138509141054934,
+      "scored_reports": 17582,
+      "episodes": 0,
+      "current_episodes": 0
+    },
+    "C03_9da26c422895": {
+      "max": 5.145166871568303,
+      "scored_reports": 17582,
+      "episodes": 0,
+      "current_episodes": 0
+    },
+    "C03_1e1bebfee87e": {
+      "max": 4.613836513016608,
+      "scored_reports": 17582,
+      "episodes": 0,
+      "current_episodes": 0
+    },
+    "C03_38776fb87d6d": {
+      "max": 4.519179189723402,
+      "scored_reports": 17582,
+      "episodes": 0,
+      "current_episodes": 0
+    },
+    "C03_7cfc6107b5cb": {
+      "max": 3.1484578125840663,
+      "scored_reports": 17582,
+      "episodes": 0,
+      "current_episodes": 0
+    },
+    "C03_578ec010a343": {
+      "max": 4.1674995964764046,
+      "scored_reports": 17582,
+      "episodes": 0,
+      "current_episodes": 0
+    },
+    "C03_44f75f345ef7": {
+      "max": 4.075362857823665,
+      "scored_reports": 17582,
+      "episodes": 0,
+      "current_episodes": 0
+    },
+    "C03_d6916b53604a": {
+      "max": 1.9465603069562918,
+      "scored_reports": 17582,
+      "episodes": 0,
+      "current_episodes": 0
+    },
+    "C03_7c105b08b5c6": {
+      "max": 1.9909921836563087,
+      "scored_reports": 17582,
+      "episodes": 0,
+      "current_episodes": 0
+    },
+    "C03_51820f4e5615": {
+      "max": 3.1832041143237575,
+      "scored_reports": 17582,
+      "episodes": 0,
+      "current_episodes": 0
+    },
+    "C03_ae79c10c5f52": {
+      "max": 3.340550831342514,
+      "scored_reports": 17582,
+      "episodes": 0,
+      "current_episodes": 0
+    },
+    "C03_f20ffb0cba0b": {
+      "max": 2.928561678807606,
+      "scored_reports": 17582,
+      "episodes": 0,
+      "current_episodes": 0
+    },
+    "C03_3444129ef563": {
+      "max": 8.615319397223764,
+      "scored_reports": 17582,
+      "episodes": 0,
+      "current_episodes": 0
+    },
+    "C03_7206aed0cf72": {
+      "max": 5.893302228769665,
+      "scored_reports": 17582,
+      "episodes": 0,
+      "current_episodes": 0
+    },
+    "C03_474e867050b6": {
+      "max": 5.387466993198868,
+      "scored_reports": 17582,
+      "episodes": 0,
+      "current_episodes": 0
+    },
+    "C03_357632cbfac2": {
+      "max": 3.1393239237233077,
+      "scored_reports": 17582,
+      "episodes": 0,
+      "current_episodes": 0
+    },
+    "C03_bc8ec9e8440e": {
+      "max": 2.3183932393753492,
+      "scored_reports": 17582,
+      "episodes": 0,
+      "current_episodes": 0
+    },
+    "C03_a09cafd91fd7": {
+      "max": 2.9197677876361117,
+      "scored_reports": 17582,
+      "episodes": 0,
+      "current_episodes": 0
+    },
+    "C03_fd176686b2ca": {
+      "max": 2.7737928173341366,
+      "scored_reports": 17582,
+      "episodes": 0,
+      "current_episodes": 0
+    },
+    "C03_36b909647d2a": {
+      "max": 5.657328625131563,
+      "scored_reports": 17582,
+      "episodes": 0,
+      "current_episodes": 0
+    },
+    "C03_dfead63b401c": {
+      "max": 3.5510126294855127,
+      "scored_reports": 17582,
+      "episodes": 0,
+      "current_episodes": 0
+    },
+    "C03_76d2798c0182": {
+      "max": 3.3644164811801924,
+      "scored_reports": 17582,
+      "episodes": 0,
+      "current_episodes": 0
+    }
+  }
+}
