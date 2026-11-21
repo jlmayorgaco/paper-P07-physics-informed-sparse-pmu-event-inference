@@ -1,7 +1,7 @@
 """Generate opaque paired PMU traces from the unmodified P2 electrical plant."""
 from concurrent.futures import ProcessPoolExecutor
 from zipfile import ZipFile,ZIP_STORED
-from design import RESULT,TMP,SIZES,SEEDS,phase_data,study,verify
+from stress_plan import RESULT,TMP,SIZES,SEEDS,phase_data,study,verify
 from phase_data import data
 import numpy as np
 
@@ -47,7 +47,9 @@ def simulate(task):
 
 def generate():
     verify()
-    (TMP/"pmu").mkdir(parents=True,exist_ok=False)
+    (TMP/"pmu").mkdir(parents=True,exist_ok=True)
+    if any((TMP/"pmu").iterdir()):
+        raise FileExistsError("Refusing to replace existing PMU observations")
     tasks = [(panel,k) for panel,n in SIZES.items() for k in range(n)]
     truth,observations = {},{}
     with ProcessPoolExecutor(12,initializer=data.sim.initialize) as pool:

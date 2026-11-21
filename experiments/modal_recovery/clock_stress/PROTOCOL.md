@@ -4,7 +4,7 @@ Compare the two estimators frozen before the preceding relative-phase trial. Kee
 
 ## Independent trials and blinding
 
-Use 480 new catalog event/control pairs (120 per ordered combination of first and second line/load family), and a separate panel of 120 new bus-31 load/control pairs, balanced by first family. Generate with the existing nonlinear P2 network, asset catalog, event-size and dwell distributions and independent preregistered seeds in design.py. The targeted panel excludes bus 31 as first event. Each twin has the identical operating point, first event, underlying PMU noise and new device-error realization as its positive. Reuse the same realization and physical records at every stress level. The inference functions see one PMU stream and the first clearance only. Archive every condition's anonymous calls before opening labels. Do not pool the enriched panel with the catalog for overall rates.
+Use 480 new catalog event/control pairs (120 per ordered combination of first and second line/load family), and a separate panel of 120 new bus-31 load/control pairs, balanced by first family. Generate with the existing nonlinear P2 network, asset catalog, event-size and dwell distributions and independent preregistered seeds in stress_plan.py. The targeted panel excludes bus 31 as first event. Each twin has the identical operating point, first event, underlying PMU noise and new device-error realization as its positive. Reuse the same realization and physical records at every stress level. The inference functions see one PMU stream and the first clearance only. Archive every condition's anonymous calls before opening labels. Do not pool the enriched panel with the catalog for overall rates.
 
 ## Error processes
 
