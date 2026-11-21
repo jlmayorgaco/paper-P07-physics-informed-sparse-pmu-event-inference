@@ -1,0 +1,2559 @@
+{
+  "protocol": "long_horizon_native_joint_nested_zip_minirocket_v1",
+  "input_manifest_sha256": "45689af32e4b8b2a3b2fe22fbebb72c96669fa715d5fbf91756e9257e863da3c",
+  "zip_submission_sha256": "e0bfc17e4c5ee9b595fa51fd94d736145c2f48755696c8d2eadcff00cb23a243",
+  "minirocket_freeze_sha256": "bccdbc23a5081e56d9325606b55e16a3498beacd68f134863323434343ebe138",
+  "conditions": {
+    "native": "Errors(631337 + stream) with nominal setting",
+    "joint": "same Errors seed with angle=0.005 degrees and jitter=0.25 us"
+  },
+  "nested_parent_streams": [
+    0,
+    1,
+    2,
+    3,
+    8,
+    9,
+    10,
+    11,
+    16,
+    17,
+    18,
+    19,
+    24,
+    25,
+    26,
+    27,
+    32,
+    33,
+    34,
+    35,
+    40,
+    41,
+    42,
+    43,
+    48,
+    49,
+    50,
+    51,
+    56,
+    57,
+    58,
+    59,
+    64,
+    65,
+    66,
+    67,
+    72,
+    73,
+    74,
+    75,
+    80,
+    81,
+    82,
+    83,
+    88,
+    89,
+    90,
+    91
+  ],
+  "records_scored": 96,
+  "cases": {
+    "00e2243b45c0b83bc8465208": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "0cc4996e869b5a89d0f673d8": {
+      "native": {
+        "zip": {
+          "class": "line",
+          "event_code": 2,
+          "site": "LINE19-33"
+        },
+        "minirocket": {
+          "class": "line",
+          "site": "LINE26-29",
+          "alarm_report": 255
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "line",
+          "event_code": 2,
+          "site": "LINE19-33"
+        },
+        "minirocket": {
+          "class": "line",
+          "site": "LINE26-29",
+          "alarm_report": 255
+        }
+      }
+    },
+    "0cf0d3a599e101081ceb8f38": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "0deb6da51c0c658182202789": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "1033e77a04b9e3529882207e": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "1130a0ac5718ef57ff67757d": {
+      "native": {
+        "zip": {
+          "class": "line",
+          "event_code": 2,
+          "site": "LINE22-35"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "line",
+          "event_code": 2,
+          "site": "LINE22-35"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "12a5f27c1710370be1cefb43": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "12a64239b2bd7e124c825df7": {
+      "native": {
+        "zip": {
+          "class": "line",
+          "event_code": 2,
+          "site": "LINE22-35"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "line",
+          "event_code": 2,
+          "site": "LINE22-35"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "1605c71dc0d2805d84a922b3": {
+      "native": {
+        "zip": {
+          "class": "line",
+          "event_code": 2,
+          "site": "LINE22-35"
+        },
+        "minirocket": {
+          "class": "load",
+          "site": "BUS3",
+          "alarm_report": 310
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "line",
+          "event_code": 2,
+          "site": "LINE22-35"
+        },
+        "minirocket": {
+          "class": "load",
+          "site": "BUS3",
+          "alarm_report": 310
+        }
+      }
+    },
+    "1b3dcad0c91f2c130d58ef2a": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "1b90c0f186e406c2749a25e6": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "1c8d3c9acafc9b02694a92cf": {
+      "native": {
+        "zip": {
+          "class": "load",
+          "event_code": 4,
+          "site": "BUS26"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "load",
+          "event_code": 4,
+          "site": "BUS26"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "1ee44b598fd345ed0d0d0c6a": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "line",
+          "site": "LINE14-15",
+          "alarm_report": 768
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "line",
+          "site": "LINE14-15",
+          "alarm_report": 771
+        }
+      }
+    },
+    "2050532ee2a888faa715ea9c": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "208c472a8f06047d096d2ea7": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "20c348a9ddb95db0276a4655": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "line",
+          "site": "LINE26-27",
+          "alarm_report": 283
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "line",
+          "site": "LINE26-27",
+          "alarm_report": 283
+        }
+      }
+    },
+    "2321983aecec22129565c121": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "24550b4666c7e004fd6cffea": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "2461d2bbe4253062c136a26b": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "32b0dabb111dc20213936fea": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "3353f84a505ca3575e8472b5": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "3394e8fb28b55f8466a6b5ca": {
+      "native": {
+        "zip": {
+          "class": "load",
+          "event_code": 4,
+          "site": "BUS39"
+        },
+        "minirocket": {
+          "class": "line",
+          "site": "LINE3-4",
+          "alarm_report": 232
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "load",
+          "event_code": 4,
+          "site": "BUS39"
+        },
+        "minirocket": {
+          "class": "line",
+          "site": "LINE3-4",
+          "alarm_report": 226
+        }
+      }
+    },
+    "38a13968844bb18cd4d9c7ed": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "3a95191ddab3a95dcdfea62a": {
+      "native": {
+        "zip": {
+          "class": "line",
+          "event_code": 2,
+          "site": "LINE22-35"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "line",
+          "event_code": 2,
+          "site": "LINE22-35"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "3d2538af1a53ac489d3c86fa": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "3e5e5f4b34aad001ac0219b1": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "3f26eb24f70eae828e93f4c1": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "3ffd1042ab91ba788d7d6682": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "41ab75f4e62c743b644704de": {
+      "native": {
+        "zip": {
+          "class": "load",
+          "event_code": 4,
+          "site": "BUS21"
+        },
+        "minirocket": {
+          "class": "line",
+          "site": "LINE23-24",
+          "alarm_report": 817
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "load",
+          "event_code": 4,
+          "site": "BUS21"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "435734de4475ba29e4eba99b": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "load",
+          "site": "BUS20",
+          "alarm_report": 278
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "load",
+          "site": "BUS20",
+          "alarm_report": 278
+        }
+      }
+    },
+    "46612bd090a4ed555b945eb4": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "46f707aa74eaeee2a2d2706a": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "47a06132d1c1cc172acb8dd3": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "load",
+          "site": "BUS15",
+          "alarm_report": 272
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "load",
+          "site": "BUS15",
+          "alarm_report": 272
+        }
+      }
+    },
+    "49a9f36264847b78a992793f": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "4e1e02b288d156c414179c04": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "4edd3dc02ac335419d5800d1": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "load",
+          "site": "BUS15",
+          "alarm_report": 660
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "51c097d1354a69bd3f015e44": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "53433a29fc89392fbfa86923": {
+      "native": {
+        "zip": {
+          "class": "load",
+          "event_code": 4,
+          "site": "BUS26"
+        },
+        "minirocket": {
+          "class": "line",
+          "site": "LINE26-29",
+          "alarm_report": 744
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "load",
+          "event_code": 4,
+          "site": "BUS26"
+        },
+        "minirocket": {
+          "class": "line",
+          "site": "LINE26-29",
+          "alarm_report": 750
+        }
+      }
+    },
+    "58f2092411306039277cfe9f": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "595082a894b730abf8799eeb": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "load",
+          "site": "BUS3",
+          "alarm_report": 232
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "load",
+          "site": "BUS3",
+          "alarm_report": 232
+        }
+      }
+    },
+    "5b18fb797ef2786fa2e0838b": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "5c24a8d4bb9e96a49b75b0b8": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "5dc0315d3b60be586d4c4368": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "63c6f2b17e77a9babb1c7a43": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "6475e3625f9abe9395dee4bb": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "65e109c73808e6e23b918654": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "661932cd57658d9d35af3b37": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "680b9a22e000d93929f0ee27": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "690ca4fcd0fb2e4096071ebd": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "6ac34628ddc7eeaf96d95bce": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "6b0c34ddaf0733b2187d3ceb": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "6b7cd0fee22551047aff207c": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "7036c6b9c9020efbac854161": {
+      "native": {
+        "zip": {
+          "class": "load",
+          "event_code": 4,
+          "site": "BUS28"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "load",
+          "event_code": 4,
+          "site": "BUS28"
+        },
+        "minirocket": {
+          "class": "load",
+          "site": "BUS31",
+          "alarm_report": 218
+        }
+      }
+    },
+    "7102faa2f0bffeaa6dcb360b": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "757b5e3ae3526fd3829cb106": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "line",
+          "site": "LINE17-18",
+          "alarm_report": 745
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "776478c01db4c5d09a398bac": {
+      "native": {
+        "zip": {
+          "class": "load",
+          "event_code": 4,
+          "site": "BUS39"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "load",
+          "event_code": 4,
+          "site": "BUS39"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "79490d91f93d7dd6c62d038d": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "7d3f2e41cd27e7bafb57d958": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "9a206dba220430b7a51e64a9": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "9d2d7d2b4a43d4ba2917aa50": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "a1b687c385b731cbd9c2115d": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "a2fd30e429b93e843ad73316": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "a5bf5b2eac691568ed1b6ba9": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "a9ba3a44b4df233f96e50e33": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "a9c7bb55d358e4a2f0a565c8": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "aa0ceb994ff1c9f60f9c2366": {
+      "native": {
+        "zip": {
+          "class": "load",
+          "event_code": 4,
+          "site": "BUS3"
+        },
+        "minirocket": {
+          "class": "line",
+          "site": "LINE17-18",
+          "alarm_report": 862
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "load",
+          "event_code": 4,
+          "site": "BUS3"
+        },
+        "minirocket": {
+          "class": "line",
+          "site": "LINE17-18",
+          "alarm_report": 862
+        }
+      }
+    },
+    "ab37adc430562aee1219a4c3": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "ad1738975e83378695de3adb": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "b11002fcf356a5a35e14e6c5": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "line",
+          "site": "LINE14-15",
+          "alarm_report": 815
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "line",
+          "site": "LINE14-15",
+          "alarm_report": 812
+        }
+      }
+    },
+    "b49446b205dfa01cffa46552": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "bbaac9d99f5754e12fd98985": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "bbeb526b41fb0fc5769d23a4": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "bc10b0984a1e49ef5532f3f9": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "be37fdc32ff69581172dc86a": {
+      "native": {
+        "zip": {
+          "class": "load",
+          "event_code": 4,
+          "site": "BUS27"
+        },
+        "minirocket": {
+          "class": "load",
+          "site": "BUS20",
+          "alarm_report": 789
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "load",
+          "event_code": 4,
+          "site": "BUS27"
+        },
+        "minirocket": {
+          "class": "load",
+          "site": "BUS20",
+          "alarm_report": 789
+        }
+      }
+    },
+    "beaed2f909c8f7af2948f25e": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "bfb841ddd8fdc1b1ee196cfc": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "bfc4522ac5499c082b7fd84b": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "c538f97fb8bb2c8c25c2f216": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "cc0479afb15e3b6a246ffc1b": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "cfb00bb34d493351de244735": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "load",
+          "site": "BUS7",
+          "alarm_report": 354
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "load",
+          "site": "BUS7",
+          "alarm_report": 354
+        }
+      }
+    },
+    "dda12669288c9625f11d86ba": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "e290b2713f1861748462f1e3": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "load",
+          "site": "BUS3",
+          "alarm_report": 232
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "load",
+          "site": "BUS3",
+          "alarm_report": 232
+        }
+      }
+    },
+    "e9362faab94dd5a470e4ebe0": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "eb1142db6765bd09ef5344dd": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "ebe2ed6ba3231e93c74ea4b6": {
+      "native": {
+        "zip": {
+          "class": "load",
+          "event_code": 4,
+          "site": "BUS28"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "load",
+          "event_code": 4,
+          "site": "BUS28"
+        },
+        "minirocket": {
+          "class": "load",
+          "site": "BUS31",
+          "alarm_report": 218
+        }
+      }
+    },
+    "ec21119292ed46d263220e6f": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "edd5978ec461a33f25cb02fd": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "ef686dd4d9d03de2f17c801d": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "f19db47f4dce7bfc7217a98e": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "f1bbbb7c519332fce3bfa1bc": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "f5af007847ff985f078af672": {
+      "native": {
+        "zip": {
+          "class": "line",
+          "event_code": 2,
+          "site": "LINE19-33"
+        },
+        "minirocket": {
+          "class": "line",
+          "site": "LINE26-29",
+          "alarm_report": 255
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "line",
+          "event_code": 2,
+          "site": "LINE19-33"
+        },
+        "minirocket": {
+          "class": "line",
+          "site": "LINE26-29",
+          "alarm_report": 255
+        }
+      }
+    },
+    "f9c1011c0efaf184aff91c25": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "fa964b370672a70edf58d74f": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "line",
+          "site": "LINE4-14",
+          "alarm_report": 723
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "line",
+          "site": "LINE4-14",
+          "alarm_report": 723
+        }
+      }
+    },
+    "fb601c667e90f80c39eea587": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "fb96fa4354e2d67ffd610470": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "none",
+          "site": null,
+          "alarm_report": null
+        }
+      }
+    },
+    "fdb4741583eaae1b67843953": {
+      "native": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "line",
+          "site": "LINE3-4",
+          "alarm_report": 190
+        }
+      },
+      "joint": {
+        "zip": {
+          "class": "none",
+          "event_code": 0,
+          "site": "none"
+        },
+        "minirocket": {
+          "class": "line",
+          "site": "LINE3-4",
+          "alarm_report": 190
+        }
+      }
+    }
+  }
+}

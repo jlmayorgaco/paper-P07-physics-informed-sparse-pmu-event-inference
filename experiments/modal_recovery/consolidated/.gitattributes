@@ -1,3 +1,4 @@
 results/*.json -text whitespace=cr-at-eol
 results/*.joblib binary
 results/*.zip binary
+long_horizon/.gitattributes -text whitespace=cr-at-eol

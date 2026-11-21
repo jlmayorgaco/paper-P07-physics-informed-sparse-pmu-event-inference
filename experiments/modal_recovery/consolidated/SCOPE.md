@@ -1,6 +1,6 @@
 # Scope: SGSMA comparison evidence for modal recovery
 
-This is an evidence map, not a new score. The cited comparisons use different cohorts and must not be pooled or described as official hidden-set results.
+This evidence map records the task and denominator for each historical score. A direct replay of the original June model on the released 264-window M9 cohort now accompanies the physical trial. [Paired nine-class replay](m9/README.md)
 
 ## Best existing full nine-class comparison
 
@@ -14,7 +14,7 @@ The original submission's reported internal SIM validation is detector accuracy 
 
 ## Physical-family comparison and scope gap
 
-No executed four-physical-family SGSMA comparison is evidenced in the available registries. The closest archived paired comparison is `generated/frozen/historical_submission_comparison_20261102/`: **124 shared 30-s windows** (96 event, 28 normal), but only two event families—load E4 and line E2—plus normal E0. It reports macro-F1 E0/E2/E4 of **0.4071** for the submitted ExtraTrees and **1.0000** for M02 V3.1; exact family+source was **0/96** versus **96/96**. There were 0/28 normal-window alarms for either. These 96 realizations are repeated seeds over 36 event and 6 normal physical trajectories, not independent scenarios. The M02 cohort is now a known development/regression set, the candidate knows its plant/catalog, and this is not full nine-class or four-family evidence. See `REPORT.md`, `PROTOCOL.json`, `SUMMARY.csv`, `CHECKS.json`, and `MANIFEST.json` in that registry, plus `docs/HACKATHON_TO_C01_METHOD_TRACE.md`.
+The nine-class M9 studies include fault, line, generation and load labels. The nonlinear P2 successive-event benchmark has an executable comparison for load and line. The paired comparison in `generated/frozen/historical_submission_comparison_20261102/` used **124 shared 30-s windows** (96 event, 28 normal), but only two event families—load E4 and line E2—plus normal E0. It reports macro-F1 E0/E2/E4 of **0.4071** for the submitted ExtraTrees and **1.0000** for M02 V3.1; exact family+source was **0/96** versus **96/96**. There were 0/28 normal-window alarms for either. These 96 realizations are repeated seeds over 36 event and 6 normal physical trajectories, not independent scenarios. The M02 cohort is now a known development/regression set, the candidate knows its plant/catalog, and this is not full nine-class or four-family evidence. See `REPORT.md`, `PROTOCOL.json`, `SUMMARY.csv`, `CHECKS.json`, and `MANIFEST.json` in that registry, plus `docs/HACKATHON_TO_C01_METHOD_TRACE.md`.
 
 ## Original code, metrics, and citations
 
