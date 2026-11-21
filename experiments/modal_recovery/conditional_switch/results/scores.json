@@ -1,0 +1,280 @@
+{
+  "parents": 240,
+  "strata": {
+    "load-load": 60,
+    "line-load": 60,
+    "load-line": 60,
+    "line-line": 60
+  },
+  "counts": {
+    "detection": {
+      "current": 211,
+      "adjusted_gate": 218,
+      "adjusted": 218
+    },
+    "family": {
+      "current": 209,
+      "adjusted_gate": 217,
+      "adjusted": 217
+    },
+    "exact": {
+      "current": 187,
+      "adjusted_gate": 210,
+      "adjusted": 216
+    },
+    "control_alarm": {
+      "current": 12,
+      "adjusted_gate": 1,
+      "adjusted": 1
+    },
+    "early": {
+      "current": 7,
+      "adjusted_gate": 1,
+      "adjusted": 1
+    }
+  },
+  "paired": {
+    "detection": {
+      "adjusted_better": 9,
+      "current_better": 2,
+      "paired_p": 0.0654296875
+    },
+    "family": {
+      "adjusted_better": 10,
+      "current_better": 2,
+      "paired_p": 0.03857421875
+    },
+    "exact": {
+      "adjusted_better": 30,
+      "current_better": 1,
+      "paired_p": 2.9802322387695312e-08
+    },
+    "control_alarm": {
+      "adjusted_better": 12,
+      "current_better": 1,
+      "paired_p": 0.00341796875
+    },
+    "early": {
+      "adjusted_better": 7,
+      "current_better": 1,
+      "paired_p": 0.0703125
+    }
+  },
+  "one_sided_exact95": {
+    "detection": {
+      "lower95": 0.871695005853481,
+      "upper95": 0.9371261571488975
+    },
+    "family": {
+      "lower95": 0.8669650425394878,
+      "upper95": 0.933614360710472
+    },
+    "exact": {
+      "lower95": 0.8622523060841549,
+      "upper95": 0.9300843588913476
+    },
+    "control_alarm": {
+      "lower95": 0.0002136992230156207,
+      "upper95": 0.019612599628702362
+    },
+    "early": {
+      "lower95": 0.0002136992230156207,
+      "upper95": 0.019612599628702362
+    }
+  },
+  "passes_point_targets": false,
+  "passes_marginal_bounds": false,
+  "adjusted_by_second_family": {
+    "load": {
+      "scheduled": 120,
+      "detection": 99,
+      "family": 99,
+      "exact": 98,
+      "early": 0
+    },
+    "line": {
+      "scheduled": 120,
+      "detection": 119,
+      "family": 118,
+      "exact": 118,
+      "early": 1
+    }
+  },
+  "adjusted_exact_failures": [
+    {
+      "id": "5d30526a5ca0c892a100e29f",
+      "parent": 4,
+      "source": "BUS31",
+      "first": "BUS15",
+      "reason": "no alarm"
+    },
+    {
+      "id": "856f4cb846b8c715c6c171d6",
+      "parent": 7,
+      "source": "LINE9-39",
+      "first": "LINE23-24",
+      "reason": "incorrect diagnosis"
+    },
+    {
+      "id": "023a5033a9cb37d03bc9d544",
+      "parent": 9,
+      "source": "BUS31",
+      "first": "LINE4-14",
+      "reason": "no alarm"
+    },
+    {
+      "id": "0ba2a72ad0364b0501311b59",
+      "parent": 21,
+      "source": "BUS31",
+      "first": "LINE26-29",
+      "reason": "no alarm"
+    },
+    {
+      "id": "608bfcffeae51af035f47c37",
+      "parent": 28,
+      "source": "BUS31",
+      "first": "BUS20",
+      "reason": "no alarm"
+    },
+    {
+      "id": "00c64aede17f09a979bea5d9",
+      "parent": 33,
+      "source": "BUS31",
+      "first": "LINE26-29",
+      "reason": "no alarm"
+    },
+    {
+      "id": "a25f60e08e8be35c8196e06b",
+      "parent": 52,
+      "source": "BUS31",
+      "first": "BUS20",
+      "reason": "no alarm"
+    },
+    {
+      "id": "6980f5a201f17b9ab7ebad61",
+      "parent": 61,
+      "source": "BUS31",
+      "first": "LINE16-17",
+      "reason": "no alarm"
+    },
+    {
+      "id": "d7ac190ceaf50669f20ad9da",
+      "parent": 65,
+      "source": "BUS31",
+      "first": "LINE9-39",
+      "reason": "no alarm"
+    },
+    {
+      "id": "5bcc074fdcf45d7c988072ef",
+      "parent": 68,
+      "source": "BUS31",
+      "first": "BUS26",
+      "reason": "no alarm"
+    },
+    {
+      "id": "04c4cf259d50f31ba78c4c6b",
+      "parent": 88,
+      "source": "BUS31",
+      "first": "BUS3",
+      "reason": "no alarm"
+    },
+    {
+      "id": "f331f35cdb0eafc89868a2b4",
+      "parent": 101,
+      "source": "BUS31",
+      "first": "LINE9-39",
+      "reason": "no alarm"
+    },
+    {
+      "id": "be321c3ade0ed1460507afa5",
+      "parent": 122,
+      "source": "LINE9-39",
+      "first": "BUS20",
+      "reason": "early"
+    },
+    {
+      "id": "1ee3c81ed3cf873dd8ef63d5",
+      "parent": 137,
+      "source": "BUS31",
+      "first": "LINE3-4",
+      "reason": "no alarm"
+    },
+    {
+      "id": "635666b6fc6b37010b5a2dbf",
+      "parent": 152,
+      "source": "BUS31",
+      "first": "BUS4",
+      "reason": "no alarm"
+    },
+    {
+      "id": "e1b5a002fb0159a6eb349098",
+      "parent": 157,
+      "source": "BUS31",
+      "first": "LINE9-39",
+      "reason": "no alarm"
+    },
+    {
+      "id": "4f3719e9b4e91320d42f28a1",
+      "parent": 177,
+      "source": "BUS26",
+      "first": "LINE9-39",
+      "reason": "no alarm"
+    },
+    {
+      "id": "362359575120d264b9184ef9",
+      "parent": 180,
+      "source": "BUS3",
+      "first": "BUS31",
+      "reason": "incorrect diagnosis"
+    },
+    {
+      "id": "acb69894c34318440684cab4",
+      "parent": 185,
+      "source": "BUS31",
+      "first": "LINE16-17",
+      "reason": "no alarm"
+    },
+    {
+      "id": "e8f2aadd99d41e62fe4d6449",
+      "parent": 188,
+      "source": "BUS31",
+      "first": "BUS15",
+      "reason": "no alarm"
+    },
+    {
+      "id": "21ceb17c17f16e51fb89e7de",
+      "parent": 192,
+      "source": "BUS31",
+      "first": "BUS15",
+      "reason": "no alarm"
+    },
+    {
+      "id": "fbe10bc504bd7cd1341e7575",
+      "parent": 205,
+      "source": "BUS31",
+      "first": "LINE23-24",
+      "reason": "no alarm"
+    },
+    {
+      "id": "02e85dc8e9e067e55cedc906",
+      "parent": 208,
+      "source": "BUS26",
+      "first": "BUS24",
+      "reason": "no alarm"
+    },
+    {
+      "id": "2f04e9a5d76e45318335560a",
+      "parent": 225,
+      "source": "BUS31",
+      "first": "LINE3-4",
+      "reason": "no alarm"
+    }
+  ],
+  "long_quiet": {
+    "hours": 5.860666666666667,
+    "current": 0,
+    "adjusted": 0
+  },
+  "predictions_sha": "ca76dc9a64543a45bd891b2356a4649637c06e07ce68f61eadeabf089714b832",
+  "truth_sha": "3fb0e8dcbf97c7d0d16c65fa641197daf96a4853848ae2d114458a2fc0ffedd0"
+}
