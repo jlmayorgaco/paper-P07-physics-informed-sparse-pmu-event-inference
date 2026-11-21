@@ -1,0 +1,198 @@
+{
+  "finalists": [
+    {
+      "name": "short",
+      "level": 0.975,
+      "threshold": 8.630992759296161,
+      "recovery_bound": 2.927941228862637,
+      "quiet_bound": 8.630992759296161,
+      "detect": 180,
+      "family": 180,
+      "site": 180,
+      "false": 0,
+      "early": 0,
+      "miss": 12
+    },
+    {
+      "name": "short",
+      "level": 0.99,
+      "threshold": 8.630992759296161,
+      "recovery_bound": 4.232121121240064,
+      "quiet_bound": 8.630992759296161,
+      "detect": 180,
+      "family": 180,
+      "site": 180,
+      "false": 0,
+      "early": 0,
+      "miss": 12
+    },
+    {
+      "name": "short",
+      "level": 0.995,
+      "threshold": 16.255569371367766,
+      "recovery_bound": 16.255569371367766,
+      "quiet_bound": 8.630992759296161,
+      "detect": 178,
+      "family": 177,
+      "site": 177,
+      "false": 0,
+      "early": 0,
+      "miss": 14
+    },
+    {
+      "name": "reference",
+      "level": 0.975,
+      "threshold": 9.530638706048334,
+      "recovery_bound": 2.8048886943147435,
+      "quiet_bound": 9.530638706048334,
+      "detect": 182,
+      "family": 182,
+      "site": 182,
+      "false": 0,
+      "early": 0,
+      "miss": 10
+    },
+    {
+      "name": "reference",
+      "level": 0.99,
+      "threshold": 9.530638706048334,
+      "recovery_bound": 4.238583800794109,
+      "quiet_bound": 9.530638706048334,
+      "detect": 182,
+      "family": 182,
+      "site": 182,
+      "false": 0,
+      "early": 0,
+      "miss": 10
+    },
+    {
+      "name": "reference",
+      "level": 0.995,
+      "threshold": 9.530638706048334,
+      "recovery_bound": 5.482372657312294,
+      "quiet_bound": 9.530638706048334,
+      "detect": 182,
+      "family": 182,
+      "site": 182,
+      "false": 0,
+      "early": 0,
+      "miss": 10
+    }
+  ],
+  "chosen": {
+    "name": "reference",
+    "level": 0.99,
+    "threshold": 9.530638706048334,
+    "recovery_bound": 4.238583800794109,
+    "quiet_bound": 9.530638706048334,
+    "detect": 182,
+    "family": 182,
+    "site": 182,
+    "false": 0,
+    "early": 0,
+    "miss": 10
+  },
+  "postclearance_grid": [
+    {
+      "name": "short",
+      "level": 0.975,
+      "threshold": 2.927941228862637,
+      "detect": 180,
+      "family": 180,
+      "site": 180,
+      "false": 3,
+      "early": 2,
+      "miss": 10
+    },
+    {
+      "name": "short",
+      "level": 0.99,
+      "threshold": 4.232121121240064,
+      "detect": 182,
+      "family": 182,
+      "site": 182,
+      "false": 0,
+      "early": 0,
+      "miss": 10
+    },
+    {
+      "name": "short",
+      "level": 0.995,
+      "threshold": 16.255569371367766,
+      "detect": 178,
+      "family": 177,
+      "site": 177,
+      "false": 0,
+      "early": 0,
+      "miss": 14
+    },
+    {
+      "name": "long",
+      "level": 0.975,
+      "threshold": 2.487361061878972,
+      "detect": 181,
+      "family": 181,
+      "site": 181,
+      "false": 1,
+      "early": 1,
+      "miss": 10
+    },
+    {
+      "name": "long",
+      "level": 0.99,
+      "threshold": 4.2567088475010415,
+      "detect": 182,
+      "family": 182,
+      "site": 182,
+      "false": 0,
+      "early": 0,
+      "miss": 10
+    },
+    {
+      "name": "long",
+      "level": 0.995,
+      "threshold": 18.140738006534523,
+      "detect": 178,
+      "family": 177,
+      "site": 177,
+      "false": 0,
+      "early": 0,
+      "miss": 14
+    }
+  ],
+  "profiled_amplitude": [
+    {
+      "name": "profile",
+      "level": 0.975,
+      "threshold": 4.547465211531117,
+      "detect": 181,
+      "family": 181,
+      "site": 181,
+      "false": 3,
+      "early": 1,
+      "miss": 10
+    },
+    {
+      "name": "profile",
+      "level": 0.99,
+      "threshold": 5.874639387726062,
+      "detect": 179,
+      "family": 179,
+      "site": 179,
+      "false": 0,
+      "early": 0,
+      "miss": 13
+    },
+    {
+      "name": "profile",
+      "level": 0.995,
+      "threshold": 7.317345623280119,
+      "detect": 178,
+      "family": 177,
+      "site": 176,
+      "false": 0,
+      "early": 0,
+      "miss": 14
+    }
+  ]
+}
