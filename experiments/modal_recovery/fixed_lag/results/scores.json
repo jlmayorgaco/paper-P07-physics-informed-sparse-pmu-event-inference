@@ -1,0 +1,83 @@
+{
+  "predictions_sha": "4dc94007f48b06bce08f811b761df92636ff9edc960e8ad23199a90875ac9423",
+  "truth_sha": "79f5860c47285c8c28e1e2065f7622a523de9ae209de98882443c0d8f801f7af",
+  "n": 96,
+  "normal_twins_with_alarm": 8,
+  "totals": {
+    "immediate": {
+      "family": 48,
+      "site": 25,
+      "in_time": 84
+    },
+    "mean_fixed": {
+      "family": 80,
+      "site": 63,
+      "in_time": 84
+    },
+    "mean_mixed": {
+      "family": 83,
+      "site": 73,
+      "in_time": 84
+    },
+    "modal_fixed": {
+      "family": 81,
+      "site": 64,
+      "in_time": 84
+    },
+    "modal_mixed": {
+      "family": 83,
+      "site": 73,
+      "in_time": 84
+    },
+    "quadratic_fixed": {
+      "family": 80,
+      "site": 64,
+      "in_time": 84
+    },
+    "quadratic_mixed": {
+      "family": 84,
+      "site": 74,
+      "in_time": 84
+    }
+  },
+  "paired_family": {
+    "immediate": {
+      "wins": 35,
+      "losses": 0,
+      "exact_p": 5.820766091346741e-11
+    },
+    "mean_fixed": {
+      "wins": 3,
+      "losses": 0,
+      "exact_p": 0.25
+    },
+    "mean_mixed": {
+      "wins": 0,
+      "losses": 0,
+      "exact_p": 1.0
+    },
+    "modal_fixed": {
+      "wins": 2,
+      "losses": 0,
+      "exact_p": 0.5
+    },
+    "quadratic_fixed": {
+      "wins": 3,
+      "losses": 0,
+      "exact_p": 0.25
+    },
+    "quadratic_mixed": {
+      "wins": 0,
+      "losses": 1,
+      "exact_p": 1.0
+    }
+  },
+  "holm": {
+    "mean_mixed": 1.0,
+    "quadratic_mixed": 1.0
+  },
+  "modal_mixed_by_family": {
+    "load": 40,
+    "line": 43
+  }
+}

@@ -76,6 +76,8 @@ def main():
     sources.update(p for p in (ROOT / 'experiments/second_family').rglob('*')
                    if p.is_file() and p.suffix in {'.py', '.md', '.json', '.pt'})
     sources.add(ROOT / 'experiments/history_conditioning/dynamics.py')
+    sources.update(p for p in (ROOT / 'experiments/modal_recovery').rglob('*')
+                   if p.is_file() and p.suffix in {'.py', '.md', '.json', '.joblib'})
     sources.update(p for p in (ROOT / 'experiments/adaptive_innovation_20261113').rglob('*')
                    if p.is_file() and p.suffix in {'.py', '.json', '.md', '.npz'})
     for folder in ('theorem_audit_20261114','adaptive_innovation_20261113_corrected','hamiltonian_f01_20261113','descriptor_bridge_20261113','relinearized_recovery_20261113','decision_bounds_20261113','recovery_nuisance_20261113','memory_covariance_audit_20261113','oracle_pmu_covariance_20261113','unknown_onset_bridge_20261114'):
@@ -113,6 +115,8 @@ with Python: python scripts/build_comparator_lineage.py.
 Recount the paired second-event family trial from the sealed predictions with
 python experiments/second_family/validation/audit.py. Its README describes
 the two-trajectory simulator replay and the published IEEE 68-bus control.
+Recount the two post-restoration oscillatory-contrast trials from their
+sealed predictions with python experiments/modal_recovery/report.py.
 The editable overview and physical/report diagrams are TikZ vector figures.
 Regenerate them with python scripts/build_recovery_overview.py and
 python scripts/build_physics_measurement_chain.py (pdfLaTeX and PyMuPDF required).
