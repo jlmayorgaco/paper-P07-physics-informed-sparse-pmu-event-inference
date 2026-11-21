@@ -1,0 +1,6433 @@
+{
+  "freeze_sha": "778d7319398dc90671662834aa42a19d1b6bb662d35dbef9c9175c9ee30c0109",
+  "manifest_sha": "edcde7ad063828c1fc63fc2cb4fb6fd255118f3fa1e15b7264a2e064e6b06288",
+  "zip_sha": "259c047bd3525ae2b4f0471de435394fc035647d89bf1739b23d9de6bbaae73d",
+  "targets_sha": "f6175f78ebc86665590b1b5f3b2f135ceb823eba49be12f4b671b5a1b8ce3521",
+  "calls": {
+    "0014e4d8f30e2daebf4f71c0": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "019011e83ddca7d93ebe1123": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "02666cd2dda65f0b74b30c48": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "02e48f6353146f5128654f6a": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "0320b780f1d3e1474be82d2c": {
+      "magnitudes": {
+        "alarm": 263,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      },
+      "angles": {
+        "alarm": 263,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      }
+    },
+    "03b0637c56d0795855a5cd20": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": 231,
+        "label": [
+          "load",
+          "BUS31"
+        ]
+      }
+    },
+    "03bfec624e1e29e5fcc29547": {
+      "magnitudes": {
+        "alarm": 229,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      },
+      "angles": {
+        "alarm": 228,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      }
+    },
+    "03c5067ab2f62191dc4dfcae": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "05ae25def06d4164137438fd": {
+      "magnitudes": {
+        "alarm": 271,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      },
+      "angles": {
+        "alarm": 271,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      }
+    },
+    "070fb95d8113da8578404cc1": {
+      "magnitudes": {
+        "alarm": 225,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      },
+      "angles": {
+        "alarm": 225,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      }
+    },
+    "07c2bbbdc99ebee141447e89": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "07f598640c483ddac22429b5": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "0836db2f8b8a113aa5b0521a": {
+      "magnitudes": {
+        "alarm": 200,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      },
+      "angles": {
+        "alarm": 200,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      }
+    },
+    "089259d41c3a78d2b37ae86f": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "0898a7cf96f7e82755410655": {
+      "magnitudes": {
+        "alarm": 194,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      },
+      "angles": {
+        "alarm": 194,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      }
+    },
+    "08a56057b393aed7272c77d0": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "0aefbeeb72773be953a55a2b": {
+      "magnitudes": {
+        "alarm": 220,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "angles": {
+        "alarm": 220,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      }
+    },
+    "0b4848d4c78308b57e82554c": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "0b51b80241160d1106b36690": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "0bbf57052bd76eac3efe34a4": {
+      "magnitudes": {
+        "alarm": 220,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "angles": {
+        "alarm": 220,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      }
+    },
+    "0bd6c1ee12f738105b0ae0ad": {
+      "magnitudes": {
+        "alarm": 280,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "angles": {
+        "alarm": 278,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "0c81c3eb318a875d58abd183": {
+      "magnitudes": {
+        "alarm": 199,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "angles": {
+        "alarm": 199,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      }
+    },
+    "0cbdbab27c81bae4a59917cc": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "0ce313ac749e53975a35ea32": {
+      "magnitudes": {
+        "alarm": 215,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "angles": {
+        "alarm": 215,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      }
+    },
+    "0cf03c56a14aa5a2743cd74b": {
+      "magnitudes": {
+        "alarm": 209,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "angles": {
+        "alarm": 209,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      }
+    },
+    "0da8016ffb5e50a285a385f2": {
+      "magnitudes": {
+        "alarm": 262,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      },
+      "angles": {
+        "alarm": 253,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      }
+    },
+    "0dd45fba50deb085e8c877e9": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "0e016df07dafb8ed613e1bdd": {
+      "magnitudes": {
+        "alarm": 251,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "angles": {
+        "alarm": 251,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      }
+    },
+    "0ec06a49fc2e511b7faec9a6": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "0eda6d479a5be41a12e7503c": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "10701afa3dc63e3aed5951e2": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "11552fb32b796906b45179d9": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "11682587f97ee0d238ba604d": {
+      "magnitudes": {
+        "alarm": 277,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "angles": {
+        "alarm": 275,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      }
+    },
+    "11a8ae68e5461c787de98d7e": {
+      "magnitudes": {
+        "alarm": 219,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "angles": {
+        "alarm": 218,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      }
+    },
+    "127d8ef2fd19dd0f7e0717a3": {
+      "magnitudes": {
+        "alarm": 272,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      },
+      "angles": {
+        "alarm": 259,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      }
+    },
+    "12c9a1bbfdfd6e49663a38d5": {
+      "magnitudes": {
+        "alarm": 247,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      },
+      "angles": {
+        "alarm": 245,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      }
+    },
+    "134108a4d35bcfd493a52147": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "13424ac3f39c0ee74dcccb80": {
+      "magnitudes": {
+        "alarm": 225,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "angles": {
+        "alarm": 225,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      }
+    },
+    "13574f1a8b2aa7eaf533ec2f": {
+      "magnitudes": {
+        "alarm": 265,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      },
+      "angles": {
+        "alarm": 265,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      }
+    },
+    "1369d393711862fc7a205426": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "13e27fcf2b7b3f4d09441b12": {
+      "magnitudes": {
+        "alarm": 224,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "angles": {
+        "alarm": 224,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      }
+    },
+    "150f32f59282e94e68e3b5c3": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "1590d862173f0e354530f788": {
+      "magnitudes": {
+        "alarm": 256,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      },
+      "angles": {
+        "alarm": 256,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      }
+    },
+    "17110fad4f6fed5fca125864": {
+      "magnitudes": {
+        "alarm": 213,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "angles": {
+        "alarm": 213,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      }
+    },
+    "18031d9549355cb2c5471e32": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "1855374afb6e7efa5577ae09": {
+      "magnitudes": {
+        "alarm": 239,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      },
+      "angles": {
+        "alarm": 239,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      }
+    },
+    "18be4164d1478ca76580ca65": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "191d5cd87caf78e0d306eb57": {
+      "magnitudes": {
+        "alarm": 230,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "angles": {
+        "alarm": 229,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      }
+    },
+    "19a46b59a02ae54107779a08": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "19f7f74580a999b5bceb27f1": {
+      "magnitudes": {
+        "alarm": 210,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      },
+      "angles": {
+        "alarm": 209,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      }
+    },
+    "19fb3c12fe58c0e58a921385": {
+      "magnitudes": {
+        "alarm": 228,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "angles": {
+        "alarm": 227,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      }
+    },
+    "1a61793a7906903aa25e1c11": {
+      "magnitudes": {
+        "alarm": 244,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      },
+      "angles": {
+        "alarm": 244,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      }
+    },
+    "1b653223478548dce6d60dbf": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "1bd968c63a20f52f5f265a3f": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "1bdb88b0908e8e61b3f0e817": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "1ca7f59b49fa70c9a40d554f": {
+      "magnitudes": {
+        "alarm": 253,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "angles": {
+        "alarm": 252,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      }
+    },
+    "1cfd3f887070c03540079eea": {
+      "magnitudes": {
+        "alarm": 200,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "angles": {
+        "alarm": 196,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      }
+    },
+    "1e318a9b11c0bbd680bff303": {
+      "magnitudes": {
+        "alarm": 241,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "angles": {
+        "alarm": 236,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      }
+    },
+    "1e49c2336a66c292fba6ffb5": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "1e69a21aabaf1882d33ef1ff": {
+      "magnitudes": {
+        "alarm": 251,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "angles": {
+        "alarm": 247,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      }
+    },
+    "1eb748c7d34afb6cf46d4378": {
+      "magnitudes": {
+        "alarm": 269,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      },
+      "angles": {
+        "alarm": 269,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      }
+    },
+    "1f656c0b028d6809123b94cf": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "1f725117ec35d64894ee27c4": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "21733d1d8f95490d20834412": {
+      "magnitudes": {
+        "alarm": 213,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "angles": {
+        "alarm": 213,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      }
+    },
+    "22255d17029bce4bf8db4826": {
+      "magnitudes": {
+        "alarm": 240,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      },
+      "angles": {
+        "alarm": 239,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      }
+    },
+    "24b84a990f32ec7cc475bf6a": {
+      "magnitudes": {
+        "alarm": 226,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      },
+      "angles": {
+        "alarm": 224,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      }
+    },
+    "2560514ba45c3627c973babd": {
+      "magnitudes": {
+        "alarm": 200,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      },
+      "angles": {
+        "alarm": 200,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      }
+    },
+    "263d676d63e94441ed6c2bed": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "269e84071e8f2bc00b1c887e": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "26ad34fef55f6c68de522413": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "276e153f0b2421915363f26b": {
+      "magnitudes": {
+        "alarm": 223,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "angles": {
+        "alarm": 221,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      }
+    },
+    "2775e6fd094f7c2df77f407f": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "27ff40db299619993ee93c35": {
+      "magnitudes": {
+        "alarm": 219,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "angles": {
+        "alarm": 219,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      }
+    },
+    "2821f95044ad4fd1ba406fd8": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "284d1b8c46ebef996de898fc": {
+      "magnitudes": {
+        "alarm": 227,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      },
+      "angles": {
+        "alarm": 227,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      }
+    },
+    "285795ff9d08ed7c6dda5cae": {
+      "magnitudes": {
+        "alarm": 268,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "angles": {
+        "alarm": 266,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "28d8d511c832869a87dca8bf": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "29deb30bb99e60741853865f": {
+      "magnitudes": {
+        "alarm": 225,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      },
+      "angles": {
+        "alarm": 217,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      }
+    },
+    "29f3a43ba953a87b61dfa705": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "2a55fec9c443d64e5a06cb11": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": 240,
+        "label": [
+          "load",
+          "BUS31"
+        ]
+      }
+    },
+    "2b55da7dcd3f77a5fa27e3fd": {
+      "magnitudes": {
+        "alarm": 275,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "angles": {
+        "alarm": 274,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      }
+    },
+    "2bae4582396fae6a1effc5e9": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "2bc76bc0bb22d90cf011bbdd": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "2c2253bc594000c15ec6b6ff": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "2c5de6371dee53e5063f5169": {
+      "magnitudes": {
+        "alarm": 234,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      },
+      "angles": {
+        "alarm": 234,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      }
+    },
+    "2cf23e98842215a909f8c636": {
+      "magnitudes": {
+        "alarm": 267,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      },
+      "angles": {
+        "alarm": 267,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      }
+    },
+    "2e0d007fec10d81665ca8bba": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "2e1d8e0b939f4da5ff7fcb2d": {
+      "magnitudes": {
+        "alarm": 238,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "angles": {
+        "alarm": 238,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      }
+    },
+    "2e2f3ba36e225a69a1c0fa5a": {
+      "magnitudes": {
+        "alarm": 200,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      },
+      "angles": {
+        "alarm": 191,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      }
+    },
+    "2f3a00cf66bd0a9363c0d303": {
+      "magnitudes": {
+        "alarm": 237,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "angles": {
+        "alarm": 237,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      }
+    },
+    "2fc5519276074f4071bd50a3": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "3095ffe1662c35b7c0c401ef": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "30a9ada55e9dfdcc18877779": {
+      "magnitudes": {
+        "alarm": 212,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "angles": {
+        "alarm": 212,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      }
+    },
+    "316944f8b026dbe0f8d2a894": {
+      "magnitudes": {
+        "alarm": 205,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "angles": {
+        "alarm": 205,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      }
+    },
+    "31724b475026c7a28b61b1e0": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "31b1f2e9c484781137aa3729": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "320d27d57f73f16e62b002a3": {
+      "magnitudes": {
+        "alarm": 260,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      },
+      "angles": {
+        "alarm": 253,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      }
+    },
+    "322f998ea3ab6e297d4147ea": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "32b871befea05a4d2a42cdae": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "33239aa447629d5925948c6c": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "33356dcbed09ee5c48a920da": {
+      "magnitudes": {
+        "alarm": 217,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      },
+      "angles": {
+        "alarm": 205,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      }
+    },
+    "33d711fae62b7530df721126": {
+      "magnitudes": {
+        "alarm": 214,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "angles": {
+        "alarm": 214,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      }
+    },
+    "34096cd53771bb02c45e03b2": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "346d6c7e9f02c94d5d6afd9d": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "34c454ec76ba23fefb3fc07d": {
+      "magnitudes": {
+        "alarm": 210,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "angles": {
+        "alarm": 210,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      }
+    },
+    "352ad1cff57bf00c71b3f65b": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "3544f085adbee879d4c84040": {
+      "magnitudes": {
+        "alarm": 233,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      },
+      "angles": {
+        "alarm": 229,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      }
+    },
+    "3571c18d9a9021be4b23d58d": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "360b3c8cf1e4ccfe62473f82": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": 257,
+        "label": [
+          "load",
+          "BUS31"
+        ]
+      }
+    },
+    "36c4e43f64ae12336c8a81e0": {
+      "magnitudes": {
+        "alarm": 274,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "angles": {
+        "alarm": 274,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      }
+    },
+    "373ca959899401ca3f0fc584": {
+      "magnitudes": {
+        "alarm": 234,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "angles": {
+        "alarm": 232,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      }
+    },
+    "3744de28507f374e62bc559e": {
+      "magnitudes": {
+        "alarm": 280,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "angles": {
+        "alarm": 278,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "37c72e62cd7ef73af943892c": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "3875e5415f7aa7d93b3133f5": {
+      "magnitudes": {
+        "alarm": 231,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      },
+      "angles": {
+        "alarm": 231,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      }
+    },
+    "38da60d63a4648fca28cf08b": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "39eb708e18a241a29459e108": {
+      "magnitudes": {
+        "alarm": 200,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "angles": {
+        "alarm": 200,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      }
+    },
+    "39f7248e2f73a4ed33f8c15c": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "3a8118ddf5edccc0401d8e32": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "3af2437f884a6e544940ff58": {
+      "magnitudes": {
+        "alarm": 217,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "angles": {
+        "alarm": 217,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      }
+    },
+    "3bd01d16901020b3f8f5b936": {
+      "magnitudes": {
+        "alarm": 236,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      },
+      "angles": {
+        "alarm": 236,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      }
+    },
+    "3c7dce2ffffbe5b763352ef4": {
+      "magnitudes": {
+        "alarm": 265,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      },
+      "angles": {
+        "alarm": 262,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      }
+    },
+    "3cf42585ba8c6e3d353a0549": {
+      "magnitudes": {
+        "alarm": 243,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "angles": {
+        "alarm": 243,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      }
+    },
+    "3d9d3dc23caec7c5c741d97f": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "3e93df7eab4438fc3134de5a": {
+      "magnitudes": {
+        "alarm": 202,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "angles": {
+        "alarm": 201,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      }
+    },
+    "3eabafffc0ac9db8f78227c6": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "3ee11a2876368c6e19a47581": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "3f70224877306c8d43bdd58a": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "3fe0e00f23f391d53079029f": {
+      "magnitudes": {
+        "alarm": 264,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "angles": {
+        "alarm": 263,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "402b252f9549d7cd72b0be7f": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "4100ca57a4a0b321763af8ee": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "419a8620acbf5068736f44ac": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "42d273baa03f1aff1bd18347": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "4428b63d3fc40c92cb8cf5b1": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "44657d16be28a4a39cd55880": {
+      "magnitudes": {
+        "alarm": 248,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      },
+      "angles": {
+        "alarm": 241,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      }
+    },
+    "44d63ffbd8c71b6edf65ca21": {
+      "magnitudes": {
+        "alarm": 217,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      },
+      "angles": {
+        "alarm": 217,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      }
+    },
+    "4587d55dedbfa1edbb43dad5": {
+      "magnitudes": {
+        "alarm": 246,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "angles": {
+        "alarm": 244,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "46781d08dd7769de58c1e5ee": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "46ab60f46ffa2e741b89f25b": {
+      "magnitudes": {
+        "alarm": 252,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "angles": {
+        "alarm": 251,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      }
+    },
+    "484a73274809179f16569f73": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "4864fd693d493db9c48c50bf": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "48692b55d1af348e20422dd9": {
+      "magnitudes": {
+        "alarm": 208,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      },
+      "angles": {
+        "alarm": 208,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      }
+    },
+    "48bc9b894f1cfdc5e0b3aa64": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "48e235460aeee96e46ae8286": {
+      "magnitudes": {
+        "alarm": 196,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "angles": {
+        "alarm": 196,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      }
+    },
+    "49321c8817196ab869dd5f6f": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "493a71b96496049f73fb10cc": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "49cf9486035d775d4e947b69": {
+      "magnitudes": {
+        "alarm": 184,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      },
+      "angles": {
+        "alarm": 184,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      }
+    },
+    "4b0e4f7104483764de7981b6": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "4b6d861e865d5e8434053767": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "4c6d90e6fe14837fc5d13c9f": {
+      "magnitudes": {
+        "alarm": 240,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "angles": {
+        "alarm": 240,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      }
+    },
+    "4cc0b944d7fb05b1d141e877": {
+      "magnitudes": {
+        "alarm": 179,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "angles": {
+        "alarm": 179,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "4d4678728fc7312bfb1122d7": {
+      "magnitudes": {
+        "alarm": 246,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      },
+      "angles": {
+        "alarm": 242,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      }
+    },
+    "4ed08087bf10d74e27435d9a": {
+      "magnitudes": {
+        "alarm": 201,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "angles": {
+        "alarm": 199,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      }
+    },
+    "4effabff07bbd5babff86f48": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "506e93f00329cd3dbffdbfb9": {
+      "magnitudes": {
+        "alarm": 226,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "angles": {
+        "alarm": 262,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      }
+    },
+    "50760c84d8f42b9546de556c": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": 229,
+        "label": [
+          "load",
+          "BUS31"
+        ]
+      }
+    },
+    "50ce496220ed903edfb305e2": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "510dfc2c6d4e543fe86e801a": {
+      "magnitudes": {
+        "alarm": 240,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "angles": {
+        "alarm": 239,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      }
+    },
+    "510f215c32ebb828859e8e72": {
+      "magnitudes": {
+        "alarm": 235,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "angles": {
+        "alarm": 235,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "511303d0424e499501570bf6": {
+      "magnitudes": {
+        "alarm": 207,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "angles": {
+        "alarm": 207,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      }
+    },
+    "5114072d81f8a44d28d43cfb": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "515108ef0899e1038060cb0a": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "51b19766e25b8ec67c512d9b": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "51c3cc5bea974489ced0b7df": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "5281e1088d954b39c9191b1b": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "55216d2cc186ec9718df61da": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "557759cd69633ff6e2e3e14e": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "558b2a64045ca5da657e8c56": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "55a79626de73b2237856d552": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "5852897ad8f5e0f0cd8c5583": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "594a1bb93672e5967d73ac52": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "598b6f549da2e77c55f112e5": {
+      "magnitudes": {
+        "alarm": 244,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "angles": {
+        "alarm": 242,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      }
+    },
+    "5a0270dcc702cd14c53550ca": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": 241,
+        "label": [
+          "load",
+          "BUS31"
+        ]
+      }
+    },
+    "5a12c7180d73b0c855f58c3e": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "5a63901dc7181d8e380026dd": {
+      "magnitudes": {
+        "alarm": 275,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "angles": {
+        "alarm": 275,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      }
+    },
+    "5b5eb6fba758df2ca0af5bef": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "5c23fc7713c6b3484cbb754c": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": 230,
+        "label": [
+          "load",
+          "BUS31"
+        ]
+      }
+    },
+    "5c5c207ac1b355925b271477": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "5c7cd07890fde01d9be522b6": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "5cc276e13120ac3e16937128": {
+      "magnitudes": {
+        "alarm": 208,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "angles": {
+        "alarm": 207,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      }
+    },
+    "5ce492664931b3012580f506": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "5d35f9c60ef5dd6b8e64e554": {
+      "magnitudes": {
+        "alarm": 190,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      },
+      "angles": {
+        "alarm": 190,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      }
+    },
+    "5d78b77ddbd692577f6258f0": {
+      "magnitudes": {
+        "alarm": 219,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "angles": {
+        "alarm": 219,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      }
+    },
+    "5da29f90e2d9e24e4a2c01b5": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "5dd81167bbc0500d1f935601": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "5e87fdc915b8398309c857b1": {
+      "magnitudes": {
+        "alarm": 253,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "angles": {
+        "alarm": 243,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      }
+    },
+    "5f9c39824538b2e0d34b72b4": {
+      "magnitudes": {
+        "alarm": 241,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      },
+      "angles": {
+        "alarm": 230,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      }
+    },
+    "61a68977ffd07f545dca6620": {
+      "magnitudes": {
+        "alarm": 209,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "angles": {
+        "alarm": 209,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      }
+    },
+    "61e48124bb73452e118041ad": {
+      "magnitudes": {
+        "alarm": 266,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      },
+      "angles": {
+        "alarm": 264,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      }
+    },
+    "6208e05719a50e6c34761518": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "6270dffc7b7c2baf5cb5c3d6": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "62b824e62e3f2b177cc7e7b8": {
+      "magnitudes": {
+        "alarm": 234,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "angles": {
+        "alarm": 234,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      }
+    },
+    "6374899d6362bb423bcde0ff": {
+      "magnitudes": {
+        "alarm": 246,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "angles": {
+        "alarm": 245,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      }
+    },
+    "64e4edd0202ebfd81dfd660a": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "64f128ff97b3a65daa050b70": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "657f202a919491aab406fddf": {
+      "magnitudes": {
+        "alarm": 210,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "angles": {
+        "alarm": 207,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      }
+    },
+    "65c0b0996393266b70aaca25": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "65ddaec0a003ae976c835779": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "662aeaa4ff9afaa34a580fe7": {
+      "magnitudes": {
+        "alarm": 199,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "angles": {
+        "alarm": 199,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      }
+    },
+    "6a895466884990fcf731687f": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "6aa658befe3385895f8c6261": {
+      "magnitudes": {
+        "alarm": 251,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "angles": {
+        "alarm": 251,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      }
+    },
+    "6b93c7dfb94c6681f266aa73": {
+      "magnitudes": {
+        "alarm": 280,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "angles": {
+        "alarm": 271,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      }
+    },
+    "6b960d6923490e4d8f170956": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "6bd0cace2891bacc1b73ab89": {
+      "magnitudes": {
+        "alarm": 217,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "angles": {
+        "alarm": 215,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      }
+    },
+    "6c273d7d81e776bd477170c7": {
+      "magnitudes": {
+        "alarm": 219,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      },
+      "angles": {
+        "alarm": 208,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      }
+    },
+    "6d32b5c56615c88e21d6f55d": {
+      "magnitudes": {
+        "alarm": 205,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      },
+      "angles": {
+        "alarm": 205,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      }
+    },
+    "6ec6b7354e75d3529fdf6571": {
+      "magnitudes": {
+        "alarm": 266,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "angles": {
+        "alarm": 266,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      }
+    },
+    "6f9b7138dcfa481b6d8b7653": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "6fe5c5909e0d365a92246163": {
+      "magnitudes": {
+        "alarm": 251,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      },
+      "angles": {
+        "alarm": 250,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      }
+    },
+    "716103c0aa9c3f3bf69572ba": {
+      "magnitudes": {
+        "alarm": 229,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "angles": {
+        "alarm": 229,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      }
+    },
+    "71ef17b86d44b44521bae560": {
+      "magnitudes": {
+        "alarm": 267,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      },
+      "angles": {
+        "alarm": 267,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      }
+    },
+    "7365d5c1732d672d687e3319": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "73931c399290151360fab347": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "73dc57a2794c30297b08ae25": {
+      "magnitudes": {
+        "alarm": 198,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      },
+      "angles": {
+        "alarm": 198,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      }
+    },
+    "745c2fb2eddb323443f3b067": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "745f9b1f66f9715090a210c7": {
+      "magnitudes": {
+        "alarm": 187,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "angles": {
+        "alarm": 187,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      }
+    },
+    "748a5ddc5b463f21ce605a87": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "74f48e1e4593e2207b7905fe": {
+      "magnitudes": {
+        "alarm": 196,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      },
+      "angles": {
+        "alarm": 196,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      }
+    },
+    "750d95a765c3359a423e377d": {
+      "magnitudes": {
+        "alarm": 209,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "angles": {
+        "alarm": 209,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "750e01b79543fb16eebdf53d": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "75357d146bc9cd34f00dbe1d": {
+      "magnitudes": {
+        "alarm": 258,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      },
+      "angles": {
+        "alarm": 258,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      }
+    },
+    "75677582353c7182f502a154": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "756a2698410b4953cd8f2b35": {
+      "magnitudes": {
+        "alarm": 270,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      },
+      "angles": {
+        "alarm": 270,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      }
+    },
+    "75a22f9cefa516b9d48d2399": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": 230,
+        "label": [
+          "load",
+          "BUS31"
+        ]
+      }
+    },
+    "77d709f16552d239797c6582": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": 274,
+        "label": [
+          "load",
+          "BUS31"
+        ]
+      }
+    },
+    "781616438013d75c49857493": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "782a67df1976d68665e6b543": {
+      "magnitudes": {
+        "alarm": 233,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "angles": {
+        "alarm": 226,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      }
+    },
+    "792155fd240267234c087376": {
+      "magnitudes": {
+        "alarm": 232,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      },
+      "angles": {
+        "alarm": 231,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      }
+    },
+    "7ab76dccc421c5131bcff6e0": {
+      "magnitudes": {
+        "alarm": 259,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      },
+      "angles": {
+        "alarm": 259,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      }
+    },
+    "7b3934c3d2dd9521f88c0a3d": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "7c026d86ba5b6f2670211ad2": {
+      "magnitudes": {
+        "alarm": 232,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "angles": {
+        "alarm": 232,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      }
+    },
+    "7c4d015105b4e5f55dbc33ae": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "7c618eb3a82c094b9ae932f9": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "7d4d0668311fae453a8f7e88": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "7e1ed786e1ebf259c8875696": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "7e5c0f8adfd3121eaf8d147a": {
+      "magnitudes": {
+        "alarm": 220,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "angles": {
+        "alarm": 220,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      }
+    },
+    "7e685ab7410d1e6ed6b9bb06": {
+      "magnitudes": {
+        "alarm": 292,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "angles": {
+        "alarm": 291,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      }
+    },
+    "7e6f12d9ca4b23861e68aa8b": {
+      "magnitudes": {
+        "alarm": 199,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "angles": {
+        "alarm": 198,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      }
+    },
+    "7f112fbd331f9b0b4fd9d8c8": {
+      "magnitudes": {
+        "alarm": 243,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      },
+      "angles": {
+        "alarm": 243,
+        "label": [
+          "line",
+          "LINE26-27"
+        ]
+      }
+    },
+    "7f354aaf5fd225ab69dded95": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "7f38fd022956812af8ae35d8": {
+      "magnitudes": {
+        "alarm": 230,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      },
+      "angles": {
+        "alarm": 228,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      }
+    },
+    "7f48f213582a8d8fdef1ddc5": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "814653147c1de3113624e2fd": {
+      "magnitudes": {
+        "alarm": 221,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      },
+      "angles": {
+        "alarm": 221,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      }
+    },
+    "8177454f0197a271b3910490": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "818508857d31128fc52280fe": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "81c12794eaf4828817f113a6": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "81df96d43dff7516e509b861": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "826991bf0c2a3c8b3bd8ade1": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "83269e7c79ffadea5c1b9bce": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "83886b390c7b07751b677397": {
+      "magnitudes": {
+        "alarm": 290,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "angles": {
+        "alarm": 287,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      }
+    },
+    "83fe48f9b1d316d0c8ce6c5c": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "8486402f6b0e902fd002ab1a": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "84ece6242f81c0517dcc1ffd": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "84ef2f24cb255959134a8652": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "853a0f1e86c8756ace0a6b6c": {
+      "magnitudes": {
+        "alarm": 280,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "angles": {
+        "alarm": 280,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      }
+    },
+    "85594f6957d637cbdfc15414": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "866d5e3c2af7c1f6b82bc438": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "86cdf9ea04562c6da2cc9bcd": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "87b0ec2905ffb9b99127400e": {
+      "magnitudes": {
+        "alarm": 230,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      },
+      "angles": {
+        "alarm": 230,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      }
+    },
+    "88235ec4a3635e280d73a0d9": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "887ef7353c5f0136dc7cc7fb": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": 283,
+        "label": [
+          "load",
+          "BUS31"
+        ]
+      }
+    },
+    "88a7107b3430335ef190babd": {
+      "magnitudes": {
+        "alarm": 209,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "angles": {
+        "alarm": 209,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      }
+    },
+    "88fab778565d7b8a1fa17d97": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "891982d68fccad5a9b106a6f": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "899a302bb553c0cc0119f7ee": {
+      "magnitudes": {
+        "alarm": 219,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "angles": {
+        "alarm": 219,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      }
+    },
+    "89d81c59d7df9c2618fad282": {
+      "magnitudes": {
+        "alarm": 290,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "angles": {
+        "alarm": 289,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "8a23147a1342aae9968e33f4": {
+      "magnitudes": {
+        "alarm": 206,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "angles": {
+        "alarm": 206,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      }
+    },
+    "8a64f8fc5f40c8d437811525": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "8b3483a6ac92d12586681480": {
+      "magnitudes": {
+        "alarm": 236,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      },
+      "angles": {
+        "alarm": 228,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      }
+    },
+    "8bf528a00b1033e652243eb8": {
+      "magnitudes": {
+        "alarm": 192,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      },
+      "angles": {
+        "alarm": 190,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      }
+    },
+    "8c0ffac693460733391f3316": {
+      "magnitudes": {
+        "alarm": 293,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "angles": {
+        "alarm": 292,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      }
+    },
+    "8c25ff1d539ea0d7fa72823e": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "8cf2990ab62e0e608f16e512": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "8d97f4e0525a5fb38b59018e": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "8e57d3c8a23ca6efbcfab94a": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "8eba9ea9bab96087ccdf4cf1": {
+      "magnitudes": {
+        "alarm": 253,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "angles": {
+        "alarm": 253,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      }
+    },
+    "8f6ecfc905516440f2c3d20b": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "8fdb20cfe1f67b7dabbb7e99": {
+      "magnitudes": {
+        "alarm": 293,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      },
+      "angles": {
+        "alarm": 293,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      }
+    },
+    "9048e77db48c5eba0c0d8085": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "904a688bc1ba1a41cd5efece": {
+      "magnitudes": {
+        "alarm": 190,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      },
+      "angles": {
+        "alarm": 190,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      }
+    },
+    "906be2d8f4c6b09f4e7768f4": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "91260aa9fbfe2c21cc591ebe": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "91b13dd41c467e983daf6de7": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "91b28f255b91f796ea511ccd": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "927824d891e3abf8eb2f7c7e": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "937e9c22792c5a46692fa17b": {
+      "magnitudes": {
+        "alarm": 228,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "angles": {
+        "alarm": 226,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      }
+    },
+    "93bd3250dcfa05d48ce1c447": {
+      "magnitudes": {
+        "alarm": 225,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      },
+      "angles": {
+        "alarm": 225,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      }
+    },
+    "944aa81c5dd5ccce70f3ded3": {
+      "magnitudes": {
+        "alarm": 222,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      },
+      "angles": {
+        "alarm": 218,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      }
+    },
+    "94b261042e73e2d875edf498": {
+      "magnitudes": {
+        "alarm": 277,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "angles": {
+        "alarm": 277,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      }
+    },
+    "9527ac4faf8f032dcedcfefb": {
+      "magnitudes": {
+        "alarm": 273,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "angles": {
+        "alarm": 266,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      }
+    },
+    "954f5fea3be4663aadb3f0a2": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "95bb3b16450752f00425f0b0": {
+      "magnitudes": {
+        "alarm": 221,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "angles": {
+        "alarm": 219,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "966dc3af547e5b923cd22a3a": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "97414b02240084873e0eb11e": {
+      "magnitudes": {
+        "alarm": 248,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "angles": {
+        "alarm": 247,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      }
+    },
+    "9753034704de011d004feab0": {
+      "magnitudes": {
+        "alarm": 239,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "angles": {
+        "alarm": 239,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      }
+    },
+    "982a34c9f16b97e891570b9f": {
+      "magnitudes": {
+        "alarm": 225,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      },
+      "angles": {
+        "alarm": 225,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      }
+    },
+    "9894a1515cca650ad05982e7": {
+      "magnitudes": {
+        "alarm": 233,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "angles": {
+        "alarm": 233,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      }
+    },
+    "997cdbcd555a481554ce411c": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "998bdf9784d96b7de76dc845": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": 245,
+        "label": [
+          "load",
+          "BUS31"
+        ]
+      }
+    },
+    "99c8035bd928b6f6fc65878d": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "99cb69d3167c4e62b81e2936": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "99e701c2328c284acf739b6b": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "9a202935bb19c1eca4e653b9": {
+      "magnitudes": {
+        "alarm": 255,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      },
+      "angles": {
+        "alarm": 251,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      }
+    },
+    "9a4fc83b5b7cfe370a550fb9": {
+      "magnitudes": {
+        "alarm": 217,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "angles": {
+        "alarm": 217,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      }
+    },
+    "9b3587279873f9f00753be46": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "9cc69eb3b516326539e43ee3": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "9cd6029067926e915e956d2d": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": 236,
+        "label": [
+          "load",
+          "BUS31"
+        ]
+      }
+    },
+    "9d6b08d804e63d2346124f66": {
+      "magnitudes": {
+        "alarm": 234,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "angles": {
+        "alarm": 232,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      }
+    },
+    "9d7f1bc7ebea054b234a54d4": {
+      "magnitudes": {
+        "alarm": 193,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      },
+      "angles": {
+        "alarm": 193,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      }
+    },
+    "9d9c0dc7d6332e9c0344651c": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "9ed226e4816e29091890e3af": {
+      "magnitudes": {
+        "alarm": 251,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "angles": {
+        "alarm": 250,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      }
+    },
+    "9f1f895edd254f80a59f72a2": {
+      "magnitudes": {
+        "alarm": 252,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      },
+      "angles": {
+        "alarm": 251,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      }
+    },
+    "a196b2bf6fa1906b33ea52ec": {
+      "magnitudes": {
+        "alarm": 262,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "angles": {
+        "alarm": 260,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "a1f18dad3120968b8d121cd7": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "a2370cbbafb20dbcf516dcfd": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "a26c6ecb3afeef625082a937": {
+      "magnitudes": {
+        "alarm": 273,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "angles": {
+        "alarm": 273,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      }
+    },
+    "a2b4d62cd25f461ebdca3c88": {
+      "magnitudes": {
+        "alarm": 283,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "angles": {
+        "alarm": 274,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      }
+    },
+    "a4573c59cc6d2e417322a31f": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "a617674a5cdd95d94c4152a2": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "a6605ef7a50b1960c5946884": {
+      "magnitudes": {
+        "alarm": 246,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "angles": {
+        "alarm": 245,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      }
+    },
+    "a769fb2bbe43274c3c51e740": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "a7cf0f8c97d2bf01911632b7": {
+      "magnitudes": {
+        "alarm": 260,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      },
+      "angles": {
+        "alarm": 260,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      }
+    },
+    "a8151a4308d5acb1ea420d19": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "a972d49c5e6eb1b230ce248d": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "abefb9ec6bbf2344a5afdf89": {
+      "magnitudes": {
+        "alarm": 250,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "angles": {
+        "alarm": 248,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      }
+    },
+    "ac335b85a3df6c01573bde5d": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "acf5278457e22edc3300a75f": {
+      "magnitudes": {
+        "alarm": 199,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "angles": {
+        "alarm": 198,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      }
+    },
+    "ad0a9ee93c05a44b82e61ca3": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "ad494c5f086a363e4b1322eb": {
+      "magnitudes": {
+        "alarm": 253,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      },
+      "angles": {
+        "alarm": 253,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      }
+    },
+    "ad95759885d6122de54bdf8a": {
+      "magnitudes": {
+        "alarm": 210,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      },
+      "angles": {
+        "alarm": 210,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      }
+    },
+    "ae65efa58431dfaa35726b3e": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "aefcb4aee98ea0ca4549e132": {
+      "magnitudes": {
+        "alarm": 266,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "angles": {
+        "alarm": 264,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "afc368dc3a1f5ec7b110bc9a": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "b074f1f7d0f608bb8f91c9e8": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": 205,
+        "label": [
+          "load",
+          "BUS31"
+        ]
+      }
+    },
+    "b0c3a9ad512490e961332be4": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "b1199645f8b7ce9ebfb39adf": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "b1c69848940349a50af3bad9": {
+      "magnitudes": {
+        "alarm": 188,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      },
+      "angles": {
+        "alarm": 188,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      }
+    },
+    "b2da11bbbf4ef1acd93d0fa3": {
+      "magnitudes": {
+        "alarm": 256,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "angles": {
+        "alarm": 256,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      }
+    },
+    "b2f14c1fa35dd49b0c57d2a9": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "b3b12241e9729319d4d5c400": {
+      "magnitudes": {
+        "alarm": 256,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "angles": {
+        "alarm": 256,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      }
+    },
+    "b3fedc9bd8baa8e3a4656b46": {
+      "magnitudes": {
+        "alarm": 231,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      },
+      "angles": {
+        "alarm": 229,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      }
+    },
+    "b40e1e65e2f6bcc7fa4e075d": {
+      "magnitudes": {
+        "alarm": 226,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "b4739f0ab1a13cf4b2b36f6d": {
+      "magnitudes": {
+        "alarm": 233,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "angles": {
+        "alarm": 233,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "b4d1ccbed5fc192ba0495a27": {
+      "magnitudes": {
+        "alarm": 249,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "angles": {
+        "alarm": 231,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      }
+    },
+    "b5922b1ee1697e3f60867c25": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "b765251ff5a7a6739c0e214e": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "b781df7a3102ee0a9658f2cb": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "b801eb7557225fd338229675": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "b824e826cf17edc796ac736f": {
+      "magnitudes": {
+        "alarm": 270,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "angles": {
+        "alarm": 270,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      }
+    },
+    "b8a2eddf8592a10054460452": {
+      "magnitudes": {
+        "alarm": 222,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      },
+      "angles": {
+        "alarm": 219,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      }
+    },
+    "b91524f0f7f98c08b5fb9051": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "ba3b0650cd3d90e7e43693fa": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "bb452f7e21e4f0e43f497b37": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "bbc6b1ab1844b23903028d5d": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "bbde13f6f47834b59d56c1f5": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "bcbe32e052a808b87c1c6657": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": 240,
+        "label": [
+          "load",
+          "BUS31"
+        ]
+      }
+    },
+    "bd2692ce19e1432e060317a7": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "bd733f4a7fcc7eaa93f60877": {
+      "magnitudes": {
+        "alarm": 212,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      },
+      "angles": {
+        "alarm": 203,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      }
+    },
+    "bd8447e88933b33f2144abb7": {
+      "magnitudes": {
+        "alarm": 252,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "angles": {
+        "alarm": 251,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      }
+    },
+    "be05356434cff1bb5de0e9db": {
+      "magnitudes": {
+        "alarm": 274,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      },
+      "angles": {
+        "alarm": 271,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      }
+    },
+    "bf01b0517ea0e9c34ba26934": {
+      "magnitudes": {
+        "alarm": 262,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      },
+      "angles": {
+        "alarm": 257,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      }
+    },
+    "c0081ab9bb433b1594f06907": {
+      "magnitudes": {
+        "alarm": 226,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "angles": {
+        "alarm": 225,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "c0ec77fe2c855c878bf47e49": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "c12642cdb1b128d6812dabd3": {
+      "magnitudes": {
+        "alarm": 247,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      },
+      "angles": {
+        "alarm": 247,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      }
+    },
+    "c272eb98992eb0b952c7622b": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "c2b0fd8ad71f4a003f9800ca": {
+      "magnitudes": {
+        "alarm": 216,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "angles": {
+        "alarm": 216,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      }
+    },
+    "c31764288cb043899b456ba4": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "c31f4a23a422c35d0e849e6b": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "c3546da166f49218509190c9": {
+      "magnitudes": {
+        "alarm": 230,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "angles": {
+        "alarm": 230,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      }
+    },
+    "c4a3d2511e23866448fbca41": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "c4d22d08fdee1471f402c3b9": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "c4eae27f8765afa588bcbde1": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "c4fe6911607af0492482da85": {
+      "magnitudes": {
+        "alarm": 255,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      },
+      "angles": {
+        "alarm": 255,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      }
+    },
+    "c5f260c79753e0b7b0e021a4": {
+      "magnitudes": {
+        "alarm": 213,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      },
+      "angles": {
+        "alarm": 213,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      }
+    },
+    "c6b14ec8b7991547c4ba0d51": {
+      "magnitudes": {
+        "alarm": 277,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "angles": {
+        "alarm": 277,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      }
+    },
+    "c78a2f5b2c9116d8b2b205c4": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "c8511346a3cfa965d3855380": {
+      "magnitudes": {
+        "alarm": 216,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "angles": {
+        "alarm": 216,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      }
+    },
+    "c8fff1399edc377eed887c01": {
+      "magnitudes": {
+        "alarm": 175,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "angles": {
+        "alarm": 175,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      }
+    },
+    "c92d2c54252111f452ff0276": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "c995b87dfa1d7e4b1c26b9f8": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "c9b3b1cb6352a606c37c1931": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "c9ea736a6523346145a4d77f": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "ca15204ef58e2151565bfd1c": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "ca73fe3e42029b3becdfba90": {
+      "magnitudes": {
+        "alarm": 251,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "angles": {
+        "alarm": 251,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      }
+    },
+    "cacdca59380ceb6dc80d0495": {
+      "magnitudes": {
+        "alarm": 212,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "angles": {
+        "alarm": 212,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      }
+    },
+    "cb37a1fd78d0f6c091949cef": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": 234,
+        "label": [
+          "load",
+          "BUS31"
+        ]
+      }
+    },
+    "cca5b85423ab418c17ecbd50": {
+      "magnitudes": {
+        "alarm": 241,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "angles": {
+        "alarm": 240,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      }
+    },
+    "cccaffb3d5ea4ec065188924": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "ce30498dc82c13a8402d25bd": {
+      "magnitudes": {
+        "alarm": 207,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      },
+      "angles": {
+        "alarm": 207,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      }
+    },
+    "cee7258c659fe1693d75e3a2": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "ceeece559007a5c89c558db8": {
+      "magnitudes": {
+        "alarm": 252,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "angles": {
+        "alarm": 251,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "cf40d333f4e6029fc23d019b": {
+      "magnitudes": {
+        "alarm": 207,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      },
+      "angles": {
+        "alarm": 207,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      }
+    },
+    "cfc24420522b5faf3bf98e47": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "cfebcec885fe4da5f135ae38": {
+      "magnitudes": {
+        "alarm": 193,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "angles": {
+        "alarm": 193,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      }
+    },
+    "d0fb97b9690551dd4c325f4e": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "d2c8cbd7db92eae2f851fc14": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "d3c77444c39492cccb051fc2": {
+      "magnitudes": {
+        "alarm": 205,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      },
+      "angles": {
+        "alarm": 205,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      }
+    },
+    "d47ead77dce1fb09503d1087": {
+      "magnitudes": {
+        "alarm": 280,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      },
+      "angles": {
+        "alarm": 280,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      }
+    },
+    "d4d60143f062fa37aad546b5": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "d6126f1b4fe523895c4344a0": {
+      "magnitudes": {
+        "alarm": 237,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      },
+      "angles": {
+        "alarm": 237,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      }
+    },
+    "d731b2534d32a6944bd23ea7": {
+      "magnitudes": {
+        "alarm": 248,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "angles": {
+        "alarm": 246,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      }
+    },
+    "d78abdfcf8f2c04753b7c1a5": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "d7be61842a709dca70c12b96": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "d80b49aef88f2a2713d01d47": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "d93415f037816e9e4548197b": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "d94535606ea16662c9ad517d": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "d9e6b375728f504e9b752982": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "da02dd88d3eebe1f69f8e93e": {
+      "magnitudes": {
+        "alarm": 211,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "angles": {
+        "alarm": 211,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      }
+    },
+    "da0f085578dd2a43abbd05ab": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "da213b47c3ca53670397eb85": {
+      "magnitudes": {
+        "alarm": 221,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      },
+      "angles": {
+        "alarm": 221,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      }
+    },
+    "daa69e8ee80f7baeba3a0065": {
+      "magnitudes": {
+        "alarm": 255,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      },
+      "angles": {
+        "alarm": 254,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      }
+    },
+    "db061a3ed8694101caea6194": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "db50b9d5f5a5ecb7f3171699": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "db6deab7faf55f6179296b1c": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "dc2632b9890d5d255c62ffac": {
+      "magnitudes": {
+        "alarm": 190,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "angles": {
+        "alarm": 190,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      }
+    },
+    "ddd8b6433909612a50b5db13": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "de113873e8803758d2c41c6e": {
+      "magnitudes": {
+        "alarm": 253,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "angles": {
+        "alarm": 251,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      }
+    },
+    "de7c78fa6e8ae5dc139fe0a0": {
+      "magnitudes": {
+        "alarm": 279,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      },
+      "angles": {
+        "alarm": 266,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      }
+    },
+    "df8d1bb0125abad96f897d06": {
+      "magnitudes": {
+        "alarm": 257,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      },
+      "angles": {
+        "alarm": 248,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      }
+    },
+    "e04f59bafc6d4dfe7417c63d": {
+      "magnitudes": {
+        "alarm": 203,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      },
+      "angles": {
+        "alarm": 202,
+        "label": [
+          "load",
+          "BUS20"
+        ]
+      }
+    },
+    "e062e58e5e05b92c6c82ca02": {
+      "magnitudes": {
+        "alarm": 262,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      },
+      "angles": {
+        "alarm": 262,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      }
+    },
+    "e11e8a7ee86233b402bbf3d6": {
+      "magnitudes": {
+        "alarm": 265,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "angles": {
+        "alarm": 263,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "e1896bde4d72c1cd75302406": {
+      "magnitudes": {
+        "alarm": 291,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      },
+      "angles": {
+        "alarm": 291,
+        "label": [
+          "line",
+          "LINE4-14"
+        ]
+      }
+    },
+    "e1d1e008e5f3d1140b6bd2f2": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "e1e0035be7aa92c44ee46ae7": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "e257df9acee39414a5c604e6": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "e29a5843f83be7baf8134ccf": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "e2dd590d6c939859cd361745": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "e319f2b460f0181a5136b594": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "e4e1d26cdcb031f93ac08dec": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "e50636a9101f7d9ff0233213": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "e5fe1ec6f0136eb579ed4742": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "e60c6ae84c0720c4727843cb": {
+      "magnitudes": {
+        "alarm": 206,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      },
+      "angles": {
+        "alarm": 206,
+        "label": [
+          "load",
+          "BUS4"
+        ]
+      }
+    },
+    "e6298912ebfad9e843646b8e": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "e629b9a58a993abf3de6b14c": {
+      "magnitudes": {
+        "alarm": 198,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "angles": {
+        "alarm": 197,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "e78fa39eb92b3baa3ab107a4": {
+      "magnitudes": {
+        "alarm": 186,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "angles": {
+        "alarm": 186,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      }
+    },
+    "e860eb18d1eaf80d71848e3c": {
+      "magnitudes": {
+        "alarm": 229,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      },
+      "angles": {
+        "alarm": 229,
+        "label": [
+          "line",
+          "LINE17-18"
+        ]
+      }
+    },
+    "e8d59f00227f59fff8935d90": {
+      "magnitudes": {
+        "alarm": 181,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "angles": {
+        "alarm": 181,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "e8f3fa1be25c87cd1b2133b1": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "eb6a3106c94e5c00b626cfdd": {
+      "magnitudes": {
+        "alarm": 181,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      },
+      "angles": {
+        "alarm": 181,
+        "label": [
+          "line",
+          "LINE3-4"
+        ]
+      }
+    },
+    "ebbb7ac3cfb33b89075a88ec": {
+      "magnitudes": {
+        "alarm": 242,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "angles": {
+        "alarm": 234,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      }
+    },
+    "ecc60000dca70d5c2020c5ec": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "ed49572336f291a9928778b4": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "ed666acdfbf5f31bf68f33b8": {
+      "magnitudes": {
+        "alarm": 231,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      },
+      "angles": {
+        "alarm": 231,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      }
+    },
+    "ede95b90c5bc34de6bfc3bc0": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "ee1e17f96ccee18de8f81fd6": {
+      "magnitudes": {
+        "alarm": 208,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      },
+      "angles": {
+        "alarm": 203,
+        "label": [
+          "line",
+          "LINE14-15"
+        ]
+      }
+    },
+    "ee3fecf1ae7b3827ba629835": {
+      "magnitudes": {
+        "alarm": 287,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      },
+      "angles": {
+        "alarm": 276,
+        "label": [
+          "load",
+          "BUS26"
+        ]
+      }
+    },
+    "ee5170da621a2fb57c70d638": {
+      "magnitudes": {
+        "alarm": 182,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      },
+      "angles": {
+        "alarm": 182,
+        "label": [
+          "line",
+          "LINE26-29"
+        ]
+      }
+    },
+    "ee905aabbd4fbfa86fe8096a": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "eefb1b25fe7bd0564b7183e0": {
+      "magnitudes": {
+        "alarm": 254,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      },
+      "angles": {
+        "alarm": 251,
+        "label": [
+          "load",
+          "BUS7"
+        ]
+      }
+    },
+    "efaa40c5c97cfacf8403a3ce": {
+      "magnitudes": {
+        "alarm": 219,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "angles": {
+        "alarm": 218,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "efb3d68d18576f0350f1c22d": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "efdff69946dd487411f7d9fb": {
+      "magnitudes": {
+        "alarm": 231,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      },
+      "angles": {
+        "alarm": 229,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      }
+    },
+    "f36ddbd57678afeaf2225771": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "f3ebb41d6093c5704e46a032": {
+      "magnitudes": {
+        "alarm": 209,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      },
+      "angles": {
+        "alarm": 208,
+        "label": [
+          "line",
+          "LINE9-39"
+        ]
+      }
+    },
+    "f436316ab13b03c17de698cb": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "f4a3b7a82a07f01ce94b6f5e": {
+      "magnitudes": {
+        "alarm": 229,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      },
+      "angles": {
+        "alarm": 229,
+        "label": [
+          "line",
+          "LINE23-24"
+        ]
+      }
+    },
+    "f4cc9d51b5f991e580667912": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "f51a72dcd9891c2ec5843325": {
+      "magnitudes": {
+        "alarm": 238,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      },
+      "angles": {
+        "alarm": 238,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      }
+    },
+    "f53ea07a1a9f136ba76ed0d4": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "f5d3240c6928cb6b9e9a0bb3": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "f5d39ed91c88b8928bc50fbc": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "f6be951201245d10f2f993f6": {
+      "magnitudes": {
+        "alarm": 217,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      },
+      "angles": {
+        "alarm": 216,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      }
+    },
+    "f7879b1d7d307ecee8c728ba": {
+      "magnitudes": {
+        "alarm": 196,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "angles": {
+        "alarm": 196,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      }
+    },
+    "f7c1abbc1c6976851caac401": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "f8949e537fe99889bb9fdd24": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "f900e46d59d84ac1cdeaf086": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "f92c4dcba93fe9e270347d25": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "f9348e001700dd2a109af52b": {
+      "magnitudes": {
+        "alarm": 243,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      },
+      "angles": {
+        "alarm": 243,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      }
+    },
+    "f98e757695db49a6f54cfc2e": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "faab5fb539b6a13e6d0a9d90": {
+      "magnitudes": {
+        "alarm": 217,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "angles": {
+        "alarm": 217,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      }
+    },
+    "fb2c4da5251728ae0122c348": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "fb588c039a41cc024e019ff2": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "fbe03ca07e687b7701719f21": {
+      "magnitudes": {
+        "alarm": 250,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      },
+      "angles": {
+        "alarm": 250,
+        "label": [
+          "line",
+          "LINE16-17"
+        ]
+      }
+    },
+    "fbf32b4fea65f745b8698f2f": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "fc571afea2742c9fe4bf1a04": {
+      "magnitudes": {
+        "alarm": 190,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      },
+      "angles": {
+        "alarm": 188,
+        "label": [
+          "load",
+          "BUS16"
+        ]
+      }
+    },
+    "fcb5765baed8c86d05e4f724": {
+      "magnitudes": {
+        "alarm": 239,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      },
+      "angles": {
+        "alarm": 239,
+        "label": [
+          "load",
+          "BUS15"
+        ]
+      }
+    },
+    "fd3856217d727975c854c522": {
+      "magnitudes": {
+        "alarm": 179,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      },
+      "angles": {
+        "alarm": 179,
+        "label": [
+          "load",
+          "BUS3"
+        ]
+      }
+    },
+    "fd5b3944fa0835be7114e6f9": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "ff82b9d5a35139c7a9104fb9": {
+      "magnitudes": {
+        "alarm": null,
+        "label": null
+      },
+      "angles": {
+        "alarm": null,
+        "label": null
+      }
+    },
+    "ffe5cc451408327e9ac41990": {
+      "magnitudes": {
+        "alarm": 276,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      },
+      "angles": {
+        "alarm": 275,
+        "label": [
+          "load",
+          "BUS24"
+        ]
+      }
+    }
+  },
+  "quiet": {
+    "C03_312ac261468a": {
+      "peak": -2.41057871884483,
+      "reports": 17582,
+      "alarms": 0,
+      "magnitudes_alarms": 0
+    },
+    "C03_4289bc65cccb": {
+      "peak": -2.984280153752979,
+      "reports": 17582,
+      "alarms": 0,
+      "magnitudes_alarms": 0
+    },
+    "C03_55e6529bb5ad": {
+      "peak": -4.776694416768544,
+      "reports": 17582,
+      "alarms": 0,
+      "magnitudes_alarms": 0
+    },
+    "C03_3bf8245f801e": {
+      "peak": -5.5996115627383976,
+      "reports": 17582,
+      "alarms": 0,
+      "magnitudes_alarms": 0
+    },
+    "C03_0233eef139de": {
+      "peak": -4.8201862553755905,
+      "reports": 17582,
+      "alarms": 0,
+      "magnitudes_alarms": 0
+    },
+    "C03_540058640aad": {
+      "peak": -5.413592069541377,
+      "reports": 17582,
+      "alarms": 0,
+      "magnitudes_alarms": 0
+    },
+    "C03_aea0071f4228": {
+      "peak": -6.025429612313766,
+      "reports": 17582,
+      "alarms": 0,
+      "magnitudes_alarms": 0
+    },
+    "C03_097f3bf2506b": {
+      "peak": -4.660866900278056,
+      "reports": 17582,
+      "alarms": 0,
+      "magnitudes_alarms": 0
+    },
+    "C03_3e887f78c2da": {
+      "peak": -5.064662273478097,
+      "reports": 17582,
+      "alarms": 0,
+      "magnitudes_alarms": 0
+    },
+    "C03_b5ebc2698707": {
+      "peak": -4.0040075902441785,
+      "reports": 17582,
+      "alarms": 0,
+      "magnitudes_alarms": 0
+    },
+    "C03_3dffa0fe0e80": {
+      "peak": -5.198775786851419,
+      "reports": 17582,
+      "alarms": 0,
+      "magnitudes_alarms": 0
+    },
+    "C03_89d4365dbf5e": {
+      "peak": -4.94345947706227,
+      "reports": 17582,
+      "alarms": 0,
+      "magnitudes_alarms": 0
+    },
+    "C03_a68983bd14c2": {
+      "peak": -4.907571350940487,
+      "reports": 17582,
+      "alarms": 0,
+      "magnitudes_alarms": 0
+    },
+    "C03_8a79ecf55143": {
+      "peak": -4.203457005358095,
+      "reports": 17582,
+      "alarms": 0,
+      "magnitudes_alarms": 0
+    },
+    "C03_6beff9f2285b": {
+      "peak": -5.175267502743624,
+      "reports": 17582,
+      "alarms": 0,
+      "magnitudes_alarms": 0
+    },
+    "C03_9da26c422895": {
+      "peak": -4.081179565339238,
+      "reports": 17582,
+      "alarms": 0,
+      "magnitudes_alarms": 0
+    },
+    "C03_1e1bebfee87e": {
+      "peak": -3.5184667058718935,
+      "reports": 17582,
+      "alarms": 0,
+      "magnitudes_alarms": 0
+    },
+    "C03_38776fb87d6d": {
+      "peak": -4.2428358622858395,
+      "reports": 17582,
+      "alarms": 0,
+      "magnitudes_alarms": 0
+    },
+    "C03_7cfc6107b5cb": {
+      "peak": -4.7654276357393,
+      "reports": 17582,
+      "alarms": 0,
+      "magnitudes_alarms": 0
+    },
+    "C03_578ec010a343": {
+      "peak": -4.024120345234466,
+      "reports": 17582,
+      "alarms": 0,
+      "magnitudes_alarms": 0
+    },
+    "C03_44f75f345ef7": {
+      "peak": -4.149149857418197,
+      "reports": 17582,
+      "alarms": 0,
+      "magnitudes_alarms": 0
+    },
+    "C03_d6916b53604a": {
+      "peak": -3.945332589101315,
+      "reports": 17582,
+      "alarms": 0,
+      "magnitudes_alarms": 0
+    },
+    "C03_7c105b08b5c6": {
+      "peak": -4.743103448297559,
+      "reports": 17582,
+      "alarms": 0,
+      "magnitudes_alarms": 0
+    },
+    "C03_51820f4e5615": {
+      "peak": -5.821634897781358,
+      "reports": 17582,
+      "alarms": 0,
+      "magnitudes_alarms": 0
+    },
+    "C03_ae79c10c5f52": {
+      "peak": -4.077327071078101,
+      "reports": 17582,
+      "alarms": 0,
+      "magnitudes_alarms": 0
+    },
+    "C03_f20ffb0cba0b": {
+      "peak": -4.103960869254015,
+      "reports": 17582,
+      "alarms": 0,
+      "magnitudes_alarms": 0
+    },
+    "C03_3444129ef563": {
+      "peak": -4.7528815769655655,
+      "reports": 17582,
+      "alarms": 0,
+      "magnitudes_alarms": 0
+    },
+    "C03_7206aed0cf72": {
+      "peak": -3.381291861937765,
+      "reports": 17582,
+      "alarms": 0,
+      "magnitudes_alarms": 0
+    },
+    "C03_474e867050b6": {
+      "peak": -1.5163010672092871,
+      "reports": 17582,
+      "alarms": 0,
+      "magnitudes_alarms": 0
+    },
+    "C03_357632cbfac2": {
+      "peak": -4.805509844784416,
+      "reports": 17582,
+      "alarms": 0,
+      "magnitudes_alarms": 0
+    },
+    "C03_bc8ec9e8440e": {
+      "peak": -3.3759168268299398,
+      "reports": 17582,
+      "alarms": 0,
+      "magnitudes_alarms": 0
+    },
+    "C03_a09cafd91fd7": {
+      "peak": -5.8793016815923975,
+      "reports": 17582,
+      "alarms": 0,
+      "magnitudes_alarms": 0
+    },
+    "C03_fd176686b2ca": {
+      "peak": -3.6107056223186875,
+      "reports": 17582,
+      "alarms": 0,
+      "magnitudes_alarms": 0
+    },
+    "C03_36b909647d2a": {
+      "peak": -1.5163886665688908,
+      "reports": 17582,
+      "alarms": 0,
+      "magnitudes_alarms": 0
+    },
+    "C03_dfead63b401c": {
+      "peak": -4.51888050420403,
+      "reports": 17582,
+      "alarms": 0,
+      "magnitudes_alarms": 0
+    },
+    "C03_76d2798c0182": {
+      "peak": -3.434048111293817,
+      "reports": 17582,
+      "alarms": 0,
+      "magnitudes_alarms": 0
+    }
+  }
+}
