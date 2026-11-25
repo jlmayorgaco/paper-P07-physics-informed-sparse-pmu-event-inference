@@ -1,0 +1,22 @@
+{
+  "candidate": "ensemble",
+  "baseline": "history",
+  "gains": 5,
+  "losses": 0,
+  "paired_joint_delta_ci": [
+    0.00531844534504109,
+    0.04945054945054945
+  ],
+  "perfect_records": 97,
+  "false_alarms_previous": {
+    "load": 7,
+    "generation": 5
+  },
+  "exact_per_family": {
+    "generation": 59,
+    "load": 64,
+    "quiet": 52,
+    "weak": 48
+  },
+  "observations_sha256": "6194405a4e77ecd1a8410757468ca78f8cd67b45ca5667c897bf15adf77fe052"
+}
