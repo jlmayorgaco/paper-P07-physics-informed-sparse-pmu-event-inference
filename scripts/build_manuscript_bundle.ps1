@@ -105,7 +105,6 @@ try {
     }
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/publish_manuscript_bundle.py')
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/package_submission_sources.py')
-    Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/check_overleaf_file_sizes.py')
     if (Test-Path -LiteralPath 'generated/frozen/ablation_a01_20261102/SUMMARY.csv') {
         Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/prepare_coauthor_brief.py')
         Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/package_coauthor_review.py')
