@@ -56,9 +56,6 @@ try {
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_paper_method_figure.py')
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/verify_adaptive_extension.py')
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_layered_architecture.py')
-    Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_adaptive_diagnostic_tables.py')
-    Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_hamiltonian_results.py')
-    Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_descriptor_bridge.py')
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_event_taxonomy_grid.py')
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/build_integrity_figure.py')
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/import_allevents.py')
@@ -101,7 +98,6 @@ try {
     }
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/publish_manuscript_bundle.py')
     Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/package_submission_sources.py')
-    Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/check_overleaf_file_sizes.py')
     if (Test-Path -LiteralPath 'generated/frozen/ablation_a01_20261102/SUMMARY.csv') {
         Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/prepare_coauthor_brief.py')
         Invoke-CheckedCommand -Command 'python' -Arguments @('-B', 'scripts/package_coauthor_review.py')

@@ -56,8 +56,6 @@ operators. A line switch changes both the voltage response and the terminal
 operator in $H_q$. The implementation discretizes the admitted
 switch modes and adds causal phase-history operators for frequency and
 ROCOF. Inertia, controls and load law remain those of the fixed plant.
-The supplement checks the native derivatives, mass normalization and
-open-loop prediction errors against six nonlinear plant trajectories.
 
 Exponential discretization integrates $c_q$ over each mode interval;
 composition handles a switch within a report. After instrumental
@@ -84,10 +82,6 @@ Uncertainty'' gives the affine construction and its code correspondence.
 The network enters through these electrical operators, not a learned graph
 embedding. Updating conditional states and history weights does not adapt
 the physical parameters or measurement-noise model online.
-The supplement verifies a rotor-energy balance and its coupling through
-electrical graph ports. An invertible energy-coordinate representation
-preserves the physical predictions; energy reconstructed from the same
-PMU history is not scored as independent evidence.
 
 \subsection{Estimate Context From the Startup Prefix}
 
