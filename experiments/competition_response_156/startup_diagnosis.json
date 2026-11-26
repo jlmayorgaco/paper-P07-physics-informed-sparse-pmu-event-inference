@@ -1,0 +1,38 @@
+{
+  "prior_21_startup_factors": {
+    "2": {
+      "n": 7,
+      "min": 2628.258258796658,
+      "median": 2697.88628361677,
+      "max": 2885.2352999282853
+    },
+    "3": {
+      "n": 7,
+      "min": 2483.265132347922,
+      "median": 2784.7710156287885,
+      "max": 2861.5137821118424
+    },
+    "4": {
+      "n": 7,
+      "min": 2625.8420436156553,
+      "median": 2706.931368417804,
+      "max": 3262.6915850320547
+    }
+  },
+  "scale_bounds": [
+    0.1,
+    10.0
+  ],
+  "filter_gate_sha256": "09b6351c69c4c8667781b431e58d872f0a824c289818073241512854dae90840",
+  "development_seed": 51891217,
+  "development_repetitions_per_class": 12,
+  "model_fit_families": [
+    1,
+    2,
+    3,
+    4,
+    8
+  ],
+  "frozen_code_commit": "903a3b0",
+  "native_zip_sha256": "e0bfc17e4c5ee9b595fa51fd94d736145c2f48755696c8d2eadcff00cb23a243"
+}
