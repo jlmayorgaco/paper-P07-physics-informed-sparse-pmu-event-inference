@@ -1,0 +1,21 @@
+{
+  "hits": {
+    "0": {
+      "impedance": 48,
+      "ac_complex": 288,
+      "ac_real": 288
+    },
+    "0.0005": {
+      "impedance": 43,
+      "ac_complex": 238,
+      "ac_real": 252
+    }
+  },
+  "cases_per_condition": 288,
+  "max_equilibrium_mismatch": 4.075861241396861e-11,
+  "inputs": {
+    "metadata/IEEE_39_Bus_Power_System.raw": "53e4cd33ffca280775fa7274a9ffa880e0a65d3f2234e65e1788b0df6de07087",
+    "topology/ieee39/ybus_full_complex.csv": "3ec5a5f72cb53c71f12044c072d73b2b3df4ef739b7ebd7b533541d617785ca0",
+    "topology/ieee39/branches_physical.csv": "1c754c666fa543a8d506dadf82d57f67835e7bd717e97b32b623b069607c162c"
+  }
+}
