@@ -1,0 +1,41 @@
+[
+  {
+    "group": "dev",
+    "family": "generation",
+    "n": 36,
+    "voltage": 30,
+    "joint": 33,
+    "gained": 3,
+    "lost": 0,
+    "delta_interval": [
+      0.0,
+      0.19444444444444442
+    ]
+  },
+  {
+    "group": "dev",
+    "family": "load",
+    "n": 72,
+    "voltage": 72,
+    "joint": 72,
+    "gained": 0,
+    "lost": 0,
+    "delta_interval": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "group": "dev",
+    "family": "weak",
+    "n": 156,
+    "voltage": 24,
+    "joint": 146,
+    "gained": 122,
+    "lost": 0,
+    "delta_interval": [
+      0.6923076923076923,
+      0.8717948717948717
+    ]
+  }
+]
