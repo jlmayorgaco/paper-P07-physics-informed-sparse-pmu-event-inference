@@ -35,7 +35,7 @@ METHODS = [
 
 plt.rcParams.update({
     "font.family": "STIXGeneral",
-    "font.size": 7.2,
+    "font.size": 6.3,
     "pdf.fonttype": 42,
     "ps.fonttype": 42,
 })
@@ -84,18 +84,18 @@ def draw(report):
             ax.hlines(y,0,value,color=color,lw=1.6,zorder=2)
             ax.plot(value,y,marker=markers[i],ms=4.5,color=color,zorder=3,clip_on=False)
         axes[0].text(100,y+.23,f"{coverage:.1f}%   {arm['timely_joint']}/{arm['events']}",
-                     ha='right',fontsize=8,color=C['ink'],
+                     ha='right',fontsize=7.5,color=C['ink'],
                      bbox=dict(facecolor='white',edgecolor='none',pad=.7))
         axes[1].text(100,y+.23,f"{extras} alarms   {arm['event_extras_per_h']:.1f}/h",
-                     ha='right',fontsize=8,color=C['ink'],
+                     ha='right',fontsize=7.5,color=C['ink'],
                      bbox=dict(facecolor='white',edgecolor='none',pad=.7))
     axes[0].set_yticks([2,1,0],[m[1] for m in METHODS])
     axes[1].set_yticks([])
     for ax in axes[:2]:
         ax.set_ylim(-.45,2.65); ax.set_xlim(-2,102); ax.set_xticks([0,25,50,75,100])
     bank=report['arms']['PHYSICAL_HISTORY']
-    axes[0].set_xlabel('Correct family and source before restoration (%)',fontsize=8,labelpad=5)
-    axes[1].set_xlabel(f"Unmatched alarms over {bank['event_monitored_s']/3600:.2f} event-hours",fontsize=8,labelpad=5)
+    axes[0].set_xlabel('Correct family and source before OFF (%)',fontsize=7.5,labelpad=5)
+    axes[1].set_xlabel(f"Unmatched alarms over {bank['event_monitored_s']/3600:.2f} event-hours",fontsize=7.5,labelpad=5)
     for i,(key,_,color) in enumerate(METHODS[1:]):
         y=1-i; arm=report['arms'][key]
         pair=report['paired_intervals']['PHYSICAL_HISTORY-minus-'+key]
@@ -109,7 +109,7 @@ def draw(report):
             ax.errorbar(v,y,xerr=[[v-lo],[hi-v]],fmt=markers[i+1],color=color,
                         ms=4.5,capsize=3,elinewidth=1.3,zorder=3)
             ax.text(.99,y+.25,f'{v:+.1f}  [{lo:.2f}, {hi:.2f}]',
-                    transform=ax.get_yaxis_transform(),ha='right',fontsize=8,color=C['ink'],
+                    transform=ax.get_yaxis_transform(),ha='right',fontsize=7.5,color=C['ink'],
                      bbox=dict(facecolor='white',edgecolor='none',pad=.7))
     axes[2].set_yticks([1,0],['Bank minus GLR','Bank minus ExtraTrees'])
     axes[3].set_yticks([])
@@ -118,18 +118,18 @@ def draw(report):
         ax.axvline(0,color=C['muted'],lw=.7,ls=(0,(3,3)),zorder=2)
     axes[2].set_xlim(-5,102);axes[2].set_xticks([0,25,50,75,100])
     axes[3].set_xlim(-200,50);axes[3].set_xticks([-200,-150,-100,-50,0,50])
-    axes[2].set_xlabel('Percentage points; positive favors the bank',fontsize=8,labelpad=5)
-    axes[3].set_xlabel('Extras/h; negative favors the bank',fontsize=8,labelpad=5)
+    axes[2].set_xlabel('Percentage points; positive favors the bank',fontsize=7.5,labelpad=5)
+    axes[3].set_xlabel('Extras/h; negative favors the bank',fontsize=7.5,labelpad=5)
     titles=['(a) Timely attribution','(b) Extra alarms',
             '(c) Paired coverage difference','(d) Paired extra-alarm difference']
     for ax,title in zip(axes,titles):
         ax.set_title(title,loc='left',fontsize=9.2,fontweight='bold',pad=12,color=C['ink'])
     fig.text(.02,.055,
              f"Normal records: 0 alarms in {bank['normal_monitored_s']/3600:.2f} h per method; one-sided 95% Poisson upper bound {bank['normal_Poisson_upper95_per_h']:.2f}/h.",
-             fontsize=8,color=C['muted'])
+             fontsize=7.5,color=C['muted'])
     fig.text(.02,.012,
-             'Paired 95% intervals from 10,000 resamples of the 18 event trajectories.',
-             fontsize=8,color=C['muted'])
+             'Paired 95% intervals: 10,000 resamples of 18 event parents. Each method meets the calibration alarm budget.',
+             fontsize=7.5,color=C['muted'])
     return fig
 
 

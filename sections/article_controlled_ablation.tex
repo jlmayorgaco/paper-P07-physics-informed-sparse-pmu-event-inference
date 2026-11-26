@@ -1,21 +1,33 @@
-\subsection{State Continuity at Fixed Thresholds}
+\subsubsection{Component Outcomes}
 \label{sec:controlled-ablation}
-Threshold selection gave the reset arm a different operating point in the
-two-plant comparison. A retrospective comparison on 18 reference-plant
-trajectories instead held thresholds, observations and all five network
-hypotheses fixed. At each internally inferred closure we either carried
-the augmented mean or zeroed its 114 physical deviations. Carrying the
-state yielded 108/108 timely attributions and one extra alarm. Resetting
-it yielded 75/108 and 166 extras. Replacing the marginal severity score
-by a bounded profile score gave the same counts in each arm. All four
-arms had zero normal alarms over 1,764 monitored seconds per arm.
+\input{tables/generated/ablation_a01}
+\begin{figure*}[t]\centering
+\includegraphics[width=.92\textwidth]{figures/generated/ablation_a01.pdf}
+\caption{Severity-scoring and state-carry study on identical observations and five-model banks. The 108 interventions belong to 18 continuous trajectories. Thresholds are fixed, so the alarm rate may differ between arms.}\label{fig:a01}\end{figure*}
+Table~\ref{tab:a01} and Fig.~\ref{fig:a01} report coverage and alarm cost
+for the four arms. With the state carried, marginal and bounded-profile
+severity scores tie on every reported endpoint. Resetting the 114
+estimated physical-state deviations at inferred closure reduces timely
+attribution from 108/108 to 75/108 and raises the unmatched alarms from 1
+to 166 under both scores. The reset leaves instrumental state, covariance
+regime, prior weights, thresholds and publication rules intact, and the
+simulated plant never resets.
 
-In a noise-free reconstruction of each intervention, we subtracted the
-best new-source residual energy from that of the reset no-event predictor,
-using the recovery-regime covariance and fitting rival load severity.
-All 108 energy gains exceeded $\log(99/\pi_c)$, the idealized reference
-for 99-to-1 odds with one-report source birth probability $\pi_c$ used
-as prior odds. In the actual reset replay, an extra alarm in the
-following gap or a lost timely attribution of the next event occurred
-after \RevResetHarm{} interventions. A reset can leave a residual
-that resembles a new source even when the monitor issues no alarm.
+\begin{figure}[t]\centering
+\includegraphics[width=\columnwidth]{figures/generated/theory_reset_cost.pdf}
+\caption{Retrospective profiled energy gain after a state reset, \eqref{eq:reset-bias}, for the 108 interventions of the controlled study. Filled: an extra alarm in the following gap or a lost timely attribution of the next intervention; open: neither. The dashed line is the idealized score reference, not the publication threshold. Under matched noise-free continuation, carrying the state gives no positive gain over the null.}
+\label{fig:theory-reset}\end{figure}
+
+Fig.~\ref{fig:theory-reset} compares this outcome with the retrospective reset diagnostic. The
+profiled energy gain exceeds $\lambda^\star$ after every intervention, by at
+least two and up to seven orders of magnitude, and the reset arm is harmed
+after \RevResetHarm{} of the \RevResetEvents{} interventions: an extra alarm
+in the following gap or a lost timely attribution of the next one. Harm
+occurs after \RevResetHarmLine{} line events and
+\RevResetHarmLoad{} load events. The bus-31 events carry the smallest
+profiled gain and are harmed after three of seven. The diagnostic shows
+that reset leaves a residual that event candidates can explain. Its
+magnitude alone does not determine the observed outcome: episode handling
+and publication rules also matter. These are within-simulator contrasts at the
+original thresholds; the two scores are compared at equal thresholds, not
+at equal alarm rates.

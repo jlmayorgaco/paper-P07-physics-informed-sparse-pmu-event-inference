@@ -6,7 +6,6 @@ import hashlib
 import importlib.util
 import io
 import json
-import shutil
 import tempfile
 import unittest
 
@@ -25,14 +24,7 @@ class ProtectedFigures(unittest.TestCase):
             r'\begin{figure}\includegraphics{'+asset+r'}\label{'+label+r'}\end{figure}'
             for label,asset in guard.REQUIRED.items())
         put('sections/problem.tex',self.source)
-        # Use the approved grid and its matching audit in the temporary repository.
-        inputs = [*guard.REQUIRED.values(), 'generated/frozen/legacy_raw_event_figure_values.csv']
-        for name in inputs:
-            destination = self.root / name
-            destination.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copyfile(guard.ROOT / name, destination)
-        grid_data = Path('generated/event_taxonomy_grid_20261113')
-        shutil.copytree(guard.ROOT / grid_data, self.root / grid_data)
+        for asset in guard.REQUIRED.values():put(asset,'fixture image')
         put('figures/ieee39_single_line.tex','editable fixture')
         put('figures/frozen/original.tex','frozen fixture')
         frozen=self.root/'figures/frozen/original.tex'

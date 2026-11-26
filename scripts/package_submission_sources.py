@@ -14,9 +14,6 @@ TRANSIENT = {'.aux', '.out', '.toc', '.lof', '.lot', '.fls', '.log', '.blg', '.f
 
 def main():
     sources = set()
-    # Include the complete local template font family for a cold TeX build.
-    sources.update(ROOT.glob('t1-formata*'))
-    sources.add(ROOT / 't1formata.fd')
     for document in ('main', 'supplement'):
         recorder = ROOT / (document + '.fls')
         if not recorder.exists():
@@ -31,12 +28,11 @@ def main():
                     raise FileNotFoundError(path)
                 sources.add(path)
     for name in ('references.bib', 'IEEEtran.bst', 'scripts/build_comparator_lineage.py',
-                 'generated/comparator_lineage.json', 'scripts/verify_history_partition.py', 'scripts/build_recovery_comparison.py', 'scripts/build_c03_figures.py', 'scripts/import_c03_results.py',
+                 'generated/comparator_lineage.json', 'scripts/verify_history_partition.py', 'scripts/build_recovery_comparison.py',
                  'scripts/verify_recovery_distribution.py', 'generated/recovery_distribution_checks.json',
-                 'scripts/verify_causal_amplitude_identity.py', 'generated/causal_amplitude_identity.json',
                  'scripts/build_channel_information_figure.py',
                  'scripts/build_channel_profile_figure.py',
-                 'scripts/build_theory_figures.py', 'scripts/theory_isolability.py', 'scripts/build_integrity_figure.py',
+                 'scripts/build_theory_figures.py', 'scripts/build_integrity_figure.py',
                  'scripts/build_event_taxonomy_extension.py',
                  'scripts/build_event_taxonomy_grid.py',
                  'generated/frozen/legacy_raw_event_figure_values.csv',
@@ -46,14 +42,6 @@ def main():
                  'scripts/build_paper_method_figure.py', 'figures/paper_method/main.tex',
                  'scripts/build_layered_architecture.py', 'figures/layered_architecture/main.tex',
                  'scripts/verify_adaptive_extension.py', 'generated/adaptive_extension_checks.json',
-                 'scripts/audit_adaptive_diagnostic.py', 'scripts/build_adaptive_diagnostic_tables.py',
-                 'generated/adaptive_diagnostic_audit.json',
-                 'scripts/build_hamiltonian_results.py', 'scripts/build_descriptor_bridge.py',
-                 'scripts/build_relinearized_recovery.py', 'docs/SHARED_IDEAS_AUDIT_20261113.md',
-                 'docs/IDEAS_SECOND_WAVE_AUDIT_20261113.md',
-                 'docs/REORGANIZATION_AND_EXPERIMENTS_20261113.md',
-                 'docs/P07_JOURNAL_CLOSURE_20261113.md', 'docs/P07_SUBMISSION_GATE_20261114.md',
-                 'docs/MEMORY_COVARIANCE_AUDIT_20261113.md',
                  'docs/ADAPTIVE_ARCHITECTURE_DECISIONS_20261113.md',
                  'figures/recovery_overview/main.tex', 'figures/physical_report/main.tex',
                  'generated/revision_math_20261103/checks.json',
@@ -61,7 +49,7 @@ def main():
         path = ROOT / name
         if path.exists():
             sources.add(path)
-    for folder in ('comparator_lineage_20261103', 'revision_math_kernel_20261103', 'recovery_c02_20261105', 'recovery_c03'):
+    for folder in ('comparator_lineage_20261103', 'revision_math_kernel_20261103', 'recovery_c02_20261105'):
         sources.update(p for p in (ROOT / 'generated/frozen' / folder).glob('*') if p.is_file())
     # Compact inputs regenerate the theory/noise figures without simulation data.
     sources.update(p for p in (ROOT / 'generated/revision_20261104').glob('*')
@@ -73,37 +61,12 @@ def main():
     protected=json.loads((ROOT/'figures/frozen/PROTECTED_FIGURES.json').read_text())
     sources.update(ROOT/p for p in protected['files'])
     diagnostic = ROOT / 'experiments/channel_information_20261112'
-    sources.update(p for p in (ROOT / 'experiments/second_family').rglob('*')
-                   if p.is_file() and p.suffix in {'.py', '.md', '.json', '.pt'})
-    sources.add(ROOT / 'experiments/history_conditioning/dynamics.py')
-    sources.update(p for p in (ROOT / 'experiments/modal_recovery').rglob('*')
-                   if p.is_file() and p.suffix in {'.py', '.md', '.json', '.joblib'})
-    sources.update(p for p in (ROOT / 'experiments/adaptive_innovation_20261113').rglob('*')
-                   if p.is_file() and p.suffix in {'.py', '.json', '.md', '.npz'})
-    for folder in ('theorem_audit_20261114','adaptive_innovation_20261113_corrected','hamiltonian_f01_20261113','descriptor_bridge_20261113','relinearized_recovery_20261113','decision_bounds_20261113','recovery_nuisance_20261113','memory_covariance_audit_20261113','oracle_pmu_covariance_20261113','unknown_onset_bridge_20261114'):
-        sources.update(p for p in (ROOT / 'experiments' / folder).rglob('*')
-                       if p.is_file() and p.suffix in {'.py','.json','.md','.npz','.csv','.jl','.toml','.txt'})
     sources.update(p for p in diagnostic.glob('*')
                    if p.is_file() and p.suffix in {'.py', '.json', '.csv', '.md', '.npz'})
     for folder in ('channel_profile_20261112', 'hbg_verification_20261112'):
         sources.update(p for p in (ROOT / 'experiments' / folder).glob('*')
                        if p.is_file() and p.suffix in {'.py', '.json', '.csv', '.md', '.txt'})
     sources.add(ROOT / 'docs/HBG_REPRODUCTION_AUDIT_20261112.md')
-    for folder in ('paired_m9_stream', 'paired_m9_successor', 'ac_load_transfer', 'pmu_source_readout', 'composite_identifiability'):
-        sources.update(p for p in (ROOT / 'experiments' / folder).glob('*') if p.is_file())
-    sources.update((ROOT / 'experiments/ac_load_transfer/current_m9').glob('*.json'))
-    for name in ('audit_c03_context', 'score_paired_m9_stream', 'prepare_paired_m9_stream',
-                 'predict_paired_m9_stream', 'benchmark_competition_windows', 'prepare_electrical_sites',
-                 'prepare_held_locations', 'replay_competition_router', 'competition_electrical_localizer',
-                 'competition_held_locations', 'competition_response_bank', 'competition_integrity_successor',
-                 'competition_spatial_contrast', 'competition_metrics', 'paired_m9_successor',
-                 'score_m9_successor', 'fit_pmu_window_correction', 'pmu_window_correction',
-                 'benchmark_pmu_source_readout', 'score_pmu_source_readout', 'build_pmu_source_readout',
-                 'pmu_source_readout', 'pmu_source_pulse', 'time_pmu_source_readout',
-                 'diagnose_class8', 'blind_class8', 'joint_class8', 'score_blind_class8', 'class8_physical_current'):
-        sources.add(ROOT / 'scripts' / (name + '.py'))
-    for name in ('competition_response_156/bank.json', 'competition_spatial_264/spatial.json'):
-        sources.add(ROOT / 'experiments' / name)
     manifest = {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(sources)}
     instructions = '''P07 article and supplement source snapshot
 
@@ -112,11 +75,6 @@ further pdfLaTeX passes. IEEEtran.bst may be supplied by your TeX distribution.
 All local files actually read by these builds are included with their paths.
 Comparator provenance is independently regenerated, without models or PMU data,
 with Python: python scripts/build_comparator_lineage.py.
-Recount the paired second-event family trial from the sealed predictions with
-python experiments/second_family/validation/audit.py. Its README describes
-the two-trajectory simulator replay and the published IEEE 68-bus control.
-Recount the two post-restoration oscillatory-contrast trials from their
-sealed predictions with python experiments/modal_recovery/report.py.
 The editable overview and physical/report diagrams are TikZ vector figures.
 Regenerate them with python scripts/build_recovery_overview.py and
 python scripts/build_physics_measurement_chain.py (pdfLaTeX and PyMuPDF required).
@@ -126,23 +84,6 @@ The prospective layered architecture and small-model checks are rebuilt with:
 python scripts/build_layered_architecture.py
 python scripts/verify_adaptive_extension.py (NumPy and SciPy required).
 These checks do not validate the adaptive extension on IEEE-39.
-The sealed nominal-operator mechanism diagnostics are independently recounted:
-python scripts/build_adaptive_diagnostic_tables.py
-This verifies hashes and saved predictions and regenerates the tables/macros.
-See experiments/adaptive_innovation_20261113_corrected/README.md for scope and
-rerun steps. The earlier diagnostic is retained but withdrawn for an OFF-index
-error; it is not evidence for current claims.
-Regenerate the rotor/graph balance figure from sealed outputs with:
-python scripts/build_hamiltonian_results.py
-See experiments/hamiltonian_f01_20261113/README.md for Julia physical reproduction
-and the coordinate comparison's recorded absolute-tolerance limitation.
-The native-descriptor, nonlinear-trajectory and observation-coordinate check is
-rebuilt from sealed data with python scripts/build_descriptor_bridge.py.
-See experiments/descriptor_bridge_20261113/README.md for full reproduction.
-The separately tested relinearized predictor is regenerated with:
-python scripts/build_relinearized_recovery.py
-See experiments/relinearized_recovery_20261113/README.md; this is a known-event
-physical prediction check, not a replacement for the frozen history bank.
 The authorized nine-panel event grid is regenerated from bundled trace values:
 python scripts/build_event_taxonomy_grid.py (NumPy, pandas, Matplotlib required).
 Original protected assets remain byte-identical and are checked by that builder.

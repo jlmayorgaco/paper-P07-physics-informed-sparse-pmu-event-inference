@@ -1,26 +1,5 @@
 \subsection{Measurement Contract}
 \label{app:measurement-contract}
-Figure~\ref{fig:physical-measurement-chain} follows an intervention from
-the network equations to the PMU report. The simulated load and line
-examples in Fig.~\ref{fig:narrative-signals} show how the same intervention
-appears at different terminals.
-
-\begin{figure*}[t]\centering
-\includegraphics[width=.99\textwidth]{figures/generated/physics_measurement_chain.pdf}
-\caption{From a load or line switch to a PMU report. Restoration changes
-the network operator. Machine states and instrument memory continue across
-the switch. The traces illustrate the measurement operations.}
-\label{fig:physical-measurement-chain}\end{figure*}
-
-\begin{figure*}[t]\centering
-\includegraphics[width=.96\textwidth]{figures/generated/narrative_signals.pdf}
-\caption{Eight PMU responses to a load change and a line opening in one
-simulated development sequence. Shading marks the known physical event
-interval for comparison. Magnitudes are plotted relative to their local
-pre-event levels. The frequency channel supplied to inference is in
-absolute hertz.}
-\label{fig:narrative-signals}\end{figure*}
-
 The executed channel map is taken from the versioned research-plant snapshot. The eight voltage buses are $\{2,5,6,10,19,22,29,39\}$. The internal voltage phasor is in per unit with unit gain and is exported as phase-to-neutral RMS volts using 345 kV/$\sqrt3$; voltage angle uses one common affine phase reference plus the stored relative offsets. The reference interpretation is observational: physical common drift and instrument clock drift are not separately identified. Terminal currents are converted to outward branch convention from the simulator\textquotesingle s into-terminal observable, then mapped with the row-specific polarity, gain and phase bias. Current bases use $100\,\mathrm{MVA}/(\sqrt{3}\,V_{\mathrm{terminal}})$; the common voltage base is 199.186 kV.\par
 \begin{table*}[t]\centering\scriptsize\setlength{\tabcolsep}{3pt}
 \caption{Eight PMU rows of the executed measurement map. V is a bus voltage in p.u.; I is an oriented branch-terminal phasor. Gains and phase biases are applied to current channels. BUS5 retains the historical 5--6, terminal-5 hypothesis and its producer CT identity is unverified. BUS39 current phase is partially validated.}

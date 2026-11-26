@@ -7,10 +7,7 @@
 \newtheorem{theorem}{Theorem}
 \input{generated/results_macros}
 \input{generated/continuous_macros}
-\input{generated/reader_macros}
-\input{generated/review_audit_macros}
 \input{generated/recovery_comparison_macros}
-\input{generated/recovery_c03_macros}
 \input{generated/channel_information_macros}
 \input{generated/channel_profile_macros}
 \input{generated/narrative_macros}
@@ -41,22 +38,25 @@
 }
 
 \begin{abstract}
-This supplement gives the switched predictor, bounded load-severity
-update and PMU terminal map used for recovery-aware attribution. It
-specifies the common reporting clock used in the two primary studies and
-the source screen used in the earlier development tests. The tables report
-attribution, restoration errors, unmatched alarms and exposure in normal
-operation for each study. Further analyses examine source separation at a
-supplied onset, the effect of discarding recovery uncertainty, and
-sensitivity to the measurement model. A prospective section describes
-an adaptive extension. Its numerical checks use a separate small model.
+This supplement documents the implemented recovery-aware history bank:
+its local filtering calculations, measurement map, publication rules and
+simulation contracts. It records the complete confirmatory outcomes,
+controlled severity-score/state-carry ablation and continuous single-state
+control. The operating-point signature and recovery-geometry studies keep
+their separate, known-onset contracts and denominators. All empirical
+results reuse the fixed evidence; no new campaign or threshold selection
+is introduced here. Earlier voltage-reconstruction, simultaneous-source
+and general diagnosability studies are preserved in the separately
+compiled Historical Technical Notes.
+An explicitly prospective section specifies an adaptive extension and
+its separate cyber interface; its small-model checks are not campaign results.
 \end{abstract}
 \begin{keywords}
 phasor measurement units, sequential diagnosis, physical state continuity,
 conditional filtering, reproducibility.
 \end{keywords}
 \titlepgskip=-21pt
-\PSevenMakePreprintTitle
+\maketitle
 \raggedbottom
 \appendices
 
@@ -71,20 +71,13 @@ conditional filtering, reproducibility.
 \label{app:comparator-lineage}
 \input{tables/generated/comparator_lineage}
 
-\input{supplement/recovery_comparison}
-\input{supplement/c03_results}
-
-\FloatBarrier
-\input{generated/modal_recovery}
-\input{supplement/modal_recovery}
-
 \FloatBarrier
 \input{supplement/c01_narrative_details}
-\input{supplement/secondary_evaluation_protocol}
-\input{supplement/secondary_evaluation_results}
+
+\FloatBarrier
+\input{supplement/recovery_comparison}
 
 \input{supplement/ablation_a01}
-\input{supplement/ablation_severity_scores}
 \paragraph{Exposure convention for the ablation alarm rate.}
 The ablation table reports extras per event-hour with the complete
 120-s event record, including startup, as denominator. Its continuous exposure is
@@ -100,6 +93,8 @@ these two rate conventions must not be compared without this conversion.
 
 \FloatBarrier
 \input{supplement/theory_and_noise_stress}
+
+\FloatBarrier
 \input{supplement/channel_information}
 \input{supplement/recovery_information_geometry}
 
@@ -108,7 +103,6 @@ these two rate conventions must not be compared without this conversion.
 \input{supplement/integrity_theory}
 \input{sections/article_integrity}
 \input{sections/article_allevents}
-\input{supplement/window_source_localization}
 
 \FloatBarrier
 \input{sections/article_ei_x02}
@@ -122,25 +116,6 @@ these two rate conventions must not be compared without this conversion.
 
 \FloatBarrier
 \input{supplement/adaptive_architecture}
-
-\FloatBarrier
-\input{supplement/hamiltonian_graph_bayes}
-
-\FloatBarrier
-\input{supplement/descriptor_bridge}
-
-\FloatBarrier
-\input{supplement/relinearized_recovery}
-
-\FloatBarrier
-\input{supplement/recovery_uncertainty_checks}
-
-\FloatBarrier
-\input{supplement/memory_covariance_audit}
-
-\FloatBarrier
-\input{supplement/oracle_pmu_covariance}
-\input{supplement/unknown_onset_bridge}
 
 \FloatBarrier
 \raggedbottom

@@ -7,8 +7,7 @@
     "moment_matched_gaussian_can_change_mixture_tail_density",
     "equal_means_can_produce_different_predictive_densities",
     "enumerated_deterministic_statistic_preserves_cause_posterior",
-    "independent_duplicate_likelihood_changes_posterior",
-    "recovery_log_score_cost_and_state_mean_match_atom_enumeration"
+    "independent_duplicate_likelihood_changes_posterior"
   ],
   "predictive_probability_next_report_one": 0.6017021276595745,
   "cause_zero_given_state_minus1": [
@@ -30,16 +29,6 @@
     "0": 0.058823529411764705,
     "1": 0.9411764705882353
   },
-  "recovery_log_score": {
-    "visible": {
-      "reset_mean_cost_nats": 15.064101562499996,
-      "omitted_spread_cost_nats": 2.3387388764458388
-    },
-    "unobservable": {
-      "reset_mean_cost_nats": 0.0,
-      "omitted_spread_cost_nats": 0.0
-    }
-  },
-  "script_sha256": "8b16cca19dfcb895430e2d74e6ccff636d738de4a20ff8e7e66e5df6e46b5288",
+  "script_sha256": "5bddfb770ee01f371d163212bd271a634a78857f9d4530df3bc9718358df4957",
   "scope": "finite exact enumerations of toy models; no estimator or campaign validation"
 }

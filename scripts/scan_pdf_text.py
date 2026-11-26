@@ -24,11 +24,6 @@ def main() -> int:
             for i, page in enumerate(doc):
                 text = " ".join(page.get_text().split())
                 for m in PATTERN.finditer(text):
-                    # The cited paper's official title begins with the package name.
-                    if m.group() == "PowerDynamics.jl" and re.match(
-                        r"\W+an experimentally val-?\s*idated", text[m.end():], flags=re.I
-                    ):
-                        continue
                     ctx = text[max(0, m.start() - 60): m.end() + 30]
                     if any(a in text[max(0, m.start() - 60): m.end() + 60] for a in ALLOWED):
                         continue

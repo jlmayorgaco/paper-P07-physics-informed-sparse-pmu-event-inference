@@ -1,0 +1,15 @@
+noise_multiplier,channels,accuracy,n_synthetic
+1,voltage,0.8996,2700
+1,voltage+current,0.9567,2700
+5,voltage,0.6844,2700
+5,voltage+current,0.8567,2700
+20,voltage,0.4015,2700
+20,voltage+current,0.6444,2700
+1,voltage+current minus PMU 2,0.9556,2700
+1,voltage+current minus PMU 5,0.9507,2700
+1,voltage+current minus PMU 6,0.9559,2700
+1,voltage+current minus PMU 10,0.9552,2700
+1,voltage+current minus PMU 19,0.9007,2700
+1,voltage+current minus PMU 22,0.9574,2700
+1,voltage+current minus PMU 29,0.9563,2700
+1,voltage+current minus PMU 39,0.9481,2700

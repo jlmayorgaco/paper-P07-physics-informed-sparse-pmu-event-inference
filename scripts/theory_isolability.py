@@ -2,14 +2,17 @@
 
 For each catalog source i, a noise-free trajectory is generated with the SAME
 discrete operators used by inference (onset at report 0, half-phase 0).  Every
-candidate conditional filter j (null, 9 loads, 9 lines) is run on it.
-The deterministic profiled innovation energy is
+candidate conditional filter j (null, 9 loads, 9 lines) is run on it.  Because
+all hypotheses are linear-Gaussian given the mode path, the expected
+log-likelihood ratio of the true hypothesis against j after k reports is the
+whitened innovation energy (Willsky--Jones signatures):
 
     Lambda_ij(k) = 1/2 * min_b sum_{r<=k} || e_j(r) - s_j(r) b ||^2_{S_j^{-1}},
 
 with b profiled for load candidates (no b for lines) and e_i == 0 for the truth.
-The separate known-onset crossing diagnostic uses an unbounded Gaussian
-severity prior with standard deviation 0.15.
+Lambda_i0 (null) is the detection information, min_{j!=i} Lambda_ij the
+isolation information.  Detection uses the exact Gaussian marginal over the
+load amplitude prior (sd 0.15) so that the Occam factor is included.
 
 Read-only inputs: one nominal bank built by the C01-identical runtime (B01 CAL
 record), the C01 truth and C01 evaluated events.  Nothing is written outside
@@ -91,21 +94,6 @@ def profiled_energy(EE, ES, SS, is_load: bool, lo=-0.2, hi=0.2):
     return 0.5 * (EE - 2 * b * ES + b * b * SS)
 
 
-def reference_amplitudes(signatures, load_mw, required_energy):
-    """Load fraction that gives the specified nominal energy at one second."""
-    rows = []
-    loads = signatures[(signatures.family == "load") & (signatures.reports == 30)]
-    for row in loads.itertuples():
-        # detection_info is already half the whitened squared norm at a_ref.
-        nominal_fraction = abs(row.reference_amplitude) * np.sqrt(required_energy / row.detection_info)
-        for multiplier in (1, 2, 5, 10, 20):
-            fraction = multiplier * nominal_fraction
-            rows.append(dict(source=row.source, load_MW=load_mw[row.source],
-                             noise_multiplier=multiplier, reference_fraction_1s=fraction,
-                             reference_MW_1s=fraction * load_mw[row.source]))
-    return pd.DataFrame(rows)
-
-
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     cfg = json.loads(PROTOCOL.read_text())
@@ -151,8 +139,10 @@ def main() -> None:
     def predicted_alarm_report(i: int, amplitude: float) -> int | None:
         if fam[i] == "load":
             EE0, ref = null_terms[i]
-            # EE0 is the full whitened squared norm at the reference severity.
-            G = EE0 / ref ** 2
+            info = EE0 * (amplitude / ref) ** 2       # whitened energy scales with a^2
+            # exact Gaussian marginal over b ~ N(0, v0): log BF = 1/2 G v0 /(1+G v0) * a^2 G ... use quadratic form
+            # with e = a s (null filter), BF = 1/2 * (a G)^2/(G+1/v0) - 1/2 log(1+v0 G); G = info*2/a^2
+            G = 2 * EE0 / ref ** 2
             logbf = 0.5 * (amplitude * G) ** 2 / (G + 1 / v0) - 0.5 * np.log1p(v0 * G)
         else:
             logbf = 0.5 * null_terms[i][0]
@@ -173,13 +163,25 @@ def main() -> None:
         for s, a in zip(ev.source, ev.amplitude)]
     ev["observed_alarm_delay_s"] = ev.alarm_s - ev.onset_s
     ev[["event", "source", "family", "amplitude", "noise", "predicted_alarm_delay_s",
-        "observed_alarm_delay_s", "timely"]].to_csv(OUT / "predicted_vs_observed_delay_normalized.csv", index=False)
+        "observed_alarm_delay_s", "timely"]].to_csv(OUT / "predicted_vs_observed_delay.csv", index=False)
 
-    # ---------- 3. Reference amplitude under uniform noise scaling -----------------
+    # ---------- 3. Minimum detectable load change (MW) within one second -----------------
     loads = pd.read_csv(SCI.parent / "SIM0001_JuliaPD_F01/runtime/reference/data/load.csv")
-    load_mw = {f"BUS{row.bus}": -100 * row.Pset for row in loads.itertuples()}
-    references = reference_amplitudes(sig, load_mw, log_threshold - log_prior_cell)
-    references.to_csv(OUT / "reference_load_amplitudes_1s.csv", index=False)
+    md = []
+    for i in range(len(assets)):
+        if fam[i] != "load":
+            continue
+        bus = int(names[i].replace("BUS", ""))
+        p_mw = -100 * float(loads.loc[loads.bus == bus, "Pset"].iloc[0])
+        EE0, ref = null_terms[i]
+        G1 = 2 * EE0[29] / ref ** 2   # whitened information per unit amplitude^2 in 1 s
+        need = 2 * (log_threshold - log_prior_cell)  # required 2*logLR (ignoring Occam term)
+        for alpha in [1, 2, 5, 10, 20]:
+            a_min = np.sqrt(need / (G1 / alpha ** 2))
+            md.append(dict(source=names[i], load_MW=p_mw, noise_multiplier=alpha,
+                           min_fraction_1s=a_min, min_MW_1s=a_min * p_mw,
+                           test_min_fraction=0.03, detectable_at_test_min=a_min <= 0.03))
+    pd.DataFrame(md).to_csv(OUT / "minimum_detectable_load.csv", index=False)
 
     summary = dict(bank=str(BANK.relative_to(SCI.parent)), regime="quiet", horizon_reports=HORIZON,
                    log_threshold=float(log_threshold), log_prior_cell=float(log_prior_cell),

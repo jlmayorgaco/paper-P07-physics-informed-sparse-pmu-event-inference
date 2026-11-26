@@ -26,8 +26,6 @@ def main():
             label + "Extras": arm["event_extras"],
             label + "ExtrasRate": f"{arm['event_extras_per_h']:.1f}",
             label + "NormalAlarms": arm["normal_false_alarms"],
-            label + "OrphanOff": arm["unmatched_episode_restorations"],
-            label + "OpenEnd": arm["open_eof"],
         })
     bank = report["arms"]["PHYSICAL_HISTORY"]
     fields.update(Parents=bank["event_parents"], NormalParents=bank["normal_parents"],

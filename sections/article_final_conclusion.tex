@@ -1,20 +1,18 @@
 \section{Conclusion}
 \label{sec:conclusion}
-
-After a load returns or a line recloses, the pre-restoration estimate
-supplies a physical prediction for what the PMUs should see next.
-Comparing new interventions against that prediction gave the history
-bank more correct source diagnoses before restoration than either
-comparator. It also issued more unmatched alarms than ExtraTrees and
-fewer than the continuous GLR. On both simulated plants, keeping the
-estimated physical state at closure produced more timely diagnoses
-than resetting it. Keeping separate histories met the prespecified criterion for a
-short-gap coverage gain on the original plant. On the second plant its
-measurable advantage was fewer unmatched alarms during event records.
-At common alarm times, spectral classification confused several second
-load changes with line events. Carrying the physical state gave the
-family estimator more supported diagnoses than resetting it. Summing
-the retained histories by family at a fixed lag matched the bank's
-original family decisions on the new pairs. Improving the common
-trigger remains important because a missed alarm prevents either
-classifier from reporting the event.
+We formulated sequential load and line attribution from sparse PMUs as
+a comparison of switched physical histories. The predictor retains
+estimated state at restoration and separates an active intervention
+from a preceding cause of recovery. On a held-out simulation under a
+common calibration budget, the nominal bank made timely,
+correct family-and-source attributions for \RecBankTimely{}
+interventions, versus \RecGlrTimely{} for a continuous
+physical GLR and \RecTreesTimely{} for ExtraTrees. The respective
+unmatched alarm counts were \RecBankExtras{}, \RecGlrExtras{} and
+\RecTreesExtras{}. A fixed-threshold state-reset control shows the cost
+of discarding the estimated state. The complete-procedure comparison does
+not isolate the benefit of retaining recovery histories from the loss of
+uncertainty under compression. The findings apply to sequential interventions
+from a known catalog in one simulator family. Transfer to another dynamic
+plant, shorter gaps and unseen sources remain untested; independent per-PMU
+noise at \RevNoiseAddedRmsLow{}\% added RMS TVE severely degrades load attribution.

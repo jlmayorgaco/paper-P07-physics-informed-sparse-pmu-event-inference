@@ -79,79 +79,17 @@
 \draw[proposed] (15.25,5.25)--(15.25,6.02)--(13.4,6.02)--(13.4,7.05)--(13.1,7.05);
 \node[note,text=orange,anchor=west,fill=white,inner sep=1pt] at (15.4,6.02) {Next report only};
 
-% Innovation geometry icon; the scoring equation remains central.
-\draw[rule,->] (9.7,6.75)--(10.95,6.75);\draw[rule,->] (9.7,6.75)--(9.7,7.64);
-\draw[blue,rotate around={25:(10.25,7.16)},fill=blue!5] (10.25,7.16) ellipse (.46 and .20);
-\fill[orange] (10.57,7.45) circle (.045);
-\draw[orange,->] (10.25,7.16)--(10.57,7.45);
-\node[small,anchor=west] at (11.25,7.35) {$e_h=r_k-\widehat r_{h,k}$};
-\node[small,anchor=west] at (11.25,6.94) {Joint covariance};
-\node[font=\fontsize{7.4}{8.5}\selectfont] at (11.33,6.19) {$L_{h,k}=\int p(r_k\mid h,a)\,p_h(a)\,da$};
-\node at (11.33,5.65) {$\pi_{h,k}\propto L_{h,k}\,\pi_{h,k}^{\rm prior}$};
-\node[note] at (11.33,5.07) {Normalize; prune; retain state};
-
-% Decision timeline: emission is explicitly distinct from inferred onset.
-\draw[rule,->] (14.4,7.20)--(17.55,7.20);
-\draw[orange,line width=.7pt] (14.90,7.07)--(14.90,7.34);
-\draw[teal,line width=.7pt] (16.64,7.07)--(16.64,7.34);
-\node[small,above] at (14.90,7.4) {$\widehat\tau$};\node[small,above] at (16.64,7.4) {$t_{\rm emit}$};
-\node[small,below] at (14.90,7.0) {estimated ON};\node[small,below] at (16.64,7.0) {decision};
-\node at (15.98,6.28) {$M_c$: active \quad $\Gamma_c$: cause};
-\node[note,align=center] at (15.98,5.68) {CAL threshold + confirmation\\Type / source / restoration};
-\node[note,text=teal] at (15.98,5.07) {No reset at physical OFF};
-\foreach \x in {4.05,8.7,13.35}{\draw[flow] ({\x+.02},6.3)--({\x+.57},6.3);}
-\draw[flow] (12.95,4.72)--(12.95,4.32)--(6.68,4.32)--(6.68,4.72);
-\node[small,text=teal,fill=white,inner sep=1pt] at (9.8,4.32) {Next report: state and history weights};
-\node[small,anchor=west] at (.12,4.35) {Shared covariance; prefix-fitted noise};
-
-% Development lane: mechanism drawings rather than another wall of prose.
-\node[head,text=orange] at (.05,3.91) {REFINEMENT DEVELOPMENT};
-\node[note,anchor=east] at (17.95,3.91) {Mechanism diagnostics; integration into the history bank remains pending};
-\foreach \a/\b in {0/5.65,6.18/11.83,12.36/18}{
- \path[card,draw=orange,dashed,fill=orange!2] (\a,1.14) rectangle (\b,3.60);}
-\node[head] at (.18,3.29) {Preserve recovery uncertainty};
-\draw[rule,->] (.45,1.96)--(2.0,1.96);\draw[rule,->] (.45,1.96)--(.45,2.93);
-\draw[blue,rotate around={25:(1.17,2.46)},fill=blue!7] (1.17,2.46) ellipse (.60 and .27);
-\draw[teal,rotate around={25:(1.17,2.46)}] (1.17,2.46) ellipse (.32 and .15);
-\fill[ink] (1.17,2.46) circle (.045);
-\node[small,anchor=west] at (2.25,2.67) {Same mean};
-\node[small,anchor=west] at (2.25,2.25) {Different predictive spread};
-\node at (2.83,1.62) {$P_{\rm mix}=\sum_h\pi_h[P_h+(\mu_h-\bar\mu)(\mu_h-\bar\mu)^\top]$};
-\node[head] at (6.36,3.29) {Adapt noise without hiding events};
-% A covariance factor and a gate are separate visual objects.
-\foreach \i in {0,1,2}{\foreach \j in {0,1,2}{\fill[blue!20] ({6.55+.22*\i},{2.03+.22*\j}) rectangle ++(.20,.20);}}
-\foreach \i in {0,1,2}{\fill[orange!65] ({6.55+.22*\i},{2.03+.22*\i}) rectangle ++(.20,.20);}
-\node[small] at (6.88,2.89) {$R_k$};
-\draw[future] (7.42,2.37)--(7.92,2.37);
-\draw[orange,fill=white] (8.40,2.83)--(8.88,2.37)--(8.40,1.91)--(7.92,2.37)--cycle;
-\node[small,text=orange,align=center] at (8.40,2.37) {quiet?};
-\draw[future] (8.88,2.37)--(9.42,2.37);
-\node[small,anchor=west] at (9.52,2.59) {learn $R_{k+1}$};
-\node[small,anchor=west] at (9.52,2.18) {or keep $R_k$};
-\node[note] at (9.0,1.55) {Score first; update after. Keep center fixed.};
-\node[head] at (12.54,3.29) {Refresh physical predictions};
-\node[small] at (13.22,2.91) {predicted state};
-\node[small] at (14.85,2.91) {constraints};
-\node[small] at (16.85,2.91) {local dynamics};
-\draw[blue,fill=blue!5] (13.22,2.43) circle (.31);
-\node at (13.22,2.43) {$\hat x_j$};
-\path[card,draw=teal] (14.12,2.13) rectangle (15.58,2.73);
-\node at (14.85,2.43) {$g_q=0$};
-\path[card,draw=orange] (16.10,2.13) rectangle (17.60,2.73);
-\node at (16.85,2.43) {$A_j,f_j$};
-\draw[future] (13.56,2.43)--(14.10,2.43);
-\draw[future] (15.60,2.43)--(16.08,2.43);
-\draw[future] (16.85,2.10)--(16.85,1.87)--(13.22,1.87)--(13.22,2.10);
-\node[note] at (15.18,1.47) {Retain state; recompute local derivatives};
-
-% Deliberately detached external service: no attack-to-event score arrow.
-\draw[rule,dashed] (0,.88)--(18,.88);
-\node[head,text=muted] at (.10,.47) {CYBER LAYER};
-\node[note,anchor=west] at (3.0,.47) {External methods + telemetry};
-\draw[->,muted] (7.1,.47)--(7.65,.47);
-\node[note,anchor=west] at (7.82,.47) {Quality / availability interface};
-\draw[->,muted] (12.38,.47)--(12.93,.47);
-\node[note,anchor=west] at (13.10,.47) {Separate alerts and validation};
-\node[small,anchor=west] at (.10,.10) {Drawings are schematic. Cyber scores are not extra physical evidence. Dashed modules are not enabled in the reported history-bank runs.};
+% Separate service boundary: no attack score is a physical likelihood.
+\draw[rule,dashed] (0,2.15)--(18,2.15);
+\node[head,text=muted] at (.05,1.82) {C\quad Cyber analysis: separate layer, outside this physical study};
+\path[card,fill=black!2] (0,.43) rectangle (5.5,1.47);
+\path[card,fill=black!2] (6.15,.43) rectangle (11.85,1.47);
+\path[card,fill=black!2] (12.5,.43) rectangle (18,1.47);
+\node[note,align=center] at (2.75,.95) {Network telemetry + report metadata\\External integrity / cyber methods};
+\node[note,align=center] at (9,.95) {Interface: timestamp + quality / availability\\Any mask requires a declared likelihood};
+\node[note,align=center] at (15.25,.95) {Separate cyber alerts and validation\\No cyber score added to event evidence};
+\draw[->,muted] (5.52,.95)--(6.12,.95);
+\draw[->,muted] (11.87,.95)--(12.47,.95);
+\node[note,anchor=west] at (.05,.12) {Solid, dashed and gray regions distinguish implementation, research proposals and an external service boundary.};
 \end{tikzpicture}
 \end{document}
