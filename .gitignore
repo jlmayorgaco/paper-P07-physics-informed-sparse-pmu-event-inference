@@ -15,6 +15,7 @@
 *.vrb
 main.pdf
 supplement.pdf
+historical_notes.pdf
 
 # Local environments and operating-system files
 build/
@@ -29,3 +30,8 @@ experiments/second_plant/data/
 
 # Local delivery archives are not Overleaf inputs (50 MB per-file sync limit).
 output/source/*.zip
+
+# Local simulation runs and publication bundles are kept outside the synced source tree.
+# The six LaTeX dependencies already tracked under experiments/ remain available.
+experiments/
+output/
