@@ -31,9 +31,9 @@ intervention from the continuing response to the first. We address this
 problem with a bank of switched network models. Each model predicts the
 next phasor measurement unit (PMU) report from the state reached before
 the switch. For a load change, the model averages over its unknown size.
-We derive the conditional minimum mean-square state estimate for each
-history and quantify the one-report increase in expected log loss caused by a
-physical-state reset. On the simulated IEEE 39-bus system with eight
+At restoration, we derive the conditional minimum mean-square estimate
+of the state shared across retiring histories and the cost of resetting
+its physical coordinates in the next PMU forecast. On the simulated IEEE 39-bus system with eight
 PMUs, the bank identified the correct event family and asset before
 restoration in \RecBankTimely{} cases. A continuous generalized
 likelihood ratio observer achieved \RecGlrTimely{} and an ExtraTrees
@@ -42,16 +42,16 @@ the bank, observer and classifier issued \RecBankExtras{}, \RecGlrExtras{} and \
 unmatched alarms, respectively. We also tested successive interventions
 separated by less than three seconds. Carrying the mean physical state
 through restoration improved attribution over a reset on both test plants.
-Retaining separate histories increased timely attribution over carrying
-the merged mean by
+Retaining histories and their onset-search memory increased timely
+attribution over restarting the search from the merged mean by
 \CThreeFOneHistoryCarryDifferencePP{} percentage points on the plant
 used to construct the predictor. With different generator dynamics,
 the gain was \CThreePTwoHistoryCarryDifferencePP{} points (paired 95\%
 interval $[\CThreePTwoHistoryCarryLowerPP,\CThreePTwoHistoryCarryUpperPP]$).
-At a shared alarm and classification deadline on new two-event records,
-the physical estimate identified \SecondLagCount{}/36 second-event
-families and a spectral convolutional classifier identified
-\SecondCnnCount{}/36.
+At common alarm times and deadlines, the bank and a spectral classifier
+identified \SecondLagCount{}/36 and \SecondCnnCount{}/36 second-event families.
+Independent PMU noise prevented startup on both plants under the original
+calibration.
 \end{abstract}
 
 \begin{keywords}

@@ -32,6 +32,6 @@ experiments/second_plant/data/
 output/source/*.zip
 
 # Local simulation runs and publication bundles are kept outside the synced source tree.
-# The six LaTeX dependencies already tracked under experiments/ remain available.
+/src/
 experiments/
 output/
