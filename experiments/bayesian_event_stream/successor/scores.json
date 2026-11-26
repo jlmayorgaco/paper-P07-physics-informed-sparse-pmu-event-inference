@@ -1,0 +1,446 @@
+[
+  {
+    "method": "bayes",
+    "context": "all",
+    "events": 192,
+    "quiet": 64,
+    "detected": 192,
+    "family_correct_events": 171,
+    "joint": 154,
+    "false_alarms": 24,
+    "macro_f1": 0.8193593640402151,
+    "confusion": [
+      [
+        40,
+        8,
+        8,
+        8
+      ],
+      [
+        0,
+        48,
+        8,
+        8
+      ],
+      [
+        0,
+        0,
+        60,
+        4
+      ],
+      [
+        0,
+        0,
+        1,
+        63
+      ]
+    ]
+  },
+  {
+    "method": "bayes",
+    "context": "after_event",
+    "events": 72,
+    "quiet": 24,
+    "detected": 72,
+    "family_correct_events": 51,
+    "joint": 40,
+    "false_alarms": 24,
+    "macro_f1": 0.4355762172742843,
+    "confusion": [
+      [
+        0,
+        8,
+        8,
+        8
+      ],
+      [
+        0,
+        8,
+        8,
+        8
+      ],
+      [
+        0,
+        0,
+        20,
+        4
+      ],
+      [
+        0,
+        0,
+        1,
+        23
+      ]
+    ]
+  },
+  {
+    "method": "bayes",
+    "context": "from_rest",
+    "events": 120,
+    "quiet": 40,
+    "detected": 120,
+    "family_correct_events": 120,
+    "joint": 114,
+    "false_alarms": 0,
+    "macro_f1": 1.0,
+    "confusion": [
+      [
+        40,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        40,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        40,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        40
+      ]
+    ]
+  },
+  {
+    "method": "ensemble",
+    "context": "all",
+    "events": 192,
+    "quiet": 64,
+    "detected": 192,
+    "family_correct_events": 191,
+    "joint": 171,
+    "false_alarms": 12,
+    "macro_f1": 0.948280799991475,
+    "confusion": [
+      [
+        52,
+        10,
+        1,
+        1
+      ],
+      [
+        0,
+        63,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        64,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        64
+      ]
+    ]
+  },
+  {
+    "method": "ensemble",
+    "context": "after_event",
+    "events": 72,
+    "quiet": 24,
+    "detected": 72,
+    "family_correct_events": 71,
+    "joint": 57,
+    "false_alarms": 12,
+    "macro_f1": 0.8533190118152524,
+    "confusion": [
+      [
+        12,
+        10,
+        1,
+        1
+      ],
+      [
+        0,
+        23,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        24,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        24
+      ]
+    ]
+  },
+  {
+    "method": "ensemble",
+    "context": "from_rest",
+    "events": 120,
+    "quiet": 40,
+    "detected": 120,
+    "family_correct_events": 120,
+    "joint": 114,
+    "false_alarms": 0,
+    "macro_f1": 1.0,
+    "confusion": [
+      [
+        40,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        40,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        40,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        40
+      ]
+    ]
+  },
+  {
+    "method": "history",
+    "context": "all",
+    "events": 192,
+    "quiet": 64,
+    "detected": 192,
+    "family_correct_events": 188,
+    "joint": 166,
+    "false_alarms": 14,
+    "macro_f1": 0.9286924510574065,
+    "confusion": [
+      [
+        50,
+        12,
+        2,
+        0
+      ],
+      [
+        0,
+        60,
+        4,
+        0
+      ],
+      [
+        0,
+        0,
+        64,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        64
+      ]
+    ]
+  },
+  {
+    "method": "history",
+    "context": "after_event",
+    "events": 72,
+    "quiet": 24,
+    "detected": 72,
+    "family_correct_events": 68,
+    "joint": 52,
+    "false_alarms": 14,
+    "macro_f1": 0.7978524743230626,
+    "confusion": [
+      [
+        10,
+        12,
+        2,
+        0
+      ],
+      [
+        0,
+        20,
+        4,
+        0
+      ],
+      [
+        0,
+        0,
+        24,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        24
+      ]
+    ]
+  },
+  {
+    "method": "history",
+    "context": "from_rest",
+    "events": 120,
+    "quiet": 40,
+    "detected": 120,
+    "family_correct_events": 120,
+    "joint": 114,
+    "false_alarms": 0,
+    "macro_f1": 1.0,
+    "confusion": [
+      [
+        40,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        40,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        40,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        40
+      ]
+    ]
+  },
+  {
+    "method": "profile",
+    "context": "all",
+    "events": 192,
+    "quiet": 64,
+    "detected": 192,
+    "family_correct_events": 171,
+    "joint": 154,
+    "false_alarms": 24,
+    "macro_f1": 0.8193593640402151,
+    "confusion": [
+      [
+        40,
+        8,
+        8,
+        8
+      ],
+      [
+        0,
+        48,
+        8,
+        8
+      ],
+      [
+        0,
+        0,
+        60,
+        4
+      ],
+      [
+        0,
+        0,
+        1,
+        63
+      ]
+    ]
+  },
+  {
+    "method": "profile",
+    "context": "after_event",
+    "events": 72,
+    "quiet": 24,
+    "detected": 72,
+    "family_correct_events": 51,
+    "joint": 40,
+    "false_alarms": 24,
+    "macro_f1": 0.4355762172742843,
+    "confusion": [
+      [
+        0,
+        8,
+        8,
+        8
+      ],
+      [
+        0,
+        8,
+        8,
+        8
+      ],
+      [
+        0,
+        0,
+        20,
+        4
+      ],
+      [
+        0,
+        0,
+        1,
+        23
+      ]
+    ]
+  },
+  {
+    "method": "profile",
+    "context": "from_rest",
+    "events": 120,
+    "quiet": 40,
+    "detected": 120,
+    "family_correct_events": 120,
+    "joint": 114,
+    "false_alarms": 0,
+    "macro_f1": 1.0,
+    "confusion": [
+      [
+        40,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        40,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        40,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        40
+      ]
+    ]
+  }
+]
