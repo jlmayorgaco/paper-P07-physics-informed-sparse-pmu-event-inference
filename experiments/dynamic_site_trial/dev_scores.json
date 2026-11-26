@@ -1,0 +1,50 @@
+[
+  {
+    "family": "generation",
+    "n": 36,
+    "static": 0,
+    "static_known": 0,
+    "dynamic": 28,
+    "dynamic_known": 20,
+    "magnitude": 35,
+    "angle": 26,
+    "gained": 28,
+    "lost": 0,
+    "delta_ci": [
+      0.5833333333333334,
+      0.9444444444444445
+    ]
+  },
+  {
+    "family": "load",
+    "n": 72,
+    "static": 15,
+    "static_known": 18,
+    "dynamic": 69,
+    "dynamic_known": 63,
+    "magnitude": 68,
+    "angle": 68,
+    "gained": 54,
+    "lost": 0,
+    "delta_ci": [
+      0.513888888888889,
+      0.9444444444444443
+    ]
+  },
+  {
+    "family": "weak",
+    "n": 156,
+    "static": 9,
+    "static_known": 8,
+    "dynamic": 26,
+    "dynamic_known": 32,
+    "magnitude": 5,
+    "angle": 26,
+    "gained": 24,
+    "lost": 7,
+    "delta_ci": [
+      2.135044278125301e-18,
+      0.21794871794871795
+    ]
+  }
+]
