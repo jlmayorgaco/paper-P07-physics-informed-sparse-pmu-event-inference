@@ -1,0 +1,45 @@
+{
+  "model": "PUBLIC MATPOWER case39 static pi-network/constant-current-injection idealization; NOT a DAE, not SGSMA data",
+  "buses": 39,
+  "branches": 46,
+  "pmu_buses": [
+    2,
+    5,
+    6,
+    10,
+    19,
+    22,
+    29,
+    39
+  ],
+  "hypotheses": 18,
+  "complex_observation_rank": 14,
+  "complex_unobservable_dimension_lower_bound": 25,
+  "max_pairwise_shape_similarity_voltage": 0.99945951049175,
+  "max_pairwise_shape_similarity_voltage_current": 0.9879935462858405,
+  "median_nearest_shape_similarity_voltage": 0.9387439091200054,
+  "median_nearest_shape_similarity_both": 0.8058721860486431
+}
+{'noise_multiplier': 1, 'channels': 'voltage', 'accuracy': 0.8996, 'n_synthetic': 2700}
+{'noise_multiplier': 1, 'channels': 'voltage+current', 'accuracy': 0.9567, 'n_synthetic': 2700}
+{'noise_multiplier': 5, 'channels': 'voltage', 'accuracy': 0.6844, 'n_synthetic': 2700}
+{'noise_multiplier': 5, 'channels': 'voltage+current', 'accuracy': 0.8567, 'n_synthetic': 2700}
+{'noise_multiplier': 20, 'channels': 'voltage', 'accuracy': 0.4015, 'n_synthetic': 2700}
+{'noise_multiplier': 20, 'channels': 'voltage+current', 'accuracy': 0.6444, 'n_synthetic': 2700}
+{'noise_multiplier': 1, 'channels': 'voltage+current minus PMU 2', 'accuracy': 0.9556, 'n_synthetic': 2700}
+{'noise_multiplier': 1, 'channels': 'voltage+current minus PMU 5', 'accuracy': 0.9507, 'n_synthetic': 2700}
+{'noise_multiplier': 1, 'channels': 'voltage+current minus PMU 6', 'accuracy': 0.9559, 'n_synthetic': 2700}
+{'noise_multiplier': 1, 'channels': 'voltage+current minus PMU 10', 'accuracy': 0.9552, 'n_synthetic': 2700}
+{'noise_multiplier': 1, 'channels': 'voltage+current minus PMU 19', 'accuracy': 0.9007, 'n_synthetic': 2700}
+{'noise_multiplier': 1, 'channels': 'voltage+current minus PMU 22', 'accuracy': 0.9574, 'n_synthetic': 2700}
+{'noise_multiplier': 1, 'channels': 'voltage+current minus PMU 29', 'accuracy': 0.9563, 'n_synthetic': 2700}
+{'noise_multiplier': 1, 'channels': 'voltage+current minus PMU 39', 'accuracy': 0.9481, 'n_synthetic': 2700}
+Most confusable pairs:
+{'channels': 'voltage+current', 'source': 'LOAD 3', 'nearest_source': 'LOAD 26', 'abs_profile_cosine': 0.987994, 'sin_angle': 0.154495}
+{'channels': 'voltage+current', 'source': 'LOAD 26', 'nearest_source': 'LOAD 3', 'abs_profile_cosine': 0.987994, 'sin_angle': 0.154495}
+{'channels': 'voltage+current', 'source': 'LOAD 16', 'nearest_source': 'LOAD 3', 'abs_profile_cosine': 0.984727, 'sin_angle': 0.174103}
+{'channels': 'voltage+current', 'source': 'LOAD 7', 'nearest_source': 'LOAD 31', 'abs_profile_cosine': 0.978891, 'sin_angle': 0.204382}
+{'channels': 'voltage+current', 'source': 'LOAD 31', 'nearest_source': 'LOAD 7', 'abs_profile_cosine': 0.978891, 'sin_angle': 0.204382}
+{'channels': 'voltage+current', 'source': 'LOAD 24', 'nearest_source': 'LOAD 3', 'abs_profile_cosine': 0.929103, 'sin_angle': 0.36982}
+{'channels': 'voltage+current', 'source': 'LOAD 15', 'nearest_source': 'LOAD 16', 'abs_profile_cosine': 0.92874, 'sin_angle': 0.370733}
+{'channels': 'voltage+current', 'source': 'LOAD 4', 'nearest_source': 'LOAD 15', 'abs_profile_cosine': 0.928189, 'sin_angle': 0.372109}

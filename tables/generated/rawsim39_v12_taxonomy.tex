@@ -1,0 +1,17 @@
+\begin{table*}[!t]
+\caption{Conservative taxonomy of the frozen RAWSIM39 V1.2 calibration checkpoint. The gate sequence was 18 candidates, 10 individually eligible ($\kappa=722.91$), eight rank-selected ($\kappa=7.83$), and seven released after one $6.15\sigma$ local-domain rejection.}
+\label{tab:supp-rawsim39-v12-taxonomy}
+\centering
+\scriptsize
+\begin{tabularx}{\textwidth}{@{}l c X X@{}}
+\toprule
+Category & Count & Directions & Evidence boundary \\
+\midrule
+Regular local & 7 & plant\_inertia\_scale, plant\_governor\_droop\_scale, generation\_delta\_p\_pu, generation\_delta\_q\_pu, generation\_amplitude, generation\_peak\_s, load\_delta\_p\_fraction & Released only under the local restricted posterior \\
+Weak first-order & 6 & plant\_damping, plant\_governor\_lag\_scale, plant\_turbine\_time\_scale, plant\_avr\_gain\_scale, plant\_avr\_time\_scale, plant\_subtransient\_x\_scale & Low information; order and temporal rescue unresolved \\
+Curvature unresolved & 2 & fault\_duration\_s, line\_duration\_s & Linear surrogate failed; not evidence of order 2 \\
+Near-redundant first-order & 2 & generation\_tau\_s, generation\_residual & Small new orthogonal fraction; exact redundancy unproved \\
+Local-domain failure & 1 & fault\_reactance\_pu & MAP left the declared local prior domain \\
+\bottomrule
+\end{tabularx}
+\end{table*}

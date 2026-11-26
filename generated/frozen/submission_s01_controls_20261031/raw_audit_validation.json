@@ -1,0 +1,23 @@
+{
+  "status": "ALL_55_EVALUATION_FIXTURES_PASS_AND_PREDICTION_SEALS_UNCHANGED",
+  "python": "3.13.9",
+  "command": "python -B -m unittest discover -s experiments/PAPER_SUBMISSION_S01/evaluation -p 'test_*.py'",
+  "tests": 55,
+  "failures": 0,
+  "errors": 0,
+  "artifact_sha256": {
+    "evaluation/RAW_CONTINUOUS_PROTOCOL.json": "9e514755aa030077e72a78f58652cf14681b7e3df0b60a7b5ce29f77524914a6",
+    "evaluation/CYBER_CONTINUOUS_PROTOCOL.json": "a220d74a7d965e0364f0736344ebba60d0f0bbe1a1a05dbe0c4a9b38749a4aac",
+    "evaluation/raw_labels.py": "4adeb37d887d2736bf9f84a423598bf69afc74401a233747ad640abd2b6d9f88",
+    "evaluation/score_continuous.py": "d7b30e30aa38762e768a72e61aae768d0ddc0e4a80f97fe6eda643d0ca671749",
+    "evaluation/score_cyber.py": "ab03139d3b72dcb1ee3fe2e0df4eb4eb6a4c098889d4beb66d5db99ffc410adb",
+    "evaluation/test_raw_continuous.py": "8521fb2f90c3a108f12231cb8d00c3c275b3dc99b5f2e9dbafb7b8aeff473e5b",
+    "run/legacy_continuous/EVALUATION.json": "4a07355e8088157030450cb8e6f788664e681a3c8d65a4b2cf6ecd492689d097",
+    "run/legacy_continuous/RAW_LABELS.json": "3a3a04727f6b3e0597c6e2608b6a9be490e3f3a2bbf0a4b54d87193434c1b7c1",
+    "run/cyber_composition_v2/EVALUATION.json": "d42dee01f977191c51e96cdb1b4a493e48f843508c72f14637aa7b3a616fe83d",
+    "RAW_CONTINUOUS_REVIEW.md": "81ee9dd374f497ec544187b348851359da200047bcc5f0d86afc69bd81737b4b"
+  },
+  "inference_rerun": false,
+  "C01_read": false,
+  "RAW0002_read": false
+}

@@ -1,0 +1,26 @@
+{
+  "id": "ET_SHORT_INCREMENTAL_DEV_V1",
+  "scope": "Development validation, not final or independent R08 test",
+  "train_campaigns": [
+    "SIM0014_RECOVERY_OBSERVER_HOLDOUT",
+    "SIM0015_HYPOTHESIS_REPAIR_HOLDOUT",
+    "SIM0016_MODE_CONFIRMATION_HOLDOUT",
+    "SIM0017_DIAGNOSIS_HOLDOUT"
+  ],
+  "validation_campaign": "SIM0018_BOUNDARY_HOLDOUT",
+  "target": "Active source; E0 after restoration including physical recovery",
+  "variant": "Original846 + causal current value and mean/std/adjacent-window-change/lag-difference at3,8,15reports",
+  "trees": 400,
+  "min_samples_leaf": 2,
+  "max_features": "sqrt",
+  "class_weight": "balanced",
+  "seed": 2601026,
+  "n_jobs": 2,
+  "training_stride": 3,
+  "first_decision": 360,
+  "reference_reports": 300,
+  "persistence": 6,
+  "hyperparameter_search": false,
+  "test_access_C01": false,
+  "selection_rule": "Primary development preference only if load joint-before-OFF improves, line joint-before-OFF does not decline, normal FA and extras do not increase; otherwise retain both as frozen exploratory variants, no superior claim"
+}

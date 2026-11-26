@@ -1,0 +1,46 @@
+{
+  "comparison.json": {
+    "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_SUBMISSION_S01\\run\\ml_raw_segmented\\PHYSICAL_METADATA_COMPARISON.json",
+    "sha256": "bf16a4c5356c934d6a76682aaf6fe6d86534af42bd1d052ebba90398dfb4572e"
+  },
+  "prediction_seal.json": {
+    "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_SUBMISSION_S01\\run\\ml_raw_segmented\\PREDICTIONS_SEAL.json",
+    "sha256": "b2d08d2429e9539a2e9c1ff648bc3bd57bfe8384aff5bcf0176124c82d0218d7"
+  },
+  "hybrid_predictions.json": {
+    "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_SUBMISSION_S01\\run\\ml_raw_segmented\\hybrid_predictions.json",
+    "sha256": "9dcea4d4ce5de441d3e24c790f0a97a12be496acc765d984afc297916fa65979"
+  },
+  "checks.json": {
+    "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_SUBMISSION_S01\\run\\ml_raw_segmented\\CHECKS.json",
+    "sha256": "cabb20515f920162a612ea33bda42d8a93f46c1f54ab9ec0d1b87daaf91247a9"
+  },
+  "read_audit.json": {
+    "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_SUBMISSION_S01\\run\\ml_raw_segmented\\READ_AUDIT.json",
+    "sha256": "727114303aae67ea2ff22eef4b17b9a2368d3ee13f2c652facbfec4035a7c300"
+  },
+  "inference_plan.json": {
+    "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_SUBMISSION_S01\\protocol\\ML_RAW_HYBRID_PLAN.json",
+    "sha256": "7463b2a20cae75f55835cfc5436da944b999e1fe867b8f5a3c05d849eeec4c02"
+  },
+  "evaluation_protocol.json": {
+    "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_SUBMISSION_S01\\evaluation\\PHYSICAL_METADATA_COMPARISON_PROTOCOL.json",
+    "sha256": "0ec11d22777e1a35b77df4414f3767245ea4b430c08842b77272b1764db5c85f"
+  },
+  "protocol_freeze.json": {
+    "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_SUBMISSION_S01\\evaluation\\PHYSICAL_METADATA_PROTOCOL_FREEZE.json",
+    "sha256": "8e28dd75e1a9fd96ed0d9c2f7336176f74db497d9d1df509b2e3f774120657b7"
+  },
+  "metadata_audit.json": {
+    "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_SUBMISSION_S01\\evaluation\\RAW_PHYSICAL_METADATA_AUDIT.json",
+    "sha256": "1dc9ecc1e8828a280f0a5042e2e2a173faacd1f1c64ffddae50d4eef263809b3"
+  },
+  "validation.json": {
+    "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_SUBMISSION_S01\\evaluation\\PHYSICAL_METADATA_VALIDATION.json",
+    "sha256": "845a72d1f9acfef93e9d716e0116876773ce11316f5be6d3d3aa8fbd1229c2c8"
+  },
+  "evaluation.py": {
+    "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_SUBMISSION_S01\\evaluation\\score_physical_metadata.py",
+    "sha256": "8afde5b5c50f9e1a2776bd6632e34b2fa595fa09853bc9e5d30b512320020147"
+  }
+}

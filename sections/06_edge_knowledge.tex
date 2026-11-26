@@ -1,0 +1,53 @@
+\section{Experimental Questions and Frozen Evidence}
+\label{sec:experimental-protocol}
+
+The experiments follow the logic of the paper rather than the order in which the software was developed. Each research question has its own independent unit, frozen selection boundary, and claim limit (Table~\ref{tab:experimental-contracts}). The complete manifests, seeds, acceptance gates, simulator versions, and secondary campaigns appear in Supplementary Appendix~F.
+
+\begin{table*}[t]
+\caption{Four research questions and their evidence contracts. Results from different rows are not pooled.}
+\label{tab:experimental-contracts}
+\centering
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}p{0.8cm}XXX@{}}
+\toprule
+RQ & Scientific question & Primary evidence and independent unit & Claim boundary \\
+\midrule
+RQ1 & What hidden voltage information do eight PMUs recover? & 100 frozen nonlinear PowerDynamics TEST trajectories; complete trajectory is the unit & Matched model and fixed PMU set \\
+RQ2 & What fails under physical mismatch, and can a constrained recentering repair it? & 980 independently rebuilt plants for diagnosis; 60 held-out equilibria for physical recentering & Point recovery under tested shifts, not sequential adaptation \\
+RQ3 & When can simultaneous load sources be resolved? & 3,488 fresh nonlinear paths and 10,564 complete-record decisions over all 137 hypotheses & One event family, known onset, fixed topology and sensing \\
+RQ4 & Does supervised localization survive physical-source holdout? & 303 decisions from 101 held-out event parents in ANDES & Historical baseline; true event family supplied \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+\subsection{RQ1 and RQ2 State-Reconstruction Contracts}
+
+The primary plant is the package-defined IEEE 39-bus PowerDynamics benchmark \cite{plietzsch2022powerdynamics}. Before scoring estimator error, we verified the power-flow translation, terminal-current orientation, equilibrium, local modes, nonlinear trajectories, and first-order response. These checks establish numerical consistency with the implemented benchmark; they do not make the tutorial model an authoritative external grid.
+
+RQ1 compares B0--B3 on the same 3-s trajectories. Model parameters and covariance choices are fixed before TEST, and the 31 requested buses exclude all eight observed buses. Separate calibration trajectories fit uncertainty corrections. RQ2 then rebuilds the plant under seven physical mismatch families while keeping the nominal estimator frozen. A distinct held-out operating-point campaign tests the constrained recentering in \eqref{eq:e06h-map}. Hidden voltages are revealed only after each solve, and rejected solves remain in the planned denominator.
+
+\subsection{RQ3 Simultaneous Load-Source Contract}
+
+Development data select the normal covariance and likelihood before the prospective support test. The final bank freezes $\bm D_i$, $\bm Q_i$, $\bm Q_{ij}$, the priors, onset, and quadrature, then generates new nonlinear trajectories for $H_0$, every single source, and every source pair. Event identifiers do not overlap the historical development manifests. Repeated noise realizations produce separate decisions but are not counted as new physical-system trajectories.
+
+The primary outcome is exact support, evaluated only after cardinality. A retrospective weak-regime audit asks which geometric distance explains errors without refitting the likelihood. A separate 120-frame study checks physical-manifold fidelity, information accumulation, and runtime. Because that study uses only one operating point and 32 validation paths, it is a diagnostic rather than a prospective recovery result.
+
+\subsection{RQ4 Historical Baseline and Event Semantics}
+
+The ANDES campaign \cite{cui2021hybrid} preserves the earlier physics-guided hierarchy as a baseline. Its compact representation uses local voltage, angle, frequency, and availability information; its expanded representation adds multiscale dynamics, adaptive residuals, and simultaneous PMU contrasts. A deterministic availability gate handles observed dropout. The ensemble is not DAE constrained, and its leaf votes are not treated as calibrated probabilities.
+
+The ordinary split places new replicas of known sources in TEST. RQ4 imposes the harder contract: it removes each physical source from every source-labeled fitting and tuning step and supplies the true event family at evaluation. This isolates physical-source generalization from detection and family-classification errors.
+
+Figure~\ref{fig:event-signatures} grounds the event ontology before any score is reported. A fault produces a short voltage sag, a line outage redistributes current, and injection changes evolve more slowly. Missing or corrupted measurements require different evidence. The clock trace in panel (e) makes the distinction explicit: time advances while packets from PMU~29 are absent.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/generated/event_signatures.pdf}
+\caption{Representative measured signatures from the RAW0001 reference simulation. Physical events alter voltage, current, or frequency through the network; integrity events alter availability or channel consistency. In panel (e), the gray reference clock advances while PMU~29 packets are absent. Curves are unsmoothed, and each panel uses the time scale needed to show its physical response.}
+\label{fig:event-signatures}
+\end{figure*}
+
+All intervals and tests use the experiment's independent unit: a complete trajectory, event parent, or rebuilt plant. Generated tables and figures read only the hashed frozen snapshot. Sample-level PMU frames are never promoted to independent replicates.
+
+\subsection{Status of the Single-Event Pilot}
+The multi-family pilot in Section~\ref{sec:single-event-route} has a different provenance tier. Two author-supplied technical dossiers dated September~24, 2026 summarize its campaign packages, but the underlying solver logs, frozen manifests, and final-survivor archive are not present in this repository. Its four development cases, four blind mini-holdout cases, and four quiet controls are independent \emph{cases}, not a population performance sample; no interval or false-alarms-per-hour estimate is computed from them. We report this line as an exploratory engineering audit in Section~\ref{sec:pilot-results} and Supplementary Appendix~H. None of its numerical values is pooled with RQ1--RQ4 or promoted to the abstract's primary evidence.

@@ -1,0 +1,164 @@
+{
+  "status": "ALGEBRA_AND_SYNTHETIC_EQUIVALENCE_PASS",
+  "IEEE39_physical_replay_executed": false,
+  "not_R11_speed_benchmark": true,
+  "legacy_Gram_already_implemented": true,
+  "hypotheses": 137,
+  "GH_order": 31,
+  "quadrature_nodes": 115817,
+  "dimensions": 960,
+  "basis_columns": 152,
+  "equivalence": [
+    {
+      "fixture": 0,
+      "max_log_evidence_error": 2.2737367544323206e-13,
+      "max_posterior_error": 4.208439152719734e-15,
+      "same_top1": true,
+      "same_top3": true,
+      "batched_log_evidence_error": 2.2737367544323206e-13,
+      "batched_posterior_error": 4.208439152719734e-15,
+      "batched_same_top3": true
+    },
+    {
+      "fixture": 1,
+      "max_log_evidence_error": 2.2737367544323206e-13,
+      "max_posterior_error": 1.814683386197613e-17,
+      "same_top1": true,
+      "same_top3": true,
+      "batched_log_evidence_error": 2.2737367544323206e-13,
+      "batched_posterior_error": 1.814683386197613e-17,
+      "batched_same_top3": true
+    },
+    {
+      "fixture": 2,
+      "max_log_evidence_error": 2.2737367544323206e-13,
+      "max_posterior_error": 1.3647394846161287e-17,
+      "same_top1": true,
+      "same_top3": true,
+      "batched_log_evidence_error": 2.2737367544323206e-13,
+      "batched_posterior_error": 1.3647394846161287e-17,
+      "batched_same_top3": true
+    },
+    {
+      "fixture": 3,
+      "max_log_evidence_error": 2.2737367544323206e-13,
+      "max_posterior_error": 1.3627066055427184e-17,
+      "same_top1": true,
+      "same_top3": true,
+      "batched_log_evidence_error": 2.2737367544323206e-13,
+      "batched_posterior_error": 1.3627066055427184e-17,
+      "batched_same_top3": true
+    },
+    {
+      "fixture": 4,
+      "max_log_evidence_error": 2.2737367544323206e-13,
+      "max_posterior_error": 4.121702978920894e-15,
+      "same_top1": true,
+      "same_top3": true,
+      "batched_log_evidence_error": 2.2737367544323206e-13,
+      "batched_posterior_error": 4.121702978920894e-15,
+      "batched_same_top3": true
+    },
+    {
+      "fixture": 5,
+      "max_log_evidence_error": 2.2737367544323206e-13,
+      "max_posterior_error": 4.390358036353228e-25,
+      "same_top1": true,
+      "same_top3": true,
+      "batched_log_evidence_error": 2.2737367544323206e-13,
+      "batched_posterior_error": 4.390358036353228e-25,
+      "batched_same_top3": true
+    }
+  ],
+  "numerical": [
+    {
+      "check": "hypothesis_covariance",
+      "amplitude": 0.0,
+      "error": 5.684341886080802e-14
+    },
+    {
+      "check": "hypothesis_covariance",
+      "amplitude": 0.02,
+      "error": 8.526512829121202e-14
+    },
+    {
+      "check": "hypothesis_covariance",
+      "amplitude": -0.05,
+      "error": 7.105427357601002e-14
+    },
+    {
+      "check": "R0_zero_parameter_uncertainty",
+      "error": 1.4210854715202004e-13
+    },
+    {
+      "check": "conditional_Bayes_factor",
+      "error": 4.475586568020162e-16
+    },
+    {
+      "check": "prefix_additivity_and_future_independence",
+      "prefixes": 30,
+      "error": 0.0
+    }
+  ],
+  "normalization": {
+    "legacy_null_masses": [
+      0.34507897532065135,
+      0.1373025616984222,
+      0.5176184629809496
+    ],
+    "corrected_null_masses": [
+      0.20000000000001364,
+      0.5000000000000238,
+      0.30000000000000454
+    ],
+    "declared_prior": [
+      0.2,
+      0.5,
+      0.3
+    ],
+    "correction_single_logZ": 1.8378770664093453,
+    "legacy_bug_preserved_in_replay": true,
+    "physical_data_replay_pending": true
+  },
+  "timings": [
+    {
+      "method": "existing_support_Gram",
+      "p50_ms": 51.22060002759099,
+      "p95_ms": 80.15846002090251,
+      "p99_ms": 91.96338901296258,
+      "repetitions": 30
+    },
+    {
+      "method": "shared_Gram_candidate",
+      "p50_ms": 50.654549995670095,
+      "p95_ms": 83.7661149940686,
+      "p99_ms": 89.06642199668568,
+      "repetitions": 30
+    },
+    {
+      "method": "batched_GH31_candidate",
+      "p50_ms": 40.88654997758567,
+      "p95_ms": 65.57160500087774,
+      "p99_ms": 70.5966450064443,
+      "repetitions": 30
+    }
+  ],
+  "pair_cache_bytes": 4632000,
+  "shared_cache_bytes": 1380992,
+  "processor": "Intel64 Family 6 Model 170 Stepping 4, GenuineIntel",
+  "logical_CPUs": 22,
+  "numpy": "2.3.5",
+  "scipy": "1.16.3",
+  "blas_threads": 1,
+  "source_hashes": {
+    "research\\pmu_hybrid_dae_bayes\\scripts\\global_137_confirmatory_v1.py": "0c0e4d2a1d344436f305745d670164d985bffb4051d09ee7e2072526eb8df665",
+    "research\\pmu_hybrid_dae_bayes\\scripts\\load_multi_pilot_v1.py": "bf7c0b9cf3eee2c146db0397c608b480bbed55fa6617b66466f83ac1809c526f"
+  },
+  "missing_original_replay_inputs": [
+    "research\\pmu_hybrid_dae_bayes\\powerdynamics_ieee39\\output\\load_tangent_v2\\results\\load_fd_central_operator.npz",
+    "research\\pmu_hybrid_dae_bayes\\powerdynamics_ieee39\\output\\load_multi_bayes_v1\\results\\load_multi_qij.npz"
+  ],
+  "C01_modified": false,
+  "RAW0002_opened": false,
+  "wall_seconds": 6.369756460189819
+}

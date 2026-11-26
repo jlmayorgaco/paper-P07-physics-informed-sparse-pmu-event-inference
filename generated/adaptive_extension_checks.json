@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "scope": "small linear Gaussian / truncated-severity identities and counterexamples only; no detector performance",
+  "checks": {
+    "truncated_log_evidence_error": 0.0,
+    "state_mean_quadrature_error": 1.1102230246251565e-16,
+    "state_covariance_quadrature_error": 5.551115123125783e-17,
+    "joseph_vs_schur_error": 5.551115123125783e-17,
+    "masked_marginal_density_error": 0.0,
+    "structured_covariance_projection_error": 1.1102230246251565e-16,
+    "prefix_score_error": 0.0,
+    "prefix_covariance_version_error": 0.0,
+    "replay_replacement_error": 0.0
+  },
+  "counterexamples": {
+    "adaptive_center_remaining_step_fraction": 0.0059205292203339975,
+    "eta": 0.05,
+    "updates": 100,
+    "variance_after_selecting_abs_standard_normal_below_1": 0.29112509477279314,
+    "wrong_inverse_submatrix_difference": 0.09216689460745142
+  },
+  "environment": {
+    "python": "3.13.14",
+    "numpy": "2.3.5",
+    "scipy": "1.16.3"
+  },
+  "script_sha256": "089f5094755bcecde3c7db57d5a32b8574060189738f9ac54c9453b0798caf24"
+}

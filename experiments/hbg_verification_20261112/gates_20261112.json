@@ -1,0 +1,34 @@
+{
+  "gates": {
+    "gaussian_bf_vs_direct_density": true,
+    "gaussian_bf_vs_integrated_prior": true,
+    "nonzero_angle_hessian_rank_one_update": true,
+    "profile_distance_conditional_decomposition": true,
+    "profile_distance_monotone_V_to_VI": true,
+    "profile_distance_not_sum_of_separate_marginal_profiles": true,
+    "reduced_swing_hamiltonian_balance": true,
+    "reduced_swing_solver_success": true,
+    "reduced_swing_switch_potential_jump": true,
+    "truncated_gaussian_mean": true,
+    "truncated_gaussian_normalizer": true,
+    "truncated_prior_bf_normalization": true,
+    "woodbury_map_equals_joint_map": true
+  },
+  "metrics": {
+    "gaussian_bf_vs_direct_density": -1.942890293094024e-16,
+    "gaussian_bf_vs_integrated_prior": 2.498001805406602e-16,
+    "nonzero_angle_hessian_rank_one_update": 1.1102230246251565e-16,
+    "profile_distance_conditional_decomposition": 5.551115123125783e-17,
+    "profile_distance_monotone_V_to_VI": 0.3383812010443864,
+    "profile_distance_not_sum_of_separate_marginal_profiles": 0.3383812010443864,
+    "reduced_swing_hamiltonian_balance": -4.3487755714208265e-15,
+    "reduced_swing_switch_potential_jump": -1.6263032587282567e-19,
+    "truncated_gaussian_mean": -5.551115123125783e-17,
+    "truncated_gaussian_normalizer": 0.0,
+    "truncated_prior_bf_normalization": -1.1102230246251565e-16,
+    "woodbury_map_equals_joint_map": 6.38378239159465e-16
+  },
+  "passed": true,
+  "scope": "reduced Gaussian identities and lossless swing model only; no DAE/IEEE-39 claim",
+  "tolerance": 2e-08
+}

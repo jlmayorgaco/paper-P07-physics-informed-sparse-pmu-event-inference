@@ -67,7 +67,7 @@ same affine augmentation to \eqref{eq:impl-flow-composition} produces the
 stored $T_o,J_o,g_o,u_o,j_o,v_o$ operators. In their report ordering,
 \begin{align}
  r_k&=J_o\xi_k+j_o+v_oa+\epsilon_k,\nonumber\\
- \xi_{k+1}&=T_o\xi_k+g_o+u_oa+w_k.
+ \xi_{k+1}&=T_o\xi_k+g_o+u_oa+\eta_k.
  \label{eq:impl-report-order}
 \end{align}
 The measurement is scored before correcting the state for the next
@@ -160,21 +160,14 @@ coordinates. It does not justify averaging absolute rotor states between
 different network equilibria.
 
 The continuous estimator uses the shared regime covariance $P_\rho$ in
-place of $P_h$. It updates the affine means and amplitude distributions
-and computes marginal diagonal state variances for diagnostics. The
-development bank's closure operation carries $\bar\xi$, including its
-instrument and discrepancy states. It clears the explicit histories and
-records the trace of the severity and between-history spread that it
-discards. Startup estimates enter as fixed parameters.
-
-The controlled two-plant study varies what happens at a published
-restoration. The history arm makes no additional merge at that report.
-The carry arm merges the no-event and retired paths into their weighted
-mean, keeps active paths and rebuilds the affected onset-search context.
-The reset arm also zeros the 114 physical state deviations. The two
-merging arms use the nominal conditional covariance for the merged state.
-The full covariance in \eqref{eq:impl-mixture-covariance} is a
-mathematical reference for that approximation.
+place of $P_h$. It updates the affine means and amplitude distributions,
+and computes marginal diagonal state variances for diagnostics. At
+closure it carries $\bar\xi$, clears explicit histories, and records the
+trace of amplitude/mean spread omitted from the new single-history
+representation. It does not carry the complete covariance in
+\eqref{eq:impl-mixture-covariance}, nor the uncertainty of the fitted
+startup context. Instrumental and discrepancy states remain in the
+carried augmented mean.
 
 For comparison, an exact conditional covariance recursion for the local
 linear model \eqref{eq:impl-report-order}, with independent noises of

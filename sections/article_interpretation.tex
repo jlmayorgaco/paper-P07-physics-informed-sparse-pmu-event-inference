@@ -1,74 +1,68 @@
 \section{Discussion}
 \label{sec:discussion}
 
-\subsection{Why State Continuity Affects Attribution}
+\subsection{What State Continuity Explains}
+A restored operator can leave a nonzero physical state, so returning
+the predictor to equilibrium introduces a residual that another
+candidate can explain. The reset control shows this failure at fixed
+thresholds; bounded profiling and marginalization tie in that control.
+The nominal signature diagnostics help explain short delays under the
+assumed noise model. They do not predict operational error rates.
+The bank has no online applicability gate to reject decisions after a plant
+change invalidates its models. Sparse-PMU transient-stability
+work has reported an explicit self-check for that applicability question
+\cite{wang2023sparsepmutsa}. The present signature diagnostics were evaluated retrospectively and do
+not suppress alarms.
 
-The continuous GLR already propagates a physical state through
-restoration. Its lower rate of timely attribution therefore cannot be
-explained by a return to equilibrium. It commits to one trajectory and
-profiles the size of a candidate load change. The bank can reconsider a
-recent onset from a saved state and average over several explanations of
-the same reports. The primary comparison measures these choices together.
-The fixed-threshold test provides little support for attributing the
-difference to severity integration alone. Substituting a profile score
-gave identical counts within each state treatment on those records.
+\subsection{Coverage, Alarm Cost and Scope}
+In the held-out comparison, the history-bank procedure had higher
+timely coverage and fewer event-record extra alarms than the continuous GLR.
+ExtraTrees emits fewer extra alarms but misses more interventions.
+These are contrasts between complete procedures calibrated to a common
+normal-alarm target; zero observed normal alarms give upper bounds, not
+equality of the underlying rates. Under an adequate Markov model, the full
+augmented-state distribution is sufficient for prediction. Compressing
+histories to their mean can discard covariance and distinct state
+alternatives. A history-bank advantage over that compression would therefore
+concern a practical representation of uncertainty, rather than information
+unavailable to every state observer. The supplementary distributional
+analysis separates predictive sufficiency from historical cause attribution.
+The present comparison does not isolate these effects.
 
-Of the two post-closure choices, carrying the estimated physical mean
-has the clearest support across plants. Equation~\eqref{eq:recovery-log-loss}
-explains how a reset can create an apparent new event. When the discarded
-state projects onto a measured phasor, the next report is displaced from
-the reset prediction even if the system simply continues to recover.
-A new load or line candidate can explain part of that displacement.
-The size of the one-report penalty depends on what the PMUs can see.
-An alarm also depends on later observations, competing sources and the
-six-report decision rule.
+\subsection{Transfer and Measurement Limits}
+Observations and predictors use the same simulator family. The catalog
+is fixed, the gaps between interventions are 3--8\,s, and no intervention
+overlaps another. Transfer of the dynamic bank to a distinct plant,
+shorter gaps and unseen sources are untested. Under independent per-PMU
+noise at \RevNoiseAddedRmsLow{}\% added RMS TVE, the bank misses most load changes. This limits transfer
+beyond the calibrated measurement model. The terminal map retains the provisional bus-5 current
+terminal and excludes the bus-39 current angle. A dropout with held
+observations prevents recovery in the
+auxiliary stress test. The bank did not start on the retrospective
+competition record; the integrity checks and separate attributor in the
+supplement do not validate the dynamic bank on that record.
 
-A separate test supplied the first restoration time and searched the
-eight PMUs for a second switch. At a common alarm, allowing 29 more
-reports and averaging over possible onset times raised timely family
-diagnoses from \ModalImmediateFamily{}/96 to \ModalConfirmFamily{}/96
-with sinusoidal contrasts. With the same reports and onset averaging,
-the mean alone gave \ModalConfirmMean{}/96 and a quadratic trend gave
-\ModalConfirmQuad{}/96. The timing of the diagnosis mattered more here
-than the choice of temporal basis. The supplement gives the source
-counts and the recovery-only controls.
+The tested IEEE-39 plant also has no grid-forming inverter controller
+dynamics. Applying the method to converter-dominated networks would require
+adding the relevant control and current-limiting states and testing those
+predictors anew; GFMI surveys describe several such modeling choices
+\cite{rathnayake2021gridforming}.
 
-The comparison between retained histories and their merged mean has a
-different interpretation. Both preserve the physical mean at the point
-of fusion for the components being merged. Fusion removes alternative
-recovery trajectories, leaves out their dispersion in report space
-\eqref{eq:recovery-report-variance}, and restarts the onset search from
-the merged state. The experiment changes all three. On the second plant
-the coverage interval spans losses and gains, even though retaining
-histories reduces unmatched alarms. Determining which part of fusion
-matters would require controlling the prediction covariance and the
-stored onset-search information separately.
+\subsection{Approximation and Processing Cost}
+Pruning, steady-state covariances, startup fitting and compression
+make the attribution weights approximate. Retrospective proposals
+change inner history weights without updating the outer model weights.
+The nominal bank processed reports faster than they arrived in a
+measured replay on one thread; the five-model version did not.
+This timing is specific to the reported hardware and records.
 
-\subsection{Sensitivity to Plant and Instrument Models}
-
-The second plant changes machine dynamics and some passive parameters
-while keeping the network layout, measurement terminals and candidate
-assets. Transfer here concerns those changes. Both test plants assume a
-balanced network, a quiet startup and nonoverlapping interventions from
-the 18-source catalog. The results give no measured accuracy for unknown
-sources, overlapping switches or unbalanced faults. On the SGSMA competition record, the bank failed its startup check and therefore
-produced no diagnosis.
-
-Relative angles across PMUs are unusually quiet under the simulated
-common instrument noise. In the auxiliary replay, adding independent
-errors reduced load attribution to \RevNoiseTVEaLoad{} even at
-\RevNoiseAddedRmsLow{}\% added RMS total vector error. With its original
-startup limits the two-plant bank rejected every independent-noise stress
-record. A test on field PMUs would therefore have to establish both
-admission of the records and source accuracy at their measured noise
-correlations. The one-thread timing results likewise establish average
-processing throughput only. They leave worst-case delay per report open.
-
-The dynamic bank rejected all M9 startup records. At familiar sites
-the fallback located 188/192 sources. On held-out sites the electrical
-hybrid classified all 72 physical events and located two. After a fault,
-phase balance raised macro-F1 from 0.943 to 0.981 with physical location
-fixed at 4/36. In a separate test, registering M9 responses raised exact
-location from 23/64 to 56/64 after a fault. All eight errors were weak
-composites. With onset and strength supplied and no instrument corruption,
-the voltage readout located only 10/78 weak sources (supplement).
+\subsection{Adaptation Without Absorbing an Intervention}
+Adaptive noise estimation has already been studied on IEEE-39
+\cite{wang2019adaptiveh}; it is not a new contribution here. A useful
+successor would test whether history-based adaptation can track changing
+instrument uncertainty without suppressing weak interventions. This requires
+propagating conditional covariance, scoring each report before updating
+noise, and checking selection bias in the adaptation gate. The supplement's
+architecture diagram and derivation specify these changes as unvalidated
+extensions. Cyber analysis belongs to a separate layer with its own alerts;
+neither missing reports nor physical residuals alone identify an attack.

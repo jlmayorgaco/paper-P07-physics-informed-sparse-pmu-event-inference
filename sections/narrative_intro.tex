@@ -1,0 +1,39 @@
+\section{Introduction}
+\label{sec:introduction}
+
+\PARstart{A}{n} unmeasured load changes. Several PMUs respond, a detector raises an alarm, and the network keeps oscillating after the load is restored. A second intervention then begins during that recovery. The operational question is no longer whether one signal exceeds a threshold: which physical intervention explains the reports observed so far, where did it originate, and when is that explanation distinguishable from the alternatives?
+
+\begin{figure*}[t]\centering
+\resizebox{\textwidth}{!}{\input{figures/narrative_architecture}}
+\caption{The complete scientific argument. Physics maps an intervention at an unmeasured source into predicted PMU trajectories; causal evidence chooses among those explanations. Event truth enters only evaluation. The figure describes the implemented restricted load/line component, not an already validated all-family joint estimator.}
+\label{fig:joint-architecture}\end{figure*}
+
+Sparse PMUs make the question difficult because a source need not have a sensor at its own bus. Its voltage, current and frequency effects propagate through the network \cite{phadke2008synchronized,zhao2019dse}. Uncertain operating context and network parameters can also change those effects. Moreover, physical OFF is not electrical recovery. A method that resets at restoration can treat the remaining response as another event or lose a real event that begins before the oscillation decays.
+
+Strong existing methods solve parts of this problem. Dynamic state estimators combine power-system equations and PMU histories \cite{katanic2024recursive}; supervised classifiers learn sparse-PMU event/source labels \cite{pandey2020realtime,yildiz2024few}; physical outage detectors compare network hypotheses sequentially \cite{chen2016quickest,rovatsos2017outage}; and high-fidelity fault trajectories already support sparse-PMU diagnosis \cite{warner2023highfidelity}. The question here is how to retain an explanation through restoration and compare its recovery with a later intervention. A low state error does not prove source identity, and a score on represented assets does not prove source transfer.
+
+Our approach uses the physical intervention as the object of inference.
+DAE derivatives construct switched predictors for load and line candidates.
+Starting from an estimated past state, those predictors describe what the
+eight PMUs should report. Conditional likelihoods compare the predictions
+with observations while accounting for severity and instrumental memory.
+A finite network-model bank represents parameter uncertainty. Active and
+originating-cause masses distinguish an ongoing intervention from the
+response that remains after restoration.
+
+The paper makes three scoped contributions:
+\begin{enumerate}
+\item \textbf{Recovery-aware physical attribution:} an executable causal load/line history bank starts from estimated past states, retains the originating cause after physical OFF, and compares recovery with new-intervention histories under fixed network hypotheses. We specify its evidence and publication rules.
+\item \textbf{A qualified source-resolution analysis:} a separate archived load-support study exposes ambiguity and the different information used by joint and conditional source decisions. A prior-consistency audit distinguishes implementation effects from a claimed physical limit; this study is not counted as causal accuracy.
+\item \textbf{A reproducible operational test:} the nominal/mixture comparison and a failed admission ablation expose the trade-off between timely source attribution and extra alarms. Separate state, batch and stream contracts retain their own denominators. R11 and nominal remain frozen co-references for confirmation.
+\end{enumerate}
+
+The central question is whether this recovery-aware construction preserves
+timely source decisions without excessive extra alarms. The experiments
+separate development from independent evaluation and keep detection,
+eventual attribution and attribution before restoration as different
+outcomes. Physical templates, onset scanning and Bayesian updates have
+close precedents; the claimed contribution is their specified operational
+construction for the declared load/line problem and its measured limits.
+
+

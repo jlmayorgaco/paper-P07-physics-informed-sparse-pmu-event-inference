@@ -1,0 +1,2337 @@
+{
+  "summary": [
+    {
+      "intended_events": 54,
+      "detected": 27,
+      "first_diagnosis_correct": 27,
+      "timely_joint": 27,
+      "extras": 3,
+      "orphan_restorations": 3,
+      "premature_restorations": 0,
+      "restoration_missing": 27,
+      "unavailable_events": 0,
+      "method": "S01_ET_SHORT_H04_FROZEN",
+      "records": 12,
+      "available_records": 12,
+      "unavailable_records": 0,
+      "normal_alarms": 0,
+      "normal_exposure_s": 204.0,
+      "planned_normal_exposure_s": 204.0,
+      "load_timely": 0,
+      "line_timely": 27,
+      "right_censored_episodes": 0,
+      "superseded_episodes": 0
+    }
+  ],
+  "records": {
+    "S001": {
+      "events": [],
+      "extras": [],
+      "orphan_restorations": [],
+      "by_plane": {
+        "physical": {
+          "intended_components": 0,
+          "timely_joint": 0,
+          "detected": 0,
+          "extras": 0
+        },
+        "integrity": {
+          "intended_components": 0,
+          "timely_joint": 0,
+          "detected": 0,
+          "extras": 0
+        }
+      },
+      "summary": {
+        "intended_events": 0,
+        "detected": 0,
+        "first_diagnosis_correct": 0,
+        "timely_joint": 0,
+        "extras": 0,
+        "orphan_restorations": 0,
+        "premature_restorations": 0,
+        "restoration_missing": 0,
+        "unavailable_events": 0
+      },
+      "normal_metrics": {
+        "available": true,
+        "intended_normal_records": 1,
+        "available_normal_records": 1,
+        "planned_exposure_s": 68.0,
+        "monitored_exposure_s": 68.0,
+        "alarms": 0,
+        "any_alarm": false,
+        "alarm_rate_per_hour": 0.0,
+        "stop_mode": "continue",
+        "stop_s": 80.0
+      },
+      "group_id": "G_41c4f849ad529a8d66c9",
+      "condition": "IN_SUPPORT",
+      "physical_parent": "H04_R12_OPEN_DEVELOPMENT/N001",
+      "available": true,
+      "prediction_wall_seconds": 0.9200802000123076
+    },
+    "S002": {
+      "events": [
+        {
+          "event": "H002_E01",
+          "plane": "physical",
+          "family": "load",
+          "source": [
+            "BUS24"
+          ],
+          "available": true,
+          "detected": false,
+          "episode": null,
+          "alarm_s": null,
+          "alarm_delay_s": null,
+          "diagnosis_s": null,
+          "diagnosis_delay_s": null,
+          "first_diagnosis_correct": false,
+          "timely_joint": false,
+          "correct_source_known_at_alarm": false,
+          "top3": false,
+          "diagnosis_censored": true,
+          "unavailable": false,
+          "restoration_s": null,
+          "off_delay_s": null,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": true,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": null
+        },
+        {
+          "event": "H002_E02",
+          "plane": "physical",
+          "family": "line",
+          "source": [
+            "LINE9-39"
+          ],
+          "available": true,
+          "detected": true,
+          "episode": "1",
+          "alarm_s": 23.6,
+          "alarm_delay_s": 0.1925030000000021,
+          "diagnosis_s": 23.6,
+          "diagnosis_delay_s": 0.1925030000000021,
+          "first_diagnosis_correct": true,
+          "timely_joint": true,
+          "correct_source_known_at_alarm": true,
+          "top3": true,
+          "diagnosis_censored": false,
+          "unavailable": false,
+          "restoration_s": 25.933333333333334,
+          "off_delay_s": 0.17391933333333398,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": false,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": "restoration"
+        },
+        {
+          "event": "H002_E03",
+          "plane": "physical",
+          "family": "line",
+          "source": [
+            "LINE4-14"
+          ],
+          "available": true,
+          "detected": true,
+          "episode": "2",
+          "alarm_s": 28.966666666666665,
+          "alarm_delay_s": 0.1959016666666642,
+          "diagnosis_s": 28.966666666666665,
+          "diagnosis_delay_s": 0.1959016666666642,
+          "first_diagnosis_correct": true,
+          "timely_joint": true,
+          "correct_source_known_at_alarm": true,
+          "top3": true,
+          "diagnosis_censored": false,
+          "unavailable": false,
+          "restoration_s": 32.166666666666664,
+          "off_delay_s": 0.1759416666666631,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": false,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": "restoration"
+        },
+        {
+          "event": "H002_E04",
+          "plane": "physical",
+          "family": "load",
+          "source": [
+            "BUS31"
+          ],
+          "available": true,
+          "detected": false,
+          "episode": null,
+          "alarm_s": null,
+          "alarm_delay_s": null,
+          "diagnosis_s": null,
+          "diagnosis_delay_s": null,
+          "first_diagnosis_correct": false,
+          "timely_joint": false,
+          "correct_source_known_at_alarm": false,
+          "top3": false,
+          "diagnosis_censored": true,
+          "unavailable": false,
+          "restoration_s": null,
+          "off_delay_s": null,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": true,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": null
+        },
+        {
+          "event": "H002_E05",
+          "plane": "physical",
+          "family": "line",
+          "source": [
+            "LINE26-27"
+          ],
+          "available": true,
+          "detected": true,
+          "episode": "3",
+          "alarm_s": 43.9,
+          "alarm_delay_s": 0.17738299999999896,
+          "diagnosis_s": 43.9,
+          "diagnosis_delay_s": 0.17738299999999896,
+          "first_diagnosis_correct": true,
+          "timely_joint": true,
+          "correct_source_known_at_alarm": true,
+          "top3": true,
+          "diagnosis_censored": false,
+          "unavailable": false,
+          "restoration_s": 47.233333333333334,
+          "off_delay_s": 0.17966133333333545,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": false,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": "restoration"
+        },
+        {
+          "event": "H002_E06",
+          "plane": "physical",
+          "family": "load",
+          "source": [
+            "BUS16"
+          ],
+          "available": true,
+          "detected": false,
+          "episode": null,
+          "alarm_s": null,
+          "alarm_delay_s": null,
+          "diagnosis_s": null,
+          "diagnosis_delay_s": null,
+          "first_diagnosis_correct": false,
+          "timely_joint": false,
+          "correct_source_known_at_alarm": false,
+          "top3": false,
+          "diagnosis_censored": true,
+          "unavailable": false,
+          "restoration_s": null,
+          "off_delay_s": null,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": true,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": null
+        }
+      ],
+      "extras": [],
+      "orphan_restorations": [],
+      "by_plane": {
+        "physical": {
+          "intended_components": 6,
+          "timely_joint": 3,
+          "detected": 3,
+          "extras": 0
+        },
+        "integrity": {
+          "intended_components": 0,
+          "timely_joint": 0,
+          "detected": 0,
+          "extras": 0
+        }
+      },
+      "summary": {
+        "intended_events": 6,
+        "detected": 3,
+        "first_diagnosis_correct": 3,
+        "timely_joint": 3,
+        "extras": 0,
+        "orphan_restorations": 0,
+        "premature_restorations": 0,
+        "restoration_missing": 3,
+        "unavailable_events": 0
+      },
+      "group_id": "G_2345eff776083af533d1",
+      "condition": "MATCH",
+      "physical_parent": "H04_R12_OPEN_DEVELOPMENT/H002",
+      "available": true,
+      "prediction_wall_seconds": 0.8902746000094339
+    },
+    "S003": {
+      "events": [
+        {
+          "event": "H001_E01",
+          "plane": "physical",
+          "family": "line",
+          "source": [
+            "LINE3-4"
+          ],
+          "available": true,
+          "detected": true,
+          "episode": "1",
+          "alarm_s": 16.6,
+          "alarm_delay_s": 0.16701300000000074,
+          "diagnosis_s": 16.6,
+          "diagnosis_delay_s": 0.16701300000000074,
+          "first_diagnosis_correct": true,
+          "timely_joint": true,
+          "correct_source_known_at_alarm": true,
+          "top3": true,
+          "diagnosis_censored": false,
+          "unavailable": false,
+          "restoration_s": 19.233333333333334,
+          "off_delay_s": 0.18857533333333265,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": false,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": "restoration"
+        },
+        {
+          "event": "H001_E02",
+          "plane": "physical",
+          "family": "line",
+          "source": [
+            "LINE26-29"
+          ],
+          "available": true,
+          "detected": true,
+          "episode": "2",
+          "alarm_s": 23.633333333333333,
+          "alarm_delay_s": 0.191908333333334,
+          "diagnosis_s": 23.633333333333333,
+          "diagnosis_delay_s": 0.191908333333334,
+          "first_diagnosis_correct": true,
+          "timely_joint": true,
+          "correct_source_known_at_alarm": true,
+          "top3": true,
+          "diagnosis_censored": false,
+          "unavailable": false,
+          "restoration_s": 26.7,
+          "off_delay_s": 0.18471100000000007,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": false,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": "restoration"
+        },
+        {
+          "event": "H001_E03",
+          "plane": "physical",
+          "family": "load",
+          "source": [
+            "BUS20"
+          ],
+          "available": true,
+          "detected": false,
+          "episode": null,
+          "alarm_s": null,
+          "alarm_delay_s": null,
+          "diagnosis_s": null,
+          "diagnosis_delay_s": null,
+          "first_diagnosis_correct": false,
+          "timely_joint": false,
+          "correct_source_known_at_alarm": false,
+          "top3": false,
+          "diagnosis_censored": true,
+          "unavailable": false,
+          "restoration_s": null,
+          "off_delay_s": null,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": true,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": null
+        },
+        {
+          "event": "H001_E04",
+          "plane": "physical",
+          "family": "load",
+          "source": [
+            "BUS31"
+          ],
+          "available": true,
+          "detected": false,
+          "episode": null,
+          "alarm_s": null,
+          "alarm_delay_s": null,
+          "diagnosis_s": null,
+          "diagnosis_delay_s": null,
+          "first_diagnosis_correct": false,
+          "timely_joint": false,
+          "correct_source_known_at_alarm": false,
+          "top3": false,
+          "diagnosis_censored": true,
+          "unavailable": false,
+          "restoration_s": null,
+          "off_delay_s": null,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": true,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": null
+        },
+        {
+          "event": "H001_E05",
+          "plane": "physical",
+          "family": "load",
+          "source": [
+            "BUS26"
+          ],
+          "available": true,
+          "detected": false,
+          "episode": null,
+          "alarm_s": null,
+          "alarm_delay_s": null,
+          "diagnosis_s": null,
+          "diagnosis_delay_s": null,
+          "first_diagnosis_correct": false,
+          "timely_joint": false,
+          "correct_source_known_at_alarm": false,
+          "top3": false,
+          "diagnosis_censored": true,
+          "unavailable": false,
+          "restoration_s": null,
+          "off_delay_s": null,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": true,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": null
+        },
+        {
+          "event": "H001_E06",
+          "plane": "physical",
+          "family": "line",
+          "source": [
+            "LINE26-27"
+          ],
+          "available": true,
+          "detected": true,
+          "episode": "3",
+          "alarm_s": 53.93333333333333,
+          "alarm_delay_s": 0.1794483333333332,
+          "diagnosis_s": 53.93333333333333,
+          "diagnosis_delay_s": 0.1794483333333332,
+          "first_diagnosis_correct": true,
+          "timely_joint": true,
+          "correct_source_known_at_alarm": true,
+          "top3": true,
+          "diagnosis_censored": false,
+          "unavailable": false,
+          "restoration_s": 57.166666666666664,
+          "off_delay_s": 0.17522266666666297,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": false,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": "restoration"
+        }
+      ],
+      "extras": [],
+      "orphan_restorations": [],
+      "by_plane": {
+        "physical": {
+          "intended_components": 6,
+          "timely_joint": 3,
+          "detected": 3,
+          "extras": 0
+        },
+        "integrity": {
+          "intended_components": 0,
+          "timely_joint": 0,
+          "detected": 0,
+          "extras": 0
+        }
+      },
+      "summary": {
+        "intended_events": 6,
+        "detected": 3,
+        "first_diagnosis_correct": 3,
+        "timely_joint": 3,
+        "extras": 0,
+        "orphan_restorations": 0,
+        "premature_restorations": 0,
+        "restoration_missing": 3,
+        "unavailable_events": 0
+      },
+      "group_id": "G_9bc21bcb24f57797799e",
+      "condition": "OUT_SUPPORT",
+      "physical_parent": "H04_R12_OPEN_DEVELOPMENT/H001",
+      "available": true,
+      "prediction_wall_seconds": 0.8277563000447117
+    },
+    "S004": {
+      "events": [],
+      "extras": [],
+      "orphan_restorations": [],
+      "by_plane": {
+        "physical": {
+          "intended_components": 0,
+          "timely_joint": 0,
+          "detected": 0,
+          "extras": 0
+        },
+        "integrity": {
+          "intended_components": 0,
+          "timely_joint": 0,
+          "detected": 0,
+          "extras": 0
+        }
+      },
+      "summary": {
+        "intended_events": 0,
+        "detected": 0,
+        "first_diagnosis_correct": 0,
+        "timely_joint": 0,
+        "extras": 0,
+        "orphan_restorations": 0,
+        "premature_restorations": 0,
+        "restoration_missing": 0,
+        "unavailable_events": 0
+      },
+      "normal_metrics": {
+        "available": true,
+        "intended_normal_records": 1,
+        "available_normal_records": 1,
+        "planned_exposure_s": 68.0,
+        "monitored_exposure_s": 68.0,
+        "alarms": 0,
+        "any_alarm": false,
+        "alarm_rate_per_hour": 0.0,
+        "stop_mode": "continue",
+        "stop_s": 80.0
+      },
+      "group_id": "G_41c4f849ad529a8d66c9",
+      "condition": "OUT_SUPPORT",
+      "physical_parent": "H04_R12_OPEN_DEVELOPMENT/N001",
+      "available": true,
+      "prediction_wall_seconds": 0.826038500003051
+    },
+    "S005": {
+      "events": [],
+      "extras": [],
+      "orphan_restorations": [],
+      "by_plane": {
+        "physical": {
+          "intended_components": 0,
+          "timely_joint": 0,
+          "detected": 0,
+          "extras": 0
+        },
+        "integrity": {
+          "intended_components": 0,
+          "timely_joint": 0,
+          "detected": 0,
+          "extras": 0
+        }
+      },
+      "summary": {
+        "intended_events": 0,
+        "detected": 0,
+        "first_diagnosis_correct": 0,
+        "timely_joint": 0,
+        "extras": 0,
+        "orphan_restorations": 0,
+        "premature_restorations": 0,
+        "restoration_missing": 0,
+        "unavailable_events": 0
+      },
+      "normal_metrics": {
+        "available": true,
+        "intended_normal_records": 1,
+        "available_normal_records": 1,
+        "planned_exposure_s": 68.0,
+        "monitored_exposure_s": 68.0,
+        "alarms": 0,
+        "any_alarm": false,
+        "alarm_rate_per_hour": 0.0,
+        "stop_mode": "continue",
+        "stop_s": 80.0
+      },
+      "group_id": "G_41c4f849ad529a8d66c9",
+      "condition": "MATCH",
+      "physical_parent": "H04_R12_OPEN_DEVELOPMENT/N001",
+      "available": true,
+      "prediction_wall_seconds": 0.9199964999570511
+    },
+    "S006": {
+      "events": [
+        {
+          "event": "H003_E01",
+          "plane": "physical",
+          "family": "line",
+          "source": [
+            "LINE26-27"
+          ],
+          "available": true,
+          "detected": true,
+          "episode": "1",
+          "alarm_s": 16.233333333333334,
+          "alarm_delay_s": 0.17275233333333517,
+          "diagnosis_s": 16.233333333333334,
+          "diagnosis_delay_s": 0.17275233333333517,
+          "first_diagnosis_correct": true,
+          "timely_joint": true,
+          "correct_source_known_at_alarm": true,
+          "top3": true,
+          "diagnosis_censored": false,
+          "unavailable": false,
+          "restoration_s": 19.366666666666667,
+          "off_delay_s": 0.18127666666666542,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": false,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": "restoration"
+        },
+        {
+          "event": "H003_E02",
+          "plane": "physical",
+          "family": "load",
+          "source": [
+            "BUS31"
+          ],
+          "available": true,
+          "detected": false,
+          "episode": null,
+          "alarm_s": null,
+          "alarm_delay_s": null,
+          "diagnosis_s": null,
+          "diagnosis_delay_s": null,
+          "first_diagnosis_correct": false,
+          "timely_joint": false,
+          "correct_source_known_at_alarm": false,
+          "top3": false,
+          "diagnosis_censored": true,
+          "unavailable": false,
+          "restoration_s": null,
+          "off_delay_s": null,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": true,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": null
+        },
+        {
+          "event": "H003_E03",
+          "plane": "physical",
+          "family": "line",
+          "source": [
+            "LINE9-39"
+          ],
+          "available": true,
+          "detected": true,
+          "episode": "3",
+          "alarm_s": 31.266666666666666,
+          "alarm_delay_s": 0.20193866666666693,
+          "diagnosis_s": 31.266666666666666,
+          "diagnosis_delay_s": 0.20193866666666693,
+          "first_diagnosis_correct": true,
+          "timely_joint": true,
+          "correct_source_known_at_alarm": true,
+          "top3": true,
+          "diagnosis_censored": false,
+          "unavailable": false,
+          "restoration_s": 33.733333333333334,
+          "off_delay_s": 0.18342533333333222,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": false,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": "restoration"
+        },
+        {
+          "event": "H003_E04",
+          "plane": "physical",
+          "family": "load",
+          "source": [
+            "BUS15"
+          ],
+          "available": true,
+          "detected": false,
+          "episode": null,
+          "alarm_s": null,
+          "alarm_delay_s": null,
+          "diagnosis_s": null,
+          "diagnosis_delay_s": null,
+          "first_diagnosis_correct": false,
+          "timely_joint": false,
+          "correct_source_known_at_alarm": false,
+          "top3": false,
+          "diagnosis_censored": true,
+          "unavailable": false,
+          "restoration_s": null,
+          "off_delay_s": null,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": true,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": null
+        },
+        {
+          "event": "H003_E05",
+          "plane": "physical",
+          "family": "line",
+          "source": [
+            "LINE17-18"
+          ],
+          "available": true,
+          "detected": true,
+          "episode": "4",
+          "alarm_s": 44.63333333333333,
+          "alarm_delay_s": 0.19846733333333333,
+          "diagnosis_s": 44.63333333333333,
+          "diagnosis_delay_s": 0.19846733333333333,
+          "first_diagnosis_correct": true,
+          "timely_joint": true,
+          "correct_source_known_at_alarm": true,
+          "top3": true,
+          "diagnosis_censored": false,
+          "unavailable": false,
+          "restoration_s": 47.9,
+          "off_delay_s": 0.17895999999999646,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": false,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": "restoration"
+        },
+        {
+          "event": "H003_E06",
+          "plane": "physical",
+          "family": "load",
+          "source": [
+            "BUS16"
+          ],
+          "available": true,
+          "detected": false,
+          "episode": null,
+          "alarm_s": null,
+          "alarm_delay_s": null,
+          "diagnosis_s": null,
+          "diagnosis_delay_s": null,
+          "first_diagnosis_correct": false,
+          "timely_joint": false,
+          "correct_source_known_at_alarm": false,
+          "top3": false,
+          "diagnosis_censored": true,
+          "unavailable": false,
+          "restoration_s": null,
+          "off_delay_s": null,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": true,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": null
+        }
+      ],
+      "extras": [
+        {
+          "plane": "physical",
+          "episode": "2",
+          "alarm_s": 21.4
+        }
+      ],
+      "orphan_restorations": [
+        {
+          "plane": "physical",
+          "episode": "2",
+          "restoration_s": 22.933333333333334
+        }
+      ],
+      "by_plane": {
+        "physical": {
+          "intended_components": 6,
+          "timely_joint": 3,
+          "detected": 3,
+          "extras": 1
+        },
+        "integrity": {
+          "intended_components": 0,
+          "timely_joint": 0,
+          "detected": 0,
+          "extras": 0
+        }
+      },
+      "summary": {
+        "intended_events": 6,
+        "detected": 3,
+        "first_diagnosis_correct": 3,
+        "timely_joint": 3,
+        "extras": 1,
+        "orphan_restorations": 1,
+        "premature_restorations": 0,
+        "restoration_missing": 3,
+        "unavailable_events": 0
+      },
+      "group_id": "G_2385a1b1aa1368fd3739",
+      "condition": "OUT_SUPPORT",
+      "physical_parent": "H04_R12_OPEN_DEVELOPMENT/H003",
+      "available": true,
+      "prediction_wall_seconds": 0.9063135999604128
+    },
+    "S007": {
+      "events": [
+        {
+          "event": "H002_E01",
+          "plane": "physical",
+          "family": "load",
+          "source": [
+            "BUS24"
+          ],
+          "available": true,
+          "detected": false,
+          "episode": null,
+          "alarm_s": null,
+          "alarm_delay_s": null,
+          "diagnosis_s": null,
+          "diagnosis_delay_s": null,
+          "first_diagnosis_correct": false,
+          "timely_joint": false,
+          "correct_source_known_at_alarm": false,
+          "top3": false,
+          "diagnosis_censored": true,
+          "unavailable": false,
+          "restoration_s": null,
+          "off_delay_s": null,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": true,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": null
+        },
+        {
+          "event": "H002_E02",
+          "plane": "physical",
+          "family": "line",
+          "source": [
+            "LINE9-39"
+          ],
+          "available": true,
+          "detected": true,
+          "episode": "1",
+          "alarm_s": 23.6,
+          "alarm_delay_s": 0.1925030000000021,
+          "diagnosis_s": 23.6,
+          "diagnosis_delay_s": 0.1925030000000021,
+          "first_diagnosis_correct": true,
+          "timely_joint": true,
+          "correct_source_known_at_alarm": true,
+          "top3": true,
+          "diagnosis_censored": false,
+          "unavailable": false,
+          "restoration_s": 25.933333333333334,
+          "off_delay_s": 0.17391933333333398,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": false,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": "restoration"
+        },
+        {
+          "event": "H002_E03",
+          "plane": "physical",
+          "family": "line",
+          "source": [
+            "LINE4-14"
+          ],
+          "available": true,
+          "detected": true,
+          "episode": "2",
+          "alarm_s": 28.966666666666665,
+          "alarm_delay_s": 0.1959016666666642,
+          "diagnosis_s": 28.966666666666665,
+          "diagnosis_delay_s": 0.1959016666666642,
+          "first_diagnosis_correct": true,
+          "timely_joint": true,
+          "correct_source_known_at_alarm": true,
+          "top3": true,
+          "diagnosis_censored": false,
+          "unavailable": false,
+          "restoration_s": 32.166666666666664,
+          "off_delay_s": 0.1759416666666631,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": false,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": "restoration"
+        },
+        {
+          "event": "H002_E04",
+          "plane": "physical",
+          "family": "load",
+          "source": [
+            "BUS31"
+          ],
+          "available": true,
+          "detected": false,
+          "episode": null,
+          "alarm_s": null,
+          "alarm_delay_s": null,
+          "diagnosis_s": null,
+          "diagnosis_delay_s": null,
+          "first_diagnosis_correct": false,
+          "timely_joint": false,
+          "correct_source_known_at_alarm": false,
+          "top3": false,
+          "diagnosis_censored": true,
+          "unavailable": false,
+          "restoration_s": null,
+          "off_delay_s": null,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": true,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": null
+        },
+        {
+          "event": "H002_E05",
+          "plane": "physical",
+          "family": "line",
+          "source": [
+            "LINE26-27"
+          ],
+          "available": true,
+          "detected": true,
+          "episode": "3",
+          "alarm_s": 43.9,
+          "alarm_delay_s": 0.17738299999999896,
+          "diagnosis_s": 43.9,
+          "diagnosis_delay_s": 0.17738299999999896,
+          "first_diagnosis_correct": true,
+          "timely_joint": true,
+          "correct_source_known_at_alarm": true,
+          "top3": true,
+          "diagnosis_censored": false,
+          "unavailable": false,
+          "restoration_s": 47.233333333333334,
+          "off_delay_s": 0.17966133333333545,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": false,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": "restoration"
+        },
+        {
+          "event": "H002_E06",
+          "plane": "physical",
+          "family": "load",
+          "source": [
+            "BUS16"
+          ],
+          "available": true,
+          "detected": false,
+          "episode": null,
+          "alarm_s": null,
+          "alarm_delay_s": null,
+          "diagnosis_s": null,
+          "diagnosis_delay_s": null,
+          "first_diagnosis_correct": false,
+          "timely_joint": false,
+          "correct_source_known_at_alarm": false,
+          "top3": false,
+          "diagnosis_censored": true,
+          "unavailable": false,
+          "restoration_s": null,
+          "off_delay_s": null,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": true,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": null
+        }
+      ],
+      "extras": [],
+      "orphan_restorations": [],
+      "by_plane": {
+        "physical": {
+          "intended_components": 6,
+          "timely_joint": 3,
+          "detected": 3,
+          "extras": 0
+        },
+        "integrity": {
+          "intended_components": 0,
+          "timely_joint": 0,
+          "detected": 0,
+          "extras": 0
+        }
+      },
+      "summary": {
+        "intended_events": 6,
+        "detected": 3,
+        "first_diagnosis_correct": 3,
+        "timely_joint": 3,
+        "extras": 0,
+        "orphan_restorations": 0,
+        "premature_restorations": 0,
+        "restoration_missing": 3,
+        "unavailable_events": 0
+      },
+      "group_id": "G_2345eff776083af533d1",
+      "condition": "IN_SUPPORT",
+      "physical_parent": "H04_R12_OPEN_DEVELOPMENT/H002",
+      "available": true,
+      "prediction_wall_seconds": 0.8927780999802053
+    },
+    "S008": {
+      "events": [
+        {
+          "event": "H003_E01",
+          "plane": "physical",
+          "family": "line",
+          "source": [
+            "LINE26-27"
+          ],
+          "available": true,
+          "detected": true,
+          "episode": "1",
+          "alarm_s": 16.233333333333334,
+          "alarm_delay_s": 0.17275233333333517,
+          "diagnosis_s": 16.233333333333334,
+          "diagnosis_delay_s": 0.17275233333333517,
+          "first_diagnosis_correct": true,
+          "timely_joint": true,
+          "correct_source_known_at_alarm": true,
+          "top3": true,
+          "diagnosis_censored": false,
+          "unavailable": false,
+          "restoration_s": 19.366666666666667,
+          "off_delay_s": 0.18127666666666542,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": false,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": "restoration"
+        },
+        {
+          "event": "H003_E02",
+          "plane": "physical",
+          "family": "load",
+          "source": [
+            "BUS31"
+          ],
+          "available": true,
+          "detected": false,
+          "episode": null,
+          "alarm_s": null,
+          "alarm_delay_s": null,
+          "diagnosis_s": null,
+          "diagnosis_delay_s": null,
+          "first_diagnosis_correct": false,
+          "timely_joint": false,
+          "correct_source_known_at_alarm": false,
+          "top3": false,
+          "diagnosis_censored": true,
+          "unavailable": false,
+          "restoration_s": null,
+          "off_delay_s": null,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": true,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": null
+        },
+        {
+          "event": "H003_E03",
+          "plane": "physical",
+          "family": "line",
+          "source": [
+            "LINE9-39"
+          ],
+          "available": true,
+          "detected": true,
+          "episode": "3",
+          "alarm_s": 31.266666666666666,
+          "alarm_delay_s": 0.20193866666666693,
+          "diagnosis_s": 31.266666666666666,
+          "diagnosis_delay_s": 0.20193866666666693,
+          "first_diagnosis_correct": true,
+          "timely_joint": true,
+          "correct_source_known_at_alarm": true,
+          "top3": true,
+          "diagnosis_censored": false,
+          "unavailable": false,
+          "restoration_s": 33.733333333333334,
+          "off_delay_s": 0.18342533333333222,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": false,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": "restoration"
+        },
+        {
+          "event": "H003_E04",
+          "plane": "physical",
+          "family": "load",
+          "source": [
+            "BUS15"
+          ],
+          "available": true,
+          "detected": false,
+          "episode": null,
+          "alarm_s": null,
+          "alarm_delay_s": null,
+          "diagnosis_s": null,
+          "diagnosis_delay_s": null,
+          "first_diagnosis_correct": false,
+          "timely_joint": false,
+          "correct_source_known_at_alarm": false,
+          "top3": false,
+          "diagnosis_censored": true,
+          "unavailable": false,
+          "restoration_s": null,
+          "off_delay_s": null,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": true,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": null
+        },
+        {
+          "event": "H003_E05",
+          "plane": "physical",
+          "family": "line",
+          "source": [
+            "LINE17-18"
+          ],
+          "available": true,
+          "detected": true,
+          "episode": "4",
+          "alarm_s": 44.63333333333333,
+          "alarm_delay_s": 0.19846733333333333,
+          "diagnosis_s": 44.63333333333333,
+          "diagnosis_delay_s": 0.19846733333333333,
+          "first_diagnosis_correct": true,
+          "timely_joint": true,
+          "correct_source_known_at_alarm": true,
+          "top3": true,
+          "diagnosis_censored": false,
+          "unavailable": false,
+          "restoration_s": 47.9,
+          "off_delay_s": 0.17895999999999646,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": false,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": "restoration"
+        },
+        {
+          "event": "H003_E06",
+          "plane": "physical",
+          "family": "load",
+          "source": [
+            "BUS16"
+          ],
+          "available": true,
+          "detected": false,
+          "episode": null,
+          "alarm_s": null,
+          "alarm_delay_s": null,
+          "diagnosis_s": null,
+          "diagnosis_delay_s": null,
+          "first_diagnosis_correct": false,
+          "timely_joint": false,
+          "correct_source_known_at_alarm": false,
+          "top3": false,
+          "diagnosis_censored": true,
+          "unavailable": false,
+          "restoration_s": null,
+          "off_delay_s": null,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": true,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": null
+        }
+      ],
+      "extras": [
+        {
+          "plane": "physical",
+          "episode": "2",
+          "alarm_s": 21.4
+        }
+      ],
+      "orphan_restorations": [
+        {
+          "plane": "physical",
+          "episode": "2",
+          "restoration_s": 22.966666666666665
+        }
+      ],
+      "by_plane": {
+        "physical": {
+          "intended_components": 6,
+          "timely_joint": 3,
+          "detected": 3,
+          "extras": 1
+        },
+        "integrity": {
+          "intended_components": 0,
+          "timely_joint": 0,
+          "detected": 0,
+          "extras": 0
+        }
+      },
+      "summary": {
+        "intended_events": 6,
+        "detected": 3,
+        "first_diagnosis_correct": 3,
+        "timely_joint": 3,
+        "extras": 1,
+        "orphan_restorations": 1,
+        "premature_restorations": 0,
+        "restoration_missing": 3,
+        "unavailable_events": 0
+      },
+      "group_id": "G_2385a1b1aa1368fd3739",
+      "condition": "MATCH",
+      "physical_parent": "H04_R12_OPEN_DEVELOPMENT/H003",
+      "available": true,
+      "prediction_wall_seconds": 0.952845299965702
+    },
+    "S009": {
+      "events": [
+        {
+          "event": "H001_E01",
+          "plane": "physical",
+          "family": "line",
+          "source": [
+            "LINE3-4"
+          ],
+          "available": true,
+          "detected": true,
+          "episode": "1",
+          "alarm_s": 16.6,
+          "alarm_delay_s": 0.16701300000000074,
+          "diagnosis_s": 16.6,
+          "diagnosis_delay_s": 0.16701300000000074,
+          "first_diagnosis_correct": true,
+          "timely_joint": true,
+          "correct_source_known_at_alarm": true,
+          "top3": true,
+          "diagnosis_censored": false,
+          "unavailable": false,
+          "restoration_s": 19.233333333333334,
+          "off_delay_s": 0.18857533333333265,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": false,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": "restoration"
+        },
+        {
+          "event": "H001_E02",
+          "plane": "physical",
+          "family": "line",
+          "source": [
+            "LINE26-29"
+          ],
+          "available": true,
+          "detected": true,
+          "episode": "2",
+          "alarm_s": 23.633333333333333,
+          "alarm_delay_s": 0.191908333333334,
+          "diagnosis_s": 23.633333333333333,
+          "diagnosis_delay_s": 0.191908333333334,
+          "first_diagnosis_correct": true,
+          "timely_joint": true,
+          "correct_source_known_at_alarm": true,
+          "top3": true,
+          "diagnosis_censored": false,
+          "unavailable": false,
+          "restoration_s": 26.7,
+          "off_delay_s": 0.18471100000000007,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": false,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": "restoration"
+        },
+        {
+          "event": "H001_E03",
+          "plane": "physical",
+          "family": "load",
+          "source": [
+            "BUS20"
+          ],
+          "available": true,
+          "detected": false,
+          "episode": null,
+          "alarm_s": null,
+          "alarm_delay_s": null,
+          "diagnosis_s": null,
+          "diagnosis_delay_s": null,
+          "first_diagnosis_correct": false,
+          "timely_joint": false,
+          "correct_source_known_at_alarm": false,
+          "top3": false,
+          "diagnosis_censored": true,
+          "unavailable": false,
+          "restoration_s": null,
+          "off_delay_s": null,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": true,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": null
+        },
+        {
+          "event": "H001_E04",
+          "plane": "physical",
+          "family": "load",
+          "source": [
+            "BUS31"
+          ],
+          "available": true,
+          "detected": false,
+          "episode": null,
+          "alarm_s": null,
+          "alarm_delay_s": null,
+          "diagnosis_s": null,
+          "diagnosis_delay_s": null,
+          "first_diagnosis_correct": false,
+          "timely_joint": false,
+          "correct_source_known_at_alarm": false,
+          "top3": false,
+          "diagnosis_censored": true,
+          "unavailable": false,
+          "restoration_s": null,
+          "off_delay_s": null,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": true,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": null
+        },
+        {
+          "event": "H001_E05",
+          "plane": "physical",
+          "family": "load",
+          "source": [
+            "BUS26"
+          ],
+          "available": true,
+          "detected": false,
+          "episode": null,
+          "alarm_s": null,
+          "alarm_delay_s": null,
+          "diagnosis_s": null,
+          "diagnosis_delay_s": null,
+          "first_diagnosis_correct": false,
+          "timely_joint": false,
+          "correct_source_known_at_alarm": false,
+          "top3": false,
+          "diagnosis_censored": true,
+          "unavailable": false,
+          "restoration_s": null,
+          "off_delay_s": null,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": true,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": null
+        },
+        {
+          "event": "H001_E06",
+          "plane": "physical",
+          "family": "line",
+          "source": [
+            "LINE26-27"
+          ],
+          "available": true,
+          "detected": true,
+          "episode": "3",
+          "alarm_s": 53.93333333333333,
+          "alarm_delay_s": 0.1794483333333332,
+          "diagnosis_s": 53.93333333333333,
+          "diagnosis_delay_s": 0.1794483333333332,
+          "first_diagnosis_correct": true,
+          "timely_joint": true,
+          "correct_source_known_at_alarm": true,
+          "top3": true,
+          "diagnosis_censored": false,
+          "unavailable": false,
+          "restoration_s": 57.166666666666664,
+          "off_delay_s": 0.17522266666666297,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": false,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": "restoration"
+        }
+      ],
+      "extras": [],
+      "orphan_restorations": [],
+      "by_plane": {
+        "physical": {
+          "intended_components": 6,
+          "timely_joint": 3,
+          "detected": 3,
+          "extras": 0
+        },
+        "integrity": {
+          "intended_components": 0,
+          "timely_joint": 0,
+          "detected": 0,
+          "extras": 0
+        }
+      },
+      "summary": {
+        "intended_events": 6,
+        "detected": 3,
+        "first_diagnosis_correct": 3,
+        "timely_joint": 3,
+        "extras": 0,
+        "orphan_restorations": 0,
+        "premature_restorations": 0,
+        "restoration_missing": 3,
+        "unavailable_events": 0
+      },
+      "group_id": "G_9bc21bcb24f57797799e",
+      "condition": "IN_SUPPORT",
+      "physical_parent": "H04_R12_OPEN_DEVELOPMENT/H001",
+      "available": true,
+      "prediction_wall_seconds": 0.9526555000338703
+    },
+    "S010": {
+      "events": [
+        {
+          "event": "H003_E01",
+          "plane": "physical",
+          "family": "line",
+          "source": [
+            "LINE26-27"
+          ],
+          "available": true,
+          "detected": true,
+          "episode": "1",
+          "alarm_s": 16.233333333333334,
+          "alarm_delay_s": 0.17275233333333517,
+          "diagnosis_s": 16.233333333333334,
+          "diagnosis_delay_s": 0.17275233333333517,
+          "first_diagnosis_correct": true,
+          "timely_joint": true,
+          "correct_source_known_at_alarm": true,
+          "top3": true,
+          "diagnosis_censored": false,
+          "unavailable": false,
+          "restoration_s": 19.366666666666667,
+          "off_delay_s": 0.18127666666666542,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": false,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": "restoration"
+        },
+        {
+          "event": "H003_E02",
+          "plane": "physical",
+          "family": "load",
+          "source": [
+            "BUS31"
+          ],
+          "available": true,
+          "detected": false,
+          "episode": null,
+          "alarm_s": null,
+          "alarm_delay_s": null,
+          "diagnosis_s": null,
+          "diagnosis_delay_s": null,
+          "first_diagnosis_correct": false,
+          "timely_joint": false,
+          "correct_source_known_at_alarm": false,
+          "top3": false,
+          "diagnosis_censored": true,
+          "unavailable": false,
+          "restoration_s": null,
+          "off_delay_s": null,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": true,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": null
+        },
+        {
+          "event": "H003_E03",
+          "plane": "physical",
+          "family": "line",
+          "source": [
+            "LINE9-39"
+          ],
+          "available": true,
+          "detected": true,
+          "episode": "3",
+          "alarm_s": 31.266666666666666,
+          "alarm_delay_s": 0.20193866666666693,
+          "diagnosis_s": 31.266666666666666,
+          "diagnosis_delay_s": 0.20193866666666693,
+          "first_diagnosis_correct": true,
+          "timely_joint": true,
+          "correct_source_known_at_alarm": true,
+          "top3": true,
+          "diagnosis_censored": false,
+          "unavailable": false,
+          "restoration_s": 33.733333333333334,
+          "off_delay_s": 0.18342533333333222,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": false,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": "restoration"
+        },
+        {
+          "event": "H003_E04",
+          "plane": "physical",
+          "family": "load",
+          "source": [
+            "BUS15"
+          ],
+          "available": true,
+          "detected": false,
+          "episode": null,
+          "alarm_s": null,
+          "alarm_delay_s": null,
+          "diagnosis_s": null,
+          "diagnosis_delay_s": null,
+          "first_diagnosis_correct": false,
+          "timely_joint": false,
+          "correct_source_known_at_alarm": false,
+          "top3": false,
+          "diagnosis_censored": true,
+          "unavailable": false,
+          "restoration_s": null,
+          "off_delay_s": null,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": true,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": null
+        },
+        {
+          "event": "H003_E05",
+          "plane": "physical",
+          "family": "line",
+          "source": [
+            "LINE17-18"
+          ],
+          "available": true,
+          "detected": true,
+          "episode": "4",
+          "alarm_s": 44.63333333333333,
+          "alarm_delay_s": 0.19846733333333333,
+          "diagnosis_s": 44.63333333333333,
+          "diagnosis_delay_s": 0.19846733333333333,
+          "first_diagnosis_correct": true,
+          "timely_joint": true,
+          "correct_source_known_at_alarm": true,
+          "top3": true,
+          "diagnosis_censored": false,
+          "unavailable": false,
+          "restoration_s": 47.9,
+          "off_delay_s": 0.17895999999999646,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": false,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": "restoration"
+        },
+        {
+          "event": "H003_E06",
+          "plane": "physical",
+          "family": "load",
+          "source": [
+            "BUS16"
+          ],
+          "available": true,
+          "detected": false,
+          "episode": null,
+          "alarm_s": null,
+          "alarm_delay_s": null,
+          "diagnosis_s": null,
+          "diagnosis_delay_s": null,
+          "first_diagnosis_correct": false,
+          "timely_joint": false,
+          "correct_source_known_at_alarm": false,
+          "top3": false,
+          "diagnosis_censored": true,
+          "unavailable": false,
+          "restoration_s": null,
+          "off_delay_s": null,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": true,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": null
+        }
+      ],
+      "extras": [
+        {
+          "plane": "physical",
+          "episode": "2",
+          "alarm_s": 21.4
+        }
+      ],
+      "orphan_restorations": [
+        {
+          "plane": "physical",
+          "episode": "2",
+          "restoration_s": 23.066666666666666
+        }
+      ],
+      "by_plane": {
+        "physical": {
+          "intended_components": 6,
+          "timely_joint": 3,
+          "detected": 3,
+          "extras": 1
+        },
+        "integrity": {
+          "intended_components": 0,
+          "timely_joint": 0,
+          "detected": 0,
+          "extras": 0
+        }
+      },
+      "summary": {
+        "intended_events": 6,
+        "detected": 3,
+        "first_diagnosis_correct": 3,
+        "timely_joint": 3,
+        "extras": 1,
+        "orphan_restorations": 1,
+        "premature_restorations": 0,
+        "restoration_missing": 3,
+        "unavailable_events": 0
+      },
+      "group_id": "G_2385a1b1aa1368fd3739",
+      "condition": "IN_SUPPORT",
+      "physical_parent": "H04_R12_OPEN_DEVELOPMENT/H003",
+      "available": true,
+      "prediction_wall_seconds": 0.8471804999862798
+    },
+    "S011": {
+      "events": [
+        {
+          "event": "H001_E01",
+          "plane": "physical",
+          "family": "line",
+          "source": [
+            "LINE3-4"
+          ],
+          "available": true,
+          "detected": true,
+          "episode": "1",
+          "alarm_s": 16.6,
+          "alarm_delay_s": 0.16701300000000074,
+          "diagnosis_s": 16.6,
+          "diagnosis_delay_s": 0.16701300000000074,
+          "first_diagnosis_correct": true,
+          "timely_joint": true,
+          "correct_source_known_at_alarm": true,
+          "top3": true,
+          "diagnosis_censored": false,
+          "unavailable": false,
+          "restoration_s": 19.233333333333334,
+          "off_delay_s": 0.18857533333333265,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": false,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": "restoration"
+        },
+        {
+          "event": "H001_E02",
+          "plane": "physical",
+          "family": "line",
+          "source": [
+            "LINE26-29"
+          ],
+          "available": true,
+          "detected": true,
+          "episode": "2",
+          "alarm_s": 23.633333333333333,
+          "alarm_delay_s": 0.191908333333334,
+          "diagnosis_s": 23.633333333333333,
+          "diagnosis_delay_s": 0.191908333333334,
+          "first_diagnosis_correct": true,
+          "timely_joint": true,
+          "correct_source_known_at_alarm": true,
+          "top3": true,
+          "diagnosis_censored": false,
+          "unavailable": false,
+          "restoration_s": 26.7,
+          "off_delay_s": 0.18471100000000007,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": false,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": "restoration"
+        },
+        {
+          "event": "H001_E03",
+          "plane": "physical",
+          "family": "load",
+          "source": [
+            "BUS20"
+          ],
+          "available": true,
+          "detected": false,
+          "episode": null,
+          "alarm_s": null,
+          "alarm_delay_s": null,
+          "diagnosis_s": null,
+          "diagnosis_delay_s": null,
+          "first_diagnosis_correct": false,
+          "timely_joint": false,
+          "correct_source_known_at_alarm": false,
+          "top3": false,
+          "diagnosis_censored": true,
+          "unavailable": false,
+          "restoration_s": null,
+          "off_delay_s": null,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": true,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": null
+        },
+        {
+          "event": "H001_E04",
+          "plane": "physical",
+          "family": "load",
+          "source": [
+            "BUS31"
+          ],
+          "available": true,
+          "detected": false,
+          "episode": null,
+          "alarm_s": null,
+          "alarm_delay_s": null,
+          "diagnosis_s": null,
+          "diagnosis_delay_s": null,
+          "first_diagnosis_correct": false,
+          "timely_joint": false,
+          "correct_source_known_at_alarm": false,
+          "top3": false,
+          "diagnosis_censored": true,
+          "unavailable": false,
+          "restoration_s": null,
+          "off_delay_s": null,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": true,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": null
+        },
+        {
+          "event": "H001_E05",
+          "plane": "physical",
+          "family": "load",
+          "source": [
+            "BUS26"
+          ],
+          "available": true,
+          "detected": false,
+          "episode": null,
+          "alarm_s": null,
+          "alarm_delay_s": null,
+          "diagnosis_s": null,
+          "diagnosis_delay_s": null,
+          "first_diagnosis_correct": false,
+          "timely_joint": false,
+          "correct_source_known_at_alarm": false,
+          "top3": false,
+          "diagnosis_censored": true,
+          "unavailable": false,
+          "restoration_s": null,
+          "off_delay_s": null,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": true,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": null
+        },
+        {
+          "event": "H001_E06",
+          "plane": "physical",
+          "family": "line",
+          "source": [
+            "LINE26-27"
+          ],
+          "available": true,
+          "detected": true,
+          "episode": "3",
+          "alarm_s": 53.93333333333333,
+          "alarm_delay_s": 0.1794483333333332,
+          "diagnosis_s": 53.93333333333333,
+          "diagnosis_delay_s": 0.1794483333333332,
+          "first_diagnosis_correct": true,
+          "timely_joint": true,
+          "correct_source_known_at_alarm": true,
+          "top3": true,
+          "diagnosis_censored": false,
+          "unavailable": false,
+          "restoration_s": 57.166666666666664,
+          "off_delay_s": 0.17522266666666297,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": false,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": "restoration"
+        }
+      ],
+      "extras": [],
+      "orphan_restorations": [],
+      "by_plane": {
+        "physical": {
+          "intended_components": 6,
+          "timely_joint": 3,
+          "detected": 3,
+          "extras": 0
+        },
+        "integrity": {
+          "intended_components": 0,
+          "timely_joint": 0,
+          "detected": 0,
+          "extras": 0
+        }
+      },
+      "summary": {
+        "intended_events": 6,
+        "detected": 3,
+        "first_diagnosis_correct": 3,
+        "timely_joint": 3,
+        "extras": 0,
+        "orphan_restorations": 0,
+        "premature_restorations": 0,
+        "restoration_missing": 3,
+        "unavailable_events": 0
+      },
+      "group_id": "G_9bc21bcb24f57797799e",
+      "condition": "MATCH",
+      "physical_parent": "H04_R12_OPEN_DEVELOPMENT/H001",
+      "available": true,
+      "prediction_wall_seconds": 0.9046860999660566
+    },
+    "S012": {
+      "events": [
+        {
+          "event": "H002_E01",
+          "plane": "physical",
+          "family": "load",
+          "source": [
+            "BUS24"
+          ],
+          "available": true,
+          "detected": false,
+          "episode": null,
+          "alarm_s": null,
+          "alarm_delay_s": null,
+          "diagnosis_s": null,
+          "diagnosis_delay_s": null,
+          "first_diagnosis_correct": false,
+          "timely_joint": false,
+          "correct_source_known_at_alarm": false,
+          "top3": false,
+          "diagnosis_censored": true,
+          "unavailable": false,
+          "restoration_s": null,
+          "off_delay_s": null,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": true,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": null
+        },
+        {
+          "event": "H002_E02",
+          "plane": "physical",
+          "family": "line",
+          "source": [
+            "LINE9-39"
+          ],
+          "available": true,
+          "detected": true,
+          "episode": "1",
+          "alarm_s": 23.6,
+          "alarm_delay_s": 0.1925030000000021,
+          "diagnosis_s": 23.6,
+          "diagnosis_delay_s": 0.1925030000000021,
+          "first_diagnosis_correct": true,
+          "timely_joint": true,
+          "correct_source_known_at_alarm": true,
+          "top3": true,
+          "diagnosis_censored": false,
+          "unavailable": false,
+          "restoration_s": 25.933333333333334,
+          "off_delay_s": 0.17391933333333398,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": false,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": "restoration"
+        },
+        {
+          "event": "H002_E03",
+          "plane": "physical",
+          "family": "line",
+          "source": [
+            "LINE4-14"
+          ],
+          "available": true,
+          "detected": true,
+          "episode": "2",
+          "alarm_s": 28.966666666666665,
+          "alarm_delay_s": 0.1959016666666642,
+          "diagnosis_s": 28.966666666666665,
+          "diagnosis_delay_s": 0.1959016666666642,
+          "first_diagnosis_correct": true,
+          "timely_joint": true,
+          "correct_source_known_at_alarm": true,
+          "top3": true,
+          "diagnosis_censored": false,
+          "unavailable": false,
+          "restoration_s": 32.166666666666664,
+          "off_delay_s": 0.1759416666666631,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": false,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": "restoration"
+        },
+        {
+          "event": "H002_E04",
+          "plane": "physical",
+          "family": "load",
+          "source": [
+            "BUS31"
+          ],
+          "available": true,
+          "detected": false,
+          "episode": null,
+          "alarm_s": null,
+          "alarm_delay_s": null,
+          "diagnosis_s": null,
+          "diagnosis_delay_s": null,
+          "first_diagnosis_correct": false,
+          "timely_joint": false,
+          "correct_source_known_at_alarm": false,
+          "top3": false,
+          "diagnosis_censored": true,
+          "unavailable": false,
+          "restoration_s": null,
+          "off_delay_s": null,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": true,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": null
+        },
+        {
+          "event": "H002_E05",
+          "plane": "physical",
+          "family": "line",
+          "source": [
+            "LINE26-27"
+          ],
+          "available": true,
+          "detected": true,
+          "episode": "3",
+          "alarm_s": 43.9,
+          "alarm_delay_s": 0.17738299999999896,
+          "diagnosis_s": 43.9,
+          "diagnosis_delay_s": 0.17738299999999896,
+          "first_diagnosis_correct": true,
+          "timely_joint": true,
+          "correct_source_known_at_alarm": true,
+          "top3": true,
+          "diagnosis_censored": false,
+          "unavailable": false,
+          "restoration_s": 47.233333333333334,
+          "off_delay_s": 0.17966133333333545,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": false,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": "restoration"
+        },
+        {
+          "event": "H002_E06",
+          "plane": "physical",
+          "family": "load",
+          "source": [
+            "BUS16"
+          ],
+          "available": true,
+          "detected": false,
+          "episode": null,
+          "alarm_s": null,
+          "alarm_delay_s": null,
+          "diagnosis_s": null,
+          "diagnosis_delay_s": null,
+          "first_diagnosis_correct": false,
+          "timely_joint": false,
+          "correct_source_known_at_alarm": false,
+          "top3": false,
+          "diagnosis_censored": true,
+          "unavailable": false,
+          "restoration_s": null,
+          "off_delay_s": null,
+          "premature_restoration": false,
+          "restoration_at_or_after_next_onset": false,
+          "restoration_missing": true,
+          "restoration_truth_censored": false,
+          "episode_open_at_horizon": false,
+          "episode_terminal_kind": null
+        }
+      ],
+      "extras": [],
+      "orphan_restorations": [],
+      "by_plane": {
+        "physical": {
+          "intended_components": 6,
+          "timely_joint": 3,
+          "detected": 3,
+          "extras": 0
+        },
+        "integrity": {
+          "intended_components": 0,
+          "timely_joint": 0,
+          "detected": 0,
+          "extras": 0
+        }
+      },
+      "summary": {
+        "intended_events": 6,
+        "detected": 3,
+        "first_diagnosis_correct": 3,
+        "timely_joint": 3,
+        "extras": 0,
+        "orphan_restorations": 0,
+        "premature_restorations": 0,
+        "restoration_missing": 3,
+        "unavailable_events": 0
+      },
+      "group_id": "G_2345eff776083af533d1",
+      "condition": "OUT_SUPPORT",
+      "physical_parent": "H04_R12_OPEN_DEVELOPMENT/H002",
+      "available": true,
+      "prediction_wall_seconds": 0.9292679000063799
+    }
+  },
+  "prediction_seals": {
+    "S001": "1d34074c7bc480d7450dff4a41d46fb676b818b0acf7a89cd8250e9a32c963de",
+    "S002": "28615e71702d4b535a6e58a537bf1f0a90b2d3f289f019f99c4f9e514b8c287d",
+    "S003": "4db9828b10aba48fbda261162e6ecd7d6429c5464056c729f7f097ada463f290",
+    "S004": "380c36d3a9396712621bec5f91b9535f46fe554b74edc1768c16cdfcdeae4f4e",
+    "S005": "9639bab864a2fc24a1015fd85cce6ff52c1c943926fbc81dd4c7f6a14853396e",
+    "S006": "58e9c7da7a4c02f69009ede716b263d7ecc4179fbc15dd31d722b53b05f15a78",
+    "S007": "5b15276a36352a2119ed9b65930adeca90c99b83cfc5525e30da52260683bd7e",
+    "S008": "a934653ee96ff51e9ffa70bc82d89c342054880e4dd4096cf9aa441cc3e91074",
+    "S009": "ef30300a0930cb1d56dc0180ca4e9da51cb80c65e7f9b2d5df20037a19905a9c",
+    "S010": "3a0beb8ee27c0effebd73839da3da9703be93d4b146f872549416708e6b6e1b0",
+    "S011": "746f50dca86aad621ce6668011e6110d8e123e739c23f3578e881973df590886",
+    "S012": "7fa04690d494248a29a39a4362024144a34777171af65fd66ad9fe22c95ec459"
+  },
+  "registry_sha256": "f459baf0af71e1034282f22255618d5c0f0ef369cabbf2e837d87cda95daa8c6",
+  "metric_sha256": "eff5e1b2d71e45e5ba9883808e6a34758813c1c11e60703790be79e48f10a7f9",
+  "evaluator_sha256": "48ef0edd55a2013d3cfb7cbffaef080deabc4a744fb739a936abaa43f915d346",
+  "protocol_sha256": "2e7ca0229dd136dc5e05ac4cbd801ec808fd7a641946587ed0983d85a1287130",
+  "model_sha256": "9b83975d80bbb7e8ae7a387b65de486808699a93d941f5635f370ea92578efcb",
+  "model_and_frozen_sources_unchanged": true,
+  "status": "DESCRIPTIVE_OPEN_H04_FIXED_TRAINED_BASELINE_METADATA_FREE_AUDIT_REPLAY",
+  "independent_event_calendars": 3,
+  "normal_parent_groups": 1,
+  "group_overlap": [
+    {
+      "record_id": "S001",
+      "group_id": "G_41c4f849ad529a8d66c9",
+      "kind": "normal",
+      "prior_split_group_memberships": [
+        "development_holdout_30"
+      ]
+    },
+    {
+      "record_id": "S002",
+      "group_id": "G_2345eff776083af533d1",
+      "kind": "event",
+      "prior_split_group_memberships": []
+    },
+    {
+      "record_id": "S003",
+      "group_id": "G_9bc21bcb24f57797799e",
+      "kind": "event",
+      "prior_split_group_memberships": []
+    },
+    {
+      "record_id": "S004",
+      "group_id": "G_41c4f849ad529a8d66c9",
+      "kind": "normal",
+      "prior_split_group_memberships": [
+        "development_holdout_30"
+      ]
+    },
+    {
+      "record_id": "S005",
+      "group_id": "G_41c4f849ad529a8d66c9",
+      "kind": "normal",
+      "prior_split_group_memberships": [
+        "development_holdout_30"
+      ]
+    },
+    {
+      "record_id": "S006",
+      "group_id": "G_2385a1b1aa1368fd3739",
+      "kind": "event",
+      "prior_split_group_memberships": []
+    },
+    {
+      "record_id": "S007",
+      "group_id": "G_2345eff776083af533d1",
+      "kind": "event",
+      "prior_split_group_memberships": []
+    },
+    {
+      "record_id": "S008",
+      "group_id": "G_2385a1b1aa1368fd3739",
+      "kind": "event",
+      "prior_split_group_memberships": []
+    },
+    {
+      "record_id": "S009",
+      "group_id": "G_9bc21bcb24f57797799e",
+      "kind": "event",
+      "prior_split_group_memberships": []
+    },
+    {
+      "record_id": "S010",
+      "group_id": "G_2385a1b1aa1368fd3739",
+      "kind": "event",
+      "prior_split_group_memberships": []
+    },
+    {
+      "record_id": "S011",
+      "group_id": "G_9bc21bcb24f57797799e",
+      "kind": "event",
+      "prior_split_group_memberships": []
+    },
+    {
+      "record_id": "S012",
+      "group_id": "G_2345eff776083af533d1",
+      "kind": "event",
+      "prior_split_group_memberships": []
+    }
+  ],
+  "normal_parent_overlaps_ML_development_holdout": true,
+  "normal_parent_overlaps_ML_train": false,
+  "source_held_out_claim": false,
+  "independent_confirmation": false,
+  "confidence_intervals": null,
+  "thresholds_selected_from_this_evaluation": false,
+  "same_event_metrics_as_single_state_H04": true,
+  "same_publication_clock": false,
+  "common_confirmation_count": 6,
+  "equal_false_alarm_operating_point_established": false,
+  "pure_memory_ablation": false,
+  "inference_truth_read": false,
+  "inference_roster_kind_and_group_metadata": false,
+  "wall_seconds": 14.232981299981475,
+  "v1_exact_parity": {
+    "S001": {
+      "events_exact": true,
+      "availability_exact": true,
+      "arrays_exact": {
+        "time_s": true,
+        "source_label": true,
+        "raw_source_label": true,
+        "class_scores": true
+      }
+    },
+    "S002": {
+      "events_exact": true,
+      "availability_exact": true,
+      "arrays_exact": {
+        "time_s": true,
+        "source_label": true,
+        "raw_source_label": true,
+        "class_scores": true
+      }
+    },
+    "S003": {
+      "events_exact": true,
+      "availability_exact": true,
+      "arrays_exact": {
+        "time_s": true,
+        "source_label": true,
+        "raw_source_label": true,
+        "class_scores": true
+      }
+    },
+    "S004": {
+      "events_exact": true,
+      "availability_exact": true,
+      "arrays_exact": {
+        "time_s": true,
+        "source_label": true,
+        "raw_source_label": true,
+        "class_scores": true
+      }
+    },
+    "S005": {
+      "events_exact": true,
+      "availability_exact": true,
+      "arrays_exact": {
+        "time_s": true,
+        "source_label": true,
+        "raw_source_label": true,
+        "class_scores": true
+      }
+    },
+    "S006": {
+      "events_exact": true,
+      "availability_exact": true,
+      "arrays_exact": {
+        "time_s": true,
+        "source_label": true,
+        "raw_source_label": true,
+        "class_scores": true
+      }
+    },
+    "S007": {
+      "events_exact": true,
+      "availability_exact": true,
+      "arrays_exact": {
+        "time_s": true,
+        "source_label": true,
+        "raw_source_label": true,
+        "class_scores": true
+      }
+    },
+    "S008": {
+      "events_exact": true,
+      "availability_exact": true,
+      "arrays_exact": {
+        "time_s": true,
+        "source_label": true,
+        "raw_source_label": true,
+        "class_scores": true
+      }
+    },
+    "S009": {
+      "events_exact": true,
+      "availability_exact": true,
+      "arrays_exact": {
+        "time_s": true,
+        "source_label": true,
+        "raw_source_label": true,
+        "class_scores": true
+      }
+    },
+    "S010": {
+      "events_exact": true,
+      "availability_exact": true,
+      "arrays_exact": {
+        "time_s": true,
+        "source_label": true,
+        "raw_source_label": true,
+        "class_scores": true
+      }
+    },
+    "S011": {
+      "events_exact": true,
+      "availability_exact": true,
+      "arrays_exact": {
+        "time_s": true,
+        "source_label": true,
+        "raw_source_label": true,
+        "class_scores": true
+      }
+    },
+    "S012": {
+      "events_exact": true,
+      "availability_exact": true,
+      "arrays_exact": {
+        "time_s": true,
+        "source_label": true,
+        "raw_source_label": true,
+        "class_scores": true
+      }
+    }
+  },
+  "v1_deviation": "V1 inference roster contained unused normal/event kind metadata. It did not enter features/model/publication. V2 removes even those metadata; V1 stays intact.",
+  "v1_retained_unchanged": true,
+  "new_independent_result": false
+}

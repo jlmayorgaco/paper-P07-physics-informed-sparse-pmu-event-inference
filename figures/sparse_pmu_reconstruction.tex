@@ -1,0 +1,49 @@
+\begin{figure*}[t]
+\centering
+\resizebox{0.98\textwidth}{!}{%
+\begin{tikzpicture}[
+  font=\footnotesize,
+  >=Latex,
+  node distance=6mm and 8mm,
+  block/.style={draw=#1!75!black, fill=#1!8, rounded corners=1.5pt,
+                minimum height=10mm, text width=28mm, align=center, line width=0.65pt},
+  small/.style={draw=#1!75!black, fill=#1!7, rounded corners=1.5pt,
+                minimum height=8mm, text width=27mm, align=center, line width=0.6pt},
+  arrow/.style={->, line width=0.75pt, draw=black!70},
+  signal/.style={->, line width=0.75pt, draw=blue!65!black},
+  warn/.style={->, line width=0.75pt, draw=orange!80!black}
+]
+\definecolor{pmublue}{RGB}{0,114,178}
+\definecolor{physgreen}{RGB}{0,132,96}
+\definecolor{adequacyorange}{RGB}{213,94,0}
+\definecolor{neutralgray}{RGB}{108,117,125}
+
+\node[block=pmublue] (pmu) {Observed PMUs\\$\bm y_{\mathcal P,k}$ at 8 buses};
+\node[block=physgreen, right=of pmu] (model) {Audited local physics\\$A_d,C,L_{\mathcal U}$};
+\node[block=physgreen, right=of model] (estimator) {Physics-based estimator\\snapshot B1 or causal B2};
+\node[block=pmublue, right=of estimator] (target) {Reconstructed field\\$\widehat{\bm V}_{\mathcal U,k}$ at 31 buses};
+
+\node[small=neutralgray, below=of model] (functional) {Functional audit\\$\ker\mathcal O_N\subseteq\ker L_{\mathcal U}$};
+\node[small=neutralgray, right=of functional] (weak) {Structural residual\\predicts weak outputs};
+\node[small=adequacyorange, below=of estimator] (innovation) {Observed innovation\\$\bm\nu_k=\bm y_k-C\widehat{\bm x}_{k|k-1}$};
+\node[small=adequacyorange, right=of innovation] (gate) {Model-adequacy gate\\nominal or mismatched?};
+
+\draw[signal] (pmu) -- (model);
+\draw[arrow] (model) -- (estimator);
+\draw[signal] (estimator) -- (target);
+\draw[arrow] (model) -- (functional);
+\draw[arrow] (functional) -- (weak);
+\draw[warn] (estimator) -- (innovation);
+\draw[warn] (innovation) -- (gate);
+\draw[warn] (gate.east) -- ++(8mm,0) node[right, align=left, text width=28mm] {if mismatched:\\recenter or relinearize};
+\draw[arrow] (weak.north) -- (estimator.south west);
+
+\node[draw=black!35, dashed, rounded corners=2pt, fit=(pmu)(model)(estimator)(target), inner sep=3.2mm,
+      label={[font=\scriptsize,text=black!65]above:online reconstruction path}] {};
+\node[draw=black!25, dashed, rounded corners=2pt, fit=(functional)(weak), inner sep=2.4mm,
+      label={[font=\scriptsize,text=black!65]below:structural evidence}] {};
+\end{tikzpicture}
+}
+\caption{Scientific structure of the validated study. Sparse voltage and terminal-current measurements feed a local physics-based estimator whose target is the unobserved complex-voltage field, not the complete internal dynamic state. Functional observability characterizes which target directions the measurements constrain, while innovations provide a separate model-adequacy signal. Adaptation is invoked only after mismatch is detected; the tested causal offset-only recentering is evaluated as an ablation rather than shown as a solved component.}
+\label{fig:study-structure}
+\end{figure*}

@@ -1,0 +1,13 @@
+{
+  "seed": 2026102901,
+  "matched_law": true,
+  "network": "three_bus_article_eq9",
+  "beta_observations": 10000,
+  "threshold": 10.308952660644293,
+  "replicates_per_source": 100,
+  "prechange_observations": 100,
+  "horizon": 1000,
+  "independence_unit": "independent Gaussian sequence",
+  "normal_ARL_estimate": "not estimated: right-censoring retained",
+  "original_118bus_results_reproduced": false
+}

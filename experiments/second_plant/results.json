@@ -1,0 +1,486 @@
+{
+ "results": {
+  "static": {
+   "summary": {
+    "events": 72,
+    "detected": 52,
+    "class_ok": 47,
+    "top1": 42,
+    "top3": 45,
+    "fa_per_normal_h": 0.0,
+    "extras_per_event_h": 120.0,
+    "line": {
+     "events": 36,
+     "detected": 36,
+     "class_ok": 32,
+     "top1": 31,
+     "top3": 32,
+     "confusion": {
+      "fault": 0,
+      "line": 32,
+      "generation": 0,
+      "load": 4
+     }
+    },
+    "load": {
+     "events": 36,
+     "detected": 16,
+     "class_ok": 15,
+     "top1": 11,
+     "top3": 13,
+     "confusion": {
+      "fault": 0,
+      "line": 1,
+      "generation": 0,
+      "load": 15
+     }
+    }
+   },
+   "per_record": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   "normal_alarms": 0
+  },
+  "ML": {
+   "tau": 0.1,
+   "f01_test": {
+    "summary": {
+     "events": 72,
+     "detected": 61,
+     "class_ok": 56,
+     "top1": 41,
+     "top3": 52,
+     "fa_per_normal_h": 0.0,
+     "extras_per_event_h": 205.0,
+     "line": {
+      "events": 36,
+      "detected": 32,
+      "class_ok": 31,
+      "top1": 25,
+      "top3": 29,
+      "confusion": {
+       "fault": 0,
+       "line": 31,
+       "generation": 0,
+       "load": 1
+      }
+     },
+     "load": {
+      "events": 36,
+      "detected": 29,
+      "class_ok": 25,
+      "top1": 16,
+      "top3": 23,
+      "confusion": {
+       "fault": 0,
+       "line": 4,
+       "generation": 0,
+       "load": 25
+      }
+     }
+    },
+    "per_record": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ],
+    "normal_alarms": 0
+   },
+   "second_plant": {
+    "summary": {
+     "events": 72,
+     "detected": 60,
+     "class_ok": 53,
+     "top1": 39,
+     "top3": 49,
+     "fa_per_normal_h": 0.0,
+     "extras_per_event_h": 425.0,
+     "line": {
+      "events": 36,
+      "detected": 30,
+      "class_ok": 30,
+      "top1": 24,
+      "top3": 29,
+      "confusion": {
+       "fault": 0,
+       "line": 30,
+       "generation": 0,
+       "load": 0
+      }
+     },
+     "load": {
+      "events": 36,
+      "detected": 30,
+      "class_ok": 23,
+      "top1": 15,
+      "top3": 20,
+      "confusion": {
+       "fault": 0,
+       "line": 7,
+       "generation": 0,
+       "load": 23
+      }
+     }
+    },
+    "per_record": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "normal_alarms": 0
+   }
+  },
+  "FIS": {
+   "tau": 0.25,
+   "f01_test": {
+    "summary": {
+     "events": 72,
+     "detected": 58,
+     "class_ok": 55,
+     "top1": 49,
+     "top3": 54,
+     "fa_per_normal_h": 0.0,
+     "extras_per_event_h": 75.0,
+     "line": {
+      "events": 36,
+      "detected": 36,
+      "class_ok": 35,
+      "top1": 32,
+      "top3": 34,
+      "confusion": {
+       "fault": 0,
+       "line": 35,
+       "generation": 0,
+       "load": 1
+      }
+     },
+     "load": {
+      "events": 36,
+      "detected": 22,
+      "class_ok": 20,
+      "top1": 17,
+      "top3": 20,
+      "confusion": {
+       "fault": 0,
+       "line": 2,
+       "generation": 0,
+       "load": 20
+      }
+     }
+    },
+    "per_record": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "normal_alarms": 0
+   },
+   "second_plant": {
+    "summary": {
+     "events": 72,
+     "detected": 68,
+     "class_ok": 60,
+     "top1": 45,
+     "top3": 55,
+     "fa_per_normal_h": 0.0,
+     "extras_per_event_h": 390.0,
+     "line": {
+      "events": 36,
+      "detected": 36,
+      "class_ok": 36,
+      "top1": 29,
+      "top3": 34,
+      "confusion": {
+       "fault": 0,
+       "line": 36,
+       "generation": 0,
+       "load": 0
+      }
+     },
+     "load": {
+      "events": 36,
+      "detected": 32,
+      "class_ok": 24,
+      "top1": 16,
+      "top3": 21,
+      "confusion": {
+       "fault": 0,
+       "line": 8,
+       "generation": 0,
+       "load": 24
+      }
+     }
+    },
+    "per_record": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "normal_alarms": 0
+   }
+  },
+  "ML+": {
+   "tau": 0.2,
+   "f01_test": {
+    "summary": {
+     "events": 72,
+     "detected": 63,
+     "class_ok": 57,
+     "top1": 48,
+     "top3": 54,
+     "fa_per_normal_h": 0.0,
+     "extras_per_event_h": 235.0,
+     "line": {
+      "events": 36,
+      "detected": 32,
+      "class_ok": 31,
+      "top1": 27,
+      "top3": 30,
+      "confusion": {
+       "fault": 0,
+       "line": 31,
+       "generation": 0,
+       "load": 1
+      }
+     },
+     "load": {
+      "events": 36,
+      "detected": 31,
+      "class_ok": 26,
+      "top1": 21,
+      "top3": 24,
+      "confusion": {
+       "fault": 0,
+       "line": 5,
+       "generation": 0,
+       "load": 26
+      }
+     }
+    },
+    "per_record": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ],
+    "normal_alarms": 0
+   },
+   "second_plant": {
+    "summary": {
+     "events": 72,
+     "detected": 66,
+     "class_ok": 61,
+     "top1": 42,
+     "top3": 52,
+     "fa_per_normal_h": 0.0,
+     "extras_per_event_h": 682.5,
+     "line": {
+      "events": 36,
+      "detected": 32,
+      "class_ok": 31,
+      "top1": 25,
+      "top3": 29,
+      "confusion": {
+       "fault": 0,
+       "line": 31,
+       "generation": 0,
+       "load": 1
+      }
+     },
+     "load": {
+      "events": 36,
+      "detected": 34,
+      "class_ok": 30,
+      "top1": 17,
+      "top3": 23,
+      "confusion": {
+       "fault": 0,
+       "line": 4,
+       "generation": 0,
+       "load": 30
+      }
+     }
+    },
+    "per_record": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "normal_alarms": 0
+   }
+  },
+  "FIS+": {
+   "tau": 0.5,
+   "f01_test": {
+    "summary": {
+     "events": 72,
+     "detected": 55,
+     "class_ok": 54,
+     "top1": 49,
+     "top3": 54,
+     "fa_per_normal_h": 0.0,
+     "extras_per_event_h": 52.5,
+     "line": {
+      "events": 36,
+      "detected": 33,
+      "class_ok": 32,
+      "top1": 30,
+      "top3": 32,
+      "confusion": {
+       "fault": 0,
+       "line": 32,
+       "generation": 0,
+       "load": 1
+      }
+     },
+     "load": {
+      "events": 36,
+      "detected": 22,
+      "class_ok": 22,
+      "top1": 19,
+      "top3": 22,
+      "confusion": {
+       "fault": 0,
+       "line": 0,
+       "generation": 0,
+       "load": 22
+      }
+     }
+    },
+    "per_record": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ],
+    "normal_alarms": 0
+   },
+   "second_plant": {
+    "summary": {
+     "events": 72,
+     "detected": 59,
+     "class_ok": 57,
+     "top1": 46,
+     "top3": 52,
+     "fa_per_normal_h": 0.0,
+     "extras_per_event_h": 187.5,
+     "line": {
+      "events": 36,
+      "detected": 34,
+      "class_ok": 33,
+      "top1": 30,
+      "top3": 33,
+      "confusion": {
+       "fault": 0,
+       "line": 33,
+       "generation": 0,
+       "load": 1
+      }
+     },
+     "load": {
+      "events": 36,
+      "detected": 25,
+      "class_ok": 24,
+      "top1": 16,
+      "top3": 19,
+      "confusion": {
+       "fault": 0,
+       "line": 1,
+       "generation": 0,
+       "load": 24
+      }
+     }
+    },
+    "per_record": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "normal_alarms": 0
+   }
+  }
+ },
+ "plan_sha256": "45f2ff1c8635473dd3c990cf3c5acc36c41ac21b16fc9e4165665873a19185d4",
+ "code_sha256": "3db7616e2e19ed78e444941d9a9d6aa6f755ce83cc1e6ea2199b42aa151cea64"
+}

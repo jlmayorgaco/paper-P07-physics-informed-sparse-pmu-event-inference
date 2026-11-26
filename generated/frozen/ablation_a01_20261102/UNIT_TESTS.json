@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "check": "bounded_likelihood_vs_optimizer",
+      "error": 3.469446951953614e-18
+    },
+    {
+      "check": "marginal_vs_quadrature",
+      "error": 1.3877787807814457e-16
+    },
+    {
+      "check": "bounded_likelihood_vs_optimizer",
+      "error": 0.0
+    },
+    {
+      "check": "marginal_vs_quadrature",
+      "error": 1.7763568394002505e-15
+    },
+    {
+      "check": "bounded_likelihood_vs_optimizer",
+      "error": 0.0
+    },
+    {
+      "check": "marginal_vs_quadrature",
+      "error": 2.2204460492503128e-16
+    },
+    {
+      "check": "bounded_likelihood_vs_optimizer",
+      "error": 5.551115123125783e-17
+    },
+    {
+      "check": "marginal_vs_quadrature",
+      "error": 1.1102230246251565e-16
+    },
+    {
+      "check": "memory_changes_only_114_estimated_physical_coordinates",
+      "passed": true
+    }
+  ]
+}

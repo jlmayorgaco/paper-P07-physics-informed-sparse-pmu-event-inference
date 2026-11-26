@@ -1,0 +1,53 @@
+{
+  "utc": "2026-10-29T20:43:38.635011+00:00",
+  "before_C01_predictions": true,
+  "before_C01_physics": true,
+  "configuration_already_drawn": true,
+  "method_or_protocol_changes": false,
+  "files": [
+    {
+      "path": "experiments/PAPER_CONFIRMATORY_C01/execution/common.py",
+      "sha256": "5893843a502c96ada05821de9925bba5057ec4477e2eeb10bba04fa0bf38ee90"
+    },
+    {
+      "path": "experiments/PAPER_CONFIRMATORY_C01/execution/evaluate.py",
+      "sha256": "93a805b0fee8f4235681063c0781e42d609fc4ad9f33d6a159e4400d443a371b"
+    },
+    {
+      "path": "experiments/PAPER_CONFIRMATORY_C01/execution/metrics.py",
+      "sha256": "3d143748709c894377c39e040bf7e3bdecbe08265d537d868de677fe8be4e182"
+    },
+    {
+      "path": "experiments/PAPER_CONFIRMATORY_C01/execution/paper.py",
+      "sha256": "752f34fd61f96da790345e46c3b9e98ba7418c5efe8a17ddcd0191661e2034fe"
+    },
+    {
+      "path": "experiments/PAPER_CONFIRMATORY_C01/execution/pipeline.py",
+      "sha256": "e9cefc24e3368f588f87aa221be14ab49a11ae68d4613e74a565602e6f1f145a"
+    },
+    {
+      "path": "experiments/PAPER_CONFIRMATORY_C01/execution/test_execution.py",
+      "sha256": "a24699e7a39339c23b639decef799d66c05d8de302e9c425df0c79234f3c7c04"
+    },
+    {
+      "path": "experiments/PAPER_CONFIRMATORY_C01/execution/worker.py",
+      "sha256": "2e88aca82c53d7ee4a832240078fd4aa54715a9c88f6e61d4e5ca1cebedf693d"
+    },
+    {
+      "path": "experiments/PAPER_CONFIRMATORY_C01/protocol/FREEZE.json",
+      "sha256": "6bdb3f740e87ae13fbe0efa6122f7d144fdb77c9f05fc409ffcbf4793eacc269"
+    },
+    {
+      "path": "experiments/PAPER_CONFIRMATORY_C01/execution_request/REQUEST.json",
+      "sha256": "c4a5a530a232fb6397343dbacff50f2637fc82e3965b14a85cd466a65174bda5"
+    },
+    {
+      "path": "experiments/PAPER_CONFIRMATORY_C01/execution_request/simulator/events/protocol.json",
+      "sha256": "4f1d58152734efd336f03e990a86b78e4a58aa90abf4aca01ff3c1651f78e5e9"
+    },
+    {
+      "path": "experiments/PAPER_CONFIRMATORY_C01/execution_request/truth_private/cases.json",
+      "sha256": "5fd2171aea529ce8b5807576fda45c3355ca2d6a3e009cf846d247a196664aba"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "sources": {
+    "EVENTS.csv": "f343e4909016459c1b2e7e113afa0e286a1ccd4b9ebb5e052bbf2c851491f741",
+    "RECORDS.csv": "08c610d458297e28a426c79a8d7c51c921f556083057b357b93cb84b2615fab8",
+    "PAIRED_INTERVALS.csv": "bc471895bf9fd93a1eda924c595b28fbaecc5eaf2eb581494a4606228aec022c"
+  },
+  "plot_scope": "Posthoc descriptive CDF of eventual correct diagnosis delay, normalized by every event. Not a new primary endpoint or before-OFF probability.",
+  "groups": [
+    {
+      "method": "R11",
+      "family": "load",
+      "denominator": 324,
+      "joint_eventual": 323,
+      "timely": 322
+    },
+    {
+      "method": "R11_NOMINAL",
+      "family": "load",
+      "denominator": 324,
+      "joint_eventual": 324,
+      "timely": 322
+    },
+    {
+      "method": "ET_REFERENCE",
+      "family": "load",
+      "denominator": 324,
+      "joint_eventual": 15,
+      "timely": 15
+    },
+    {
+      "method": "ET_CANDIDATE",
+      "family": "load",
+      "denominator": 324,
+      "joint_eventual": 30,
+      "timely": 30
+    },
+    {
+      "method": "R11",
+      "family": "line",
+      "denominator": 324,
+      "joint_eventual": 322,
+      "timely": 322
+    },
+    {
+      "method": "R11_NOMINAL",
+      "family": "line",
+      "denominator": 324,
+      "joint_eventual": 321,
+      "timely": 321
+    },
+    {
+      "method": "ET_REFERENCE",
+      "family": "line",
+      "denominator": 324,
+      "joint_eventual": 315,
+      "timely": 315
+    },
+    {
+      "method": "ET_CANDIDATE",
+      "family": "line",
+      "denominator": 324,
+      "joint_eventual": 322,
+      "timely": 322
+    }
+  ],
+  "single_state_control_verified": true,
+  "monitored_rate_rows": 24,
+  "new_test_predictions_or_thresholds": false,
+  "event_image_changed": false
+}

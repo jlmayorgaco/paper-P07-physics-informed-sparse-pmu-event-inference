@@ -1,0 +1,32 @@
+{
+  "id": "M02_V31_VS_HACKATHON_C01",
+  "sealed_before_inference_utc": "2026-10-23T11:58:41.176331+00:00",
+  "purpose": "Paired retrospective load/line/normal comparison of actual submitted package and unchanged M02 V3.1",
+  "submission_sha256": "e0bfc17e4c5ee9b595fa51fd94d736145c2f48755696c8d2eadcff00cb23a243",
+  "m02_result_manifest_sha256": "bcbe6bd16d85716c86cee32cba37e8ee82efa09a07961cc200b4becf4d8fafd3",
+  "observations": "All 112 archived V2 observation NPZs, no truth read by preparation or inference",
+  "inference": {
+    "submission": "Unmodified extracted ZIP, ml_windowed route, 30 s default and partial final window, full catalog, no retraining",
+    "m02": "Unmodified JointTensor and public model, exact same archived six-field PMU reports; fresh causal replay"
+  },
+  "export": "Invoke frozen F01 export(): balanced phases A/B/C, wrapped angles, volts/amps/Hz/Hz/s; retain four-frame f/ROCOF NaN warmup and DATA_PRESENT=1",
+  "metrics": {
+    "primary": "Shared 30 s windows, classification at window end; label is the physical family if an event occurred anywhere in the window, otherwise E0",
+    "secondary": "One decision per complete record; earliest nonzero submitted window, M02 final cause if an alarm occurred",
+    "m02_window_adapter": "E0 unless an alarm occurred in this window; otherwise family with maximum sum of M_cause at last available report and top3 cells within that family",
+    "detection": "Any nonzero event code is abnormal, including unsupported-family outputs; accuracy/precision/recall/F1, normal false windows and records",
+    "classification": "Accuracy, support-weighted F1 over E0-E8, macro-F1 on true common classes E0/E2/E4; out-of-scope predictions remain errors",
+    "localization": "Top1 and Top3 exact physical source on every event, and joint correct family+source; unordered line endpoints, typed BUS/LINE",
+    "temporal": "M02 first alarm and first frozen diagnosis alarm+0.5s; submitted emission is end of window, never the timestamp to which its retrospective label is broadcast",
+    "unit": "Record/windows, not 8 identical PMU rows as independent trials; physical parent is dependence cluster",
+    "failures": "Keep all inference failures in denominators; never silently drop"
+  },
+  "restrictions": [
+    "No RAW0002",
+    "No parameter or threshold changes",
+    "No baseline writes",
+    "No new physical simulations or state resets within records",
+    "Not an independent test: M02 development/validation now regression sets; different training/model information across methods"
+  ],
+  "uncertainty": "No calibrated-posterior claim; no full E0-E8 or 39-bus coverage claim; not an organizer score"
+}

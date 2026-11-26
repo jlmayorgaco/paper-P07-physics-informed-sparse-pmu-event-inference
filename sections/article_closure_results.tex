@@ -1,0 +1,14 @@
+\section{Episode Restoration and Computational Cost}
+\label{sec:closure-results}
+
+Restoration timing gives a second view of continuous attribution. Figure~\ref{fig:closure-restoration} shows the signed OFF delay among available associated restorations, alongside intended events without a restoration value. Under the posthoc threshold of more than one 30-Hz report early ($d_{\rm OFF}<-1/30$ s), the physical bank has 0/644 early restorations and the nominal bank 0/643. The reference and short-window ExtraTrees have 52/330 and 26/352, respectively. The corresponding missing-restoration counts are 4, 5, 318 and 296 out of 648 intended event realizations. Missing values include omissions and are not necessarily open episodes. Replays are dependent; this descriptive criterion is not a new confirmatory endpoint and does not isolate the memory component.
+
+\begin{figure}[t]\centering
+\includegraphics[width=\columnwidth]{figures/generated/closure_restoration.pdf}
+\caption{Posthoc restoration timing and events without an associated restoration value. Panel A shows signed OFF delay only where available; the dashed line marks the threshold at one report early. Panel B reports missing restoration values over 648 intended events, including omissions, not a count of episodes open at record end.}
+\label{fig:closure-restoration}\end{figure}
+
+Recorded stage timings from the continuous evaluation are summarized in Table~\ref{tab:closure-compute-cost}. For 120-s records, median physical-history inference took 358.7 s across 270 records, compared with 9.5 s for the combined ExtraTrees adapter stage; physical bank construction had a separate 80.1-s median. Dividing total time by 3,601 reports gives amortized averages of 99.6 ms/report for physical inference and 2.6 ms/report for the combined learned stage. These totals include full-record work and do not measure per-report latency. The physical stage is slower in this recorded implementation and does not support a real-time claim. Timers span mixed stages from the evaluation and concurrency; memory use and frame-level latency were not recorded. The 600-s normal controls are summarized separately in the machine-readable cost file.
+
+\input{tables/generated/closure_restoration}
+\input{tables/generated/closure_compute_cost}

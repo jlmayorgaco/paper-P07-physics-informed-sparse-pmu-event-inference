@@ -1,0 +1,58 @@
+[
+  {
+    "method":"R11",
+    "name":"Physical bank, five R\/X models",
+    "precision":0.8881405564,
+    "recall":0.9258241758,
+    "f1":0.9065909431,
+    "fa_per_min":0.0,
+    "normal_min":705.6,
+    "delay_s":0.1997683277,
+    "top1":0.9953703704,
+    "top3":0.9953703704,
+    "events":648,
+    "extras":72
+  },
+  {
+    "method":"R11_NOMINAL",
+    "name":"Physical bank, nominal model",
+    "precision":0.8739753817,
+    "recall":0.9267980697,
+    "f1":0.8996119929,
+    "fa_per_min":0.0,
+    "normal_min":705.6,
+    "delay_s":0.2665707209,
+    "top1":0.9953703704,
+    "top3":0.9953703704,
+    "events":648,
+    "extras":92
+  },
+  {
+    "method":"ET_REFERENCE",
+    "name":"Submitted ExtraTrees",
+    "precision":0.9378016603,
+    "recall":0.4236438165,
+    "f1":0.5836353806,
+    "fa_per_min":0.0,
+    "normal_min":705.6,
+    "delay_s":0.2712575298,
+    "top1":0.5092592593,
+    "top3":0.5092592593,
+    "events":648,
+    "extras":29
+  },
+  {
+    "method":"ET_CANDIDATE",
+    "name":"Retrained short-window ExtraTrees",
+    "precision":0.9441951607,
+    "recall":0.4832693761,
+    "f1":0.6393162064,
+    "fa_per_min":0.0,
+    "normal_min":705.6,
+    "delay_s":0.1948447823,
+    "top1":0.5432098765,
+    "top3":0.5432098765,
+    "events":648,
+    "extras":16
+  }
+]

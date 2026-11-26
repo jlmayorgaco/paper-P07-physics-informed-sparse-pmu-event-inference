@@ -1,0 +1,113 @@
+{
+  "M1_cone_symmetry": {
+    "cases": 15,
+    "max_independent_direction_error": 3.885780586188048e-16
+  },
+  "M2_regular_cone_laplace": {
+    "cases": [
+      {
+        "score": -2.0,
+        "relative_errors": [
+          0.0025728601181213007,
+          0.0006459432729768455,
+          0.00016165753495855917,
+          4.042513496960165e-05
+        ]
+      },
+      {
+        "score": 0.0,
+        "relative_errors": [
+          0.01005050633883342,
+          0.002541300169265015,
+          0.0006371456524505437,
+          0.00015940065455510855
+        ]
+      },
+      {
+        "score": 1.0,
+        "relative_errors": [
+          0.022747906637448523,
+          0.005797807730027804,
+          0.0014565478433370416,
+          0.0003645831622498541
+        ]
+      }
+    ],
+    "limiting_cone_mass_positive": true
+  },
+  "M2_excluded_cusp": {
+    "chart_dimension": 2,
+    "tangent_dimension": 1,
+    "nonempty_interior": false,
+    "evidence_over_epsilon_cubed": [
+      3.7369756784742476,
+      3.7541018370319046,
+      3.758475847363431
+    ],
+    "limit": 3.7599424119465006
+  },
+  "M3_full_law_fibers": {
+    "full_vs_reduced_error": 1.1102230246251565e-16,
+    "excluded_mean_only_counterexample_difference": 0.06989516372131105
+  },
+  "M4_centered_bilateral_constant": {
+    "cases": [
+      {
+        "k": 1,
+        "relative_errors": [
+          1.1102230246251565e-15,
+          1.1102230246251565e-15,
+          1.2212453270876722e-15
+        ]
+      },
+      {
+        "k": 2,
+        "relative_errors": [
+          0.0,
+          1.1102230246251565e-16,
+          2.220446049250313e-16
+        ]
+      },
+      {
+        "k": 3,
+        "relative_errors": [
+          2.220446049250313e-16,
+          5.551115123125783e-16,
+          4.440892098500626e-16
+        ]
+      }
+    ],
+    "noncentered_constant_ratio": 1.1720258281745783,
+    "one_sided_factor_at_equal_local_prior_density": 0.5
+  },
+  "M5_historical_effective_prior": {
+    "supports": 137,
+    "cases": 20,
+    "max_posterior_equivalence_error": 2.9976021664879227e-15,
+    "zero_response_cardinality": [
+      0.34507897532063464,
+      0.13730256169841293,
+      0.5176184629809519
+    ],
+    "corrected_physical_results_claimed": false
+  },
+  "M6_restricted_margin": {
+    "wide_map_margin": 0.0,
+    "full_column_restricted_margin": 0.9660845876841005,
+    "minimum_bound_slack": 1.0418468897793005,
+    "bound_cases": 30
+  },
+  "M7_domains": {
+    "positive_definite_cases": 30,
+    "minimum_preevent_information_gain": 0.03295354165135045,
+    "singular_precision_rejected": true,
+    "null_competitor_tangent_scalar_division_rejected": true
+  },
+  "all_checks_passed": true,
+  "scope": "Dimensionless independent algebra only; no simulator, RAW, C01 or physical-performance evaluation.",
+  "reviewed_source_sha256": {
+    "supplement/appendix_d_theory.tex": "ce2a3c8e5e050edb466e842ec5177f67640b3ffa9bfe9013b764fbf35c546ccc",
+    "supplement/appendix_e_estimator.tex": "335b51ced1a8c9e8d5e379387e94fc48829f8b1b59dee87e7cf450c849b35e47"
+  },
+  "check_script_sha256": "d8c954fd47ea198a47b6dd639a8fe1ece5f88b44986da3b763222340e2767764"
+}

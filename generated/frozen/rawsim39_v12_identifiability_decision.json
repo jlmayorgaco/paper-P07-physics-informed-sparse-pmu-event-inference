@@ -1,0 +1,54 @@
+{
+  "RAW0002_used": false,
+  "calibration_horizons_s": [
+    0.25,
+    1.0,
+    3.0
+  ],
+  "candidate_count": 18,
+  "checkpoint": "RAWSIM39_V1.2_IDENTIFIABILITY",
+  "created_utc": "2026-08-30T17:49:57.035804+00:00",
+  "data_source": "RAW0001 only",
+  "diagnostic_only_signals": [
+    "VA_ANG",
+    "IA_ANG",
+    "ROCOF"
+  ],
+  "eligible_candidate_count": 10,
+  "eligible_full_condition_number": 722.9105686056365,
+  "eligible_full_parameter_count": 10,
+  "eligible_full_rank": 10,
+  "feature_rows_calibration": 558,
+  "feature_rows_temporal_holdout": 600,
+  "feature_rows_total": 2316,
+  "frozen_artifacts_mutated": false,
+  "gates": {
+    "condition_number_max": 50.0,
+    "curvature_ratio_max": 0.5,
+    "individual_posterior_sd_max": 0.9,
+    "likelihood_sigma_normalized_feature": 0.25,
+    "orthogonal_fraction_min": 0.15,
+    "sensitivity_rms_min": 0.005
+  },
+  "posterior_estimation_authorized": true,
+  "posterior_status": "AUTHORIZED_RESTRICTED_SUBSET",
+  "primary_likelihood_signals": [
+    "VA_MAG",
+    "IA_MAG",
+    "Freq"
+  ],
+  "selected_condition_number": 7.826727232395702,
+  "selected_parameter_count": 8,
+  "selected_parameters": [
+    "fault_reactance_pu",
+    "generation_delta_p_pu",
+    "generation_amplitude",
+    "load_delta_p_fraction",
+    "generation_peak_s",
+    "generation_delta_q_pu",
+    "plant_inertia_scale",
+    "plant_governor_droop_scale"
+  ],
+  "selected_rank": 8,
+  "temporal_holdout_policy": "all other event horizons"
+}

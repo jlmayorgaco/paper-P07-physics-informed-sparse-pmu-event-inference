@@ -1,0 +1,50 @@
+{
+  "single_state_evaluation.json": {
+    "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_SUBMISSION_S01\\run\\single_state_h04\\EVALUATION.json",
+    "sha256": "6eeb6822a2c270978bb0a2a67edd50dc108461361c05ec605d24948256d5e32c"
+  },
+  "single_state_plan.json": {
+    "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_SUBMISSION_S01\\protocol\\SINGLE_STATE_PLAN.json",
+    "sha256": "59c762647f24355b6c02db256e6457818c4a72651e187707775161289feeea66"
+  },
+  "single_state_sources.json": {
+    "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_SUBMISSION_S01\\checks\\SINGLE_STATE_EXECUTION_SOURCES.json",
+    "sha256": "e92d9682a64afbf242d5c9bf71c18f790538837eedac4df9ee8bbc956c02cf17"
+  },
+  "legacy_raw_evaluation.json": {
+    "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_SUBMISSION_S01\\run\\legacy_continuous\\EVALUATION.json",
+    "sha256": "4a07355e8088157030450cb8e6f788664e681a3c8d65a4b2cf6ecd492689d097"
+  },
+  "cyber_evaluation.json": {
+    "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_SUBMISSION_S01\\run\\cyber_composition_v2\\EVALUATION.json",
+    "sha256": "d42dee01f977191c51e96cdb1b4a493e48f843508c72f14637aa7b3a616fe83d"
+  },
+  "cyber_plan.json": {
+    "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_SUBMISSION_S01\\protocol\\CYBER_PLAN.json",
+    "sha256": "c1fbed8fab892078810498fd7a5b491b263724050f666b5f59d1560d66e010cd"
+  },
+  "historical_parity_evaluation.json": {
+    "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_SUBMISSION_S01\\run\\legacy_historical\\EVALUATION.json",
+    "sha256": "22d4cdfdf0d6bfc330045a88d25d3dd91a9f8dfc4686f0f719f8431787c88791"
+  },
+  "physical_raw_startup.json": {
+    "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_SUBMISSION_S01\\run\\raw_physical_prefix\\RESULT.json",
+    "sha256": "2b36b7c297017d2aacc4c89c527aeef6fbcc92d62e166a6b0df18dd9fd99c0c5"
+  },
+  "physical_raw_prefix_diagnostic.json": {
+    "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_SUBMISSION_S01\\run\\raw_prefix_review_20261031\\attempt03\\DIAGNOSTIC.json",
+    "sha256": "8700370d6607ad0ef2ca0c68afa6cab7854b54a15dd5d415d872d7622ebd28be"
+  },
+  "physical_raw_prefix_shape.json": {
+    "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_SUBMISSION_S01\\run\\raw_prefix_review_20261031\\shape_followup\\SHAPE.json",
+    "sha256": "e58cf3647c44c9b7be687063a0fc9a00e78f37cdaa008f8c1326f2288d9ad83c"
+  },
+  "successor_metrics.py": {
+    "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_SUBMISSION_S01\\evaluation\\metrics.py",
+    "sha256": "eff5e1b2d71e45e5ba9883808e6a34758813c1c11e60703790be79e48f10a7f9"
+  },
+  "raw_audit_validation.json": {
+    "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_SUBMISSION_S01\\evaluation\\RAW_AUDIT_VALIDATION.json",
+    "sha256": "1b95ce3b30d8a61d32b3a4ec44fd8ac312b2192ad25f0cf9ef844d119202c169"
+  }
+}

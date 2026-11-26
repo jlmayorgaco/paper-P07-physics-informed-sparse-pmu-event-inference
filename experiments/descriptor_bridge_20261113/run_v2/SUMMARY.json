@@ -1,0 +1,135 @@
+{
+  "scope": "Six deterministic development trajectories; known event schedule, initial state and load magnitude; no Kalman updates, noise, uncertainty or detection score.",
+  "operator_reconstruction_max_abs": {
+    "normal": {
+      "A": 2.842170943040401e-14,
+      "B": 1.7763568394002505e-15,
+      "C": 6.661338147750939e-16,
+      "D": 1.249000902703301e-16
+    },
+    "line": {
+      "A": 4.263256414560601e-14,
+      "B": 8.881784197001252e-16,
+      "C": 7.494005416219807e-16,
+      "D": 1.3877787807814457e-16
+    }
+  },
+  "cases": [
+    {
+      "case": "normal",
+      "terminal_stamp_error_pu": 3.1982594540095405e-13,
+      "windows": {
+        "active": {
+          "complex_voltage_rmse_pu": 5.160100003560692e-15,
+          "event_response_rms_pu": 0.0,
+          "relative_rmse": null,
+          "max_complex_voltage_error_pu": 8.656537128507925e-15
+        },
+        "recovery": {
+          "complex_voltage_rmse_pu": 9.480655442066828e-15,
+          "event_response_rms_pu": 0.0,
+          "relative_rmse": null,
+          "max_complex_voltage_error_pu": 3.69509593516292e-14
+        }
+      }
+    },
+    {
+      "case": "load_up",
+      "terminal_stamp_error_pu": 3.5987615186923267e-13,
+      "windows": {
+        "active": {
+          "complex_voltage_rmse_pu": 0.0062779817031602845,
+          "event_response_rms_pu": 0.08795889779209409,
+          "relative_rmse": 0.07137403788300495,
+          "max_complex_voltage_error_pu": 0.017972082511254858
+        },
+        "recovery": {
+          "complex_voltage_rmse_pu": 0.04377786254283948,
+          "event_response_rms_pu": 0.2953188057260507,
+          "relative_rmse": 0.14823933218614443,
+          "max_complex_voltage_error_pu": 0.05427743466477186
+        }
+      }
+    },
+    {
+      "case": "load_down",
+      "terminal_stamp_error_pu": 3.4332346964989837e-13,
+      "windows": {
+        "active": {
+          "complex_voltage_rmse_pu": 0.0064274262426263626,
+          "event_response_rms_pu": 0.08964191630581184,
+          "relative_rmse": 0.07170112495921338,
+          "max_complex_voltage_error_pu": 0.0183799934310673
+        },
+        "recovery": {
+          "complex_voltage_rmse_pu": 0.04461269397050793,
+          "event_response_rms_pu": 0.29954805338298307,
+          "relative_rmse": 0.1489333463084435,
+          "max_complex_voltage_error_pu": 0.05529831982161098
+        }
+      }
+    },
+    {
+      "case": "line",
+      "terminal_stamp_error_pu": 4.5211827212112456e-13,
+      "windows": {
+        "active": {
+          "complex_voltage_rmse_pu": 0.018860405716992837,
+          "event_response_rms_pu": 0.10494624877706242,
+          "relative_rmse": 0.17971491060207445,
+          "max_complex_voltage_error_pu": 0.04995952248405091
+        },
+        "recovery": {
+          "complex_voltage_rmse_pu": 0.06099708137389279,
+          "event_response_rms_pu": 0.1986686433422743,
+          "relative_rmse": 0.3070292339430968,
+          "max_complex_voltage_error_pu": 0.11076521236535777
+        }
+      }
+    },
+    {
+      "case": "load_up_small",
+      "terminal_stamp_error_pu": 3.083521684367446e-13,
+      "windows": {
+        "active": {
+          "complex_voltage_rmse_pu": 6.349247878889611e-05,
+          "event_response_rms_pu": 0.008878753990721834,
+          "relative_rmse": 0.007151057328003998,
+          "max_complex_voltage_error_pu": 0.00018172176543301092
+        },
+        "recovery": {
+          "complex_voltage_rmse_pu": 0.00044262699330700436,
+          "event_response_rms_pu": 0.029829714602672946,
+          "relative_rmse": 0.014838458872393701,
+          "max_complex_voltage_error_pu": 0.0005489307537012556
+        }
+      }
+    },
+    {
+      "case": "load_down_small",
+      "terminal_stamp_error_pu": 3.4081177876600303e-13,
+      "windows": {
+        "active": {
+          "complex_voltage_rmse_pu": 6.36421837922964e-05,
+          "event_response_rms_pu": 0.008895623117724951,
+          "relative_rmse": 0.007154325554270204,
+          "max_complex_voltage_error_pu": 0.00018213069124024415
+        },
+        "recovery": {
+          "complex_voltage_rmse_pu": 0.0004434672600425919,
+          "event_response_rms_pu": 0.02987246863927077,
+          "relative_rmse": 0.014845350258719615,
+          "max_complex_voltage_error_pu": 0.0005499593120600561
+        }
+      }
+    }
+  ],
+  "reporting_contract": "47 raw coordinates, no BUS39 current phase. Common robust reporting isolates plant linearization; first-order polar/ordinary polynomial reporting adds observation approximation. Neither is a full 376-state bank run.",
+  "limitations": [
+    "One operating point, one load bus, one line; no independent replicates.",
+    "BUS5 historical 5-6 terminal hypothesis unchanged.",
+    "Topology and event timing known; no source attribution or false-alarm conclusion.",
+    "No Hamiltonian prior or data-driven parameter adaptation tested.",
+    "Legacy energy/coordinate gate fields in protocol.json are inherited and not part of this descriptor experiment."
+  ]
+}

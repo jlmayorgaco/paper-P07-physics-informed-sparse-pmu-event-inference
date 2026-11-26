@@ -1,0 +1,42 @@
+{
+  "ml_plan.json": {
+    "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_SUBMISSION_S01\\protocol\\ML_PLAN.json",
+    "sha256": "b6ab35502bae7693e0b1eb41d26005d66267b17f14686e2387162995618c8993"
+  },
+  "split.json": {
+    "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_SUBMISSION_S01\\protocol\\DEVELOPMENT_SPLIT.json",
+    "sha256": "af49df26c04778b970e10847e256d151fc8157cd691e61367bdc241dcbf6c1a5"
+  },
+  "model_freeze.json": {
+    "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_SUBMISSION_S01\\ml\\MODEL_FREEZE.json",
+    "sha256": "50f360b3fdca403f9ce84d73b8f927c026c89167b09e34befdfc7add13185f3c"
+  },
+  "holdout_complete.json": {
+    "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_SUBMISSION_S01\\ml\\HOLDOUT_COMPLETE.json",
+    "sha256": "bb4e0c05908d34148e35ea7aff6f4e1e1a82185b3c27a2ee6737dd52a2470365"
+  },
+  "holdout_summary.json": {
+    "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_SUBMISSION_S01\\ml\\metrics\\development_holdout_30\\SHORT\\SUMMARY.json",
+    "sha256": "1e8412babb15826d47833bd20a7ef3578598a7e7e9bc1970066600e724323e6e"
+  },
+  "holdout_events.csv": {
+    "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_SUBMISSION_S01\\ml\\metrics\\development_holdout_30\\SHORT\\EVENTS.csv",
+    "sha256": "462fc4f5746a3751c020af75046875677137dee1cd9eb2bd679f298936eda409"
+  },
+  "validation_events.csv": {
+    "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_SUBMISSION_S01\\ml\\metrics\\validation_14\\SHORT\\EVENTS.csv",
+    "sha256": "7ed4473614f016d2cdad475af65d77cf97e1ff84ba003d746e07425f066bc946"
+  },
+  "missing_latency.json": {
+    "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_SUBMISSION_S01\\run\\cyber_composition_v2\\MISSING_LATENCY_COMPARISON.json",
+    "sha256": "21427ab2d79b98ca7fbb7f1e15544e30eb3e5cec844b14e42afa7cf827705e87"
+  },
+  "missing_latency_protocol.json": {
+    "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_SUBMISSION_S01\\evaluation\\MISSING_LATENCY_PROTOCOL.json",
+    "sha256": "b8b47dfc7b755b099a335be22ac19e5a7e225ea5bf16ca64b1186d6ba44aa187"
+  },
+  "missing_latency_validation.json": {
+    "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_SUBMISSION_S01\\evaluation\\MISSING_LATENCY_VALIDATION.json",
+    "sha256": "c0bd283a161ab3927516ebcedaa5eefca585b6d4a7849b6e74ed6dab8312e19d"
+  }
+}

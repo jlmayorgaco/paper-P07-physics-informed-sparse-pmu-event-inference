@@ -1,0 +1,126 @@
+{
+  "validation": {
+    "all_46_from_to_stamps_vs_independent_pi_formula": "PASS",
+    "tap_transformers": "PASS",
+    "line_charging_shunts": "PASS",
+    "KCL_all_39_buses": "PASS",
+    "KCL_max_abs_residual": 2.3437142008433856e-13,
+    "opened_each_selected_branch_and_checked_all_channels": "PASS",
+    "opened_branch_checks": [
+      {
+        "opened_branch_index_zero_based": 0,
+        "affected_channels": [
+          0
+        ],
+        "all_others_match_direct_formula": true
+      },
+      {
+        "opened_branch_index_zero_based": 1,
+        "affected_channels": [
+          7
+        ],
+        "all_others_match_direct_formula": true
+      },
+      {
+        "opened_branch_index_zero_based": 7,
+        "affected_channels": [
+          1
+        ],
+        "all_others_match_direct_formula": true
+      },
+      {
+        "opened_branch_index_zero_based": 9,
+        "affected_channels": [
+          2
+        ],
+        "all_others_match_direct_formula": true
+      },
+      {
+        "opened_branch_index_zero_based": 17,
+        "affected_channels": [
+          3
+        ],
+        "all_others_match_direct_formula": true
+      },
+      {
+        "opened_branch_index_zero_based": 26,
+        "affected_channels": [
+          4
+        ],
+        "all_others_match_direct_formula": true
+      },
+      {
+        "opened_branch_index_zero_based": 34,
+        "affected_channels": [
+          5
+        ],
+        "all_others_match_direct_formula": true
+      },
+      {
+        "opened_branch_index_zero_based": 43,
+        "affected_channels": [
+          6
+        ],
+        "all_others_match_direct_formula": true
+      }
+    ],
+    "terminal_selection_local_bus": "PASS",
+    "to_end_count": 7,
+    "corrected_H_shape": [
+      16,
+      39
+    ],
+    "corrected_H_complex_rank": 14,
+    "noise_base_matches_corrected_terminal_currents": "PASS",
+    "max_independent_stamp_error": 5.684341886080802e-14,
+    "zip_sha256_matches_source_manifest": "c19f7ed78d3b60bf05e50c6319ba6d196a6b1a43f9141c43b0a6188d1288f048",
+    "same_seeded_noise_array_programmatic_equality": true,
+    "noise_array_shape": [
+      18,
+      150,
+      32
+    ]
+  },
+  "paired_static_comparison": {
+    "same_seed": 261112,
+    "same_noise_array_sha256": "49fb26f5080570180c4ae47b8e590388e218e5ca5684d5a924aa0259f87291b1",
+    "complex_observation_rank": {
+      "original": 14,
+      "corrected": 14
+    },
+    "median_nearest_abs_cosine_V_plus_I": {
+      "original": 0.812811939557158,
+      "corrected": 0.8058721860486431
+    },
+    "max_pairwise_abs_cosine_V_plus_I": {
+      "original": 0.9880994383116426,
+      "corrected": 0.9879935462858405
+    },
+    "accuracy": {
+      "1x/voltage": {
+        "original": 0.8996,
+        "corrected": 0.8996
+      },
+      "1x/voltage+current": {
+        "original": 0.9563,
+        "corrected": 0.9567
+      },
+      "5x/voltage": {
+        "original": 0.6844,
+        "corrected": 0.6844
+      },
+      "5x/voltage+current": {
+        "original": 0.8556,
+        "corrected": 0.8567
+      },
+      "20x/voltage": {
+        "original": 0.4015,
+        "corrected": 0.4015
+      },
+      "20x/voltage+current": {
+        "original": 0.6485,
+        "corrected": 0.6444
+      }
+    }
+  }
+}

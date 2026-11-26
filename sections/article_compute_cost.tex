@@ -1,17 +1,17 @@
-\subsection{Processing Time}
-In the controlled two-plant comparison, the median recorded runtime
-of the history arm for a 120-s event trajectory was 37.4\,s on the reference plant
-and 49.2\,s on the second plant (36 trajectories per plant). The mean and reset
-arms took 46.6 and 46.3\,s on the reference plant and 48.1 and 48.3\,s on the second plant.
-The timer aggregates processing across each record and cannot resolve
-individual report latencies.
-
-The five-model bank in the separate network-mismatch evaluation took
-a median 358.7\,s of single-thread inference per 120-s event or
-persistent-line record, or 99.6\,ms per report at 30 reports/s.
-Constructing the prefix-specific bank took a further median 80.1\,s.
-In the six-record noise replay, the nominal bank alone took
-\RevNomMsReport{}\,ms per report at the median and
-\RevNomMsReportMax{}\,ms at the maximum of the record averages.
-The five-model inference stage exceeded the 33.3-ms inter-report
-interval even on an amortized basis.
+\subsection{Computational Cost}
+\input{tables/generated/closure_compute_cost}
+Table~\ref{tab:closure-compute-cost} records the stages of the evaluation
+campaign, which ran the five-model bank on one thread. Its history
+inference takes a median 358.7\,s per 120-s record (99.6\,ms per report),
+three times slower than the 30-report/s input, so the five-model bank as
+implemented is an offline causal replay. The cost is dominated by the
+number of network hypotheses. Re-running the unchanged nominal bank alone
+on the same hardware and thread settings (Section~\ref{sec:noise-stress})
+gives \RevNomMsReport\,ms per report (median over \RevNomRecords{}
+records, maximum \RevNomMsReportMax\,ms), below the 33.3-ms report
+interval; the nominal bank attributed \COneNomTimely{}/\COneNomTotal{}
+interventions in the independent evaluation. These are amortized
+processing rates on a desktop CPU; per-report latency percentiles and
+memory were not instrumented, and the 80-s startup bank construction is a
+one-time cost. Decision timestamps elsewhere in the paper are report times,
+not wall-clock latency.

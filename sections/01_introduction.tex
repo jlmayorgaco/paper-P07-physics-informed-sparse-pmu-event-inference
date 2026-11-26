@@ -1,0 +1,30 @@
+\section{Introduction}
+\label{sec:introduction}
+
+\PARstart{P}{hasor} measurement units (PMUs) reveal electromechanical transients through synchronized voltage and current phasors, yet transmission networks instrument only a fraction of their buses and branches \cite{phadke2008synchronized,zhao2019dse}. An event may start outside the measured region and still alter every available PMU. Missing frames and corrupted channels create a second problem because they can resemble a physical transient. A useful diagnosis must therefore answer separate questions: what is the hidden network state, what changed physically, and which measurements can still be trusted?
+
+Dynamic estimators combine network models with synchrophasors \cite{zhao2019dse,katanic2024recursive}; sparse-PMU classifiers identify events and faulted assets \cite{pandey2020realtime,yildiz2024few}; and recent learning methods reconstruct hidden trajectories before localization \cite{rimkus2025gnn,zhai2025partial}. These capabilities do not imply one another. In particular, a low state-reconstruction error says nothing about whether two candidate sources produce distinguishable measurements.
+
+This distinction changes how the problem must be evaluated. A generation change may be visible throughout the network while its source remains ambiguous. A dropped PMU identifies the failed measurement device, yet the lost channel can make a simultaneous physical event harder to localize. Treating both cases as entries in one multiclass label hides the relevant failure mechanism and mixes incompatible denominators.
+
+Our central idea is to separate target recovery from source separation inside the same physical model. A candidate event specifies a family, a sparse support, an onset, and signed severity. Measurement availability and corruption remain separate variables. Each candidate generates a counterfactual DAE response. After admissible state and integrity directions are profiled, the distance between candidate response manifolds measures the information available for source discrimination \cite{eriksson2013diagnosability,scharf1994matched}. Zero distance means that two candidates intersect; a small positive distance means that they are distinct but difficult to separate with the available horizon and noise.
+
+We test that argument in two stages. The state study asks what eight voltage/current PMUs recover, how the estimate fails when its operating point is stale, and whether a constrained physical recentering repairs that failure. The event study then evaluates all zero-, one-, and two-source load supports without fitting a bus-label classifier. A retrospective geometry audit and a longer-horizon diagnostic explain the weak-source failures. Finally, an earlier supervised ANDES model provides a contrasting test: it performs well when a source appears in training but collapses under complete source holdout. These studies use separate targets and denominators.
+
+The contributions are:
+\begin{enumerate}
+  \item a hybrid DAE formulation that keeps physical interventions and measurement integrity compositional, and represents simultaneous sources by a sparse support rather than a new class label;
+  \item a finite-horizon analysis that separates functional state recovery, sparse event injectivity, and the conditioning supplied by additional PMUs or observation time, and connects profiled separation to Gaussian error and support-recovery limits; and
+  \item a prospective \GlobalHypothesisCount{}-hypothesis load-source test that connects exact-support recovery to response-manifold geometry, together with independent state-reconstruction and source-holdout evidence.
+\end{enumerate}
+
+The evidence yields one consistent picture. Sparse PMUs can recover the requested voltage field under a matched model, but operating-point error must be corrected physically. For simultaneous load events, source severity controls whether the posterior resolves only cardinality or the exact support. Longer observation adds information, yet nearly collinear signatures remain difficult. The implemented batch event estimator therefore supports matched load interventions with at most two sources. It does not yet solve the full multi-family problem shown in Fig.~\ref{fig:joint-architecture}.
+
+A separate causal component extends the executed evidence to unknown-onset load and line interventions in continuous streams. It retains conditional recovery states and marginalizes a finite bank of fixed network hypotheses. Its source/family array and increments separate event-evidence evolution from model reweighting. Section~\ref{sec:continuous-evidence} reports the resulting precision--timeliness trade-off, including failures; it does not identify this component with the complete joint posterior. We implement a published line-outage likelihood comparator and preregister its eligible confirmatory comparison rather than infer general superiority from incompatible task definitions.
+
+\begin{figure*}[t]
+\centering
+\resizebox{\textwidth}{!}{\input{figures/joint_inference_architecture}}
+\caption{Scientific argument and validation boundary. The blue B0--B3 path is an independently evaluated state-reconstruction component. The green path is the implemented batch reference estimator $\mathcal E_{\mathrm B}$. The dashed path is the proposed joint estimator $\mathcal E_{\mathrm J}$; its complete posterior remains unevaluated. The exploratory single-event pilot implements only part of that route.}
+\label{fig:joint-architecture}
+\end{figure*}

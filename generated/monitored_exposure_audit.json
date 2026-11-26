@@ -1,0 +1,227 @@
+{
+  "purpose": "Descriptive unit correction; original registered intervals remain unchanged.",
+  "formula": "alarm count / sum(monitored_s); archived difference and CI multiplied by full/monitored exposure",
+  "original_hashes": {
+    "RECORDS.csv": "08c610d458297e28a426c79a8d7c51c921f556083057b357b93cb84b2615fab8",
+    "PAIRED_INTERVALS.csv": "bc471895bf9fd93a1eda924c595b28fbaecc5eaf2eb581494a4606228aec022c"
+  },
+  "rows": [
+    {
+      "condition": "MATCH",
+      "noise": 1.0,
+      "method": "R11",
+      "reference": "ET_REFERENCE",
+      "factor": 1.1111111111111112,
+      "full_exposure_s": 2160.0,
+      "monitored_exposure_s": 1944.0
+    },
+    {
+      "condition": "MATCH",
+      "noise": 1.0,
+      "method": "R11",
+      "reference": "ET_CANDIDATE",
+      "factor": 1.1111111111111112,
+      "full_exposure_s": 2160.0,
+      "monitored_exposure_s": 1944.0
+    },
+    {
+      "condition": "MATCH",
+      "noise": 1.0,
+      "method": "R11_NOMINAL",
+      "reference": "ET_REFERENCE",
+      "factor": 1.1111111111111112,
+      "full_exposure_s": 2160.0,
+      "monitored_exposure_s": 1944.0
+    },
+    {
+      "condition": "MATCH",
+      "noise": 1.0,
+      "method": "R11_NOMINAL",
+      "reference": "ET_CANDIDATE",
+      "factor": 1.1111111111111112,
+      "full_exposure_s": 2160.0,
+      "monitored_exposure_s": 1944.0
+    },
+    {
+      "condition": "MATCH",
+      "noise": 2.0,
+      "method": "R11",
+      "reference": "ET_REFERENCE",
+      "factor": 1.1111111111111112,
+      "full_exposure_s": 2160.0,
+      "monitored_exposure_s": 1944.0
+    },
+    {
+      "condition": "MATCH",
+      "noise": 2.0,
+      "method": "R11",
+      "reference": "ET_CANDIDATE",
+      "factor": 1.1111111111111112,
+      "full_exposure_s": 2160.0,
+      "monitored_exposure_s": 1944.0
+    },
+    {
+      "condition": "MATCH",
+      "noise": 2.0,
+      "method": "R11_NOMINAL",
+      "reference": "ET_REFERENCE",
+      "factor": 1.1111111111111112,
+      "full_exposure_s": 2160.0,
+      "monitored_exposure_s": 1944.0
+    },
+    {
+      "condition": "MATCH",
+      "noise": 2.0,
+      "method": "R11_NOMINAL",
+      "reference": "ET_CANDIDATE",
+      "factor": 1.1111111111111112,
+      "full_exposure_s": 2160.0,
+      "monitored_exposure_s": 1944.0
+    },
+    {
+      "condition": "RX_IN_SUPPORT",
+      "noise": 1.0,
+      "method": "R11",
+      "reference": "ET_REFERENCE",
+      "factor": 1.1111111111111112,
+      "full_exposure_s": 2160.0,
+      "monitored_exposure_s": 1944.0
+    },
+    {
+      "condition": "RX_IN_SUPPORT",
+      "noise": 1.0,
+      "method": "R11",
+      "reference": "ET_CANDIDATE",
+      "factor": 1.1111111111111112,
+      "full_exposure_s": 2160.0,
+      "monitored_exposure_s": 1944.0
+    },
+    {
+      "condition": "RX_IN_SUPPORT",
+      "noise": 1.0,
+      "method": "R11_NOMINAL",
+      "reference": "ET_REFERENCE",
+      "factor": 1.1111111111111112,
+      "full_exposure_s": 2160.0,
+      "monitored_exposure_s": 1944.0
+    },
+    {
+      "condition": "RX_IN_SUPPORT",
+      "noise": 1.0,
+      "method": "R11_NOMINAL",
+      "reference": "ET_CANDIDATE",
+      "factor": 1.1111111111111112,
+      "full_exposure_s": 2160.0,
+      "monitored_exposure_s": 1944.0
+    },
+    {
+      "condition": "RX_IN_SUPPORT",
+      "noise": 2.0,
+      "method": "R11",
+      "reference": "ET_REFERENCE",
+      "factor": 1.1111111111111112,
+      "full_exposure_s": 2160.0,
+      "monitored_exposure_s": 1944.0
+    },
+    {
+      "condition": "RX_IN_SUPPORT",
+      "noise": 2.0,
+      "method": "R11",
+      "reference": "ET_CANDIDATE",
+      "factor": 1.1111111111111112,
+      "full_exposure_s": 2160.0,
+      "monitored_exposure_s": 1944.0
+    },
+    {
+      "condition": "RX_IN_SUPPORT",
+      "noise": 2.0,
+      "method": "R11_NOMINAL",
+      "reference": "ET_REFERENCE",
+      "factor": 1.1111111111111112,
+      "full_exposure_s": 2160.0,
+      "monitored_exposure_s": 1944.0
+    },
+    {
+      "condition": "RX_IN_SUPPORT",
+      "noise": 2.0,
+      "method": "R11_NOMINAL",
+      "reference": "ET_CANDIDATE",
+      "factor": 1.1111111111111112,
+      "full_exposure_s": 2160.0,
+      "monitored_exposure_s": 1944.0
+    },
+    {
+      "condition": "RX_OUT_SUPPORT",
+      "noise": 1.0,
+      "method": "R11",
+      "reference": "ET_REFERENCE",
+      "factor": 1.1111111111111112,
+      "full_exposure_s": 2160.0,
+      "monitored_exposure_s": 1944.0
+    },
+    {
+      "condition": "RX_OUT_SUPPORT",
+      "noise": 1.0,
+      "method": "R11",
+      "reference": "ET_CANDIDATE",
+      "factor": 1.1111111111111112,
+      "full_exposure_s": 2160.0,
+      "monitored_exposure_s": 1944.0
+    },
+    {
+      "condition": "RX_OUT_SUPPORT",
+      "noise": 1.0,
+      "method": "R11_NOMINAL",
+      "reference": "ET_REFERENCE",
+      "factor": 1.1111111111111112,
+      "full_exposure_s": 2160.0,
+      "monitored_exposure_s": 1944.0
+    },
+    {
+      "condition": "RX_OUT_SUPPORT",
+      "noise": 1.0,
+      "method": "R11_NOMINAL",
+      "reference": "ET_CANDIDATE",
+      "factor": 1.1111111111111112,
+      "full_exposure_s": 2160.0,
+      "monitored_exposure_s": 1944.0
+    },
+    {
+      "condition": "RX_OUT_SUPPORT",
+      "noise": 2.0,
+      "method": "R11",
+      "reference": "ET_REFERENCE",
+      "factor": 1.1111111111111112,
+      "full_exposure_s": 2160.0,
+      "monitored_exposure_s": 1944.0
+    },
+    {
+      "condition": "RX_OUT_SUPPORT",
+      "noise": 2.0,
+      "method": "R11",
+      "reference": "ET_CANDIDATE",
+      "factor": 1.1111111111111112,
+      "full_exposure_s": 2160.0,
+      "monitored_exposure_s": 1944.0
+    },
+    {
+      "condition": "RX_OUT_SUPPORT",
+      "noise": 2.0,
+      "method": "R11_NOMINAL",
+      "reference": "ET_REFERENCE",
+      "factor": 1.1111111111111112,
+      "full_exposure_s": 2160.0,
+      "monitored_exposure_s": 1944.0
+    },
+    {
+      "condition": "RX_OUT_SUPPORT",
+      "noise": 2.0,
+      "method": "R11_NOMINAL",
+      "reference": "ET_CANDIDATE",
+      "factor": 1.1111111111111112,
+      "full_exposure_s": 2160.0,
+      "monitored_exposure_s": 1944.0
+    }
+  ],
+  "predictions_matches_or_test_selection_changed": false
+}

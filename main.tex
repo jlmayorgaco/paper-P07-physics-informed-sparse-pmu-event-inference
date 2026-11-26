@@ -1,5 +1,5 @@
 % !TeX program = pdflatex
-% Main article only. See README.md for compilation instructions.
+% Main article only. Build both documents with scripts/build_manuscript_bundle.ps1.
 % ieeeaccess.cls reuses \year as a metadata setter. Preserve the TeX primitive
 % so PGF/TikZ can initialize its deterministic machinery while loading.
 \let\PSevenTeXYear\year
@@ -7,13 +7,28 @@
 
 \input{preamble}
 \usepackage{placeins}
+\input{generated/results_macros}
+\input{generated/continuous_macros}
+\input{generated/narrative_macros}
 \input{generated/c01_macros}
 \input{generated/recovery_comparison_macros}
-\input{generated/recovery_c03_macros}
-\input{generated/c03_extended_macros}
-\input{generated/second_family}
-\input{generated/modal_recovery}
+\input{generated/channel_information_macros}
+\input{generated/channel_profile_macros}
+\input{generated/reader_macros}
+\input{generated/evidence_bridge_macros}
+\input{generated/review_audit_macros}
+\IfFileExists{generated/ei_x02_macros.tex}{\input{generated/ei_x02_macros}}{}
+\input{generated/revision_history_macros}
+\input{generated/revision_baselines_macros}
+\input{generated/revision_secondplant_macros}
+\IfFileExists{generated/submission_s01_macros.tex}{\input{generated/submission_s01_macros}}{}
+\IfFileExists{generated/submission_s01_learning_macros.tex}{\input{generated/submission_s01_learning_macros}}{}
+\IfFileExists{generated/submission_s01_raw_macros.tex}{\input{generated/submission_s01_raw_macros}}{}
+\IfFileExists{generated/submission_s01_ml_h04_macros.tex}{\input{generated/submission_s01_ml_h04_macros}}{}
+\IfFileExists{generated/submission_s01_system_macros.tex}{\input{generated/submission_s01_system_macros}}{}
 \input{generated/revision_20261104_macros}
+\input{generated/revision_integrity_macros}
+\input{generated/revision_allevents_macros}
 
 \begin{document}
 \input{metadata}
@@ -21,63 +36,56 @@
   pdftitle={Recovery-Aware Physical Attribution of Load and Line Events From Sparse PMUs},
   pdfauthor={Jorge Luis Mayorga Taborda; Yessica Africano Rodriguez; Masoud Barati; Payman Dehghanian; David Felipe Celeita Rodriguez},
   pdfsubject={Causal physical event attribution, recovery, and source resolution from sparse PMUs},
-  pdfkeywords={change detection and isolation, differential-algebraic equations, event attribution, phasor measurement units, physics-informed inference}
+  pdfkeywords={change detection and isolation, differential-algebraic equations, event attribution, measurement integrity, phasor measurement units, physics-informed inference}
 }
 
 \begin{abstract}
-A line can reclose while generators are still responding to its opening.
-A monitor that observes another change in current must distinguish a new
-intervention from the continuing response to the first. We address this
-problem with a bank of switched network models. Each model predicts the
-next phasor measurement unit (PMU) report from the state reached before
-the switch. For a load change, the model averages over its unknown size.
-We derive the conditional minimum mean-square state estimate for each
-history and quantify the one-report increase in expected log loss caused by a
-physical-state reset. On the simulated IEEE 39-bus system with eight
-PMUs, the bank identified the correct event family and asset before
-restoration in \RecBankTimely{} cases. A continuous generalized
-likelihood ratio observer achieved \RecGlrTimely{} and an ExtraTrees
-classifier achieved \RecTreesTimely{}. Over 0.54 monitored event-hours
-the bank, observer and classifier issued \RecBankExtras{}, \RecGlrExtras{} and \RecTreesExtras{}
-unmatched alarms, respectively. We also tested successive interventions
-separated by less than three seconds. Carrying the mean physical state
-through restoration improved attribution over a reset on both test plants.
-Retaining separate histories increased timely attribution over carrying
-the merged mean by
-\CThreeFOneHistoryCarryDifferencePP{} percentage points on the plant
-used to construct the predictor. With different generator dynamics,
-the gain was \CThreePTwoHistoryCarryDifferencePP{} points (paired 95\%
-interval $[\CThreePTwoHistoryCarryLowerPP,\CThreePTwoHistoryCarryUpperPP]$).
-At a shared alarm and classification deadline on new two-event records,
-the physical estimate identified \SecondLagCount{}/36 second-event
-families and a spectral convolutional classifier identified
-\SecondCnnCount{}/36.
+When a load is restored or a line is reclosed, the electrical
+response can persist and resemble a new intervention. We formulate
+source attribution from eight phasor measurement units (PMUs) in the
+IEEE 39-bus system using switched differential-algebraic predictors.
+The bank carries the estimated state through restoration and retains
+the preceding intervention as a candidate explanation of the remaining
+response. Nominal signatures describe separation under the assumed
+plant and noise model. With thresholds calibrated separately to a target
+of one normal alarm per hour, the bank correctly attributed the family and source of
+\RecBankTimely{} interventions before physical restoration,
+compared with \RecGlrTimely{} for a continuous
+generalized likelihood ratio observer and \RecTreesTimely{} for
+ExtraTrees. The bank gained \RecGlrDiff{} percentage points over the
+continuous observer (95\% interval \RecGlrCI{} across \RecParents{}
+physical parents) and emitted \RecBankExtras{} unmatched alarms,
+compared with \RecGlrExtras{} and \RecTreesExtras{}, respectively.
+No method emitted a normal alarm in \RecNormalHours{} monitored hours.
+At fixed thresholds in a separate control, resetting the estimated
+physical state reduced timely attribution from 108/108 to 75/108.
+Independent per-PMU noise at \RevNoiseAddedRmsLow{}\% added RMS total vector error degraded load
+attribution. The bank--comparator contrast does not isolate history retention.
+The results describe sequential, nonoverlapping
+interventions in a known catalog on one simulator family.
 \end{abstract}
 
 \begin{keywords}
-change detection and isolation, differential-algebraic equations, event attribution, phasor measurement units, physics-informed inference, power system dynamics.
+change detection and isolation, differential-algebraic equations, event attribution, measurement integrity, phasor measurement units, physics-informed inference, power system dynamics.
 \end{keywords}
 
 \titlepgskip=-21pt
-\PSevenMakePreprintTitle
+\maketitle
 \raggedbottom
 
 \input{sections/article_intro}
 \input{sections/article_related}
 \input{sections/narrative_problem}
 \input{sections/article_method}
-\input{sections/article_alarm_family}
-\input{sections/article_recovery_moments}
 \input{sections/article_theory}
 \FloatBarrier
 \input{sections/narrative_protocol}
-\input{sections/article_spectral_design}
-\section{Results}\label{sec:narrative-results}
+\section{Results and Controlled Comparisons}\label{sec:narrative-results}
 \input{sections/article_recovery_comparison}
-\input{sections/article_c03}
+\input{sections/08c_c01_confirmatory}
+\input{sections/narrative_results}
+\input{sections/article_ablation_design}
 \input{sections/article_controlled_ablation}
-\input{sections/article_spectral_results}
-\input{sections/article_network_stress}
 \input{sections/article_noise_stress}
 \input{sections/article_compute_cost}
 \input{sections/article_interpretation}
@@ -86,11 +94,7 @@ change detection and isolation, differential-algebraic equations, event attribut
 \FloatBarrier
 \bibliographystyle{IEEEtran}
 \bibliography{references}
-% Keep the author entries together at the end of the reference list.
-\begingroup
-\makeatletter\def\@IEEEBIOskipN{.75\baselineskip}\makeatother
 \input{author_biographies}
-\endgroup
 \EOD
 
 \end{document}

@@ -1,0 +1,28 @@
+{
+  "created_utc": "2026-11-12",
+  "source_archive": {
+    "path": "C:/Users/walla/Downloads/HBG_DAE_Derivacion_y_Verificacion.zip",
+    "sha256": "a433c305788a527a1cc025bef478a77a2d863a43e713883fc615c2ae93169a4e"
+  },
+  "inputs": {
+    "zip_script_sha256": "bd50e57217fb122ac8495189e4e659463c2462bc824eaa985917ac91e65850ca",
+    "zip_derivation_sha256": "68689a2552e2a3d963d9aaf337720ccf114dc5d4b1f4853964804d3b69d92a69"
+  },
+  "code": {
+    "original_script_sha256": "bd50e57217fb122ac8495189e4e659463c2462bc824eaa985917ac91e65850ca",
+    "extended_script_sha256": "52d47e04eee09e86e3d8b0937e91a532cca257e72901b30d1cac290351d4be52"
+  },
+  "outputs": {
+    "original_run_20261112.txt": "126194da59f93ffae6bd140376ae6793936816123fd58d9debcc716dc893a875",
+    "gates_20261112.json": "04a70823638ce27157073cf5ed447f73a7f670121fccf7e89269005dae08fd51"
+  },
+  "other_artifacts": {
+    "README.md": "62d943b630901e3c0294f52756837c294feadc21b09cab50c72e7a92a5b75c85",
+    "../../docs/HBG_REPRODUCTION_AUDIT_20261112.md": "0c99b9d521be9a168733f09e46f60059cf6786446f84fbb74a3cff234c2d274e"
+  },
+  "execution": {
+    "python": "3.13",
+    "blas_threads": 1,
+    "extended_gates_passed": true
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "checks": [
+    "enumerated_transition_filter_predictive_equals_state_marginal_recursion",
+    "same_state_marginal_can_have_different_historical_cause_posterior",
+    "enumerated_severity_noise_atoms_verify_mixture_variance_and_covariance",
+    "moment_matched_gaussian_can_change_mixture_tail_density",
+    "equal_means_can_produce_different_predictive_densities",
+    "enumerated_deterministic_statistic_preserves_cause_posterior",
+    "independent_duplicate_likelihood_changes_posterior"
+  ],
+  "predictive_probability_next_report_one": 0.6017021276595745,
+  "cause_zero_given_state_minus1": [
+    1.0,
+    0.0
+  ],
+  "enumerated_moments": {
+    "state_mean": 1.5,
+    "state_variance": 2.0625,
+    "severity_mean": 2.5,
+    "severity_variance": 1.0625,
+    "state_severity_covariance": 0.8125
+  },
+  "deterministic_statistic_posterior": {
+    "0": 0.2,
+    "1": 0.8
+  },
+  "duplicate_likelihood_posterior": {
+    "0": 0.058823529411764705,
+    "1": 0.9411764705882353
+  },
+  "script_sha256": "5bddfb770ee01f371d163212bd271a634a78857f9d4530df3bc9718358df4957",
+  "scope": "finite exact enumerations of toy models; no estimator or campaign validation"
+}

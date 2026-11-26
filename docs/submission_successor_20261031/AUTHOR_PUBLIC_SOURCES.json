@@ -1,0 +1,873 @@
+{
+  "id": "P07_PUBLIC_AUTHOR_SOURCE_AUDIT_20261031",
+  "accessed_on": "2026-10-31",
+  "status": "BIOGRAPHIES_INTEGRATED_CORRESPONDENCE_AUTHOR_CONFIRMED",
+  "authorization": "Human-authorized public professional biographies, supplemented by direct author correction and designation of P07 correspondence.",
+  "scope": {
+    "authors": 5,
+    "private_sources_used": false,
+    "anyone_contacted": false,
+    "manuscript_edited": true,
+    "author_order_changed": false,
+    "corresponding_author_selected": true
+  },
+  "methodology": "Institutional profiles first; ORCID public API for exact names and self-entered affiliations; publisher or publisher-deposited DOI metadata for publication identity. Search-only primary text is marked. Public records support facts, not author consent to correspondence or submission.",
+  "source_access_note": "ORCID HTML required JavaScript; public JSON endpoints were retrieved without authentication. Web-search crawler upload/crawl dates were not treated as event or degree dates.",
+  "sources": [
+    {
+      "id": "S01",
+      "url": "https://pub.orcid.org/v3.0/0000-0002-0774-2176/person",
+      "title": "Jorge Luis Mayorga Taborda: public ORCID person",
+      "type": "ORCID public API",
+      "access": "HTTP JSON retrieved",
+      "accessed_on": "2026-10-31"
+    },
+    {
+      "id": "S02",
+      "url": "https://pub.orcid.org/v3.0/0000-0002-0774-2176/educations",
+      "title": "Jorge: public ORCID education",
+      "type": "ORCID self-entered record",
+      "access": "HTTP JSON retrieved",
+      "accessed_on": "2026-10-31"
+    },
+    {
+      "id": "S03",
+      "url": "https://pub.orcid.org/v3.0/0000-0002-0774-2176/employments",
+      "title": "Jorge: public ORCID employment",
+      "type": "ORCID self-entered record",
+      "access": "HTTP JSON retrieved",
+      "accessed_on": "2026-10-31"
+    },
+    {
+      "id": "S04",
+      "url": "https://repositorio.uniandes.edu.co/server/api/core/bitstreams/f2d97b2c-2dab-4a00-be25-798636ee21c6/content",
+      "title": "Jorge's 2014 undergraduate thesis",
+      "type": "Institutional repository",
+      "access": "Primary-source text indexed in search; direct retrieval returned403",
+      "accessed_on": "2026-10-31"
+    },
+    {
+      "id": "S05",
+      "url": "https://sgsma2026.cl/paper-sessions",
+      "title": "SGSMA2026 accepted-paper session program",
+      "type": "Conference organizer",
+      "access": "Indexed primary-source text; direct web requests timed out; direct Python request encountered TLS hostname error",
+      "accessed_on": "2026-10-31"
+    },
+    {
+      "id": "S06",
+      "url": "https://github.com/jlmayorgaco",
+      "title": "GitHub profile previously used for contact attribution; attribution withdrawn",
+      "type": "Public self-authored profile",
+      "access": "Indexed public page; email displayed explicitly",
+      "accessed_on": "2026-10-31",
+      "status": "WITHDRAWN_FOR_AUTHOR_CONTACT_IDENTITY_NOT_SUFFICIENTLY_VERIFIED"
+    },
+    {
+      "id": "S07",
+      "url": "https://pub.orcid.org/v3.0/0009-0000-6853-4912/person",
+      "title": "Yessica Africano Rodriguez: public ORCID person",
+      "type": "ORCID public API",
+      "access": "HTTP JSON retrieved",
+      "accessed_on": "2026-10-31"
+    },
+    {
+      "id": "S08",
+      "url": "https://pub.orcid.org/v3.0/0009-0000-6853-4912/employments",
+      "title": "Yessica: public ORCID affiliation",
+      "type": "ORCID self-entered record",
+      "access": "HTTP JSON retrieved",
+      "accessed_on": "2026-10-31"
+    },
+    {
+      "id": "S09",
+      "url": "https://repositorio.uniandes.edu.co/bitstreams/b39fbe8b-747d-456e-86ac-5cff0f10cde9/download",
+      "title": "Yessica's 2015 undergraduate thesis",
+      "type": "Institutional repository",
+      "access": "Primary-source text indexed in search; direct retrieval timed out",
+      "accessed_on": "2026-10-31"
+    },
+    {
+      "id": "S10",
+      "url": "https://api.crossref.org/works/10.1109/PEPQA.2017.7981659",
+      "title": "IEEE-deposited metadata for Co-simulation strategy of PV hosting capacity applying a stochastic analysis",
+      "type": "Publisher-deposited DOI metadata",
+      "access": "HTTP JSON retrieved; DOI landing page inaccessible to web crawler",
+      "accessed_on": "2026-10-31"
+    },
+    {
+      "id": "S11",
+      "url": "https://www.ewh.ieee.org/soc/ias/2016/include/docs/2016%20IAS%20Annual%20Meeting%20Program.pdf",
+      "title": "2016 IEEE IAS Annual Meeting program",
+      "type": "IEEE conference program",
+      "access": "Indexed primary PDF text",
+      "accessed_on": "2026-10-31"
+    },
+    {
+      "id": "S12",
+      "url": "https://www.engineering.pitt.edu/people/faculty/masoud-barati/",
+      "title": "Masoud Barati: Pitt faculty profile",
+      "type": "Institutional faculty profile",
+      "access": "HTTP HTML retrieved with Python; web open encountered redirect loop",
+      "accessed_on": "2026-10-31"
+    },
+    {
+      "id": "S13",
+      "url": "https://www.engineering.pitt.edu/ssoe-resources/people/faculty/research/?Research=Machine+learning",
+      "title": "Pitt faculty directory",
+      "type": "Institutional directory",
+      "access": "Web page retrieved",
+      "accessed_on": "2026-10-31"
+    },
+    {
+      "id": "S14",
+      "url": "https://ietresearch.onlinelibrary.wiley.com/doi/abs/10.1049/gtd2.13082",
+      "title": "Utilizing grid-supportive load response to shape resilient frequency control of the power grid",
+      "type": "Publisher article metadata",
+      "access": "Web page retrieved; first published2023-12-19, issue2024",
+      "accessed_on": "2026-10-31"
+    },
+    {
+      "id": "S15",
+      "url": "https://pub.orcid.org/v3.0/0000-0003-0905-6505/person",
+      "title": "Masoud Barati: public ORCID person",
+      "type": "ORCID public API",
+      "access": "HTTP JSON retrieved",
+      "accessed_on": "2026-10-31"
+    },
+    {
+      "id": "S16",
+      "url": "https://carleton.ca/csit/people/masoud-barati/",
+      "title": "Different Masoud Barati at Carleton",
+      "type": "Institutional profile used only for disambiguation",
+      "access": "Indexed primary-source text",
+      "accessed_on": "2026-10-31"
+    },
+    {
+      "id": "S17",
+      "url": "https://doi.org/10.1145/3672608.3707870",
+      "title": "Carleton homonym's ACM publication and ORCID",
+      "type": "Publisher metadata used only for disambiguation",
+      "access": "Indexed primary-source text",
+      "accessed_on": "2026-10-31"
+    },
+    {
+      "id": "S18",
+      "url": "https://ece.engineering.gwu.edu/payman-dehghanian",
+      "title": "Payman Dehghanian: GWU faculty profile",
+      "type": "Institutional faculty profile",
+      "access": "Web page retrieved",
+      "accessed_on": "2026-10-31"
+    },
+    {
+      "id": "S19",
+      "url": "https://ietresearch.onlinelibrary.wiley.com/doi/abs/10.1049/gtd2.13058",
+      "title": "Fueling the seaport of the future: Investments in low-carbon energy technologies for operational resilience in seaport multi-energy systems",
+      "type": "Publisher article metadata",
+      "access": "Web page retrieved; issue2024",
+      "accessed_on": "2026-10-31"
+    },
+    {
+      "id": "S20",
+      "url": "https://pub.orcid.org/v3.0/0000-0003-2237-4284/person",
+      "title": "Payman Dehghanian: public ORCID person",
+      "type": "ORCID public API",
+      "access": "HTTP JSON retrieved",
+      "accessed_on": "2026-10-31"
+    },
+    {
+      "id": "S21",
+      "url": "https://www.unisabana.edu.co/programas/unidades-academicas/facultad-de-ingenieria/nuestro-equipo/david-felipe-celeita-rodriguez",
+      "title": "David Felipe Celeita Rodríguez: Faculty of Engineering profile",
+      "type": "Institutional faculty profile",
+      "access": "Web page retrieved",
+      "accessed_on": "2026-10-31"
+    },
+    {
+      "id": "S22",
+      "url": "https://pure.unisabana.edu.co/es/persons/david-felipe-celeita-rodr%C3%ADguez/",
+      "title": "David Felipe Celeita Rodríguez: institutional research profile",
+      "type": "Institutional research portal",
+      "access": "Web page retrieved",
+      "accessed_on": "2026-10-31"
+    },
+    {
+      "id": "S23",
+      "url": "https://pub.orcid.org/v3.0/0000-0002-8849-1777/person",
+      "title": "David Celeita: public ORCID person, biography and public verified email",
+      "type": "ORCID public API",
+      "access": "HTTP JSON retrieved",
+      "accessed_on": "2026-10-31"
+    },
+    {
+      "id": "S24",
+      "url": "https://mdpi-res.com/d_attachment/energies/energies-18-00109/article_deploy/energies-18-00109.pdf",
+      "title": "Advanced Genetic Algorithms for Optimal Battery Siting",
+      "type": "Publisher article",
+      "access": "Indexed publisher PDF text; article-page request returned429",
+      "accessed_on": "2026-10-31"
+    }
+  ],
+  "authors": [
+    {
+      "key": "jorge_luis_mayorga_taborda",
+      "manuscript_name": "Jorge Luis Mayorga Taborda",
+      "name_recommendation": "Keep current spelling; exact full-name ORCID match.",
+      "orcid": {
+        "id": "0000-0002-0774-2176",
+        "url": "https://orcid.org/0000-0002-0774-2176",
+        "status": "exact_name_and_Uniandes_education_match",
+        "source_ids": [
+          "S01",
+          "S02"
+        ]
+      },
+      "claims": [
+        {
+          "id": "J1",
+          "text": "Public ORCID identifies Jorge Luis Mayorga Taborda.",
+          "status": "verified_public_identifier",
+          "source_document_date": null,
+          "evidence": [
+            {
+              "source_id": "S01",
+              "url": "https://pub.orcid.org/v3.0/0000-0002-0774-2176/person",
+              "accessed_on": "2026-10-31"
+            }
+          ]
+        },
+        {
+          "id": "J2",
+          "text": "Self-entered ORCID education lists Electronic Engineer at Universidad de Los Andes,2011–2015.",
+          "status": "public_self_reported_education",
+          "source_document_date": "2011–2015",
+          "evidence": [
+            {
+              "source_id": "S02",
+              "url": "https://pub.orcid.org/v3.0/0000-0002-0774-2176/educations",
+              "accessed_on": "2026-10-31"
+            }
+          ]
+        },
+        {
+          "id": "J3",
+          "text": "A Uniandes thesis in2014 concerns distributed population dynamics for urban traffic control.",
+          "status": "indexed_institutional_record",
+          "source_document_date": "2014-12-09",
+          "evidence": [
+            {
+              "source_id": "S04",
+              "url": "https://repositorio.uniandes.edu.co/server/api/core/bitstreams/f2d97b2c-2dab-4a00-be25-798636ee21c6/content",
+              "accessed_on": "2026-10-31"
+            }
+          ]
+        },
+        {
+          "id": "J4",
+          "text": "SGSMA2026 program lists him with Universidad de los Andes for a contribution on dynamic frequency estimators in low-inertia IBR grids.",
+          "status": "conference_affiliation_not_employment_certificate",
+          "source_document_date": "2026-06-03/2026-06-04",
+          "evidence": [
+            {
+              "source_id": "S05",
+              "url": "https://sgsma2026.cl/paper-sessions",
+              "accessed_on": "2026-10-31"
+            }
+          ]
+        },
+        {
+          "id": "J5",
+          "text": "The author supplied jl.mayorga236@uniandes.edu.co and designated himself corresponding author in a direct conversation reply.",
+          "status": "author_confirmed_supersedes_rejected_public_profile_attribution",
+          "source_document_date": null,
+          "evidence": [
+            {
+              "source": "Direct user reply in current conversation",
+              "public_url": null
+            }
+          ]
+        },
+        {
+          "id": "J6",
+          "text": "The public ORCID employment entry concerns TheSignLab in2017–2018, not current university employment.",
+          "status": "historical_self_report",
+          "source_document_date": "2017–2018",
+          "evidence": [
+            {
+              "source_id": "S03",
+              "url": "https://pub.orcid.org/v3.0/0000-0002-0774-2176/employments",
+              "accessed_on": "2026-10-31"
+            }
+          ]
+        }
+      ],
+      "affiliation": {
+        "institution": "Universidad de los Andes",
+        "city": "Bogotá",
+        "country": "Colombia",
+        "status": "supported_as_2026_conference_affiliation; current employment/appointment not independently verified",
+        "source_ids": [
+          "S04",
+          "S05"
+        ]
+      },
+      "email": {
+        "value": "jl.mayorga236@uniandes.edu.co",
+        "status": "direct_author_instruction",
+        "source_ids": [],
+        "corresponding_author": true
+      },
+      "conflicts": [
+        "A2014 thesis defense and education ending2015 are different events; do not silently assign2014 as degree-conferral year.",
+        "No primary institutional verification of master's degrees was located; omit them from draft.",
+        "Public ORCID has no current Uniandes employment entry; a conference affiliation does not prove a staff appointment."
+      ],
+      "biography_basis": [
+        "J2",
+        "J3"
+      ],
+      "remaining_unknowns": [
+        "Current role at Uniandes"
+      ]
+    },
+    {
+      "key": "yessica_africano_rodriguez",
+      "manuscript_name": "Yessica Africano Rodriguez",
+      "name_recommendation": "Keep manuscript/ORCID spelling. Historical sources use Yessica Andrea Africano Rodríguez; do not add Andrea or accents automatically.",
+      "orcid": {
+        "id": "0009-0000-6853-4912",
+        "url": "https://orcid.org/0009-0000-6853-4912",
+        "status": "exact_name_and_Uniandes_affiliation_match",
+        "source_ids": [
+          "S07",
+          "S08"
+        ]
+      },
+      "claims": [
+        {
+          "id": "Y1",
+          "text": "Public ORCID identifies Yessica Africano Rodriguez.",
+          "status": "verified_public_identifier",
+          "source_document_date": null,
+          "evidence": [
+            {
+              "source_id": "S07",
+              "url": "https://pub.orcid.org/v3.0/0009-0000-6853-4912/person",
+              "accessed_on": "2026-10-31"
+            }
+          ]
+        },
+        {
+          "id": "Y2",
+          "text": "A self-entered ORCID affiliation names Uniandes from2011 with no end date and no role.",
+          "status": "public_self_reported_affiliation_role_unspecified",
+          "source_document_date": "2011–open",
+          "evidence": [
+            {
+              "source_id": "S08",
+              "url": "https://pub.orcid.org/v3.0/0009-0000-6853-4912/employments",
+              "accessed_on": "2026-10-31"
+            }
+          ]
+        },
+        {
+          "id": "Y3",
+          "text": "Uniandes'2015 thesis record names Yessica Andrea Africano Rodríguez and concerns stochastic co-simulation of photovoltaic integration.",
+          "status": "indexed_historical_name_variant_and_research",
+          "source_document_date": "2015-12-09",
+          "evidence": [
+            {
+              "source_id": "S09",
+              "url": "https://repositorio.uniandes.edu.co/bitstreams/b39fbe8b-747d-456e-86ac-5cff0f10cde9/download",
+              "accessed_on": "2026-10-31"
+            }
+          ]
+        },
+        {
+          "id": "Y4",
+          "text": "IEEE-deposited Crossref metadata names Yessica Africano, David Celeita and Gustavo Ramos as authors of the2017 PEPQA photovoltaic hosting-capacity co-simulation paper, DOI10.1109/PEPQA.2017.7981659.",
+          "status": "verified_publisher_deposited_publication",
+          "source_document_date": "2017-05",
+          "evidence": [
+            {
+              "source_id": "S10",
+              "url": "https://api.crossref.org/works/10.1109/PEPQA.2017.7981659",
+              "accessed_on": "2026-10-31"
+            }
+          ]
+        },
+        {
+          "id": "Y5",
+          "text": "The2016 IEEE IAS program lists Yessica Andrea Africano Rodriguez with Uniandes for the same research topic.",
+          "status": "historical_conference_identity_support",
+          "source_document_date": "2016-10-03",
+          "evidence": [
+            {
+              "source_id": "S11",
+              "url": "https://www.ewh.ieee.org/soc/ias/2016/include/docs/2016%20IAS%20Annual%20Meeting%20Program.pdf",
+              "accessed_on": "2026-10-31"
+            }
+          ]
+        },
+        {
+          "id": "Y6",
+          "text": "SGSMA2026 lists Yessica Africano Rodriguez with Uniandes beside Jorge Luis Mayorga Taborda on dynamic frequency estimation.",
+          "status": "conference_affiliation_not_employment_certificate",
+          "source_document_date": "2026-06-03/2026-06-04",
+          "evidence": [
+            {
+              "source_id": "S05",
+              "url": "https://sgsma2026.cl/paper-sessions",
+              "accessed_on": "2026-10-31"
+            }
+          ]
+        }
+      ],
+      "affiliation": {
+        "institution": "Universidad de los Andes",
+        "city": "Bogotá",
+        "country": "Colombia",
+        "status": "self-reported ORCID plus2026 conference affiliation; no role independently verified",
+        "source_ids": [
+          "S08",
+          "S05"
+        ]
+      },
+      "email": {
+        "value": null,
+        "status": "no exact-person public professional email verified",
+        "source_ids": [],
+        "corresponding_author": false
+      },
+      "conflicts": [
+        "ORCID employment category has no role; do not infer professor, researcher, student, or continuous paid employment.",
+        "The thesis cover states work submitted for a degree; it does not independently certify conferral.",
+        "Historical full-name variant is supported by thesis/topic/program continuity; retain preferred manuscript name."
+      ],
+      "biography_basis": [
+        "Y3",
+        "Y4"
+      ],
+      "remaining_unknowns": [
+        "Current role",
+        "Degree-conferral details",
+        "Public professional email",
+        "Preferred full-name spelling"
+      ]
+    },
+    {
+      "key": "masoud_barati",
+      "manuscript_name": "Masoud Barati",
+      "name_recommendation": "Keep current spelling; exclude Carleton/Cardiff/Newcastle homonym.",
+      "orcid": {
+        "id": "0000-0003-0905-6505",
+        "url": "https://orcid.org/0000-0003-0905-6505",
+        "status": "public_name_plus_power_publication_Pittsburgh_crosslink",
+        "source_ids": [
+          "S14",
+          "S15"
+        ]
+      },
+      "claims": [
+        {
+          "id": "M1",
+          "text": "The Pitt profile identifies him with Electrical and Computer Engineering and publishes masoud.barati@pitt.edu.",
+          "status": "verified_current_institutional_profile",
+          "source_document_date": null,
+          "evidence": [
+            {
+              "source_id": "S12",
+              "url": "https://www.engineering.pitt.edu/people/faculty/masoud-barati/",
+              "accessed_on": "2026-10-31"
+            }
+          ]
+        },
+        {
+          "id": "M2",
+          "text": "The faculty directory/contact card gives Associate Professor; the narrative biography on the profile still says assistant professor.",
+          "status": "unresolved_rank_conflict",
+          "source_document_date": null,
+          "evidence": [
+            {
+              "source_id": "S12",
+              "url": "https://www.engineering.pitt.edu/people/faculty/masoud-barati/",
+              "accessed_on": "2026-10-31"
+            },
+            {
+              "source_id": "S13",
+              "url": "https://www.engineering.pitt.edu/ssoe-resources/people/faculty/research/?Research=Machine+learning",
+              "accessed_on": "2026-10-31"
+            }
+          ]
+        },
+        {
+          "id": "M3",
+          "text": "Pitt states that he earned a PhD in electrical engineering at Illinois Institute of Technology in2013.",
+          "status": "verified_institutional_education",
+          "source_document_date": "2013",
+          "evidence": [
+            {
+              "source_id": "S12",
+              "url": "https://www.engineering.pitt.edu/people/faculty/masoud-barati/",
+              "accessed_on": "2026-10-31"
+            }
+          ]
+        },
+        {
+          "id": "M4",
+          "text": "His institutional research description concerns mathematical modeling and optimization of electric power systems.",
+          "status": "verified_institutional_research",
+          "source_document_date": null,
+          "evidence": [
+            {
+              "source_id": "S12",
+              "url": "https://www.engineering.pitt.edu/people/faculty/masoud-barati/",
+              "accessed_on": "2026-10-31"
+            }
+          ]
+        },
+        {
+          "id": "M5",
+          "text": "The publisher links ORCID0000-0003-0905-6505 to his Pittsburgh affiliation and power-grid frequency-control article.",
+          "status": "verified_publisher_identity_crosslink",
+          "source_document_date": "2023-12-19",
+          "evidence": [
+            {
+              "source_id": "S14",
+              "url": "https://ietresearch.onlinelibrary.wiley.com/doi/abs/10.1049/gtd2.13082",
+              "accessed_on": "2026-10-31"
+            },
+            {
+              "source_id": "S15",
+              "url": "https://pub.orcid.org/v3.0/0000-0003-0905-6505/person",
+              "accessed_on": "2026-10-31"
+            }
+          ]
+        },
+        {
+          "id": "M6",
+          "text": "The Carleton namesake has a2018 computer-science doctorate from Sherbrooke and ORCID0000-0001-7829-2240; these details belong to another person.",
+          "status": "excluded_homonym",
+          "source_document_date": "2018",
+          "evidence": [
+            {
+              "source_id": "S16",
+              "url": "https://carleton.ca/csit/people/masoud-barati/",
+              "accessed_on": "2026-10-31"
+            },
+            {
+              "source_id": "S17",
+              "url": "https://doi.org/10.1145/3672608.3707870",
+              "accessed_on": "2026-10-31"
+            }
+          ]
+        }
+      ],
+      "affiliation": {
+        "institution": "University of Pittsburgh",
+        "unit": "Department of Electrical and Computer Engineering",
+        "city": "Pittsburgh, PA",
+        "country": "USA",
+        "status": "verified_current_institutional_profile",
+        "source_ids": [
+          "S12",
+          "S13"
+        ]
+      },
+      "email": {
+        "value": "masoud.barati@pitt.edu",
+        "status": "public_institutional_contact",
+        "source_ids": [
+          "S12",
+          "S14"
+        ],
+        "corresponding_author": false
+      },
+      "conflicts": [
+        "Associate versus assistant on the same Pitt profile: draft avoids rank.",
+        "Pitt's automated publication list contains some topics also associated with the Carleton homonym; do not copy its entire publication history.",
+        "Corresponding author on another publication does not assign that role for P07."
+      ],
+      "biography_basis": [
+        "M1",
+        "M3",
+        "M4"
+      ],
+      "remaining_unknowns": [
+        "Resolution of stale rank wording",
+        "P07 correspondence designation"
+      ]
+    },
+    {
+      "key": "payman_dehghanian",
+      "manuscript_name": "Payman Dehghanian",
+      "name_recommendation": "Keep current spelling.",
+      "orcid": {
+        "id": "0000-0003-2237-4284",
+        "url": "https://orcid.org/0000-0003-2237-4284",
+        "status": "public_name_plus_GWU_publication_crosslink",
+        "source_ids": [
+          "S19",
+          "S20"
+        ]
+      },
+      "claims": [
+        {
+          "id": "P1",
+          "text": "GWU's current faculty page identifies him as Associate Professor in Electrical and Computer Engineering.",
+          "status": "verified_current_institutional_profile",
+          "source_document_date": null,
+          "evidence": [
+            {
+              "source_id": "S18",
+              "url": "https://ece.engineering.gwu.edu/payman-dehghanian",
+              "accessed_on": "2026-10-31"
+            }
+          ]
+        },
+        {
+          "id": "P2",
+          "text": "The institutional page lists his PhD from Texas A&M University in2017.",
+          "status": "verified_institutional_education",
+          "source_document_date": "2017",
+          "evidence": [
+            {
+              "source_id": "S18",
+              "url": "https://ece.engineering.gwu.edu/payman-dehghanian",
+              "accessed_on": "2026-10-31"
+            }
+          ]
+        },
+        {
+          "id": "P3",
+          "text": "The institutional research description includes power-system reliability, resilience and data-informed decisions.",
+          "status": "verified_institutional_research",
+          "source_document_date": null,
+          "evidence": [
+            {
+              "source_id": "S18",
+              "url": "https://ece.engineering.gwu.edu/payman-dehghanian",
+              "accessed_on": "2026-10-31"
+            }
+          ]
+        },
+        {
+          "id": "P4",
+          "text": "A publisher article associates payman@gwu.edu and ORCID0000-0003-2237-4284 with his GWU affiliation.",
+          "status": "verified_publication_contact_and_identifier",
+          "source_document_date": "2024",
+          "evidence": [
+            {
+              "source_id": "S19",
+              "url": "https://ietresearch.onlinelibrary.wiley.com/doi/abs/10.1049/gtd2.13058",
+              "accessed_on": "2026-10-31"
+            },
+            {
+              "source_id": "S20",
+              "url": "https://pub.orcid.org/v3.0/0000-0003-2237-4284/person",
+              "accessed_on": "2026-10-31"
+            }
+          ]
+        }
+      ],
+      "affiliation": {
+        "institution": "The George Washington University",
+        "unit": "Department of Electrical and Computer Engineering",
+        "city": "Washington, DC",
+        "country": "USA",
+        "status": "verified_current_institutional_profile",
+        "source_ids": [
+          "S18"
+        ]
+      },
+      "email": {
+        "value": "payman@gwu.edu",
+        "status": "public_publisher_contact_matching_current_institution",
+        "source_ids": [
+          "S19"
+        ],
+        "corresponding_author": false
+      },
+      "conflicts": [
+        "Older GWU publications describe an assistant-professor appointment; use current institutional page for rank.",
+        "Publisher corresponding-author status concerns that article only."
+      ],
+      "biography_basis": [
+        "P1",
+        "P2",
+        "P3"
+      ],
+      "remaining_unknowns": [
+        "P07 correspondence designation"
+      ]
+    },
+    {
+      "key": "david_felipe_celeita_rodriguez",
+      "manuscript_name": "David Felipe Celeita Rodríguez",
+      "name_recommendation": "Institutional full-name spelling includes Rodríguez; manuscript LaTeX already represents its accent.",
+      "orcid": {
+        "id": "0000-0002-8849-1777",
+        "url": "https://orcid.org/0000-0002-8849-1777",
+        "status": "direct_institutional_profile_link_plus_public_ORCID_record",
+        "source_ids": [
+          "S21",
+          "S22",
+          "S23"
+        ]
+      },
+      "claims": [
+        {
+          "id": "D1",
+          "text": "La Sabana's institutional research profile identifies him as Associate Professor and Director of Outreach and Engagement in its Faculty of Engineering.",
+          "status": "verified_current_institutional_profile",
+          "source_document_date": null,
+          "evidence": [
+            {
+              "source_id": "S22",
+              "url": "https://pure.unisabana.edu.co/es/persons/david-felipe-celeita-rodr%C3%ADguez/",
+              "accessed_on": "2026-10-31"
+            }
+          ]
+        },
+        {
+          "id": "D2",
+          "text": "La Sabana lists a doctorate in engineering and a master's in electrical engineering from Uniandes, and electronic engineering from Universidad Distrital Francisco José de Caldas.",
+          "status": "verified_institutional_education",
+          "source_document_date": null,
+          "evidence": [
+            {
+              "source_id": "S21",
+              "url": "https://www.unisabana.edu.co/programas/unidades-academicas/facultad-de-ingenieria/nuestro-equipo/david-felipe-celeita-rodriguez",
+              "accessed_on": "2026-10-31"
+            }
+          ]
+        },
+        {
+          "id": "D3",
+          "text": "His institutional research interests include power-system protection, fault location and real-time simulation.",
+          "status": "verified_institutional_research",
+          "source_document_date": null,
+          "evidence": [
+            {
+              "source_id": "S21",
+              "url": "https://www.unisabana.edu.co/programas/unidades-academicas/facultad-de-ingenieria/nuestro-equipo/david-felipe-celeita-rodriguez",
+              "accessed_on": "2026-10-31"
+            },
+            {
+              "source_id": "S22",
+              "url": "https://pure.unisabana.edu.co/es/persons/david-felipe-celeita-rodr%C3%ADguez/",
+              "accessed_on": "2026-10-31"
+            }
+          ]
+        },
+        {
+          "id": "D4",
+          "text": "The institutional profiles link ORCID0000-0002-8849-1777, whose public email david.celeita@unisabana.edu.co is marked verified.",
+          "status": "verified_public_institutional_identifier_and_ORCID_contact",
+          "source_document_date": null,
+          "evidence": [
+            {
+              "source_id": "S22",
+              "url": "https://pure.unisabana.edu.co/es/persons/david-felipe-celeita-rodr%C3%ADguez/",
+              "accessed_on": "2026-10-31"
+            },
+            {
+              "source_id": "S23",
+              "url": "https://pub.orcid.org/v3.0/0000-0002-8849-1777/person",
+              "accessed_on": "2026-10-31"
+            }
+          ]
+        },
+        {
+          "id": "D5",
+          "text": "Uniandes education and Paris-Saclay/CentraleSupélec research visits are historical experience, not evidence of a current extra affiliation.",
+          "status": "institutional_historical_context",
+          "source_document_date": null,
+          "evidence": [
+            {
+              "source_id": "S21",
+              "url": "https://www.unisabana.edu.co/programas/unidades-academicas/facultad-de-ingenieria/nuestro-equipo/david-felipe-celeita-rodriguez",
+              "accessed_on": "2026-10-31"
+            },
+            {
+              "source_id": "S23",
+              "url": "https://pub.orcid.org/v3.0/0000-0002-8849-1777/person",
+              "accessed_on": "2026-10-31"
+            }
+          ]
+        },
+        {
+          "id": "D6",
+          "text": "A2025 publisher article independently gives the La Sabana faculty affiliation and same professional email.",
+          "status": "verified_publication_contact",
+          "source_document_date": "2025",
+          "evidence": [
+            {
+              "source_id": "S24",
+              "url": "https://mdpi-res.com/d_attachment/energies/energies-18-00109/article_deploy/energies-18-00109.pdf",
+              "accessed_on": "2026-10-31"
+            }
+          ]
+        }
+      ],
+      "affiliation": {
+        "institution": "Universidad de La Sabana",
+        "unit": "Faculty of Engineering",
+        "city": "Chía",
+        "country": "Colombia",
+        "status": "verified_current_institutional_profile",
+        "source_ids": [
+          "S21",
+          "S22"
+        ]
+      },
+      "email": {
+        "value": "david.celeita@unisabana.edu.co",
+        "status": "public_ORCID_verified_and_publisher_contact",
+        "source_ids": [
+          "S23",
+          "S24"
+        ],
+        "corresponding_author": false
+      },
+      "conflicts": [
+        "Institutional doctorate wording is Engineering; ORCID biography specifies Electrical Engineering. Draft uses broader institution-supported Engineering.",
+        "No current Uniandes or French affiliation is inferred from degrees or past visits.",
+        "No postal code copied: source publications differ and the paper needs only city/country."
+      ],
+      "biography_basis": [
+        "D1",
+        "D2",
+        "D3"
+      ],
+      "remaining_unknowns": [
+        "P07 correspondence designation"
+      ]
+    }
+  ],
+  "recommended_correspondence": {
+    "author": "Jorge Luis Mayorga Taborda",
+    "email": "jl.mayorga236@uniandes.edu.co",
+    "status": "designated_by_author_not_recommended_by_public_inference"
+  },
+  "preserved_unknowns": [
+    "Funding for P07",
+    "Conflicts of interest",
+    "Author approval and contribution roles",
+    "Unverified degrees/appointments",
+    "Yessica's professional email"
+  ],
+  "exclusions": "No phone numbers, personal identifiers, legal records, contact brokers or unrelated people are included.",
+  "outputs": [
+    "AUTHOR_PUBLIC_SOURCES.md",
+    "AUTHOR_PUBLIC_SOURCES.json",
+    "metadata_biographies_draft.tex"
+  ],
+  "author_correction": {
+    "source": "Direct user reply to corresponding-author question in this conversation",
+    "author": "Jorge Luis Mayorga Taborda",
+    "email": "jl.mayorga236@uniandes.edu.co",
+    "corresponding_author": true,
+    "withdrawn_claim": "Earlier GitHub-derived email attribution rejected by author; not an accepted author contact."
+  }
+}

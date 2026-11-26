@@ -1,0 +1,32 @@
+{
+  "rows": [
+    {
+      "method": "nominal",
+      "median_relative_amplitude_error_pct": 3.452206425819948,
+      "mean_relative_amplitude_error_pct": 19.999635923566775,
+      "records": 240
+    },
+    {
+      "method": "recentered",
+      "median_relative_amplitude_error_pct": 1.2031696516837955,
+      "mean_relative_amplitude_error_pct": 1.2465971720395908,
+      "records": 240
+    },
+    {
+      "method": "conditioned",
+      "median_relative_amplitude_error_pct": 0.3288283529167928,
+      "mean_relative_amplitude_error_pct": 0.5083297176540144,
+      "records": 240
+    }
+  ],
+  "effect": {
+    "metric": "relative_amplitude_error_pct",
+    "estimate": -0.7382674543855767,
+    "lower95": -0.8977595263721682,
+    "upper95": -0.5815576198283842,
+    "physical_cases": 80,
+    "interpretation": "Amplitude-error metric was prespecified; this aggregation uses all source-conditioned amplitude estimates. Intervals condition on three common noise realizations."
+  },
+  "source": "generated/frozen/ei_x02_20261030/results/PER_RECORD.csv",
+  "source_sha256": "31178572e371df64012e7f2f67f0db0053ce207e4fc4814a2bc8c68e788158d1"
+}

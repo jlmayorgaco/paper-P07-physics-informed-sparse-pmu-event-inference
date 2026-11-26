@@ -1,0 +1,21 @@
+{
+  "source_commit": "5189fa16a1e39e31595ed5786f2ccc4487db24d3",
+  "source_path": "research/pmu_hybrid_dae_bayes/scripts/global_137_confirmatory_v1.py",
+  "historical_source_sha256": "6aaf432a87f962f8d901f62542f559780d0aac64440709196646a7e96ac77bce",
+  "historical_functions_match_current": true,
+  "zero_response_single_log_evidence_minus_null": -1.837877066409419,
+  "zero_response_double_log_evidence_minus_null": -1.1368683772161603e-13,
+  "posterior_cardinality": [
+    0.34507897532065135,
+    0.1373025616984222,
+    0.5176184629809496
+  ],
+  "declared_prior": [
+    0.2,
+    0.5,
+    0.3
+  ],
+  "expected_all_log_evidence_ratios": 0.0,
+  "data_were_not_recomputed": true,
+  "C01_or_R11_changed": false
+}

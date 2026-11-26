@@ -1,10 +1,9 @@
 \section{Architecture and a Testable Adaptive Extension}
 \label{sec:adaptive-extension}
 
-This section specifies a successor and evaluates two of its mechanisms in
-nominal-operator diagnostics, not in the full history bank.
-Figure~\ref{fig:layered-architecture} separates the implemented
-physical estimator, refinement candidates, and an external cyber layer.
+This section specifies a successor, not an additional capability of the
+evaluated bank. Figure~\ref{fig:layered-architecture} separates the implemented
+physical estimator, proposed adaptation, and an external cyber layer.
 Adaptive covariance estimation already appears in power-system dynamic
 state estimation, including an IEEE-39 study \cite{wang2019adaptiveh}.
 The question here is whether adaptation can follow instrumental changes
@@ -13,17 +12,9 @@ without explaining away a load or line intervention during recovery.
 \begin{figure*}[t]\centering
 \includegraphics[width=.98\textwidth]{figures/generated/layered_architecture.pdf}
 \caption{System architecture and implementation boundary. The solid upper path
-is the reported physical bank. Dashed modules specify proposed integration of
-history-specific uncertainty, guarded noise adaptation and local dynamic
-refinement. The drawings are schematic; $p_h(a)$ denotes the severity density
-conditional on the history and past observations. Mechanism diagnostics below
-do not validate these modules within the bank. The separate known-event
-relinearization test appears in Section~\ref{app:relinearized-recovery}.
-The rotor-energy panel describes a verified mechanical subsystem of the
-nonlinear plant (Section~\ref{app:hamiltonian-graph}); it contributes no
-additional likelihood factor. Graph connectivity enters through the
-electrical ports and mode-specific operators.
-The lower layer hosts separate cyber methods and outputs; neither
+is the reported physical bank. Dashed modules specify an unvalidated successor:
+history-specific uncertainty, guarded noise adaptation and bounded-window
+smoothing. The lower layer hosts separate cyber methods and outputs; neither
 cyber scores nor nominal source-separation diagnostics are extra physical
 likelihood factors. An availability interface requires a separately validated
 measurement model.}
@@ -92,7 +83,7 @@ A candidate covariance-matching update is
  \widehat R_k^{\rm raw}
  &=\frac{\sum_{r\in W_k}\omega_r
        (\nu_r\nu_r^\top-C_r^{\rm pred})}{\sum_{r\in W_k}\omega_r},\nonumber\\
- R_{k+1}&=\Pi_{\mathcal R}\!\left[(1-\eta)R_k+
+ R_{k+1}&=\Pi_{\mathcal R}!\left[(1-\eta)R_k+
                           \eta\widehat R_k^{\rm raw}\right].
  \label{eq:adaptive-noise-update}
 \end{align}

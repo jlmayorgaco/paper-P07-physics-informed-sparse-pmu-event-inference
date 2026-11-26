@@ -1,0 +1,36 @@
+{
+  "id": "S01_METADATA_PHYSICAL_SOURCE_COMPARISON_V1",
+  "status": "FROZEN_BEFORE_READING_HYBRID_PREDICTIONS_AFTER_BASELINE_ANNOTATION_EVALUATION",
+  "scope": "Full RAW0001 continuous fixed windows only; never the incompatible archived21-context calendar",
+  "source_provenance": {
+    "file": "data/metadata/Event Timeline & Location.xlsx",
+    "sha256": "02afb97f4e317c35a79af0a33699db4e4abd765ab0c10858d2339122b0c7a6f2",
+    "sheet": "Sheet1",
+    "fault": {"source": "BUS39", "rows": [3]},
+    "line_outage": {"source": "LINE23-24", "rows": [4]},
+    "generation_change": {"source": "BUS2", "rows": [6,8,10]},
+    "load_change": {"source": "BUS7", "rows": [12,13]},
+    "status": "Archived metadata-based source labels, not exact producer actuation logs"
+  },
+  "time_support": "Original Event report support from eight verified RAW files. A physical family present at any report contributes its metadata-source target to that fixed window. No artificial exact ON/OFF, actuation magnitude, or action correspondence is introduced.",
+  "denominator": "All24physical-positive windows, including11generation windows outside the ML line/load catalog. Also preserve all180windows to expose false physical outputs and unavailability.",
+  "primary": "First native window output joint physical family+metadata source any-coverage over all24physical-positive windows; exact target sets over the same24windows, with per-family counts and paired gains/losses/unchanged states",
+  "secondary": "Exact physical target sets over all180windows; physical family-only coverage; false physical targets and no-physical windows; source-only accuracy over all24positive windows without conditioning on correct family or method availability",
+  "hybrid_route": {
+    "eligible_native_classes": [2,4],
+    "legacy_E6_eligible": "Only when its physical_event PREDICTED by ZIP belongs to{2,4}. E6 with predicted generation3 remains unchanged. True family is never used for routing.",
+    "class_policy": "legacy_event and physical_event must remain byte-equivalent scalar values to the sealed native ZIP window",
+    "first_policy": "First diagnosis per (segment,episode) only, regardless of its family or source correctness; later revisions never replace it",
+    "selection": "Among eligible first diagnoses with family matching the native class, emitted inside the same fixed window and no later than the ZIP emission, take the earliest by emission time. Ties with different source claims are ambiguous and require explicit fallback.",
+    "simultaneous_emission_allowed": true,
+    "family_aliases": {"line": "line_outage", "line_outage": "line_outage", "load": "load_change", "load_change": "load_change", "fault": "fault", "generation": "generation_change", "generation_change": "generation_change"},
+    "source_policy": "Copy only the selected diagnosis source into physical_source and legacy_location. No posterior winner, future diagnosis, correct-source search, or truth-dependent fallback.",
+    "fallback": "Retain native ZIP source on ineligible class, absent/late/wrong-family ML diagnosis, unavailable segment, or ambiguous first diagnosis. All fallback reasons and segment states must remain visible.",
+    "clock": "emitted_ML <= emitted_ZIP, last_report_used_ML <= emitted_ML; original report times remain original, never compressed across missing/startup gaps"
+  },
+  "source_canonicalization": "BUS integer IDs and unordered LINE endpoint pairs only; reversing LINE24-23 to LINE23-24 is permitted. No bus-to-generator substitution, nearby-source credit, or device-PMU-number conversion.",
+  "uncertainty": "Generation action count and exact load application/reversal remain unresolved. Metadata gives family sources and approximate minutes. Results measure family/source attribution over annotation support, not action detection delay or restoration.",
+  "comparison_status": "Retrospective candidate integration on already exposed RAW; no official score, independent validation, significance, or superiority presumed",
+  "preservation": "Write new comparison files only. Existing EVALUATION.json files and prior validation reports remain unchanged.",
+  "forbidden": ["C01 data/results/truth", "RAW0002", "Reading partial hybrid predictions", "Changing models or routing after hybrid outcomes", "Dropping generation/unsupported/unavailable windows", "Historical21-context comparison"]
+}

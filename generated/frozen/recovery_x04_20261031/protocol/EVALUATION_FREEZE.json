@@ -1,0 +1,16 @@
+{
+  "time": 1793478820.749682,
+  "files": [
+    {
+      "path": "evaluate.py",
+      "sha256": "c61e8636ead0e393a0dcfd1519a79383e09ae452a7e9702360a0299a2568c0c9"
+    },
+    {
+      "path": "measurement_bridge.py",
+      "sha256": "e3d04ea90d4f294d41c7415fe768f6fdcdc0a58ee39634e31dfb71b01506c8b7"
+    }
+  ],
+  "results_opened": false,
+  "repair": "Use byte-identical local copy of X02 coordinate bridge; references now resolve to sealed X04 runtime. No numerical method change.",
+  "estimands": "Nonnegative profiled distance and signed Gaussian amplitude binary evidence are different diagnostics, not a common error bound."
+}

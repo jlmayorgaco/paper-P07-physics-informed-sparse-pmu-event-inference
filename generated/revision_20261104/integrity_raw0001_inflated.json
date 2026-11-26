@@ -1,0 +1,289 @@
+{
+  "variance_inflation": 2.0,
+  "threshold_gamma2": 47.8794475,
+  "per_report_false_alarm_probability": 1e-09,
+  "monitored_minutes": 89.605,
+  "normal_minutes": 74.23944444444444,
+  "labeled": [
+    {
+      "kind": "corrupted",
+      "pmu": 2,
+      "start_s": 3.26600000000326,
+      "duration_s": 0.733333333330422,
+      "detected": true,
+      "delay_reports": 0,
+      "located": [
+        2
+      ],
+      "reports_flagged": 22,
+      "reports": 22,
+      "true_phase": "C",
+      "relative_step": 0.06900865388532229,
+      "identified_phase": "C"
+    },
+    {
+      "kind": "missing",
+      "pmu": 29,
+      "start_s": 536.5659999999916,
+      "duration_s": 27.067333333332986,
+      "detected": true,
+      "delay_reports": 0,
+      "located": [
+        29
+      ],
+      "reports_flagged": 812,
+      "reports": 812,
+      "true_phase": NaN,
+      "relative_step": NaN,
+      "identified_phase": NaN
+    },
+    {
+      "kind": "missing",
+      "pmu": 29,
+      "start_s": 614.3329999999987,
+      "duration_s": 29.100333333328795,
+      "detected": true,
+      "delay_reports": 0,
+      "located": [
+        29
+      ],
+      "reports_flagged": 873,
+      "reports": 873,
+      "true_phase": NaN,
+      "relative_step": NaN,
+      "identified_phase": NaN
+    },
+    {
+      "kind": "missing",
+      "pmu": 29,
+      "start_s": 2584.665999999997,
+      "duration_s": 191.43333333332842,
+      "detected": true,
+      "delay_reports": 0,
+      "located": [
+        29
+      ],
+      "reports_flagged": 5743,
+      "reports": 5743,
+      "true_phase": NaN,
+      "relative_step": NaN,
+      "identified_phase": NaN
+    },
+    {
+      "kind": "missing",
+      "pmu": 29,
+      "start_s": 2935.766000000004,
+      "duration_s": 59.06733333333207,
+      "detected": true,
+      "delay_reports": 0,
+      "located": [
+        29
+      ],
+      "reports_flagged": 1772,
+      "reports": 1772,
+      "true_phase": NaN,
+      "relative_step": NaN,
+      "identified_phase": NaN
+    },
+    {
+      "kind": "corrupted",
+      "pmu": 39,
+      "start_s": 334.36599999999453,
+      "duration_s": 0.7673333333300737,
+      "detected": true,
+      "delay_reports": 0,
+      "located": [
+        39
+      ],
+      "reports_flagged": 23,
+      "reports": 23,
+      "true_phase": "A",
+      "relative_step": -0.07165845719164421,
+      "identified_phase": "A"
+    },
+    {
+      "kind": "corrupted",
+      "pmu": 39,
+      "start_s": 336.5329999999958,
+      "duration_s": 1.0663333333291425,
+      "detected": true,
+      "delay_reports": 0,
+      "located": [
+        39
+      ],
+      "reports_flagged": 15,
+      "reports": 32,
+      "true_phase": "A",
+      "relative_step": 0.009179638132999823,
+      "identified_phase": "A"
+    }
+  ],
+  "detections": [
+    {
+      "pmu": 2,
+      "start_s": 3.26600000000326,
+      "end_s": 3.966000000000349,
+      "reports": 22,
+      "mechanism": "sequence parity",
+      "labeled_corruption": true,
+      "after_physical_onset_s": NaN,
+      "phase": "C",
+      "max_statistic": 244.62557236982173,
+      "max_balanced_change": 0.025833294600366985
+    },
+    {
+      "pmu": 2,
+      "start_s": 11.565999999991618,
+      "end_s": 11.565999999991618,
+      "reports": 1,
+      "mechanism": "sequence parity",
+      "labeled_corruption": false,
+      "after_physical_onset_s": NaN,
+      "phase": "A",
+      "max_statistic": 351777.15514699667,
+      "max_balanced_change": 0.0012715598236620052
+    },
+    {
+      "pmu": 2,
+      "start_s": 12.33299999999872,
+      "end_s": 12.33299999999872,
+      "reports": 1,
+      "mechanism": "sequence parity",
+      "labeled_corruption": false,
+      "after_physical_onset_s": NaN,
+      "phase": "A",
+      "max_statistic": 27524.050116130074,
+      "max_balanced_change": 0.00023385969796296813
+    },
+    {
+      "pmu": 2,
+      "start_s": 2976.3659999999945,
+      "end_s": 2976.3659999999945,
+      "reports": 1,
+      "mechanism": "sequence parity",
+      "labeled_corruption": false,
+      "after_physical_onset_s": 0.0,
+      "phase": "C",
+      "max_statistic": 111.4699174511665,
+      "max_balanced_change": 0.013993606882715004
+    },
+    {
+      "pmu": 22,
+      "start_s": 2375.699999999997,
+      "end_s": 2375.699999999997,
+      "reports": 1,
+      "mechanism": "sequence parity",
+      "labeled_corruption": false,
+      "after_physical_onset_s": 0.46700000000419095,
+      "phase": "B",
+      "max_statistic": 158.13767125733168,
+      "max_balanced_change": 0.02089710425216207
+    },
+    {
+      "pmu": 29,
+      "start_s": 536.5329999999958,
+      "end_s": 536.5329999999958,
+      "reports": 1,
+      "mechanism": "network coupling",
+      "labeled_corruption": false,
+      "after_physical_onset_s": NaN,
+      "phase": "A",
+      "max_statistic": 22.04625288365239,
+      "max_balanced_change": 0.11740846704883101
+    },
+    {
+      "pmu": 29,
+      "start_s": 2776.899999999994,
+      "end_s": 2777.433,
+      "reports": 17,
+      "mechanism": "network coupling",
+      "labeled_corruption": false,
+      "after_physical_onset_s": NaN,
+      "phase": "A",
+      "max_statistic": 73.44209503846578,
+      "max_balanced_change": 0.9986122730432193
+    },
+    {
+      "pmu": 29,
+      "start_s": 2778.565999999992,
+      "end_s": 2779.099999999992,
+      "reports": 17,
+      "mechanism": "network coupling",
+      "labeled_corruption": false,
+      "after_physical_onset_s": NaN,
+      "phase": "B",
+      "max_statistic": 120.04300738310596,
+      "max_balanced_change": 1.0902618863465185
+    },
+    {
+      "pmu": 39,
+      "start_s": 334.36599999999453,
+      "end_s": 335.09999999999127,
+      "reports": 23,
+      "mechanism": "sequence parity",
+      "labeled_corruption": true,
+      "after_physical_onset_s": NaN,
+      "phase": "A",
+      "max_statistic": 210.23985100144068,
+      "max_balanced_change": 0.026979618299903807
+    },
+    {
+      "pmu": 39,
+      "start_s": 336.5329999999958,
+      "end_s": 336.63300000000163,
+      "reports": 4,
+      "mechanism": "sequence parity",
+      "labeled_corruption": true,
+      "after_physical_onset_s": NaN,
+      "phase": "A",
+      "max_statistic": 187.96398221116323,
+      "max_balanced_change": 0.02566038578558949
+    },
+    {
+      "pmu": 39,
+      "start_s": 337.2329999999929,
+      "end_s": 337.5659999999916,
+      "reports": 11,
+      "mechanism": "sequence parity",
+      "labeled_corruption": true,
+      "after_physical_onset_s": NaN,
+      "phase": "A",
+      "max_statistic": 225.88191425007025,
+      "max_balanced_change": 0.025669071879922623
+    },
+    {
+      "pmu": 39,
+      "start_s": 5378.766000000003,
+      "end_s": 5378.766000000003,
+      "reports": 1,
+      "mechanism": "sequence parity",
+      "labeled_corruption": false,
+      "after_physical_onset_s": NaN,
+      "phase": "A",
+      "max_statistic": 922.2776385851698,
+      "max_balanced_change": 7.388915709372057e-05
+    },
+    {
+      "pmu": 39,
+      "start_s": 5379.032999999996,
+      "end_s": 5379.032999999996,
+      "reports": 1,
+      "mechanism": "sequence parity",
+      "labeled_corruption": false,
+      "after_physical_onset_s": NaN,
+      "phase": "A",
+      "max_statistic": 964.7533167303992,
+      "max_balanced_change": 0.0024658119867309036
+    }
+  ],
+  "n_labeled_corruption": 3,
+  "n_labeled_corruption_detected": 3,
+  "n_labeled_missing": 4,
+  "n_labeled_missing_detected": 4,
+  "missing_reports": 9200,
+  "missing_reports_flagged": 9200,
+  "missing_false_reports": 0,
+  "n_unlabeled_detections": 7,
+  "n_switching_transients": 2,
+  "switching_false_alarms_per_min": 0.022320183025500807
+}

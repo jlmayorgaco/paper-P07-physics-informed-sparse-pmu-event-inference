@@ -1,0 +1,97 @@
+{
+  "sections": [
+    {
+      "file": "sections/article_intro.tex",
+      "section": "Introduction"
+    },
+    {
+      "file": "sections/article_related.tex",
+      "section": "Related Work"
+    },
+    {
+      "file": "sections/narrative_problem.tex",
+      "section": "Problem and Measurement Model"
+    },
+    {
+      "file": "sections/article_method.tex",
+      "section": "Recovery-Aware Physical Attribution"
+    },
+    {
+      "file": "sections/narrative_protocol.tex",
+      "section": "Experimental Design"
+    },
+    {
+      "file": "sections/narrative_results.tex",
+      "section": "Continuous-Stream Results"
+    },
+    {
+      "file": "sections/article_submission_checks.tex",
+      "section": "Adversarial Controls and the Transfer Boundary"
+    },
+    {
+      "file": "sections/article_signature_summary.tex",
+      "section": "Reference and Response Are Different Corrections"
+    },
+    {
+      "file": "sections/article_interpretation.tex",
+      "section": "Interpretation and Limits"
+    },
+    {
+      "file": "sections/article_final_conclusion.tex",
+      "section": "Conclusion"
+    },
+    {
+      "file": "supplement/appendix_causal_walkthrough.tex",
+      "section": "How to Read and Reproduce the Current Method"
+    },
+    {
+      "file": "supplement/appendix_causal_walkthrough.tex",
+      "section": "Local Calculations and Worked Examples"
+    },
+    {
+      "file": "supplement/appendix_causal_walkthrough.tex",
+      "section": "Simulation Scenarios and Reproduction Order"
+    },
+    {
+      "file": "supplement/appendix_submission_contract.tex",
+      "section": "Measurement Integrity and the Historical Submission Interface"
+    },
+    {
+      "file": "supplement/appendix_submission_contract.tex",
+      "section": "Alarm, Diagnosis and Restoration Are Different Decisions"
+    },
+    {
+      "file": "supplement/appendix_submission_contract.tex",
+      "section": "Retrospective RAW Comparison and Independent Units"
+    },
+    {
+      "file": "supplement/appendix_submission_contract.tex",
+      "section": "Repository Boundaries and Reproduction"
+    },
+    {
+      "file": "supplement/appendix_single_state.tex",
+      "section": "Executable Single-State Comparison"
+    },
+    {
+      "file": "supplement/appendix_grouped_learning.tex",
+      "section": "Grouped Learning and Integrity Publication"
+    },
+    {
+      "file": "sections/article_recovery_x04.tex",
+      "section": "Does Recovery Increase Source Separation?"
+    },
+    {
+      "file": "sections/article_ei_x02.tex",
+      "section": "Operating-Point Signature Experiment"
+    }
+  ],
+  "abstracts_disclosed_in_acknowledgment": true,
+  "scientific_citation_claim": false,
+  "other_blocks": [
+    {
+      "file": "author_biographies.tex",
+      "description": "All five public-source biographies",
+      "credit_footnotes": 1
+    }
+  ]
+}

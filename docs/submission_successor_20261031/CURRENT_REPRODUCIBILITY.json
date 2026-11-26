@@ -1,0 +1,112 @@
+{
+  "status": "PASS",
+  "exact_frozen_source_files": 44,
+  "files": [
+    "generated\\frozen\\submission_s01_controls_20261031\\single_state_evaluation.json",
+    "generated\\frozen\\submission_s01_controls_20261031\\single_state_plan.json",
+    "generated\\frozen\\submission_s01_controls_20261031\\single_state_sources.json",
+    "generated\\frozen\\submission_s01_controls_20261031\\legacy_raw_evaluation.json",
+    "generated\\frozen\\submission_s01_controls_20261031\\cyber_evaluation.json",
+    "generated\\frozen\\submission_s01_controls_20261031\\cyber_plan.json",
+    "generated\\frozen\\submission_s01_controls_20261031\\historical_parity_evaluation.json",
+    "generated\\frozen\\submission_s01_controls_20261031\\physical_raw_startup.json",
+    "generated\\frozen\\submission_s01_controls_20261031\\physical_raw_prefix_diagnostic.json",
+    "generated\\frozen\\submission_s01_controls_20261031\\physical_raw_prefix_shape.json",
+    "generated\\frozen\\submission_s01_controls_20261031\\successor_metrics.py",
+    "generated\\frozen\\submission_s01_controls_20261031\\raw_audit_validation.json",
+    "generated\\frozen\\submission_s01_learning_20261031\\ml_plan.json",
+    "generated\\frozen\\submission_s01_learning_20261031\\split.json",
+    "generated\\frozen\\submission_s01_learning_20261031\\model_freeze.json",
+    "generated\\frozen\\submission_s01_learning_20261031\\holdout_complete.json",
+    "generated\\frozen\\submission_s01_learning_20261031\\holdout_summary.json",
+    "generated\\frozen\\submission_s01_learning_20261031\\holdout_events.csv",
+    "generated\\frozen\\submission_s01_learning_20261031\\validation_events.csv",
+    "generated\\frozen\\submission_s01_learning_20261031\\missing_latency.json",
+    "generated\\frozen\\submission_s01_learning_20261031\\missing_latency_protocol.json",
+    "generated\\frozen\\submission_s01_learning_20261031\\missing_latency_validation.json",
+    "generated\\frozen\\submission_s01_ml_h04_20261031\\evaluation.json",
+    "generated\\frozen\\submission_s01_ml_h04_20261031\\inference_complete.json",
+    "generated\\frozen\\submission_s01_ml_h04_20261031\\protocol.json",
+    "generated\\frozen\\submission_s01_ml_h04_20261031\\results.md",
+    "generated\\frozen\\submission_s01_ml_h04_20261031\\v1_deviation.md",
+    "generated\\frozen\\submission_s01_raw_hybrid_20261031\\comparison.json",
+    "generated\\frozen\\submission_s01_raw_hybrid_20261031\\prediction_seal.json",
+    "generated\\frozen\\submission_s01_raw_hybrid_20261031\\hybrid_predictions.json",
+    "generated\\frozen\\submission_s01_raw_hybrid_20261031\\checks.json",
+    "generated\\frozen\\submission_s01_raw_hybrid_20261031\\read_audit.json",
+    "generated\\frozen\\submission_s01_raw_hybrid_20261031\\inference_plan.json",
+    "generated\\frozen\\submission_s01_raw_hybrid_20261031\\evaluation_protocol.json",
+    "generated\\frozen\\submission_s01_raw_hybrid_20261031\\protocol_freeze.json",
+    "generated\\frozen\\submission_s01_raw_hybrid_20261031\\metadata_audit.json",
+    "generated\\frozen\\submission_s01_raw_hybrid_20261031\\validation.json",
+    "generated\\frozen\\submission_s01_raw_hybrid_20261031\\evaluation.py",
+    "generated\\frozen\\submission_s01_system_20261031\\validation.json",
+    "generated\\frozen\\submission_s01_system_20261031\\plan.json",
+    "generated\\frozen\\submission_s01_system_20261031\\prediction_seal.json",
+    "generated\\frozen\\submission_s01_system_20261031\\read_audit.json",
+    "generated\\frozen\\submission_s01_system_20261031\\runtime.py",
+    "generated\\frozen\\submission_s01_system_20261031\\verifier.py"
+  ],
+  "new_composition_macros_verified": 3,
+  "compiled_credit_footnotes": {
+    "main_sections": 10,
+    "supplement_sections": 11,
+    "biography_block": 1
+  },
+  "source_package_validation": {
+    "status": "PASS",
+    "source_package_sha256": "c7639f4c05d248ca8b64ec0d3dad4473ee7ca556a1c737719646a87b89589fda",
+    "isolated_directory": "C:\\Users\\walla\\Documents\\Github\\paper-P07-physics-informed-sparse-pmu-event-inference\\build\\source-smoke-pg4becpv",
+    "input_files": 80,
+    "documents": {
+      "main": {
+        "pages": 14,
+        "text_and_pagination_match": true
+      },
+      "supplement": {
+        "pages": 10,
+        "text_and_pagination_match": true
+      }
+    },
+    "system_TeX_dependencies_required": true,
+    "scientific_readiness_certified": false
+  },
+  "C01_results_read": false,
+  "scientific_submission_readiness": false,
+  "biographies": {
+    "count": 5,
+    "source_ledger_sha256": "cb580595e9160d3682b5b66460a12fe1307061482f468a54ea5d2dc0c39a1d7c",
+    "tex_sha256": "e4026c21593ed328d955da755fed4fcf3589cad3812ed32e3af2ec133196cfaf",
+    "correspondence_inferred": false
+  },
+  "correspondence": {
+    "author": "Jorge Luis Mayorga Taborda",
+    "email": "jl.mayorga236@uniandes.edu.co",
+    "source": "Direct author instruction",
+    "in_article_and_supplement": true,
+    "rejected_public_profile_address_withdrawn": true
+  },
+  "current_pdf_sha256": {
+    "main": "93a00d2d05d6ce183585254f3d4ab327932300e286687c365e6627ec783ed7fd",
+    "supplement": "03a918358b0e5dc28b26b050f0f68a78a555a0d138f4bd2674c24c814e63f842",
+    "historical_notes": "b343e3df8c07c1cf3d68dd69c8311719c6e5bc612af3199dcbd2030994ace4dd"
+  },
+  "visual_qa_sha256": "8315e196d3d2834481e4908cced6866c2d07db7c6aa006a0b0afe9bb52b4cb27",
+  "citation_audit": {
+    "report": "CITATION_AUDIT.json",
+    "sha256": "cf07f5f9868cc4b217ba5be1bd6623f6a6f495eda3fc872660c5d9e49bc9e3f2",
+    "entries": 77,
+    "active_keys": 28,
+    "active_occurrences": 38,
+    "original_verdict": "WARN",
+    "corrections_applied": 7,
+    "cross_model_independence_certified": false,
+    "post_correction_verification": {
+      "path": "docs/submission_successor_20261031/CITATION_CORRECTIONS_VERIFICATION.json",
+      "sha256": "a14f282793896ecb0435b1751e90956a740ef34d82bdcea3d6be3ffe9c7d8ebf",
+      "verdict": "PASS",
+      "seven_corrections_verified": true,
+      "residual_uncertainties_preserved": true
+    }
+  }
+}

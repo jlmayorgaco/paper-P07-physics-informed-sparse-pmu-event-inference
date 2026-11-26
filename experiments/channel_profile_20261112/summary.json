@@ -1,0 +1,59 @@
+{
+  "scope": {
+    "status": "fixed_before_successor_calculation",
+    "question": "Does the nominal current contribution survive fitting rival load severity?",
+    "source": "../channel_information_20261112/input_snapshot.npz",
+    "snapshot_sha256": "6102a7a39ee22c0080b4ec0820ef4cf50ece9f77910bd551189fbf9b03fc8140",
+    "horizons_reports": [
+      3,
+      15,
+      30
+    ],
+    "true_load_amplitude": 0.1,
+    "rival_load_interval": [
+      -0.2,
+      0.2
+    ],
+    "line_severity": "fixed full opening, never rescaled",
+    "channels": [
+      "V",
+      "VI",
+      "all"
+    ],
+    "covariance": "same common quiet-null temporal covariance as predecessor; no extra state covariance appended",
+    "initial_state": "fixed zero deviation, known onset",
+    "sources": "all 18 nominal catalogue entries, all 17 distinct rivals; no null in source separation",
+    "inference": "deterministic bounded profiling, no amplitude prior/evidence/threshold decisions",
+    "exclusions": "no TEST, no detector outcomes, no recovered-state or plant-transfer claim"
+  },
+  "checks": {
+    "all_gates_pass": true,
+    "independent_optimizer_max_relative_error": 8.396132569151545e-16
+  },
+  "inputs": {
+    "experiments\\channel_profile_20261112\\design.json": "191f8d8edac9e2a199d2fcc33068c746b9ff4745d8bc00b6b5137a2fb28d07a7",
+    "experiments\\channel_information_20261112\\input_snapshot.npz": "6102a7a39ee22c0080b4ec0820ef4cf50ece9f77910bd551189fbf9b03fc8140",
+    "experiments\\channel_information_20261112\\run_channel_diagnostic.py": "016f0a06035ea7967e5c4be920c37edeea67bd6235ea36bf883a758cb04bd43a",
+    "experiments\\channel_information_20261112\\r11_assets.json": "e237d417f12f1fa3e59c62166d980d017c70b5eab3f1b7733b618e3326a9c7f9"
+  },
+  "script_sha256": "a545569ee31cb06ec35aff1ebe6caa808f143eb4a518e3051887d1b4eeff537e",
+  "results": {
+    "pairwise_rows": 918,
+    "nearest_rows": 162,
+    "nearest_profile_VI_over_V": {
+      "min": 1.0266691785373727,
+      "median": 1.5296945304419478,
+      "max": 7.816939424004783
+    },
+    "nearest_profile_VI_over_fixed_VI": {
+      "min": 0.023284589049339076,
+      "median": 0.9019323126223022,
+      "max": 1.0
+    },
+    "nearest_changes_fixed_vs_profile_VI": 4
+  },
+  "outputs": {
+    "pairwise.csv": "3ae471dec39c53f1c8775c7c749c626a09435ac26b0b2e6ebf3dd6f446105ab2",
+    "nearest.csv": "bffb256c8f09065d83115b484ee2cd115a3488c3e0bad77d1cc42107a58c0c2e"
+  }
+}

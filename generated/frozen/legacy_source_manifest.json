@@ -1,0 +1,98 @@
+[
+  {
+    "archive": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\journal_v71_chatgpt_analysis.zip",
+    "member": "journal_v71_chatgpt_analysis/metrics/baseline_reproduction.csv",
+    "file": "baseline_reproduction.csv",
+    "sha256": "da0544905ed5f89d34d437379d4635dba282984f29836603f3b7da048d1b37e9"
+  },
+  {
+    "archive": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\journal_v71_chatgpt_analysis.zip",
+    "member": "journal_v71_chatgpt_analysis/metrics/baseline_reproduction_by_seed.csv",
+    "file": "baseline_reproduction_by_seed.csv",
+    "sha256": "dae18dd3b900b564a6e453192d2f10f51de4509f105d1d224b410932cc5f0cec"
+  },
+  {
+    "archive": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\journal_v71_chatgpt_analysis.zip",
+    "member": "journal_v71_chatgpt_analysis/metrics/availability_gate_ablation.csv",
+    "file": "availability_gate_ablation.csv",
+    "sha256": "591ddc18511c3fe4b2155a897bb75a48c826b4c9f0d74276c2196915f02b6c39"
+  },
+  {
+    "archive": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\journal_v71_chatgpt_analysis.zip",
+    "member": "journal_v71_chatgpt_analysis/metrics/feature_group_ablation_summary.csv",
+    "file": "feature_group_ablation_summary.csv",
+    "sha256": "96de85581389a08dd532e25531c546119c30ed30b323cc4e7d86e60393fc24fb"
+  },
+  {
+    "archive": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\journal_v71_chatgpt_analysis.zip",
+    "member": "journal_v71_chatgpt_analysis/metrics/descriptor_attribution.csv",
+    "file": "descriptor_attribution.csv",
+    "sha256": "c9e4aeac3a8ac53d1a6dc2b559b9d65d8f24b49790337de260f3ba545f7cfdb2"
+  },
+  {
+    "archive": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\journal_v71_chatgpt_analysis.zip",
+    "member": "journal_v71_chatgpt_analysis/metrics/event_conditioned_descriptor_results.csv",
+    "file": "event_conditioned_descriptor_results.csv",
+    "sha256": "dcbb6f07b8725375926b9e0af1cbcf49a11a6d1f8ef707976a29b5dd4a599259"
+  },
+  {
+    "archive": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\journal_v71_chatgpt_analysis.zip",
+    "member": "journal_v71_chatgpt_analysis/metrics/timing_breakdown.csv",
+    "file": "timing_breakdown.csv",
+    "sha256": "3a1d241ffaefbf3e28055a1794fa57e482788b91b07b6eeee7e0e7e09e2c2760"
+  },
+  {
+    "archive": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\journal_v71_chatgpt_analysis.zip",
+    "member": "journal_v71_chatgpt_analysis/metrics/model_head_manifest.csv",
+    "file": "model_head_manifest.csv",
+    "sha256": "8266d412f6c895b9ea3fb3d47eee459f4a0714cca41bb958cd8e0ad97af40f14"
+  },
+  {
+    "archive": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\journal_v71_chatgpt_analysis.zip",
+    "member": "journal_v71_chatgpt_analysis/metrics/locked_event_confusion.csv",
+    "file": "locked_event_confusion.csv",
+    "sha256": "ae74f36a2c6d2ae85d5cd84eafe9b49216f8a2f469634de83af2ad2b545f78e2"
+  },
+  {
+    "archive": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\journal_v71_chatgpt_analysis.zip",
+    "member": "journal_v71_chatgpt_analysis/metrics/locked_event_per_class.csv",
+    "file": "locked_event_per_class.csv",
+    "sha256": "2434367ba127683935ebdbb567a8da73474b1c29a066d8fe296ec7e629a31556"
+  },
+  {
+    "archive": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\journal_v71_chatgpt_analysis.zip",
+    "member": "journal_v71_chatgpt_analysis/metrics/asset_disjoint_folds.csv",
+    "file": "asset_disjoint_folds.csv",
+    "sha256": "87b22fde3e34a44fb48c2ad0122e1f9320e117589dd03502da5489244f2781ce"
+  },
+  {
+    "archive": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\journal_v71_chatgpt_analysis.zip",
+    "member": "journal_v71_chatgpt_analysis/metrics/raw0001_transfer_results.csv",
+    "file": "raw0001_transfer_results.csv",
+    "sha256": "2c87249f1a5b622843887484dac6e16fde49b3bdff9e26514f61f134ff00544b"
+  },
+  {
+    "archive": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\journal_v71_chatgpt_analysis.zip",
+    "member": "journal_v71_chatgpt_analysis/metrics/pmu_sparsity_ablation.csv",
+    "file": "pmu_sparsity_ablation.csv",
+    "sha256": "79d3e7f2e1f322e2810e948cd354a1093bea8dd378749bab648b0ddd3c6f8c76"
+  },
+  {
+    "archive": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\journal_v71_chatgpt_analysis.zip",
+    "member": "journal_v71_chatgpt_analysis/metrics/andes_v2_results.csv",
+    "file": "andes_v2_results.csv",
+    "sha256": "e907e5ebfb6bb64e23849243080d23c3f7409d9cd7c0840cd9a8f3436875b90f"
+  },
+  {
+    "archive": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\journal_v71_chatgpt_analysis.zip",
+    "member": "journal_v71_chatgpt_analysis/metrics/tree_capacity_equal_head.csv",
+    "file": "tree_capacity_equal_head.csv",
+    "sha256": "a58a91cbf7254d8b47304d05b24d77c36b2817ea57ec531b55f780918bd2a806"
+  },
+  {
+    "archive": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\journal_v71_chatgpt_analysis.zip",
+    "member": "journal_v71_chatgpt_analysis/metrics/tree_capacity_equal_total.csv",
+    "file": "tree_capacity_equal_total.csv",
+    "sha256": "9ade5612ca8528a876631107612a6f84106d9bce677585d0af99eaaefe11d4c7"
+  }
+]

@@ -1,0 +1,79 @@
+"""Import the learned baselines trained on the bank's simulated cohort.
+
+Reads experiments/fair_baselines/results/BASELINES_ALL.json plus the bank and static-attributor rows of the
+sealed comparison, and writes generated/revision_baselines_macros.tex and tables/generated/fair_baselines.tex.
+No number is typed by hand.
+"""
+from __future__ import annotations
+import json, math, re, sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+SCI = ROOT.parent / "SGSMA26-Physics-Informed-AD/experiments"
+BS = chr(92)
+EV_H = 12 * 120 / 3600
+
+
+def cp(k, n, a=0.05):
+    """exact Clopper-Pearson interval in percent"""
+    from scipy.stats import beta
+    lo = 0.0 if k == 0 else beta.ppf(a / 2, k, n - k + 1)
+    hi = 1.0 if k == n else beta.ppf(1 - a / 2, k + 1, n - k)
+    return 100 * lo, 100 * hi
+
+
+def parents_ok(preds, truth):
+    sys.path.insert(0, str(SCI / 'PAPER_ALLEVENTS_V1/eval'))
+    from score_sim import score_record
+    out = []
+    for rid, eps in preds.items():
+        t = truth[rid]
+        if t['events']:
+            sc = score_record(t['events'], eps, t['duration_s']); out.append(all(r['detected'] and r['top1'] for r in sc['rows']))
+    return sum(out), len(out)
+
+
+def main() -> None:
+    d = json.loads((ROOT / "experiments/fair_baselines/results/BASELINES_ALL.json").read_text())["results"]
+    truth = {r['id']: r for r in json.loads((SCI / 'PAPER_CALIBRATION_B01/execution_request/truth_private/by_split/TEST.json').read_text())}
+    rows = []
+    b01 = (SCI / "PAPER_CALIBRATION_B01/RESULTS.md").read_text(encoding="utf-8")
+    m = re.search(r"\| Banco actual \| (\d+)/(\d+) \| (\d+)/(\d+) \| (\d+) \| (\d+) \| (\d+) \|", b01)
+    bank = dict(name="Dynamic bank", det=int(m[1]), n=int(m[2]), fam=int(m[1]), t1=int(m[1]), t3=int(m[3]), l1=36, o1=36, ex=int(m[6]), fa=int(m[7]), par=(12, 12))
+    led = (SCI / "PAPER_ALLEVENTS_V1/run/sim_ledger/LEDGER.md").read_text(encoding="utf-8")
+    s = re.search(r"\| v2_TEST_bank \|[^|]*\| (\d+)/72 \| (\d+) \| (\d+) \| (\d+) \| (\d+)/(\d+) \| (\d+)/(\d+) \| ([\d.]+) \| ([\d.]+) \|", led)
+    srec = json.loads((SCI / 'PAPER_ALLEVENTS_V1/run/sim_ledger/v2_TEST_bank/SCORE.json').read_text())['records']
+    sp = [all(r['detected'] and r['top1'] for r in x['rows']) for x in srec if x['rows']]
+    static = dict(par=(sum(sp), len(sp)), name="Static physical", det=int(s[1]), n=72, fam=int(s[2]), t1=int(s[3]), t3=int(s[4]), l1=int(s[6]), o1=int(s[8]),
+                  ex=round(float(s[10]) * EV_H), fa=round(float(s[9]) * 0))
+    rows += [bank, static]
+    names = {"ML": "Trees, phasor changes", "FIS": "Trees, signatures", "LR": "Logistic, signatures"}
+    for k in ("ML", "FIS", "LR"):
+        t = d[k]["test"]
+        rows.append(dict(name=names[k], det=t["detected"], n=t["events"], fam=t["class_ok"], t1=t["top1"], t3=t["top3"],
+                         l1=t["line"]["top1"], o1=t["load"]["top1"], ex=round(t["extras_per_event_h"] * EV_H),
+                         fa=round((t["fa_per_normal_h"] or 0) * 1.96), par=parents_ok(d[k]['preds'], truth)))
+    pc = BS + "%"
+    L = [f"{BS}begin{{table}}[t]{BS}centering{BS}scriptsize{BS}setlength{{{BS}tabcolsep}}{{2pt}}",
+         f"{BS}caption{{Learned baselines trained on the simulated cohort of the bank, scored once on its held-out 72 events (36 lines, 36 loads) with the same event-association rule. Thresholds were set on calibration records for zero alarms in normal records. Top-1 counts the events detected with the correct source. The 72 events come from 12 independent records of six events each, so the last column counts the records in which all six were located (family and source), with its exact 95{pc} interval; the events of a record share one noise realization and operating point. Extras are alarms matching no event.}}",
+         f"{BS}label{{tab:fair-baselines}}",
+         f"{BS}begin{{tabular}}{{lcccccc}}{BS}toprule",
+         f"Method & Detected & Top-1 & Lines & Loads & Extras & Records (95{pc}) {BS}{BS}{BS}midrule"]
+    for r in rows:
+        k, nn = r['par']; lo, hi = cp(k, nn)
+        L.append(f"{r['name']} & {r['det']}/{r['n']} & {r['t1']} & {r['l1']}/36 & {r['o1']}/36 & {r['ex']} & {k}/{nn} ({lo:.0f}--{hi:.0f}) {BS}{BS}")
+    L.append(f"{BS}bottomrule{BS}end{{tabular}}{BS}end{{table}}")
+    (ROOT / "tables/generated/fair_baselines.tex").write_text("\n".join(L) + "\n")
+    fis, ml, lr = rows[3], rows[2], rows[4]
+    mac = {"FBBankTop": str(bank["t1"]), "FBEvents": "72",
+           "FBBestTop": str(max(ml["t1"], fis["t1"], lr["t1"])), "FBWorstTop": str(min(ml["t1"], fis["t1"], lr["t1"])),
+           "FBBestExtras": str(min(ml["ex"], fis["ex"], lr["ex"])), "FBWorstExtras": str(max(ml["ex"], fis["ex"], lr["ex"])),
+           "FBBankExtras": str(bank["ex"]), "FBStaticTop": str(static["t1"]),
+           "FBFisLoads": str(fis["o1"]), "FBFisLines": str(fis["l1"])}
+    (ROOT / "generated/revision_baselines_macros.tex").write_text(
+        "% generated by scripts/import_fair_baselines.py\n" + "".join(f"{BS}newcommand{{{BS}{k}}}{{{v}}}\n" for k, v in mac.items()))
+    print(json.dumps(rows, indent=1)); print(mac)
+
+
+if __name__ == "__main__":
+    main()

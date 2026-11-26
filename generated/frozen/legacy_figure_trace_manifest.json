@@ -1,0 +1,230 @@
+[
+  {
+    "event": 1,
+    "reference": "RAW0001",
+    "selection": "First labeled episode of this family",
+    "onset_index": 35195,
+    "last_labeled_index": 35343,
+    "onset_time_bus2_s": 1173.1659999999974,
+    "last_labeled_time_bus2_s": 1178.0999999999913,
+    "display_relative_seconds": [
+      -0.25,
+      1.5
+    ],
+    "baseline_relative_seconds": [
+      -3,
+      0
+    ],
+    "channels": [
+      {
+        "bus": 39,
+        "column": "BUS39_VA_MAG",
+        "pre_event_median": 204138.18453413146,
+        "source": "data/RAW0001/Bus39_Competition_Data_nanmask.csv",
+        "sha256": "80925b189f1715fb332bf58a4a9ffb06012b11f0db1bb021a4f4030d52debb21"
+      },
+      {
+        "bus": 5,
+        "column": "BUS5_VA_MAG",
+        "pre_event_median": 200239.90316367435,
+        "source": "data/RAW0001/Bus5_Competition_Data_nanmask.csv",
+        "sha256": "e8f54267c1a5f16ae5019e65125a18eb01ab3ce8d7e349cf6b35a045df8ccf2a"
+      },
+      {
+        "bus": 19,
+        "column": "BUS19_VA_MAG",
+        "pre_event_median": 208628.10927346005,
+        "source": "data/RAW0001/Bus19_Competition_Data_nanmask.csv",
+        "sha256": "efe593c8b8aa1aa6a35aa1e7416214131d3f1362d6da0f7fb77e0db5e6bc8e67"
+      }
+    ],
+    "voltage_minimum_ratio": 0.24389304760806596
+  },
+  {
+    "event": 2,
+    "reference": "RAW0001",
+    "selection": "First labeled episode of this family",
+    "onset_index": 71257,
+    "last_labeled_index": 71382,
+    "onset_time_bus2_s": 2375.232999999993,
+    "last_labeled_time_bus2_s": 2379.399999999994,
+    "display_relative_seconds": [
+      -1,
+      6
+    ],
+    "baseline_relative_seconds": [
+      -3,
+      0
+    ],
+    "channels": [
+      {
+        "bus": 22,
+        "column": "BUS22_IA_MAG",
+        "pre_event_median": 998.4857316402672,
+        "source": "data/RAW0001/Bus22_Competition_Data_nanmask.csv",
+        "sha256": "a9a1722784438c5ddacb2c7fe7fcf5283da8fddefb818025e3efdb32413bb8b9"
+      },
+      {
+        "bus": 39,
+        "column": "BUS39_IA_MAG",
+        "pre_event_median": 245.6234797706988,
+        "source": "data/RAW0001/Bus39_Competition_Data_nanmask.csv",
+        "sha256": "80925b189f1715fb332bf58a4a9ffb06012b11f0db1bb021a4f4030d52debb21"
+      },
+      {
+        "bus": 2,
+        "column": "BUS2_IA_MAG",
+        "pre_event_median": 584.4629696492391,
+        "source": "data/RAW0001/Bus2_Competition_Data_nanmask.csv",
+        "sha256": "73526f6cc99c1340377ae7cb3d35deb45e9c35cc557c5cd741f43686c08544a9"
+      }
+    ]
+  },
+  {
+    "event": 3,
+    "reference": "RAW0001",
+    "selection": "First labeled episode of this family",
+    "onset_index": 89291,
+    "last_labeled_index": 98818,
+    "onset_time_bus2_s": 2976.3659999999945,
+    "last_labeled_time_bus2_s": 3293.933,
+    "display_relative_seconds": [
+      -3,
+      35
+    ],
+    "baseline_relative_seconds": [
+      -3,
+      0
+    ],
+    "channels": [
+      {
+        "bus": 2,
+        "column": "BUS2_Freq",
+        "pre_event_median": 59.96893952293725,
+        "source": "data/RAW0001/Bus2_Competition_Data_nanmask.csv",
+        "sha256": "73526f6cc99c1340377ae7cb3d35deb45e9c35cc557c5cd741f43686c08544a9"
+      },
+      {
+        "bus": 39,
+        "column": "BUS39_Freq",
+        "pre_event_median": 59.968787880970325,
+        "source": "data/RAW0001/Bus39_Competition_Data_nanmask.csv",
+        "sha256": "80925b189f1715fb332bf58a4a9ffb06012b11f0db1bb021a4f4030d52debb21"
+      }
+    ]
+  },
+  {
+    "event": 4,
+    "reference": "RAW0001",
+    "selection": "First labeled episode of this family",
+    "onset_index": 116332,
+    "last_labeled_index": 125463,
+    "onset_time_bus2_s": 3877.732999999993,
+    "last_labeled_time_bus2_s": 4182.099999999991,
+    "display_relative_seconds": [
+      -3,
+      40
+    ],
+    "baseline_relative_seconds": [
+      -3,
+      0
+    ],
+    "channels": [
+      {
+        "bus": 6,
+        "column": "BUS6_IA_MAG",
+        "pre_event_median": 728.2033986190476,
+        "source": "data/RAW0001/Bus6_Competition_Data_nanmask.csv",
+        "sha256": "709e27de654103086c3c437a5e79eefcd270d35d69291a2b3b02af6d4bdd1d57"
+      },
+      {
+        "bus": 10,
+        "column": "BUS10_IA_MAG",
+        "pre_event_median": 626.1722116015806,
+        "source": "data/RAW0001/Bus10_Competition_Data_nanmask.csv",
+        "sha256": "784233d4cf0d7c7bc39147240eb95080f007da2bf26b0eeda8862887c952f06e"
+      },
+      {
+        "bus": 5,
+        "column": "BUS5_IA_MAG",
+        "pre_event_median": 795.4382901573963,
+        "source": "data/RAW0001/Bus5_Competition_Data_nanmask.csv",
+        "sha256": "e8f54267c1a5f16ae5019e65125a18eb01ab3ce8d7e349cf6b35a045df8ccf2a"
+      }
+    ]
+  },
+  {
+    "event": 5,
+    "reference": "RAW0001",
+    "selection": "First labeled episode of this family",
+    "onset_index": 16097,
+    "last_labeled_index": 16908,
+    "onset_time_bus2_s": 536.5659999999916,
+    "last_labeled_time_bus2_s": 563.5999999999913,
+    "display_relative_seconds": [
+      -4,
+      32
+    ],
+    "baseline_relative_seconds": [
+      -3,
+      0
+    ],
+    "channels": [
+      {
+        "bus": 29,
+        "column": "DATA_PRESENT",
+        "pre_event_median": 1.0,
+        "source": "data/RAW0001/Bus29_Competition_Data_nanmask.csv",
+        "sha256": "e7150a641e27654991c8c553b4a2b833d28dfc233221123e5f570e706e6f2534"
+      },
+      {
+        "bus": 22,
+        "column": "DATA_PRESENT",
+        "pre_event_median": 1.0,
+        "source": "data/RAW0001/Bus22_Competition_Data_nanmask.csv",
+        "sha256": "a9a1722784438c5ddacb2c7fe7fcf5283da8fddefb818025e3efdb32413bb8b9"
+      }
+    ],
+    "missing_frames": 812
+  },
+  {
+    "event": 7,
+    "reference": "RAW0001",
+    "selection": "First labeled episode of this family",
+    "onset_index": 98,
+    "last_labeled_index": 119,
+    "onset_time_bus2_s": 3.26600000000326,
+    "last_labeled_time_bus2_s": 3.966000000000349,
+    "display_relative_seconds": [
+      -0.5,
+      2
+    ],
+    "baseline_relative_seconds": [
+      -3,
+      0
+    ],
+    "channels": [
+      {
+        "bus": 2,
+        "column": "BUS2_VC_MAG",
+        "pre_event_median": 208561.6949355854,
+        "source": "data/RAW0001/Bus2_Competition_Data_nanmask.csv",
+        "sha256": "73526f6cc99c1340377ae7cb3d35deb45e9c35cc557c5cd741f43686c08544a9"
+      },
+      {
+        "bus": 2,
+        "column": "BUS2_VA_MAG",
+        "pre_event_median": 208564.21327812155,
+        "source": "data/RAW0001/Bus2_Competition_Data_nanmask.csv",
+        "sha256": "73526f6cc99c1340377ae7cb3d35deb45e9c35cc557c5cd741f43686c08544a9"
+      },
+      {
+        "bus": 2,
+        "column": "BUS2_VB_MAG",
+        "pre_event_median": 208625.7303488362,
+        "source": "data/RAW0001/Bus2_Competition_Data_nanmask.csv",
+        "sha256": "73526f6cc99c1340377ae7cb3d35deb45e9c35cc557c5cd741f43686c08544a9"
+      }
+    ]
+  }
+]

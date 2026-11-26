@@ -1,0 +1,27 @@
+{
+  "id": "S01_SINGLE_STATE_H04_V1",
+  "status": "FROZEN_BEFORE_NEW_COMPARATOR_SCORES",
+  "population": "All 12 open H04 R12 records; descriptive development contrast, never blind confirmation",
+  "reference": "Frozen H04 R11 and R11_NOMINAL predictive masses, republished with the same successor clock",
+  "comparator": "One committed switched physical and instrumental state with 19-report temporary GLR alternatives; bounded signed load severity and fixed line switches",
+  "plant_and_startup": "Same H04 nominal particle bank, startup fit and frozen constant observation discrepancy; no new plant fit",
+  "on_penalty_log": "log(18*2*19)",
+  "off_penalty_log": "log(2*19)",
+  "score_threshold_log": "log(99)",
+  "confirmation_frames": 6,
+  "warmup_frames": 360,
+  "amplitude_bounds": [-0.2, 0.2],
+  "common_publication": "A stable winning source above threshold for six reports emits alarm and diagnosis together. The same source's OFF score must exceed threshold for six reports to emit restoration. No timeout, true-event trigger, forced closure or refractory interval.",
+  "R11_score": "logit(M[source]) for ON; logit(M_cause[owner]*restoration_probability[owner]) for OFF",
+  "single_state_score": "Maximum short profile log likelihood ratio minus the fixed maximum search-count penalty; not a posterior or calibrated false-alarm bound",
+  "regime": "Chosen using preceding inferred mode. Family covariance persists after OFF until 60 consecutive available, inferred-inactive reports satisfy the inherited quiet criterion using normal counterfactual innovations from the preceding committed state. Missingness or an active episode clears the quiet run. Every current candidate uses the same preceding regime. A new ON during recovery retains the maximum preceding/family regime.",
+  "missing": "Explicit unavailable, propagate committed state without measurement correction; clear short alternatives, preserve mode; no future interpolation",
+  "limitations": [
+    "A shared clock and numerical threshold do not equalize false-alarm rate or average run length.",
+    "GLR maximization, severity fitting and finite search differ from Bayesian history averaging; this is a complete-procedure comparison, not an isolated proof that memory alone causes a gain.",
+    "H04 has only three distinct event calendars and one repeated normal parent across three conditions; uncertainty cannot count 54 events as independent experiments.",
+    "No threshold selection from these results. An unsatisfactory result remains in the report."
+  ],
+  "RAW_access": false,
+  "C01_access": false
+}

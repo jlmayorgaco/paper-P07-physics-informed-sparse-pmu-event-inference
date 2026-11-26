@@ -1,0 +1,68 @@
+{
+  "id": "S01_SIM_ET_SHORT_RAW_SEGMENTED_SOURCE_HYBRID_V1",
+  "status": "FROZEN_BEFORE_RAW_INFERENCE",
+  "implementation_sha256": {
+    "runtime/ml_raw_segmented.py": "2441f761fbec57d8a49ff232e83a77a9b821b4240fa3c12a2073fc01c097b008",
+    "stage_physical_observations.py": "c90b3ec8b58e5a37ff28c442c44523e2b0aad7d74a115d47099fed7b3c28bb48",
+    "ml/MODEL_FREEZE.json": "50f360b3fdca403f9ce84d73b8f927c026c89167b09e34befdfc7add13185f3c",
+    "protocol/ML_PLAN.json": "b6ab35502bae7693e0b1eb41d26005d66267b17f14686e2387162995618c8993",
+    "ml/checks.py": "883a30f12c36732b0906662f32b4f8a4b8482b5fbbfe9256923019b8e478cb14",
+    "ml/common.py": "4505c9fffd254949993ca25c2be895232a0bac8678f3dc56cc25824403a9c48c",
+    "ml/infer.py": "89ce7d41662e75f78c9a4f092542cbb315c0edd61a4ec143b38e1d64a40d4dc9",
+    "ml/kernels.py": "ebf6d095446439a54c63d0c71839e4f536fa113388749301c3ed7aa4f65cc4d7",
+    "ml/preprocess.py": "63349fe92f2ea6ee029ab2afb6d84bf86f3590fb947b25e01a3d19079890f6e3",
+    "ml/publication.py": "b56a5eda1b7ae9fd2bb4f293ae1d193c0760bccf58a67108b4c885a66eb38e3a",
+    "ml/run.py": "8d88f670f6cffe5f6efe52ac2ca477ac483747fd2b692ba0d293e202013383bf",
+    "ml/validation_metrics.py": "fb987cae175c20b435199a553df02192a3ad3c8bcec8649307db5cfea51a9b84",
+    "ml/reference/model/assets.json": "e237d417f12f1fa3e59c62166d980d017c70b5eab3f1b7733b618e3326a9c7f9",
+    "ml/reference/model/reporting_config.json": "2f9759a0f1f062dd76a16e0b873ced9eed3f3b8402a3a1a9cdd60872148f9d01",
+    "ml/reference/model/stochastic_model.json": "f873cfcd4267f499f719c9003f5a005fdafb019dfdd5b35ac1d62129e870da29"
+  },
+  "input_sha256": {
+    "run/observations/PHYSICAL_REFERENCE.npz": "862a88595a65c0cbbf06b192c041260976e25784ab55e8ba553c63eff68858d9",
+    "run/legacy_continuous/predictions.json": "87f0dddb794403a1482057bfb62f36c14b12097a3d1c559471a8de9b0e675165",
+    "run/legacy_continuous/PREDICTIONS_SEAL.json": "9ed5ec74493f647c04fdfa9875605492fc8347a7476fc47aa10b84196bc413b1"
+  },
+  "model_sha256": "9b83975d80bbb7e8ae7a387b65de486808699a93d941f5635f370ea92578efcb",
+  "model_path": "ml/models/SHORT.joblib",
+  "segmentation": "Maximal consecutive reports with all 48 phase-A measurements finite and all eight DATA_PRESENT true; no gap removal, interpolation or concatenation",
+  "segment_minimum_reports": 361,
+  "prefix_reports": 300,
+  "first_monitoring_report_zero_based": 360,
+  "startup_status": "STARTUP_UNVERIFIED; source_label=-1, unavailable; no claim that prefix is normal",
+  "prefix_normality_verified": false,
+  "continuous_state_across_gaps": false,
+  "publication_reports": 6,
+  "classifier": "Unmodified frozen SHORT, 19 known source classes; no confidence threshold or refitting",
+  "clocks": "Model operates on local k/30; every emitted/used/onset/off timestamp is mapped by report index to original received timestamp",
+  "gap_censoring": "Right censoring is emitted at first incomplete report, with physical last report stored separately; EOF censored at last available timestamp",
+  "numerical_failure": "Retain the longest successful causal prefix if a longer prefix fails; unavailable after the first failing report; no reset inside the same complete run",
+  "hybrid_scope": "Only sealed legacy_continuous; historical oracle calendar is excluded",
+  "eligibility": "legacy_event 2/4, or legacy_event 6 with predicted physical_event 2/4; all other event classes retain ZIP source",
+  "diagnosis_policy": "First diagnosis per (segment_id,episode); no subsequent revision may replace it; then earliest eligible same-family diagnosis within the ZIP window",
+  "time_gate": "window_start_s <= emitted_ML <= min(window_end_s,emitted_ZIP); last_report_used_ML <= emitted_ML and ZIP last_report_used <= emitted_ZIP",
+  "substitution_fields": [
+    "legacy_location",
+    "physical_source"
+  ],
+  "immutable": "Event classes, integrity/missing diagnoses, availability, ZIP emission times and legacy_top3 remain unchanged",
+  "fallback": "Retain ZIP if unavailable, noneligible predicted class, or no temporally eligible same-family diagnosis; preserve every window",
+  "unknown_source_and_fault_generation_training": false,
+  "truth_used": false,
+  "raw_score_used": false,
+  "raw_historical_inference": false,
+  "raw0002_access": false,
+  "c01_access": false,
+  "resource_limits": {
+    "n_jobs": 1,
+    "blas_threads": 1,
+    "model_copies_per_process": 1
+  },
+  "output_status_codes": {
+    "0": "INCOMPLETE_REPORT",
+    "1": "STARTUP_UNVERIFIED",
+    "2": "MONITORING",
+    "3": "NUMERICAL_FAILURE"
+  },
+  "motivation": "Test SIM localization transfer with frozen cyber fallback, without promising improvement"
+}

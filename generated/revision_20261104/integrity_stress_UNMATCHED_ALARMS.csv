@@ -1,0 +1,13 @@
+record,kind,scenario,alarm_s,family,source,cause
+C025,event,M,22.466666666666665,,ABSTAIN,dropout
+C025,event,M,22.666666666666668,load,BUS26,dropout
+C025,event,M,23.266666666666666,load,BUS3,dropout
+C025,event,M,24.03333333333333,line,LINE16-17,dropout
+C025,event,M,28.966666666666665,line,LINE26-29,dropout
+C027,event,M,23.1,line,LINE3-4,dropout
+C027,event,M,24.3,line,LINE26-27,dropout
+C029,event,M,27.066666666666663,line,LINE14-15,dropout
+C029,event,M,35.8,line,LINE14-15,dropout
+C032,event,M,24.03333333333333,line,LINE9-39,dropout
+C026,normal,M,100.33333333333331,line,LINE3-4,dropout
+C026,normal,M,103.66666666666669,line,LINE16-17,dropout

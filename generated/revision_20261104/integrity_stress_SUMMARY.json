@@ -1,0 +1,87 @@
+{
+  "corruptions_total": 40,
+  "events": [
+    {
+      "scenario": "C",
+      "family": "line",
+      "events": 12,
+      "timely": 12,
+      "detected": 12,
+      "median_delay_s": 0.1897047021574938
+    },
+    {
+      "scenario": "C",
+      "family": "load",
+      "events": 12,
+      "timely": 12,
+      "detected": 12,
+      "median_delay_s": 0.3486011472221655
+    },
+    {
+      "scenario": "M",
+      "family": "line",
+      "events": 12,
+      "timely": 5,
+      "detected": 5,
+      "median_delay_s": 0.1922250899138902
+    },
+    {
+      "scenario": "M",
+      "family": "load",
+      "events": 12,
+      "timely": 0,
+      "detected": 3,
+      "median_delay_s": 0.7051561900907899
+    },
+    {
+      "scenario": "U1",
+      "family": "line",
+      "events": 12,
+      "timely": 12,
+      "detected": 12,
+      "median_delay_s": 0.1897047021574938
+    },
+    {
+      "scenario": "U1",
+      "family": "load",
+      "events": 12,
+      "timely": 12,
+      "detected": 12,
+      "median_delay_s": 0.3486011472221655
+    }
+  ],
+  "unmatched": [
+    {
+      "scenario": "M",
+      "cause": "dropout",
+      "alarms": 12
+    }
+  ],
+  "dropout_events": [
+    {
+      "during_dropout": false,
+      "family": "line",
+      "events": 8,
+      "timely": 4
+    },
+    {
+      "during_dropout": false,
+      "family": "load",
+      "events": 3,
+      "timely": 0
+    },
+    {
+      "during_dropout": true,
+      "family": "line",
+      "events": 4,
+      "timely": 1
+    },
+    {
+      "during_dropout": true,
+      "family": "load",
+      "events": 9,
+      "timely": 0
+    }
+  ],
+  "corruptions_with_physical_alarm": 0
+}

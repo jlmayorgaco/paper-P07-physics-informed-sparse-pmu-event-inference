@@ -1,0 +1,362 @@
+[
+  {
+    "path": "SIM0001_JuliaPD_F01\\AGENTS.md",
+    "sha256": "0ae2162b14fa831962307e38e018afa9e7570a98c2bf1fab431e8a1c2b1a4915"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\COMPONENT_MANIFESTS.json",
+    "sha256": "64b027cd043f591a362b7cdb73d4dde4efded9ab89012b926a01ef75503884c8"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\CONTINUE_PROMPT.txt",
+    "sha256": "715eda867123ddce7dacd4da38a2e2f42752dab6a839d97ec74e19c234cc605e"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\DECISIONS.md",
+    "sha256": "35306fd3c4823bda6ad7bcfedbe924743c0aa571cfc763578906c1a3931e2661"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\FREEZE_CONTRACT.json",
+    "sha256": "7c4044fa2a137584319986a6c041b38b460f606d0660dae276d8a1f6d7325073"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\FREEZE_MANIFEST.json",
+    "sha256": "e4c20cdb58c66ba28ad3c763fea171bef140df268132d229a31ee92891a0a2e7"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\FREEZE_MANIFEST.sha256",
+    "sha256": "c15a96d7d3d4815e1f0cd7106df6f8b2b43fce4cc4d8d89a8333987b1e72195e"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\GATES.json",
+    "sha256": "f0498bde6bca850197d85d14b88f71a75e2466cbff928f6e8c2e70c947816e3b"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\RUNBOOK.md",
+    "sha256": "a4c99a62757177e079e34641ca97842ceae5ff5938daaf694ed27f2d4d5a51bf"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\SOURCE_PROVENANCE.json",
+    "sha256": "80c2fefc16f7d308862936f6598999dc4953d5d57190d0f1cab2dd2dc6b8c42b"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\stage_run.py",
+    "sha256": "20e0d0d7715f53dd2092782c8e8590be156eed44c7b1fce1f62f50af9f42b706"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\START_HERE.md",
+    "sha256": "bf0336b135bc1eec8e059dccea13328cc2c6dcb9c3ebcc5e96f039ce78da6e71"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\evidence\\BUS5_ANDES_V5_HISTORY.md",
+    "sha256": "3523ce0ddb5a210772a4ceec279727b9b6e84f47350cd7d3ed662dbb762f0ad7"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\evidence\\FREEZE_ASSEMBLY_RECORD.json",
+    "sha256": "2cb97ebd595988c9494bc61504b21b9fd5c19441c27da0049d7cd0d3212a2b96"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\evidence\\frozen_initialization.json",
+    "sha256": "74859153b44d68dd6e1114c403c2bda12b1b936a88869d66242dd482f84e794f"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\evidence\\MEASUREMENT_V3_HISTORICAL_REPORT.md",
+    "sha256": "920dd04ac60d86bd954b6487ef17c56d476c5df743688e537df77ba673f28c93"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\evidence\\R5C2_SELECTED_MAPPING_PRE_F01.csv",
+    "sha256": "a159227f8bce8a2331d3af871cdaacc77c7ee18f6e7edf2093fdfb4691cd7b9d"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\export_pmu.py",
+    "sha256": "2e961aa935cf5af97abc655f3c553ed4adce0a783161f947c66e3ef0c9ef09f5"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\protocol.json",
+    "sha256": "5189a7a0f5dabba309c4bb1ab85371ebfd6e884e207cd0b351fefffadb018b86"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\run.ps1",
+    "sha256": "db9aa95d7a43a892f2d8098c5c873036891ed1aeaa932d84431515ce7a69c5e5"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\run_events.jl",
+    "sha256": "f7f20a9e7277f41066e82d773a394199ff1ac619d1500a3fd55c647a93559272"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\run_physics.jl",
+    "sha256": "2d131e041ceead11ba29a420dc8c567d0de6cd1f4c3844a52cc31d7ec09c1df8"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\environment\\Manifest.toml",
+    "sha256": "57dbb045612dc2953abdb63f0238b63516bc216bb334dbc25c87c613d11d68a7"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\environment\\Project.toml",
+    "sha256": "73d843953226656485b1d54451487078f07e57d3053f9db3a7acef3b0caec7c5"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\environment\\python_runtime.json",
+    "sha256": "a05b7c70bd10c9cee9b04ac0ff1947498855664c1bce351bfbc4813cb6021ea4"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\environment\\requirements-analysis.txt",
+    "sha256": "07b777e2ad4efa6947c824f5f0d71e737f06972ecc0ce843fd5a4ed50777d5fe"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\events\\protocol.json",
+    "sha256": "5afffc3d487458958a6c9d031a90b107c9990316417366ff8d79772338ccf169"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\inputs\\covariance_full_s1.csv",
+    "sha256": "43382dfa65daaa0042659c55ed8b14a6804ff604f676420d0de8bf29353787f6"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\inputs\\covariance_full_s2.csv",
+    "sha256": "c0b83cf50697e350fa79cf4580e966e905fbe741ef689f3e300e8d35865112fa"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\inputs\\covariance_full_s3.csv",
+    "sha256": "db9556155fcba7d347db95edac2e1f0147e70f7804817f284fdc13601d91cac4"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\inputs\\covariance_full_weights.csv",
+    "sha256": "edbb8b1c5d2d5025f9f42452137736771f9ab5df9785fe6ae81661ef57ec1338"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\inputs\\covariance_half_s1.csv",
+    "sha256": "7802c650df1476d02a9852130a475a566071cdab2772185a06b06473000d9ee4"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\inputs\\covariance_half_s2.csv",
+    "sha256": "0ec34926ba050dca6debdfe39156ac0d22da180fb429ab9725ceded0161b3ef3"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\inputs\\covariance_half_s3.csv",
+    "sha256": "5643940f21701b7c9b29e3427c6e0ec622de456fee6d4c444f4bdd56160c3a03"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\inputs\\covariance_half_weights.csv",
+    "sha256": "b49029b4c1c712e867d4a7e8f6df0a84fee2e3fce17fce26f73766a94165a5d0"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\inputs\\geographic_s1.csv",
+    "sha256": "ab4ebcd5c189c2ad342e8f7b3883a6b8f8a732d16cb942ad89e53811f16a0464"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\inputs\\geographic_s2.csv",
+    "sha256": "bd30c2802555ff3cb4472f7de2714c6d13c371546535c101dce39f93de3a3e1a"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\inputs\\geographic_s3.csv",
+    "sha256": "da2fdfa9d4e68e296af9534c5f79c2089ece60c55d98982349659a4af2c35843"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\inputs\\geographic_weights.csv",
+    "sha256": "507728f1ce452d290555d45b19dfc1ee5c24a6d17972c14e46bf5aa4c2444f17"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\inputs\\input_manifest.json",
+    "sha256": "600776d995c22d90b9118e23b59edb15cdf7df9e5f48a2a41ecbd364c0963dcb"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\inputs\\pattern_matrices.npz",
+    "sha256": "6a78f1a852a5440c1c587873862c0c527c00daebab4a3b97902862964082008e"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\reference\\fixed_network.npz",
+    "sha256": "1863debff09c0688b88f209b9bfff0c2c9fc4262aef539cf7d02633f43b58da3"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\reference\\frozen_network_sensitivity.csv",
+    "sha256": "d70fd8262ecc6118dc382563478439522804b2c848829912d2f2d0e7b49f08b4"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\reference\\initial_parameters.csv",
+    "sha256": "b13a628d76419d36f2f0367648039768db52999b85cd96e39bb48ce0056d902b"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\reference\\initial_state.csv",
+    "sha256": "0ecce2901173149407c972ed2fd86e464804a3b30c2b98046e4c4ffbf6067225"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\reference\\noise.py",
+    "sha256": "df164abc812db9066f22fac72e646a5993173c6500782bd59c51264c36a37584"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\reference\\pd_static_solution.csv",
+    "sha256": "611223148d84674d84a26823520e8883ad0527832f53e7be07973bd116c23144"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\reference\\pmu_operator.py",
+    "sha256": "e9311c63dad492120e5ba422e90471b808e5527118778cde9323a9d0f2c5a5ff"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\reference\\reporting_config.json",
+    "sha256": "2f9759a0f1f062dd76a16e0b873ced9eed3f3b8402a3a1a9cdd60872148f9d01"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\reference\\stochastic_model.json",
+    "sha256": "f873cfcd4267f499f719c9003f5a005fdafb019dfdd5b35ac1d62129e870da29"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\reference\\target_bus_state.csv",
+    "sha256": "6eae0386a4e71138204b7db8432fa1d744fac863728fbca14f4f74ace89e5a09"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\reference\\terminal_mapping.csv",
+    "sha256": "74c1ba517d22f0c7d8c478c55fff32207d826a816c291187cb86d6c3b91bd9be"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\reference\\data\\avr.csv",
+    "sha256": "46d9062bc0db558f863faf5706829d109b3ca817297edc43d492ae7af39457bf"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\reference\\data\\branch.csv",
+    "sha256": "b1858adb3e409750b5db24bc5073dda1e0683a59ef6e5966840cd73a18293972"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\reference\\data\\bus.csv",
+    "sha256": "d732a896e95c013fa3906941a540f2d9161ca99a2c60e571a890174680cb6943"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\reference\\data\\gov.csv",
+    "sha256": "2cd24f6c43c0fb4175b0b6e5f579239e23f6b7a01805e0c71eb88b1fb892d7ac"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\reference\\data\\load.csv",
+    "sha256": "635e38cb30ed983be884d2e1e88cbe4069d69097a98969648390da1464df0d30"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\reference\\data\\machine.csv",
+    "sha256": "8cf9a02574f650d2c459f536a02ae6bbfe16122e927dbbd54ca54ec2556616a1"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\reference\\ieee39_source\\distributed_slack.jl",
+    "sha256": "b4e08640054747a471d58223e336daafbe31c6e041a0aefc305574dc17b20a1b"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\reference\\ieee39_source\\grid_of_grids.jl",
+    "sha256": "97851c21c209316cd80372f8d55ad454531c8dd790e9bcdcad08c04a3a50ea44"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\reference\\ieee39_source\\IEEE39.jl",
+    "sha256": "d64f8c022325591672cb021befb9e31ffd5f0ae972aec03ea8021b88e19dab02"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\reference\\ieee39_source\\ieee39_base.jl",
+    "sha256": "f1884ef40681860ae7e79604dc5d976702b5be492e32960a83f37fb46a5987e6"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\reference\\ieee39_source\\ieee39_random_pf.jl",
+    "sha256": "4220be83afe348620dac074afa4395b6591802dc143e3f41d77cc081aacb0b1f"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\runtime\\reference\\ieee39_source\\utilities.jl",
+    "sha256": "1abb1964359c27ae52463f67624c20f7e9601acb3528faff442a2ef420351d26"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\evidence\\physical_pilot\\PIPELINE_READINESS.md",
+    "sha256": "d9e4f7bdaf383aece1c40f9687c9efdbb2d653ee7eb86fc0fdcee7d7933c41f4"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\evidence\\terminal_audit\\protocol.json",
+    "sha256": "1f440a200267bbf912f6e3699a9a7e391cd30fac3bbf1a49f9d37ffc12821853"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\evidence\\terminal_audit\\REPORT.md",
+    "sha256": "7c46a6a9f1697ae6813482c452fbf12fe103e4e8d9931ffd1917a45dfaa67995"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\evidence\\terminal_audit\\evidence\\baseline_integrity.json",
+    "sha256": "3a366e845db09a3e3c571b14358d8f934dc4a1d45fe9aab0a4f4ba589c2a33df"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\evidence\\terminal_audit\\evidence\\BUS5_ARCHIVED_HYPOTHESIS.json",
+    "sha256": "1c22a03b8ea4379427e80c94c6f44c699079eb9ceceb1ffeb46b1c5660342a9b"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\evidence\\terminal_audit\\evidence\\R5C2_CURRENT_MAPPING_CORRECTED_METRIC_AUDIT.csv",
+    "sha256": "e3d4570bfd834545670cc433333df2ced7cfe76a32b9b8c023e57b5c3ca83cec"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\evidence\\terminal_audit\\figures\\BUS5_current_summary.png",
+    "sha256": "e1e3c705a9b0207ca335576726c068ecee9aa097f58a3792b60c7577a2f0af0c"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\evidence\\terminal_audit\\figures\\BUS5_normal_variability.png",
+    "sha256": "327bae288e074bbc13dff5c399ba42e258ea176aed288003820128af4d57feea"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\evidence\\terminal_audit\\figures\\BUS5_terminal_dynamics.png",
+    "sha256": "f7d717fd3853585480943e29073ee99ff858257c152b56c9a59d66d1bb1c03de"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\evidence\\terminal_audit\\figures\\BUS6_terminal_alternatives.png",
+    "sha256": "02d48337cc808042f09d790cd2f4ccf826c8e8d4eba4950082dac5b4053fa65c"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\evidence\\terminal_audit\\figures\\eight_PMU_load_amplitudes.png",
+    "sha256": "94b0543e991cd8f61126716a616398ee0d3457c210103b3ddf7833f3c06eb70b"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\evidence\\terminal_audit\\results\\ambient_BUS5_audit.csv",
+    "sha256": "f1fa3b65ee62beb645531b8fa5744f0194b9d60d5a27a18d202229f1c3fc5d59"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\evidence\\terminal_audit\\results\\amplitude_audit.csv",
+    "sha256": "878e78dd2da0e3b210c4819a6517c582ed7274088d2a8c8fcfdb2ec67b555564"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\evidence\\terminal_audit\\results\\audit_checks.json",
+    "sha256": "b1fef81a6de9e3d10c1bfde1bd9386768c1e0da316252747a69bee996c1cff40"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\evidence\\terminal_audit\\results\\eight_PMU_load_ratios.csv",
+    "sha256": "16c3740c873f0da42a020fc9797c4627c2af2b6843f8665259f91c4750e2f5a6"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\evidence\\terminal_audit\\results\\event_terminal_audit.csv",
+    "sha256": "f7af4ecc0b3fb32661bf17e9dcd0c019b2763a275c8b52bece9ce55a36b7d8e3"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\evidence\\terminal_audit\\results\\normal_terminal_audit.csv",
+    "sha256": "be4f525641b601c7b757ccdeeee0b512a66cfd37f3b390249cf295054a2ca92c"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\evidence\\terminal_audit\\results\\pre_event_condition_audit.csv",
+    "sha256": "7755cc04f03a023c05e0fd8e53acc9315b917850cdc3bf136e95422228e03859"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\evidence\\physical_pilot\\events\\protocol.json",
+    "sha256": "5afffc3d487458958a6c9d031a90b107c9990316417366ff8d79772338ccf169"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\evidence\\physical_pilot\\events\\source_audit.json",
+    "sha256": "219c946dc711f3d0d8b86929d3a2d93df1e6ff4a4efaebafd83e1feb40fcca8b"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\evidence\\physical_pilot\\results\\family_gates.csv",
+    "sha256": "9d6553faf9d409009905a45f0bb7c94deb42627383350f6b6dacd61245bbba1b"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\evidence\\physical_pilot\\results\\validation.json",
+    "sha256": "ee3aa85f270509028a6e2eeb528298fc3137500f43dd99d2c3a488c4200084ec"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\evidence\\physical_pilot\\events\\results\\acceptance.json",
+    "sha256": "a2235c304a03e44d788502697ebfd21f57f911d895d5cc3ac8505a20dd968841"
+  },
+  {
+    "path": "SIM0001_JuliaPD_F01\\evidence\\physical_pilot\\events\\results\\long_load_validation.json",
+    "sha256": "923f9e7567ff1d19446cd8862451a6c71cf6a5e6c4f53d340ea81ac16f69200f"
+  },
+  {
+    "path": "experiments\\PAPER_CONFIRMATORY_C01\\protocol\\EXECUTION_FREEZE.json",
+    "sha256": "aabb50a07022855ce21dcb242df36a892ee40ebae254e7e2e940a3501fae4e56"
+  },
+  {
+    "path": "experiments\\PAPER_CONFIRMATORY_C01\\protocol\\FREEZE.json",
+    "sha256": "6bdb3f740e87ae13fbe0efa6122f7d144fdb77c9f05fc409ffcbf4793eacc269"
+  }
+]

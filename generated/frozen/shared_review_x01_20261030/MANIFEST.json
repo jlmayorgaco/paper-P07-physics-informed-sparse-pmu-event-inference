@@ -1,0 +1,36 @@
+{
+  "source_review": "https://chatgpt.com/share/6ae4eff8-00c4-83ea-812f-d5afe8c2f774",
+  "status": "SYNTHETIC_KERNEL_AND_HISTORICAL_CODE_AUDIT_NOT_PHYSICAL_CONFIRMATION",
+  "files": [
+    {
+      "path": "run/RESULTS.json",
+      "sha256": "5917280a6b283db667a0c53ae0ce3d78f725d32949d64986c7efd487dc06aabf",
+      "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_METHOD_DICE_X01\\run\\RESULTS.json"
+    },
+    {
+      "path": "run/HISTORICAL_NORMALIZATION_AUDIT.json",
+      "sha256": "34a623e5b3c0316141b010f7df2b21b4100b996d261071c04dc7554beabe5337",
+      "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_METHOD_DICE_X01\\run\\HISTORICAL_NORMALIZATION_AUDIT.json"
+    },
+    {
+      "path": "run/timings.csv",
+      "sha256": "36a78bbaa606957ecbb161bf91d0fd7289ecfdb53ee59e64d551517089a9f48c",
+      "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_METHOD_DICE_X01\\run\\timings.csv"
+    },
+    {
+      "path": "kernels.py",
+      "sha256": "0b3c2e8cafda51a5c1d4cdfbce55866bb6ab947d041752d09561f68bc08b0814",
+      "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_METHOD_DICE_X01\\kernels.py"
+    },
+    {
+      "path": "run_checks.py",
+      "sha256": "48e217dac11ad2370285435e471a28cf1a60c388e4191c66b866d995f3091590",
+      "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_METHOD_DICE_X01\\run_checks.py"
+    },
+    {
+      "path": "METHOD_AND_EXPERIMENTS.md",
+      "sha256": "0d4daa8157f426d5f31fd2813c209fd5e39a63c5459c21e8036f9e3eec7331c2",
+      "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_METHOD_DICE_X01\\METHOD_AND_EXPERIMENTS.md"
+    }
+  ]
+}

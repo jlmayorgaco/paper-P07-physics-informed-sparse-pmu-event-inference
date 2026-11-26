@@ -1,0 +1,13 @@
+{
+  "sigma_tve": 0.0005,
+  "events": 24,
+  "min_worst_over_alarm": 42.23436197737453,
+  "median_worst_fraction": 0.2879924015825047,
+  "min_worst_fraction": 0.07175079471500884,
+  "all_above_alarm": true,
+  "worst_case": {
+    "source": "BUS26",
+    "worst_missing_pmu": "39",
+    "worst_fraction": 0.07175079471500884
+  }
+}

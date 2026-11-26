@@ -1,0 +1,338 @@
+[
+  {
+    "record": "C025",
+    "scenario": "U1",
+    "kind": "event",
+    "sha256": "739e9de8693f935ab5a7113702e2c6113a039df7441aad334ab49c0af8c26486",
+    "u1_max_abs_difference_vs_B01": 5.238689482212067e-10
+  },
+  {
+    "record": "C025",
+    "scenario": "U5",
+    "kind": "event",
+    "sha256": "64c12b3d80df8870c890ea28adf7e52a94a23991149123f3e3de67c232ca5413",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C025",
+    "scenario": "U10",
+    "kind": "event",
+    "sha256": "5baaf7b4f7cdb0984fe96d1ba1638999671f3d76253d93947882f7b1b52a14e1",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C025",
+    "scenario": "U20",
+    "kind": "event",
+    "sha256": "9328ba99ae3ca11a55d77703e21a92299481b52d4d90c715ed4646b168b7c573",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C025",
+    "scenario": "P05",
+    "kind": "event",
+    "sha256": "b853dda0551fddcdc112eaf347f9fdff3f8a3d9976260b12eb20ea1de6e7d72a",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C025",
+    "scenario": "P10",
+    "kind": "event",
+    "sha256": "40aeff06c88876124e3cd5d48fd7f8888c6329938bbbe82dbae1f0520f51af0c",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C026",
+    "scenario": "U1",
+    "kind": "normal",
+    "sha256": "83c499bddf85f26fe4ebed8f31ea3a7ff8f79419d89aafb8b23298cf40700d08",
+    "u1_max_abs_difference_vs_B01": 6.111804395914078e-10
+  },
+  {
+    "record": "C026",
+    "scenario": "U5",
+    "kind": "normal",
+    "sha256": "b39280fb82b46d655963ef0162086e4f9241dc83a754e62f3246003c3d50b396",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C026",
+    "scenario": "U10",
+    "kind": "normal",
+    "sha256": "f7055090ed2f205e44bb7a8f5ac820fe49051042efb15175d9fb40109875dc06",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C026",
+    "scenario": "U20",
+    "kind": "normal",
+    "sha256": "201edf399261c77c35ba5476e1048ced1364647cf38da21175f051813a8cefe3",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C026",
+    "scenario": "P05",
+    "kind": "normal",
+    "sha256": "f48e36f73709e6808e1c4058f490050d4186346e8cff533a38c811beec207aab",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C026",
+    "scenario": "P10",
+    "kind": "normal",
+    "sha256": "8bfb6ccfc9c2c2684109760459c6561c6f569d442b2b5a4d63f7ab64066c5227",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C027",
+    "scenario": "U1",
+    "kind": "event",
+    "sha256": "21ae39e3693f1ef9c1d826fb3975f6dd99dcfb9550e88516549ce7c65aa0bd30",
+    "u1_max_abs_difference_vs_B01": 5.529727786779404e-10
+  },
+  {
+    "record": "C027",
+    "scenario": "U5",
+    "kind": "event",
+    "sha256": "da5ea38d239ff895c4e70c4cda9e679646379ac38038c46103442b5ac3298044",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C027",
+    "scenario": "U10",
+    "kind": "event",
+    "sha256": "43d3f838c7b881b71b08c6c3caf3d1f2ace8da27430fc8f42b627e7113493991",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C027",
+    "scenario": "U20",
+    "kind": "event",
+    "sha256": "ded4e1b8124200b433c1712bf0e6bebe5285fbbc142a93e84167055e0cb2e804",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C027",
+    "scenario": "P05",
+    "kind": "event",
+    "sha256": "b363dfc6f5e2ddf9fe562a0bec749b1b561dc2eaf8fbdc08b16c22f429160334",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C027",
+    "scenario": "P10",
+    "kind": "event",
+    "sha256": "52d377fe9059971173e056c647fcaccb79cdf1ee010045124332acdadb1a4b1c",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C028",
+    "scenario": "U1",
+    "kind": "normal",
+    "sha256": "a1b35fb47f48aa72a02af95b669cc4bee5d19af6547fc276defe422a0449ce6b",
+    "u1_max_abs_difference_vs_B01": 6.111804395914078e-10
+  },
+  {
+    "record": "C028",
+    "scenario": "U5",
+    "kind": "normal",
+    "sha256": "66b168649704b40ec61faca9560b96fcdfbde97211886259f88e29d042a9aaa5",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C028",
+    "scenario": "U10",
+    "kind": "normal",
+    "sha256": "fcd22551589c1f40318d7ccfc996d071d0c3dced86dddd2fe5436c2e89d82972",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C028",
+    "scenario": "U20",
+    "kind": "normal",
+    "sha256": "8b6defa5b6975473d7f5bf8bebef09b63560dba013a45a68d1823f4f3d4126a3",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C028",
+    "scenario": "P05",
+    "kind": "normal",
+    "sha256": "346d2d7d9af761dbdad36232e7139a21f95b62f0a84221640fc45a3753d202af",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C028",
+    "scenario": "P10",
+    "kind": "normal",
+    "sha256": "9ddff9cbef469e9755d2e55844f8b6853a38f6d55c38a44895703ceb14ac3fea",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C029",
+    "scenario": "U1",
+    "kind": "event",
+    "sha256": "739c2befc27dd2beca79f81ac4e0718eaaf82fec96c6ebd0ddd7cc364eb5f5ca",
+    "u1_max_abs_difference_vs_B01": 5.820766091346741e-10
+  },
+  {
+    "record": "C029",
+    "scenario": "U5",
+    "kind": "event",
+    "sha256": "7c95114f79dc8545beb52f071b89b41a9ffa6b5d16ffa7576512bcc9583fbff8",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C029",
+    "scenario": "U10",
+    "kind": "event",
+    "sha256": "5dadb94c0ca04f5ec074b32706de0b6a42297c6005c10c4c7676442fdfec422f",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C029",
+    "scenario": "U20",
+    "kind": "event",
+    "sha256": "2101c9ba71c7b1ff4be3fbe76765ea6367ecf76d6190146fef86a289c93a83a7",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C029",
+    "scenario": "P05",
+    "kind": "event",
+    "sha256": "2a567674a318c600e3764aa90133f439fb5a7f717756c8c92611121a2fa0a63b",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C029",
+    "scenario": "P10",
+    "kind": "event",
+    "sha256": "4e96018ba2d3e2284a21aac6a61a0230d811bce46a50cb7025a60f9a8f180305",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C030",
+    "scenario": "U1",
+    "kind": "normal",
+    "sha256": "e1d179a4b849bd01e852e5d82bbe6dd722db53a075ae8bd4388db293a303edd6",
+    "u1_max_abs_difference_vs_B01": 5.529727786779404e-10
+  },
+  {
+    "record": "C030",
+    "scenario": "U5",
+    "kind": "normal",
+    "sha256": "f6e2f8522a02850c89b0f17778ed7bf0c95dec4aff477729b4002040c07665c1",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C030",
+    "scenario": "U10",
+    "kind": "normal",
+    "sha256": "708133c1ddbe603db4bdcbcebf99e8d05275f8f83adae1ce55195a81c06c1a30",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C030",
+    "scenario": "U20",
+    "kind": "normal",
+    "sha256": "c41df0f056744c2a9a6f0e5dc9ada0950ec59edc80b732eebb92fd27c3fd4cd5",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C030",
+    "scenario": "P05",
+    "kind": "normal",
+    "sha256": "62345e061a7afbb328cacc819262f398ef7dd7463f118619fe35bceaa818e5e0",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C030",
+    "scenario": "P10",
+    "kind": "normal",
+    "sha256": "191ab64c16eb56670d71f79d20be5fcc48bf3635b17d434da926ce7be11cf6ca",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C031",
+    "scenario": "U1",
+    "kind": "normal",
+    "sha256": "50d0966187da7675e81a0681f93252f15c99847138b294d079974544bfaf3cbe",
+    "u1_max_abs_difference_vs_B01": 6.111804395914078e-10
+  },
+  {
+    "record": "C031",
+    "scenario": "U5",
+    "kind": "normal",
+    "sha256": "b479f22090b314b37091e6471acdf95b90f147b5adc7e181ea184e39edd81e36",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C031",
+    "scenario": "U10",
+    "kind": "normal",
+    "sha256": "95bf296a92d4a9a4b54eda7f11ca519d57b84739b20deba27c439dbb29da7851",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C031",
+    "scenario": "U20",
+    "kind": "normal",
+    "sha256": "93ad9e70fe917b1069ad9945f3093fc22fe73c94beb07c803624c79c41aebe64",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C031",
+    "scenario": "P05",
+    "kind": "normal",
+    "sha256": "419faf56ec9294ecd937e6a7414d64877c4eee82179654a1c6e322e52b009dd8",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C031",
+    "scenario": "P10",
+    "kind": "normal",
+    "sha256": "aaf26889381daaf96bb4a9de3a4750a6d48932268b9dfc6bb996cd96369e3273",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C032",
+    "scenario": "U1",
+    "kind": "event",
+    "sha256": "ff003708a3b947c4d13c6ecddfc964b4e84dcc16cf82ac724c0933ab468bf652",
+    "u1_max_abs_difference_vs_B01": 5.820766091346741e-10
+  },
+  {
+    "record": "C032",
+    "scenario": "U5",
+    "kind": "event",
+    "sha256": "0f58d6e5d5e5da65f825e81bd718dc8da47703cd9c84e54cb6982c3845fe8b31",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C032",
+    "scenario": "U10",
+    "kind": "event",
+    "sha256": "21ac8a2e209484e364d710e181857a7ecec2aae85f1246619b1ef16c3f5198fd",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C032",
+    "scenario": "U20",
+    "kind": "event",
+    "sha256": "1dbfcf8d1cc0bed9feea8d6f187d093c9221901fd428f2ae4ca4be0c756a53d0",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C032",
+    "scenario": "P05",
+    "kind": "event",
+    "sha256": "612cbd543584d8c53ccc2695e9a8975a495bae7176499741434a70fb74248a63",
+    "u1_max_abs_difference_vs_B01": null
+  },
+  {
+    "record": "C032",
+    "scenario": "P10",
+    "kind": "event",
+    "sha256": "731493e0f7160962fd1eaaad8363278e778b38f0c9e63dadd533da67b8aa5c51",
+    "u1_max_abs_difference_vs_B01": null
+  }
+]

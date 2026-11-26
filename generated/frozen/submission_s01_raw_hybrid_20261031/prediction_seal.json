@@ -1,0 +1,29 @@
+{
+  "files": {
+    "prediction.npz": "78ce32a8199c5be63b54abeefa2065829abf3777e2c1cf86fffad33e5d5dbf60",
+    "prediction.json": "506c0f89a0eff4fd3a5892c281748e056d6f35e9c10b340f46c586688f1aa72e",
+    "hybrid_predictions.json": "9dcea4d4ce5de441d3e24c790f0a97a12be496acc765d984afc297916fa65979",
+    "READ_AUDIT.json": "727114303aae67ea2ff22eef4b17b9a2368d3ee13f2c652facbfec4035a7c300",
+    "CHECKS.json": "cabb20515f920162a612ea33bda42d8a93f46c1f54ab9ec0d1b87daaf91247a9"
+  },
+  "plan_sha256": "7463b2a20cae75f55835cfc5436da944b999e1fe867b8f5a3c05d849eeec4c02",
+  "truth_read": false,
+  "model_sha256": "9b83975d80bbb7e8ae7a387b65de486808699a93d941f5635f370ea92578efcb",
+  "implementation_sha256": {
+    "runtime/ml_raw_segmented.py": "2441f761fbec57d8a49ff232e83a77a9b821b4240fa3c12a2073fc01c097b008",
+    "stage_physical_observations.py": "c90b3ec8b58e5a37ff28c442c44523e2b0aad7d74a115d47099fed7b3c28bb48",
+    "ml/MODEL_FREEZE.json": "50f360b3fdca403f9ce84d73b8f927c026c89167b09e34befdfc7add13185f3c",
+    "protocol/ML_PLAN.json": "b6ab35502bae7693e0b1eb41d26005d66267b17f14686e2387162995618c8993",
+    "ml/checks.py": "883a30f12c36732b0906662f32b4f8a4b8482b5fbbfe9256923019b8e478cb14",
+    "ml/common.py": "4505c9fffd254949993ca25c2be895232a0bac8678f3dc56cc25824403a9c48c",
+    "ml/infer.py": "89ce7d41662e75f78c9a4f092542cbb315c0edd61a4ec143b38e1d64a40d4dc9",
+    "ml/kernels.py": "ebf6d095446439a54c63d0c71839e4f536fa113388749301c3ed7aa4f65cc4d7",
+    "ml/preprocess.py": "63349fe92f2ea6ee029ab2afb6d84bf86f3590fb947b25e01a3d19079890f6e3",
+    "ml/publication.py": "b56a5eda1b7ae9fd2bb4f293ae1d193c0760bccf58a67108b4c885a66eb38e3a",
+    "ml/run.py": "8d88f670f6cffe5f6efe52ac2ca477ac483747fd2b692ba0d293e202013383bf",
+    "ml/validation_metrics.py": "fb987cae175c20b435199a553df02192a3ad3c8bcec8649307db5cfea51a9b84",
+    "ml/reference/model/assets.json": "e237d417f12f1fa3e59c62166d980d017c70b5eab3f1b7733b618e3326a9c7f9",
+    "ml/reference/model/reporting_config.json": "2f9759a0f1f062dd76a16e0b873ced9eed3f3b8402a3a1a9cdd60872148f9d01",
+    "ml/reference/model/stochastic_model.json": "f873cfcd4267f499f719c9003f5a005fdafb019dfdd5b35ac1d62129e870da29"
+  }
+}

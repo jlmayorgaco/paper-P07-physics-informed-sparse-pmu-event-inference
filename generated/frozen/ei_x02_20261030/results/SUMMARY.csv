@@ -1,0 +1,4 @@
+method,event_records,joint_correct,conditional_source_correct,source_top3,normal_records,normal_selected_event,mean_event_log_loss,median_incremental_error,median_absolute_error
+nominal,240,114,114,192,15,12,358.9659334835398,0.012513389857703214,6612.516589539745
+recentered,240,240,240,240,15,0,0.0,0.012513389857703214,3.7821527185422026
+conditioned,240,240,240,240,15,0,0.0,0.0005607086892727618,0.252467313594007

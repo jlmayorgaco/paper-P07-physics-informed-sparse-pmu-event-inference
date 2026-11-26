@@ -1,12 +1,24 @@
-\section{Sequential Inference and Reporting Rules}
+\section{How to Read and Reproduce the Current Method}
 \label{app:causal-walkthrough}
 
-The history bank uses conditional Gaussian updates for the augmented
-physical and instrument state \cite{sarkka2013bayesian}. The primary
-studies use a nominal network and a common reporting clock. The
-five-network development bank also has an internal episode tracker
-and a source-qualification rule. Those latter rules are specified in
-Section~\ref{app:publication-rules}.
+This companion begins with the recovery-aware causal method used in the
+current article. Sections~\ref{app:causal-walkthrough}--\ref{app:current-scenarios}
+give its execution order, local derivations, worked examples and simulation
+contracts. The separately compiled Historical Technical Notes preserve
+full diagnosability proofs, earlier state-reconstruction and batch-estimator
+studies, and secondary evidence. The earlier studies support particular
+components; they are not additional tests of the complete causal algorithm.
+
+The article retains the physical model, the defining evidence integral,
+the recovery mechanism, the decision outputs and decisive results. This
+supplement supplies the intermediate calculations. The Historical Technical
+Notes develop functional observability, nuisance-profiled information and
+source ambiguity, and distinguish the implemented batch estimator $\mathcal E_{\mathrm B}$ from
+the proposed joint estimator $\mathcal E_{\mathrm J}$. Neither should be
+silently substituted for the causal physical history bank.
+The conditional Gaussian updates use standard filtering identities
+\cite{sarkka2013bayesian}; the derivation below specifies their role and
+the approximations made by the implemented bank.
 
 \subsection{Inputs, Outputs and the Information Boundary}
 
@@ -47,16 +59,15 @@ onset in the stored interval.
 bounded prior and the local conditional Gaussian likelihood. For lines,
 score the admitted switched operator. Score a report before using that
 same report for its conditional state correction.
-\item \textbf{Update the bank.} Update severity and conditional states.
-Form restoration alternatives, prune histories and record their discarded
-mass. In the multiple-network variant, update the network weights from
-the predictive densities saved before the onset search.
-\item \textbf{Confirm a source and report restoration.} In the primary
-comparisons, the common clock uses each source's active score for the alarm
-and its diagnosis. Consecutive reports with sufficient joint support for
-the same source and restoration close the episode. Physical state continues
-across the switch. Section~\ref{app:implemented-filter} specifies which
-histories each arm keeps after a published restoration.
+\item \textbf{Update and compress.} Update severity and conditional
+states, network weights, restoration children and the retained beam.
+Record discarded mass. At episode closure retain the augmented-state
+mixture mean; the omitted between-history spread is a documented
+approximation, not an exact posterior covariance.
+\item \textbf{Publish and record.} Aggregate active mass $M$, cause
+mass $\Gamma$ and $\Delta M$. Apply the fixed detection, diagnosis and
+restoration rules. Save emission time and the last report used, in addition
+to estimated onset and source. Continue propagation through OFF.
 \end{enumerate}
 
 \subsection{Why Replayed Reports Are Not New Evidence}
@@ -77,8 +88,7 @@ adaptive screening or beam pruning exact Bayesian inference.
 
 \subsection{Fixed Numerical Choices}
 
-The input grid is 30 reports/s. The five hypotheses of the network-mismatch
-study are nominal,
+The input grid is 30 reports/s. The five network hypotheses are nominal,
 global $\pm2\%$ and selected-branch $\pm3\%$ paired R/X perturbations.
 Each hypothesis is fixed in time; the weights change. They do not identify
 a continuous impedance posterior.
@@ -95,13 +105,17 @@ severity. After likelihood normalization, the beam retains the union of
 the 96 highest-weight recent histories, 64 older histories and at least
 one per occupied source. The union is renormalized.
 
-In the earlier development configuration, the internal observer confirms
-active mass above 0.99 for six reports and uses a separate 15-report
-internal restoration clock. The development publisher checks the pending
-episode and source qualification. Its public restoration requires six
-reports with the diagnosed cell's joint cause-and-restoration mass above
-0.99. The common-clock comparisons instead select a threshold for each
-procedure from calibration sequences.
+The internal observer confirms active-mass evidence at 0.99 for six reports
+and has a separate 15-report internal OFF clock. The public physical-bank publisher
+requires an internal pending episode and six reports of source-qualified
+active support above 0.99; its public OFF requires six reports of the
+diagnosed cell's joint cause-and-restoration mass above 0.99. The detailed source qualification, diagnosis and replacement rules are
+given below.
+These thresholds are implementation settings, not guarantees of
+probability calibration or false-alarm control. Nominal and mixture use
+their fixed publication paths, so their comparison does not isolate
+network averaging alone. The admission-rule ablation changes publication,
+not the recovery dynamics.
 
 \input{supplement/appendix_publication_rules}
 
@@ -183,8 +197,7 @@ To see the last line, apply the correction to a fixed amplitude:
 The severity distribution is updated by the same likelihood integral.
 Regime covariances come from nominal-operator Riccati equations. The physical history bank does
 not propagate an independent exact covariance for every switched history.
-Where the closure rule merges histories, their retained mean and discarded
-covariance are given in Section~\ref{app:conditional-moments}.
+At closure the mean is retained and the omitted mixture spread recorded.
 
 \subsection{Restoration Is Not a State Reset}
 

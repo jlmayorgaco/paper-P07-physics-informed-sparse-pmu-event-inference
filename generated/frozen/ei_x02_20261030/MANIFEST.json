@@ -1,0 +1,117 @@
+{
+  "scope": "Separate known-onset load signature experiment; not R11/C01",
+  "files": [
+    {
+      "path": "protocol/PLAN.json",
+      "sha256": "dd9045f59cfc300abc3797ae5a20ac3fc591c32f093d3dfb4de6517fc735dbc9",
+      "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_METHOD_EI_X02\\protocol\\PLAN.json"
+    },
+    {
+      "path": "protocol/FREEZE.json",
+      "sha256": "be47c30a33af243fa33843482b99b686a57302e122e167947664d9263efe04dc",
+      "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_METHOD_EI_X02\\protocol\\FREEZE.json"
+    },
+    {
+      "path": "protocol/PARENT.json",
+      "sha256": "9830d7213fe6af0d290b4b4df8adf4cbcf5e89f1bb21b2d1056311938b0dcc12",
+      "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_METHOD_EI_X02\\protocol\\PARENT.json"
+    },
+    {
+      "path": "results/SUMMARY.csv",
+      "sha256": "f8d314bcb823cf9c06ad8f378d7efd712af3a118b61d0188174ec472c8287897",
+      "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_METHOD_EI_X02\\results\\SUMMARY.csv"
+    },
+    {
+      "path": "results/PER_RECORD.csv",
+      "sha256": "31178572e371df64012e7f2f67f0db0053ce207e4fc4814a2bc8c68e788158d1",
+      "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_METHOD_EI_X02\\results\\PER_RECORD.csv"
+    },
+    {
+      "path": "results/FIDELITY.csv",
+      "sha256": "627ee2531205f5ba502ccd9f801ea098c1f80583934d42b32939314c98950529",
+      "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_METHOD_EI_X02\\results\\FIDELITY.csv"
+    },
+    {
+      "path": "results/PAIRED_INTERVALS.csv",
+      "sha256": "41ee68ac03d80ea18ddba8b44a2fea9234ffc93d2528e1858531e375b1555cbb",
+      "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_METHOD_EI_X02\\results\\PAIRED_INTERVALS.csv"
+    },
+    {
+      "path": "results/DERIVATIVE_CHECKS.csv",
+      "sha256": "5b4064cc2cb1c75b373692aa0281c828548a463c6a45811d0aafdc8ab1bafbb7",
+      "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_METHOD_EI_X02\\results\\DERIVATIVE_CHECKS.csv"
+    },
+    {
+      "path": "results/EVALUATION_AUDIT.json",
+      "sha256": "0b1a6206ed19d6f6937184d3ef2db57920cc3f3178afffc0e27bdbfd5e178a9b",
+      "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_METHOD_EI_X02\\results\\EVALUATION_AUDIT.json"
+    },
+    {
+      "path": "results/PHYSICAL_STATUS.json",
+      "sha256": "32289ea18b6231acb3319043f3793be45dc1f9a49a18b9e9b7d1b66e4cbc0630",
+      "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_METHOD_EI_X02\\results\\PHYSICAL_STATUS.json"
+    },
+    {
+      "path": "results/INTEGRAL_CHECK.json",
+      "sha256": "b50fa0af6b58d2589030ef62d2584dc34dfb686b656103a1461302120d59ebfd",
+      "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_METHOD_EI_X02\\results\\INTEGRAL_CHECK.json"
+    },
+    {
+      "path": "results/PREFIX_CAUSALITY_CHECK.json",
+      "sha256": "1b749b38c236e7fbdba23ce10ea62d185af527db944977dd3b5ad25d05cf90b2",
+      "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_METHOD_EI_X02\\results\\PREFIX_CAUSALITY_CHECK.json"
+    },
+    {
+      "path": "model/dictionary.npz",
+      "sha256": "6cb587c3bfbde07a12f37ffa15f38de9207ffe9b3c394b4e643312ccd0c5ae02",
+      "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_METHOD_EI_X02\\model\\dictionary.npz"
+    },
+    {
+      "path": "model/MANIFEST.json",
+      "sha256": "3cafde9dee761d308bb565de03f00cb2fbcea7627b7685bdb4a1f7297be05c70",
+      "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_METHOD_EI_X02\\model\\MANIFEST.json"
+    },
+    {
+      "path": "predictions/READ_BOUNDARY.json",
+      "sha256": "b669a3348f589f3b0167cf829ce6ccf95d01e6a64773bcb8914cb04f3a54cd01",
+      "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_METHOD_EI_X02\\predictions\\READ_BOUNDARY.json"
+    },
+    {
+      "path": "runtime/reference/stochastic_model.json",
+      "sha256": "f873cfcd4267f499f719c9003f5a005fdafb019dfdd5b35ac1d62129e870da29",
+      "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_METHOD_EI_X02\\runtime\\reference\\stochastic_model.json"
+    },
+    {
+      "path": "sample/observed.npz",
+      "sha256": "d3a1a43434d5403ca155b3168262267c4f6effa6d7a0beb7fa824eca62e1fc49",
+      "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_METHOD_EI_X02\\observations\\R0229.npz"
+    },
+    {
+      "path": "sample/prediction.json",
+      "sha256": "907d547f59dfecd111c2c81aad769a351db057632c0638ff11f33872c47d01dd",
+      "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_METHOD_EI_X02\\predictions\\R0229.json"
+    },
+    {
+      "path": "sample/deterministic.npz",
+      "sha256": "9ae07138ad003571da07f15690d12e396726b948600f436bdd927777f45f6dab",
+      "source": "C:\\Users\\walla\\Documents\\Github\\SGSMA26-Physics-Informed-AD\\experiments\\PAPER_METHOD_EI_X02\\engine\\C0134_det.npz"
+    }
+  ],
+  "sample_selection": {
+    "id": "C0134",
+    "split": "test",
+    "eta": 0.03,
+    "source": 7,
+    "amplitude": 0.01,
+    "derivative_grid": "main"
+  },
+  "sample_record": {
+    "record": "R0229",
+    "physical_case": "C0134",
+    "source": 7,
+    "amplitude": 0.01,
+    "eta": 0.03,
+    "seed": 390502
+  },
+  "C01_modified": false
+}

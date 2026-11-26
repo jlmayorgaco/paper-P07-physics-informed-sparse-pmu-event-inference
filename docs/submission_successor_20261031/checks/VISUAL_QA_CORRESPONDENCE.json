@@ -1,0 +1,51 @@
+{
+  "status": "VISUAL_REVIEW_COMPLETE_FOR_CURRENT_DOCUMENTS",
+  "pdf_sha256": {
+    "main": "ea130e5a0e28f1ecbe4e24133d29873fa9a67fa902bb38901cd694f2cc5136f4",
+    "supplement": "9df8946ee0d095764421afd89084ccb5cd711bd0996b409262151cc0a5668551"
+  },
+  "inspected_current_pages": {
+    "main": [
+      1,
+      2,
+      3
+    ],
+    "supplement": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  "unchanged_raster_pages_from_prior_review": {
+    "main": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "supplement": [
+      10
+    ]
+  },
+  "checks": [
+    "Author-confirmed correspondence readable in both documents",
+    "All changed pages inspected at final layout; no observed clipping",
+    "Protected figures raster-identical to prior reviewed main pages4/5;16 hashes verified",
+    "Five biographies and21 section credits plus one biography credit retained"
+  ],
+  "scope": "Visual and provenance checks, not scientific submission readiness",
+  "build_log": "build/submission_s01_correspondence_build.log"
+}

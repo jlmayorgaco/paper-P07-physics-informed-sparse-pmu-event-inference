@@ -1,0 +1,28 @@
+\section{Discussion and Limitations}
+\label{sec:discussion}
+
+The experiments support one central distinction: recovering a requested state function is not the same as identifying the intervention that produced it. The state estimator can reconstruct hidden voltages because many unobservable state directions have little effect on that target. Source inference is stricter. It must separate every admissible candidate after amplitude and other nuisance directions are allowed to adjust.
+
+The state results make this distinction concrete. Instantaneous PMU conditioning supplies most of the nominal improvement, while causal propagation adds a smaller correction. When the equilibrium becomes stale, an unconstrained offset does not solve the problem; rebuilding an AC-feasible center does. The resulting point estimate is accurate even though the operating-point coordinates remain non-unique. Its joint covariance is still unreliable. Target recovery and parameter recovery must therefore be evaluated separately.
+
+An archived ANDES calibration checkpoint makes the parameter distinction more
+concrete. Individual screening retained 10 of 18 directions, but their joint
+condition number was 722.9. Rank-revealing selection reduced the set to eight
+directions with condition number 7.83, and a final $6.15\sigma$ displacement
+gate left seven in the released local posterior. The rejected directions did
+not share one explanation: six were information-poor, two violated the local
+curvature gate, two added little first-order direction, and one left the local
+model domain. Supplementary Appendix~D traces these counts to the frozen gate
+ledger. Because the checkpoint lacks the required higher derivatives, it does
+not establish which rejected directions are curvature-resolved or structurally
+redundant.
+
+The event results expose a parallel hierarchy. Weak simultaneous events often provide enough evidence for two active sources before they identify the pair. Profiled manifold distance explains this behavior because it measures what remains after a competing support chooses its best amplitude. Longer observation increases that distance, but nearly collinear signatures still amplify noise. A positive structural margin is therefore a uniqueness statement, not a reliability guarantee. This information--delay trade-off has a measurement-level analogue: our previous benchmark showed disturbance-dependent trade-offs among transient error, settling behavior, observation characteristics, and computational cost across dynamic frequency estimators \cite{Mayorga2026FrequencyBenchmark}. In the present problem, the corresponding trade-off occurs at the inference level: longer PMU histories can increase physical source separation while delaying the localization decision.
+
+The supervised baseline adds a warning about learning. Engineered temporal and spatial features work when the source appears in training. Under complete source holdout, the same representation loses source identity even when the event family is supplied. A learned correction should therefore operate on candidate residuals, not on asset labels alone, and its value must be measured against the physics-only likelihood on the same event parents.
+
+The evidence remains bounded in four ways. First, the state and event paths are evaluated separately rather than as one fitted posterior. Second, the Bayesian support result covers one event family, fixed topology, known onset, fixed PMUs, and matched operation. Third, the 120-frame study is diagnostic and lacks independent operating-point validation. Fourth, the normal exposure is too short to establish false alarms per hour, and no field or cross-simulator validation is claimed.
+
+The separate continuous component supplies unknown-onset load/line evidence under a fixed catalog, but leaves those broader gaps open. Its frozen observation intercept corrects the measured residual center; it does not contradict the hidden-state study's finding that an arbitrary offset cannot replace AC-feasible recentering. Likewise, its finite network mixture does not identify true R/X or establish calibrated probabilities. The nominal component's better timely attribution and worse alarm burden make both references necessary.
+
+The next decision is a finite confirmatory comparison, not another bus-specific repair. The sealed C01 protocol compares those fixed references and the frozen ExtraTrees adaptations on continuous records, and compares the published physical detector only on persistent-line and normal records. It retains failed and censored cases. That campaign can validate the stated restricted causal contract; it cannot establish source-disjoint transfer, a learned-discrepancy benefit, changing-PMU robustness, or the complete joint estimator. Those claims remain blocked rather than inferred from improved development scores.

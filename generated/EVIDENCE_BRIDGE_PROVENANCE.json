@@ -1,0 +1,51 @@
+{
+  "inputs": [
+    {
+      "path": "generated/frozen/e04a_b0_b1_b2_summary.csv",
+      "sha256": "a64685c9af3a892401d7e9a9da251fe6e70418f20d19c209e07fa1c6d36b428b"
+    },
+    {
+      "path": "generated/frozen/legacy_feature_group_ablation_summary.csv",
+      "sha256": "96de85581389a08dd532e25531c546119c30ed30b323cc4e7d86e60393fc24fb"
+    },
+    {
+      "path": "generated/frozen/likelihood120_physical_validation.csv",
+      "sha256": "cc5846162eec61341c68049cb1caf1708e6a836b7704b76d1244131f1b48d5a1"
+    },
+    {
+      "path": "generated/frozen/global137_support_summary.csv",
+      "sha256": "b55db9e7d5a18a57b38405fce50eb16a7c1d6ed65d727eaf88e8c802f2a17e74"
+    },
+    {
+      "path": "generated\\frozen\\historical_submission_comparison_20261102\\SUMMARY.csv",
+      "sha256": "74ac54328c4a970da8cba53fe3b1df24144642d442b1c6fb7166456335e10bcb"
+    },
+    {
+      "path": "generated\\frozen\\historical_submission_comparison_20261102\\confusion_windows_Submitted_ExtraTrees.csv",
+      "sha256": "0e1bd2e2efddbb963139a5a0a5cb5dee2e8bb7f47ccc044ac68ea10109cda01c"
+    },
+    {
+      "path": "generated\\frozen\\historical_submission_comparison_20261102\\confusion_windows_M02_V3.1.csv",
+      "sha256": "ee5da7baa0a13d8da0d4e86508c9114efc19372df1e7898e3cae905b39870a08"
+    },
+    {
+      "path": "generated\\frozen\\historical_submission_comparison_20261102\\REPORT.md",
+      "sha256": "7131c7a051d7089b1c3397b42feb66d98fb91d8aaac2b3c581fe553c583a725d"
+    },
+    {
+      "path": "generated\\frozen\\historical_submission_comparison_20261102\\PROTOCOL.json",
+      "sha256": "bef6c1441f9ac19a0c69f6ec2cc3a9e7c3b9ea5d5f747caf3a5f3ffbaf8fd132"
+    },
+    {
+      "path": "generated\\frozen\\historical_submission_comparison_20261102\\CHECKS.json",
+      "sha256": "d058528a71158120ec1f88328b6d79ea6a4a8728614357de87ace2b93690c925"
+    },
+    {
+      "path": "generated\\frozen\\historical_submission_comparison_20261102\\SUBMISSION_OUTPUT_AUDIT.json",
+      "sha256": "a13b1abae6a90d5a1cc6cb074e4c9e8d3881d9345655473156879d619f44105b"
+    }
+  ],
+  "reran_methods": false,
+  "changed_C01": false,
+  "interpretation": "Distinct component/development experiments, not pooled or end-to-end ablations"
+}

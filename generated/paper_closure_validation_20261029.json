@@ -1,0 +1,36 @@
+{
+  "main_pages": 19,
+  "supplement_pages": 24,
+  "frozen_import_files": 32,
+  "frozen_import_hashes_verified": true,
+  "deterministic_checks": {
+    "theory_checks": {
+      "checks": 11,
+      "passed": true
+    },
+    "cone_bayes_checks": {
+      "checks": 12,
+      "passed": true
+    },
+    "information_limit_checks": {
+      "checks": 12,
+      "passed": true
+    },
+    "discrepancy_design_checks": {
+      "checks": 6,
+      "passed": true
+    }
+  },
+  "undefined_references": false,
+  "undefined_citations": false,
+  "confirmatory_executed": false,
+  "legacy_class_font_color_layout_warnings": true,
+  "visual_pages": [
+    1,
+    9,
+    10,
+    16,
+    17
+  ],
+  "publication_status": "DRAFT_CONFIRMATION_AND_FINAL_REVIEW_PENDING"
+}

@@ -1,0 +1,6 @@
+method,name,detected,joint,timely,events,load_timely,load_total,line_timely,line_total,extras,normal_fa,normal_s
+R11,Physical bank (5 models),54,54,53,54,26,27,27,27,4,0,204.0
+R11_NOMINAL,Physical bank (nominal),54,54,54,54,27,27,27,27,7,0,204.0
+ET_REFERENCE,ExtraTrees reference,27,27,27,54,0,27,27,27,3,0,204.0
+ET_CANDIDATE,ExtraTrees short,27,27,27,54,0,27,27,27,3,0,204.0
+R12,Onset-witness ablation,53,53,52,54,25,27,27,27,0,0,204.0

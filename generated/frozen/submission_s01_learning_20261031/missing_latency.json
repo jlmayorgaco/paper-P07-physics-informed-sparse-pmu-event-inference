@@ -1,0 +1,485 @@
+{
+  "status": "RETROSPECTIVE_OBSERVED_MISSING_NOTICE_LATENCY",
+  "protocol_sha256": "b8b47dfc7b755b099a335be22ac19e5a7e225ea5bf16ca64b1186d6ba44aa187",
+  "script_sha256": "cce2a8204ffebb3a46fa5e5649336fd6f3f280376a893098235da75aeb0184c5",
+  "input_seals": {
+    "legacy_predictions_sha256": "87f0dddb794403a1482057bfb62f36c14b12097a3d1c559471a8de9b0e675165",
+    "cyber_prediction_sha256": "e73181b9a15667d3eb354698f615b4268efe202c1b38fdd2f7bd4afd25c6f678",
+    "availability_sha256": "5857f49af401d0546ef90a727e0658da5a13d07b29d8cc9cee317f11fbed63e6"
+  },
+  "original_raw_sources": [
+    {
+      "file": "Bus2_Competition_Data_nanmask.csv",
+      "sha256": "73526f6cc99c1340377ae7cb3d35deb45e9c35cc557c5cd741f43686c08544a9"
+    },
+    {
+      "file": "Bus5_Competition_Data_nanmask.csv",
+      "sha256": "e8f54267c1a5f16ae5019e65125a18eb01ab3ce8d7e349cf6b35a045df8ccf2a"
+    },
+    {
+      "file": "Bus6_Competition_Data_nanmask.csv",
+      "sha256": "709e27de654103086c3c437a5e79eefcd270d35d69291a2b3b02af6d4bdd1d57"
+    },
+    {
+      "file": "Bus10_Competition_Data_nanmask.csv",
+      "sha256": "784233d4cf0d7c7bc39147240eb95080f007da2bf26b0eeda8862887c952f06e"
+    },
+    {
+      "file": "Bus19_Competition_Data_nanmask.csv",
+      "sha256": "efe593c8b8aa1aa6a35aa1e7416214131d3f1362d6da0f7fb77e0db5e6bc8e67"
+    },
+    {
+      "file": "Bus22_Competition_Data_nanmask.csv",
+      "sha256": "a9a1722784438c5ddacb2c7fe7fcf5283da8fddefb818025e3efdb32413bb8b9"
+    },
+    {
+      "file": "Bus29_Competition_Data_nanmask.csv",
+      "sha256": "e7150a641e27654991c8c553b4a2b833d28dfc233221123e5f570e706e6f2534"
+    },
+    {
+      "file": "Bus39_Competition_Data_nanmask.csv",
+      "sha256": "80925b189f1715fb332bf58a4a9ffb06012b11f0db1bb021a4f4030d52debb21"
+    }
+  ],
+  "observed_intervals": [
+    {
+      "id": "M01",
+      "onset_s": 536.5659999999916,
+      "last_missing_report_s": 563.5999999999913,
+      "end_s": 563.6330000000016,
+      "rows": 812,
+      "source": [
+        "PMU29"
+      ]
+    },
+    {
+      "id": "M02",
+      "onset_s": 614.3329999999987,
+      "last_missing_report_s": 643.3999999999942,
+      "end_s": 643.433,
+      "rows": 873,
+      "source": [
+        "PMU29"
+      ]
+    },
+    {
+      "id": "M03",
+      "onset_s": 2584.665999999997,
+      "last_missing_report_s": 2776.065999999992,
+      "end_s": 2776.099999999992,
+      "rows": 5743,
+      "source": [
+        "PMU29"
+      ]
+    },
+    {
+      "id": "M04",
+      "onset_s": 2935.766000000004,
+      "last_missing_report_s": 2994.800000000003,
+      "end_s": 2994.8329999999987,
+      "rows": 1772,
+      "source": [
+        "PMU29"
+      ]
+    }
+  ],
+  "Event5_6_equals_DATA_PRESENT_absence": true,
+  "Event5_6_equals_sealed_current_report_missing_mask": true,
+  "positive_reports": 9200,
+  "native_zip": {
+    "intended_intervals": 4,
+    "detected": 4,
+    "missed": 0,
+    "first_source_correct": 4,
+    "first_source_wrong": 0,
+    "first_source_unavailable": 0,
+    "conditional_detected_delay": {
+      "n": 4,
+      "mean_s": 12.133250000002477,
+      "median_s": 9.916499999998905,
+      "max_s": 25.300000000003365
+    },
+    "restricted_detection_delay_mean_s": 12.133250000002477,
+    "restricted_first_source_delay_mean_s": 12.133250000002477,
+    "rows": [
+      {
+        "id": "M01",
+        "onset_s": 536.5659999999916,
+        "end_s": 563.6330000000016,
+        "deadline_exclusive_s": 563.6330000000016,
+        "true_source": [
+          "PMU29"
+        ],
+        "first_notice": {
+          "emitted_s": 539.9660000000003,
+          "last_report_used_s": 539.9660000000003,
+          "source": [
+            "PMU29"
+          ],
+          "legacy_event": 5,
+          "legacy_location": "PMU29",
+          "window_index": 17,
+          "window_start_s": 510.0,
+          "window_end_s": 540.0,
+          "source_note": "E5 affected PMU",
+          "comparison_time_s": 539.9660000000003,
+          "clock_roundoff_adjustment_s": 0.0
+        },
+        "detected": true,
+        "first_source_correct": true,
+        "first_source_status": "CORRECT",
+        "delay_s": 3.400000000008731,
+        "restricted_detection_delay_s": 3.400000000008731,
+        "restricted_first_source_delay_s": 3.400000000008731,
+        "latest_notice_before_onset": null,
+        "eligible_notices": 1,
+        "later_notice_used_to_repair_first": false
+      },
+      {
+        "id": "M02",
+        "onset_s": 614.3329999999987,
+        "end_s": 643.433,
+        "deadline_exclusive_s": 643.433,
+        "true_source": [
+          "PMU29"
+        ],
+        "first_notice": {
+          "emitted_s": 629.9660000000003,
+          "last_report_used_s": 629.9660000000003,
+          "source": [
+            "PMU29"
+          ],
+          "legacy_event": 5,
+          "legacy_location": "PMU29",
+          "window_index": 20,
+          "window_start_s": 600.0,
+          "window_end_s": 630.0,
+          "source_note": "E5 affected PMU",
+          "comparison_time_s": 629.9660000000003,
+          "clock_roundoff_adjustment_s": 0.0
+        },
+        "detected": true,
+        "first_source_correct": true,
+        "first_source_status": "CORRECT",
+        "delay_s": 15.63300000000163,
+        "restricted_detection_delay_s": 15.63300000000163,
+        "restricted_first_source_delay_s": 15.63300000000163,
+        "latest_notice_before_onset": {
+          "emitted_s": 569.9660000000003,
+          "last_report_used_s": 569.9660000000003,
+          "source": [
+            "PMU29"
+          ],
+          "legacy_event": 5,
+          "legacy_location": "PMU29",
+          "window_index": 18,
+          "window_start_s": 540.0,
+          "window_end_s": 570.0,
+          "source_note": "E5 affected PMU",
+          "comparison_time_s": 569.9660000000003,
+          "clock_roundoff_adjustment_s": 0.0
+        },
+        "eligible_notices": 1,
+        "later_notice_used_to_repair_first": false
+      },
+      {
+        "id": "M03",
+        "onset_s": 2584.665999999997,
+        "end_s": 2776.099999999992,
+        "deadline_exclusive_s": 2776.099999999992,
+        "true_source": [
+          "PMU29"
+        ],
+        "first_notice": {
+          "emitted_s": 2609.9660000000003,
+          "last_report_used_s": 2609.9660000000003,
+          "source": [
+            "PMU29"
+          ],
+          "legacy_event": 5,
+          "legacy_location": "PMU29",
+          "window_index": 86,
+          "window_start_s": 2580.0,
+          "window_end_s": 2610.0,
+          "source_note": "E5 affected PMU",
+          "comparison_time_s": 2609.9660000000003,
+          "clock_roundoff_adjustment_s": 0.0
+        },
+        "detected": true,
+        "first_source_correct": true,
+        "first_source_status": "CORRECT",
+        "delay_s": 25.300000000003365,
+        "restricted_detection_delay_s": 25.300000000003365,
+        "restricted_first_source_delay_s": 25.300000000003365,
+        "latest_notice_before_onset": {
+          "emitted_s": 659.9660000000003,
+          "last_report_used_s": 659.9660000000003,
+          "source": null,
+          "legacy_event": 6,
+          "legacy_location": "BUS29",
+          "window_index": 21,
+          "window_start_s": 630.0,
+          "window_end_s": 660.0,
+          "source_note": "E6 physical location is not missing-PMU attribution",
+          "comparison_time_s": 659.9660000000003,
+          "clock_roundoff_adjustment_s": 0.0
+        },
+        "eligible_notices": 6,
+        "later_notice_used_to_repair_first": false
+      },
+      {
+        "id": "M04",
+        "onset_s": 2935.766000000004,
+        "end_s": 2994.8329999999987,
+        "deadline_exclusive_s": 2994.8329999999987,
+        "true_source": [
+          "PMU29"
+        ],
+        "first_notice": {
+          "emitted_s": 2939.9660000000003,
+          "last_report_used_s": 2939.9660000000003,
+          "source": [
+            "PMU29"
+          ],
+          "legacy_event": 5,
+          "legacy_location": "PMU29",
+          "window_index": 97,
+          "window_start_s": 2910.0,
+          "window_end_s": 2940.0,
+          "source_note": "E5 affected PMU",
+          "comparison_time_s": 2939.9660000000003,
+          "clock_roundoff_adjustment_s": 0.0
+        },
+        "detected": true,
+        "first_source_correct": true,
+        "first_source_status": "CORRECT",
+        "delay_s": 4.19999999999618,
+        "restricted_detection_delay_s": 4.19999999999618,
+        "restricted_first_source_delay_s": 4.19999999999618,
+        "latest_notice_before_onset": {
+          "emitted_s": 2789.9660000000003,
+          "last_report_used_s": 2789.9660000000003,
+          "source": null,
+          "legacy_event": 6,
+          "legacy_location": "BUS29",
+          "window_index": 92,
+          "window_start_s": 2760.0,
+          "window_end_s": 2790.0,
+          "source_note": "E6 physical location is not missing-PMU attribution",
+          "comparison_time_s": 2789.9660000000003,
+          "clock_roundoff_adjustment_s": 0.0
+        },
+        "eligible_notices": 2,
+        "later_notice_used_to_repair_first": false
+      }
+    ]
+  },
+  "immediate_availability_v2": {
+    "intended_intervals": 4,
+    "detected": 4,
+    "missed": 0,
+    "first_source_correct": 4,
+    "first_source_wrong": 0,
+    "first_source_unavailable": 0,
+    "conditional_detected_delay": {
+      "n": 4,
+      "mean_s": 0.0,
+      "median_s": 0.0,
+      "max_s": 0.0
+    },
+    "restricted_detection_delay_mean_s": 0.0,
+    "restricted_first_source_delay_mean_s": 0.0,
+    "rows": [
+      {
+        "id": "M01",
+        "onset_s": 536.5659999999916,
+        "end_s": 563.6330000000016,
+        "deadline_exclusive_s": 563.6330000000016,
+        "true_source": [
+          "PMU29"
+        ],
+        "first_notice": {
+          "emitted_s": 536.5659999999916,
+          "last_report_used_s": 536.5659999999916,
+          "source": [
+            "PMU29"
+          ],
+          "episode": 1,
+          "comparison_time_s": 536.5659999999916,
+          "clock_roundoff_adjustment_s": 0.0
+        },
+        "detected": true,
+        "first_source_correct": true,
+        "first_source_status": "CORRECT",
+        "delay_s": 0.0,
+        "restricted_detection_delay_s": 0.0,
+        "restricted_first_source_delay_s": 0.0,
+        "latest_notice_before_onset": null,
+        "eligible_notices": 1,
+        "later_notice_used_to_repair_first": false
+      },
+      {
+        "id": "M02",
+        "onset_s": 614.3329999999987,
+        "end_s": 643.433,
+        "deadline_exclusive_s": 643.433,
+        "true_source": [
+          "PMU29"
+        ],
+        "first_notice": {
+          "emitted_s": 614.3329999999987,
+          "last_report_used_s": 614.3329999999987,
+          "source": [
+            "PMU29"
+          ],
+          "episode": 2,
+          "comparison_time_s": 614.3329999999987,
+          "clock_roundoff_adjustment_s": 0.0
+        },
+        "detected": true,
+        "first_source_correct": true,
+        "first_source_status": "CORRECT",
+        "delay_s": 0.0,
+        "restricted_detection_delay_s": 0.0,
+        "restricted_first_source_delay_s": 0.0,
+        "latest_notice_before_onset": {
+          "emitted_s": 536.5659999999916,
+          "last_report_used_s": 536.5659999999916,
+          "source": [
+            "PMU29"
+          ],
+          "episode": 1,
+          "comparison_time_s": 536.5659999999916,
+          "clock_roundoff_adjustment_s": 0.0
+        },
+        "eligible_notices": 1,
+        "later_notice_used_to_repair_first": false
+      },
+      {
+        "id": "M03",
+        "onset_s": 2584.665999999997,
+        "end_s": 2776.099999999992,
+        "deadline_exclusive_s": 2776.099999999992,
+        "true_source": [
+          "PMU29"
+        ],
+        "first_notice": {
+          "emitted_s": 2584.665999999997,
+          "last_report_used_s": 2584.665999999997,
+          "source": [
+            "PMU29"
+          ],
+          "episode": 3,
+          "comparison_time_s": 2584.665999999997,
+          "clock_roundoff_adjustment_s": 0.0
+        },
+        "detected": true,
+        "first_source_correct": true,
+        "first_source_status": "CORRECT",
+        "delay_s": 0.0,
+        "restricted_detection_delay_s": 0.0,
+        "restricted_first_source_delay_s": 0.0,
+        "latest_notice_before_onset": {
+          "emitted_s": 614.3329999999987,
+          "last_report_used_s": 614.3329999999987,
+          "source": [
+            "PMU29"
+          ],
+          "episode": 2,
+          "comparison_time_s": 614.3329999999987,
+          "clock_roundoff_adjustment_s": 0.0
+        },
+        "eligible_notices": 1,
+        "later_notice_used_to_repair_first": false
+      },
+      {
+        "id": "M04",
+        "onset_s": 2935.766000000004,
+        "end_s": 2994.8329999999987,
+        "deadline_exclusive_s": 2994.8329999999987,
+        "true_source": [
+          "PMU29"
+        ],
+        "first_notice": {
+          "emitted_s": 2935.766000000004,
+          "last_report_used_s": 2935.766000000004,
+          "source": [
+            "PMU29"
+          ],
+          "episode": 4,
+          "comparison_time_s": 2935.766000000004,
+          "clock_roundoff_adjustment_s": 0.0
+        },
+        "detected": true,
+        "first_source_correct": true,
+        "first_source_status": "CORRECT",
+        "delay_s": 0.0,
+        "restricted_detection_delay_s": 0.0,
+        "restricted_first_source_delay_s": 0.0,
+        "latest_notice_before_onset": {
+          "emitted_s": 2584.665999999997,
+          "last_report_used_s": 2584.665999999997,
+          "source": [
+            "PMU29"
+          ],
+          "episode": 3,
+          "comparison_time_s": 2584.665999999997,
+          "clock_roundoff_adjustment_s": 0.0
+        },
+        "eligible_notices": 1,
+        "later_notice_used_to_repair_first": false
+      }
+    ]
+  },
+  "paired": [
+    {
+      "interval": "M01",
+      "legacy_delay_s": 3.400000000008731,
+      "v2_delay_s": 0.0,
+      "legacy_minus_v2_s": 3.400000000008731,
+      "legacy_first_source_correct": true,
+      "v2_first_source_correct": true
+    },
+    {
+      "interval": "M02",
+      "legacy_delay_s": 15.63300000000163,
+      "v2_delay_s": 0.0,
+      "legacy_minus_v2_s": 15.63300000000163,
+      "legacy_first_source_correct": true,
+      "v2_first_source_correct": true
+    },
+    {
+      "interval": "M03",
+      "legacy_delay_s": 25.300000000003365,
+      "v2_delay_s": 0.0,
+      "legacy_minus_v2_s": 25.300000000003365,
+      "legacy_first_source_correct": true,
+      "v2_first_source_correct": true
+    },
+    {
+      "interval": "M04",
+      "legacy_delay_s": 4.19999999999618,
+      "v2_delay_s": 0.0,
+      "legacy_minus_v2_s": 4.19999999999618,
+      "legacy_first_source_correct": true,
+      "v2_first_source_correct": true
+    }
+  ],
+  "prior_frozen_artifact_sha256": {
+    "evaluation\\RAW_AUDIT_VALIDATION.json": "1b95ce3b30d8a61d32b3a4ec44fd8ac312b2192ad25f0cf9ef844d119202c169",
+    "run\\legacy_historical\\EVALUATION.json": "22d4cdfdf0d6bfc330045a88d25d3dd91a9f8dfc4686f0f719f8431787c88791",
+    "run\\legacy_continuous\\EVALUATION.json": "4a07355e8088157030450cb8e6f788664e681a3c8d65a4b2cf6ecd492689d097",
+    "run\\cyber_composition_v2\\EVALUATION.json": "d42dee01f977191c51e96cdb1b4a493e48f843508c72f14637aa7b3a616fe83d"
+  },
+  "prior_artifacts_unchanged": true,
+  "inference_rerun": false,
+  "C01_read": false,
+  "RAW0002_read": false,
+  "interpretation": "Any delay advantage is immediate availability publication on observed missing reports, not a novel attack detector or global superiority.",
+  "limitations": [
+    "Four missing intervals on one previously exposed record, not independent validation trials.",
+    "Native ZIP notices describe their completed input window; no label is backdated or treated as persistent.",
+    "Only the first eligible notice is credited; wrong and unavailable source claims remain failures.",
+    "These report-level absence times do not supply physical action or restoration truth."
+  ]
+}

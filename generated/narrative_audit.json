@@ -1,0 +1,90 @@
+{
+  "case": "H04 H002 paired MATCH/OUT",
+  "C01_outcomes_used": false,
+  "import_hashes_verified": true,
+  "delta_identity_max_error": 6.617254318011089e-16,
+  "rows": [
+    {
+      "method": "R11",
+      "name": "Physical bank (5 models)",
+      "detected": 54,
+      "joint": 54,
+      "timely": 53,
+      "events": 54,
+      "load_timely": 26,
+      "load_total": 27,
+      "line_timely": 27,
+      "line_total": 27,
+      "extras": 4,
+      "normal_fa": 0,
+      "normal_s": 204.0
+    },
+    {
+      "method": "R11_NOMINAL",
+      "name": "Physical bank (nominal)",
+      "detected": 54,
+      "joint": 54,
+      "timely": 54,
+      "events": 54,
+      "load_timely": 27,
+      "load_total": 27,
+      "line_timely": 27,
+      "line_total": 27,
+      "extras": 7,
+      "normal_fa": 0,
+      "normal_s": 204.0
+    },
+    {
+      "method": "ET_REFERENCE",
+      "name": "ExtraTrees reference",
+      "detected": 27,
+      "joint": 27,
+      "timely": 27,
+      "events": 54,
+      "load_timely": 0,
+      "load_total": 27,
+      "line_timely": 27,
+      "line_total": 27,
+      "extras": 3,
+      "normal_fa": 0,
+      "normal_s": 204.0
+    },
+    {
+      "method": "ET_CANDIDATE",
+      "name": "ExtraTrees short",
+      "detected": 27,
+      "joint": 27,
+      "timely": 27,
+      "events": 54,
+      "load_timely": 0,
+      "load_total": 27,
+      "line_timely": 27,
+      "line_total": 27,
+      "extras": 3,
+      "normal_fa": 0,
+      "normal_s": 204.0
+    },
+    {
+      "method": "R12",
+      "name": "Onset-witness ablation",
+      "detected": 53,
+      "joint": 53,
+      "timely": 52,
+      "events": 54,
+      "load_timely": 25,
+      "load_total": 27,
+      "line_timely": 27,
+      "line_total": 27,
+      "extras": 0,
+      "normal_fa": 0,
+      "normal_s": 204.0
+    }
+  ],
+  "figures": [
+    "narrative_topology",
+    "narrative_signals",
+    "narrative_rolling",
+    "narrative_tradeoff",
+    "narrative_resolution"
+  ]
+}

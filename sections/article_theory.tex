@@ -1,28 +1,113 @@
-\subsection{Can the PMUs Distinguish Two Candidate Sources?}
+\section{Nominal Signatures and State Continuity}
 \label{sec:theory}
 
-Two sources can produce nearly the same report once a competing load is
-allowed to choose its severity. To measure how closely a rival can fit the same data, we generate a
-noise-free response to source $i$ at a known onset and run each candidate
-filter $j$ on the same reports. Let $e_{j,r}$ and $s_{j,r}$ be its
-innovation and unit-severity response from \eqref{eq:innovation}.
-Over $n$ reports the residual energy of the best-fitting rival is
+The local operators give a nominal signature for each candidate. We
+use these signatures to explain separation and the effect of resetting
+the physical state under the assumed model. The numerical comparisons
+with completed runs are retrospective.
+
+\subsection{Signatures and Information}
+Let intervention $i$ start at report $0$ with severity $a$ and let the
+plant follow the local switched model \eqref{eq:implemented-predictor}
+without noise. Run the conditional filter of candidate history $j$, started
+at the same onset, on these reports. Its innovation $e_j(k)$ and severity
+sensitivity $s_j(k)$ follow the recursion
+\eqref{eq:implemented-conditional-correction}. The filter of the true
+history at the true severity has zero deterministic innovation in this
+construction. We measure nominal separation by a profiled signature
+energy,
 \begin{equation}
- \Lambda_{ij}(n)=\tfrac12\min_{b\in I_j}\sum_{r=1}^{n}
-       \|e_{j,r}-s_{j,r}b\|_{S_{j,r}^{-1}}^2 .
+ \Lambda_{ij}(k)=\tfrac12\min_{b\in[l,u]}\sum_{r=0}^{k}
+ \big\|e_j(r)-s_j(r)\,b\big\|^2_{S_j^{-1}},
  \label{eq:signature-information}
 \end{equation}
-For a line or the no-intervention path the amplitude term drops out.
-A high $\Lambda_{i0}$ means that source $i$ leaves a visible departure
-from the no-intervention prediction. If another asset gives a small
-$\Lambda_{ij}$ on the same reports, the change can be easy to detect
-and difficult to locate.
+where a line candidate has no severity to minimize over. The quantity
+$\Lambda_{i0}$ compares against the no-intervention path;
+$\min_{j\ne i}\Lambda_{ij}$ measures separation from the nearest
+alternative at the supplied onset. These are deterministic diagnostics.
+For fixed Gaussian paths with means $m_i,m_j$ and joint report
+covariances $\Sigma_i,\Sigma_j$, the expected log likelihood ratio under
+$i$ is
+\begin{align}
+D_{ij}=\tfrac12\big[&
+(m_i-m_j)^\top\Sigma_j^{-1}(m_i-m_j)\\
+&+\mathrm{tr}(\Sigma_j^{-1}\Sigma_i)-d
++\log(|\Sigma_j|/|\Sigma_i|)\big],\nonumber
+\end{align}
+where $d$ is the stacked report dimension. The covariance terms cancel
+when the covariances coincide. Equation~\eqref{eq:signature-information}
+profiles severity on deterministic signatures using the candidate
+innovation covariance; it is not, in general, the full Gaussian KL
+divergence above. Optimizing a deterministic signature, profiling severity
+from noisy observations and integrating it under a prior are different
+operations.
 
-Under the nominal quiet-regime covariance, a 10\% load step yields
-one-second energies against the no-intervention path ranging from
-\RevInfoLoadMin{} to $\RevInfoLoadMax$ across the nine buses. With the
-same onset and a line opening, the smallest energy is
-$\RevInfoLineMin$. These diagnostics use a matched model and a supplied
-onset. The online bank must search for the onset and integrates over load
-severity when scoring a path. The supplement gives the source-by-source
-results and the effect of profiling a rival load.
+For an idealized comparison of one onset and source against the null,
+\begin{equation}\lambda^\star=\log99-\log\pi_c.\label{eq:alarm-evidence}\end{equation}
+This is the score required for odds of
+99 to 1 if $\pi_c$ is used as the approximate prior odds. For a load
+with $\Lambda_{i0}=a^2G_i/2$ and covariance scaled by $\alpha^2$, the
+corresponding reference amplitude at horizon $T$ is
+\begin{equation}
+ a_{\mathrm{ref}}(\alpha,T)=\alpha\sqrt{2\lambda^\star/G_i(T)}.
+ \label{eq:reference-amplitude}
+\end{equation}
+This does not specify a detection probability or a threshold guarantee
+for the bank: unknown onset, competing paths, marginal likelihoods
+and consecutive-report confirmation all affect publication.
+
+\subsection{The Cost of Forgetting the Physical State}
+Consider a noise-free, matched-model continuation with no new intervention
+after an inferred closure at report $k_c$. Suppose the conditional mean
+at closure equals the augmented state. Carrying this state gives zero
+deterministic innovation. If the physical coordinates are set to zero while
+the instrument and discrepancy states are kept, the no-intervention filter
+receives the deterministic bias
+\begin{equation}
+ \bar e_0(k)=C_0\Phi_0(k,k_c)\,\delta x(k_c)
+ -\!\!\sum_{r=k_c}^{k-1}\!C_0\Phi_0(k,r{+}1)K_0\,\bar e_0(r),
+ \label{eq:reset-bias}
+\end{equation}
+where $\delta x(k_c)$ is the zeroed physical part of the augmented state,
+$\Phi_0(k,r)=T_0^{\,k-r}$ and $C_0=J_0$ are the no-intervention operators of
+\eqref{eq:implemented-conditional-correction}, and $K_0$ is its gain. This
+is the free recovery response \eqref{eq:recovery-response} seen through a
+filter that tries to absorb it. Any birth hypothesis $j$ that explains part
+of this bias has a profiled energy gain
+$\Gamma^{\rm sp}_j(k)=\Lambda^{\rm reset}_{0}(k)-\Lambda^{\rm reset}_{j}(k)$,
+where both energies use the same reports from $k_c$ to $k$.
+A gain above $\lambda^\star$ crosses the idealized score reference;
+it does not guarantee a published alarm. Under the same construction
+with carry, the null energy is zero, so every alternative has gain
+$\Gamma^{\rm sp,carry}_j(k)\le0$. The positive part of the best gain is
+therefore zero. Reset bias depends on the excited modes, their decay,
+and their projection onto the observed channels.
+
+\subsection{Retrospective Diagnostics}
+We evaluated the signature and reset diagnostics in the nominal quiet
+covariance regime. The true-path deterministic residual was below
+$10^{-8}$ nats. Fig.~\ref{fig:theory-information} summarizes separation
+under those conditions.
+
+\begin{figure*}[t]\centering
+\includegraphics[width=.97\textwidth]{figures/generated/theory_information.pdf}
+\caption{Retrospective signature diagnostics using the nominal switched-DAE operators. (a) Profiled signature energy after 1\,s against the no-intervention history (filled circles) and against the nearest competing source (open circles), for a 10\% load step or a line opening; the dashed line marks the idealized score reference $\lambda^\star$. (b) Reference load amplitude at 1\,s, \eqref{eq:reference-amplitude}, versus a uniform multiplier of the calibrated noise; gray lines are the other seven load buses.}
+\label{fig:theory-information}\end{figure*}
+
+For a 10\% load step, the one-second nominal separation from the null
+ranges from \RevInfoLoadMin{} to $\RevInfoLoadMax$ nats; for lines it is
+at least $\RevInfoLineMin$ nats. These large margins are consistent with
+the short delays under matched conditions. The reference amplitude
+under uniform noise scaling is highest at bus~31. Neither diagnostic
+accounts for independent per-PMU noise or a shifted plant.
+The reset diagnostic (Section~\ref{sec:controlled-ablation}) evaluates
+the deterministic effect of discarding a previously estimated state.
+
+A separate channel diagnostic holds source amplitudes and a common
+temporal covariance fixed. At 1\,s, adding terminal currents to voltage
+increases the minimum pairwise separation by a median factor of
+$\ChannelGainMedian$ across the 18 sources (range
+$\ChannelGainMin$--$\ChannelGainMax$). Allowing rival loads to fit severity
+over the admitted interval gives a median factor of $\ProfileChannelGainMedian$.
+The supplement derives both diagnostics and shows how fitting severity can
+reduce source separation. Neither result measures attribution accuracy.

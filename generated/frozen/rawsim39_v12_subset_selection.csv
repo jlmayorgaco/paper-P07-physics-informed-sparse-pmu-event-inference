@@ -1,0 +1,19 @@
+name,decision,orthogonal_fraction,trial_rank,trial_parameter_count,trial_condition_number,reason
+fault_reactance_pu,SELECT,1.0,1.0,1.0,1.0,
+generation_delta_p_pu,SELECT,1.0,2.0,2.0,1.1750425787519723,
+generation_amplitude,SELECT,0.4868266633624701,3.0,3.0,3.948154353319343,
+load_delta_p_fraction,SELECT,1.0,4.0,4.0,3.948154353319343,
+generation_peak_s,SELECT,0.9974637114360039,5.0,5.0,3.9554614705975064,
+generation_delta_q_pu,SELECT,0.8697299754171532,6.0,6.0,4.978795328291583,
+generation_residual,REJECT_JOINT,0.04491340820839744,7.0,7.0,88.32893521057235,orthogonal_fraction<0.15; condition_number>50
+plant_inertia_scale,SELECT,0.8489457906922704,7.0,7.0,7.136073940051165,
+plant_governor_droop_scale,SELECT,0.8880964983893505,8.0,8.0,7.826727232395702,
+generation_tau_s,REJECT_JOINT,0.05994146270802143,9.0,9.0,165.46612299246996,orthogonal_fraction<0.15; condition_number>50
+plant_damping,REJECT_PRESELECTION,,,,,individual_posterior_sd_z>0.9; insufficient sensitivity in at least one declared support event
+plant_governor_lag_scale,REJECT_PRESELECTION,,,,,sensitivity_rms<0.005; individual_posterior_sd_z>0.9; insufficient sensitivity in at least one declared support event
+plant_turbine_time_scale,REJECT_PRESELECTION,,,,,individual_posterior_sd_z>0.9
+plant_avr_gain_scale,REJECT_PRESELECTION,,,,,individual_posterior_sd_z>0.9; insufficient sensitivity in at least one declared support event
+plant_avr_time_scale,REJECT_PRESELECTION,,,,,individual_posterior_sd_z>0.9; insufficient sensitivity in at least one declared support event
+plant_subtransient_x_scale,REJECT_PRESELECTION,,,,,individual_posterior_sd_z>0.9
+fault_duration_s,REJECT_PRESELECTION,,,,,curvature_ratio>0.5
+line_duration_s,REJECT_PRESELECTION,,,,,curvature_ratio>0.5

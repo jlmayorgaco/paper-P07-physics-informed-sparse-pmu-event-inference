@@ -1,0 +1,10 @@
+{
+  "official_hackathon_score": false,
+  "method_retuned": false,
+  "RAW0002_opened": false,
+  "paired_conditions": true,
+  "independence_unit": "Base physical schedule, paired across 3 static network conditions at one noise level; 3 event parents and 1 normal parent",
+  "generator_rejections": [],
+  "inference_failures": [],
+  "primary_abstention_policy": "Unavailable reports use class-1; count as classification errors and event omissions. Detection F1 counts positive abstentions as FN; normal FA/hour uses available exposure only. No silent exclusions."
+}

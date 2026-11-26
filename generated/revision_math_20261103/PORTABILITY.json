@@ -1,0 +1,23 @@
+{
+  "status": "PASS_PORTABLE_SOURCE_VERIFICATION",
+  "minimal_input_files": [
+    "scripts/verify_history_partition.py",
+    "generated/frozen/revision_math_kernel_20261103/amplitude_parent.py",
+    "generated/frozen/revision_math_kernel_20261103/MANIFEST.json",
+    "generated/frozen/revision_math_kernel_20261103/reference_checks.json"
+  ],
+  "default_requires_research_checkout": false,
+  "default_requires_campaign_data": false,
+  "portable_numerical_fields_identical": [
+    "partition",
+    "affine_flow",
+    "joint_gaussian_reference",
+    "summary"
+  ],
+  "explicit_research_mode_passed": true,
+  "modified_kernel_rejected_before_execution": true,
+  "project_pyc_files_created": false,
+  "table_sha256_unchanged": "dd7f3bff8a46dc410ff23c3f4ada6cc8db5c48b1f8b1abe27ed324a1a5d9e6cb",
+  "python": "C:\\Users\\walla\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+  "isolated_test_directory": "C:\\Users\\walla\\Documents\\Github\\paper-P07-physics-informed-sparse-pmu-event-inference\\tmp\\math_portability_4dd9cbcc8aed43ba92a8fbaf9ce8ee9a"
+}

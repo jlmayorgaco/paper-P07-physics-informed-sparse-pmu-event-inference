@@ -1,0 +1,29 @@
+{
+  "status": "TWELVE_FIXTURES_PASS_SEALED_FULL_COMPARISON_AUDITED_PRIOR_ARTIFACTS_UNCHANGED",
+  "tests": 12,
+  "failures": 0,
+  "errors": 0,
+  "python": "3.13.9",
+  "test_command": "python -B -m unittest discover -s experiments/PAPER_SUBMISSION_S01/evaluation -p test_physical_metadata.py -v",
+  "comparison_command": "python -B experiments/PAPER_SUBMISSION_S01/evaluation/score_physical_metadata.py",
+  "new_artifact_sha256": {
+    "evaluation/PHYSICAL_METADATA_COMPARISON_PROTOCOL.json": "0ec11d22777e1a35b77df4414f3767245ea4b430c08842b77272b1764db5c85f",
+    "evaluation/PHYSICAL_METADATA_PROTOCOL_FREEZE.json": "8e28dd75e1a9fd96ed0d9c2f7336176f74db497d9d1df509b2e3f774120657b7",
+    "evaluation/score_physical_metadata.py": "8afde5b5c50f9e1a2776bd6632e34b2fa595fa09853bc9e5d30b512320020147",
+    "evaluation/test_physical_metadata.py": "a09493907f4493ad5d81f14ff4f8e2e67bb3128dd2bdf4f1971b80c9341b82cd",
+    "run/ml_raw_segmented/PHYSICAL_METADATA_COMPARISON.json": "bf16a4c5356c934d6a76682aaf6fe6d86534af42bd1d052ebba90398dfb4572e",
+    "PHYSICAL_METADATA_COMPARISON_REVIEW.md": "7f6ce8b8657cc0bf168c6d57e89036dad268737271893925724c94e7a25736af"
+  },
+  "prior_artifact_sha256": {
+    "evaluation\\RAW_AUDIT_VALIDATION.json": "1b95ce3b30d8a61d32b3a4ec44fd8ac312b2192ad25f0cf9ef844d119202c169",
+    "evaluation\\MISSING_LATENCY_VALIDATION.json": "c0bd283a161ab3927516ebcedaa5eefca585b6d4a7849b6e74ed6dab8312e19d",
+    "run\\cyber_composition_v2\\MISSING_LATENCY_COMPARISON.json": "21427ab2d79b98ca7fbb7f1e15544e30eb3e5cec844b14e42afa7cf827705e87",
+    "run\\legacy_historical\\EVALUATION.json": "22d4cdfdf0d6bfc330045a88d25d3dd91a9f8dfc4686f0f719f8431787c88791",
+    "run\\legacy_continuous\\EVALUATION.json": "4a07355e8088157030450cb8e6f788664e681a3c8d65a4b2cf6ecd492689d097",
+    "run\\cyber_composition_v2\\EVALUATION.json": "d42dee01f977191c51e96cdb1b4a493e48f843508c72f14637aa7b3a616fe83d"
+  },
+  "hybrid_seal_intact": true,
+  "inference_rerun": false,
+  "C01_read": false,
+  "RAW0002_read": false
+}
