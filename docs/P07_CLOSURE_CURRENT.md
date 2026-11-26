@@ -1,5 +1,122 @@
 # P07: estado de cierre vigente
 
+**18 de noviembre de 2026.** La revisión técnica reorganizó el artículo en
+11 páginas y el suplemento en 44. El texto deriva el estimador local y el
+costo predictivo de borrar el estado físico, corrige la amplitud de referencia
+y precisa qué compara cada brazo al cierre. El dictamen recoge las correcciones
+y las limitaciones que siguen afectando la interpretación.
+[Revisión de revisor 2](REVISION_REVISOR_2_20261118.md)
+
+## Estado al 15 de noviembre
+
+**15-nov-2026. Cierre coordinado con tres agentes Luna.** C03 permanece cerrado e intacto. Los dos pilotos completos de C04 terminaron; pasaron los controles de desarrollo, prefijo causal y comparadores legados. Se reparó la preparación CAL conservando las 72 observaciones originales (36 padres de eventos y 36 normales), y se reforzaron sus sellos de procedencia. El resultado de C04 aún no está disponible: no se incorpora una ventaja de covarianza al artículo. El estado operativo vivo está en `experiments/PAPER_RECOVERY_C04/run/SUPERVISOR.json` del repositorio científico.
+
+El artículo distingue ahora el alcance de los intervalos entre eventos, la procedencia del costo computacional y las cohortes de ruido. Compilación local: 19 páginas; suplemento sin cambios: 44. Se revisaron visualmente las páginas afectadas y las dos figuras protegidas; 16 hashes verificados. El plan vigente es [P07_CLOSURE_EXECUTION_20261115.md](P07_CLOSURE_EXECUTION_20261115.md). Faltan la evidencia C04, su integración y revisión final, la confirmación remota de compilación y las aprobaciones/declaraciones de autores.
+
+## Estado anterior
+
+**14-nov-2026. C03 completo.** Verificadas 528 predicciones y los sellos de ambas plantas. Historias mejora frente a fusion de medias en F01; diferencia no concluyente en P2. Conservar estado supera al reset en ambas. Los 48 padres del estres de ruido fallaron en el ajuste del prefijo: no hay una medida de robustez para ese estres.
+
+El articulo integra resultados, errores de restauracion, reglas de publicacion, mapa de terminales y suficiencia predictiva/covarianza. Articulo: 19 paginas; suplemento: 44. Estado: borrador para revision de autores; [criterio de envio](P07_SUBMISSION_GATE_20261114.md).
+
+## Registro historico (superado por el estado anterior)
+
+# P07: estado de cierre vigente
+
+**Revisión de narrativa, 14-nov-2026.** El artículo plantea la
+atribución antes de la restauración, presenta los tres procedimientos y
+explica la calibración antes de mostrar sus resultados. Separa la
+comparación principal, el control de continuidad y las pruebas de
+sensibilidad. El suplemento conserva los detalles de las evaluaciones
+secundarias. Artículo de 16 páginas y suplemento de 43. C03 sigue
+pendiente de cierre, con 38/72 registros nominales de P2 en la consulta.
+
+**14-nov-2026.** Se completó el contraste retrospectivo de covarianza al
+0,05% y 0,10%. Ningún oráculo superó al estimador por familia y la exposición
+normal fue de 0,3267 h por brazo. Se reprodujo una ablación sintética con
+inicio desconocido y se ejecutó una segunda semilla. C03 no tiene todavía
+el sello conjunto. Véase el [criterio de envío vigente](P07_SUBMISSION_GATE_20261114.md).
+
+**13-nov-2026, 22:21 Bogotá.** El apéndice X integra el contraste
+retrospectivo R11 al 0,05% por componente. Familia, estructura y oráculo
+obtuvieron 11/12 cargas oportunas. Ledoit–Wolf obtuvo 10/12. Los cuatro
+registraron cero alarmas normales en 0,3267 h por brazo. El resultado
+del 0,10% permanece en ejecución. C03 tenía 68 registros P2 exportados
+y el sello F01. La evaluación conjunta de C03 sigue pendiente.
+
+**13-nov-2026, 21:30 Bogotá.** C03 selló las predicciones de F01 y
+está exportando TEST de P2 (38 registros exportados en el último corte).
+El cierre combinado aún está pendiente. La corrida de covarianza R11
+lleva 23/48 replays CAL y pasa automáticamente a TEST tras fijar los
+umbrales. La evidencia de esta versión incluye la validación numérica
+del modelo de ruido añadido. Las conclusiones de atribución requieren
+terminar TEST y auditar su exposición normal.
+
+**13-nov-2026, 21:00 Bogotá.** C03 completó 72/72 registros nominales
+de TEST de F01 y sigue en las pruebas de estrés F01. La evaluación
+sellada de ambas plantas sigue pendiente. El contraste retrospectivo de
+covarianza con B01 está en ejecución. Pasaron la comprobación del modelo
+del ruido añadido y un replay oráculo del banco. El
+[plan de cierre](P07_JOURNAL_CLOSURE_20261113.md) fija la secuencia
+para usar los resultados y preparar el envío.
+
+**13-nov-2026, 19:34 Bogotá.** C03 terminó los 72 registros nominales
+TEST de F01. Sigue pendiente el cierre sellado de ambas plantas.
+El suplemento incorpora la reproducción de la ablación controlada de
+memoria y un piloto de estimación de covarianza con verdad conocida.
+Véase [la auditoría](MEMORY_COVARIANCE_AUDIT_20261113.md).
+
+**Revisión de las 18:58 Bogotá, 13-nov-2026.** El artículo conecta la
+comparación de procedimientos con la geometría de recuperación y conserva
+19 páginas. El suplemento de 40 páginas añade tres diagnósticos reproducibles:
+separación bajo incertidumbre en la carga anterior, derivadas de conmutación
+y cruces secuenciales bajo desajuste del modelo normal. Los resultados
+respaldan afirmaciones de desarrollo en sus respectivos contratos.
+La [revisión de los adjuntos](REORGANIZATION_AND_EXPERIMENTS_20261113.md)
+documenta las decisiones y el protocolo. C03 lleva 69/72 registros de TEST
+de F01 y queda pendiente la evaluación sellada de ambas plantas. Los
+estados fechados a continuación corresponden a revisiones previas.
+
+**Última actualización: 13-nov-2026, 17:00 Bogotá.** Se revisaron los once
+adjuntos nuevos, siete textos distintos. Véase
+[la auditoría de la segunda ola](IDEAS_SECOND_WAVE_AUDIT_20261113.md).
+Apéndice U incorpora una cota condicional de error de score con media y
+covarianza y distingue ganador de masa de publicación. La implementación
+se comprobó en 2.000 perturbaciones gaussianas, sin violaciones observadas;
+no es una prueba de atribución. Las A nativas no son Laplacianas y tienen
+un modo numéricamente cercano a cero: no se certifica una regla de olvido
+por decaimiento global. El refinamiento selectivo no está habilitado en
+el banco. Artículo 19 páginas; suplemento 39. C03 intacto: 60/72 registros
+F01 TEST completados, proceso 32480 activo y sin archivos finales de
+resultado/bloqueo. La revisión fue solo operativa, sin métricas de TEST.
+Los bloques fechados siguientes son historial de avances anteriores.
+
+**Actualización vigente: 13-nov-2026, 16:36 Bogotá.** El sucesor
+`experiments/relinearized_recovery_20261113` reduce el RMSE de fase en la
+recuperación de la línea de referencia de 3,191 a 0,139 grados (95,7%).
+Actualizar la dinámica local cada 0,1 s mejora los cuatro casos de línea;
+el control que cambia solo la observación no resuelve el error. Pasan los
+11 criterios predefinidos en siete trayectorias. Se conocen evento, tiempos
+y estado inicial: no es una mejora demostrada de detección. Para integrar
+en el banco faltan propagación de covarianza compatible, integración de
+severidad y una comparación con eventos desconocidos bajo nuevo CAL/TEST.
+Apéndice U, Tabla 29 y Figura 18; arquitectura actualizada en Figura 15.
+Artículo: 19 páginas; suplemento: 38. Los párrafos siguientes conservan
+resultados y tamaños de revisiones anteriores.
+
+C03: proceso principal 32480 activo; el último registro de campaña muestra
+58/72 registros F01 TEST completados. No existen `TEST_RESULTS.json` ni
+`TEST_EVALUATION_LOCK.json`; no se leyeron resultados parciales. La campaña,
+sus entradas y sus umbrales no se modificaron. No se puede cerrar todavía
+el contraste de mecanismo ni la transferencia a la segunda planta.
+
+Las ideas del chat compartido y los adjuntos se clasifican en
+[SHARED_IDEAS_AUDIT_20261113.md](SHARED_IDEAS_AUDIT_20261113.md).
+Los contraejemplos impiden incorporar las garantías propuestas de
+submodularidad, KL de compresión, consistencia y poda futura. El criterio
+de envío permanece abierto: evidencia C03 sellada, auditoría de ambas
+plantas, coherencia final de afirmaciones y aprobación de coautores.
+
 La derivación suministrada se comprobó en su ejemplo de tres barras y se
 conectó con el punto de operación real de F01. El nuevo estudio
 `experiments/descriptor_bridge_20261113` extrae 192 variables nativas
