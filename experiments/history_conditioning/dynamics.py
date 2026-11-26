@@ -11,12 +11,13 @@ whether conditioning on the previous event's state helps attribution (see PLAN.m
 from __future__ import annotations
 
 import importlib.util
+import os
 from pathlib import Path
 
 import numpy as np
 
 HERE = Path(__file__).resolve().parent
-SCI = HERE.parents[2] / "SGSMA26-Physics-Informed-AD"          # science repository (network, topology, RAW0001)
+SCI = Path(os.environ.get("P07_SCIENCE_ARCHIVE", HERE.parents[2] / "SGSMA26-Physics-Informed-AD"))          # science repository (network, topology, RAW0001)
 _sp = importlib.util.spec_from_file_location("network", SCI / "experiments/PAPER_ALLEVENTS_V1/physics/network.py")
 network = importlib.util.module_from_spec(_sp)
 _sp.loader.exec_module(network)
