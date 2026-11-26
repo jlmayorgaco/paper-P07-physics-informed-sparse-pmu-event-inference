@@ -1,8 +1,0 @@
-# Protocolo previo a la simulación
-
-Pregunta: con las firmas eléctricas congeladas de la revisión 20680c1, ¿qué parte de la resolución de activos se pierde por ambigüedad y ruido incluso si los datos proceden exactamente de ese diccionario? Diagnóstico retrospectivo con familia conocida. Las ventanas M9, el filtro secuencial y sus umbrales no se reajustan.
-
-- Evaluar todas las fuentes equiprobables por familia física (1, 2, 3, 4, 6 y 8); informar cada familia por separado porque hay diccionarios repetidos.
-- Ocho PMU y ocho configuraciones que omiten una PMU. Misma realización base para todas las configuraciones. Proyectar el offset complejo y ajustar amplitud compleja por candidato; norma euclídea, ruido blanco complejo de varianza unitaria por canal antes de proyectar. Definir la SNR como energía de señal centrada en las ocho PMU dividida por energía esperada de ruido centrado en las ocho PMU. SNR 0, 10 y 20 dB, más techo sin ruido. Mantener la amplitud y el ruido por sensor al omitir una PMU.
-- Generar 256 realizaciones independientes por fuente, semilla 746191, fase uniforme del evento. Repartir un acierto entre empates numéricos con tolerancia relativa 1e-10 a la puntuación máxima. Verificar que el techo sin ruido coincide con el número de direcciones únicas entre el número de candidatos. Comprobar invariancia frente a offset y fase. Guardar recuentos por fuente y por configuración, versión del diccionario, código y figura.
-- Es una simulación de resolución favorable al modelo. Carece de una métrica de falsas alarmas, de incertidumbre de familia y de transferencia entre plantas. No convertir el resultado en una tasa de éxito operativa ni usarlo para volver a elegir el método ganador en la cohorte ya puntuada.

@@ -204,7 +204,7 @@ model; the test does not separate its contribution to the observed
 errors from simulator mismatch.
 
 \paragraph{How many sources do the voltage signatures distinguish?}
-\input{experiments/electrical_dictionary_resolution/macros}
+\input{tables/evidence/electrical_dictionary_resolution_macros}
 To separate ambiguity in the electrical dictionary from mismatch with
 the simulator, we generated observations directly from each source
 signature, with the family given. For each candidate we removed a common
@@ -221,7 +221,7 @@ and unrestricted complex strength. They do not bound a monitor that
 also observes current or transient timing.
 
 \begin{figure*}[t]\centering
-\includegraphics[width=.97\textwidth]{experiments/electrical_dictionary_resolution/resolution.pdf}
+\includegraphics[width=.97\textwidth]{figures/evidence/electrical_dictionary_resolution_resolution.pdf}
 \caption{Exact source resolution when the electrical dictionary also
 generates the data. Each source has 256 random event phases and complex
 white-noise draws. SNR is the ratio of centered signal energy to expected
@@ -277,7 +277,7 @@ class, the window counts give little precision for transfer to other sites.
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=.86\textwidth]{experiments/paired_m9_stream/confusion.pdf}
+\includegraphics[width=.86\textwidth]{figures/evidence/paired_m9_stream_confusion.pdf}
 \caption{Nine-class decisions on the final window. Within a column,
 the target and noise seed match across rows. Each matrix row contains
 three observations; blank cells have zero count. Classes 0 through 8
@@ -332,7 +332,7 @@ families share a site. All four procedures saw the same buffers.
 an exact site; sensitivity counts any positive event decision.}
 \label{tab:m9-successor}
 \setlength{\tabcolsep}{3pt}
-\input{experiments/paired_m9_successor/table.tex}
+\input{tables/evidence/paired_m9_successor_table.tex}
 \end{table}
 
 After a preceding fault, the revised hybrid correctly assigned two
@@ -391,7 +391,7 @@ median 19~ms and a 95th percentile of 38~ms on 48 earlier physical-family
 windows. These are processing times on the test machine.
 
 \begin{figure*}[t]\centering
-\includegraphics[width=.83\textwidth]{experiments/pmu_source_readout/locations.pdf}
+\includegraphics[width=.83\textwidth]{figures/evidence/pmu_source_readout_locations.pdf}
 \caption{Exact source hits by true class with the same fixed alarm
 and family decisions. Each panel has eight events per row. Both readouts
 see the same measurements. The calibrated readout searches the full
