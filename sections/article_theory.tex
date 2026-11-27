@@ -26,6 +26,25 @@ from the no-intervention prediction. If another asset gives a small
 $\Lambda_{ij}$ on the same reports, the change can be easy to detect
 and difficult to locate.
 
+Recovery can also change which source the data favor. Compare two
+fixed local Gaussian forecasts over the same reports, with common
+covariance $W^{-1}$. Write $d$ for the mean departure due to recovery
+and $s$ for the additional response to one proposed switch. For a report
+vector $y$ measured from the quiet forecast, the log likelihood ratio
+of a switch against continued recovery is
+\[
+ \ell_d(y)=s^\top W(y-d)-\tfrac12 s^\top Ws .
+\]
+If a reset drops $d$ but keeps the same $s$ and $W$, its log ratio
+changes by $\ell_0(y)-\ell_d(y)=s^\top Wd$. Under recovery alone,
+the reset favors the new switch on average whenever
+$s^\top Wd>\tfrac12s^\top Ws$. A negative alignment instead suppresses
+evidence for that switch. Thus even a large recovery matters little
+for a particular source when the two departures are orthogonal at
+the measured terminals. The identity compares two specified means.
+The online monitor still has to infer the previous state, source
+and onset.
+
 Under the nominal quiet-regime covariance, a 10\% load step yields
 one-second energies against the no-intervention path ranging from
 \RevInfoLoadMin{} to $\RevInfoLoadMax$ across the nine buses. With the

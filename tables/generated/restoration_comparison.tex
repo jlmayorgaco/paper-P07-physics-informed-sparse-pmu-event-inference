@@ -1,0 +1,27 @@
+\begin{table}[t]\centering\footnotesize
+\caption{Four-family extension on the reduced plant. Joint requires the correct family and asset. Extras count unmatched alarms. Quiet$^+$ counts quiet windows labeled abnormal.}
+\label{tab:four-family-comparison}\setlength{\tabcolsep}{2.6pt}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lrrrr@{}}\toprule
+\multicolumn{5}{l}{\textit{Continuous monitoring, 420 events in 465 records}}\\
+Method & Macro-F1 & Family & Joint & Extras \\
+\midrule
+Recovery bank & 0.976 & 405 & 399 & 3 \\
+With voltage check & 0.958 & 396 & 391 & 9 \\
+Earlier physical bank & 0.957 & 396 & 387 & 10 \\
+Sequential GLR & 0.835 & 326 & 321 & 16 \\
+Refitted ExtraTrees & 0.708 & 265 & 252 & 0 \\
+\midrule
+\multicolumn{5}{l}{\textit{Family at a common alarm, 120 scheduled second events}}\\
+Readout & Correct & Wrong & Late & Missed \\
+\midrule
+Recovery bank & 106 & 1 & 7 & 6 \\
+CNN-F & 28 & 79 & 7 & 6 \\
+CNN-F, no subtraction & 27 & 80 & 7 & 6 \\
+MultiRocket-Hydra & 50 & 57 & 7 & 6 \\
+\midrule
+\multicolumn{5}{l}{\textit{One decision at 30 s, 72 isolated events and 12 quiet records}}\\
+Method & Macro-F1 & Family & Joint & Quiet$^+$ \\
+\midrule
+Recovery bank & 0.983 & 69 & 69 & 0 \\
+Archived ExtraTrees & 0.067 & 2 & 0 & 0 \\
+\bottomrule\end{tabular*}\end{table}

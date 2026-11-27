@@ -23,19 +23,22 @@ A line opening changes the network admittance immediately. Reclosure restores
 that admittance, but the rotor angles and speeds still reflect the outage.
 We therefore treat recovery as a competing explanation for each new report.
 A bank of switched differential-algebraic equation (DAE) models predicts
-how voltages and currents would evolve if recovery continued and how they
-would change if a particular load or line switched. The bank assigns each
-history a weight based on its prediction errors. Two sums of these weights
-answer different questions. A load already restored contributes no weight
-to the hypothesis that it is still active, but its history can still
-explain which load produced the measured transient
+the next PMU report for continued recovery and for each candidate load
+change or line switch during recovery. Each candidate is
+weighted by how well its predicted reports match the observations. For
+each source, the active-history weight supports a new-event alarm, while
+the weight summed over active and restored histories supports the source
+diagnosis. Thus a restored load can explain a transient without being
+reported as still active
 (Fig.~\ref{fig:problem-method}).
 
 We test this distinction on successive, nonoverlapping interventions from
 a fixed catalog of nine load buses and nine lines. We first compare the bank
-with a continuous generalized likelihood ratio (GLR) observer and an
-ExtraTrees classifier at a common calibration target for alarms in normal
-operation. We then ask what information a monitor needs to keep after it
+with a continuous generalized likelihood ratio (GLR) observer and
+previously fitted ExtraTrees adapters, using a common calibration target
+for alarms in normal operation. A separate experiment refits learned
+baselines on the bank's simulation cohort. We then ask what information
+a monitor needs to keep after it
 reports restoration. On paired sequences from two simulated plants, we
 compare retaining recovery histories, merging them into a single state
 mean, and resetting the physical part of that mean. We count an intervention

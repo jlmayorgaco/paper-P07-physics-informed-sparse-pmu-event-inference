@@ -8,10 +8,9 @@ parents for training and eight for development validation. Both training sets in
 all 18 candidate sources. The reference uses 846 causal features from
 1-, 5- and 10-s windows; the short-window variant adds 611 features from
 3-, 8- and 15-report windows. Each model has 400 trees with the same
-predeclared hyperparameters. They inherit feature families from the SGSMA
-project, but their fitted weights are distinct from the original hackathon
-submission. These models and their adapters were fixed before the present
-independent schedules; no retraining uses the current evaluation records.
+predeclared hyperparameters. Both use features from the archived
+window classifier. We fitted new weights for the continuous load and
+line task and fixed both models before drawing the independent schedules.
 All methods receive the same 30-fps observations. The supplementary
 reproduction table records the training lineage and model hashes.
 

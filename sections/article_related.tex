@@ -37,6 +37,11 @@ Recursive DAE estimators recover differential and algebraic states from
 partial measurements \cite{katanic2024recursive}. Trajectory sensitivities
 also relate uncertain physical parameters to measured responses
 \cite{nagi2022trajectory}. Here the unknowns include which asset switched.
+On the Brazilian interconnected system, Lopes \emph{et al.} evaluated
+multi-label event categorization over six months of operation
+\cite{lopes2025multilabel}. That study addresses overlapping event labels
+in field data. Here a diagnosis must also name the individual bus or line
+within a specified time.
 PMU classifiers can identify disturbances and their locations from
 the observed features \cite{pandey2020realtime,li2024knowledge,yildiz2024few}.
 Barati uses recurrent PMU features to forecast grid disruptions
@@ -47,8 +52,10 @@ application in hardware-in-the-loop tests \cite{becejac2019pmu}.
 Our simulated reporting chain makes the corresponding noise sensitivity
 measurable but leaves hardware performance open.
 
-The submitted SGSMA ExtraTrees classifier detected 32 of 96 load
-and line windows from 36 development trajectories, identified the family
-in 23 and matched both family and asset in none. For the continuous
-comparison we train ExtraTrees on all 18 catalog sources and restrict
-its features to the reports available at diagnosis.
+The archived window-based ExtraTrees system detected 32 of 96 load and line
+windows from 36 development trajectories, identified the family in 23,
+and matched both family and asset in none. Our continuous-stream comparison
+uses two adapters trained on 32 independent simulated trajectories from
+four earlier campaigns. Both cover normal operation and all 18 catalog
+sources. The supplement also reports results for supervised models fitted
+on the bank's training and calibration records.

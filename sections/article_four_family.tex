@@ -1,0 +1,65 @@
+\subsection{Transfer to Four Physical Event Families}
+\label{sec:four-family-comparison}
+
+Does a recovery forecast still help when a fault or a generator torque
+pulse can also explain the PMUs? We tested a four-family version on
+a reduced IEEE 39-bus plant with the same eight PMU sites. Its 31
+coordinates comprise eight voltage magnitudes and angles, eight
+current magnitudes and seven current-direction terms. It fits the
+first fault or line opening from the measured voltages, propagates the
+estimated generator and governor states after clearance, and compares
+new reports with continued recovery and with a second intervention.
+This implementation scores a bank of network responses with a Student
+likelihood. The two-family filter in Section~\ref{sec:narrative-method}
+uses a local Gaussian state update for each history. Both ask whether the
+next transient requires a new switch. The four-family predictor uses
+the reduced simulator's network equations. The selected
+operating point was fixed before we generated 15 new scenario blocks.
+The blocks reuse the reserved asset catalog and draw new times, event
+strengths, noise and governor parameters. The supplement gives the fit,
+the event prior and the alarm rule for this extension.
+
+\input{tables/generated/restoration_comparison}
+
+The continuous test in Table~\ref{tab:four-family-comparison} counts a
+joint decision when the correct family and exact bus or line are
+published within 1.5~s of onset. The recovery bank met this deadline in
+\RepBankJoint{} of 420 events (95\% block-bootstrap interval
+$\RepBankJointCI$\%) and named \RepBankActive{} while the intervention
+was still active. The refitted trees made \RepTreeJoint{}
+joint diagnoses. The two methods issued \RepBankExtras{} and
+\RepTreeExtras{} unmatched alarms, respectively. Compared with the earlier
+physical bank, the recovery bank added 12 joint diagnoses within the
+deadline and both made \RepBankActive{} before clearance. Ten missed
+generator pulses and four generator-bus errors accounted for 14 of its
+21 unsuccessful joint diagnoses. The extra voltage check discarded
+eight correct joint diagnoses on balance and increased unmatched alarms
+from \RepBankExtras{} to \RepCheckExtras{}.
+
+We also compared family decisions on the same alarm reports. Each
+classifier published 29 reports after the alarm when that report was
+available.
+All 120 scheduled second events count, including those whose trigger
+was absent or too late. The spectral CNN-F uses the subtraction of
+Li and Wang \cite{liwang2019successive}. MultiRocket-Hydra uses
+convolutional time-series features and a ridge classifier
+\cite{dempster2023hydra,middlehurst2024bakeoff}. Both learned four families on the same
+400 simulated training cases. The second events in this test were
+generator, load or line interventions. The bank retained its family
+decision from the alarm and reported it at the common deadline. The
+recovery bank, CNN-F and MultiRocket-Hydra correctly labeled
+\RepBankSecond{}, \RepCnnSecond{} and \RepHydraSecond{} second events,
+respectively. Equal publication times leave a difference in what each
+model remembers. The bank carries a network state from earlier reports,
+CNN-F can extrapolate a previous disturbance, and MultiRocket-Hydra
+receives the two seconds around the alarm. Six missed triggers and
+seven late readouts cost every method the same 13 second events.
+
+Finally, the archived ExtraTrees system assigns one family and
+location to a complete window. We gave it 84 independently simulated
+30-s windows at its native duration. At window close we compared its
+label with the bank's first declaration or normal if it remained
+silent. Quiet$^+$ counts quiet records labeled as events. This measures
+transfer of the archived weights to the reduced plant. Event strengths,
+the balanced three-phase reconstruction and the measurement noise all
+belong to this simulation.

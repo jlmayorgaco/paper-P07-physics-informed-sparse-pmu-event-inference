@@ -12,6 +12,7 @@
 \input{generated/recovery_c03_macros}
 \input{generated/c03_extended_macros}
 \input{generated/second_family}
+\input{generated/restoration_macros}
 \input{generated/modal_recovery}
 \input{generated/revision_20261104_macros}
 
@@ -26,32 +27,27 @@
 
 \begin{abstract}
 A line can reclose while generators are still responding to its opening.
-A monitor that observes another change in current must distinguish a new
-intervention from the continuing response to the first. We address this
-problem with a bank of switched network models. Each model predicts the
-next phasor measurement unit (PMU) report from the state reached before
-the switch. For a load change, the model averages over its unknown size.
-At restoration, we derive the conditional minimum mean-square estimate
-of the state shared across retiring histories and the cost of resetting
-its physical coordinates in the next PMU forecast. On the simulated IEEE 39-bus system with eight
-PMUs, the bank identified the correct event family and asset before
-restoration in \RecBankTimely{} cases. A continuous generalized
-likelihood ratio observer achieved \RecGlrTimely{} and an ExtraTrees
-classifier achieved \RecTreesTimely{}. Over 0.54 monitored event-hours
-the bank, observer and classifier issued \RecBankExtras{}, \RecGlrExtras{} and \RecTreesExtras{}
-unmatched alarms, respectively. We also tested successive interventions
-separated by less than three seconds. Carrying the mean physical state
-through restoration improved attribution over a reset on both test plants.
-Retaining histories and their onset-search memory increased timely
-attribution over restarting the search from the merged mean by
-\CThreeFOneHistoryCarryDifferencePP{} percentage points on the plant
-used to construct the predictor. With different generator dynamics,
-the gain was \CThreePTwoHistoryCarryDifferencePP{} points (paired 95\%
-interval $[\CThreePTwoHistoryCarryLowerPP,\CThreePTwoHistoryCarryUpperPP]$).
-At common alarm times and deadlines, the bank and a spectral classifier
-identified \SecondLagCount{}/36 and \SecondCnnCount{}/36 second-event families.
-Independent PMU noise prevented startup on both plants under the original
-calibration.
+If a phasor measurement unit (PMU) then records another change in
+current, continued recovery and a new intervention are competing
+explanations. We predict the next PMU report under both by carrying
+the estimated machine and instrument states through restoration. A
+multiple-hypothesis filter integrates over load severity and sums the
+weights of switch histories by asset. Its posterior mean minimizes
+squared state error within the retained local model. We calibrate the
+alarm threshold on separate records. On the simulated IEEE 39-bus system
+with eight PMUs, the filter identified the family and asset before
+restoration in \RecBankTimely{} cases, compared with \RecGlrTimely{} for a
+continuous generalized likelihood ratio observer and \RecTreesTimely{}
+for a streaming ExtraTrees adapter. They issued \RecBankExtras{},
+\RecGlrExtras{} and \RecTreesExtras{} unmatched alarms over 0.54
+monitored event-hours. Carrying the estimated state improved timely
+attribution over resetting it on two plants. Retaining separate
+histories gave a further gain on the reference plant, with little
+observed change on the plant with different machine dynamics. In a
+separate four-family test on a reduced plant, the recovery bank
+identified \RepBankJoint{}/420 family--asset pairs within 1.5~s and
+issued \RepBankExtras{} unmatched alarms. Independent PMU noise
+prevented startup of the original two-family filter on both plants.
 \end{abstract}
 
 \begin{keywords}
@@ -80,6 +76,7 @@ change detection and isolation, differential-algebraic equations, event attribut
 \input{sections/article_network_stress}
 \input{sections/article_noise_stress}
 \input{sections/article_compute_cost}
+\input{sections/article_four_family}
 \input{sections/article_interpretation}
 \input{sections/article_final_conclusion}
 

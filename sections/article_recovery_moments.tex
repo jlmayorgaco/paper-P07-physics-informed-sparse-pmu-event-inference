@@ -56,6 +56,6 @@ that instant has zero immediate cost and can become visible later. The
 moment-matched Gaussian minimizes one-step log loss among Gaussian
 forecasts and serves as an analytical reference. Selecting a source
 before restoration is a different decision problem, with a cost for
-delay and for unmatched alarms. We evaluate that decision empirically:
-the pruning and six-report decision rules have no established
-optimality for this sequential objective.
+delay and for unmatched alarms. We calibrate and test the six-report
+decision rule empirically. The one-step loss calculation gives no
+optimality guarantee for the stopping time of the pruned filter.

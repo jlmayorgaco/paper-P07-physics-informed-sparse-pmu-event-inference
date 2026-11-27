@@ -21,6 +21,12 @@ state. One leaves the network alone. The other applies a candidate load
 change or line opening. Their predictions can differ even at PMUs remote
 from the candidate asset.
 
+A persistent lead in active-source evidence triggers an alarm and supplies
+the family (load or line) and catalog asset. We charge the diagnosis to
+the report on which the monitor publishes it, even when the estimated
+switch time is earlier. A source's recovery histories can continue to
+explain later reports after its active weight falls.
+
 \subsection{From a Network Intervention to a PMU Prediction}
 
 For each topology $q$, hold the prefix-fitted operating point
@@ -81,8 +87,8 @@ innovation for severity $a$ is $e-sa$, where
  S&=JP_\rho J^\top+R, & K&=TP_\rho J^\top S^{-1}.
  \label{eq:innovation}
 \end{align}
-The factor $T$ in $K$ appears because the target is the next state:
-at fixed $a$, its cross-covariance with the present report is
+The factor $T$ in $K$ appears because the target is the next state.
+At fixed $a$, its cross-covariance with the present report is
 $TP_\rho J^\top$. The vector $s$ is the predicted change in this report per unit severity,
 after conditioning on the previous reports
 \cite{friedland1969bias,willsky1976glr}.
@@ -107,9 +113,9 @@ The first factor is the ordinary Gaussian predictive density. The ratio
 accounts for the admitted load range. The posterior severity law is the
 Gaussian with parameters $(\mu',v_a')$ truncated to $I$. Its mean
 $\bar a_h$ minimizes conditional squared error in severity.
-In particular, $\bar a_h=\mu'+v_a'\,\partial_{\mu'}\log Z_I(\mu',v_a')$:
-differentiating the interval probability accounts for the displacement
-of the mean near either bound. For a line
+Differentiating the interval probability gives
+$\bar a_h=\mu'+v_a'\,\partial_{\mu'}\log Z_I(\mu',v_a')$,
+including the shift in the mean near either bound. For a line
 the evidence reduces to $\mathcal N(e;0,S)$.
 
 Applying the gain to $e-sa$ and collecting the constant and linear
@@ -159,9 +165,10 @@ the candidate switch and replays the intervening reports. Its score
 replaces the old suffix likelihood. The same reports therefore contribute
 once to each path. The bank prunes low-weight histories and renormalizes
 the survivors. Averaging $\widehat{\xi}_{h,k+1}$ with these normalized
-weights gives the minimum-mean-square-error state estimate for the retained
-mixture. Its accuracy as an approximation to the full posterior depends on
-the local covariance model and the histories surviving the search.
+weights gives the minimum-mean-square-error state estimate under the
+retained mixture and local Gaussian model. Discarded paths can change
+the full posterior mean. The approximation therefore depends on the
+assigned covariance and which histories survive the search.
 The source decision uses the history masses below and a calibrated
 publication threshold.
 The supplement gives the transition hazards, half-report

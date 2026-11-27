@@ -1,6 +1,27 @@
 \subsection{Learned Baselines Trained on the Bank's Own Simulations}
 \label{sec:fair-baselines}
-The ExtraTrees adapters of the main comparison keep the operating points of the earlier system. A fair test of the learned alternative retrains it where the bank was developed. We fitted three learners on the 24 training records of the simulated cohort (72 events) and fixed each alarm threshold on the 24 calibration records, requiring no alarm in normal records. Each was then scored once on the 24 held-out records with the same association rule. Inputs were causal. They were the changes of the 16 phasor channels over the last 0.5 and 1.5\,s relative to a reference taken 1.5 to 4\,s earlier, whitened with the startup noise of each record. One learner received those changes directly. Two received their projection on the 18 physical signatures of the catalog, which gives them the static physical knowledge of the bank. A multinomial logistic model on the projections serves as a linear control. The held-out records had already been opened by the physical methods, so they are not a pristine test for those; they were not used to fit or to tune any learner.
+The main comparison uses two previously fitted ExtraTrees adapters at their
+original operating points. Here we ask separately how learned baselines do
+when trained on the bank's simulation cohort. Three learners were fitted
+on its 24 training records (72 events). We fixed thresholds on 24
+calibration records by requiring zero alarms in normal operation, then
+scored each learner once on 24 held-out records with the same event
+association rule. At each decision the inputs measure changes in
+16 phasor channels over the previous 0.5 and 1.5\,s relative
+to a reference 1.5--4\,s earlier, whitened by that record's startup noise.
+One learner receives these changes directly. Two receive their projections
+onto the 18 catalog signatures, giving them the bank's static physical
+signatures. A multinomial logistic model on those projections is the linear
+control. Physical methods had already opened the held-out records, but
+those records were not used to fit or tune any learner.
 
-Table~\ref{tab:fair-baselines} gives the outcome. The best learner locates \FBBestTop{} of \FBEvents{} events at the source, against \FBBankTop{} for the dynamic bank, and the worst locates \FBWorstTop{}. Giving the learner the physical signatures helps most: it recovers \FBFisLines{} of 36 line outages but only \FBFisLoads{} of 36 loads, where the responses are small and electromechanical and the static signatures describe them poorly. The learners also raise \FBBestExtras{} to \FBWorstExtras{} alarms outside the scheduled events, against \FBBankExtras{} for the bank. Calibration required zero alarms in normal records. The learners also produced zero alarms in the held-out normal records. Their largest attribution deficit on these simulations was for load changes.
+Table~\ref{tab:fair-baselines} reports the outcomes. The best learner
+locates \FBBestTop{} of \FBEvents{} events at the source, compared with
+\FBBankTop{} for the dynamic bank. The lowest learner count is \FBWorstTop{}. The
+signature projections help most for line outages (\FBFisLines{} of 36)
+but less for loads (\FBFisLoads{} of 36), whose small electromechanical
+responses are poorly represented by static signatures. The learners emit
+\FBBestExtras{}--\FBWorstExtras{} alarms outside scheduled events, versus
+\FBBankExtras{} for the bank. All had zero alarms on held-out normal
+records. The largest learner deficit is load attribution.
 \input{tables/generated/fair_baselines}

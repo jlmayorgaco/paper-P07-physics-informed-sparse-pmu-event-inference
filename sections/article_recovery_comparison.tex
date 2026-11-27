@@ -2,7 +2,10 @@
 \label{sec:recovery-comparison}
 The history bank correctly attributed \RecBankTimely{} interventions
 before restoration. The continuous GLR attributed \RecGlrTimely{}
-and ExtraTrees \RecTreesTimely{} (Fig.~\ref{fig:recovery-c02}).
+and the previously fitted ExtraTrees adapters \RecTreesTimely{}
+(Fig.~\ref{fig:recovery-c02}). These adapters retained their original
+weights. The supplement reports the comparison with learners trained on
+the bank's own simulations.
 The paired gain over the GLR was \RecGlrDiff{} percentage points
 (95\% interval \RecGlrCI). All nine bank misses occurred in the mixed
 branch-parameter perturbation condition, where the bank attributed 27
@@ -22,6 +25,6 @@ During 0.54 monitored event-hours, the bank emitted \RecBankExtras{}
 extra alarms, the GLR \RecGlrExtras{} and ExtraTrees \RecTreesExtras{}.
 All three emitted zero alarms over \RecNormalHours{} normal hours per
 method (one-sided 95\% Poisson upper bound \RecNormalUpper{}/h).
-The bank gained timely coverage over ExtraTrees at the cost of eight
-extra alarms. Its comparison with the GLR changes onset search,
+The bank gained timely coverage over these ExtraTrees adapters at the
+cost of eight extra alarms. Its comparison with the GLR changes onset search,
 severity scoring and state commitment together.
