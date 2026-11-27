@@ -1,10 +1,11 @@
 \subsection{All Event Types: Network Physics Without Training}
 \label{sec:allevents}
 
-Because the bank cannot start on the competition record
-(Section~\ref{sec:integrity-results}), we built a second attributor from
-the provided network data alone, with no trained parameter, for every
-event type of the guide. The
+The competition record lacks the quiet initialization required by the
+dynamic bank (Section~\ref{sec:integrity-results}). For this record we
+use a separate estimator derived from the supplied network data. It
+attributes faults, line outages, generation changes and load changes
+without fitting parameters to labeled events. Its
 network is the admittance matrix of the provided power-flow case, with
 loads as constant impedances and generators as transient reactances
 behind constant voltages~\cite{pai1989energy}. The integrity layer runs

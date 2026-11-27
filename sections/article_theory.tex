@@ -12,6 +12,14 @@ Over $n$ reports the residual energy of the best-fitting rival is
        \|e_{j,r}-s_{j,r}b\|_{S_{j,r}^{-1}}^2 .
  \label{eq:signature-information}
 \end{equation}
+For a rival load, stack $S_{j,r}^{-1/2}e_{j,r}$ and
+$S_{j,r}^{-1/2}s_{j,r}$ over reports to form $E$ and $D$,
+respectively. When $D^\top D>0$, the minimizing severity is
+$b^\star=\operatorname{proj}_{I_j}((D^\top E)/(D^\top D))$, where the
+projection clips to the allowable load range. Thus two candidate buses
+are difficult to distinguish when a change in severity at one reproduces
+the other's measured response. If $D=0$, the energy is independent of
+severity.
 For a line or the no-intervention path the amplitude term drops out.
 A high $\Lambda_{i0}$ means that source $i$ leaves a visible departure
 from the no-intervention prediction. If another asset gives a small

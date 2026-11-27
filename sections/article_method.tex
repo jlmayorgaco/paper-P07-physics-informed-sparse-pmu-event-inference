@@ -158,7 +158,13 @@ screens the last 0--18 report lags, retrieves the stored state preceding
 the candidate switch and replays the intervening reports. Its score
 replaces the old suffix likelihood. The same reports therefore contribute
 once to each path. The bank prunes low-weight histories and renormalizes
-the survivors. The supplement gives the transition hazards, half-report
+the survivors. Averaging $\widehat{\xi}_{h,k+1}$ with these normalized
+weights gives the minimum-mean-square-error state estimate for the retained
+mixture. Its accuracy as an approximation to the full posterior depends on
+the local covariance model and the histories surviving the search.
+The source decision uses the history masses below and a calibrated
+publication threshold.
+The supplement gives the transition hazards, half-report
 switch phases, storage limits and pruning rule.
 
 For source $c$, the two relevant sums of history weights are

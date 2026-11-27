@@ -1,0 +1,121 @@
+\subsection{A New Event During Recovery in a Four-Family Model}
+\label{app:four-family-conditional}
+
+We tested whether the response still visible after a fault clears or a
+line recloses can account for an apparent second event. This experiment
+uses a reduced IEEE 39-bus simulator with classical machine dynamics,
+governors and eight PMUs. Its four interventions are a bus fault, a
+temporary line opening, a positive pulse in generator torque and a load
+change. Each record lasts 24~s, including a one-second quiet reference.
+Both the simulator and the predictor use the same network and machine
+equations. The experiment tests uncertainty in their parameters.
+Li and Wang predict and subtract a preceding disturbance to classify a
+second event from a triggered PMU window \cite{liwang2019successive}.
+Here the physical fit supplies the competing prediction that recovery alone
+continues. The monitor must decide whether to issue a second alarm and,
+if it does, name the affected bus or line.
+
+\paragraph{A common prediction after clearance.}
+The first declaration supplies the family and asset of a fault or line
+opening. When the inferred probability that clearance occurred at least
+15 reports earlier reaches 0.99, we refine the switch times from nearby
+voltage changes. Let $k_f$ be the fitting report, $y_j$ the complex PMU
+voltages normalized to their quiet mean, and $V_j(\theta)$ the predicted
+voltages for the inferred switch history. Both monitors fit
+\[
+ \widehat\theta=\arg\min_{\theta\in\Theta}
+ \sum_{j=\widehat\tau}^{k_f}
+ \frac{\|y_j-V_j(\theta)\|_2^2}{(0.001)^2}
+ +\sum_{i=1}^{4}\frac{\log^2(\theta_i/\theta_{0,i})}{s_i^2}.
+\]
+The four penalized parameters are inertia and damping multipliers,
+governor time constant and droop, with nominal values $(1,1,0.5,0.05)$
+and log scales $(0.25,0.65,0.5,0.45)$. For a fault, the fit includes a
+fifth bounded parameter for conductance. With the asset back in service,
+the fitted swing and governor dynamics predict its residual motion.
+The network equations map that motion to the eight PMU voltages and
+oriented branch currents. The reference monitor retains its original bank of new-event hypotheses
+and can also declare a generator event from the governor-fitted recovery
+residual. The original stream has priority at
+each publication time.
+
+The alternative uses one decision after the fit becomes available.
+It subtracts the predicted departure due to the first event from each
+new report and compares all four intervention families with continued
+recovery in those coordinates. Both hypotheses then account for the
+same first event. A conditional filter initialized from the quiet
+reference starts with the next report. The measurements used to fit the
+first event do not enter its subsequent event likelihood again.
+
+For a candidate with predicted innovation $s$, let $r$ be the observed
+innovation in the 31 whitened measurement coordinates, and $v$ the
+baseline predictive scale. Under a multivariate Student law with
+$\nu$ degrees of freedom and common scale matrix $c_b v I$, the
+single-report log likelihood ratio against continued recovery, before a
+second event has been declared, is
+\[
+ \frac{\nu+31}{2}
+ \log\!\left(\frac{\nu c_b v+\|r\|^2}
+                   {\nu c_b v+\|r-s\|^2}\right).
+\]
+The filter adds these log ratios across reports for each candidate history,
+then sums the prior-weighted likelihoods over onset, asset and duration.
+A previously fitted slope and intercept calibrate the resulting log odds.
+Every three reports the monitor compares the expected cost of publishing
+each family--asset pair with the cost of waiting three more reports. It
+approximates that one-step expectation by sampling predictive measurements.
+Under the null model, $\|r\|^2/(31c_b v)$ follows $F_{31,\nu}$.
+Here $\nu=3$. We estimated $c_b$ by dividing the median observed radial energy
+$\|r\|^2/(31v)$ by the median of this reference distribution.
+Twenty isolated training faults and sixteen isolated line openings supplied the residuals.
+Their labeled switches initialized the training fits. In operation the
+monitor infers the switches. We fitted one scale at each of three
+recovery ages (up to 45, 46--150, and beyond 150 reports after
+clearance). The fitted scale multipliers were 0.866, 0.856 and 0.840,
+respectively. The unit-scale control uses the same conditional filter.
+Conditioning on the fitted trajectory is a plug-in approximation to
+integration over uncertain physical parameters.
+
+We checked whether these parameters leave an asset-specific pattern in
+the prediction error. In 10 isolated faults and 11 isolated line openings
+from development, we stacked the real and imaginary voltage errors from
+eight PMUs over 15 consecutive reports. We projected each 240-coordinate
+vector onto the span of the voltage sensitivities to the fitted parameters.
+Across 728 nonoverlapping windows after fitting, the median projected
+energy fraction (first within each record, then across records) was
+0.973 for faults and 0.617 for lines. Cyclically shifting the PMU
+channels gave 0.965 and 0.616. The high alignment survives a change of
+sensor labels, which limits its value as evidence for the location.
+
+\paragraph{What duration can identify.}
+The original generator prior admitted durations of 27--66 reports.
+We assigned half of each generator's prior mass to pulses of 6--12
+reports, preserving the total prior by asset and the original torque
+quadrature. At a fixed onset, asset and torque, all durations still
+active at report $k$ have the same input history and the same prefix
+likelihood $L_{\rm active}$. Their contribution to the evidence is
+$L_{\rm active}\Pr(D>k-\tau)$ for onset report $\tau$ and duration $D$.
+A duration change can alter the relative weight of already-cleared
+paths. Distinguishing two pulses that have both remained active requires
+a later report at which their trajectories differ.
+
+\paragraph{Paired evaluation.}
+Each scenario block shares its noise, first-event realization and
+timing across an isolated first event and its two-event counterparts.
+First- and second-event strengths are drawn independently.
+Each block tests nominal regulation and a second setting with time constant and droop drawn
+independently and uniformly over 0.35--1.05~s and 0.035--0.085,
+respectively. The supervised
+comparator uses the source-excluded ExtraTrees refit with its original
+decision rules. All methods consume the same reports in time order.
+We froze the estimators and operating points before generating these
+records. Event times, disturbances and noise were drawn afresh. The
+reserved physical assets were the same as in our earlier four-family
+experiments, so the new trajectories do not expand the set of tested
+locations.
+A successful joint decision requires the correct family and exact
+bus or line within 45 reports of onset. A second count requires
+publication before the event ends. Macro-F1 weights the four families
+equally. Extras include every unmatched alarm in event and quiet records.
+
+\input{tables/generated/four_family_conditional}

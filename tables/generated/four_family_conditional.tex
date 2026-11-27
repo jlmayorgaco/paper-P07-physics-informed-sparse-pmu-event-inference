@@ -1,0 +1,46 @@
+\begin{table*}[t]\centering\footnotesize
+\caption{Paired four-family stress test on the reduced IEEE 39-bus plant. The 420 events are the denominator for family and joint accuracy. Joint requires the correct asset and family within 1.5 s. Active also requires publication before clearance. Extras are unmatched alarms on all records.}
+\label{tab:four-family-conditional}\setlength{\tabcolsep}{5pt}
+\begin{tabular}{lrrrrrr}\toprule
+Decision model & Detected & Family & Joint & Active & Macro-F1 & Extras\\\midrule
+Reference & 403 & 403 & 397 & 391 & 0.9145 & 58 \\
+Short torque pulses & 411 & 411 & 405 & 391 & 0.8848 & 117 \\
+Conditional recovery & 409 & 409 & 407 & 400 & 0.9444 & 38 \\
+Conditional recovery and short pulses & 417 & 417 & 415 & 400 & 0.9502 & 41 \\
+Combined, unit scale & 417 & 417 & 415 & 400 & 0.9502 & 41 \\
+Refitted ExtraTrees & 294 & 252 & 240 & 63 & 0.6786 & 2 \\
+\midrule\multicolumn{7}{l}{Operating points selected on separate calibration blocks}\\
+Reference ($b=16$) & 395 & 395 & 391 & 390 & 0.9430 & 21 \\
+Conditional recovery and short pulses ($b=16$) & 410 & 410 & 408 & 396 & 0.9809 & 7 \\
+\bottomrule\end{tabular}\end{table*}
+
+The blind trial contained 465 records in 15 independent scenario blocks,
+with 165 distinct quiet realizations (1.05 monitored hours).
+The second-event generator buses (32, 35 and 38) and all other test assets were excluded from labeled model fitting and calibration.
+Table~\ref{tab:four-family-conditional} reports a factorial comparison at the reference operating point.
+As a secondary comparison, six separate calibration blocks set the alarm budget to the number of extras from the frozen trees.
+For the reference and combined monitors we divided fitted event odds by $b\in\{1,4,16\}$ and selected the most accurate joint decision satisfying the budget.
+When all three violated the budget, we selected the smallest excess before comparing accuracy.
+The selected reference rule gave 0 calibration extras and 151 joint identifications out of 168.
+The selected combined rule gave 2 calibration extras and 154 joint identifications out of 168.
+The trees produced 0 calibration extras.
+
+At the original odds, the combined rule changed joint accuracy by +4.29
+percentage points (paired 95\% block-bootstrap interval [1.43, 7.14]),
+macro-F1 by +3.57 points (interval [-0.24, 7.52]),
+and unmatched alarms by -17.
+With the same physical filter and unit scale the joint count was 415 and there were 41 extras.
+The combined rule produced 0 alarms in quiet records and 41 unmatched alarms in event records.
+The conditional forecast raised joint diagnoses from 25/30 to 30/30 both for loads after faults and for second line openings.
+Extending the duration prior raised joint diagnoses for isolated short generator pulses from 20/30 to 28/30. In both cases only 14/30 were identified before pulse removal.
+The combined rule and the reference identified the same number of generator events following a fault (28/30) or a line opening (29/30).
+Across all 30 generator--amplitude combinations, the six-report
+innovation prefix of the shortest pulse was identical to that of the corresponding long pulse in the implemented bank.
+
+At the operating points selected on calibration, the combined model identified 408 family--asset pairs against 391 for the reference.
+The paired gains were 4.05 percentage points in joint accuracy (95\% interval [2.14, 6.19]) and 3.79 points in macro-F1 ([1.60, 6.36]).
+The combined model exceeded 0.96 in macro-F1, family accuracy and joint accuracy within the deadline. Of the 420 events, 396 had correct joint decisions before clearance.
+It issued seven extras against two from the trees. Three followed isolated faults. In the records with two line openings, three were duplicate diagnoses during the second opening and one followed reclosure.
+Thus the combined model missed the prespecified macro-F1 target at the reference odds and exceeded the tree alarm budget at both operating points.
+These comparisons use simulated positive torque pulses, a fixed PMU installation and known topology.
+The resulting operating points need independent validation on a different plant and a longer continuous stream.
