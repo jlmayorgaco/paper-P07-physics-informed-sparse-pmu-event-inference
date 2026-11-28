@@ -61,6 +61,21 @@ report after the deadline in the two governor variants of the same
 scenario. We charged both as unmatched. The supplement reports the
 paired intervals and sensitivity to terminal-angle noise.
 
+The two late declarations motivated a revision. For a first generator
+pulse we project the voltage reports and all seven current angles
+onto the rotor-motion subspace and integrate over torque magnitude.
+During recovery we check whether the shunt implied by a new fault
+declaration would produce the observed voltage jump. We froze both
+changes and repeated the experiment on 15 new scenario blocks from
+the same reserved assets. The revised estimator triggered on 416 of
+420 events, correctly classified all 416, and located 409 by the
+unchanged 1.5-s deadline (97.38\%, 95\% block-bootstrap interval
+95.71--98.81\%). The single-current estimator located 408. The
+additional diagnosis was a short pulse at bus 35. Across all 30
+short pulses, the revision raised the number located before clearance
+from 10 to 16. Both estimators had macro-F1 0.9896 and made the
+same five unmatched declarations, all on streams with two line trips.
+
 We also compared family decisions on the same alarm reports. Each
 classifier published 29 reports after the alarm when that report was
 available.

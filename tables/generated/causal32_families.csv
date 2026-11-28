@@ -1,0 +1,17 @@
+method,family,events,miss,wrong_or_late_family,wrong_asset,joint
+combined16,1,120,0,0,0,120
+combined16,2,120,4,0,4,112
+combined16,3,120,4,0,3,113
+combined16,4,60,0,0,0,60
+trees_refit,1,120,2,28,3,87
+trees_refit,2,120,24,0,2,94
+trees_refit,3,120,62,4,7,47
+trees_refit,4,60,30,0,0,30
+incumbent_terminal,1,120,0,0,0,120
+incumbent_terminal,2,120,4,0,4,112
+incumbent_terminal,3,120,0,0,4,116
+incumbent_terminal,4,60,0,0,0,60
+candidate,1,120,0,0,0,120
+candidate,2,120,4,0,4,112
+candidate,3,120,0,0,3,117
+candidate,4,60,0,0,0,60

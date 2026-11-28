@@ -1,0 +1,99 @@
+\paragraph{Why did two bus-32 declarations arrive one report late?}
+The two late records shared the same six-report pulse and noise
+realization, with different governors. Both prefixes already exceeded
+the single-terminal reader's threshold against quiet operation. Its best
+source alternated between buses 31 and 32. At onset plus 45 reports,
+the nominal-governor record favored bus 31 with conditional probability
+0.644. In the other record, bus 31 led with probability 0.999 at
+plus 44, followed by bus 32 with probability 0.999 at plus 45.
+The next scheduled publication was at plus 46. A faster decision clock
+alone could therefore have published the wrong bus.
+
+For the revised first-pulse likelihood we kept the three-report clock
+and included all seven available current angles alongside the 16
+voltage coordinates. Let $H_w$ map rotor-angle changes to these
+23 standardized coordinates. Use the original voltage scales and
+the same working angular standard deviation of 1~mrad at each
+energized current terminal. If $U$ contains the ten orthonormal
+columns spanning $H_w$, every candidate response lies in that space
+at each report. Projecting each report and template onto $U$ thus
+preserves both the inner product and the template energy in
+\eqref{eq:pulse-common-prefix}. The residual check still uses all 23
+coordinates, including deviations that rotor motion cannot explain.
+
+At the final source comparison we integrate the positive torque
+severity $a$ uniformly over $[l,u]=[0.7,1.3]$. For a candidate path
+write $p=\langle P_N s,P_N y\rangle$, $e=\|P_N s\|^2>0$, and
+$z=p/\sqrt e$. Its marginal likelihood ratio is
+\[
+ \frac{\sqrt{2\pi/e}}{u-l}\,\exp(z^2/2)
+ \big[\Phi(u\sqrt e-z)-\Phi(l\sqrt e-z)\big].
+\]
+The fast screen retains its three amplitude nodes. In development,
+using all currents with three nodes also in the final comparison
+produced premature bus-34 declarations on bus-33 pulses. Continuous
+severity integration removed these source errors on the same
+records. Both late bus-32 cases in the diagnostic replay were
+correctly located at plus seven reports, one report after torque
+cleared. We excluded the diagnostic replay from the new blind counts.
+
+During recovery, the bank can also announce a new shunt fault while
+voltage follows a smooth trajectory. We check this particular
+declaration at its proposed publication report. For a candidate
+bus $b$, let $\Delta y_b(a)$ be the proposed shunt conductance and
+$Z$ the inverse nominal nodal admittance including the generator
+Norton admittances. Holding the internal source phasors fixed at
+switching gives the rank-one voltage change
+\[
+ v(a)-v_0=-\frac{\Delta y_b(a)\,v_{0b}}
+                    {1+\Delta y_b(a)\,Z_{bb}}\, Z e_b .
+\]
+The log-magnitudes and phases of $v(a)/v_0$ at the eight PMUs
+form the signed jump $j_b(a)$.
+At each available onset within two reports of the estimated onset,
+subtract the locally extrapolated voltage from the mean of up to
+three post-onset reports to give $d$. With $W$ the inverse diagonal
+scale estimated from preceding increments, the profiled log likelihood
+ratio for a jump against smooth continuation is
+\[
+ G_b=\tfrac12\left(\|Wd\|^2-\min_a\|W(d-j_b(a))\|^2\right).
+\]
+The search spans the weak-to-nominal fault range on a grid and
+includes its endpoints. We suppress the declaration only when
+$G_b\leq -5$ and the smallest admissible jump has
+$\|Wj_b(a_{\min})\|\geq5$ at every available onset. Both cutoffs
+are operating choices. The check applies only to a fault proposed
+by the recovery observer at the current report. In the two
+development cohorts it removed two unmatched declarations in one
+and none in the other, and retained every previously correct
+family--asset declaration in both.
+
+\input{tables/generated/causal32_replication}
+
+Table~\ref{tab:network-torque-replication} uses 15 new scenario and
+noise blocks with matched governor variants. The asset split, eight
+PMUs, 30-report/s sampling and 45-report publication deadline match
+the preceding experiment. Both estimators located all ten short
+bus-32 pulses. The revised estimates arrived four to seven reports
+after onset (median six), compared with five to seven for the
+single-current estimator (median six). At bus 35 the latter assigned
+one pulse to bus 36. The revision located it at report 27 after onset.
+Across all 420 events the paired gain in exact diagnoses was 0.24
+percentage points (95\% whole-block bootstrap interval 0.00--0.71).
+The corresponding gain before clearance was 1.43 points
+(0.00--2.86). The unit resampled was the scenario block.
+
+The revised estimator made 120/120 exact fault diagnoses, 112/120
+line diagnoses, 117/120 generator diagnoses and 60/60 load diagnoses.
+It missed four line events and assigned four other lines and three
+generators to the wrong asset. Both estimators made the same five
+unmatched declarations. Three occurred after the second line
+reclosed. In two governor variants the bank first attributed a
+trip of line 10--11 to line 6--11 and then repeated the same
+declaration while the line was still open. The shunt check removed
+no alarm on these blind records. Of the two spurious fault
+declarations, the voltage change at the proposed onset favored a
+shunt over local continuation for bus 5. At bus 36 the weakest
+shunt had a standardized norm below 1.2 at every tested onset,
+too small to rule out. All four methods remained silent
+in the 165 quiet streams (1.05 monitored quiet hours).
