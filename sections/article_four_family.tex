@@ -76,6 +76,22 @@ short pulses, the revision raised the number located before clearance
 from 10 to 16. Both estimators had macro-F1 0.9896 and made the
 same five unmatched declarations, all on streams with two line trips.
 
+We therefore let the estimator track the circuit topology after the
+first line declaration. For each possible opening or reclosure, it
+conditions the generator-source phasors on the previous PMU report
+and integrates them out when predicting the next report. Line
+openings compete with load changes and faults. The monitor reports
+a new opening once and uses the inferred reclosure to recognize a
+later opening of the same line. On another 15 blind blocks, both
+estimators located all \SwNewSecond{} second line openings and
+made \SwNewJoint{} exact diagnoses in 420 events by the deadline.
+The switch filter reduced unmatched alarms from \SwOldExtras{}
+to \SwNewExtras{}. Both avoided alarms came from the two
+governor variants of one sequence. While line 21--22 remained
+open, the previous estimator announced a further opening on
+a different branch in each variant. The filter retained line
+21--22 as open in both.
+
 We also compared family decisions on the same alarm reports. Each
 classifier published 29 reports after the alarm when that report was
 available.

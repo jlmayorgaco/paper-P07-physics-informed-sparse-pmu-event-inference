@@ -1,0 +1,5036 @@
+{
+  "freeze_sha256": "d6d94688f8d8ac36c84476a551d35ce1acd63fb9d6c16bb83e38de6fd736b7f5",
+  "source": "912c5a5a444f49b7e527e1b542239436ccabcce3493f40714ca2a12edc0d917b",
+  "design": {
+    "pmu.npy": "e07375aeb63c6dfc19cefc3061c8adff4ca20f1dfcdbcc525de17cb1dd06e089",
+    "design.json": "bd1306fed501473ba3a0cced5a57c248beb41c6076a8453a40624a7999b132af",
+    "protocol": "d200985918fc45305bda07b213727815bb4049c64f7fcc54f0e6599fee2d1f88",
+    "freeze": "d6d94688f8d8ac36c84476a551d35ce1acd63fb9d6c16bb83e38de6fd736b7f5",
+    "current_freeze": {
+      "schema": 1,
+      "seed": 1973173963,
+      "blocks": 15,
+      "records": 465,
+      "event_slots": 420,
+      "current_freeze_sha256": "87f4db8439408c7be96dd5d70a9dfbe47536864952eb7e74389ca6baa315497a",
+      "prior_causal32_model_sha256": "8959c1c7f6d7a1aabbd59d1332f3af68d14c79a0419aa4a7cc7d2103096b50ab",
+      "digests": {
+        "output/switch_trial/protocol.json": "d200985918fc45305bda07b213727815bb4049c64f7fcc54f0e6599fee2d1f88",
+        "src/switch_trial/freeze.py": "adb8537aa1e612911385f8d6f81a8a803811598fd21b91cda4806f506542cdde",
+        "src/switch_trial/generate.py": "203a143835c44c1bf07be9f5ee2ff9fa443c2be93fa431ea365920a58f95a9e4",
+        "src/switch_trial/runner.py": "f138a275a70b002bb55a7d7281b849b7af416ee040dc00d3f9305aa81360e137",
+        "src/switch_estimator.py": "912c5a5a444f49b7e527e1b542239436ccabcce3493f40714ca2a12edc0d917b",
+        "src/switch_physics.npz": "fdc693b8d5ef27ab5506512808a07fc190f513c8830ef6bf1cb4d33d21622486",
+        "src/switch_physics.py": "8fa8ae2a4e6b8d6a226c7cee933a3ad4f302f9f2673c9f44603ea375d89c303f",
+        "src/switch_dev.py": "a1c8e30d22262e6d021d0c06a42b55f0e0a578ecfce1925e49cdbf70af836bad",
+        "src/switch_checks.py": "c785d856d1db8aa33c4a57208999b64ba1505fa16b137115245897859c1ab26e",
+        "src/causal32_estimator.py": "8959c1c7f6d7a1aabbd59d1332f3af68d14c79a0419aa4a7cc7d2103096b50ab",
+        "src/rotor_score.py": "3fe790be438b482b6240a9affb040106cf1c0f5cadd824c901bfbf69f6b38d9f",
+        "src/experiments/graph_recursive/evaluate.py": "685434084bf7e2f500017a811001344847390fec6c89773285115eeef189e4c6",
+        "src/conditional_pulse_data.py": "dbbd95c8b42471fafc5bf0c9ae29628732ec16e9c6481ecb9a84189b06698cbc",
+        "src/weak_fault_bank_trial.py": "2cd7e741c13d9a5cf7bef5803839023c47c700d9b84543c5f6163c0a9dd0c8b7",
+        "src/rotor_campaign.py": "9ff781ad1de90983b407f00ebc77e22b2dfd96305a027bb21ec74666f7d5668c",
+        "tmp/graph_recursive/plant.npz": "7079a477a0341f415feb318c6100d3f08d9df6d245cf5663f9f723bbce2dfe29",
+        "src/experiments/graph_intervention/model.npz": "37412fe95b4bcc702d85fc2748ac613a9a08ca18a2f4290dbd0b47bbc35bbe0e",
+        "tmp/graph_intervention/trees_refit.joblib": "18c3fdeabb3a6a0c38266eaeffcbfff82ddc892369fb1099ea5bd4b872d04e72",
+        "output/switch_dev/conditional_pulse_trial/metrics.json": "c97acd10743b0f4c3b9d759c45ead88af71e66f0bb770c243df7a19115a0210e",
+        "output/switch_dev/conditional_pulse_trial/predictions.json": "a5f162985016943f482b96f5d33d1e8a875bbd898b9868011081a21018f5c3e5",
+        "output/switch_dev/restoration_trial_v1/metrics.json": "737c039d0f34639bbed2f089d5aebf5e7fe20062401c7067deef4d03311bdd94",
+        "output/switch_dev/restoration_trial_v1/predictions.json": "0d1a4a37ff764b7b9686a735359c5a0ce6cfd9c2e375fb01bbeb4a79c38c11ed",
+        "output/switch_dev/prior_diagnostic/metrics.json": "ff6ef6d393b11eec9cbefa1065f52c14dfa62e5d79af5fbb467c6328d14b78a8",
+        "output/switch_dev/prior_diagnostic/predictions.json": "86cb54c1fb657973e6a850e6e2fe5de1847fa4b74f5d3c59086f0b4417227d77",
+        "output/switch_dev/checks.json": "b7244c056b26eb981c88e6b65eb5dce785a7b909016e4e5508c6464f219e0f20",
+        "src/switch_diagnostic/audit_development.py": "cf57c5bdcf0244d551b863f0860f22e697f552304ec85b1c3590e751d6596c7b",
+        "output/switch_diagnostic/summary.json": "66f2295a7fbd93e1ef121d23c2d0d36c256f64f8cd881f7f980f531f187923ff",
+        "output/switch_diagnostic/README.md": "7809a208d6996d6e56c09bf456033cd826278571dfea2432ab82db548f19c2f0",
+        "output/switch_diagnostic/conditional_calibration_cases.csv": "e955951f04c16e9d9de53dd52f817c6c53c7d7038a1e12c86cdb8389f272b937",
+        "output/switch_diagnostic/pmu_switch_jumps.csv": "50bb023fe527c98915048e6c8de8601258755898fbc9565cf02ae4abcab1765c",
+        "output/switch_diagnostic/restoration_calibration_cases.csv": "0247555edbb9e439cb0482a6d6031359ebee51b431e801bb4571e3a40cb8eb6e",
+        "output/switch_diagnostic/restoration_pmu_switch_jumps.csv": "3fe20039616fccdfde6853f013e98314c6d6d95fcc968a57c6846214140e5da1",
+        "src/switch_falsify.py": "7112fc85e61f32d524413685fa046788702c0079e44fee0b65aa4b8adfd145cb",
+        "src/switch_replay.py": "120349183474a48db3e8c18fbbbef614b6d0955d65f05afdd17e8fd269b79a53",
+        "src/switch_challenge/run.py": "1ceb0e80dc00d1e83e3c70eb5ecdcd41e49da802ddbd1be3609a178021fc7ebc",
+        "output/switch_challenge/protocol.json": "f3d70b5bc9dcda262382719077e4340fc49ca67bfab716b2301bd5b037af5333",
+        "output/switch_challenge/data_seal.json": "ca9b8f0d8fa97051b303933b4d1664682979d8b7a83704034d7716092323192b",
+        "output/switch_challenge/design.json": "8be5f8975e64dd976f733d82a09b450d31e446004db3d252083179d21966b453",
+        "output/switch_challenge/pmu.npy": "a6267e240aab8389e86d79872a1b20dd1804189b1a9ea49fc3af0cfe7749689e",
+        "output/switch_challenge/baseline_combined16.json": "3911711875c0c2b53d145f7ecf4f84bc685d0a8b375c7d1d29b5743e1cae180d",
+        "output/switch_challenge/baseline_causal32_estimator.json": "f32f3bfcf53ddf8077e1a1f06fe2602bf0a427cbe194a5dcfe4f053f1b6c78e0",
+        "output/switch_challenge/baseline_metrics.json": "e70aef4333e5f484156fc49804857fd0d08d6d99eb820db26182afc489219491",
+        "output/switch_dev/challenge/metrics.json": "474da93d72435e4617a9bc18ec34993efd681f1fec1cfa514edc96ec7bfe8364",
+        "output/switch_dev/challenge/predictions.json": "e160422ede1ee96e5b86e40320088d5153f354a35f22f2bb005bf23c9cbaceee"
+      },
+      "development": {
+        "conditional_pulse_trial": {
+          "current": {
+            "events": 168,
+            "detected": 158,
+            "family": 158,
+            "joint": 158,
+            "before_clearance": 148,
+            "macro_f1": 0.9606060606060607,
+            "extras": 0,
+            "quiet_extras": 0
+          },
+          "candidate": {
+            "events": 168,
+            "detected": 158,
+            "family": 158,
+            "joint": 158,
+            "before_clearance": 148,
+            "macro_f1": 0.9606060606060607,
+            "extras": 0,
+            "quiet_extras": 0
+          }
+        },
+        "restoration_trial_v1": {
+          "current": {
+            "events": 168,
+            "detected": 160,
+            "family": 158,
+            "joint": 150,
+            "before_clearance": 140,
+            "macro_f1": 0.9081041332207292,
+            "extras": 20,
+            "quiet_extras": 0
+          },
+          "candidate": {
+            "events": 168,
+            "detected": 160,
+            "family": 160,
+            "joint": 152,
+            "before_clearance": 142,
+            "macro_f1": 0.9280639210211408,
+            "extras": 19,
+            "quiet_extras": 0
+          }
+        },
+        "prior_diagnostic": {
+          "events": 420,
+          "detected": 420,
+          "family": 420,
+          "joint": 417,
+          "before_clearance": 403,
+          "macro_f1": 0.9968965398991805,
+          "extras": 2,
+          "quiet_extras": 0
+        },
+        "positive_challenge": {
+          "all": {
+            "current": {
+              "events": 150,
+              "detected": 148,
+              "family": 147,
+              "joint": 146,
+              "before_clearance": 146,
+              "macro_f1": 0.9692101740294511,
+              "extras": 2
+            },
+            "candidate": {
+              "events": 150,
+              "detected": 150,
+              "family": 150,
+              "joint": 149,
+              "before_clearance": 149,
+              "macro_f1": 0.99,
+              "extras": 1
+            }
+          },
+          "reopen_different": {
+            "current": {
+              "events": 12,
+              "detected": 11,
+              "family": 11,
+              "joint": 11,
+              "before_clearance": 11,
+              "macro_f1": 0.2391304347826087,
+              "extras": 1
+            },
+            "candidate": {
+              "events": 12,
+              "detected": 12,
+              "family": 12,
+              "joint": 12,
+              "before_clearance": 12,
+              "macro_f1": 0.25,
+              "extras": 0
+            }
+          },
+          "three_openings_abc": {
+            "current": {
+              "events": 18,
+              "detected": 17,
+              "family": 17,
+              "joint": 17,
+              "before_clearance": 17,
+              "macro_f1": 0.24285714285714285,
+              "extras": 1
+            },
+            "candidate": {
+              "events": 18,
+              "detected": 18,
+              "family": 18,
+              "joint": 18,
+              "before_clearance": 18,
+              "macro_f1": 0.25,
+              "extras": 0
+            }
+          },
+          "extra_three_openings_aba": {
+            "current": {
+              "events": 18,
+              "detected": 18,
+              "family": 17,
+              "joint": 17,
+              "before_clearance": 17,
+              "macro_f1": 0.24285714285714285,
+              "extras": 0
+            },
+            "candidate": {
+              "events": 18,
+              "detected": 18,
+              "family": 18,
+              "joint": 18,
+              "before_clearance": 18,
+              "macro_f1": 0.25,
+              "extras": 1
+            }
+          }
+        }
+      },
+      "development_digests": {
+        "output/switch_dev/conditional_pulse_trial/metrics.json": "c97acd10743b0f4c3b9d759c45ead88af71e66f0bb770c243df7a19115a0210e",
+        "output/switch_dev/conditional_pulse_trial/predictions.json": "a5f162985016943f482b96f5d33d1e8a875bbd898b9868011081a21018f5c3e5",
+        "output/switch_dev/restoration_trial_v1/metrics.json": "737c039d0f34639bbed2f089d5aebf5e7fe20062401c7067deef4d03311bdd94",
+        "output/switch_dev/restoration_trial_v1/predictions.json": "0d1a4a37ff764b7b9686a735359c5a0ce6cfd9c2e375fb01bbeb4a79c38c11ed",
+        "output/switch_dev/prior_diagnostic/metrics.json": "ff6ef6d393b11eec9cbefa1065f52c14dfa62e5d79af5fbb467c6328d14b78a8",
+        "output/switch_dev/prior_diagnostic/predictions.json": "86cb54c1fb657973e6a850e6e2fe5de1847fa4b74f5d3c59086f0b4417227d77",
+        "output/switch_dev/checks.json": "b7244c056b26eb981c88e6b65eb5dce785a7b909016e4e5508c6464f219e0f20",
+        "src/switch_diagnostic/audit_development.py": "cf57c5bdcf0244d551b863f0860f22e697f552304ec85b1c3590e751d6596c7b",
+        "output/switch_diagnostic/summary.json": "66f2295a7fbd93e1ef121d23c2d0d36c256f64f8cd881f7f980f531f187923ff",
+        "output/switch_diagnostic/README.md": "7809a208d6996d6e56c09bf456033cd826278571dfea2432ab82db548f19c2f0",
+        "output/switch_diagnostic/conditional_calibration_cases.csv": "e955951f04c16e9d9de53dd52f817c6c53c7d7038a1e12c86cdb8389f272b937",
+        "output/switch_diagnostic/pmu_switch_jumps.csv": "50bb023fe527c98915048e6c8de8601258755898fbc9565cf02ae4abcab1765c",
+        "output/switch_diagnostic/restoration_calibration_cases.csv": "0247555edbb9e439cb0482a6d6031359ebee51b431e801bb4571e3a40cb8eb6e",
+        "output/switch_diagnostic/restoration_pmu_switch_jumps.csv": "3fe20039616fccdfde6853f013e98314c6d6d95fcc968a57c6846214140e5da1",
+        "src/switch_falsify.py": "7112fc85e61f32d524413685fa046788702c0079e44fee0b65aa4b8adfd145cb",
+        "src/switch_replay.py": "120349183474a48db3e8c18fbbbef614b6d0955d65f05afdd17e8fd269b79a53",
+        "src/switch_challenge/run.py": "1ceb0e80dc00d1e83e3c70eb5ecdcd41e49da802ddbd1be3609a178021fc7ebc",
+        "output/switch_challenge/protocol.json": "f3d70b5bc9dcda262382719077e4340fc49ca67bfab716b2301bd5b037af5333",
+        "output/switch_challenge/data_seal.json": "ca9b8f0d8fa97051b303933b4d1664682979d8b7a83704034d7716092323192b",
+        "output/switch_challenge/design.json": "8be5f8975e64dd976f733d82a09b450d31e446004db3d252083179d21966b453",
+        "output/switch_challenge/pmu.npy": "a6267e240aab8389e86d79872a1b20dd1804189b1a9ea49fc3af0cfe7749689e",
+        "output/switch_challenge/baseline_combined16.json": "3911711875c0c2b53d145f7ecf4f84bc685d0a8b375c7d1d29b5743e1cae180d",
+        "output/switch_challenge/baseline_causal32_estimator.json": "f32f3bfcf53ddf8077e1a1f06fe2602bf0a427cbe194a5dcfe4f053f1b6c78e0",
+        "output/switch_challenge/baseline_metrics.json": "e70aef4333e5f484156fc49804857fd0d08d6d99eb820db26182afc489219491",
+        "output/switch_dev/challenge/metrics.json": "474da93d72435e4617a9bc18ec34993efd681f1fec1cfa514edc96ec7bfe8364",
+        "output/switch_dev/challenge/predictions.json": "e160422ede1ee96e5b86e40320088d5153f354a35f22f2bb005bf23c9cbaceee"
+      }
+    },
+    "n": 465,
+    "blocks": 15,
+    "seed": 1973173963,
+    "event_slots": 420
+  },
+  "manifest": {
+    "data_seal": "cfd44d581acd53efc9554afcd398ebb7dbb8b50ce7b1cafef037a2e063d8675f",
+    "freeze": "d6d94688f8d8ac36c84476a551d35ce1acd63fb9d6c16bb83e38de6fd736b7f5",
+    "methods": {
+      "combined16": "d46bc8249a29c0acc00dda0f7c52ebd9599b11f6e4051768757f6795fa57f576",
+      "trees_refit": "7402e86f8bc41cdcf4f17a628f787537acdba8f7929b020472af691cc065179f",
+      "causal32": "91ac6f186dc31911a7e4beaf80ae45a3142a2affea60a94370ef95169b6e602b",
+      "switch_candidate": "833eae6b89c91b2d77f264565f5d9156ae069e4dcaf698481d465c71dda34266"
+    },
+    "labels_opened": false
+  },
+  "scores": {
+    "combined16": {
+      "events": 420,
+      "detected": 402,
+      "family": 402,
+      "joint": 402,
+      "macro_f1": 0.9646635649249339,
+      "extras": 11,
+      "quiet_extras": 0,
+      "quiet_hours": 1.0541666666666667,
+      "fa_normal_per_hour": 0.0,
+      "event_record_extras": 11,
+      "median_detection_s": 0.1,
+      "median_diagnosis_s": 0.1,
+      "confusion": [
+        [
+          0,
+          6,
+          4,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          120,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          120,
+          0,
+          0,
+          0
+        ],
+        [
+          14,
+          0,
+          0,
+          106,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          0,
+          0,
+          56,
+          0
+        ]
+      ],
+      "by_family": [
+        [
+          0,
+          0,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          120
+        ],
+        [
+          14,
+          0,
+          0,
+          106
+        ],
+        [
+          4,
+          0,
+          0,
+          56
+        ]
+      ],
+      "site_only": 402,
+      "before_clearance": 384,
+      "subgroups": {
+        "short_generator/event_1": [
+          30,
+          22,
+          8,
+          22
+        ],
+        "generator/event_1": [
+          30,
+          30,
+          30,
+          30
+        ],
+        "load/event_1": [
+          30,
+          30,
+          30,
+          30
+        ],
+        "fault/event_1": [
+          30,
+          30,
+          30,
+          30
+        ],
+        "line/event_1": [
+          30,
+          30,
+          30,
+          30
+        ],
+        "weak_fault/event_1": [
+          30,
+          30,
+          26,
+          30
+        ],
+        "fault_generator/event_1": [
+          30,
+          30,
+          30,
+          30
+        ],
+        "fault_generator/event_2": [
+          30,
+          24,
+          24,
+          24
+        ],
+        "line_generator/event_1": [
+          30,
+          30,
+          30,
+          30
+        ],
+        "line_generator/event_2": [
+          30,
+          30,
+          30,
+          30
+        ],
+        "fault_load/event_1": [
+          30,
+          30,
+          30,
+          30
+        ],
+        "fault_load/event_2": [
+          30,
+          26,
+          26,
+          26
+        ],
+        "line_line/event_1": [
+          30,
+          30,
+          30,
+          30
+        ],
+        "line_line/event_2": [
+          30,
+          30,
+          30,
+          30
+        ]
+      }
+    },
+    "trees_refit": {
+      "events": 420,
+      "detected": 303,
+      "family": 253,
+      "joint": 236,
+      "macro_f1": 0.6854592842261067,
+      "extras": 1,
+      "quiet_extras": 0,
+      "quiet_hours": 1.0541666666666667,
+      "fa_normal_per_hour": 0.0,
+      "event_record_extras": 1,
+      "median_detection_s": 1.1666666666666667,
+      "median_diagnosis_s": 1.1666666666666667,
+      "confusion": [
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          90,
+          0,
+          0,
+          30,
+          0
+        ],
+        [
+          24,
+          0,
+          76,
+          0,
+          8,
+          12
+        ],
+        [
+          63,
+          0,
+          0,
+          57,
+          0,
+          0
+        ],
+        [
+          30,
+          0,
+          0,
+          0,
+          30,
+          0
+        ]
+      ],
+      "by_family": [
+        [
+          0,
+          30,
+          9,
+          81
+        ],
+        [
+          24,
+          20,
+          0,
+          76
+        ],
+        [
+          63,
+          0,
+          8,
+          49
+        ],
+        [
+          30,
+          0,
+          0,
+          30
+        ]
+      ],
+      "site_only": 236,
+      "before_clearance": 97,
+      "subgroups": {
+        "short_generator/event_1": [
+          30,
+          15,
+          0,
+          18
+        ],
+        "generator/event_1": [
+          30,
+          27,
+          17,
+          30
+        ],
+        "load/event_1": [
+          30,
+          30,
+          22,
+          30
+        ],
+        "fault/event_1": [
+          30,
+          27,
+          0,
+          30
+        ],
+        "line/event_1": [
+          30,
+          18,
+          14,
+          24
+        ],
+        "weak_fault/event_1": [
+          30,
+          0,
+          0,
+          30
+        ],
+        "fault_generator/event_1": [
+          30,
+          27,
+          0,
+          30
+        ],
+        "fault_generator/event_2": [
+          30,
+          0,
+          0,
+          0
+        ],
+        "line_generator/event_1": [
+          30,
+          18,
+          14,
+          24
+        ],
+        "line_generator/event_2": [
+          30,
+          7,
+          4,
+          9
+        ],
+        "fault_load/event_1": [
+          30,
+          27,
+          0,
+          30
+        ],
+        "fault_load/event_2": [
+          30,
+          0,
+          0,
+          0
+        ],
+        "line_line/event_1": [
+          30,
+          18,
+          14,
+          24
+        ],
+        "line_line/event_2": [
+          30,
+          22,
+          12,
+          24
+        ]
+      }
+    },
+    "causal32": {
+      "events": 420,
+      "detected": 410,
+      "family": 410,
+      "joint": 410,
+      "macro_f1": 0.9737365802028418,
+      "extras": 11,
+      "quiet_extras": 0,
+      "quiet_hours": 1.0541666666666667,
+      "fa_normal_per_hour": 0.0,
+      "event_record_extras": 11,
+      "median_detection_s": 0.1,
+      "median_diagnosis_s": 0.1,
+      "confusion": [
+        [
+          0,
+          6,
+          4,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          120,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          120,
+          0,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          0,
+          114,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          0,
+          0,
+          56,
+          0
+        ]
+      ],
+      "by_family": [
+        [
+          0,
+          0,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          120
+        ],
+        [
+          6,
+          0,
+          0,
+          114
+        ],
+        [
+          4,
+          0,
+          0,
+          56
+        ]
+      ],
+      "site_only": 410,
+      "before_clearance": 392,
+      "subgroups": {
+        "short_generator/event_1": [
+          30,
+          30,
+          16,
+          30
+        ],
+        "generator/event_1": [
+          30,
+          30,
+          30,
+          30
+        ],
+        "load/event_1": [
+          30,
+          30,
+          30,
+          30
+        ],
+        "fault/event_1": [
+          30,
+          30,
+          30,
+          30
+        ],
+        "line/event_1": [
+          30,
+          30,
+          30,
+          30
+        ],
+        "weak_fault/event_1": [
+          30,
+          30,
+          26,
+          30
+        ],
+        "fault_generator/event_1": [
+          30,
+          30,
+          30,
+          30
+        ],
+        "fault_generator/event_2": [
+          30,
+          24,
+          24,
+          24
+        ],
+        "line_generator/event_1": [
+          30,
+          30,
+          30,
+          30
+        ],
+        "line_generator/event_2": [
+          30,
+          30,
+          30,
+          30
+        ],
+        "fault_load/event_1": [
+          30,
+          30,
+          30,
+          30
+        ],
+        "fault_load/event_2": [
+          30,
+          26,
+          26,
+          26
+        ],
+        "line_line/event_1": [
+          30,
+          30,
+          30,
+          30
+        ],
+        "line_line/event_2": [
+          30,
+          30,
+          30,
+          30
+        ]
+      }
+    },
+    "switch_candidate": {
+      "events": 420,
+      "detected": 410,
+      "family": 410,
+      "joint": 410,
+      "macro_f1": 0.9757688251561002,
+      "extras": 9,
+      "quiet_extras": 0,
+      "quiet_hours": 1.0541666666666667,
+      "fa_normal_per_hour": 0.0,
+      "event_record_extras": 9,
+      "median_detection_s": 0.1,
+      "median_diagnosis_s": 0.1,
+      "confusion": [
+        [
+          0,
+          6,
+          2,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          120,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          120,
+          0,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          0,
+          114,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          0,
+          0,
+          56,
+          0
+        ]
+      ],
+      "by_family": [
+        [
+          0,
+          0,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          120
+        ],
+        [
+          6,
+          0,
+          0,
+          114
+        ],
+        [
+          4,
+          0,
+          0,
+          56
+        ]
+      ],
+      "site_only": 410,
+      "before_clearance": 392,
+      "subgroups": {
+        "short_generator/event_1": [
+          30,
+          30,
+          16,
+          30
+        ],
+        "generator/event_1": [
+          30,
+          30,
+          30,
+          30
+        ],
+        "load/event_1": [
+          30,
+          30,
+          30,
+          30
+        ],
+        "fault/event_1": [
+          30,
+          30,
+          30,
+          30
+        ],
+        "line/event_1": [
+          30,
+          30,
+          30,
+          30
+        ],
+        "weak_fault/event_1": [
+          30,
+          30,
+          26,
+          30
+        ],
+        "fault_generator/event_1": [
+          30,
+          30,
+          30,
+          30
+        ],
+        "fault_generator/event_2": [
+          30,
+          24,
+          24,
+          24
+        ],
+        "line_generator/event_1": [
+          30,
+          30,
+          30,
+          30
+        ],
+        "line_generator/event_2": [
+          30,
+          30,
+          30,
+          30
+        ],
+        "fault_load/event_1": [
+          30,
+          30,
+          30,
+          30
+        ],
+        "fault_load/event_2": [
+          30,
+          26,
+          26,
+          26
+        ],
+        "line_line/event_1": [
+          30,
+          30,
+          30,
+          30
+        ],
+        "line_line/event_2": [
+          30,
+          30,
+          30,
+          30
+        ]
+      }
+    }
+  },
+  "paired95": {
+    "switch_candidate-causal32": {
+      "counts_and_scores": {
+        "macro_f1": [
+          0.0,
+          0.006047675844574774
+        ],
+        "detected": [
+          0.0,
+          0.0
+        ],
+        "family": [
+          0.0,
+          0.0
+        ],
+        "joint": [
+          0.0,
+          0.0
+        ],
+        "before_clearance": [
+          0.0,
+          0.0
+        ],
+        "extras": [
+          -6.0,
+          0.0
+        ],
+        "quiet_extras": [
+          0.0,
+          0.0
+        ]
+      },
+      "rates": {
+        "detected": [
+          0.0,
+          0.0
+        ],
+        "family": [
+          0.0,
+          0.0
+        ],
+        "joint": [
+          0.0,
+          0.0
+        ],
+        "before_clearance": [
+          0.0,
+          0.0
+        ]
+      },
+      "by_family": {
+        "1": {
+          "counts_and_f1": {
+            "family_f1": [
+              0.0,
+              0.0
+            ],
+            "events": [
+              0.0,
+              0.0
+            ],
+            "detected": [
+              0.0,
+              0.0
+            ],
+            "family": [
+              0.0,
+              0.0
+            ],
+            "joint": [
+              0.0,
+              0.0
+            ],
+            "before_clearance": [
+              0.0,
+              0.0
+            ]
+          },
+          "rates": {
+            "detected": [
+              0.0,
+              0.0
+            ],
+            "family": [
+              0.0,
+              0.0
+            ],
+            "joint": [
+              0.0,
+              0.0
+            ],
+            "before_clearance": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "2": {
+          "counts_and_f1": {
+            "family_f1": [
+              0.0,
+              0.024190703378298983
+            ],
+            "events": [
+              0.0,
+              0.0
+            ],
+            "detected": [
+              0.0,
+              0.0
+            ],
+            "family": [
+              0.0,
+              0.0
+            ],
+            "joint": [
+              0.0,
+              0.0
+            ],
+            "before_clearance": [
+              0.0,
+              0.0
+            ]
+          },
+          "rates": {
+            "detected": [
+              0.0,
+              0.0
+            ],
+            "family": [
+              0.0,
+              0.0
+            ],
+            "joint": [
+              0.0,
+              0.0
+            ],
+            "before_clearance": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "3": {
+          "counts_and_f1": {
+            "family_f1": [
+              0.0,
+              0.0
+            ],
+            "events": [
+              0.0,
+              0.0
+            ],
+            "detected": [
+              0.0,
+              0.0
+            ],
+            "family": [
+              0.0,
+              0.0
+            ],
+            "joint": [
+              0.0,
+              0.0
+            ],
+            "before_clearance": [
+              0.0,
+              0.0
+            ]
+          },
+          "rates": {
+            "detected": [
+              0.0,
+              0.0
+            ],
+            "family": [
+              0.0,
+              0.0
+            ],
+            "joint": [
+              0.0,
+              0.0
+            ],
+            "before_clearance": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "4": {
+          "counts_and_f1": {
+            "family_f1": [
+              0.0,
+              0.0
+            ],
+            "events": [
+              0.0,
+              0.0
+            ],
+            "detected": [
+              0.0,
+              0.0
+            ],
+            "family": [
+              0.0,
+              0.0
+            ],
+            "joint": [
+              0.0,
+              0.0
+            ],
+            "before_clearance": [
+              0.0,
+              0.0
+            ]
+          },
+          "rates": {
+            "detected": [
+              0.0,
+              0.0
+            ],
+            "family": [
+              0.0,
+              0.0
+            ],
+            "joint": [
+              0.0,
+              0.0
+            ],
+            "before_clearance": [
+              0.0,
+              0.0
+            ]
+          }
+        }
+      }
+    },
+    "switch_candidate-combined16": {
+      "counts_and_scores": {
+        "macro_f1": [
+          0.0042216222620089505,
+          0.01965347886273711
+        ],
+        "detected": [
+          2.0,
+          16.0
+        ],
+        "family": [
+          2.0,
+          16.0
+        ],
+        "joint": [
+          2.0,
+          16.0
+        ],
+        "before_clearance": [
+          2.0,
+          16.0
+        ],
+        "extras": [
+          -6.0,
+          0.0
+        ],
+        "quiet_extras": [
+          0.0,
+          0.0
+        ]
+      },
+      "rates": {
+        "detected": [
+          0.004761904761904745,
+          0.03809523809523807
+        ],
+        "family": [
+          0.004761904761904745,
+          0.03809523809523807
+        ],
+        "joint": [
+          0.004761904761904745,
+          0.03809523809523807
+        ],
+        "before_clearance": [
+          0.004761904761904745,
+          0.03809523809523807
+        ]
+      },
+      "by_family": {
+        "1": {
+          "counts_and_f1": {
+            "family_f1": [
+              0.0,
+              0.0
+            ],
+            "events": [
+              0.0,
+              0.0
+            ],
+            "detected": [
+              0.0,
+              0.0
+            ],
+            "family": [
+              0.0,
+              0.0
+            ],
+            "joint": [
+              0.0,
+              0.0
+            ],
+            "before_clearance": [
+              0.0,
+              0.0
+            ]
+          },
+          "rates": {
+            "detected": [
+              0.0,
+              0.0
+            ],
+            "family": [
+              0.0,
+              0.0
+            ],
+            "joint": [
+              0.0,
+              0.0
+            ],
+            "before_clearance": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "2": {
+          "counts_and_f1": {
+            "family_f1": [
+              0.0,
+              0.024190703378298983
+            ],
+            "events": [
+              0.0,
+              0.0
+            ],
+            "detected": [
+              0.0,
+              0.0
+            ],
+            "family": [
+              0.0,
+              0.0
+            ],
+            "joint": [
+              0.0,
+              0.0
+            ],
+            "before_clearance": [
+              0.0,
+              0.0
+            ]
+          },
+          "rates": {
+            "detected": [
+              0.0,
+              0.0
+            ],
+            "family": [
+              0.0,
+              0.0
+            ],
+            "joint": [
+              0.0,
+              0.0
+            ],
+            "before_clearance": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "3": {
+          "counts_and_f1": {
+            "family_f1": [
+              0.008839309455776606,
+              0.07261904761904758
+            ],
+            "events": [
+              0.0,
+              0.0
+            ],
+            "detected": [
+              2.0,
+              16.0
+            ],
+            "family": [
+              2.0,
+              16.0
+            ],
+            "joint": [
+              2.0,
+              16.0
+            ],
+            "before_clearance": [
+              2.0,
+              16.0
+            ]
+          },
+          "rates": {
+            "detected": [
+              0.016666666666666607,
+              0.1333333333333333
+            ],
+            "family": [
+              0.016666666666666607,
+              0.1333333333333333
+            ],
+            "joint": [
+              0.016666666666666607,
+              0.1333333333333333
+            ],
+            "before_clearance": [
+              0.016666666666666607,
+              0.1333333333333333
+            ]
+          }
+        },
+        "4": {
+          "counts_and_f1": {
+            "family_f1": [
+              0.0,
+              0.0
+            ],
+            "events": [
+              0.0,
+              0.0
+            ],
+            "detected": [
+              0.0,
+              0.0
+            ],
+            "family": [
+              0.0,
+              0.0
+            ],
+            "joint": [
+              0.0,
+              0.0
+            ],
+            "before_clearance": [
+              0.0,
+              0.0
+            ]
+          },
+          "rates": {
+            "detected": [
+              0.0,
+              0.0
+            ],
+            "family": [
+              0.0,
+              0.0
+            ],
+            "joint": [
+              0.0,
+              0.0
+            ],
+            "before_clearance": [
+              0.0,
+              0.0
+            ]
+          }
+        }
+      }
+    },
+    "switch_candidate-trees_refit": {
+      "counts_and_scores": {
+        "macro_f1": [
+          0.2542232727095613,
+          0.33555632075509645
+        ],
+        "detected": [
+          88.0,
+          122.0
+        ],
+        "family": [
+          141.0,
+          176.0
+        ],
+        "joint": [
+          151.0,
+          200.0
+        ],
+        "before_clearance": [
+          263.0,
+          328.0
+        ],
+        "extras": [
+          0.0,
+          17.0
+        ],
+        "quiet_extras": [
+          0.0,
+          0.0
+        ]
+      },
+      "rates": {
+        "detected": [
+          0.20952380952380945,
+          0.29047619047619055
+        ],
+        "family": [
+          0.33571428571428563,
+          0.4190476190476191
+        ],
+        "joint": [
+          0.35952380952380947,
+          0.47619047619047616
+        ],
+        "before_clearance": [
+          0.6261904761904762,
+          0.780952380952381
+        ]
+      },
+      "by_family": {
+        "1": {
+          "counts_and_f1": {
+            "family_f1": [
+              0.08773903262092242,
+              0.1428571428571429
+            ],
+            "events": [
+              0.0,
+              0.0
+            ],
+            "detected": [
+              0.0,
+              0.0
+            ],
+            "family": [
+              30.0,
+              30.0
+            ],
+            "joint": [
+              30.0,
+              54.0
+            ],
+            "before_clearance": [
+              110.0,
+              120.0
+            ]
+          },
+          "rates": {
+            "detected": [
+              0.0,
+              0.0
+            ],
+            "family": [
+              0.25,
+              0.25
+            ],
+            "joint": [
+              0.25,
+              0.44999999999999996
+            ],
+            "before_clearance": [
+              0.9166666666666666,
+              1.0
+            ]
+          }
+        },
+        "2": {
+          "counts_and_f1": {
+            "family_f1": [
+              0.08857175218031477,
+              0.3751609672342252
+            ],
+            "events": [
+              0.0,
+              0.0
+            ],
+            "detected": [
+              8.0,
+              42.0
+            ],
+            "family": [
+              22.0,
+              66.0
+            ],
+            "joint": [
+              22.0,
+              66.0
+            ],
+            "before_clearance": [
+              40.0,
+              92.0
+            ]
+          },
+          "rates": {
+            "detected": [
+              0.06666666666666665,
+              0.35
+            ],
+            "family": [
+              0.18333333333333335,
+              0.55
+            ],
+            "joint": [
+              0.18333333333333335,
+              0.55
+            ],
+            "before_clearance": [
+              0.33333333333333337,
+              0.7666666666666666
+            ]
+          }
+        },
+        "3": {
+          "counts_and_f1": {
+            "family_f1": [
+              0.22761580323234082,
+              0.42872238715845623
+            ],
+            "events": [
+              0.0,
+              0.0
+            ],
+            "detected": [
+              41.0,
+              72.0
+            ],
+            "family": [
+              41.0,
+              72.0
+            ],
+            "joint": [
+              52.0,
+              77.0
+            ],
+            "before_clearance": [
+              65.0,
+              93.0
+            ]
+          },
+          "rates": {
+            "detected": [
+              0.3416666666666667,
+              0.5999999999999999
+            ],
+            "family": [
+              0.3416666666666667,
+              0.5999999999999999
+            ],
+            "joint": [
+              0.4333333333333333,
+              0.6416666666666666
+            ],
+            "before_clearance": [
+              0.5416666666666666,
+              0.775
+            ]
+          }
+        },
+        "4": {
+          "counts_and_f1": {
+            "family_f1": [
+              0.44075590948685467,
+              0.5575189325640102
+            ],
+            "events": [
+              0.0,
+              0.0
+            ],
+            "detected": [
+              20.0,
+              30.0
+            ],
+            "family": [
+              20.0,
+              30.0
+            ],
+            "joint": [
+              20.0,
+              30.0
+            ],
+            "before_clearance": [
+              24.0,
+              44.0
+            ]
+          },
+          "rates": {
+            "detected": [
+              0.33333333333333337,
+              0.5
+            ],
+            "family": [
+              0.33333333333333337,
+              0.5
+            ],
+            "joint": [
+              0.33333333333333337,
+              0.5
+            ],
+            "before_clearance": [
+              0.4,
+              0.7333333333333334
+            ]
+          }
+        }
+      }
+    }
+  },
+  "absolute95": {
+    "combined16": {
+      "macro_f1": [
+        0.9411553705318588,
+        0.9832138625374419
+      ],
+      "events": [
+        420.0,
+        420.0
+      ],
+      "detected": [
+        390.0,
+        412.0
+      ],
+      "family": [
+        390.0,
+        412.0
+      ],
+      "joint": [
+        390.0,
+        412.0
+      ],
+      "before_clearance": [
+        370.0,
+        398.0
+      ],
+      "extras": [
+        4.0,
+        19.0
+      ],
+      "quiet_extras": [
+        0.0,
+        0.0
+      ],
+      "detected_rate": [
+        0.9285714285714286,
+        0.9809523809523809
+      ],
+      "family_rate": [
+        0.9285714285714286,
+        0.9809523809523809
+      ],
+      "joint_rate": [
+        0.9285714285714286,
+        0.9809523809523809
+      ],
+      "before_clearance_rate": [
+        0.8809523809523809,
+        0.9476190476190476
+      ],
+      "by_family": {
+        "1": {
+          "family_f1": [
+            0.9448818897637795,
+            1.0
+          ],
+          "events": [
+            120.0,
+            120.0
+          ],
+          "detected": [
+            120.0,
+            120.0
+          ],
+          "family": [
+            120.0,
+            120.0
+          ],
+          "joint": [
+            120.0,
+            120.0
+          ],
+          "before_clearance": [
+            110.0,
+            120.0
+          ],
+          "detected_rate": [
+            1.0,
+            1.0
+          ],
+          "family_rate": [
+            1.0,
+            1.0
+          ],
+          "joint_rate": [
+            1.0,
+            1.0
+          ],
+          "before_clearance_rate": [
+            0.9166666666666666,
+            1.0
+          ]
+        },
+        "2": {
+          "family_f1": [
+            0.963855421686747,
+            1.0
+          ],
+          "events": [
+            120.0,
+            120.0
+          ],
+          "detected": [
+            120.0,
+            120.0
+          ],
+          "family": [
+            120.0,
+            120.0
+          ],
+          "joint": [
+            120.0,
+            120.0
+          ],
+          "before_clearance": [
+            120.0,
+            120.0
+          ],
+          "detected_rate": [
+            1.0,
+            1.0
+          ],
+          "family_rate": [
+            1.0,
+            1.0
+          ],
+          "joint_rate": [
+            1.0,
+            1.0
+          ],
+          "before_clearance_rate": [
+            1.0,
+            1.0
+          ]
+        },
+        "3": {
+          "family_f1": [
+            0.8990825688073395,
+            0.9661016949152542
+          ],
+          "events": [
+            120.0,
+            120.0
+          ],
+          "detected": [
+            98.0,
+            114.0
+          ],
+          "family": [
+            98.0,
+            114.0
+          ],
+          "joint": [
+            98.0,
+            114.0
+          ],
+          "before_clearance": [
+            84.0,
+            100.0
+          ],
+          "detected_rate": [
+            0.8166666666666667,
+            0.95
+          ],
+          "family_rate": [
+            0.8166666666666667,
+            0.95
+          ],
+          "joint_rate": [
+            0.8166666666666667,
+            0.95
+          ],
+          "before_clearance_rate": [
+            0.7,
+            0.8333333333333334
+          ]
+        },
+        "4": {
+          "family_f1": [
+            0.9090909090909091,
+            1.0
+          ],
+          "events": [
+            60.0,
+            60.0
+          ],
+          "detected": [
+            50.0,
+            60.0
+          ],
+          "family": [
+            50.0,
+            60.0
+          ],
+          "joint": [
+            50.0,
+            60.0
+          ],
+          "before_clearance": [
+            50.0,
+            60.0
+          ],
+          "detected_rate": [
+            0.8333333333333334,
+            1.0
+          ],
+          "family_rate": [
+            0.8333333333333334,
+            1.0
+          ],
+          "joint_rate": [
+            0.8333333333333334,
+            1.0
+          ],
+          "before_clearance_rate": [
+            0.8333333333333334,
+            1.0
+          ]
+        }
+      }
+    },
+    "trees_refit": {
+      "macro_f1": [
+        0.6415652999508122,
+        0.7185496652709767
+      ],
+      "events": [
+        420.0,
+        420.0
+      ],
+      "detected": [
+        289.0,
+        317.0
+      ],
+      "family": [
+        233.0,
+        272.0
+      ],
+      "joint": [
+        209.0,
+        262.0
+      ],
+      "before_clearance": [
+        66.0,
+        128.0
+      ],
+      "extras": [
+        0.0,
+        3.0
+      ],
+      "quiet_extras": [
+        0.0,
+        0.0
+      ],
+      "detected_rate": [
+        0.6880952380952381,
+        0.7547619047619047
+      ],
+      "family_rate": [
+        0.5547619047619048,
+        0.6476190476190476
+      ],
+      "joint_rate": [
+        0.4976190476190476,
+        0.6238095238095238
+      ],
+      "before_clearance_rate": [
+        0.15714285714285714,
+        0.3047619047619048
+      ],
+      "by_family": {
+        "1": {
+          "family_f1": [
+            0.8571428571428571,
+            0.8571428571428571
+          ],
+          "events": [
+            120.0,
+            120.0
+          ],
+          "detected": [
+            120.0,
+            120.0
+          ],
+          "family": [
+            90.0,
+            90.0
+          ],
+          "joint": [
+            66.0,
+            90.0
+          ],
+          "before_clearance": [
+            0.0,
+            0.0
+          ],
+          "detected_rate": [
+            1.0,
+            1.0
+          ],
+          "family_rate": [
+            0.75,
+            0.75
+          ],
+          "joint_rate": [
+            0.55,
+            0.75
+          ],
+          "before_clearance_rate": [
+            0.0,
+            0.0
+          ]
+        },
+        "2": {
+          "family_f1": [
+            0.6206896551724138,
+            0.8990825688073395
+          ],
+          "events": [
+            120.0,
+            120.0
+          ],
+          "detected": [
+            78.0,
+            112.0
+          ],
+          "family": [
+            54.0,
+            98.0
+          ],
+          "joint": [
+            54.0,
+            98.0
+          ],
+          "before_clearance": [
+            28.0,
+            80.0
+          ],
+          "detected_rate": [
+            0.65,
+            0.9333333333333333
+          ],
+          "family_rate": [
+            0.45,
+            0.8166666666666667
+          ],
+          "joint_rate": [
+            0.45,
+            0.8166666666666667
+          ],
+          "before_clearance_rate": [
+            0.23333333333333334,
+            0.6666666666666666
+          ]
+        },
+        "3": {
+          "family_f1": [
+            0.562874251497006,
+            0.7165775401069518
+          ],
+          "events": [
+            120.0,
+            120.0
+          ],
+          "detected": [
+            47.0,
+            67.0
+          ],
+          "family": [
+            47.0,
+            67.0
+          ],
+          "joint": [
+            40.0,
+            59.0
+          ],
+          "before_clearance": [
+            12.0,
+            30.0
+          ],
+          "detected_rate": [
+            0.39166666666666666,
+            0.5583333333333333
+          ],
+          "family_rate": [
+            0.39166666666666666,
+            0.5583333333333333
+          ],
+          "joint_rate": [
+            0.3333333333333333,
+            0.49166666666666664
+          ],
+          "before_clearance_rate": [
+            0.1,
+            0.25
+          ]
+        },
+        "4": {
+          "family_f1": [
+            0.4225352112676056,
+            0.5
+          ],
+          "events": [
+            60.0,
+            60.0
+          ],
+          "detected": [
+            30.0,
+            30.0
+          ],
+          "family": [
+            30.0,
+            30.0
+          ],
+          "joint": [
+            30.0,
+            30.0
+          ],
+          "before_clearance": [
+            14.0,
+            28.0
+          ],
+          "detected_rate": [
+            0.5,
+            0.5
+          ],
+          "family_rate": [
+            0.5,
+            0.5
+          ],
+          "joint_rate": [
+            0.5,
+            0.5
+          ],
+          "before_clearance_rate": [
+            0.23333333333333334,
+            0.4666666666666667
+          ]
+        }
+      }
+    },
+    "causal32": {
+      "macro_f1": [
+        0.9492079872360457,
+        0.9918115394305871
+      ],
+      "events": [
+        420.0,
+        420.0
+      ],
+      "detected": [
+        398.0,
+        420.0
+      ],
+      "family": [
+        398.0,
+        420.0
+      ],
+      "joint": [
+        398.0,
+        420.0
+      ],
+      "before_clearance": [
+        376.0,
+        406.0
+      ],
+      "extras": [
+        4.0,
+        19.0
+      ],
+      "quiet_extras": [
+        0.0,
+        0.0
+      ],
+      "detected_rate": [
+        0.9476190476190476,
+        1.0
+      ],
+      "family_rate": [
+        0.9476190476190476,
+        1.0
+      ],
+      "joint_rate": [
+        0.9476190476190476,
+        1.0
+      ],
+      "before_clearance_rate": [
+        0.8952380952380953,
+        0.9666666666666667
+      ],
+      "by_family": {
+        "1": {
+          "family_f1": [
+            0.9448818897637795,
+            1.0
+          ],
+          "events": [
+            120.0,
+            120.0
+          ],
+          "detected": [
+            120.0,
+            120.0
+          ],
+          "family": [
+            120.0,
+            120.0
+          ],
+          "joint": [
+            120.0,
+            120.0
+          ],
+          "before_clearance": [
+            110.0,
+            120.0
+          ],
+          "detected_rate": [
+            1.0,
+            1.0
+          ],
+          "family_rate": [
+            1.0,
+            1.0
+          ],
+          "joint_rate": [
+            1.0,
+            1.0
+          ],
+          "before_clearance_rate": [
+            0.9166666666666666,
+            1.0
+          ]
+        },
+        "2": {
+          "family_f1": [
+            0.963855421686747,
+            1.0
+          ],
+          "events": [
+            120.0,
+            120.0
+          ],
+          "detected": [
+            120.0,
+            120.0
+          ],
+          "family": [
+            120.0,
+            120.0
+          ],
+          "joint": [
+            120.0,
+            120.0
+          ],
+          "before_clearance": [
+            120.0,
+            120.0
+          ],
+          "detected_rate": [
+            1.0,
+            1.0
+          ],
+          "family_rate": [
+            1.0,
+            1.0
+          ],
+          "joint_rate": [
+            1.0,
+            1.0
+          ],
+          "before_clearance_rate": [
+            1.0,
+            1.0
+          ]
+        },
+        "3": {
+          "family_f1": [
+            0.9391304347826087,
+            0.9917355371900827
+          ],
+          "events": [
+            120.0,
+            120.0
+          ],
+          "detected": [
+            108.0,
+            120.0
+          ],
+          "family": [
+            108.0,
+            120.0
+          ],
+          "joint": [
+            108.0,
+            120.0
+          ],
+          "before_clearance": [
+            90.0,
+            110.0
+          ],
+          "detected_rate": [
+            0.9,
+            1.0
+          ],
+          "family_rate": [
+            0.9,
+            1.0
+          ],
+          "joint_rate": [
+            0.9,
+            1.0
+          ],
+          "before_clearance_rate": [
+            0.75,
+            0.9166666666666666
+          ]
+        },
+        "4": {
+          "family_f1": [
+            0.9090909090909091,
+            1.0
+          ],
+          "events": [
+            60.0,
+            60.0
+          ],
+          "detected": [
+            50.0,
+            60.0
+          ],
+          "family": [
+            50.0,
+            60.0
+          ],
+          "joint": [
+            50.0,
+            60.0
+          ],
+          "before_clearance": [
+            50.0,
+            60.0
+          ],
+          "detected_rate": [
+            0.8333333333333334,
+            1.0
+          ],
+          "family_rate": [
+            0.8333333333333334,
+            1.0
+          ],
+          "joint_rate": [
+            0.8333333333333334,
+            1.0
+          ],
+          "before_clearance_rate": [
+            0.8333333333333334,
+            1.0
+          ]
+        }
+      }
+    },
+    "switch_candidate": {
+      "macro_f1": [
+        0.9508080027084022,
+        0.9938105461547874
+      ],
+      "events": [
+        420.0,
+        420.0
+      ],
+      "detected": [
+        398.0,
+        420.0
+      ],
+      "family": [
+        398.0,
+        420.0
+      ],
+      "joint": [
+        398.0,
+        420.0
+      ],
+      "before_clearance": [
+        376.0,
+        406.0
+      ],
+      "extras": [
+        2.0,
+        17.0
+      ],
+      "quiet_extras": [
+        0.0,
+        0.0
+      ],
+      "detected_rate": [
+        0.9476190476190476,
+        1.0
+      ],
+      "family_rate": [
+        0.9476190476190476,
+        1.0
+      ],
+      "joint_rate": [
+        0.9476190476190476,
+        1.0
+      ],
+      "before_clearance_rate": [
+        0.8952380952380953,
+        0.9666666666666667
+      ],
+      "by_family": {
+        "1": {
+          "family_f1": [
+            0.9448818897637795,
+            1.0
+          ],
+          "events": [
+            120.0,
+            120.0
+          ],
+          "detected": [
+            120.0,
+            120.0
+          ],
+          "family": [
+            120.0,
+            120.0
+          ],
+          "joint": [
+            120.0,
+            120.0
+          ],
+          "before_clearance": [
+            110.0,
+            120.0
+          ],
+          "detected_rate": [
+            1.0,
+            1.0
+          ],
+          "family_rate": [
+            1.0,
+            1.0
+          ],
+          "joint_rate": [
+            1.0,
+            1.0
+          ],
+          "before_clearance_rate": [
+            0.9166666666666666,
+            1.0
+          ]
+        },
+        "2": {
+          "family_f1": [
+            0.9795918367346939,
+            1.0
+          ],
+          "events": [
+            120.0,
+            120.0
+          ],
+          "detected": [
+            120.0,
+            120.0
+          ],
+          "family": [
+            120.0,
+            120.0
+          ],
+          "joint": [
+            120.0,
+            120.0
+          ],
+          "before_clearance": [
+            120.0,
+            120.0
+          ],
+          "detected_rate": [
+            1.0,
+            1.0
+          ],
+          "family_rate": [
+            1.0,
+            1.0
+          ],
+          "joint_rate": [
+            1.0,
+            1.0
+          ],
+          "before_clearance_rate": [
+            1.0,
+            1.0
+          ]
+        },
+        "3": {
+          "family_f1": [
+            0.9391304347826087,
+            0.9917355371900827
+          ],
+          "events": [
+            120.0,
+            120.0
+          ],
+          "detected": [
+            108.0,
+            120.0
+          ],
+          "family": [
+            108.0,
+            120.0
+          ],
+          "joint": [
+            108.0,
+            120.0
+          ],
+          "before_clearance": [
+            90.0,
+            110.0
+          ],
+          "detected_rate": [
+            0.9,
+            1.0
+          ],
+          "family_rate": [
+            0.9,
+            1.0
+          ],
+          "joint_rate": [
+            0.9,
+            1.0
+          ],
+          "before_clearance_rate": [
+            0.75,
+            0.9166666666666666
+          ]
+        },
+        "4": {
+          "family_f1": [
+            0.9090909090909091,
+            1.0
+          ],
+          "events": [
+            60.0,
+            60.0
+          ],
+          "detected": [
+            50.0,
+            60.0
+          ],
+          "family": [
+            50.0,
+            60.0
+          ],
+          "joint": [
+            50.0,
+            60.0
+          ],
+          "before_clearance": [
+            50.0,
+            60.0
+          ],
+          "detected_rate": [
+            0.8333333333333334,
+            1.0
+          ],
+          "family_rate": [
+            0.8333333333333334,
+            1.0
+          ],
+          "joint_rate": [
+            0.8333333333333334,
+            1.0
+          ],
+          "before_clearance_rate": [
+            0.8333333333333334,
+            1.0
+          ]
+        }
+      }
+    }
+  },
+  "uncertainty_unit": "15 paired scenario/noise blocks",
+  "second_lines": {
+    "combined16": [
+      {
+        "record": 10,
+        "source": "LINE11-12",
+        "exact": true,
+        "lag": 0
+      },
+      {
+        "record": 25,
+        "source": "LINE11-12",
+        "exact": true,
+        "lag": 0
+      },
+      {
+        "record": 41,
+        "source": "LINE10-11",
+        "exact": true,
+        "lag": 2
+      },
+      {
+        "record": 56,
+        "source": "LINE10-11",
+        "exact": true,
+        "lag": 2
+      },
+      {
+        "record": 72,
+        "source": "LINE26-29",
+        "exact": true,
+        "lag": 3
+      },
+      {
+        "record": 87,
+        "source": "LINE26-29",
+        "exact": true,
+        "lag": 3
+      },
+      {
+        "record": 103,
+        "source": "LINE11-12",
+        "exact": true,
+        "lag": 2
+      },
+      {
+        "record": 118,
+        "source": "LINE11-12",
+        "exact": true,
+        "lag": 2
+      },
+      {
+        "record": 134,
+        "source": "LINE1-39",
+        "exact": true,
+        "lag": 0
+      },
+      {
+        "record": 149,
+        "source": "LINE1-39",
+        "exact": true,
+        "lag": 0
+      },
+      {
+        "record": 165,
+        "source": "LINE11-12",
+        "exact": true,
+        "lag": 3
+      },
+      {
+        "record": 180,
+        "source": "LINE11-12",
+        "exact": true,
+        "lag": 3
+      },
+      {
+        "record": 196,
+        "source": "LINE1-39",
+        "exact": true,
+        "lag": 3
+      },
+      {
+        "record": 211,
+        "source": "LINE1-39",
+        "exact": true,
+        "lag": 3
+      },
+      {
+        "record": 227,
+        "source": "LINE16-24",
+        "exact": true,
+        "lag": 2
+      },
+      {
+        "record": 242,
+        "source": "LINE16-24",
+        "exact": true,
+        "lag": 2
+      },
+      {
+        "record": 258,
+        "source": "LINE7-8",
+        "exact": true,
+        "lag": 2
+      },
+      {
+        "record": 273,
+        "source": "LINE7-8",
+        "exact": true,
+        "lag": 2
+      },
+      {
+        "record": 289,
+        "source": "LINE21-22",
+        "exact": true,
+        "lag": 7
+      },
+      {
+        "record": 304,
+        "source": "LINE21-22",
+        "exact": true,
+        "lag": 7
+      },
+      {
+        "record": 320,
+        "source": "LINE10-11",
+        "exact": true,
+        "lag": 2
+      },
+      {
+        "record": 335,
+        "source": "LINE10-11",
+        "exact": true,
+        "lag": 2
+      },
+      {
+        "record": 351,
+        "source": "LINE7-8",
+        "exact": true,
+        "lag": 0
+      },
+      {
+        "record": 366,
+        "source": "LINE7-8",
+        "exact": true,
+        "lag": 0
+      },
+      {
+        "record": 382,
+        "source": "LINE1-39",
+        "exact": true,
+        "lag": 9
+      },
+      {
+        "record": 397,
+        "source": "LINE1-39",
+        "exact": true,
+        "lag": 6
+      },
+      {
+        "record": 413,
+        "source": "LINE21-22",
+        "exact": true,
+        "lag": 6
+      },
+      {
+        "record": 428,
+        "source": "LINE21-22",
+        "exact": true,
+        "lag": 6
+      },
+      {
+        "record": 444,
+        "source": "LINE10-11",
+        "exact": true,
+        "lag": 15
+      },
+      {
+        "record": 459,
+        "source": "LINE10-11",
+        "exact": true,
+        "lag": 15
+      }
+    ],
+    "trees_refit": [
+      {
+        "record": 10,
+        "source": "LINE11-12",
+        "exact": false,
+        "lag": null
+      },
+      {
+        "record": 25,
+        "source": "LINE11-12",
+        "exact": false,
+        "lag": null
+      },
+      {
+        "record": 41,
+        "source": "LINE10-11",
+        "exact": true,
+        "lag": 35
+      },
+      {
+        "record": 56,
+        "source": "LINE10-11",
+        "exact": true,
+        "lag": 35
+      },
+      {
+        "record": 72,
+        "source": "LINE26-29",
+        "exact": true,
+        "lag": 31
+      },
+      {
+        "record": 87,
+        "source": "LINE26-29",
+        "exact": true,
+        "lag": 31
+      },
+      {
+        "record": 103,
+        "source": "LINE11-12",
+        "exact": false,
+        "lag": null
+      },
+      {
+        "record": 118,
+        "source": "LINE11-12",
+        "exact": false,
+        "lag": null
+      },
+      {
+        "record": 134,
+        "source": "LINE1-39",
+        "exact": true,
+        "lag": 32
+      },
+      {
+        "record": 149,
+        "source": "LINE1-39",
+        "exact": true,
+        "lag": 31
+      },
+      {
+        "record": 165,
+        "source": "LINE11-12",
+        "exact": false,
+        "lag": null
+      },
+      {
+        "record": 180,
+        "source": "LINE11-12",
+        "exact": false,
+        "lag": null
+      },
+      {
+        "record": 196,
+        "source": "LINE1-39",
+        "exact": true,
+        "lag": 34
+      },
+      {
+        "record": 211,
+        "source": "LINE1-39",
+        "exact": true,
+        "lag": 34
+      },
+      {
+        "record": 227,
+        "source": "LINE16-24",
+        "exact": false,
+        "lag": null
+      },
+      {
+        "record": 242,
+        "source": "LINE16-24",
+        "exact": false,
+        "lag": null
+      },
+      {
+        "record": 258,
+        "source": "LINE7-8",
+        "exact": true,
+        "lag": 32
+      },
+      {
+        "record": 273,
+        "source": "LINE7-8",
+        "exact": true,
+        "lag": 32
+      },
+      {
+        "record": 289,
+        "source": "LINE21-22",
+        "exact": true,
+        "lag": 33
+      },
+      {
+        "record": 304,
+        "source": "LINE21-22",
+        "exact": true,
+        "lag": 33
+      },
+      {
+        "record": 320,
+        "source": "LINE10-11",
+        "exact": true,
+        "lag": 35
+      },
+      {
+        "record": 335,
+        "source": "LINE10-11",
+        "exact": true,
+        "lag": 35
+      },
+      {
+        "record": 351,
+        "source": "LINE7-8",
+        "exact": true,
+        "lag": 32
+      },
+      {
+        "record": 366,
+        "source": "LINE7-8",
+        "exact": true,
+        "lag": 32
+      },
+      {
+        "record": 382,
+        "source": "LINE1-39",
+        "exact": true,
+        "lag": 33
+      },
+      {
+        "record": 397,
+        "source": "LINE1-39",
+        "exact": true,
+        "lag": 34
+      },
+      {
+        "record": 413,
+        "source": "LINE21-22",
+        "exact": true,
+        "lag": 33
+      },
+      {
+        "record": 428,
+        "source": "LINE21-22",
+        "exact": true,
+        "lag": 33
+      },
+      {
+        "record": 444,
+        "source": "LINE10-11",
+        "exact": true,
+        "lag": 30
+      },
+      {
+        "record": 459,
+        "source": "LINE10-11",
+        "exact": true,
+        "lag": 30
+      }
+    ],
+    "causal32": [
+      {
+        "record": 10,
+        "source": "LINE11-12",
+        "exact": true,
+        "lag": 0
+      },
+      {
+        "record": 25,
+        "source": "LINE11-12",
+        "exact": true,
+        "lag": 0
+      },
+      {
+        "record": 41,
+        "source": "LINE10-11",
+        "exact": true,
+        "lag": 2
+      },
+      {
+        "record": 56,
+        "source": "LINE10-11",
+        "exact": true,
+        "lag": 2
+      },
+      {
+        "record": 72,
+        "source": "LINE26-29",
+        "exact": true,
+        "lag": 3
+      },
+      {
+        "record": 87,
+        "source": "LINE26-29",
+        "exact": true,
+        "lag": 3
+      },
+      {
+        "record": 103,
+        "source": "LINE11-12",
+        "exact": true,
+        "lag": 2
+      },
+      {
+        "record": 118,
+        "source": "LINE11-12",
+        "exact": true,
+        "lag": 2
+      },
+      {
+        "record": 134,
+        "source": "LINE1-39",
+        "exact": true,
+        "lag": 0
+      },
+      {
+        "record": 149,
+        "source": "LINE1-39",
+        "exact": true,
+        "lag": 0
+      },
+      {
+        "record": 165,
+        "source": "LINE11-12",
+        "exact": true,
+        "lag": 3
+      },
+      {
+        "record": 180,
+        "source": "LINE11-12",
+        "exact": true,
+        "lag": 3
+      },
+      {
+        "record": 196,
+        "source": "LINE1-39",
+        "exact": true,
+        "lag": 3
+      },
+      {
+        "record": 211,
+        "source": "LINE1-39",
+        "exact": true,
+        "lag": 3
+      },
+      {
+        "record": 227,
+        "source": "LINE16-24",
+        "exact": true,
+        "lag": 2
+      },
+      {
+        "record": 242,
+        "source": "LINE16-24",
+        "exact": true,
+        "lag": 2
+      },
+      {
+        "record": 258,
+        "source": "LINE7-8",
+        "exact": true,
+        "lag": 2
+      },
+      {
+        "record": 273,
+        "source": "LINE7-8",
+        "exact": true,
+        "lag": 2
+      },
+      {
+        "record": 289,
+        "source": "LINE21-22",
+        "exact": true,
+        "lag": 7
+      },
+      {
+        "record": 304,
+        "source": "LINE21-22",
+        "exact": true,
+        "lag": 7
+      },
+      {
+        "record": 320,
+        "source": "LINE10-11",
+        "exact": true,
+        "lag": 2
+      },
+      {
+        "record": 335,
+        "source": "LINE10-11",
+        "exact": true,
+        "lag": 2
+      },
+      {
+        "record": 351,
+        "source": "LINE7-8",
+        "exact": true,
+        "lag": 0
+      },
+      {
+        "record": 366,
+        "source": "LINE7-8",
+        "exact": true,
+        "lag": 0
+      },
+      {
+        "record": 382,
+        "source": "LINE1-39",
+        "exact": true,
+        "lag": 9
+      },
+      {
+        "record": 397,
+        "source": "LINE1-39",
+        "exact": true,
+        "lag": 6
+      },
+      {
+        "record": 413,
+        "source": "LINE21-22",
+        "exact": true,
+        "lag": 6
+      },
+      {
+        "record": 428,
+        "source": "LINE21-22",
+        "exact": true,
+        "lag": 6
+      },
+      {
+        "record": 444,
+        "source": "LINE10-11",
+        "exact": true,
+        "lag": 15
+      },
+      {
+        "record": 459,
+        "source": "LINE10-11",
+        "exact": true,
+        "lag": 15
+      }
+    ],
+    "switch_candidate": [
+      {
+        "record": 10,
+        "source": "LINE11-12",
+        "exact": true,
+        "lag": 0
+      },
+      {
+        "record": 25,
+        "source": "LINE11-12",
+        "exact": true,
+        "lag": 0
+      },
+      {
+        "record": 41,
+        "source": "LINE10-11",
+        "exact": true,
+        "lag": 2
+      },
+      {
+        "record": 56,
+        "source": "LINE10-11",
+        "exact": true,
+        "lag": 2
+      },
+      {
+        "record": 72,
+        "source": "LINE26-29",
+        "exact": true,
+        "lag": 0
+      },
+      {
+        "record": 87,
+        "source": "LINE26-29",
+        "exact": true,
+        "lag": 0
+      },
+      {
+        "record": 103,
+        "source": "LINE11-12",
+        "exact": true,
+        "lag": 2
+      },
+      {
+        "record": 118,
+        "source": "LINE11-12",
+        "exact": true,
+        "lag": 2
+      },
+      {
+        "record": 134,
+        "source": "LINE1-39",
+        "exact": true,
+        "lag": 0
+      },
+      {
+        "record": 149,
+        "source": "LINE1-39",
+        "exact": true,
+        "lag": 0
+      },
+      {
+        "record": 165,
+        "source": "LINE11-12",
+        "exact": true,
+        "lag": 3
+      },
+      {
+        "record": 180,
+        "source": "LINE11-12",
+        "exact": true,
+        "lag": 3
+      },
+      {
+        "record": 196,
+        "source": "LINE1-39",
+        "exact": true,
+        "lag": 3
+      },
+      {
+        "record": 211,
+        "source": "LINE1-39",
+        "exact": true,
+        "lag": 3
+      },
+      {
+        "record": 227,
+        "source": "LINE16-24",
+        "exact": true,
+        "lag": 2
+      },
+      {
+        "record": 242,
+        "source": "LINE16-24",
+        "exact": true,
+        "lag": 2
+      },
+      {
+        "record": 258,
+        "source": "LINE7-8",
+        "exact": true,
+        "lag": 2
+      },
+      {
+        "record": 273,
+        "source": "LINE7-8",
+        "exact": true,
+        "lag": 2
+      },
+      {
+        "record": 289,
+        "source": "LINE21-22",
+        "exact": true,
+        "lag": 1
+      },
+      {
+        "record": 304,
+        "source": "LINE21-22",
+        "exact": true,
+        "lag": 1
+      },
+      {
+        "record": 320,
+        "source": "LINE10-11",
+        "exact": true,
+        "lag": 2
+      },
+      {
+        "record": 335,
+        "source": "LINE10-11",
+        "exact": true,
+        "lag": 2
+      },
+      {
+        "record": 351,
+        "source": "LINE7-8",
+        "exact": true,
+        "lag": 0
+      },
+      {
+        "record": 366,
+        "source": "LINE7-8",
+        "exact": true,
+        "lag": 0
+      },
+      {
+        "record": 382,
+        "source": "LINE1-39",
+        "exact": true,
+        "lag": 9
+      },
+      {
+        "record": 397,
+        "source": "LINE1-39",
+        "exact": true,
+        "lag": 6
+      },
+      {
+        "record": 413,
+        "source": "LINE21-22",
+        "exact": true,
+        "lag": 0
+      },
+      {
+        "record": 428,
+        "source": "LINE21-22",
+        "exact": true,
+        "lag": 0
+      },
+      {
+        "record": 444,
+        "source": "LINE10-11",
+        "exact": true,
+        "lag": 0
+      },
+      {
+        "record": 459,
+        "source": "LINE10-11",
+        "exact": true,
+        "lag": 0
+      }
+    ]
+  },
+  "extra_alarms": {
+    "combined16": [
+      {
+        "record": 35,
+        "block": 1,
+        "governor": "nominal",
+        "arm": "fault",
+        "alarm": {
+          "detected": 333,
+          "published": 333,
+          "code": 1,
+          "source": "BUS36",
+          "onset_est": 299,
+          "route": "conditional_recovery"
+        },
+        "truth": [
+          {
+            "code": 1,
+            "source": "BUS35",
+            "onset": 98,
+            "end": 107,
+            "strength": 1.2627327820331447,
+            "sensors": [
+              2,
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "record": 38,
+        "block": 1,
+        "governor": "nominal",
+        "arm": "fault_generator",
+        "alarm": {
+          "detected": 333,
+          "published": 333,
+          "code": 1,
+          "source": "BUS36",
+          "onset_est": 299,
+          "route": "conditional_recovery"
+        },
+        "truth": [
+          {
+            "code": 1,
+            "source": "BUS35",
+            "onset": 98,
+            "end": 107,
+            "strength": 1.2627327820331447,
+            "sensors": [
+              2,
+              5
+            ]
+          },
+          {
+            "code": 3,
+            "source": "BUS35",
+            "onset": 139,
+            "end": 175,
+            "strength": 1.0733501085380828,
+            "sensors": [
+              2,
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "record": 53,
+        "block": 1,
+        "governor": "variable",
+        "arm": "fault_generator",
+        "alarm": {
+          "detected": 333,
+          "published": 333,
+          "code": 1,
+          "source": "BUS36",
+          "onset_est": 300,
+          "route": "conditional_recovery"
+        },
+        "truth": [
+          {
+            "code": 1,
+            "source": "BUS35",
+            "onset": 98,
+            "end": 107,
+            "strength": 1.2627327820331447,
+            "sensors": [
+              2,
+              5
+            ]
+          },
+          {
+            "code": 3,
+            "source": "BUS35",
+            "onset": 139,
+            "end": 175,
+            "strength": 1.0733501085380828,
+            "sensors": [
+              2,
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "record": 289,
+        "block": 9,
+        "governor": "nominal",
+        "arm": "line_line",
+        "alarm": {
+          "detected": 249,
+          "published": 249,
+          "code": 2,
+          "source": "LINE16-24",
+          "onset_est": 245,
+          "route": "conditional_recovery"
+        },
+        "truth": [
+          {
+            "code": 2,
+            "source": "LINE10-11",
+            "onset": 150,
+            "end": 187,
+            "strength": 1.0,
+            "sensors": [
+              2,
+              5
+            ]
+          },
+          {
+            "code": 2,
+            "source": "LINE21-22",
+            "onset": 230,
+            "end": 267,
+            "strength": 1.0,
+            "sensors": [
+              2,
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "record": 304,
+        "block": 9,
+        "governor": "variable",
+        "arm": "line_line",
+        "alarm": {
+          "detected": 249,
+          "published": 249,
+          "code": 2,
+          "source": "LINE22-23",
+          "onset_est": 245,
+          "route": "conditional_recovery"
+        },
+        "truth": [
+          {
+            "code": 2,
+            "source": "LINE10-11",
+            "onset": 150,
+            "end": 187,
+            "strength": 1.0,
+            "sensors": [
+              2,
+              5
+            ]
+          },
+          {
+            "code": 2,
+            "source": "LINE21-22",
+            "onset": 230,
+            "end": 267,
+            "strength": 1.0,
+            "sensors": [
+              2,
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "record": 360,
+        "block": 11,
+        "governor": "variable",
+        "arm": "fault",
+        "alarm": {
+          "detected": 261,
+          "published": 261,
+          "code": 1,
+          "source": "BUS8",
+          "onset_est": 234,
+          "route": "conditional_recovery"
+        },
+        "truth": [
+          {
+            "code": 1,
+            "source": "BUS35",
+            "onset": 130,
+            "end": 139,
+            "strength": 0.968225198236463,
+            "sensors": [
+              2,
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "record": 363,
+        "block": 11,
+        "governor": "variable",
+        "arm": "fault_generator",
+        "alarm": {
+          "detected": 261,
+          "published": 261,
+          "code": 1,
+          "source": "BUS8",
+          "onset_est": 234,
+          "route": "conditional_recovery"
+        },
+        "truth": [
+          {
+            "code": 1,
+            "source": "BUS35",
+            "onset": 130,
+            "end": 139,
+            "strength": 0.968225198236463,
+            "sensors": [
+              2,
+              5
+            ]
+          },
+          {
+            "code": 3,
+            "source": "BUS38",
+            "onset": 184,
+            "end": 233,
+            "strength": 1.1245349125718276,
+            "sensors": [
+              2,
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "record": 396,
+        "block": 12,
+        "governor": "variable",
+        "arm": "fault_load",
+        "alarm": {
+          "detected": 360,
+          "published": 360,
+          "code": 3,
+          "source": "BUS32",
+          "onset_est": 354,
+          "route": "conditional_recovery"
+        },
+        "truth": [
+          {
+            "code": 1,
+            "source": "BUS32",
+            "onset": 186,
+            "end": 194,
+            "strength": 1.216785935861517,
+            "sensors": [
+              2,
+              5
+            ]
+          },
+          {
+            "code": 4,
+            "source": "BUS27",
+            "onset": 273,
+            "end": 331,
+            "strength": 1.158900346406245,
+            "sensors": [
+              2,
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "record": 397,
+        "block": 12,
+        "governor": "variable",
+        "arm": "line_line",
+        "alarm": {
+          "detected": 324,
+          "published": 324,
+          "code": 2,
+          "source": "LINE1-39",
+          "onset_est": 307,
+          "route": "conditional_recovery"
+        },
+        "truth": [
+          {
+            "code": 2,
+            "source": "LINE21-22",
+            "onset": 186,
+            "end": 221,
+            "strength": 1.0,
+            "sensors": [
+              2,
+              5
+            ]
+          },
+          {
+            "code": 2,
+            "source": "LINE1-39",
+            "onset": 300,
+            "end": 335,
+            "strength": 1.0,
+            "sensors": [
+              2,
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "record": 428,
+        "block": 13,
+        "governor": "variable",
+        "arm": "line_line",
+        "alarm": {
+          "detected": 207,
+          "published": 207,
+          "code": 1,
+          "source": "BUS35",
+          "onset_est": 195,
+          "route": "conditional_recovery"
+        },
+        "truth": [
+          {
+            "code": 2,
+            "source": "LINE5-6",
+            "onset": 90,
+            "end": 128,
+            "strength": 1.0,
+            "sensors": [
+              2,
+              5
+            ]
+          },
+          {
+            "code": 2,
+            "source": "LINE21-22",
+            "onset": 186,
+            "end": 224,
+            "strength": 1.0,
+            "sensors": [
+              2,
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "record": 428,
+        "block": 13,
+        "governor": "variable",
+        "arm": "line_line",
+        "alarm": {
+          "detected": 357,
+          "published": 357,
+          "code": 2,
+          "source": "LINE17-27",
+          "onset_est": 330,
+          "route": "conditional_recovery"
+        },
+        "truth": [
+          {
+            "code": 2,
+            "source": "LINE5-6",
+            "onset": 90,
+            "end": 128,
+            "strength": 1.0,
+            "sensors": [
+              2,
+              5
+            ]
+          },
+          {
+            "code": 2,
+            "source": "LINE21-22",
+            "onset": 186,
+            "end": 224,
+            "strength": 1.0,
+            "sensors": [
+              2,
+              5
+            ]
+          }
+        ]
+      }
+    ],
+    "trees_refit": [
+      {
+        "record": 164,
+        "block": 5,
+        "governor": "nominal",
+        "arm": "fault_load",
+        "alarm": {
+          "detected": 363,
+          "published": 363,
+          "code": 4,
+          "source": "BUS24"
+        },
+        "truth": [
+          {
+            "code": 1,
+            "source": "BUS38",
+            "onset": 200,
+            "end": 207,
+            "strength": 1.1352234502052045,
+            "sensors": [
+              2,
+              5
+            ]
+          },
+          {
+            "code": 4,
+            "source": "BUS27",
+            "onset": 304,
+            "end": 337,
+            "strength": 0.8336337413775758,
+            "sensors": [
+              2,
+              5
+            ]
+          }
+        ]
+      }
+    ],
+    "causal32": [
+      {
+        "record": 35,
+        "block": 1,
+        "governor": "nominal",
+        "arm": "fault",
+        "alarm": {
+          "detected": 333,
+          "published": 333,
+          "code": 1,
+          "source": "BUS36",
+          "onset_est": 299,
+          "route": "conditional_recovery"
+        },
+        "truth": [
+          {
+            "code": 1,
+            "source": "BUS35",
+            "onset": 98,
+            "end": 107,
+            "strength": 1.2627327820331447,
+            "sensors": [
+              2,
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "record": 38,
+        "block": 1,
+        "governor": "nominal",
+        "arm": "fault_generator",
+        "alarm": {
+          "detected": 333,
+          "published": 333,
+          "code": 1,
+          "source": "BUS36",
+          "onset_est": 299,
+          "route": "conditional_recovery"
+        },
+        "truth": [
+          {
+            "code": 1,
+            "source": "BUS35",
+            "onset": 98,
+            "end": 107,
+            "strength": 1.2627327820331447,
+            "sensors": [
+              2,
+              5
+            ]
+          },
+          {
+            "code": 3,
+            "source": "BUS35",
+            "onset": 139,
+            "end": 175,
+            "strength": 1.0733501085380828,
+            "sensors": [
+              2,
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "record": 53,
+        "block": 1,
+        "governor": "variable",
+        "arm": "fault_generator",
+        "alarm": {
+          "detected": 333,
+          "published": 333,
+          "code": 1,
+          "source": "BUS36",
+          "onset_est": 300,
+          "route": "conditional_recovery"
+        },
+        "truth": [
+          {
+            "code": 1,
+            "source": "BUS35",
+            "onset": 98,
+            "end": 107,
+            "strength": 1.2627327820331447,
+            "sensors": [
+              2,
+              5
+            ]
+          },
+          {
+            "code": 3,
+            "source": "BUS35",
+            "onset": 139,
+            "end": 175,
+            "strength": 1.0733501085380828,
+            "sensors": [
+              2,
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "record": 289,
+        "block": 9,
+        "governor": "nominal",
+        "arm": "line_line",
+        "alarm": {
+          "detected": 249,
+          "published": 249,
+          "code": 2,
+          "source": "LINE16-24",
+          "onset_est": 245,
+          "route": "conditional_recovery"
+        },
+        "truth": [
+          {
+            "code": 2,
+            "source": "LINE10-11",
+            "onset": 150,
+            "end": 187,
+            "strength": 1.0,
+            "sensors": [
+              2,
+              5
+            ]
+          },
+          {
+            "code": 2,
+            "source": "LINE21-22",
+            "onset": 230,
+            "end": 267,
+            "strength": 1.0,
+            "sensors": [
+              2,
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "record": 304,
+        "block": 9,
+        "governor": "variable",
+        "arm": "line_line",
+        "alarm": {
+          "detected": 249,
+          "published": 249,
+          "code": 2,
+          "source": "LINE22-23",
+          "onset_est": 245,
+          "route": "conditional_recovery"
+        },
+        "truth": [
+          {
+            "code": 2,
+            "source": "LINE10-11",
+            "onset": 150,
+            "end": 187,
+            "strength": 1.0,
+            "sensors": [
+              2,
+              5
+            ]
+          },
+          {
+            "code": 2,
+            "source": "LINE21-22",
+            "onset": 230,
+            "end": 267,
+            "strength": 1.0,
+            "sensors": [
+              2,
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "record": 360,
+        "block": 11,
+        "governor": "variable",
+        "arm": "fault",
+        "alarm": {
+          "detected": 261,
+          "published": 261,
+          "code": 1,
+          "source": "BUS8",
+          "onset_est": 234,
+          "route": "conditional_recovery"
+        },
+        "truth": [
+          {
+            "code": 1,
+            "source": "BUS35",
+            "onset": 130,
+            "end": 139,
+            "strength": 0.968225198236463,
+            "sensors": [
+              2,
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "record": 363,
+        "block": 11,
+        "governor": "variable",
+        "arm": "fault_generator",
+        "alarm": {
+          "detected": 261,
+          "published": 261,
+          "code": 1,
+          "source": "BUS8",
+          "onset_est": 234,
+          "route": "conditional_recovery"
+        },
+        "truth": [
+          {
+            "code": 1,
+            "source": "BUS35",
+            "onset": 130,
+            "end": 139,
+            "strength": 0.968225198236463,
+            "sensors": [
+              2,
+              5
+            ]
+          },
+          {
+            "code": 3,
+            "source": "BUS38",
+            "onset": 184,
+            "end": 233,
+            "strength": 1.1245349125718276,
+            "sensors": [
+              2,
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "record": 396,
+        "block": 12,
+        "governor": "variable",
+        "arm": "fault_load",
+        "alarm": {
+          "detected": 360,
+          "published": 360,
+          "code": 3,
+          "source": "BUS32",
+          "onset_est": 354,
+          "route": "conditional_recovery"
+        },
+        "truth": [
+          {
+            "code": 1,
+            "source": "BUS32",
+            "onset": 186,
+            "end": 194,
+            "strength": 1.216785935861517,
+            "sensors": [
+              2,
+              5
+            ]
+          },
+          {
+            "code": 4,
+            "source": "BUS27",
+            "onset": 273,
+            "end": 331,
+            "strength": 1.158900346406245,
+            "sensors": [
+              2,
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "record": 397,
+        "block": 12,
+        "governor": "variable",
+        "arm": "line_line",
+        "alarm": {
+          "detected": 324,
+          "published": 324,
+          "code": 2,
+          "source": "LINE1-39",
+          "onset_est": 307,
+          "route": "conditional_recovery"
+        },
+        "truth": [
+          {
+            "code": 2,
+            "source": "LINE21-22",
+            "onset": 186,
+            "end": 221,
+            "strength": 1.0,
+            "sensors": [
+              2,
+              5
+            ]
+          },
+          {
+            "code": 2,
+            "source": "LINE1-39",
+            "onset": 300,
+            "end": 335,
+            "strength": 1.0,
+            "sensors": [
+              2,
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "record": 428,
+        "block": 13,
+        "governor": "variable",
+        "arm": "line_line",
+        "alarm": {
+          "detected": 207,
+          "published": 207,
+          "code": 1,
+          "source": "BUS35",
+          "onset_est": 195,
+          "route": "conditional_recovery"
+        },
+        "truth": [
+          {
+            "code": 2,
+            "source": "LINE5-6",
+            "onset": 90,
+            "end": 128,
+            "strength": 1.0,
+            "sensors": [
+              2,
+              5
+            ]
+          },
+          {
+            "code": 2,
+            "source": "LINE21-22",
+            "onset": 186,
+            "end": 224,
+            "strength": 1.0,
+            "sensors": [
+              2,
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "record": 428,
+        "block": 13,
+        "governor": "variable",
+        "arm": "line_line",
+        "alarm": {
+          "detected": 357,
+          "published": 357,
+          "code": 2,
+          "source": "LINE17-27",
+          "onset_est": 330,
+          "route": "conditional_recovery"
+        },
+        "truth": [
+          {
+            "code": 2,
+            "source": "LINE5-6",
+            "onset": 90,
+            "end": 128,
+            "strength": 1.0,
+            "sensors": [
+              2,
+              5
+            ]
+          },
+          {
+            "code": 2,
+            "source": "LINE21-22",
+            "onset": 186,
+            "end": 224,
+            "strength": 1.0,
+            "sensors": [
+              2,
+              5
+            ]
+          }
+        ]
+      }
+    ],
+    "switch_candidate": [
+      {
+        "record": 35,
+        "block": 1,
+        "governor": "nominal",
+        "arm": "fault",
+        "alarm": {
+          "detected": 333,
+          "published": 333,
+          "code": 1,
+          "source": "BUS36",
+          "onset_est": 299,
+          "route": "conditional_recovery"
+        },
+        "truth": [
+          {
+            "code": 1,
+            "source": "BUS35",
+            "onset": 98,
+            "end": 107,
+            "strength": 1.2627327820331447,
+            "sensors": [
+              2,
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "record": 38,
+        "block": 1,
+        "governor": "nominal",
+        "arm": "fault_generator",
+        "alarm": {
+          "detected": 333,
+          "published": 333,
+          "code": 1,
+          "source": "BUS36",
+          "onset_est": 299,
+          "route": "conditional_recovery"
+        },
+        "truth": [
+          {
+            "code": 1,
+            "source": "BUS35",
+            "onset": 98,
+            "end": 107,
+            "strength": 1.2627327820331447,
+            "sensors": [
+              2,
+              5
+            ]
+          },
+          {
+            "code": 3,
+            "source": "BUS35",
+            "onset": 139,
+            "end": 175,
+            "strength": 1.0733501085380828,
+            "sensors": [
+              2,
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "record": 53,
+        "block": 1,
+        "governor": "variable",
+        "arm": "fault_generator",
+        "alarm": {
+          "detected": 333,
+          "published": 333,
+          "code": 1,
+          "source": "BUS36",
+          "onset_est": 300,
+          "route": "conditional_recovery"
+        },
+        "truth": [
+          {
+            "code": 1,
+            "source": "BUS35",
+            "onset": 98,
+            "end": 107,
+            "strength": 1.2627327820331447,
+            "sensors": [
+              2,
+              5
+            ]
+          },
+          {
+            "code": 3,
+            "source": "BUS35",
+            "onset": 139,
+            "end": 175,
+            "strength": 1.0733501085380828,
+            "sensors": [
+              2,
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "record": 360,
+        "block": 11,
+        "governor": "variable",
+        "arm": "fault",
+        "alarm": {
+          "detected": 261,
+          "published": 261,
+          "code": 1,
+          "source": "BUS8",
+          "onset_est": 234,
+          "route": "conditional_recovery"
+        },
+        "truth": [
+          {
+            "code": 1,
+            "source": "BUS35",
+            "onset": 130,
+            "end": 139,
+            "strength": 0.968225198236463,
+            "sensors": [
+              2,
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "record": 363,
+        "block": 11,
+        "governor": "variable",
+        "arm": "fault_generator",
+        "alarm": {
+          "detected": 261,
+          "published": 261,
+          "code": 1,
+          "source": "BUS8",
+          "onset_est": 234,
+          "route": "conditional_recovery"
+        },
+        "truth": [
+          {
+            "code": 1,
+            "source": "BUS35",
+            "onset": 130,
+            "end": 139,
+            "strength": 0.968225198236463,
+            "sensors": [
+              2,
+              5
+            ]
+          },
+          {
+            "code": 3,
+            "source": "BUS38",
+            "onset": 184,
+            "end": 233,
+            "strength": 1.1245349125718276,
+            "sensors": [
+              2,
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "record": 396,
+        "block": 12,
+        "governor": "variable",
+        "arm": "fault_load",
+        "alarm": {
+          "detected": 360,
+          "published": 360,
+          "code": 3,
+          "source": "BUS32",
+          "onset_est": 354,
+          "route": "conditional_recovery"
+        },
+        "truth": [
+          {
+            "code": 1,
+            "source": "BUS32",
+            "onset": 186,
+            "end": 194,
+            "strength": 1.216785935861517,
+            "sensors": [
+              2,
+              5
+            ]
+          },
+          {
+            "code": 4,
+            "source": "BUS27",
+            "onset": 273,
+            "end": 331,
+            "strength": 1.158900346406245,
+            "sensors": [
+              2,
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "record": 397,
+        "block": 12,
+        "governor": "variable",
+        "arm": "line_line",
+        "alarm": {
+          "detected": 324,
+          "published": 324,
+          "code": 2,
+          "source": "LINE1-39",
+          "onset_est": 307,
+          "route": "conditional_recovery"
+        },
+        "truth": [
+          {
+            "code": 2,
+            "source": "LINE21-22",
+            "onset": 186,
+            "end": 221,
+            "strength": 1.0,
+            "sensors": [
+              2,
+              5
+            ]
+          },
+          {
+            "code": 2,
+            "source": "LINE1-39",
+            "onset": 300,
+            "end": 335,
+            "strength": 1.0,
+            "sensors": [
+              2,
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "record": 428,
+        "block": 13,
+        "governor": "variable",
+        "arm": "line_line",
+        "alarm": {
+          "detected": 207,
+          "published": 207,
+          "code": 1,
+          "source": "BUS35",
+          "onset_est": 195,
+          "route": "conditional_recovery"
+        },
+        "truth": [
+          {
+            "code": 2,
+            "source": "LINE5-6",
+            "onset": 90,
+            "end": 128,
+            "strength": 1.0,
+            "sensors": [
+              2,
+              5
+            ]
+          },
+          {
+            "code": 2,
+            "source": "LINE21-22",
+            "onset": 186,
+            "end": 224,
+            "strength": 1.0,
+            "sensors": [
+              2,
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "record": 428,
+        "block": 13,
+        "governor": "variable",
+        "arm": "line_line",
+        "alarm": {
+          "detected": 357,
+          "published": 357,
+          "code": 2,
+          "source": "LINE17-27",
+          "onset_est": 330,
+          "route": "conditional_recovery"
+        },
+        "truth": [
+          {
+            "code": 2,
+            "source": "LINE5-6",
+            "onset": 90,
+            "end": 128,
+            "strength": 1.0,
+            "sensors": [
+              2,
+              5
+            ]
+          },
+          {
+            "code": 2,
+            "source": "LINE21-22",
+            "onset": 186,
+            "end": 224,
+            "strength": 1.0,
+            "sensors": [
+              2,
+              5
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "challenge": {
+    "all": {
+      "current": {
+        "events": 150,
+        "detected": 148,
+        "family": 147,
+        "joint": 146,
+        "extras": 2,
+        "before_clearance": 146,
+        "macro_f1": 0.9692101740294511,
+        "post_first_exact": 80
+      },
+      "candidate": {
+        "events": 150,
+        "detected": 150,
+        "family": 150,
+        "joint": 149,
+        "extras": 1,
+        "before_clearance": 149,
+        "macro_f1": 0.99,
+        "post_first_exact": 83
+      }
+    },
+    "extra_same_line_repeat": {
+      "current": {
+        "events": 18,
+        "detected": 18,
+        "family": 18,
+        "joint": 18,
+        "extras": 0,
+        "before_clearance": 18,
+        "macro_f1": 0.25,
+        "post_first_exact": 12
+      },
+      "candidate": {
+        "events": 18,
+        "detected": 18,
+        "family": 18,
+        "joint": 18,
+        "extras": 0,
+        "before_clearance": 18,
+        "macro_f1": 0.25,
+        "post_first_exact": 12
+      }
+    },
+    "extra_three_openings_aba": {
+      "current": {
+        "events": 18,
+        "detected": 18,
+        "family": 17,
+        "joint": 17,
+        "extras": 0,
+        "before_clearance": 17,
+        "macro_f1": 0.24285714285714285,
+        "post_first_exact": 11
+      },
+      "candidate": {
+        "events": 18,
+        "detected": 18,
+        "family": 18,
+        "joint": 18,
+        "extras": 1,
+        "before_clearance": 18,
+        "macro_f1": 0.25,
+        "post_first_exact": 12
+      }
+    },
+    "fault_strong": {
+      "current": {
+        "events": 12,
+        "detected": 12,
+        "family": 12,
+        "joint": 11,
+        "extras": 0,
+        "before_clearance": 11,
+        "macro_f1": 0.5,
+        "post_first_exact": 5
+      },
+      "candidate": {
+        "events": 12,
+        "detected": 12,
+        "family": 12,
+        "joint": 11,
+        "extras": 0,
+        "before_clearance": 11,
+        "macro_f1": 0.5,
+        "post_first_exact": 5
+      }
+    },
+    "fault_weak": {
+      "current": {
+        "events": 12,
+        "detected": 12,
+        "family": 12,
+        "joint": 12,
+        "extras": 0,
+        "before_clearance": 12,
+        "macro_f1": 0.5,
+        "post_first_exact": 6
+      },
+      "candidate": {
+        "events": 12,
+        "detected": 12,
+        "family": 12,
+        "joint": 12,
+        "extras": 0,
+        "before_clearance": 12,
+        "macro_f1": 0.5,
+        "post_first_exact": 6
+      }
+    },
+    "generator_after_reclose": {
+      "current": {
+        "events": 12,
+        "detected": 12,
+        "family": 12,
+        "joint": 12,
+        "extras": 0,
+        "before_clearance": 12,
+        "macro_f1": 0.5,
+        "post_first_exact": 6
+      },
+      "candidate": {
+        "events": 12,
+        "detected": 12,
+        "family": 12,
+        "joint": 12,
+        "extras": 0,
+        "before_clearance": 12,
+        "macro_f1": 0.5,
+        "post_first_exact": 6
+      }
+    },
+    "load_after_reclose": {
+      "current": {
+        "events": 12,
+        "detected": 12,
+        "family": 12,
+        "joint": 12,
+        "extras": 0,
+        "before_clearance": 12,
+        "macro_f1": 0.5,
+        "post_first_exact": 6
+      },
+      "candidate": {
+        "events": 12,
+        "detected": 12,
+        "family": 12,
+        "joint": 12,
+        "extras": 0,
+        "before_clearance": 12,
+        "macro_f1": 0.5,
+        "post_first_exact": 6
+      }
+    },
+    "recovery_only": {
+      "current": {
+        "events": 6,
+        "detected": 6,
+        "family": 6,
+        "joint": 6,
+        "extras": 0,
+        "before_clearance": 6,
+        "macro_f1": 0.25,
+        "post_first_exact": 0
+      },
+      "candidate": {
+        "events": 6,
+        "detected": 6,
+        "family": 6,
+        "joint": 6,
+        "extras": 0,
+        "before_clearance": 6,
+        "macro_f1": 0.25,
+        "post_first_exact": 0
+      }
+    },
+    "reopen_different": {
+      "current": {
+        "events": 12,
+        "detected": 11,
+        "family": 11,
+        "joint": 11,
+        "extras": 1,
+        "before_clearance": 11,
+        "macro_f1": 0.2391304347826087,
+        "post_first_exact": 5
+      },
+      "candidate": {
+        "events": 12,
+        "detected": 12,
+        "family": 12,
+        "joint": 12,
+        "extras": 0,
+        "before_clearance": 12,
+        "macro_f1": 0.25,
+        "post_first_exact": 6
+      }
+    },
+    "reopen_same": {
+      "current": {
+        "events": 12,
+        "detected": 12,
+        "family": 12,
+        "joint": 12,
+        "extras": 0,
+        "before_clearance": 12,
+        "macro_f1": 0.25,
+        "post_first_exact": 6
+      },
+      "candidate": {
+        "events": 12,
+        "detected": 12,
+        "family": 12,
+        "joint": 12,
+        "extras": 0,
+        "before_clearance": 12,
+        "macro_f1": 0.25,
+        "post_first_exact": 6
+      }
+    },
+    "three_openings_abc": {
+      "current": {
+        "events": 18,
+        "detected": 17,
+        "family": 17,
+        "joint": 17,
+        "extras": 1,
+        "before_clearance": 17,
+        "macro_f1": 0.24285714285714285,
+        "post_first_exact": 11
+      },
+      "candidate": {
+        "events": 18,
+        "detected": 18,
+        "family": 18,
+        "joint": 18,
+        "extras": 0,
+        "before_clearance": 18,
+        "macro_f1": 0.25,
+        "post_first_exact": 12
+      }
+    },
+    "two_reopens_same": {
+      "current": {
+        "events": 18,
+        "detected": 18,
+        "family": 18,
+        "joint": 18,
+        "extras": 0,
+        "before_clearance": 18,
+        "macro_f1": 0.25,
+        "post_first_exact": 12
+      },
+      "candidate": {
+        "events": 18,
+        "detected": 18,
+        "family": 18,
+        "joint": 18,
+        "extras": 0,
+        "before_clearance": 18,
+        "macro_f1": 0.25,
+        "post_first_exact": 12
+      }
+    }
+  },
+  "reclosures": {
+    "total": 30,
+    "paired": 24,
+    "exact": 20,
+    "within_three": 24,
+    "early": 0,
+    "late": 4,
+    "median_error": 0.0,
+    "rows": [
+      {
+        "record": 10,
+        "governor": "nominal",
+        "block": 0,
+        "line": "LINE11-12",
+        "true_on": 291,
+        "true_reclose": 333,
+        "supported_open": 294,
+        "reclose": 334,
+        "error": 1
+      },
+      {
+        "record": 25,
+        "governor": "variable",
+        "block": 0,
+        "line": "LINE11-12",
+        "true_on": 291,
+        "true_reclose": 333,
+        "supported_open": 294,
+        "reclose": 334,
+        "error": 1
+      },
+      {
+        "record": 41,
+        "governor": "nominal",
+        "block": 1,
+        "line": "LINE10-11",
+        "true_on": 175,
+        "true_reclose": 220,
+        "supported_open": 175,
+        "reclose": 220,
+        "error": 0
+      },
+      {
+        "record": 56,
+        "governor": "variable",
+        "block": 1,
+        "line": "LINE10-11",
+        "true_on": 175,
+        "true_reclose": 220,
+        "supported_open": 175,
+        "reclose": 220,
+        "error": 0
+      },
+      {
+        "record": 72,
+        "governor": "nominal",
+        "block": 2,
+        "line": "LINE26-29",
+        "true_on": 177,
+        "true_reclose": 202,
+        "supported_open": 177,
+        "reclose": 202,
+        "error": 0
+      },
+      {
+        "record": 87,
+        "governor": "variable",
+        "block": 2,
+        "line": "LINE26-29",
+        "true_on": 177,
+        "true_reclose": 202,
+        "supported_open": 177,
+        "reclose": 202,
+        "error": 0
+      },
+      {
+        "record": 103,
+        "governor": "nominal",
+        "block": 3,
+        "line": "LINE11-12",
+        "true_on": 247,
+        "true_reclose": 285,
+        "supported_open": 249,
+        "reclose": 286,
+        "error": 1
+      },
+      {
+        "record": 118,
+        "governor": "variable",
+        "block": 3,
+        "line": "LINE11-12",
+        "true_on": 247,
+        "true_reclose": 285,
+        "supported_open": 249,
+        "reclose": 286,
+        "error": 1
+      },
+      {
+        "record": 134,
+        "governor": "nominal",
+        "block": 4,
+        "line": "LINE1-39",
+        "true_on": 198,
+        "true_reclose": 227,
+        "supported_open": null,
+        "reclose": null,
+        "error": null
+      },
+      {
+        "record": 149,
+        "governor": "variable",
+        "block": 4,
+        "line": "LINE1-39",
+        "true_on": 198,
+        "true_reclose": 227,
+        "supported_open": null,
+        "reclose": null,
+        "error": null
+      },
+      {
+        "record": 165,
+        "governor": "nominal",
+        "block": 5,
+        "line": "LINE11-12",
+        "true_on": 339,
+        "true_reclose": 381,
+        "supported_open": 340,
+        "reclose": 381,
+        "error": 0
+      },
+      {
+        "record": 180,
+        "governor": "variable",
+        "block": 5,
+        "line": "LINE11-12",
+        "true_on": 339,
+        "true_reclose": 381,
+        "supported_open": 340,
+        "reclose": 381,
+        "error": 0
+      },
+      {
+        "record": 196,
+        "governor": "nominal",
+        "block": 6,
+        "line": "LINE1-39",
+        "true_on": 234,
+        "true_reclose": 264,
+        "supported_open": null,
+        "reclose": null,
+        "error": null
+      },
+      {
+        "record": 211,
+        "governor": "variable",
+        "block": 6,
+        "line": "LINE1-39",
+        "true_on": 234,
+        "true_reclose": 264,
+        "supported_open": null,
+        "reclose": null,
+        "error": null
+      },
+      {
+        "record": 227,
+        "governor": "nominal",
+        "block": 7,
+        "line": "LINE16-24",
+        "true_on": 289,
+        "true_reclose": 333,
+        "supported_open": 289,
+        "reclose": 333,
+        "error": 0
+      },
+      {
+        "record": 242,
+        "governor": "variable",
+        "block": 7,
+        "line": "LINE16-24",
+        "true_on": 289,
+        "true_reclose": 333,
+        "supported_open": 289,
+        "reclose": 333,
+        "error": 0
+      },
+      {
+        "record": 258,
+        "governor": "nominal",
+        "block": 8,
+        "line": "LINE7-8",
+        "true_on": 223,
+        "true_reclose": 253,
+        "supported_open": 223,
+        "reclose": 253,
+        "error": 0
+      },
+      {
+        "record": 273,
+        "governor": "variable",
+        "block": 8,
+        "line": "LINE7-8",
+        "true_on": 223,
+        "true_reclose": 253,
+        "supported_open": 223,
+        "reclose": 253,
+        "error": 0
+      },
+      {
+        "record": 289,
+        "governor": "nominal",
+        "block": 9,
+        "line": "LINE21-22",
+        "true_on": 230,
+        "true_reclose": 267,
+        "supported_open": 230,
+        "reclose": 267,
+        "error": 0
+      },
+      {
+        "record": 304,
+        "governor": "variable",
+        "block": 9,
+        "line": "LINE21-22",
+        "true_on": 230,
+        "true_reclose": 267,
+        "supported_open": 230,
+        "reclose": 267,
+        "error": 0
+      },
+      {
+        "record": 320,
+        "governor": "nominal",
+        "block": 10,
+        "line": "LINE10-11",
+        "true_on": 169,
+        "true_reclose": 203,
+        "supported_open": 169,
+        "reclose": 203,
+        "error": 0
+      },
+      {
+        "record": 335,
+        "governor": "variable",
+        "block": 10,
+        "line": "LINE10-11",
+        "true_on": 169,
+        "true_reclose": 203,
+        "supported_open": 169,
+        "reclose": 203,
+        "error": 0
+      },
+      {
+        "record": 351,
+        "governor": "nominal",
+        "block": 11,
+        "line": "LINE7-8",
+        "true_on": 225,
+        "true_reclose": 275,
+        "supported_open": 225,
+        "reclose": 275,
+        "error": 0
+      },
+      {
+        "record": 366,
+        "governor": "variable",
+        "block": 11,
+        "line": "LINE7-8",
+        "true_on": 225,
+        "true_reclose": 275,
+        "supported_open": 225,
+        "reclose": 275,
+        "error": 0
+      },
+      {
+        "record": 382,
+        "governor": "nominal",
+        "block": 12,
+        "line": "LINE1-39",
+        "true_on": 300,
+        "true_reclose": 335,
+        "supported_open": null,
+        "reclose": null,
+        "error": null
+      },
+      {
+        "record": 397,
+        "governor": "variable",
+        "block": 12,
+        "line": "LINE1-39",
+        "true_on": 300,
+        "true_reclose": 335,
+        "supported_open": null,
+        "reclose": null,
+        "error": null
+      },
+      {
+        "record": 413,
+        "governor": "nominal",
+        "block": 13,
+        "line": "LINE21-22",
+        "true_on": 186,
+        "true_reclose": 224,
+        "supported_open": 186,
+        "reclose": 224,
+        "error": 0
+      },
+      {
+        "record": 428,
+        "governor": "variable",
+        "block": 13,
+        "line": "LINE21-22",
+        "true_on": 186,
+        "true_reclose": 224,
+        "supported_open": 186,
+        "reclose": 224,
+        "error": 0
+      },
+      {
+        "record": 444,
+        "governor": "nominal",
+        "block": 14,
+        "line": "LINE10-11",
+        "true_on": 312,
+        "true_reclose": 354,
+        "supported_open": 312,
+        "reclose": 354,
+        "error": 0
+      },
+      {
+        "record": 459,
+        "governor": "variable",
+        "block": 14,
+        "line": "LINE10-11",
+        "true_on": 312,
+        "true_reclose": 354,
+        "supported_open": 312,
+        "reclose": 354,
+        "error": 0
+      }
+    ]
+  },
+  "illustration": {
+    "record": 289,
+    "block": 9,
+    "governor": "nominal",
+    "lines": [
+      "LINE10-11",
+      "LINE21-22"
+    ],
+    "criterion": "First eligible double-line record in generator order where exact or unmatched count differs; otherwise first eligible record."
+  },
+  "rule": {
+    "passed": true,
+    "thresholds": {
+      "macro_f1": 0.96,
+      "detection_fraction": 0.96,
+      "family_fraction": 0.96,
+      "joint_fraction": 0.96,
+      "extras_vs_causal32": "strictly fewer"
+    }
+  }
+}
