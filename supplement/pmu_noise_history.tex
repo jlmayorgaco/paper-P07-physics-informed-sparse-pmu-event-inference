@@ -1,0 +1,60 @@
+\subsection{Startup Support and Covariance in the History Bank}
+\label{app:pmu-history-noise}
+
+To test the history bank itself, we selected two event and two quiet
+parents by hash among the 24 archived stress parents. The same parents
+appear on the reference plant (F01) and the second plant (P2).
+We replayed their original and noisy recordings
+at the primary bank's frozen alarm threshold. Each event record
+contains six interventions. We monitored the first 120~s of each
+record, including 12~s for startup. The wider-range rule raised the
+upper admissible noise scale from 10 to 1000 and retained the six
+estimated family scales. Each physical response bank was linearized
+at the operating point inferred from the prefix it actually received.
+
+The second rule retained the same physical response and onset
+proposals but separated independent terminal error from the nominal
+correlated background. Let $\Delta\phi_k$ be the first difference of
+the eight voltage angles. Independent angular error with variance
+vector $v$ contributes $-\operatorname{diag}(v)$ to its lag-one
+covariance. With $P=I-\mathbf{1}\mathbf{1}^{\top}/8$, subtraction of
+the nominal lag covariance and projection by $P$ remove the modeled
+background and the common phase direction. We estimated $v\geq0$ from
+300 startup reports by fitting the upper triangle of
+$P\operatorname{diag}(v)P$ to the symmetrized projected difference
+(nominal minus observed). A fixed ridge of 0.1 shrinks the eight
+variances toward the nonnegative part of the mean diagonal target. We used these
+voltage-based estimates for both measured phasors at each terminal,
+as the stress generator gives voltage and current equal relative
+error scales. This assumption would require calibration for actual
+transducers.
+
+After restoring nominal background scales, we propagated the added
+polar errors through the instrument model. Twenty lagged angular
+errors per PMU give the 21-report derivative its time correlation.
+The state gain uses $T P_\rho J^\top+
+\operatorname{Cov}(w_k,\epsilon_k)$ as its cross-covariance.
+The updated gain and innovation covariance enter each history's
+likelihood. The electrical response operators and alarm threshold
+are shared by the two admitted rules.
+
+\begin{table}[t]\centering\small
+\caption{History-bank replay on four paired parents per plant. Exact
+counts correct family and asset before restoration among 12 interventions.
+Extra counts unmatched event-record alarms. Quiet$^+$ counts alarms
+in 0.06 monitored normal hours per admitted row. Dashes indicate zero
+monitored exposure. On nominal recordings the original and wider ranges
+admit the same bank and give identical decisions.}
+\label{tab:pmu-noise-history}
+\input{tables/generated/pmu_history_noise}
+\end{table}
+
+Under added noise, all three extra correct diagnoses on the reference
+plant were loads. On the second plant, modeling the added noise cost
+three previously correct line diagnoses in aggregate and yielded
+eight more unmatched event-record alarms. Even on its nominal
+recordings the second plant lost timely diagnoses when the covariance
+rule changed. This rules out startup rejection as the sole explanation
+for the poor transfer. The paired design uses the same two event
+schedules and two quiet recordings per plant. With zero quiet alarms
+in 0.06~h the one-sided 95\% Poisson upper bound is 49.9 alarms/h.

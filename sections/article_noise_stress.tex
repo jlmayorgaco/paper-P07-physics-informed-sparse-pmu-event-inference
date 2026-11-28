@@ -4,7 +4,19 @@ With independent noise at each PMU, the bank could not start monitoring
 either plant. The estimated voltage-angle noise scale fell outside the permitted
 startup range on all \CThreeAuditFZeroOneNoiseParents{}
 records per plant. The bank accumulated zero monitored hours under this
-condition. With held observations during dropout, it ran on every record
+condition. We replayed four of these records per plant at the original
+alarm threshold. Raising the startup limit admitted all four and gave
+\HistRefWideExact{}/12 timely family--asset diagnoses on each plant.
+We then estimated a separate independent-noise component from the
+same startup angles and propagated it through the instrument filter.
+On the reference plant, timely diagnoses rose to \HistRefModelExact{}/12
+and unmatched event-record alarms fell from \HistRefWideExtra{} to
+\HistRefModelExtra{}. On the second plant, diagnoses fell to
+\HistSecondModelExact{}/12 and unmatched alarms rose from
+\HistSecondWideExtra{} to \HistSecondModelExtra{}. Neither admitted
+rule raised a quiet alarm in 0.06 monitored normal hours per plant.
+
+With held observations during dropout, the original bank ran on every record
 but attributed only \CThreeAuditFZeroOneDropoutShortTimely{}/48 short-gap
 interventions on the reference plant and \CThreeAuditPTwoDropoutShortTimely{}/48 on the second plant.
 On each plant it issued \CThreeAuditFZeroOneDropoutNormalAlarms{} alarms
@@ -31,3 +43,16 @@ Each of the six scenarios, including the original noise, had zero extras
 and zero alarms in \RevNoiseNormalHours{} monitored normal hours. In these trajectories the load diagnoses were more sensitive to the
 independent component than to a twentyfold increase in the original
 correlated noise.
+
+Could the eight PMUs still distinguish the source of an isolated
+change? We added simulated load and line responses to quiet records
+from the second plant and supplied the onset to a phasor classifier.
+At 0.05\% added RMS total vector error, estimating the independent noise
+variance from startup raised exact load attribution from
+\ContrastWindowFixed{} to \ContrastWindowLoad{} of 432. All
+\ContrastBusMiss{} remaining misses were 3\% load changes at bus~31
+classified as normal. On the complete noisy trajectories, the same
+classifier identified only \ContrastPAtOnset{} of 72 sources on the
+second plant even with the onset supplied. When it also had to issue
+the alarm, it identified \ContrastPExact{} before restoration. The
+supplement gives the decision rule and the false-alarm counts.

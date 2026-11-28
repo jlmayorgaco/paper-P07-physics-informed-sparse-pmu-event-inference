@@ -1,0 +1,144 @@
+\subsection{Source Resolution With Independent Phasor Errors}
+\label{app:phasor-noise-contrast}
+
+We tested whether the loss on noisy records begins at the source
+decision or at the alarm. The observation $y_k$ contains 31 terminal
+coordinates from the eight PMUs. These comprise 16 log magnitudes
+of voltage and current, eight unwrapped voltage angles and seven
+usable current angles in radians. Given a possible onset $u$, let $b_0,b_1,b_2$
+denote the means of three consecutive $h$-report blocks. The first two
+end before $u$ and the last starts at $u$. We use
+\[
+ d_h=b_2-2b_1+b_0,\qquad
+ C_h(q)=C_{h,0}+(6q/h)I .
+\]
+The contrast cancels a constant or linear time trend. Independent
+errors of variance $q$ per polar coordinate add $6q/h$ to its
+variance because the three disjoint block means have squared weights
+$1,4,1$. Eight quiet calibration records from the reference plant
+supply the background mean and covariance $C_{h,0}$ for each $h$.
+
+To estimate $q$ from a new record, we form 100 nonoverlapping
+three-report second differences from its first 300 reports and divide
+each by $\sqrt{6}$. Let $\lambda_j$ be the eigenvalues of the
+calibration covariance of these differences. Let $m_j$ be the
+startup mean square in eigenvector $j$ after subtracting the
+calibration mean. We fit $q\geq0$ by minimizing the Gaussian score
+\[
+ \sum_{j=1}^{31}\left[\log(\lambda_j+q)+
+                   \frac{m_j}{\lambda_j+q}\right].
+\]
+This is a marginal score for the differences. Their background can
+remain correlated in time. For source $a$ and load severity $s$, the
+nonlinear second plant provides an isolated response $\mu_{a,s}$ in
+contrast coordinates. We evaluate the Gaussian likelihood with mean
+$\mu_{a,s}$ plus the background mean and covariance $C_h(q)$.
+The source decision maximizes posterior mass after summing over four
+equally likely load sizes ($-10,-3,3,10\%$). Normal has prior mass
+$1/2$. Load and line each have mass $1/4$, divided equally among
+their nine candidate assets. This decision minimizes source-label
+error under the specified mixture for a given onset and fitted
+covariance.
+
+\begin{table}[t]\centering\small
+\caption{Source decisions one second after a supplied onset. Each
+condition uses the same 432 load, 108 line and 540 quiet windows.
+Quiet$^+$ counts quiet windows labeled as physical events.}
+\label{tab:pmu-contrast-window}
+\input{tables/generated/pmu_contrast_window}
+\end{table}
+
+For Table~\ref{tab:pmu-contrast-window}, each of 12 separate quiet
+test records from the second plant supplies 90 disjoint windows.
+In 45 per record we add an isolated simulated response in the same
+coordinates as the classifier's templates. The other 45 contain
+background alone. Fresh independent Gaussian errors in log magnitude
+and phase have standard deviation equal to the nominal added RMS
+total vector error divided by $\sqrt{2}$ (small-error approximation).
+We froze the classifier before generating the windows. The primary
+readout uses $h=30$ at 30 reports/s. All four arms see the same
+windows. The diagonal arm discards between-channel covariance after
+estimating $q$. The supplied arm receives the injected $q$.
+At 0.05\%, supplying $q$ gave the same counts as estimating it.
+The diagonal fit recovered four more loads but labeled 14 quiet
+windows as events. Compared with fixed nominal covariance, the
+estimated full covariance recovered 10--16 additional loads in each
+of the 12 background records. Windows within a record share its
+startup estimate.
+
+\begin{table}[t]\centering\small
+\caption{Continuous replay at 0.05\% added RMS total vector error.
+Det., Fam.\ and Exact count detection, correct family and correct
+family and asset before restoration among 72 interventions per plant.
+Extra counts unmatched event-record alarms. Quiet$^+$ counts alarms
+in \ContrastQuietHours{} normal hours per row.}
+\label{tab:pmu-contrast-stream}
+\input{tables/generated/pmu_contrast_stream}
+\end{table}
+
+Table~\ref{tab:pmu-contrast-stream} uses all 24 archived noisy records
+per plant, with the same 12 six-intervention schedules and 12 quiet
+records across plants. Both replays used the frozen isolated responses
+from the second plant, including the replay on the reference plant.
+The unknown-onset rule slides the three blocks
+one report at a time after 12~s of startup. It publishes after the
+same source exceeds the source-to-normal odds threshold for six
+consecutive reports and rearms after six consecutive reports below
+threshold. The common log threshold was the greater of $\log 99$ and
+the highest estimated-covariance score on the eight quiet calibration
+records with or without fresh 0.05\% noise (plus a numerical margin
+on the calibration maximum). The first unmatched alarm during each
+intervention determines its diagnosis. All remaining alarms count as
+extras. Sharing a threshold permits the two arms to incur different
+false-alarm rates. In this archived stress test each complex phasor is
+multiplied by $1+(0.0005/\sqrt{2})(e_1+\mathrm{i}e_2)$, with fresh
+independent standard normal components at each report and terminal.
+
+On these same noisy trajectories we also read the unconstrained source
+decision 30 reports from each true onset. With estimated covariance it
+identified \ContrastFAtOnset{}/72 sources on the reference plant and
+\ContrastPAtOnset{}/72 on the second plant. On each plant it identified
+10 of 12 first interventions and 22 of 48 that followed restoration
+by less than 3~s. Requiring the classifier
+to find the onset reduced those counts to \ContrastFExact{} and
+\ContrastPExact{}. On the second plant the clock also produced
+\ContrastPExtra{} unmatched event-record alarms and \ContrastPQuiet{}
+quiet alarms. These trajectories include continuously sampled load
+sizes and the residual motion of previous interventions, whereas the
+isolated-window experiment uses the same responses for insertion and
+inference. The comparison does not isolate the contribution of each
+difference. The main history bank carries the estimated state through
+preceding interventions.
+
+We tested the discrete load prior on 36 newly simulated two-event
+sequences from the second plant. Each load or line family order
+occurred nine times. Load size was uniform in absolute value from
+3\% to 14\%, with either sign equally likely. The gap after restoration
+was 0.5--3~s. Each sequence had its own instrument noise and independent
+0.05\% RMS phasor error. We froze both rules before generating the
+observations. Both saw the same eight PMUs and used the same contrast,
+covariance and alarm threshold. For the continuous prior we drew a
+secant through the 3\% and 10\% responses separately for each sign,
+extended it to 14\%, and integrated the Gaussian likelihood along it.
+For endpoints $l,r$ in whitened coordinates and observation $z$,
+the likelihood relative to the null, conditional on the sign, is
+\[
+ \int_0^1 \exp\!\left(z^\top m(u)-\tfrac12\|m(u)\|^2\right)du,
+ \qquad m(u)=l+u(r-l).
+\]
+Completing the square reduces this integral to the difference of two
+normal distribution functions. We average over sign before deciding
+the asset.
+
+With the onset supplied, integration increased exact first-event
+diagnoses from \SizeGridFirst{} to \SizeIntegralFirst{} out of 36.
+For the second intervention it increased them from \SizeGridSecond{}
+to \SizeIntegralSecond{} out of 36. With the alarm clock running,
+both rules detected every first intervention and missed every
+second one before restoration. Exact diagnoses fell from
+\SizeGridExact{} to \SizeIntegralExact{} out of 72, and unmatched
+event-record alarms increased from \SizeGridExtra{} to
+\SizeIntegralExtra{}. Neither rule raised a quiet alarm in 1.44~h
+from 18 additional simulated records. A more accurate size model
+helped when the first switch time was given. It did not supply the
+recovery prediction needed to interpret successive switches.

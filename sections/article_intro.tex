@@ -10,13 +10,12 @@ these cases and, if the line opened, identify it before it recloses?
 
 \begin{figure*}[t]\centering
 \includegraphics[width=.99\textwidth]{figures/generated/paper_method.pdf}
-\caption{Recovery-aware attribution. (a) The response to intervention A
-persists when B begins. (b) Each candidate predicts the next PMU report
-from the estimated state at its proposed onset. Load histories integrate
-over the size of the change. A line history specifies an open or closed
-branch. (c) Active histories support a new alarm and its source diagnosis.
-Restored histories support a restoration report for that source. The source-separation calculation
-at left uses a supplied onset and serves as a retrospective diagnostic.}
+\caption{Recovery-aware attribution. (a) Intervention B begins while the
+system is recovering from A. (b) Steps 1--3 predict and score each new
+PMU report from the state estimated at the proposed switch. Step~4 uses
+active and restored weights to publish the source and its restoration.
+(c) The separate source-resolution diagnostic compares two nominal
+responses at a supplied onset.}
 \label{fig:problem-method}\end{figure*}
 
 A line opening changes the network admittance immediately. Reclosure restores
@@ -25,11 +24,10 @@ We therefore treat recovery as a competing explanation for each new report.
 A bank of switched differential-algebraic equation (DAE) models predicts
 the next PMU report for continued recovery and for each candidate load
 change or line switch during recovery. Each candidate is
-weighted by how well its predicted reports match the observations. For
-each source, the active-history weight supports a new-event alarm, while
-the weight summed over active and restored histories supports the source
-diagnosis. Thus a restored load can explain a transient without being
-reported as still active
+weighted by how well its predicted reports match the observations.
+The monitor names a bus or line when that asset's active histories
+lead for six reports above threshold. Restored histories explain
+lingering motion and supply the evidence for closing the episode
 (Fig.~\ref{fig:problem-method}).
 
 We test this distinction on successive, nonoverlapping interventions from

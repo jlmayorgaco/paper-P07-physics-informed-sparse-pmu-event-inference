@@ -13,6 +13,8 @@
 \input{generated/c03_extended_macros}
 \input{generated/second_family}
 \input{generated/restoration_macros}
+\input{generated/pmu_contrast_macros}
+\input{generated/pmu_history_macros}
 \input{generated/modal_recovery}
 \input{generated/revision_20261104_macros}
 
@@ -47,7 +49,10 @@ observed change on the plant with different machine dynamics. In a
 separate four-family test on a reduced plant, the recovery bank
 identified \RepBankJoint{}/420 family--asset pairs within 1.5~s and
 issued \RepBankExtras{} unmatched alarms. Independent PMU noise
-prevented startup of the original two-family filter on both plants.
+prevented startup of the original two-family filter. In a paired
+replay, widening the startup range admitted both plants. Modeling the
+added noise improved attribution on the reference plant and reduced
+it on the second.
 \end{abstract}
 
 \begin{keywords}

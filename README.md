@@ -4,6 +4,11 @@ This repository contains the IEEE Access article, its supplement, the bibliograp
 
 The [four-family replication counts](tables/generated/restoration_block_counts.csv) give the confusion matrix, exact family-and-asset count, before-clearance count and unmatched alarm count for each streaming method in each of the 15 scenario blocks.
 The [window-level counts](tables/generated/restoration_window_counts.csv) report the shared-trigger family decisions and the 24- and 30-second comparisons with the archived forest.
+The [torque-amplitude quadrature check](tables/generated/torque_quadrature_development.csv) gives paired counts and delays on the six development blocks.
+
+The phasor-noise experiment reports [isolated-window decisions](tables/generated/pmu_contrast_window_counts.csv) and [continuous replay decisions](tables/generated/pmu_contrast_stream_counts.csv) by parent record. The latter also gives exact source counts with a supplied onset for the same nonlinear trajectories.
+The [load-size comparison](tables/generated/pmu_contrast_nonlinear_counts.csv) reports the same two decision tasks on newly simulated pairs of interventions.
+The [history-bank noise pilot](tables/generated/pmu_history_noise_counts.csv) gives startup admission, timely diagnoses, unmatched alarms and monitored normal exposure by plant, recording and covariance rule.
 
 In Overleaf, set the compiler to pdfLaTeX and the main document to `main.tex`. Select `supplement.tex` as the main document to compile the supplement. For a local build, run pdfLaTeX, BibTeX, and two more pdfLaTeX passes for each document.
 

@@ -1,8 +1,10 @@
 \section{Attribution Against a Recovering State}
 \label{sec:narrative-method}
 
-The method is a multiple-hypothesis filter. Its design choice is which
-state and switch history to carry when an asset returns to service.
+The filter carries the machine and instrument states through
+restoration. Its multiple-hypothesis update then asks whether the
+next PMU reports follow from the preceding switch alone or require
+another intervention.
 Suppose a line recloses at time $\kappa$. From that instant the intact
 network governs the machine dynamics again, but its initial condition is
 the state reached during the outage. Compare this trajectory with the one
@@ -197,11 +199,17 @@ screening and pruning make the resulting masses approximate.
 \subsection{From Source Evidence to an Alarm}
 
 All methods in the two primary comparisons use the same alarm rule.
-The bank scores onset using the log odds of active source mass and
-restoration using the log odds of restored source mass. It raises an
-alarm and names the asset once the same source leads above threshold
-for six consecutive reports. Six qualifying restoration reports for that
-source close the episode. We calibrate thresholds on separate sequences
+For an open alarm slot, the bank selects the asset with the largest
+$M_{c,k}$. Conditional on an intervention being active and on the
+retained histories, the probability that $c$ is the source is
+$M_{c,k}/\sum_j M_{j,k}$ when the sum is positive. Selecting its
+maximum minimizes the probability of a wrong asset at that report.
+The bank publishes that asset and its catalog family when the same
+asset leads for six consecutive reports with
+$\log[M_{c,k}/(1-M_{c,k})]$ at or above threshold. Once an episode
+is open, the clock follows its declared asset. It closes the episode
+after six qualifying reports using the log odds of that asset's
+restored mass $\Gamma_{c,k}-M_{c,k}$. We calibrate thresholds on separate sequences
 (Section~\ref{sec:narrative-protocol}). When scoring timeliness, we use
 the time the monitor names the asset, even if it estimates an earlier onset.
 

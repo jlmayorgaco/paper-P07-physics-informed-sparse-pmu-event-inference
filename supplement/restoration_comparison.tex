@@ -13,6 +13,16 @@ in the inclusive interval from onset through report 45 after onset.
 Each subsequent unmatched alarm counts as an extra, including a
 duplicate on a disturbed record.
 
+A separate development check tested the integration of generator
+torque amplitude. We kept the physical responses, pulse durations,
+priors and alarm threshold fixed and replaced three Gauss--Legendre
+nodes with seven over the same amplitude interval. On six development
+blocks both rules correctly identified 154 of 168 family--asset pairs
+within the deadline and 146 before clearance. Each issued two unmatched
+alarms. Seven nodes advanced three correct declarations at bus~37 by
+0.1~s. No event gained or lost a timely diagnosis, so we retained the
+three-node rule.
+
 \paragraph{Checking the physical continuation.}
 An apparent second event can be a mismatch in the recovery fit. For
 a proposed fault, line or load after the first physical fit, we
