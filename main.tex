@@ -13,6 +13,7 @@
 \input{generated/c03_extended_macros}
 \input{generated/second_family}
 \input{generated/restoration_macros}
+\input{generated/torque_terminal_macros}
 \input{generated/pmu_contrast_macros}
 \input{generated/pmu_history_macros}
 \input{generated/modal_recovery}
@@ -45,10 +46,12 @@ for a streaming ExtraTrees adapter. They issued \RecBankExtras{},
 monitored event-hours. Carrying the estimated state improved timely
 attribution over resetting it on two plants. Retaining separate
 histories gave a further gain on the reference plant, with little
-observed change on the plant with different machine dynamics. In a
-separate four-family test on a reduced plant, the recovery bank
-identified \RepBankJoint{}/420 family--asset pairs within 1.5~s and
-issued \RepBankExtras{} unmatched alarms. Independent PMU noise
+observed change on the plant with different machine dynamics. On a
+four-family reduced plant, a torque estimator using eight PMU voltages
+and one model-selected current angle raised exact family--asset
+decisions from \TorqueBaseJoint{} to \TorqueTermJoint{} of 420 within
+1.5~s. Unmatched alarms rose from \TorqueBaseExtra{} to
+\TorqueTermExtra{}. Independent PMU noise
 prevented startup of the original two-family filter. In a paired
 replay, widening the startup range admitted both plants. Modeling the
 added noise improved attribution on the reference plant and reduced

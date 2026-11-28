@@ -1,0 +1,934 @@
+{
+  "intervals": {
+    "candidate-combined16": [
+      [
+        0.0,
+        1.1725980345386802
+      ],
+      [
+        0.0,
+        2.6190476190476204
+      ],
+      [
+        0.0,
+        2.6190476190476204
+      ],
+      [
+        0.0,
+        2.6190476190476204
+      ],
+      [
+        0.0,
+        3.0
+      ]
+    ],
+    "terminal-candidate": [
+      [
+        -0.4059310164744005,
+        1.3720532460772006
+      ],
+      [
+        -0.2380952380952408,
+        2.857142857142861
+      ],
+      [
+        -0.2380952380952408,
+        2.857142857142861
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        3.0
+      ]
+    ],
+    "terminal-combined16": [
+      [
+        0.01794838698190447,
+        1.9132198043596702
+      ],
+      [
+        0.952380952380949,
+        4.285714285714278
+      ],
+      [
+        0.952380952380949,
+        4.285714285714278
+      ],
+      [
+        0.0,
+        2.6190476190476204
+      ],
+      [
+        0.0,
+        6.0
+      ]
+    ],
+    "terminal-trees_refit": [
+      [
+        25.219917294760652,
+        30.495684126805976
+      ],
+      [
+        32.38095238095238,
+        38.095238095238095
+      ],
+      [
+        30.714285714285708,
+        37.14285714285714
+      ],
+      [
+        62.85714285714286,
+        78.57142857142858
+      ],
+      [
+        -9.0,
+        12.0
+      ]
+    ]
+  },
+  "interval_columns": [
+    "macro_F1_pp",
+    "joint_pp",
+    "family_pp",
+    "active_joint_pp",
+    "extras_per_cohort"
+  ],
+  "absolute_intervals": {
+    "combined16": [
+      [
+        94.55913087546651,
+        98.59191773407902
+      ],
+      [
+        90.71428571428571,
+        97.38095238095238
+      ],
+      [
+        92.14285714285714,
+        97.85714285714285
+      ],
+      [
+        88.80952380952381,
+        95.0
+      ],
+      [
+        2.0,
+        13.0
+      ]
+    ],
+    "candidate": [
+      [
+        95.00025743065017,
+        99.0559294257122
+      ],
+      [
+        92.14285714285714,
+        98.33333333333333
+      ],
+      [
+        93.0952380952381,
+        99.04761904761905
+      ],
+      [
+        90.0,
+        95.95238095238095
+      ],
+      [
+        3.0,
+        14.0
+      ]
+    ],
+    "trees_refit": [
+      [
+        67.8925740659354,
+        71.57792620887169
+      ],
+      [
+        58.80952380952381,
+        64.04761904761904
+      ],
+      [
+        61.42857142857143,
+        65.71428571428571
+      ],
+      [
+        15.476190476190476,
+        29.28571428571429
+      ],
+      [
+        0.0,
+        16.0
+      ]
+    ],
+    "terminal": [
+      [
+        95.96972187671594,
+        99.16838842975207
+      ],
+      [
+        94.28571428571428,
+        98.57142857142858
+      ],
+      [
+        95.23809523809523,
+        99.52380952380952
+      ],
+      [
+        90.0,
+        95.95238095238095
+      ],
+      [
+        3.0,
+        15.0
+      ]
+    ]
+  },
+  "quiet_records": 165,
+  "subgroups": [
+    {
+      "method": "combined16",
+      "arm": "short_generator",
+      "events": 30,
+      "joint": 18,
+      "before_clearance": 8,
+      "detected": 18
+    },
+    {
+      "method": "combined16",
+      "arm": "generator",
+      "events": 30,
+      "joint": 30,
+      "before_clearance": 30,
+      "detected": 30
+    },
+    {
+      "method": "combined16",
+      "arm": "fault_generator",
+      "events": 30,
+      "joint": 25,
+      "before_clearance": 25,
+      "detected": 27
+    },
+    {
+      "method": "combined16",
+      "arm": "line_generator",
+      "events": 30,
+      "joint": 30,
+      "before_clearance": 30,
+      "detected": 30
+    },
+    {
+      "method": "candidate",
+      "arm": "short_generator",
+      "events": 30,
+      "joint": 23,
+      "before_clearance": 13,
+      "detected": 23
+    },
+    {
+      "method": "candidate",
+      "arm": "generator",
+      "events": 30,
+      "joint": 30,
+      "before_clearance": 30,
+      "detected": 30
+    },
+    {
+      "method": "candidate",
+      "arm": "fault_generator",
+      "events": 30,
+      "joint": 25,
+      "before_clearance": 25,
+      "detected": 27
+    },
+    {
+      "method": "candidate",
+      "arm": "line_generator",
+      "events": 30,
+      "joint": 30,
+      "before_clearance": 30,
+      "detected": 30
+    },
+    {
+      "method": "trees_refit",
+      "arm": "short_generator",
+      "events": 30,
+      "joint": 15,
+      "before_clearance": 0,
+      "detected": 22
+    },
+    {
+      "method": "trees_refit",
+      "arm": "generator",
+      "events": 30,
+      "joint": 27,
+      "before_clearance": 19,
+      "detected": 30
+    },
+    {
+      "method": "trees_refit",
+      "arm": "fault_generator",
+      "events": 30,
+      "joint": 0,
+      "before_clearance": 0,
+      "detected": 0
+    },
+    {
+      "method": "trees_refit",
+      "arm": "line_generator",
+      "events": 30,
+      "joint": 2,
+      "before_clearance": 0,
+      "detected": 2
+    },
+    {
+      "method": "terminal",
+      "arm": "short_generator",
+      "events": 30,
+      "joint": 28,
+      "before_clearance": 13,
+      "detected": 28
+    },
+    {
+      "method": "terminal",
+      "arm": "generator",
+      "events": 30,
+      "joint": 30,
+      "before_clearance": 30,
+      "detected": 30
+    },
+    {
+      "method": "terminal",
+      "arm": "fault_generator",
+      "events": 30,
+      "joint": 25,
+      "before_clearance": 25,
+      "detected": 27
+    },
+    {
+      "method": "terminal",
+      "arm": "line_generator",
+      "events": 30,
+      "joint": 30,
+      "before_clearance": 30,
+      "detected": 30
+    }
+  ],
+  "source_assets": [
+    "BUS14",
+    "BUS16",
+    "BUS21",
+    "BUS24",
+    "BUS27",
+    "BUS32",
+    "BUS35",
+    "BUS38",
+    "BUS6",
+    "LINE1-39",
+    "LINE10-11",
+    "LINE11-12",
+    "LINE16-24",
+    "LINE21-22",
+    "LINE26-29",
+    "LINE5-6",
+    "LINE7-8"
+  ],
+  "sealed_predictions": {
+    "combined16": "3088ef5d4d62c96f3556fc57ba6199d5a273dfa8de9b465fd6e461cbec1db875",
+    "candidate": "95f26580a0c263e74e0bb48eb478cd83f792fac3e1eaf6fc09651789e3f8f19b",
+    "trees_refit": "1dff3181e58a8969dac43a86199bda9b9d4da4c174005e4e7856b6e25ccbad57",
+    "terminal": "5270104e207fd05bcf3d183419952a5b5ad4089398aa105263fd1126c0af8357"
+  },
+  "trial_seal": "cee87dc77b338172eb71c6dbf663dc3316deef0d33c0fde9eaba0e6c6dfa2800",
+  "secondary_seal": "76f5131ad6101484022765d5446505392ac27a803ebe6c3b493de6ae8d8802a7",
+  "simulation": "db6d36e983b50d822e7346f4c4ace69ed69b2560269c5c07ab42271b1246f192",
+  "truth_seal": "102eb0dac75dbdb3cb72b5d4521725a3e11dd6a475e0a7311b0112cc8f8a66f3",
+  "protocol": "9ed35f66306dc9849d3889771882419e996eadee7455fd6a10ed39c124350fca",
+  "cluster_unit": "15 matched scenario blocks with source catalog fixed",
+  "scores": {
+    "combined16": {
+      "events": 420,
+      "detected": 401,
+      "family": 400,
+      "joint": 396,
+      "macro_f1": 0.967703825150968,
+      "extras": 7,
+      "quiet_extras": 0,
+      "quiet_hours": 1.0541666666666667,
+      "fa_normal_per_hour": 0.0,
+      "event_record_extras": 7,
+      "median_detection_s": 0.06666666666666667,
+      "median_diagnosis_s": 0.06666666666666667,
+      "confusion": [
+        [
+          0,
+          2,
+          3,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          120,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          117,
+          0,
+          0,
+          0
+        ],
+        [
+          15,
+          0,
+          0,
+          105,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          58,
+          0
+        ]
+      ],
+      "by_family": [
+        [
+          0,
+          0,
+          0,
+          120
+        ],
+        [
+          2,
+          1,
+          2,
+          115
+        ],
+        [
+          15,
+          0,
+          2,
+          103
+        ],
+        [
+          2,
+          0,
+          0,
+          58
+        ]
+      ],
+      "site_only": 396,
+      "before_clearance": 386
+    },
+    "candidate": {
+      "events": 420,
+      "detected": 406,
+      "family": 405,
+      "joint": 401,
+      "macro_f1": 0.9724777942572431,
+      "extras": 8,
+      "quiet_extras": 0,
+      "quiet_hours": 1.0541666666666667,
+      "fa_normal_per_hour": 0.0,
+      "event_record_extras": 8,
+      "median_detection_s": 0.06666666666666667,
+      "median_diagnosis_s": 0.06666666666666667,
+      "confusion": [
+        [
+          0,
+          2,
+          3,
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          120,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          117,
+          0,
+          0,
+          0
+        ],
+        [
+          10,
+          0,
+          0,
+          110,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          58,
+          0
+        ]
+      ],
+      "by_family": [
+        [
+          0,
+          0,
+          0,
+          120
+        ],
+        [
+          2,
+          1,
+          2,
+          115
+        ],
+        [
+          10,
+          0,
+          2,
+          108
+        ],
+        [
+          2,
+          0,
+          0,
+          58
+        ]
+      ],
+      "site_only": 401,
+      "before_clearance": 391
+    },
+    "trees_refit": {
+      "events": 420,
+      "detected": 303,
+      "family": 267,
+      "joint": 258,
+      "macro_f1": 0.6988638806289901,
+      "extras": 7,
+      "quiet_extras": 0,
+      "quiet_hours": 1.0541666666666667,
+      "fa_normal_per_hour": 0.0,
+      "event_record_extras": 7,
+      "median_detection_s": 1.1666666666666667,
+      "median_diagnosis_s": 1.1666666666666667,
+      "confusion": [
+        [
+          0,
+          4,
+          1,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          90,
+          0,
+          0,
+          30,
+          0
+        ],
+        [
+          21,
+          0,
+          97,
+          0,
+          2,
+          0
+        ],
+        [
+          66,
+          0,
+          0,
+          50,
+          4,
+          0
+        ],
+        [
+          30,
+          0,
+          0,
+          0,
+          30,
+          0
+        ]
+      ],
+      "by_family": [
+        [
+          0,
+          30,
+          3,
+          87
+        ],
+        [
+          21,
+          2,
+          0,
+          97
+        ],
+        [
+          66,
+          4,
+          6,
+          44
+        ],
+        [
+          30,
+          0,
+          0,
+          30
+        ]
+      ],
+      "site_only": 258,
+      "before_clearance": 94
+    },
+    "terminal": {
+      "events": 420,
+      "detected": 411,
+      "family": 410,
+      "joint": 406,
+      "macro_f1": 0.9770120661698978,
+      "extras": 9,
+      "quiet_extras": 0,
+      "quiet_hours": 1.0541666666666667,
+      "fa_normal_per_hour": 0.0,
+      "event_record_extras": 9,
+      "median_detection_s": 0.06666666666666667,
+      "median_diagnosis_s": 0.06666666666666667,
+      "confusion": [
+        [
+          0,
+          2,
+          3,
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          120,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          117,
+          0,
+          0,
+          0
+        ],
+        [
+          5,
+          0,
+          0,
+          115,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          58,
+          0
+        ]
+      ],
+      "by_family": [
+        [
+          0,
+          0,
+          0,
+          120
+        ],
+        [
+          2,
+          1,
+          2,
+          115
+        ],
+        [
+          5,
+          0,
+          2,
+          113
+        ],
+        [
+          2,
+          0,
+          0,
+          58
+        ]
+      ],
+      "site_only": 406,
+      "before_clearance": 391
+    }
+  },
+  "source_separation_noise": "Assumed independent current-angle noise, 0.001 rad. Geometric separation is a binary oracle diagnostic.",
+  "development_terminal_noise": {
+    "seed": 2026112814,
+    "radians": [
+      0.0,
+      0.001,
+      0.002,
+      0.005
+    ],
+    "cohorts": {
+      "conditional_pulse_calibration": {
+        "0.0": {
+          "short_generator": {
+            "n": 12,
+            "located": 12,
+            "timely_location": 12,
+            "preclearance_location": 2,
+            "onset_within_12": 12
+          },
+          "quiet": {
+            "n": 6,
+            "quiet_alarms": 0
+          },
+          "quiet_extra": {
+            "n": 12,
+            "quiet_alarms": 0
+          }
+        },
+        "0.001": {
+          "short_generator": {
+            "n": 12,
+            "located": 12,
+            "timely_location": 12,
+            "preclearance_location": 2,
+            "onset_within_12": 12
+          },
+          "quiet": {
+            "n": 6,
+            "quiet_alarms": 0
+          },
+          "quiet_extra": {
+            "n": 12,
+            "quiet_alarms": 0
+          }
+        },
+        "0.002": {
+          "short_generator": {
+            "n": 12,
+            "located": 11,
+            "timely_location": 11,
+            "preclearance_location": 2,
+            "onset_within_12": 11
+          },
+          "quiet": {
+            "n": 6,
+            "quiet_alarms": 0
+          },
+          "quiet_extra": {
+            "n": 12,
+            "quiet_alarms": 0
+          }
+        },
+        "0.005": {
+          "short_generator": {
+            "n": 12,
+            "located": 0,
+            "timely_location": 0,
+            "preclearance_location": 0,
+            "onset_within_12": 0
+          },
+          "quiet": {
+            "n": 6,
+            "quiet_alarms": 0
+          },
+          "quiet_extra": {
+            "n": 12,
+            "quiet_alarms": 0
+          }
+        }
+      },
+      "restoration_calibration": {
+        "0.0": {
+          "short_generator": {
+            "n": 12,
+            "located": 12,
+            "timely_location": 12,
+            "preclearance_location": 0,
+            "onset_within_12": 12
+          },
+          "quiet": {
+            "n": 6,
+            "quiet_alarms": 0
+          },
+          "quiet_extra": {
+            "n": 12,
+            "quiet_alarms": 0
+          }
+        },
+        "0.001": {
+          "short_generator": {
+            "n": 12,
+            "located": 12,
+            "timely_location": 12,
+            "preclearance_location": 0,
+            "onset_within_12": 12
+          },
+          "quiet": {
+            "n": 6,
+            "quiet_alarms": 0
+          },
+          "quiet_extra": {
+            "n": 12,
+            "quiet_alarms": 0
+          }
+        },
+        "0.002": {
+          "short_generator": {
+            "n": 12,
+            "located": 9,
+            "timely_location": 8,
+            "preclearance_location": 0,
+            "onset_within_12": 8
+          },
+          "quiet": {
+            "n": 6,
+            "quiet_alarms": 0
+          },
+          "quiet_extra": {
+            "n": 12,
+            "quiet_alarms": 0
+          }
+        },
+        "0.005": {
+          "short_generator": {
+            "n": 12,
+            "located": 0,
+            "timely_location": 0,
+            "preclearance_location": 0,
+            "onset_within_12": 0
+          },
+          "quiet": {
+            "n": 6,
+            "quiet_alarms": 0
+          },
+          "quiet_extra": {
+            "n": 12,
+            "quiet_alarms": 0
+          }
+        }
+      }
+    }
+  },
+  "cohort_seed": 86759123,
+  "isolated_short_by_site": [
+    {
+      "method": "combined16",
+      "site": "BUS32",
+      "events": 10,
+      "joint": 6,
+      "active": 2
+    },
+    {
+      "method": "combined16",
+      "site": "BUS35",
+      "events": 10,
+      "joint": 4,
+      "active": 2
+    },
+    {
+      "method": "combined16",
+      "site": "BUS38",
+      "events": 10,
+      "joint": 8,
+      "active": 4
+    },
+    {
+      "method": "candidate",
+      "site": "BUS32",
+      "events": 10,
+      "joint": 9,
+      "active": 2
+    },
+    {
+      "method": "candidate",
+      "site": "BUS35",
+      "events": 10,
+      "joint": 4,
+      "active": 2
+    },
+    {
+      "method": "candidate",
+      "site": "BUS38",
+      "events": 10,
+      "joint": 10,
+      "active": 9
+    },
+    {
+      "method": "terminal",
+      "site": "BUS32",
+      "events": 10,
+      "joint": 8,
+      "active": 2
+    },
+    {
+      "method": "terminal",
+      "site": "BUS35",
+      "events": 10,
+      "joint": 10,
+      "active": 2
+    },
+    {
+      "method": "terminal",
+      "site": "BUS38",
+      "events": 10,
+      "joint": 10,
+      "active": 9
+    },
+    {
+      "method": "trees_refit",
+      "site": "BUS32",
+      "events": 10,
+      "joint": 2,
+      "active": 0
+    },
+    {
+      "method": "trees_refit",
+      "site": "BUS35",
+      "events": 10,
+      "joint": 3,
+      "active": 0
+    },
+    {
+      "method": "trees_refit",
+      "site": "BUS38",
+      "events": 10,
+      "joint": 10,
+      "active": 0
+    }
+  ],
+  "algorithms": {
+    "torque_voltage_prefix.py": "e5d330f56b431c4ebee1d57f41ee2a2395493e1b3e5e93c19a8fffd524472443",
+    "torque_joint_terminal.py": "12ac0aa1227d7b62a5c211a52edc7711e51b4304d91f617ef2cfd4d9d25782bd",
+    "torque_resolution_geometry.py": "dcb2e97ac0f7785ed622b6ef3cb61f79652731622164d0682ed5f8c8fc626e8d"
+  },
+  "development_gate": "Both candidates improved over the incumbent without more extras. Both exceeded the trees' extra count during development. The second candidate was sealed separately before the new cohort was generated."
+}

@@ -1,0 +1,17 @@
+method,arm,events,joint,before_clearance,detected
+combined16,short_generator,30,18,8,18
+combined16,generator,30,30,30,30
+combined16,fault_generator,30,25,25,27
+combined16,line_generator,30,30,30,30
+candidate,short_generator,30,23,13,23
+candidate,generator,30,30,30,30
+candidate,fault_generator,30,25,25,27
+candidate,line_generator,30,30,30,30
+trees_refit,short_generator,30,15,0,22
+trees_refit,generator,30,27,19,30
+trees_refit,fault_generator,30,0,0,0
+trees_refit,line_generator,30,2,0,2
+terminal,short_generator,30,28,13,28
+terminal,generator,30,30,30,30
+terminal,fault_generator,30,25,25,27
+terminal,line_generator,30,30,30,30

@@ -36,6 +36,31 @@ generator pulses and four generator-bus errors accounted for 14 of its
 eight correct joint diagnoses on balance and increased unmatched alarms
 from \RepBankExtras{} to \RepCheckExtras{}.
 
+For a first generator pulse, we asked which of the existing terminals
+could resolve a bus that voltages alone leave ambiguous. We propagated
+a seven-report torque pulse through each generator and let every rival
+bus adjust its onset, duration, inertia and amplitude. At the 1.5-s
+deadline, buses 35 and 36 remained the closest pair. The current angle
+at bus 22 on branch 21--22 gave the largest separation among seven
+available terminals. We froze two first-event readers. One used the
+eight voltage phasors, and the other added this current angle. Both
+summed over possible pulse onsets before choosing a bus. On a further
+15 blocks the original bank, voltage reader and terminal reader
+identified \TorqueBaseJoint{}, \TorqueVoltJoint{} and
+\TorqueTermJoint{} of 420 events within 1.5~s, respectively. All ten
+additional joint diagnoses over the bank were isolated short pulses.
+The terminal reader located \TorqueTermShort{} of these 30 pulses,
+including \TorqueTermShortActive{} while torque was still applied.
+The bank located \TorqueBaseShort{}, including \TorqueBaseShortActive{}
+while active. At bus 35, adding terminal 22 raised the voltage reader's
+timely diagnoses from \TorqueVoltBusThirtyFive{} to
+\TorqueTermBusThirtyFive{} of ten. The original bank issued
+\TorqueBaseExtra{} unmatched alarms and the terminal version issued
+\TorqueTermExtra{}. Both additional alarms correctly named bus 32 one
+report after the deadline in the two governor variants of the same
+scenario. We charged both as unmatched. The supplement reports the
+paired intervals and sensitivity to terminal-angle noise.
+
 We also compared family decisions on the same alarm reports. Each
 classifier published 29 reports after the alarm when that report was
 available.

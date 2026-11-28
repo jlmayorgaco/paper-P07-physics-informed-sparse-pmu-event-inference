@@ -18,9 +18,13 @@ the retained histories by family at a fixed lag matched the bank's
 original family decisions on the new pairs. Improving the common
 trigger remains important because a missed alarm prevents either
 classifier from reporting the event. On the reduced four-family plant,
-the main remaining loss was generator attribution. Six isolated short
-pulses went undetected, and four pulses during recovery were assigned
-to the wrong generator bus. A stricter voltage check lost joint
-diagnoses and increased duplicate or unmatched alarms. These results
-favor improving the early generator response model before tightening
-the publication rule.
+the closest generator signatures identified the angle of current on
+branch 21--22 as the most informative additional terminal for
+distinguishing two buses. In a new
+replication, adding this terminal to the first-pulse voltage reader
+raised the number of isolated short pulses located by the deadline
+from \TorqueVoltShort{} to \TorqueTermShort{} of 30. Both readers
+located \TorqueTermShortActive{} while torque was still applied.
+The additional terminal helped identify the source of the residual
+motion. Locating the source while the pulse is active and controlling
+late alarms remain distinct operational requirements.

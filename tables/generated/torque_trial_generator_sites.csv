@@ -1,0 +1,13 @@
+method,site,events,joint,active
+combined16,BUS32,10,6,2
+combined16,BUS35,10,4,2
+combined16,BUS38,10,8,4
+candidate,BUS32,10,9,2
+candidate,BUS35,10,4,2
+candidate,BUS38,10,10,9
+terminal,BUS32,10,8,2
+terminal,BUS35,10,10,2
+terminal,BUS38,10,10,9
+trees_refit,BUS32,10,2,0
+trees_refit,BUS35,10,3,0
+trees_refit,BUS38,10,10,0

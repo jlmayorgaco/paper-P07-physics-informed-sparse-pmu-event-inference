@@ -26,6 +26,18 @@ from the no-intervention prediction. If another asset gives a small
 $\Lambda_{ij}$ on the same reports, the change can be easy to detect
 and difficult to locate.
 
+There is a useful scale for this distance when two forecasts have a
+common Gaussian covariance. After whitening and removal of any shared
+constant reference, let $D$ be the distance between their two means.
+The equal-prior decision projects the reports onto the direction
+joining the means. Its error probability is $\Phi(-D/2)$, where
+$\Phi$ is the standard normal distribution function. A rival with
+$D<3.29$ therefore rules out a uniform 95\% source guarantee for that
+pair under the assumed noise model. In Section~\ref{sec:four-family-comparison}
+we also allow the rival pulse to start at a different time. The
+terminal that best separates the closest two generators then has a
+direct interpretation in terms of the PMU reports it adds.
+
 Recovery can also change which source the data favor. Compare two
 fixed local Gaussian forecasts over the same reports, with common
 covariance $W^{-1}$. Write $d$ for the mean departure due to recovery

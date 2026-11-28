@@ -33,6 +33,14 @@ an event trigger. We use that interface to compare spectral classification
 with two ways of inferring the family from network histories, all at the
 same alarm times.
 
+For a generator trip, Azizi \emph{et al.} use the bus impedance
+matrix to identify the location and size of the lost injection from
+sparse phasors \cite{azizi2021log}. Our four-family experiment includes
+a finite torque pulse at a machine that stays connected.
+Its early motion depends on both the source bus and
+the time for which torque has acted. We use this ambiguity to select
+a measured current terminal for a joint time-and-source estimate.
+
 Recursive DAE estimators recover differential and algebraic states from
 partial measurements \cite{katanic2024recursive}. Trajectory sensitivities
 also relate uncertain physical parameters to measured responses
